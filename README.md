@@ -10,7 +10,7 @@ You can view the files using any text editor or a GraphViz viewer. You can do th
 
 Embedding a URL is also possible.
 
-https://dreampuf.github.io/GraphvizOnline/?url=https://github.com/mos9527/disco-corpus/blob/main/disco-corpus-en/W/WHIRLING%20_%20BATHROOM%20MIRROR.txt
+https://dreampuf.github.io/GraphvizOnline/?url=https://raw.githubusercontent.com/mos9527/disco-corpus/refs/heads/main/disco-corpus-en/W/WHIRLING%20_%20BATHROOM%20MIRROR_0x010000040000032B.gv
 
 # Example
 ```
