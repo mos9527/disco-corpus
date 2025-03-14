@@ -51,7 +51,11 @@ def process_one(convo_id):
     ctitle = convo_fields.get("Title", None)
     cdesc = convo_fields.get("Description", None)
     if cid and ctitle and cdesc:
-        fpath = os.path.join(DEST, f"convo_{cid}_{escape_filename(ctitle)}.txt")
+        fdir = ctitle[0].upper()
+        if not fdir.isalpha():
+            fdir = "_"
+        os.makedirs(os.path.join(DEST, fdir), exist_ok=True)
+        fpath = os.path.join(DEST, fdir, f"{escape_filename(ctitle)}_{cid}.gv")
         f = open(fpath, "w", encoding="utf-8")
         writeline = lambda *a, **k: print(*a, **k, file=f)
 
