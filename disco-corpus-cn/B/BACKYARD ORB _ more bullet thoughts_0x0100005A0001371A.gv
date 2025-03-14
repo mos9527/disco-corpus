@@ -1,0 +1,107 @@
+# BACKYARD ORB / more bullet thoughts
+# quick comments with kim or not about the other bullet holes in this wall.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 仔细靠近查看。"];
+	  3 [label="Visual Calculus: 更多的弹孔，至少已经存在了半个世纪，应该是大革命时期留下的。"];
+	  4 [label="Kim Kitsuragi: “一般来说，弹孔都长得很像，所以…也许是吧。”他倾身向前，查看着墙壁。“不过你是对的，确实是大革命时期留下的旧弹孔。”"];
+	  5 [label="You: “好吧。那你能跟我说说这个大革命吗？”"];
+	  6 [label="You: “所以说，这里没有发生罪案了？”"];
+	  7 [label="Kim Kitsuragi: “可能是你过去越轨行为的一种…副作用。你在看什么呢？”"];
+	  8 [label="Kim Kitsuragi: “不，我们不是建筑工人，也不是翻修工人。再说这些弹孔跟调查也没什么关系。”"];
+	  9 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  10 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  11 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  12 [label="Kim Kitsuragi: 警督点点头。"];
+	  13 [label="Variable[\"plaza.rene_asked_wardamage\"] == true  or  Variable[\"plaza.rene_mentioned_revolution_and_couron\"] == true  or  Variable[\"tc.revolution\"] == true"];
+	  14 [label="Variable[\"plaza.rene_asked_wardamage\"] == true  or  Variable[\"plaza.rene_mentioned_revolution_and_couron\"] == true  or  Variable[\"tc.revolution\"] == true", shape=diamond];
+	  15 [label="!(Variable[\"plaza.rene_asked_wardamage\"] == true  or  Variable[\"plaza.rene_mentioned_revolution_and_couron\"] == true  or  Variable[\"tc.revolution\"] == true)", shape=diamond];
+	  16 [label="You: “我们应该做点什么吗？”"];
+	  17 [label="Pain Threshold: 眼前的景象让你胸口发紧。越来越近…越来越深，越揪越紧。你的呼吸变得沉重起来。"];
+	  18 [label="You: “天，刚才有那么一瞬间我感觉非常糟糕。”"];
+	  19 [label="Shivers: 街道被鲜血染红。尘土在废墟上方盘绕。炮火引起气压变化，将上方建筑顶层的人们撕成了碎片…"];
+	  20 [label="Visual Calculus: 更多的弹孔，至少已经存在了半个世纪。那是一个完全不同的时代。"];
+	  21 [label="You: “这些弹孔跟我们之前看到的弹孔很像。”"];
+	  22 [label="You: （大呼一口气。）“哈，嗯嗯，我没事。”"];
+	  23 [label="You: [放弃思维。]"];
+	  24 [label="You: “那没事了。我们走吧。”[放弃思维。]"];
+	  25 [label="Kim Kitsuragi: “刚才你的脸色很苍白。你在看什么呢？”"];
+	  26 [label="Jump to: [morekimquestions]"];
+	  27 [label="You: “我也这么觉得。”[放弃思维。]"];
+	  28 [label="Kim Kitsuragi: “没什么可说的。毕竟我不能提供什么*新鲜的视角*。可以走了吗？”"];
+	  29 [label="morekimquestions"];
+	  30 [label="Kim Kitsuragi: “你没事吧？”警督突然开口，他的声音就像一柄利刃，将你带出了恍惚状态。"];
+	  31 [label="You: “我的天，到底有多少人在大革命的时候被杀了？”"];
+	  32 [label="Kim Kitsuragi: “很多。”"];
+	  33 [label="You: “金，看…还有好多弹孔。有人在这里中枪了。”"];
+	  34 [label="Visual Calculus: 又是一连串可怕的陈旧弹孔。"];
+	  35 [label="Kim Kitsuragi: “也许很久以前，有过*某种*罪案…不过没有，这跟调查没什么关系。”"];
+	  36 [label="Variable[\"plaza.sense_bulletholes_viscal_said_old\"]"];
+	  37 [label="Variable[\"plaza.sense_bulletholes_viscal_said_old\"]", shape=diamond];
+	  38 [label="!(Variable[\"plaza.sense_bulletholes_viscal_said_old\"])", shape=diamond];
+	  39 [label="Pain Threshold: 四周密布的弹孔让你的胸口感到一阵疼痛。你的呼吸变得沉重起来。"];
+	  40 [label="Kim Kitsuragi: 警督查看了墙壁，然后点点头。“又是大革命时期留下的旧弹孔。”"];
+	  41 [label="You: “这些弹孔到底是怎么回事？我在附近看到不少。”"];
+	  42 [label="Kim Kitsuragi: 警督看着墙。“大革命的残留品，应该有大半个世纪了。”"];
+	  43 [label="Horrific Necktie: 这是可怕的咒语，伙计！该死的恐怖咒语！末日就要降临了！"];
+	  44 [label="Kim Kitsuragi: “瑞瓦肖本身就是一部暴力史。”"];
+	  45 [label="Pain Threshold: 你凝视着石头上褪色的痕迹…它们就像一排无穷无尽的小黑洞回望着你。汗水渐渐从你的额角滑落。"];
+	  0 -> 1
+	  1 -> 40
+	  2 -> 46
+	  3 -> 30
+	  4 -> 32
+	  4 -> 28
+	  5 -> 29
+	  6 -> 36
+	  7 -> 27
+	  8 -> 25
+	  8 -> 5
+	  9 -> 10
+	  9 -> 11
+	  10 -> 44
+	  11 -> 17
+	  13 -> 14
+	  13 -> 15
+	  14 -> 3
+	  15 -> 21
+	  16 -> 8
+	  17 -> 31
+	  18 -> 7
+	  20 -> 30
+	  21 -> 4
+	  22 -> 26
+	  24 -> 12
+	  25 -> 27
+	  26 -> 30
+	  27 -> 45
+	  29 -> 2
+	  29 -> 34
+	  29 -> 42
+	  29 -> 22
+	  29 -> 24
+	  30 -> 19
+	  30 -> 23
+	  31 -> 33
+	  32 -> 20
+	  33 -> 41
+	  34 -> 30
+	  35 -> 25
+	  35 -> 5
+	  36 -> 38
+	  36 -> 39
+	  37 -> 35
+	  38 -> 13
+	  39 -> 37
+	  40 -> 32
+	  40 -> 28
+	  41 -> 43
+	  42 -> 16
+	  42 -> 6
+	  43 -> 17
+	  44 -> 20
+	  45 -> 9
+}
+

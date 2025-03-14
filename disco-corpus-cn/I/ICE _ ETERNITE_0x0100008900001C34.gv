@@ -1,0 +1,50 @@
+# ICE / ETERNITE
+# this dialogue for pushing over eternite for you know very darksoulsy shortcut, yes, gut design.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: [维持原样。]"];
+	  3 [label="Variable[\"ice.acele_greet_hub_reached\"] == false  and  Variable[\"ice.tentflap_transport\"] == false  and  IsKimHere()"];
+	  4 [label="Variable[\"ice.acele_greet_hub_reached\"] == false  and  Variable[\"ice.tentflap_transport\"] == false  and  IsKimHere()", shape=diamond];
+	  5 [label="!(Variable[\"ice.acele_greet_hub_reached\"] == false  and  Variable[\"ice.tentflap_transport\"] == false  and  IsKimHere())", shape=diamond];
+	  6 [label="Kim Kitsuragi: “去问问冰面上的那个姑娘吧，看看他们到底在干嘛。”警督指向帐篷旁边的年轻女子。"];
+	  7 [label="Variable[\"yard.shack_ency_eternite_dump\"]"];
+	  8 [label="Variable[\"yard.shack_ency_eternite_dump\"]", shape=diamond];
+	  9 [label="!(Variable[\"yard.shack_ency_eternite_dump\"])", shape=diamond];
+	  10 [label="Pile of Eternite: 一块永恒之板被埋入雪中，两根杆子在支撑着它。"];
+	  11 [label="Interfacing: *勉强*支撑着它，随时都有可能掉下来……或许一阵强风就足够了。"];
+	  12 [label="You: 这是什么？"];
+	  13 [label="Pile of Eternite: 看上去像一座临时搭建的桥，当前正在施工中。"];
+	  14 [label="Jump to: [pane_eternite]"];
+	  15 [label="You: “这是什么？”"];
+	  16 [label="You: 推倒永恒之板。"];
+	  17 [label="Encyclopedia: 大概是三十年前，初级研究员奥拉瑞·塔尔在瓦塔那理工学院研究出了亘石，他以为这种东西能够永存——所以命名为亘石。可悲的是，唯一能够持久的只有这种材料的超高致癌效应。"];
+	  18 [label="pane_eternite"];
+	  19 [label="Pile of Eternite: 随着轻柔的一声，石板落在冰冷的雪地上。"];
+	  20 [label="Kim Kitsuragi: “看起来像一座临时搭建的桥。”警督为抵御寒风而调整着衣领。“还挺方便的。”"];
+	  0 -> 1
+	  1 -> 10
+	  3 -> 4
+	  3 -> 5
+	  4 -> 6
+	  7 -> 8
+	  7 -> 9
+	  8 -> 14
+	  9 -> 17
+	  10 -> 11
+	  11 -> 18
+	  12 -> 13
+	  13 -> 7
+	  14 -> 18
+	  15 -> 21
+	  16 -> 20
+	  17 -> 14
+	  18 -> 16
+	  18 -> 2
+	  18 -> 12
+	  18 -> 15
+	  19 -> 3
+	  20 -> 14
+}
+

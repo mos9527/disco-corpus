@@ -1,0 +1,722 @@
+# ICE / ACELE ON ICE
+# this is where the "recording device", "what are you doing here on the ice?" and "questioning" branches are located.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="CheckEquipped(\"hat_t500\")"];
+	  3 [label="CheckEquipped(\"hat_t500\")", shape=diamond];
+	  4 [label="!(CheckEquipped(\"hat_t500\"))", shape=diamond];
+	  5 [label="You: “那些电线呢？”"];
+	  6 [label="Acele Contact mic hub."];
+	  7 [label="You: “哦不，你完全误会我了。我自己可能也是同性恋呢。”"];
+	  8 [label="Acele: “我也不太确定自己在做什么，他们还会用到合成器，我没有合成器。”"];
+	  9 [label="Jump to: [Acele coming down HUB]"];
+	  10 [label="You: “所以，你跟警察之间——有什么过节吗？”"];
+	  11 [label="You: “我知道*加姆洛克*是什么，但是……就当我不知道吧。”"];
+	  12 [label="Acele: “*富*人，富人们都在河东岸。”"];
+	  13 [label="Acele: “哦，他们确实是。而我就是个渣滓。”"];
+	  14 [label="Acele: “拜托，老兄。我们就在这里。这里就是北加姆洛克——马丁内斯。算是吧。这些术语让人挺困惑的。”"];
+	  15 [label="Jump to: [Acele: \"\"Okay.\"\"]"];
+	  16 [label="Jump to: [Acele: \"\"Oh yeah...\" She looks you over, as...\"]"];
+	  17 [label="Acele: “呃……”"];
+	  18 [label="Acele: “麦克风吗？我也说不好。不知道为什么它无法感知空气的振动，盒子上写着它只能接收*结构音*。如果你喜欢技术呓语的话。”"];
+	  19 [label="Jump to: [Acele: \"\"Yes?\"\"]"];
+	  20 [label="Acele: 她对着自己的手指哈气，看来是不知道该说些什么了。"];
+	  21 [label="You: “是的，你没听错。你应该试着更像一击即溃·迈克一些：一个成功的运动员，一个克服了社会、肉体与精神障碍的*励志人物*。”"];
+	  22 [label="You: “这与我无关，而是你对拳击界的泰斗之一——和*你自己*都缺乏尊重。”"];
+	  23 [label="You: “什么样的东西？”"];
+	  24 [label="Jump to: [Acele: \"\"Go ahead.\"\"]"];
+	  25 [label="You: （冷笑。）“我敢说他们*一定*很有钱。他们那么富有，一定非常特别……”"];
+	  26 [label="Kim Kitsuragi: “咳……”警督介入了。“市郊——不是*在市郊*——是位于加姆洛克南部的大片郊区，瑞瓦肖——也可能是全世界最大的贫民窟。”"];
+	  27 [label="Acele: 她小心翼翼地点了点头。"];
+	  28 [label="CheckEquipped(\"hat_amphibian_sports_visor\")"];
+	  29 [label="CheckEquipped(\"hat_amphibian_sports_visor\")", shape=diamond];
+	  30 [label="!(CheckEquipped(\"hat_amphibian_sports_visor\"))", shape=diamond];
+	  31 [label="Acele: “谢了。”她接过来，对她来说有些大了。"];
+	  32 [label="Acele: “谢了。”她接过来，对她来说有些大了。"];
+	  33 [label="You: “现在来谈谈你提到的那个叫*阿诺*的家伙吧。”"];
+	  34 [label="You: “是的，接触式麦克风。”"];
+	  35 [label="You: “这玩意是怎么工作的？”"];
+	  36 [label="Acele: “你对什么是*没有*意见？”"];
+	  37 [label="Acele: “你跟那个叫迈克的家伙到底是怎么回事？”她停顿了一下，这是个反问句。"];
+	  38 [label="You: “仔细想想，去他的一击即溃·迈克吧。他才不算什么冠军——你才是！看看你，站在一顶松松垮垮的帐篷面前，对着瘾君子的音乐挑三拣四的。体育界应该对你的信念与奉献感到敬畏。”"];
+	  39 [label="Acele: “没错。”她微微眯起眼睛。“是挺好的……很遗憾我们把它卖掉了。”"];
+	  40 [label="Variable[\"ice.acele_knew_amphetamine_gives_cold_resistance\"]"];
+	  41 [label="Variable[\"ice.acele_knew_amphetamine_gives_cold_resistance\"]", shape=diamond];
+	  42 [label="!(Variable[\"ice.acele_knew_amphetamine_gives_cold_resistance\"])", shape=diamond];
+	  43 [label="Acele: “嗯……”她望向东边。“也许你是对的。大部分人都会说三种语言。”"];
+	  44 [label="Jump to: [Acele coming down HUB]"];
+	  45 [label="You: “再跟我说说麦克风的事吧。”\n“大概就是少年犯混日子的地方。如果可以的话，再跟我说说麦克风的事吧。”"];
+	  46 [label="Encyclopedia: 可能是安非他命——它能让你对天气的影响*感到*无动于衷，却不会让你不那么冷。"];
+	  47 [label="IsKimHere()"];
+	  48 [label="IsKimHere()", shape=diamond];
+	  49 [label="!(IsKimHere())", shape=diamond];
+	  50 [label="Acele: “我爸爸是个酒鬼。另外，我感觉自己也想要一醉了之，明白吗。找点*乐子*。”"];
+	  51 [label="You: “我还有一个问题。”"];
+	  52 [label="You: “你不是渣滓。”"];
+	  53 [label="Acele: “这是反问句吗？”"];
+	  54 [label="Acele: “老样子吧，我十几岁的生活相当堕落。”"];
+	  55 [label="Physical Instrument: 这不公平。而且这是一种保守的陈述。"];
+	  56 [label="Rhetoric: 一整个*长篇累牍*倾巢而出！"];
+	  57 [label="Conceptualization: 女子击剑。这是一种高雅的活动。"];
+	  58 [label="Acele: “那对你来说很好啊。女子击剑*的确*很让人赏心悦目。”"];
+	  59 [label="Jump to: [Acele: \"\"Now, uh... we were talking about m...\"]"];
+	  60 [label="Acele: “抱歉，我不是很想要它。”她移开了视线。"];
+	  61 [label="Jump to: [Acele: \"\"Yes?\"\"]"];
+	  62 [label="You: “抱歉，我也不知道自己为什么要提起这个。还有件事我想知道……”"];
+	  63 [label="Acele problem HUB"];
+	  64 [label="Acele: “哦！好吧，真有你的。”"];
+	  65 [label="You: “其实我也一样。不知道自己在说什么。沮丧了？累了？”"];
+	  66 [label="You: “等等，耳机怎么了？”"];
+	  67 [label="Acele: “我男朋友把它卖掉了。”"];
+	  68 [label="You: “为什么？你为什么能接受？”"];
+	  69 [label="Logic: 为什么呢？"];
+	  70 [label="You: “*老样子*是指什么？”"];
+	  71 [label="IsKimHere()"];
+	  72 [label="IsKimHere()", shape=diamond];
+	  73 [label="!(IsKimHere())", shape=diamond];
+	  74 [label="CheckEquipped(\"hat_revolutionary\")"];
+	  75 [label="CheckEquipped(\"hat_revolutionary\")", shape=diamond];
+	  76 [label="!(CheckEquipped(\"hat_revolutionary\"))", shape=diamond];
+	  77 [label="Encyclopedia: 你受伤的大脑想让你知道有个被称为一击即溃·迈克的拳击手。"];
+	  78 [label="You: “是的，但在我们说回接触式麦克风之前——你提到的那个叫*阿诺*的家伙是谁？”"];
+	  79 [label="Acele: “哼……”她再次对着手指哈气取暖。“我也这么想。”"];
+	  80 [label="Acele: “那可真是好极了。如果错过了这个世界所能提供的所有绝赞的同性恋内容，也希望你不要介意。”"];
+	  81 [label="You: “我很累。”"];
+	  82 [label="You: 只是点点头。"];
+	  83 [label="You: “现在*就是*帽子派上用场的时候了。”"];
+	  84 [label="Acele: “不用了老兄，去他的吧，我没事……抱歉我这么说了，请原谅我的脏话。”"];
+	  85 [label="logicitup"];
+	  86 [label="You: 叹气。"];
+	  87 [label="Acele: “是吗？”她好像相当困惑。“我还以为他们是和我们一样的*瓦肖人*呢，只是远比我们有钱而已。"];
+	  88 [label="You: “我还有一个问题。”（总结。）"];
+	  89 [label="Acele: “好吧……”她下意识地笑了一下。"];
+	  90 [label="You: “哦好吧，很高兴能知道。”"];
+	  91 [label="CheckEquipped(\"hat_camionneur\")"];
+	  92 [label="CheckEquipped(\"hat_camionneur\")", shape=diamond];
+	  93 [label="!(CheckEquipped(\"hat_camionneur\"))", shape=diamond];
+	  94 [label="Acele: “谢了。”她接过来，对她来说有些大了。"];
+	  95 [label="Acele: “谢了。”她接过来，对她来说有些大了。"];
+	  96 [label="You: “*接触式麦克风*是什么？”"];
+	  97 [label="Acele: “其实只有一根线，我正提着它等线团松开。电线连着一个接触式麦克风。”"];
+	  98 [label="encythepency"];
+	  99 [label="You: “不，我是指拳击手一击即溃·迈克。”"];
+	  100 [label="Acele: “什么？”"];
+	  101 [label="Acele: “那好吧，好极了。”"];
+	  102 [label="You: “我也不知道，但我有确凿的证据能证明我很摇滚，以一台坏掉的录音机和一间完全报废的旅社客房的形式。”\n“我不能确定，但我有确凿的证据能证明我很摇滚，以一台坏掉的录音机和一间完全报废的旅社客房的形式。”"];
+	  103 [label="You: “我想说我只是个普通人而已。现在来谈谈麦克的事吧——不是迈克，是麦克。”"];
+	  104 [label="You: “那这些破碎声和脚步声的录音——要用来干什么呢？”"];
+	  105 [label="You: “小伙子们都待在里面，怎么就你在外面冻成这样？”"];
+	  106 [label="Empathy: 这女孩真的很为自己骄傲。"];
+	  107 [label="You: “对警察说谎没什么好骄傲的。接下来，另一个问题，如果你能说真话的话。”"];
+	  108 [label="Jump to: [Acele: \"\"Go ahead.\"\"]"];
+	  109 [label="Reaction Speed: 旧耳机怎么样了？"];
+	  110 [label="Acele: “呃……”她有些困惑。“是的，我用它来录东西。”"];
+	  111 [label="Acele: “我……不清楚那是什么意思。”"];
+	  112 [label="You: “别把那些话放在心上，我对麦克风还有些疑问……”"];
+	  113 [label="Acele: “是啊，我明白了，但你有什么*问题*吗？”"];
+	  114 [label="Empathy: 她看着录音设备，那个她本以为能给自己带来欢乐与逃离的东西，已经化为了空想。一时间她觉得自己很幼稚，很没用。"];
+	  115 [label="You: “为什么不把一些东西放在外面，这样你就不用受冻了？”"];
+	  116 [label="Variable[\"ice.acele_authority_done\"]"];
+	  117 [label="Variable[\"ice.acele_authority_done\"]", shape=diamond];
+	  118 [label="!(Variable[\"ice.acele_authority_done\"])", shape=diamond];
+	  119 [label="Jump to: [Acele coming down HUB]"];
+	  120 [label="Acele: “不，算了吧，去他妈的，我没事……很抱歉说了那种话，我不该说*他妈的*。”"];
+	  121 [label="Jump to: [Acele coming down HUB]"];
+	  122 [label="Jump to: [Acele Contact mic hub.]"];
+	  123 [label="Acele: “现在，呃……我们说到我的接触式麦克风了吗？”她拿起设备检查起来，回避了你的目光。"];
+	  124 [label="Acele: “啊！不是。这是个*接触式麦克风*，用来记录物体*内部*声音的。一击即溃·迈克不过是把人揍飞罢了。”"];
+	  125 [label="Encyclopedia: 不用客气。"];
+	  126 [label="You: “听上去像是个同性恋者聚集的地方。”\n“对哦，我记起来了。帕里瑟姆听上去像是个同性恋者聚集的地方。”"];
+	  127 [label="You: “听上去很有趣，那位*阿诺*是谁？”\n“有意思。就像你的朋友爱凡客喜欢的那种？”"];
+	  128 [label="You: “自尊不是让你满足任何人，而是你自己。”"];
+	  129 [label="Acele: “好吧，如果这能让你高兴的话，我会更像一击即溃·迈克而不是我自己一点的。”"];
+	  130 [label="Acele: “你明白这在我听来都是一样的吧？”"];
+	  131 [label="Drama: 一个谎言，他们可能是为了某样可疑的东西把它当掉了。"];
+	  132 [label="Acele: “帕里瑟姆的音乐家们用它们来创作音乐，循环播放，或是把带子剪在一起。他们利用破碎的冰块和晃动的钥匙之类的不可思议的声音……来奏乐。很难解释的。”"];
+	  133 [label="You: “你是指你男朋友卖掉的那种耳机？”"];
+	  134 [label="Acele: “那里。”她冲着教堂点了点头。“男孩们觉得那里可以成为帕里瑟姆之类的*地方*。愚蠢，那里真的……”她顿了一下。“不可能变成帕里瑟姆的。”\n“是的。”她冲着教堂点了点头。“男孩们觉得那里可以成为帕里瑟姆之类的*地方*。愚蠢，那里真的……”她顿了一下。“不可能变成帕里瑟姆的。”"];
+	  135 [label="Acele: “是啊，安德烈和其他人，他们都在里面，帐篷里。”\n“是啊，安德烈和其他人，他们都在帐篷里面。”"];
+	  136 [label="Acele: “嗯，这只是一次问话，对吧？你在问我问题——这就是警察的工作。”"];
+	  137 [label="You: “我知道了。我自己就是个派对狂人，非常疯狂。”"];
+	  138 [label="Acele: “哦，但我就是啊。”"];
+	  139 [label="Half Light: 你他妈的一点问题都没有！一个也没有！"];
+	  140 [label="Acele: “谢了。”她接过来，对她来说有些大了。"];
+	  141 [label="Encyclopedia: 你受伤的大脑想让你知道有个被称为一击即溃·迈克的拳击手。"];
+	  142 [label="Variable[\"ice.acele_dialogue_you_remember_contact_mic\"]"];
+	  143 [label="Variable[\"ice.acele_dialogue_you_remember_contact_mic\"]", shape=diamond];
+	  144 [label="!(Variable[\"ice.acele_dialogue_you_remember_contact_mic\"])", shape=diamond];
+	  145 [label="Acele: “和我搞来录音机的地方一样，帕里瑟姆。”"];
+	  146 [label="You: “我很沮丧。”"];
+	  147 [label="You: “你是对的，时间抛弃了我。”"];
+	  148 [label="You: “去他的吧！我什么意见都没有，你不能那么说。”\n“去他的吧！我什么意见都没有——除了饮酒——你不能那么说。”"];
+	  149 [label="Acele: “总而言之，我想我也可以做一些。反正那里应该，是个，音乐场所……”她揉了揉肩膀，环顾四周。"];
+	  150 [label="You: “我还有别的问题。”（总结。）"];
+	  151 [label="Acele coming down HUB"];
+	  152 [label="You: “想要我的夹克吗？”（动手脱掉。）"];
+	  153 [label="Drama: 干净利落！干得漂亮。不能说这是个谎言，但是感觉如此。相比她想让大家知道的，她真实的撒谎能力还要更厉害一些。"];
+	  154 [label="You: “*在市郊*是什么意思？”"];
+	  155 [label="Acele: 她奇怪地看着你。“糟透了，老兄。”她稍微眯了会儿眼睛，试着记起些什么……随即又放弃了。“还有别的事吗？跟接触式麦克风有关的事？”"];
+	  156 [label="You: “女子击剑。很棒的运动。完全没问题。”"];
+	  157 [label="Acele: “接触式麦克风，”她重复道，转动着手中的设备。"];
+	  158 [label="Acele: “‘像骷髅头那种东西’？”她摇摇头。“老兄，你这么一说，感觉你就像个100岁的老头子一样。”"];
+	  159 [label="Acele: “这个？”她对着冻僵的手指哈气。“这是个便携式录音设备，用来做现场记录的。质量很差，但也能用。”"];
+	  160 [label="Acele: “录音吧，我想。”"];
+	  161 [label="Electrochemistry: 她服用了某种兴奋剂——安非他命或者甲氧麻黄酮——但药效很快就退去了。她将会经历越来越多的低谷，与几近于无的高峰。"];
+	  162 [label="Kim Kitsuragi: “穿上吧，你太冷了。”警督动手脱掉了上衣。"];
+	  163 [label="You: “你说*那里*应该是个音乐场所，是哪里？”\n“你说*那里*应该是个音乐场所，是指安德烈计划中的——那座教堂吗？”"];
+	  164 [label="You: “男孩们？”"];
+	  165 [label="Variable[\"ice.acele_logic_said_ask_why_outside\"]"];
+	  166 [label="Variable[\"ice.acele_logic_said_ask_why_outside\"]", shape=diamond];
+	  167 [label="!(Variable[\"ice.acele_logic_said_ask_why_outside\"])", shape=diamond];
+	  168 [label="Jump to: [Acele: \"\"Go ahead.\"\"]"];
+	  169 [label="Jump to: [MAINHUB-acelequestions]"];
+	  170 [label="You: “明白了。”"];
+	  171 [label="Empathy: 一想到俱乐部，她真的振奋了起来。不过离这里挺远的。"];
+	  172 [label="CheckEquipped(\"hat_mullen\")"];
+	  173 [label="CheckEquipped(\"hat_mullen\")", shape=diamond];
+	  174 [label="!(CheckEquipped(\"hat_mullen\"))", shape=diamond];
+	  175 [label="Jump to: [Acele Contact mic hub.]"];
+	  176 [label="Reaction Speed: 喂，尿兄和干弟不是也提过凡·艾克吗？"];
+	  177 [label="You: 我该拿这个怎么办呢？"];
+	  178 [label="Jump to: [Acele: \"\"Sure.\"\"]"];
+	  179 [label="maincontacthub"];
+	  180 [label="You: （把你的帽子给她。）“拿着吧，你比我更需要这个。”"];
+	  181 [label="You: “为什么你年纪轻轻的就要搬出去？”\n（转向女孩。）“为什么你这么年轻就要搬出去？”"];
+	  182 [label="You: “酗酒、派对和迪斯科音乐都对你有害，你应该以我为戒。”"];
+	  183 [label="You: （凑过去耳语。）“让我猜猜，这些富人都不是本地人吧……”"];
+	  184 [label="Acele: “你知道的。酗酒、斗殴，当你十三岁搬离父母住所的时候，在市郊经历的一切丑恶。”"];
+	  185 [label="You: “知道吗？我觉得你从诸多问话中学到了不少东西，有些谎言你说得很不错。”"];
+	  186 [label="Acele: 她担忧地点点头。"];
+	  187 [label="thequestionishere"];
+	  188 [label="Acele: “你说呢。”她又在对着手指哈气了，它们被冻得通红。"];
+	  189 [label="CheckEquipped(\"hat_bum\")"];
+	  190 [label="CheckEquipped(\"hat_bum\")", shape=diamond];
+	  191 [label="!(CheckEquipped(\"hat_bum\"))", shape=diamond];
+	  192 [label="CheckEquipped(\"hat_rcm\")"];
+	  193 [label="CheckEquipped(\"hat_rcm\")", shape=diamond];
+	  194 [label="!(CheckEquipped(\"hat_rcm\"))", shape=diamond];
+	  195 [label="Encyclopedia: 加姆洛克是瑞瓦肖的一个区，由以下区块组成：帕克斯，维拉洛博斯，加姆洛克中心，大科戎，旧南城还有野狗山谷。学习真是太棒了！"];
+	  196 [label="Acele: “哦老兄，你没去过帕里瑟姆吗？”她一时间忘乎所以了。“那是个*充斥*着毒品的粪坑。”"];
+	  197 [label="Acele: “对哦……”她打量着你，估摸着你的年纪。“我想你应该不认识凡·艾克，也不像是会去帕里瑟姆的人……”\n“对哦……”她打量着你，估摸着你的年纪。“我想即便是你这样对性向有着现代化认知的人，应该也不属于凡·艾克的年龄层。”"];
+	  198 [label="You: “因为我对同性恋有意见，很大的意见。”"];
+	  199 [label="You: “实际上，我还有一些麦克风之外的问题想问你。”"];
+	  200 [label="ampfcoldhub"];
+	  201 [label="Acele: “我还有录音的事要做，而且我待在外面感觉更好……”一阵寒流袭来，把她淹没在冰冷的浪花之中。"];
+	  202 [label="Acele: “谢了。”她接过来，对她来说有些大了。"];
+	  203 [label="You: “河东岸是什么？”"];
+	  204 [label="Perception (Hearing): “是你让他们*保持*富有的。”"];
+	  205 [label="Jump to: [Acele coming down HUB]"];
+	  206 [label="Acele: “是啊……”"];
+	  207 [label="Kim Kitsuragi: “同意，”警督记录到。"];
+	  208 [label="noegg"];
+	  209 [label="Composure: 不，你没有。她错把你当成一个老人了！快说你很酷。"];
+	  210 [label="Acele: “我*想*我是在记录冰块破碎的声音，但如果没有耳机的话，也没法知道。我刚才可能还录下了你的脚步声，不知道听上去会怎样……”她挠了挠前额。"];
+	  211 [label="Acele: “是啊……也许你对帽子的坚持是对的。”"];
+	  212 [label="You: “那好吧。”"];
+	  213 [label="You: （随它去。）“明白了……”"];
+	  214 [label="Jump to: [Acele: \"\"Go ahead.\"\"]"];
+	  215 [label="You: “我……什么都想不起来。肯定是有东西的，对吧？对人类来说很正常。”"];
+	  216 [label="yesegg"];
+	  217 [label="Jump to: [Acele Contact mic hub.]"];
+	  218 [label="Encyclopedia: 不知道。"];
+	  219 [label="You: “仔细一想，我们还是再来谈谈接触式麦克风吧。”"];
+	  220 [label="You: “这说明我比实际年龄更加时髦。”"];
+	  221 [label="Composure: 内啡肽肉眼可见地急剧下降着，如同一张温暖的毛毯从她的肩膀上滑落——阵阵寒颤与颤抖的下巴，意味着药物反应。"];
+	  222 [label="fakehub"];
+	  223 [label="Variable[\"ice.acele_authority_done\"]  or  Variable[\"ice.acele_ended_crying_in_front_of_her\"]"];
+	  224 [label="Variable[\"ice.acele_authority_done\"]  or  Variable[\"ice.acele_ended_crying_in_front_of_her\"]", shape=diamond];
+	  225 [label="!(Variable[\"ice.acele_authority_done\"]  or  Variable[\"ice.acele_ended_crying_in_front_of_her\"])", shape=diamond];
+	  226 [label="Variable[\"ice.egg_eyck\"]  or  Variable[\"ice.egg_mentions_pumping_van_eyck_jam\"]"];
+	  227 [label="Variable[\"ice.egg_eyck\"]  or  Variable[\"ice.egg_mentions_pumping_van_eyck_jam\"]", shape=diamond];
+	  228 [label="!(Variable[\"ice.egg_eyck\"]  or  Variable[\"ice.egg_mentions_pumping_van_eyck_jam\"])", shape=diamond];
+	  229 [label="IsTHCPresent(\"coach_physical_instrument\")"];
+	  230 [label="IsTHCPresent(\"coach_physical_instrument\")", shape=diamond];
+	  231 [label="!(IsTHCPresent(\"coach_physical_instrument\"))", shape=diamond];
+	  232 [label="Jump to: [Acele Contact mic hub.]"];
+	  233 [label="You: 是吗？有关于我名字的消息吗？\n是吗？有关于我妻子名字的消息吗？还有我妈呢？"];
+	  234 [label="Jump to: [Acele Contact mic hub.]"];
+	  235 [label="Acele: “当然。”"];
+	  236 [label="Acele: “老兄，你真是个古怪的警察。”"];
+	  237 [label="Jump to: [Acele: \"\"Okay.\"\"]"];
+	  238 [label="Jump to: [Acele Contact mic hub.]"];
+	  239 [label="You: “我也有酗酒的问题。”"];
+	  240 [label="Acele: “主要是音乐方面的东西。就像这台录音机，但要更大一些，那还有一堆呢。”\n“你看不出来吗？主要是音乐方面的东西，就像这台录音机，但要更大一些。”"];
+	  241 [label="You: （敬畏地看着。）“这些*富人*都是谁？听起来太棒了！我也想成为富人。”"];
+	  242 [label="Acele: “呃……谢谢你？”"];
+	  243 [label="Kim Kitsuragi: “我们在加姆洛克。算是吧。有时候，马丁内斯也被称为北加姆洛克。加姆洛克也是个贫民区，不过比市郊要小一些。”"];
+	  244 [label="Acele: “我会努力的。”"];
+	  245 [label="Jump to: [thequestionishere]"];
+	  246 [label="Acele: 她回头望着自己的录音机。"];
+	  247 [label="Acele: “那是一间音乐俱乐部和电子合成器工坊，就在加姆洛克的布吉街上。音乐家们都住在那里……真正的音乐家。我有次还看到阿诺·凡·艾克了！”"];
+	  248 [label="Acele: “我会记住的，以备不时之需。”她转身去检查自己的录音机。"];
+	  249 [label="Acele: “谢了。”她接过来，对她来说有些大了。"];
+	  250 [label="IsKimHere()"];
+	  251 [label="IsKimHere()", shape=diamond];
+	  252 [label="!(IsKimHere())", shape=diamond];
+	  253 [label="Reaction Speed: 这些小伙子是谁？"];
+	  254 [label="Jump to: [Acele: \"\"Sure.\"\"]"];
+	  255 [label="Acele: “那东西要比我贵多了，实际上比我们任何一个都要贵。没关系，我能抗住。”"];
+	  256 [label="You: “你以前被问过话吗？”"];
+	  257 [label="Acele: “一两次吧。抱歉，我没有他们在河东岸的那种*瑞瓦肖经验*。”"];
+	  258 [label="You: “的确，不是吗？你介意我再问你一些问题吗？”"];
+	  259 [label="IsKimHere()"];
+	  260 [label="IsKimHere()", shape=diamond];
+	  261 [label="!(IsKimHere())", shape=diamond];
+	  262 [label="Acele: “我打赌那就是他们期望的。”她的喃喃自语，悄然地随着呼吸吐露出来。"];
+	  263 [label="Jump to: [Acele: \"\"Yes?\"\"]"];
+	  264 [label="Acele: “谢了。”她接过来，对她来说有些大了。"];
+	  265 [label="Acele: “对啊，爱凡客*真的*很喜欢他，或许有点*太*喜欢他了。他是个非常热情的人。”"];
+	  266 [label="Drama: 一切正常，大人！"];
+	  267 [label="Reaction Speed: 喂，尿兄和干弟不是也提过凡·艾克吗？"];
+	  268 [label="Variable[\"pier.skulls_arno_van_eyck\"]"];
+	  269 [label="Variable[\"pier.skulls_arno_van_eyck\"]", shape=diamond];
+	  270 [label="!(Variable[\"pier.skulls_arno_van_eyck\"])", shape=diamond];
+	  271 [label="You: “是不是像骷髅头那种东西？”"];
+	  272 [label="Encyclopedia: 没有。"];
+	  273 [label="You: “帕里瑟姆是什么？”"];
+	  274 [label="You: “算了，我们还是来谈谈那个接触式麦克风吧……”"];
+	  275 [label="Acele: “好吧……是加姆洛克南部的一个大贫民窟。”"];
+	  276 [label="You: “不，有时候我甚至连最基本的术语都记不起来。”"];
+	  277 [label="You: “哦不，他们是外来者，国际资本的代理人。只要你留意观察就能发现。”"];
+	  278 [label="Acele: 她回头望着自己的录音机。"];
+	  279 [label="CheckEquipped(\"hat_samaran\")"];
+	  280 [label="CheckEquipped(\"hat_samaran\")", shape=diamond];
+	  281 [label="!(CheckEquipped(\"hat_samaran\"))", shape=diamond];
+	  282 [label="Acele: “谢了。”她接过来，对她来说有些大了。"];
+	  283 [label="Pain Threshold: 这个女孩突然变得冷漠起来，非常冷漠。"];
+	  284 [label="Jump to: [Acele: \"\"Oh yeah...\" She looks you over, as...\"]"];
+	  285 [label="Variable[\"pier.skulls_arno_van_eyck\"]"];
+	  286 [label="Variable[\"pier.skulls_arno_van_eyck\"]", shape=diamond];
+	  287 [label="!(Variable[\"pier.skulls_arno_van_eyck\"])", shape=diamond];
+	  288 [label="You: “要知道，一击即溃·迈克不*只能把人揍飞*，他是个真正的榜样。”"];
+	  289 [label="You: “不，我是指……算了吧。”"];
+	  290 [label="You: “你的麦克风是从哪儿来的？”"];
+	  291 [label="Acele: “是啊，可能会有一些吧。我觉得他们那里不会轻视同性恋者地下组织。帕里瑟姆不是那种地方。它很酷。”"];
+	  292 [label="You: “卖了做什么？”"];
+	  293 [label="Kim Kitsuragi: “没事的。”警督后退一步，瞥了你一眼。"];
+	  294 [label="Acele: 她微微颤抖着。"];
+	  295 [label="Jump to: [Acele coming down HUB]"];
+	  296 [label="You: “我也是个渣滓。”"];
+	  297 [label="You: “是的，我甚至不记得你告诉过我多少东西，也记不清我问过哪些问题了。接下来——另一个问题。”"];
+	  298 [label="Jump to: [MAINHUB-acelequestions]"];
+	  299 [label="You: （随它去。）“知道了……”"];
+	  300 [label="Acele: “嗯哼，干得漂亮。”她转身去检查自己的录音机。"];
+	  301 [label="Jump to: [Acele: \"\"Sure.\"\"]"];
+	  302 [label="Interfacing: 很好。也许你可以用它来骚扰别人？窃听！"];
+	  303 [label="Conceptualization: 有趣的术语。是时候收集一些知识了！"];
+	  304 [label="Acele: “接触式麦克风能从物体内部记录声音，比如这片冰里面。”\n专注于设备似乎能使她平静下来。“接触式麦克风能从物体内部记录声音，比如这片冰里面。”"];
+	  305 [label="You: “这跟一击即溃·迈克有关系吗？”"];
+	  306 [label="You: “别误会我。我完全支持同性恋者。那个*帕里瑟姆*听起来就像是他们喜欢去的地方。”"];
+	  307 [label="Acele: “我也不清楚那是什么意思。”\n“这是同性恋者地下组织的一种说法吗？”"];
+	  308 [label="Acele: “那可真是棒极了。”她对着自己的手指哈气，看来是不知道该说些什么了。"];
+	  309 [label="You: “没错，那确实取悦了我。”"];
+	  310 [label="You: “那你究竟在录什么呢？”"];
+	  311 [label="Acele: “我不知道，老兄……买一些东西吧，生活所需的那种。”"];
+	  312 [label="Acele: “里面塞了太多东西，没地方了。”"];
+	  313 [label="Acele: “看到了吗？这才是送给一个女孩儿帽子的正确方式……”"];
+	  314 [label="Acele: “那就祝你能靠着警察的薪水跨越那条河了。”"];
+	  315 [label="You: “奇怪。富人们的存在并没有激起我的任何感情。”"];
+	  316 [label="Jump to: [Acele: \"\"Go ahead.\"\"]"];
+	  317 [label="Jump to: [Acele coming down HUB]"];
+	  318 [label="CheckEquipped(\"hat_faln\")"];
+	  319 [label="CheckEquipped(\"hat_faln\")", shape=diamond];
+	  320 [label="!(CheckEquipped(\"hat_faln\"))", shape=diamond];
+	  321 [label="You: “我也很热情。”"];
+	  0 -> 1
+	  1 -> 160
+	  1 -> 136
+	  1 -> 159
+	  2 -> 3
+	  2 -> 4
+	  3 -> 95
+	  4 -> 60
+	  5 -> 97
+	  6 -> 289
+	  6 -> 35
+	  6 -> 291
+	  6 -> 199
+	  6 -> 306
+	  7 -> 64
+	  8 -> 114
+	  9 -> 151
+	  10 -> 54
+	  11 -> 259
+	  12 -> 241
+	  12 -> 183
+	  12 -> 25
+	  12 -> 90
+	  12 -> 316
+	  13 -> 297
+	  13 -> 52
+	  14 -> 195
+	  16 -> 197
+	  17 -> 56
+	  18 -> 217
+	  19 -> 100
+	  20 -> 275
+	  20 -> 147
+	  21 -> 236
+	  22 -> 37
+	  23 -> 240
+	  25 -> 13
+	  26 -> 11
+	  26 -> 181
+	  27 -> 299
+	  28 -> 29
+	  28 -> 30
+	  29 -> 94
+	  30 -> 91
+	  31 -> 9
+	  32 -> 9
+	  33 -> 285
+	  34 -> 157
+	  35 -> 18
+	  36 -> 63
+	  37 -> 129
+	  38 -> 236
+	  39 -> 115
+	  40 -> 41
+	  40 -> 42
+	  41 -> 200
+	  42 -> 121
+	  43 -> 222
+	  44 -> 151
+	  45 -> 254
+	  46 -> 40
+	  47 -> 48
+	  47 -> 49
+	  48 -> 162
+	  49 -> 151
+	  50 -> 185
+	  50 -> 137
+	  50 -> 51
+	  50 -> 182
+	  51 -> 214
+	  52 -> 138
+	  53 -> 277
+	  53 -> 181
+	  54 -> 70
+	  55 -> 234
+	  56 -> 62
+	  56 -> 21
+	  56 -> 38
+	  57 -> 148
+	  57 -> 156
+	  57 -> 215
+	  58 -> 250
+	  59 -> 123
+	  60 -> 9
+	  61 -> 100
+	  62 -> 61
+	  63 -> 215
+	  63 -> 148
+	  63 -> 239
+	  64 -> 112
+	  64 -> 33
+	  65 -> 20
+	  66 -> 67
+	  67 -> 293
+	  68 -> 201
+	  69 -> 165
+	  70 -> 184
+	  71 -> 72
+	  71 -> 73
+	  72 -> 26
+	  73 -> 276
+	  74 -> 75
+	  74 -> 76
+	  75 -> 140
+	  76 -> 280
+	  77 -> 142
+	  78 -> 16
+	  79 -> 123
+	  80 -> 123
+	  81 -> 308
+	  82 -> 149
+	  83 -> 211
+	  84 -> 294
+	  85 -> 105
+	  85 -> 213
+	  86 -> 295
+	  87 -> 278
+	  88 -> 168
+	  89 -> 299
+	  90 -> 206
+	  91 -> 92
+	  91 -> 93
+	  92 -> 283
+	  93 -> 74
+	  94 -> 9
+	  95 -> 9
+	  96 -> 305
+	  97 -> 96
+	  97 -> 170
+	  98 -> 233
+	  98 -> 177
+	  99 -> 124
+	  100 -> 6
+	  101 -> 112
+	  101 -> 33
+	  102 -> 309
+	  103 -> 130
+	  104 -> 132
+	  105 -> 313
+	  106 -> 298
+	  106 -> 107
+	  107 -> 244
+	  109 -> 104
+	  109 -> 66
+	  110 -> 290
+	  110 -> 99
+	  111 -> 81
+	  112 -> 19
+	  113 -> 57
+	  114 -> 221
+	  115 -> 255
+	  116 -> 117
+	  116 -> 118
+	  117 -> 314
+	  118 -> 189
+	  119 -> 151
+	  120 -> 212
+	  120 -> 86
+	  121 -> 151
+	  122 -> 6
+	  123 -> 34
+	  123 -> 78
+	  124 -> 55
+	  125 -> 6
+	  126 -> 292
+	  127 -> 226
+	  128 -> 248
+	  129 -> 128
+	  129 -> 310
+	  130 -> 238
+	  131 -> 266
+	  132 -> 82
+	  133 -> 39
+	  134 -> 253
+	  135 -> 69
+	  136 -> 153
+	  137 -> 89
+	  138 -> 222
+	  139 -> 123
+	  140 -> 9
+	  141 -> 142
+	  142 -> 144
+	  142 -> 143
+	  143 -> 98
+	  144 -> 303
+	  145 -> 274
+	  145 -> 45
+	  146 -> 111
+	  147 -> 155
+	  148 -> 79
+	  149 -> 284
+	  150 -> 24
+	  151 -> 163
+	  151 -> 83
+	  151 -> 180
+	  151 -> 150
+	  151 -> 152
+	  152 -> 120
+	  153 -> 256
+	  153 -> 258
+	  154 -> 53
+	  155 -> 232
+	  156 -> 58
+	  157 -> 122
+	  158 -> 209
+	  159 -> 5
+	  160 -> 311
+	  161 -> 47
+	  162 -> 84
+	  163 -> 134
+	  164 -> 135
+	  165 -> 166
+	  165 -> 167
+	  166 -> 85
+	  167 -> 205
+	  170 -> 15
+	  171 -> 179
+	  172 -> 173
+	  172 -> 174
+	  173 -> 32
+	  174 -> 2
+	  175 -> 6
+	  176 -> 216
+	  177 -> 218
+	  178 -> 235
+	  179 -> 126
+	  179 -> 127
+	  180 -> 116
+	  181 -> 50
+	  182 -> 27
+	  183 -> 87
+	  184 -> 304
+	  185 -> 242
+	  186 -> 222
+	  187 -> 88
+	  187 -> 10
+	  187 -> 203
+	  188 -> 139
+	  189 -> 190
+	  189 -> 191
+	  190 -> 202
+	  191 -> 319
+	  192 -> 193
+	  192 -> 194
+	  193 -> 249
+	  194 -> 172
+	  195 -> 51
+	  195 -> 181
+	  196 -> 247
+	  197 -> 268
+	  198 -> 223
+	  199 -> 237
+	  200 -> 68
+	  200 -> 300
+	  201 -> 44
+	  202 -> 9
+	  203 -> 12
+	  204 -> 222
+	  205 -> 151
+	  206 -> 222
+	  207 -> 59
+	  208 -> 146
+	  208 -> 219
+	  208 -> 271
+	  209 -> 146
+	  209 -> 219
+	  210 -> 109
+	  211 -> 119
+	  212 -> 295
+	  213 -> 246
+	  215 -> 188
+	  216 -> 322
+	  216 -> 219
+	  216 -> 271
+	  217 -> 6
+	  218 -> 6
+	  219 -> 263
+	  220 -> 309
+	  221 -> 161
+	  222 -> 245
+	  223 -> 224
+	  223 -> 225
+	  224 -> 36
+	  225 -> 80
+	  226 -> 227
+	  226 -> 228
+	  227 -> 265
+	  228 -> 197
+	  229 -> 230
+	  229 -> 231
+	  230 -> 77
+	  231 -> 141
+	  232 -> 6
+	  233 -> 273
+	  234 -> 6
+	  235 -> 6
+	  236 -> 22
+	  236 -> 103
+	  238 -> 6
+	  239 -> 113
+	  240 -> 115
+	  240 -> 133
+	  241 -> 315
+	  242 -> 106
+	  243 -> 195
+	  244 -> 169
+	  245 -> 187
+	  246 -> 318
+	  247 -> 171
+	  248 -> 238
+	  249 -> 9
+	  250 -> 251
+	  250 -> 252
+	  251 -> 207
+	  252 -> 59
+	  253 -> 164
+	  254 -> 235
+	  255 -> 46
+	  256 -> 257
+	  257 -> 187
+	  258 -> 317
+	  259 -> 260
+	  259 -> 261
+	  260 -> 243
+	  261 -> 14
+	  262 -> 204
+	  263 -> 100
+	  264 -> 9
+	  265 -> 286
+	  266 -> 104
+	  267 -> 208
+	  268 -> 269
+	  268 -> 270
+	  269 -> 267
+	  270 -> 208
+	  271 -> 158
+	  272 -> 125
+	  273 -> 196
+	  274 -> 302
+	  275 -> 11
+	  275 -> 181
+	  276 -> 71
+	  277 -> 43
+	  278 -> 44
+	  279 -> 281
+	  279 -> 282
+	  280 -> 31
+	  281 -> 192
+	  282 -> 9
+	  283 -> 8
+	  284 -> 197
+	  285 -> 288
+	  285 -> 287
+	  286 -> 176
+	  287 -> 216
+	  288 -> 17
+	  289 -> 178
+	  290 -> 145
+	  291 -> 307
+	  291 -> 198
+	  291 -> 7
+	  292 -> 312
+	  293 -> 151
+	  294 -> 296
+	  295 -> 151
+	  296 -> 186
+	  297 -> 108
+	  299 -> 279
+	  300 -> 238
+	  301 -> 235
+	  302 -> 6
+	  303 -> 154
+	  303 -> 181
+	  304 -> 229
+	  305 -> 110
+	  306 -> 101
+	  307 -> 65
+	  307 -> 220
+	  307 -> 102
+	  308 -> 275
+	  308 -> 147
+	  309 -> 301
+	  310 -> 210
+	  311 -> 131
+	  312 -> 23
+	  313 -> 189
+	  314 -> 222
+	  315 -> 262
+	  317 -> 151
+	  318 -> 320
+	  318 -> 321
+	  319 -> 264
+	  320 -> 28
+	  321 -> 111
+}
+

@@ -1,0 +1,273 @@
+# LANDS END ORB / lands end shot viscal
+# the conclusion dialogue where you conclude the shot did not come from land's end. this fires only if you have  TASK.check_lands_end
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 也许袭击者爬上了通讯塔，在那里开了枪？\n“也许袭击者爬上了通讯塔，在那里开了枪？”"];
+	  3 [label="You: 那些烟头呢？\n“那些烟头呢？”"];
+	  4 [label="IsKimHere()"];
+	  5 [label="IsKimHere()", shape=diamond];
+	  6 [label="!(IsKimHere())", shape=diamond];
+	  7 [label="IsKimHere()"];
+	  8 [label="IsKimHere()", shape=diamond];
+	  9 [label="!(IsKimHere())", shape=diamond];
+	  10 [label="Variable[\"coast.sense_cyclo_tioumoutiri\"]"];
+	  11 [label="Variable[\"coast.sense_cyclo_tioumoutiri\"]", shape=diamond];
+	  12 [label="!(Variable[\"coast.sense_cyclo_tioumoutiri\"])", shape=diamond];
+	  13 [label="Variable[\"coast.sense_shot_rhetoric_kim_hat\"]"];
+	  14 [label="Variable[\"coast.sense_shot_rhetoric_kim_hat\"]", shape=diamond];
+	  15 [label="!(Variable[\"coast.sense_shot_rhetoric_kim_hat\"])", shape=diamond];
+	  16 [label="You: “警棍。你肯定是想说警棍吧。”"];
+	  17 [label="Esprit de Corps: Esprit de Corps: \"...\""];
+	  18 [label="Jump to: [viscalmaimhub]"];
+	  19 [label="Encyclopedia: 没有什么是不重要的，警探。"];
+	  20 [label="Kim Kitsuragi: “那些吗？”他用手指了指。“一个抽烟的袭击者，相比阿斯特拉或者是德鲁安，更喜欢特拜科？这里到处都是烟头。这个牌子在年纪大的人中间比较流行。”"];
+	  21 [label="You: “你说得对。在我因为低体温症死掉之前，应该好好调查一下这种情况。”"];
+	  22 [label="Visual Calculus: 褴褛飞旋三楼的灯熄灭了。那个年轻女子走了，没人知道她去了哪里。安全，隔绝。她的身影不再在玻璃背后荡漾……"];
+	  23 [label="You: 遥望水面——望向褴褛飞旋。"];
+	  24 [label="Kim Kitsuragi: “要想从1.2公里外开枪，这里可不是个好地方。能见度差的可怕，到处都是水蒸汽——我觉得可以排除这里……B''，是吗？"];
+	  25 [label="Electrochemistry: 抽烟。喝酒。找乐子。心花怒放。没有你——因为你在这里，在寒风中冻到麻木，不是吗？做你的*侦探工作*。"];
+	  26 [label="Visual Calculus: 跨越1.2公里冰冷的海水，铺天盖地的雪花在海浪中片片融化。你勉强看见了一个小小的长方形。"];
+	  27 [label="You: “金，你看起来很冷——要不换件厚点的衣服？”"];
+	  28 [label="You: 好吧……"];
+	  29 [label="Electrochemistry: 真是个好姑娘，你暗暗想到。"];
+	  30 [label="Encyclopedia: 哦，当然了！你看见的烟蒂上有一个戴着科菲亚帽的男孩——一个烟草采摘工人。这个男孩是特拜科的品牌标志。同时代的瑞瓦肖人更喜欢德鲁安（南部岛屿的一个本土牌子）或者是阿斯特拉，一种来自格拉德的传奇香烟。喜欢特拜科的人年龄偏大，他们钟情老式纸过滤嘴，过量的焦油，还有殖民主义和芝麻蜜饼的香甜。"];
+	  31 [label="Kim Kitsuragi: “不，一顶橙色的飞行员帽没什么帮助。”他把脸转向大海。"];
+	  32 [label="Jump to: [viscalmaimhub]"];
+	  33 [label="Kim Kitsuragi: “我还好。倒是你——看起来都快变成一根人形冰棍了。”\n“我还好。倒是你，荣誉警督——看起来都快变成一根人形冰棍了。”"];
+	  34 [label="Kim Kitsuragi: “没错，这样好像比较明智。”"];
+	  35 [label="Visual Calculus: 跨越1.2公里冰冷的海水，透过远方蔚蓝的天空，你勉强看见了一个小小的长方形。"];
+	  36 [label="IsNight()"];
+	  37 [label="IsNight()", shape=diamond];
+	  38 [label="!(IsNight())", shape=diamond];
+	  39 [label="Visual Calculus: 这里有没有什么东西可以证明——有个狙击手把这里当成了开枪的据点？眼下只有一些碎石，一只瓶子，还有一个废弃的通讯塔。"];
+	  40 [label="Encyclopedia: 特拜科是瑞瓦肖在伊尔玛的殖民地。那里的人口基本上都是伊尔玛的艾瑞奥帕吉特人——高达97%。那片区域以烟草出口闻名，也因此得名。"];
+	  41 [label="Rhetoric: 从技术的角度来讲，应该是……"];
+	  42 [label="Variable[\"auto.is_snowing\"]"];
+	  43 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  44 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  45 [label="Visual Calculus: 褴褛飞旋三楼的灯熄灭了。年轻女子走了，就在57区。安全，封闭。她的身影不再在窗户背后荡漾……"];
+	  46 [label="Jump to: [viscalmaimhub]"];
+	  47 [label="Kim Kitsuragi: 「不，一顶橙色的飞行员帽没什么帮助。」他把脸转向大海。\n「不，一顶黑色的飞行员帽没什么帮助。」他把脸转向大海。"];
+	  48 [label="Rhetoric: 你该如何回应那样一句简洁有力的*不*呢？似乎他对飞行员帽不是很感冒。"];
+	  49 [label="Endurance: 站在海岸尽头的他看起来有点冷。夹克是很暖和，但也扛不住这种天气。"];
+	  50 [label="You: 我说给我停止这个愚蠢的想法。[离开。]"];
+	  51 [label="Jump to: [viscalmaimhub]"];
+	  52 [label="Variable[\"whirling.klaasje_arrest_decision_made_did_not_arrest\"]"];
+	  53 [label="Variable[\"whirling.klaasje_arrest_decision_made_did_not_arrest\"]", shape=diamond];
+	  54 [label="!(Variable[\"whirling.klaasje_arrest_decision_made_did_not_arrest\"])", shape=diamond];
+	  55 [label="You: 「不用什么——橙色的飞行员帽没用吗？」\n「不用什么——黑色的飞行员帽没用吗？」"];
+	  56 [label="Kim Kitsuragi: “不，我没有。我们*西奥人*不喜欢双关语的幽默。”"];
+	  57 [label="You: [完成思维。]"];
+	  58 [label="Visual Calculus: 所以？"];
+	  59 [label="Variable[\"TASK.inspect_window\"]"];
+	  60 [label="Variable[\"TASK.inspect_window\"]", shape=diamond];
+	  61 [label="!(Variable[\"TASK.inspect_window\"])", shape=diamond];
+	  62 [label="You: “不用什么——橙色的飞行员帽没用吗？”"];
+	  63 [label="Endurance: 风越来越大。海面卷起细小的水沫扫过你的脸庞，就像细针扎过一样。你能承受住——只要竖起你的衣领就好，警探。"];
+	  64 [label="You: 我想知道的要比这个*多得多*。"];
+	  65 [label="You: 够了。这些香烟一点也不重要。"];
+	  66 [label="Kim Kitsuragi: “我没看见，警官。我没看出有人在这里开枪，然后命中了那边的某个东西……”他看向海岸的东边。“在褴褛飞旋里面。”\n“我没看出来，双重荣誉警督。我没看出一个人怎么能在*这里*开枪，然后命中那边……”他看向东边，海岸对面。“褴褛飞旋里的目标。”"];
+	  67 [label="Variable[\"coast.sense_shooter_endurance_kim_cold\"]"];
+	  68 [label="Variable[\"coast.sense_shooter_endurance_kim_cold\"]", shape=diamond];
+	  69 [label="!(Variable[\"coast.sense_shooter_endurance_kim_cold\"])", shape=diamond];
+	  70 [label="Visual Calculus: 你确定？你还没有排除子弹从这里射出来的可能性……"];
+	  71 [label="Variable[\"auto.is_raining\"]"];
+	  72 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  73 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  74 [label="viscalmaimhub"];
+	  75 [label="IsKimHere()"];
+	  76 [label="IsKimHere()", shape=diamond];
+	  77 [label="!(IsKimHere())", shape=diamond];
+	  78 [label="Kim Kitsuragi: “爬上那个梯子是不可能的，就算可能——但是为什么要这么做？上面根本就没有可以瞄准的平台。”警督抬起头，竖高了衣领。"];
+	  79 [label="Kim Kitsuragi: “绝对的白痴行为，”他点点头，承认了你表露无遗的愚蠢。"];
+	  80 [label="You: 也许这里的篝火是罪犯用过的？\n“也许这里的篝火是罪犯用过的？”"];
+	  81 [label="You: “不用什么——你不冷吗？”"];
+	  82 [label="Jump to: [viscalmaimhub]"];
+	  83 [label="Variable[\"TASK.check_lands_end_done\"]"];
+	  84 [label="Variable[\"TASK.check_lands_end_done\"]", shape=diamond];
+	  85 [label="!(Variable[\"TASK.check_lands_end_done\"])", shape=diamond];
+	  86 [label="IsNighttime()"];
+	  87 [label="IsNighttime()", shape=diamond];
+	  88 [label="!(IsNighttime())", shape=diamond];
+	  89 [label="Jump to: [viscalmaimhub]"];
+	  90 [label="Perception: 你听见碎浪在远处咆哮。"];
+	  91 [label="You: “金，你看起来很冷——要不来一顶小飞行员帽？”"];
+	  92 [label="Kim Kitsuragi: “没错，是这个意思。不要橙色的飞行员帽。”他把脸转向大海。"];
+	  93 [label="Kim Kitsuragi: “别傻了，没人想变成冰棍的。”"];
+	  94 [label="Variable[\"auto.is_raining\"]"];
+	  95 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  96 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  97 [label="Variable[\"coast.sense_shot_esprit_story\"]"];
+	  98 [label="Variable[\"coast.sense_shot_esprit_story\"]", shape=diamond];
+	  99 [label="!(Variable[\"coast.sense_shot_esprit_story\"])", shape=diamond];
+	  100 [label="Kim Kitsuragi: “不用。”"];
+	  101 [label="You: “这是我的风格。明星警探从不穿派克大衣。他们很摇滚范。”"];
+	  102 [label="Variable[\"TASK.arrest_klaasje_done\"]"];
+	  103 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  104 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  105 [label="Variable[\"auto.is_snowing\"]"];
+	  106 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  107 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  108 [label="Visual Calculus: 一个抽烟的袭击者，相比阿斯特拉或者是德鲁安，更喜欢特拜科？烟头是架设篝火的一部分——散落的到处都是。"];
+	  109 [label="IsKimHere()"];
+	  110 [label="IsKimHere()", shape=diamond];
+	  111 [label="!(IsKimHere())", shape=diamond];
+	  112 [label="Kim Kitsuragi: “在扣响扳机前先让手暖和一下？也许吧。不过这东西可能是任何人弄的。每年这个时候，海岸边到处都是火光点点的。”他四下看了看。"];
+	  113 [label="Visual Calculus: 在跨越海湾1.2公里的地方，你透过浓密的灰黑雨幕，勉强看见一个小小的长方形。"];
+	  114 [label="Visual Calculus: 褴褛飞旋的三楼闪烁着亮光。透过望远镜的镜片，你看见一个年轻女子的身影在玻璃后面移动，她的四肢纤细而修长。"];
+	  115 [label="Kim Kitsuragi: 「没错，是这个意思。不要橙色的飞行员帽。」他把脸转向大海。\n「没错，是这个意思。不要黑色的飞行员帽。」他把脸转向大海。"];
+	  116 [label="Inland Empire: 然而，你感觉它还是很重要，应该铭记于心。那意味着*某种东西*。你没有注意到海岸上的其他的烟蒂。"];
+	  117 [label="You: “要是我*想*变成冰棍呢？”"];
+	  118 [label="Visual Calculus: 它在黑夜里闪闪发光。灯是开的。卡拉洁肯定在里面……看来她遵守了自己晚上不再出门的诺言。"];
+	  119 [label="Visual Calculus: 为了在扣动扳机之前先暖和一下双手？地上没有三脚架的痕迹，他可能躺在床垫上。对于1.2公里的狙击来说，这里确实不是什么好位置。"];
+	  120 [label="Rhetoric: 不用什么？"];
+	  121 [label="Jump to: [viscalmaimhub]"];
+	  122 [label="Visual Calculus: 天色已晚。褴褛飞旋三楼的灯全都熄灭了。背后不见任何人影。卡拉洁肯定进城去了。"];
+	  123 [label="Savoir Faire: 它看起来*非常*摇摇欲坠。而且也帮不上什么忙。"];
+	  124 [label="Visual Calculus: 梯子被咸咸的海水腐蚀，变得就像两条纤细的橙色轨道。此外，这里并不是个稳定的据点，没什么用的。"];
+	  0 -> 1
+	  1 -> 40
+	  2 -> 4
+	  3 -> 76
+	  4 -> 5
+	  4 -> 6
+	  5 -> 79
+	  6 -> 125
+	  7 -> 8
+	  7 -> 9
+	  8 -> 113
+	  9 -> 120
+	  10 -> 11
+	  10 -> 12
+	  11 -> 65
+	  11 -> 66
+	  12 -> 117
+	  13 -> 14
+	  13 -> 15
+	  14 -> 56
+	  14 -> 82
+	  15 -> 49
+	  16 -> 57
+	  18 -> 75
+	  19 -> 47
+	  20 -> 41
+	  21 -> 35
+	  22 -> 18
+	  23 -> 95
+	  24 -> 122
+	  25 -> 18
+	  26 -> 103
+	  27 -> 34
+	  28 -> 59
+	  29 -> 18
+	  30 -> 47
+	  32 -> 75
+	  33 -> 42
+	  34 -> 83
+	  35 -> 103
+	  36 -> 38
+	  36 -> 39
+	  39 -> 64
+	  40 -> 10
+	  41 -> 16
+	  41 -> 118
+	  41 -> 21
+	  41 -> 102
+	  42 -> 44
+	  42 -> 45
+	  43 -> 27
+	  44 -> 36
+	  45 -> 18
+	  46 -> 75
+	  47 -> 33
+	  48 -> 33
+	  49 -> 68
+	  51 -> 75
+	  52 -> 54
+	  52 -> 55
+	  53 -> 119
+	  54 -> 123
+	  55 -> 116
+	  56 -> 83
+	  57 -> 84
+	  58 -> 52
+	  59 -> 61
+	  59 -> 62
+	  60 -> 22
+	  61 -> 87
+	  62 -> 93
+	  63 -> 91
+	  64 -> 31
+	  65 -> 19
+	  66 -> 75
+	  67 -> 69
+	  67 -> 70
+	  68 -> 28
+	  68 -> 92
+	  69 -> 124
+	  70 -> 51
+	  70 -> 29
+	  71 -> 73
+	  71 -> 74
+	  73 -> 106
+	  74 -> 2
+	  74 -> 3
+	  74 -> 81
+	  74 -> 23
+	  74 -> 58
+	  75 -> 77
+	  75 -> 78
+	  76 -> 20
+	  77 -> 109
+	  78 -> 50
+	  79 -> 83
+	  80 -> 7
+	  81 -> 48
+	  82 -> 75
+	  83 -> 85
+	  83 -> 86
+	  85 -> 71
+	  86 -> 88
+	  86 -> 89
+	  87 -> 53
+	  88 -> 115
+	  89 -> 75
+	  90 -> 110
+	  91 -> 101
+	  93 -> 83
+	  94 -> 96
+	  94 -> 97
+	  95 -> 114
+	  96 -> 43
+	  97 -> 99
+	  97 -> 100
+	  100 -> 121
+	  101 -> 80
+	  102 -> 104
+	  102 -> 105
+	  103 -> 46
+	  104 -> 60
+	  105 -> 107
+	  105 -> 108
+	  108 -> 41
+	  109 -> 112
+	  109 -> 111
+	  110 -> 67
+	  111 -> 75
+	  112 -> 24
+	  113 -> 103
+	  114 -> 26
+	  115 -> 33
+	  116 -> 47
+	  117 -> 94
+	  118 -> 30
+	  119 -> 122
+	  120 -> 13
+	  121 -> 75
+	  122 -> 26
+	  123 -> 90
+	  124 -> 124
+}
+

@@ -1,0 +1,746 @@
+# VILLAGE / LILIENNES TWINS
+# You can talk to them before and get nothing, but when you hear the twins have been to the island they tell you details about it.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Lilienne's Twin: “是的。”"];
+	  3 [label="You: “喂，你们的妈妈在哪？”"];
+	  4 [label="You: “孩子们，你们有没有在附近见到过坏人？”"];
+	  5 [label="Lilienne's Other Twin: 男孩没有回答。他的兄弟又扔了一块石头。两人的头发上都覆盖着某种污垢。"];
+	  6 [label="Lilienne's Twin: “我……”是其中一个先开始的——现在很难分清到底是哪一个——开了口。“我不知道。”"];
+	  7 [label="Jump to: [islandquestionnaire]"];
+	  8 [label="Variable[\"TASK.ask_twins_about_island\"]"];
+	  9 [label="Variable[\"TASK.ask_twins_about_island\"]", shape=diamond];
+	  10 [label="!(Variable[\"TASK.ask_twins_about_island\"])", shape=diamond];
+	  11 [label="IsKimHere()"];
+	  12 [label="IsKimHere()", shape=diamond];
+	  13 [label="!(IsKimHere())", shape=diamond];
+	  14 [label="Kim Kitsuragi: 警督笑着说道，“绕了一圈又回到菲尔德了啊。等你准备好就过去吧。”\n警督皱了皱眉，看着很不吉利地杵在那里的建筑。“线索又指回了菲尔德啊。等你准备好了我们再进去吧，警探。”"];
+	  15 [label="Jump to: [themainlyhub]"];
+	  16 [label="Lilienne's Other Twin: “脏话，”另一个孩子心不在焉地点着头说道。“很脏很脏的话……”"];
+	  17 [label="Variable[\"TASK.ask_twins_about_island\"]"];
+	  18 [label="Variable[\"TASK.ask_twins_about_island\"]", shape=diamond];
+	  19 [label="!(Variable[\"TASK.ask_twins_about_island\"])", shape=diamond];
+	  20 [label="Lilienne's Other Twin: “我不知道你在说什么，”另一个男孩也跟着点点头。"];
+	  21 [label="Jump to: [themainlyhub]"];
+	  22 [label="Variable[\"village.twins_said_kill_yourself\"]"];
+	  23 [label="Variable[\"village.twins_said_kill_yourself\"]", shape=diamond];
+	  24 [label="!(Variable[\"village.twins_said_kill_yourself\"])", shape=diamond];
+	  25 [label="Kim Kitsuragi: “灯光？火男？”警督看着你。“我们应该去那座岛上看看，还有你……”"];
+	  26 [label="You: 我不在乎。"];
+	  27 [label="Lilienne's Twin: “你很蠢，”另外一个重复到，样子还是非常严肃。"];
+	  28 [label="You: “好吧，孩子们。你们去过那个小岛，对吗？”"];
+	  29 [label="Kim Kitsuragi: 警督扬起眉头，掏出笔记本。“那就当答案是*是的*。”"];
+	  30 [label="Lilienne's Other Twin: “别这么说。他没有。”他的兄弟给了他一拳。男孩的眼睛有些湿润，好像要哭了。"];
+	  31 [label="Lilienne's Twin: “我不知道……”说话的男孩发现自己也不太确定。他看了看四周。"];
+	  32 [label="Kim Kitsuragi: “灯光？火男？”警督看着你。“我们应该去那座岛上看看。”"];
+	  33 [label="You: “嘿，孩子们。你妹妹告诉我，你们因为说脏话所以惹上麻烦了。”"];
+	  34 [label="Empathy: 警督毫无反应。"];
+	  35 [label="You: “我们继续吧。你们是在哪儿听到脏话的？是哪个海岸上的人说的吗？还是收音机里放的？”"];
+	  36 [label="You: “不是，我只是觉得这样说很好玩。”"];
+	  37 [label="You: “好了孩子们，告诉金那些声音是怎么回事吧。”"];
+	  38 [label="Lilienne's Other Twin: “就是我们听到说脏话的那个吗？”男孩耸耸肩。“好吧，那声音就像……”他挠了挠脑袋——然后似乎记了起来。"];
+	  39 [label="Lilienne's Twin: “‘时候到了，下流的狂飙怪人们！我们的兄弟要长大了！’”"];
+	  40 [label="Lilienne's Twin: “是的。”"];
+	  41 [label="Pain Threshold: 一阵隐痛闪过你的脑海。"];
+	  42 [label="You: “你们俩看起来真是一模一样。”"];
+	  43 [label="You: “小孩都很蠢。”"];
+	  44 [label="Lilienne's Twin: “那个小岛？”忙着踢石头的男孩指着海湾说道。"];
+	  45 [label="You: “他为什么让你把火扑灭呢？”"];
+	  46 [label="IsKimHere()"];
+	  47 [label="IsKimHere()", shape=diamond];
+	  48 [label="!(IsKimHere())", shape=diamond];
+	  49 [label="Jump to: [islandquestionnaire]"];
+	  50 [label="Lilienne's Twin: “很抱歉。”一个男孩对另一个说道，然后亲切地摸了摸兄弟的肩膀。"];
+	  51 [label="Lilienne's Twin: “我不知道，”他们几乎是异口同声。"];
+	  52 [label="Lilienne's Other Twin: “别这么说，他是一个*警警警警察察*，”他的兄弟低语到。"];
+	  53 [label="Lilienne's Other Twin: “我们不会的，”小一点的男孩一边说着，一边在海风中调整着帽檐。"];
+	  54 [label="Lilienne's Twin: “我们学会了，”另一个男孩回答道。"];
+	  55 [label="Lilienne's Other Twin: “‘DJ弗莱科的首张单曲来啦！系好安全带，你们闻所未闻的超高速垃圾要来了。’”"];
+	  56 [label="Electrochemistry: 来吧孩子们，你们能做到的！"];
+	  57 [label="Perception (Hearing): 这个尖锐的笑声是故意的。就好像他已经练习过很多次，明显为了惹怒别人才这么做的。"];
+	  58 [label="Lilienne's Twin: 看起来他没明白是什么意思。"];
+	  59 [label="You: “好吧。”"];
+	  60 [label="Jump to: [themainlyhub]"];
+	  61 [label="Lilienne's Other Twin: “因为他要把火扑灭！”另一个男孩解释到。"];
+	  62 [label="Lilienne's Twin: 头发蓬乱的小男孩踢着一块石头，另一个在旁边看着他。"];
+	  63 [label="Lilienne's Twin: “有一个……”男孩揉揉眼睛说道。很明显，他没打算把话说完。"];
+	  64 [label="Electrochemistry: 他干嘛要这么傻乎乎的呢？这个词多有意思啊！"];
+	  65 [label="Lilienne's Other Twin: 男孩耸耸肩。他的外套和肩膀摩擦，发出沙沙声。“我们只是听到了一些好玩的声音。”"];
+	  66 [label="Lilienne's Twin: “他不知道你在说什么，”第一个男孩大声说道。或者你以为是第一个孩子——也可能是第二个。"];
+	  67 [label="Esprit de Corps: 我是不会再跟你说第二遍的。"];
+	  68 [label="You: “你们肯定就是莉莉恩的双胞胎吧。”"];
+	  69 [label="You: “再见。”[离开。]"];
+	  70 [label="You: “我现在就走。我马上就走，再也不跟你们俩说话了。”[离开。]"];
+	  71 [label="Lilienne's Twin: 就在一秒前，第一个孩子还在笑。现在他正在嘴巴和牙齿缝里捣鼓着什么。"];
+	  72 [label="Lilienne's Other Twin: 他的兄弟看了看他，然后看着你。“是的，”他说道。"];
+	  73 [label="Lilienne's Other Twin: “还有！还有！”另一个男孩插了进来。“我们生火了。我们还……我们生火了。”"];
+	  74 [label="You: “好吧，那现在警察叔叔问你点别的事？”"];
+	  75 [label="Lilienne's Twin: “嗯……”男孩把手中的石头翻了个转。“我们听到*脏*话还跟着说出来，结果就惹了麻烦……”"];
+	  76 [label="Lilienne's Other Twin: 男孩眨了眨眼。“次奥……”他努力想挤出这个字，可是却说不出口。"];
+	  77 [label="You: “脏话不好，不要说脏话，孩子们。说脏话就是走向犯罪的第一步。”"];
+	  78 [label="Jump to: [Lilienne's Other Twin: \"\"We just heard funny voices.\" The b...\"]"];
+	  79 [label="IsKimHere()"];
+	  80 [label="IsKimHere()", shape=diamond];
+	  81 [label="!(IsKimHere())", shape=diamond];
+	  82 [label="Lilienne's Twin: 男孩捡起一块尖锐的石头，在地上划出一道白色痕迹。"];
+	  83 [label="You: “是啊。但是你听到了什么呢？”"];
+	  84 [label="Electrochemistry: 他为什么非得这么假正经？就是个好玩的词罢了！"];
+	  85 [label="You: “我听说你们有时候会去那栋废弃的菲尔德大厦玩？”"];
+	  86 [label="You: “*你*知道我在说什么吗？”"];
+	  87 [label="Conceptualization: 真的有两个小男孩吗？你确定不是产生了幻觉？看成了两个人？"];
+	  88 [label="Empathy: 看起来他很*伤心*。因为你要走了，或者……谁又能真的知道呢？"];
+	  89 [label="You: “是吗？”"];
+	  90 [label="Logic: 哇哦，在智力上真是太刺激了。"];
+	  91 [label="Variable[\"reputation.suicide_cop\"] >= 2"];
+	  92 [label="Variable[\"reputation.suicide_cop\"] >= 2", shape=diamond];
+	  93 [label="!(Variable[\"reputation.suicide_cop\"] >= 2)", shape=diamond];
+	  94 [label="Jump to: [themainlyhub]"];
+	  95 [label="Variable[\"village.twins_inland_mysterious_laugh\"]"];
+	  96 [label="Variable[\"village.twins_inland_mysterious_laugh\"]", shape=diamond];
+	  97 [label="!(Variable[\"village.twins_inland_mysterious_laugh\"])", shape=diamond];
+	  98 [label="You: “为什么他是*火*男呢？”"];
+	  99 [label="You: “还能告诉我点别的吗？这个家伙长什么样？”"];
+	  100 [label="Lilienne's Other Twin: 男孩皱了皱眉。“我不知道这好玩在哪儿……”"];
+	  101 [label="Kim Kitsuragi: 警督的眼睛比平时瞪得还大。他清了清嗓子，然后说，“完事以后有话和你说。”"];
+	  102 [label="Lilienne's Other Twin: 一个男孩捡起一块石头。而另一个男孩则对着你眨眼睛。"];
+	  103 [label="You: “等等，你的意思是*弹壳*吗？”"];
+	  104 [label="Authority: 那我们*绝对*要这么做。"];
+	  105 [label="Jump to: [themainlyhub]"];
+	  106 [label="Lilienne's Twin: “嗯。我们的妈妈是莉莉，”其中一个双胞胎说道。"];
+	  107 [label="Lilienne's Twin: “不，他不在那里住。我不觉得。”"];
+	  108 [label="Lilienne's Twin: “啊哈！”一个孩子一边叫着，一边将石头扔向沙地。"];
+	  109 [label="IsKimHere()"];
+	  110 [label="IsKimHere()", shape=diamond];
+	  111 [label="!(IsKimHere())", shape=diamond];
+	  112 [label="Jump to: [themainlyhub]"];
+	  113 [label="You: “哈！我就知道！”"];
+	  114 [label="Lilienne's Twin: “哦……”男孩看上去有些不安，顺着防波堤的方向看着他的母亲。"];
+	  115 [label="Lilienne's Other Twin: “我们听到的不是这个字。我们听到的是别的脏话……”"];
+	  116 [label="You: “你没有在帮我……”"];
+	  117 [label="Lilienne's Twin: 男孩止住了笑声，看着自己的脚趾头发呆。"];
+	  118 [label="Variable[\"TASK.ask_twins_about_island\"]"];
+	  119 [label="Variable[\"TASK.ask_twins_about_island\"]", shape=diamond];
+	  120 [label="!(Variable[\"TASK.ask_twins_about_island\"])", shape=diamond];
+	  121 [label="Jump to: [islandquestionnaire]"];
+	  122 [label="Kim Kitsuragi: “还能告诉我点别的吗？这个家伙长什么样？”"];
+	  123 [label="Variable[\"village.twin_volition_just_said_grats\"]"];
+	  124 [label="Variable[\"village.twin_volition_just_said_grats\"]", shape=diamond];
+	  125 [label="!(Variable[\"village.twin_volition_just_said_grats\"])", shape=diamond];
+	  126 [label="Lilienne's Other Twin: “我们听到的不是这个字。我们听到的是别的脏话……”"];
+	  127 [label="You: “你们是在哪儿听到声音的？是有人在说话吗？还是从收音机里听到的？”"];
+	  128 [label="Lilienne's Other Twin: 男孩摇了摇头。“不是，就只是有人说话说得很快。”"];
+	  129 [label="Lilienne's Other Twin: “你知道吗，”他用冻得通红的手指指着自己的脑袋。“我在脑子里听见有人说话！”"];
+	  130 [label="Lilienne's Twin: “‘把音量调到最大，让喇叭炸裂。接下来——’”"];
+	  131 [label="Lilienne's Other Twin: 菲尔德大厦在高空中若隐若现。另一个孩子点点头。“我们当时就在那儿。”"];
+	  132 [label="Lilienne's Other Twin: 男孩把手中的石头翻了过来。他看了看你，看了看自己的哥哥，然后又看了看你。"];
+	  133 [label="Composure: 你的举止应该表现得有威严。没必要当着孩子爆粗口。"];
+	  134 [label="Variable[\"TASK.ask_the_wind_done\"]"];
+	  135 [label="Variable[\"TASK.ask_the_wind_done\"]", shape=diamond];
+	  136 [label="!(Variable[\"TASK.ask_the_wind_done\"])", shape=diamond];
+	  137 [label="Half Light: 一个很可疑的请求。因为害怕吗？"];
+	  138 [label="Jump to: [islandquestionnaire]"];
+	  139 [label="Lilienne's Twin: 踢石头的男孩突然笑了起来。对于他的肩膀来说，他的脑袋有些太大了。"];
+	  140 [label="Lilienne's Twin: 男孩还在笑个不停。然后他弯下腰去查看那块石头，仿佛有什么很值得注意的地方。"];
+	  141 [label="Lilienne's Twin: “因为……因为……”男孩停下来想了想。"];
+	  142 [label="Lilienne's Other Twin: “不，他住在那里。”另一个男孩点点头。“他去过两次，两次。”"];
+	  143 [label="Lilienne's Twin: “呃……”第一个男孩停下来想了想，然后得出了某种结论。“他不住在那里。他有时候不在。”"];
+	  144 [label="Jump to: [themainlyhub]"];
+	  145 [label="Volition: 多么令人羞愧又失望啊。"];
+	  146 [label="You: “好吧，你听见什么了？”"];
+	  147 [label="Variable[\"plaza.kineema_radio_speedfreaks\"] == true"];
+	  148 [label="Variable[\"plaza.kineema_radio_speedfreaks\"] == true", shape=diamond];
+	  149 [label="!(Variable[\"plaza.kineema_radio_speedfreaks\"] == true)", shape=diamond];
+	  150 [label="Lilienne's Other Twin: “不要！”双胞胎哥哥突然惊声打断弟弟的话。“别说脏话，蠢货！”"];
+	  151 [label="You: “我又回来了，菲尔德。”"];
+	  152 [label="You: “谢了，孩子们。”"];
+	  153 [label="Logic: 等等！先等等。我支持这个说法。可什么是*脏话*？"];
+	  154 [label="Lilienne's Other Twin: “次奥……”另一个男孩试着说道。他不解地看向他的哥哥，然后又望向你。“这个字是什么意思？”"];
+	  155 [label="Jump to: [themainlyhub]"];
+	  156 [label="Lilienne's Twin: “菲尔德大厦是什么？”其中一个男孩耸耸肩，问到。"];
+	  157 [label="Lilienne's Twin: “我不知道那些是什么……”"];
+	  158 [label="Composure: 踢石头的男孩有些*害羞*，不过现在又热情了起来。"];
+	  159 [label="You: “我需要你把知道的事情都告诉我——那个小岛*上面*有什么？”"];
+	  160 [label="Lilienne's Twin: 其中一个男孩点点头，另外一个看着自己的兄弟，耸了耸肩。"];
+	  161 [label="Jump to: [themainlyhub]"];
+	  162 [label="IsKimHere()"];
+	  163 [label="IsKimHere()", shape=diamond];
+	  164 [label="!(IsKimHere())", shape=diamond];
+	  165 [label="You: “孩子们，最近发生过什么*奇怪的*事情吗？”"];
+	  166 [label="Lilienne's Twin: 男孩把手中的石头翻了个转。“有啊。我们听到*脏*话还跟着说出来，结果就惹了麻烦……”"];
+	  167 [label="Horrific Necktie: 肯定会很搞笑的，兄弟！放飞自我吧！说*操*！"];
+	  168 [label="IsKimHere()"];
+	  169 [label="IsKimHere()", shape=diamond];
+	  170 [label="!(IsKimHere())", shape=diamond];
+	  171 [label="You: “你们脑子里的声音？像是那种讯息传输的杂音吗？”"];
+	  172 [label="Esprit de Corps: 在瑞瓦肖的某处，警督打开了收音机。他的脑袋伴随着激烈的旋律摇摆着。他可得听听这个故事。"];
+	  173 [label="Drama: 今天这两个小流氓给我们献上了多——么精彩绝伦的表演啊！这一定会成为最美好的记忆！也许他们的双簧能在表演艺术上获得重大成就。"];
+	  174 [label="You: “你们家族有精神分裂史吗？”"];
+	  175 [label="Logic: 弹壳？战争期间留下了很多——不过这个也许很重要。"];
+	  176 [label="Lilienne's Twin: 男孩没有回应，一心一意沉浸在自己的小游戏里。"];
+	  177 [label="Jump to: [themainlyhub]"];
+	  178 [label="Lilienne's Twin: 头发蓬乱的小男孩踢着一块石头。他应该没超过5岁。"];
+	  179 [label="IsKimHere()"];
+	  180 [label="IsKimHere()", shape=diamond];
+	  181 [label="!(IsKimHere())", shape=diamond];
+	  182 [label="You: “你只知道这么多吗？关于那座小岛，你还能告诉我些别的事吗？”（总结。）"];
+	  183 [label="You: 什么也不说。"];
+	  184 [label="Jump to: [IsKimHere()]"];
+	  185 [label="IsKimHere()"];
+	  186 [label="IsKimHere()", shape=diamond];
+	  187 [label="!(IsKimHere())", shape=diamond];
+	  188 [label="Jump to: [islandquestionnaire]"];
+	  189 [label="Kim Kitsuragi: “没关系。怎么了？你们是在哪儿听到脏话的？是哪个海岸上的人说的吗？还是收音机里放的？”"];
+	  190 [label="Lilienne's Other Twin: “资产……什么？”男孩轻轻地向石塔丢了一块石头，可是却没砸中。“那是脏话吗？”"];
+	  191 [label="Lilienne's Twin: 男孩指向旁边的一座破损的建筑。“就在那儿。”"];
+	  192 [label="You: “不是，和我说说你听到了什么吧。”"];
+	  193 [label="Lilienne's Twin: “哈哈，我不知道你在说什么。”其中一个男孩耸耸肩，笑了起来。"];
+	  194 [label="Logic: 你永远也得不到一个答案。这些小白痴就这样了。"];
+	  195 [label="Jump to: [themainlyhub]"];
+	  196 [label="Jump to: [themainlyhub]"];
+	  197 [label="IsKimHere()"];
+	  198 [label="IsKimHere()", shape=diamond];
+	  199 [label="!(IsKimHere())", shape=diamond];
+	  200 [label="Lilienne's Other Twin: 另一个男孩摇摇头。“不，你知道的，我们真的不能跟陌生人说话。”"];
+	  201 [label="You: “再见。”[离开。]"];
+	  202 [label="Logic: 这里没有*方法*可言。"];
+	  203 [label="Variable[\"village.twins_logic_something_else\"]"];
+	  204 [label="Variable[\"village.twins_logic_something_else\"]", shape=diamond];
+	  205 [label="!(Variable[\"village.twins_logic_something_else\"])", shape=diamond];
+	  206 [label="Lilienne's Twin: “那个……呃……没什么？”男孩停下来思考着，手指头还放在嘴巴里。“只是一座海堡，还有些植物。你可以乘木筏过去。那里很棒的。”"];
+	  207 [label="You: “你提到了*灯光*？”"];
+	  208 [label="Lilienne's Twin: “请不要……”男孩看着你，两只眼睛有些湿润，又黑又圆。风吹乱了他的头发。\n男孩看着你，两只眼睛有些湿润，又黑又圆。风吹乱了他的头发。"];
+	  209 [label="Logic: 这两件事*毫无关联*。你的问题没有任何意义。"];
+	  210 [label="Electrochemistry: 说*操*。肯定会很搞笑的。"];
+	  211 [label="Variable[\"village.twins_electrochem_said_to_swear\"]"];
+	  212 [label="Variable[\"village.twins_electrochem_said_to_swear\"]", shape=diamond];
+	  213 [label="!(Variable[\"village.twins_electrochem_said_to_swear\"])", shape=diamond];
+	  214 [label="Lilienne's Other Twin: 男孩对你眨了眨眼。“那是脏话吗？”"];
+	  215 [label="Kim Kitsuragi: “我不觉得在没有家长陪同的情况下询问一个4岁大的小孩会对破案有所帮助，”警督说道。"];
+	  216 [label="Lilienne's Other Twin: “我们的妈妈是莉莉，”另一个男孩解释到，舌头还没收回去。"];
+	  217 [label="Inland Empire: 也许他们笑是有原因的？一个跟案子有关的有趣原因！"];
+	  218 [label="Lilienne's Other Twin: “他看起来跟我一样，”另一个男孩说道。"];
+	  219 [label="You: “是啊，我说过了。”"];
+	  220 [label="Kim Kitsuragi: “别担心，大家都一样。”他看了看小脏娃，然后看着你。“不如我们做点实际的警察工作吧？我们从这里问不出什么的。”"];
+	  221 [label="Kim Kitsuragi: “你说得对。”他看了看小脏娃，然后看着你。“让我们看看能不能找到实际的警察工作，怎么样？我们从这里问不出什么的。”"];
+	  222 [label="You: “再见。”[离开。]"];
+	  223 [label="Lilienne's Twin: “嗯，”他的兄弟点点头。“收集树枝生火——还有子弹。或者，不是真正的子弹，是空子弹。”"];
+	  224 [label="islandquestionnaire"];
+	  225 [label="Lilienne's Twin: “好的。”头发蓬乱的小男孩眯起眼睛看着你。"];
+	  226 [label="You: “他是自杀了。”"];
+	  227 [label="You: “关于那个*家伙*，你还有什么能告诉我的吗？比如年龄？他是住在那里吗？”"];
+	  228 [label="Lilienne's Twin: “哦……”男孩看上去有些不安，顺着防波堤的方向看着他的母亲。"];
+	  229 [label="Lilienne's Other Twin: “‘DJ麦斯的首张单曲来啦！系好安全带，你们闻所未闻的超高速垃圾要来了。’”"];
+	  230 [label="You: “操才是脏话，记住了吗？和我说说你听到了什么吧。”"];
+	  231 [label="Lilienne's Other Twin: 另一个点点头。“他不知道你在说什么。”"];
+	  232 [label="Lilienne's Twin: 其中一个男孩抬起头，嘴巴微微张开。“什么坏人？”他问到。"];
+	  233 [label="You: “是的，就是那个。我需要知道那里有什么。”"];
+	  234 [label="Variable[\"village.twins_hub_reached\"]"];
+	  235 [label="Variable[\"village.twins_hub_reached\"]", shape=diamond];
+	  236 [label="!(Variable[\"village.twins_hub_reached\"])", shape=diamond];
+	  237 [label="Lilienne's Twin: “那里有灯光。火男来了，告诉我们把火熄灭。”"];
+	  238 [label="Rhetoric: 他们肯定说的是一个人类。在那座小岛上吗？但那里早就已经废弃了……"];
+	  239 [label="Jump to: [themainlyhub]"];
+	  240 [label="Lilienne's Other Twin: “别*哭*，”他的兄弟说道，接着，他小声补充了一句：“对不起。”"];
+	  241 [label="Variable[\"village.twins_electrochem_said_to_swear\"]"];
+	  242 [label="Variable[\"village.twins_electrochem_said_to_swear\"]", shape=diamond];
+	  243 [label="!(Variable[\"village.twins_electrochem_said_to_swear\"])", shape=diamond];
+	  244 [label="Volition: 你真棒。我知道你想大喊一声*操*，可是你忍住了。非常好。"];
+	  245 [label="Lilienne's Twin: 双胞胎哥哥点点头。“我们觉得那声音很好玩。我们就跟着声音学了起来，结果遇上了麻烦……”"];
+	  246 [label="Conceptualization: 这可能吗？难道他们的大脑运作都一样？"];
+	  247 [label="Lilienne's Twin: “啊……”他挠了挠脑袋，看向双胞胎哥哥，哥哥点了点头——他便说道，“比如……‘时候到了，下流的狂飙怪人们！我们的兄弟要长大了！’”"];
+	  248 [label="You: “再见。”[离开。]"];
+	  249 [label="You: “你们在笑什么呢？”"];
+	  250 [label="Kim Kitsuragi: “也许我是呢？”他咧嘴一笑。“现在，不如做点实际的警察工作吧？我们从这里问不出什么的。”"];
+	  251 [label="You: “不是，其他小岛。*当然*是那个啦。”"];
+	  252 [label="Lilienne's Twin: “呃……我不知道，他不喜欢……他不喜欢那里有人……你不应该过去。”"];
+	  253 [label="Kim Kitsuragi: “你的意思是那里有*电*灯吗？”他指向街灯。"];
+	  254 [label="Reaction Speed: 听他提起一个*男人*，你的神经末梢就开始*刺痛*。"];
+	  255 [label="Variable[\"TASK.ask_twins_about_island_done\"]"];
+	  256 [label="Variable[\"TASK.ask_twins_about_island_done\"]", shape=diamond];
+	  257 [label="!(Variable[\"TASK.ask_twins_about_island_done\"])", shape=diamond];
+	  258 [label="Lilienne's Twin: “也许*你*是很蠢！”"];
+	  259 [label="Untitled hub (06)"];
+	  260 [label="Electrochemistry: 好好宣传一下吧，兄弟！把*操*这个字眼传遍全城！"];
+	  261 [label="Lilienne's Twin: “收音机？那是什么东西？”男孩吸了吸鼻涕。“我们直接听到的。在我们脑子里。”"];
+	  262 [label="Reaction Speed: 你突然想起自己以前好像听过这种机关枪似的快节奏飙话。"];
+	  263 [label="Inland Empire: 来自另一个自己的声音？来自*内心深处自己*的声音？来自……*早期精神分裂症*的声音？"];
+	  264 [label="You: “那个我已经说过了。”"];
+	  265 [label="Lilienne's Other Twin: “你很蠢，”另外一个突然严肃地告诉他。"];
+	  266 [label="You: “再见。”[离开。]"];
+	  267 [label="You: “嗯。”（点头赞同。）"];
+	  268 [label="Jump to: [themainlyhub]"];
+	  269 [label="fatheringhub"];
+	  270 [label="Lilienne's Twin: “我不会*哭*的，”眼泪都快掉下来的男孩厉声说道，重新控制住了自己颤抖的下巴。"];
+	  271 [label="You: “操。”"];
+	  272 [label="You: “资产阶级吗？对，这算是最恶劣的脏话了吧，孩子。”"];
+	  273 [label="Kim Kitsuragi: “我明白了。”虽然警督的语气很冷静，但是他的眼睛因为吃惊而瞪得很大。“谢谢你，你搞定了之后我有话和你说，警探。”"];
+	  274 [label="You: “这是个谜，你们得自己找出谜底。”"];
+	  275 [label="Variable[\"village.twins_anti_logic_bad_words_what\"]"];
+	  276 [label="Variable[\"village.twins_anti_logic_bad_words_what\"]", shape=diamond];
+	  277 [label="!(Variable[\"village.twins_anti_logic_bad_words_what\"])", shape=diamond];
+	  278 [label="Untitled hub"];
+	  279 [label="Jump to: [themainlyhub]"];
+	  280 [label="Rhetoric: 理解小孩语言中的秘密这项技能，很久以前你就已经失去了。"];
+	  281 [label="Lilienne's Twin: 男孩什么也没说，只是用破烂的球鞋踢着混凝土块。"];
+	  282 [label="IsKimHere()"];
+	  283 [label="IsKimHere()", shape=diamond];
+	  284 [label="!(IsKimHere())", shape=diamond];
+	  285 [label="Savoir Faire: 因为他不想被发现。烟雾的痕迹……"];
+	  286 [label="Lilienne's Twin: “我们的爸爸自杀了。”"];
+	  287 [label="Lilienne's Other Twin: “我们……我们跑了。他只是大喊着我们不应该去那里。”"];
+	  288 [label="You: “你们说‘在你们的脑子里听见’是什么意思？”"];
+	  289 [label="You: “真是挺快的啊，孩子们——你们是在哪儿听到这些声音的？”"];
+	  290 [label="Lilienne's Twin: “我不知道你在说什么。”男孩把手深深地插进口袋里，又踢走了一块石头。"];
+	  291 [label="Half Light: 哦，好吧。所以现在他*害羞*了。他不再说话，只是晃来晃去的，似乎在害怕什么。"];
+	  292 [label="Lilienne's Twin: “是的。”"];
+	  293 [label="You: “再见了，孩子们，保重哦。”[离开。]"];
+	  294 [label="Lilienne's Twin: “哈哈，”头发蓬乱的小男孩笑了，似乎表示同意。"];
+	  295 [label="Kim Kitsuragi: “你很不擅长应付小孩子，”警督评论到，样子明摆着很高兴。"];
+	  296 [label="You: “是的，没错。”"];
+	  297 [label="You: “你这也太*随便*了吧！”"];
+	  298 [label="Lilienne's Twin: “没有，”男孩拼命摇头回答到。"];
+	  299 [label="Lilienne's Other Twin: “是的，”另一个男孩简短地补充了一句，双手贴在身体两侧，像个小锡兵一样站的笔直。"];
+	  300 [label="Lilienne's Other Twin: “好吧。”他的兄弟替他做出了回答。"];
+	  301 [label="Lilienne's Twin: “呃……是的。”男孩看着自己的脚趾头。"];
+	  302 [label="You: “然后呢？”"];
+	  303 [label="Kim Kitsuragi: “闭嘴。”警督用胳膊肘撞了一下你的肋骨，然后转向男孩……"];
+	  304 [label="You: “你知道吗，自杀其实没什么问题。我就打算把自己的脑袋打爆。等结束最后这个案子之后，然后就*嘣*——我就滚蛋了。”"];
+	  305 [label="Lilienne's Twin: 另一个男孩挺直了背后。“我不会*哭*的，蠢货，”他重新控制住自己颤抖的下巴，厉声说道。"];
+	  306 [label="Lilienne's Other Twin: 另一个男孩看着他，眉毛拧成了一个结。“这跟你一点关系都没有。爸爸不是火男。”"];
+	  307 [label="Jump to: [Lilienne's Other Twin: \"The other watches him, brows knitte...\"]"];
+	  308 [label="Empathy: 男孩们现在看上去不太高兴了。"];
+	  309 [label="You: “脏话？这是什么资产阶级的心态，非要觉得*工人阶级的话*是脏话？”"];
+	  310 [label="You: “再见。”[离开。]"];
+	  311 [label="Lilienne's Other Twin: 另一个看起来跟他几乎一模一样。他看着自己的兄弟踢着石头，舌头从嘴巴里伸了出来。"];
+	  312 [label="themainlyhub"];
+	  313 [label="Lilienne's Other Twin: 另一个也跟着笑了。"];
+	  314 [label="Lilienne's Twin: 踢石头的男孩突然慌了神，似乎有什么东西吓着他了——你刚才陈述的那个显而易见的事实。"];
+	  315 [label="You: “你爸爸以前去过那座小岛，对吧？”"];
+	  316 [label="You: “你爸爸没有自杀。”"];
+	  317 [label="Kim Kitsuragi: “别打你的兄弟……拜托。别哭。我们还有问题要问呢。”"];
+	  318 [label="You: “为什么？”"];
+	  319 [label="You: “是脏话，最糟糕的话。”"];
+	  320 [label="You: “好吧，发生什么事了？”"];
+	  321 [label="Authority: 安静些，拼图脸，现在是紧急情况！如果我们要温习一下所有的*脏话*，那只会更想在*孩子*面前爆粗口。我们可*不想*那样。"];
+	  322 [label="Electrochemistry: 传播它吧，兄弟！把*他妈的*这么优秀的词传遍整个小镇！"];
+	  323 [label="Lilienne's Other Twin: “不，我们哪里也没去，”另一个嘟囔着。"];
+	  324 [label="You: “小莉莉是你妹妹吗？”（指向房子。）"];
+	  325 [label="You: “就这些？就这么简洁的吗？”"];
+	  326 [label="Physical Instrument: 踢石头根本不算什么高水准。所有人都做得到。"];
+	  327 [label="Kim Kitsuragi: 他小声说道：“在小孩子面前，控制一下你那套*黑色幽默*，好吗？”"];
+	  328 [label="You: “坏人。犯人。危险的女人。”"];
+	  329 [label="You: “*擅长*应付小孩是不可能的，他们太蠢了。”"];
+	  330 [label="You: “那你呢，孩子王？”"];
+	  331 [label="You: “有人住在岛上吗？”"];
+	  332 [label="Jump to: [themainlyhub]"];
+	  333 [label="Lilienne's Twin: 男孩皱了皱眉。“别再说脏话了！”"];
+	  334 [label="Lilienne's Twin: “‘调大音量，让喇叭炸裂吧。接下来——’”"];
+	  335 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  336 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  337 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  0 -> 1
+	  1 -> 235
+	  2 -> 59
+	  2 -> 326
+	  3 -> 176
+	  4 -> 233
+	  5 -> 158
+	  6 -> 46
+	  7 -> 225
+	  8 -> 9
+	  8 -> 10
+	  9 -> 160
+	  10 -> 315
+	  11 -> 12
+	  11 -> 13
+	  12 -> 304
+	  13 -> 209
+	  14 -> 132
+	  15 -> 313
+	  16 -> 211
+	  17 -> 18
+	  17 -> 19
+	  18 -> 156
+	  19 -> 291
+	  20 -> 249
+	  20 -> 116
+	  21 -> 313
+	  22 -> 24
+	  22 -> 23
+	  23 -> 25
+	  24 -> 32
+	  25 -> 328
+	  26 -> 140
+	  27 -> 281
+	  28 -> 44
+	  29 -> 7
+	  30 -> 91
+	  31 -> 307
+	  32 -> 333
+	  33 -> 166
+	  34 -> 84
+	  35 -> 78
+	  36 -> 100
+	  37 -> 38
+	  38 -> 39
+	  39 -> 230
+	  40 -> 89
+	  40 -> 59
+	  41 -> 270
+	  42 -> 8
+	  43 -> 256
+	  44 -> 234
+	  44 -> 252
+	  45 -> 253
+	  46 -> 48
+	  46 -> 47
+	  47 -> 254
+	  48 -> 49
+	  49 -> 225
+	  50 -> 121
+	  51 -> 319
+	  52 -> 144
+	  53 -> 54
+	  54 -> 242
+	  55 -> 335
+	  56 -> 154
+	  57 -> 87
+	  58 -> 280
+	  59 -> 293
+	  60 -> 313
+	  61 -> 7
+	  62 -> 313
+	  63 -> 162
+	  65 -> 246
+	  66 -> 20
+	  67 -> 333
+	  68 -> 118
+	  70 -> 71
+	  71 -> 88
+	  72 -> 283
+	  73 -> 224
+	  74 -> 226
+	  75 -> 16
+	  76 -> 56
+	  77 -> 53
+	  78 -> 65
+	  79 -> 80
+	  79 -> 81
+	  80 -> 101
+	  81 -> 172
+	  82 -> 112
+	  83 -> 248
+	  84 -> 309
+	  85 -> 17
+	  86 -> 66
+	  87 -> 196
+	  88 -> 203
+	  89 -> 2
+	  90 -> 327
+	  91 -> 92
+	  91 -> 93
+	  92 -> 41
+	  93 -> 270
+	  94 -> 313
+	  95 -> 96
+	  95 -> 97
+	  96 -> 250
+	  96 -> 26
+	  97 -> 90
+	  98 -> 141
+	  99 -> 51
+	  100 -> 242
+	  101 -> 82
+	  102 -> 15
+	  103 -> 157
+	  104 -> 177
+	  105 -> 313
+	  106 -> 269
+	  107 -> 142
+	  108 -> 109
+	  109 -> 110
+	  109 -> 111
+	  110 -> 14
+	  111 -> 15
+	  112 -> 313
+	  113 -> 108
+	  114 -> 115
+	  115 -> 78
+	  116 -> 193
+	  117 -> 292
+	  118 -> 120
+	  118 -> 119
+	  119 -> 106
+	  120 -> 282
+	  121 -> 225
+	  122 -> 51
+	  123 -> 124
+	  123 -> 125
+	  124 -> 145
+	  125 -> 76
+	  126 -> 78
+	  127 -> 262
+	  128 -> 146
+	  129 -> 146
+	  130 -> 274
+	  131 -> 152
+	  131 -> 113
+	  131 -> 151
+	  132 -> 15
+	  133 -> 153
+	  134 -> 136
+	  134 -> 135
+	  137 -> 7
+	  138 -> 225
+	  139 -> 314
+	  140 -> 60
+	  141 -> 61
+	  142 -> 143
+	  143 -> 185
+	  144 -> 313
+	  145 -> 76
+	  146 -> 248
+	  147 -> 148
+	  147 -> 149
+	  148 -> 263
+	  149 -> 55
+	  150 -> 173
+	  151 -> 108
+	  152 -> 108
+	  153 -> 276
+	  154 -> 168
+	  155 -> 313
+	  156 -> 324
+	  157 -> 268
+	  157 -> 303
+	  158 -> 179
+	  159 -> 207
+	  160 -> 240
+	  161 -> 313
+	  162 -> 163
+	  162 -> 164
+	  163 -> 22
+	  164 -> 333
+	  165 -> 75
+	  166 -> 16
+	  167 -> 133
+	  168 -> 169
+	  168 -> 170
+	  169 -> 189
+	  170 -> 320
+	  170 -> 275
+	  171 -> 128
+	  172 -> 82
+	  173 -> 79
+	  174 -> 215
+	  175 -> 279
+	  176 -> 94
+	  177 -> 313
+	  178 -> 312
+	  179 -> 180
+	  179 -> 181
+	  180 -> 296
+	  181 -> 105
+	  182 -> 63
+	  183 -> 50
+	  184 -> 11
+	  185 -> 186
+	  185 -> 187
+	  186 -> 122
+	  187 -> 99
+	  188 -> 225
+	  189 -> 34
+	  190 -> 273
+	  190 -> 36
+	  191 -> 131
+	  192 -> 248
+	  193 -> 57
+	  194 -> 60
+	  195 -> 313
+	  196 -> 313
+	  197 -> 198
+	  197 -> 199
+	  198 -> 216
+	  199 -> 329
+	  200 -> 177
+	  202 -> 204
+	  203 -> 205
+	  203 -> 206
+	  204 -> 298
+	  204 -> 267
+	  205 -> 195
+	  206 -> 73
+	  207 -> 6
+	  208 -> 241
+	  209 -> 138
+	  210 -> 212
+	  211 -> 213
+	  211 -> 214
+	  212 -> 336
+	  213 -> 260
+	  214 -> 192
+	  214 -> 83
+	  214 -> 231
+	  215 -> 104
+	  216 -> 265
+	  216 -> 202
+	  217 -> 95
+	  218 -> 220
+	  218 -> 69
+	  219 -> 5
+	  220 -> 105
+	  221 -> 105
+	  223 -> 175
+	  224 -> 98
+	  224 -> 228
+	  224 -> 332
+	  224 -> 45
+	  224 -> 208
+	  224 -> 182
+	  224 -> 316
+	  225 -> 161
+	  226 -> 184
+	  227 -> 107
+	  228 -> 323
+	  229 -> 130
+	  230 -> 248
+	  231 -> 86
+	  231 -> 311
+	  232 -> 197
+	  233 -> 207
+	  234 -> 236
+	  234 -> 237
+	  235 -> 62
+	  236 -> 178
+	  237 -> 255
+	  238 -> 225
+	  239 -> 313
+	  240 -> 306
+	  241 -> 243
+	  241 -> 244
+	  242 -> 245
+	  243 -> 35
+	  244 -> 272
+	  244 -> 35
+	  245 -> 127
+	  246 -> 264
+	  247 -> 147
+	  249 -> 117
+	  250 -> 105
+	  251 -> 301
+	  252 -> 300
+	  253 -> 302
+	  254 -> 239
+	  255 -> 257
+	  255 -> 258
+	  256 -> 259
+	  257 -> 295
+	  258 -> 52
+	  259 -> 272
+	  259 -> 321
+	  259 -> 77
+	  259 -> 310
+	  261 -> 247
+	  262 -> 55
+	  263 -> 289
+	  263 -> 171
+	  263 -> 174
+	  264 -> 139
+	  265 -> 74
+	  265 -> 70
+	  265 -> 223
+	  267 -> 238
+	  268 -> 313
+	  269 -> 305
+	  269 -> 227
+	  269 -> 317
+	  269 -> 183
+	  270 -> 308
+	  271 -> 123
+	  272 -> 334
+	  273 -> 102
+	  274 -> 114
+	  275 -> 277
+	  275 -> 278
+	  276 -> 322
+	  277 -> 260
+	  278 -> 268
+	  278 -> 303
+	  278 -> 103
+	  279 -> 313
+	  280 -> 195
+	  281 -> 217
+	  282 -> 284
+	  282 -> 285
+	  283 -> 29
+	  284 -> 7
+	  285 -> 137
+	  286 -> 30
+	  287 -> 188
+	  288 -> 129
+	  289 -> 191
+	  290 -> 232
+	  291 -> 194
+	  292 -> 21
+	  294 -> 266
+	  295 -> 297
+	  295 -> 330
+	  295 -> 331
+	  296 -> 221
+	  297 -> 27
+	  298 -> 72
+	  299 -> 286
+	  300 -> 159
+	  301 -> 49
+	  302 -> 238
+	  303 -> 318
+	  304 -> 11
+	  305 -> 308
+	  306 -> 210
+	  307 -> 307
+	  308 -> 126
+	  309 -> 190
+	  311 -> 313
+	  312 -> 33
+	  312 -> 290
+	  312 -> 3
+	  312 -> 4
+	  312 -> 37
+	  312 -> 165
+	  312 -> 68
+	  312 -> 325
+	  312 -> 294
+	  312 -> 42
+	  312 -> 43
+	  312 -> 85
+	  312 -> 28
+	  313 -> 218
+	  314 -> 219
+	  315 -> 287
+	  316 -> 31
+	  317 -> 271
+	  318 -> 288
+	  319 -> 229
+	  320 -> 65
+	  321 -> 260
+	  322 -> 309
+	  323 -> 155
+	  324 -> 40
+	  325 -> 58
+	  326 -> 60
+	  327 -> 67
+	  328 -> 200
+	  329 -> 222
+	  330 -> 251
+	  331 -> 299
+	  332 -> 313
+	  333 -> 242
+	  334 -> 150
+	  335 -> 337
+	  335 -> 338
+	  336 -> 167
+	  337 -> 133
+}
+

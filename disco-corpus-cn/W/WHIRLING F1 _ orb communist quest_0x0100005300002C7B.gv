@@ -1,0 +1,56 @@
+# WHIRLING F1 / orb communist quest
+# Orb for wondering whether the Hardies are a communist cell. PART OF THE COMMUNIST DREAM QUEST.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Titus Hardie: 而坐在餐桌另一端的提图斯·哈迪冷漠地盯着你，让你很想赶紧离开餐厅。"];
+	  3 [label="You: 什么意思？他们不是艾弗拉特的人吗？"];
+	  4 [label="You: 好吧，我可能得去别的地方看看了。[离开。]"];
+	  5 [label="Glen: 不，他们没有。格伦揉着自己被擦伤的指关节，仿佛是受了很重的伤……"];
+	  6 [label="Shanky: 一个面容瘦削而可憎、身体像小孩一样的小个子男人……"];
+	  7 [label="Variable[\"whirling.hardie_hub_reached\"]"];
+	  8 [label="Variable[\"whirling.hardie_hub_reached\"]", shape=diamond];
+	  9 [label="!(Variable[\"whirling.hardie_hub_reached\"])", shape=diamond];
+	  10 [label="You: 那我们走吧。[离开。]"];
+	  11 [label="You: 那我们走吧。[离开。]"];
+	  12 [label="Fat Angus: 与此同时，胖子安格斯一直鬼鬼祟祟看着你，心神不宁地喃喃自语……"];
+	  13 [label="You: 你是什么意思？他们是谁？"];
+	  14 [label="Untitled hub"];
+	  15 [label="Rhetoric: 你也许不认识他们，但他们似乎都知道*你*是谁……"];
+	  16 [label="Alain: 他脸上的这副表情，你曾经在一群老练的强盗和杀手脸上看到过。"];
+	  17 [label="Untitled hub (02)"];
+	  18 [label="Titus Hardie: 他像一只领头狼一般守护着自己老巢的入口，蔑视着你和你的一切。"];
+	  19 [label="Perception (Smell): Perception (Smell): \"...\""];
+	  20 [label="Fat Angus: 与此同时，那个胖子一直鬼鬼祟祟看着你，心神不宁地喃喃自语……"];
+	  21 [label="Rhetoric: 是，不过他们好像不想和你说话？"];
+	  22 [label="Eugene: 在远处，尤金尽力无视着你的存在……"];
+	  23 [label="Rhetoric: 等等……不，这些人好像有些不对劲……"];
+	  24 [label="Rhetoric: 而且你很确定他们认定自己是工人主义者。"];
+	  25 [label="You: 我觉得他们很有组织。"];
+	  0 -> 1
+	  1 -> 24
+	  2 -> 25
+	  3 -> 22
+	  5 -> 23
+	  6 -> 17
+	  7 -> 9
+	  7 -> 10
+	  8 -> 18
+	  9 -> 15
+	  12 -> 3
+	  13 -> 7
+	  14 -> 11
+	  14 -> 14
+	  15 -> 5
+	  16 -> 21
+	  17 -> 4
+	  17 -> 12
+	  18 -> 16
+	  20 -> 19
+	  21 -> 6
+	  22 -> 13
+	  23 -> 8
+	  24 -> 5
+}
+

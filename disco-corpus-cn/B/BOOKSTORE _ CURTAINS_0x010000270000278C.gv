@@ -1,0 +1,288 @@
+# BOOKSTORE / CURTAINS
+# The curtains hanging in front of the back room. Curious trinkets attached. Very suspect. Can open, but Plaisance doesn't like that.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 是啊，其实…这都是废话。"];
+	  3 [label="Closed Curtains: 此时此刻，除了怀疑地戳一戳之外，已经没什么可以对鱼头符咒做的了。你面前的窗帘还是紧紧闭合着。"];
+	  4 [label="You: 是的，我能*感觉*到。真的很恐怖。"];
+	  5 [label="Inland Empire: 它们潜伏在塞美尼的热带灰域区，对所有人施展奇怪的法术！不要管那个窗帘——否则你将自食其果…"];
+	  6 [label="Kim Kitsuragi: “通往地窖吗？”警督暗示到。“快点，她要转过来了…”"];
+	  7 [label="Plaisance: “不！”她举起手，想要阻拦你。“请跟我聊聊，警官…过来吧，在你决定做出什么*极端的*事情之前，我们先好好谈谈……”"];
+	  8 [label="You: 把窗帘拉开。"];
+	  9 [label="Plaisance: 一个惊恐的“哦！”字不经意地从普莱桑斯的口中逃了出来，她拼命想转移目光，把自己那张圆脸埋进手中。"];
+	  10 [label="Inland Empire: 这幅窗帘*的确*有些神秘的地方…小心点！"];
+	  11 [label="You: 我宁愿不去想它…"];
+	  12 [label="Closed Curtains: Variable[\"doomed.plais_whitecheck_succeeded\"]"];
+	  13 [label="Variable[\"doomed.plais_whitecheck_succeeded\"]", shape=diamond];
+	  14 [label="!(Variable[\"doomed.plais_whitecheck_succeeded\"])", shape=diamond];
+	  15 [label="You: 偷偷看一眼窗帘后面。"];
+	  16 [label="Half Light: 谎言。吾辈会说，把它们撕开！"];
+	  17 [label="Inland Empire: 如果这里有*很多*守护的话，我们对付的一定是极端邪恶的力量。"];
+	  18 [label="Horrific Necktie: 怎么回事，你是胆小鬼吗？想想另一边，有多么不可思议的冒险正在等待着我们。"];
+	  19 [label="Closed Curtains: Variable[\"doomed.bookstore_curtains_ency_darkisles\"]"];
+	  20 [label="Variable[\"doomed.bookstore_curtains_ency_darkisles\"]", shape=diamond];
+	  21 [label="!(Variable[\"doomed.bookstore_curtains_ency_darkisles\"])", shape=diamond];
+	  22 [label="You: “但是我感觉到这个地方在呼唤我。我必须*跨越*这道门槛，彻底调查清楚。”"];
+	  23 [label="Jump to: [choicehub]"];
+	  24 [label="Inland Empire: 你知道烟雾缭绕的塞美尼岛上发生了什么吗？别听博物的——上面住满了萨满，还有使用超自然秘法的疯子。"];
+	  25 [label="Plaisance: “我警告你！你这样做会释放超出你理解能力之外的力量！”"];
+	  26 [label="Plaisance: “不好意思，警官…”柜台后的她大声呼喊着。“后面的房间只允许雇员出入。”\n“不好意思，警官…”柜台附近的普莱桑斯大声呼喊。“后面的房间只允许雇员出入。”"];
+	  27 [label="Inland Empire: 不是这样的！你能感觉到它们奇异的魔力，那些在黑暗森林周围蠕动的不祥魂灵。你不相信吗？那就去吧，直直地穿过窗帘，承受一切后果。"];
+	  28 [label="Encyclopedia: 南部的塞美尼群岛，幽灵岛的居民。"];
+	  29 [label="You: （把它们掀开，这次是动真格的了。）"];
+	  30 [label="Plaisance: “为什么？又不是说那里有人*被杀*了！”她突然停了下来，手指飞快掠过自己的嘴唇，像是在为自己的率直感到迷惑。"];
+	  31 [label="Plaisance: “从超心理的角度来说——如果你决定打开它，那我们就*完蛋*了。我是不会对那个后果负责的！实在是太危险了！”"];
+	  32 [label="You: “我看见了更多小装饰品。看起来简直太疯狂了。”"];
+	  33 [label="Kim Kitsuragi: “你看见什么了？”警督神秘兮兮地问到。"];
+	  34 [label="You: 这些窗帘有什么可怕的？"];
+	  35 [label="Jump to: [curtainshub]"];
+	  36 [label="You: 所以遥视者部队…是真的了？我就是其中一员，而且我能胜任这个任务！"];
+	  37 [label="Kim Kitsuragi: “不，你*到底*看见什么了？”"];
+	  38 [label="Jump to: [Closed Curtains: \"You see a tattered set of curtains...\"]"];
+	  39 [label="Savoir Faire: 突然间，窗帘变得非常*脆弱*。不够强壮的它根本无法控制住狡猾的黑暗。"];
+	  40 [label="You: 你有些出格了。"];
+	  41 [label="Plaisance: “不，那里只是雇员使用的储藏室，我已经告诉过你了！现在，*请*离窗帘远一点…”她几乎是在求你了。"];
+	  42 [label="Closed Curtains: 你看见一面破破烂烂的窗帘，挡住了通往另一个房间的路。窗帘上还挂了些笼子形状的装饰品。"];
+	  43 [label="Closed Curtains: 你看见一个昏暗的房间，里面堆满灰尘扑扑的家具和垃圾。后面有一个出入口，上面挂着可怕的小塞美尼守护——你的阴影笼罩在那上面，像是某种预兆。"];
+	  44 [label="Closed Curtains: IsKimHere()"];
+	  45 [label="IsKimHere()", shape=diamond];
+	  46 [label="!(IsKimHere())", shape=diamond];
+	  47 [label="Inland Empire: 等等…什么？"];
+	  48 [label="Plaisance: “所有人都会突然*需要*一些东西…”她愤怒地挥挥手。“别碰那个窗帘。它希望如此…”"];
+	  49 [label="Savoir Faire: 窗帘后透出一丝微弱的光，揭露出后面的一个门道，上面挂着笼子形状的多面体。多面体是用鱼头和小动物骨头做成的，看起来很像一个小型坟场…"];
+	  50 [label="Closed Curtains: Variable[\"doomed.bookstore_curtains_inland_darkisles\"]"];
+	  51 [label="Variable[\"doomed.bookstore_curtains_inland_darkisles\"]", shape=diamond];
+	  52 [label="!(Variable[\"doomed.bookstore_curtains_inland_darkisles\"])", shape=diamond];
+	  53 [label="You: “我看见*野兽*蜷缩在黑暗里。”"];
+	  54 [label="You: 检查那个像笼子一样的奇怪装饰。"];
+	  55 [label="You: 黑暗岛屿？怎么回事？"];
+	  56 [label="Plaisance: “你们在做什么呢，警官们？”你刚把窗帘一拉上，书店主人就转过身来。“我告诉过你，别碰窗帘…麻烦看书去好吗，先生！”"];
+	  57 [label="You: “好吧，我再稍微考虑下…”（继续。）"];
+	  58 [label="Jump to: [curtainshub]"];
+	  59 [label="Closed Curtains: 你看见一面破破烂烂的窗帘挡住了通往另一个房间的路，上面还挂着些像笼子一样奇怪的装饰品。"];
+	  60 [label="You: “夫人，这不太一样——我是个警察，我*需要*进去。”"];
+	  61 [label="Conceptualization: 她说话的方式几乎像是要对你*下咒*一样，催促你多买些书…"];
+	  62 [label="Inland Empire: 她是对的——那些窗帘发散出*诡异的波动*，最好不要乱动。"];
+	  63 [label="You: 有什么好烦恼的？神秘幽灵，超自然波动——没有什么是超能警探对付不了的。我们走吧！"];
+	  64 [label="Closed Curtains: Variable[\"doomed.bookstore_curtains_ency_called_ie_racist\"]"];
+	  65 [label="Variable[\"doomed.bookstore_curtains_ency_called_ie_racist\"]", shape=diamond];
+	  66 [label="!(Variable[\"doomed.bookstore_curtains_ency_called_ie_racist\"])", shape=diamond];
+	  67 [label="You: “是关于*诅咒*的事吗？这就是你害怕的原因？”"];
+	  68 [label="Plaisance: “谢谢你！”店主大声地叹了口气。“我们先好好聊聊，行吗？你没有理由冒险进入未知的…”"];
+	  69 [label="You: [忽略窗帘。]"];
+	  70 [label="You: （拉开窗帘。）"];
+	  71 [label="Closed Curtains: Variable[\"doomed.bookstore_curtains_perc_secondary\"] == true"];
+	  72 [label="Variable[\"doomed.bookstore_curtains_perc_secondary\"] == true", shape=diamond];
+	  73 [label="!(Variable[\"doomed.bookstore_curtains_perc_secondary\"] == true)", shape=diamond];
+	  74 [label="Jump to: [Closed Curtains: \"You see a tattered set of curtains...\"]"];
+	  75 [label="Closed Curtains: Variable[\"doomed.bookstore_curtains_greeting_done\"] == true"];
+	  76 [label="Variable[\"doomed.bookstore_curtains_greeting_done\"] == true", shape=diamond];
+	  77 [label="!(Variable[\"doomed.bookstore_curtains_greeting_done\"] == true)", shape=diamond];
+	  78 [label="You: 塞美尼人是谁？"];
+	  79 [label="You: “我听说那里有台我需要的冰箱。”"];
+	  80 [label="Encyclopedia: 幽灵岛和塞美尼南部岛屿的居民。别听本心的鬼话——那是个美丽的地方，拥有丰富而独特的文化………"];
+	  81 [label="Kim Kitsuragi: “你没救了，”他叹了一口气。“快点，她要转过来了…”"];
+	  82 [label="Closed Curtains: 你看见一个昏暗的房间，里面堆满灰尘扑扑的家具和垃圾。后面有一个出入口，上面挂了许多笼子形状的可怕装饰品——你的阴影笼罩在那上面，像是某种预兆。"];
+	  83 [label="Plaisance: “很抱歉，我也不想这么没礼貌，请别进去！这一点我绝不允许。你只会让事情变得更糟糕，会把*力量*释放出来的。”"];
+	  84 [label="Savoir Faire: 窗帘后的房间很昏暗……你只能隐约辨认出某种*东西*的模糊阴影，就像蜷缩在孩童卧室里那些黑暗角落的野兽。"];
+	  85 [label="Closed Curtains: 你看见一面破破烂烂的窗帘，还有个像笼子一样的多面体装饰品。\n你面前挂着一幅被岁月摧残过的破烂窗帘，上面满是灰尘，仿佛在嘲弄你…"];
+	  86 [label="Plaisance: “先生，别碰它！我告诉过你顾客是禁止进入的！”她紧握吊坠，手指紧张地摆弄着护身符。"];
+	  87 [label="Closed Curtains: 你看见一个昏暗的房间，里面堆满灰尘扑扑的家具和垃圾。后面有一个出入口，上面挂了许多笼子形状的可怕装饰品——你的阴影笼罩在那上面，像是某种预兆。"];
+	  88 [label="Jump to: [curtainshub]"];
+	  89 [label="gotinhub"];
+	  90 [label="Closed Curtains: 说来也怪，她越是想让你不靠近窗帘，它们就变得越来越诱人。"];
+	  91 [label="curtainshub"];
+	  92 [label="ency"];
+	  93 [label="Perception (Hearing): 她移开目光，嘟囔着：“为什么每个人*总是*喜欢摆弄窗帘，为什么就不能像普通人一样买些书呢…”"];
+	  94 [label="You: “后面有一扇门。不知道会通往什么地方…”"];
+	  95 [label="You: “老实说，我什么也看不清。不过在我看来，就是个普通的房间而已。”"];
+	  96 [label="Inland Empire: 你有没有意识到外面有什么？塞美尼那迷雾环绕的幽灵岛上到底有什么？古怪的侏儒族，还有使用超自然秘术的疯狂萨满？"];
+	  97 [label="Rhetoric: 她唯一想要的就是你远离窗帘，即便只是一小会就好。也许可以先跟她聊聊？"];
+	  98 [label="Closed Curtains: Variable[\"tc.wards_plais\"]"];
+	  99 [label="Variable[\"tc.wards_plais\"]", shape=diamond];
+	  100 [label="!(Variable[\"tc.wards_plais\"])", shape=diamond];
+	  101 [label="Inland Empire: 好吧…你是先行者之一。那就别管了，尽情玩弄那扇窗帘吧。不过，后果自负。"];
+	  102 [label="Half Light: 好吧。所以那里面有一种意志力，它*想要*你进去？这怕是不太妙啊。"];
+	  103 [label="Closed Curtains: 你看见某种符咒——那是一个不规则的多面体，由骨头、树枝和稻草组成。在那里面，一个令人不安的鱼头正用空洞的眼眶盯着你。"];
+	  104 [label="Encyclopedia: 从外观来看，这是一种传统的塞美尼守护，专门用来抵御厄运，噩梦，诅咒，还有其他超自然灾祸。"];
+	  105 [label="Kim Kitsuragi: “我明白了，”警督点点头，然后看向店主：“快点，她转过去了…”"];
+	  106 [label="Inland Empire: 小心那些来自*黑暗岛屿*的神秘装饰。"];
+	  107 [label="Jump to: [curtainshub]"];
+	  108 [label="You: “幽灵，来自至暗国度，前来迎接我们的…”"];
+	  109 [label="Closed Curtains: 你看见一个昏暗的房间，里面堆满灰尘扑扑的家具和垃圾。后面有一个出入口，上面挂了许多笼子形状的可怕装饰品——你的阴影笼罩在那上面，像是某种预兆。"];
+	  110 [label="Closed Curtains: Variable[\"tc.wards_plais\"]"];
+	  111 [label="Variable[\"tc.wards_plais\"]", shape=diamond];
+	  112 [label="!(Variable[\"tc.wards_plais\"])", shape=diamond];
+	  113 [label="Jump to: [curtainshub]"];
+	  114 [label="Closed Curtains: CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  115 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  116 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  117 [label="You: “店主，窗帘背后是什么？”"];
+	  118 [label="Plaisance: “你*有吗*？！”她又抓紧了吊坠，明显有些动摇。“天啦，那就更不能去碰窗帘了…先生，麻烦你离开那里！”"];
+	  119 [label="Kim Kitsuragi: “可怕，”警督评论到。“快点，她要转过来了…”"];
+	  120 [label="Jump to: [Closed Curtains: \"You see a tattered set of curtains...\"]"];
+	  121 [label="choicehub"];
+	  122 [label="You: “我不在乎，你阻止不了我！我偏要打开。”（继续。）"];
+	  123 [label="You: 暂时不管那个窗帘。[离开。]"];
+	  124 [label="Closed Curtains: 你正要拉开窗帘，店主那惊讶的声音再次响起："];
+	  125 [label="Plaisance: “没什么！你为什么不看书呢？”她把玩着吊坠。“难道你没感觉到*必须*去看那些书吗？你本来应该如此啊。”\n“没什么！你还是继续回去看书吧。”她把玩着吊坠。“难道你没感觉到*必须*去看那些书吗？书才是你唯一需要关心的东西！”"];
+	  0 -> 1
+	  1 -> 12
+	  2 -> 27
+	  3 -> 59
+	  4 -> 5
+	  5 -> 108
+	  6 -> 57
+	  7 -> 98
+	  8 -> 111
+	  10 -> 39
+	  11 -> 75
+	  12 -> 13
+	  12 -> 14
+	  13 -> 43
+	  14 -> 76
+	  15 -> 85
+	  16 -> 10
+	  17 -> 45
+	  18 -> 98
+	  19 -> 20
+	  19 -> 21
+	  20 -> 93
+	  21 -> 3
+	  22 -> 119
+	  23 -> 122
+	  24 -> 41
+	  24 -> 4
+	  24 -> 37
+	  26 -> 63
+	  27 -> 36
+	  28 -> 3
+	  29 -> 99
+	  30 -> 84
+	  31 -> 94
+	  32 -> 120
+	  33 -> 96
+	  33 -> 33
+	  33 -> 54
+	  33 -> 95
+	  34 -> 107
+	  35 -> 92
+	  36 -> 48
+	  37 -> 96
+	  37 -> 33
+	  37 -> 109
+	  37 -> 95
+	  38 -> 86
+	  39 -> 23
+	  40 -> 27
+	  41 -> 23
+	  42 -> 90
+	  43 -> 9
+	  44 -> 46
+	  44 -> 47
+	  45 -> 34
+	  46 -> 121
+	  47 -> 64
+	  47 -> 2
+	  48 -> 103
+	  49 -> 72
+	  50 -> 52
+	  50 -> 53
+	  51 -> 81
+	  52 -> 28
+	  53 -> 38
+	  54 -> 104
+	  55 -> 65
+	  56 -> 114
+	  57 -> 69
+	  58 -> 92
+	  59 -> 26
+	  60 -> 30
+	  61 -> 91
+	  62 -> 92
+	  63 -> 102
+	  64 -> 66
+	  64 -> 67
+	  65 -> 24
+	  66 -> 97
+	  67 -> 42
+	  68 -> 115
+	  70 -> 125
+	  71 -> 73
+	  71 -> 74
+	  72 -> 17
+	  73 -> 45
+	  74 -> 86
+	  75 -> 77
+	  75 -> 78
+	  76 -> 86
+	  77 -> 60
+	  78 -> 51
+	  79 -> 49
+	  80 -> 3
+	  81 -> 57
+	  82 -> 9
+	  83 -> 40
+	  84 -> 50
+	  85 -> 92
+	  86 -> 31
+	  87 -> 25
+	  88 -> 92
+	  89 -> 8
+	  89 -> 70
+	  90 -> 89
+	  91 -> 35
+	  91 -> 71
+	  91 -> 15
+	  91 -> 118
+	  91 -> 55
+	  91 -> 124
+	  91 -> 29
+	  92 -> 79
+	  93 -> 122
+	  94 -> 6
+	  95 -> 106
+	  96 -> 41
+	  96 -> 4
+	  96 -> 37
+	  97 -> 16
+	  98 -> 100
+	  98 -> 101
+	  99 -> 110
+	  100 -> 88
+	  101 -> 108
+	  102 -> 23
+	  103 -> 105
+	  104 -> 19
+	  105 -> 57
+	  106 -> 56
+	  106 -> 11
+	  107 -> 92
+	  108 -> 82
+	  109 -> 25
+	  110 -> 112
+	  110 -> 113
+	  111 -> 44
+	  112 -> 83
+	  113 -> 92
+	  114 -> 116
+	  114 -> 117
+	  115 -> 18
+	  116 -> 98
+	  117 -> 126
+	  118 -> 23
+	  119 -> 57
+	  120 -> 86
+	  121 -> 68
+	  121 -> 80
+	  121 -> 22
+	  121 -> 58
+	  121 -> 123
+	  121 -> 61
+	  122 -> 7
+	  124 -> 87
+	  125 -> 62
+}
+

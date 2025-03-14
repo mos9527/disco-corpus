@@ -1,0 +1,32 @@
+# APT ORB / foreclosed apt logic
+# Logic wonders what happened in this apartment.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Logic: 这里出了什么事？"];
+	  3 [label="You: 墙上有个洞的公寓，是不能取消赎回权的。"];
+	  4 [label="You: 看起来真是太悲哀了……"];
+	  5 [label="You: 冰箱里总是有那么一点东西的。"];
+	  6 [label="Logic: 把你的情绪先放在一边。试着集中在抽象客观的事情上。"];
+	  7 [label="Inland Empire: 但谁能忽视这四处蔓延的悲伤！"];
+	  8 [label="You: 除了冰箱里的那些东西。"];
+	  9 [label="Logic: 的确！"];
+	  10 [label="You: [放弃思维。]"];
+	  11 [label="Logic: 还是可以通过旁边的公寓进来。那边连门都没有……很可惜，这里没剩下什么很有价值的东西。"];
+	  0 -> 1
+	  1 -> 2
+	  2 -> 10
+	  2 -> 3
+	  2 -> 4
+	  3 -> 11
+	  4 -> 6
+	  5 -> 9
+	  6 -> 7
+	  7 -> 10
+	  7 -> 3
+	  8 -> 9
+	  11 -> 8
+	  11 -> 5
+}
+

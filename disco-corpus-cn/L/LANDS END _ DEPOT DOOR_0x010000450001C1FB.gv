@@ -1,0 +1,143 @@
+# LANDS END / DEPOT DOOR
+# The door to the jammed supply depot near Land's End. The door is jammed and locked. You can't open it. EVER.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: 警督耸耸肩。“我们不用进去。”"];
+	  3 [label="You: “拜托，我们连那个能扭曲光线的超级富豪的集装箱都进了，你居然说这里进不去？”"];
+	  4 [label="Jump to: [mainunopenablehub]"];
+	  5 [label="Door (Unopenable): 一扇老旧而破损的门守卫着仓库。前方是被风吹起的一道沙丘。看来这扇门已经有一阵子没开了。你看见一只手柄。"];
+	  6 [label="Kim Kitsuragi: “放松。里面没藏着什么人。如果我们打不开，其他人也不行——所以他们也进不去。”他看着这扇门，脸上带着悲伤的微笑。"];
+	  7 [label="Jump to: [mainunopenablehub]"];
+	  8 [label="Door (Unopenable): 没成功。你在这里没有成功。这是不可能的。这扇门打不开。它不仅仅是锁了，而且还*卡*的死死的。"];
+	  9 [label="You: “你什么意思？我们不是应该……怎么说呢……什么地方都能进得去吧。”"];
+	  10 [label="Door (Unopenable): 混凝土结构本身看起来就很*军方*。这里至少有半个世纪了，但是造的很牢固。"];
+	  11 [label="Jump to: [mainunopenablehub]"];
+	  12 [label="Rhetoric: 不不不，迄今为止，我们每道门都进去过了。我们就是做这个的——开门。我们是警察，这是我们的特殊待遇。就连艾弗拉特都知道这是我们的准则。"];
+	  13 [label="Variable[\"XP.coin_operated_bay\"]  and  Variable[\"coast.depot_chain_clicked\"]"];
+	  14 [label="Variable[\"XP.coin_operated_bay\"]  and  Variable[\"coast.depot_chain_clicked\"]", shape=diamond];
+	  15 [label="!(Variable[\"XP.coin_operated_bay\"]  and  Variable[\"coast.depot_chain_clicked\"])", shape=diamond];
+	  16 [label="You: “我不会接受的。这扇门可能是调查的一部分”"];
+	  17 [label="You: “也许这个建筑以前是用来射击的？”"];
+	  18 [label="Conceptualization: 至少你可以*考虑*打开它。一般而言，说到门——它们毕竟是你生活的基础。也许可以得到一些有用的东西呢？"];
+	  19 [label="You: “以前是为什么服务的？”"];
+	  20 [label="mainunopenablehub"];
+	  21 [label="IsKimHere()"];
+	  22 [label="IsKimHere()", shape=diamond];
+	  23 [label="!(IsKimHere())", shape=diamond];
+	  24 [label="Rhetoric: 不不不，迄今为止，我们每道门都进去过了。我们就是做这个的——开门。我们是警察，这是我们的特殊待遇。"];
+	  25 [label="Door (Unopenable): 是的，这样最好。反正你连自己身处的兔子洞到底有多深都不知道。"];
+	  26 [label="You: “但我就是这样的人啊。*我们*都是。”"];
+	  27 [label="Variable[\"cargo.evrart_door_comment\"]"];
+	  28 [label="Variable[\"cargo.evrart_door_comment\"]", shape=diamond];
+	  29 [label="!(Variable[\"cargo.evrart_door_comment\"])", shape=diamond];
+	  30 [label="Visual Calculus: 可能是为大气层中的静风舰服务的？或者防御工事，就像海湾的那座海堡。"];
+	  31 [label="Kim Kitsuragi: “是啊，我能理解你，我也跟其他人一样喜欢开门，不过这扇门真的修不好了，而且我们也没有打开它的资源。”"];
+	  32 [label="yesyesthisisahub"];
+	  33 [label="You: 打开门。"];
+	  34 [label="You: Variable[\"coast.depot_door_red_check\"]"];
+	  35 [label="Variable[\"coast.depot_door_red_check\"]", shape=diamond];
+	  36 [label="!(Variable[\"coast.depot_door_red_check\"])", shape=diamond];
+	  37 [label="Conceptualization: 至少你可以*考虑*打开它。一般而言，说到门——它们毕竟是你生活的基础。也许可以得到一些有用的东西呢？"];
+	  38 [label="You: 走开。[离开。]"];
+	  39 [label="You: 话说这到底是什么？\n“话说这到底是什么？”"];
+	  40 [label="Kim Kitsuragi: “也许是已经不在那里的某种东西吧。”警督看着眼前巨大的混凝土堆。\n“洗衣女工说过海岸边有个补给站。”警督看着耸立在他眼前的混凝土蛤蟆。“她说这里是用来向海湾对岸运送弹药和货物的——可能就是这个吧。”"];
+	  41 [label="Variable[\"XP.coin_operated_bay\"]  and  Variable[\"coast.depot_chain_clicked\"]"];
+	  42 [label="Variable[\"XP.coin_operated_bay\"]  and  Variable[\"coast.depot_chain_clicked\"]", shape=diamond];
+	  43 [label="!(Variable[\"XP.coin_operated_bay\"]  and  Variable[\"coast.depot_chain_clicked\"])", shape=diamond];
+	  44 [label="You: “无所谓了，门。”[离开。]"];
+	  45 [label="Kim Kitsuragi: “老实说，你还是接受事实吧，不可能每道门都能进去的。”"];
+	  46 [label="IsKimHere()"];
+	  47 [label="IsKimHere()", shape=diamond];
+	  48 [label="!(IsKimHere())", shape=diamond];
+	  49 [label="Variable[\"coast.depot_door_red_check\"]"];
+	  50 [label="Variable[\"coast.depot_door_red_check\"]", shape=diamond];
+	  51 [label="!(Variable[\"coast.depot_door_red_check\"])", shape=diamond];
+	  52 [label="Door (Unopenable): 永远打不开"];
+	  53 [label="Esprit de Corps: 放松，他想到。里面没人。如果我们打不开，别人也不可以。"];
+	  54 [label="You: “好吧。我可以忍受。”（接受它。）"];
+	  55 [label="Kim Kitsuragi: “还能怎么做呢？*不*接受也不能让消防队来……”他看着这扇门，脸上带着悲伤的微笑。"];
+	  56 [label="Door (Unopenable): 你稍微摇晃了一下手柄，然后用全身的重量去推门——它没有移动分毫。看来它不仅仅是锁了，而且还*卡*的死死的。"];
+	  57 [label="Kim Kitsuragi: “从这里到飞旋旅社？我看不出怎么做到……”他看向东南方，往手指吹了口气：“教堂挡住了。”"];
+	  58 [label="You: 嗯……不知道里面有什么。怎么才能进去呢？\n“哈，门关的很紧。我们怎么才能进去？”"];
+	  59 [label="Door (Unopenable): 不行。门还是没打开……"];
+	  60 [label="Kim Kitsuragi: “是军方的——大概是维修仓库之类的。”"];
+	  61 [label="Visual Calculus: 为大气层中的静风舰服务的？或者防御工事，就像海湾的那座海堡。"];
+	  0 -> 1
+	  1 -> 5
+	  2 -> 9
+	  2 -> 3
+	  3 -> 46
+	  4 -> 20
+	  5 -> 20
+	  6 -> 18
+	  7 -> 20
+	  8 -> 59
+	  8 -> 45
+	  9 -> 46
+	  10 -> 13
+	  11 -> 20
+	  12 -> 33
+	  13 -> 14
+	  13 -> 15
+	  14 -> 62
+	  15 -> 4
+	  16 -> 6
+	  17 -> 58
+	  18 -> 7
+	  19 -> 41
+	  20 -> 40
+	  20 -> 17
+	  20 -> 34
+	  20 -> 39
+	  21 -> 22
+	  21 -> 23
+	  22 -> 2
+	  23 -> 60
+	  24 -> 33
+	  26 -> 32
+	  27 -> 29
+	  27 -> 30
+	  28 -> 12
+	  29 -> 24
+	  30 -> 4
+	  31 -> 6
+	  32 -> 16
+	  32 -> 27
+	  32 -> 55
+	  33 -> 35
+	  34 -> 36
+	  34 -> 37
+	  35 -> 50
+	  36 -> 50
+	  37 -> 11
+	  39 -> 47
+	  40 -> 42
+	  41 -> 43
+	  41 -> 44
+	  42 -> 31
+	  43 -> 4
+	  44 -> 26
+	  45 -> 28
+	  46 -> 48
+	  46 -> 49
+	  47 -> 61
+	  48 -> 10
+	  49 -> 51
+	  49 -> 52
+	  50 -> 8
+	  51 -> 57
+	  52 -> 38
+	  53 -> 7
+	  54 -> 56
+	  55 -> 54
+	  56 -> 59
+	  56 -> 45
+	  57 -> 4
+	  58 -> 21
+	  59 -> 53
+	  60 -> 19
+	  61 -> 4
+}
+

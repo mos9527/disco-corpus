@@ -1,0 +1,162 @@
+# BOOKSTORE / HJELMSERIES
+# A shelf full of Hjelmdall books. There are so many.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Man from Hjelmdall Series: 也许有一百本？“来自赫姆达尔的男人与末日先哲”，“来自赫姆达尔的男人与虚神”，“来自赫姆达尔的男人与焦土策略”，“来自赫姆达尔的男人：赫姆达尔殖民地”，“来自赫姆达尔的男人与沼泽怪兽”，来自赫姆达尔的男人与雪蟹”。"];
+	  3 [label="You: “哇哦，还有这么多赫姆达尔…”"];
+	  4 [label="Plaisance: 她推了推眼镜。“它*成为*畅销书是有理由的。”"];
+	  5 [label="Man from Hjelmdall Series: IsKimHere()"];
+	  6 [label="IsKimHere()", shape=diamond];
+	  7 [label="!(IsKimHere())", shape=diamond];
+	  8 [label="You: “听起来不像是我感兴趣的东西。”"];
+	  9 [label="You: [离开。]"];
+	  10 [label="You: “店主，跟我说说那本肌肉男的书。”"];
+	  11 [label="Plaisance: “有什么关系吗？它们都一样。”她翻了翻白眼，然后摆弄起脖子上的吊坠。“不过，大家都说，顾客永远是对的。”"];
+	  12 [label="You: “来自赫姆达尔的男人是谁？”"];
+	  13 [label="Plaisance: “他是来自冰封北国的一个‘英雄’，周游各地，主要是到处杀人。这个系列有几百本书…而且卖得相当不错。”"];
+	  14 [label="Jump to: [Man from Hjelmdall Series: \"The display rack before you is burd...\"]"];
+	  15 [label="You: 就这些吗？"];
+	  16 [label="You: 嗯，那些不都是魔女吗？"];
+	  17 [label="Encyclopedia: 这是纸上冒险。发生在一个名叫赫姆达尔的虚拟神话世界。卡特拉洲上根本没有这种地方。"];
+	  18 [label="You: “店主，这本书很歧视女性啊。你怎么能卖这种肮脏的东西？”"];
+	  19 [label="Man from Hjelmdall Series: Variable[\"doomed.book_wc_hjelmwoman\"]"];
+	  20 [label="Variable[\"doomed.book_wc_hjelmwoman\"]", shape=diamond];
+	  21 [label="!(Variable[\"doomed.book_wc_hjelmwoman\"])", shape=diamond];
+	  22 [label="You: 够了。"];
+	  23 [label="You: 呃，这是什么？"];
+	  24 [label="You: 有意思。"];
+	  25 [label="hjelmhub"];
+	  26 [label="Plaisance: “总算遇到通情达理的人了…”她摆弄着自己的吊坠。“不过，我还是劝你买一本。毕竟他们都说，不能只通过封面来评判一本书的好坏。”"];
+	  27 [label="Jump to: [Man from Hjelmdall Series: \"The display rack before you is burd...\"]"];
+	  28 [label="Jump to: [hjelmhub]"];
+	  29 [label="You: 啊！"];
+	  30 [label="Jump to: [hjelmhub]"];
+	  31 [label="Man from Hjelmdall: 赫姆达尔的英雄小说，堆得像山一样。跟*本尊*相比，罗伊那件衬衫根本微不足道。"];
+	  32 [label="Man from Hjelmdall Series: 展示架堆满了破旧的平装书，封面上有一个很显眼的野蛮人——肌肉极度发达，手持长剑。几乎所有标题都包含*赫姆达尔*这个词。"];
+	  33 [label="You: “我想买那个叫‘赫姆达尔英雄传’的书。”"];
+	  34 [label="Man from Hjelmdall Series: 还够没有呢！“来自赫姆达尔的男人之坠入地狱”，“来自赫姆达尔的男人与森林奴隶”，“来自赫姆达尔的男人之湖水深处”，“来自赫姆达尔的男人：燃烧的赫姆达尔”。甚至还有“死亡宣判”，以赫姆达尔世界观为背景的田园风战斗游戏书。还有很多很多。"];
+	  35 [label="Man from Hjelmdall Series: 在王座和来自赫姆达尔男人中间是一团篝火，在墙壁上投射出黑色的影子。女人头饰的阴影看起来像是一对恶魔角。标题是：“来自赫姆达尔的男人与魔女。”"];
+	  36 [label="You: 我的天，怎么这么多？"];
+	  37 [label="Inland Empire: 她在嘲笑他，轻视他。"];
+	  38 [label="Man from Hjelmdall Series: Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"]"];
+	  39 [label="Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"]", shape=diamond];
+	  40 [label="!(Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"])", shape=diamond];
+	  41 [label="Physical Instrument: 这彻彻底底，*完完全全*就是你本人嘛。你找到了*对的*书。"];
+	  42 [label="Kim Kitsuragi: “如果我可以补充的话，这整个系列还很*讨喜的*种族歧视呢。”"];
+	  43 [label="Pain Threshold: 没什么感兴趣的。只有沉默和宇宙背景的痛苦辐射。"];
+	  44 [label="Man from Hjelmdall Series: 你的手伸向那本书，光滑的封面上印着肌肉发达的*来自赫姆达尔的男人*——被*链条束缚*的男人——他正跪在通往王座的楼梯前。一个女人坐在王座上，正朝着那个男人抛媚眼。"];
+	  45 [label="Plaisance: “哦，先生，我知道的。”店主立即道歉。“它真的不能代表我们的价值观。但是这家店还是要迎合顾客的。”\n“哦，先生，我知道的。”店主立即道歉。“它真的不能代表我们的价值观。但是这家店还是要迎合顾客的。”"];
+	  46 [label="You: 有没有哪本书在呼唤我？"];
+	  47 [label="You: Variable[\"doomed.book_wc_hjelmwoman\"]"];
+	  48 [label="Variable[\"doomed.book_wc_hjelmwoman\"]", shape=diamond];
+	  49 [label="!(Variable[\"doomed.book_wc_hjelmwoman\"])", shape=diamond];
+	  50 [label="Man from Hjelmdall Series: 一排排的赫姆达尔英雄传模糊了你的视线。你依稀辨认出一些标题：“来自赫姆达尔的男人与猛犸象骑手”，“来自赫姆达尔的男人：回到赫姆达尔”，还有最一本唯我论的“来自赫姆达尔的男人与赫姆达尔的男人”。"];
+	  51 [label="Half Light: 那些雪蟹比听起来的更糟糕。"];
+	  52 [label="Conceptualization: 它是恶行与罪孽的象征。"];
+	  53 [label="Jump to: [Man from Hjelmdall Series: \"The display rack before you is burd...\"]"];
+	  54 [label="Man from Hjelmdall Series: 你眼前的展示架被*来自赫姆达尔的男人*的小说压得喘不过气来。"];
+	  55 [label="You: 浏览陈列的书籍。"];
+	  56 [label="You: “我想买这本‘来自赫姆达尔的男人与魔女’。”"];
+	  57 [label="Plaisance: “哦，*来自赫姆达尔的男人*。一本非常出名的系列冒险小说。”她略为不屑地看着那本书。“那些书非常有伤风化，而且还很暴力。”"];
+	  58 [label="Pain Threshold: 后脑勺感到一阵刺痛，让你有些退却。你的眼睛也开始抽搐。"];
+	  59 [label="Plaisance: “没错，当然了。”她搓着双手。“又是个好买卖。”"];
+	  60 [label="Jump to: [hjelmhub]"];
+	  61 [label="Jump to: [Man from Hjelmdall Series: \"The display rack before you is burd...\"]"];
+	  62 [label="Jump to: [hjelmhub]"];
+	  63 [label="You: “听起来不错。那我应该从哪本开始？”"];
+	  64 [label="Plaisance: “如果你是第一次看系列小说的话，那我推荐从‘赫姆达尔传奇：来自赫姆达尔的男人’开始。对于这个系列来说，这本入门应该最合适。”"];
+	  65 [label="Tutorial Agent: 你得到了一个可互动物品。前往物品栏中与之互动吧。"];
+	  66 [label="Jump to: [hjelmhub]"];
+	  67 [label="Plaisance: “鲜血和暴力，衣不遮体的女人，史诗故事，还有他遇到的所有神秘的东西。一定会吸引那些缺乏想象力，而且无所事事的人。”"];
+	  68 [label="You: “为什么会流行呢？”"];
+	  69 [label="Man from Hjelmdall Series: 特别是那些搔首弄姿、眼含秋波的家伙，好像只穿了身装甲比基尼。而且还有蛇蜥样的野兽盘绕在她的‘胸腹肩’区域。"];
+	  0 -> 1
+	  1 -> 32
+	  2 -> 51
+	  3 -> 31
+	  4 -> 38
+	  5 -> 6
+	  5 -> 7
+	  6 -> 42
+	  7 -> 45
+	  8 -> 26
+	  10 -> 58
+	  11 -> 65
+	  12 -> 13
+	  13 -> 17
+	  14 -> 55
+	  15 -> 34
+	  16 -> 70
+	  17 -> 69
+	  18 -> 5
+	  19 -> 20
+	  19 -> 21
+	  20 -> 59
+	  21 -> 43
+	  22 -> 27
+	  23 -> 44
+	  24 -> 53
+	  25 -> 33
+	  25 -> 3
+	  25 -> 9
+	  25 -> 10
+	  25 -> 46
+	  25 -> 56
+	  25 -> 57
+	  26 -> 65
+	  27 -> 55
+	  28 -> 25
+	  29 -> 44
+	  30 -> 25
+	  31 -> 67
+	  32 -> 41
+	  33 -> 60
+	  34 -> 28
+	  35 -> 16
+	  35 -> 24
+	  35 -> 18
+	  36 -> 2
+	  37 -> 35
+	  38 -> 40
+	  38 -> 39
+	  39 -> 63
+	  40 -> 66
+	  41 -> 25
+	  42 -> 45
+	  43 -> 61
+	  44 -> 37
+	  45 -> 14
+	  46 -> 47
+	  47 -> 48
+	  47 -> 49
+	  48 -> 19
+	  49 -> 19
+	  50 -> 36
+	  50 -> 22
+	  51 -> 22
+	  51 -> 15
+	  52 -> 62
+	  53 -> 55
+	  54 -> 25
+	  55 -> 50
+	  56 -> 4
+	  57 -> 12
+	  57 -> 69
+	  58 -> 29
+	  58 -> 23
+	  59 -> 38
+	  60 -> 25
+	  61 -> 55
+	  62 -> 25
+	  63 -> 11
+	  64 -> 30
+	  65 -> 63
+	  66 -> 25
+	  67 -> 64
+	  67 -> 8
+	  68 -> 68
+	  69 -> 52
+}
+

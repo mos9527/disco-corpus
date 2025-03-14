@@ -1,0 +1,237 @@
+# APT / SMOKER DOOR
+# DOOR, APARTMENT #28 (SMOKER ON THE BALCONY)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: “我们看看有没有人在家。敲门吧。”"];
+	  3 [label="Kim Kitsuragi: “阳台上的那个吸烟者。我们就是为这个来的，不是吗？他可能知道些凶杀案的事。所以，要不今晚9点吧？”"];
+	  4 [label="IsKimHere()"];
+	  5 [label="IsKimHere()", shape=diamond];
+	  6 [label="!(IsKimHere())", shape=diamond];
+	  7 [label="Jump to: [knock hub]"];
+	  8 [label="Variable[\"TASK.interview_the_sunday_friend\"]"];
+	  9 [label="Variable[\"TASK.interview_the_sunday_friend\"]", shape=diamond];
+	  10 [label="!(Variable[\"TASK.interview_the_sunday_friend\"])", shape=diamond];
+	  11 [label="Jump to: [knock hub]"];
+	  12 [label="Kim Kitsuragi: “明天晚上，就在这里，28号公寓。好了，我们走吧。”"];
+	  13 [label="You: “我可能赶不到。”"];
+	  14 [label="Jump to: [knock hub]"];
+	  15 [label="IsKimHere()"];
+	  16 [label="IsKimHere()", shape=diamond];
+	  17 [label="!(IsKimHere())", shape=diamond];
+	  18 [label="Door, Apartment #28: 没人回应。"];
+	  19 [label="knock hub"];
+	  20 [label="Variable[\"backyard.smoker_first_departure\"] == DayCount()"];
+	  21 [label="Variable[\"backyard.smoker_first_departure\"] == DayCount()", shape=diamond];
+	  22 [label="!(Variable[\"backyard.smoker_first_departure\"] == DayCount())", shape=diamond];
+	  23 [label="Esprit de Corps: 突然，他有点担心你的记忆力……"];
+	  24 [label="Kim Kitsuragi: “没事的，没必要9点整赶到这里，我只要在笔记本里记下来就好。”他已经打开了自己的蓝色小笔记本。"];
+	  25 [label="You: “你在说什么呢？”"];
+	  26 [label="Kim Kitsuragi: “没事的，没必要9点整赶到这里，我只要在笔记本里记下来就好。”他已经打开了自己的蓝色小笔记本。"];
+	  27 [label="IsKimHere()"];
+	  28 [label="IsKimHere()", shape=diamond];
+	  29 [label="!(IsKimHere())", shape=diamond];
+	  30 [label="Smoker on the Balcony: “什么事？”一个英俊的年轻男子哼了一声，手里还拿着一只香烟。“你在找我吗，警官？”"];
+	  31 [label="Logic: 看来他不在家。你应该晚点再来，晚上9点之后。"];
+	  32 [label="Logic: 看来他不在家。你应该晚点再来，晚上9点之后。"];
+	  33 [label="Logic: 你要找的男人就站在你身边。你应该跟他聊聊。"];
+	  34 [label="Kim Kitsuragi: “我们走吧。这里没什么能做的了。”"];
+	  35 [label="Variable[\"backyard.smoker_first_departure\"] < DayCount()  and  IsHourBetween(21, 4)  and  IsTaskActive(\"TASK.visit_the_smoker_on_the_balcony\")"];
+	  36 [label="Variable[\"backyard.smoker_first_departure\"] < DayCount()  and  IsHourBetween(21, 4)  and  IsTaskActive(\"TASK.visit_the_smoker_on_the_balcony\")", shape=diamond];
+	  37 [label="!(Variable[\"backyard.smoker_first_departure\"] < DayCount()  and  IsHourBetween(21, 4)  and  IsTaskActive(\"TASK.visit_the_smoker_on_the_balcony\"))", shape=diamond];
+	  38 [label="Variable[\"TASK.talk_to_smoker_again_done\"]"];
+	  39 [label="Variable[\"TASK.talk_to_smoker_again_done\"]", shape=diamond];
+	  40 [label="!(Variable[\"TASK.talk_to_smoker_again_done\"])", shape=diamond];
+	  41 [label="Kim Kitsuragi: “看来我们要找的年轻人不在家，我想最好抓到他的机会是在晚上。”他看了看周围，吸了一口春日料峭的空气。"];
+	  42 [label="Kim Kitsuragi: “明天晚上9点，就在这里，28号公寓。”他记在自己的小笔记本上。“好了。我们走吧。”"];
+	  43 [label="Jump to: [knock hub]"];
+	  44 [label="Kim Kitsuragi: “今晚9点，就在这里，28号公寓。”他记在自己的小笔记本上。“好了。我们走吧。”"];
+	  45 [label="Encyclopedia: 别担心，（差不多）已经记住了。你能想起来。你可以*做到*的。"];
+	  46 [label="You: 敲门。"];
+	  47 [label="Variable[\"backyard.smoker_first_departure\"] == DayCount()"];
+	  48 [label="Variable[\"backyard.smoker_first_departure\"] == DayCount()", shape=diamond];
+	  49 [label="!(Variable[\"backyard.smoker_first_departure\"] == DayCount())", shape=diamond];
+	  50 [label="Kim Kitsuragi: “我们应该明天再来，等完成白天的工作之后——晚上9点，怎么样？”"];
+	  51 [label="Kim Kitsuragi: “我们应该跟他聊聊。”警督朝着站在门边的男人点点头。"];
+	  52 [label="Logic: 记住：明天。他今天*可能*已经走了。"];
+	  53 [label="Door, Apartment #28: 这扇门是金属做的，好像还加固过。有人真的很重视自己的安全。"];
+	  54 [label="Kim Kitsuragi: “今晚，就在这里，28号公寓。好了，我们走吧。”"];
+	  55 [label="Kim Kitsuragi: “我们应该明天再来，等完成白天的工作之后——晚上9点，怎么样？”"];
+	  56 [label="Variable[\"TASK.visit_the_smoker_on_the_balcony\"]"];
+	  57 [label="Variable[\"TASK.visit_the_smoker_on_the_balcony\"]", shape=diamond];
+	  58 [label="!(Variable[\"TASK.visit_the_smoker_on_the_balcony\"])", shape=diamond];
+	  59 [label="Variable[\"backyard.smoker_first_departure\"] < DayCount()  and  IsHourBetween(21, 4)  and  IsTaskActive(\"TASK.visit_the_smoker_on_the_balcony\")"];
+	  60 [label="Variable[\"backyard.smoker_first_departure\"] < DayCount()  and  IsHourBetween(21, 4)  and  IsTaskActive(\"TASK.visit_the_smoker_on_the_balcony\")", shape=diamond];
+	  61 [label="!(Variable[\"backyard.smoker_first_departure\"] < DayCount()  and  IsHourBetween(21, 4)  and  IsTaskActive(\"TASK.visit_the_smoker_on_the_balcony\"))", shape=diamond];
+	  62 [label="Jump to: [knock hub]"];
+	  63 [label="Variable[\"TASK.visit_the_smoker_on_the_balcony\"]"];
+	  64 [label="Variable[\"TASK.visit_the_smoker_on_the_balcony\"]", shape=diamond];
+	  65 [label="!(Variable[\"TASK.visit_the_smoker_on_the_balcony\"])", shape=diamond];
+	  66 [label="Variable[\"TASK.interview_the_sunday_friend_done\"]  or  Variable[\"TASK.interview_the_sunday_friend_cancelled\"]"];
+	  67 [label="Variable[\"TASK.interview_the_sunday_friend_done\"]  or  Variable[\"TASK.interview_the_sunday_friend_cancelled\"]", shape=diamond];
+	  68 [label="!(Variable[\"TASK.interview_the_sunday_friend_done\"]  or  Variable[\"TASK.interview_the_sunday_friend_cancelled\"])", shape=diamond];
+	  69 [label="Reaction Speed: 28号……清洁女工说阳台上的吸烟者住的地方。"];
+	  70 [label="Jump to: [knock hub]"];
+	  71 [label="Jump to: [knock hub]"];
+	  72 [label="Kim Kitsuragi: “我们应该明天再来——明天晚上9点，”警督提醒着你。"];
+	  73 [label="IsKimHere()"];
+	  74 [label="IsKimHere()", shape=diamond];
+	  75 [label="!(IsKimHere())", shape=diamond];
+	  76 [label="IsKimHere()"];
+	  77 [label="IsKimHere()", shape=diamond];
+	  78 [label="!(IsKimHere())", shape=diamond];
+	  79 [label="You: [离开。]"];
+	  80 [label="You: “听起来不错。那就明天晚上9点吧。”"];
+	  81 [label="You: “我可能赶不到。”"];
+	  82 [label="Kim Kitsuragi: “阳台上的那个吸烟者。我们就是为这个来的，不是吗？他可能知道些凶杀案的事。所以要不明天晚上9点吧？”"];
+	  83 [label="Kim Kitsuragi: “我们应该晚上再来——最早9点。”"];
+	  84 [label="You: “你什么意思？”"];
+	  85 [label="IsKimHere()"];
+	  86 [label="IsKimHere()", shape=diamond];
+	  87 [label="!(IsKimHere())", shape=diamond];
+	  88 [label="Variable[\"TASK.visit_the_smoker_on_the_balcony\"]"];
+	  89 [label="Variable[\"TASK.visit_the_smoker_on_the_balcony\"]", shape=diamond];
+	  90 [label="!(Variable[\"TASK.visit_the_smoker_on_the_balcony\"])", shape=diamond];
+	  91 [label="Kim Kitsuragi: “看来我们要找的年轻人不在家。我想最后抓到他的机会是在晚上。”他看了看周围，吸了一口春日料峭的空气。"];
+	  92 [label="Logic: 看来他不在家。你应该明天晚上再来，晚上9点之后。"];
+	  93 [label="You: “听起来不错。今晚9点。”"];
+	  94 [label="Logic: 看来他不在家。你应该明天晚上再来，晚上9点之后。"];
+	  95 [label="Door, Apartment #28: 这里没什么能做的了……"];
+	  96 [label="IsKimHere()"];
+	  97 [label="IsKimHere()", shape=diamond];
+	  98 [label="!(IsKimHere())", shape=diamond];
+	  99 [label="IsKimHere()"];
+	  100 [label="IsKimHere()", shape=diamond];
+	  101 [label="!(IsKimHere())", shape=diamond];
+	  102 [label="Reaction Speed: 见鬼。没想到在这间大公寓里找个人居然这么棘手……别担心。你会找到他的！"];
+	  103 [label="Kim Kitsuragi: “我们走吧。这里没什么能做的了。”"];
+	  0 -> 1
+	  1 -> 53
+	  2 -> 19
+	  3 -> 93
+	  4 -> 5
+	  4 -> 6
+	  5 -> 72
+	  6 -> 94
+	  7 -> 19
+	  8 -> 9
+	  8 -> 10
+	  9 -> 27
+	  10 -> 38
+	  11 -> 19
+	  12 -> 103
+	  13 -> 26
+	  14 -> 19
+	  15 -> 16
+	  15 -> 17
+	  16 -> 34
+	  17 -> 71
+	  18 -> 66
+	  19 -> 46
+	  19 -> 79
+	  20 -> 21
+	  20 -> 22
+	  21 -> 4
+	  22 -> 73
+	  23 -> 45
+	  24 -> 12
+	  25 -> 3
+	  26 -> 54
+	  27 -> 28
+	  27 -> 29
+	  28 -> 104
+	  29 -> 95
+	  30 -> 19
+	  31 -> 11
+	  32 -> 62
+	  33 -> 71
+	  34 -> 71
+	  35 -> 36
+	  35 -> 37
+	  36 -> 30
+	  37 -> 63
+	  38 -> 40
+	  38 -> 39
+	  39 -> 71
+	  40 -> 59
+	  41 -> 50
+	  42 -> 103
+	  43 -> 19
+	  44 -> 7
+	  45 -> 80
+	  45 -> 81
+	  46 -> 18
+	  47 -> 48
+	  47 -> 49
+	  48 -> 100
+	  49 -> 76
+	  50 -> 80
+	  50 -> 81
+	  50 -> 84
+	  51 -> 71
+	  52 -> 70
+	  53 -> 56
+	  54 -> 7
+	  55 -> 25
+	  55 -> 13
+	  55 -> 93
+	  56 -> 57
+	  56 -> 58
+	  57 -> 35
+	  58 -> 69
+	  59 -> 60
+	  59 -> 61
+	  60 -> 85
+	  61 -> 88
+	  62 -> 19
+	  63 -> 64
+	  63 -> 65
+	  64 -> 19
+	  65 -> 97
+	  66 -> 67
+	  66 -> 68
+	  67 -> 15
+	  68 -> 8
+	  69 -> 35
+	  70 -> 19
+	  71 -> 19
+	  72 -> 43
+	  73 -> 74
+	  73 -> 75
+	  74 -> 83
+	  75 -> 32
+	  76 -> 77
+	  76 -> 78
+	  77 -> 91
+	  78 -> 31
+	  80 -> 42
+	  81 -> 24
+	  82 -> 23
+	  83 -> 62
+	  84 -> 82
+	  85 -> 86
+	  85 -> 87
+	  86 -> 51
+	  87 -> 33
+	  88 -> 89
+	  88 -> 90
+	  89 -> 20
+	  90 -> 47
+	  91 -> 55
+	  92 -> 14
+	  93 -> 44
+	  94 -> 43
+	  95 -> 71
+	  96 -> 98
+	  96 -> 99
+	  97 -> 2
+	  98 -> 19
+	  99 -> 101
+	  99 -> 102
+	  100 -> 41
+	  101 -> 92
+	  102 -> 52
+	  103 -> 71
+}
+

@@ -1,0 +1,660 @@
+# GATES / MYSTERIOUS EYES
+# Interactable object (the gap in the gates) leads to a dialogue with the spooky pair of eyes.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Mysterious Pair of Eyes: “我们瞧见你用枪指着一个满嘴脏话的小女孩。他妈的这是怎样的丧心病狂啊？操，你有病啊？”"];
+	  3 [label="Mysterious Pair of Eyes: “说的好像你的眼睛就好得到哪里去了，充血警官。”一个闷闷的声音蓦地从厚实又牢固的金属大门里传了出来。"];
+	  4 [label="You: “呃……双性恋吧？”"];
+	  5 [label="You: “你能别这么混蛋吗？”"];
+	  6 [label="Mysterious Pair of Eyes: “唔，好吧，这样聊下去……也不会有什么结果。没劲，我真的烦了，不如我们换个话题吧？”"];
+	  7 [label="Jump to: [talkyhub]"];
+	  8 [label="Jump to: [whohub]"];
+	  9 [label="You: “我真的没法相信你。”"];
+	  10 [label="Mysterious Pair of Eyes: “哦？我有个建议，你可以去把我们上方的那个守卫打晕。哈哈，那样就真他妈的有意思了。”"];
+	  11 [label="Variable[\"yard.hanged_pointed_at_cunoesse\"]"];
+	  12 [label="Variable[\"yard.hanged_pointed_at_cunoesse\"]", shape=diamond];
+	  13 [label="!(Variable[\"yard.hanged_pointed_at_cunoesse\"])", shape=diamond];
+	  14 [label="Mysterious Pair of Eyes: “当然可以，猪猡，哈哈哈。”那双眼睛飞快地眨巴着。“哦，还有，不是的，我不是那些*吸血鬼*的什么鬼暗探。”"];
+	  15 [label="You: “你他妈有种再说一次。没错，力量！”"];
+	  16 [label="You: “去你妈的，看什么看，你个神经病。”"];
+	  17 [label="Mysterious Pair of Eyes: “你不觉得吗那样很无聊吗？”"];
+	  18 [label="Mysterious Pair of Eyes: “哈哈。好吧，祝你好运！现在我觉得有点厌烦了……换个话题吧，不如？”"];
+	  19 [label="Jump to: [talkyhub]"];
+	  20 [label="You: “行吧，那你在看什么人，或者什么东西吗？”"];
+	  21 [label="Jump to: [talkyhub]"];
+	  22 [label="You: “我并不想跟墙壁背后的某个愚蠢的声音讨论自己的个人生活。”"];
+	  23 [label="Mysterious Pair of Eyes: “呃，你说什么？我说的不是……*字面上的意思*——没有人真的能把自己塞进各种各样的小洞里。这点你应该明白的，对吧？”"];
+	  24 [label="Variable[\"yard.hanged_endurance_failed_once\"]"];
+	  25 [label="Variable[\"yard.hanged_endurance_failed_once\"]", shape=diamond];
+	  26 [label="!(Variable[\"yard.hanged_endurance_failed_once\"])", shape=diamond];
+	  27 [label="You: “哇哦，我收回我的话。”"];
+	  28 [label="Jump to: [talkyhub]"];
+	  29 [label="Electrochemistry: 哦吼，你现在知道是谁在隐瞒了吗！？"];
+	  30 [label="Perception (Hearing): 一阵不规则的微弱呼吸通过缺口发出共鸣，几乎完全听不见，不过的确有。"];
+	  31 [label="talkyhub"];
+	  32 [label="You: “我不是很想继续讨论这个话题。”[离开。]\n“好吧，我已经厌倦你这些屁话了。我走了。”[离开。]"];
+	  33 [label="You: “我要怎么才能进到大门的另一边？”"];
+	  34 [label="Mysterious Pair of Eyes: “并不是。而且就算我是，我也没做过任何事实上违法的事情。清清白白。”"];
+	  35 [label="You: “呃……好吧，我猜。”"];
+	  36 [label="You: “为了把工贼挡在外面？”"];
+	  37 [label="Mysterious Pair of Eyes: “大家伙儿快来啊！快来看衰仔神奇警察不可思议的冒险故事！他是*最最歹毒*的阴谋家的克星。哈哈哈。”"];
+	  38 [label="Mysterious Pair of Eyes: “没错，我在隐瞒自己的身份。哈哈哈。”"];
+	  39 [label="You: “你对那些老实的工人有意见吗？”"];
+	  40 [label="Mysterious Pair of Eyes: “咱们看来真的还挺走运的。不过这事我*真的*说烦了……也许是时候该换个话题了。”"];
+	  41 [label="Mysterious Pair of Eyes: “哎呀！我想知道如此壮烈的自毁行为背后到底隐藏着怎样*痛苦的秘密*。”"];
+	  42 [label="You: “证明给我看啊，怪胎。”"];
+	  43 [label="Variable[\"gates.peeker_inland_triggers\"]"];
+	  44 [label="Variable[\"gates.peeker_inland_triggers\"]", shape=diamond];
+	  45 [label="!(Variable[\"gates.peeker_inland_triggers\"])", shape=diamond];
+	  46 [label="Mysterious Pair of Eyes: “现在吗？我们在看你啊！哈哈。我们已经盯上你了，真的！”"];
+	  47 [label="Mysterious Pair of Eyes: “好吧，你还想听？我们还看见你想出手揍那个小孩。一个成年人，一个*警察*，居然想要揍一个拖着鼻涕的小破孩！真他妈可以的，那是个孩子啊！”\n“好吧，你还想听？我们还看见你出手揍了那个小孩。一个成年人，一个*警察*，居然出手揍了一个拖着鼻涕的小破孩！你知道这事有多他妈的严重吗，你这个疯子！”"];
+	  48 [label="Mysterious Pair of Eyes: “做什么，看吗？”"];
+	  49 [label="Mysterious Pair of Eyes: “以你的视角来说……我就是一双神秘的眼睛，轰！！”"];
+	  50 [label="You: “是该有人给我写本书。”\n“是的！那个书店的小姑娘之前也这么说过。”\n“是的！小安妮特之前也这么说过。”"];
+	  51 [label="Mysterious Pair of Eyes: “直视，窥视，凝视，审视，注视，盯视，呆视。”"];
+	  52 [label="Mysterious Pair of Eyes: “好吧，我们知道你想做什么。我们观察着你的一举一动。保重，小心你身后。”眼睛突然消失不见了，只留下一片漂浮在大门缝隙间的虚无。"];
+	  53 [label="You: “这也比我想象中的无聊太多了。”"];
+	  54 [label="Jump to: [talkyhub]"];
+	  55 [label="You: “抱歉，当时情况有些……失控。”"];
+	  56 [label="Mysterious Pair of Eyes: “我肯定你的人生故事很*特别*，完全没有那些充满刻板印象、旧瓶装新酒的无聊桥段。”"];
+	  57 [label="You: “我仍然无法确定那是真实存在的东西……”"];
+	  58 [label="Jump to: [talkyhub]"];
+	  59 [label="Mysterious Pair of Eyes: “欢迎来到操蛋的马丁内斯，猪猡！我们盯着你呢。”"];
+	  60 [label="You: “你是那种性变态吗？”"];
+	  61 [label="Mysterious Pair of Eyes: “哈哈哈哈！”一阵响亮又嘲弄的笑声穿过大门，疯狂地回响着。"];
+	  62 [label="You: “随便你了。混球。”"];
+	  63 [label="You: “你说的*我们*又是谁？”"];
+	  64 [label="You: “哦，我不会这么做……我觉得。至少在我记得是这样的。”"];
+	  65 [label="You: “只是在履行职责罢了。”"];
+	  66 [label="Variable[\"yard.hanged_failed_shooting_body_down\"]"];
+	  67 [label="Variable[\"yard.hanged_failed_shooting_body_down\"]", shape=diamond];
+	  68 [label="!(Variable[\"yard.hanged_failed_shooting_body_down\"])", shape=diamond];
+	  69 [label="You: “这他妈的是他自找的。”"];
+	  70 [label="You: “我这是在教育他怎么去*尊重*他人。”"];
+	  71 [label="Mysterious Pair of Eyes: “啊，当然是了！这可是地下同性恋组织非常重大的一部分。”"];
+	  72 [label="Mysterious Pair of Eyes: “这个地方有*很多很多*的眼睛，你数都数不清。每一个孔洞、每一道缝隙、每一个角落——都有人在窥视着。你无处可逃。”"];
+	  73 [label="You: “评判和监督我完全不认识的人的私密行为是我的义不容辞的责任。”"];
+	  74 [label="You: “呃……纯的，也许？”"];
+	  75 [label="You: “去你妈的，臭小子，有本事出来当着我的面说啊。”"];
+	  76 [label="You: “你猜怎么着？算了……跟一个骂骂咧咧的小丑生气没任何意义。”"];
+	  77 [label="Jump to: [detectohub]"];
+	  78 [label="Jump to: [talkyhub]"];
+	  79 [label="Mysterious Pair of Eyes: “去吧，思考者，去吧。找出点线索，然后两两匹配，接下来就是见证奇迹的时刻，哈哈。”"];
+	  80 [label="You: “当然是！”"];
+	  81 [label="You: “呃，也许？”"];
+	  82 [label="Mysterious Pair of Eyes: “我们看见你踹了邮箱。这种行为还挺混蛋的。”\n“我们看见你踹了邮箱还有投币望远镜。你是不是那种有情绪管控问题的神经病？”\n“我们看见你踹了投币望远镜。你对待没有生命的物体是不是太暴力了点？”"];
+	  83 [label="You: “哇哦，好*瘆人*。这个场景当时又不是没其他人看到。”"];
+	  84 [label="Inland Empire: 我的妈呀！一个空洞的声音！咱们是因为过去的罪行被虚空中的幽灵给缠上了吗？"];
+	  85 [label="Mysterious Pair of Eyes: “哈哈，你不把我们当回事，是吧？不过你迟早会的——而且那一天到来的时候，你会后悔的。”"];
+	  86 [label="Mysterious Pair of Eyes: “哦？这事是不是对你来说就是家常便饭啊，下重手的警官？说真的，你他妈就是个神经病，这一点你可骗不了我……”"];
+	  87 [label="Jump to: [talkyhub]"];
+	  88 [label="Mysterious Pair of Eyes: “当然不是了，你个榆木脑袋！”另一边传来一声抱怨。“简直难以置信。”"];
+	  89 [label="Mysterious Pair of Eyes: “讽刺运用得很好嘛，哥们儿。”你听见一阵微弱的鼓掌声，充满了夸张的意味。"];
+	  90 [label="You: “无所谓，我反正对小说什么的没什么兴趣。”"];
+	  91 [label="Mysterious Pair of Eyes: “哦，当然不是！谁敢啊。”"];
+	  92 [label="Jump to: [talkyhub]"];
+	  93 [label="You: “不，我是说……别这么吓唬人。”"];
+	  94 [label="Mysterious Pair of Eyes: 那双神秘的眼睛聚精会神地关注着你的一举一动。"];
+	  95 [label="Variable[\"gates.peeker_algreeting_void\"]"];
+	  96 [label="Variable[\"gates.peeker_algreeting_void\"]", shape=diamond];
+	  97 [label="!(Variable[\"gates.peeker_algreeting_void\"])", shape=diamond];
+	  98 [label="Mysterious Pair of Eyes: “这是所有警察的集结口号！*我们没有，我们没用*，哈哈。”"];
+	  99 [label="You: “是那种不断冒出来的同性恋之类的东西吗？”"];
+	  100 [label="You: “真的吗？！”"];
+	  101 [label="Mysterious Pair of Eyes: “不是。”对面传来一声抱怨。“你完全就是个工具人啊，不是吗。”"];
+	  102 [label="Variable[\"tc.scab_leader_is_a_merc\"]"];
+	  103 [label="Variable[\"tc.scab_leader_is_a_merc\"]", shape=diamond];
+	  104 [label="!(Variable[\"tc.scab_leader_is_a_merc\"])", shape=diamond];
+	  105 [label="Mysterious Pair of Eyes: “随你便！”眼睛在大门内部的黑暗深处忽闪着。"];
+	  106 [label="You: “没错。警察这个职业就是如此。”"];
+	  107 [label="Mysterious Pair of Eyes: “当然！太神奇了！既然那个小女孩都这么说了，那事情就该如此！”"];
+	  108 [label="Variable[\"plaza.annette_book_about_you\"]"];
+	  109 [label="Variable[\"plaza.annette_book_about_you\"]", shape=diamond];
+	  110 [label="!(Variable[\"plaza.annette_book_about_you\"])", shape=diamond];
+	  111 [label="whohub"];
+	  112 [label="You: “但是如果他们*真的*活该呢？”"];
+	  113 [label="Mysterious Pair of Eyes: “你的生活听上去就是一场巨大的闹剧。有哪儿真的出了*很严重的问题*。”"];
+	  114 [label="Mysterious Pair of Eyes: “你的脑子是真的坏脱了吧？这个话题越来越无聊了，换个话题吧。”"];
+	  115 [label="Mysterious Pair of Eyes: “好的，很好，你明白就行。我们随时都在警惕地盯着你呢，你的一举一动都逃不出我们的视线。”"];
+	  116 [label="Mysterious Pair of Eyes: “我们看见你想用枪射断绳索把尸体从树上弄下来。要我说的话，那还真是一次……让人印象特别深刻的失败呢。”"];
+	  117 [label="Volition: 别逗了，这就是个普通人，可能是某个码头工人吧。"];
+	  118 [label="You: “我很想知道。非常想。”"];
+	  119 [label="You: “哈，神经病。”[离开。]"];
+	  120 [label="Mysterious Pair of Eyes: “我们是眼睛。我们是眼睛！眼睛无处不在，警察。当心。”"];
+	  121 [label="You: “如果你都这么说了……我好像一直都没想过这个问题？”"];
+	  122 [label="Mysterious Pair of Eyes: “也许是某个码头工人吧，想把那些吵死人的工贼挡在外面。那些人有时候就容易自乱阵脚……”"];
+	  123 [label="Mysterious Pair of Eyes: “站在那些或愚昧，或自大，或居高临下的人一边其实要更容易、也更舒服一些，不是吗？就这样躲藏在柔软又安全的优越感和你自己那索然无味的幻想里。”"];
+	  124 [label="You: “你以为我不知道吗？”"];
+	  125 [label="Mysterious Pair of Eyes: “嗯，这就是存在的喜悦，一种时常因为某些你自己完全不了解、但在*想象*中却无比生动的事情而产生的苦恼和担忧。哈哈。”"];
+	  126 [label="Jump to: [talkyhub]"];
+	  127 [label="Mysterious Pair of Eyes: “而且我们还看见你把尸体放下来了。哦，过程可太精彩了！准备好鼓掌吧，女士们，先生们。”"];
+	  128 [label="Mysterious Pair of Eyes: “哦，当然了，你可以为自己那些操蛋的恶行找到任何借口。说真的，你他妈就是个神经病，这一点你可骗不了我……”"];
+	  129 [label="You: “你是乔暗示的那个公司派出的暗探吗？”"];
+	  130 [label="Mysterious Pair of Eyes: “是那种对双性恋的好奇，还是纯好奇？”"];
+	  131 [label="Mysterious Pair of Eyes: “相信我，我们早就知道了，我们已经盯上你了很久了。你总是管不住自己，对吧？总是喜欢溜进别人的生活，想要支配他们的行动甚至他们的谈话。”"];
+	  132 [label="Mysterious Pair of Eyes: “大概吧，*神奇调查员*先生，你还真敏锐呢！也许该有人给你写本小说。”"];
+	  133 [label="Mysterious Pair of Eyes: “老实个屁。天哪，你瞧瞧那家伙！”"];
+	  134 [label="You: “没关系，不要紧。”（让自己冷静下来。）"];
+	  135 [label="Mysterious Pair of Eyes: “司法制度不就是为此而存在的吗？法制之所以得以确立是有原因的。唉，话题怎么又无聊起来了……是时候换个话题了。”"];
+	  136 [label="You: “想看就看吧，我不在乎。”"];
+	  137 [label="backtalkhub"];
+	  138 [label="Mysterious Pair of Eyes: “那一定是某件很*大*、很*深入*、而且*很重要*的事情，因为你肯定不是个普通的混球，明明一直以一种自我为中心的傲慢态度到处搅乱所有人的生活，却还避不承认这一事实。”"];
+	  139 [label="Mysterious Pair of Eyes: “怎么了，你脑子是宕机了还是什么？”他咕哝着。“我不明白你之前都是怎么做事的。唉，无所谓了。”"];
+	  140 [label="You: “你好？”"];
+	  141 [label="You: “你在做什么？”"];
+	  142 [label="Mysterious Pair of Eyes: “我就知道。太阳底下没有新鲜事！你都奇葩成这样了，还有什么事情是你做不出来的吗。”"];
+	  143 [label="You: “没准我真是？从没想过这个问题。”"];
+	  144 [label="You: “我的意思是，你*到底*是谁？”"];
+	  145 [label="Mysterious Pair of Eyes: “大门早他妈的坏了。肯定有人砸掉了上面控制塔的控制面板。”"];
+	  146 [label="Mysterious Pair of Eyes: “很好，活字典警探！你的词汇量可以啊，哈哈哈！没错，还有*监视*。”"];
+	  147 [label="You: “我没有！”"];
+	  148 [label="Mysterious Pair of Eyes: “我们已经注意你一段时间了。我直接跟你说了吧……妈的，你作为一个警察简直他娘的*没劲疯了*！”"];
+	  149 [label="You: “好吧，是有点可疑，不过还不是特别有说服力。”"];
+	  150 [label="theeyeshaveit"];
+	  151 [label="Mysterious Pair of Eyes: “你真以为自己是什么善良、体面、正直的好市民？别担心，我们会抓到你的……狗是改不了吃屎的。”"];
+	  152 [label="Mysterious Pair of Eyes: “这只是个开始，警官！你以为自己是个体面正直的好市民？别担心，我们会抓到你的……狗是改不了吃屎的。”"];
+	  153 [label="You: “没有的事，我否认所有的指控。”"];
+	  154 [label="Mysterious Pair of Eyes: “你不想知道吗，猪头！”"];
+	  155 [label="Variable[\"gates.peeker_who_has_to_hide\"]"];
+	  156 [label="Variable[\"gates.peeker_who_has_to_hide\"]", shape=diamond];
+	  157 [label="!(Variable[\"gates.peeker_who_has_to_hide\"])", shape=diamond];
+	  158 [label="Mysterious Pair of Eyes: “当然了，你这朵娇艳的花朵。去发现你自己*刺激*的背景故事吧，我敢肯定它一定是独一无二的。”"];
+	  159 [label="You: “该死！谁在那里？”"];
+	  160 [label="You: “为什么会有人这么做？”"];
+	  161 [label="Variable[\"gates.peeker_greeting_done\"]"];
+	  162 [label="Variable[\"gates.peeker_greeting_done\"]", shape=diamond];
+	  163 [label="!(Variable[\"gates.peeker_greeting_done\"])", shape=diamond];
+	  164 [label="You: “我不怕你。”"];
+	  165 [label="You: “是的。”"];
+	  166 [label="You: “直到末日降临，赦免我们所有的悲痛。”"];
+	  167 [label="Mysterious Pair of Eyes: “已经受不了了？哈哈！行吧，快走吧，找几个真正的罪犯去。”"];
+	  168 [label="You: “你能别再给我瞎起名字了吗？”"];
+	  169 [label="You: “你对我一无所知。”"];
+	  170 [label="Mysterious Pair of Eyes: “反正肯定不是从这儿过。”"];
+	  171 [label="You: “老天，抱歉。我这不是好奇嘛。”"];
+	  172 [label="detectohub"];
+	  173 [label="You: “是什么秘密吗？你在隐瞒什么？”"];
+	  174 [label="Jump to: [whohub]"];
+	  175 [label="Mysterious Pair of Eyes: “我们是眼睛，我们永远睁开着……其中一双闭上，其他的就会顶上，哈哈哈！”眼睛突然令人不安地瞪得老大。"];
+	  176 [label="Mysterious Pair of Eyes: “你才是那个喜欢多管闲事的人，警官。”眼睛朝你眨了眨。"];
+	  177 [label="You: “两者都有吧，大概？”"];
+	  178 [label="Jump to: [talkyhub]"];
+	  179 [label="Variable[\"TASK.get_the_dead_body_down_from_the_tree_done\"]"];
+	  180 [label="Variable[\"TASK.get_the_dead_body_down_from_the_tree_done\"]", shape=diamond];
+	  181 [label="!(Variable[\"TASK.get_the_dead_body_down_from_the_tree_done\"])", shape=diamond];
+	  182 [label="Inland Empire: 我操！它来抓咱们来了！"];
+	  183 [label="You: 什么也不说。"];
+	  184 [label="Mysterious Pair of Eyes: “而另一只眼睛正盯着那个个头又大、声音又吵的工贼领袖呢。这家伙真太他妈可疑了。”"];
+	  185 [label="Mysterious Pair of Eyes: “你以为自己是谁？就算，你有什么权力鄙视和评判别人私人、另类的偷窥癖？杂碎，死猪猡。”"];
+	  186 [label="Jump to: [talkyhub]"];
+	  187 [label="You: “我不知道是不是真是这样……”"];
+	  188 [label="You: “好吧，如果你不打算认真回答这个问题的话，我就问点别的好了。”"];
+	  189 [label="Mysterious Pair of Eyes: “你知道自己做了什么，现在可别否认。”"];
+	  190 [label="Mysterious Pair of Eyes: “看看你，活脱脱一个小威权主义者。我敢打赌，你肯定很喜欢歧视弱势群体，这会让你觉得自己特*男人*。”"];
+	  191 [label="You: “绝对是酒精的作用。我敢肯定，错不了的。”"];
+	  192 [label="Mysterious Pair of Eyes: “一个有趣的谜题！我想知道这张黑暗和不祥的面纱下面到底隐藏着什么*可怕的秘密*，哈哈。”"];
+	  193 [label="You: “哈哈，气到你了吧，你这个自以为是、成天说教的狗屁玩意儿！”"];
+	  194 [label="You: “她是一个恶魔，祈求着有人能帮她从尘世的烦扰中解脱出来。”"];
+	  195 [label="You: “拜托，我开玩笑的，我当时只是在传授她一些人生经验。”"];
+	  196 [label="You: “哦，那个人啊。他是个假扮成工人的雇佣兵。”"];
+	  197 [label="You: “喂，我问你话呢。”"];
+	  198 [label="Mysterious Pair of Eyes: “我们看见你在后院呕吐，还想够着那个吊着的男人。你还真是个软蛋。”\n“我们看见你在后院吐了*一地*，笑死我了！你居然还好意思自称是执法人员？”"];
+	  199 [label="You: “等一下，你是*怎么*知道我是谁，还有我是做什么的？”"];
+	  200 [label="Mysterious Pair of Eyes: “哈……活到老学到老吧，警官。走出去，变成一朵花然后绽放吧！去了解生活的真谛！话说回来，我有点厌烦了……不如我们换个话题吧？”"];
+	  201 [label="Mysterious Pair of Eyes: “哈哈，我觉得很好笑。”"];
+	  202 [label="Jump to: [talkyhub]"];
+	  203 [label="Mysterious Pair of Eyes: “看看你，超级警察正准备推理一起疑案！不过他看起来他妈的要花上好一会儿了，哈哈。”"];
+	  204 [label="Jump to: [talkyhub]"];
+	  205 [label="Mysterious Pair of Eyes: “轰！马丁内斯之眼在注视着你，猪猡！”"];
+	  206 [label="Drama: 您心里跟明镜似的知道她并没有说别人应该怎么为您写一本书，*您*才是那个挑起这个话题的人。"];
+	  207 [label="Mysterious Pair of Eyes: “这也未尝不是件好事！反正我又不是你的混蛋柯尼希斯神经分析师，得靠善良老百姓的焦虑赚钱。所以现在怎么说，耸人听闻侦探先生？”"];
+	  208 [label="Mysterious Pair of Eyes: “无聊？！你一直被人盯着、被人评判这件事很无聊？你做的一切都在我们的掌握之中，时时刻刻。”"];
+	  209 [label="Jump to: [talkyhub]"];
+	  210 [label="Jump to: [talkyhub]"];
+	  211 [label="Mysterious Pair of Eyes: 那双眼睛飞快地眨巴着。“不，我不是，哈哈哈。”"];
+	  212 [label="Volition: 别犯傻了，说吧。就在今天，就在这个时代，都不会有好结果的。"];
+	  213 [label="You: “你好？”"];
+	  214 [label="Mysterious Pair of Eyes: 那双眼睛在大门内部的黑暗中忽闪着。"];
+	  215 [label="Mysterious Pair of Eyes: “我听见你的话了。”一个闷闷的声音蓦地从厚实又牢固的金属大门里传了出来。"];
+	  216 [label="You: “什么？我听不懂。”"];
+	  217 [label="Mysterious Pair of Eyes: “*我*都用一堆脏话骂过你了，你居然还跟我道歉？老天啊，咱俩到底更奇怪一点？”"];
+	  218 [label="You: “是的！”"];
+	  219 [label="Mysterious Pair of Eyes: “确实如此……我们知道你是谁，我们真的知道！这一点你不用担心。”"];
+	  220 [label="Mysterious Pair of Eyes: 那双诡异的蓝眼睛还在那里，透过大门之间的黑暗虚空注视着外面的世界。"];
+	  221 [label="You: “无所谓了，我才不要正中你的下怀。”"];
+	  222 [label="You: “好吧，已经够了，这让我感觉更糟糕了。”"];
+	  223 [label="You: “你是不可能*钻进*所有犄角旮旯的。”"];
+	  224 [label="Mysterious Pair of Eyes: 没有回应，惟有沉默还潜伏在门内部黑暗虚空巨穴般的深处。"];
+	  225 [label="Conceptualization: 他们是怎么钻进各种空洞和缝隙的？他们莫非是袖珍小人？或者就是……没有身体的眼睛？"];
+	  226 [label="Jump to: [talkyhub]"];
+	  227 [label="You: “你是谁？”"];
+	  228 [label="You: “那双眼睛可真够瘆人的。”"];
+	  229 [label="You: “我迟早会进门把你揪出来的，说到做到！”"];
+	  230 [label="Mysterious Pair of Eyes: “也许你就是那种……受虐狂吧，喜欢被人羞辱之类的。”"];
+	  231 [label="Mysterious Pair of Eyes: “哈哈。好吧，好家伙，你把我怼得*无话可说*了。总之，这样聊下去真挺无聊的……换个话题吧，不然？”"];
+	  232 [label="You: “你这是在取笑我吗？”"];
+	  233 [label="You: “我是个警察，这当然关我的事！”"];
+	  234 [label="You: “我不知道……”"];
+	  235 [label="You: “我需要……想一想。”"];
+	  236 [label="Mysterious Pair of Eyes: “我由衷地表示怀疑。你应该去服务人民，处理真的犯罪行为，而不是像个暴君一样到处溜达，看谁不爽就抓谁。”"];
+	  237 [label="You: “其实我以前到底做过什么我自己都不怎么记得了。”"];
+	  238 [label="You: “你对警察是有什么意见吗？”"];
+	  239 [label="Mysterious Pair of Eyes: “不，不是。那是……怎么说……超级操蛋的一件事。说真的，我都不敢相信你居然还没丢饭碗。跟这件破事相比，其他事都一下子相形见绌了……”"];
+	  240 [label="put_this_here"];
+	  241 [label="Mysterious Pair of Eyes: 那双令人毛骨悚然的蓝眼睛正从大门内部盯着你。那双眼睛用力地瞪着你，仿佛要窥见到你的灵魂深处。"];
+	  242 [label="Mysterious Pair of Eyes: “我就知道。”"];
+	  243 [label="You: “说得好。抱歉。我这些天……过得不太好。”"];
+	  244 [label="You: “哈哈哈很好笑。”（缓慢又讽刺地鼓掌。）"];
+	  245 [label="Mysterious Pair of Eyes: “不关你的事。哦哦哦，吓死人家了！”"];
+	  246 [label="You: “他有何可疑之处？”"];
+	  247 [label="Mysterious Pair of Eyes: “是吗，*真的*？”"];
+	  248 [label="You: “真倒霉。我还是找别的路进去吧。”"];
+	  249 [label="Mysterious Pair of Eyes: “哎呀，不妙！我居然还满怀希望地在这儿等着。这位热情的警官还有*别的问题*想问吗？”"];
+	  250 [label="Mysterious Pair of Eyes: “好主意，我已经有点厌倦这个话题了。清单上的下一项是什么，压迫警官？”"];
+	  251 [label="Variable[\"plaza.viewer_attacked_the_viewer\"]  or  Variable[\"plaza.mailbox_kicked_it\"]"];
+	  252 [label="Variable[\"plaza.viewer_attacked_the_viewer\"]  or  Variable[\"plaza.mailbox_kicked_it\"]", shape=diamond];
+	  253 [label="!(Variable[\"plaza.viewer_attacked_the_viewer\"]  or  Variable[\"plaza.mailbox_kicked_it\"])", shape=diamond];
+	  254 [label="Variable[\"gates.peeker_volition_high\"]"];
+	  255 [label="Variable[\"gates.peeker_volition_high\"]", shape=diamond];
+	  256 [label="!(Variable[\"gates.peeker_volition_high\"])", shape=diamond];
+	  257 [label="Variable[\"yard.cuno_fist_fail\"]  or  Variable[\"yard.cuno_punched_cuno\"]"];
+	  258 [label="Variable[\"yard.cuno_fist_fail\"]  or  Variable[\"yard.cuno_punched_cuno\"]", shape=diamond];
+	  259 [label="!(Variable[\"yard.cuno_fist_fail\"]  or  Variable[\"yard.cuno_punched_cuno\"])", shape=diamond];
+	  260 [label="Mysterious Pair of Eyes: “就这样？真见鬼……”他吸了吸鼻子。“我猜你也不完全是个笨蛋吧。”"];
+	  261 [label="You: “不……我只是个可怜虫，一个心态积极的垃圾警察。”"];
+	  262 [label="Jump to: [talkyhub]"];
+	  263 [label="You: “这一点都不好笑。”"];
+	  264 [label="Mysterious Pair of Eyes: “你居然不喜欢读书？这还真是让人震惊啊！”那双眼睛在虚无的黑暗中明亮地忽闪着。"];
+	  265 [label="Logic: 有什么东西在你的脑海深处抽搐……某条线索就隐藏在你疼得有些麻木的大脑褶皱之间。"];
+	  266 [label="Mysterious Pair of Eyes: “别闪着腰了，老人家，哈哈哈。”那双眼睛朝你顽皮地眨巴着。"];
+	  267 [label="Mysterious Pair of Eyes: “怎么一本正经地否认起来了？还是说你又喝多了？”"];
+	  268 [label="Mysterious Pair of Eyes: “没有，阿sir，没有意见！请不要逮捕我，我只是一个可怜的老实人，一直低着头做人。哈哈！”嘲讽的笑声轻易就穿过了厚厚的大门，没有遮拦。"];
+	  269 [label="Mysterious Pair of Eyes: “我们已经注意你一段时间了。我们看见你踉踉跄跄的从一家旅社里走出来，整个人衣衫不整，酒气冲天。”"];
+	  270 [label="Mysterious Pair of Eyes: 眼睛快速地眨巴着，似乎在密切关注着你的一举一动。"];
+	  271 [label="You: “还有‘监视’？”"];
+	  272 [label="Mysterious Pair of Eyes: “拜托，光看就知道了啊。”"];
+	  273 [label="You: “我想……也许吧，有那么点儿？”"];
+	  274 [label="You: “我为什么要当心？”"];
+	  275 [label="Mysterious Pair of Eyes: 在大门缝隙间的幽深之中……空无一物，就连一双警惕地盯着你一举一动的蓝眼睛也没有。不管那到底是谁，他已经不见了。"];
+	  276 [label="Jump to: [talkyhub]"];
+	  277 [label="You: “否认……？我不知道。”"];
+	  278 [label="You: “喂，回来！你要去哪儿？”"];
+	  279 [label="You: “别太得意了，小心眼珠子被人抠出来。”"];
+	  280 [label="Variable[\"plaza.viewer_attacked_the_viewer\"]  or  Variable[\"plaza.mailbox_kicked_it\"]  or  Variable[\"yard.hanged_endurance_failed_once\"]  or  Variable[\"yard.hanged_failed_enough_to_whine_someone_else\"]  or  Variable[\"TASK.get_the_dead_body_down_from_the_tree_done\"]  or  Variable[\"yard.hanged_pointed_at_cunoesse\"]  or  Variable[\"yard.cuno_punched_cuno\"]"];
+	  281 [label="Variable[\"plaza.viewer_attacked_the_viewer\"]  or  Variable[\"plaza.mailbox_kicked_it\"]  or  Variable[\"yard.hanged_endurance_failed_once\"]  or  Variable[\"yard.hanged_failed_enough_to_whine_someone_else\"]  or  Variable[\"TASK.get_the_dead_body_down_from_the_tree_done\"]  or  Variable[\"yard.hanged_pointed_at_cunoesse\"]  or  Variable[\"yard.cuno_punched_cuno\"]", shape=diamond];
+	  282 [label="!(Variable[\"plaza.viewer_attacked_the_viewer\"]  or  Variable[\"plaza.mailbox_kicked_it\"]  or  Variable[\"yard.hanged_endurance_failed_once\"]  or  Variable[\"yard.hanged_failed_enough_to_whine_someone_else\"]  or  Variable[\"TASK.get_the_dead_body_down_from_the_tree_done\"]  or  Variable[\"yard.hanged_pointed_at_cunoesse\"]  or  Variable[\"yard.cuno_punched_cuno\"])", shape=diamond];
+	  283 [label="You: “就这样？”"];
+	  284 [label="You: “哦，我当然明白了。”"];
+	  285 [label="Jump to: [talkyhub]"];
+	  286 [label="You: “还真他妈够直接的。”"];
+	  0 -> 1
+	  1 -> 96
+	  2 -> 154
+	  2 -> 195
+	  2 -> 196
+	  3 -> 85
+	  4 -> 243
+	  5 -> 62
+	  6 -> 263
+	  7 -> 32
+	  8 -> 112
+	  9 -> 281
+	  10 -> 277
+	  11 -> 12
+	  11 -> 13
+	  12 -> 2
+	  13 -> 270
+	  14 -> 88
+	  15 -> 191
+	  16 -> 49
+	  17 -> 217
+	  17 -> 122
+	  18 -> 187
+	  19 -> 32
+	  20 -> 47
+	  21 -> 32
+	  22 -> 208
+	  23 -> 285
+	  23 -> 54
+	  24 -> 26
+	  24 -> 27
+	  25 -> 199
+	  26 -> 180
+	  27 -> 168
+	  28 -> 32
+	  29 -> 156
+	  30 -> 160
+	  30 -> 214
+	  31 -> 33
+	  31 -> 130
+	  31 -> 34
+	  31 -> 228
+	  31 -> 200
+	  31 -> 142
+	  31 -> 17
+	  32 -> 106
+	  33 -> 171
+	  34 -> 186
+	  35 -> 6
+	  36 -> 133
+	  37 -> 78
+	  38 -> 175
+	  39 -> 134
+	  40 -> 22
+	  41 -> 139
+	  42 -> 281
+	  43 -> 45
+	  43 -> 46
+	  44 -> 118
+	  45 -> 32
+	  46 -> 185
+	  47 -> 56
+	  47 -> 70
+	  47 -> 71
+	  48 -> 219
+	  48 -> 94
+	  48 -> 135
+	  49 -> 112
+	  50 -> 109
+	  51 -> 272
+	  51 -> 21
+	  52 -> 194
+	  52 -> 279
+	  53 -> 209
+	  54 -> 32
+	  55 -> 87
+	  56 -> 170
+	  56 -> 125
+	  56 -> 23
+	  57 -> 89
+	  58 -> 32
+	  59 -> 64
+	  60 -> 35
+	  61 -> 77
+	  61 -> 230
+	  61 -> 63
+	  62 -> 232
+	  63 -> 121
+	  64 -> 41
+	  65 -> 152
+	  66 -> 68
+	  66 -> 69
+	  67 -> 117
+	  68 -> 138
+	  69 -> 129
+	  70 -> 129
+	  71 -> 58
+	  71 -> 101
+	  72 -> 226
+	  73 -> 132
+	  74 -> 18
+	  75 -> 62
+	  76 -> 232
+	  77 -> 173
+	  78 -> 32
+	  79 -> 93
+	  80 -> 191
+	  81 -> 237
+	  82 -> 25
+	  83 -> 258
+	  84 -> 44
+	  85 -> 286
+	  86 -> 29
+	  87 -> 32
+	  88 -> 59
+	  89 -> 8
+	  90 -> 265
+	  91 -> 78
+	  92 -> 32
+	  93 -> 177
+	  94 -> 205
+	  95 -> 97
+	  95 -> 98
+	  96 -> 276
+	  97 -> 162
+	  98 -> 222
+	  98 -> 239
+	  99 -> 72
+	  100 -> 102
+	  101 -> 59
+	  102 -> 104
+	  102 -> 105
+	  103 -> 184
+	  103 -> 197
+	  104 -> 40
+	  104 -> 247
+	  106 -> 248
+	  107 -> 207
+	  108 -> 110
+	  108 -> 111
+	  109 -> 108
+	  110 -> 38
+	  111 -> 264
+	  111 -> 145
+	  111 -> 245
+	  111 -> 189
+	  112 -> 136
+	  113 -> 139
+	  114 -> 179
+	  115 -> 9
+	  115 -> 137
+	  115 -> 43
+	  116 -> 138
+	  117 -> 255
+	  118 -> 212
+	  119 -> 215
+	  120 -> 280
+	  120 -> 275
+	  120 -> 165
+	  121 -> 6
+	  122 -> 20
+	  123 -> 53
+	  124 -> 126
+	  125 -> 223
+	  125 -> 167
+	  126 -> 32
+	  127 -> 138
+	  128 -> 29
+	  129 -> 155
+	  130 -> 217
+	  130 -> 75
+	  130 -> 4
+	  131 -> 107
+	  131 -> 188
+	  132 -> 173
+	  133 -> 266
+	  134 -> 95
+	  135 -> 22
+	  136 -> 86
+	  137 -> 284
+	  137 -> 150
+	  137 -> 84
+	  138 -> 57
+	  139 -> 93
+	  140 -> 216
+	  141 -> 52
+	  142 -> 244
+	  142 -> 100
+	  142 -> 5
+	  142 -> 76
+	  143 -> 201
+	  144 -> 246
+	  145 -> 161
+	  145 -> 249
+	  145 -> 37
+	  146 -> 21
+	  147 -> 99
+	  148 -> 66
+	  148 -> 287
+	  149 -> 258
+	  150 -> 224
+	  150 -> 9
+	  150 -> 137
+	  150 -> 43
+	  151 -> 227
+	  152 -> 210
+	  153 -> 240
+	  154 -> 169
+	  154 -> 119
+	  155 -> 157
+	  155 -> 158
+	  156 -> 213
+	  157 -> 241
+	  158 -> 179
+	  159 -> 271
+	  160 -> 123
+	  161 -> 163
+	  161 -> 164
+	  162 -> 221
+	  163 -> 242
+	  164 -> 73
+	  165 -> 191
+	  166 -> 115
+	  167 -> 55
+	  168 -> 14
+	  169 -> 159
+	  170 -> 146
+	  171 -> 131
+	  172 -> 233
+	  172 -> 91
+	  172 -> 51
+	  173 -> 39
+	  174 -> 112
+	  175 -> 205
+	  176 -> 205
+	  177 -> 114
+	  178 -> 32
+	  179 -> 181
+	  179 -> 182
+	  180 -> 128
+	  181 -> 67
+	  182 -> 32
+	  183 -> 140
+	  184 -> 103
+	  185 -> 74
+	  185 -> 172
+	  185 -> 28
+	  186 -> 32
+	  187 -> 190
+	  188 -> 267
+	  189 -> 148
+	  189 -> 238
+	  190 -> 124
+	  191 -> 42
+	  192 -> 139
+	  193 -> 225
+	  194 -> 240
+	  195 -> 240
+	  196 -> 261
+	  197 -> 216
+	  198 -> 180
+	  199 -> 60
+	  200 -> 7
+	  201 -> 8
+	  202 -> 32
+	  203 -> 93
+	  204 -> 32
+	  205 -> 32
+	  206 -> 38
+	  207 -> 179
+	  208 -> 9
+	  208 -> 137
+	  208 -> 43
+	  209 -> 32
+	  210 -> 32
+	  211 -> 88
+	  212 -> 241
+	  213 -> 271
+	  215 -> 85
+	  216 -> 143
+	  217 -> 231
+	  218 -> 176
+	  219 -> 175
+	  220 -> 206
+	  221 -> 250
+	  222 -> 251
+	  223 -> 24
+	  225 -> 151
+	  226 -> 32
+	  227 -> 50
+	  228 -> 3
+	  229 -> 19
+	  230 -> 144
+	  230 -> 262
+	  231 -> 187
+	  232 -> 92
+	  233 -> 220
+	  234 -> 204
+	  235 -> 80
+	  236 -> 65
+	  236 -> 113
+	  237 -> 268
+	  238 -> 269
+	  239 -> 211
+	  240 -> 234
+	  240 -> 61
+	  240 -> 174
+	  241 -> 31
+	  242 -> 217
+	  242 -> 36
+	  243 -> 218
+	  244 -> 90
+	  245 -> 30
+	  246 -> 273
+	  247 -> 81
+	  247 -> 82
+	  247 -> 166
+	  247 -> 15
+	  248 -> 10
+	  249 -> 127
+	  250 -> 179
+	  251 -> 253
+	  251 -> 254
+	  252 -> 83
+	  253 -> 25
+	  254 -> 256
+	  254 -> 257
+	  255 -> 32
+	  256 -> 183
+	  257 -> 259
+	  257 -> 260
+	  258 -> 48
+	  259 -> 153
+	  260 -> 93
+	  261 -> 201
+	  262 -> 32
+	  263 -> 202
+	  264 -> 203
+	  265 -> 274
+	  265 -> 235
+	  265 -> 236
+	  266 -> 79
+	  267 -> 192
+	  267 -> 178
+	  267 -> 278
+	  268 -> 127
+	  269 -> 252
+	  270 -> 120
+	  270 -> 229
+	  270 -> 141
+	  270 -> 198
+	  271 -> 147
+	  272 -> 266
+	  273 -> 204
+	  274 -> 73
+	  276 -> 32
+	  277 -> 193
+	  278 -> 225
+	  279 -> 73
+	  280 -> 282
+	  280 -> 283
+	  281 -> 11
+	  282 -> 149
+	  283 -> 258
+	  284 -> 116
+	  285 -> 32
+	  286 -> 152
+}
+

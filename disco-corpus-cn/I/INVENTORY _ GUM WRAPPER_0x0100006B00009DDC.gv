@@ -1,0 +1,100 @@
+# INVENTORY / GUM WRAPPER
+# the chewing gum wrapper you can interact with whether you've messed with the ledger or not
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Apricot Chewing Gum Wrapper: 又来了——杏子的香味，再加上一丝肉桂。闻起来像是某个遥远夏日的尾巴。在另一个星球的表面，或者是某座古代寺庙。"];
+	  3 [label="You: 深深，*深深*地呼吸一口。"];
+	  4 [label="Jump to: [main_thought_hub]"];
+	  5 [label="Apricot Chewing Gum Wrapper: 太阳落在海面上，但海水并没有沸腾，反而变成一汪金色的海洋。有那么一瞬间，世界上的贵重金属储量似乎在急剧增加，而你也变得富有起来……"];
+	  6 [label="You: 古代寺庙？"];
+	  7 [label="Encyclopedia: 你觉得有必要说明一点：肉桂完全没有任何水果的味道——它是一种源于树皮的香料。"];
+	  8 [label="Encyclopedia: 不管他们用了什么石油化工副产品创造出这种人造味道，这种紧紧附着在包装纸上的味道。或者那只是你的记忆，在填补空白？"];
+	  9 [label="You: 等等，快回来！"];
+	  10 [label="main_thought_hub"];
+	  11 [label="Apricot Chewing Gum Wrapper: 你旁边有什么东西在活动。是一件小外套在扭捏不安地动作着。暖洋洋的，有如傍晚。然而，当你转向它的时候，那里什么也没有……"];
+	  12 [label="Inland Empire: 你小心翼翼地把包装纸折成方形，放回口袋。整个过程甚至显得一往情深——虽然还有一种挥之不去的悔恨。"];
+	  13 [label="Apricot Chewing Gum Wrapper: ……直到你紧闭双眼，由皮肤与花瓣构成的花朵在脑海中绽放。那里传来太妃糖，奶油和疏远的味道。你*不得不*深陷其中。"];
+	  14 [label="Apricot Chewing Gum Wrapper: 是的。站在古代的高度。很久、很久以前。几千年前。在一座时间的孤岛，你再也回不去的那座孤岛。"];
+	  15 [label="Apricot Chewing Gum Wrapper: 苦涩，柑橘，甜蜜，它似乎变得越来越强烈，就像一阵辉光，你每每呼吸一次……"];
+	  16 [label="Inland Empire: 感觉非常，非常熟悉。哈里，求你了。你应该丢掉它的。"];
+	  17 [label="Variable[\"inventory.wrapper_inland_discard\"]"];
+	  18 [label="Variable[\"inventory.wrapper_inland_discard\"]", shape=diamond];
+	  19 [label="!(Variable[\"inventory.wrapper_inland_discard\"])", shape=diamond];
+	  20 [label="Inland Empire: 感觉是如此，如此的熟悉。"];
+	  21 [label="Jump to: [main_thought_hub]"];
+	  22 [label="Apricot Chewing Gum Wrapper: 你为什么在跟一张口香糖包装纸说话？"];
+	  23 [label="You: 我会留着它，以防万一。"];
+	  24 [label="You: [把包装纸放在一边。]"];
+	  25 [label="no_ledger_hub"];
+	  26 [label="You: 夏日的尾巴……"];
+	  27 [label="Apricot Chewing Gum Wrapper: 你把包装纸整齐地折成了一个四方形，然后放回自己的口袋。小心翼翼。甚至有些含情脉脉……"];
+	  28 [label="Apricot Chewing Gum Wrapper: 这是个好问题。包装纸内部没有任何答案或者暗语。不过你还是被它吸引了。"];
+	  29 [label="Variable[\"inventory.wrapper_inland_discard\"]"];
+	  30 [label="Variable[\"inventory.wrapper_inland_discard\"]", shape=diamond];
+	  31 [label="!(Variable[\"inventory.wrapper_inland_discard\"])", shape=diamond];
+	  32 [label="You: 它去哪了？"];
+	  33 [label="Apricot Chewing Gum Wrapper: 一张皱巴巴的口香糖包装纸。磨损的标牌上写着：‘百果蜜饯’。上面有些微微的杏子香，还有一丝让人难以察觉的肉桂味。”"];
+	  34 [label="Inland Empire: 被悔恨吸引了。停下来，在你被那张百果蜜饯的包装纸‘伤害’之前，把它扔掉吧，求你了。"];
+	  35 [label="Jump to: [main_thought_hub]"];
+	  36 [label="Apricot Chewing Gum Wrapper: 一张用过的包装纸会耸肩吗？不知道为什么，它似乎正在做这种事情。这跟花或者树皮无关，对吗？那*这是*关于什么的呢？你为什么要看着这张包装纸？"];
+	  37 [label="You: 我为什么要在乎这个？"];
+	  38 [label="Jump to: [no_ledger_hub]"];
+	  39 [label="Endurance: 你的心脏正在超负荷运转，努力跟上你大脑里那些恐慌灼热的神经突触。它朝你的身体输送着大量血液，惴惴不安。"];
+	  40 [label="Variable[\"inventory.letters_felt_perfume\"]"];
+	  41 [label="Variable[\"inventory.letters_felt_perfume\"]", shape=diamond];
+	  42 [label="!(Variable[\"inventory.letters_felt_perfume\"])", shape=diamond];
+	  43 [label="You: 肉桂不是水果。"];
+	  0 -> 1
+	  1 -> 41
+	  2 -> 10
+	  3 -> 15
+	  4 -> 10
+	  5 -> 11
+	  6 -> 14
+	  7 -> 25
+	  8 -> 13
+	  9 -> 22
+	  10 -> 24
+	  10 -> 26
+	  10 -> 3
+	  10 -> 6
+	  11 -> 32
+	  11 -> 9
+	  13 -> 40
+	  14 -> 4
+	  15 -> 8
+	  16 -> 35
+	  17 -> 18
+	  17 -> 19
+	  18 -> 12
+	  19 -> 27
+	  20 -> 35
+	  21 -> 10
+	  22 -> 21
+	  23 -> 17
+	  25 -> 44
+	  25 -> 37
+	  25 -> 23
+	  26 -> 5
+	  28 -> 34
+	  29 -> 30
+	  29 -> 31
+	  30 -> 16
+	  31 -> 20
+	  32 -> 22
+	  33 -> 7
+	  34 -> 38
+	  35 -> 10
+	  36 -> 38
+	  37 -> 28
+	  38 -> 25
+	  39 -> 29
+	  40 -> 42
+	  40 -> 43
+	  41 -> 2
+	  42 -> 33
+	  43 -> 36
+}
+

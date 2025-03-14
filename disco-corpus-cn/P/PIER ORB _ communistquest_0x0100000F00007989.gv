@@ -1,0 +1,183 @@
+# PIER ORB / communistquest
+# Rhetoric smells a communist around here. Part of the Communist Dream Quest
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Rhetoric: 绝对是垃圾的味道。你的政治嗅觉皮层不会欺骗你。气味从阳台那边……飘过来了！"];
+	  3 [label="You: “我在努力培养自己的政治觉悟。”"];
+	  4 [label="You: 我嗅到了*某种*梦想被资本碾碎的味道。"];
+	  5 [label="You: “对。”"];
+	  6 [label="Kim Kitsuragi: “你在培养你的……”"];
+	  7 [label="Variable[\"pier.cindy_main_hub_reached\"]"];
+	  8 [label="Variable[\"pier.cindy_main_hub_reached\"]", shape=diamond];
+	  9 [label="!(Variable[\"pier.cindy_main_hub_reached\"])", shape=diamond];
+	  10 [label="You: “不。”"];
+	  11 [label="Perception (Smell): 你首先闻到的是扑面而来的海水味。你幻想着自己身处水下，有只长着一百条腿的节肢动物在海底阴暗的淤泥中穿行……"];
+	  12 [label="Rhetoric: 毋庸置疑。你的政治嗅觉皮层不会欺骗你。气味从阳台那边……飘过来了！"];
+	  13 [label="Kim Kitsuragi: “你要呼吸的东西有点多啊，嗯？”警督皱了皱鼻子。"];
+	  14 [label="Kim Kitsuragi: “那我就不打扰你了，你继续吧，警探。”"];
+	  15 [label="Variable[\"gates.manana_talked_communism_quest\"]"];
+	  16 [label="Variable[\"gates.manana_talked_communism_quest\"]", shape=diamond];
+	  17 [label="!(Variable[\"gates.manana_talked_communism_quest\"])", shape=diamond];
+	  18 [label="Variable[\"reputation.kim\"] >= 5"];
+	  19 [label="Variable[\"reputation.kim\"] >= 5", shape=diamond];
+	  20 [label="!(Variable[\"reputation.kim\"] >= 5)", shape=diamond];
+	  21 [label="Kim Kitsuragi: “还在闻康米主义者的气味吗，警探？”"];
+	  22 [label="Perception (Smell): 换句话说，闻到的就是码头应该有的味道。这只是一个很普通的码头，无法激发什么意识上的联想。"];
+	  23 [label="You: 你是说辛迪的味道？"];
+	  24 [label="Jump to: [Rhetoric: \"Without a doubt. Your politico-olfa...\"]"];
+	  25 [label="Kim Kitsuragi: “我觉得这跟我们的调查没什么关系，但我相信*一切都会水落石出*。”"];
+	  26 [label="You: （闭上眼睛然后深呼吸。）"];
+	  27 [label="You: 你是说这附近有康米主义者吗？"];
+	  28 [label="Perception (Smell): 紧接着，一阵强烈的*海鸥屎*的臭味随风而来，与腐木和重燃油的气味交织成一段刺鼻的旋律。"];
+	  29 [label="Kim Kitsuragi: “一切正常吗，警探？”警督疑惑地看着你。"];
+	  30 [label="Kim Kitsuragi: “个人事务。”"];
+	  31 [label="Kim Kitsuragi: “好吧，我在这儿等你忙完。”警督用脚碰了碰地上的垃圾。"];
+	  32 [label="Jump to: [pier.cindy_main_hub_reached]"];
+	  33 [label="Rhetoric: 那么多年的动乱、希望和梦想都被无情的资本浪潮所淹没。"];
+	  34 [label="You: 闻到什么？"];
+	  35 [label="Inland Empire: 这是一个与未来搭上线的机会！这是多么美丽，又多么*可怕*的想法……"];
+	  36 [label="You: “这是个人事务。”"];
+	  37 [label="Kim Kitsuragi: “你还记得我们正在调查一起*谋杀案*吗？我真心希望你能把你的政治追求留到空闲时间去。”"];
+	  38 [label="Rhetoric: 你难道感觉不出那种不满和不安的独特*气味*吗？感觉就像是这个世界需要强烈地，甚至是*暴力地*去重建秩序一般。"];
+	  39 [label="Savoir Faire: 警督说得没错。你总是莫名其妙、装腔作势地嗅着周围的气息，就好像*想要*获得关注一样。"];
+	  40 [label="Rhetoric: 对！你闻到了吗？"];
+	  41 [label="You: 我什么也没闻到。"];
+	  42 [label="IsKimHere()"];
+	  43 [label="IsKimHere()", shape=diamond];
+	  44 [label="!(IsKimHere())", shape=diamond];
+	  45 [label="You: “我*还是*什么都闻不到。”"];
+	  46 [label="Jump to: [Rhetoric: \"Without a doubt. Your politico-olfa...\"]"];
+	  47 [label="Rhetoric: 你闻到什么了？"];
+	  48 [label="You: “我在闻康米主义者的气味，金。”"];
+	  49 [label="Kim Kitsuragi: “嗯哼。”"];
+	  50 [label="Jump to: [Rhetoric: \"Absolute rubbish. Your politico-olf...\"]"];
+	  51 [label="Rhetoric: 又是这种味道！这个工业港萦绕着一股诡异的气息。闻起来就像……"];
+	  52 [label="Variable[\"gates.manana_communist_quest_smelled_kim\"]"];
+	  53 [label="Variable[\"gates.manana_communist_quest_smelled_kim\"]", shape=diamond];
+	  54 [label="!(Variable[\"gates.manana_communist_quest_smelled_kim\"])", shape=diamond];
+	  55 [label="Variable[\"reputation.kim\"] >= 1"];
+	  56 [label="Variable[\"reputation.kim\"] >= 1", shape=diamond];
+	  57 [label="!(Variable[\"reputation.kim\"] >= 1)", shape=diamond];
+	  58 [label="Perception (Smell): 什么也闻不到。至少没有什么特别的气味。对你而言，鼻子纯粹只是一种装饰。"];
+	  59 [label="Kim Kitsuragi: “无意冒犯，警探，但你有点不太*精明*。”"];
+	  60 [label="Rhetoric: 警督没有你那种*高度发达*的政治嗅觉。这气息是无可争辩的。来了……气味从阳台那边传来了！"];
+	  61 [label="You: “你为什么那么说？”"];
+	  62 [label="Rhetoric: 警督的想法不重要。你的政治嗅觉皮层就像节日街景一般被点亮。康米主义的气味扑面而来，来了……气味从阳台那边传来了！"];
+	  63 [label="You: 你是说那个穿着老妇人外套，看起来很吓人的姑娘吗？"];
+	  64 [label="Variable[\"reputation.kim\"] >= 1"];
+	  65 [label="Variable[\"reputation.kim\"] >= 1", shape=diamond];
+	  66 [label="!(Variable[\"reputation.kim\"] >= 1)", shape=diamond];
+	  67 [label="Jump to: [Rhetoric: \"What do you smell?\"]"];
+	  68 [label="Perception (Smell): 更多就是海水味儿吧。毕竟这是码头。"];
+	  69 [label="You: “我只是像一个普通的警探一样呼吸着新鲜的空气罢了。”\n“我只是像一个普通的警探一样呼吸着早晨的空气罢了。”\n“我只是像一个普通的警探一样呼吸着下午的空气罢了。”\n“我只是像一个普通的警探一样呼吸着傍晚的空气罢了。”\n“我只是像一个普通的警探一样呼吸着夜晚的空气罢了。”"];
+	  70 [label="Esprit de Corps: 他会容忍这次*私人事务*的，但是他的耐心已经快耗尽了。"];
+	  71 [label="Kim Kitsuragi: “你在闻……”"];
+	  72 [label="Esprit de Corps: 他的急躁是装出来的。他其实对*私人事务*的结果很好奇。"];
+	  73 [label="Drama: 警督并*没有*被你说服，大人。"];
+	  74 [label="Variable[\"pier.orb_perc_smelled_pier\"]"];
+	  75 [label="Variable[\"pier.orb_perc_smelled_pier\"]", shape=diamond];
+	  76 [label="!(Variable[\"pier.orb_perc_smelled_pier\"])", shape=diamond];
+	  77 [label="Rhetoric: 肯定的！那位早熟的康米主义青年象征着更美好、更有希望的未来。你现在可以去和革命兄弟姐妹们*搭上线*了。"];
+	  78 [label="Jump to: [pier.cindy_main_hub_reached]"];
+	  79 [label="You: （闭上眼睛然后深呼吸。）"];
+	  0 -> 1
+	  1 -> 15
+	  2 -> 7
+	  3 -> 6
+	  4 -> 46
+	  5 -> 31
+	  6 -> 64
+	  7 -> 8
+	  7 -> 9
+	  8 -> 23
+	  9 -> 63
+	  10 -> 49
+	  11 -> 75
+	  12 -> 7
+	  13 -> 24
+	  14 -> 60
+	  15 -> 16
+	  15 -> 17
+	  16 -> 51
+	  17 -> 40
+	  18 -> 19
+	  18 -> 20
+	  19 -> 14
+	  20 -> 25
+	  21 -> 10
+	  21 -> 61
+	  21 -> 5
+	  22 -> 2
+	  23 -> 78
+	  24 -> 12
+	  25 -> 60
+	  26 -> 47
+	  27 -> 12
+	  28 -> 42
+	  29 -> 48
+	  29 -> 3
+	  29 -> 36
+	  29 -> 70
+	  30 -> 48
+	  30 -> 3
+	  31 -> 55
+	  32 -> 7
+	  33 -> 80
+	  33 -> 4
+	  33 -> 45
+	  34 -> 38
+	  36 -> 30
+	  37 -> 60
+	  38 -> 26
+	  38 -> 27
+	  39 -> 62
+	  40 -> 41
+	  40 -> 34
+	  41 -> 38
+	  42 -> 43
+	  42 -> 44
+	  43 -> 52
+	  44 -> 22
+	  45 -> 50
+	  46 -> 12
+	  47 -> 11
+	  48 -> 72
+	  49 -> 74
+	  50 -> 2
+	  51 -> 68
+	  52 -> 53
+	  52 -> 54
+	  53 -> 21
+	  54 -> 29
+	  55 -> 56
+	  55 -> 57
+	  56 -> 73
+	  57 -> 71
+	  58 -> 2
+	  59 -> 39
+	  60 -> 79
+	  61 -> 59
+	  62 -> 32
+	  63 -> 78
+	  64 -> 65
+	  64 -> 66
+	  65 -> 18
+	  66 -> 37
+	  67 -> 47
+	  68 -> 33
+	  69 -> 13
+	  70 -> 62
+	  71 -> 64
+	  72 -> 62
+	  73 -> 62
+	  74 -> 76
+	  74 -> 77
+	  75 -> 28
+	  76 -> 58
+	  77 -> 35
+	  78 -> 7
+	  79 -> 67
+}
+

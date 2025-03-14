@@ -1,0 +1,113 @@
+# CONTAINERYARD / PANEL
+# very likely we need this panel to make mega-rich-light-bendy-guy container move.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: [离开。]"];
+	  3 [label="Encyclopedia: *启动*——开启。*停机*——关闭。"];
+	  4 [label="IsKimHere()"];
+	  5 [label="IsKimHere()", shape=diamond];
+	  6 [label="!(IsKimHere())", shape=diamond];
+	  7 [label="Crane Control Panel: 这次当你按下按钮的时候，没有发出金属刺耳的尖叫声。只有沉默，而起重机依然处于休眠状态。"];
+	  8 [label="Crane Control Panel: 起重机没有回到原来的位置。它完全没动。"];
+	  9 [label="Crane Control Panel: 随着一声巨响，头顶的起重机开动了，吊起一个巨大的金属集装箱经过半空……"];
+	  10 [label="You: 明白。我们回到控制面板上吧。"];
+	  11 [label="Jump to: [crane_panel_hub]"];
+	  12 [label="Perception (Smell): 一股淡淡的烧焦的橡胶味钻进你的鼻孔，是短路的味道。"];
+	  13 [label="Variable[\"cargo.crane_container_moved\"]"];
+	  14 [label="Variable[\"cargo.crane_container_moved\"]", shape=diamond];
+	  15 [label="!(Variable[\"cargo.crane_container_moved\"])", shape=diamond];
+	  16 [label="Inland Empire: 建造这台起重机的目的现在已经实现了——移动*这个*集装箱。"];
+	  17 [label="Jump to: [IsKimHere()]"];
+	  18 [label="You: 按下*停机*按钮。"];
+	  19 [label="Variable[\"cargo.crane_container_moved\"]"];
+	  20 [label="Variable[\"cargo.crane_container_moved\"]", shape=diamond];
+	  21 [label="!(Variable[\"cargo.crane_container_moved\"])", shape=diamond];
+	  22 [label="You: 明白了。我们回到控制面板上吧。"];
+	  23 [label="Kim Kitsuragi: “我看不出怎么就值得搞出那么大的骚动……”他看着集装箱。“不过能看见运转中的起重机。这一点，我必须承认，挺让人满意的。”"];
+	  24 [label="Jump to: [crane_panel_hub]"];
+	  25 [label="Jump to: [crane_panel_hub]"];
+	  26 [label="You: 它的目的？你是什么意思？"];
+	  27 [label="Interfacing: 罢工在远处进行得如火如荼，而港口则陷入了沉睡。起重机的目的已经实现，现在它又可以休息了。"];
+	  28 [label="Variable[\"cargo.panel_interf_the_crane\"]"];
+	  29 [label="Variable[\"cargo.panel_interf_the_crane\"]", shape=diamond];
+	  30 [label="!(Variable[\"cargo.panel_interf_the_crane\"])", shape=diamond];
+	  31 [label="Inland Empire: 如果你能知道……"];
+	  32 [label="You: 集装箱里有什么？"];
+	  33 [label="You: 按下*启动*按钮。"];
+	  34 [label="Inland Empire: 谁知道呢？你只知道——它很特别。"];
+	  35 [label="Untitled hub (04)"];
+	  36 [label="crane_panel_hub"];
+	  37 [label="Crane Control Panel: 一个生锈的控制面板，上面有几个开关。两个标注着*启动*和*停机*的按钮，被用得褪了色。它好像控制着上面那台大起重机——它的带钩滑車上连着一个集装箱。"];
+	  38 [label="Crane Control Panel: ……随着安静地惊人的*铛*得一声，起重机把集装箱放下了。"];
+	  39 [label="Interfacing: 生锈的控制面板摸起来有些温暖。然后又变冷了。它已经完工了。"];
+	  40 [label="Interfacing: 当然，是为了移动*这个*集装箱。这就是建造它的目的；而这个目的已经实现。所以现在它要休息了。"];
+	  41 [label="Variable[\"cargo.panel_inland_inside_the_container\"]"];
+	  42 [label="Variable[\"cargo.panel_inland_inside_the_container\"]", shape=diamond];
+	  43 [label="!(Variable[\"cargo.panel_inland_inside_the_container\"])", shape=diamond];
+	  44 [label="Variable[\"cargo.crane_container_moved\"]"];
+	  45 [label="Variable[\"cargo.crane_container_moved\"]", shape=diamond];
+	  46 [label="!(Variable[\"cargo.crane_container_moved\"])", shape=diamond];
+	  47 [label="Crane Control Panel: 起重机高高地矗立着，骄傲，笔直，*纹丝不动*。"];
+	  48 [label="Crane Control Panel: 一个生锈的控制面板，上面有几个开关。上面写着*启动*和*停机*——字迹非常、非常轻——因为经常使用有些褪色。"];
+	  0 -> 1
+	  1 -> 45
+	  3 -> 36
+	  4 -> 5
+	  4 -> 6
+	  5 -> 23
+	  6 -> 11
+	  7 -> 25
+	  8 -> 24
+	  9 -> 38
+	  10 -> 39
+	  11 -> 36
+	  12 -> 4
+	  13 -> 14
+	  13 -> 15
+	  14 -> 8
+	  15 -> 48
+	  16 -> 42
+	  17 -> 4
+	  18 -> 13
+	  19 -> 20
+	  19 -> 21
+	  20 -> 7
+	  21 -> 9
+	  22 -> 31
+	  23 -> 11
+	  24 -> 36
+	  25 -> 36
+	  26 -> 41
+	  27 -> 28
+	  28 -> 29
+	  28 -> 30
+	  29 -> 26
+	  29 -> 10
+	  30 -> 17
+	  31 -> 4
+	  32 -> 34
+	  33 -> 19
+	  34 -> 4
+	  35 -> 32
+	  35 -> 22
+	  36 -> 33
+	  36 -> 18
+	  36 -> 2
+	  37 -> 3
+	  38 -> 16
+	  39 -> 12
+	  40 -> 4
+	  41 -> 43
+	  41 -> 44
+	  42 -> 35
+	  43 -> 27
+	  44 -> 46
+	  44 -> 47
+	  45 -> 49
+	  46 -> 37
+	  47 -> 24
+	  48 -> 36
+}
+

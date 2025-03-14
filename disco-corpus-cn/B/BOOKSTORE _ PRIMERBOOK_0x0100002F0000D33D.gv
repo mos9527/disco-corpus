@@ -1,0 +1,78 @@
+# BOOKSTORE / PRIMERBOOK
+# A primer-book (quest item for Arx)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: “夫人，这是什么书？”"];
+	  3 [label="Plaisance: “一本非常有教育意义的初级读物。对于年轻的小脑瓜来说有些超常了…而且很显然，十分受欢迎。”"];
+	  4 [label="Plaisance: “不过，你已经是个成年人了。所以现在可能有点太迟了…这本书是给小孩子看的。”"];
+	  5 [label="Savoir Faire: 现在，你骄傲地拥有了一本给小孩子看的初级读物，而且说实话，它根本花不了几个钱。"];
+	  6 [label="Primer Book: 确实很像是初级读物——每一页上都有一个单词，跟字母表上的字母相对应。"];
+	  7 [label="You: “哇哦，太酷了吧，我想变得更聪明点。”"];
+	  8 [label="Primer Book: IsKimHere()"];
+	  9 [label="IsKimHere()", shape=diamond];
+	  10 [label="!(IsKimHere())", shape=diamond];
+	  11 [label="You: “行吧。”"];
+	  12 [label="Plaisance: “呃…你有孩子吗？”她不自在地颤抖着。“好吧，我猜。好好享受吧。”"];
+	  13 [label="Primer Book: 我不确定你打算从里面得到些什么。这是给小婴儿看的——字面意义上的，小婴儿。"];
+	  14 [label="Jump to: [primerhub]"];
+	  15 [label="Savoir Faire: 你慢慢把手伸向那本小书。不过还没碰到，你就被打断了："];
+	  16 [label="Jump to: [mainmapwallhub]"];
+	  17 [label="Primer Book: Variable[\"doomed.book_primer_wc_stealing\"]"];
+	  18 [label="Variable[\"doomed.book_primer_wc_stealing\"]", shape=diamond];
+	  19 [label="!(Variable[\"doomed.book_primer_wc_stealing\"])", shape=diamond];
+	  20 [label="Plaisance: “先生，请不要乱碰商品。”"];
+	  21 [label="You: [离开。]"];
+	  22 [label="primerhub"];
+	  23 [label="Savoir Faire: 你偷偷盯着店主，等待她分心。当她没看到时，你熟练地把那本小册子从书架上取了下来，然后塞进自己的口袋。"];
+	  24 [label="Primer Book: 你看见一个彩色的初级读本。标题是：“儿童识字入门。”"];
+	  25 [label="You: 偷走初级读物。"];
+	  26 [label="You: Variable[\"doomed.book_primer_wc_stealing\"]"];
+	  27 [label="Variable[\"doomed.book_primer_wc_stealing\"]", shape=diamond];
+	  28 [label="!(Variable[\"doomed.book_primer_wc_stealing\"])", shape=diamond];
+	  29 [label="Kim Kitsuragi: 警督用力咳了几声，然后低语到：“还是别了吧。诈骗小商家可不是我们的*菜*。”"];
+	  30 [label="You: 翻阅书页。"];
+	  31 [label="You: 我想买这本初级读物。"];
+	  32 [label="Jump to: [primerhub]"];
+	  33 [label="Jump to: [mainmapwallhub]"];
+	  0 -> 1
+	  1 -> 25
+	  2 -> 4
+	  3 -> 8
+	  3 -> 12
+	  4 -> 15
+	  5 -> 17
+	  6 -> 14
+	  7 -> 5
+	  8 -> 10
+	  8 -> 11
+	  9 -> 30
+	  10 -> 21
+	  11 -> 5
+	  13 -> 33
+	  14 -> 23
+	  15 -> 9
+	  17 -> 19
+	  17 -> 20
+	  18 -> 24
+	  19 -> 16
+	  20 -> 34
+	  22 -> 32
+	  22 -> 2
+	  22 -> 22
+	  22 -> 26
+	  22 -> 31
+	  23 -> 6
+	  24 -> 23
+	  25 -> 27
+	  26 -> 28
+	  26 -> 29
+	  27 -> 18
+	  28 -> 18
+	  29 -> 34
+	  30 -> 7
+	  31 -> 13
+	  32 -> 23
+}
+

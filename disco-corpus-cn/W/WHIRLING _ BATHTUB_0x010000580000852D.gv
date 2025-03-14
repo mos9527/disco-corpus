@@ -1,0 +1,78 @@
+# WHIRLING / BATHTUB
+# You can take a bath and wash that corpse stench off.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Bathtub: 这不是世界上最整洁的浴缸，不过它比现在的你要干净。"];
+	  3 [label="Savoir Faire: 保持住，别动！让头停留在水面上，不然莫雷尔朝你身上喷的那些费洛蒙就全没了。"];
+	  4 [label="Variable[\"coast.morells_pheromone_spray\"]"];
+	  5 [label="Variable[\"coast.morells_pheromone_spray\"]", shape=diamond];
+	  6 [label="!(Variable[\"coast.morells_pheromone_spray\"])", shape=diamond];
+	  7 [label="You: 给自己冲个澡。"];
+	  8 [label="You: 让啤酒罐在里面放着。"];
+	  9 [label="You: 把啤酒罐拿出来。"];
+	  10 [label="Physical Instrument: 你在干什么？你又不是水族箱里那些肥硕的大鱼。是时候行动起来了。"];
+	  11 [label="You: 出去。（总结。）"];
+	  12 [label="lingerhub"];
+	  13 [label="Bathtub: 你站起身，水位线也随之下降。现在你感觉有点冷。你的衣服粘在依然潮湿的皮肤上。"];
+	  14 [label="You: 我想永远带着这种尸臭味活下去。这是死亡的象征。[离开。]"];
+	  15 [label="Bathtub: 随着逐渐冷却的水温，你的手指变得苍白，上面盖满小小的螺纹。"];
+	  16 [label="Perception (Smell): 啊，那个皂垢的味道。闻起来像是生活的味道。至少跟你比起来是这样的。"];
+	  17 [label="bathtubhub"];
+	  18 [label="You: 我不在乎。我只想被水淹没。"];
+	  19 [label="Conceptualization: 然后——你看见一条窄街上的房子，一家录像带租赁店，以及笼罩在星球曲线轮廓之上的黑暗。"];
+	  20 [label="Untitled hub"];
+	  21 [label="Bathtub: 现在你泡在浴缸里独自思考，但这总比在浴缸外面要来的容易许多。"];
+	  22 [label="You: 在浴缸里多待一会儿。"];
+	  23 [label="Bathtub: 水感觉也不是特别的干净。几只啤酒罐在你的身侧上下浮沉，像悲伤的鸭子一样。你停下来想了一会儿，然后把头沉了下去。"];
+	  24 [label="Bathtub: 温水很舒适，仿佛羊水一般。"];
+	  25 [label="Bathtub: 啤酒罐继续吐着上下浮沉，你的想法也一样，漫无目的地泼溅在浴缸两侧。"];
+	  26 [label="Inland Empire: 你感觉很好，很孤独。而且还特别，特别的疲惫。"];
+	  27 [label="You: 想象一些东西。"];
+	  28 [label="You: 脱下衣服，闭上眼睛，然后浸入水中。"];
+	  29 [label="Bathtub: 水只是有些微温，不过还算舒适，仿佛羊水一般。几只啤酒罐在你的身侧上下浮沉，像悲伤的鸭子一样。"];
+	  30 [label="Bathtub: 浴缸里水慢慢满上了，水在召唤你。"];
+	  31 [label="Electrochemistry: 它们甚至都不算真正的想法。只是一些杂七杂八的感觉，一个都不够敏锐，费不着集中精力。"];
+	  32 [label="Bathtub: 你看见了尸体。你还能闻到自己身上的尸臭。要想彻底消除这股恶臭，不是洗一次澡就能解决的。"];
+	  33 [label="You: 为了以防万一，把你的头停留在水面上。"];
+	  0 -> 1
+	  1 -> 2
+	  2 -> 16
+	  3 -> 21
+	  4 -> 5
+	  4 -> 6
+	  5 -> 24
+	  6 -> 30
+	  7 -> 31
+	  8 -> 26
+	  9 -> 22
+	  10 -> 12
+	  11 -> 13
+	  12 -> 11
+	  12 -> 28
+	  12 -> 23
+	  15 -> 10
+	  16 -> 18
+	  17 -> 14
+	  17 -> 7
+	  18 -> 25
+	  19 -> 12
+	  20 -> 34
+	  20 -> 19
+	  21 -> 32
+	  22 -> 15
+	  23 -> 3
+	  24 -> 27
+	  25 -> 32
+	  26 -> 8
+	  26 -> 9
+	  27 -> 33
+	  28 -> 4
+	  29 -> 27
+	  30 -> 29
+	  31 -> 12
+	  32 -> 20
+	  33 -> 25
+}
+

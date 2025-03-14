@@ -1,0 +1,53 @@
+# CHURCH / WATERBASINS
+# Waterbasin dialogue for solving the "Move the waterbasins" task.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Variable[\"church.waterbowls_physinst_walk\"]  and  Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  3 [label="Variable[\"church.waterbowls_physinst_walk\"]  and  Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  4 [label="!(Variable[\"church.waterbowls_physinst_walk\"]  and  Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  5 [label="Water Bowls: 可怕的沉默再次降临，就好像有人把墙壁外面的整个世界都关掉了。水盆里的水没有一丝涟漪。"];
+	  6 [label="Soona, the Programmer: 主程序员在大厅对面朝你竖起拇指，以示鼓励。"];
+	  7 [label="Logic: 这个任务是对你心智技能的一种侮辱。"];
+	  8 [label="You: 把第3个水盆向左移动2厘米。"];
+	  9 [label="Variable[\"church.waterbasins_moved_one_basin\"] == true  and  Variable[\"church.waterbasins_moved_second_basin\"] == true"];
+	  10 [label="Variable[\"church.waterbasins_moved_one_basin\"] == true  and  Variable[\"church.waterbasins_moved_second_basin\"] == true", shape=diamond];
+	  11 [label="!(Variable[\"church.waterbasins_moved_one_basin\"] == true  and  Variable[\"church.waterbasins_moved_second_basin\"] == true)", shape=diamond];
+	  12 [label="Pain Threshold: *而且*你那条在宣判中受伤的腿还疼着呢。"];
+	  13 [label="You: 把第4个水盆从左向右移动5厘米。"];
+	  14 [label="waterbasins hub"];
+	  15 [label="Jump to: [waterbasins hub]"];
+	  16 [label="Perception (Sight): 水盆的周围已经标好了尺寸，地板上每一条粉笔线代表一厘米。"];
+	  17 [label="Water Bowls: 有些水从盆里洒了出来，打湿了地板。"];
+	  18 [label="Physical Instrument: 该跑回去了！或者也许可以用走的，毕竟这*是*个神圣的地方……"];
+	  19 [label="Water Bowls: 它像幽灵一样移动着，但却没有发出一丝声音。"];
+	  20 [label="Interfacing: 天啦，这个应该超级好玩的。"];
+	  21 [label="You: [离开。]"];
+	  0 -> 1
+	  1 -> 5
+	  2 -> 3
+	  2 -> 4
+	  3 -> 13
+	  4 -> 16
+	  5 -> 17
+	  6 -> 19
+	  7 -> 16
+	  8 -> 20
+	  9 -> 11
+	  9 -> 12
+	  10 -> 6
+	  11 -> 7
+	  12 -> 16
+	  13 -> 18
+	  14 -> 8
+	  14 -> 14
+	  14 -> 22
+	  15 -> 15
+	  16 -> 21
+	  17 -> 10
+	  18 -> 2
+	  19 -> 10
+	  20 -> 15
+}
+

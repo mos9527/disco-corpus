@@ -1,0 +1,442 @@
+# KINEEMA / SERIAL NUMBER
+# 1. Ask Alice to run the serial number you got from the boot.
+#2. Come back the next day to get results and ask for Alice to try to get more personal info on the mercenary (finish task to run serial number, gain task to get personal info from serial number).
+#3. Come back the next day to get personal info (finish task to get personal info from serial number).
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Alice: Variable[\"whirling.klaasje_talked_about_lely\"]"];
+	  3 [label="Variable[\"whirling.klaasje_talked_about_lely\"]", shape=diamond];
+	  4 [label="!(Variable[\"whirling.klaasje_talked_about_lely\"])", shape=diamond];
+	  5 [label="Alice: “没问题，警官。很高兴能澄清这一点。我马上跟ICP资料库联系。明天再联系你。希望他们能找到对你的调查有帮助的信息。”"];
+	  6 [label="Alice: “警官，我很感激你为舒缓情绪所做的努力，但是我们都有很重要的工作。你还有其他*紧急*问题吗？”\n“警官，我怀疑你只是不想让我挂断吧，我……真的没有这个时间。你还有其他*严肃*的问题吗？”"];
+	  7 [label="You: “看起来好像跟我的调查没有关系。”（结束对话。）"];
+	  8 [label="Visual Calculus: 像这样的一套盔甲，应该是按照某个人的体型专门制造的。你应该问问这套盔甲是给谁穿的。"];
+	  9 [label="Alice: “当然。明天给你回话。希望到那时我能收到更多信息。”"];
+	  10 [label="Esprit de Corps: 对于她来说，这是个很有趣的挑战。除了那些呆板的本职工作外，她还能做出额外的贡献。她会很愿意为RCM警队付出额外的努力！"];
+	  11 [label="You: “莱利斯塔德，大概他就是因此得名*莱利*的吧。”\n“莱利斯塔德，大概他就是因此得名莱利的吧。”"];
+	  12 [label="Encyclopedia: 我不知道你怎么想的，但我真的，真的很喜欢。最后结果也挺不错的。"];
+	  13 [label="Kim Kitsuragi: 警督手中拿着笔记本，倾身聆听着。"];
+	  14 [label="You: “所以他跟科奈尔的联系只有那套盔甲。”"];
+	  15 [label="Alice: IsKimHere()"];
+	  16 [label="IsKimHere()", shape=diamond];
+	  17 [label="!(IsKimHere())", shape=diamond];
+	  18 [label="You: “呃，现在我们知道了他的名字和服役记录。”（继续。）"];
+	  19 [label="Alice: Variable[\"plaza.kineema_serial_told_wrong_a\"]"];
+	  20 [label="Variable[\"plaza.kineema_serial_told_wrong_a\"]", shape=diamond];
+	  21 [label="!(Variable[\"plaza.kineema_serial_told_wrong_a\"])", shape=diamond];
+	  22 [label="Alice: Variable[\"tc.crenel\"]"];
+	  23 [label="Variable[\"tc.crenel\"]", shape=diamond];
+	  24 [label="!(Variable[\"tc.crenel\"])", shape=diamond];
+	  25 [label="Alice: “ICP联系到CdP之后，找到最近注册的是一个名叫*科奈尔*的军事佣兵组织。在那个之前是深井。我想也许是同一个佣兵组织。”"];
+	  26 [label="Alice: “他被发现的时候还是个婴儿，被放在一个废弃农场的树叶压缩机里。在新生儿加护病房待了4个月——显然是活下来了——然后2岁时被送到了一个寄养家庭。”"];
+	  27 [label="Kim Kitsuragi: 警督点点头——然后记在笔记里。“莱利斯塔德——莱利。我喜欢这个名字。”"];
+	  28 [label="Jump to: [thehubwhereithappened]"];
+	  29 [label="Jump to: [thehubwhereithappened]"];
+	  30 [label="Alice: “他们没能在你给我的完整代码上找到任何信息。不过，前8个字符跟托拜厄斯·普雷恩的一系列画作是相匹配的——你知道的，就是最近刚上吊自杀的那个艺术家？”"];
+	  31 [label="Alice: “这跟你的调查有关系吗？”"];
+	  32 [label="Jump to: [The actual Radio HUB]"];
+	  33 [label="You: “不知道，他的画是什么样的？”\n“他的画是什么样的？”"];
+	  34 [label="Alice: “名声问题。”"];
+	  35 [label="Kim Kitsuragi: “这种盔甲一定不是批量生产的——很可能是量身定制。到底是谁签收过这套特殊的盔甲，也许还留有记录。”"];
+	  36 [label="Alice: Variable[\"whirling.klaasje_katarzine_lelystad\"]  and  Variable[\"tc.name_kortenaer\"]"];
+	  37 [label="Variable[\"whirling.klaasje_katarzine_lelystad\"]  and  Variable[\"tc.name_kortenaer\"]", shape=diamond];
+	  38 [label="!(Variable[\"whirling.klaasje_katarzine_lelystad\"]  and  Variable[\"tc.name_kortenaer\"])", shape=diamond];
+	  39 [label="Jump to: [thehubwhereithappened]"];
+	  40 [label="Inland Empire: 知道那个名字。对与他来说很重要。就像给案件起名一样，是很重要的。"];
+	  41 [label="ease_of_use_hub"];
+	  42 [label="You: “厉害……还有，国际道德伦理委员会是什么？”"];
+	  43 [label="Electrochemistry: 她指的是药品和酒精。看见了吗，药品和酒精能让你变成一个*名人*。你有多久没碰过了？"];
+	  44 [label="You: “你知道它现在叫什么吗？”"];
+	  45 [label="Alice: “抱歉，先生。我还没收到资料库那边的回话。晚点再打过来吧。还有别的事吗？”"];
+	  46 [label="Authority: 她的声音有一丝疲倦，还有些居高临下的意味。体验过你那些乏味的诱饵之后，她完全不相信你的专业程度。"];
+	  47 [label="Alice: “是的。这套盔甲的生产商是……”她看了一眼笔记。“费尔韦瑟在贝当古的一个加工点，就在苏拉菲，42年产的。”"];
+	  48 [label="You: “艺术跟我的调查密切相关。谢谢你。”（结束对话。）"];
+	  49 [label="prenhub"];
+	  50 [label="Alice: “那套盔甲签发给了奥兰治的一个市民，名叫埃利斯·科顿艾尔——拼写是E-L-L-I-SK-O-R-T-E-N-A-E-R。具体的出生日期不祥。09年2月28号，他被送到莱利斯塔德郡的新生儿加护病房。”"];
+	  51 [label="You: “世界很快就会毁灭。”"];
+	  52 [label="Alice: IsKimHere()"];
+	  53 [label="IsKimHere()", shape=diamond];
+	  54 [label="!(IsKimHere())", shape=diamond];
+	  55 [label="Jump to: [The actual Radio HUB]"];
+	  56 [label="Jump to: [diearmorhubbe]"];
+	  57 [label="Alice: “收到。我马上跟ICP资料库联系。明天再联系你。希望他们能找到什么有用的信息。”"];
+	  58 [label="Alice: “是的，但是ICP好像不愿意分享私人记录。不过我可以试试说服他们。”"];
+	  59 [label="Jump to: [The actual Radio HUB]"];
+	  60 [label="Alice: “不客气，警督。”她听起来很开心。"];
+	  61 [label="Jump to: [The actual Radio HUB]"];
+	  62 [label="You: “我不确定这跟我的调查有什么样的关系，不过我肯定是有的。”（结束对话。）"];
+	  63 [label="Alice: “希望如此。还有什么能帮你的吗？”"];
+	  64 [label="Alice: “ICP那里只有这些信息：他被寄养家庭养大，17岁那年加入弗里德堡的艾斯布兰德军事学院，然后进入奥兰治部队服役，直到41年光荣退伍，就在塞美尼冲突发生的一年之前。”"];
+	  65 [label="thehubwhereithappened"];
+	  66 [label="Authority: 来自曷城警督的称赞！不赖嘛！"];
+	  67 [label="Alice: “很高兴能帮到你的调查，警官。你还有其他问题吗？”"];
+	  68 [label="Jump to: [The actual Radio HUB]"];
+	  69 [label="Alice: “当然了，警官。号码是多少？如果你知道的话，盔甲的制造商是谁？”"];
+	  70 [label="You: “没有，不过还是谢谢你帮我调查。”"];
+	  71 [label="Alice: “只是完成我的本职工作罢了，警官。还有什么事吗？”"];
+	  72 [label="Alice: “是的！”她好像很开心你猜对了。“这是ICP联系到CdP最近的名字。在那个之前是深井。我这里还有一个叫赛迪蒙特的——不过我觉得可能是不同的佣兵组织……”"];
+	  73 [label="You: “是的，请务必试试。我们必须知道这是谁的盔甲。”"];
+	  74 [label="Alice: Variable[\"plaza.kineema_serial_told_right\"]"];
+	  75 [label="Variable[\"plaza.kineema_serial_told_right\"]", shape=diamond];
+	  76 [label="!(Variable[\"plaza.kineema_serial_told_right\"])", shape=diamond];
+	  77 [label="Kim Kitsuragi: “没错！谢谢你，爱丽丝！”"];
+	  78 [label="Alice: “这是药剂师军团特殊订单的一部分，那是一家安保公司，负责保护奥兰治制药公司的利益——在塞美尼冲突发生期间。”"];
+	  79 [label="You: “有，当然有了！我需要的就是这个。”"];
+	  80 [label="Alice: Variable[\"plaza.kineema_serial_concept_particular\"]"];
+	  81 [label="Variable[\"plaza.kineema_serial_concept_particular\"]", shape=diamond];
+	  82 [label="!(Variable[\"plaza.kineema_serial_concept_particular\"])", shape=diamond];
+	  83 [label="You: “是的，谢谢你，警官。很感谢你对案件做出的努力。”"];
+	  84 [label="You: “你是我美丽的女英雄。”"];
+	  85 [label="Untitled hub"];
+	  86 [label="Jump to: [The actual Radio HUB]"];
+	  87 [label="You: “你说的对。我本来想说E50.100.1000。抱歉，让你困惑了。”"];
+	  88 [label="Alice: Variable[\"tc.moralintern\"]"];
+	  89 [label="Variable[\"tc.moralintern\"]", shape=diamond];
+	  90 [label="!(Variable[\"tc.moralintern\"])", shape=diamond];
+	  91 [label="Alice: Variable[\"tc.icp\"]"];
+	  92 [label="Variable[\"tc.icp\"]", shape=diamond];
+	  93 [label="!(Variable[\"tc.icp\"])", shape=diamond];
+	  94 [label="You: “不，他为什么要上吊？”\n“他为什么要上吊？”"];
+	  95 [label="You: “我猜其中一个名字是科奈尔。”"];
+	  96 [label="You: “首先，这家公司改名这么多次之后，还在为制药公司工作吗？”"];
+	  97 [label="Alice: 你听见她的手指敲击键盘的声音。“不，他们被称为*赛迪蒙特*。好像还有*萨玛托塞斯*。这一切都发生在过去的九年里。”"];
+	  98 [label="Jump to: [tc.icp]"];
+	  99 [label="You: “E50.100.1000。盔甲的制造商和型号是费尔韦瑟T-500/VE。”"];
+	  100 [label="Alice: “他们没能在你给我的完整代码上找到任何信息。不过，前10个字符追踪到十年前瓦萨城制造的一台定制婴儿車。”"];
+	  101 [label="Alice: “很高兴能帮到你的调查，警官。你还有其他问题吗？”"];
+	  102 [label="Alice: “即便如此，我还是花了不少功夫才说服他们从资料库中检索出这些信息的，警官。”"];
+	  103 [label="You: “关于他的寄养父母，有什么信息吗？”"];
+	  104 [label="Alice: IsKimHere()"];
+	  105 [label="IsKimHere()", shape=diamond];
+	  106 [label="!(IsKimHere())", shape=diamond];
+	  107 [label="You: “等一下，ICP是什么？”"];
+	  108 [label="Alice: “好吧。”她并不担心。“这是不是意味着你已经准备好了？”"];
+	  109 [label="Kim Kitsuragi: “哈！是的——卡拉洁就是这么说的。很好。我觉得很有道理。”他飞快地做下笔记。"];
+	  110 [label="Alice: Variable[\"plaza.serial_number_2\"]"];
+	  111 [label="Variable[\"plaza.serial_number_2\"]", shape=diamond];
+	  112 [label="!(Variable[\"plaza.serial_number_2\"])", shape=diamond];
+	  113 [label="Alice: TotalHourCount() >= Variable[\"plaza.alice_serial_next_meeting_time\"]"];
+	  114 [label="TotalHourCount() >= Variable[\"plaza.alice_serial_next_meeting_time\"]", shape=diamond];
+	  115 [label="!(TotalHourCount() >= Variable[\"plaza.alice_serial_next_meeting_time\"])", shape=diamond];
+	  116 [label="Alice: “不，我怀疑明早之前他们是不会联系我的。还有别的事吗？”"];
+	  117 [label="Alice: “你确定号码没错吗？听起来不太像序列号。”"];
+	  118 [label="Alice: “好吧，我马上跟ICP资料库联系。明天再联系你。希望他们能找到对你的调查有帮助的信息。”"];
+	  119 [label="Alice: “是的。确实需要些说服力，不过我拿到了雇佣兵的名字，还有一些履历详情。你准备好了吗？”\n“是的。我拿到了雇佣兵的名字，还有一些履历详情。你准备好了吗？”"];
+	  120 [label="Kim Kitsuragi: “一个名字——真是太好了。埃利斯·科顿艾尔……”他自言自语到。"];
+	  121 [label="Alice: IsKimHere()"];
+	  122 [label="IsKimHere()", shape=diamond];
+	  123 [label="!(IsKimHere())", shape=diamond];
+	  124 [label="Kim Kitsuragi: “就连这都算是个小小的奇迹——这些*组织*一般都会仔细检查自己的存货。”他又靠近了一些，然后呼喊到：“谢谢你，爱丽丝。做得漂亮！”"];
+	  125 [label="Jump to: [The actual Radio HUB]"];
+	  126 [label="Alice: Variable[\"plaza.kineema_69_joke\"]"];
+	  127 [label="Variable[\"plaza.kineema_69_joke\"]", shape=diamond];
+	  128 [label="!(Variable[\"plaza.kineema_69_joke\"])", shape=diamond];
+	  129 [label="Empathy: 她的声音里有一丝疲倦的味道。不是说她不相信你——她只是想彻底一点，这样你们俩都不用额外做功了。"];
+	  130 [label="Alice: “各种各样漂亮的野生动物画，应该是打算放在办公大楼的大堂里激发观众的灵感，还有放在沙发上好看的吧。”她犹豫了一下。“我一直觉得那些都是垃圾。”"];
+	  131 [label="Alice: “太好了。还有什么能帮到你的吗？”"];
+	  132 [label="Jump to: [The actual Radio HUB]"];
+	  133 [label="You: “好吧。”"];
+	  134 [label="You: “新生儿加护病房？”"];
+	  135 [label="Jump to: [thehubwhereithappened]"];
+	  136 [label="Alice: Variable[\"plaza.serial_number_1\"]"];
+	  137 [label="Variable[\"plaza.serial_number_1\"]", shape=diamond];
+	  138 [label="!(Variable[\"plaza.serial_number_1\"])", shape=diamond];
+	  139 [label="You: “X54156745678222。盔甲的制造商和型号是费尔韦瑟T-500/VE。”"];
+	  140 [label="Alice: Variable[\"tc.icp\"]"];
+	  141 [label="Variable[\"tc.icp\"]", shape=diamond];
+	  142 [label="!(Variable[\"tc.icp\"])", shape=diamond];
+	  143 [label="Encyclopedia: 国际联合刑警(ICP)是一个国际执法机构，跟EPIS和联盟政府一样，都是国际道德伦理委员会王冠上的宝珠。"];
+	  144 [label="You: “我生来就准备好了，宝贝！”"];
+	  145 [label="Inland Empire: 根据卡拉洁说的，莱利说他的真名其实不属于*他*——也许因为他是被寄养的？"];
+	  146 [label="Alice: “还有其他事吗？”"];
+	  147 [label="Alice: “然后，盔甲跟着他去了塞美尼——或者，至少我假设如此。就这些。科奈尔没有他的工作记录。或者它的其他化身也没有。而且甚至没有他入境瑞瓦肖的记录。"];
+	  148 [label="Jump to: [thehubwhereithappened]"];
+	  149 [label="Alice: Variable[\"plaza.alice_serial_number_stalled_once\"]"];
+	  150 [label="Variable[\"plaza.alice_serial_number_stalled_once\"]", shape=diamond];
+	  151 [label="!(Variable[\"plaza.alice_serial_number_stalled_once\"])", shape=diamond];
+	  152 [label="You: “AO5577789RHG9999。盔甲的制造商和型号是费尔韦瑟T-500/VE。”"];
+	  153 [label="Alice: 她浏览着页面。“所以……看起来这套盔甲被送去了塞美尼。不过，书面记录到这里就中断了。就连公司也很难追踪。这套盔甲上市这几年来，药剂师军团连着改名好多次。"];
+	  154 [label="diearmorhubbe"];
+	  155 [label="Alice: IsKimHere()"];
+	  156 [label="IsKimHere()", shape=diamond];
+	  157 [label="!(IsKimHere())", shape=diamond];
+	  158 [label="Alice: “很难说。他们的客户名单上形形色色的人都有。而且……很不完整。唯一不变的好像只有那些部署在第三和第四国家的雇佣兵。”"];
+	  159 [label="Alice: “乐意帮忙。明天回复你。希望到那时我能收到更多消息。”"];
+	  160 [label="Alice: “我……我不知道是什么意思。不过——肯定是的。”"];
+	  161 [label="Alice: “恐怕还是没有消息，先生。我知道这很让人沮丧。你还有什么想问的吗？”"];
+	  162 [label="Alice: TotalHourCount() >= Variable[\"plaza.kineema_serial_personal_aliiz_deadline\"]"];
+	  163 [label="TotalHourCount() >= Variable[\"plaza.kineema_serial_personal_aliiz_deadline\"]", shape=diamond];
+	  164 [label="!(TotalHourCount() >= Variable[\"plaza.kineema_serial_personal_aliiz_deadline\"])", shape=diamond];
+	  165 [label="Alice: “先别急——但是我说服了资料库的人，让他们透露些机密部门的信息。他们答应明早联系我。你还有其他问题吗？”"];
+	  166 [label="You: “绝对就是这个号码。”"];
+	  167 [label="Jump to: [The actual Radio HUB]"];
+	  168 [label="You: “有没有办法找到这套特殊盔甲的主人是谁？”\n“这种盔甲一定是根据穿戴者的体型量身定制的。应该还有签发记录吧。”"];
+	  169 [label="Logic: 乔斯说那个死者叫莱利。他一定是从*莱利斯塔德*得名的——那个郡名。"];
+	  170 [label="Alice: Variable[\"XP.encyc_serial_number\"]"];
+	  171 [label="Variable[\"XP.encyc_serial_number\"]", shape=diamond];
+	  172 [label="!(Variable[\"XP.encyc_serial_number\"])", shape=diamond];
+	  173 [label="Alice: IsKimHere()"];
+	  174 [label="IsKimHere()", shape=diamond];
+	  175 [label="!(IsKimHere())", shape=diamond];
+	  176 [label="Alice: “这个我就不管了，警官。明天回复你。希望到那时我能收到更多消息。”"];
+	  177 [label="You: “说吧。”"];
+	  178 [label="Alice: IsKimHere()"];
+	  179 [label="IsKimHere()", shape=diamond];
+	  180 [label="!(IsKimHere())", shape=diamond];
+	  181 [label="Drama: 吾辈就知道会有好结果的！"];
+	  182 [label="Alice: “没有，警官。抱歉。”"];
+	  183 [label="Alice: “如果你这么说的话，警官——当然了。”"];
+	  184 [label="Esprit de Corps: 有时候，警察的工作与人格尊严有关——要帮那些无名被害人找回他们的名字。"];
+	  185 [label="Jump to: [The actual Radio HUB]"];
+	  186 [label="Alice: “国际联合刑警？嗯……”她好像有点困惑。“所有特许生产商的军事技术产品，他们那里都有详细的记录。这也是国际道德伦理委员会一开始创建ICP的原因之一。”"];
+	  187 [label="Alice: “太好了。还有什么能帮到你的吗？”"];
+	  188 [label="Alice: Variable[\"tc.name_lely\"]  and  Variable[\"whirling.klaasje_katarzine_lelystad\"] == false"];
+	  189 [label="Variable[\"tc.name_lely\"]  and  Variable[\"whirling.klaasje_katarzine_lelystad\"] == false", shape=diamond];
+	  190 [label="!(Variable[\"tc.name_lely\"]  and  Variable[\"whirling.klaasje_katarzine_lelystad\"] == false)", shape=diamond];
+	  191 [label="Drama: 吾辈为你感到很高兴，大人。这是一次很好的训练。也许您什么时候需要通过撒谎来挽救自己的性命？"];
+	  192 [label="You: “等等，他是在……树叶压缩机里被发现的？”"];
+	  193 [label="Alice: “那是一种园艺工具，用来把树叶压缩成……方块的。这是医院记录的一条具体信息——这些文件里唯一的具体信息。所以我觉得，还是让你知道的好。”"];
+	  194 [label="Alice: “恐怕我只知道这么多了——你给我的那个序列号。还有什么能帮你的吗？”"];
+	  195 [label="Jump to: [The actual Radio HUB]"];
+	  196 [label="Jump to: [You: \"\"Okay.\"\"]"];
+	  197 [label="You: “所以他的名字不属于*他自己*，是因为他是被寄养的？”"];
+	  0 -> 1
+	  1 -> 111
+	  2 -> 3
+	  2 -> 4
+	  3 -> 120
+	  4 -> 150
+	  5 -> 99
+	  6 -> 62
+	  7 -> 195
+	  8 -> 81
+	  9 -> 133
+	  10 -> 74
+	  10 -> 84
+	  10 -> 85
+	  11 -> 105
+	  12 -> 171
+	  13 -> 86
+	  14 -> 15
+	  15 -> 16
+	  15 -> 17
+	  16 -> 125
+	  17 -> 103
+	  18 -> 179
+	  19 -> 20
+	  19 -> 21
+	  20 -> 101
+	  21 -> 30
+	  22 -> 24
+	  22 -> 23
+	  23 -> 96
+	  24 -> 45
+	  25 -> 8
+	  26 -> 36
+	  27 -> 28
+	  28 -> 66
+	  29 -> 66
+	  30 -> 50
+	  31 -> 80
+	  31 -> 71
+	  33 -> 131
+	  34 -> 44
+	  35 -> 155
+	  36 -> 37
+	  36 -> 38
+	  37 -> 146
+	  38 -> 189
+	  39 -> 66
+	  40 -> 185
+	  41 -> 88
+	  41 -> 167
+	  42 -> 6
+	  43 -> 49
+	  43 -> 63
+	  43 -> 7
+	  44 -> 25
+	  45 -> 56
+	  46 -> 42
+	  47 -> 79
+	  48 -> 132
+	  49 -> 33
+	  49 -> 7
+	  49 -> 49
+	  49 -> 95
+	  49 -> 63
+	  50 -> 135
+	  51 -> 109
+	  52 -> 54
+	  52 -> 55
+	  53 -> 78
+	  54 -> 29
+	  56 -> 155
+	  57 -> 141
+	  58 -> 10
+	  60 -> 67
+	  62 -> 64
+	  63 -> 12
+	  64 -> 148
+	  65 -> 193
+	  65 -> 198
+	  65 -> 104
+	  65 -> 11
+	  65 -> 14
+	  65 -> 18
+	  66 -> 136
+	  67 -> 196
+	  69 -> 140
+	  69 -> 153
+	  69 -> 100
+	  70 -> 72
+	  71 -> 192
+	  72 -> 98
+	  73 -> 9
+	  74 -> 76
+	  74 -> 77
+	  75 -> 48
+	  76 -> 19
+	  77 -> 29
+	  78 -> 154
+	  79 -> 188
+	  80 -> 82
+	  80 -> 83
+	  81 -> 155
+	  82 -> 156
+	  83 -> 160
+	  84 -> 177
+	  85 -> 145
+	  85 -> 178
+	  85 -> 52
+	  87 -> 5
+	  88 -> 90
+	  88 -> 91
+	  89 -> 126
+	  90 -> 43
+	  90 -> 197
+	  91 -> 93
+	  91 -> 94
+	  92 -> 87
+	  93 -> 108
+	  93 -> 134
+	  94 -> 34
+	  95 -> 73
+	  96 -> 159
+	  97 -> 8
+	  98 -> 141
+	  99 -> 58
+	  100 -> 31
+	  101 -> 196
+	  102 -> 136
+	  103 -> 183
+	  104 -> 106
+	  104 -> 107
+	  105 -> 27
+	  106 -> 184
+	  107 -> 187
+	  108 -> 145
+	  108 -> 178
+	  109 -> 39
+	  110 -> 112
+	  110 -> 113
+	  111 -> 163
+	  112 -> 137
+	  113 -> 115
+	  113 -> 116
+	  114 -> 75
+	  115 -> 117
+	  116 -> 69
+	  117 -> 127
+	  118 -> 99
+	  119 -> 122
+	  120 -> 40
+	  121 -> 123
+	  121 -> 124
+	  122 -> 13
+	  123 -> 86
+	  124 -> 61
+	  126 -> 128
+	  126 -> 129
+	  127 -> 47
+	  128 -> 130
+	  129 -> 42
+	  130 -> 49
+	  130 -> 63
+	  130 -> 7
+	  131 -> 12
+	  133 -> 147
+	  134 -> 26
+	  135 -> 66
+	  136 -> 138
+	  136 -> 139
+	  137 -> 114
+	  138 -> 70
+	  139 -> 118
+	  140 -> 142
+	  140 -> 143
+	  141 -> 87
+	  142 -> 144
+	  143 -> 92
+	  144 -> 51
+	  145 -> 189
+	  146 -> 60
+	  147 -> 66
+	  148 -> 66
+	  149 -> 152
+	  149 -> 151
+	  150 -> 162
+	  151 -> 46
+	  152 -> 118
+	  153 -> 22
+	  154 -> 97
+	  154 -> 169
+	  155 -> 157
+	  155 -> 158
+	  156 -> 35
+	  157 -> 155
+	  158 -> 57
+	  159 -> 133
+	  160 -> 39
+	  161 -> 56
+	  162 -> 164
+	  162 -> 165
+	  163 -> 2
+	  164 -> 166
+	  165 -> 186
+	  166 -> 119
+	  168 -> 59
+	  169 -> 65
+	  170 -> 172
+	  170 -> 173
+	  171 -> 182
+	  172 -> 168
+	  173 -> 176
+	  173 -> 175
+	  174 -> 110
+	  175 -> 161
+	  176 -> 133
+	  177 -> 51
+	  178 -> 180
+	  178 -> 181
+	  179 -> 121
+	  180 -> 68
+	  181 -> 168
+	  182 -> 149
+	  183 -> 28
+	  184 -> 102
+	  186 -> 89
+	  187 -> 192
+	  188 -> 190
+	  188 -> 191
+	  189 -> 170
+	  190 -> 65
+	  191 -> 32
+	  192 -> 194
+	  193 -> 53
+	  194 -> 12
+	  196 -> 134
+	  197 -> 174
+}
+

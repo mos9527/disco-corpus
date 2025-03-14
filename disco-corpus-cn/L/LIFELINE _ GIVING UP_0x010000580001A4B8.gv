@@ -1,0 +1,97 @@
+# LIFELINE / GIVING UP
+# When you lose enough Morale (Volition), you feel like giving up. This is the freebie/tutorial.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Untitled hub (02)"];
+	  3 [label="Untitled hub (02)"];
+	  4 [label="Variable[\"stats.giving_t_inland\"]"];
+	  5 [label="Variable[\"stats.giving_t_inland\"]", shape=diamond];
+	  6 [label="!(Variable[\"stats.giving_t_inland\"])", shape=diamond];
+	  7 [label="Kim Kitsuragi: “我不否认，你确实被指控过，而且是因为保护这里的人，这个……很有挑战性地方的人。但是贫穷不会让人变成废材——贫穷只是……贫穷而已。”"];
+	  8 [label="You: “保护人类简直就是浪费我的生命。他们不值得。”"];
+	  9 [label="Conceptualization: 你还在组织语言。这是离完全的毁灭又近了一步，是吗？"];
+	  10 [label="Volition: 现在你说什么也不会让感觉变得好起来……"];
+	  11 [label="Inland Empire: 还有些什么东西。肯定有什么。但是——就像把手伸进泥水中一样，不论怎么四下翻找，还是什么都没有……"];
+	  12 [label="You: “保护人类简直就是浪费我的生命。他们不值得。”"];
+	  13 [label="You: “我真的没什么好说的了，坤诺。老子不干了。”\n“我真他妈什么办法也没了。就让尸体挂在树上吧！我不干了。”"];
+	  14 [label="You: 去他妈的马丁内斯，去他妈的瑞瓦肖。还有我自己。老子不干了。"];
+	  15 [label="IsCunoInParty()"];
+	  16 [label="IsCunoInParty()", shape=diamond];
+	  17 [label="!(IsCunoInParty())", shape=diamond];
+	  18 [label="Interfacing: 是啊，我很肯定你的*搜查*运走到尽头了。你已经被水淹没不知所措了。"];
+	  19 [label="Cuno: “现在已经太迟了。所以你打算怎么做？狠狠地嘲笑自己？”"];
+	  20 [label="Cuno: “坤诺才不管你那张臭嘴说出的屁话。”\n“除此之外，这样可能会危害公共健康。至于辞职不干的话——请等到调查结束之后再说吧。”"];
+	  21 [label="You: “我真他妈希望自己要死了。还有你，坤诺，去死吧你。”"];
+	  22 [label="You: “我真他妈希望自己要死了。去你妈的，操。”"];
+	  23 [label="Cuno: “你是个废材，坤诺完全不怀疑这一点，但是你为什么还要到处抱怨呢？”"];
+	  24 [label="You: 我不干了。根本没人喜欢警察。"];
+	  25 [label="You: “保护人类简直就是浪费我的生命。他们不值得。”"];
+	  26 [label="Cuno: “坤诺知道这头猪是个狗娘养的杂种。”"];
+	  27 [label="You: “我不干了。根本没人喜欢警察。”"];
+	  28 [label="Volition: 绝望渐渐爬进你的心底，因为你的软弱愈发膨胀。不论作为一名警察的你曾经有过多么崇高的意愿——现在都变成了它的食粮。"];
+	  29 [label="You: “我不干了。根本没人喜欢警察。”"];
+	  30 [label="You: 我真的没什么好说的了。让这一切见鬼去吧。\n“我真他妈什么办法也没了。见鬼去吧。”"];
+	  31 [label="Jump to: [NewspaperEndgame(\"GIVING_UP\", \"COP G ...]"];
+	  32 [label="You: “我真的没什么好说的了，金。去死吧你。”\n“我真他妈什么办法也没了。就让尸体挂在树上吧！我不干了。去你妈的。”"];
+	  33 [label="Kim Kitsuragi: “叫我去死？我理解这次调查一点也不轻松，不过……”\n“去你妈的？请等到我们的调查结束之后再发泄你的*怒火*吧。”"];
+	  34 [label="IsKimHere()"];
+	  35 [label="IsKimHere()", shape=diamond];
+	  36 [label="!(IsKimHere())", shape=diamond];
+	  37 [label="Untitled hub (02)"];
+	  38 [label="Kim Kitsuragi: “是啊，承受这么多的怀疑和赤裸裸的仇恨真的很难，”他露出悲伤的微笑。"];
+	  39 [label="Kim Kitsuragi: 他透过鼻梁上的眼镜片，恬淡地看着你陷入崩溃。"];
+	  0 -> 1
+	  1 -> 28
+	  2 -> 32
+	  2 -> 25
+	  2 -> 27
+	  2 -> 22
+	  3 -> 8
+	  3 -> 29
+	  3 -> 21
+	  3 -> 13
+	  4 -> 5
+	  4 -> 6
+	  5 -> 18
+	  6 -> 9
+	  7 -> 10
+	  8 -> 23
+	  9 -> 34
+	  10 -> 31
+	  11 -> 4
+	  12 -> 10
+	  13 -> 20
+	  14 -> 10
+	  15 -> 16
+	  15 -> 17
+	  16 -> 3
+	  17 -> 37
+	  18 -> 9
+	  19 -> 10
+	  20 -> 10
+	  21 -> 26
+	  22 -> 40
+	  23 -> 10
+	  24 -> 10
+	  25 -> 7
+	  26 -> 10
+	  27 -> 39
+	  28 -> 11
+	  29 -> 19
+	  30 -> 10
+	  32 -> 33
+	  33 -> 10
+	  34 -> 35
+	  34 -> 36
+	  35 -> 2
+	  36 -> 15
+	  37 -> 24
+	  37 -> 12
+	  37 -> 30
+	  37 -> 14
+	  38 -> 10
+	  39 -> 10
+}
+

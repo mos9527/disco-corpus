@@ -1,0 +1,670 @@
+# INVENTORY / DOCUMENTS
+# Interaction with the documents Evrart asks you to sign.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Rhetoric: 他没有明说，不过他在暗示你造假。"];
+	  3 [label="Rhetoric: 在这种情况下，他对你为发展做出的贡献并不完全满意。"];
+	  4 [label="You: 设法找出交易里的漏洞。"];
+	  5 [label="You: Variable[\"cargo.evrartdocument_logic_wc_to_see_whats_up_with_the_signatures\"]"];
+	  6 [label="Variable[\"cargo.evrartdocument_logic_wc_to_see_whats_up_with_the_signatures\"]", shape=diamond];
+	  7 [label="!(Variable[\"cargo.evrartdocument_logic_wc_to_see_whats_up_with_the_signatures\"])", shape=diamond];
+	  8 [label="Kim Kitsuragi: “我本该料到的。”警督的语气充满悔意。“村里的人迟早会自愿搬出去。”"];
+	  9 [label="You: 那这里有什么影响呢？"];
+	  10 [label="Jump to: [agreement form]"];
+	  11 [label="Logic: 你当然会找到一支新武器，而且，希望你能在没有艾弗拉特帮助的情况下破获这起案件。"];
+	  12 [label="You: 等等，这里有什么影响呢？"];
+	  13 [label="Jump to: [agreement form]"];
+	  14 [label="Jump to: [agreement form]"];
+	  15 [label="White Envelope: Variable[\"village.ww_redcheck_viscal_forgery\"]"];
+	  16 [label="Variable[\"village.ww_redcheck_viscal_forgery\"]", shape=diamond];
+	  17 [label="!(Variable[\"village.ww_redcheck_viscal_forgery\"])", shape=diamond];
+	  18 [label="White Envelope: IsKimHere()"];
+	  19 [label="IsKimHere()", shape=diamond];
+	  20 [label="!(IsKimHere())", shape=diamond];
+	  21 [label="Kim Kitsuragi: “是啊……”他懊恼地点了点头。“这可能是明智的选择。”"];
+	  22 [label="Inland Empire: 这是个不吉利或者很酷的建筑选择——很难说清楚。"];
+	  23 [label="You: 这也太可怕了。那群可怜人。我就不能做点什么吗？\n“看啦，金……”（指着复印件。）“这些人会因为噪音被迫搬走的。”"];
+	  24 [label="Kim Kitsuragi: “我不确定跟艾弗拉特一起合作是不是就特别道德……不过我能理解，也很尊重你的立场。”他看向一边，陷入沉思。"];
+	  25 [label="Interfacing: 现在你要做的就是把东西寄给艾弗拉特在德尔塔的会计师。"];
+	  26 [label="White Envelope: CheckItem(\"white_envelope_lilienne_and_idiot_doom\")"];
+	  27 [label="CheckItem(\"white_envelope_lilienne_and_idiot_doom\")", shape=diamond];
+	  28 [label="!(CheckItem(\"white_envelope_lilienne_and_idiot_doom\"))", shape=diamond];
+	  29 [label="White Envelope: 你把法律文件从信封中取了出来：附录里有一份建设周期为12-40个月的分区规划图。所有内容下方——是莉莉恩的签名和一条空白的细线，等待着一名签名人。"];
+	  30 [label="White Envelope: 你把法律文件从信封中取了出来：附录里有一份建设周期为12-40个月的分区规划图。所有内容下方——是你失败的伪造签名。"];
+	  31 [label="Logic: 呃，你*可以*欺骗艾弗拉特。随便找些人签署这些文件。等到工会老大发现的时候，你在这里的工作早就已经结束了。"];
+	  32 [label="Logic: 什么也没有。醉鬼的签名毫无价值，等到艾弗拉特准备好开始施工的时候，他还是需要拿到莉莉恩和伊泽贝尔签名。"];
+	  33 [label="Kim Kitsuragi: “我早该发现的。”警督又看了一遍文件，皱起了眉头。"];
+	  34 [label="You: “谁他妈管这群人。他们有为我做过什么吗？我们继续吧。“"];
+	  35 [label="White Envelope: IsKimHere()"];
+	  36 [label="IsKimHere()", shape=diamond];
+	  37 [label="!(IsKimHere())", shape=diamond];
+	  38 [label="Kim Kitsuragi: “当然……我早该发现的。”警督又看了一遍文件，皱起了眉头。"];
+	  39 [label="Logic: 你还真的是很有理性呢。艾弗拉特也一样——毫无疑问，废弃的村子能让他从中获利。"];
+	  40 [label="White Envelope: Variable[\"cargo.evrartdocument_forged_two_signature\"]"];
+	  41 [label="Variable[\"cargo.evrartdocument_forged_two_signature\"]", shape=diamond];
+	  42 [label="!(Variable[\"cargo.evrartdocument_forged_two_signature\"])", shape=diamond];
+	  43 [label="You: 名字：“伊泽贝尔·莎蒂。”"];
+	  44 [label="You: “金，你对这个有什么看法？”"];
+	  45 [label="White Envelope: IsKimHere()"];
+	  46 [label="IsKimHere()", shape=diamond];
+	  47 [label="!(IsKimHere())", shape=diamond];
+	  48 [label="Kim Kitsuragi: “嗯……”警督看着再次检查文件的你，小声嘟囔着。"];
+	  49 [label="Logic: 里面没有漏洞。事实很简单：目前这些居民将会失去街道通道，在接下来的12-40个月里，他们的生活将会被隔壁连续不断的建筑噪音所支配。"];
+	  50 [label="Interfacing: 似乎你只是画了一条线，而不是写了个签名。一条微不足道的线。看起来像是痴呆症晚期。"];
+	  51 [label="White Envelope: CancelTask(\"TASK.find_two_random_people_to_sign_the_papers_cancelled\")--[[ Variable[ ]]"];
+	  52 [label="Kim Kitsuragi: “然而……在我们采取任何行动之前，应该先去一趟海岸。如果你都没去过村子的话，艾弗拉特是不会相信你拿到村民签名的。”他耸耸肩。“等我们走过水闸之后，你就可以试着伪造签名了。”"];
+	  53 [label="Logic: 里面没有漏洞。事实很简单：目前这些居民将会失去街道通道，在接下来的12-40个月里，他们的生活将会被隔壁连续不断的建筑噪音所支配。"];
+	  54 [label="Logic: 你还真的是很有理性呢。艾弗拉特也一样——毫无疑问，废弃的村子能让他从中获利。"];
+	  55 [label="Logic: 或者！你*可以*欺骗艾弗拉特。随便找些人签署这些文件。等到工会老大发现的时候，你在这里的工作早就已经结束了。"];
+	  56 [label="Jump to: [agreement form]"];
+	  57 [label="You: 还好我会伪造签名。\n“还好我会伪造签名。”"];
+	  58 [label="White Envelope: IsKimHere()"];
+	  59 [label="IsKimHere()", shape=diamond];
+	  60 [label="!(IsKimHere())", shape=diamond];
+	  61 [label="You: “我是不是刚把它毁掉了？”"];
+	  62 [label="Kim Kitsuragi: “我们需要给你找一支新武器——而且，希望我们能不在艾弗拉特的帮助下解决这起案件。”他叹了一口气。"];
+	  63 [label="Kim Kitsuragi: “很好。艾弗拉特要重新盘算他的阴谋了。”警督点点头。“当伊泽贝尔质疑签名的时候，这份文件就会被视为无效了。”"];
+	  64 [label="White Envelope: IsKimHere()"];
+	  65 [label="IsKimHere()", shape=diamond];
+	  66 [label="!(IsKimHere())", shape=diamond];
+	  67 [label="Untitled hub"];
+	  68 [label="Kim Kitsuragi: “我不确定跟艾弗拉特一起合作是不是就特别道德……不过我能理解，也很尊重你的立场。”他看向一边，陷入沉思。"];
+	  69 [label="Jump to: [agreement form]"];
+	  70 [label="White Envelope: CheckItem(\"white_envelope_signed_wrong\")"];
+	  71 [label="CheckItem(\"white_envelope_signed_wrong\")", shape=diamond];
+	  72 [label="!(CheckItem(\"white_envelope_signed_wrong\"))", shape=diamond];
+	  73 [label="White Envelope: IsKimHere()"];
+	  74 [label="IsKimHere()", shape=diamond];
+	  75 [label="!(IsKimHere())", shape=diamond];
+	  76 [label="Kim Kitsuragi: “很好。艾弗拉特要重新盘算他的阴谋了。”警督点点头。“当她绝不承认这是她本人签名的时候，这份文件就会被视为无效。”"];
+	  77 [label="You: 我毁掉这份文件了吗？"];
+	  78 [label="White Envelope: Variable[\"village.netpicker_got_her_signature\"]  or  Variable[\"village.netpicker_signature_for_washerwoman\"]"];
+	  79 [label="Variable[\"village.netpicker_got_her_signature\"]  or  Variable[\"village.netpicker_signature_for_washerwoman\"]", shape=diamond];
+	  80 [label="!(Variable[\"village.netpicker_got_her_signature\"]  or  Variable[\"village.netpicker_signature_for_washerwoman\"])", shape=diamond];
+	  81 [label="You: 两个名字：*伊泽贝尔·莎蒂*和*莉莉恩·卡特*。"];
+	  82 [label="Jump to: [agreement form]"];
+	  83 [label="White Envelope: Variable[\"village.netpicker_got_her_signature\"]  or  Variable[\"village.netpicker_signature_for_washerwoman\"]"];
+	  84 [label="Variable[\"village.netpicker_got_her_signature\"]  or  Variable[\"village.netpicker_signature_for_washerwoman\"]", shape=diamond];
+	  85 [label="!(Variable[\"village.netpicker_got_her_signature\"]  or  Variable[\"village.netpicker_signature_for_washerwoman\"])", shape=diamond];
+	  86 [label="White Envelope: Variable[\"TASK.forge_liliennes_and_isobels_signatures\"]"];
+	  87 [label="Variable[\"TASK.forge_liliennes_and_isobels_signatures\"]", shape=diamond];
+	  88 [label="!(Variable[\"TASK.forge_liliennes_and_isobels_signatures\"])", shape=diamond];
+	  89 [label="Kim Kitsuragi: 他赞许地点点头。“一般这种决定我是无法容忍的，不过，在这种情况下……”"];
+	  90 [label="You: 我想这就是发展的代价。\n“噪音对村民来说可能难以忍受，不过我想这就是发展的代价。”"];
+	  91 [label="You: 好吧，就这么干！（开始伪造。）"];
+	  92 [label="You: Variable[\"village.ww_redcheck_viscal_forgery\"]"];
+	  93 [label="Variable[\"village.ww_redcheck_viscal_forgery\"]", shape=diamond];
+	  94 [label="!(Variable[\"village.ww_redcheck_viscal_forgery\"])", shape=diamond];
+	  95 [label="agreement form"];
+	  96 [label="White Envelope: Variable[\"cargo.evrartdocument_logic_wc_to_see_whats_up_with_the_signatures\"]"];
+	  97 [label="Variable[\"cargo.evrartdocument_logic_wc_to_see_whats_up_with_the_signatures\"]", shape=diamond];
+	  98 [label="!(Variable[\"cargo.evrartdocument_logic_wc_to_see_whats_up_with_the_signatures\"])", shape=diamond];
+	  99 [label="Jump to: [agreement form]"];
+	  100 [label="White Envelope: Variable[\"TASK.forge_liliennes_and_isobels_signatures_done\"]"];
+	  101 [label="Variable[\"TASK.forge_liliennes_and_isobels_signatures_done\"]", shape=diamond];
+	  102 [label="!(Variable[\"TASK.forge_liliennes_and_isobels_signatures_done\"])", shape=diamond];
+	  103 [label="Logic: 里面没有漏洞。事实很简单：目前这些居民将会失去街道通道，在接下来的12-40个月里，他们的生活将会被隔壁连续不断的建筑噪音所支配。"];
+	  104 [label="Logic: 把他人的利益放在你个人之前……你是个好人，哈里。一个善良又正直的人。而且，武器是可以替换的——人不行。"];
+	  105 [label="Jump to: [agreement form]"];
+	  106 [label="Jump to: [agreement form]"];
+	  107 [label="You: 好吧，看在我的良心的份上，我已经准备承受伤害了。"];
+	  108 [label="White Envelope: Variable[\"cargo.evrartenvelope_viscal_youthcentre_very_close_to_houses\"]"];
+	  109 [label="Variable[\"cargo.evrartenvelope_viscal_youthcentre_very_close_to_houses\"]", shape=diamond];
+	  110 [label="!(Variable[\"cargo.evrartenvelope_viscal_youthcentre_very_close_to_houses\"])", shape=diamond];
+	  111 [label="Jump to: [agreement form]"];
+	  112 [label="White Envelope: Variable[\"cargo.evrartdocument_forged_one_signature\"]"];
+	  113 [label="Variable[\"cargo.evrartdocument_forged_one_signature\"]", shape=diamond];
+	  114 [label="!(Variable[\"cargo.evrartdocument_forged_one_signature\"])", shape=diamond];
+	  115 [label="White Envelope: 你把法律文件从信封中取了出来：附录里有一份建设周期为12-40个月的分区规划图。很明显，签名者是*伊泽贝尔·莎蒂*和*厄运漩涡*。"];
+	  116 [label="Jump to: [agreement form]"];
+	  117 [label="You: 那这里有什么影响呢？"];
+	  118 [label="Logic: 什么也没有。你伪造的签名毫无价值，等到艾弗拉特准备好开始施工的时候，他还是需要拿到莉莉恩和伊泽贝尔签名。"];
+	  119 [label="White Envelope: IsKimHere()"];
+	  120 [label="IsKimHere()", shape=diamond];
+	  121 [label="!(IsKimHere())", shape=diamond];
+	  122 [label="Logic: 没人会评判你。毕竟，没了枪的警察那算什么？还能算得上是警察吗？"];
+	  123 [label="Interfacing: 但是并不是，如果她提出异议，这份文件就会作废。那就意味着艾弗拉特要重新开始了。"];
+	  124 [label="Interfacing: 不，只是一条线而已。伪造显然不是你的强项——很抱歉，我不该提这种建议的。如果你能找人*真正*在上面签字的话，应该就没问题了。"];
+	  125 [label="Rhetoric: ……要想建造什么东西的话，你还能怎么做呢？建东西一直都很不方便，市民必然会对这些建设工程产生分歧意见，不过也没有别的办法了。"];
+	  126 [label="Logic: 这可能是个聪明的选择。现在就把这份文件寄出去，以后别想了。"];
+	  127 [label="Jump to: [agreement form]"];
+	  128 [label="White Envelope: Variable[\"village.netpicker_signature_for_washerwoman\"]"];
+	  129 [label="Variable[\"village.netpicker_signature_for_washerwoman\"]", shape=diamond];
+	  130 [label="!(Variable[\"village.netpicker_signature_for_washerwoman\"])", shape=diamond];
+	  131 [label="You: “我想过伪造伊泽贝尔·莎蒂的签名，之后决定放弃。不过现在，我觉得这么做也许是对的。”"];
+	  132 [label="Untitled hub"];
+	  133 [label="Esprit de Corps: 他对未能保护渔村居民不受贪婪的帮派老大伤害而感到愧疚。"];
+	  134 [label="White Envelope: 你把法律文件从信封中取了出来：附录里有一份建设周期为12-40个月的分区规划图。很明显，签名者是*厄运漩涡*和某个叫*尔盖比阿给打要不*的人。"];
+	  135 [label="You: 我都做了什么？"];
+	  136 [label="Kim Kitsuragi: “任何半调子的公证人应该都能处理好这个。*没有*让她签字可能是最好的结果吧。”"];
+	  137 [label="Jump to: [agreement form]"];
+	  138 [label="Jump to: [agreement form]"];
+	  139 [label="Visual Calculus: 广场有一个邮筒，靠近书店转角。"];
+	  140 [label="Kim Kitsuragi: “现在我们要做的就是把东西寄出去。我好像在广场看见过一个邮筒。”"];
+	  141 [label="White Envelope: CancelTask(\"TASK.find_two_random_people_to_sign_the_papers_cancelled\")--[[ Variable[ ]]"];
+	  142 [label="White Envelope: 你把法律文件从信封中取了出来：附录里有一份建设周期为12-40个月的分区规划图。"];
+	  143 [label="Interfacing: 你自信地大笔一挥，伪造工作就完成了。你在签名栏上看见了什么？"];
+	  144 [label="Jump to: [agreement form]"];
+	  145 [label="Logic: 一旦施工开始，可能会花费几个月——也许是一年——即使是最顽固的钉子户也会厌倦这种生活。在那之后，他们会便宜卖掉自己的财产，然后搬出去。"];
+	  146 [label="Logic: 呃，你*可以*欺骗艾弗拉特。随便找些人签署这些文件。等到工会老大发现的时候，你在这里的工作早就已经结束了。"];
+	  147 [label="Kim Kitsuragi: 警督点点头。“是啊——当个*混账*要容易地多。我们走吧。”"];
+	  148 [label="Interfacing: 确实。你伪造的签名就在莉莉恩本人签名的旁边，看起来很让人信服，就像真的一样。"];
+	  149 [label="Kim Kitsuragi: 他撅起嘴唇。“没错，伪造。这样文件就无效了。”"];
+	  150 [label="Kim Kitsuragi: “你可能没有笔。”他从口袋里掏出一支。“给你，留着吧。我还有一支。”"];
+	  151 [label="You: “哦耶，我们就这么干！”"];
+	  152 [label="White Envelope: 你把法律文件从信封中取了出来：附录里有一份建设周期为12-40个月的分区规划图。很明显，签名者是*伊泽贝尔·莎蒂*和*莉莉恩·卡特*。"];
+	  153 [label="White Envelope: Variable[\"cargo.evrartdocument_failed_forge_two_signature\"]"];
+	  154 [label="Variable[\"cargo.evrartdocument_failed_forge_two_signature\"]", shape=diamond];
+	  155 [label="!(Variable[\"cargo.evrartdocument_failed_forge_two_signature\"])", shape=diamond];
+	  156 [label="Logic: 里面没有漏洞。事实就是现在的居民将会无法在街道上通行。在接下来的12-40个月里，他们的生活将会被隔壁连续不断的建筑噪音所支配。"];
+	  157 [label="You: 幸好我让那些醉鬼签了这个。\n“幸好我让那些醉鬼签了这个。”"];
+	  158 [label="Logic: 这一步走的很漂亮，没错。"];
+	  159 [label="You: 伊泽贝尔和莉莉恩即将面对12-40个艰苦的岁月。\n“伊泽贝尔和莉莉恩即将面对12-40个艰苦的岁月。”"];
+	  160 [label="Jump to: [agreement form]"];
+	  161 [label="Interfacing: 但是没有，如果伊泽贝尔提出质疑，这份文件就会视作无效。那就意味着艾弗拉特必须重新开始。"];
+	  162 [label="Kim Kitsuragi: “艾弗拉特可能在监视我们，不过……”他停下来想了想。“如果第二份签名出了点*差错*的话……”"];
+	  163 [label="You: “这不合法吧。我对你的期望比这个要高多了，金。”"];
+	  164 [label="White Envelope: IsKimHere()"];
+	  165 [label="IsKimHere()", shape=diamond];
+	  166 [label="!(IsKimHere())", shape=diamond];
+	  167 [label="White Envelope: 你把法律文件从信封中取了出来：附录里有一份建设周期为12-40个月的分区规划图。所有内容下方——在签名栏上——都有你的小伪造品。"];
+	  168 [label="White Envelope: 你把法律文件从信封中取了出来：附录里有一份建设周期为12-40个月的分区规划图。所有内容下方——在签名栏上——是莉莉恩和你的小伪造品。"];
+	  169 [label="Visual Calculus: 它与这些现存房屋之间的距离近的可怕。基本上是墙贴墙，实际上是把它们集成到青少年活动中心里面去了。"];
+	  170 [label="Logic: 再次声明，这份文件似乎没有任何隐藏条款。也许，只是也许，你看到的是你跟艾弗拉特先生之间是什么关系？"];
+	  171 [label="White Envelope: Variable[\"village.ww_got_her_signature\"]"];
+	  172 [label="Variable[\"village.ww_got_her_signature\"]", shape=diamond];
+	  173 [label="!(Variable[\"village.ww_got_her_signature\"])", shape=diamond];
+	  174 [label="Logic: 里面没有漏洞。事实很简单：目前这些居民将会失去街道通道，在接下来的12-40个月里，他们的生活将会被隔壁连续不断的建筑噪音所支配。"];
+	  175 [label="Untitled hub"];
+	  176 [label="Kim Kitsuragi: 警督看了你很久，然后才开了口。“无论如何，我觉得你在做一件正确的事情。武器是可以替换的。人不行。”"];
+	  177 [label="Kim Kitsuragi: 警督点点头。“那我们就这么做吧。”"];
+	  178 [label="Kim Kitsuragi: “这样不行的，”警督回头看了看你，说到。“看起来甚至都不像是个名字。这就是一道刮痕。”"];
+	  179 [label="You: 该死……听起来太麻烦了。妈的，我还是直接寄出去吧。"];
+	  180 [label="Jump to: [Esprit de Corps: \"He feels guilty about failing to pr...\"]"];
+	  181 [label="White Envelope: Variable[\"canal.lever_waterlock_closed\"]"];
+	  182 [label="Variable[\"canal.lever_waterlock_closed\"]", shape=diamond];
+	  183 [label="!(Variable[\"canal.lever_waterlock_closed\"])", shape=diamond];
+	  184 [label="White Envelope: IsKimHere()"];
+	  185 [label="IsKimHere()", shape=diamond];
+	  186 [label="!(IsKimHere())", shape=diamond];
+	  187 [label="You: “我考虑过伪造，然后又排除了这种想法。这不合法，也不道德。”"];
+	  188 [label="White Envelope: CheckItem(\"white_envelope_signed_right\")"];
+	  189 [label="CheckItem(\"white_envelope_signed_right\")", shape=diamond];
+	  190 [label="!(CheckItem(\"white_envelope_signed_right\"))", shape=diamond];
+	  191 [label="You: 看着分区规划图。"];
+	  192 [label="White Envelope: 青少年活动中心像某种大型现代战舰一样向海洋进犯。很明显，它会覆盖大多数——即便不是全部——现存房屋之间的街道和广场。这是一栋三层楼高的建筑。"];
+	  193 [label="Kim Kitsuragi: “是的。”警督点点头。“很可惜，我们看不到艾弗拉特脸上是什么表情了——等到他发现的时候。”"];
+	  194 [label="Jump to: [agreement form]"];
+	  195 [label="You: 这也太可怕了。那群可怜人。我就不能做点什么吗？\n“看看，金……”（指着复印件。）“这些人会被迫搬走的。我们不能做点什么吗？”"];
+	  196 [label="White Envelope: Variable[\"cargo.evrartenvelope_viscal_youthcentre_very_close_to_houses\"]"];
+	  197 [label="Variable[\"cargo.evrartenvelope_viscal_youthcentre_very_close_to_houses\"]", shape=diamond];
+	  198 [label="!(Variable[\"cargo.evrartenvelope_viscal_youthcentre_very_close_to_houses\"])", shape=diamond];
+	  199 [label="Kim Kitsuragi: “现在我们要做的就是把东西寄出去。我好像在广场看见过一个邮筒。”"];
+	  200 [label="Kim Kitsuragi: “任何半调子的公证人应该都能处理好这个。*没有*让伊泽贝尔签字可能是最好的结果吧。”"];
+	  201 [label="White Envelope: IsKimHere()"];
+	  202 [label="IsKimHere()", shape=diamond];
+	  203 [label="!(IsKimHere())", shape=diamond];
+	  204 [label="Jump to: [agreement form]"];
+	  205 [label="Kim Kitsuragi: “你的选择是正确的。”警督赞许地笑了。“现在我们开始行动，解决这起案件吧。”"];
+	  206 [label="Interfacing: 确实。它们看起来明显不一样，非常有说服力。很可能就是她们本人的签名。"];
+	  207 [label="Kim Kitsuragi: “很好。艾弗拉特要重新盘算他的阴谋了。”警督点点头。“当伊泽贝尔和莉莉恩对签名提出争议的时候，这份文件就会被视为无效。”"];
+	  208 [label="White Envelope: (CheckItem(\"kind_green_ape_pen\")  or  CheckItem(\"blue_oblong_pen\")) == false"];
+	  209 [label="(CheckItem(\"kind_green_ape_pen\")  or  CheckItem(\"blue_oblong_pen\")) == false", shape=diamond];
+	  210 [label="!((CheckItem(\"kind_green_ape_pen\")  or  CheckItem(\"blue_oblong_pen\")) == false)", shape=diamond];
+	  211 [label="Kim Kitsuragi: “不，只是一条线而已。我们在它上面弄个真正的签名，那样就没问题了。”"];
+	  212 [label="Rhetoric: 在这种情况下，他对你为发展做出的贡献并不完全满意。"];
+	  213 [label="Jump to: [agreement form]"];
+	  214 [label="Interfacing: 你颤颤巍巍地画出一条可怜的线，笔在你手中抖个不停。"];
+	  215 [label="Logic: 这里似乎没什么有趣的东西。没有难懂的条文。你很聪明。你能阅读。"];
+	  216 [label="You: 那这里有什么影响呢？"];
+	  217 [label="Jump to: [agreement form]"];
+	  218 [label="You: （叹气。）“好吧，该死……听起来太麻烦了。妈的，我们直接寄出去吧。”"];
+	  219 [label="Logic: 一旦施工开始，可能会花费几个月——也许是一年——即使是最顽固的钉子户也会厌倦这种生活。在那之后，他们会便宜卖掉自己的财产，然后搬出去。"];
+	  220 [label="White Envelope: Variable[\"village.documents_refused_to_forge\"]"];
+	  221 [label="Variable[\"village.documents_refused_to_forge\"]", shape=diamond];
+	  222 [label="!(Variable[\"village.documents_refused_to_forge\"])", shape=diamond];
+	  223 [label="White Envelope: Variable[\"cargo.evrartdocument_failed_forge_one_signature\"]"];
+	  224 [label="Variable[\"cargo.evrartdocument_failed_forge_one_signature\"]", shape=diamond];
+	  225 [label="!(Variable[\"cargo.evrartdocument_failed_forge_one_signature\"])", shape=diamond];
+	  226 [label="White Envelope: Variable[\"village.netpicker_got_her_signature\"]"];
+	  227 [label="Variable[\"village.netpicker_got_her_signature\"]", shape=diamond];
+	  228 [label="!(Variable[\"village.netpicker_got_her_signature\"])", shape=diamond];
+	  229 [label="Logic: 很难想象有人能忍耐这种状况。顽固的那些也许能坚持一年，不过在40个月过完之前，他们就会便宜卖掉自己的财产，然后搬出去。"];
+	  230 [label="Untitled hub"];
+	  231 [label="Interfacing: 确实。老实说，看起来确实很有说服力。笔法近乎精湛。很可能就是她本人的签名。"];
+	  232 [label="You: “好吧，看在我的良心的份上，我已经准备承受伤害了。”"];
+	  233 [label="Jump to: [agreement form]"];
+	  234 [label="White Envelope: Variable[\"cargo.inland_youthcentre_omnious_or_cool\"]"];
+	  235 [label="Variable[\"cargo.inland_youthcentre_omnious_or_cool\"]", shape=diamond];
+	  236 [label="!(Variable[\"cargo.inland_youthcentre_omnious_or_cool\"])", shape=diamond];
+	  237 [label="Kim Kitsuragi: “任何半调子的公证人应该都能处理好这个。*没有*让她签字可能是最好的结果吧。”"];
+	  238 [label="Kim Kitsuragi: “我本该料到的。”他又看了一遍文件，边看边皱起眉头。“人们会自愿搬走。毕竟改变不可能毫无代价。”"];
+	  239 [label="You: 我想这就是发展的代价。\n“噪音对村民来说可能难以忍受，不过我想这就是发展的代价。”"];
+	  240 [label="White Envelope: Variable[\"village.idiot_signed_by_rosemary\"]"];
+	  241 [label="Variable[\"village.idiot_signed_by_rosemary\"]", shape=diamond];
+	  242 [label="!(Variable[\"village.idiot_signed_by_rosemary\"])", shape=diamond];
+	  243 [label="White Envelope: 你把法律文件从信封中取了出来：附录里有一份建设周期为12-40个月的分区规划图。很明显，签名者是*厄运漩涡*和某个叫*别打给阿比盖尔*的人。"];
+	  244 [label="Kim Kitsuragi: “我不是产权律师，不过看起来挺不错的，”警督一边翻阅文件，一边回复到。“我喜欢这种打印尺寸。他们没有出售或者出租任何东西。这不是个完美的解决方案，不过……”他耸耸肩。"];
+	  245 [label="Logic: 一旦施工开始，可能会花费几个月——也许是一年——即使是最顽固的钉子户也会厌倦这种生活。在那之后，他们会便宜卖掉自己的财产，然后搬出去。"];
+	  246 [label="Logic: 你可以*不*把这些寄给艾弗拉特的会计师。不过那样的话，你永远也见不到自己的枪了。"];
+	  247 [label="Kim Kitsuragi: “不，只是一条线而已。我们在它上面弄个真正的签名，那样就没问题了。”"];
+	  248 [label="Interfacing: 这条线变得更加不平稳了，开始朝着页面底部弯曲。"];
+	  249 [label="Jump to: [agreement form]"];
+	  250 [label="Interfacing: 现在你要做的就是把签名寄给艾弗拉特在德尔塔的会计师。"];
+	  251 [label="Interfacing: 但是并不是，如果她提出异议，这份文件就会作废。那就意味着艾弗拉特要重新开始了。"];
+	  252 [label="You: “你在暗示……”"];
+	  253 [label="You: “其实我在想伪造伊泽贝尔·莎蒂的签名……”"];
+	  254 [label="Kim Kitsuragi: 他点点头。“一般这种行为我是无法容忍的，不过，在这种情况下，如果*谨慎*处理的话……可能是唯一拯救那个残破村子的方式。”"];
+	  255 [label="Kim Kitsuragi: “一般这种行为我是无法容忍的，不过，在这种情况下，如果*谨慎*处理的话……可能是唯一拯救那个残破村子的方式。”"];
+	  256 [label="White Envelope: CheckItem(\"white_envelope_lilienne_signed\")"];
+	  257 [label="CheckItem(\"white_envelope_lilienne_signed\")", shape=diamond];
+	  258 [label="!(CheckItem(\"white_envelope_lilienne_signed\"))", shape=diamond];
+	  259 [label="White Envelope: IsKimHere()"];
+	  260 [label="IsKimHere()", shape=diamond];
+	  261 [label="!(IsKimHere())", shape=diamond];
+	  262 [label="White Envelope: Variable[\"cargo.evrartdocument_failed_wc_once\"]"];
+	  263 [label="Variable[\"cargo.evrartdocument_failed_wc_once\"]", shape=diamond];
+	  264 [label="!(Variable[\"cargo.evrartdocument_failed_wc_once\"])", shape=diamond];
+	  265 [label="White Envelope: IsKimHere()"];
+	  266 [label="IsKimHere()", shape=diamond];
+	  267 [label="!(IsKimHere())", shape=diamond];
+	  268 [label="Logic: 这一步走的很漂亮，没错。"];
+	  269 [label="Kim Kitsuragi: “我们现在能做的就是*不要*把这些寄给艾弗拉特的会计师。”他停顿了一下。“不过你的枪也许就找不到了。”"];
+	  270 [label="White Envelope: IsTaskActive(\"TASK.find_two_random_people_to_sign_the_papers\")--[[ Variable[ ]]"];
+	  271 [label="IsTaskActive(\"TASK.find_two_random_people_to_sign_the_papers\")--[[ Variable[ ]]", shape=diamond];
+	  272 [label="!(IsTaskActive(\"TASK.find_two_random_people_to_sign_the_papers\")--[[ Variable[ ]])", shape=diamond];
+	  273 [label="White Envelope: 你把法律文件从信封中取了出来：附录里有一份建设周期为12-40个月的分区规划图。所有内容下方——在签名栏上——是莉莉恩和你的小伪造品。"];
+	  274 [label="Kim Kitsuragi: “真是的……我本该料到的。”他又看了一遍文件，边看边皱起眉头。“人们会自愿搬走。可我不确定他们该不该这么做……”"];
+	  275 [label="You: 把文件放回信封里。[离开。]"];
+	  276 [label="White Envelope: Variable[\"TASK.find_two_random_people_to_sign_the_papers_done\"]"];
+	  277 [label="Variable[\"TASK.find_two_random_people_to_sign_the_papers_done\"]", shape=diamond];
+	  278 [label="!(Variable[\"TASK.find_two_random_people_to_sign_the_papers_done\"])", shape=diamond];
+	  279 [label="You: 等等，这里有什么影响呢？"];
+	  280 [label="You: “我的枪不要了。我不会寄出去的。”（取消任务。）"];
+	  281 [label="You: “该死……我真的需要我的枪——而且我想看看事情的走向到底会怎么样。”"];
+	  282 [label="You: 我的枪不要了。我不会寄出去的。"];
+	  283 [label="White Envelope: IsKimHere()"];
+	  284 [label="IsKimHere()", shape=diamond];
+	  285 [label="!(IsKimHere())", shape=diamond];
+	  286 [label="Conceptualization: 我押注酷炫。它看起来像个立体黄铁矿。"];
+	  287 [label="Jump to: [agreement form]"];
+	  288 [label="Logic: 好吧。很酷。还很荣耀。昂首阔步的走开吧。"];
+	  289 [label="White Envelope: IsTaskActive(\"TASK.find_two_random_people_to_sign_the_papers\")--[[ Variable[ ]]"];
+	  290 [label="IsTaskActive(\"TASK.find_two_random_people_to_sign_the_papers\")--[[ Variable[ ]]", shape=diamond];
+	  291 [label="!(IsTaskActive(\"TASK.find_two_random_people_to_sign_the_papers\")--[[ Variable[ ]])", shape=diamond];
+	  292 [label="White Envelope: Variable[\"village.netpicker_got_her_signature\"]"];
+	  293 [label="Variable[\"village.netpicker_got_her_signature\"]", shape=diamond];
+	  294 [label="!(Variable[\"village.netpicker_got_her_signature\"])", shape=diamond];
+	  295 [label="Interfacing: 不，只是一条线而已。伪造显然不是你的强项——很抱歉，我不该提这种建议的。如果你能找人*真正*在上面签字的话，应该就没问题了。"];
+	  296 [label="Kim Kitsuragi: “艾弗拉特可能在监视我们，不过……”他停下来想了想。“我们可以试着找其他人代替清单上那些人来签字。*或者*你可以自己伪造他们的签名。等他发现的时候，我们已经走了。”"];
+	  297 [label="Kim Kitsuragi: “是的。”警督点点头。“很可惜，我们看不到艾弗拉特脸上是什么表情了——等到他发现的时候。”"];
+	  298 [label="You: 该死……我真的需要我的枪。"];
+	  299 [label="You: 继续画。"];
+	  300 [label="Jump to: [agreement form]"];
+	  0 -> 1
+	  1 -> 40
+	  2 -> 86
+	  3 -> 127
+	  4 -> 5
+	  5 -> 6
+	  5 -> 7
+	  6 -> 96
+	  7 -> 96
+	  8 -> 270
+	  9 -> 246
+	  10 -> 95
+	  11 -> 107
+	  11 -> 179
+	  12 -> 220
+	  13 -> 95
+	  14 -> 95
+	  15 -> 16
+	  15 -> 17
+	  16 -> 143
+	  17 -> 215
+	  18 -> 19
+	  18 -> 20
+	  19 -> 8
+	  20 -> 230
+	  21 -> 234
+	  22 -> 235
+	  23 -> 64
+	  24 -> 180
+	  25 -> 290
+	  26 -> 27
+	  26 -> 28
+	  27 -> 115
+	  28 -> 112
+	  29 -> 95
+	  30 -> 95
+	  31 -> 13
+	  32 -> 157
+	  33 -> 297
+	  34 -> 147
+	  35 -> 36
+	  35 -> 37
+	  36 -> 208
+	  37 -> 252
+	  38 -> 162
+	  39 -> 160
+	  40 -> 41
+	  40 -> 42
+	  41 -> 167
+	  42 -> 70
+	  43 -> 232
+	  44 -> 245
+	  45 -> 46
+	  45 -> 47
+	  46 -> 194
+	  47 -> 158
+	  48 -> 144
+	  49 -> 280
+	  49 -> 90
+	  49 -> 196
+	  50 -> 77
+	  51 -> 138
+	  52 -> 82
+	  53 -> 240
+	  53 -> 12
+	  53 -> 23
+	  54 -> 301
+	  55 -> 214
+	  56 -> 95
+	  57 -> 73
+	  58 -> 59
+	  58 -> 60
+	  59 -> 178
+	  60 -> 300
+	  60 -> 135
+	  61 -> 293
+	  62 -> 233
+	  62 -> 219
+	  63 -> 201
+	  64 -> 65
+	  64 -> 66
+	  65 -> 38
+	  66 -> 31
+	  67 -> 131
+	  67 -> 187
+	  68 -> 133
+	  69 -> 95
+	  70 -> 72
+	  70 -> 71
+	  71 -> 241
+	  72 -> 26
+	  73 -> 74
+	  73 -> 75
+	  74 -> 298
+	  75 -> 269
+	  76 -> 136
+	  77 -> 227
+	  78 -> 80
+	  78 -> 79
+	  79 -> 43
+	  80 -> 81
+	  81 -> 128
+	  82 -> 95
+	  83 -> 84
+	  83 -> 85
+	  84 -> 53
+	  85 -> 49
+	  86 -> 88
+	  86 -> 87
+	  87 -> 254
+	  88 -> 221
+	  89 -> 209
+	  90 -> 164
+	  91 -> 92
+	  92 -> 93
+	  92 -> 94
+	  93 -> 15
+	  94 -> 15
+	  95 -> 4
+	  95 -> 44
+	  95 -> 276
+	  95 -> 91
+	  95 -> 191
+	  96 -> 97
+	  96 -> 98
+	  97 -> 277
+	  98 -> 263
+	  99 -> 95
+	  100 -> 101
+	  100 -> 102
+	  101 -> 174
+	  102 -> 171
+	  103 -> 9
+	  103 -> 159
+	  104 -> 11
+	  105 -> 95
+	  106 -> 95
+	  107 -> 289
+	  108 -> 109
+	  108 -> 110
+	  109 -> 111
+	  110 -> 169
+	  111 -> 95
+	  112 -> 113
+	  112 -> 114
+	  113 -> 274
+	  114 -> 188
+	  115 -> 95
+	  116 -> 95
+	  117 -> 118
+	  118 -> 57
+	  119 -> 120
+	  119 -> 121
+	  120 -> 231
+	  121 -> 175
+	  122 -> 10
+	  123 -> 25
+	  124 -> 105
+	  125 -> 116
+	  126 -> 288
+	  127 -> 95
+	  128 -> 129
+	  128 -> 130
+	  129 -> 148
+	  130 -> 207
+	  131 -> 255
+	  132 -> 163
+	  132 -> 151
+	  133 -> 137
+	  134 -> 95
+	  135 -> 50
+	  136 -> 140
+	  137 -> 95
+	  138 -> 95
+	  139 -> 271
+	  140 -> 290
+	  141 -> 69
+	  142 -> 95
+	  143 -> 78
+	  144 -> 95
+	  145 -> 90
+	  145 -> 196
+	  146 -> 56
+	  147 -> 205
+	  148 -> 184
+	  149 -> 132
+	  150 -> 55
+	  151 -> 256
+	  152 -> 95
+	  153 -> 154
+	  153 -> 155
+	  154 -> 30
+	  155 -> 142
+	  156 -> 217
+	  156 -> 157
+	  157 -> 45
+	  158 -> 195
+	  159 -> 18
+	  160 -> 95
+	  161 -> 251
+	  162 -> 2
+	  163 -> 24
+	  164 -> 165
+	  164 -> 166
+	  165 -> 239
+	  166 -> 54
+	  167 -> 95
+	  168 -> 95
+	  169 -> 197
+	  170 -> 266
+	  171 -> 172
+	  171 -> 173
+	  172 -> 103
+	  173 -> 83
+	  174 -> 57
+	  174 -> 117
+	  175 -> 283
+	  175 -> 299
+	  176 -> 62
+	  177 -> 205
+	  178 -> 61
+	  179 -> 126
+	  180 -> 133
+	  181 -> 182
+	  181 -> 183
+	  182 -> 82
+	  183 -> 52
+	  184 -> 185
+	  184 -> 186
+	  185 -> 63
+	  186 -> 161
+	  187 -> 68
+	  188 -> 189
+	  188 -> 190
+	  189 -> 152
+	  190 -> 224
+	  191 -> 193
+	  192 -> 108
+	  193 -> 195
+	  194 -> 95
+	  195 -> 202
+	  196 -> 198
+	  196 -> 199
+	  197 -> 22
+	  198 -> 106
+	  199 -> 271
+	  200 -> 200
+	  201 -> 203
+	  201 -> 204
+	  202 -> 33
+	  203 -> 146
+	  204 -> 95
+	  206 -> 35
+	  207 -> 238
+	  208 -> 210
+	  208 -> 211
+	  209 -> 150
+	  210 -> 55
+	  211 -> 250
+	  212 -> 14
+	  213 -> 95
+	  214 -> 58
+	  215 -> 99
+	  216 -> 32
+	  217 -> 95
+	  218 -> 21
+	  219 -> 240
+	  219 -> 23
+	  220 -> 222
+	  220 -> 223
+	  221 -> 67
+	  222 -> 253
+	  223 -> 225
+	  223 -> 226
+	  224 -> 168
+	  225 -> 257
+	  226 -> 228
+	  226 -> 229
+	  227 -> 296
+	  228 -> 124
+	  229 -> 247
+	  230 -> 281
+	  230 -> 282
+	  230 -> 34
+	  231 -> 284
+	  232 -> 206
+	  233 -> 95
+	  234 -> 236
+	  234 -> 237
+	  235 -> 287
+	  236 -> 106
+	  237 -> 200
+	  238 -> 3
+	  239 -> 260
+	  240 -> 242
+	  240 -> 243
+	  241 -> 244
+	  242 -> 134
+	  243 -> 95
+	  244 -> 125
+	  245 -> 159
+	  246 -> 119
+	  247 -> 250
+	  248 -> 77
+	  249 -> 95
+	  250 -> 139
+	  251 -> 251
+	  252 -> 149
+	  253 -> 89
+	  254 -> 209
+	  255 -> 209
+	  256 -> 258
+	  256 -> 259
+	  257 -> 29
+	  258 -> 153
+	  259 -> 261
+	  259 -> 262
+	  260 -> 275
+	  261 -> 39
+	  262 -> 264
+	  262 -> 265
+	  263 -> 170
+	  264 -> 216
+	  265 -> 267
+	  265 -> 268
+	  266 -> 48
+	  267 -> 144
+	  268 -> 218
+	  269 -> 119
+	  270 -> 272
+	  270 -> 273
+	  271 -> 51
+	  272 -> 138
+	  273 -> 95
+	  274 -> 213
+	  276 -> 278
+	  276 -> 279
+	  277 -> 156
+	  278 -> 100
+	  279 -> 145
+	  280 -> 176
+	  281 -> 177
+	  282 -> 104
+	  283 -> 285
+	  283 -> 286
+	  284 -> 76
+	  285 -> 123
+	  286 -> 106
+	  287 -> 95
+	  289 -> 291
+	  289 -> 292
+	  290 -> 141
+	  291 -> 69
+	  292 -> 294
+	  292 -> 295
+	  293 -> 212
+	  294 -> 248
+	  295 -> 105
+	  296 -> 181
+	  297 -> 218
+	  298 -> 122
+	  299 -> 249
+	  300 -> 95
+}
+

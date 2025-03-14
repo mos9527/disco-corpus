@@ -1,0 +1,62 @@
+# WHIRLING F2 ORB / dialogue cigarette stub
+# ashtray dialogue / TASK find smokes
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Electrochemistry: 然后当你想完之后，下一步就是要*弄到*它们。"];
+	  3 [label="You: 什么？"];
+	  4 [label="You: 好吧……我会考虑的。"];
+	  5 [label="Conceptualization: 就像一只在主人腿上蹭来蹭去的小猫。（一只想你让你抽很多烟的小猫。）"];
+	  6 [label="You: 不过她把过滤嘴弄坏了。这我可没法抽。"];
+	  7 [label="You: 我会优先考虑的。"];
+	  8 [label="Volition: 或者——你可以*不要*这么做。没人逼你。"];
+	  9 [label="Electrochemistry: 你还真是诡计多端啊！这样一来就没有效果了。你应该找一根*完好无损*的香烟。或者有一整包就更好了！刚才说的不算，应该是一整条！保证它们全都健健康康，身强体壮，然后全部抽掉。"];
+	  10 [label="You: 我应该没有*不做*的理由。"];
+	  11 [label="Electrochemistry: 再说，抽烟的确可以得到*大量的奖励*。"];
+	  12 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  13 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  14 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  15 [label="Electrochemistry: 你应该从烟灰缸里捡起那个肥美的烟头，点燃它，然后一口把里面的生气全部吸出来！"];
+	  16 [label="You: 应该满腔热情的去做！"];
+	  17 [label="Electrochemistry: 很好！*想象*嘴里叼着美味的香烟在最棒的事情中排名第二。不过，记得要*时时刻刻*想着那些美味的香烟。如果不是时时刻刻，那就不算数了。"];
+	  18 [label="You: 我抽烟的吗？"];
+	  19 [label="You: 是啊，我应该这么做。"];
+	  20 [label="Horrific Necktie: 这个想法似乎让你的脖子膨胀了。突然间，这条花哨的领带感觉非常舒适。"];
+	  21 [label="Electrochemistry: 谁知道你是谁？一个怪物，一个杀人犯，还是赫罗那的地精？你*觉得*自己是个烟民，特别是当你看着那个肥美多汁又充满诱惑力的烟头的时候。它还在缓慢燃烧着，吐露着芬芳……"];
+	  22 [label="Electrochemistry: 很好。它们会让你变得更好更强。现在的你年老体衰，酷到上天应该很难了。不过如果找到香烟，然后抽上一口——立马原地爆炸！一步到位！秒变离经叛道的霸道总裁，秒变高深莫测的红龙，鼻孔里还能喷出炙热的烟雾！"];
+	  23 [label="You: 不要。[放弃思维。]"];
+	  24 [label="Electrochemistry: 狗屁生活。你的中脑缘奖励回路直言不讳。它想抽烟。"];
+	  0 -> 1
+	  1 -> 15
+	  2 -> 11
+	  3 -> 25
+	  4 -> 17
+	  5 -> 8
+	  6 -> 9
+	  7 -> 23
+	  8 -> 4
+	  8 -> 7
+	  8 -> 10
+	  8 -> 16
+	  8 -> 20
+	  9 -> 12
+	  10 -> 23
+	  12 -> 13
+	  12 -> 14
+	  13 -> 21
+	  14 -> 8
+	  15 -> 24
+	  15 -> 18
+	  15 -> 3
+	  16 -> 23
+	  17 -> 2
+	  18 -> 22
+	  19 -> 23
+	  20 -> 5
+	  21 -> 6
+	  22 -> 11
+	  24 -> 24
+	  24 -> 18
+}
+

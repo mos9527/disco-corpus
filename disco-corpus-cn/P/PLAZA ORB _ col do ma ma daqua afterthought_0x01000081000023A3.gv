@@ -1,0 +1,99 @@
+# PLAZA ORB / col do ma ma daqua afterthought
+# Afterthought when Lena has told you about this cryptid.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Inland Empire: 又来了！你即将重新发现一种灭绝已久的物种！"];
+	  3 [label="Inland Empire: 那就竖起耳朵注意听。如果这个物种真的迁移到了马丁内斯，你一定能再次听见。"];
+	  4 [label="Inland Empire: 那不是——难道真的是——哈库多玛达塔？！不会。可能只是你的耳朵产生*幻听*了吧……"];
+	  5 [label="You: 也许不是。[放弃思维。]"];
+	  6 [label="You: 是吗？好像有铃声？（再靠近一点听。）"];
+	  7 [label="the_main_stuff"];
+	  8 [label="Jump to: [the_main_stuff]"];
+	  9 [label="Variable[\"canal.roy_likes_recording_sounds\"]"];
+	  10 [label="Variable[\"canal.roy_likes_recording_sounds\"]", shape=diamond];
+	  11 [label="!(Variable[\"canal.roy_likes_recording_sounds\"])", shape=diamond];
+	  12 [label="Inland Empire: 他当然没有了。他耳朵聋了。"];
+	  13 [label="IsTHCPresent(\"remote_viewer\")"];
+	  14 [label="IsTHCPresent(\"remote_viewer\")", shape=diamond];
+	  15 [label="!(IsTHCPresent(\"remote_viewer\"))", shape=diamond];
+	  16 [label="Inland Empire: 就这样吧。它走了。现在唯一为你留下来的——只有迪斯科。"];
+	  17 [label="Variable[\"canal.roy_necktie_altercation\"]  and  CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"]"];
+	  18 [label="Variable[\"canal.roy_necktie_altercation\"]  and  CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"]", shape=diamond];
+	  19 [label="!(Variable[\"canal.roy_necktie_altercation\"]  and  CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"])", shape=diamond];
+	  20 [label="You: 先仔细点听。"];
+	  21 [label="col_do_ma_ma_hub"];
+	  22 [label="Composure: 站好别动！它可能会停在你的肩膀上。"];
+	  23 [label="Physical Instrument: 你在做什么？你是个警察，不是同性恋鸟类学家。你唯一应该寻找的鸟类，只有处在生育年龄的健康女性。"];
+	  24 [label="Reaction Speed: 那个当铺老板——罗伊——也很喜欢大自然的声音。也许你应该跟他聊聊。"];
+	  25 [label="You: “等等，金，*你*有没有听到一个很高亢的噪音？”"];
+	  26 [label="You: 那好吧，走吧！像其他东西一样离开！（不要。）"];
+	  27 [label="Inland Empire: 好像确实有。一阵*特别*高亢的铃声，超声波。莉娜说过它的音调非常高，对吗？就好像有什么在给你的耳朵*挠痒痒*。"];
+	  28 [label="You: 乖乖站稳，希望那个鸟儿会飞过来停在你的肩膀上。（继续。）"];
+	  29 [label="Variable[\"canal.roy_likes_recording_sounds\"]"];
+	  30 [label="Variable[\"canal.roy_likes_recording_sounds\"]", shape=diamond];
+	  31 [label="!(Variable[\"canal.roy_likes_recording_sounds\"])", shape=diamond];
+	  32 [label="Inland Empire: 应该离的很近……也许，也许它朝你的方向走来……"];
+	  33 [label="Electrochemistry: 别学当铺那个古怪的罗伊，他都不喜欢音乐。但是当你找到节拍的时候，根本就不需要*声音*。"];
+	  34 [label="Perception (Hearing): 说实话，你的耳朵能听到的不多。远处工业港的轰鸣。嘈杂的交通。但是必须承认——那里的某个地方*确实*有一阵高亢的噪音。但是话又说回来，不总是这样吗……"];
+	  35 [label="Savoir Faire: 是啊，但是你该怎么抓到它呢？"];
+	  36 [label="Inland Empire: 哦不！那个声音——它离开了，就在那边的某个地方——快追！……"];
+	  37 [label="Horrific Necktie: 还记得那个想让你赶走我的混账罗伊吗？他不喜欢音乐，只喜欢声音。真是个废材。还好你不喜欢他。你和迪斯科才应该永远在一起。"];
+	  38 [label="Kim Kitsuragi: “没有。我没听见哈库多玛达塔的声音——也没听到你的。”"];
+	  39 [label="Inland Empire: 但你不是普通动物啊。你甚至都不是个普通警察。你会看——还会听！——甚至可以超越来世。"];
+	  40 [label="You: 把你的脑袋移向声音传来的方向。（继续。）"];
+	  41 [label="Inland Empire: 不……太迟了。它走了……你再也听不见鸣叫，只剩下街道传来的声响。"];
+	  42 [label="Logic: 莉娜还说其他动物听不到——包括人类。你听到的肯定只是普通的鸟叫。"];
+	  43 [label="You: 继续听。"];
+	  44 [label="You: 不，快回来，拜托！（接着听。）"];
+	  0 -> 1
+	  1 -> 4
+	  2 -> 36
+	  3 -> 9
+	  4 -> 22
+	  6 -> 28
+	  7 -> 41
+	  7 -> 26
+	  7 -> 20
+	  7 -> 29
+	  8 -> 7
+	  9 -> 10
+	  9 -> 11
+	  10 -> 25
+	  12 -> 8
+	  13 -> 14
+	  13 -> 15
+	  14 -> 40
+	  15 -> 35
+	  16 -> 30
+	  17 -> 18
+	  17 -> 19
+	  18 -> 38
+	  19 -> 34
+	  20 -> 2
+	  21 -> 5
+	  21 -> 6
+	  22 -> 24
+	  23 -> 8
+	  25 -> 39
+	  26 -> 16
+	  27 -> 43
+	  28 -> 37
+	  29 -> 32
+	  29 -> 31
+	  30 -> 17
+	  32 -> 23
+	  34 -> 7
+	  35 -> 44
+	  36 -> 42
+	  38 -> 12
+	  39 -> 7
+	  40 -> 37
+	  41 -> 27
+	  41 -> 45
+	  42 -> 13
+	  43 -> 33
+	  44 -> 3
+}
+

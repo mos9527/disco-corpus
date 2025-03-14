@@ -1,0 +1,90 @@
+# EVRART / COFFEE TABLE
+# a quick table interaction where you find a different key card to get out of the harbour at night.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="itsatable"];
+	  3 [label="You: 啊哈，太好了。我是有点怀疑，警察应该不是靠这些陈年咖啡渣破案的吧。"];
+	  4 [label="Inland Empire: 所有凶杀案幕后黑手的线索！"];
+	  5 [label="Inland Empire: 如果连自己的眼睛都信不过，那还能相信什么……"];
+	  6 [label="Jump to: [itsatable]"];
+	  7 [label="Coffee Table: 如果眯着眼睛看的话，那些咖啡渣好像组成了两个字母：F……还有K。"];
+	  8 [label="Coffee Table: 你一把抓起那张红色的塑料卡片。上面印着吊车抬起集装箱的黑色图案。中间写着“艾蒂安·贺加斯”，下面有一小行字：*董事会成员*。卡上还有一个磁条——应该是用来打开电子门的。"];
+	  9 [label="You: 什么线索？"];
+	  10 [label="Jump to: [itsatable]"];
+	  11 [label="You: 捡起卡片。"];
+	  12 [label="Variable[\"cargo.orb_coffee_logic_pareidolia\"]"];
+	  13 [label="Variable[\"cargo.orb_coffee_logic_pareidolia\"]", shape=diamond];
+	  14 [label="!(Variable[\"cargo.orb_coffee_logic_pareidolia\"])", shape=diamond];
+	  15 [label="You: [离开。]"];
+	  16 [label="You: 看向其中一只旧咖啡杯。"];
+	  17 [label="Inland Empire: 这是一条线索！"];
+	  18 [label="You: 我应该在这里看到些什么？"];
+	  19 [label="Inland Empire: 绝对是有什么特殊意义的，我敢*发誓*！你就等着吧……我很快就能破获这个案子。"];
+	  20 [label="Jump to: [itsatable]"];
+	  21 [label="Inland Empire: 再仔细看看！"];
+	  22 [label="You: 好吧，谢了。这确实不是浪费时间。"];
+	  23 [label="Coffee Table: 你把杯子又扔回了垃圾箱。"];
+	  24 [label="Logic: 也许你是对的。"];
+	  25 [label="Inland Empire: 如果连自己的眼睛都信不过，那还能相信谁？反正肯定不能相信金。他实在是……太可疑了。"];
+	  26 [label="Coffee Table: 一张大桌子上放着两台巨大的真空隔热咖啡贩售机。有人把一张小塑料卡片落在了茶杯旁边。"];
+	  27 [label="You: 这*绝对*是某种象征！遥视者也会这样做的。隐藏在世俗之间的征兆……"];
+	  28 [label="Coffee Table: 你没发现什么异常。不过是一只布满棕色污渍的脏咖啡杯，杯底还粘着些陈年的咖啡渣……正在慢慢变霉。"];
+	  29 [label="Logic: 没错，当然了。在聒噪的环境下注意到这个图案，肯定不只是*错觉*的案例。值了。"];
+	  30 [label="Inland Empire: 你说的没错，伙计。换做是我，*永远*也编不出这种东西。"];
+	  31 [label="IsKimHere()"];
+	  32 [label="IsKimHere()", shape=diamond];
+	  33 [label="!(IsKimHere())", shape=diamond];
+	  34 [label="Inland Empire: 盯着一只废弃的咖啡杯！"];
+	  35 [label="Variable[\"cargo.orb_coffee_logic_pareidolia\"]"];
+	  36 [label="Variable[\"cargo.orb_coffee_logic_pareidolia\"]", shape=diamond];
+	  37 [label="!(Variable[\"cargo.orb_coffee_logic_pareidolia\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 27
+	  2 -> 16
+	  2 -> 17
+	  2 -> 12
+	  3 -> 36
+	  4 -> 30
+	  5 -> 11
+	  6 -> 2
+	  7 -> 18
+	  8 -> 6
+	  9 -> 4
+	  10 -> 2
+	  11 -> 8
+	  12 -> 14
+	  12 -> 15
+	  13 -> 20
+	  14 -> 3
+	  14 -> 28
+	  16 -> 29
+	  17 -> 10
+	  17 -> 23
+	  18 -> 22
+	  19 -> 3
+	  19 -> 28
+	  20 -> 2
+	  21 -> 7
+	  22 -> 24
+	  23 -> 21
+	  24 -> 11
+	  25 -> 11
+	  26 -> 35
+	  27 -> 31
+	  28 -> 19
+	  28 -> 23
+	  29 -> 13
+	  30 -> 11
+	  31 -> 33
+	  31 -> 34
+	  32 -> 26
+	  33 -> 5
+	  34 -> 2
+	  35 -> 37
+	  35 -> 38
+	  36 -> 25
+	  37 -> 32
+}
+

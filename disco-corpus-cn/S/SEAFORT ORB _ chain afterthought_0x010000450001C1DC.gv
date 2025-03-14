@@ -1,0 +1,149 @@
+# SEAFORT ORB / chain afterthought
+# (afterthought about chain)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Jump to: [debot_chain_hub]"];
+	  3 [label="Rhetoric: 疯狂的敌人。精神失常的疯子。就在大灾难降临在这里之后。"];
+	  4 [label="IsKimHere()"];
+	  5 [label="IsKimHere()", shape=diamond];
+	  6 [label="!(IsKimHere())", shape=diamond];
+	  7 [label="Kim Kitsuragi: “从严格意义上讲——不是的。并没有。”"];
+	  8 [label="You: 什么样的敌人？"];
+	  9 [label="IsHighestPolitical(\"moralist\")"];
+	  10 [label="IsHighestPolitical(\"moralist\")", shape=diamond];
+	  11 [label="!(IsHighestPolitical(\"moralist\"))", shape=diamond];
+	  12 [label="Kim Kitsuragi: “敌人”。他抬起头。“瑞瓦肖公社的敌人。我相信这座海堡是大革命时期的要塞。”"];
+	  13 [label="Jump to: [debot_chain_hub]"];
+	  14 [label="You: 为什么？\n（指过去。）“这里可以通往地之角的补给站。”"];
+	  15 [label="IsHighestPolitical(\"revacholian_nationhood\")"];
+	  16 [label="IsHighestPolitical(\"revacholian_nationhood\")", shape=diamond];
+	  17 [label="!(IsHighestPolitical(\"revacholian_nationhood\"))", shape=diamond];
+	  18 [label="Jump to: [debot_chain_hub]"];
+	  19 [label="IsKimHere()"];
+	  20 [label="IsKimHere()", shape=diamond];
+	  21 [label="!(IsKimHere())", shape=diamond];
+	  22 [label="Interfacing: 敌人。"];
+	  23 [label="IsHighestPolitical(\"communist\")"];
+	  24 [label="IsHighestPolitical(\"communist\")", shape=diamond];
+	  25 [label="!(IsHighestPolitical(\"communist\"))", shape=diamond];
+	  26 [label="Rhetoric: 未来的敌人。人类的敌人。"];
+	  27 [label="You: “封锁起来是为了防谁？”"];
+	  28 [label="Cuno: “不知道，猪头，我们现在看起来不像是在大门后面——当然了，这只是坤诺的想法。”"];
+	  29 [label="debot_chain_hub"];
+	  30 [label="Interfacing: 为了运送补给品：弹药和燃料。也可以把它抬起来，封锁瑞瓦肖西海岸。"];
+	  31 [label="Kim Kitsuragi: “也许是为了把弹药送到岛上？还有补给品。如果把链条抬起来，还可以*封锁*海湾。”"];
+	  32 [label="Interfacing: 瑞瓦肖公社的敌人。"];
+	  33 [label="Interfacing: 他说得对。"];
+	  34 [label="Interfacing: 从严格意义上讲——没有。很抱歉。"];
+	  35 [label="You: [完成思维。]"];
+	  36 [label="Jump to: [debot_chain_hub]"];
+	  37 [label="Rhetoric: 不要急着迎接这些敌人，黑心骑士——他们也是瑞瓦肖的敌人。"];
+	  38 [label="Visual Calculus: 作为封锁海湾那一边的防御手段。"];
+	  39 [label="Kim Kitsuragi: 警督看着头顶的机械。“啊，是的……好像是这样。”"];
+	  40 [label="You: 这就意味着我*算是*进了补给站的大门。"];
+	  41 [label="IsCunoInParty()"];
+	  42 [label="IsCunoInParty()", shape=diamond];
+	  43 [label="!(IsCunoInParty())", shape=diamond];
+	  44 [label="You: 封锁起来是为了防谁？"];
+	  45 [label="Cuno: 男孩凝视着机械。“这锁链也他妈的太酷了吧。”"];
+	  46 [label="Jump to: [debot_chain_hub]"];
+	  47 [label="IsCunoInParty()"];
+	  48 [label="IsCunoInParty()", shape=diamond];
+	  49 [label="!(IsCunoInParty())", shape=diamond];
+	  50 [label="IsKimHere()"];
+	  51 [label="IsKimHere()", shape=diamond];
+	  52 [label="!(IsKimHere())", shape=diamond];
+	  53 [label="Cuno: “坤诺当然他妈的知道了。”他耸了耸肩。“坤诺要用它往岛上运狗屎。”"];
+	  54 [label="IsHighestPolitical(\"ultraliberal\")"];
+	  55 [label="IsHighestPolitical(\"ultraliberal\")", shape=diamond];
+	  56 [label="!(IsHighestPolitical(\"ultraliberal\"))", shape=diamond];
+	  57 [label="You: “这就意味着我*算是*进了补给站的大门。”"];
+	  58 [label="Interfacing: 链条消失在大海里，连接着岛屿和海岸边的补给站。"];
+	  59 [label="You: “你觉得它是做什么用的？”"];
+	  60 [label="Jump to: [debot_chain_hub]"];
+	  61 [label="IsCunoInParty()"];
+	  62 [label="IsCunoInParty()", shape=diamond];
+	  63 [label="!(IsCunoInParty())", shape=diamond];
+	  0 -> 1
+	  1 -> 59
+	  2 -> 30
+	  3 -> 61
+	  4 -> 5
+	  4 -> 6
+	  5 -> 40
+	  6 -> 42
+	  7 -> 34
+	  8 -> 33
+	  9 -> 10
+	  9 -> 11
+	  10 -> 3
+	  11 -> 61
+	  12 -> 18
+	  13 -> 30
+	  14 -> 4
+	  15 -> 16
+	  15 -> 17
+	  16 -> 38
+	  17 -> 9
+	  18 -> 30
+	  19 -> 20
+	  19 -> 21
+	  20 -> 7
+	  21 -> 48
+	  22 -> 47
+	  23 -> 25
+	  23 -> 26
+	  24 -> 27
+	  25 -> 55
+	  26 -> 61
+	  27 -> 12
+	  28 -> 34
+	  29 -> 36
+	  29 -> 8
+	  29 -> 41
+	  29 -> 45
+	  29 -> 60
+	  29 -> 14
+	  29 -> 58
+	  29 -> 28
+	  30 -> 37
+	  31 -> 39
+	  32 -> 24
+	  33 -> 13
+	  34 -> 13
+	  36 -> 30
+	  37 -> 61
+	  38 -> 2
+	  39 -> 37
+	  40 -> 35
+	  41 -> 43
+	  41 -> 44
+	  42 -> 46
+	  43 -> 31
+	  44 -> 23
+	  45 -> 37
+	  46 -> 30
+	  47 -> 49
+	  47 -> 50
+	  48 -> 29
+	  50 -> 52
+	  50 -> 53
+	  51 -> 32
+	  52 -> 62
+	  53 -> 2
+	  54 -> 56
+	  54 -> 57
+	  55 -> 3
+	  56 -> 15
+	  57 -> 19
+	  58 -> 30
+	  59 -> 51
+	  60 -> 30
+	  61 -> 64
+	  61 -> 63
+	  62 -> 54
+	  63 -> 2
+}
+

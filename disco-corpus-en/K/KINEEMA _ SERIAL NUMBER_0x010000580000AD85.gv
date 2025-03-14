@@ -1,7 +1,7 @@
 # KINEEMA / SERIAL NUMBER
 # 1. Ask Alice to run the serial number you got from the boot.
-2. Come back the next day to get results and ask for Alice to try to get more personal info on the mercenary (finish task to run serial number, gain task to get personal info from serial number).
-3. Come back the next day to get personal info (finish task to get personal info from serial number).
+#2. Come back the next day to get results and ask for Alice to try to get more personal info on the mercenary (finish task to run serial number, gain task to get personal info from serial number).
+#3. Come back the next day to get personal info (finish task to get personal info from serial number).
 # ==================================================
 digraph G {
 	  0 [label="START"];
@@ -10,12 +10,12 @@ digraph G {
 	  3 [label="Variable[\"whirling.klaasje_talked_about_lely\"]", shape=diamond];
 	  4 [label="!(Variable[\"whirling.klaasje_talked_about_lely\"])", shape=diamond];
 	  5 [label="Alice: \"No problem, officer. Just glad we got it straightened out. I'll contact the ICP database immediately. Call back tomorrow. Hopefully they'll have dug up something useful to your investigation by then.\""];
-	  6 [label="Alice: \"Officer, as much as I appreciate your efforts to lighten the mood, we both have important work to get back to. Did you have any other *serious* questions?\""];
+	  6 [label="Alice: \"Officer, as much as I appreciate your efforts to lighten the mood, we both have important work to get back to. Did you have any other *serious* questions?\"\n\"Officer, I suspect you're just trying to keep me on the line, and I just... don't have time for this. Do you have any other *serious* questions?\""];
 	  7 [label="You: \"This doesn't seem relevant to my investigation.\" (Conclude the conversation.)"];
 	  8 [label="Visual Calculus: A suit of armour like this would have been manufactured with a particular person's physique in mind. You should ask for whom this suit was fitted."];
 	  9 [label="Alice: \"Sure. Call back tomorrow. Hopefully I will have more information for you then.\""];
 	  10 [label="Esprit de Corps: This is a fun challenge for her, an opportunity to contribute beyond doing her job by rote. She'll gladly put in the extra effort for team RCM!"];
-	  11 [label="You: \"Lelystad is probably where he got the name *Lely*.\""];
+	  11 [label="You: \"Lelystad is probably where he got the name *Lely*.\"\n\"Lelystad is probably where he got the name Lely.\""];
 	  12 [label="Encyclopedia: I don't know about you, but I really, really enjoyed it. Worked out really well in the end."];
 	  13 [label="Kim Kitsuragi: The lieutenant leans in to listen, notebook in hand."];
 	  14 [label="You: \"So all we have to connect him to Krenel is the armour.\""];
@@ -37,7 +37,7 @@ digraph G {
 	  30 [label="Alice: \"They couldn't find anything on the full code you gave me. However, the first eight characters were match for a series of paintings by Tobias Pren -- you know, that artist who recently hanged himself?\""];
 	  31 [label="Alice: \"Does that seem relevant to your investigation?\""];
 	  32 [label="Jump to: [The actual Radio HUB]"];
-	  33 [label="You: \"No, what were his paintings like?\""];
+	  33 [label="You: \"No, what were his paintings like?\"\n\"What were his paintings like?\""];
 	  34 [label="Alice: \"Celebrity problems.\""];
 	  35 [label="Kim Kitsuragi: \"Armour like this isn't mass-produced -- it would have probably been fitted. Perhaps there's a record of who signed for this particular suit of armour.\""];
 	  36 [label="Alice: Variable[\"whirling.klaasje_katarzine_lelystad\"]  and  Variable[\"tc.name_kortenaer\"]"];
@@ -98,7 +98,7 @@ digraph G {
 	  91 [label="Alice: Variable[\"tc.icp\"]"];
 	  92 [label="Variable[\"tc.icp\"]", shape=diamond];
 	  93 [label="!(Variable[\"tc.icp\"])", shape=diamond];
-	  94 [label="You: \"No, why did he hang himself?\""];
+	  94 [label="You: \"No, why did he hang himself?\"\n\"Why did he hang himself?\""];
 	  95 [label="You: \"I'm guessing one of its names is Krenel.\""];
 	  96 [label="You: \"First, has the firm continued to work for pharmaceutical companies through all these name changes?\""];
 	  97 [label="Alice: You hear her fingers on a keyboard. \"No, they were called *Sediment*. And *Somatosensor*, it seems. All that during the last nine years.\""];
@@ -123,7 +123,7 @@ digraph G {
 	  116 [label="Alice: \"No, and I doubt they'll get back to me before tomorrow morning. Anything else?\""];
 	  117 [label="Alice: \"Are you sure that's the right number? Doesn't sound like a serial.\""];
 	  118 [label="Alice: \"Well, I'll contact the ICP database immediately. Call back tomorrow. Hopefully they'll have dug up something useful to your investigation by then.\""];
-	  119 [label="Alice: \"Yes. It took some convincing, but I got the mercenary's name and a few biographical details. Are you ready?\""];
+	  119 [label="Alice: \"Yes. It took some convincing, but I got the mercenary's name and a few biographical details. Are you ready?\"\n\"Yes. I got the mercenary's name and a few biographical details. Are you ready?\""];
 	  120 [label="Kim Kitsuragi: \"A name -- this is very good. Ellis Kortenaer...\" he says to himself."];
 	  121 [label="Alice: IsKimHere()"];
 	  122 [label="IsKimHere()", shape=diamond];
@@ -172,7 +172,7 @@ digraph G {
 	  165 [label="Alice: \"Not yet -- but I was able to convince the database people to share private sector information. They promised to get back to me by tomorrow morning. Did you have any other questions?\""];
 	  166 [label="You: \"That's definitely the right number.\""];
 	  167 [label="Jump to: [The actual Radio HUB]"];
-	  168 [label="You: \"Is there any way to find out who got this particular suit of armour?\""];
+	  168 [label="You: \"Is there any way to find out who got this particular suit of armour?\"\n\"A suit of armour like this would have been customized to fit the wearer. There must be a record of the person to whom it was issued.\""];
 	  169 [label="Logic: Joyce said the dead man went by Lely. He must have gotten that from *Lelystad* -- the name of the county."];
 	  170 [label="Alice: Variable[\"XP.encyc_serial_number\"]"];
 	  171 [label="Variable[\"XP.encyc_serial_number\"]", shape=diamond];

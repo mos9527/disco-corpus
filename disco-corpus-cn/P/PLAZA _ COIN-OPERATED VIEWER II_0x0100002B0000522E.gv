@@ -1,0 +1,61 @@
+# PLAZA / COIN-OPERATED VIEWER II
+# A coin-operated viewer on the plaza. It offers a view to the church.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: [离开。]"];
+	  3 [label="You: “故意破坏公共财物。”（摇摇头。）"];
+	  4 [label="Perception (Sight): 在巨大的木质建筑周围，你看见大块的海冰聚集在海滩上。冰面上搭了一座小帐篷。"];
+	  5 [label="You: 将注意力转移到背景上。"];
+	  6 [label="Coin-Operated Viewer: 一层厚厚的涂鸦遮住了镜头——你在另一边分辨出“ONUC”的字样——而且N和C是倒着写的。"];
+	  7 [label="You: “可怜的小望远镜……”（拍拍它。）"];
+	  8 [label="Jump to: [Viewer hub]"];
+	  9 [label="Kim Kitsuragi: “也许是小孩子做的吧……”警督检查着被堵死的投币口。"];
+	  10 [label="Jump to: [Viewer hub]"];
+	  11 [label="Inland Empire: 教堂看起来饱经风雨，残破不堪。窗户里没有透露出光亮。"];
+	  12 [label="Interfacing: 不过没错——这就是在故意破坏公共财物。"];
+	  13 [label="Coin-Operated Viewer: 这个投币式望远镜朝向南方。它的投币口里塞满了硬邦邦的口香糖，让这台机器永远也无法使用了。"];
+	  14 [label="Logic: 镜头上写的是坤诺。"];
+	  15 [label="Viewer hub"];
+	  16 [label="Coin-Operated Viewer: 掌心下的金属感觉冰冷而潮湿。它看起来很不卫生。"];
+	  17 [label="Encyclopedia: 你知道这就是佩里卡纳西斯之星，又叫做凯乐符号。佩里卡纳西斯教堂的中心象征——它是一颗星，一种值得我们奋斗的道德高度。"];
+	  18 [label="IsKimHere()"];
+	  19 [label="IsKimHere()", shape=diamond];
+	  20 [label="!(IsKimHere())", shape=diamond];
+	  21 [label="Coin-Operated Viewer: 涂鸦下面，出现一片蓝灰色的海洋——海洋的背后，是一条布满混凝土和芦苇丛的海岸。在那上面——一座高高耸立的教堂，修长的木板饱受风雨侵蚀，尖塔顶端是一个X形的十字。"];
+	  22 [label="You: 看看里面。"];
+	  23 [label="Coin-Operated Viewer: 沉默的机器无法确认或是否定你的理论。"];
+	  24 [label="Interfacing: 这是破坏投币式望远镜的一种简单又聪明的办法。这是需要费脑筋的。"];
+	  25 [label="Jump to: [Viewer hub]"];
+	  0 -> 1
+	  1 -> 14
+	  3 -> 19
+	  4 -> 26
+	  5 -> 22
+	  6 -> 15
+	  7 -> 17
+	  8 -> 16
+	  9 -> 25
+	  10 -> 16
+	  11 -> 4
+	  12 -> 11
+	  13 -> 16
+	  14 -> 5
+	  15 -> 8
+	  15 -> 2
+	  15 -> 3
+	  15 -> 23
+	  16 -> 9
+	  17 -> 12
+	  18 -> 20
+	  18 -> 21
+	  19 -> 10
+	  20 -> 24
+	  21 -> 18
+	  22 -> 7
+	  23 -> 13
+	  24 -> 11
+	  25 -> 16
+}
+

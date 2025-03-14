@@ -1,0 +1,85 @@
+# LIFELINE / HEART ATTACK
+# When you lose enough Health (Endurance), you have a heart attack. This is the freebie/tutorial.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 世界末日到了。"];
+	  3 [label="You: 放下一切吧。"];
+	  4 [label="Endurance: 现在投降一点也不羞愧。我们都会这么做，眼前变得*如此*黑暗。你甚至看不清她的脸，就像你一直以为的那样。你只看到痛苦和恐惧。"];
+	  5 [label="Physical Instrument: 不要乱，小伙子。不管情况变得多糟糕，你也得坚持下去。"];
+	  6 [label="Endurance: 是啊，极度呼吸急促的时候是没法尖叫的。你只是让它变得更糟糕了。天啦，真的好痛苦……"];
+	  7 [label="Untitled hub (03)"];
+	  8 [label="Endurance: 非常。*非常*糟糕。有*这一切都结束了*那么糟糕。"];
+	  9 [label="Endurance: 不，不好意思，不行。这次不行。"];
+	  10 [label="You: 试着保持清醒。"];
+	  11 [label="Variable[\"whirling.fan_heart_left_arm\"]"];
+	  12 [label="Variable[\"whirling.fan_heart_left_arm\"]", shape=diamond];
+	  13 [label="!(Variable[\"whirling.fan_heart_left_arm\"])", shape=diamond];
+	  14 [label="Endurance: 你感到胸中有什么东西。一种不自然的压力。它慢慢朝你的左胳膊扩散，然后是你的下巴……"];
+	  15 [label="Variable[\"whirling.fan_pain_threshold_heart\"]"];
+	  16 [label="Variable[\"whirling.fan_pain_threshold_heart\"]", shape=diamond];
+	  17 [label="!(Variable[\"whirling.fan_pain_threshold_heart\"])", shape=diamond];
+	  18 [label="Endurance: 不。这是多年的自我忽略再加上自虐。"];
+	  19 [label="Composure: 别抓着你的胸口然后尖叫着什么血腥谋杀了。自己冷静一点。要记住——看起来不错的时候，自己的感觉也会变得不错。"];
+	  20 [label="Endurance: 你能感到的只剩下疼痛和虚弱。现在你必须投降。我们都会这么做，眼前变得*如此*黑暗。你甚至看不清她的脸，就像你一直以为的那样。你只看到痛苦和恐惧。"];
+	  21 [label="You: 所以我猜，这不是件好事。"];
+	  22 [label="You: 我肯定只是胃灼热而已。天啦……"];
+	  23 [label="Pain Threshold: 以前也有过这种状况。你能搞定的。"];
+	  24 [label="Variable[\"stats.heart_t_pain\"]"];
+	  25 [label="Variable[\"stats.heart_t_pain\"]", shape=diamond];
+	  26 [label="!(Variable[\"stats.heart_t_pain\"])", shape=diamond];
+	  27 [label="Untitled hub (05)"];
+	  28 [label="IsTHCPresent(\"coach_physical_instrument\")"];
+	  29 [label="IsTHCPresent(\"coach_physical_instrument\")", shape=diamond];
+	  30 [label="!(IsTHCPresent(\"coach_physical_instrument\"))", shape=diamond];
+	  31 [label="You: “救命……有人吗……”"];
+	  32 [label="Jump to: [NewspaperEndgame(\"HEART_ATTACK\", \"CO ...]"];
+	  33 [label="Savoir Faire: 呃，这种感觉挺熟悉的。"];
+	  34 [label="Endurance: 别把它当做是心脏衰竭的信号就行。"];
+	  35 [label="Half Light: 就听你鬼扯吧，哥们我在这儿都要吓晕了好吗。我该怎么办？要打给谁才好？"];
+	  0 -> 1
+	  1 -> 15
+	  2 -> 35
+	  3 -> 4
+	  4 -> 33
+	  5 -> 28
+	  6 -> 28
+	  7 -> 32
+	  7 -> 2
+	  7 -> 22
+	  7 -> 23
+	  8 -> 29
+	  9 -> 36
+	  10 -> 21
+	  11 -> 13
+	  11 -> 14
+	  12 -> 34
+	  13 -> 16
+	  14 -> 12
+	  15 -> 17
+	  15 -> 18
+	  16 -> 24
+	  17 -> 36
+	  18 -> 28
+	  19 -> 7
+	  20 -> 33
+	  21 -> 8
+	  22 -> 19
+	  23 -> 25
+	  24 -> 26
+	  24 -> 27
+	  25 -> 9
+	  26 -> 36
+	  27 -> 3
+	  27 -> 11
+	  28 -> 30
+	  28 -> 31
+	  29 -> 5
+	  30 -> 28
+	  31 -> 6
+	  33 -> 16
+	  34 -> 28
+	  35 -> 20
+}
+

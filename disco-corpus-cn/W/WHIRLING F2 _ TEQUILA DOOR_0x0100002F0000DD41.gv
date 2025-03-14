@@ -1,0 +1,242 @@
+# WHIRLING F2 / TEQUILA DOOR
+# The dialogue between you and the door to your room. It is locked unless you've paid for damages.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: “啊啊啊啊！好疼！”"];
+	  3 [label="Pain Threshold: 不错的尝试。你崩溃地倒向地面，泪水从脸颊不断滑落。"];
+	  4 [label="Pain Threshold: 泪水带来些许安慰，但并不太多。"];
+	  5 [label="Door, Room #1: Variable[\"character.door1_pain_anti\"]"];
+	  6 [label="Variable[\"character.door1_pain_anti\"]", shape=diamond];
+	  7 [label="!(Variable[\"character.door1_pain_anti\"])", shape=diamond];
+	  8 [label="Kim Kitsuragi: 他朝着楼梯点点头。“来吧，我们下去。”"];
+	  9 [label="Kim Kitsuragi: “这肯定是电子锁。你得去找加尔特，那个餐厅经理，先把它打开——当然是在你付清今晚的房费之后。”"];
+	  10 [label="You: 哭闹，继续哭闹。"];
+	  11 [label="Door, Room #1: Variable[\"character.door1_pain_pass\"]"];
+	  12 [label="Variable[\"character.door1_pain_pass\"]", shape=diamond];
+	  13 [label="!(Variable[\"character.door1_pain_pass\"])", shape=diamond];
+	  14 [label="Door, Room #1: IsKimHere()"];
+	  15 [label="IsKimHere()", shape=diamond];
+	  16 [label="!(IsKimHere())", shape=diamond];
+	  17 [label="Kim Kitsuragi: “等等。我们还要聊聊调查的进展。去阳台外面吧。”"];
+	  18 [label="inlandhub"];
+	  19 [label="Garte, the Cafeteria Manager: （他的声音在楼下回响。）“上面他妈的出什么事了？”"];
+	  20 [label="Door, Room #1: IsKimHere()"];
+	  21 [label="IsKimHere()", shape=diamond];
+	  22 [label="!(IsKimHere())", shape=diamond];
+	  23 [label="Door, Room #1: IsKimHere()"];
+	  24 [label="IsKimHere()", shape=diamond];
+	  25 [label="!(IsKimHere())", shape=diamond];
+	  26 [label="Savoir Faire: 你可以试着爬进院子里的那个垃圾箱里，这是流浪警探的风格……特别是在你把盖子之后。"];
+	  27 [label="Door, Room #1: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  28 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  29 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  30 [label="You: 试着打开门。"];
+	  31 [label="Kim Kitsuragi: “我会建议不要这么做。现在已经不早了，在附近你也找不到更便宜的住宿地点。”"];
+	  32 [label="Authority: 他在维护自己的领导才能，因为他关心你。"];
+	  33 [label="Pain Threshold: 你愤怒的声音传遍了整个飞旋旅社，但仍然无法阻止从眼里涌出的泪水……"];
+	  34 [label="You: “这扇门一定会拜倒在法律面前！”（再次砸门。）"];
+	  35 [label="Kim Kitsuragi: 警督咬紧嘴唇。“真是令人钦佩的方式。走吧，我们下去。”"];
+	  36 [label="Door, Room #1: Variable[\"TASK.pay_for_the_damages_done\"]"];
+	  37 [label="Variable[\"TASK.pay_for_the_damages_done\"]", shape=diamond];
+	  38 [label="!(Variable[\"TASK.pay_for_the_damages_done\"])", shape=diamond];
+	  39 [label="Door, Room #1: 门因为冲击而发出回响，但却依然纹丝不动。"];
+	  40 [label="You: “算了，我总会想到办法的。反正我也不是很喜欢那个房间。”"];
+	  41 [label="Door, Room #1: 这是你的房间大门。\n这是你*重新装饰*过的房间大门。"];
+	  42 [label="Garte, the Cafeteria Manager: （他的声音在楼下回响。）“上面出什么事了？”"];
+	  43 [label="Physical Instrument: 砰砰！还真是令人印象深刻啊。"];
+	  44 [label="Door, Room #1: 门颤抖着，但好像没受到什么伤害。"];
+	  45 [label="Door, Room #1: IsKimHere()"];
+	  46 [label="IsKimHere()", shape=diamond];
+	  47 [label="!(IsKimHere())", shape=diamond];
+	  48 [label="Door, Room #1: Variable[\"whirling.kim_orientation\"]"];
+	  49 [label="Variable[\"whirling.kim_orientation\"]", shape=diamond];
+	  50 [label="!(Variable[\"whirling.kim_orientation\"])", shape=diamond];
+	  51 [label="Savoir Faire: 你可以试着爬进院子里的那个垃圾桶里，这是流浪警探的风格……"];
+	  52 [label="Volition: 你感到疑惑，就像在人群中与母亲失散的小孩。"];
+	  53 [label="Inland Empire: 因为这是最后一条救生索——这样你还能当个警察，而不是流浪汉。"];
+	  54 [label="Jump to: [doordamageshub]"];
+	  55 [label="Composure: 你可以的。像你这样的男人是不会轻易流泪的，除非有所目的。"];
+	  56 [label="You: “好吧，我们走。”"];
+	  57 [label="Door, Room #1: 你的钥匙拧不开锁了。"];
+	  58 [label="You: “其实呢，我不需要给钱——我会勇敢地走上街头。扮成流浪警察去卧底。”"];
+	  59 [label="You: [离开。]"];
+	  60 [label="Kim Kitsuragi: 警督冷漠地看着你。“就算你能把门砸开，也只会得到另一张账单而已。”"];
+	  61 [label="Garte, the Cafeteria Manager: （他的声音在楼下回响。）“上面出什么事了？”"];
+	  62 [label="Door, Room #1: 门似乎完好无损，看起来甚至比警督还要冷漠。"];
+	  63 [label="Inland Empire: 是的，而且这不仅仅与舒适有关，还跟原则有关。这很可能是你最后一条救生索——这样你还能当个警察，而不是流浪汉。"];
+	  64 [label="You: “晚安，警督。”"];
+	  65 [label="Tutorial Agent: 如果不付房费，房间会在每晚21点上锁。去楼下找餐厅经理加尔特说话的时候可以支付房费。"];
+	  66 [label="Kim Kitsuragi: 他点点头。“是啊，今晚我们都需要好好休息。”"];
+	  67 [label="You: 检查指关节受的伤。真的值得吗？"];
+	  68 [label="Kim Kitsuragi: “等等。我记得你之前说有些问题，而且我们还要聊聊调查的进展。去阳台外面吧。”"];
+	  69 [label="Savoir Faire: 嗯，还记得垃圾箱的点子吗……？是时候爬进去了！"];
+	  70 [label="You: 听起来还是比睡在外面好多了。"];
+	  71 [label="Half Light: 用拳头拼命砸门。没什么*锁*可以把你关在外面。"];
+	  72 [label="Kim Kitsuragi: “我们目前的调查不需要任何人去卧底。不用多说，直接找经理解决你的债务问题吧。”"];
+	  73 [label="You: 试着保持冷静。"];
+	  74 [label="Pain Threshold: 真的很疼，但是一定要保持冷静。你能做到的。"];
+	  75 [label="Door, Room #1: IsKimHere()"];
+	  76 [label="IsKimHere()", shape=diamond];
+	  77 [label="!(IsKimHere())", shape=diamond];
+	  78 [label="Garte, the Cafeteria Manager: （他的声音在楼下回响。）“上面他妈的出什么事了？”"];
+	  79 [label="Kim Kitsuragi: 警督看着你，脸上混杂着同情和疲倦的表情。“走吧，我们下去。”"];
+	  80 [label="Door, Room #1: Variable[\"yard.trash_container_hub_reached\"]"];
+	  81 [label="Variable[\"yard.trash_container_hub_reached\"]", shape=diamond];
+	  82 [label="!(Variable[\"yard.trash_container_hub_reached\"])", shape=diamond];
+	  83 [label="You: 我为什么想待在这种地方？"];
+	  84 [label="You: “好吧，我得先还清自己的债务，然后才能睡觉。”"];
+	  85 [label="doordamageshub"];
+	  86 [label="You: 用力砸门。"];
+	  87 [label="Door, Room #1: Variable[\"character.got_hobocop_climb_into_trashbin_idea\"]"];
+	  88 [label="Variable[\"character.got_hobocop_climb_into_trashbin_idea\"]", shape=diamond];
+	  89 [label="!(Variable[\"character.got_hobocop_climb_into_trashbin_idea\"])", shape=diamond];
+	  90 [label="Door, Room #1: 有些东西已经变了。"];
+	  91 [label="Door, Room #1: IsKimHere()"];
+	  92 [label="IsKimHere()", shape=diamond];
+	  93 [label="!(IsKimHere())", shape=diamond];
+	  94 [label="Door, Room #1: Variable[\"character.door1_locked_inland\"]"];
+	  95 [label="Variable[\"character.door1_locked_inland\"]", shape=diamond];
+	  96 [label="!(Variable[\"character.door1_locked_inland\"])", shape=diamond];
+	  97 [label="Physical Instrument: *就算你能*？别让他这么居高临下的跟你说话，小子！"];
+	  98 [label="You: 再试一次。这次用上两个拳头，一个接一个。"];
+	  99 [label="Kim Kitsuragi: 警督看着你，脸上混杂着同情和疲倦的表情。“走吧，我们下去。”"];
+	  100 [label="You: 忍住。拖住你的手臂。"];
+	  101 [label="painhub"];
+	  102 [label="Door, Room #1: Variable[\"yard.trash_container_open\"]"];
+	  103 [label="Variable[\"yard.trash_container_open\"]", shape=diamond];
+	  104 [label="!(Variable[\"yard.trash_container_open\"])", shape=diamond];
+	  105 [label="Pain Threshold: 你的拳头从门上弹了回来，一阵痛楚涌上你的整条手臂。"];
+	  106 [label="You: 摆出坚忍的表情与门对垒。你依然代表着法律。"];
+	  107 [label="Jump to: [Kim Kitsuragi: \"The air outside is brisk, the lieut...\"]"];
+	  0 -> 1
+	  1 -> 42
+	  2 -> 34
+	  3 -> 11
+	  4 -> 20
+	  5 -> 8
+	  5 -> 7
+	  6 -> 102
+	  7 -> 75
+	  8 -> 55
+	  9 -> 72
+	  10 -> 20
+	  11 -> 13
+	  11 -> 14
+	  12 -> 99
+	  13 -> 24
+	  14 -> 16
+	  14 -> 17
+	  15 -> 10
+	  16 -> 28
+	  17 -> 57
+	  18 -> 84
+	  18 -> 71
+	  19 -> 76
+	  20 -> 22
+	  20 -> 23
+	  21 -> 9
+	  22 -> 55
+	  23 -> 25
+	  23 -> 26
+	  24 -> 61
+	  25 -> 21
+	  26 -> 86
+	  27 -> 29
+	  27 -> 30
+	  28 -> 72
+	  29 -> 66
+	  30 -> 58
+	  31 -> 86
+	  32 -> 88
+	  33 -> 20
+	  34 -> 43
+	  35 -> 55
+	  36 -> 38
+	  36 -> 39
+	  37 -> 65
+	  38 -> 91
+	  39 -> 79
+	  40 -> 32
+	  41 -> 37
+	  42 -> 21
+	  43 -> 62
+	  44 -> 44
+	  45 -> 48
+	  45 -> 47
+	  46 -> 36
+	  47 -> 55
+	  48 -> 50
+	  48 -> 51
+	  49 -> 69
+	  50 -> 18
+	  51 -> 86
+	  52 -> 15
+	  54 -> 86
+	  55 -> 107
+	  55 -> 4
+	  56 -> 108
+	  57 -> 53
+	  58 -> 73
+	  60 -> 63
+	  61 -> 46
+	  62 -> 98
+	  64 -> 49
+	  65 -> 72
+	  66 -> 86
+	  67 -> 43
+	  68 -> 57
+	  69 -> 86
+	  70 -> 64
+	  71 -> 86
+	  72 -> 33
+	  73 -> 56
+	  74 -> 12
+	  75 -> 77
+	  75 -> 78
+	  76 -> 100
+	  77 -> 55
+	  78 -> 92
+	  79 -> 106
+	  80 -> 82
+	  80 -> 83
+	  81 -> 103
+	  82 -> 86
+	  83 -> 54
+	  84 -> 67
+	  85 -> 41
+	  85 -> 85
+	  85 -> 87
+	  85 -> 59
+	  85 -> 60
+	  86 -> 40
+	  87 -> 89
+	  87 -> 90
+	  88 -> 70
+	  89 -> 81
+	  90 -> 60
+	  90 -> 31
+	  91 -> 93
+	  91 -> 94
+	  92 -> 80
+	  93 -> 106
+	  94 -> 96
+	  94 -> 97
+	  95 -> 19
+	  97 -> 35
+	  97 -> 68
+	  98 -> 45
+	  99 -> 55
+	  100 -> 5
+	  101 -> 74
+	  101 -> 3
+	  101 -> 101
+	  102 -> 104
+	  102 -> 105
+	  103 -> 52
+	  104 -> 27
+	  105 -> 6
+	  106 -> 43
+}
+

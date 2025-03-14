@@ -1,0 +1,178 @@
+# APT / MAZOV DOOR
+# DOOR, APARTMENT #11 (turns into door. can lockpick and get into?)
+#
+#1. Use the wirecutters to cut the chain.
+#If you don't have them, the door suggests it. The chain is very flimsy. 
+#Exactly the same structure as other doors. 
+#
+#1. Observe the padlock. - the weakness here is in chain.
+#
+#Option to get a task if you do not have the chaincutters.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: “我们为什么要这样随机闯入普通市民的公寓？”"];
+	  3 [label="Rhetoric: 他现在有很多话可以说，但他知道这样也改变不了什么。"];
+	  4 [label="Padlocked Door: SetVariableValue(\"character.trigger_master_investigator_thought\", true) --[[ Variable[ ]]"];
+	  5 [label="You: “为什么*不可以*呢？”"];
+	  6 [label="Padlocked Door: Variable[\"apt.master_investigator_doors_opened\"] >=3"];
+	  7 [label="Variable[\"apt.master_investigator_doors_opened\"] >=3", shape=diamond];
+	  8 [label="!(Variable[\"apt.master_investigator_doors_opened\"] >=3)", shape=diamond];
+	  9 [label="Kim Kitsuragi: “我觉得你应该剪开的是*钩环*，警探。”警督用戴着手套的手指指向被腐蚀的圆环。"];
+	  10 [label="Empathy: 他只是想试着帮你的忙，别把它……往坏处想。放松点。"];
+	  11 [label="You: 用切链钳剪开挂锁。"];
+	  12 [label="You: Variable[\"apt.padlock_interfacing_wc\"]"];
+	  13 [label="Variable[\"apt.padlock_interfacing_wc\"]", shape=diamond];
+	  14 [label="!(Variable[\"apt.padlock_interfacing_wc\"])", shape=diamond];
+	  15 [label="You: “是时候来点咔擦-咔擦了！”（用手比划出剪刀的样子。）"];
+	  16 [label="Interfacing: 一把锁挡住了你的去路！你可以用标准的警用设备剪开这些链条。某些可以在RCM汽車里找到的东西……"];
+	  17 [label="You: “我不知道，只是感觉像是我们可以做的事。”"];
+	  18 [label="Padlocked Door: Variable[\"apt.padlock_interfacing_wc\"]"];
+	  19 [label="Variable[\"apt.padlock_interfacing_wc\"]", shape=diamond];
+	  20 [label="!(Variable[\"apt.padlock_interfacing_wc\"])", shape=diamond];
+	  21 [label="Kim Kitsuragi: “你好像下定决心了，那就继续吧。”"];
+	  22 [label="Jump to: [padlock hub]"];
+	  23 [label="Padlocked Door: CheckEquipped(\"chaincutters\") == false"];
+	  24 [label="CheckEquipped(\"chaincutters\") == false", shape=diamond];
+	  25 [label="!(CheckEquipped(\"chaincutters\") == false)", shape=diamond];
+	  26 [label="You: “我们可以用切链钳把链条剪开。”"];
+	  27 [label="Kim Kitsuragi: 警督什么也没说，脸上没有任何表情。"];
+	  28 [label="Interfacing: 钩环像小树枝一样被剪了下来，锁砰的一声掉落在地板上。现在能进去了……"];
+	  29 [label="Jump to: [padlock hub]"];
+	  30 [label="Kim Kitsuragi: “也许你应该再试一次？”"];
+	  31 [label="Padlocked Door: 这扇门被一只挂锁锁上了。门板上用粉笔写着11号。"];
+	  32 [label="Padlocked Door: CheckItem(\"chaincutters\")"];
+	  33 [label="CheckItem(\"chaincutters\")", shape=diamond];
+	  34 [label="!(CheckItem(\"chaincutters\"))", shape=diamond];
+	  35 [label="Padlocked Door: 没有回应。"];
+	  36 [label="cutter_cuttery"];
+	  37 [label="Padlocked Door: CheckItem(\"chaincutters\")"];
+	  38 [label="CheckItem(\"chaincutters\")", shape=diamond];
+	  39 [label="!(CheckItem(\"chaincutters\"))", shape=diamond];
+	  40 [label="Kim Kitsuragi: 警督盯着你看了好一会儿，然后眨了眨眼……"];
+	  41 [label="You: [离开。]"];
+	  42 [label="Jump to: [padlock hub]"];
+	  43 [label="Kim Kitsuragi: “你先吧，警探。”"];
+	  44 [label="You: “咔擦掉它吧，我的朋友！”（用手比划出剪刀的样子。）"];
+	  45 [label="Kim Kitsuragi: 他仔细看了眼门锁。“如果某人真的*决心*要这么做的话，我的锐影里有一副切链钳。”"];
+	  46 [label="Padlocked Door: CheckEquipped(\"chaincutters\")"];
+	  47 [label="CheckEquipped(\"chaincutters\")", shape=diamond];
+	  48 [label="!(CheckEquipped(\"chaincutters\"))", shape=diamond];
+	  49 [label="Padlocked Door: IsKimHere()"];
+	  50 [label="IsKimHere()", shape=diamond];
+	  51 [label="!(IsKimHere())", shape=diamond];
+	  52 [label="padlock hub"];
+	  53 [label="You: 检查挂锁。"];
+	  54 [label="You: “你不觉得这就是我要*尝试*的事情吗？”"];
+	  55 [label="Interfacing: 你在干什么？你需要把工具拿出来，伙计。"];
+	  56 [label="You: 敲门。"];
+	  57 [label="Interfacing: 没错！把切链钳来出来，直接*剪开*吧。这根脆弱的链条根本比不上你强大的力量。"];
+	  58 [label="Padlocked Door: 这是一块坚硬的金属，但是链条腐蚀地已经很严重——一副结实的切链钳最适合这类工作。"];
+	  59 [label="Padlocked Door: IsKimHere()"];
+	  60 [label="IsKimHere()", shape=diamond];
+	  61 [label="!(IsKimHere())", shape=diamond];
+	  62 [label="Padlocked Door: IsKimHere()"];
+	  63 [label="IsKimHere()", shape=diamond];
+	  64 [label="!(IsKimHere())", shape=diamond];
+	  65 [label="Interfacing: 你在干什么？你打算用切链钳剪开锁头吗，这样真的行不通。"];
+	  66 [label="You: 忍住，不要发表评论。"];
+	  67 [label="Padlocked Door: CheckEquipped(\"chaincutters\")"];
+	  68 [label="CheckEquipped(\"chaincutters\")", shape=diamond];
+	  69 [label="!(CheckEquipped(\"chaincutters\"))", shape=diamond];
+	  70 [label="Jump to: [padlock hub]"];
+	  71 [label="Kim Kitsuragi: 警督的注意力都放在了走廊上，他正观察着两边有没有人接近。"];
+	  72 [label="You: “切链钳坏了，金。”"];
+	  73 [label="Interfacing: 最好把那些切链钳拿出来……否则你是走不了太远的。"];
+	  0 -> 1
+	  1 -> 32
+	  2 -> 18
+	  2 -> 45
+	  2 -> 6
+	  3 -> 46
+	  4 -> 63
+	  5 -> 41
+	  6 -> 8
+	  6 -> 9
+	  7 -> 5
+	  8 -> 63
+	  9 -> 11
+	  10 -> 73
+	  10 -> 55
+	  11 -> 13
+	  12 -> 14
+	  12 -> 15
+	  13 -> 19
+	  14 -> 19
+	  15 -> 22
+	  16 -> 43
+	  17 -> 41
+	  18 -> 20
+	  18 -> 21
+	  19 -> 29
+	  20 -> 24
+	  21 -> 23
+	  22 -> 53
+	  23 -> 25
+	  23 -> 26
+	  24 -> 56
+	  25 -> 66
+	  26 -> 3
+	  27 -> 4
+	  28 -> 7
+	  29 -> 53
+	  30 -> 53
+	  31 -> 53
+	  32 -> 34
+	  32 -> 35
+	  33 -> 74
+	  34 -> 17
+	  35 -> 30
+	  36 -> 16
+	  36 -> 67
+	  37 -> 40
+	  37 -> 39
+	  38 -> 74
+	  39 -> 71
+	  40 -> 4
+	  42 -> 53
+	  44 -> 28
+	  45 -> 43
+	  46 -> 48
+	  46 -> 49
+	  47 -> 37
+	  48 -> 38
+	  49 -> 51
+	  49 -> 52
+	  50 -> 10
+	  51 -> 53
+	  52 -> 42
+	  52 -> 12
+	  52 -> 54
+	  52 -> 57
+	  52 -> 27
+	  53 -> 59
+	  54 -> 31
+	  55 -> 43
+	  56 -> 36
+	  57 -> 43
+	  58 -> 60
+	  59 -> 61
+	  59 -> 62
+	  60 -> 47
+	  61 -> 68
+	  62 -> 64
+	  62 -> 65
+	  63 -> 44
+	  65 -> 50
+	  66 -> 72
+	  67 -> 69
+	  67 -> 70
+	  68 -> 58
+	  69 -> 33
+	  70 -> 53
+	  71 -> 23
+	  72 -> 31
+	  73 -> 71
+}
+

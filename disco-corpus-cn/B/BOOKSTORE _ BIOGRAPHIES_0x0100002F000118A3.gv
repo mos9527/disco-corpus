@@ -1,0 +1,97 @@
+# BOOKSTORE / BIOGRAPHIES
+# Shelf full of biographies of famous people.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Plaisance: “一个很有影响力的历史人物，这一点应该就不用我告诉你了吧。”她摆摆手，像是要把这个想法抛在一旁。“你是一个警官，执法人员至少都受过*一些*教育吧。”"];
+	  3 [label="Shelf of Biographies: “全速恋爱”讲的是历史上两名顶尖巡回赛車手之间的罗曼史。其中之一是狂妄車手雅各布·欧文。他的金色鬓毛为封面增色不少。"];
+	  4 [label="Shelf of Biographies: 在欧文的传记旁边，你看见一本薄薄的奥西登摇滚明星传记，名叫“叛逆巨星”。他因为在一只眼睛里注射吗啡，另一只眼睛里注射可卡因而出名。"];
+	  5 [label="Shelf of Biographies: 书架的饰板上写着：“名人传记。”你看见各种各样的名字，但是没有一个能勾起你的回忆。"];
+	  6 [label="Shelf of Biographies: 浏览所有这些书还有它们的书名，让你感到头晕目眩。没有一本看起来很重要，或者有什么关联。全都是些毫无趣味的利己主义！"];
+	  7 [label="Shelf of Biographies: 在那旁边是瑞瓦肖的广播名人纪尧姆·贝维，站在一个贩毒窝点前面。他是8频道的不变招牌，专门报道现实生活中的犯罪，还有破坏警察的生活…"];
+	  8 [label="biohub"];
+	  9 [label="Jump to: [biohub]"];
+	  10 [label="Plaisance: “我*必须*坚持你买一本书。”店主打断了你。“读书可不是免费的。不过请继续浏览。但是别*太久*就好。”"];
+	  11 [label="You: “无罪者是谁，或者是什么？”"];
+	  12 [label="Plaisance: “要我说的话…”女人低语到。“‘最伟大的无罪者’。没错，我很肯定。这是一本很重要的教学工具，对历史、宗教信仰，以及它们与*无罪政权*之间的联系进行了深入探究。”"];
+	  13 [label="Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"]"];
+	  14 [label="Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"]", shape=diamond];
+	  15 [label="!(Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"])", shape=diamond];
+	  16 [label="Tutorial Agent: 你得到了一个可互动物品。前往物品栏中与之互动吧。"];
+	  17 [label="Plaisance: “对于一个外行来说也许是吧！”她嘲笑着。“要想层层剥开多层含义，深入分析是很有必要的。”"];
+	  18 [label="You: 讲什么的？"];
+	  19 [label="Plaisance: “这本书也非常大胆。作者想要重新审视大众对无罪体系的普遍理解，创造一个全新的有利位置，改变让人厌倦的旧秩序。”"];
+	  20 [label="You: [离开。]"];
+	  21 [label="You: “我对那本‘最伟大的无罪者’有点兴趣。”"];
+	  22 [label="You: “店主，这个书架上有什么值得注意的吗？”"];
+	  23 [label="Plaisance: “一个真正的文化试金石。”她点点头。“祝你阅读愉快。”"];
+	  24 [label="Jump to: [biohub]"];
+	  25 [label="Suggestion: 她明白自己得罪了顾客，立马纠正了自己的行为。"];
+	  26 [label="Composure: 总有一天，你也会在那个书架上拥有一席之地…或者要努力到*至死方休*！"];
+	  27 [label="Shelf of Biographies: 书架上堆满了*名人*传记，不管他们到底是谁。"];
+	  28 [label="You: 浏览陈列的书籍。"];
+	  29 [label="You: “很好。我也不用知道更多了。”"];
+	  30 [label="You: “我以为这是关于这些…无罪者当中…谁是最酷最伟大的？”"];
+	  31 [label="Conceptualization: 在你看来，她的话语是不是很模糊，而且很抽象？"];
+	  32 [label="Jump to: [Shelf of Biographies: \"Shelves full of biographies of *fam...\"]"];
+	  33 [label="Jump to: [biohub]"];
+	  34 [label="Plaisance: “很抱歉，我也不想催你。你*的确*是在浏览。请吧。别着急。时间就是生意。”"];
+	  35 [label="Plaisance: “当然。对于一个人来说，对历史和社会至少有一个初级的理解是很明智的。想象一下，如果不是这样，我们将会陷入怎样的混乱。”"];
+	  36 [label="Variable[\"doomed.bookstore_famous_hub_reached\"]"];
+	  37 [label="Variable[\"doomed.bookstore_famous_hub_reached\"]", shape=diamond];
+	  38 [label="!(Variable[\"doomed.bookstore_famous_hub_reached\"])", shape=diamond];
+	  39 [label="Inland Empire: 你觉得自己应该买这本。绝对如此。不知道为什么，它就是*很重要*。里面有些很私人的东西…"];
+	  40 [label="You: “所以你很推荐了？”"];
+	  41 [label="Shelf of Biographies: 突然间，一个特别古怪的标题吸引了你的注意。上面写着：“全速恋爱：雅各布·欧文与阿尔菲·德拉查斯的真实爱情悲剧”，作者是塞西莉亚·艾维布鲁克。"];
+	  0 -> 1
+	  1 -> 36
+	  2 -> 19
+	  3 -> 4
+	  4 -> 7
+	  5 -> 26
+	  6 -> 41
+	  7 -> 10
+	  8 -> 20
+	  8 -> 28
+	  8 -> 21
+	  8 -> 22
+	  9 -> 8
+	  10 -> 25
+	  11 -> 2
+	  12 -> 11
+	  12 -> 29
+	  13 -> 14
+	  13 -> 15
+	  14 -> 9
+	  15 -> 16
+	  16 -> 9
+	  17 -> 31
+	  18 -> 3
+	  19 -> 40
+	  19 -> 29
+	  19 -> 30
+	  21 -> 23
+	  22 -> 12
+	  23 -> 13
+	  24 -> 8
+	  25 -> 34
+	  26 -> 8
+	  27 -> 8
+	  28 -> 6
+	  29 -> 32
+	  30 -> 17
+	  31 -> 40
+	  32 -> 27
+	  33 -> 8
+	  34 -> 33
+	  35 -> 39
+	  36 -> 37
+	  36 -> 38
+	  37 -> 27
+	  38 -> 5
+	  39 -> 24
+	  40 -> 35
+	  41 -> 18
+}
+

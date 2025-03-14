@@ -1,0 +1,340 @@
+# INVENTORY / FRACTURED BULLET
+# By inspecting the bullet, you can find out that:
+#1. The bullet came from a breech-loaded rifle.
+#2. The bullet was shot from some distance, so this was probably not a mercy kill (white check.)
+#3. The rifle used was a model mass-produced during the revolutionary war, and the surplus rifles/ammo are still a favourite with third-world guerrillas and Jamrock bangers.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 哇哦，我竟然*知道*这个……"];
+	  3 [label="You: “值得什么？中枪吗？”"];
+	  4 [label="Esprit de Corps: 警督身在远方，他正坐在锐影里，来回切换着无线电台。他没有在此时此地和你一起检查这颗子弹。他应该在这里的……他肯定会对此兴致盎然。等他回来，再和他谈谈这件事吧。"];
+	  5 [label="Interfacing: 一枚包壳子弹……可能出自一支军用级后膛步枪，而不是马丁内斯街道上那些常见的前膛枪。\n没错。一枚*不寻常*的包壳子弹。可能出自一支军用级后膛步枪，而不是马丁内斯街道上那些常见的前膛枪。"];
+	  6 [label="Fractured Bullet: 这个被压扁的小东西也不知道。"];
+	  7 [label="Fractured Bullet: 但是子弹不会说话。"];
+	  8 [label="Horrific Necktie: 是啊，你怎么了，*疯了*？子弹不会说话的。它们没有感情。子弹也不能陪伴你。"];
+	  9 [label="Hand/Eye Coordination: 是一支步枪，大革命时期的。这枚子弹看起来像是老式的4.46毫米的——是世纪之交残留下来的东西了。可能是一个古董，或者一个翻新的古董。"];
+	  10 [label="Fractured Bullet: Variable[\"inventory.fractured_look_jacket\"]  and  Variable[\"inventory.fractured_look_core\"]"];
+	  11 [label="Variable[\"inventory.fractured_look_jacket\"]  and  Variable[\"inventory.fractured_look_core\"]", shape=diamond];
+	  12 [label="!(Variable[\"inventory.fractured_look_jacket\"]  and  Variable[\"inventory.fractured_look_core\"])", shape=diamond];
+	  13 [label="lookhub"];
+	  14 [label="You: “让你考虑自己开出的每一枪。我喜欢这样。”"];
+	  15 [label="You: “这是一枚包壳子弹，直径接近5毫米。”\n“这是一枚软尖弹，拥有铅质核心和直径大约8毫米的黄铜外壳。”"];
+	  16 [label="You: “金，看看这个。这是一枚包壳子弹，直径接近5毫米。”\n“金，看看这个。这是一枚软尖弹，拥有铅质核心和直径大约8毫米的黄铜外壳。”"];
+	  17 [label="Endurance: 这是一个真正的杀器。不是街头那些垃圾子弹。你能*感觉*到。"];
+	  18 [label="Endurance: 我们是对的。它来自一支很有杀伤力的武器。"];
+	  19 [label="Hand/Eye Coordination: 古董爱好者，遥远国家的游击队队员，还有一些幸运的加姆洛克黑帮分子。你寻找的东西跟隐藏武器库里的那些是一样的——只不过它还能正常使用。"];
+	  20 [label="Jump to: [bulletmainhub]"];
+	  21 [label="You: “难道凶手把受害人和某些外国的游击队战士弄混了吗？”"];
+	  22 [label="Kim Kitsuragi: “到目前为止，你对子弹有什么看法？”"];
+	  23 [label="You: 吃掉它！"];
+	  24 [label="Encyclopedia: 禁止和平时期的执法人员使用后膛枪是国际道德伦理委员会在所有雷亚尔货币体系国家执行的一项政策。"];
+	  25 [label="Perception (Sight): 核心是铅制的。黄铜外壳可能无法包裹住整颗子弹，否则软金属是不会像那样膨胀的。"];
+	  26 [label="Kim Kitsuragi: “不过，还是继续说回调查。”"];
+	  27 [label="Inland Empire: 子弹靠在他工整的笔迹旁边，看起来特别悲伤。就像是一个小小的，枯萎的菜花头。"];
+	  28 [label="find_the_gun_bro"];
+	  29 [label="You: 它是我的朋友。我要开始跟它说话。它会陪伴我的。"];
+	  30 [label="Inland Empire: 有什么东西告诉你还不会那么快找到。这会是那种持续很长时间的史诗级任务……"];
+	  31 [label="You: “我想我知道它是从哪里来的了。”（若有所思地晃晃袋子。）"];
+	  32 [label="You: 隔着袋子抚摸子弹。"];
+	  33 [label="Hand/Eye Coordination: 4.46口径被广泛应用于*贝莱-马格雷*步枪，一家瑞瓦肖制造商。50年前，B-M在世纪前革命的伊苏林迪剧院战场上占据了主要地位。"];
+	  34 [label="Fractured Bullet: IsKimHere()"];
+	  35 [label="IsKimHere()", shape=diamond];
+	  36 [label="!(IsKimHere())", shape=diamond];
+	  37 [label="Kim Kitsuragi: “RCM有些新成员，一旦接受过军用级武器训练之后，就会对他们的前膛枪感到不耐烦，不过最后他们会意识到这是值得的。”"];
+	  38 [label="lookingforhub"];
+	  39 [label="You: “我说：我该拿你怎么办，子弹？”"];
+	  40 [label="Fractured Bullet: 但是很悲哀，子弹是不可食用的。"];
+	  41 [label="Visual Calculus: 然后找出发射它的那支枪，还有枪的所有者——他用它杀害了你的受害人。不赖吧！"];
+	  42 [label="You: 子弹没什么可以说的了。[把它放在一边。]"];
+	  43 [label="Fractured Bullet: 你只能辨认出子弹底部附近的一些小条纹。极其细小，呈线状。感觉没什么特别的。"];
+	  44 [label="You: “是的。某些*神秘的*东西正在跟这种古老的子弹类型一起发酵。”"];
+	  45 [label="Fractured Bullet: 很有意思。你手上有一只不同寻常的军用级子弹。现在你只需要找到能发射这种子弹的枪支就可以了。"];
+	  46 [label="Fractured Bullet: 是的。就好像你之前见过这种子弹，警官。"];
+	  47 [label="Fractured Bullet: Variable[\"inventory.fractured_esprit_kim\"]"];
+	  48 [label="Variable[\"inventory.fractured_esprit_kim\"]", shape=diamond];
+	  49 [label="!(Variable[\"inventory.fractured_esprit_kim\"])", shape=diamond];
+	  50 [label="Kim Kitsuragi: “*那个*看起来不太可能，不过我们需要查证所有可能的线索。下一步——找到那支凶枪。”"];
+	  51 [label="Hand/Eye Coordination: 顺便说一句，你身上就带着一支类似的步枪。就是商业区地下室里藏着的那个旧玩意。可悲的是，它不能用了。如果可以的话，子弹*可能*跟枪膛是符合的。"];
+	  52 [label="Fractured Bullet: IsKimHere()"];
+	  53 [label="IsKimHere()", shape=diamond];
+	  54 [label="!(IsKimHere())", shape=diamond];
+	  55 [label="Kim Kitsuragi: “一枚包壳子弹。好吧……那可能出自一支军用级后膛步枪，而不是马丁内斯街道上那些常见的前膛枪。”\n“好吧……包壳就意味着它可能出自一支军用级后膛步枪，而不是瑞瓦肖西部街道上那些常见的前膛枪。”"];
+	  56 [label="Fractured Bullet: IsKimHere()"];
+	  57 [label="IsKimHere()", shape=diamond];
+	  58 [label="!(IsKimHere())", shape=diamond];
+	  59 [label="You: “我不知道……”"];
+	  60 [label="Fractured Bullet: 它损毁的很严重。有些碎片还卡在伤口里。"];
+	  61 [label="Kim Kitsuragi: 他点点头。“我必须赞扬一下君主——他们听从了上世纪犯罪学家的建议，禁止在和平时期使用后膛枪，这是一件挺让人钦佩的事。”"];
+	  62 [label="Fractured Bullet: Variable[\"inventory.fractured_interfacing_interesting_bullet\"]"];
+	  63 [label="Variable[\"inventory.fractured_interfacing_interesting_bullet\"]", shape=diamond];
+	  64 [label="!(Variable[\"inventory.fractured_interfacing_interesting_bullet\"])", shape=diamond];
+	  65 [label="Esprit de Corps: 回到警局，警督正站在一个柜台前面，勤奋地填写文件，准备交给一个疲惫的档案管理员。"];
+	  66 [label="Kim Kitsuragi: “嗯……”警督在笔记本里记了些什么。“你在想什么？子弹？”"];
+	  67 [label="You: “为什么不呢？”"];
+	  68 [label="Fractured Bullet: 子弹还是安全地密封在一个有RCM印章的塑料袋里。"];
+	  69 [label="Jump to: [find_the_gun_bro]"];
+	  70 [label="You: 那制造商呢？"];
+	  71 [label="Fractured Bullet: 子弹安全地密封在一个有RCM印章的塑料袋里。金填好了袋子上的标签，包括物品编号，案件编号，日期，还有发现子弹的地点。"];
+	  72 [label="Fractured Bullet: 被压扁子弹的边缘有些锋利，那周围的外壳已经裂开了。就算是透过袋子，它依然感觉很冰冷。"];
+	  73 [label="Fractured Bullet: 子弹外壳是淡黄色金属制成的。它已经绽放出了深灰色的核心。子弹底部的直径接近5毫米。"];
+	  74 [label="Hand/Eye Coordination: 你记不起上周发生了什么事情——是什么让你觉得自己会记得那支神秘武器的型号呢？"];
+	  75 [label="Esprit de Corps: 你应该尽快跟他分享你的发现。"];
+	  76 [label="You: 那核心呢？"];
+	  77 [label="Jump to: [bulletmainhub]"];
+	  78 [label="Fractured Bullet: 没毛病，像是一个警探会做的。首先，你需要尽你所能地去了解这个小家伙！"];
+	  79 [label="You: 仔细检查子弹。"];
+	  80 [label="You: 尝试确定这是什么武器射出的子弹。"];
+	  81 [label="You: Variable[\"inventory.fractured_encyc_white_check_succeeded\"]"];
+	  82 [label="Variable[\"inventory.fractured_encyc_white_check_succeeded\"]", shape=diamond];
+	  83 [label="!(Variable[\"inventory.fractured_encyc_white_check_succeeded\"])", shape=diamond];
+	  84 [label="You: “子弹很可能是从一支贝莱-马格雷步枪里射出来的。”"];
+	  85 [label="Fractured Bullet: CheckItem(\"antique_rifle\")"];
+	  86 [label="CheckItem(\"antique_rifle\")", shape=diamond];
+	  87 [label="!(CheckItem(\"antique_rifle\"))", shape=diamond];
+	  88 [label="Jump to: [Kim Kitsuragi: \"\"A jacketed bullet. Okay... It woul...\"]"];
+	  89 [label="Visual Calculus: 我知道！你应该找出这枚子弹是什么武器射出来的。"];
+	  90 [label="You: 把它卖掉赚钱！"];
+	  91 [label="bulletmainhub"];
+	  92 [label="You: “我的意思是……有点想法，不过不太确定……”"];
+	  93 [label="Kim Kitsuragi: “你是说世纪之交盈余的枪支？”"];
+	  94 [label="You: “看来我们在寻找一个古董爱好者。”"];
+	  95 [label="You: “难道是全副武装的加姆洛克黑帮分子开始进军马丁内斯了？”"];
+	  96 [label="You: “我该拿你怎么办呢，子弹？”"];
+	  97 [label="Kim Kitsuragi: “如果我们找出它的所有者，就很有可能发现到底是谁*使用*过它——可能用它杀死了我们的受害人。”"];
+	  98 [label="Fractured Bullet: CheckItem(\"antique_rifle\")"];
+	  99 [label="CheckItem(\"antique_rifle\")", shape=diamond];
+	  100 [label="!(CheckItem(\"antique_rifle\"))", shape=diamond];
+	  101 [label="You: 哇哦，我竟然*知道*这个……"];
+	  102 [label="Jump to: [bulletmainhub]"];
+	  103 [label="Kim Kitsuragi: “肯定会有一些军火交易。不过法律禁止我们使用从君主制继承的后膛枪这一点，据我观察，是颇有成效的。”"];
+	  104 [label="Fractured Bullet: Variable[\"inventory.fractured_viscal_find_the_gun\"]"];
+	  105 [label="Variable[\"inventory.fractured_viscal_find_the_gun\"]", shape=diamond];
+	  106 [label="!(Variable[\"inventory.fractured_viscal_find_the_gun\"])", shape=diamond];
+	  107 [label="Kim Kitsuragi: “好吧，所以呢？”"];
+	  108 [label="You: 现在谁会使用贝莱-马格雷步枪呢？"];
+	  109 [label="You: “我们这具尸体是被一支丛林枪击杀的。”"];
+	  110 [label="You: “我觉得我们应该拥有更*强大的*枪械。我们可是法律！”"];
+	  111 [label="Kim Kitsuragi: “这就要由我们去发现了。下一步——找到那支凶枪。”"];
+	  112 [label="Kim Kitsuragi: “就连RCM使用的都是普通的无壳圆锥弹。这有点……奇怪。很奇怪。我喜欢这样，警官。奇怪就意味着独一无二。独一无二就意味着有罪。我们需要找到射出这枚子弹的枪。”"];
+	  113 [label="Kim Kitsuragi: “总之：我们对这枚子弹了解的越多，结果就越好。”"];
+	  114 [label="You: 找出发射这枚子弹的武器！"];
+	  115 [label="Fractured Bullet: 是的。就好像你之前见过这种子弹，警官。"];
+	  116 [label="Encyclopedia: 通常你没有接触包壳子弹的理由。公民武装只会使用无壳弹——从枪口装填的小金属弹，一般是装在管壳里的。"];
+	  117 [label="dmrifle"];
+	  118 [label="You: “那可能是件好事。”"];
+	  119 [label="Jump to: [bulletmainhub]"];
+	  120 [label="Fractured Bullet: CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  121 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  122 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  123 [label="Fractured Bullet: Variable[\"inventory.fractured_encyc_white_check_succeeded\"]"];
+	  124 [label="Variable[\"inventory.fractured_encyc_white_check_succeeded\"]", shape=diamond];
+	  125 [label="!(Variable[\"inventory.fractured_encyc_white_check_succeeded\"])", shape=diamond];
+	  126 [label="Kim Kitsuragi: “你的最佳猜测是什么？”"];
+	  127 [label="Jump to: [bulletmainhub]"];
+	  128 [label="Fractured Bullet: 谁会想要这枚*用过*的子弹呢？"];
+	  129 [label="Encyclopedia: 很不寻常。瑞瓦肖人已经有近半个世纪未能持有这种后膛装填的武器了。"];
+	  130 [label="You: 看看外壳。"];
+	  131 [label="Jump to: [lookhub]"];
+	  132 [label="You: “贝莱-马格雷步枪。子弹指向了它。”"];
+	  133 [label="Kim Kitsuragi: “想象一下，如果所有人——警察，市民——都能接触到不用停下来重新装填就能发射好几轮子弹的枪支。第一枪过后，就会有第二枪，第三枪，以此类推——那样要来的容易得多。”"];
+	  134 [label="Interfacing: 目前为止，这枚子弹有什么有意思的地方吗？"];
+	  135 [label="Fractured Bullet: Variable[\"inventory.fractured_main_hub_reached\"]"];
+	  136 [label="Variable[\"inventory.fractured_main_hub_reached\"]", shape=diamond];
+	  137 [label="!(Variable[\"inventory.fractured_main_hub_reached\"])", shape=diamond];
+	  138 [label="Kim Kitsuragi: “什么？”警督靠近了一些。"];
+	  139 [label="Kim Kitsuragi: “神秘？”他耸耸肩。“好吧。不管怎么说，等找到那支枪的时候，我们就会知道了。”"];
+	  140 [label="Hand/Eye Coordination: 古董爱好者，遥远国家的游击队队员，还有一些幸运的加姆洛克黑帮分子。你的目标大概是一把存良好的古董枪吧。"];
+	  141 [label="You: 还有人在生产这种步枪吗？"];
+	  142 [label="Hand/Eye Coordination: 没有了。不过一家名为齐格勒的大型军火制造商，在战后还剩有不少库存。所以还有很多旧军事步枪广为流传，一般都是坏的，质量实在太糟糕了。"];
+	  143 [label="Kim Kitsuragi: “一个古董。是有点道理。不可能有很多后膛枪在马丁内斯广泛流传，或者说真的，瑞瓦肖的任何地方都不太可能……”"];
+	  144 [label="You: 这是一枚包壳子弹，直径接近5毫米。\n这是一枚软尖弹，拥有铅质核心和直径大约8毫米的黄铜外壳。"];
+	  145 [label="Kim Kitsuragi: “呃，如果我是子弹——当然我不是——我会说：找到把我发射出来的那支武器。”"];
+	  146 [label="You: “好主意。”"];
+	  147 [label="Jump to: [bulletmainhub]"];
+	  148 [label="Jump to: [bulletmainhub]"];
+	  0 -> 1
+	  1 -> 136
+	  2 -> 116
+	  3 -> 134
+	  4 -> 128
+	  5 -> 45
+	  6 -> 89
+	  7 -> 121
+	  8 -> 69
+	  9 -> 70
+	  10 -> 11
+	  10 -> 12
+	  11 -> 52
+	  12 -> 132
+	  13 -> 131
+	  13 -> 76
+	  14 -> 134
+	  15 -> 55
+	  16 -> 88
+	  17 -> 25
+	  18 -> 130
+	  19 -> 34
+	  20 -> 91
+	  21 -> 112
+	  22 -> 2
+	  22 -> 15
+	  23 -> 40
+	  24 -> 3
+	  24 -> 14
+	  24 -> 111
+	  25 -> 13
+	  26 -> 38
+	  27 -> 91
+	  28 -> 90
+	  28 -> 115
+	  28 -> 29
+	  28 -> 23
+	  29 -> 7
+	  30 -> 128
+	  31 -> 108
+	  32 -> 72
+	  33 -> 85
+	  34 -> 35
+	  34 -> 36
+	  35 -> 66
+	  36 -> 65
+	  37 -> 24
+	  38 -> 44
+	  38 -> 21
+	  38 -> 94
+	  38 -> 95
+	  39 -> 146
+	  40 -> 69
+	  41 -> 149
+	  43 -> 10
+	  44 -> 140
+	  45 -> 128
+	  46 -> 145
+	  47 -> 48
+	  47 -> 49
+	  48 -> 75
+	  49 -> 103
+	  50 -> 77
+	  51 -> 118
+	  52 -> 53
+	  52 -> 54
+	  53 -> 22
+	  54 -> 135
+	  55 -> 18
+	  56 -> 57
+	  56 -> 58
+	  57 -> 139
+	  58 -> 6
+	  59 -> 97
+	  60 -> 10
+	  61 -> 37
+	  62 -> 64
+	  62 -> 63
+	  63 -> 145
+	  63 -> 101
+	  64 -> 4
+	  65 -> 47
+	  66 -> 103
+	  67 -> 104
+	  68 -> 91
+	  69 -> 28
+	  70 -> 33
+	  71 -> 27
+	  72 -> 117
+	  73 -> 17
+	  74 -> 148
+	  75 -> 103
+	  76 -> 60
+	  77 -> 91
+	  78 -> 105
+	  79 -> 73
+	  80 -> 81
+	  81 -> 82
+	  81 -> 83
+	  82 -> 124
+	  83 -> 124
+	  84 -> 144
+	  85 -> 86
+	  85 -> 87
+	  86 -> 51
+	  87 -> 118
+	  88 -> 55
+	  89 -> 28
+	  90 -> 129
+	  91 -> 96
+	  91 -> 32
+	  91 -> 42
+	  91 -> 79
+	  91 -> 16
+	  91 -> 80
+	  91 -> 31
+	  92 -> 127
+	  93 -> 133
+	  94 -> 50
+	  95 -> 112
+	  96 -> 56
+	  97 -> 114
+	  98 -> 99
+	  98 -> 100
+	  99 -> 19
+	  100 -> 141
+	  101 -> 46
+	  102 -> 91
+	  103 -> 37
+	  104 -> 106
+	  104 -> 107
+	  105 -> 41
+	  106 -> 149
+	  107 -> 84
+	  107 -> 110
+	  107 -> 92
+	  108 -> 98
+	  109 -> 93
+	  110 -> 134
+	  111 -> 77
+	  112 -> 30
+	  113 -> 120
+	  114 -> 78
+	  115 -> 15
+	  116 -> 20
+	  117 -> 142
+	  118 -> 61
+	  119 -> 91
+	  120 -> 122
+	  120 -> 123
+	  121 -> 8
+	  122 -> 69
+	  123 -> 125
+	  123 -> 126
+	  124 -> 9
+	  125 -> 74
+	  126 -> 133
+	  127 -> 91
+	  128 -> 69
+	  129 -> 113
+	  130 -> 43
+	  131 -> 13
+	  132 -> 144
+	  133 -> 26
+	  134 -> 62
+	  135 -> 137
+	  135 -> 138
+	  136 -> 68
+	  137 -> 71
+	  138 -> 39
+	  139 -> 77
+	  140 -> 34
+	  141 -> 143
+	  142 -> 109
+	  143 -> 67
+	  143 -> 119
+	  144 -> 5
+	  145 -> 59
+	  145 -> 147
+	  146 -> 97
+	  147 -> 91
+	  148 -> 91
+}
+

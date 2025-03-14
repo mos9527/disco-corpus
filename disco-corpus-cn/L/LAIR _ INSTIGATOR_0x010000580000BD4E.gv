@@ -1,0 +1,1406 @@
+# LAIR / INSTIGATOR
+# You are caught in the ray of the Pale Compressor and talk to Ruby. You can:
+#1. Ask about the Compressor.
+#2. Ask about the murder and why Ruby went into hiding.
+#3. Try to destroy the Compressor.
+#4. Try to stop Ruby from killing herself if you destroy the Compressor.
+#5. Let Ruby go.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Jump to: [Untitled hub]"];
+	  3 [label="Drama: 她对你撒谎了……*包括*那件事。"];
+	  4 [label="Game Over: 黑暗接管了一切，你感觉自己坠入到一个未知的、无声的世界。哦……这就是死亡！这就是结束。"];
+	  5 [label="Ruby, the Instigator: Variable[\"boardwalk.ruby_sugg_talk\"]"];
+	  6 [label="Variable[\"boardwalk.ruby_sugg_talk\"]", shape=diamond];
+	  7 [label="!(Variable[\"boardwalk.ruby_sugg_talk\"])", shape=diamond];
+	  8 [label="You: “胡说，你是想……”（奇怪地抽搐），“误导我。根本就没人会这么说我。”"];
+	  9 [label="Ruby, the Instigator: “‘怎么会没人这么说你。警察啦，罪犯啦……要不然你以为我为什么会带着这台该死的死亡射线一起藏在这里，等着你找上门？”"];
+	  10 [label="Ruby, the Instigator: Variable[\"tc.harry\"]"];
+	  11 [label="Variable[\"tc.harry\"]", shape=diamond];
+	  12 [label="!(Variable[\"tc.harry\"])", shape=diamond];
+	  13 [label="You: “好吧，好吧。”（让自己振作。）“咱们现在怎么办？”（继续。）"];
+	  14 [label="Ruby, the Instigator: Variable[\"TASK.explore_the_passages_done\"]"];
+	  15 [label="Variable[\"TASK.explore_the_passages_done\"]", shape=diamond];
+	  16 [label="!(Variable[\"TASK.explore_the_passages_done\"])", shape=diamond];
+	  17 [label="Ruby, the Instigator: “我什么都不知道，反正我在这里扎营之后就没人来过。不过我很肯定自己绝不是第一个在这里苟活的人……”她的声音越来越微弱，跟你脑袋中的白噪音混在了一起。感觉就像是动脉瘤在靠近。"];
+	  18 [label="Ruby, the Instigator: “哦。”她露出了悲伤的笑容。“我虽然知道小猫也是有爪子的，但没想到会这样……”"];
+	  19 [label="Perception (Sight): 她手中握着的是一支双管前膛枪——跟凶器并不一致。"];
+	  20 [label="Ruby, the Instigator: “她要我上楼去找她——那个跟她一起的雇佣兵就躺在卧室地板上，死了。我知道她不希望让当局介入。所以，没错……”"];
+	  21 [label="Endurance: 曷城警督此刻忍受的痛苦比你还要严重。他试着去抵抗，但根本无从知道何时才能解脱。"];
+	  22 [label="Endurance: 曷城警督正在承受的痛苦比你还要严重，但他已经慢慢开始恢复了。"];
+	  23 [label="You: “康米主义者的藏身地就在后面……”"];
+	  24 [label="Ruby, the Instigator: “我用的是一台灰域维度压缩机。你和你的搭档现在就困在它的场域里。”"];
+	  25 [label="Ruby, the Instigator: “嗯？什么？”"];
+	  26 [label="Ruby, the Instigator: “哦，这当然能解决问题。”"];
+	  27 [label="You: “我也希望可以就这样放你走，但我必须遵守规定。”"];
+	  28 [label="You: 但是——她不该就这样平白无故地死去！"];
+	  29 [label="Ruby, the Instigator: “哦，这根本不重要。他们对我来说甚至连朋友都算不上，更别说是*自家*兄弟了。至于有人*喜欢*我这件事——我太知道了。如果一个人有人喜欢就会遇上这种事……”"];
+	  30 [label="Ruby, the Instigator: “呕，拉倒吧，嘴说破个屁。有人*喜欢*我什么——我太知道了。如果一个人有人喜欢就会遇上这种事……”"];
+	  31 [label="Shivers: 他漫步着，两侧是一排排的罂粟花，大部分粉红色的花朵已经凋谢。男人看了看周围，然后抬头望向天空；一声叹息。"];
+	  32 [label="Ruby, the Instigator: Variable[\"XP.ruby_motive\"]"];
+	  33 [label="Variable[\"XP.ruby_motive\"]", shape=diamond];
+	  34 [label="!(Variable[\"XP.ruby_motive\"])", shape=diamond];
+	  35 [label="Ruby, the Instigator: “子弹是从远处射进来的——否则我们在楼下应该能听到枪声才对。再说了，她有充分的动机不去主动招惹是非引人注意。”\n“警官，我不是说了好多遍了吗，我们在楼下什么也没听见。没有枪声，什么也没有。”"];
+	  36 [label="Ruby, the Instigator: “灰域？灰域不是在世界的尽头吗？”"];
+	  37 [label="You: “*大家*是指谁？你是从哪儿听来的？”"];
+	  38 [label="You: “是啊，没错，我刚才……在逗你玩呢。他们就在外面，荷枪实弹。”"];
+	  39 [label="You: 别晕过去了。"];
+	  40 [label="Empathy: 她死了。他的反应怎么可以如此……冷淡？"];
+	  41 [label="Ruby, the Instigator: CheckItem(\"gun_villiers\")"];
+	  42 [label="CheckItem(\"gun_villiers\")", shape=diamond];
+	  43 [label="!(CheckItem(\"gun_villiers\"))", shape=diamond];
+	  44 [label="Kim Kitsuragi: 他望向黑暗深处，“那边的帐篷。”"];
+	  45 [label="Ruby, the Instigator: “你认真的吗？那就尝尝这个吧！”她拧动手中的转盘。"];
+	  46 [label="You: “到底发生了什么？周日晚上？跟我说说你的版本。”"];
+	  47 [label="Ruby, the Instigator: “有啊，在对你使用之前，我自己也把脑袋伸进去过，感觉这样做比较*合乎科学伦理*。不敢说是很愉快的体验，我试的时候开的档位比现在还低，不过我可以想象你现在正经受的痛苦。”"];
+	  48 [label="Ruby, the Instigator: “信号通过一系列中继站来完成传递。”她停顿了一下。“驻守在那些中继站里可不是什么有意思的工作，人类独自呆在灰域之中的话，不需要几年就会失去理智的。”"];
+	  49 [label="Jump to: [rubymainhub]"];
+	  50 [label="Conceptualization: 如果一只大黄蜂可以在一分钟内杀死40只蜜蜂，那三只大黄蜂一分钟就能杀120只蜜蜂……甚至更多，因为他们还会团队配合。"];
+	  51 [label="Kim Kitsuragi: “女士，把枪放下。这样是不能解决问题的。你……”"];
+	  52 [label="Ruby, the Instigator: 她从你身边、接着是警督身边飞奔而过，最后消失在黑暗的隧道里。"];
+	  53 [label="You: “你的第一个猜测并不算完全错误……”"];
+	  54 [label="Ruby, the Instigator: 她眯起眼睛。“听起来应该差不多吧？”"];
+	  55 [label="Inland Empire: 白噪音变成一堵迷雾和灰霉组成的沸腾高墙，笼罩了整座城市……撕裂了建筑，把人行布道刮到了半空中。这就是瑞瓦肖——世界末日的瑞瓦肖。"];
+	  56 [label="You: “所谓的准备指的是把子弹藏在地板底下吗？”"];
+	  57 [label="You: “准备什么……枪战吗？所以把子弹先藏起来？”"];
+	  58 [label="You: “等等……以你的标准来看她当时是不是已经嗨了？”"];
+	  59 [label="Electrochemistry: 她见识过真正嗑药过量的人的样子，卡拉洁当时还没到那个程度，所以有什么好担心的呢？"];
+	  60 [label="Authority: 我以为我们已经达成协议了，她想到。*这种事*真的不应该发生。"];
+	  61 [label="Ruby, the Instigator: “呃，当时你队里没有这位瘦巴巴的老兄。”她朝警督点点头。“你带了两个男人，还有一个女人。男的看上去都很壮实，女的也不差。”"];
+	  62 [label="You: “你还有什么别的……能告诉我的吗……”"];
+	  63 [label="Ruby, the Instigator: “我见识过更糟糕的情况。”她耸耸肩。"];
+	  64 [label="You: “你这又是何必呢。你跟这个案子没关系，我可以放你走。”"];
+	  65 [label="Kim Kitsuragi: “我们是警察。责任全在我们，要是我们放任不管……”他看了看四周。"];
+	  66 [label="Ruby, the Instigator: Variable[\"tc.rank_known\"]  and  Variable[\"tc.name_full_harrier\"]"];
+	  67 [label="Variable[\"tc.rank_known\"]  and  Variable[\"tc.name_full_harrier\"]", shape=diamond];
+	  68 [label="!(Variable[\"tc.rank_known\"]  and  Variable[\"tc.name_full_harrier\"])", shape=diamond];
+	  69 [label="Ruby, the Instigator: Variable[\"TASK.explore_the_passages_done\"]"];
+	  70 [label="Variable[\"TASK.explore_the_passages_done\"]", shape=diamond];
+	  71 [label="!(Variable[\"TASK.explore_the_passages_done\"])", shape=diamond];
+	  72 [label="Ruby, the Instigator: 顷刻间，你全身麻痹了。白噪声充斥着你的大脑——一阵前所未有的奇怪的痛楚接踵而至。透过静电流声，你听见了一个女人的声音。"];
+	  73 [label="You: 说服她把枪放下。"];
+	  74 [label="You: Variable[\"boardwalk.ruby_red_check_rhet\"]"];
+	  75 [label="Variable[\"boardwalk.ruby_red_check_rhet\"]", shape=diamond];
+	  76 [label="!(Variable[\"boardwalk.ruby_red_check_rhet\"])", shape=diamond];
+	  77 [label="You: “那她说了什么？”"];
+	  78 [label="You: 盯着露比。"];
+	  79 [label="Ruby, the Instigator: “我他妈的不会杀你的，如果我真有这个打算，你现在早就没命了。考虑到现在的情况，我已经很讲道理了。”"];
+	  80 [label="You: “你听说了所谓审判的事吗……就是那群雇佣正在筹划的事？”"];
+	  81 [label="Ruby, the Instigator: 她叹了口气。“是啊。那群佣兵打算私设公堂，处决杀害莱利的人。”"];
+	  82 [label="You: 保持静止。"];
+	  83 [label="You: 也许我应该劝劝她？"];
+	  84 [label="Rhetoric: 因为你觉得自杀对你来说也是种不错的做法。现在她的手指已经握紧扳机了……"];
+	  85 [label="You: “咱们……还是聊聊别的吧。”"];
+	  86 [label="Ruby, the Instigator: (Variable[\"canal.roy_suicide\"]  or  Variable[\"plaza.kineema_sylvie_drama_suicidejokes\"]  or  Variable[\"whirling.hardies_authority_wc_fail_tried_gun\"])"];
+	  87 [label="(Variable[\"canal.roy_suicide\"]  or  Variable[\"plaza.kineema_sylvie_drama_suicidejokes\"]  or  Variable[\"whirling.hardies_authority_wc_fail_tried_gun\"])", shape=diamond];
+	  88 [label="!((Variable[\"canal.roy_suicide\"]  or  Variable[\"plaza.kineema_sylvie_drama_suicidejokes\"]  or  Variable[\"whirling.hardies_authority_wc_fail_tried_gun\"]))", shape=diamond];
+	  89 [label="Rhetoric: 强大的道德感。她仍想找个机会为自己辩护。"];
+	  90 [label="You: “那你……觉得雇佣兵会不会是她亲手杀的？”\n“你觉得……是不是她亲自动手……杀了莱利……？”"];
+	  91 [label="Kim Kitsuragi: “你现在的行为已经触犯了法律。我猜机器应该是有专利的……但是现在发射的波段应该远超合法范围了吧？”"];
+	  92 [label="Kim Kitsuragi: “警官，你还好吗？”"];
+	  93 [label="Pain Threshold: 压缩机发射的无线电讯号像雹暴般袭来，不同的幻景在你的大脑中拼命地争夺着地盘。你感觉自己的头骨快要碎成齑粉了。"];
+	  94 [label="Ruby, the Instigator: “过度接近灰域压缩机让他的大脑超载了。等机器关掉之后他就会没事的。”"];
+	  95 [label="Authority: 他没法像你一样接受这件事，他为此而心焦——然后才慢慢缓过来。"];
+	  96 [label="Ruby, the Instigator: “你不可能不知道，我敢打赌他们就在外面等着。”她看着你身后的隧道。“我想我之后要碰碰运气铤而走险看看了。”"];
+	  97 [label="Jump to: [endhub]"];
+	  98 [label="You: “如果我们放凶手走会怎么样？”"];
+	  99 [label="Kim Kitsuragi: “现在我们必须想出个好理由……解释一下为什么我们会这么直直地自投罗网，否则写在报告里可就太难看了。”"];
+	  100 [label="You: “她自杀了。我没能劝住她。”"];
+	  101 [label="Kim Kitsuragi: “真的吗？这就是……你的判断？我*敢肯定*她不是凶手。”他看了看周围，然后指向洞穴深处。“她的帐篷。我们应该去检查一下。”"];
+	  102 [label="Ruby, the Instigator: Variable[\"village.twins_spoke_to_boys_about_swearing_done\"]"];
+	  103 [label="Variable[\"village.twins_spoke_to_boys_about_swearing_done\"]", shape=diamond];
+	  104 [label="!(Variable[\"village.twins_spoke_to_boys_about_swearing_done\"])", shape=diamond];
+	  105 [label="You: “你好像说了些关于宣判的事……”"];
+	  106 [label="You: “你被捕了！”"];
+	  107 [label="Ruby, the Instigator: “好吧，如果你真想谈，我可以把机器调小。顺便提一嘴，我手上还有把枪呢。”她不情愿地从阴影中走了出来。痛苦减轻了。"];
+	  108 [label="Jump to: [rubymainhub]"];
+	  109 [label="Pain Threshold: 不想伤害你？你的耳道可不这么想……等等，不，甚至不是你的耳道——这台机器是直接冲着你的听觉神经去的。"];
+	  110 [label="You: “代理人……马德雷教父是什么旅行社吗？”"];
+	  111 [label="Ruby, the Instigator: Variable[\"boardwalk.ruby_kim_help\"]"];
+	  112 [label="Variable[\"boardwalk.ruby_kim_help\"]", shape=diamond];
+	  113 [label="!(Variable[\"boardwalk.ruby_kim_help\"])", shape=diamond];
+	  114 [label="Conceptualization: 我也不想打扰你现在正在承受的这震耳欲聋痛苦，但是乔伊斯说过——使用无线电波去强加维度是有可能的。这一定就是向灰域传输无线电信号的设备之一。"];
+	  115 [label="Ruby, the Instigator: “哦，当然了。你什么都不知道。”"];
+	  116 [label="Jump to: [rubycasehub]"];
+	  117 [label="Jump to: [rubymainhub]"];
+	  118 [label="Kim Kitsuragi: “还有第三个……哎，真下可糟糕了。”"];
+	  119 [label="You: “拜托，”（高举双手，）“你走吧。”"];
+	  120 [label="You: “你的……那群兄弟告诉我们你在海岸的。”"];
+	  121 [label="You: “你说马德雷教父的代理人……是什么意思？”"];
+	  122 [label="Suggestion: 她已经在这里躲了一些时日了，其间没人陪她说话聊天。让她接着说，你说不定能有机能摆脱困境。"];
+	  123 [label="Ruby, the Instigator: “真他妈要命。”她突然略带同情地看着你和金。"];
+	  124 [label="Pain Threshold: 你的手试着伸入灰域混沌中，随之而来的痛苦也逐渐加剧。"];
+	  125 [label="arrestedklaasjehub"];
+	  126 [label="Ruby, the Instigator: “但是卡拉洁不可能知道我躲在这里。你是怎么知道的？”"];
+	  127 [label="Ruby, the Instigator: IsKimHere()"];
+	  128 [label="IsKimHere()", shape=diamond];
+	  129 [label="!(IsKimHere())", shape=diamond];
+	  130 [label="Rhetoric: 她喜欢跟你聊机器的事。让她接着说下去，寻找脱身的机会。"];
+	  131 [label="You: 别盖上它们。"];
+	  132 [label="Empathy: 一定要谨慎决定下一步行动的时机——一旦开始下一步你就*没法*问她问题了。慎之，慎之。"];
+	  133 [label="You: “对了，她没有出卖你——那个洗衣女工。”\n“对了，她没有出卖你——伊泽贝尔，那个洗衣女工。”"];
+	  134 [label="You: “好吧……那我还有别的问题……”"];
+	  135 [label="Ruby, the Instigator: “现在情势已经峰回路转了。如果你们没有一头撞进25超高频率波段的话，情况确实会对我极为不利。”"];
+	  136 [label="Kim Kitsuragi: “没事的……我们只想……唔……”他挣扎着想把话说完。"];
+	  137 [label="Jump to: [rubymainhub]"];
+	  138 [label="Pain Threshold: 感觉突然间变得很糟糕，就像血管爆炸了一样。"];
+	  139 [label="Drama: 她才没有，她以前从没同时面对过三个武装分子。她相信了你的说法。"];
+	  140 [label="Pain Threshold: 疼痛变得愈发难忍。"];
+	  141 [label="Untitled hub (02)"];
+	  142 [label="Kim Kitsuragi: “好吧……这可是你说的。你需要这么说。现在既然已经*说定*了，”他的声音缓慢而又慎重。“我们需要清理干净。”"];
+	  143 [label="Jump to: [Untitled hub]"];
+	  144 [label="Jump to: [NewspaperEndgame(\"INSTIGATOR_SUICIDE ...]"];
+	  145 [label="Ruby, the Instigator: Variable[\"boardwalk.ruby_red_check_rhet\"]"];
+	  146 [label="Variable[\"boardwalk.ruby_red_check_rhet\"]", shape=diamond];
+	  147 [label="!(Variable[\"boardwalk.ruby_red_check_rhet\"])", shape=diamond];
+	  148 [label="rubygreetinghub"];
+	  149 [label="You: “就是个碉堡。你去过那里吗？”"];
+	  150 [label="Ruby, the Instigator: “不会——只要我关掉压缩机，痛苦就会结束。”她犹豫着。“不过你可能需要花上几分钟才能稳住自己——感觉有点像是刚做了场昏昏沉沉的梦。”"];
+	  151 [label="Kim Kitsuragi: “你怎么知道的？”"];
+	  152 [label="You: “他们已经设好陷阱等着我们上钩了吗？”"];
+	  153 [label="Hand/Eye Coordination: 三个雇佣兵，毫无疑问一定是全副武装，渴望复仇……而你只有前膛枪。这看起来不太妙啊。"];
+	  154 [label="Rhetoric: 因为你从一开始就错估了形式。现在她的手指已经握紧扳机了……"];
+	  155 [label="Ruby, the Instigator: 她满脸疑惑地看着你。“你在说什么？我以为提图斯和我只是正经的同事关系……”"];
+	  156 [label="Perception (Hearing): “真他妈该死”，还有“为什么是我？”透过白噪音，你听到这两句话。"];
+	  157 [label="Jump to: [Ruby, the Instigator: \"\"I'm listening.\"\"]"];
+	  158 [label="Ruby, the Instigator: “比如说？”她调整了一下持枪的姿势。“我已经告诉过你了，人不是我杀的。”"];
+	  159 [label="You: “坦白说，我也不知道自己是怎么找到这里的……我就是凑巧经过。你能不能……给我解释一下现在到底是怎么回事？”"];
+	  160 [label="Ruby, the Instigator: “不管你觉得我俩到底谁更应该为‘私刑’负责，我真的都无所谓，反正人不是我们杀的。”"];
+	  161 [label="Ruby, the Instigator: “行啊，我们还是不要聊*那件*破事儿了。你追捕我了一路，结果却掉入我的陷阱。我说完了。”"];
+	  162 [label="Kim Kitsuragi: 警督抓着自己的头，表情十分痛苦。“该死……这个……”"];
+	  163 [label="Ruby, the Instigator: Variable[\"boardwalk.ruby_pi_rc_fail_inland_vision\"]"];
+	  164 [label="Variable[\"boardwalk.ruby_pi_rc_fail_inland_vision\"]", shape=diamond];
+	  165 [label="!(Variable[\"boardwalk.ruby_pi_rc_fail_inland_vision\"])", shape=diamond];
+	  166 [label="Kim Kitsuragi: “这是我们的工作。现在情况不太妙。咱们必须把这里清理干净。”"];
+	  167 [label="Jump to: [NewspaperEndgame(\"INSTIGATOR_ALONE\", ...]"];
+	  168 [label="Ruby, the Instigator: “前一秒的确是，但我现在已经用灰域维度压缩机控制住你们了，所以现在我没事了。”"];
+	  169 [label="Volition: 别被她唬住了，这个名字没准是她瞎蒙的。"];
+	  170 [label="Logic: 这一切只能代表你做事立竿见影。罪犯们都认得你，而且怕你。"];
+	  171 [label="Ruby, the Instigator: “你知道我做了什么。我骗了他。”她停了一下。“结果现在开罐器哈里就在我的藏身处现身了。该死的提图斯……”\n“你进我的货車里看过。你觉得加姆洛克最大的玩家喜欢竞争吗？”她停了一下。“结果现在人形开罐器哈里就出现在我的藏身之处了。该死的提图斯……”"];
+	  172 [label="Endurance: 如果别无选择的话，她会迎着枪林弹雨冲出去。"];
+	  173 [label="You: “嗯……”"];
+	  174 [label="Empathy: 感激。怀疑。她还是想跑路……"];
+	  175 [label="endhub"];
+	  176 [label="You: “不过，为什么……要把子弹藏起来？”"];
+	  177 [label="You: “这是……是我们的错。”"];
+	  178 [label="pre_ruby_main"];
+	  179 [label="Rhetoric: 你应该知道此刻该说些什么，你从前也有过相同的境遇，但为何脑中还一片空白？"];
+	  180 [label="You: （回头小声低语。）“你还好吧，金？”"];
+	  181 [label="You: “所以你打算……也杀了我吗？”"];
+	  182 [label="Pain Threshold: 当她说出“警官”这个词的时候，你感觉到一阵尖锐的剧痛。听起来就像整个射频波段直接朝着你的神经通路尖叫。"];
+	  183 [label="You: “你是怎么弄到这玩意的？”"];
+	  184 [label="Interfacing: 而且她也对此感到很自豪。她也有理由感到自豪，你就造不出这样的东西。"];
+	  185 [label="Ruby, the Instigator: 她咯咯笑了起来。“*审判*这个词相对于他们实际上想做的事来说也忒好听了点。话说回来，没错，我监听过他们的频道。他们的‘调查’已经完成了。”"];
+	  186 [label="You: “为什么每个人都喜欢跟我作对？”"];
+	  187 [label="You: “你能不能……跟我说说？”"];
+	  188 [label="You: “不，那才是真正的问题所在！”"];
+	  189 [label="Volition: 她的嗓音里隐隐透露出绝望。"];
+	  190 [label="Ruby, the Instigator: “他的身体还是温热的，但在透过破掉的窗户射进来的青色灯光的照射下他看起来好像已经死了很久……”"];
+	  191 [label="You: “那还真是……不妙——她居然能如此镇静……”"];
+	  192 [label="Ruby, the Instigator: Variable[\"tc.ulan_frequency\"]"];
+	  193 [label="Variable[\"tc.ulan_frequency\"]", shape=diamond];
+	  194 [label="!(Variable[\"tc.ulan_frequency\"])", shape=diamond];
+	  195 [label="Pale Latitude Compressor: 嗞嗞嗞嗞嗞嗞嗞……342455797……哦，亲爱的……嗞嗞嗞嗞嗞嗞嗞……请不要这么忧伤，依然如此忧伤，我的姑娘……嗞嗞嗞嗞嗞……4464544829……嗞嗞嗞嗞嗞……嗞嗞嗞嗞嗞……"];
+	  196 [label="You: “别担心，金，我只是在试着……想象……世界末日……的景象……”"];
+	  197 [label="Inland Empire: 什么都没有。只有缓慢的消逝。你看见一棵树，或是一间煤矿小屋。你转开视线，又转了回来……"];
+	  198 [label="Inland Empire: ……小屋会消失，你不会记得那里曾经有过一棵树，更别说树的品种是松还是桦了。你也不会记得，是不是有个男人就吊在那上面。"];
+	  199 [label="Horrific Necktie: 刚才有人提到一条操蛋的领带了吗？要我说的话，这都是放屁。你都疯成这样了，怎么可能会收人贿赂呢。"];
+	  200 [label="Suggestion: 让她接着说，你能渡过难关。"];
+	  201 [label="Empathy: 她的语气有些苦涩。她觉得自己被人出卖了。"];
+	  202 [label="You: “那个……小队里都有谁？”"];
+	  203 [label="Rhetoric: 你知道的。"];
+	  204 [label="You: “我尽力了。”"];
+	  205 [label="You: “谢谢。”（摩挲你的两鬓。）"];
+	  206 [label="Kim Kitsuragi: 他看了看周围，然后指向洞穴深处。“她的帐篷。我们应该去检查一下。”"];
+	  207 [label="Ruby, the Instigator: 她看着机器，评估着损坏程度。她的双手不住地颤抖着。"];
+	  208 [label="Ruby, the Instigator: “哦。”她露出了悲伤的笑容。“好吧，我想自己其实一直都知道她是个最优先考虑个人利益的*幸存者*。”"];
+	  209 [label="Ruby, the Instigator: Variable[\"boardwalk.ruby_suggestion_malice\"]"];
+	  210 [label="Variable[\"boardwalk.ruby_suggestion_malice\"]", shape=diamond];
+	  211 [label="!(Variable[\"boardwalk.ruby_suggestion_malice\"])", shape=diamond];
+	  212 [label="You: “话说，那个*灰域*是什么鬼东西？”"];
+	  213 [label="Ruby, the Instigator: “没错。这是一个工业级的抛物面反射器。专门用于将维度强加到某种*没有*维度的东西上。所以理所当然的，它所使用的频率……并不属于这个世界。”"];
+	  214 [label="You: “我会一直这个样子吗？”"];
+	  215 [label="Ruby, the Instigator: “我监听了他们的频道。”她停了一下，咬住自己的嘴唇。“虽然那帮孙子出卖了我……我还是很担心他们。”"];
+	  216 [label="Pale Latitude Compressor: “875263……23621837……为了那个特别的人……”"];
+	  217 [label="Ruby, the Instigator: “解决问题，”她嘟囔着。"];
+	  218 [label="You: 我当时说的是醉话！我不是故意的！……"];
+	  219 [label="You: “我确定自己理应是知道的……但是我最近失忆了。”"];
+	  220 [label="You: “哦，我当然是了。你……现在是不是*怕*了啊？”"];
+	  221 [label="You: “是啊，你从提图斯那里挖走的。还有提图斯自己。”"];
+	  222 [label="Rhetoric: 不，等等，你终于想到了，你跟她的共同点："];
+	  223 [label="Ruby, the Instigator: “然后惹得一身骚？不可能。再说，子弹是从远处射进来的——否则我们在楼下应该能听到枪声才对。”\n“警官，我不是说了好多遍了吗，我们在楼下什么也没听见。没有枪声，什么也没有。”"];
+	  224 [label="Jump to: [pre_ruby_main]"];
+	  225 [label="Jump to: [Pale Latitude Compressor: \"\"875263... 23621837... for that spe...\"]"];
+	  226 [label="Esprit de Corps: 你也许应该看看金的状况。他现在的状态好像不太好。"];
+	  227 [label="Pain Threshold: 呃，虽然*感官上*并没有好太多，但你现在可以组织起语言了，思考起来也没那么痛了。"];
+	  228 [label="You: “淋浴头？真是机智……”"];
+	  229 [label="Ruby, the Instigator: “‘大家’是指加姆洛克的所有人。警察啦，罪犯啦……要不然你以为我为什么会带着这台该死的死亡射线一起藏在这里，等着你找上门？”"];
+	  230 [label="Logic: 如果她连*这个*都知道，那也一定知道你的真名。"];
+	  231 [label="Half Light: 我不确定……听上去还挺可信的。"];
+	  232 [label="Kim Kitsuragi: “真的吗？这就是……你的判断？我*敢肯定*她不是凶手。”他看了看周围，然后指向洞穴深处。“她的帐篷。我们应该去检查一下。”"];
+	  233 [label="Kim Kitsuragi: “考虑到种种因素……”警督还没从疼痛中缓过来。“……现在未必是最糟糕的结局。”"];
+	  234 [label="Kim Kitsuragi: “不用，我觉得凶手不是她……她跟咱们已经没关系了。”"];
+	  235 [label="Jump to: [endhub]"];
+	  236 [label="Pain Threshold: 一靠近压缩机，那阵猛烈的白噪音就变得更加汹涌。你感觉自己的大脑在颅骨中膨胀。"];
+	  237 [label="You: “救命啊，金，救命！我的脑袋着火了！”"];
+	  238 [label="Ruby, the Instigator: “不，我没杀人，我只是帮忙布置了私刑现场。不过我怀疑这么说对*你*而言也没什么区别。”"];
+	  239 [label="Kim Kitsuragi: “唔……”警督抓着自己的脑袋，眼珠上翻。"];
+	  240 [label="Ruby, the Instigator: 一股全新的强电流向你袭来，你感觉大脑里的血管好像要爆了。"];
+	  241 [label="Ruby, the Instigator: Variable[\"boardwalk.ruby_la_puta_esprit\"]"];
+	  242 [label="Variable[\"boardwalk.ruby_la_puta_esprit\"]", shape=diamond];
+	  243 [label="!(Variable[\"boardwalk.ruby_la_puta_esprit\"])", shape=diamond];
+	  244 [label="Ruby, the Instigator: 她满脸疑惑地看着你。“什么？我都不明白你到底想表达什么。”"];
+	  245 [label="Ruby, the Instigator: 她停下来消化了一会儿。“呃，去他妈的。有人*喜欢*我什么——我太知道了。如果一个人有人喜欢就会遇上这种事……”"];
+	  246 [label="Ruby, the Instigator: Variable[\"boardwalk.ruby_didnt_do_it_arguments\"]"];
+	  247 [label="Variable[\"boardwalk.ruby_didnt_do_it_arguments\"]", shape=diamond];
+	  248 [label="!(Variable[\"boardwalk.ruby_didnt_do_it_arguments\"])", shape=diamond];
+	  249 [label="Perception (Hearing): 就像是有一千个无线电台同时向你的脑袋轰炸，但一片嘈杂中你唯独能辨认出她的话语。"];
+	  250 [label="Ruby, the Instigator: “真他妈要命。”她突然略带同情地看着你和金。"];
+	  251 [label="Perception (Sight): 她带着把双管前膛枪。千万要小心。"];
+	  252 [label="Ruby, the Instigator: Variable[\"boardwalk.ruby_ruled_out_roof_shot_for_viscal\"]"];
+	  253 [label="Variable[\"boardwalk.ruby_ruled_out_roof_shot_for_viscal\"]", shape=diamond];
+	  254 [label="!(Variable[\"boardwalk.ruby_ruled_out_roof_shot_for_viscal\"])", shape=diamond];
+	  255 [label="Untitled hub (04)"];
+	  256 [label="Inland Empire: 她的内心深处渴望着某种结局……但大概不是现在这种……从一个审讯室被押送到另一个审讯室，一夜白头……"];
+	  257 [label="You: “金！金！快让它停下来！”"];
+	  258 [label="Jump to: [rubymainhub]"];
+	  259 [label="Jump to: [rubymainhub]"];
+	  260 [label="Esprit de Corps: “我们还是回去吧，让。今天不会再发生什么了，”她安静地回应道。让摘下了他的金色假发。“打给海德斯塔姆吧。他可以载我们一程。”"];
+	  261 [label="Kim Kitsuragi: “我也会这么做的……”他喘了口气。“如果我没有失去行动能力的话……”"];
+	  262 [label="Kim Kitsuragi: 他望向黑暗深处，“那边的帐篷。”"];
+	  263 [label="Half Light: 卡拉洁不想开灯，她害怕凶手再来一枪。"];
+	  264 [label="Ruby, the Instigator: “何止，*超级*嗨。不过我一开始没想太多——我之前也见过她玩很疯的样子。”"];
+	  265 [label="You: “就这样吧……谢谢你。”"];
+	  266 [label="Pale Latitude Compressor: 嗞嗞嗞嗞嗞嗞…….摩擦锁套装……嗞……别把我一个人留在这里，求你了塞利斯！"];
+	  267 [label="Pale Latitude Compressor: 嗞嗞嗞嗞嗞……兰伯恩：星光与阳光。24摄氏度……"];
+	  268 [label="Rhetoric: 只有这样你才能劝她放弃，这是唯一能让她活下去的方案。"];
+	  269 [label="Untitled hub"];
+	  270 [label="Kim Kitsuragi: “该死。”警督一动不动地站着，看着沙子上那一大滩血迹。"];
+	  271 [label="Kim Kitsuragi: “高阶警督杜博阿，”他吟诵着。“请控制好你的情绪。我们只是在做自己的*本职工作*。这绝不会是这起案子的最低点……相信我。你不能被这种事击垮。”"];
+	  272 [label="Logic: 那对双胞胎肯定就是这样在脑子里听到广播的。她测试的时候他们一定就在附近。"];
+	  273 [label="Ruby, the Instigator: “顺便问一句，到底是谁出卖的我？是提图斯吗？不对，”她犹豫了一下，“第一个招了的不会是他……”"];
+	  274 [label="Ruby, the Instigator: “我没办法说很高兴认识你，警官。我真心希望自己能够*不认识*你。但是——咱们还是见面了。”"];
+	  275 [label="Ruby, the Instigator: “那个小子真该好好学学该怎么管住自己的臭嘴。而且这不是什么鬼灰域发射器。它不会发射*灰域*……”"];
+	  276 [label="You: “你朝莱利开枪了吗？”\n“我还有个*案子*要破……我们继续吧……”"];
+	  277 [label="Ruby, the Instigator: “好吧，别把自己折腾死了。我那时候跟哈迪兄弟们喝了几杯啤酒，像往常一样瞎扯淡，然后卡拉洁就进来了，面色苍白，全身颤抖……”"];
+	  278 [label="Ruby, the Instigator: “我知道这种感觉很难受——别乱动了。”"];
+	  279 [label="Ruby, the Instigator: “我猜你应该不知道还有第三个雇佣兵已经进城了，正好能赶上宣判——不过现在你知道了。”"];
+	  280 [label="You: “露比兄弟……前身是哈迪兄弟。”"];
+	  281 [label="Ruby, the Instigator: “是啊，我也不知道到底是该钦佩她——还是该感到不安。”"];
+	  282 [label="You: “卡拉洁，她显然背叛了自己的性别群体。”"];
+	  283 [label="You: “你现在正在对我使用的是那种跨灰域传递信号的机器！”"];
+	  284 [label="Ruby, the Instigator: Variable[\"boardwalk.ruby_greet_kim_endurance\"]"];
+	  285 [label="Variable[\"boardwalk.ruby_greet_kim_endurance\"]", shape=diamond];
+	  286 [label="!(Variable[\"boardwalk.ruby_greet_kim_endurance\"])", shape=diamond];
+	  287 [label="Jump to: [Ruby, the Instigator: \"\"Yeah? What?\"\"]"];
+	  288 [label="Kim Kitsuragi: “警官……你在做什么，你……”"];
+	  289 [label="Half Light: 现在那种遥远又诡异的恐惧感离你越来越近了。你在恐惧的——是*你自己*。"];
+	  290 [label="Pain Threshold: 这是个糟糕的决定。你怎么就不防着它点儿呢？你面对的是一种*全新*的体验——其可怕程度远超你之前所经历过的一切。"];
+	  291 [label="Rhetoric: 不像其他背刺她的人。比如说，哈迪兄弟。"];
+	  292 [label="You: “准备什么……最坏的情况？”"];
+	  293 [label="Inland Empire: 棚屋里一片漆黑。外面的海浪声已经平静了下来。她看着上好膛的枪，然后打开枪管，把子弹取了出来。今天不行。"];
+	  294 [label="Composure: 你能看见当时的场景：她的嘴唇，虽然依旧发白，但好像已然不再颤抖。她的一举一动从容而又专注。"];
+	  295 [label="Ruby, the Instigator: “哈里·杜博阿，”她飞快答道。“一个腐败的混蛋，穿着迪斯科裤子，还戴着一条搞笑的领带。马德雷教父的代理人。”"];
+	  296 [label="Rhetoric: 等等，有一件事。也许很小，不过——她说*你*开车进城，那‘你’是一个人，还是有很多人？她也许知道些什么……"];
+	  297 [label="You: “不……我一点印象都没有。”"];
+	  298 [label="You: 太迟了……"];
+	  299 [label="You: “等等……咱们不去追她吗？”"];
+	  300 [label="Kim Kitsuragi: 他看了看周围，然后指向洞穴深处。“她的帐篷！也许里面有些什么。”"];
+	  301 [label="Pain Threshold: 再也回不去了。它会一直伴着你——在你的噩梦中。"];
+	  302 [label="You: “你很快就想好了计划，对此卡拉洁觉得……有点奇怪。”"];
+	  303 [label="Ruby, the Instigator: “什么碉堡？”"];
+	  304 [label="You: “卡拉洁……她说你当下就知道出问题了。”"];
+	  305 [label="You: “你有没有……亲自*体验*过这台压缩机？”"];
+	  306 [label="You: “我不是任何人的……代理人。我甚至连马德雷教父是谁都不知道！”"];
+	  307 [label="You: “马德雷教父……我听说过马德雷教父……他是个危险人物……对吗？”"];
+	  308 [label="Jump to: [rubymainhub]"];
+	  309 [label="You: “你在*干嘛*？”"];
+	  310 [label="Ruby, the Instigator: 你看着她的脑浆从霓虹色的头发中飞溅而出。"];
+	  311 [label="You: “是提图斯告诉我的。我嘴都快说破皮了……”"];
+	  312 [label="Ruby, the Instigator: “……你们其他人到底是怎么他妈的办到的？”"];
+	  313 [label="Shivers: 他掏出一把刀，蹲伏在一个花坛的尽头。他在一只荚果上划了一刀，乳白色的汁液渗露而出。痛苦再度将你包围……"];
+	  314 [label="You: “等等，管我叫我*人形开罐器*的……不就是你吗？不是针对你啊。所以我……就像开罐子一样让他们开口了。”"];
+	  315 [label="Logic: 从胖子安格斯提到的灰域发射器里发出来的。"];
+	  316 [label="You: “求你了，能不能把机器稍微关小点……让我能……问你几句话？”（继续。）"];
+	  317 [label="Jump to: [rubymainhub]"];
+	  318 [label="Kim Kitsuragi: “嗯……她没说错，确实没人提到说*听到*……枪声什么的。我……凶手不是在屋顶开的枪。”"];
+	  319 [label="You: “我们逮捕了她……就当是为你报仇了吧。”"];
+	  320 [label="Ruby, the Instigator: “真是个坏消息……那个女孩是在玩火，但是即便她这么对我了之后……我也不希望她会落得*那种下场*……”"];
+	  321 [label="Reaction Speed: 所以这就是她不敢告诉提图斯的事。*这个警察，这个警察……*"];
+	  322 [label="Ruby, the Instigator: “这么说你是找到我的小屋了，是吗？对此我并不意外。”"];
+	  323 [label="Ruby, the Instigator: “我确实说过，不是吗。所以现在你来抓我了。”她嗤之以鼻道。“不过，他们还是他妈的该死。”"];
+	  324 [label="Ruby, the Instigator: “好了，说句老实话，这次聊得挺愉快的，不过我得继续赶路了。”"];
+	  325 [label="Reaction Speed: 审判？什么审判？"];
+	  326 [label="Savoir Faire: 再说现在已经来不及了。她已经走了。"];
+	  327 [label="Jump to: [Untitled hub]"];
+	  328 [label="Logic: 那对双胞胎肯定就是这样在脑子里听到广播的。她测试的时候他们一定就在附近。"];
+	  329 [label="You: “我威胁说要逮捕她的时候，卡拉洁崩溃了……她把一切都告诉我了。”"];
+	  330 [label="Half Light: 她看起来有些动摇。她并不意外会有人把自己给供出来——但是万万没料到会被人*诬陷*。"];
+	  331 [label="You: 痛苦地蠕动。"];
+	  332 [label="Ruby, the Instigator: Variable[\"tc.seraise_giant_hornet\"]"];
+	  333 [label="Variable[\"tc.seraise_giant_hornet\"]", shape=diamond];
+	  334 [label="!(Variable[\"tc.seraise_giant_hornet\"])", shape=diamond];
+	  335 [label="Ruby, the Instigator: 你的话音未落，她就扣动了扳机。"];
+	  336 [label="Ruby, the Instigator: 她朝你露出一丝怀疑的笑容，然后重重呼出一口气，摇了摇头，紧接着就扣动了手中的扳机。"];
+	  337 [label="Authority: 即使在现在的情形下，金也是职业精神的典范：他想要清楚明了地告知她——她被背叛了。"];
+	  338 [label="Ruby, the Instigator: SetVariableValue(\"whirling.klaasje_drew_red_thread\", true) ;
+SetVariableValue(\"whirling.replaced_window_trivialized\", true) --[[ Variable[ ]]"];
+	  339 [label="Ruby, the Instigator: SetVariableValue(\"whirling.klaasje_drew_red_thread\", true) ;
+SetVariableValue(\"whirling.replaced_window_trivialized\", true) --[[ Variable[ ]]"];
+	  340 [label="You: 如果*真的*发生了的话会怎么样？"];
+	  341 [label="Inland Empire: 是的，但即使是在极度的痛苦中，你还是看不清它的准确形状。它*不可想象*是有原因的。"];
+	  342 [label="You: “那只是徒劳。她毕竟是个……逃犯。我们逮捕了她。”"];
+	  343 [label="Ruby, the Instigator: “哦，我不希望她的结局会是这样……那个女孩是在玩火，但是即便她这么对我了之后……我也不希望她会落得*那种下场*……”"];
+	  344 [label="Esprit de Corps: 我们当初应该把这一点考虑进去的。见鬼。"];
+	  345 [label="Volition: 卡拉洁很清楚自己在干嘛，不如此的话你很难保持冷静。"];
+	  346 [label="Ruby, the Instigator: 她苦涩地笑了。“不，她不可能崩溃的，她是个幸存者。如果她真的跟你说了什么，那也是为了自救……”"];
+	  347 [label="Empathy: 你这么说确实让她稍稍原谅了他们——那么一点点。"];
+	  348 [label="You: “告诉我，我叫什么？如果你连这个……都知道，那你一定……也知道我的名字。”"];
+	  349 [label="You: “我们刚才到底做了什么？”"];
+	  350 [label="Ruby, the Instigator: "];
+	  351 [label="", shape=diamond];
+	  352 [label="!()", shape=diamond];
+	  353 [label="Untitled hub (02)"];
+	  354 [label="You: “那杀了那个雇佣兵又会是谁……如果不是你的话？”"];
+	  355 [label="ulanfrequencystuff"];
+	  356 [label="Ruby, the Instigator: “我自己造的。”她朝着那台刑具点了点头。"];
+	  357 [label="Shivers: 一个穿着白色西装的男人走过一个花园，里面的泥土曾经覆盖在沥青下面——黑暗的建筑物把这个街区和其他街区隔开了。"];
+	  358 [label="Ruby, the Instigator: “你现在是在说笑呢，还是在威胁我？我猜两者都有吧。”"];
+	  359 [label="Ruby, the Instigator: “……战争吗？”她咬起嘴唇。“我想过。但那个雇佣兵的死亡无论如何都会产生后果，尽管现在事情的走向有点……”"];
+	  360 [label="Drama: 她不想提这个，不是因为她有什么需要隐瞒——只是不想感到内疚罢了。"];
+	  361 [label="Ruby, the Instigator: “我也在问自己这个问题。总之，我猜你应该不知道还有第三个雇佣兵已经进城了，正好能赶上宣判——不过现在你知道了。”"];
+	  362 [label="Ruby, the Instigator: 她点点头。“我不是说了吗——小心点。”"];
+	  363 [label="You: 我阻止不了她……"];
+	  364 [label="You: 来吧，点子，我需要个好点子！"];
+	  365 [label="You: “*求你*了，关了吧！我已经受不了了！”（继续。）"];
+	  366 [label="Pale Latitude Compressor: “236189281……如果你想购买床垫……请拨打嗞嗞嗞嗞嗞嗞嗞……23567……32971047302819……哦，奇怪的光芒，哦，我的光……”"];
+	  367 [label="You: 那之后呢？会发生什么难以言喻的大事件吗？"];
+	  368 [label="You: 什么也不说。"];
+	  369 [label="Ruby, the Instigator: 她皱起眉头。“有一群很危险的人在追着她。从大牢里出来之后，她会脱胎成一个完全不同的人……假设她还出得来的话。”"];
+	  370 [label="Electrochemistry: 她进监狱之后衰老的速度会比她天天派对还要快。可惜了。"];
+	  371 [label="Ruby, the Instigator: 顷刻间，你全身麻痹了。白噪声充斥着你的大脑——一阵前所未有的奇怪的痛楚接踵而至。透过静电流声，你听见了一个女人的声音。"];
+	  372 [label="Ruby, the Instigator: Variable[\"boardwalk.ruby_esprit_vicquemare\"]"];
+	  373 [label="Variable[\"boardwalk.ruby_esprit_vicquemare\"]", shape=diamond];
+	  374 [label="!(Variable[\"boardwalk.ruby_esprit_vicquemare\"])", shape=diamond];
+	  375 [label="Untitled hub (02)"];
+	  376 [label="Visual Calculus: 你现在离那台机器只有三米远。只要能让她继续分心下去，也许……"];
+	  377 [label="You: “你已经准备好……拼个鱼死网破了，是吗？”"];
+	  378 [label="You: “你的女朋友出卖了你。面对质询她直接崩溃了。”"];
+	  379 [label="Composure: 她的脖子和肩膀放松下来，握枪的那只手也松动了。"];
+	  380 [label="Ruby, the Instigator: “很高兴能帮上忙。”她轻蔑地把头往后一仰，关小了机器。“祝你们好运了，警官——瑞瓦肖就是个婊子。”"];
+	  381 [label="You: “你到底是怎么……想出这个计划的？而且还这么快？”"];
+	  382 [label="You: “那好吧。”（由着她这么做。）"];
+	  383 [label="Ruby, the Instigator: Variable[\"pier.joyce_palebranch_mind_damage\"]"];
+	  384 [label="Variable[\"pier.joyce_palebranch_mind_damage\"]", shape=diamond];
+	  385 [label="!(Variable[\"pier.joyce_palebranch_mind_damage\"])", shape=diamond];
+	  386 [label="Ruby, the Instigator: “灰域维度压缩机是用来……更好地控制灰域的。如果有很多这玩意，你就能把一个无线电信号网格强加在灰域上——从字面意义上讲，就是压缩它的距离。”"];
+	  387 [label="Untitled hub"];
+	  388 [label="Jump to: [rubymainhub]"];
+	  389 [label="You: “抱歉……我确定自己理应是知道的……但是我最近失忆了。”"];
+	  390 [label="Ruby, the Instigator: “谁不是呢？”她耸耸肩。“要知道，我现在还能看见他，就在卡拉洁的房间里，侧躺着。”"];
+	  391 [label="Ruby, the Instigator: IsTHCPresent(\"suicide_is_painless\")"];
+	  392 [label="IsTHCPresent(\"suicide_is_painless\")", shape=diamond];
+	  393 [label="!(IsTHCPresent(\"suicide_is_painless\"))", shape=diamond];
+	  394 [label="Logic: 这一定就是胖子安格斯提到的灰域发射器。"];
+	  395 [label="Ruby, the Instigator: “你*见过我的方程式*？”她吸吸鼻子。“你翻过我的货車了，对吧？这点我倒不意外，但你居然知道自己看到的是什么，这点*倒是*出乎我的意料……”"];
+	  396 [label="Ruby, the Instigator: Variable[\"whirling.hardie_logic_wc_succ_reaction_speed\"]"];
+	  397 [label="Variable[\"whirling.hardie_logic_wc_succ_reaction_speed\"]", shape=diamond];
+	  398 [label="!(Variable[\"whirling.hardie_logic_wc_succ_reaction_speed\"])", shape=diamond];
+	  399 [label="Ruby, the Instigator: SubstanceUsedOnce(\"pyrholidon\")"];
+	  400 [label="SubstanceUsedOnce(\"pyrholidon\")", shape=diamond];
+	  401 [label="!(SubstanceUsedOnce(\"pyrholidon\"))", shape=diamond];
+	  402 [label="Inland Empire: 头骨碎片四散，有如你此刻的思想，此刻附着于不祥的预感之上，附着于一个出奇熟悉的声音之上……"];
+	  403 [label="Ruby, the Instigator: Variable[\"boardwalk.ruby_viscal_three_metres\"]"];
+	  404 [label="Variable[\"boardwalk.ruby_viscal_three_metres\"]", shape=diamond];
+	  405 [label="!(Variable[\"boardwalk.ruby_viscal_three_metres\"])", shape=diamond];
+	  406 [label="Logic: *完全不知道*这些人是谁，真的。"];
+	  407 [label="Ruby, the Instigator: “很好。”她微微笑了笑。“我可不想连她都在我背后捅我一刀。”"];
+	  408 [label="Rhetoric: 她的言外之意是那颗子弹是她留给自己的最后救赎。"];
+	  409 [label="You: “她的主意？”"];
+	  410 [label="You: “那现在怎么办呢？”（总结。）"];
+	  411 [label="Jump to: [Untitled hub]"];
+	  412 [label="Logic: 这样才对——把现场清理干净，同时保持冷静。"];
+	  413 [label="Pain Threshold: 你做到了。压缩机已经抛锚了，你的脑子里又安静了，虽然还是疼得厉害，不过……"];
+	  414 [label="Ruby, the Instigator: “什么？不是。把现场伪造成私刑是她的主意。”"];
+	  415 [label="You: “是你的朋友卡拉洁，她把你推进了火坑里……她说是你开枪杀了莱利。”"];
+	  416 [label="Ruby, the Instigator: Variable[\"boardwalk.ruby_esprit_kim\"]"];
+	  417 [label="Variable[\"boardwalk.ruby_esprit_kim\"]", shape=diamond];
+	  418 [label="!(Variable[\"boardwalk.ruby_esprit_kim\"])", shape=diamond];
+	  419 [label="Ruby, the Instigator: 女人从你身边跑过，消失在黑暗的隧道里。"];
+	  420 [label="Empathy: 听上去她似乎认识在那些中继站里驻守过的人。不过她肯定不会告诉你的。兄弟，作为一个善于察言观色的警察，你现在心里清楚着呢。"];
+	  421 [label="Ruby, the Instigator: “好啊，当然了。”"];
+	  422 [label="Jump to: [rubymainhub]"];
+	  423 [label="Perception (Sight): 她眼周布满黑眼圈，声音疲惫——她熬夜到很晚，一直在听着跟马丁内斯范围内的各种电波。"];
+	  424 [label="Ruby, the Instigator: Variable[\"whirling.klaasje_concept_whatstheretodo\"]"];
+	  425 [label="Variable[\"whirling.klaasje_concept_whatstheretodo\"]", shape=diamond];
+	  426 [label="!(Variable[\"whirling.klaasje_concept_whatstheretodo\"])", shape=diamond];
+	  427 [label="Jump to: [Untitled hub]"];
+	  428 [label="You: “你怎么知道我们来了？”"];
+	  429 [label="Kim Kitsuragi: “警用无线电？你一直在……关注这个案子的进展？”"];
+	  430 [label="Ruby, the Instigator: “没错，你那时候带着你的杀手小队。话说回来，他们人呢？”"];
+	  431 [label="You: “我好像认识他们。他们就在马丁内斯……”"];
+	  432 [label="You: “你确定吗？”"];
+	  433 [label="You: “我觉得她不是凶手。”"];
+	  434 [label="You: “我的天……”"];
+	  435 [label="Kim Kitsuragi: “我有种直觉……我们放跑的那人不是凶手。”他看了看周围，然后指向洞穴背后。“她的帐篷。我们应该去检查一下。”"];
+	  436 [label="rubymainhub"];
+	  437 [label="You: “看见机器冒烟了吗，金？”（向后看。）"];
+	  438 [label="Ruby, the Instigator: 她警惕地盯着你，仿佛在估量你的真诚。"];
+	  439 [label="You: “就是个……公社同志会停下来歇歇脚的地方。一座大革命时期的碉堡。”"];
+	  440 [label="Authority: 她说了不是她干的——而且她不相信你。她是不相信你这个人，还是整个公民武装？"];
+	  441 [label="You: “卡拉洁说……你到她那儿的时候……好像就已经把计划想好了。”"];
+	  442 [label="Ruby, the Instigator: “不，我真的没有。她不是个容易被看透的人。我只是假设她嗑过头了。对于她来说，肯定不是第一次。不过——她没那份运气。她真是*深陷*困境了。”"];
+	  443 [label="You: 捂住你的耳朵！"];
+	  444 [label="You: （在静电声中大喊。）“你被捕了！”"];
+	  445 [label="Volition: 把注意力从疼痛上转移走——想想你的工作。告诉她说她被逮捕了。"];
+	  446 [label="Pain Threshold: 不，伙计，这么做没用的，你是没办法屏蔽它的——这是一种*全新*的体验，你就从没遭过这样的罪。"];
+	  447 [label="Kim Kitsuragi: “所以，我们现在听到的这些……是无线电波的集合……”他费了好大力气比划了一下周围。"];
+	  448 [label="Kim Kitsuragi: 警督弯着腰，正在慢慢缓过来。“我还好，警官。千万小心。”"];
+	  449 [label="Rhetoric: 因为你也曾经拿枪指着自己，试图找到同样的问题的答案，但一切都是徒劳。现在她的手指已经握紧扳机了……"];
+	  450 [label="Jump to: [Ruby, the Instigator: \"\"Yeah? What?\"\"]"];
+	  451 [label="Ruby, the Instigator: “*我的*兄弟？”"];
+	  452 [label="You: “我靠的就是……问问题啊。而且我也有问题要问你。”"];
+	  453 [label="Ruby, the Instigator: Variable[\"TASK.arrest_klaasje_done\"]"];
+	  454 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  455 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  456 [label="Ruby, the Instigator: Variable[\"TASK.arrest_klaasje_done\"]"];
+	  457 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  458 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  459 [label="Ruby, the Instigator: SetVariableValue(\"whirling.klaasje_drew_red_thread\", true) ;
+SetVariableValue(\"whirling.replaced_window_trivialized\", true) --[[ Variable[ ]]"];
+	  460 [label="Ruby, the Instigator: “好吧。我可以把它调小。顺便提一嘴，我手上还有枪呢。”她不情愿地从阴影中走了出来。痛苦减轻了。"];
+	  461 [label="Ruby, the Instigator: “那太好了。我得上路了——然后你能去找你的朋友了……除非你有现在什么*要紧事*要问我。”"];
+	  462 [label="Ruby, the Instigator: Variable[\"TASK.arrest_klaasje_done\"]"];
+	  463 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  464 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  465 [label="Ruby, the Instigator: Variable[\"whirling.titus_ruby_scared_thiscopthiscop\"]"];
+	  466 [label="Variable[\"whirling.titus_ruby_scared_thiscopthiscop\"]", shape=diamond];
+	  467 [label="!(Variable[\"whirling.titus_ruby_scared_thiscopthiscop\"])", shape=diamond];
+	  468 [label="Half Light: 你全身都被恐惧占据了。那种很糟糕的恐惧。对*你自己*的恐惧。"];
+	  469 [label="Physical Instrument: 她持枪的手握得很紧，双臂紧绷——她的姿势稳如磐石。马丁内斯错失了一位宝贵的守护者。"];
+	  470 [label="Ruby, the Instigator: Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  471 [label="Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  472 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  473 [label="You: “你不必那样的……”"];
+	  474 [label="Inland Empire: 不，不，不是的。你不是哈里·杜博阿。忘了你听到的一切。现在没时间管这个。"];
+	  475 [label="You: “我也不知道……他们去哪儿了。”"];
+	  476 [label="Kim Kitsuragi: “好主意……”警督的脚下还不是很稳。"];
+	  477 [label="Ruby, the Instigator: 她盯着你，仿佛被冻住一样，枪还在她的嘴巴里，眼里充满漆黑的光芒。然后她体内有什么东西改变了。"];
+	  478 [label="You: “我觉得是她是凶手，但是……我不想她死。”"];
+	  479 [label="Kim Kitsuragi: “我有种直觉……我们放跑的那人不是凶手。”他看了看周围，然后指向洞穴背后。“她的帐篷。我们应该去检查一下。”"];
+	  480 [label="Ruby, the Instigator: “如果你们没像这样径直走入25超高频率波段的话，我可就倒大霉了。”"];
+	  481 [label="Composure: 说归说，警督自己还是很难保持镇静；别再给他平添负担了。"];
+	  482 [label="Hand/Eye Coordination: 如果她自杀的话，你就能拿到她的枪了……"];
+	  483 [label="Kim Kitsuragi: 他看了看周围，然后指向洞穴深处。“她的帐篷！也许里面有些什么。”"];
+	  484 [label="Authority: 她不想像头被逼入绝境的困兽一样行动。有如一只没了狼群的头狼——她还想保持对局势的一些掌控。"];
+	  485 [label="You: “你没有说错。卡拉洁是第一个……跟我们透露她对你的怀疑的人。”"];
+	  486 [label="You: “胖子安格斯说你有一台灰域发射器……”"];
+	  487 [label="Ruby, the Instigator: Variable[\"whirling.hardie_logic_wc_succ_reaction_speed\"]"];
+	  488 [label="Variable[\"whirling.hardie_logic_wc_succ_reaction_speed\"]", shape=diamond];
+	  489 [label="!(Variable[\"whirling.hardie_logic_wc_succ_reaction_speed\"])", shape=diamond];
+	  490 [label="Untitled hub"];
+	  491 [label="Reaction Speed: 她是不是在暗示说你是没人喜欢的那类人？"];
+	  492 [label="You: “既然你没杀他……为什么还要躲起来？”"];
+	  493 [label="Ruby, the Instigator: 她看着你站在那里，不发一言，脸上闪过幸灾乐祸的笑容。接着她重重呼出一口气，摇了摇头，扣动了手中的扳机。"];
+	  494 [label="Rhetoric: 所以她觉得你是个猎人——而非警察——而她自己不过是猎物而已。"];
+	  495 [label="Ruby, the Instigator: “你看，我知道这对你来说一点也不好玩，所以就到此为止吧。还有一场审判等着你去参加呢。”"];
+	  496 [label="Ruby, the Instigator: Variable[\"whirling.titus_half_light_thiscopthiscop\"]"];
+	  497 [label="Variable[\"whirling.titus_half_light_thiscopthiscop\"]", shape=diamond];
+	  498 [label="!(Variable[\"whirling.titus_half_light_thiscopthiscop\"])", shape=diamond];
+	  499 [label="Esprit de Corps: 外派警官维克玛冷酷地看着窗外，然后把咖啡放下，转向巡警迈诺特。“我们要么在飞旋旅社开个房间，要么就今天直接回家。”"];
+	  500 [label="Ruby, the Instigator: Variable[\"boardwalk.ruby_sugg_talk\"]"];
+	  501 [label="Variable[\"boardwalk.ruby_sugg_talk\"]", shape=diamond];
+	  502 [label="!(Variable[\"boardwalk.ruby_sugg_talk\"])", shape=diamond];
+	  503 [label="Ruby, the Instigator: “是啊，特别冷血。真的把我给吓到了——我们上楼的时候她就已经稳定住情绪了。感觉像是变了个人一样，之前那个*派对女孩*不见了。”"];
+	  504 [label="Volition: 看来她知道你的名字，但这也不意味着你真的有受贿的行为。罪犯就喜欢编些耸人听闻的故事来污蔑警察。"];
+	  505 [label="Reaction Speed: 她没在开玩笑，你要抓紧了。"];
+	  506 [label="You: “妈的，快走啊，在我改变主意之前！”"];
+	  507 [label="Electrochemistry: 你需要大量的酒精来吞没这一切。"];
+	  508 [label="Kim Kitsuragi: “我们把这里清理一下。”他看了看周围。“分析部的人可能要在几天之后才能来收殓她的尸体。我们需要找个地儿把她安置好……”"];
+	  509 [label="Ruby, the Instigator: Variable[\"TASK.explore_the_passages_done\"]"];
+	  510 [label="Variable[\"TASK.explore_the_passages_done\"]", shape=diamond];
+	  511 [label="!(Variable[\"TASK.explore_the_passages_done\"])", shape=diamond];
+	  512 [label="Ruby, the Instigator: Variable[\"boardwalk.ruby_red_check_pain\"]"];
+	  513 [label="Variable[\"boardwalk.ruby_red_check_pain\"]", shape=diamond];
+	  514 [label="!(Variable[\"boardwalk.ruby_red_check_pain\"])", shape=diamond];
+	  515 [label="You: “我承受不了了。算了吧。”（放弃破坏压缩机。）"];
+	  516 [label="Ruby, the Instigator: “我看见*你*进城了。我可不打算干坐着等马德雷教父该死的代理人找上门来。”"];
+	  517 [label="Ruby, the Instigator: “如果你*真的*有什么重要的话要说，可以在白噪音里头说。”"];
+	  518 [label="Pale Latitude Compressor: “嗞嗞嗞嗞嗞嗞嗞……136841……嘶嘶嘶嘶嘶嘶嘶嘶嘶嘶……37891303……嗞嗞嗞嗞嗞嗞……嘶嘶嘶嘶嘶嘶嘶嘶……”"];
+	  519 [label="Kim Kitsuragi: “但是……就算你说的都是真的……”警督强迫自己把剩下的话说完了。“你那个时候就不担心把现场处理成‘私刑’会引发……”"];
+	  520 [label="Ruby, the Instigator: “啊，去他娘的吧。”她把枪管塞进嘴里。"];
+	  521 [label="Ruby, the Instigator: Variable[\"TASK.arrest_klaasje_done\"]"];
+	  522 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  523 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  524 [label="Electrochemistry: 拿出嚯浣酮，取其精华去其糟粕后做一个大脑炸弹，使其处于恒定的爆炸状态之中。大功告成。"];
+	  525 [label="Logic: 你听到的静电爆炸声——就是ULAN频率。"];
+	  526 [label="Ruby, the Instigator: “哇哦，瞧瞧你这颗发达的脑袋。”她听起来对你的表现颇为赞许。“你说的有几分在点子上……”"];
+	  527 [label="You: “这真是……太棒了，不过我们还是聊聊……那个死掉的男人吧。”"];
+	  528 [label="You: 静止不动，试着想象世界末日的景象。"];
+	  529 [label="Ruby, the Instigator: “你在做什么？我告诉过你了——最好不要动……”"];
+	  530 [label="Ruby, the Instigator: Variable[\"whirling.klaasje_perc_sight_noticed_makeup\"]"];
+	  531 [label="Variable[\"whirling.klaasje_perc_sight_noticed_makeup\"]", shape=diamond];
+	  532 [label="!(Variable[\"whirling.klaasje_perc_sight_noticed_makeup\"])", shape=diamond];
+	  533 [label="Suggestion: 她不会这么轻易就改变主意的。她还觉得你是个威胁。"];
+	  534 [label="Ruby, the Instigator: “你们在走廊里的时候我就听见了，而且在这之前我已经准备了好些时日了。”"];
+	  535 [label="You: “好吧，那就叫他们哈迪兄弟吧。”"];
+	  536 [label="Jump to: [Ruby, the Instigator: \"\"Yeah? What?\"\"]"];
+	  537 [label="You: “好吧，换个别的问题。”"];
+	  538 [label="Ruby, the Instigator: “行啊，问吧。”"];
+	  539 [label="Ruby, the Instigator: Variable[\"tc.tribunal\"]"];
+	  540 [label="Variable[\"tc.tribunal\"]", shape=diamond];
+	  541 [label="!(Variable[\"tc.tribunal\"])", shape=diamond];
+	  542 [label="Untitled hub (04)"];
+	  543 [label="Kim Kitsuragi: “*警探*，”他一字一句道。“管控好你的情绪。我们完成了*本职工作*，而这绝对不会是这起案子的最低点……相信我。你不能被这种事击垮。”"];
+	  544 [label="Ruby, the Instigator: Variable[\"TASK.explore_the_passages_done\"]"];
+	  545 [label="Variable[\"TASK.explore_the_passages_done\"]", shape=diamond];
+	  546 [label="!(Variable[\"TASK.explore_the_passages_done\"])", shape=diamond];
+	  547 [label="Kim Kitsuragi: 他看了看周围，然后指向洞穴深处。“她的帐篷。我们应该去检查一下。”"];
+	  548 [label="You: 破坏这台机器。"];
+	  549 [label="You: Variable[\"boardwalk.ruby_red_check_pain\"]"];
+	  550 [label="Variable[\"boardwalk.ruby_red_check_pain\"]", shape=diamond];
+	  551 [label="!(Variable[\"boardwalk.ruby_red_check_pain\"])", shape=diamond];
+	  552 [label="Rhetoric: 她彻底绝望了——她觉得自己已经走投无路了。你得提供一些选项给她。"];
+	  553 [label="You: “你知道……这个碉堡吗……就在隔壁？”"];
+	  554 [label="Kim Kitsuragi: “……你把现场布置得……就像他是被吊死的一样……”"];
+	  555 [label="Esprit de Corps: 你也许应该确认一下金的状况。好搭档就会这么做。"];
+	  556 [label="You: 回头看着金。"];
+	  557 [label="Ruby, the Instigator: “她端着一杯酒坐下，想要稳定自己的情绪。然后我就在她旁边坐下了。”"];
+	  558 [label="Kim Kitsuragi: 警督抓着自己的头，表情十分痛苦。“该死……这个……”"];
+	  559 [label="Ruby, the Instigator: Variable[\"TASK.ballistics_analysis_done\"]"];
+	  560 [label="Variable[\"TASK.ballistics_analysis_done\"]", shape=diamond];
+	  561 [label="!(Variable[\"TASK.ballistics_analysis_done\"])", shape=diamond];
+	  562 [label="Ruby, the Instigator: 她耸耸肩。“管它呢，见鬼去吧。在他们对我做出那些事之后，我也不需要对他们负责。”"];
+	  563 [label="Ruby, the Instigator: “看吧，我说的吧，我都告诉过你最好别动了。”"];
+	  564 [label="You: 为什么我像个白痴一样的傻站着？"];
+	  565 [label="Ruby, the Instigator: “怕你？不，一点都不。”"];
+	  566 [label="Ruby, the Instigator: “但是她不可能知道我躲在海岸区。你是怎么找到我的？”"];
+	  567 [label="Kim Kitsuragi: “是提图斯和他的兄弟们说的，女士。他们告诉我们你躲在海岸区。”"];
+	  568 [label="Ruby, the Instigator: 她疑惑地看着你。“是的——说的就是你。大家都说你是他的傀儡，他的‘人形开罐器。’”"];
+	  569 [label="Kim Kitsuragi: 你的大脑突然感到一阵尖锐的剧痛，你听见警督在喃喃些什么。"];
+	  570 [label="You: “我不信！”"];
+	  571 [label="You: “我见过你写的方程式了……这是ULAN频率。”"];
+	  572 [label="Ruby, the Instigator: “是的，*远远*超过。”她观赏着自己的死亡电波以及身陷其中的执法人员。"];
+	  573 [label="Untitled hub"];
+	  574 [label="Inland Empire: 同样的事也会发生在所有人类身上。你会变成水蒸气，融化成频率。然后这些频率会被彻底遗忘。"];
+	  575 [label="Pale Latitude Compressor: “是的，我们看见……98713……嗞嗞嗞嗞嗞嗞……完全失去理智了，或者是……嗞嗞嗞嗞嗞嗞……产前维生素，因为没有小孩是一块白板……352628789……无耻的混蛋……”"];
+	  576 [label="Ruby, the Instigator: Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")"];
+	  577 [label="Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")", shape=diamond];
+	  578 [label="!(Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\"))", shape=diamond];
+	  579 [label="Drama: 她不相信你。"];
+	  580 [label="Untitled hub (02)"];
+	  581 [label="Endurance: 你动作最好快一点。情况越来越*糟糕*了。"];
+	  582 [label="Reaction Speed: 她知道审判的事？"];
+	  583 [label="Ruby, the Instigator: “奇迹降临之日……”她说道，然后一边眼睛牢牢盯着你，一边把枪管从嘴里拿了出来，然后瞥了一眼你身后的隧道。“我接受你的提议。”"];
+	  584 [label="Kim Kitsuragi: “是的，我确定……”他得喘口气。“如果我没有丧失行动能力，一定也会做同样的事……”"];
+	  585 [label="You: “我受够了，不想再折腾了。”（总结。）"];
+	  586 [label="You: “不要，我不干了，我不当警察了。”[结束它。]"];
+	  587 [label="Ruby, the Instigator: Variable[\"TASK.explore_the_passages_done\"]"];
+	  588 [label="Variable[\"TASK.explore_the_passages_done\"]", shape=diamond];
+	  589 [label="!(Variable[\"TASK.explore_the_passages_done\"])", shape=diamond];
+	  590 [label="You: 什么也不说。试着捂住自己的耳朵。"];
+	  591 [label="Ruby, the Instigator: “我知道你现在感觉不是很舒服。动作不要太大，也不要去抵抗。这样只会让情况更糟糕，”机器旁边的影子开了口。"];
+	  592 [label="Suggestion: 穿过痛苦漩涡的人声并没有恶意。她不想伤害你——但她必须这么做。"];
+	  593 [label="You: “我这是怎么了？”"];
+	  594 [label="Ruby, the Instigator: “不。我没打算朝你开枪，这已经是我现在能对马德雷教父展示的最大礼遇。”"];
+	  595 [label="You: “没错，我就是马德雷教父的代理人……你最好放我走。”"];
+	  596 [label="Ruby, the Instigator: “还有你——最好以后多留点神。你好像有自投罗网的习惯。”"];
+	  597 [label="Ruby, the Instigator: “我确定马德雷教父很快会亲自向你解释的。”"];
+	  598 [label="You: “我明白你的痛苦！我也被女人伤害过。”"];
+	  599 [label="kimbackherehub"];
+	  600 [label="Ruby, the Instigator: “她让我帮忙把他拖进浴室，然后她就能用淋浴头的线缠绕在他的脖子周围，勒出青紫色的勒痕。然后她帮他穿好衣服，而我去找哈迪兄弟。”"];
+	  601 [label="You: “你为什么这么肯定……他不是卡拉洁杀的？”"];
+	  602 [label="Ruby, the Instigator: “你已经是大孩子了，你能承受得住，别演了。”"];
+	  603 [label="You: “我刚到瑞瓦肖的时候……有其他人跟我一起吗？”"];
+	  604 [label="Ruby, the Instigator: “有个看起来很爽朗的金发男，另外一个男的好像有心事……还有个女的……只有她穿了制服。他们仨都带着家伙。”"];
+	  605 [label="You: *我*会怎么样？（试着爬回去。）"];
+	  606 [label="Savoir Faire: 保持冷静。深呼吸。疼痛减轻之后，神志清晰些了……"];
+	  607 [label="You: “那你怎么*惹了*……那个马德雷了？”"];
+	  608 [label="You: 什么选择？"];
+	  609 [label="Untitled hub (03)"];
+	  610 [label="Volition: 控制好你自己。现在他需要你的支持。"];
+	  611 [label="Ruby, the Instigator: Variable[\"TASK.find_children_of_the_big_sea_done\"]"];
+	  612 [label="Variable[\"TASK.find_children_of_the_big_sea_done\"]", shape=diamond];
+	  613 [label="!(Variable[\"TASK.find_children_of_the_big_sea_done\"])", shape=diamond];
+	  614 [label="You: “你当下就想出了这个计划……这还真的挺奇怪的。”"];
+	  615 [label="Ruby, the Instigator: “我怎么会知道？我不是说了吗，我发现他的时候他的脑袋已经中枪了，而且收音机里也没听到什么有用的小道消息……”"];
+	  616 [label="Ruby, the Instigator: Variable[\"boardwalk.ruby_electro_new\"]"];
+	  617 [label="Variable[\"boardwalk.ruby_electro_new\"]", shape=diamond];
+	  618 [label="!(Variable[\"boardwalk.ruby_electro_new\"])", shape=diamond];
+	  619 [label="Ruby, the Instigator: “是啊，他们喜欢把人派去很远的地方……”"];
+	  620 [label="Kim Kitsuragi: “我在你身后呢，警官。”警督紧闭双眼，弯腰蜷缩着。他还活着，还有呼吸。"];
+	  621 [label="Pale Latitude Compressor: “236189281……如果你想买床垫的话……请拨打嗞嗞嗞嗞嗞嗞嗞……23567……32971047302819……哦，罗莎琳，哦，罗莎琳……”"];
+	  622 [label="Ruby, the Instigator: “频率达到上限时这台机器就相当于是大型素数生成站，专门用于压缩灰域维度。这就是你可能会听到一些数字的原因。不过，你同时也可能会听见——或者你会自以为听到——本地电台调频的说话声。”"];
+	  623 [label="Ruby, the Instigator: “现在他们打算在行刑前先做一场秀。”她停了一下，咬紧嘴唇。“尽管那帮孙子出卖了我……我还是很担心他们。”"];
+	  624 [label="Ruby, the Instigator: “怎么回事？”她调整了一下持枪的姿势。“我已经告诉过你了，人不是我杀的。我觉得挺好懂的。”"];
+	  625 [label="Inland Empire: ……而且它甚至还没真的开始呢。"];
+	  626 [label="Jump to: [Untitled hub]"];
+	  627 [label="Pale Latitude Compressor: “他都不屑于停下来聊个两句……98713……嗞嗞嗞嗞嗞嗞……完全失去理智了，或者是……嗞嗞嗞嗞嗞嗞……产前维生素，因为没有小孩是一块白板……352628789……无耻的混蛋……”"];
+	  0 -> 1
+	  1 -> 127
+	  2 -> 269
+	  3 -> 570
+	  3 -> 228
+	  3 -> 191
+	  4 -> 167
+	  5 -> 6
+	  5 -> 7
+	  6 -> 200
+	  7 -> 376
+	  8 -> 9
+	  9 -> 230
+	  10 -> 11
+	  10 -> 12
+	  11 -> 504
+	  12 -> 169
+	  13 -> 508
+	  14 -> 16
+	  14 -> 15
+	  15 -> 300
+	  16 -> 483
+	  17 -> 267
+	  18 -> 462
+	  19 -> 227
+	  20 -> 554
+	  21 -> 24
+	  22 -> 386
+	  23 -> 17
+	  24 -> 192
+	  25 -> 436
+	  26 -> 353
+	  27 -> 335
+	  28 -> 32
+	  29 -> 189
+	  30 -> 189
+	  31 -> 313
+	  32 -> 33
+	  32 -> 34
+	  33 -> 222
+	  34 -> 493
+	  35 -> 252
+	  36 -> 224
+	  37 -> 229
+	  38 -> 63
+	  39 -> 495
+	  40 -> 412
+	  41 -> 42
+	  41 -> 43
+	  42 -> 353
+	  43 -> 482
+	  45 -> 240
+	  46 -> 438
+	  47 -> 224
+	  48 -> 420
+	  49 -> 436
+	  50 -> 118
+	  51 -> 26
+	  52 -> 453
+	  53 -> 567
+	  54 -> 406
+	  55 -> 163
+	  56 -> 322
+	  57 -> 168
+	  58 -> 264
+	  59 -> 304
+	  59 -> 77
+	  60 -> 533
+	  61 -> 265
+	  61 -> 62
+	  62 -> 605
+	  63 -> 139
+	  64 -> 583
+	  65 -> 481
+	  66 -> 67
+	  66 -> 68
+	  67 -> 271
+	  68 -> 543
+	  69 -> 70
+	  69 -> 71
+	  70 -> 232
+	  71 -> 101
+	  72 -> 249
+	  73 -> 74
+	  74 -> 75
+	  74 -> 76
+	  75 -> 145
+	  76 -> 145
+	  77 -> 20
+	  78 -> 386
+	  79 -> 24
+	  80 -> 185
+	  81 -> 151
+	  82 -> 563
+	  83 -> 268
+	  84 -> 363
+	  84 -> 28
+	  85 -> 450
+	  86 -> 88
+	  86 -> 87
+	  87 -> 449
+	  88 -> 154
+	  89 -> 116
+	  90 -> 223
+	  91 -> 572
+	  92 -> 196
+	  93 -> 402
+	  94 -> 225
+	  95 -> 610
+	  96 -> 172
+	  97 -> 175
+	  98 -> 544
+	  99 -> 14
+	  100 -> 66
+	  102 -> 104
+	  102 -> 103
+	  103 -> 612
+	  104 -> 122
+	  105 -> 81
+	  106 -> 207
+	  107 -> 521
+	  108 -> 436
+	  109 -> 617
+	  110 -> 620
+	  111 -> 112
+	  111 -> 113
+	  112 -> 226
+	  113 -> 555
+	  114 -> 355
+	  115 -> 490
+	  117 -> 436
+	  118 -> 362
+	  119 -> 477
+	  120 -> 451
+	  121 -> 568
+	  122 -> 500
+	  123 -> 460
+	  124 -> 529
+	  125 -> 368
+	  125 -> 342
+	  125 -> 319
+	  126 -> 255
+	  127 -> 128
+	  127 -> 129
+	  128 -> 72
+	  129 -> 371
+	  130 -> 178
+	  131 -> 290
+	  132 -> 436
+	  133 -> 407
+	  134 -> 536
+	  135 -> 408
+	  136 -> 277
+	  137 -> 436
+	  138 -> 8
+	  138 -> 37
+	  139 -> 317
+	  140 -> 49
+	  141 -> 432
+	  141 -> 204
+	  141 -> 205
+	  142 -> 507
+	  143 -> 269
+	  145 -> 146
+	  145 -> 147
+	  146 -> 552
+	  147 -> 179
+	  148 -> 237
+	  148 -> 594
+	  148 -> 444
+	  148 -> 181
+	  149 -> 17
+	  150 -> 195
+	  151 -> 215
+	  152 -> 279
+	  153 -> 118
+	  154 -> 298
+	  154 -> 364
+	  155 -> 29
+	  156 -> 138
+	  158 -> 89
+	  159 -> 625
+	  160 -> 602
+	  161 -> 494
+	  162 -> 123
+	  163 -> 164
+	  163 -> 165
+	  164 -> 626
+	  165 -> 124
+	  166 -> 40
+	  168 -> 408
+	  169 -> 474
+	  170 -> 231
+	  171 -> 60
+	  172 -> 202
+	  173 -> 391
+	  174 -> 379
+	  176 -> 480
+	  177 -> 65
+	  178 -> 365
+	  178 -> 527
+	  178 -> 305
+	  178 -> 212
+	  178 -> 214
+	  178 -> 183
+	  178 -> 316
+	  179 -> 564
+	  179 -> 173
+	  180 -> 448
+	  181 -> 79
+	  182 -> 617
+	  183 -> 356
+	  184 -> 91
+	  185 -> 624
+	  186 -> 361
+	  187 -> 598
+	  188 -> 421
+	  189 -> 312
+	  190 -> 263
+	  191 -> 281
+	  192 -> 193
+	  192 -> 194
+	  193 -> 525
+	  194 -> 487
+	  195 -> 224
+	  196 -> 55
+	  197 -> 198
+	  198 -> 627
+	  199 -> 10
+	  200 -> 376
+	  201 -> 292
+	  201 -> 133
+	  201 -> 377
+	  201 -> 473
+	  201 -> 176
+	  201 -> 57
+	  202 -> 61
+	  203 -> 27
+	  203 -> 83
+	  203 -> 119
+	  204 -> 261
+	  205 -> 261
+	  207 -> 520
+	  208 -> 462
+	  209 -> 210
+	  209 -> 211
+	  210 -> 109
+	  211 -> 182
+	  212 -> 36
+	  213 -> 623
+	  214 -> 150
+	  215 -> 597
+	  216 -> 257
+	  216 -> 39
+	  217 -> 51
+	  218 -> 32
+	  219 -> 421
+	  220 -> 565
+	  221 -> 155
+	  222 -> 599
+	  223 -> 252
+	  224 -> 178
+	  225 -> 216
+	  226 -> 600
+	  227 -> 5
+	  228 -> 281
+	  229 -> 230
+	  230 -> 387
+	  231 -> 427
+	  233 -> 542
+	  234 -> 326
+	  235 -> 175
+	  236 -> 528
+	  236 -> 82
+	  236 -> 331
+	  237 -> 239
+	  238 -> 440
+	  239 -> 21
+	  240 -> 237
+	  240 -> 594
+	  240 -> 181
+	  241 -> 242
+	  241 -> 243
+	  242 -> 31
+	  243 -> 580
+	  244 -> 29
+	  245 -> 189
+	  246 -> 248
+	  246 -> 247
+	  247 -> 157
+	  248 -> 238
+	  249 -> 592
+	  250 -> 107
+	  251 -> 227
+	  252 -> 253
+	  252 -> 254
+	  253 -> 519
+	  254 -> 318
+	  255 -> 120
+	  255 -> 53
+	  255 -> 311
+	  256 -> 126
+	  257 -> 495
+	  258 -> 436
+	  259 -> 436
+	  260 -> 375
+	  261 -> 95
+	  263 -> 117
+	  264 -> 59
+	  265 -> 324
+	  266 -> 461
+	  267 -> 581
+	  268 -> 27
+	  268 -> 119
+	  269 -> 100
+	  269 -> 586
+	  269 -> 13
+	  269 -> 177
+	  269 -> 434
+	  269 -> 349
+	  270 -> 611
+	  271 -> 301
+	  272 -> 122
+	  273 -> 485
+	  273 -> 329
+	  273 -> 378
+	  273 -> 282
+	  273 -> 415
+	  274 -> 593
+	  275 -> 518
+	  276 -> 246
+	  277 -> 557
+	  278 -> 216
+	  279 -> 332
+	  280 -> 244
+	  281 -> 90
+	  282 -> 208
+	  283 -> 526
+	  284 -> 285
+	  284 -> 286
+	  285 -> 386
+	  286 -> 22
+	  287 -> 25
+	  288 -> 94
+	  289 -> 121
+	  290 -> 399
+	  291 -> 292
+	  291 -> 377
+	  291 -> 473
+	  291 -> 176
+	  291 -> 57
+	  292 -> 168
+	  293 -> 137
+	  294 -> 601
+	  295 -> 576
+	  296 -> 259
+	  297 -> 324
+	  298 -> 32
+	  299 -> 234
+	  300 -> 235
+	  301 -> 411
+	  302 -> 414
+	  303 -> 439
+	  303 -> 149
+	  303 -> 23
+	  304 -> 442
+	  305 -> 47
+	  306 -> 115
+	  307 -> 358
+	  308 -> 436
+	  309 -> 217
+	  310 -> 456
+	  311 -> 30
+	  312 -> 491
+	  313 -> 580
+	  314 -> 323
+	  315 -> 355
+	  316 -> 517
+	  317 -> 436
+	  318 -> 344
+	  319 -> 343
+	  320 -> 369
+	  321 -> 496
+	  322 -> 201
+	  323 -> 347
+	  324 -> 505
+	  325 -> 108
+	  326 -> 410
+	  327 -> 269
+	  328 -> 122
+	  329 -> 208
+	  330 -> 409
+	  331 -> 278
+	  332 -> 333
+	  332 -> 334
+	  333 -> 50
+	  334 -> 153
+	  335 -> 310
+	  336 -> 310
+	  337 -> 245
+	  338 -> 476
+	  339 -> 559
+	  340 -> 197
+	  341 -> 627
+	  342 -> 320
+	  343 -> 369
+	  344 -> 519
+	  345 -> 3
+	  346 -> 462
+	  347 -> 452
+	  347 -> 159
+	  348 -> 295
+	  349 -> 166
+	  350 -> 352
+	  350 -> 351
+	  353 -> 73
+	  353 -> 309
+	  353 -> 382
+	  354 -> 616
+	  355 -> 283
+	  355 -> 571
+	  355 -> 486
+	  355 -> 591
+	  356 -> 184
+	  357 -> 241
+	  358 -> 220
+	  358 -> 188
+	  358 -> 389
+	  359 -> 360
+	  360 -> 562
+	  361 -> 332
+	  362 -> 140
+	  363 -> 32
+	  364 -> 32
+	  365 -> 603
+	  366 -> 162
+	  367 -> 341
+	  368 -> 566
+	  369 -> 530
+	  370 -> 424
+	  371 -> 4
+	  372 -> 373
+	  372 -> 374
+	  373 -> 260
+	  374 -> 375
+	  375 -> 297
+	  375 -> 38
+	  375 -> 431
+	  376 -> 403
+	  377 -> 168
+	  378 -> 346
+	  379 -> 64
+	  379 -> 506
+	  380 -> 419
+	  381 -> 414
+	  382 -> 335
+	  383 -> 384
+	  383 -> 385
+	  384 -> 114
+	  385 -> 518
+	  386 -> 48
+	  387 -> 306
+	  387 -> 307
+	  387 -> 348
+	  387 -> 596
+	  388 -> 436
+	  389 -> 421
+	  390 -> 190
+	  391 -> 392
+	  391 -> 393
+	  392 -> 84
+	  393 -> 86
+	  394 -> 355
+	  395 -> 518
+	  396 -> 397
+	  396 -> 398
+	  397 -> 315
+	  398 -> 355
+	  399 -> 400
+	  399 -> 401
+	  400 -> 524
+	  401 -> 445
+	  402 -> 628
+	  402 -> 575
+	  403 -> 404
+	  403 -> 405
+	  404 -> 132
+	  405 -> 258
+	  406 -> 499
+	  407 -> 291
+	  408 -> 293
+	  409 -> 503
+	  410 -> 99
+	  411 -> 269
+	  412 -> 143
+	  413 -> 106
+	  413 -> 180
+	  413 -> 437
+	  414 -> 330
+	  415 -> 18
+	  416 -> 417
+	  416 -> 418
+	  417 -> 600
+	  418 -> 386
+	  419 -> 233
+	  420 -> 447
+	  421 -> 579
+	  422 -> 436
+	  423 -> 429
+	  424 -> 425
+	  424 -> 426
+	  425 -> 256
+	  426 -> 126
+	  427 -> 387
+	  428 -> 534
+	  429 -> 390
+	  430 -> 202
+	  430 -> 475
+	  431 -> 266
+	  432 -> 584
+	  433 -> 509
+	  434 -> 270
+	  436 -> 354
+	  436 -> 515
+	  436 -> 548
+	  436 -> 105
+	  436 -> 553
+	  436 -> 428
+	  436 -> 492
+	  436 -> 46
+	  436 -> 80
+	  436 -> 276
+	  436 -> 604
+	  437 -> 207
+	  438 -> 484
+	  439 -> 17
+	  440 -> 273
+	  441 -> 414
+	  442 -> 20
+	  443 -> 446
+	  444 -> 45
+	  445 -> 148
+	  446 -> 399
+	  447 -> 213
+	  448 -> 207
+	  449 -> 218
+	  449 -> 363
+	  449 -> 28
+	  450 -> 25
+	  451 -> 280
+	  451 -> 221
+	  451 -> 535
+	  452 -> 158
+	  453 -> 454
+	  453 -> 455
+	  454 -> 476
+	  455 -> 338
+	  456 -> 457
+	  456 -> 458
+	  457 -> 269
+	  458 -> 459
+	  459 -> 269
+	  460 -> 521
+	  461 -> 317
+	  462 -> 464
+	  462 -> 463
+	  463 -> 125
+	  464 -> 566
+	  465 -> 466
+	  465 -> 467
+	  466 -> 321
+	  467 -> 496
+	  468 -> 121
+	  469 -> 422
+	  470 -> 472
+	  470 -> 471
+	  473 -> 135
+	  474 -> 427
+	  475 -> 96
+	  476 -> 141
+	  477 -> 174
+	  478 -> 69
+	  480 -> 408
+	  481 -> 327
+	  482 -> 353
+	  483 -> 235
+	  484 -> 136
+	  485 -> 18
+	  486 -> 275
+	  487 -> 488
+	  487 -> 489
+	  488 -> 394
+	  489 -> 383
+	  490 -> 219
+	  490 -> 85
+	  490 -> 187
+	  491 -> 314
+	  491 -> 452
+	  491 -> 159
+	  492 -> 516
+	  493 -> 310
+	  494 -> 224
+	  495 -> 539
+	  496 -> 497
+	  496 -> 498
+	  497 -> 289
+	  498 -> 468
+	  499 -> 372
+	  500 -> 501
+	  500 -> 502
+	  501 -> 178
+	  502 -> 130
+	  503 -> 294
+	  504 -> 170
+	  505 -> 317
+	  506 -> 52
+	  507 -> 587
+	  507 -> 13
+	  508 -> 588
+	  509 -> 510
+	  509 -> 511
+	  510 -> 206
+	  511 -> 547
+	  512 -> 513
+	  512 -> 514
+	  513 -> 413
+	  514 -> 236
+	  515 -> 380
+	  516 -> 465
+	  517 -> 622
+	  518 -> 111
+	  519 -> 359
+	  520 -> 41
+	  521 -> 522
+	  521 -> 523
+	  522 -> 559
+	  523 -> 339
+	  524 -> 445
+	  525 -> 396
+	  526 -> 518
+	  527 -> 161
+	  528 -> 92
+	  529 -> 216
+	  530 -> 531
+	  530 -> 532
+	  531 -> 370
+	  532 -> 424
+	  533 -> 296
+	  534 -> 56
+	  534 -> 134
+	  535 -> 245
+	  536 -> 25
+	  537 -> 538
+	  538 -> 259
+	  539 -> 540
+	  539 -> 541
+	  540 -> 582
+	  541 -> 325
+	  542 -> 410
+	  542 -> 299
+	  543 -> 301
+	  544 -> 545
+	  544 -> 546
+	  545 -> 479
+	  546 -> 435
+	  548 -> 549
+	  549 -> 550
+	  549 -> 551
+	  550 -> 512
+	  551 -> 512
+	  552 -> 609
+	  553 -> 303
+	  554 -> 441
+	  554 -> 381
+	  554 -> 302
+	  554 -> 615
+	  555 -> 416
+	  556 -> 621
+	  557 -> 304
+	  557 -> 58
+	  557 -> 77
+	  558 -> 250
+	  559 -> 560
+	  559 -> 561
+	  560 -> 19
+	  561 -> 251
+	  562 -> 469
+	  563 -> 216
+	  564 -> 391
+	  565 -> 357
+	  566 -> 255
+	  567 -> 337
+	  568 -> 569
+	  569 -> 156
+	  570 -> 160
+	  571 -> 395
+	  572 -> 224
+	  573 -> 340
+	  573 -> 606
+	  573 -> 367
+	  574 -> 93
+	  575 -> 288
+	  576 -> 577
+	  576 -> 578
+	  577 -> 199
+	  578 -> 10
+	  579 -> 598
+	  580 -> 608
+	  580 -> 537
+	  581 -> 607
+	  582 -> 108
+	  583 -> 52
+	  584 -> 95
+	  585 -> 142
+	  586 -> 144
+	  587 -> 589
+	  587 -> 590
+	  588 -> 262
+	  589 -> 44
+	  590 -> 518
+	  591 -> 274
+	  592 -> 209
+	  593 -> 24
+	  594 -> 357
+	  595 -> 595
+	  596 -> 152
+	  596 -> 186
+	  597 -> 357
+	  598 -> 336
+	  599 -> 556
+	  599 -> 78
+	  600 -> 345
+	  601 -> 35
+	  602 -> 366
+	  603 -> 430
+	  604 -> 54
+	  605 -> 574
+	  606 -> 308
+	  607 -> 171
+	  608 -> 203
+	  609 -> 433
+	  609 -> 98
+	  609 -> 478
+	  610 -> 2
+	  611 -> 613
+	  611 -> 614
+	  612 -> 272
+	  613 -> 328
+	  614 -> 414
+	  615 -> 423
+	  616 -> 618
+	  616 -> 619
+	  617 -> 443
+	  617 -> 131
+	  618 -> 445
+	  619 -> 490
+	  620 -> 284
+	  621 -> 558
+	  622 -> 102
+	  623 -> 597
+	  624 -> 89
+	  625 -> 573
+	  626 -> 573
+	  627 -> 288
+}
+

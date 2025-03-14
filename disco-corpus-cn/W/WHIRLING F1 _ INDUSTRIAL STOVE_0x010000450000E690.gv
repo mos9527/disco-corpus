@@ -1,0 +1,177 @@
+# WHIRLING F1 / INDUSTRIAL STOVE
+# You can use the stove to boil the hanged man's boots when Kim is not around.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Endurance: 它需要来点*硬的*，放得越多越好。"];
+	  3 [label="You: 漂亮。"];
+	  4 [label="You: 等等……"];
+	  5 [label="You: 再等等……"];
+	  6 [label="You: 倒掉袜子和炖肉——看看你的新靴子吧！"];
+	  7 [label="Industrial Stove: 这双靴子看着很干净，但闻起来仍然很诡异。"];
+	  8 [label="Logic: 那双靴子已经够糟的了，别那么小气。"];
+	  9 [label="Jump to: [industrialstovemainhub]"];
+	  10 [label="Kim Kitsuragi: Variable[\"whirling.stove_added_soap_and_vinegar\"]"];
+	  11 [label="Variable[\"whirling.stove_added_soap_and_vinegar\"]", shape=diamond];
+	  12 [label="!(Variable[\"whirling.stove_added_soap_and_vinegar\"])", shape=diamond];
+	  13 [label="Industrial Stove: 整个厨房都弥漫着白醋味，但也许你的靴子再也不会有尸体的味道了？"];
+	  14 [label="Half Light: 你应该尝一尝。"];
+	  15 [label="Industrial Stove: 这个工业燃气炉被用来为许多饥肠辘辘的旅社客人准备食物，上面有好几个汤锅和煎锅。"];
+	  16 [label="Half Light: 是啊，也许这是个‘不该’列入你名单的好习惯。总之，靴子的事进展的很顺利。"];
+	  17 [label="industrialstovemainhub"];
+	  18 [label="You: 查看厨具。"];
+	  19 [label="You: 洗涤精！正合我意，往锅中倒入大量洗涤精。"];
+	  20 [label="Industrial Stove: 锅沿旁充斥着大量的肥皂泡——水慢慢地沸腾了。"];
+	  21 [label="You: 再等*一下*……"];
+	  22 [label="Kim Kitsuragi: IsKimHere()"];
+	  23 [label="IsKimHere()", shape=diamond];
+	  24 [label="!(IsKimHere())", shape=diamond];
+	  25 [label="You: 大厨退场。[离开。]"];
+	  26 [label="Industrial Stove: 一套双份主菜的晚餐，腐烂的人肉以及硬化的陶瓷。"];
+	  27 [label="Endurance: 腐烂的人肉陶瓷靴汤？不，你不应该这么做。"];
+	  28 [label="You: 加水——还有鞋子——入锅。*完全*煮沸。"];
+	  29 [label="You: 把手指在锅里蘸一下，然后舔一口。"];
+	  30 [label="Kim Kitsuragi: CheckEquipped(\"gloves_garden\")  or  CheckEquipped(\"gloves_t500\")"];
+	  31 [label="CheckEquipped(\"gloves_garden\")  or  CheckEquipped(\"gloves_t500\")", shape=diamond];
+	  32 [label="!(CheckEquipped(\"gloves_garden\")  or  CheckEquipped(\"gloves_t500\"))", shape=diamond];
+	  33 [label="Kim Kitsuragi: Variable[\"yard.hanged_boots_kim_acid\"]"];
+	  34 [label="Variable[\"yard.hanged_boots_kim_acid\"]", shape=diamond];
+	  35 [label="!(Variable[\"yard.hanged_boots_kim_acid\"])", shape=diamond];
+	  36 [label="You: “好吧，好吧。”[离开。]"];
+	  37 [label="Industrial Stove: 浓烈的醋味迫使你离开了汤锅，水慢慢地沸腾了。"];
+	  38 [label="Industrial Stove: 浓烈的醋味迫使你从火炉旁退开了。"];
+	  39 [label="Encyclopedia: 呃，至少现在你知道了。"];
+	  40 [label="You: 忍耐一下恶臭，它最终会消散的，对吧？"];
+	  41 [label="Jump to: [industrialstovemainhub]"];
+	  42 [label="Jump to: [Industrial Stove: \"That's it, chef! The boots are as c...\"]"];
+	  43 [label="Savoir Faire: 从靴子中祛除尸体的残留物需要相当的耐心，以及一个装满沸水、洗涤精和白醋的大锅。"];
+	  44 [label="Industrial Stove: 长条的聚合物纤维和人体组织从靴子里剥离开来，它们漂浮在冒着泡泡的水面上。"];
+	  45 [label="Industrial Stove: 锅底布满了亮晶晶的白色粘稠物。"];
+	  46 [label="Esprit de Corps: 远在41分局检疫所后面的临时停尸房中，尼克斯·戈特利布医生在黑暗里切开了被害人冰冷而僵硬的双脚。静脉呈现出怪异的黑色，他怀疑是一种神经毒素……"];
+	  47 [label="You: 不可能，我不会碰它的。"];
+	  48 [label="Industrial Stove: 不出一会儿，靴子就能准备妥当。"];
+	  49 [label="Jump to: [You: \"A little more...\"]"];
+	  50 [label="Industrial Stove: 炉子并未因你的来来去去而受到影响。"];
+	  51 [label="Industrial Stove: 一个商品锅引起了你的注意，它非常大，甚至可以说巨大，巨大到足以炖出满足整个城市的美味，也能煮下一双腐烂的死亡之靴。"];
+	  52 [label="Industrial Stove: 靴子看上去愈发干净了，星星点点的人肉碎末看起来也*熟透了*，你能够闻到。"];
+	  53 [label="You: 好极了！把水倒掉，然后闻一闻靴子。"];
+	  54 [label="Conceptualization: 味道当然恶心了。看看你在烹饪方面付出的努力？不算是很精致的饮食，不是吗？"];
+	  55 [label="Savoir Faire: 警督说过你得把靴子放进酸里煮才能消除尸体的气味，但有了这个大汤锅，加上工业用洗涤精、白醋与一些耐心或许也能奏效。"];
+	  56 [label="You: 查看清洁用品。"];
+	  57 [label="Esprit de Corps: 不管你有什么计划，最好等警督走了之后再说。"];
+	  58 [label="Volition: 你尝到了一个人类的味道。你不应该这样的。"];
+	  59 [label="Kim Kitsuragi: “你打算做什么，举办晚宴吗？在我们调查完成之前，请不要做任何烹饪实验。”"];
+	  60 [label="Inland Empire: 你唤醒了*饥饿*。现在没办法回头了，最好买一本好的烹饪书，储备一点盐。"];
+	  61 [label="Inland Empire: 感觉你应该把醋也倒进去的……"];
+	  62 [label="Jump to: [industrialstovemainhub]"];
+	  63 [label="Industrial Stove: 灼热的‘炖汤’烧伤了你的手指，味道可以说是绝对的恶心。"];
+	  64 [label="Industrial Stove: 你的手没有受到热度的伤害，但是‘炖汤’的味道实在是太恶心了。"];
+	  65 [label="You: 再等等……"];
+	  66 [label="Industrial Stove: 好了，大厨！靴子已经焕然一新了。弥漫着奇怪肉味的蒸汽，消失在了炉子上方的通风口里。"];
+	  67 [label="Perception (Smell): 就像炖牛肉一样。"];
+	  68 [label="You: 这双靴子*真的*恶心透顶，往锅中倒入一些洗涤精和白醋。"];
+	  69 [label="Industrial Stove: 一双绝佳的艺术品！靴子火热又闪亮，还散发着阵阵醋味，完美极了。"];
+	  70 [label="You: 倒掉袜子和炖肉——看看你的新靴子吧！"];
+	  71 [label="Jump to: [industrialstovemainhub]"];
+	  72 [label="Kim Kitsuragi: Variable[\"whirling.boots_halflight_taste_the_stew\"]"];
+	  73 [label="Variable[\"whirling.boots_halflight_taste_the_stew\"]", shape=diamond];
+	  74 [label="!(Variable[\"whirling.boots_halflight_taste_the_stew\"])", shape=diamond];
+	  75 [label="Interfacing: 来吧，大厨。把炉子点上，让它们沸腾吧。"];
+	  76 [label="Industrial Stove: 炉子左侧的橱柜里有各种各样的洗涤精和漂白剂，冰箱旁边的柜子里还有一瓶白醋。"];
+	  77 [label="Industrial Stove: 真是一双绝佳的艺术品！靴子火热又闪亮，还散发着阵阵醋味，完美极了。"];
+	  78 [label="You: 再煮一次试试，这次加点白醋吧。"];
+	  79 [label="Industrial Stove: 廉价洗涤精和醋的香味从汤锅里飘了出来。"];
+	  0 -> 1
+	  1 -> 15
+	  2 -> 8
+	  3 -> 26
+	  4 -> 45
+	  5 -> 53
+	  6 -> 78
+	  7 -> 62
+	  8 -> 19
+	  8 -> 69
+	  9 -> 17
+	  10 -> 11
+	  10 -> 12
+	  11 -> 6
+	  12 -> 71
+	  13 -> 54
+	  14 -> 73
+	  15 -> 22
+	  16 -> 50
+	  17 -> 57
+	  17 -> 18
+	  17 -> 28
+	  17 -> 25
+	  18 -> 52
+	  19 -> 46
+	  20 -> 4
+	  21 -> 13
+	  22 -> 24
+	  22 -> 23
+	  23 -> 60
+	  24 -> 33
+	  26 -> 5
+	  27 -> 48
+	  27 -> 29
+	  28 -> 20
+	  28 -> 37
+	  29 -> 30
+	  30 -> 32
+	  30 -> 31
+	  31 -> 65
+	  32 -> 64
+	  33 -> 34
+	  33 -> 35
+	  34 -> 56
+	  35 -> 44
+	  36 -> 51
+	  37 -> 4
+	  38 -> 21
+	  39 -> 49
+	  40 -> 78
+	  41 -> 17
+	  42 -> 67
+	  43 -> 17
+	  44 -> 3
+	  44 -> 5
+	  45 -> 76
+	  46 -> 63
+	  47 -> 16
+	  48 -> 43
+	  49 -> 66
+	  51 -> 47
+	  52 -> 68
+	  53 -> 70
+	  54 -> 61
+	  55 -> 17
+	  56 -> 77
+	  57 -> 36
+	  58 -> 55
+	  59 -> 58
+	  60 -> 39
+	  61 -> 41
+	  61 -> 79
+	  62 -> 17
+	  63 -> 59
+	  64 -> 59
+	  65 -> 67
+	  66 -> 10
+	  67 -> 14
+	  68 -> 80
+	  69 -> 9
+	  70 -> 7
+	  71 -> 17
+	  72 -> 74
+	  72 -> 75
+	  73 -> 27
+	  74 -> 66
+	  75 -> 72
+	  76 -> 2
+	  77 -> 42
+	  78 -> 38
+	  79 -> 76
+}
+

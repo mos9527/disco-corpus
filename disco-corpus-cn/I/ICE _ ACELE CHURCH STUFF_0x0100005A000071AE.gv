@@ -1,0 +1,460 @@
+# ICE / ACELE CHURCH STUFF
+# this is where "the drug lab plan conclusion", "what did you see in the church" and "what's your plan for the church" branches are located
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Jump to: [MAINHUB-acelequestions]"];
+	  3 [label="Acele: “我能问问，你都告诉他们什么了吗？”"];
+	  4 [label="Jump to: [MAINHUB-acelequestions]"];
+	  5 [label="You: “发生了一些奇怪的事。”"];
+	  6 [label="Drama: 拜托。她明显就是可以。她已经在详细描述了。"];
+	  7 [label="Acele: “谢谢你。”女青年面露喜色。“我向你保证，绝对会保密的。”"];
+	  8 [label="Jump to: [MAINHUB-acelequestions]"];
+	  9 [label="IsKimHere()"];
+	  10 [label="IsKimHere()", shape=diamond];
+	  11 [label="!(IsKimHere())", shape=diamond];
+	  12 [label="Jump to: [Acele: \"\"Go ahead.\"\"]"];
+	  13 [label="Acele: “哦，那个啊……你不会相信的，我也没必要告诉你了。”"];
+	  14 [label="You: “这并不是特别可怕。”"];
+	  15 [label="Acele: “他们都在那玩意里面。”她指着帐篷。“如果你可以的随意进出的话，那真的挺酷的……还有别的事吗？”\n“好吧……”她停下来，想了一会儿。“好吧。还有别的事情吗？”"];
+	  16 [label="Acele: “算不上吧，不是。”"];
+	  17 [label="Acele: “电子合成器和磁带控制台，还有无线电脑。任何需要电的东西，但不是吉他……同时还能发出声音，诸如此类的吧。”"];
+	  18 [label="Acele: “她穿得就像个由祖母抚养长大的人，明白吗。怪异的旧衣服，面无表情，一言不发，就那么站着。”"];
+	  19 [label="You: “我已经跟他们谈过了，我愿意帮忙。”\n“我已经跟他们谈过了，我们愿意帮忙。”"];
+	  20 [label="You: （点头。）“我看到他了，我看到蟹男了。”"];
+	  21 [label="You: “我确实看到了他们两个，没错。”"];
+	  22 [label="You: “我不想跟你分享这个消息。”"];
+	  23 [label="Acele: “是的，我很抱歉。”她看起来并不惊讶。“不管怎么说……这不算什么大事。”\n“是的，我很抱歉。不管怎么说……这不算什么大事。”"];
+	  24 [label="You: “我需要一点雷亚尔，金。生活太艰难了。”"];
+	  25 [label="You: “继续。”"];
+	  26 [label="Acele: “我不怪你，我的意思是，换我也不会相信的。我很吃惊诺伊德居然信了。安德烈我倒是想到了，但是诺伊德……”她摇摇头。"];
+	  27 [label="Shivers: 地板颤颤巍巍，横梁如同骨头一般慢慢裂开。黄金三角洲的远东，比工业港还要遥远的地方，一处没有灯光的黑色海岸，冰面上有着世界上最小的生物……"];
+	  28 [label="Shivers: 永远不会。"];
+	  29 [label="You: （向她展示手册上的贴纸。）“所以，这不是你的咯？”"];
+	  30 [label="Variable[\"ice.acele_knows_youre_cops\"]"];
+	  31 [label="Variable[\"ice.acele_knows_youre_cops\"]", shape=diamond];
+	  32 [label="!(Variable[\"ice.acele_knows_youre_cops\"])", shape=diamond];
+	  33 [label="You: “等等，这位*诺伊德*是你朋友吗？”\n“等等，*诺伊德*是你朋友吗？”"];
+	  34 [label="Acele: “拜托，老兄，别浪费时间了……”她有些犹豫。"];
+	  35 [label="Acele: “你*看到*他了？！”她凑得更近了。“这是不是说明你*进去*了？那你看到另一个幽灵了吗，穿着老太太衣服的那个？”"];
+	  36 [label="Acele: “哦，好吧。”她坐回到毯子上，耳朵被冻得通红。“那安德烈呢？如果你不想跟我说话，那就去找安德烈吧。”"];
+	  37 [label="You: “相反，你选择了掩盖真相。这是一回事。”"];
+	  38 [label="Acele: “没问题。”"];
+	  39 [label="You: “我从中分了一杯羹。你看，我已经腐败到骨髓了。”\n（说实话。）“我从中分了一杯羹。你看，我已经腐败到骨髓了。”"];
+	  40 [label="You: “你知道什么不错的甜甜圈店吗？”"];
+	  41 [label="You: “你错了，我其实是相信你的。”"];
+	  42 [label="Acele: 她挑起眉毛。“*为什么*？”"];
+	  43 [label="You: “是你把用挂锁锁上了教堂的门吗？”"];
+	  44 [label="IsKimHere()"];
+	  45 [label="IsKimHere()", shape=diamond];
+	  46 [label="!(IsKimHere())", shape=diamond];
+	  47 [label="Acele: “是的，‘混混’，就像梅斯克帮派混混一样。我知道这听起来不靠谱，但这是我亲眼所见。”"];
+	  48 [label="You: “你应该更努力一点。误导警察可不是闹着玩的。”"];
+	  49 [label="Kim Kitsuragi: “好主意，警探，”他仍旧望着大海说到。“试图调节这群少年犯惹出来的所有麻烦会让你失去理智的。命运会帮我们解决这一切的。”"];
+	  50 [label="Kim Kitsuragi: “不。继续你的走访，然后我们继续处理手头的案子。”"];
+	  51 [label="Jump to: [MAINHUB-acelequestions]"];
+	  52 [label="Shivers: 这里不会有阳极音乐俱乐部的。"];
+	  53 [label="Acele: “那好吧……”她犹豫着。“也许你可以跟安德烈他们*谈谈*？因为教堂里发生了一些奇怪的事……身为警察的你应该去调查一下，不是吗？”"];
+	  54 [label="Untitled hub"];
+	  55 [label="Acele: “他看起来像个暴徒，好吗？肌肉发达什么的。还穿了一件网眼背心。我知道这听起来很荒谬，但在某种程度上，这只会让事情变得更可怕……”"];
+	  56 [label="You: “你是对的，我不相信你。”\n“一个黑帮螃蟹男……是啊，我不相信你。”"];
+	  57 [label="Acele: “它本应该，成为，一座俱乐部才对，专门播放*阳极舞曲*。就像他们在帕里瑟姆演奏的那种新型合成器。”"];
+	  58 [label="You: “不？”"];
+	  59 [label="Jump to: [Acele: \"\"What do you need to know?\"\"]"];
+	  60 [label="Acele: “嘿，还记得我之前说过不*需要*你帮忙吗？”"];
+	  61 [label="You: “一旦我看透了他们的把戏，我就不再关心了。我不是什么独裁者，你是其他人的问题了。”"];
+	  62 [label="IsKimHere()"];
+	  63 [label="IsKimHere()", shape=diamond];
+	  64 [label="!(IsKimHere())", shape=diamond];
+	  65 [label="Jump to: [MAINHUB-acelequestions]"];
+	  66 [label="Acele: “他在落地前停了下来，然后就那么挂着，看着我。直直地看着我。我他妈转身就走出去了。故事结束。”"];
+	  67 [label="Jump to: [Acele church HUB]"];
+	  68 [label="IsKimHere()"];
+	  69 [label="IsKimHere()", shape=diamond];
+	  70 [label="!(IsKimHere())", shape=diamond];
+	  71 [label="Variable[\"ice.andre_logic_hecoordination_shotsfired\"]"];
+	  72 [label="Variable[\"ice.andre_logic_hecoordination_shotsfired\"]", shape=diamond];
+	  73 [label="!(Variable[\"ice.andre_logic_hecoordination_shotsfired\"])", shape=diamond];
+	  74 [label="Acele: “我们不会给任何人添麻烦。我向你保证，绝对会保密的。”"];
+	  75 [label="Acele: “我想也是。”她犹豫了。“总之——还有别的吗？”"];
+	  76 [label="Acele: 她耸了耸肩。“我猜问问也无妨……”"];
+	  77 [label="You: “我会跟他们谈谈的。”"];
+	  78 [label="Rhetoric: 她试图用花言巧语来避免直白的谎言，*她本人*并没有把挂锁挂到门上。"];
+	  79 [label="Untitled hub (04)"];
+	  80 [label="Acele: “是的，‘混混’，就像梅斯克帮派混混一样。我知道这听起来不靠谱，但这是我亲眼所见。”"];
+	  81 [label="You: “就按照你们的舞蹈俱乐部的计划去做吧……但是别想着毒品实验室了，拜托。”"];
+	  82 [label="Acele: “你无法选择自己的老铁，是他们选择你。我的老铁们都是白痴，但那也是我的老铁。我试着说服过安德烈，我甚至试过不对你说谎了……”"];
+	  83 [label="You: “我不在乎，我是个*疯子*。我只想让你知道，我已经知道那个计划了。”"];
+	  84 [label="Acele: “哦！”她差点笑出来，而后又忍住了。紧接着是片刻的沉默。"];
+	  85 [label="You: “什么是*阳极舞曲*？”\n“阳极舞曲？！我*现在*就要知道那是什么东西！那是什么？”"];
+	  86 [label="padthepadlock"];
+	  87 [label="You: “我的事情已经够多的了。”\n“是啊，我已经跟他们谈过了。我是绝不可能掺和进来的。”"];
+	  88 [label="Inland Empire: 你看见清晰、美丽又强烈的闪光。光线刺穿了烟雾弥漫的黑暗。那就是未来的模样——如果它还能到来。"];
+	  89 [label="Conceptualization: 这是自扩音乐器以来革命性的一步，反过来也是音响乐器前进的一步。在那之后是什么，你开始好奇：一种黑色的虚无，或者是比它还要好的东西？"];
+	  90 [label="Kim Kitsuragi: “所以我才没有进入帐篷。”警督眯起眼睛望向大海。“典型的违法犯罪。”"];
+	  91 [label="Rhetoric: 的确，她反而只是想掩盖事实真相。"];
+	  92 [label="Kim Kitsuragi: “拜托，警官，赶快完成你的次要走访吧。咱们该去处理手头的案子了。”"];
+	  93 [label="Drama: 你的话语流露着真诚。"];
+	  94 [label="Acele: “实在太黑了。”她摇摇头。“我也看不清楚。”"];
+	  95 [label="You: （向她展示手册上的贴纸。）“所以，这不是你的咯？”"];
+	  96 [label="Acele: “谢谢你。”年轻女人点点头。“我会保密的，我保证。”"];
+	  97 [label="You: “这个蟹男看起来什么样？”"];
+	  98 [label="You: “明白了，至于教堂的事……”"];
+	  99 [label="Acele: “嘿……”她瞪大了黑色的眼睛。“你是警察……”\n“嘿……”她瞪大了黑色的眼睛。“你们是警察……”"];
+	  100 [label="You: （抛弃庆祝胜利的念头。）“关于这座教堂……”"];
+	  101 [label="Half Light: 应该吗？不知怎么的，*怪人*听起来挺糟糕的。"];
+	  102 [label="You: “没有，只有蟹男。”"];
+	  103 [label="You: “我会在调查了教堂的情况后再做决定。”"];
+	  104 [label="Acele: “你无法选择自己的老铁，是他们选择你。我的老铁们都是白痴，但那也是我的老铁。我试着说服过安德烈……”"];
+	  105 [label="Acele: “好吧，但我仍然很后悔。我本应该能够控制住他们的，以后我会做到的，我保证。”"];
+	  106 [label="Acele: “我知道，但我知道你也能看穿他们的计划。我不是傻瓜，我本应该能够控制住他们的。以后我会做到的，我保证。”"];
+	  107 [label="You: 当着警督的面隐瞒你的行为。"];
+	  108 [label="You: Variable[\"ice.acele_drama_lied_about_corruption_well\"]"];
+	  109 [label="Variable[\"ice.acele_drama_lied_about_corruption_well\"]", shape=diamond];
+	  110 [label="!(Variable[\"ice.acele_drama_lied_about_corruption_well\"])", shape=diamond];
+	  111 [label="Kim Kitsuragi: “真是个好主意……”警督仍旧望着大海说到。“不过最好什么都不要做，试图调解这群少年犯惹出来的所有麻烦会让你失去理智的。”"];
+	  112 [label="Acele: “然后，你知道的。就在她身后，一个男人*从墙上爬了下来*。倒挂着，像螃蟹一样，沿着教堂的墙爬下来。我猜那个女人根本不知道他在那里，他非常安静……”"];
+	  113 [label="Acele: “那好吧，”她点点头。“他们在我周围确实会这样。”"];
+	  114 [label="You: “你想把教堂变成一个俱乐部？”"];
+	  115 [label="Jump to: [Acele church HUB]"];
+	  116 [label="Acele: “阻止更多的怪人进去，该死的马丁内斯……抱歉。”她的牙齿咯咯作响。“聚集了最糟糕的怪胎。如果你有空去找安德烈，他会告诉你的。”"];
+	  117 [label="You: “我不知道你为什么会这么想。”"];
+	  118 [label="Kim Kitsuragi: “你说像*螃蟹*？”警督点了点头，面无表情。"];
+	  119 [label="Empathy: 她似乎一瞬间就克制住了自己。她紧握双拳，目视前方，用自己全身的力量压制住了自己内心的跌宕。"];
+	  120 [label="You: （低语。）“这都是一个计谋。实际上我是个隐藏极深的卧底，模糊了现实与虚幻之间的界线。”"];
+	  121 [label="You: “作为谎言来说这太可笑了。”"];
+	  122 [label="Acele: “好吧，”她点点头。“我走进去，看到一个女人站在一台机器旁边，诺伊德称之为*主机*……”"];
+	  123 [label="You: “教堂的事就到此为止了。我还有一个问题。”（继续。）"];
+	  124 [label="Acele: “不。”"];
+	  125 [label="Acele: “嘿……别误会我的意思。但你是*条子*对吧……”\n“嘿……别误会我的意思。但你们是*条子*对吧，对吧……”"];
+	  126 [label="Variable[\"ice.acele_doesnt_need_help\"]"];
+	  127 [label="Variable[\"ice.acele_doesnt_need_help\"]", shape=diamond];
+	  128 [label="!(Variable[\"ice.acele_doesnt_need_help\"])", shape=diamond];
+	  129 [label="Drama: 你的谎言，太容易看穿了。"];
+	  130 [label="Acele: “那是诺伊德的锁，用来阻止那些变态怪胎们进去。也许你应该跟他谈谈。”"];
+	  131 [label="Untitled hub (05)"];
+	  132 [label="Acele: 年轻女人看着你，然后看向警督，又看向了你，最后望向了海岸。她看起来不太舒服，声音拖得老长：“所以呢……？”"];
+	  133 [label="Jump to: [MAINHUB-acelequestions]"];
+	  134 [label="Kim Kitsuragi: “好吧。现在继续你的走访，然后我们得去处理手头上的案子了。”"];
+	  135 [label="You: “你说的对。我再问你点别的。”"];
+	  136 [label="Acele: “什么也得不到，”她说到。“总之——还有别的吗？”"];
+	  137 [label="You: “走着瞧吧。我更倾向于不置可否。”\n“我跟小伙子们都谈过了，这件事还没有定论。”"];
+	  138 [label="Acele: “我知道。”她朝着岸边倾斜的木头点了点头，然后打了个寒颤。“这不是我的主意，安德烈和其他小伙子们找的地方。它本应该是荒废的，但现在他们甚至都进不去……”"];
+	  139 [label="Acele: “是啊，我就是这个意思——诺伊德做的。他在门上挂了一把锁。”\n“是诺伊德的。”"];
+	  140 [label="Jump to: [Acele church HUB]"];
+	  141 [label="Jump to: [Acele: \"\"What do you need to know?\"\"]"];
+	  142 [label="Acele: “是啊，当然。”不知道为什么，她似乎不太确定。"];
+	  143 [label="Volition: 但是没有很久。这对她来说很重要。她开口询问是需要勇气的。"];
+	  144 [label="Kim Kitsuragi: “一只螃蟹，*而且*还是个黑帮分子？”警督扬起眉头。"];
+	  145 [label="IsKimHere()"];
+	  146 [label="IsKimHere()", shape=diamond];
+	  147 [label="!(IsKimHere())", shape=diamond];
+	  148 [label="Kim Kitsuragi: “好极了，”警督仍旧望着大海说到。“瑞瓦肖真的需要再雇一名警察，也许过会我们可以去买些甜甜圈？”"];
+	  149 [label="Jump to: [MAINHUB-acelequestions]"];
+	  150 [label="Jump to: [Acele: \"\"Go ahead.\"\"]"];
+	  151 [label="Acele: “除了那个……没错。”她看着远处那座古老的木质教堂。狂风呼啸而来，那座六层楼高的建筑发出了一声凄厉的惨叫。"];
+	  152 [label="Acele church HUB"];
+	  153 [label="Acele: “是吧，可以这么说。”"];
+	  154 [label="Variable[\"ice.acele_shivers\"]"];
+	  155 [label="Variable[\"ice.acele_shivers\"]", shape=diamond];
+	  156 [label="!(Variable[\"ice.acele_shivers\"])", shape=diamond];
+	  157 [label="Variable[\"ice.andre_greeting_done\"]"];
+	  158 [label="Variable[\"ice.andre_greeting_done\"]", shape=diamond];
+	  159 [label="!(Variable[\"ice.andre_greeting_done\"])", shape=diamond];
+	  160 [label="Variable[\"whirling.fixer_conze_anodic_dance_music\"]"];
+	  161 [label="Variable[\"whirling.fixer_conze_anodic_dance_music\"]", shape=diamond];
+	  162 [label="!(Variable[\"whirling.fixer_conze_anodic_dance_music\"])", shape=diamond];
+	  163 [label="You: “啊哈！园丁错了——我绝不仅是迪斯科老古董，我要体验未来。”"];
+	  164 [label="Rhetoric: 相比其他人，*螃蟹人*这个词并不容易从她嘴里脱口而出。"];
+	  165 [label="Acele: “嗯……”她坐回到毯子上，耳朵被冻得通红。“真是怪了。你应该搜查一下她的机器，也许里面有她的去向？”"];
+	  166 [label="Acele: “哦当然，那很明智。”她点了点头。“慢慢来。”"];
+	  167 [label="Empathy: 她并不经常感到困惑，但她现在确实困惑起来了。"];
+	  168 [label="Variable[\"ice.acele_drama_lied_about_corruption_well\"]"];
+	  169 [label="Variable[\"ice.acele_drama_lied_about_corruption_well\"]", shape=diamond];
+	  170 [label="!(Variable[\"ice.acele_drama_lied_about_corruption_well\"])", shape=diamond];
+	  171 [label="You: “你撒谎能得到什么呢？”"];
+	  172 [label="You: “先说来听听吧。”"];
+	  173 [label="You: “好吧，那座教堂……”"];
+	  174 [label="Untitled hub (02)"];
+	  175 [label="You: “一只螃蟹，*而且*还是个黑帮分子？”"];
+	  176 [label="Kim Kitsuragi: 警督怀疑地盯着你。"];
+	  177 [label="Kim Kitsuragi: “我看得出这其中还有更多隐情，警探。”他平静地说。“但你也不是RCM里第一个腐败的警察了。”"];
+	  178 [label="Acele: “我知道，我本应该能够控制住他们的。以后我会做到的，我保证。”"];
+	  179 [label="You: “电子乐器——比如什么？”"];
+	  180 [label="You: “为什么那个叫诺伊德的人要在教堂门上挂把锁？”\n“为什么诺伊德要在教堂门上挂把锁？”"];
+	  181 [label="Jump to: [Acele church HUB]"];
+	  182 [label="Variable[\"ice.acele_church_case_discussed\"]"];
+	  183 [label="Variable[\"ice.acele_church_case_discussed\"]", shape=diamond];
+	  184 [label="!(Variable[\"ice.acele_church_case_discussed\"])", shape=diamond];
+	  185 [label="Variable[\"ice.acele_drama_headshake_overdone\"]"];
+	  186 [label="Variable[\"ice.acele_drama_headshake_overdone\"]", shape=diamond];
+	  187 [label="!(Variable[\"ice.acele_drama_headshake_overdone\"])", shape=diamond];
+	  188 [label="Acele: “很好，所以你相信我了。”她看着帐篷。“你应该把这件事告诉安德烈，他会知道下一步要做什么的。”"];
+	  189 [label="Variable[\"ice.acele_directed_you_to_church_case\"]"];
+	  190 [label="Variable[\"ice.acele_directed_you_to_church_case\"]", shape=diamond];
+	  191 [label="!(Variable[\"ice.acele_directed_you_to_church_case\"])", shape=diamond];
+	  192 [label="You: “我称之为预防犯罪。如果你有这份意愿——就要努力向前。”"];
+	  193 [label="You: “行了，别再拖延时间了。他长什么样子？”"];
+	  194 [label="Acele: “就是，阳极，阴极——用电子乐器演奏出来的音乐。”"];
+	  195 [label="You: “是的，你问这个干什么？”"];
+	  196 [label="You: “好吧，如果不是*你本人*，那是谁呢？”"];
+	  197 [label="Jump to: [Acele church HUB]"];
+	  198 [label="Acele: “哇哦！谢谢你，这……真是太好了。”她清了清嗓子。“你还想知道什么？”"];
+	  199 [label="Acele: “也许你可以跟安德烈和那些人*聊聊*？因为那座教堂里发生了一些怪事……如果你是警察，那就应该去调查一下，对吗？”"];
+	  200 [label="You: “我称之为预防犯罪。如果你有这份意愿——就要努力向前。”"];
+	  201 [label="Drama: 拜托。她明显就是可以。她已经在详细描述了。"];
+	  202 [label="You: “不。我是*警探*。”\n“不。我们是*法律*。”\n“不。我是*法律*。”\n“不。我们是*警探*。”"];
+	  203 [label="Acele: “你想知道什么？”"];
+	  0 -> 1
+	  1 -> 57
+	  1 -> 13
+	  1 -> 23
+	  3 -> 54
+	  5 -> 114
+	  6 -> 132
+	  7 -> 178
+	  9 -> 10
+	  9 -> 11
+	  10 -> 49
+	  11 -> 74
+	  13 -> 165
+	  14 -> 113
+	  15 -> 141
+	  16 -> 78
+	  17 -> 161
+	  18 -> 25
+	  18 -> 14
+	  19 -> 199
+	  20 -> 35
+	  21 -> 189
+	  22 -> 36
+	  23 -> 68
+	  24 -> 135
+	  25 -> 113
+	  26 -> 65
+	  27 -> 155
+	  28 -> 153
+	  29 -> 140
+	  30 -> 32
+	  30 -> 31
+	  31 -> 99
+	  32 -> 126
+	  33 -> 154
+	  34 -> 144
+	  35 -> 21
+	  35 -> 102
+	  35 -> 22
+	  36 -> 2
+	  37 -> 107
+	  38 -> 62
+	  39 -> 84
+	  40 -> 50
+	  41 -> 42
+	  42 -> 122
+	  42 -> 172
+	  42 -> 5
+	  43 -> 158
+	  44 -> 45
+	  44 -> 46
+	  45 -> 145
+	  46 -> 176
+	  47 -> 56
+	  47 -> 41
+	  48 -> 179
+	  49 -> 74
+	  50 -> 133
+	  52 -> 28
+	  53 -> 175
+	  54 -> 103
+	  54 -> 39
+	  54 -> 108
+	  54 -> 81
+	  54 -> 61
+	  55 -> 44
+	  56 -> 26
+	  57 -> 152
+	  58 -> 16
+	  59 -> 204
+	  60 -> 196
+	  61 -> 9
+	  62 -> 64
+	  62 -> 63
+	  63 -> 149
+	  64 -> 51
+	  66 -> 146
+	  67 -> 153
+	  68 -> 69
+	  68 -> 70
+	  69 -> 90
+	  70 -> 190
+	  71 -> 72
+	  71 -> 73
+	  72 -> 120
+	  73 -> 3
+	  74 -> 134
+	  75 -> 150
+	  76 -> 141
+	  77 -> 15
+	  78 -> 86
+	  79 -> 97
+	  79 -> 20
+	  80 -> 56
+	  80 -> 41
+	  81 -> 96
+	  82 -> 91
+	  83 -> 106
+	  84 -> 38
+	  85 -> 195
+	  86 -> 29
+	  86 -> 197
+	  86 -> 174
+	  86 -> 95
+	  87 -> 76
+	  88 -> 89
+	  89 -> 182
+	  90 -> 190
+	  91 -> 48
+	  91 -> 83
+	  91 -> 37
+	  92 -> 133
+	  93 -> 201
+	  94 -> 202
+	  95 -> 140
+	  96 -> 4
+	  97 -> 94
+	  98 -> 59
+	  99 -> 203
+	  99 -> 196
+	  99 -> 118
+	  100 -> 59
+	  101 -> 116
+	  102 -> 166
+	  103 -> 167
+	  104 -> 48
+	  104 -> 83
+	  105 -> 71
+	  106 -> 71
+	  107 -> 109
+	  108 -> 110
+	  108 -> 111
+	  109 -> 169
+	  110 -> 169
+	  111 -> 96
+	  112 -> 66
+	  113 -> 150
+	  114 -> 139
+	  115 -> 153
+	  116 -> 101
+	  117 -> 34
+	  118 -> 79
+	  119 -> 3
+	  120 -> 92
+	  121 -> 75
+	  122 -> 18
+	  123 -> 151
+	  124 -> 58
+	  125 -> 203
+	  125 -> 196
+	  125 -> 118
+	  126 -> 128
+	  126 -> 129
+	  127 -> 60
+	  128 -> 30
+	  129 -> 193
+	  130 -> 67
+	  131 -> 56
+	  131 -> 41
+	  131 -> 194
+	  132 -> 168
+	  134 -> 133
+	  135 -> 12
+	  136 -> 150
+	  137 -> 15
+	  138 -> 183
+	  139 -> 33
+	  139 -> 181
+	  140 -> 153
+	  141 -> 204
+	  142 -> 182
+	  143 -> 200
+	  144 -> 80
+	  145 -> 147
+	  145 -> 148
+	  146 -> 119
+	  147 -> 79
+	  148 -> 40
+	  148 -> 121
+	  148 -> 24
+	  151 -> 27
+	  152 -> 43
+	  152 -> 115
+	  152 -> 124
+	  152 -> 85
+	  153 -> 181
+	  154 -> 156
+	  154 -> 157
+	  155 -> 52
+	  156 -> 153
+	  157 -> 160
+	  157 -> 159
+	  158 -> 131
+	  159 -> 125
+	  160 -> 162
+	  160 -> 163
+	  161 -> 100
+	  161 -> 164
+	  162 -> 88
+	  163 -> 143
+	  164 -> 136
+	  164 -> 173
+	  165 -> 2
+	  166 -> 134
+	  167 -> 8
+	  168 -> 170
+	  168 -> 171
+	  169 -> 93
+	  170 -> 130
+	  171 -> 137
+	  172 -> 123
+	  173 -> 142
+	  174 -> 138
+	  174 -> 19
+	  174 -> 77
+	  174 -> 87
+	  175 -> 47
+	  176 -> 7
+	  177 -> 24
+	  177 -> 121
+	  178 -> 71
+	  179 -> 17
+	  180 -> 117
+	  181 -> 153
+	  182 -> 184
+	  182 -> 185
+	  183 -> 198
+	  184 -> 127
+	  185 -> 187
+	  185 -> 188
+	  186 -> 132
+	  187 -> 6
+	  188 -> 2
+	  189 -> 192
+	  189 -> 191
+	  190 -> 82
+	  191 -> 105
+	  192 -> 177
+	  193 -> 55
+	  194 -> 98
+	  194 -> 180
+	  195 -> 53
+	  196 -> 140
+	  197 -> 153
+	  198 -> 141
+	  199 -> 175
+	  200 -> 112
+	  201 -> 186
+	  202 -> 53
+	  203 -> 153
+}
+

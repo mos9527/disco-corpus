@@ -1,0 +1,46 @@
+# TRIBUNAL / WHERE IS KLAASJE?
+# "Where is Klaasje? Maybe she can calmly explain this and help diffuse the situation."
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: “卡拉洁——楼上那个女人？她在哪？”"];
+	  3 [label="Untitled hub (06)"];
+	  4 [label="Kortenaer: “那他妈的又是谁？”"];
+	  5 [label="Empathy: 你能*感觉*到他到底有多不安。只持续了一会儿。接着，恐惧占据了上风，他又回到了这一刻。"];
+	  6 [label="Volition: 她走了。现在忘了它吧。集中对付眼下的情况。"];
+	  7 [label="Rhetoric: 老天爷啊，告诉他们不是哈迪兄弟*做的*，拿出证据来！"];
+	  8 [label="Garte, the Cafeteria Manager: “我在做什么？我的地方他妈的被袭击了！”他指向那群穿盔甲的人。“你知道这些窗户*值多少钱*吗？”"];
+	  9 [label="Kim Kitsuragi: “我们应该逮捕她的……”警督低语到，他的双眼没有离开那些武装雇佣兵。"];
+	  10 [label="Garte, the Cafeteria Manager: “她走了！”经理站在阳台上朝下喊。"];
+	  11 [label="Kortenaer: “喂，布希曼人！！！”男人大声喊叫，脖子上的青筋也随之爆出。“那个小婊子是不会帮你摆脱困境的！”"];
+	  12 [label="You: “加尔特，你他妈在这里*搞什么鬼*？”"];
+	  13 [label="You: “你说*她走了*是什么意思？”"];
+	  14 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_said_they_didnt_do_it\"]"];
+	  15 [label="Variable[\"plaza.tribunal_said_they_didnt_do_it\"]", shape=diamond];
+	  16 [label="!(Variable[\"plaza.tribunal_said_they_didnt_do_it\"])", shape=diamond];
+	  17 [label="Composure: 赤手空拳，弯腰驼背，但是十分镇静。"];
+	  18 [label="Jump to: [tribunalHUB]"];
+	  19 [label="Garte, the Cafeteria Manager: “她走了！她的房间都清理干净了——就在这些混账出现之前！”"];
+	  0 -> 1
+	  2 -> 10
+	  3 -> 12
+	  3 -> 13
+	  4 -> 2
+	  5 -> 11
+	  6 -> 14
+	  7 -> 18
+	  8 -> 13
+	  9 -> 5
+	  10 -> 17
+	  11 -> 6
+	  12 -> 8
+	  13 -> 20
+	  14 -> 16
+	  14 -> 15
+	  15 -> 18
+	  16 -> 7
+	  17 -> 3
+	  19 -> 9
+}
+

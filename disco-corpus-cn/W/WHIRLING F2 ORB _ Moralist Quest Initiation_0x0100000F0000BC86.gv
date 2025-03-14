@@ -1,0 +1,172 @@
+# WHIRLING F2 ORB / Moralist Quest Initiation
+# Empathy tells you it's time to take responsibility... by convening a committee to spread responsibility around.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Empathy: 很好，你醒了。听我说，有件事情已经困扰你好几天了。"];
+	  3 [label="Empathy: 那是一种猜疑，或者是一种感觉。事情进展得不是很*顺利*……"];
+	  4 [label="Empathy: 可谁来关心那些真正*重大的问题*呢？"];
+	  5 [label="Empathy: 可你见过他们吗？你怎么知道他们还在呢？最重要的是，你怎么知道他们是不是在等*你加入*呢？"];
+	  6 [label="Jump to: [Empathy: \"Only the most even-keeled minds in...\"]"];
+	  7 [label="You: 那不是我的事。[放弃思维。]"];
+	  8 [label="Empathy: 你得找出那些承担*职责*的人。"];
+	  9 [label="You: 我觉得那些最有资历、最有资格的人会处理这些事情。"];
+	  10 [label="Esprit de Corps: 你的好哥们，那个警督，就是一个很好的着手点。"];
+	  11 [label="Variable[\"tc.harry\"]"];
+	  12 [label="Variable[\"tc.harry\"]", shape=diamond];
+	  13 [label="!(Variable[\"tc.harry\"])", shape=diamond];
+	  14 [label="Empathy: 事情一天比一天失控。中心已经守不住了。虽然你努力去*缓和*并*牵制*这些能量，但是情况似乎越来越糟糕。"];
+	  15 [label="You: 我该怎么做？"];
+	  16 [label="Untitled hub"];
+	  17 [label="You: 不可能，我要做的事情太多了。[拒绝思想。]"];
+	  18 [label="Empathy: 好了，你内心深处其实知道，真正的权威来自于机构而非个人。这是划分文明与野蛮的唯一原则。\n真的，哈里。你内心深处其实知道，真正的权威来自于机构而非个人。这是划分文明与野蛮的唯一原则。"];
+	  19 [label="Empathy: 如果你想要自己做的事情被*认可*，就必须经历一段过程。"];
+	  20 [label="Esprit de Corps: 被你赶走的那个警督就是一个很好的着手点。"];
+	  21 [label="Empathy: 哦，是啊。你在调查案件、走访他人和*解决日常杂事*方面都进展顺利……"];
+	  22 [label="You: 职责究竟*是*什么？"];
+	  23 [label="Empathy: 职责与*谁杀了谁*这种琐碎的事情无关。它关乎的是真正的问题：人类的福祉、大宗商品价格和向真正民主的过渡……"];
+	  24 [label="Variable[\"reputation.kim\"] >1"];
+	  25 [label="Variable[\"reputation.kim\"] >1", shape=diamond];
+	  26 [label="!(Variable[\"reputation.kim\"] >1)", shape=diamond];
+	  27 [label="Jump to: [Empathy: \"You've got to find out who bears *l...\"]"];
+	  28 [label="You: 我觉得我*有*调查谋杀案的职责？"];
+	  29 [label="IsTHCPresent(\"lawbringer\")"];
+	  30 [label="IsTHCPresent(\"lawbringer\")", shape=diamond];
+	  31 [label="!(IsTHCPresent(\"lawbringer\"))", shape=diamond];
+	  32 [label="Empathy: 眼睛睁大些，不要因为一些小细节就分心。是时候把重心放在真正重要的事情上了。"];
+	  33 [label="Empathy: 哇，哇，*哇*。职责不是什么*专权*。你不能把职责都揽在自己身上。职责是由正统权威分配的……"];
+	  34 [label="You: 我们被赋予职责之后，会发生什么事情？"];
+	  35 [label="You: 这种事情听起来不像是我的工作。"];
+	  36 [label="You: 我们真的有时间去做这些事吗？"];
+	  37 [label="Rhetoric: 换句话说，职责遍布整个官僚机构，所以没有人真的能说出*什么人对什么事情负责*。"];
+	  38 [label="Authority: 你根本不需要什么委员会，你就是法律。"];
+	  39 [label="Authority: 技术。"];
+	  40 [label="Electrochemistry: 有趣的地方就在于他们会做什么事。"];
+	  41 [label="Half Light: 大规模处刑。"];
+	  42 [label="Savoir Faire: 有一点假公济私？"];
+	  43 [label="You: 谁会加入这个委员会呢？"];
+	  44 [label="Empathy: 当然是马丁内斯那些思想上最为公允的人了。"];
+	  45 [label="Empathy: 和他一起，你就能找出瑞瓦肖有职责的人。如果有必要，你们还得运用*智慧和专业技术*。"];
+	  46 [label="Empathy: 别现在就逃避，哈里。你知道这是*应该做的事*。"];
+	  47 [label="You: 好，交给我吧。*我会*接受职责。（继续。）"];
+	  48 [label="Accept hub"];
+	  49 [label="Empathy: 放心，无论发生什么事情都，会通过正当途径来处理。"];
+	  50 [label="Jump to: [Accept hub]"];
+	  51 [label="You: 等等，我还以为一切都进展得很顺利呢？"];
+	  52 [label="You: 可我就是法律，这件事情我不能自己去做吗？"];
+	  53 [label="You: 感觉这样的责任对我来说太重了。我不想这样。"];
+	  54 [label="Jump to: [Empathy: \"This is a grave abdication of la re...\"]"];
+	  55 [label="Empathy: 追求职责和拒绝职责是人类的天性。所以职责才会分散给各个不同的组织、机构、办公室和部门。"];
+	  56 [label="Empathy: 你的发现可能会整理成为一份报告，你的上级会仔细审阅这份报告。"];
+	  57 [label="You: 什么事情？"];
+	  58 [label="You: 我们直奔主题吧：到底应该做什么？"];
+	  59 [label="Empathy: 那是最可怕的事情……"];
+	  60 [label="You: 我已经准备好承受这个可怕的重担了。[接受任务。]"];
+	  61 [label="Jump to: [firsthub]"];
+	  62 [label="You: 跟你说吧，这些听起来就很无聊。[拒绝任务。]"];
+	  63 [label="Empathy: 这是对职责的严重逃避。你的个人档案上会有记录的。"];
+	  64 [label="Empathy: 拜托，你的思想太狭隘了。"];
+	  65 [label="Jump to: [firsthub]"];
+	  66 [label="Empathy: 哈里，哈里。你的思想太狭隘了。"];
+	  67 [label="firsthub"];
+	  68 [label="Empathy: 祝你好运，一帆风顺。你的报告备受期待。"];
+	  69 [label="You: （叹气。）你说得对。谁会加入这个委员会呢？"];
+	  70 [label="Empathy: 比如委员会。"];
+	  71 [label="Volition: 迅速而果断的行动。"];
+	  72 [label="Logic: 你的心中进行了一场惊天动地的推论。他们接下来还会想出什么东西来？"];
+	  73 [label="Jump to: [Untitled hub]"];
+	  74 [label="Empathy: 你总有时间去遵循最佳实践。一旦有人为了一己私利而*抄捷径*，天知道那个人会做出什么别的事情？"];
+	  75 [label="Empathy: 在你的上级审阅了报告后，他们便会提出一系列建议，并在下一次的*常务委员会*上提出来。"];
+	  76 [label="Jump to: [Untitled hub]"];
+	  0 -> 1
+	  1 -> 2
+	  2 -> 57
+	  3 -> 73
+	  4 -> 9
+	  4 -> 35
+	  4 -> 15
+	  5 -> 15
+	  6 -> 44
+	  8 -> 16
+	  9 -> 5
+	  10 -> 45
+	  11 -> 12
+	  11 -> 13
+	  12 -> 67
+	  13 -> 65
+	  14 -> 58
+	  14 -> 51
+	  14 -> 7
+	  15 -> 27
+	  16 -> 28
+	  16 -> 22
+	  16 -> 47
+	  17 -> 64
+	  18 -> 39
+	  19 -> 66
+	  20 -> 45
+	  21 -> 4
+	  22 -> 59
+	  23 -> 77
+	  24 -> 25
+	  24 -> 26
+	  25 -> 10
+	  26 -> 20
+	  27 -> 8
+	  28 -> 11
+	  29 -> 30
+	  29 -> 31
+	  30 -> 38
+	  31 -> 68
+	  32 -> 15
+	  33 -> 71
+	  34 -> 56
+	  35 -> 32
+	  36 -> 75
+	  37 -> 74
+	  38 -> 68
+	  39 -> 19
+	  40 -> 62
+	  41 -> 42
+	  42 -> 40
+	  43 -> 44
+	  44 -> 24
+	  45 -> 48
+	  46 -> 17
+	  46 -> 70
+	  47 -> 33
+	  48 -> 34
+	  48 -> 60
+	  48 -> 63
+	  49 -> 50
+	  50 -> 48
+	  51 -> 21
+	  52 -> 18
+	  53 -> 46
+	  54 -> 64
+	  55 -> 37
+	  56 -> 76
+	  57 -> 3
+	  58 -> 8
+	  59 -> 55
+	  60 -> 69
+	  61 -> 68
+	  62 -> 54
+	  64 -> 23
+	  65 -> 68
+	  66 -> 23
+	  67 -> 43
+	  67 -> 52
+	  67 -> 53
+	  67 -> 36
+	  69 -> 6
+	  70 -> 29
+	  71 -> 41
+	  72 -> 14
+	  73 -> 16
+	  74 -> 72
+	  75 -> 49
+	  76 -> 16
+}
+

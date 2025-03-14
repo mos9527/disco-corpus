@@ -1,0 +1,2168 @@
+# VILLAGE / POSSE
+# It's time to face your colleagues. 
+#
+#This is the dialogue that autostarts once you step to the villlage square, the others just bark and stand there.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_hardie_shot\"] == true"];
+	  3 [label="Variable[\"plaza.tribunal_hardie_shot\"] == true", shape=diamond];
+	  4 [label="!(Variable[\"plaza.tribunal_hardie_shot\"] == true)", shape=diamond];
+	  5 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  6 [label="Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  7 [label="!(Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  8 [label="Kim Kitsuragi: Variable[\"village.posse_intro_auth_tribunal\"]"];
+	  9 [label="Variable[\"village.posse_intro_auth_tribunal\"]", shape=diamond];
+	  10 [label="!(Variable[\"village.posse_intro_auth_tribunal\"])", shape=diamond];
+	  11 [label="Judit Minot: “我们看过报告了，哈里。曷城警督的报告。我们知道的。”"];
+	  12 [label="Jump to: [HUB 1.0]"];
+	  13 [label="Jean Vicquemare: “我们是来这里把你的残渣从马路上铲回去的。”"];
+	  14 [label="Kim Kitsuragi: CheckEquipped(\"jacket_fucktheworld\")"];
+	  15 [label="CheckEquipped(\"jacket_fucktheworld\")", shape=diamond];
+	  16 [label="!(CheckEquipped(\"jacket_fucktheworld\"))", shape=diamond];
+	  17 [label="Jean Vicquemare: “我本来想说你只是个小人物罢了，不过说实在的，你让我记住你了……不知道你从哪里搞来这些装备的——不过我可以肯定的说，有些很坏、很坏的家伙正在寻找它……”"];
+	  18 [label="You: “你提到了什么‘特别行动小组’？”"];
+	  19 [label="Trant Heidelstam: “确实，什么呢？”他看了看破败的棚屋，然后看了看你。“他们要求我分享一下对某种比较*晦涩*的理论的看法，那是30年代在柯尼希斯萌发出来的。比如说——部分精神创伤性失忆症，群体人格理论……”"];
+	  20 [label="Jean Vicquemare: “你。*臭小子*——就是你。”"];
+	  21 [label="Trant Heidelstam: “这句台词是出自卢·贾图恩的‘米诺瓦循环’，对吗？关于纯真康米主义——有名无实的*回归*角色。幽灵的幻影……”他四下看了看，注意到同伴不耐烦的样子，于是自己停了下来。“很不错的选择，哈里。”"];
+	  22 [label="Cuno: “坤诺知道乔装打扮的猪猡进城了。坤诺本来打算给他们掸掸灰——用坤诺的猪猡除尘器——不过坤诺没有这么做，因为他在乎。”男孩严肃地点点头。"];
+	  23 [label="Suggestion: 这就是那个马脸女人。我不知道你*为什么*要这么称呼她，不过这已经超出了愚蠢的范围。你*永远*也不应该再用这种词称呼她。"];
+	  24 [label="Untitled hub (02)"];
+	  25 [label="Jean Vicquemare: “是啊，这真是*太好*了。”"];
+	  26 [label="Jean Vicquemare: “其他人也离开了。那些能干又聪明的人。大家不会回来的。只有我和这位*真的很有耐性*的巡警还在这里。还有特兰特——因为我*强迫*他留下来的。”"];
+	  27 [label="Jean Vicquemare: “哦，你觉得这样很*酷*吗——你真这么觉得？还有些莫名的*唯美*？我们来的时候，你正在哭。到处砸东西。你说我们都会‘陷入深渊’。”"];
+	  28 [label="You: “我是个高度实验性的警探。这是我用来破案的一种方法。”"];
+	  29 [label="Trant Heidelstam: “有意思。他一开始会小心尝试。做好准备。那是他的灵感源泉——对。实践。然后借用酒精”达成目标“。可以这么说……”"];
+	  30 [label="You: “目前当个普通警探就好。”"];
+	  31 [label="Kim Kitsuragi: IsKimHere()  and  Variable[\"church.soona_kim_heard_anomaly\"]"];
+	  32 [label="IsKimHere()  and  Variable[\"church.soona_kim_heard_anomaly\"]", shape=diamond];
+	  33 [label="!(IsKimHere()  and  Variable[\"church.soona_kim_heard_anomaly\"])", shape=diamond];
+	  34 [label="Jean Vicquemare: “看看这位哭鼻子先生！乙醇大工业中心的受害者。你是什么，现在又变成波动康米主义者了？你觉得这是个笑话？”"];
+	  35 [label="You: “等等，大海里有一辆汽車？”"];
+	  36 [label="Jean Vicquemare: 他怀疑地眯起眼睛打量着。"];
+	  37 [label="Judit Minot: “他找到了！”巡警把它捡起来，交还给你——滑腻又冰冷。“他找到了，让。是他的警徽！”\n“他找到了！”巡警把它捡起来，交还给你——滑腻又冰冷。“他找到了，让。是他的警徽！”"];
+	  38 [label="Jean Vicquemare: 男人盯着你，无动于衷。“那你的*枪*呢？”"];
+	  39 [label="Jean Vicquemare: 最后，他点点头，还是一副毫无兴趣的样子。“好吧。那你的*枪*呢？”"];
+	  40 [label="You: “这是一支*很棒*的枪。也许不是什么华而不实的*配枪*，不过还是很棒！”"];
+	  41 [label="Jump to: [village.posse_lost_badge]"];
+	  42 [label="You: “所以我找到枪也是无关紧要的吗？！”"];
+	  43 [label="Jean Vicquemare: “大概一星期？”他眯起眼睛。“你喝醉了。而且你还让嫌疑人*逃跑*了——某个叫卡拉洁的人。因为你喝的太*醉*，无法评估到她有潜逃的风险！”"];
+	  44 [label="Jean Vicquemare: “或者是现在你已经成为艾弗拉特·克莱尔的*小傀儡*这件事。我不知道你在为他做什么事。那都是些无关紧要的小事。什么都不算。只是一件幽默的趣闻轶事……”"];
+	  45 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  46 [label="Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  47 [label="!(Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  48 [label="Jean Vicquemare: “……那*7个*被枪杀的人才是大事！哈里，街道都被鲜血染红了，毫不夸张。这他妈是一场*大屠杀*。”"];
+	  49 [label="Jean Vicquemare: “哦，好吧——如果*你*认为她什么也不知道……”他挫败地揉搓着自己的脸庞。“我甚至都不想深入探讨另外那8个你没能逮捕的嫌疑人。”"];
+	  50 [label="Cuno: “他妈的等什么？我是坤诺。我们刚从死亡岛回来。”"];
+	  51 [label="You: “哦……那就能解释通了。”"];
+	  52 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  53 [label="IsCunoInParty()", shape=diamond];
+	  54 [label="!(IsCunoInParty())", shape=diamond];
+	  55 [label="Cuno: “哎呀，拜托，你得放他一马。猪猡一直很努力在工作。翻遍了尸体的内脏什么的。还中枪了什么的。”"];
+	  56 [label="Kim Kitsuragi: IsCunoInParty()  or  IsKimHere()"];
+	  57 [label="IsCunoInParty()  or  IsKimHere()", shape=diamond];
+	  58 [label="!(IsCunoInParty()  or  IsKimHere())", shape=diamond];
+	  59 [label="Judit Minot: “我们看过报告了。曷城警督的报告。我们知道的。”"];
+	  60 [label="Jean Vicquemare: 随迁警官没有回应，只是捂住了鼻子。"];
+	  61 [label="Trant Heidelstam: “你好，我是特兰特·海德斯塔姆。我想我们已经见过好几次了。”"];
+	  62 [label="Kim Kitsuragi: WeirdClothing()  or  CheckEquipped(\"hat_samaran\")  or  CheckEquipped(\"jacket_carabineer\")  or  CheckEquipped(\"pants_carabineer\")  or  CheckEquipped(\"jacket_kimono_robe\")"];
+	  63 [label="WeirdClothing()  or  CheckEquipped(\"hat_samaran\")  or  CheckEquipped(\"jacket_carabineer\")  or  CheckEquipped(\"pants_carabineer\")  or  CheckEquipped(\"jacket_kimono_robe\")", shape=diamond];
+	  64 [label="!(WeirdClothing()  or  CheckEquipped(\"hat_samaran\")  or  CheckEquipped(\"jacket_carabineer\")  or  CheckEquipped(\"pants_carabineer\")  or  CheckEquipped(\"jacket_kimono_robe\"))", shape=diamond];
+	  65 [label="Cuno: “那就祝你好运了。”他转向你。“听起来你有麻烦了。”"];
+	  66 [label="REMEMBERANCE HUB"];
+	  67 [label="You: “好吧。这是我的报应。”"];
+	  68 [label="You: “所以，*特兰特·海德斯塔姆*。你在这里*特别顾问*些什么呢？”"];
+	  69 [label="Jean Vicquemare: “做什么？那是个重案小组！我们处理过的案子卷宗能堆满一整张桌子，这样41分局看起来就不像是城里最糟糕的了。现在我们就是*垃圾*，哈里。因为你。”"];
+	  70 [label="Trant Heidelstam: “根据你现在跟他的互动，他跟本地人的互动，还有他不记得自己是执法人员的事实……这一切都非常有意思。”"];
+	  71 [label="Jean Vicquemare: “我相信你是*喝多*了，”他转向你。“谁都会喝醉——尤其是你。但是他们不会因为酗酒把*整个人生*都忘了个精光。”"];
+	  72 [label="Jump to: [You: \"\"I have?\"\"]"];
+	  73 [label="Jean Vicquemare: “或者可以用催眠治愈？不过之后我就想了：不，不太可能。他可能只是个*混账*而已。一个混账酒鬼，*假装*失忆来摆脱这一切困境。”"];
+	  74 [label="Jean Vicquemare: “是的。真的、真的很难相信。因为这很*愚蠢*，而且*不是真的*。要抹去自己的记忆是不可能的。即便你*每小时*灌进去那么多*高度比尔森啤酒*也不可能。”"];
+	  75 [label="You: “不是我。它被交通流氓偷走了。”"];
+	  76 [label="Jean Vicquemare: “哦——好吧，如果不是*你*，那就没事了。你只不过是让人*偷走*了价值45,000雷亚尔的警車，开进了海里——而且就这么把它*留在*那里。”"];
+	  77 [label="Untitled hub"];
+	  78 [label="Jean Vicquemare: 男人对你手中那块塑料毫无兴趣。“那你的枪呢？”他问到。"];
+	  79 [label="You: “等等，你*怎么*知道我的枪不见了？”"];
+	  80 [label="You: “枪。枪……”（不停地重复*枪*。）"];
+	  81 [label="Conceptualization: 所有这些*物质的东西*是怎么回事？！"];
+	  82 [label="Jean Vicquemare: “你是给谁摆造型呢，哈里？你让嫌疑人逃跑了——某个叫露比的人。你他妈当时正*嗨*着呢，没办法拘留她，不是吗？”"];
+	  83 [label="KLAASJE ESC"];
+	  84 [label="Kim Kitsuragi: “他受伤了。”他看着你。“这是漫长的一周——而且他还处理了一具真正的尸体。”"];
+	  85 [label="Kim Kitsuragi: Variable[\"TASK.arrest_klaasje_done\"] == false"];
+	  86 [label="Variable[\"TASK.arrest_klaasje_done\"] == false", shape=diamond];
+	  87 [label="!(Variable[\"TASK.arrest_klaasje_done\"] == false)", shape=diamond];
+	  88 [label="Jump to: [RUBY SUI]"];
+	  89 [label="Jean Vicquemare: “哦，好吧——如果她接受过*特殊训练*。”他挫败地揉搓着自己的脸庞。“我甚至都不想深入探讨另外那个嫌疑人——就是开枪自杀那个。*爆头*那个。”"];
+	  90 [label="Jean Vicquemare: “哦，好吧——如果你*放走*她的话……”他挫败地揉搓着自己的脸庞。“我甚至都不想深入探讨另外那个嫌疑人——就是开枪自杀那个。*爆头*那个。”"];
+	  91 [label="Jump to: [POSSE 2]"];
+	  92 [label="Jean Vicquemare: 他深吸一口气。“去他妈的吧，我们不谈这个了。”"];
+	  93 [label="You: “忘了这一切吧，有一只巨大的……”"];
+	  94 [label="Jean Vicquemare: “我们什么都不会忘——看看你！”他用两只手指着你。"];
+	  95 [label="You: “等等……你是那个墨镜男。”"];
+	  96 [label="Esprit de Corps: 尽管我们这里都是猪猡，你和坤诺也比其他人要更像猪猡一些。他会支持你的——只是要晚些时候。"];
+	  97 [label="Jean Vicquemare: “*我们*去哪了？在我的记忆里，你不是要我们滚蛋吗。”他抱起双臂。"];
+	  98 [label="Jump to: [REMEMBERANCE HUB]"];
+	  99 [label="You: “不知道你闻到的是*什么*。我把身上尸体的味道都洗掉了。”"];
+	  100 [label="You: “谢谢你，警督。”"];
+	  101 [label="Composure: 让警督知道*他*不应该为即将降临到你身上的激烈争执感到尴尬。"];
+	  102 [label="Jean Vicquemare: “不会太久的。只是跟哈里聊聊我觉得他最近做过的一些错事。”"];
+	  103 [label="Jump to: [REMEMBERANCE HUB]"];
+	  104 [label="Half Light: 他的儿子？真是个笑话……*所有人*都在骗你！"];
+	  105 [label="Trant Heidelstam: “米克尔？米克尔是我的儿子。”"];
+	  106 [label="Jean Vicquemare: “那个被你整得够呛的餐厅经理告诉我们的。”"];
+	  107 [label="You: “塞尔维是个婊子。她跟很多人上过床……还有外国人。”"];
+	  108 [label="Jump to: [REMEMBERANCE HUB]"];
+	  109 [label="Jean Vicquemare: “说到这里。他的建筑前面那个巨大的*空气涂鸦*。就是*燃烧*的那个——你知道是怎么回事吗？”"];
+	  110 [label="Jean Vicquemare: “我就知道。我不是告诉过你吗，特兰特？我就说是那个臭小子干的。”"];
+	  111 [label="You: “是啊。完全明白了。重案组。”"];
+	  112 [label="You: “好吧。那重案组是*做*什么的呢？”"];
+	  113 [label="Jean Vicquemare: “我们没有人想凝视深渊，所以我们就滚开了。”他叹了口气。“就像你要求的那样。”"];
+	  114 [label="Kim Kitsuragi: Variable[\"plaza.kineema_57th_hub\"]  and  Variable[\"boardwalk.trant_main_hub_reached\"]"];
+	  115 [label="Variable[\"plaza.kineema_57th_hub\"]  and  Variable[\"boardwalk.trant_main_hub_reached\"]", shape=diamond];
+	  116 [label="!(Variable[\"plaza.kineema_57th_hub\"]  and  Variable[\"boardwalk.trant_main_hub_reached\"])", shape=diamond];
+	  117 [label="You: “这一切都是我瞎编的。这是一场白日梦，一个愚蠢的玩笑。我知道自己是谁。”\n“这一切都是我瞎编的。就像我跟曷城警督说的，我知道自己是谁。”"];
+	  118 [label="Jean Vicquemare: “这个我信。臭小子编了这套谎话，把我们都骗了——因为他是个精神病患者。这是哈里典型的行为方式。一个恶心的玩笑。我告诉过你的，茱蒂。”\n“这个我信。不是*警探*那部分，那是个无理的要求，不过他把我们都骗了。这是哈里典型的行为方式。一个恶心的玩笑。我告诉过你的，茱蒂。”"];
+	  119 [label="Jean Vicquemare: “……还*没有*被证实的是喝了那么多海军准将红朗姆之后，会不会导致记忆完全丧失。说实在的——我觉得他只是在欺骗我们。”"];
+	  120 [label="You: “等等，在海里吗？”（假装不懂。）"];
+	  121 [label="You: “我以为杀手可能藏在水下。但是并没有。”"];
+	  122 [label="You: “著名的大师赛車手。”"];
+	  123 [label="You: “枪？看看我*所有*的枪！如果说还有什么的话，我需要更多的*手*才对！”（拿出你的两支手枪和两支步枪。）"];
+	  124 [label="Authority: 又来了。“失枪，失枪”——想要恐吓你！"];
+	  125 [label="Jean Vicquemare: “我就知道！我告诉过你他没有。”"];
+	  126 [label="You: “我没喝醉。我没有喝酒了！”"];
+	  127 [label="Jump to: [DRINKING]"];
+	  128 [label="Jean Vicquemare: “*什么*？你让嫌疑人逃跑了！叫卡拉洁还是什么的那个。因为你*醉的*太厉害，无法评估到她有潜逃的风险。”"];
+	  129 [label="Jean Vicquemare: “*什么*？哈里，嫌疑人自己一枪爆头了。我知道你做了什么——你醉醺醺地进去，还*恐吓*她了，对吗？”"];
+	  130 [label="You: “这些都不重要。我的*气味*情况？跟我的发现相比，这根本*毫无意义*。”"];
+	  131 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  132 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  133 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  134 [label="Jean Vicquemare: “大概一星期？”他眯起眼睛。“你喝醉了。你让嫌疑人自己一枪爆头。你醉醺醺地跑进去，而且还*威胁*她。”"];
+	  135 [label="Jean Vicquemare: “又被骗了！被一个没有*喝醉*的人打败了。”他挫败地揉搓着自己的脸庞。“我甚至都不想深入探讨*另外*那个逃跑的嫌疑人。好像叫露比什么的？”\n“又被骗了！我一刻也不相信你在*戒酒*。”他挫败地揉搓着自己的脸庞。“我甚至都不想深入探讨*另外*那个逃跑的嫌疑人。好像叫露比什么的？”"];
+	  136 [label="Jean Vicquemare: “哦，好吧——如果你已经*接受教训*了……”他挫败地揉搓着自己的脸庞。“我甚至都不想深入探讨另外那8个你没能逮捕的嫌疑人。”"];
+	  137 [label="Untitled hub (02)"];
+	  138 [label="Jean Vicquemare: “哈里，那是因为你是个警察，而且背后还写着‘花花世界我一人干翻’。”"];
+	  139 [label="Jean Vicquemare: “真的吗？”他调整了一下领带。“或者你是真的认不出我的脸了？我们搭档多久了，哈里？不用回答——你不*记得*了。”"];
+	  140 [label="Trant Heidelstam: “这句台词是出自卢·贾图恩的‘米诺瓦82’，对吗？关于纯真康米主义——有名无实的*回归*角色。幽灵的幻影……”他四下看了看，注意到同伴不耐烦的样子，于是停了下来。“很棒的选择，哈里。”"];
+	  141 [label="Half Light: 那些案子对你来说很难……"];
+	  142 [label="Judit Minot: “我们看过报告了。曷城警督的报告。我们知道的。”"];
+	  143 [label="Judit Minot: “我们看过报告了，哈里。曷城警督的报告。我们知道的。”"];
+	  144 [label="Inland Empire: 完全正确，随迁警官维克玛。这是马丁内斯。"];
+	  145 [label="Jump to: [Shivers: \"You close your eyes and hear the do...\"]"];
+	  146 [label="Jean Vicquemare: 从他捂鼻子的样子来看，你可以看出随迁警官还专注在味道上面，而不是你惊人的成就。"];
+	  147 [label="You: “我真的很抱歉，迈诺特警官。”"];
+	  148 [label="Judit Minot: “不是。”她摇摇头。“没有*那层*关系。”"];
+	  149 [label="Judit Minot: “维克，冷静点……”"];
+	  150 [label="Kim Kitsuragi: CheckEquipped(\"shirt_t500\")  and  (CheckEquipped(\"shoes_t500\")  or  CheckEquipped(\"gloves_t500\")  or  CheckEquipped(\"hat_t500\"))"];
+	  151 [label="CheckEquipped(\"shirt_t500\")  and  (CheckEquipped(\"shoes_t500\")  or  CheckEquipped(\"gloves_t500\")  or  CheckEquipped(\"hat_t500\"))", shape=diamond];
+	  152 [label="!(CheckEquipped(\"shirt_t500\")  and  (CheckEquipped(\"shoes_t500\")  or  CheckEquipped(\"gloves_t500\")  or  CheckEquipped(\"hat_t500\")))", shape=diamond];
+	  153 [label="Trant Heidelstam: “我的背景完全不同。我从事的是*神经病学*研究……”——他在空中比了个引号——“……不过仅仅是在理论层次的。事实上，我可能该走了……”"];
+	  154 [label="You: “所以*特兰特·海德斯塔姆*原来是……*特别顾问特兰特·海德斯塔姆*……”"];
+	  155 [label="You: “尽管我做了*所有*那些事情，还要这么叫我吗？”"];
+	  156 [label="You: （面向飞旋旅社的大致方向，然后大声叫喊。）“去你妈的，餐厅经理！这是你最后一次背叛我！”"];
+	  157 [label="Kim Kitsuragi: Variable[\"TASK.light_graffito_on_fire_done\"]"];
+	  158 [label="Variable[\"TASK.light_graffito_on_fire_done\"]", shape=diamond];
+	  159 [label="!(Variable[\"TASK.light_graffito_on_fire_done\"])", shape=diamond];
+	  160 [label="Jean Vicquemare: “永远也不可能发生，茱蒂。他是这个地球上最粗鲁的男人。他就是我们所有人要接受敏感性训练的原因。而且我*痛恨*敏感性训练……”"];
+	  161 [label="Trant Heidelstam: “我*是*什么？”他跺跺脚。“他们要求我分享一下对某种比较*边缘的学术理论*的看法，那是30年代在柯尼希斯开发出来的。比如说——部分精神创伤性失忆症。群体人格理论……”"];
+	  162 [label="Jean Vicquemare: “当然……”他眯起眼睛看着你。“你不是一个……*超级明星执法人员*。城里的人都说你是纪尧姆·列米利翁的转世。我知道这他妈是怎么回事。什么也没有改变。”"];
+	  163 [label="Rhetoric: 意思就是：你忘了自己是谁。还有‘金钱’，‘洲’，‘灰域’等等之类的定义。"];
+	  164 [label="You: “一个心碎的苦力。”"];
+	  165 [label="You: “我身上发生过一件非常悲伤的事情，让我变得不像自己了。这是一种防御机制。”"];
+	  166 [label="Jean Vicquemare: “你是什么意思？”"];
+	  167 [label="Conceptualization: 所以你不*记得*自己不记得了。赞。"];
+	  168 [label="Trant Heidelstam: “与自由市场密切相关……”他自信地点点头。“他只是需要结束这一切。”"];
+	  169 [label="Jump to: [Judit Minot: \"\"But, Detective Vicquemare,\" she in...\"]"];
+	  170 [label="Jean Vicquemare: “恕我直言，警督——你被*臭小子弄得鬼迷心窍*了。有时候是会发生这种情况。没发生的是，一个警察为了破案而抹掉自己的记忆。”"];
+	  171 [label="You: “它被雅各布·欧文偷走了。”"];
+	  172 [label="Jean Vicquemare: “是的。在海里。我们的工作車——现在跟鱼，蛤蚌还有其他狗屁海洋生物在一起。”"];
+	  173 [label="Jean Vicquemare: “你现在就是醉的对吗？你现在就不清醒，是不是，你这个该死的*流浪汉*。我都闻到了！”"];
+	  174 [label="Jump to: [village.posse_lost_badge]"];
+	  175 [label="Jean Vicquemare: “喝*一点*小酒？！你身上散发着尸体的味道。我在下风位置，整个人都快不能呼吸了。”他捂住鼻子。“你闻起来像屎一样。”"];
+	  176 [label="Jean Vicquemare: “这就是你让嫌疑人自己爆头的原因吗————那个叫露比还是什么的人？就在木板道下面？你醉醺醺地进去，还*恐吓*她吗？”"];
+	  177 [label="Jump to: [KLAASJE ESC]"];
+	  178 [label="Jump to: [RUBY SUI]"];
+	  179 [label="Jean Vicquemare: “哦，好吧——如果她接受过*特殊训练*……”他挫败地揉搓着自己的脸庞。“我甚至都不想深入探讨*另外*那个逃跑的嫌疑人。没错。好像叫露比什么的？”"];
+	  180 [label="Jean Vicquemare: “或者是你*很可能把枪卖了换酒喝*的事实。那些都微不足道。什么都不算。只是一件幽默的趣闻轶事……”"];
+	  181 [label="Jean Vicquemare: “哦，好吧——如果你*真的*嗑嗨了，那我猜也没什么大不了的。”他挫败地揉搓着自己的脸庞。“那么这一切都是值得的。那就不要深入探讨另外那个*开枪自杀*的嫌疑人。爆头那个。”"];
+	  182 [label="Jean Vicquemare: “哦，好吧——如果你*真的*嗑嗨了，那我猜也没什么大不了的。”他挫败地揉搓着自己的脸庞。“那就不要深入探讨这对道德委员会来说意味着什么。”\n“哦，好吧——如果你*真的*嗑嗨了，那我猜也没什么大不了的。”他挫败地揉搓着自己的脸庞。“那就不要深入探讨那个拿着警灯、还患有紧张症的老太太——还有*所有这一切*对于道德委员会来说意味着什么。”"];
+	  183 [label="You: “是啊，花花世界我一人干翻。好像没有其他人为此感到困扰。”"];
+	  184 [label="Cuno: “坤诺喜欢这种紧张的狗屎。”"];
+	  185 [label="Jean Vicquemare: “没错——而你是某种……杀人机器。”"];
+	  186 [label="Empathy: 从你对他的熟悉程度判断——最少有两年了？或者更短一些，不过特别小组的工作时间很紧张……"];
+	  187 [label="You: “我什么都没想起来……”（继续。）"];
+	  188 [label="Kim Kitsuragi: Variable[\"whirling.vicq_asked_nurse\"]"];
+	  189 [label="Variable[\"whirling.vicq_asked_nurse\"]", shape=diamond];
+	  190 [label="!(Variable[\"whirling.vicq_asked_nurse\"])", shape=diamond];
+	  191 [label="Esprit de Corps: 他的意思是：“你最好不要跟这个塞尔维一起*派对*了，臭小子。”"];
+	  192 [label="Jump to: [REMEMBERANCE HUB]"];
+	  193 [label="Jean Vicquemare: “别鼓励他，特兰特。”"];
+	  194 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  195 [label="IsCunoInParty()", shape=diamond];
+	  196 [label="!(IsCunoInParty())", shape=diamond];
+	  197 [label="Judit Minot: “没事的，”她叹了口气。“我不是来看你的笑话，或者是愚弄你的。其实，他也不是。”她朝维克玛比了个手势。“我们只是很担心你。”"];
+	  198 [label="Jump to: [REMEMBERANCE HUB]"];
+	  199 [label="You: “再唤醒一下我的记忆——这里面还有*谁*？”"];
+	  200 [label="You: “等等，所以你让我独自面对一队训练有素的杀手，就是为了给我上一课？”"];
+	  201 [label="You: “我知道你太过保守，没办法理解*异常现象*。”"];
+	  202 [label="Jean Vicquemare: “不要回答。”他呼出一口气，想稳住自己的呼吸。“你的警徽，哈里。把你的警徽拿给我看看。”"];
+	  203 [label="Perception (Sight): 你看着他手指的方向——在东南边——没错。海里好像真有一台汽車。奇怪。它是怎么跑到那里去的？"];
+	  204 [label="You: “我的警徽就在这里啊。”（把它拿给他们看。）"];
+	  205 [label="You: “我的枪丢了。没找到。它没了。”"];
+	  206 [label="Jean Vicquemare: 他看都没看你的军火库一眼，挥挥手让你拿开。“我不在乎你那些藏品，你这个囤积狂——那里面有你的配枪吗？我只想知道那*一支*枪怎么样了。”"];
+	  207 [label="Jean Vicquemare: “哇哦。在他手里——*而且*他没有弄掉。”他假装放松地擦了擦眉头。“你醉的跟个流浪汉一样，哈里。在你杀人之前，把那玩意收起来。”"];
+	  208 [label="Judit Minot: “这不是庆祝的理由。这个……很糟糕。”"];
+	  209 [label="Jean Vicquemare: “*升级*？我不在乎你对武器的狂热，哈里。我只在乎你的官方配枪——就是被你*弄丢*的那个。”"];
+	  210 [label="Kim Kitsuragi: Variable[\"TASK.arrest_klaasje_done\"] == false"];
+	  211 [label="Variable[\"TASK.arrest_klaasje_done\"] == false", shape=diamond];
+	  212 [label="!(Variable[\"TASK.arrest_klaasje_done\"] == false)", shape=diamond];
+	  213 [label="Kim Kitsuragi: IsKimHere()"];
+	  214 [label="IsKimHere()", shape=diamond];
+	  215 [label="!(IsKimHere())", shape=diamond];
+	  216 [label="Smell like a corpse HUB"];
+	  217 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  218 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  219 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  220 [label="Kim Kitsuragi: Variable[\"TASK.arrest_klaasje_done\"] == false"];
+	  221 [label="Variable[\"TASK.arrest_klaasje_done\"] == false", shape=diamond];
+	  222 [label="!(Variable[\"TASK.arrest_klaasje_done\"] == false)", shape=diamond];
+	  223 [label="Jean Vicquemare: “……那*6个*被枪杀的人才是大事！哈里，街道都被鲜血染红了，毫不夸张。这他妈是一场*大屠杀*。”"];
+	  224 [label="Jean Vicquemare: “哦，好吧——如果她*很好*的话……”他挫败地揉搓着自己的脸庞。“我甚至都不想深入探讨另外那个嫌疑人——就是开枪自杀那个。*爆头*那个。”"];
+	  225 [label="Jean Vicquemare: “哦，好吧——如果她*很好*的话……”他挫败地揉搓着自己的脸庞。“我甚至都不想深入探讨*另外*那个逃跑的嫌疑人。没错。好像叫露比什么的？”"];
+	  226 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  227 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  228 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  229 [label="Jean Vicquemare: “哦，好吧——如果你感觉到很*内疚*……”他挫败地揉搓着自己的脸庞。“我甚至都不想深入探讨这对道德委员会来说意味着什么。”\n“哦，好吧——如果你感觉到很*内疚*……”他挫败地揉搓着自己的脸庞。“我甚至都不想深入探讨这对道德委员会来说意味着什么。更别提那个拿着警灯，还有紧张症的老太太了……”"];
+	  230 [label="Jean Vicquemare: “哦，好吧——如果她*不重要*的话……”他挫败地揉搓着自己的脸庞。“我甚至都不想深入探讨这对道德委员会来说意味着什么。”\n“哦，好吧——如果她*不重要*的话……”他挫败地揉搓着自己的脸庞。“我甚至都不想深入探讨这对道德委员会来说意味着什么。更别提那个拿着警灯，还有紧张症的老太太了……”"];
+	  231 [label="Jean Vicquemare: “看看是谁来了，”男人的口气很慎重。突然间，他歪起脑袋，脸上的表情也变了……\n“看看是谁来了，”没戴墨镜的男人说道。突然，他歪起脑袋，表情也变了……"];
+	  232 [label="Kim Kitsuragi: “附近没有任何相机。”他盯着脚上的靴子。“他们没有相机……”"];
+	  233 [label="Judit Minot: “我们看过报告了。曷城警督的报告。我们知道的。”"];
+	  234 [label="Empathy: 他还在*惦记*那件夹克。"];
+	  235 [label="Composure: 意思是说‘你应该做得更好’。"];
+	  236 [label="Jean Vicquemare: “我没有*骗*你——没有人*骗*你。你的脑子被酒精搞得乱七八糟，连自己的搭档都认不出来了。”"];
+	  237 [label="Jean Vicquemare: “我告诉过你。他只要再喝一杯就会杀人了。”"];
+	  238 [label="Kim Kitsuragi: Variable[\"whirling.vicq_asked_firefighter\"]"];
+	  239 [label="Variable[\"whirling.vicq_asked_firefighter\"]", shape=diamond];
+	  240 [label="!(Variable[\"whirling.vicq_asked_firefighter\"])", shape=diamond];
+	  241 [label="You: “我明白了。好吧。是加尔特告诉你的。”"];
+	  242 [label="Trant Heidelstam: “好吧。”"];
+	  243 [label="Judit Minot: “好吧。”又是一声叹息。“你是我的指挥官。我……我真的很想尊敬你。我希望能跟你保持正常的关系。”"];
+	  244 [label="Kim Kitsuragi: Variable[\"village.posse_minot_rhet_case\"]"];
+	  245 [label="Variable[\"village.posse_minot_rhet_case\"]", shape=diamond];
+	  246 [label="!(Variable[\"village.posse_minot_rhet_case\"])", shape=diamond];
+	  247 [label="Cuno: 他看起来有些后悔。“只要别吓出屎来就行——拜托了。”"];
+	  248 [label="Kim Kitsuragi: Variable[\"village.posse_logic_bevy\"]"];
+	  249 [label="Variable[\"village.posse_logic_bevy\"]", shape=diamond];
+	  250 [label="!(Variable[\"village.posse_logic_bevy\"])", shape=diamond];
+	  251 [label="Empathy: 他是由衷地觉得这样会很有趣。对于你们俩来说都是。"];
+	  252 [label="Jean Vicquemare: “有意思？”"];
+	  253 [label="You: “一个警探。”"];
+	  254 [label="Kim Kitsuragi: “他是的——他在慢慢变好。我可以肯定在事情发生之前，他喝了*很多*酒。”"];
+	  255 [label="You: “我有吗？”"];
+	  256 [label="Jean Vicquemare: “好吧，特兰特，谢谢你。这还真是完全……没有任何意义。很高兴我们把你也带来了。他到底还能不能在重案组继续工作？现在他是个白痴病患者了吗？我想知道的是*这个*。”"];
+	  257 [label="Kim Kitsuragi: “他*的确*向我展现过这套理论——曾经有过一次。当时我很难相信，不过他似乎是被说服了。而且我见过他工作的方式。他的方法有些……不太传统。”"];
+	  258 [label="Jean Vicquemare: “精神创伤性失忆症？特兰特？”他转向特别顾问。“这个我可以接受——臭小子是个绝望的人，一直都是。谁不是呢？我知道我是。但是你知道吗？”"];
+	  259 [label="You: “我不知道。我不知道它在那里做什么。”"];
+	  260 [label="Untitled hub (04)"];
+	  261 [label="You: “失枪，失枪！我再也不会被什么狗屁失枪*恐吓*了。”"];
+	  262 [label="You: “是啊，是啊，我也有。”（把无聊的配枪拿给他看。）"];
+	  263 [label="Jean Vicquemare: “我不在乎。RCM发给你用来杀人的枪呢？那支枪在哪？”"];
+	  264 [label="You: “这可是特里安戈4.46步枪！它曾经杀死了大概一公里外的一个男人。”"];
+	  265 [label="Judit Minot: “这不是庆祝的理由。这个……很糟糕。”"];
+	  266 [label="Jean Vicquemare: “但是你没有——因为你*喝醉*了。你把枪弄丢了——而且还喝醉了。你是个酒鬼，一个没有枪的流浪汉！我都闻出来了！”"];
+	  267 [label="You: “那又怎么样？我只喝了一点小酒。”"];
+	  268 [label="You: “我试过戒掉，但是没有它我就不能好好工作。”"];
+	  269 [label="Jump to: [RUBY ESC]"];
+	  270 [label="You: “这是你一无所知的*大案*中的一个小细节罢了。”"];
+	  271 [label="Jean Vicquemare: “……那*9个*被枪杀的人才是大事！哈里，街道都被鲜血染红了，毫不夸张。这他妈是一场*大屠杀*。”"];
+	  272 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  273 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  274 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  275 [label="Kim Kitsuragi: Variable[\"TASK.arrest_klaasje_done\"] == false"];
+	  276 [label="Variable[\"TASK.arrest_klaasje_done\"] == false", shape=diamond];
+	  277 [label="!(Variable[\"TASK.arrest_klaasje_done\"] == false)", shape=diamond];
+	  278 [label="Jean Vicquemare: “特别顾问特兰特·海德斯塔姆，巡警茱蒂特·迈诺特。”"];
+	  279 [label="Reaction Speed: ……他是这么说的。"];
+	  280 [label="You: “好吧，我明白了。没错。”"];
+	  281 [label="Jump to: [HUB 1.0]"];
+	  282 [label="Jump to: [TASK.light_graffito_on_fire_done]"];
+	  283 [label="Kim Kitsuragi: IsKimHere()"];
+	  284 [label="IsKimHere()", shape=diamond];
+	  285 [label="!(IsKimHere())", shape=diamond];
+	  286 [label="You: 已招募金"];
+	  287 [label="Jump to: [Shivers: \"You close your eyes and hear the do...\"]"];
+	  288 [label="Judit Minot: “哈里，我们想帮你。特兰特，我想现在该你出手了？”"];
+	  289 [label="Jean Vicquemare: “我被诊断出抑郁症了，哈里。你叫我们都滚蛋之后，很抱歉我当时没那个心情奉承你。”"];
+	  290 [label="Jean Vicquemare: “有吗？还是你以为我他妈是个男护士？我们已经搭档多久了，哈里？”他调整了一下脖子上的领带。“不用回答——反正你也不*记得*了。”"];
+	  291 [label="Judit Minot: “呃，还有……”她插了进来，试图缓和一下局势。“街上的人也帮了我们。”"];
+	  292 [label="Jean Vicquemare: “奇怪。他倒是没提过这个。事实上，那个公司看起来完全没有获救——建筑前面有一个巨大的*空气涂鸦*。它着火了。”"];
+	  293 [label="Untitled hub"];
+	  294 [label="Kim Kitsuragi: IsKimHere()"];
+	  295 [label="IsKimHere()", shape=diamond];
+	  296 [label="!(IsKimHere())", shape=diamond];
+	  297 [label="Jump to: [REMEMBERANCE HUB]"];
+	  298 [label="Jump to: [REMEMBERANCE HUB]"];
+	  299 [label="Cuno: “该死的，猪猡……”男孩看起来有点不自在。“我叫库诺，不是*坤诺*。它很……傻。我的名字比我告诉你的还要傻。”\n“该死的，猪猡……被你发现了。我叫库诺，不是*坤诺*。让我们继续生活下去吧。我是库诺。现在你知道了啊。别再盯着我看了。”"];
+	  300 [label="Jean Vicquemare: “该死的，哈里……”他转移了重心，交叉双臂，直直地望向你的眼睛。"];
+	  301 [label="Jean Vicquemare: “你可能也是对的——我永远不会让你诱拐一个孩子，带着他在三月中旬搞什么诡异的乘船旅行！”"];
+	  302 [label="You: “一切*都会*燃烧的。随迁警官维克玛。千万别搞错了。”"];
+	  303 [label="Jean Vicquemare: “你*想不起来*是因为你有脑损伤。特兰特，”他转向金发男子，“你的任务来了——情况有多糟糕？”\n“你*想不起来*是因为你有脑损伤，侦探之神。特兰特，”他转向金发男子，“你的任务来了——情况有多糟糕？”"];
+	  304 [label="Trant Heidelstam: “他*不是*一个白痴病患者。而且他*的确*可以工作——即便不能承担之前的领导角色，也可以当个普通的警探。”"];
+	  305 [label="You: “我之后再解释，不过还有一个人也失忆了。那个*蟹男*。”"];
+	  306 [label="Trant Heidelstam: “这是个都市神话——是一个采用高实验性调查技巧的警探。这是一种*文化的*参照物，警探。”"];
+	  307 [label="You: “你们全都去死吧，我*不想*待在你的小组。”"];
+	  308 [label="Jean Vicquemare: “不，哈里——你去死吧。你已经把我们搞得乱七八糟——我已经跟普赖斯解释过*两次*了。在别尔佳耶夫那里——*四次*。我是你的搭档。你不在那里的时候，我会替你回答。”"];
+	  309 [label="Jean Vicquemare: “我知道。你把它开进海里的。街上所有人都看见了。它也会成为本地的一个地标——记录在宣传册上。感谢你，给我们惹了这么大的烂摊子，哈里。”"];
+	  310 [label="Savoir Faire: 你想耍一耍手中的警徽，但是没成功，它掉落在大概2米开外的地上。"];
+	  311 [label="Judit Minot: “这不是庆祝的理由。这个……很糟糕。”"];
+	  312 [label="Jean Vicquemare: “你让嫌疑人逃跑了，哈里——那个叫卡拉洁还是什么的。因为你*醉的*太厉害，无法评估到她有潜逃的风险。”"];
+	  313 [label="Kim Kitsuragi: Variable[\"TASK.arrest_klaasje_done\"] == false"];
+	  314 [label="Variable[\"TASK.arrest_klaasje_done\"] == false", shape=diamond];
+	  315 [label="!(Variable[\"TASK.arrest_klaasje_done\"] == false)", shape=diamond];
+	  316 [label="Jean Vicquemare: “*什么*？哈里，你让嫌疑人逃跑了！那个叫露比还是什么的那个。因为你*醉的*太厉害，没办法拘留她，不是吗？”"];
+	  317 [label="Jean Vicquemare: “你*发现*了什么？你让嫌疑人*逃跑*了——某个叫露比的人。因为你喝的太*醉*，没能拘留她。你醉醺醺地跑进去了。”"];
+	  318 [label="Jump to: [RUBY SUI]"];
+	  319 [label="Jean Vicquemare: “我不信你。”他眯起眼睛。“你喝醉了。你让嫌疑人自己一枪爆头。你醉醺醺地跑进去，而且还*威胁*她。”"];
+	  320 [label="You: “她用*灰域维度压缩机*控制住了我们。你知道那有多痛吗？”"];
+	  321 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  322 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  323 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  324 [label="HUB 1.0"];
+	  325 [label="You: “似乎没有其他人在意我在流血这件事。”"];
+	  326 [label="Jean Vicquemare: “真的吗？！他们好像并不困扰？那是因为你是个穿着外骨骼的警察！”"];
+	  327 [label="Jean Vicquemare: “实际上你是吗？你还是个警察吗？基于你这么*迪斯科*的经历，很难说啊。”"];
+	  328 [label="Authority: 仿佛他回想起来，他实际上是一个授勋的警督，而不是一个调皮的小男孩。"];
+	  329 [label="You: “一个伪装……为什么？”"];
+	  330 [label="Jump to: [REMEMBERANCE HUB]"];
+	  331 [label="Jump to: [REMEMBERANCE HUB]"];
+	  332 [label="Kim Kitsuragi: (CheckEquipped(\"jacket_faln\")  and  CheckEquipped(\"pants_faln\"))  or  (CheckEquipped(\"shirt_faln\")  and  CheckEquipped(\"pants_faln\"))  or  (CheckEquipped(\"hat_faln\")  and  CheckEquipped(\"pants_faln\")  and  CheckEquipped(\"shoes_faln\")  and  CheckEquipped(\"gloves_faln\"))"];
+	  333 [label="(CheckEquipped(\"jacket_faln\")  and  CheckEquipped(\"pants_faln\"))  or  (CheckEquipped(\"shirt_faln\")  and  CheckEquipped(\"pants_faln\"))  or  (CheckEquipped(\"hat_faln\")  and  CheckEquipped(\"pants_faln\")  and  CheckEquipped(\"shoes_faln\")  and  CheckEquipped(\"gloves_faln\"))", shape=diamond];
+	  334 [label="!((CheckEquipped(\"jacket_faln\")  and  CheckEquipped(\"pants_faln\"))  or  (CheckEquipped(\"shirt_faln\")  and  CheckEquipped(\"pants_faln\"))  or  (CheckEquipped(\"hat_faln\")  and  CheckEquipped(\"pants_faln\")  and  CheckEquipped(\"shoes_faln\")  and  CheckEquipped(\"gloves_faln\")))", shape=diamond];
+	  335 [label="Kim Kitsuragi: “之后可能还会需要你们的协助，”突然找回自信的他补充了一句。"];
+	  336 [label="You: “是你！你从来没有告诉过我，你不是那个马脸女人！”（指着她。）"];
+	  337 [label="You: “哦……好吧。抱歉。”"];
+	  338 [label="You: “是啊，我把它点燃的。那是一种诗意的姿态。”"];
+	  339 [label="Jean Vicquemare: “唤醒你的记忆？这是个该死的重案组。有你，我，茱蒂，该死的特兰特·海德斯塔姆，还有纪尧姆·贝维……”他凝视着你。"];
+	  340 [label="Jump to: [You: \"\"Okay. So what does the unit *do*?\"\"]"];
+	  341 [label="Jean Vicquemare: “你让我们滚开。你说我们*限制了你的风格*。你说自己是*侦探之神*。一切全都滚蛋。一切都会燃烧。不侦查，毋宁死！”"];
+	  342 [label="You: “你为什么要抛下一个字面意义上的*侦探之神*呢？”"];
+	  343 [label="Jean Vicquemare: “你歇斯底里的大哭。烂醉如泥，到处砸东西，情感上受到了虐待。你说我们都会‘陷入深渊’。”"];
+	  344 [label="Jean Vicquemare: “你确定吗？”他眯起眼睛看着你。“所以你没跟所有人说自己是个多么*无聊的警察*——还说你应该自杀？大家都说你疯了。我已经四下打听过。”"];
+	  345 [label="You: “一个醉鬼，一个失败者。”"];
+	  346 [label="Kim Kitsuragi: “*蟹男*这个词选的很不成功——不过我也在那里。海岸上的教堂因为一个音频空间的异常现象产生了震动。可能是灰域，或者也许跟无线电波有关……”"];
+	  347 [label="Kim Kitsuragi: Variable[\"whirling.kim_experimental\"]"];
+	  348 [label="Variable[\"whirling.kim_experimental\"]", shape=diamond];
+	  349 [label="!(Variable[\"whirling.kim_experimental\"])", shape=diamond];
+	  350 [label="Esprit de Corps: 当你打卡下班的时候，*我*要对你的案子负责——还有你的特别行动小组。"];
+	  351 [label="Jean Vicquemare: “感谢你毁掉了价值45,000雷亚尔的警方财产，这下*我*的工资单要遭殃了。你知道的，对吗？你会被开除的。而我会到死都要为你支付这笔账单……”"];
+	  352 [label="You: 就这么站在那里。"];
+	  353 [label="Jean Vicquemare: “他没有……”他指向大海。“我有个主意。也许你他妈的可以去那辆被你开进海里的車里看看？要不要去那边看看？！”"];
+	  354 [label="Rhetoric: 似乎拥有警徽*和*配枪是一种很自然的状态，而不是成就。"];
+	  355 [label="Cuno: “哇哦，他们对你真是够残忍的……猪猡对猪猡使用暴力了。”"];
+	  356 [label="Jump to: [village.posse_lost_badge]"];
+	  357 [label="Jean Vicquemare: “我就*知道*。我告诉过你他没有。”"];
+	  358 [label="Jean Vicquemare: “这就是你让嫌疑人逃跑的原因吗——那个叫露比还是什么的人？因为你他妈*醉的*太厉害，没办法拘留她？”"];
+	  359 [label="Jean Vicquemare: “一个女人自杀了——自己爆头。因为当时你嗑嗨了，还跑进去*威胁*她，是吗？！那个叫露比什么的人？你基本上是亲手*杀*了她。”"];
+	  360 [label="Jean Vicquemare: “大概一星期？”他眯起眼睛。“你喝醉了。而且你还让嫌疑人*逃跑*了——某个叫露比的人。因为你喝的太*醉*，没能拘留她。”"];
+	  361 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  362 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  363 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  364 [label="Jean Vicquemare: “……那*8个*被枪杀的人才是大事街道都被鲜血染红了，毫不夸张。曷城警督躺在医院里奄奄一息。哈里，这他妈是一场*大屠杀*。”"];
+	  365 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  366 [label="IsCunoInParty()", shape=diamond];
+	  367 [label="!(IsCunoInParty())", shape=diamond];
+	  368 [label="Jean Vicquemare: “感到困扰？！哈里，你他妈的看起来都需要器官移植了！”"];
+	  369 [label="You: “是的……我是个该死的警察。”\n“是啊，我是个穿着外骨骼的该死警察。”"];
+	  370 [label="Jean Vicquemare: “*什么*报应？没有认出*每天*跟你一起工作的人？”他眯起眼睛。“大脑损伤？”"];
+	  371 [label="Kim Kitsuragi: Variable[\"church.soona_kim_heard_anomaly\"]"];
+	  372 [label="Variable[\"church.soona_kim_heard_anomaly\"]", shape=diamond];
+	  373 [label="!(Variable[\"church.soona_kim_heard_anomaly\"])", shape=diamond];
+	  374 [label="Jean Vicquemare: 男人没有回应，不过他的表情已经说明了一切。"];
+	  375 [label="You: “我也许是当掉了……不管怎么说，现在它不在了。”"];
+	  376 [label="Jean Vicquemare: “你的背后写的是什么？”他眯起眼睛。“弱水三千只取一尿饮……你*他妈的*有什么毛病吗？！”"];
+	  377 [label="Jean Vicquemare: “而且，你他妈看起来像个白痴一样。”"];
+	  378 [label="Trant Heidelstam: “呃……”他后退一步。“我*不太*清楚自己到底在这里做什么。我被邀请以专家的身份加入——我想我需要压低一下你们的期望。我充其量就是个认知科学的爱好者。”"];
+	  379 [label="You: “把我留下来喂狼……”"];
+	  380 [label="You: “巡警迈诺特，很高兴认识你。让我们把过去抛在脑后吧。”"];
+	  381 [label="Trant Heidelstam: “重申一遍……”他四下看了看。“他们要求我分享一下对某种比较*边缘的学术理论*的看法，那是30年代在柯尼希斯萌发出来的。比如说——部分精神创伤性失忆症，群体人格理论……”"];
+	  382 [label="Jump to: [REMEMBERANCE HUB]"];
+	  383 [label="Rhetoric: 好主意。看来他不认为你能在臭小子的问题上纠正他。"];
+	  384 [label="You: “真的吗？”"];
+	  385 [label="You: “你怎么知道我在这里？”\n“你怎么知道我在这里？”"];
+	  386 [label="Kim Kitsuragi: Variable[\"coast.idiot_teq_story_end_reach\"]"];
+	  387 [label="Variable[\"coast.idiot_teq_story_end_reach\"]", shape=diamond];
+	  388 [label="!(Variable[\"coast.idiot_teq_story_end_reach\"])", shape=diamond];
+	  389 [label="Jean Vicquemare: “奇怪。他倒是没提过这个。事实上，那个公司看起来完全没有获救——建筑前面有一个巨大的*空气涂鸦*。里面还混合着*血液*。”"];
+	  390 [label="You: “你一直在*暗中监视*我吗？”"];
+	  391 [label="Jean Vicquemare: “你是个*担心集合体*。她担心你。我担心你。就连特别顾问都在担心你。每个人都在担心——而不是在*工作*。”"];
+	  392 [label="Rhetoric: 听听你自己说的话。你听起来就像个毫不讲理的白痴。无论我做什么都没用。"];
+	  393 [label="You: “园丁，工贼首领，*这个*……”（转向警督。）“告诉我，至少*你*没有对自己的身份撒谎吧。”\n“园丁，工贼首领，*这个*……”（转向坤诺。）“告诉我，至少*你*没有对自己的身份撒谎吧。”"];
+	  394 [label="You: “好吧。那个……确实跟它有点关系，是的。”"];
+	  395 [label="Esprit de Corps: 他们是你的队员。或者是仅存的队员。亲手挑选的。亲手弄丢的。"];
+	  396 [label="You: “那为什么你没有‘不侦查，毋宁死’呢？”"];
+	  397 [label="Trant Heidelstam: “呃……他没有明显的颤抖。说话也没有口齿不清。他能开船。他还好好地站着，据理力争。都是良好迹象。不过——在片段记忆*和*语义上，他有完全的逆行性遗忘……”"];
+	  398 [label="Jump to: [Untitled hub]"];
+	  399 [label="Jean Vicquemare: “谢谢你，曷城警督。澄清一下——我不认为跨洲灰域学是一个骗局。灰域引起了全球性的现象——这是已经证实过的。然而……”"];
+	  400 [label="Kim Kitsuragi: “不管怎么说，这是真的。我把这些都记录在报告里了——你应该看看。不过，我觉得这跟他喝酒喝到大脑受损没什么关系。”"];
+	  401 [label="Jump to: [Untitled hub (04)]"];
+	  402 [label="You: “什么？！这些都是*很棒*的枪。比我的配枪好多了。”"];
+	  403 [label="You: “是啊，我没有。我没有配枪。”"];
+	  404 [label="You: “等等，也许是因为*费洛蒙*。”"];
+	  405 [label="Judit Minot: “警探——拜托。不要又开始讲你的什么*费洛蒙*。这很严肃。如果你不……”她没有把话说完。"];
+	  406 [label="Jump to: [Smell like a corpse HUB]"];
+	  407 [label="Jean Vicquemare: “又被骗了！被一个没有*喝醉*的人打败了。”他揉了揉自己的脸。“我甚至都不想深入探讨另外那个嫌疑人——就是开枪自杀那个。爆头那个。”\n“又被骗了！我一刻也不相信你在*戒酒*。”他揉了揉自己的脸。“我甚至都不想深入探讨另外那个嫌疑人——就是开枪自杀那个。爆头那个。”"];
+	  408 [label="Jean Vicquemare: “哦，好吧——如果你*放走*她的话……”他挫败地揉搓着自己的脸庞。“我甚至都不想深入探讨*另外*那个逃跑嫌疑人——又是出于仁慈吗？”"];
+	  409 [label="Jean Vicquemare: “是的，这*总是*能解释通的。”"];
+	  410 [label="Jean Vicquemare: “哈里，可能会有相片的……”他渐渐开始明白事态的严重性。"];
+	  411 [label="Trant Heidelstam: “是的。”特兰特·海德斯塔姆说道。“可能会有相机。我们需要损害控制。”"];
+	  412 [label="Empathy: 在你的陪伴下，每一个人都感觉到非常安全。他根本不知道自己在说什么。"];
+	  413 [label="Jump to: [Jean Vicquemare: \"\"Bothered by it? Harry, you're a *g...\"]"];
+	  414 [label="Encyclopedia: 完全不知道。一百年？"];
+	  415 [label="Kim Kitsuragi: IsKimHere()"];
+	  416 [label="IsKimHere()", shape=diamond];
+	  417 [label="!(IsKimHere())", shape=diamond];
+	  418 [label="Kim Kitsuragi: Variable[\"inventory.ledger_crack_it_on_the_knee\"]  and  Variable[\"inventory.ledger_case_mural\"]"];
+	  419 [label="Variable[\"inventory.ledger_crack_it_on_the_knee\"]  and  Variable[\"inventory.ledger_case_mural\"]", shape=diamond];
+	  420 [label="!(Variable[\"inventory.ledger_crack_it_on_the_knee\"]  and  Variable[\"inventory.ledger_case_mural\"])", shape=diamond];
+	  421 [label="Judit Minot: “我们看过报告了，哈里。曷城警督的报告。我们知道的。”"];
+	  422 [label="You: “朋友……炮友那种？”"];
+	  423 [label="Authority: *他*能为*自己*辩护些什么？他留下你自己一个人去挡子弹了！"];
+	  424 [label="Kim Kitsuragi: Variable[\"village.posse_intro_reaction_cuno\"]"];
+	  425 [label="Variable[\"village.posse_intro_reaction_cuno\"]", shape=diamond];
+	  426 [label="!(Variable[\"village.posse_intro_reaction_cuno\"])", shape=diamond];
+	  427 [label="Untitled hub (03)"];
+	  428 [label="You: “我们还是朋友，我只是脑袋太笨了。”"];
+	  429 [label="You: “我帮他料理了塞尔维的事，现在他居然背叛我……”"];
+	  430 [label="Jean Vicquemare: “我不知道……”他怀疑地眯起眼睛打量你。“在我看来完全就是*臭小子*的风格。”"];
+	  431 [label="Jean Vicquemare: “不。每个人都是伪装的高手。”"];
+	  432 [label="Jean Vicquemare: 他看着迈诺特，说道，“他不记得了。”"];
+	  433 [label="Jean Vicquemare: “哦，其实吧，那个故事很有意思！”他的脸上没有笑容。“纪尧姆·贝维是一名警方记者，加入了我们的团队。他真的很能干。然后他离开了，因为他对你领导小组的能力失去了信心。”"];
+	  434 [label="Kim Kitsuragi: IsHighestCopotype(\"superstar_cop\")"];
+	  435 [label="IsHighestCopotype(\"superstar_cop\")", shape=diamond];
+	  436 [label="!(IsHighestCopotype(\"superstar_cop\"))", shape=diamond];
+	  437 [label="Jump to: [REMEMBERANCE HUB]"];
+	  438 [label="Trant Heidelstam: “是的。有意思。我有自己的一套理论，不过我想先听听哈里的想法，”他转向你，“*你*觉得自己出了什么事？神经方面的？心理上的？还有——*社会经济学方面的*？”"];
+	  439 [label="Trant Heidelstam: “根据你现在跟他的互动，还有之前在酒吧的互动，还有——我不想当个‘告密者’，”他在空中比了个引号，“还有之前我跟他的会面，那时哈里似乎没认出我是谁……这一切都非常有意思。”"];
+	  440 [label="You: “我喝的太多，所以失忆了。而且现在我在*慢慢地*恢复。”"];
+	  441 [label="Trant Heidelstam: “不，不是这么回事。我没在说弗里德堡学派。不过，哈里，我问你——*你*觉得是怎么回事？”"];
+	  442 [label="You: “我已经准备好再次走上领导岗位。”"];
+	  443 [label="Jean Vicquemare: “根本没人*提过*这事。”他看了看你，然后转向特兰特。“我的问题提的不太对。应该这样问：他能自己穿衣服，自己用便盆吗？还是我们需要给他发放伤残退休金？”"];
+	  444 [label="Kim Kitsuragi: “一开始我也是这么想的。那只是一个幻想。不过……我见过他工作的样子。那并不是什么幻想。他真的经历了某种很不同寻常的事情。他真的不记得了。”"];
+	  445 [label="Jean Vicquemare: 他又转向你。“我会努力生活下去。而且，我*知道*一个人不能抹掉自己的记忆——不管到底受过多大的创伤。就是不可能发生。你在撒谎。要么就是疯了。或者两者都有。”"];
+	  446 [label="You: “时间到了。龙舌兰日落。”\n“龙舌兰日落。话说，我还跳过了运河。”"];
+	  447 [label="Jean Vicquemare: “雅各布·欧文？”"];
+	  448 [label="Jean Vicquemare: “是啊，是啊。就这么傻站着。挺好的。"];
+	  449 [label="Judit Minot: 巡警迈诺特把警徽捡了起来，交还给你——滑腻又冰冷。"];
+	  450 [label="You: “我的枪就在这里！”（把你的维利耶9毫米手枪拿给他看。）"];
+	  451 [label="Kim Kitsuragi: CheckItem(\"gun_villiers\")"];
+	  452 [label="CheckItem(\"gun_villiers\")", shape=diamond];
+	  453 [label="!(CheckItem(\"gun_villiers\"))", shape=diamond];
+	  454 [label="You: “很抱歉，我身上的味道很糟糕。大概有一星期了。”\n“是啊，大概有一星期了。很抱歉，我身上的味道很糟糕。”"];
+	  455 [label="Jump to: [RUBY ESC]"];
+	  456 [label="Kim Kitsuragi: Variable[\"TASK.arrest_klaasje_done\"] == false"];
+	  457 [label="Variable[\"TASK.arrest_klaasje_done\"] == false", shape=diamond];
+	  458 [label="!(Variable[\"TASK.arrest_klaasje_done\"] == false)", shape=diamond];
+	  459 [label="You: “你说得对。我搞砸了。是我给她施压了，这个算在我头上。”"];
+	  460 [label="You: “不，金，你必须支持我。让我们消灭他们吧。”"];
+	  461 [label="Jean Vicquemare: “不……特兰特，太迟了。现在这破事也有你一份！”他转向你。“你有什么要说的吗，臭小子？”"];
+	  462 [label="You: “坤诺，你还会站在我这边，对吧？”"];
+	  463 [label="Cuno: “我们都是猪猡。”他朝你点点头，然后挺直了腰杆。"];
+	  464 [label="Cuno: “猪猡在撒谎。很明显，他这里肯定有很多乱七八糟的东西。”他用食指拧了一把太阳穴。"];
+	  465 [label="Esprit de Corps: 还是被卷入火力之中了……"];
+	  466 [label="Jump to: [IsCunoInParty()]"];
+	  467 [label="You: “等等，什么味道？！我根本都没接近那具该死的尸体，而且我*还*在继续破案呢。我就有这么出色。”"];
+	  468 [label="Kim Kitsuragi: “他受伤了。”他看着你。“这真是漫长的一周。”"];
+	  469 [label="You: “你们是谁？”"];
+	  470 [label="Rhetoric: 他太爱挖苦人了，你没明白他到底是谁。"];
+	  471 [label="You: “也许如果你没有那么爱*挖苦*人的话，我可能会意识到自己认识你。”"];
+	  472 [label="Judit Minot: “警督，”她重重地叹了一口气。“我的名字不叫‘马脸女人’。我是茱蒂特·迈诺特。两个月前被分配到你的小队。我还以为我们是朋友……”"];
+	  473 [label="Jean Vicquemare: “的确。做得好，哈里。现在你真的疯了。对于我——还有其他所有人来说——又少了一个人可以依靠。”"];
+	  474 [label="Jean Vicquemare: “好极了，”他点头说道。“婊子。外国人。仇恨。”"];
+	  475 [label="You: “是啊，我写的。那是一种充满诗意的致敬。”（撒谎。）"];
+	  476 [label="Judit Minot: “好吧。”又是一声叹息。“你是我的指挥官。我……我真的很想尊敬你。我希望能跟你保持正常的关系。”"];
+	  477 [label="Jean Vicquemare: “他来看看你是不是真的疯了。然后他很聪明。我们继续吧。”"];
+	  478 [label="Jump to: [REMEMBERANCE HUB]"];
+	  479 [label="Jean Vicquemare: “是的。你很*抱歉*。你是有史以来最抱歉的警察。什么也没有改变，哈里。这种*忏悔*我已经听过不下几百万次了。”"];
+	  480 [label="Kim Kitsuragi: Variable[\"boardwalk.trant_main_hub_reached\"]  and  (Variable[\"whirling.minot_whirling_mainhub_reached\"]  or  Variable[\"whirling.vicquemare_main_hub_reached\"])"];
+	  481 [label="Variable[\"boardwalk.trant_main_hub_reached\"]  and  (Variable[\"whirling.minot_whirling_mainhub_reached\"]  or  Variable[\"whirling.vicquemare_main_hub_reached\"])", shape=diamond];
+	  482 [label="!(Variable[\"boardwalk.trant_main_hub_reached\"]  and  (Variable[\"whirling.minot_whirling_mainhub_reached\"]  or  Variable[\"whirling.vicquemare_main_hub_reached\"]))", shape=diamond];
+	  483 [label="Trant Heidelstam: “左翼呆子？呃，事实上——我完全不觉得自己个典型的左翼分子。至少就马佐夫主义理论而言不是。不过，好吧——把批判理论放在一边，到底发生了什么？”"];
+	  484 [label="Judit Minot: “但是，维克玛警探，”她插了一嘴。“他之前*也*昏倒过。”"];
+	  485 [label="You: “严肃一点。我怀疑马丁内斯有点不太对劲。”"];
+	  486 [label="Kim Kitsuragi: “不管怎么说，我把这些都记录在报告里了——你应该看看。不过，我觉得这跟他喝酒喝到大脑受损没什么关系。”"];
+	  487 [label="Drama: 撒谎。只要——等待时机，问些问题。然后撒谎。"];
+	  488 [label="You: “等等，我的警徽？”"];
+	  489 [label="Kim Kitsuragi: Variable[\"village.posse_savoir_faire_rc_to_not_loose_badeg\"]"];
+	  490 [label="Variable[\"village.posse_savoir_faire_rc_to_not_loose_badeg\"]", shape=diamond];
+	  491 [label="!(Variable[\"village.posse_savoir_faire_rc_to_not_loose_badeg\"])", shape=diamond];
+	  492 [label="Kim Kitsuragi: Variable[\"village.posse_lost_badge\"]"];
+	  493 [label="Variable[\"village.posse_lost_badge\"]", shape=diamond];
+	  494 [label="!(Variable[\"village.posse_lost_badge\"])", shape=diamond];
+	  495 [label="Judit Minot: “他找到了。是他的警徽。我可以确认。”\n“他有。是他的警徽。我可以确认。”"];
+	  496 [label="Jean Vicquemare: “我就*知道*。我告诉过你他没有。”"];
+	  497 [label="Jean Vicquemare: “哇哦。在他手里——我还以为在海里呢……”他假装放松地擦了擦眉头。“你醉的跟个流浪汉一样，哈里。在你杀人之前，把那玩意收起来。”"];
+	  498 [label="You: “这不算什么。她对于调查来说并不重要。反正也是个死胡同。”"];
+	  499 [label="You: “没拘留她才是对的。她给了我一条至关重要的线索，把我引到了那座小岛。”\n“没拘留她才是对的。她给了我一条至关重要的线索，把我们引到了那座小岛。”"];
+	  500 [label="Kim Kitsuragi: IsKimHere()"];
+	  501 [label="IsKimHere()", shape=diamond];
+	  502 [label="!(IsKimHere())", shape=diamond];
+	  503 [label="Jean Vicquemare: “当然了——如果这是你*大计划*的一部分……”他挫败地揉搓着自己的脸庞。“那就不要深入探讨这对道德委员会来说意味着什么。”\n“当然了——如果这是你*大计划*的一部分。还有那个拿着警灯、还患有紧张症的老太太。”他挫败地揉搓着自己的脸庞。“那就不要深入探讨这对道德委员会来说意味着什么。”"];
+	  504 [label="Visual Calculus: 他就是褴褛飞旋里那个墨镜男！但是他的墨镜去哪了？"];
+	  505 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"]"];
+	  506 [label="Variable[\"plaza.tribunal_gardener_shot\"]", shape=diamond];
+	  507 [label="!(Variable[\"plaza.tribunal_gardener_shot\"])", shape=diamond];
+	  508 [label="Kim Kitsuragi: “他之前就*已经*暗示过这种可能性。当然，我很难相信他，但他似乎很想说服自己相信这一点。而且我见过他工作的样子。他的方法很……不传统。”"];
+	  509 [label="Judit Minot: “我们看过报告了，哈里。曷城警督的报告。我们知道的。”"];
+	  510 [label="Electrochemistry: 你*知道*她说的‘朋友’是什么意思。不过为了肯定，还是问问吧。"];
+	  511 [label="You: “等等，尸检之后我还没洗过澡……”"];
+	  512 [label="You: 已招募哈里"];
+	  513 [label="You: “盔甲？好像没有其他人为它困扰了。”"];
+	  514 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  515 [label="IsCunoInParty()", shape=diamond];
+	  516 [label="!(IsCunoInParty())", shape=diamond];
+	  517 [label="You: “其实，我怀疑有些不太对劲。”"];
+	  518 [label="Judit Minot: “看见了吧。他真的*不记得*了。这不是什么‘恶作剧’——至少这一点是好的。”"];
+	  519 [label="You: 最好不要跟他争辩来惹他生气。"];
+	  520 [label="Jean Vicquemare: “你在酒鬼之间是个传奇人物，哈里。一个传说中的本地*酒鬼*。”"];
+	  521 [label="You: 你*也*在担心？"];
+	  522 [label="You: “是啊，呃——首先，纪尧姆·贝维是谁？”"];
+	  523 [label="You: “这位纪尧姆·贝维是一头金发，还戴着墨镜吗？就跟你之前一样……”"];
+	  524 [label="Untitled hub"];
+	  525 [label="Judit Minot: “不是那样的……”"];
+	  526 [label="Kim Kitsuragi: IsHighestCopotype(\"apocalypse_cop\")"];
+	  527 [label="IsHighestCopotype(\"apocalypse_cop\")", shape=diamond];
+	  528 [label="!(IsHighestCopotype(\"apocalypse_cop\"))", shape=diamond];
+	  529 [label="Jean Vicquemare: “当然……”他眯起眼睛看着你。“城里的人都说你是‘黄昏的代言人’。疯狂的世界末日理论……什么也没有改变。”"];
+	  530 [label="You: “资本主义。资本主义把我搞得面目全非。特兰特是对的。”"];
+	  531 [label="You: “现在怎么办？”（继续。）"];
+	  532 [label="Jean Vicquemare: “是的，是的。异常现象。你看，我明白的。在你精神错乱的时候，你想出了一种*灰域学*说法，来解释你为什么会变成个疯狂的酒鬼。而且我完全能理解。”"];
+	  533 [label="Jean Vicquemare: “这些我也经历过：也许*不是*因为他是个住在40多岁的中年男人身体里的暴躁小青年。也许这跟灰域有关？也许跟超物质有关？”"];
+	  534 [label="Jean Vicquemare: “是的。*你的*汽車。蓝白相间的。就在海底。跟鱼，蛤蚌还有其他狗屁海洋生物在一起。”"];
+	  535 [label="Jean Vicquemare: 他又镇定了一下——拍了拍黑西服上的灰尘，虽然那上面一尘不染的。“见鬼去吧。我自己去找，告诉我，*枪*总在你身上上吧。”"];
+	  536 [label="You: 让它掉在地上。"];
+	  537 [label="You: “我正在找，7X24小时不停歇。我*现在*正在追查。”"];
+	  538 [label="Conceptualization: 枪？是啊，你没有。也许你可以通过*哲学探讨*让自己脱身？"];
+	  539 [label="Jean Vicquemare: “闭嘴！要么把你的配枪拿出来，要么赶紧滚蛋。”"];
+	  540 [label="Jean Vicquemare: “要我说是*非常*糟糕。”他转向你。“你醉的像个流浪汉，哈里。在你杀人之前，拜托先把你偷来的步枪放下。”"];
+	  541 [label="Jump to: [DRINKING]"];
+	  542 [label="You: “我没喝醉。我没有喝酒了！”（撒谎。）"];
+	  543 [label="Jean Vicquemare: “我不信。那你为什么闻起来有一股*尸体*的味道？哈？”"];
+	  544 [label="Jump to: [RUBY ESC]"];
+	  545 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  546 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  547 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  548 [label="Jump to: [KLAASJE ESC]"];
+	  549 [label="You: “她什么都不知道。对于调查来说算不上什么大损失。”"];
+	  550 [label="Jean Vicquemare: “哈里，你是个警察，而且背后还写着‘弱水三千只取一尿饮’！你知道那些自由派人士会为此对我们下多大的狠手吗？”"];
+	  551 [label="Logic: 这不是他第一次看见你穿着古怪的衣服了。"];
+	  552 [label="Jean Vicquemare: “他们会把我们玩死的。”"];
+	  553 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  554 [label="Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  555 [label="!(Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  556 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  557 [label="Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  558 [label="!(Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  559 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  560 [label="Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  561 [label="!(Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  562 [label="Jump to: [REMEMBERANCE HUB]"];
+	  563 [label="Kim Kitsuragi: IsKimHere()"];
+	  564 [label="IsKimHere()", shape=diamond];
+	  565 [label="!(IsKimHere())", shape=diamond];
+	  566 [label="Judit Minot: “我们看过报告了，哈里。曷城警督的报告。我们知道的。”"];
+	  567 [label="You: 哈里留了下来"];
+	  568 [label="Jump to: [Jean Vicquemare: \"\"Good bye, Harry. And -- I know it...\"]"];
+	  569 [label="Reaction Speed: 这个孩子打算说自己是坤诺！"];
+	  570 [label="Judit Minot: “嗨。”"];
+	  571 [label="Trant Heidelstam: “我不会……那么说的。不过，是的，他表现出的攻击性不是晚期酒精中毒的非典型症状。”"];
+	  572 [label="Jean Vicquemare: “现在什么都不做。我们就在这里站着。”"];
+	  573 [label="Jean Vicquemare: “有吗？还是你以为我他妈是个驯兽员？我们已经搭档多久了，哈里？”他调整了一下脖子上的领带。“不用回答——反正你也不*记得*了。”"];
+	  574 [label="Kim Kitsuragi: Variable[\"whirling.vicq_asked_animal_control\"]"];
+	  575 [label="Variable[\"whirling.vicq_asked_animal_control\"]", shape=diamond];
+	  576 [label="!(Variable[\"whirling.vicq_asked_animal_control\"])", shape=diamond];
+	  577 [label="Jean Vicquemare: “你在酒鬼之间是个传奇人物，哈里。一个传说中的本地*酒鬼*。”"];
+	  578 [label="Encyclopedia: 他说的没错。那是一位萨弗里诗人卢·贾图恩，在上个世界50年代他……"];
+	  579 [label="Jean Vicquemare: “去你妈的，你也是这场大闹剧的一部分。”"];
+	  580 [label="Logic: 这位纪尧姆·贝维是一头金发，还特别喜欢墨镜吗？"];
+	  581 [label="Jean Vicquemare: “该死的，哈里……我们*不知道*会有一场审判，不是吗？”"];
+	  582 [label="Jump to: [REMEMBERANCE HUB]"];
+	  583 [label="Kim Kitsuragi: IsKimHere()"];
+	  584 [label="IsKimHere()", shape=diamond];
+	  585 [label="!(IsKimHere())", shape=diamond];
+	  586 [label="Trant Heidelstam: “呃——我的理论是这样的。如果这是对我们生活的这个世界的一种完全正常的反应呢？如果这根本不是什么*异常现象*、某种需要解释的，被当成是缺陷的东西呢？看看这里的感官输入吧……”他朝着周围的风景比了个手势。"];
+	  587 [label="Judit Minot: “维克玛警探……他之前*也*晕倒过。我们应该严肃对待这件事。”"];
+	  588 [label="Judit Minot: “维克玛警探……我不会说他是肺之子。不过撒谎？我的意思是——他之前*也*晕倒过……”"];
+	  589 [label="Hand/Eye Coordination: 今天不能让你得逞，警徽。"];
+	  590 [label="You: “好吧，那个也在我这里。”（把无聊的配枪拿给他看。）"];
+	  591 [label="Jean Vicquemare: “首先，你永远都不该弄丢它。*没有丢枪*才是*自然状态*，你这个醉醺醺的流浪汉。”"];
+	  592 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  593 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  594 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  595 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  596 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  597 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  598 [label="RUBY ESC"];
+	  599 [label="RUBY SUI"];
+	  600 [label="You: “我*放*她走的。这是一种仁慈的行为。如果我不这么做，她就会朝自己开枪的。”"];
+	  601 [label="You: “是的，我放她走的——出于仁慈。”\n“是的，我放她走的——这是代表瑞瓦肖城的一种仁慈的行为。她正在等待归来。”"];
+	  602 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"] == false  or  Variable[\"plaza.tribunal_hardie_shot\"] == false"];
+	  603 [label="Variable[\"plaza.tribunal_gardener_shot\"] == false  or  Variable[\"plaza.tribunal_hardie_shot\"] == false", shape=diamond];
+	  604 [label="!(Variable[\"plaza.tribunal_gardener_shot\"] == false  or  Variable[\"plaza.tribunal_hardie_shot\"] == false)", shape=diamond];
+	  605 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"] == false  or  Variable[\"plaza.tribunal_hardie_shot\"] == false"];
+	  606 [label="Variable[\"plaza.tribunal_gardener_shot\"] == false  or  Variable[\"plaza.tribunal_hardie_shot\"] == false", shape=diamond];
+	  607 [label="!(Variable[\"plaza.tribunal_gardener_shot\"] == false  or  Variable[\"plaza.tribunal_hardie_shot\"] == false)", shape=diamond];
+	  608 [label="Jean Vicquemare: “哦，好吧——如果你*放走*她的话……”他挫败地揉搓着自己的脸庞。“我甚至都不想深入探讨另外那8个你没能逮捕的嫌疑人，因为太*困难*了。”"];
+	  609 [label="Suggestion: 不不不！你的敏感性已经测试过了！"];
+	  610 [label="Kim Kitsuragi: Variable[\"village.posse_intro_auth_kim\"]"];
+	  611 [label="Variable[\"village.posse_intro_auth_kim\"]", shape=diamond];
+	  612 [label="!(Variable[\"village.posse_intro_auth_kim\"])", shape=diamond];
+	  613 [label="Kim Kitsuragi: Variable[\"village.posse_intro_half_fuck\"]"];
+	  614 [label="Variable[\"village.posse_intro_half_fuck\"]", shape=diamond];
+	  615 [label="!(Variable[\"village.posse_intro_half_fuck\"])", shape=diamond];
+	  616 [label="Jean Vicquemare: “没错，你是某种……都市流浪汉。”"];
+	  617 [label="Jean Vicquemare: “说对了，孩子——他是个精神病患者，而且还编了一整套健忘症的鬼话来欺骗我们。”"];
+	  618 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"]"];
+	  619 [label="Variable[\"plaza.tribunal_gardener_shot\"]", shape=diamond];
+	  620 [label="!(Variable[\"plaza.tribunal_gardener_shot\"])", shape=diamond];
+	  621 [label="Kim Kitsuragi: “41分局没有……”他拖长了音节，不想把话说完。"];
+	  622 [label="Rhetoric: 你可能不小心承认把它弄丢了。就在刚才。"];
+	  623 [label="Judit Minot: “很高兴见到你，曷城警督，”她热情地说道，对警督微微一笑。"];
+	  624 [label="Rhetoric: 这个场景甚至让他觉得要为你的行为辩护。"];
+	  625 [label="Judit Minot: “好吧，先生。”她的口气突然变得非常冷淡。"];
+	  626 [label="Jean Vicquemare: “不——现在我们要讨论那个。”他指向水面。“你他妈对我们的汽車做了什么？它为什么在*那里*，哈里？”"];
+	  627 [label="Jump to: [REMEMBERANCE HUB]"];
+	  628 [label="You: “是你。”（朝着女警官点点头。）“很抱歉我之前没认出你来。”"];
+	  629 [label="You: “哦，是吗？！那所有那些*趣味历史*是怎么回事？暗中监视我吗？”"];
+	  630 [label="You: “又出现园丁的情况了……”（转向警督。）“告诉我，至少*你*没有对自己的身份撒谎吧。”\n“又出现园丁的情况了……”（转向坤诺。）“告诉我，至少*你*没有对自己的身份撒谎吧。”"];
+	  631 [label="You: “我说过那些话吗？我已经不像以前那样了。”"];
+	  632 [label="Jean Vicquemare: “又来了——酒精中毒性谵妄。*幻觉*。所有人都要付出代价……”他摇摇头。"];
+	  633 [label="You: “这么久以来，你到底去了*哪里*？”\n“这么久以来你到底在哪——我还经历了一场雇佣兵审判。”"];
+	  634 [label="Trant Heidelstam: “你这么说就不是了。我知道大家以为这有些牵强附会，不过我不认为批判理论是华而不实的学术话题。所以，我认为还是应该考虑这一点的。”"];
+	  635 [label="Jean Vicquemare: “我相信他是*喝多*了，”他转向你。“谁都会喝醉——特别是这家伙。但是他们不会因为酗酒把*整个人生*都忘了个精光。”"];
+	  636 [label="Trant Heidelstam: “看看这片废墟，看看霓虹灯，听听广播，听听芸芸众生，所有人。在这里生活了四十年……作为一名警探，他就像世界这盘磁带的磁带阅读器——这里借用了一个众所周知的比喻。哈里被它*压扁*了。完全的输入。”"];
+	  637 [label="Kim Kitsuragi: Variable[\"village.posse_trant_lefty_dink\"]"];
+	  638 [label="Variable[\"village.posse_trant_lefty_dink\"]", shape=diamond];
+	  639 [label="!(Variable[\"village.posse_trant_lefty_dink\"])", shape=diamond];
+	  640 [label="Jean Vicquemare: “警督，很抱歉，不过你被*臭小子弄得鬼迷心窍*了。有时候是会发生这种情况。我知道这很难接受，不过这全都是他自己编出来的——因为他是个精神病患者。这是个很简单的解释。”"];
+	  641 [label="Jump to: [You: \"\"I have?\"\"]"];
+	  642 [label="Untitled hub"];
+	  643 [label="You: “我醉酒的时候把它开进海里了。”"];
+	  644 [label="Jean Vicquemare: “哈哈哈，呵呵呵。”他苦笑着抓紧自己的腹部。“龙舌兰日落——不是日出，因为你就快死了。真好笑，哈里。感谢你，给我惹了这么大的烂摊子。”\n“哈哈哈，呵呵呵。”他苦笑着抓紧自己的腹部。“龙舌兰日落。跳过运河。真好笑，哈里。感谢你，给我惹了这么大的烂摊子。”"];
+	  645 [label="Interfacing: 你急于向他们展示警徽，热切的手指没能抓住那块湿漉漉的塑料，警徽从你手中溜了出去。"];
+	  646 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  647 [label="IsCunoInParty()", shape=diamond];
+	  648 [label="!(IsCunoInParty())", shape=diamond];
+	  649 [label="You: “枪？警徽？車？这些都是*东西*。东西不重要。重要的是人。”"];
+	  650 [label="You: “是啊，是啊，在我这里。”（把无聊的配枪拿给他看。）"];
+	  651 [label="DRINKING"];
+	  652 [label="You: “我没有。我没有配枪。”"];
+	  653 [label="Jean Vicquemare: “要我说是*非常*糟糕。”他转向你。“你醉的像个流浪汉，哈里。在你杀人之前，拜托先把你的武器库拿开。"];
+	  654 [label="Jump to: [KLAASJE ESC]"];
+	  655 [label="You: “我没有*威胁*她。这是个误会。她以为我是马德雷教父派来的。”"];
+	  656 [label="You: “我*放*她走的。这是一种仁慈的行为。”（撒谎。）"];
+	  657 [label="You: “你说得对。我搞砸了。我们盲目地走进去，然后她跑掉了。这是我的锅。”"];
+	  658 [label="Jean Vicquemare: “或者是你绑架了一个小孩，还把他带到岛上这件事？那都是些无关紧要的小事。什么都不算。只是一件幽默的趣闻轶事……”"];
+	  659 [label="Jean Vicquemare: “……那*9个*被枪杀的人才是大事！街道都被鲜血染红了，毫不夸张。曷城警督躺在医院里奄奄一息。哈里，这他妈是一场*大屠杀*。”"];
+	  660 [label="Jean Vicquemare: “……那*7个*被枪杀的人才是大事街道都被鲜血染红了，毫不夸张。曷城警督躺在医院里奄奄一息。哈里，这他妈是一场*大屠杀*。”"];
+	  661 [label="Jean Vicquemare: “……那*8个*被枪杀的人才是大事！哈里，街道都被鲜血染红了，毫不夸张。这他妈是一场*大屠杀*。”"];
+	  662 [label="Jean Vicquemare: “当然了——如果这是你*大计划*的一部分……”他挫败地揉搓着自己的脸庞。“那就不要深入探讨*另外*那个逃跑的嫌疑人。又是一个*细节*。”"];
+	  663 [label="Jump to: [HUB 1.0]"];
+	  664 [label="Kim Kitsuragi: IsKimHere()"];
+	  665 [label="IsKimHere()", shape=diamond];
+	  666 [label="!(IsKimHere())", shape=diamond];
+	  667 [label="Jean Vicquemare: “没错，而且你看起来像是得了20种性病。”"];
+	  668 [label="Jump to: [HUB 1.0]"];
+	  669 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  670 [label="Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  671 [label="!(Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  672 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"]"];
+	  673 [label="Variable[\"plaza.tribunal_gardener_shot\"]", shape=diamond];
+	  674 [label="!(Variable[\"plaza.tribunal_gardener_shot\"])", shape=diamond];
+	  675 [label="Reaction Speed: 那你肯定会被开除。会有一场听证会——坚强一点。"];
+	  676 [label="Judit Minot: “我们看过报告了，哈里。曷城警督的报告。我们知道的。”"];
+	  677 [label="Untitled hub"];
+	  678 [label="Jump to: [Smell like a corpse HUB]"];
+	  679 [label="Kim Kitsuragi: Variable[\"TASK.inspect_the_dead_body\"] == true  and  Variable[\"TASK.inspect_the_dead_body_done\"] == false"];
+	  680 [label="Variable[\"TASK.inspect_the_dead_body\"] == true  and  Variable[\"TASK.inspect_the_dead_body_done\"] == false", shape=diamond];
+	  681 [label="!(Variable[\"TASK.inspect_the_dead_body\"] == true  and  Variable[\"TASK.inspect_the_dead_body_done\"] == false)", shape=diamond];
+	  682 [label="Kim Kitsuragi: IsKimHere()"];
+	  683 [label="IsKimHere()", shape=diamond];
+	  684 [label="!(IsKimHere())", shape=diamond];
+	  685 [label="Kim Kitsuragi: “我是曷城警督，57分局的。我们刚从那座小岛回来……”他指向背后的海堡。“我们的调查结果指向了那里。”"];
+	  686 [label="You: “等等……”（用胳膊肘撞向他的肋骨。）"];
+	  687 [label="Trant Heidelstam: “是的，我是特兰特·海德斯塔姆。我从没说过自己不是特兰特·海德斯塔姆。”"];
+	  688 [label="Rhetoric: 尽管你做了*所有*那些事情——那个逃兵，竹节虫，还有这起案子，还要这么叫我吗？！"];
+	  689 [label="Jean Vicquemare: “有吗？还是你以为我他妈是个消防员？我们已经搭档多久了，哈里？”他调整了一下脖子上的领带。“不用回答——反正你也不*记得*了。”"];
+	  690 [label="You: “我拯救了他的企业，结果他还是背叛我了？！”"];
+	  691 [label="Jean Vicquemare: “我就知道。我不是告诉过你吗，特兰特？我就说是那个臭小子干的。”"];
+	  692 [label="Jump to: [REMEMBERANCE HUB]"];
+	  693 [label="Jean Vicquemare: “*骗你*？喂，我有个好主意——别当个病态的酒鬼，这样你就没那么容易被骗了。”"];
+	  694 [label="Jump to: [REMEMBERANCE HUB]"];
+	  695 [label="Jean Vicquemare: “事实上，要抹掉一个人的记忆是不可能的——完全不可能。即便*每小时*灌进去那么大量的高度比尔森啤酒也不可能。他就是在撒谎。要么就是疯了。或者两者都有。”"];
+	  696 [label="Jean Vicquemare: “闭嘴！抹掉自己的记忆是不可能的。我们根本不会*考虑*那个选项。这是不可能的。即便你*每小时*灌进去那么多*高度比尔森啤酒*也不可能。"];
+	  697 [label="Jean Vicquemare: 他转向特别顾问。“问他是个错误——他就是个十几岁的精神病患者。我问*你*。只靠酒精是不可能抹掉自己的记忆的，对吧？他不是在撒谎，就是疯了。”"];
+	  698 [label="Jean Vicquemare: “我*知道*雅各布·欧文是谁。我本来想给你一次不再*骗*我的机会。我真是太天真了。你把价值45,000雷亚尔的警車开进了大海里——我还能期待什么呢？”"];
+	  699 [label="You: “我把它弄丢了，还没有找到。”\n“还没有找到。”"];
+	  700 [label="Hand/Eye Coordination: 你做得很对！你向他展示着胜利。他们*看见*徽章了。"];
+	  701 [label="Jean Vicquemare: “这样也*能行*，是吧？你现在还是醉的，对吗？你这个该死的流浪汉，我一路走过来就闻到了！”"];
+	  702 [label="You: “枪是找到了，然后我意识到我不需要它了，所以就丢掉了。”"];
+	  703 [label="You: “我没把枪弄丢，还在这里呢！”（把枪拿给他看。）"];
+	  704 [label="You: “是啊，我喝醉了！而且我还嗑药呢。”"];
+	  705 [label="You: “我处理了一具真正的尸体。”\n“是啊，我处理了一具真正的尸体。”"];
+	  706 [label="Jean Vicquemare: “我不信你。”他眯起眼睛。“你喝醉了。而且你还让嫌疑人*逃跑*了——某个叫露比的人。因为你喝的太*醉*，没能拘留她。”"];
+	  707 [label="Jean Vicquemare: “我不信你。”他眯起眼睛。“你喝醉了。而且你还让嫌疑人*逃跑*了——某个叫卡拉洁的人。因为你喝的太*醉*，无法评估到她有潜逃的风险！”"];
+	  708 [label="You: “卡拉洁？她是个来自奥西登的间谍。接受过特殊训练。”"];
+	  709 [label="Jean Vicquemare: “……那*6个*被枪杀的人才是大事！街道都被鲜血染红了，毫不夸张。曷城警督躺在医院里奄奄一息。哈里，这他妈是一场*大屠杀*。”"];
+	  710 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  711 [label="Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  712 [label="!(Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  713 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"] == false"];
+	  714 [label="Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"] == false", shape=diamond];
+	  715 [label="!(Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"] == false)", shape=diamond];
+	  716 [label="You: “好像没有其他人为我的FALN装备感到困扰。”"];
+	  717 [label="You: “别担心，*很多*人见过我这幅样子。谁都没说什么。”"];
+	  718 [label="Jump to: [HUB 1.0]"];
+	  719 [label="Empathy: 没人会在你不知道的情况下害怕你。他们全都感觉非常安全。"];
+	  720 [label="Jean Vicquemare: “相信我，他们感觉很不自在。”"];
+	  721 [label="Rhetoric: 不管这到底是要干嘛，与你刚刚*看见*的生物相比，这事完全无关紧要。"];
+	  722 [label="Kim Kitsuragi: Variable[\"whirling.vicquemare_main_hub_reached\"]"];
+	  723 [label="Variable[\"whirling.vicquemare_main_hub_reached\"]", shape=diamond];
+	  724 [label="!(Variable[\"whirling.vicquemare_main_hub_reached\"])", shape=diamond];
+	  725 [label="Jean Vicquemare: “没错——而且你在流血。”"];
+	  726 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  727 [label="Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  728 [label="!(Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  729 [label="Judit Minot: “我们看过报告了，哈里。曷城警督的报告。我们知道的。”"];
+	  730 [label="Judit Minot: “我们看过报告了，哈里。曷城警督的报告。我们知道的。”"];
+	  731 [label="Rhetoric: 如果你能调查地深入一些，你——或者金——会有更多话说。但是你没有，所以才会这样。"];
+	  732 [label="Rhetoric: 如果你能调查地深入一些，你会有更多话说。但是你没有。所以才会这样。"];
+	  733 [label="Kim Kitsuragi: “不过，这显然是你们的*部门事务*，所以我还是回避一下，让你们自己讨论吧。”"];
+	  734 [label="You: “我不喜欢被骗！”"];
+	  735 [label="Trant Heidelstam: “我把他送回家了，”他平静地回应到。“米克尔跟他妈妈在一起。我们共享监护权。”"];
+	  736 [label="You: “所以你在这里*特别顾问*什么呢？”"];
+	  737 [label="Kim Kitsuragi: Variable[\"TASK.light_graffito_on_fire_done\"]"];
+	  738 [label="Variable[\"TASK.light_graffito_on_fire_done\"]", shape=diamond];
+	  739 [label="!(Variable[\"TASK.light_graffito_on_fire_done\"])", shape=diamond];
+	  740 [label="Jean Vicquemare: “是的，我*是*在暗中监视你。我去过酒吧，戴着一顶假发，还有一副愚蠢的墨镜。你没有*认出*我来——你自己的搭档。直接从我身边走过去了……”"];
+	  741 [label="Rhetoric: 是的。大多数时候，你听起来就像个毫不讲理的白痴。"];
+	  742 [label="Kim Kitsuragi: “是的。我还是金·曷城——还是来自57分局的一名警督。”"];
+	  743 [label="Cuno: “你是在说坤诺吗？”他指着自己。“大坤诺没有被诱拐，你个死呆子胖子！赶紧滚开……”"];
+	  744 [label="Jean Vicquemare: “好吧，特兰特，谢谢你。这还真是完全没有任何意义。你还真是个左翼呆子。他到底还能不能在重案组继续工作？现在他是个白痴病患者了吗？我想知道的是*这个*。”"];
+	  745 [label="Jean Vicquemare: “蟹男……好吧，我明白了。在你精神错乱的时候，你想出了一种*灰域学*说法，来解释你为什么会变成个疯狂的酒鬼。”"];
+	  746 [label="You: “真有那么难以相信吗？”"];
+	  747 [label="Jean Vicquemare: “没关系。”他呼出一口气，想稳住自己的呼吸。“你的警徽，哈里。把你的警徽拿给我看看。”"];
+	  748 [label="You: “我把它弄丢了，还没有找到。”（撒谎。）"];
+	  749 [label="You: 没必要搞得这么戏剧化，警徽在我这里，一切都很顺利。"];
+	  750 [label="Drama: 试着确认那不是一片蓝色的糖果包装纸，或者是黑胶唱片。"];
+	  751 [label="You: “我把枪升级成步枪了。”（拿出特里安戈4.46步枪。）"];
+	  752 [label="Jean Vicquemare: “你去本地当铺看了吗？因为*我*去过了——你是不会相信的，不过你把维利耶9毫米手枪卖给当铺老板了——为了换酒钱！”"];
+	  753 [label="Jean Vicquemare: “你他妈把枪弄丢了！？”他四下看了看。“我就知道。我就知道他弄丢了。我不是告诉过你吗？我告诉过你他的枪也丢了。”"];
+	  754 [label="Jean Vicquemare: “是啊——枪。给你用来*杀人*的玩意。”"];
+	  755 [label="Jean Vicquemare: “哦？这就是嫌疑人自己一枪爆头的原因？就在木板道下面？你醉醺醺地跑进去，而且还*威胁*她。”"];
+	  756 [label="Jean Vicquemare: “所以你……*忘记*喝酒了？我不信。那你为什么闻起来有一股*尸体*的味道？”"];
+	  757 [label="You: “那不重要——这一切都不重要。你绝对想不到我刚刚发现了什么。”\n“那不重要——这一切都不重要。我们现在看见的是氧气浩劫——乘以千的五次方。我已经知道人类和宇宙的最终命运了。”"];
+	  758 [label="You: “好吧，我被骗了。她欺骗了我。”"];
+	  759 [label="Jump to: [HUB 1.0]"];
+	  760 [label="Half Light: 现在你一想——也许他们*的确*很怕你……"];
+	  761 [label="Jump to: [HUB 1.0]"];
+	  762 [label="You: “弱水三千只取一尿饮。独一无二。”"];
+	  763 [label="You: “如果我周围的人感觉不自在的话，我会*知道*的。但是他们没有。”"];
+	  764 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_hardie_shot\"] == true"];
+	  765 [label="Variable[\"plaza.tribunal_hardie_shot\"] == true", shape=diamond];
+	  766 [label="!(Variable[\"plaza.tribunal_hardie_shot\"] == true)", shape=diamond];
+	  767 [label="Suggestion: 他说得对。别猜了。现在不是好时候。"];
+	  768 [label="Kim Kitsuragi: IsKimHere()"];
+	  769 [label="IsKimHere()", shape=diamond];
+	  770 [label="!(IsKimHere())", shape=diamond];
+	  771 [label="Jean Vicquemare: “你看起来就像个该死的小丑，哈里。*不像*一个可笑的警察，而是一个现实的、全职的、脸上糊了个馅饼、还骑着独轮車的马戏团雇员。”"];
+	  772 [label="Jean Vicquemare: “你背后这写的是什么？”他眯起眼睛。“花花世界我一人干翻？所以你变成了某种……虚无主义的摇滚*世界终结者*？”"];
+	  773 [label="Cuno: “特别小组。酷毙了。我是坤诺。我们刚从那座该死的小岛回来。”他指向背后的海堡。"];
+	  774 [label="Jean Vicquemare: “哈里尔和我是老朋友了……很久以前就是。介意我们单独待一会儿吗？”"];
+	  775 [label="Jean Vicquemare: “罪名成立。”他跟特别顾问交换了一个眼神。“我听说你疯了，*而且*还失忆了。我想看看是不是真的。”"];
+	  776 [label="Jump to: [REMEMBERANCE HUB]"];
+	  777 [label="Jean Vicquemare: “臭小子，”他摇晃着食指，说道，“他没有*背叛*你。他只是告诉我们你往哪个方向去了。塞尔维又是谁？”"];
+	  778 [label="Jump to: [REMEMBERANCE HUB]"];
+	  779 [label="Jean Vicquemare: “我听说你疯了，*而且*还失忆了。我想看看是不是真的。而且，的确是，哈里——现在你完全疯了。干得漂亮。”"];
+	  780 [label="You: “又在骗我！你们说的身份都是假的！”"];
+	  781 [label="Jump to: [REMEMBERANCE HUB]"];
+	  782 [label="Kim Kitsuragi: IsHighestCopotype(\"sorry_cop\")"];
+	  783 [label="IsHighestCopotype(\"sorry_cop\")", shape=diamond];
+	  784 [label="!(IsHighestCopotype(\"sorry_cop\"))", shape=diamond];
+	  785 [label="Jump to: [REMEMBERANCE HUB]"];
+	  786 [label="Trant Heidelstam: “根据警局通话的表现，我们跟他的互动，还有——我不想当个‘告密者’，”他在空中比了个引号，“之前我跟他的会面，那时哈里似乎没认出我是谁……这一切都非常有意思。”"];
+	  787 [label="Untitled hub"];
+	  788 [label="Jean Vicquemare: “那又是什么？”"];
+	  789 [label="Judit Minot: “是的。好几次。在几次更加……严重的饮酒作乐之后。”想到这里，她停了下来。“一次是在破获双酒鬼案之后，还有一次是我们调查那副壁画的时候。”"];
+	  790 [label="Jean Vicquemare: “*目前*？”他看了看你，然后转向特兰特。“我的问题提的不太对。应该这样问：他能自己穿衣服，自己用便盆，还是我们需要给他发放伤残退休金？”"];
+	  791 [label="Jean Vicquemare: “该死的肺之子在这里！激进肺之子警探正在调查这起案件！”"];
+	  792 [label="You: “肺之子是谁？”\n“再说一次，肺之子是谁？”"];
+	  793 [label="You: 抓住它！"];
+	  794 [label="You: Variable[\"village.posse_savoir_faire_rc_to_not_loose_badeg\"]"];
+	  795 [label="Variable[\"village.posse_savoir_faire_rc_to_not_loose_badeg\"]", shape=diamond];
+	  796 [label="!(Variable[\"village.posse_savoir_faire_rc_to_not_loose_badeg\"])", shape=diamond];
+	  797 [label="You: “看，我的警徽！”"];
+	  798 [label="You: “现在我有一支新枪了。”（掏出露比的枪。）"];
+	  799 [label="Jean Vicquemare: “我不在乎你有没有*新枪*，我只在乎你的*旧枪*。你的官方配枪。你弄丢了，是吗？”"];
+	  800 [label="Jean Vicquemare: “我们没有说你那支该死的枪了——我们说的是你嘴里吐出来的乙醇*汽化云*。”"];
+	  801 [label="Jean Vicquemare: “要我说，是*非常*糟糕，没错。”他转向你。“你醉的像个混账一样，哈里——在你杀人之前，拜托先把那玩意收起来。”"];
+	  802 [label="You: “那个我没有。我没有配枪。”（撒谎。）"];
+	  803 [label="Jump to: [IsCunoInParty()]"];
+	  804 [label="You: “我戒酒了。永远的。现在只有我一个人在这个无聊的地狱之城。”"];
+	  805 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  806 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  807 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  808 [label="Kim Kitsuragi: IsCunoInParty()  and  Variable[\"TASK.perform_field_autopsy_done\"]"];
+	  809 [label="IsCunoInParty()  and  Variable[\"TASK.perform_field_autopsy_done\"]", shape=diamond];
+	  810 [label="!(IsCunoInParty()  and  Variable[\"TASK.perform_field_autopsy_done\"])", shape=diamond];
+	  811 [label="Jean Vicquemare: “你*发现*了什么？你让嫌疑人*逃跑*了——某个叫卡拉洁的人。因为你喝的太*醉*，无法评估到她有潜逃的风险！”"];
+	  812 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  813 [label="IsCunoInParty()", shape=diamond];
+	  814 [label="!(IsCunoInParty())", shape=diamond];
+	  815 [label="Jean Vicquemare: “哦，好吧，如果它让你犯下*愚蠢的错误*……”他挫败地揉搓着自己的脸庞。“我甚至都不想深入探讨另外那8个你没能逮捕的嫌疑人。”"];
+	  816 [label="Kim Kitsuragi: Variable[\"TASK.arrest_klaasje_done\"] == false"];
+	  817 [label="Variable[\"TASK.arrest_klaasje_done\"] == false", shape=diamond];
+	  818 [label="!(Variable[\"TASK.arrest_klaasje_done\"] == false)", shape=diamond];
+	  819 [label="Electrochemistry: 两者并没有互相排斥。"];
+	  820 [label="You: “好像没有其他人为我的*风格*感到困扰。”"];
+	  821 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  822 [label="Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  823 [label="!(Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  824 [label="Reaction Speed: 两起案件……在你的手册里。无解案件和来世壁画。那些是最近的。"];
+	  825 [label="You: “塞尔维是我帮加尔特勾搭上的一个女孩。不只这样，我*还*拯救了他的公司！”"];
+	  826 [label="Authority: 领导能力——现在。"];
+	  827 [label="Pain Threshold: 哎哟，你试着去抓住那个愚蠢的东西，结果扯到胳膊肘了……见鬼。"];
+	  828 [label="Jump to: [Judit Minot: \"\"But, Detective Vicquemare,\" she in...\"]"];
+	  829 [label="Jean Vicquemare: “是啊，我去本地当铺查过了。你把维利耶9毫米手枪卖给了当铺老板——为了换酒钱！”"];
+	  830 [label="Kim Kitsuragi: IsKimHere()"];
+	  831 [label="IsKimHere()", shape=diamond];
+	  832 [label="!(IsKimHere())", shape=diamond];
+	  833 [label="Jean Vicquemare: “我他妈是你的*搭档*让·维克玛，这是*你的*特别任务小组，”他一边说，一边朝着他的同伴比了个手势。“或者说，小组的残部。”"];
+	  834 [label="Jean Vicquemare: “那是什么，FALNAC？这套*运动装备*是怎么回事？你又回到高中时代了吗？”"];
+	  835 [label="Kim Kitsuragi: CheckEquipped(\"jacket_pissflaubert\")"];
+	  836 [label="CheckEquipped(\"jacket_pissflaubert\")", shape=diamond];
+	  837 [label="!(CheckEquipped(\"jacket_pissflaubert\"))", shape=diamond];
+	  838 [label="Jean Vicquemare: “听着……坤诺。”男人打量着男孩，就像一个打算破门而入的突击队长。"];
+	  839 [label="You: “好吧。你是特兰特·海德斯塔姆。特别顾问。我明白了。”"];
+	  840 [label="Jean Vicquemare: “不——就是*因为*你做的所有那些事情。”"];
+	  841 [label="Kim Kitsuragi: Variable[\"whirling.minot_whirling_mainhub_reached\"]"];
+	  842 [label="Variable[\"whirling.minot_whirling_mainhub_reached\"]", shape=diamond];
+	  843 [label="!(Variable[\"whirling.minot_whirling_mainhub_reached\"])", shape=diamond];
+	  844 [label="Rhetoric: 他的理由非常、非常充分。事实上，我一直想找个合适的机会告诉你……"];
+	  845 [label="Jean Vicquemare: “是啊——杜博阿和维克玛警督领导下的重案组——想起什么了吗？”"];
+	  846 [label="Jean Vicquemare: “看见没——看见没！”他朝你挥舞着手指。“他明白了！我在*模仿*他。看看我，我是纪尧姆·贝维。本来我是想搞个有趣的恶作剧，却发现你是真有脑损伤——结果就是有趣不起来了。”"];
+	  847 [label="You: “等等，社会经济学？你觉得我是因为太*穷*才失去记忆的吗？”"];
+	  848 [label="Jump to: [Untitled hub]"];
+	  849 [label="You: “他错了。我状态太差，不适合工作了。”"];
+	  850 [label="Jean Vicquemare: “和你脑袋里那个20厘米的洞相对应吗？当然。这套理论有很大的对称性。我能看出它是怎么巧妙地融入进去的。”"];
+	  851 [label="Kim Kitsuragi: IsKimHere()"];
+	  852 [label="IsKimHere()", shape=diamond];
+	  853 [label="!(IsKimHere())", shape=diamond];
+	  854 [label="Physical Instrument: 退休金他们自己留着吧，你可是摇滚硬汉。你可以穿上*硬核*的衣服。"];
+	  855 [label="You: “我*拥有*这一身未来主义盔甲。”（指向你自己。）\n“我*拥有*这一身未来主义盔甲。”（拍拍你的头盔。）\n“我*拥有*这一身未来主义盔甲。”（拍拍你的胸甲。）\n“我*拥有*这一身未来主义盔甲。”（掂一下靴子的后跟。）\n“我*拥有*这一身未来主义盔甲。”（攥紧戴着盔甲手套的拳头。）"];
+	  856 [label="Jump to: [Untitled hub]"];
+	  857 [label="Jean Vicquemare: “你*喝醉*了，是吗？你弄丢了枪，而且还喝醉了！你就是个酒鬼，没有枪的流浪汉！我都闻出来了！”"];
+	  858 [label="Jean Vicquemare: “你是给谁摆造型呢，哈？一个嫌疑人逃跑了，哈里。那个叫卡拉洁还是什么的人。因为你他妈当时正*嗨*，无法评估到她有潜逃的风险。”"];
+	  859 [label="Kim Kitsuragi: Variable[\"TASK.open_gary_door_done\"]"];
+	  860 [label="Variable[\"TASK.open_gary_door_done\"]", shape=diamond];
+	  861 [label="!(Variable[\"TASK.open_gary_door_done\"])", shape=diamond];
+	  862 [label="You: “这是在干什么？”（继续。）"];
+	  863 [label="Jump to: [HUB 1.0]"];
+	  864 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"]"];
+	  865 [label="Variable[\"plaza.tribunal_gardener_shot\"]", shape=diamond];
+	  866 [label="!(Variable[\"plaza.tribunal_gardener_shot\"])", shape=diamond];
+	  867 [label="Conceptualization: 臭小子。多么有趣的一个绰号啊。"];
+	  868 [label="Judit Minot: “我们看过报告了，哈里。曷城警督的报告。我们知道的。”"];
+	  869 [label="Jean Vicquemare: “为它困扰？哈里，你*他妈的*是个警察！他们都怕你！”"];
+	  870 [label="Jean Vicquemare: “哈里……你到处都在流血。你已经半死不活了。”"];
+	  871 [label="You: “你根本不是那个墨镜男……而且你都不是金发！”"];
+	  872 [label="You: “哦，是吗？！那现在你的*儿子*去哪里了？*特别顾问*？！”"];
+	  873 [label="You: “臭小子是什么？”"];
+	  874 [label="Kim Kitsuragi: Variable[\"village.posse_rhet_all\"]"];
+	  875 [label="Variable[\"village.posse_rhet_all\"]", shape=diamond];
+	  876 [label="!(Variable[\"village.posse_rhet_all\"])", shape=diamond];
+	  877 [label="Jump to: [REMEMBERANCE HUB]"];
+	  878 [label="Jean Vicquemare: “最好不是。”"];
+	  879 [label="You: “不是我。是个少年犯干的。”"];
+	  880 [label="Judit Minot: “呃，还有……”她四下看了看。“街上的人也帮了我们。关于你的下落问题。”"];
+	  881 [label="Kim Kitsuragi: Variable[\"coast.idiot_teq_story_end_reach\"]"];
+	  882 [label="Variable[\"coast.idiot_teq_story_end_reach\"]", shape=diamond];
+	  883 [label="!(Variable[\"coast.idiot_teq_story_end_reach\"])", shape=diamond];
+	  884 [label="Jump to: [REMEMBERANCE HUB]"];
+	  885 [label="Suggestion: 这是真的。你有问题。"];
+	  886 [label="Jean Vicquemare: “每次你不来上班，或者你出现了——却*一身酒气*、*臭气熏天*、*讨厌透顶*的时候。”"];
+	  887 [label="Trant Heidelstam: “从严格意义上讲，我只是个平民顾问。”"];
+	  888 [label="Kim Kitsuragi: IsKimHere()"];
+	  889 [label="IsKimHere()", shape=diamond];
+	  890 [label="!(IsKimHere())", shape=diamond];
+	  891 [label="Kim Kitsuragi: “可能听起来很奇怪——不过我也在那里。海岸上的教堂因为一个音频空间的异常现象产生了震动。可能是灰域，或者也许跟无线电波有关……”"];
+	  892 [label="You: “这全都*毫无意义*。我已经完全超越了这一切。你根本不知道我刚才看见了什么！”"];
+	  893 [label="Jean Vicquemare: “你就是在撒谎。要么就是疯了。或者两者都有。”"];
+	  894 [label="Jean Vicquemare: “我们不是武装警察，我们就是普通警察！大家不会通过盔甲来辨认我们，而是我们的警徽。你那个该死的警徽在哪？”\n“我们不是武装警察，我们就是普通警察！大家不会通过盔甲来辨认我们，而是我们的警徽。你打来电话说把警徽弄丢了——你*找到*它了吗？”"];
+	  895 [label="Jean Vicquemare: “郑重声明，是你逼我们买的。‘那样多酷啊，让，我们有車之后，就能快速响应……’我觉得当骑警挺不错的。希望你骑*自行車*也没问题。”"];
+	  896 [label="Jean Vicquemare: “真是让人*神清气爽*。他刚刚承认了。感谢你的诚实。感谢你毁掉了价值45,000雷亚尔的警方财产，这下*所有人*的工资单都要遭殃了。”"];
+	  897 [label="Jean Vicquemare: “就是告诉别人你是警察的东西。”"];
+	  898 [label="Jump to: [Untitled hub]"];
+	  899 [label="You: 我有警徽吗？"];
+	  900 [label="Jean Vicquemare: “要我说，是*非常*糟糕，没错。”他转向你。“你弄丢了自己的配枪——在喝醉的时候。然后你找不到了，因为你*还在*醉酒？！你现在也喝醉了，是不是？”"];
+	  901 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  902 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  903 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  904 [label="Jean Vicquemare: “哦，好吧——如果你*真的*嗑嗨了，那我猜也没什么大不了的。”他挫败地揉搓着自己的脸庞。“那就不要深入探讨*另外*那个逃跑的嫌疑人。”\n“哦，好吧——如果你*真的*嗑嗨了，那我猜也没什么大不了的。”他挫败地揉搓着自己的脸庞。“那就不要深入探讨*另外*那个逃跑的嫌疑人。或者是那个拿着警灯、还患有紧张症的老太太。”"];
+	  905 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  906 [label="Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  907 [label="!(Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  908 [label="You: “是啊，我没有。我没有配枪。”（撒谎。）"];
+	  909 [label="Rhetoric: 也许这是你*应得*的？"];
+	  910 [label="You: 让他这样做。"];
+	  911 [label="You: “等等，那个孩子是怎么回事？”"];
+	  912 [label="Trant Heidelstam: “没关系。”"];
+	  913 [label="You: “谁也不是。这不重要。”"];
+	  914 [label="Jean Vicquemare: “说到这里。他的建筑前面那个巨大的*空气涂鸦*，用政府的红色燃油画的——你知道是怎么回事吗？”"];
+	  915 [label="Kim Kitsuragi: “在人群里，有一对穿着RCM制服的男女，”他转向维克玛，对你说道。“为他辩解的话——我们在赶时间。”"];
+	  916 [label="Jean Vicquemare: “你他妈的是白痴吗。他妈的，你个愚蠢的白痴。你甚至比之前还要糟糕。这怎么*可能*呢？”"];
+	  917 [label="You: 你他妈也给我滚蛋吧！我不需要帮助！"];
+	  918 [label="Empathy: 他跟儿子出现在那里——并不是一个巧合。虽然很难看出来，不过他在担心你。而且*也*对菲尔德大厦很感兴趣。"];
+	  919 [label="Trant Heidelstam: “不。我只是对菲尔德大厦和马丁内斯滩头堡很感兴趣。而且米克尔想看看马丁内斯。这是个巧合。”"];
+	  920 [label="Jean Vicquemare: “他来看看你是不是真的疯了。他很聪明。我们继续吧。”"];
+	  921 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  922 [label="IsCunoInParty()", shape=diamond];
+	  923 [label="!(IsCunoInParty())", shape=diamond];
+	  924 [label="You: “这跟教堂里的异常现象有关。这个世界上有一个2毫米的洞。”"];
+	  925 [label="Jean Vicquemare: “什么？！他是因为*资本主义*而失忆的吗？”"];
+	  926 [label="You: “呃，并*不是*资本主义。所以可以把这一条从清单上划掉了，你这个左翼呆子。”"];
+	  927 [label="Untitled hub (02)"];
+	  928 [label="You: “我完成了任何普通警探都做不到的事。我发现了一个……”"];
+	  929 [label="Jean Vicquemare: “我同意，哈里。”他点点头。“别指望我们给你申请伤残退休金。那些真正在乎的警察还排队等着呢。你不会占用他们的位置。”"];
+	  930 [label="Jean Vicquemare: “哈哈哈，呵呵呵。”他苦笑着抓紧自己的腹部。“藏在水下的杀手。真好笑，哈里。感谢你，给我惹了这么大的烂摊子。”"];
+	  931 [label="Jean Vicquemare: 男人盯着你，对找到的警徽毫无兴趣。“那你的*枪*呢？”"];
+	  932 [label="Rhetoric: 这太不公平了。他知道你有枪，但*还是*在惩罚你。"];
+	  933 [label="Kim Kitsuragi: Variable[\"village.posse_lost_badge\"]"];
+	  934 [label="Variable[\"village.posse_lost_badge\"]", shape=diamond];
+	  935 [label="!(Variable[\"village.posse_lost_badge\"])", shape=diamond];
+	  936 [label="Jean Vicquemare: “我不在乎。RCM发给你用来杀人的枪呢？那支枪在哪？”"];
+	  937 [label="Judit Minot: “这不是庆祝的理由。这个……很糟糕。”"];
+	  938 [label="Jean Vicquemare: “所以你……*忘记*喝酒了？我不信。那你为什么闻起来有一股*尸体*的味道？”"];
+	  939 [label="Kim Kitsuragi: Variable[\"TASK.arrest_klaasje_done\"] == false"];
+	  940 [label="Variable[\"TASK.arrest_klaasje_done\"] == false", shape=diamond];
+	  941 [label="!(Variable[\"TASK.arrest_klaasje_done\"] == false)", shape=diamond];
+	  942 [label="Jean Vicquemare: “哦，好吧——如果她觉得你是马德雷教父派来的……”他挫败地揉搓着自己的脸庞。“我甚至都不想深入探讨这对道德委员会来说意味着什么。”\n“哦，好吧——如果她觉得你是马德雷教父派来的……”他挫败地揉搓着自己的脸庞。“我甚至都不想深入探讨这对道德委员会来说意味着什么。更别提那个拿着警灯，还有紧张症的老太太了……”"];
+	  943 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"] == false"];
+	  944 [label="Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"] == false", shape=diamond];
+	  945 [label="!(Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"] == false)", shape=diamond];
+	  946 [label="Jean Vicquemare: “当然了——如果这是你*大计划*的一部分……”他挫败地揉搓着自己的脸庞。“那就不要深入探讨另外那个开枪自杀的嫌疑人。爆头那个。又是一个*细节*。”"];
+	  947 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  948 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  949 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  950 [label="You: “我的夹克……好像没有其他人为它感到困扰……”"];
+	  951 [label="Jean Vicquemare: “是啊，是啊……你到底有什么*毛病*？”"];
+	  952 [label="Jump to: [HUB 1.0]"];
+	  0 -> 1
+	  1 -> 231
+	  2 -> 3
+	  2 -> 4
+	  3 -> 865
+	  4 -> 672
+	  5 -> 6
+	  5 -> 7
+	  6 -> 660
+	  7 -> 364
+	  8 -> 9
+	  8 -> 10
+	  9 -> 300
+	  10 -> 97
+	  11 -> 178
+	  12 -> 324
+	  13 -> 365
+	  14 -> 16
+	  14 -> 15
+	  15 -> 773
+	  16 -> 62
+	  17 -> 377
+	  18 -> 846
+	  19 -> 477
+	  20 -> 688
+	  21 -> 578
+	  22 -> 885
+	  23 -> 378
+	  24 -> 393
+	  24 -> 394
+	  24 -> 630
+	  25 -> 478
+	  26 -> 580
+	  27 -> 113
+	  28 -> 792
+	  29 -> 166
+	  30 -> 791
+	  31 -> 32
+	  31 -> 33
+	  32 -> 892
+	  33 -> 532
+	  34 -> 697
+	  35 -> 534
+	  36 -> 750
+	  37 -> 38
+	  38 -> 354
+	  39 -> 451
+	  40 -> 263
+	  41 -> 934
+	  42 -> 591
+	  43 -> 869
+	  44 -> 500
+	  45 -> 46
+	  45 -> 47
+	  47 -> 944
+	  48 -> 91
+	  49 -> 860
+	  50 -> 279
+	  51 -> 409
+	  52 -> 53
+	  52 -> 54
+	  53 -> 464
+	  54 -> 118
+	  55 -> 216
+	  56 -> 57
+	  56 -> 58
+	  57 -> 24
+	  58 -> 562
+	  59 -> 599
+	  60 -> 678
+	  61 -> 834
+	  62 -> 64
+	  62 -> 63
+	  63 -> 772
+	  64 -> 871
+	  65 -> 12
+	  66 -> 385
+	  66 -> 68
+	  66 -> 390
+	  66 -> 872
+	  66 -> 874
+	  66 -> 781
+	  66 -> 336
+	  66 -> 18
+	  66 -> 628
+	  66 -> 633
+	  66 -> 154
+	  66 -> 187
+	  67 -> 370
+	  68 -> 161
+	  69 -> 395
+	  70 -> 252
+	  71 -> 484
+	  72 -> 255
+	  73 -> 829
+	  74 -> 894
+	  75 -> 76
+	  76 -> 896
+	  77 -> 488
+	  77 -> 204
+	  77 -> 748
+	  77 -> 856
+	  77 -> 699
+	  78 -> 354
+	  79 -> 753
+	  80 -> 754
+	  81 -> 124
+	  82 -> 233
+	  83 -> 708
+	  83 -> 270
+	  83 -> 499
+	  83 -> 757
+	  83 -> 758
+	  83 -> 601
+	  84 -> 216
+	  85 -> 86
+	  85 -> 87
+	  86 -> 812
+	  87 -> 131
+	  88 -> 599
+	  89 -> 860
+	  90 -> 860
+	  92 -> 761
+	  93 -> 94
+	  94 -> 864
+	  95 -> 616
+	  95 -> 725
+	  95 -> 952
+	  95 -> 185
+	  95 -> 667
+	  96 -> 668
+	  97 -> 341
+	  98 -> 66
+	  99 -> 374
+	  100 -> 623
+	  101 -> 759
+	  102 -> 65
+	  103 -> 66
+	  104 -> 337
+	  104 -> 873
+	  104 -> 629
+	  105 -> 104
+	  106 -> 677
+	  107 -> 474
+	  108 -> 66
+	  109 -> 293
+	  110 -> 21
+	  111 -> 432
+	  112 -> 69
+	  113 -> 786
+	  114 -> 115
+	  114 -> 116
+	  115 -> 787
+	  116 -> 480
+	  117 -> 789
+	  118 -> 587
+	  119 -> 829
+	  120 -> 172
+	  121 -> 931
+	  122 -> 698
+	  123 -> 206
+	  124 -> 260
+	  125 -> 938
+	  126 -> 756
+	  127 -> 651
+	  128 -> 142
+	  129 -> 59
+	  130 -> 85
+	  131 -> 132
+	  131 -> 133
+	  132 -> 317
+	  133 -> 755
+	  134 -> 729
+	  135 -> 860
+	  136 -> 860
+	  137 -> 369
+	  137 -> 763
+	  137 -> 51
+	  138 -> 760
+	  139 -> 414
+	  140 -> 578
+	  141 -> 29
+	  142 -> 83
+	  143 -> 654
+	  144 -> 305
+	  144 -> 201
+	  144 -> 485
+	  146 -> 678
+	  147 -> 243
+	  148 -> 917
+	  149 -> 663
+	  150 -> 152
+	  150 -> 151
+	  151 -> 17
+	  152 -> 332
+	  153 -> 461
+	  154 -> 687
+	  155 -> 841
+	  156 -> 157
+	  157 -> 158
+	  157 -> 159
+	  158 -> 109
+	  159 -> 915
+	  160 -> 331
+	  161 -> 921
+	  162 -> 582
+	  163 -> 114
+	  164 -> 889
+	  165 -> 258
+	  166 -> 586
+	  167 -> 418
+	  168 -> 637
+	  169 -> 484
+	  170 -> 695
+	  171 -> 447
+	  172 -> 643
+	  172 -> 259
+	  172 -> 75
+	  172 -> 171
+	  172 -> 121
+	  172 -> 446
+	  173 -> 804
+	  174 -> 934
+	  175 -> 210
+	  176 -> 59
+	  177 -> 83
+	  178 -> 599
+	  179 -> 860
+	  180 -> 500
+	  181 -> 860
+	  182 -> 860
+	  183 -> 138
+	  184 -> 718
+	  185 -> 953
+	  186 -> 767
+	  187 -> 303
+	  188 -> 189
+	  188 -> 190
+	  189 -> 290
+	  190 -> 574
+	  191 -> 98
+	  192 -> 66
+	  193 -> 242
+	  194 -> 195
+	  194 -> 196
+	  195 -> 22
+	  196 -> 885
+	  197 -> 887
+	  198 -> 66
+	  199 -> 339
+	  200 -> 525
+	  201 -> 31
+	  202 -> 77
+	  203 -> 643
+	  203 -> 259
+	  203 -> 75
+	  203 -> 171
+	  203 -> 121
+	  203 -> 446
+	  204 -> 645
+	  205 -> 752
+	  206 -> 650
+	  206 -> 803
+	  206 -> 402
+	  207 -> 651
+	  208 -> 802
+	  209 -> 264
+	  209 -> 403
+	  209 -> 909
+	  209 -> 590
+	  210 -> 211
+	  210 -> 212
+	  211 -> 312
+	  212 -> 592
+	  213 -> 214
+	  213 -> 215
+	  214 -> 679
+	  215 -> 809
+	  216 -> 705
+	  216 -> 130
+	  216 -> 99
+	  216 -> 454
+	  216 -> 467
+	  216 -> 404
+	  216 -> 511
+	  217 -> 218
+	  217 -> 219
+	  218 -> 706
+	  219 -> 319
+	  220 -> 221
+	  220 -> 222
+	  221 -> 707
+	  222 -> 217
+	  223 -> 91
+	  224 -> 860
+	  225 -> 860
+	  226 -> 227
+	  226 -> 228
+	  227 -> 408
+	  228 -> 90
+	  229 -> 860
+	  230 -> 860
+	  231 -> 150
+	  232 -> 718
+	  233 -> 598
+	  234 -> 953
+	  235 -> 678
+	  236 -> 103
+	  237 -> 571
+	  238 -> 240
+	  238 -> 239
+	  239 -> 689
+	  240 -> 188
+	  241 -> 881
+	  242 -> 779
+	  243 -> 160
+	  244 -> 245
+	  244 -> 246
+	  245 -> 521
+	  245 -> 918
+	  246 -> 297
+	  247 -> 298
+	  248 -> 249
+	  248 -> 250
+	  249 -> 523
+	  250 -> 340
+	  251 -> 340
+	  252 -> 438
+	  253 -> 889
+	  254 -> 635
+	  255 -> 790
+	  256 -> 304
+	  257 -> 170
+	  258 -> 445
+	  259 -> 309
+	  260 -> 450
+	  260 -> 261
+	  260 -> 649
+	  260 -> 205
+	  260 -> 751
+	  260 -> 80
+	  260 -> 79
+	  260 -> 375
+	  260 -> 537
+	  260 -> 123
+	  260 -> 702
+	  260 -> 799
+	  261 -> 858
+	  262 -> 41
+	  263 -> 652
+	  263 -> 262
+	  264 -> 937
+	  265 -> 653
+	  266 -> 466
+	  267 -> 175
+	  268 -> 313
+	  269 -> 598
+	  270 -> 817
+	  271 -> 91
+	  272 -> 273
+	  272 -> 274
+	  273 -> 225
+	  274 -> 224
+	  275 -> 276
+	  275 -> 277
+	  276 -> 902
+	  277 -> 182
+	  278 -> 570
+	  279 -> 839
+	  280 -> 410
+	  281 -> 324
+	  282 -> 737
+	  283 -> 284
+	  283 -> 285
+	  284 -> 731
+	  285 -> 732
+	  286 -> 287
+	  288 -> 842
+	  289 -> 67
+	  289 -> 517
+	  289 -> 734
+	  290 -> 414
+	  291 -> 386
+	  292 -> 293
+	  293 -> 880
+	  293 -> 338
+	  293 -> 475
+	  294 -> 296
+	  294 -> 295
+	  295 -> 916
+	  296 -> 194
+	  297 -> 66
+	  298 -> 66
+	  299 -> 247
+	  300 -> 341
+	  301 -> 743
+	  302 -> 632
+	  303 -> 397
+	  304 -> 827
+	  305 -> 852
+	  306 -> 929
+	  306 -> 746
+	  306 -> 893
+	  307 -> 308
+	  308 -> 350
+	  309 -> 351
+	  310 -> 828
+	  311 -> 901
+	  312 -> 142
+	  313 -> 314
+	  313 -> 315
+	  314 -> 128
+	  315 -> 595
+	  316 -> 233
+	  317 -> 421
+	  318 -> 599
+	  319 -> 11
+	  320 -> 816
+	  321 -> 322
+	  321 -> 323
+	  322 -> 135
+	  323 -> 407
+	  324 -> 512
+	  324 -> 513
+	  324 -> 325
+	  324 -> 567
+	  324 -> 716
+	  324 -> 462
+	  324 -> 821
+	  324 -> 469
+	  324 -> 951
+	  324 -> 863
+	  324 -> 183
+	  324 -> 93
+	  324 -> 286
+	  324 -> 95
+	  325 -> 368
+	  326 -> 760
+	  327 -> 149
+	  328 -> 610
+	  329 -> 780
+	  330 -> 66
+	  331 -> 66
+	  332 -> 333
+	  332 -> 334
+	  333 -> 835
+	  334 -> 836
+	  335 -> 328
+	  336 -> 472
+	  337 -> 913
+	  338 -> 691
+	  339 -> 888
+	  340 -> 112
+	  341 -> 922
+	  342 -> 343
+	  343 -> 113
+	  344 -> 582
+	  345 -> 889
+	  346 -> 486
+	  347 -> 348
+	  347 -> 349
+	  348 -> 257
+	  349 -> 508
+	  350 -> 855
+	  351 -> 747
+	  352 -> 448
+	  353 -> 535
+	  354 -> 451
+	  355 -> 651
+	  356 -> 934
+	  357 -> 265
+	  358 -> 233
+	  359 -> 59
+	  360 -> 730
+	  361 -> 362
+	  361 -> 363
+	  362 -> 179
+	  363 -> 89
+	  364 -> 91
+	  365 -> 366
+	  365 -> 367
+	  366 -> 569
+	  367 -> 514
+	  368 -> 92
+	  369 -> 327
+	  370 -> 103
+	  371 -> 372
+	  371 -> 373
+	  372 -> 533
+	  373 -> 283
+	  374 -> 235
+	  375 -> 830
+	  376 -> 721
+	  377 -> 721
+	  378 -> 153
+	  379 -> 623
+	  380 -> 625
+	  381 -> 477
+	  382 -> 66
+	  383 -> 330
+	  384 -> 626
+	  385 -> 106
+	  386 -> 387
+	  386 -> 388
+	  387 -> 520
+	  388 -> 108
+	  389 -> 293
+	  390 -> 740
+	  391 -> 845
+	  392 -> 297
+	  393 -> 831
+	  394 -> 431
+	  395 -> 415
+	  396 -> 27
+	  397 -> 163
+	  398 -> 788
+	  399 -> 119
+	  400 -> 399
+	  401 -> 260
+	  402 -> 539
+	  403 -> 125
+	  404 -> 405
+	  405 -> 675
+	  406 -> 216
+	  407 -> 860
+	  408 -> 860
+	  409 -> 551
+	  410 -> 552
+	  411 -> 664
+	  412 -> 137
+	  413 -> 870
+	  414 -> 186
+	  415 -> 416
+	  415 -> 417
+	  416 -> 621
+	  417 -> 694
+	  418 -> 419
+	  418 -> 420
+	  419 -> 825
+	  420 -> 29
+	  421 -> 455
+	  422 -> 148
+	  423 -> 868
+	  424 -> 425
+	  424 -> 426
+	  425 -> 686
+	  425 -> 911
+	  426 -> 514
+	  427 -> 67
+	  427 -> 517
+	  427 -> 734
+	  427 -> 471
+	  428 -> 476
+	  429 -> 778
+	  430 -> 627
+	  431 -> 782
+	  432 -> 518
+	  433 -> 26
+	  434 -> 435
+	  434 -> 436
+	  435 -> 162
+	  436 -> 526
+	  437 -> 66
+	  438 -> 788
+	  439 -> 252
+	  440 -> 583
+	  441 -> 849
+	  442 -> 443
+	  443 -> 855
+	  444 -> 640
+	  445 -> 169
+	  446 -> 644
+	  447 -> 122
+	  448 -> 384
+	  449 -> 495
+	  450 -> 934
+	  451 -> 452
+	  451 -> 453
+	  452 -> 81
+	  453 -> 538
+	  454 -> 456
+	  455 -> 598
+	  456 -> 457
+	  456 -> 458
+	  457 -> 43
+	  458 -> 545
+	  459 -> 229
+	  460 -> 623
+	  461 -> 423
+	  462 -> 463
+	  463 -> 96
+	  464 -> 617
+	  465 -> 298
+	  466 -> 646
+	  467 -> 146
+	  468 -> 216
+	  469 -> 61
+	  470 -> 427
+	  471 -> 289
+	  472 -> 510
+	  473 -> 470
+	  474 -> 291
+	  475 -> 110
+	  476 -> 160
+	  477 -> 692
+	  478 -> 66
+	  479 -> 582
+	  480 -> 481
+	  480 -> 482
+	  481 -> 439
+	  482 -> 70
+	  483 -> 398
+	  484 -> 255
+	  485 -> 31
+	  486 -> 399
+	  487 -> 642
+	  488 -> 898
+	  489 -> 490
+	  489 -> 491
+	  490 -> 589
+	  491 -> 310
+	  492 -> 493
+	  492 -> 494
+	  493 -> 536
+	  493 -> 794
+	  494 -> 36
+	  495 -> 932
+	  496 -> 208
+	  497 -> 651
+	  498 -> 230
+	  499 -> 272
+	  500 -> 501
+	  500 -> 502
+	  501 -> 764
+	  502 -> 2
+	  503 -> 860
+	  504 -> 324
+	  505 -> 506
+	  505 -> 507
+	  506 -> 726
+	  507 -> 669
+	  508 -> 170
+	  509 -> 269
+	  510 -> 380
+	  510 -> 147
+	  510 -> 428
+	  510 -> 422
+	  511 -> 60
+	  512 -> 145
+	  513 -> 326
+	  514 -> 515
+	  514 -> 516
+	  515 -> 774
+	  516 -> 682
+	  517 -> 238
+	  518 -> 25
+	  519 -> 383
+	  520 -> 108
+	  521 -> 741
+	  522 -> 433
+	  523 -> 847
+	  524 -> 200
+	  524 -> 396
+	  524 -> 302
+	  524 -> 342
+	  524 -> 631
+	  525 -> 581
+	  526 -> 528
+	  526 -> 527
+	  527 -> 529
+	  528 -> 783
+	  529 -> 582
+	  530 -> 34
+	  531 -> 572
+	  532 -> 371
+	  533 -> 73
+	  534 -> 203
+	  535 -> 260
+	  536 -> 449
+	  537 -> 266
+	  538 -> 124
+	  539 -> 650
+	  539 -> 803
+	  540 -> 651
+	  541 -> 651
+	  542 -> 939
+	  543 -> 213
+	  544 -> 598
+	  545 -> 546
+	  545 -> 547
+	  546 -> 360
+	  547 -> 134
+	  548 -> 83
+	  549 -> 49
+	  550 -> 609
+	  551 -> 149
+	  552 -> 411
+	  553 -> 554
+	  553 -> 555
+	  554 -> 660
+	  555 -> 364
+	  556 -> 557
+	  556 -> 558
+	  557 -> 364
+	  558 -> 659
+	  559 -> 560
+	  559 -> 561
+	  560 -> 709
+	  561 -> 660
+	  562 -> 66
+	  563 -> 564
+	  563 -> 565
+	  564 -> 347
+	  565 -> 696
+	  566 -> 177
+	  567 -> 568
+	  569 -> 424
+	  570 -> 13
+	  571 -> 736
+	  571 -> 840
+	  572 -> 384
+	  572 -> 352
+	  573 -> 414
+	  574 -> 576
+	  574 -> 575
+	  575 -> 573
+	  576 -> 139
+	  577 -> 192
+	  578 -> 193
+	  579 -> 112
+	  579 -> 522
+	  580 -> 248
+	  581 -> 342
+	  581 -> 396
+	  581 -> 302
+	  581 -> 631
+	  582 -> 66
+	  583 -> 584
+	  583 -> 585
+	  584 -> 254
+	  585 -> 71
+	  586 -> 636
+	  587 -> 72
+	  588 -> 641
+	  589 -> 900
+	  589 -> 749
+	  589 -> 798
+	  590 -> 356
+	  591 -> 127
+	  592 -> 593
+	  592 -> 594
+	  593 -> 358
+	  594 -> 176
+	  595 -> 596
+	  595 -> 597
+	  596 -> 316
+	  597 -> 129
+	  598 -> 320
+	  598 -> 549
+	  598 -> 270
+	  598 -> 656
+	  598 -> 657
+	  598 -> 757
+	  598 -> 600
+	  599 -> 459
+	  599 -> 270
+	  599 -> 655
+	  599 -> 498
+	  599 -> 757
+	  600 -> 608
+	  601 -> 226
+	  602 -> 603
+	  602 -> 604
+	  605 -> 606
+	  605 -> 607
+	  608 -> 860
+	  609 -> 280
+	  609 -> 762
+	  609 -> 717
+	  610 -> 611
+	  610 -> 612
+	  611 -> 820
+	  612 -> 733
+	  613 -> 614
+	  613 -> 615
+	  614 -> 719
+	  615 -> 412
+	  616 -> 953
+	  617 -> 587
+	  618 -> 619
+	  618 -> 620
+	  619 -> 906
+	  620 -> 822
+	  621 -> 694
+	  622 -> 311
+	  623 -> 101
+	  624 -> 335
+	  625 -> 777
+	  626 -> 487
+	  627 -> 66
+	  628 -> 197
+	  629 -> 920
+	  630 -> 831
+	  631 -> 434
+	  632 -> 437
+	  633 -> 8
+	  634 -> 926
+	  635 -> 484
+	  636 -> 168
+	  637 -> 638
+	  637 -> 639
+	  638 -> 744
+	  639 -> 256
+	  640 -> 587
+	  641 -> 255
+	  642 -> 35
+	  642 -> 643
+	  642 -> 259
+	  642 -> 75
+	  642 -> 171
+	  642 -> 120
+	  642 -> 121
+	  642 -> 446
+	  643 -> 897
+	  644 -> 351
+	  645 -> 492
+	  646 -> 648
+	  646 -> 647
+	  647 -> 355
+	  648 -> 651
+	  649 -> 858
+	  650 -> 174
+	  651 -> 704
+	  651 -> 805
+	  651 -> 542
+	  651 -> 42
+	  651 -> 267
+	  651 -> 268
+	  651 -> 126
+	  651 -> 703
+	  652 -> 496
+	  653 -> 651
+	  654 -> 83
+	  655 -> 943
+	  656 -> 608
+	  657 -> 136
+	  658 -> 500
+	  659 -> 91
+	  660 -> 91
+	  661 -> 91
+	  662 -> 860
+	  663 -> 324
+	  664 -> 665
+	  664 -> 666
+	  665 -> 232
+	  666 -> 184
+	  667 -> 953
+	  668 -> 324
+	  669 -> 670
+	  669 -> 671
+	  670 -> 223
+	  671 -> 48
+	  672 -> 673
+	  672 -> 674
+	  673 -> 553
+	  674 -> 559
+	  675 -> 406
+	  676 -> 318
+	  677 -> 241
+	  677 -> 690
+	  677 -> 156
+	  677 -> 429
+	  678 -> 216
+	  679 -> 680
+	  679 -> 681
+	  680 -> 468
+	  681 -> 84
+	  682 -> 683
+	  682 -> 684
+	  683 -> 685
+	  684 -> 281
+	  685 -> 624
+	  686 -> 50
+	  687 -> 912
+	  687 -> 736
+	  687 -> 840
+	  688 -> 875
+	  689 -> 414
+	  690 -> 737
+	  691 -> 140
+	  692 -> 66
+	  693 -> 56
+	  694 -> 66
+	  695 -> 588
+	  696 -> 894
+	  697 -> 169
+	  698 -> 747
+	  699 -> 353
+	  700 -> 749
+	  700 -> 798
+	  701 -> 804
+	  702 -> 173
+	  703 -> 801
+	  704 -> 940
+	  705 -> 220
+	  706 -> 509
+	  707 -> 143
+	  708 -> 361
+	  709 -> 91
+	  710 -> 712
+	  710 -> 711
+	  712 -> 713
+	  713 -> 714
+	  713 -> 715
+	  715 -> 605
+	  716 -> 413
+	  717 -> 410
+	  718 -> 324
+	  719 -> 137
+	  720 -> 149
+	  721 -> 722
+	  722 -> 723
+	  722 -> 724
+	  723 -> 504
+	  724 -> 324
+	  725 -> 953
+	  726 -> 728
+	  726 -> 727
+	  727 -> 48
+	  728 -> 661
+	  729 -> 88
+	  730 -> 544
+	  731 -> 533
+	  732 -> 533
+	  733 -> 460
+	  733 -> 379
+	  733 -> 100
+	  734 -> 236
+	  735 -> 237
+	  736 -> 19
+	  737 -> 738
+	  737 -> 739
+	  738 -> 292
+	  739 -> 389
+	  740 -> 329
+	  741 -> 297
+	  742 -> 465
+	  743 -> 524
+	  744 -> 304
+	  745 -> 371
+	  746 -> 768
+	  747 -> 77
+	  748 -> 353
+	  749 -> 78
+	  750 -> 39
+	  751 -> 209
+	  752 -> 701
+	  753 -> 622
+	  754 -> 401
+	  755 -> 676
+	  756 -> 213
+	  757 -> 275
+	  758 -> 321
+	  759 -> 324
+	  760 -> 613
+	  761 -> 324
+	  762 -> 410
+	  763 -> 720
+	  764 -> 765
+	  764 -> 766
+	  765 -> 618
+	  766 -> 505
+	  767 -> 878
+	  768 -> 769
+	  768 -> 770
+	  769 -> 347
+	  770 -> 74
+	  771 -> 721
+	  772 -> 721
+	  773 -> 839
+	  774 -> 102
+	  775 -> 473
+	  776 -> 66
+	  777 -> 826
+	  777 -> 107
+	  777 -> 914
+	  778 -> 66
+	  779 -> 294
+	  780 -> 693
+	  781 -> 66
+	  782 -> 784
+	  782 -> 785
+	  783 -> 479
+	  784 -> 344
+	  785 -> 66
+	  786 -> 252
+	  787 -> 165
+	  787 -> 848
+	  787 -> 530
+	  787 -> 117
+	  787 -> 440
+	  787 -> 28
+	  787 -> 925
+	  787 -> 927
+	  788 -> 345
+	  788 -> 164
+	  788 -> 253
+	  789 -> 167
+	  790 -> 855
+	  791 -> 793
+	  791 -> 746
+	  791 -> 929
+	  791 -> 893
+	  792 -> 306
+	  793 -> 795
+	  794 -> 796
+	  794 -> 797
+	  795 -> 489
+	  796 -> 489
+	  797 -> 78
+	  798 -> 800
+	  799 -> 40
+	  799 -> 652
+	  799 -> 262
+	  800 -> 933
+	  801 -> 651
+	  802 -> 357
+	  803 -> 646
+	  804 -> 543
+	  805 -> 808
+	  805 -> 807
+	  806 -> 82
+	  807 -> 359
+	  808 -> 810
+	  808 -> 811
+	  809 -> 55
+	  810 -> 216
+	  811 -> 566
+	  812 -> 814
+	  812 -> 815
+	  813 -> 658
+	  814 -> 180
+	  815 -> 860
+	  816 -> 818
+	  816 -> 819
+	  817 -> 948
+	  818 -> 503
+	  819 -> 733
+	  820 -> 870
+	  821 -> 824
+	  821 -> 823
+	  822 -> 48
+	  823 -> 661
+	  824 -> 141
+	  825 -> 282
+	  826 -> 928
+	  827 -> 37
+	  828 -> 484
+	  829 -> 701
+	  830 -> 832
+	  830 -> 833
+	  831 -> 742
+	  832 -> 299
+	  833 -> 278
+	  834 -> 721
+	  835 -> 837
+	  835 -> 838
+	  836 -> 376
+	  837 -> 14
+	  838 -> 775
+	  839 -> 381
+	  840 -> 330
+	  841 -> 843
+	  841 -> 844
+	  842 -> 23
+	  843 -> 378
+	  844 -> 244
+	  845 -> 111
+	  845 -> 199
+	  846 -> 251
+	  847 -> 634
+	  848 -> 788
+	  849 -> 930
+	  850 -> 144
+	  851 -> 853
+	  851 -> 854
+	  852 -> 346
+	  853 -> 745
+	  854 -> 531
+	  855 -> 895
+	  856 -> 77
+	  857 -> 466
+	  858 -> 142
+	  859 -> 861
+	  859 -> 862
+	  860 -> 44
+	  861 -> 813
+	  862 -> 288
+	  863 -> 324
+	  864 -> 866
+	  864 -> 867
+	  865 -> 556
+	  866 -> 5
+	  867 -> 66
+	  868 -> 548
+	  869 -> 760
+	  870 -> 721
+	  871 -> 776
+	  872 -> 735
+	  873 -> 20
+	  874 -> 876
+	  874 -> 877
+	  875 -> 155
+	  875 -> 519
+	  876 -> 910
+	  877 -> 66
+	  878 -> 191
+	  879 -> 430
+	  880 -> 882
+	  881 -> 883
+	  881 -> 884
+	  882 -> 577
+	  883 -> 192
+	  884 -> 66
+	  885 -> 331
+	  886 -> 391
+	  887 -> 579
+	  888 -> 890
+	  888 -> 891
+	  889 -> 444
+	  890 -> 52
+	  891 -> 400
+	  892 -> 563
+	  893 -> 588
+	  894 -> 857
+	  895 -> 202
+	  896 -> 747
+	  897 -> 899
+	  898 -> 77
+	  899 -> 700
+	  900 -> 646
+	  901 -> 904
+	  901 -> 903
+	  902 -> 905
+	  903 -> 181
+	  904 -> 860
+	  905 -> 907
+	  905 -> 908
+	  906 -> 661
+	  907 -> 271
+	  908 -> 125
+	  909 -> 382
+	  910 -> 774
+	  911 -> 105
+	  912 -> 736
+	  912 -> 840
+	  913 -> 879
+	  914 -> 293
+	  915 -> 885
+	  916 -> 886
+	  917 -> 392
+	  918 -> 736
+	  918 -> 840
+	  919 -> 919
+	  920 -> 198
+	  921 -> 923
+	  921 -> 924
+	  922 -> 301
+	  923 -> 524
+	  924 -> 851
+	  925 -> 441
+	  926 -> 483
+	  927 -> 850
+	  927 -> 531
+	  927 -> 307
+	  927 -> 442
+	  927 -> 30
+	  928 -> 563
+	  929 -> 855
+	  930 -> 351
+	  931 -> 354
+	  932 -> 541
+	  933 -> 936
+	  933 -> 935
+	  934 -> 207
+	  935 -> 497
+	  936 -> 403
+	  936 -> 909
+	  936 -> 590
+	  937 -> 540
+	  938 -> 213
+	  939 -> 941
+	  939 -> 942
+	  940 -> 859
+	  941 -> 806
+	  942 -> 860
+	  943 -> 945
+	  943 -> 946
+	  945 -> 602
+	  946 -> 860
+	  947 -> 949
+	  947 -> 950
+	  948 -> 662
+	  949 -> 947
+	  950 -> 550
+	  951 -> 234
+	  952 -> 324
+}
+

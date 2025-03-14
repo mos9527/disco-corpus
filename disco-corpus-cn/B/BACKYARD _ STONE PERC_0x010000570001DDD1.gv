@@ -1,0 +1,43 @@
+# BACKYARD / STONE PERC
+# First follow-up convo with Kim where you discover keys under the stone. Difficult perception finds the stone.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Stone: 很普通的石头，躺在冻雨和泥泞的漩涡里。也许下面有什么东西？"];
+	  3 [label="You: 无视它。[离开。]"];
+	  4 [label="Logic: 看来是建筑前门的钥匙。"];
+	  5 [label="Variable[\"TASK.where_does_the_smoker_on_the_balcony_live\"]"];
+	  6 [label="Variable[\"TASK.where_does_the_smoker_on_the_balcony_live\"]", shape=diamond];
+	  7 [label="!(Variable[\"TASK.where_does_the_smoker_on_the_balcony_live\"])", shape=diamond];
+	  8 [label="You: 把石头放回去。[离开。]"];
+	  9 [label="Kim Kitsuragi: “这肯定是前门的钥匙。可惜上面没有公寓号码。这栋建筑有上百套公寓。”"];
+	  10 [label="IsKimHere()"];
+	  11 [label="IsKimHere()", shape=diamond];
+	  12 [label="!(IsKimHere())", shape=diamond];
+	  13 [label="You: 把它翻过来。"];
+	  14 [label="You: “我们怎么找到正确的那一个呢？”"];
+	  15 [label="Kim Kitsuragi: “这肯定是前门的钥匙。我们试试能不能用吧。”"];
+	  16 [label="Kim Kitsuragi: “我们得进去看了。”"];
+	  17 [label="Stone: 下面有一把钥匙，因为尘土的腐蚀有些生锈。"];
+	  0 -> 1
+	  1 -> 2
+	  2 -> 3
+	  2 -> 14
+	  4 -> 8
+	  5 -> 6
+	  5 -> 7
+	  6 -> 10
+	  7 -> 16
+	  9 -> 15
+	  10 -> 12
+	  10 -> 13
+	  11 -> 5
+	  12 -> 4
+	  13 -> 18
+	  14 -> 17
+	  15 -> 8
+	  16 -> 8
+	  17 -> 11
+}
+

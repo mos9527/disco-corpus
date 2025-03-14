@@ -1,0 +1,79 @@
+# BOOKSTORE / COCKATOO
+# From A to Zrieek! Guide to a Well-Behaved Cockatoo. (Helen)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="bookhub"];
+	  3 [label="From A to Zrieek! A Guide To a Well-Behaved Cockatoo: IsKimHere()"];
+	  4 [label="IsKimHere()", shape=diamond];
+	  5 [label="!(IsKimHere())", shape=diamond];
+	  6 [label="From A to Zrieek! A Guide To a Well-Behaved Cockatoo: 结果居然有这么多不同种类的凤头鹦鹉，而且都有行为问题。"];
+	  7 [label="You: “我想买这本凤头鹦鹉指南。”"];
+	  8 [label="You: 翻阅书页。"];
+	  9 [label="Kim Kitsuragi: 警督用力咳了几声，然后低语到：“我们真要这么做吗？我觉得还是不要了吧。”"];
+	  10 [label="Jump to: [bookhub]"];
+	  11 [label="Interfacing: 你慢慢把手伸向凤头鹦鹉指南。还没碰到书，你就被打断了："];
+	  12 [label="Composure: 你没有行为问题。那些都是废话。你没什么事。"];
+	  13 [label="You: “这本凤头鹦鹉指南怎么样，店主？”"];
+	  14 [label="Tutorial Agent: 你得到了一个可互动物品。前往物品栏中与之互动吧。"];
+	  15 [label="You: 偷走凤头鹦鹉指南。"];
+	  16 [label="You: Variable[\"doomed.book_cockatoo_wc_stealing\"]"];
+	  17 [label="Variable[\"doomed.book_cockatoo_wc_stealing\"]", shape=diamond];
+	  18 [label="!(Variable[\"doomed.book_cockatoo_wc_stealing\"])", shape=diamond];
+	  19 [label="Plaisance: “哦，一个自然爱好者！选的好。我就*知道*把它留在附近是个好主意…”"];
+	  20 [label="Plaisance: “先生，请不要乱碰商品。大家都喜欢崭新的书，而不是被天知道什么样的人碰过的书。”"];
+	  21 [label="From A to Zrieek! A Guide To a Well-Behaved Cockatoo: Variable[\"doomed.book_cockatoo_wc_stealing\"]"];
+	  22 [label="Variable[\"doomed.book_cockatoo_wc_stealing\"]", shape=diamond];
+	  23 [label="!(Variable[\"doomed.book_cockatoo_wc_stealing\"])", shape=diamond];
+	  24 [label="Jump to: [bookhub]"];
+	  25 [label="Interfacing: 这是个不小的挑战，不过最终凤头鹦鹉指南是你的了。多么辉煌的成就！"];
+	  26 [label="Plaisance: “如果你有凤头鹦鹉的话，那这本就是必需品了。我听说它们挺反复无常的。”"];
+	  27 [label="From A to Zrieek! A Guide To a Well-Behaved Cockatoo: 一只硫磺色羽冠的凤头鹦鹉坐在封面上，嘴部微张。似乎这只鸟正在呼唤着书名：“从0到1！凤头鹦鹉驯养指南。”"];
+	  28 [label="From A to Zrieek! A Guide To a Well-Behaved Cockatoo: Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"]"];
+	  29 [label="Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"]", shape=diamond];
+	  30 [label="!(Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"])", shape=diamond];
+	  31 [label="Jump to: [bookhub]"];
+	  32 [label="You: [离开。]"];
+	  33 [label="Interfacing: 你在等待店主分心。当她没看到的时候，你把凤头鹦鹉指南塞进了自己的口袋。"];
+	  0 -> 1
+	  1 -> 28
+	  2 -> 33
+	  2 -> 7
+	  2 -> 8
+	  2 -> 13
+	  2 -> 16
+	  3 -> 4
+	  3 -> 5
+	  4 -> 9
+	  5 -> 21
+	  6 -> 12
+	  7 -> 20
+	  8 -> 6
+	  9 -> 25
+	  10 -> 2
+	  11 -> 3
+	  12 -> 32
+	  13 -> 27
+	  15 -> 17
+	  16 -> 18
+	  16 -> 19
+	  17 -> 22
+	  18 -> 22
+	  19 -> 29
+	  20 -> 25
+	  21 -> 24
+	  21 -> 23
+	  22 -> 34
+	  23 -> 11
+	  24 -> 2
+	  25 -> 29
+	  26 -> 10
+	  27 -> 2
+	  28 -> 30
+	  28 -> 31
+	  30 -> 15
+	  31 -> 2
+	  33 -> 26
+}
+

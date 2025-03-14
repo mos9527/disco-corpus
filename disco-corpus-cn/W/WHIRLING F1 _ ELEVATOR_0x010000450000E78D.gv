@@ -1,0 +1,113 @@
+# WHIRLING F1 / ELEVATOR
+# 1. You experience the lovely elevator and wonder what it was used for.
+#2. You can go up and down.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Elevator: 电梯门大敞着，邀请你走进去。"];
+	  3 [label="Elevator: 电梯摇摆不定，仿佛某种古代巨兽的肚子，正带着你朝下走……."];
+	  4 [label="You: 往里看。"];
+	  5 [label="Kim Kitsuragi: “往好的方面想：如果它坏掉了，也不过是受点轻伤而已。我是指在医院住上三、四个月，或者五个月不会再多了。”"];
+	  6 [label="Variable[\"whirling.elevator_main_reached\"]"];
+	  7 [label="Variable[\"whirling.elevator_main_reached\"]", shape=diamond];
+	  8 [label="!(Variable[\"whirling.elevator_main_reached\"])", shape=diamond];
+	  9 [label="Kim Kitsuragi: “看着像部运送机械的小货梯。这么看来——挺古怪的。”他轻敲着忽明忽暗的灯泡——它在黑暗中闪着金色的光芒。"];
+	  10 [label="You: “这部电梯一定是用来楼上楼下运送弹球机的。”\n“所以大部分情况下都是弹球机在乘坐这部电梯。”"];
+	  11 [label="You: 下楼。"];
+	  12 [label="You: （关门上楼。）"];
+	  13 [label="You: [离开。]"];
+	  14 [label="You: “所以这不是来自未来的信息咯？”"];
+	  15 [label="Kim Kitsuragi: 警督严肃地答道：“如果未来真有可能实现某种时间旅行，我怀疑它的发明者也不会用它来修理马丁内斯的电梯。”"];
+	  16 [label="Elevator: 电梯嘎吱作响，仿佛某种古代巨兽的肚子，正带着你朝上走……"];
+	  17 [label="Kim Kitsuragi: “不，我认为官僚们只是在大革命后忘记了这部秘密电梯。”"];
+	  18 [label="Logic: 这部电梯一定是用来把弹球机从楼上的車间运进运出的。"];
+	  19 [label="elevatormainhub"];
+	  20 [label="You: 看着电梯的控制面板。"];
+	  21 [label="You: “这部电梯最后一次维护是在*未来*？”"];
+	  22 [label="Elevator: 小电梯里的老旧灯泡散发出微弱的光芒，格状铁笼大敞着，邀请你走进去。"];
+	  23 [label="You: “这意味着它不是非常安全，对吧？”"];
+	  24 [label="Elevator: 地板上深深的划痕表明它曾被当做货梯使用——用于运输重型机械，和一个人。"];
+	  25 [label="Kim Kitsuragi: “看上去确实如此，尽管它很漂亮……用于运货也太古怪了。”他轻敲着忽明忽暗的灯泡——它在黑暗中闪着金色的光芒。"];
+	  26 [label="You: 这有可能是用来楼上楼下运送弹球机的吗？\n这真能塞得下一台弹球机吗？"];
+	  27 [label="You: “真令人失望。”"];
+	  28 [label="You: “我想知道这部电梯是做什么用的。”"];
+	  29 [label="Jump to: [elevatormainhub]"];
+	  30 [label="Jump to: [elevatormainhub]"];
+	  31 [label="Elevator: 看起来确实能装下一台，没错。虽然它意外地像人——在破旧灯泡的金色光芒下。\n差不多，如果找准角度的话。对于一部小电梯来说，它出乎意料的精妙。破旧的金色灯泡在黑暗中忽明忽暗着。"];
+	  32 [label="Elevator: 伴随着一股牛轧糖和汗水的味道，你的头碰到了天花板。你的右手边有个控制面板——正好只够容纳两个人。"];
+	  33 [label="Elevator: 上面有巨大的矩形按钮：“上升”，“下降”，以及一句国际通用的：“请求紧急援助。”第三个按钮似乎坏掉了。"];
+	  34 [label="Kim Kitsuragi: “不是，这是在*上个*世纪的88年维护的。”"];
+	  35 [label="Variable[\"auto.visited_pinball_workshop\"]  and  Variable[\"whirling.elevator_use\"] == false  and  Variable[\"whirling.elevator_logic_use\"] == false"];
+	  36 [label="Variable[\"auto.visited_pinball_workshop\"]  and  Variable[\"whirling.elevator_use\"] == false  and  Variable[\"whirling.elevator_logic_use\"] == false", shape=diamond];
+	  37 [label="!(Variable[\"auto.visited_pinball_workshop\"]  and  Variable[\"whirling.elevator_use\"] == false  and  Variable[\"whirling.elevator_logic_use\"] == false)", shape=diamond];
+	  38 [label="Jump to: [elevatormainhub]"];
+	  39 [label="Perception (Sight): 控制面板下方的维修卡上写着：*上次维护时间：88年，7月10日*。"];
+	  40 [label="You: 你是做什么用的，电梯？"];
+	  41 [label="Kim Kitsuragi: “上个世纪末。”他点点头。“往好的方面想：如果它坏掉了，也不过是受点轻伤而已。我是指在医院住上三、四个月，或者五个月不会再多了。”"];
+	  42 [label="Kim Kitsuragi: “的确如此。”警督往里瞄了一眼。“要我说——勇敢一点吧。”"];
+	  43 [label="You: “88年……这部电梯是很久以前维护的。”"];
+	  44 [label="You: [离开。]"];
+	  45 [label="Encyclopedia: 一小块钢匾上写着‘霍尔特800’。霍尔特是一家很早很早之前就倒闭了的柯尼希斯电梯公司。"];
+	  46 [label="You: “上面说最后一次维护是在88年。”"];
+	  47 [label="Rhetoric: 看来他毕生的热爱就是讽刺。"];
+	  0 -> 1
+	  1 -> 6
+	  2 -> 36
+	  4 -> 33
+	  5 -> 48
+	  6 -> 8
+	  6 -> 7
+	  7 -> 2
+	  8 -> 23
+	  9 -> 31
+	  10 -> 26
+	  11 -> 3
+	  12 -> 16
+	  14 -> 18
+	  15 -> 39
+	  17 -> 39
+	  18 -> 20
+	  19 -> 41
+	  19 -> 10
+	  19 -> 11
+	  19 -> 12
+	  19 -> 13
+	  19 -> 47
+	  19 -> 21
+	  19 -> 27
+	  19 -> 29
+	  20 -> 34
+	  21 -> 35
+	  22 -> 4
+	  22 -> 45
+	  23 -> 5
+	  24 -> 31
+	  25 -> 31
+	  26 -> 32
+	  27 -> 15
+	  28 -> 9
+	  29 -> 20
+	  30 -> 20
+	  31 -> 31
+	  32 -> 40
+	  33 -> 46
+	  34 -> 24
+	  34 -> 28
+	  34 -> 14
+	  35 -> 37
+	  35 -> 38
+	  36 -> 19
+	  37 -> 20
+	  38 -> 20
+	  39 -> 36
+	  40 -> 25
+	  41 -> 48
+	  42 -> 44
+	  42 -> 22
+	  43 -> 42
+	  45 -> 30
+	  46 -> 43
+	  47 -> 39
+}
+

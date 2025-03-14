@@ -1,0 +1,95 @@
+# KIM SWITCH / DISCUSSING KLAASJE DOWNSTAIRS
+# this should blink ONLY DOWNSTAIRS and after Klaasje rape hub exit
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: “你觉得这样就能让他们配合吗？”"];
+	  3 [label="Volition: 比如你可能会——记起来吗？"];
+	  4 [label="Kim Kitsuragi: “你这么觉得吗？”他的脸掠过一片阴影。“她看起来很愿意提供信息……一般都是这样。很乐意提供某些事的信息，是掩盖其他事的好办法。”"];
+	  5 [label="You: “我不确定她有撒谎的*必要*。我也不会知道。”"];
+	  6 [label="Kim Kitsuragi: “你这么觉得吗？”他的脸掠过一片阴影。“坦白是最好的撒谎方式。率直的外表，加上一些事实，能把人们的注意力从他们选择遗漏的事情上转移开。”"];
+	  7 [label="You: “也许是因为你*就是*这样的？”"];
+	  8 [label="Kim Kitsuragi: “在我看来，她看起来很愿意提供信息……一般都是这样。很乐意提供某些事的信息，是掩盖其他事的好办法。但我自己也不是一个容易妥协的人……”"];
+	  9 [label="Kim Kitsuragi: “不管怎么说，我们该走了。我想问询工作很快会把我们带回到这里。”"];
+	  10 [label="You: “明白了。我们走吧。”[离开。]"];
+	  11 [label="Drama: 您本来可以捕捉到的。"];
+	  12 [label="You: (点头。)“我本来可以捕捉到的。”"];
+	  13 [label="Kim Kitsuragi: “所以你对她说……你说这话是*什么意思*？”"];
+	  14 [label="Kim Kitsuragi: “你这话是什么意思？”"];
+	  15 [label="Variable[\"whirling.klaasje_drama_would_have_caught_it\"]"];
+	  16 [label="Variable[\"whirling.klaasje_drama_would_have_caught_it\"]", shape=diamond];
+	  17 [label="!(Variable[\"whirling.klaasje_drama_would_have_caught_it\"])", shape=diamond];
+	  18 [label="Variable[\"XP.detect_compromized_skillset\"]"];
+	  19 [label="Variable[\"XP.detect_compromized_skillset\"]", shape=diamond];
+	  20 [label="!(Variable[\"XP.detect_compromized_skillset\"])", shape=diamond];
+	  21 [label="You: “有点不太对劲。”"];
+	  22 [label="You: “呃，我是，无所谓了。”"];
+	  23 [label="You: “她好像很坦白。”"];
+	  24 [label="Kim Kitsuragi: “她还能怎么做？撒谎？她发现没办法撒谎，也没办法彻底脱身了。”"];
+	  25 [label="nomesshub"];
+	  26 [label="Kim Kitsuragi: “最好的骗子总是乐于提供信息的……不管怎么说，我们该走了。我想问询工作很快会把我们带回到这里。”"];
+	  27 [label="lies_and_lies"];
+	  28 [label="Variable[\"whirling.klaasje_said_manipulation\"]"];
+	  29 [label="Variable[\"whirling.klaasje_said_manipulation\"]", shape=diamond];
+	  30 [label="!(Variable[\"whirling.klaasje_said_manipulation\"])", shape=diamond];
+	  31 [label="fixthehub"];
+	  32 [label="You: （低语。）“她自己很有一套，对我一半的技能都有抵抗力。我对她的评价完全靠不住。”"];
+	  33 [label="Kim Kitsuragi: “我不会轻易被年轻女人影响。不过话又说回来……最好的骗子都是很坦率的。而且她也很坦率。”"];
+	  34 [label="Kim Kitsuragi: “什么也不能让他们尊重RCM。但是可以扰乱他们为我们准备好的游戏。不论到底是什么，我们只是剥掉了其中一层。她决定不为他们的说法作证，*肯定*不是计划的一部分。”"];
+	  35 [label="You: （小声说道）“为什么她*要*告诉我们这一切？”"];
+	  36 [label="Kim Kitsuragi: “如果你不知道，那我就更不知道了。她的这个举动很明智。”"];
+	  37 [label="You: （低语）“我知道她很有手段。”"];
+	  38 [label="Kim Kitsuragi: “她可能想尝试控制调查的进展。不管怎么说，我们该走了。我想问询工作很快会把我们带回到这里。”"];
+	  39 [label="You: “我有理由怀疑自己看穿她谎言的能力。”"];
+	  40 [label="Volition: 警督对自己不会妥协这一点好像有种奇怪的执着，至少心理上没有。难道是因为傲慢吗？"];
+	  0 -> 1
+	  1 -> 2
+	  2 -> 35
+	  3 -> 32
+	  4 -> 27
+	  5 -> 37
+	  6 -> 39
+	  7 -> 34
+	  8 -> 23
+	  8 -> 7
+	  11 -> 16
+	  12 -> 37
+	  13 -> 33
+	  14 -> 33
+	  15 -> 17
+	  15 -> 18
+	  16 -> 19
+	  17 -> 26
+	  18 -> 20
+	  18 -> 21
+	  19 -> 3
+	  20 -> 26
+	  21 -> 4
+	  22 -> 34
+	  23 -> 6
+	  24 -> 12
+	  25 -> 40
+	  25 -> 5
+	  25 -> 13
+	  27 -> 24
+	  27 -> 38
+	  27 -> 22
+	  28 -> 30
+	  28 -> 31
+	  29 -> 14
+	  30 -> 15
+	  31 -> 40
+	  31 -> 5
+	  31 -> 13
+	  32 -> 8
+	  33 -> 41
+	  34 -> 11
+	  34 -> 36
+	  35 -> 25
+	  36 -> 28
+	  37 -> 29
+	  39 -> 37
+	  40 -> 10
+}
+

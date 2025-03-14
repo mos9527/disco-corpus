@@ -1,0 +1,538 @@
+# ICE / CHURCH DOOR
+# Initiating the Get Into The Church TO-DO
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: 警督往后退了一步，望着头顶上若隐若现的教堂。“是的，锐影里面有个工具箱……”\n他往后退了一步，望着头顶上若隐若现的教堂。“看来你是真的很想进去……我的锐影里面的确有些工具。”"];
+	  3 [label="Church Doors: IsKimHere()"];
+	  4 [label="IsKimHere()", shape=diamond];
+	  5 [label="!(IsKimHere())", shape=diamond];
+	  6 [label="Church Doors: 两倍于你身高的厚重木门紧闭于你的面前。这个长方形的、被海水侵蚀过的装饰物，与被漫不经心地镶在木头上的挂锁形成了鲜明的对比。"];
+	  7 [label="Kim Kitsuragi: “我们再去那个帐篷看看如何？”他朝着教堂旁边的冰面上的破旧帆布点了点头。"];
+	  8 [label="You: 把贴纸贴在你的手册*里*——最后一项条目之后，正是它的位置。"];
+	  9 [label="Kim Kitsuragi: “没有。”"];
+	  10 [label="Interfacing: 感觉很不寻常。300吨的松木严丝合缝地拼接在一起。它也很古老了，是很多个世纪以前雕刻而成的。"];
+	  11 [label="Conceptualization: 现在你也是未来部队的一部分了。你以前那本无聊的手册也是一样。霓虹灯，宝贝！"];
+	  12 [label="Church Doors: Variable[\"TASK.doomed_investigation_done\"]"];
+	  13 [label="Variable[\"TASK.doomed_investigation_done\"]", shape=diamond];
+	  14 [label="!(Variable[\"TASK.doomed_investigation_done\"])", shape=diamond];
+	  15 [label="Kim Kitsuragi: “我们走吧。”警督朝你点点头。"];
+	  16 [label="Physical Instrument: 折断的撬棍裂口非常光滑。尖端直接没有了……"];
+	  17 [label="You: 检查螺钉。"];
+	  18 [label="Kim Kitsuragi: “你能听见风中传来的低音脉冲吗？”他把手举至耳边。“青少年过失行为的明确符号——就在这里往东去的某个地方。”\n“是的。低音脉冲……”他把手举至耳边。“青少年过失行为的明确符号——就在这里往东去的某个地方。”"];
+	  19 [label="Empathy: 他很是为你难过。对于身为警督的他来说，让别人叙述警官考试中的术语相当有失身份。"];
+	  20 [label="Jump to: [Church Doors: \"This cheap-looking padlock is sturd...\"]"];
+	  21 [label="failpryhub"];
+	  22 [label="Shivers: 我的心上有一个洞。"];
+	  23 [label="Church Doors: Variable[\"church.churchdoor_open_crowbar\"] == true"];
+	  24 [label="Variable[\"church.churchdoor_open_crowbar\"] == true", shape=diamond];
+	  25 [label="!(Variable[\"church.churchdoor_open_crowbar\"] == true)", shape=diamond];
+	  26 [label="Kim Kitsuragi: “再说了，我们真应该上岛了。”他望向大海。"];
+	  27 [label="Church Doors: ……在这座城市的心脏。"];
+	  28 [label="Kim Kitsuragi: 警督点点头。“这似乎跟我们的案子毫无无关系。”"];
+	  29 [label="Inland Empire: 与此同时，你竖起耳朵倾听，那是来自在劫难逃商业区的回响。那漆黑的走廊和尘封的机械。这种感觉转瞬即逝。"];
+	  30 [label="Church Doors: 你看到一个黄色圆圈，上面有两个X，下面有一条大曲线，看起来像是一张嘴。你很确定自己之前从未见过它，但这个符号所描绘的东西已经足够清晰了:一个面带微笑的死者。曲线让它微笑，X让它死亡。"];
+	  31 [label="Kim Kitsuragi: “我不知道……你*不*知道？或者我们可以找个新的。我只能带上一根撬棍……”他抬头望向钟塔。"];
+	  32 [label="You: 试着完好得将贴纸揭下来。"];
+	  33 [label="You: Variable[\"church.churchdoor_got_sticker\"]"];
+	  34 [label="Variable[\"church.churchdoor_got_sticker\"]", shape=diamond];
+	  35 [label="!(Variable[\"church.churchdoor_got_sticker\"])", shape=diamond];
+	  36 [label="Jump to: [churchdoormainhub]"];
+	  37 [label="You: 承认失败，不再碰那把锁。"];
+	  38 [label="Church Doors: IsKimHere()"];
+	  39 [label="IsKimHere()", shape=diamond];
+	  40 [label="!(IsKimHere())", shape=diamond];
+	  41 [label="Church Doors: 挂锁像门环一样撞在木门上，发出响亮的撞击声。你冻僵的手也弄疼了，真是恭喜！"];
+	  42 [label="Church Doors: 教堂没有回应。现在木头似乎没那么腐朽了，螺丝（还有一只钉子）几乎还在坚持不懈地闪耀。"];
+	  43 [label="Church Doors: 你进入教堂。"];
+	  44 [label="You: 用力摇门，看看是否能打开。"];
+	  45 [label="Church Doors: 锁轻易就打开了，你能够听见如同镣铐被打开时的咔哒声。"];
+	  46 [label="Kim Kitsuragi: “但我们或许可以先找找别的入口……这座建筑已经遭了太多罪了。”"];
+	  47 [label="You: “什么鬼！？这怎么*可能*？”"];
+	  48 [label="Kim Kitsuragi: 他后退了一步。“我们或许可以先绕着大楼走一圈，找找别的入口。这座建筑已经遭了太多罪了。”"];
+	  49 [label="Interfacing: 瞧瞧！看起来太现代了。"];
+	  50 [label="Untitled hub"];
+	  51 [label="Shivers: 云霄之上，狂风把教堂包裹得严严实实。海湾传来的寒冷和潮湿，沿着巨大的龙骨状屋顶分开了。宛如一个风洞洗刷着两侧，340年以来，一直都是同样的方式。狂风都保持着一定距离，你也应该这么做。"];
+	  52 [label="You: 用钥匙打开挂锁。"];
+	  53 [label="Kim Kitsuragi: “你能听见东风中的低音脉冲吗？”他把手举至耳边。“明显是青少年过失行为的征兆。”\n“是的，低音脉冲……”他把手举至耳边。“青少年过失行为的征兆。”他转身向门口走去。"];
+	  54 [label="You: “你认为如何？”"];
+	  55 [label="Jump to: [churchdoormainhub]"];
+	  56 [label="Jump to: [Church Doors: \"This cheap-looking padlock is sturd...\"]"];
+	  57 [label="You: “金，你身边有撬棍吗？”"];
+	  58 [label="Church Doors: Variable[\"church.churchdoor_get_in_the_church_initiated\"]"];
+	  59 [label="Variable[\"church.churchdoor_get_in_the_church_initiated\"]", shape=diamond];
+	  60 [label="!(Variable[\"church.churchdoor_get_in_the_church_initiated\"])", shape=diamond];
+	  61 [label="Kim Kitsuragi: 警督看着挂锁，他没听到你的问题，你太小声了。"];
+	  62 [label="Church Doors: 挂锁穿过一根钉在木头上的螺钉，仔细检查后发现其中一根螺钉根本不是什么螺钉，而是一根铁钉。这是最近才挂上去的，至少可以判断手法非常不专业。"];
+	  63 [label="Conceptualization: 这个标志有某种极具*现代*气息的东西。它的现代程度使你之前见过的一切都相形见绌起来。"];
+	  64 [label="Kim Kitsuragi: “这些行为不同于成年人那样被称为*犯罪*，未成年人犯下罪行被称为‘过失行为’。这都是你警官考试的一部分。”他把手帕放回外衣口袋。"];
+	  65 [label="Kim Kitsuragi: “对于瑞瓦肖SAR，国际道德伦理委员会将少年犯定义为10到16岁之间有违法行为的未成年人……”"];
+	  66 [label="Church Doors: Variable[\"church.door_shivers_success\"]"];
+	  67 [label="Variable[\"church.door_shivers_success\"]", shape=diamond];
+	  68 [label="!(Variable[\"church.door_shivers_success\"])", shape=diamond];
+	  69 [label="You: “金，能把那块手帕借我吗？我的手湿了。”"];
+	  70 [label="Jump to: [churchdoormainhub]"];
+	  71 [label="You: “你以前见过这个符号吗？”（指向它。）"];
+	  72 [label="Kim Kitsuragi: 他摘下眼镜，用一块蓝色手帕把眼镜彻底擦干净，才检查起了贴纸。然后他抬起头，停顿了一下后回答道……"];
+	  73 [label="You: “我同意——它相当现代。但这个快活的人是不知道自己已经死去？还是这个死去的人不在乎自己已经死去了呢？里面的讽刺源头是什么？”"];
+	  74 [label="Logic: 如果你想进去的话，直接把它撬开可能会更容易些。"];
+	  75 [label="Conceptualization: 是愉悦、化学黄色与死后僵硬的反差。就好像这个快活的人不知道自己已经死去了，或者这个死去的家伙不在乎自己的死亡。无论如何，你能感到这其中有*未来*的力量在发挥作用。"];
+	  76 [label="Kim Kitsuragi: “如果你真的认为我们应该进去，就得想出其它办法……”"];
+	  77 [label="Jump to: [churchdoormainhub]"];
+	  78 [label="Interfacing: 弄断订书钉要比弄断锁容易得多。还有——不知道为什么，那张贴纸挺有意思的……"];
+	  79 [label="Kim Kitsuragi: “我觉得用这种方法进入一个年久失修的宗教场所非常糟糕。我猜教堂也会同意的。”"];
+	  80 [label="You: “不，我只是有点好奇。”"];
+	  81 [label="Church Doors: IsKimHere()"];
+	  82 [label="IsKimHere()", shape=diamond];
+	  83 [label="!(IsKimHere())", shape=diamond];
+	  84 [label="Jump to: [churchdoormainhub]"];
+	  85 [label="Church Doors: IsTaskActive(\"TASK.investigate_sea_fortress\")--[[ Variable[ ]]"];
+	  86 [label="IsTaskActive(\"TASK.investigate_sea_fortress\")--[[ Variable[ ]]", shape=diamond];
+	  87 [label="!(IsTaskActive(\"TASK.investigate_sea_fortress\")--[[ Variable[ ]])", shape=diamond];
+	  88 [label="You: “欢迎来到瑞瓦肖，挂锁！”"];
+	  89 [label="You: “其实我现在对教堂不是很感兴趣了。”"];
+	  90 [label="Church Doors: CheckEquipped(\"prybar\") == false  and  CheckEquipped(\"kvalsund_multitool\") == false"];
+	  91 [label="CheckEquipped(\"prybar\") == false  and  CheckEquipped(\"kvalsund_multitool\") == false", shape=diamond];
+	  92 [label="!(CheckEquipped(\"prybar\") == false  and  CheckEquipped(\"kvalsund_multitool\") == false)", shape=diamond];
+	  93 [label="Kim Kitsuragi: “我从没见过这个标志。而且我也不是年轻人。”"];
+	  94 [label="You: “你认为我们应该从哪里入手？”\n“我们应该从冰上传来的鼓声入手吗？我之前就听到一个声音了。”"];
+	  95 [label="You: 把它从拇指上甩下来，扔到风里去。"];
+	  96 [label="Kim Kitsuragi: “你认为我们的嫌犯藏在里面吗？”他抬头望着头顶上昏暗的窗户。"];
+	  97 [label="Interfacing: 看来今天是个好日子！"];
+	  98 [label="Church Doors: CheckItem(\"key_church_door\")"];
+	  99 [label="CheckItem(\"key_church_door\")", shape=diamond];
+	  100 [label="!(CheckItem(\"key_church_door\"))", shape=diamond];
+	  101 [label="Visual Calculus: 那边的海冰上面有什么东西。"];
+	  102 [label="Church Doors: IsKimHere()"];
+	  103 [label="IsKimHere()", shape=diamond];
+	  104 [label="!(IsKimHere())", shape=diamond];
+	  105 [label="Church Doors: Variable[\"TASK.locate_ruby_on_the_coast_done\"]"];
+	  106 [label="Variable[\"TASK.locate_ruby_on_the_coast_done\"]", shape=diamond];
+	  107 [label="!(Variable[\"TASK.locate_ruby_on_the_coast_done\"])", shape=diamond];
+	  108 [label="Jump to: [churchdoormainhub]"];
+	  109 [label="Jump to: [churchdoormainhub]"];
+	  110 [label="Kim Kitsuragi: 警督递给你一块蓝色手帕。当他拿回皱巴巴手帕的时候，看起来有点失望。不过，现在应该更容易揭下贴纸了。"];
+	  111 [label="Kim Kitsuragi: “我不像你那么*彪悍*，甚至起不了多少作用。”他甚至没有尝试让自己显得有说服力一些。"];
+	  112 [label="Church Doors: IsKimHere()"];
+	  113 [label="IsKimHere()", shape=diamond];
+	  114 [label="!(IsKimHere())", shape=diamond];
+	  115 [label="Kim Kitsuragi: “看上去像是个在微笑的死人，意味着……青少年过失行为。”"];
+	  116 [label="You: [离开。]"];
+	  117 [label="You: 后退一步，看着那扇门。"];
+	  118 [label="You: 它为何会如此现代？"];
+	  119 [label="Church Doors: CheckItem(\"prybar\")"];
+	  120 [label="CheckItem(\"prybar\")", shape=diamond];
+	  121 [label="!(CheckItem(\"prybar\"))", shape=diamond];
+	  122 [label="Inland Empire: 这些未来的力量选择描绘一种东西，让你想起了……你。"];
+	  123 [label="You: 退后。"];
+	  124 [label="Church Doors: Variable[\"ice.tentflap_greeting_done\"]"];
+	  125 [label="Variable[\"ice.tentflap_greeting_done\"]", shape=diamond];
+	  126 [label="!(Variable[\"ice.tentflap_greeting_done\"])", shape=diamond];
+	  127 [label="Jump to: [churchdoormainhub]"];
+	  128 [label="Kim Kitsuragi: 他退后一步。“也许我们应该先找找别的入口……这座教堂已经受过不少虐待了。”"];
+	  129 [label="You: “呃啊啊啊！”"];
+	  130 [label="You: 这里有什么地方暗示了它是青少年过失行为吗？"];
+	  131 [label="You: “好吧，什么是*青少年过失行为*？”"];
+	  132 [label="Church Doors: Variable[\"church.churchdoor_got_sticker\"]"];
+	  133 [label="Variable[\"church.churchdoor_got_sticker\"]", shape=diamond];
+	  134 [label="!(Variable[\"church.churchdoor_got_sticker\"])", shape=diamond];
+	  135 [label="Kim Kitsuragi: “人们确实会去教堂寻求庇护，但像这样被遗弃的教堂……我不太确定。”"];
+	  136 [label="You: （转向警督。）“这就是撬棍先生出场的时候了。”"];
+	  137 [label="You: 挂锁，挂锁，挂锁！"];
+	  138 [label="You: “你可以帮我一把的，知道吗？”"];
+	  139 [label="Untitled hub"];
+	  140 [label="Esprit de Corps: 比如说，看看我有多淡定，虽然你把我最心爱的撬棍弄坏了。"];
+	  141 [label="Church Doors: 门上的雕刻呈块状，棱角分明，正如教堂本身。两根大梁扎入地下，在到达门槛之前便没入了木头之中。"];
+	  142 [label="Jump to: [churchdoormainhub]"];
+	  143 [label="Physical Instrument: 你把撬棍卡在挂锁和螺钉之间，然后发力——你的肱二头肌因此膨胀起来，金属嘎吱作响……"];
+	  144 [label="Church Doors: IsKimHere()"];
+	  145 [label="IsKimHere()", shape=diamond];
+	  146 [label="!(IsKimHere())", shape=diamond];
+	  147 [label="You: 仔细检查挂锁。"];
+	  148 [label="You: 后退一步，看着那扇门。"];
+	  149 [label="You: “你认为我们应该从哪里入手？”\n“我们应该从冰上传来的鼓声入手吗？”"];
+	  150 [label="Physical Instrument: 想的挺美，孩子，但这并不是你赤手空拳就能做到的事。"];
+	  151 [label="You: 用手拂过梁柱。"];
+	  152 [label="Church Doors: 其表面被风吹得很光滑，但摸起来很潮湿。"];
+	  153 [label="You: “是的。”"];
+	  154 [label="You: “去他的吧！”（击打挂锁。）"];
+	  155 [label="Church Doors: 门上的锁当啷一声撞到门上，冰冷又沉重。"];
+	  156 [label="modernityunderstood"];
+	  157 [label="You: “或许吧，无论如何都值得一试。”"];
+	  158 [label="Kim Kitsuragi: 警督无声地点了点头。"];
+	  159 [label="Physical Instrument: 可怜的朽木、生锈的螺钉（还有一枚铁钉）根本无法抵挡*杠杆*的力量，从内部撕开了一道裂痕……"];
+	  160 [label="Physical Instrument: 一分多钟的对于挂锁的蹂躏并没有成功，你手中的撬棍……并没有给你任何机械增益。\n一分多钟的对于挂锁的蹂躏并没有成功，你手中的库瓦桑德……并没有给你任何机械增益。"];
+	  161 [label="Physical Instrument: 突然，撬棍断了，金属碎片四处飞溅。挂锁与螺钉之间的上半部分*呯*得一声掉在了地上。"];
+	  162 [label="You: 看着你手中损坏的工具。"];
+	  163 [label="Inland Empire: 一个不祥之兆。小心这座教堂。"];
+	  164 [label="Jump to: [Church Doors: \"This cheap-looking padlock is sturd...\"]"];
+	  165 [label="Interfacing: 没有什么比揭开贴纸的声音更美妙了，现在它黏在你的拇指上了。"];
+	  166 [label="You: 把贴纸贴在你的手册*上*——就在封面上！"];
+	  167 [label="churchdoor_initiation_hub"];
+	  168 [label="churchdoormainhub"];
+	  169 [label="Church Doors: CheckItem(\"key_church_door\")"];
+	  170 [label="CheckItem(\"key_church_door\")", shape=diamond];
+	  171 [label="!(CheckItem(\"key_church_door\"))", shape=diamond];
+	  172 [label="Jump to: [Church Doors: \"The doors remain unchanged -- close...\"]"];
+	  173 [label="Logic: 这肯定只是一起不寻常的事故。"];
+	  174 [label="Jump to: [churchdoormainhub]"];
+	  175 [label="You: 再看一眼挂锁。\n再看一眼那把无聊的挂锁，看在荒谬的份上。"];
+	  176 [label="Interfacing: 你的双手因为海边的空气变得潮湿，那张贴纸不断地滑落……"];
+	  177 [label="You: 优雅地放下锁。"];
+	  178 [label="Kim Kitsuragi: 那一下肯定很疼。警督抬头望着教堂的屋顶，没有理会你的小脾气。"];
+	  179 [label="Logic: 所以说，这个标志一定是一个年轻人制作的。"];
+	  180 [label="Jump to: [Untitled hub]"];
+	  181 [label="Kim Kitsuragi: “工具坏了，警官。试着控制一下自己。”"];
+	  182 [label="You: 检查木头做工。"];
+	  183 [label="You: “这是什么感觉？”"];
+	  184 [label="Church Doors: 这把廉价的挂锁异常坚固，它禁锢了一个搭扣和一根钉在木门上的螺钉，上面还装饰着一张黄色的贴纸。\n这把廉价的挂锁异常坚固，它禁锢了一个搭扣和一根钉在木门上的螺钉。"];
+	  185 [label="Church Doors: 什么也没有发生，只有挂锁撞门的声音。"];
+	  186 [label="Church Doors: IsTHCPresent(\"revacholian_nationhood\")"];
+	  187 [label="IsTHCPresent(\"revacholian_nationhood\")", shape=diamond];
+	  188 [label="!(IsTHCPresent(\"revacholian_nationhood\"))", shape=diamond];
+	  189 [label="Church Doors: Variable[\"church.churchdoor_have_crowbar_idea\"]"];
+	  190 [label="Variable[\"church.churchdoor_have_crowbar_idea\"]", shape=diamond];
+	  191 [label="!(Variable[\"church.churchdoor_have_crowbar_idea\"])", shape=diamond];
+	  192 [label="Kim Kitsuragi: “但我们或许可以先绕着大楼走一圈，找找别的入口。这座建筑已经遭了太多罪了。”"];
+	  193 [label="Church Doors: Variable[\"TASK.ask_about_ruby_in_village\"]"];
+	  194 [label="Variable[\"TASK.ask_about_ruby_in_village\"]", shape=diamond];
+	  195 [label="!(Variable[\"TASK.ask_about_ruby_in_village\"])", shape=diamond];
+	  196 [label="Physical Instrument: 你的肌肉不知道。这种事不应该发生。你肯定木头看起来很脆弱。"];
+	  197 [label="Kim Kitsuragi: “我觉得这样行不通……”"];
+	  198 [label="Church Doors: IsKimHere()"];
+	  199 [label="IsKimHere()", shape=diamond];
+	  200 [label="!(IsKimHere())", shape=diamond];
+	  201 [label="Church Doors: Variable[\"ice.tentflap_greeting_done\"]"];
+	  202 [label="Variable[\"ice.tentflap_greeting_done\"]", shape=diamond];
+	  203 [label="!(Variable[\"ice.tentflap_greeting_done\"])", shape=diamond];
+	  204 [label="Jump to: [churchdoormainhub]"];
+	  205 [label="Church Doors: IsKimHere()"];
+	  206 [label="IsKimHere()", shape=diamond];
+	  207 [label="!(IsKimHere())", shape=diamond];
+	  208 [label="Church Doors: Variable[\"church.churchdoor_understood_modernity\"]"];
+	  209 [label="Variable[\"church.churchdoor_understood_modernity\"]", shape=diamond];
+	  210 [label="!(Variable[\"church.churchdoor_understood_modernity\"])", shape=diamond];
+	  211 [label="Jump to: [Church Doors: \"The doors remain unchanged -- close...\"]"];
+	  212 [label="Church Doors: Variable[\"church.churchdoor_get_in_the_church_initiated\"]"];
+	  213 [label="Variable[\"church.churchdoor_get_in_the_church_initiated\"]", shape=diamond];
+	  214 [label="!(Variable[\"church.churchdoor_get_in_the_church_initiated\"])", shape=diamond];
+	  215 [label="Jump to: [churchdoormainhub]"];
+	  216 [label="You: 拉开门……"];
+	  217 [label="Church Doors: Variable[\"ice.tentflap_greeting_done\"]"];
+	  218 [label="Variable[\"ice.tentflap_greeting_done\"]", shape=diamond];
+	  219 [label="!(Variable[\"ice.tentflap_greeting_done\"])", shape=diamond];
+	  220 [label="You: 查看贴纸。"];
+	  221 [label="yeskimyesprybar"];
+	  222 [label="Church Doors: 一股巨大的气流冲进了教堂的黑暗之中，仿佛要填补一个巨大的真空……"];
+	  223 [label="Shivers: 感觉就像电流和一点点的虚无。"];
+	  224 [label="Empathy: 他的声音里有一种东西。很难说是什么。"];
+	  225 [label="Kim Kitsuragi: “这种程度的概念性思考不在我的技能范畴之内。”"];
+	  226 [label="Empathy: 他的声音里有一丝内疚。"];
+	  227 [label="You: 对挂锁上施力。"];
+	  228 [label="You: Variable[\"church.churchdoor_open_crowbar\"]"];
+	  229 [label="Variable[\"church.churchdoor_open_crowbar\"]", shape=diamond];
+	  230 [label="!(Variable[\"church.churchdoor_open_crowbar\"])", shape=diamond];
+	  231 [label="Jump to: [churchdoormainhub]"];
+	  232 [label="Interfacing: 再见啦，贴纸！"];
+	  233 [label="yeskimnoprybar"];
+	  234 [label="Jump to: [churchdoormainhub]"];
+	  235 [label="Church Doors: 大门纹丝不动——被一把挂锁锁住了。"];
+	  236 [label="Church Doors: IsKimHere()"];
+	  237 [label="IsKimHere()", shape=diamond];
+	  238 [label="!(IsKimHere())", shape=diamond];
+	  239 [label="Jump to: [Church Doors: \"The doors remain unchanged -- close...\"]"];
+	  240 [label="You: “我把撬棍弄坏了。该去哪里招新的呢？”（继续。）"];
+	  0 -> 1
+	  1 -> 6
+	  2 -> 201
+	  3 -> 4
+	  3 -> 5
+	  4 -> 21
+	  5 -> 211
+	  6 -> 168
+	  7 -> 127
+	  8 -> 97
+	  9 -> 54
+	  10 -> 204
+	  11 -> 109
+	  12 -> 13
+	  12 -> 14
+	  13 -> 29
+	  14 -> 222
+	  15 -> 216
+	  16 -> 163
+	  17 -> 62
+	  18 -> 101
+	  19 -> 130
+	  20 -> 184
+	  21 -> 138
+	  21 -> 37
+	  22 -> 102
+	  23 -> 24
+	  23 -> 25
+	  24 -> 143
+	  25 -> 90
+	  26 -> 51
+	  27 -> 43
+	  29 -> 222
+	  30 -> 63
+	  31 -> 79
+	  32 -> 33
+	  33 -> 34
+	  33 -> 35
+	  34 -> 132
+	  35 -> 132
+	  36 -> 168
+	  37 -> 211
+	  38 -> 40
+	  38 -> 39
+	  39 -> 178
+	  40 -> 41
+	  41 -> 231
+	  42 -> 173
+	  44 -> 185
+	  45 -> 223
+	  46 -> 224
+	  47 -> 112
+	  48 -> 226
+	  49 -> 11
+	  50 -> 148
+	  50 -> 183
+	  51 -> 66
+	  52 -> 45
+	  54 -> 115
+	  55 -> 168
+	  56 -> 184
+	  57 -> 2
+	  58 -> 59
+	  58 -> 60
+	  59 -> 77
+	  60 -> 167
+	  61 -> 36
+	  62 -> 169
+	  63 -> 175
+	  63 -> 118
+	  63 -> 71
+	  64 -> 19
+	  65 -> 64
+	  66 -> 67
+	  66 -> 68
+	  67 -> 50
+	  68 -> 36
+	  69 -> 110
+	  70 -> 168
+	  71 -> 72
+	  72 -> 9
+	  73 -> 225
+	  74 -> 189
+	  75 -> 122
+	  76 -> 89
+	  76 -> 149
+	  77 -> 168
+	  78 -> 174
+	  79 -> 173
+	  80 -> 158
+	  81 -> 82
+	  81 -> 83
+	  82 -> 197
+	  83 -> 51
+	  84 -> 168
+	  85 -> 86
+	  85 -> 87
+	  86 -> 26
+	  87 -> 51
+	  88 -> 161
+	  89 -> 28
+	  90 -> 91
+	  90 -> 92
+	  91 -> 150
+	  92 -> 160
+	  93 -> 208
+	  94 -> 18
+	  95 -> 232
+	  96 -> 80
+	  96 -> 153
+	  96 -> 157
+	  97 -> 109
+	  98 -> 99
+	  98 -> 100
+	  100 -> 212
+	  101 -> 215
+	  102 -> 104
+	  102 -> 103
+	  103 -> 61
+	  104 -> 36
+	  105 -> 106
+	  105 -> 107
+	  106 -> 85
+	  107 -> 96
+	  108 -> 168
+	  109 -> 168
+	  110 -> 231
+	  111 -> 211
+	  112 -> 113
+	  112 -> 114
+	  113 -> 181
+	  114 -> 196
+	  115 -> 130
+	  115 -> 131
+	  116 -> 98
+	  117 -> 239
+	  118 -> 75
+	  119 -> 120
+	  119 -> 121
+	  120 -> 221
+	  121 -> 233
+	  122 -> 175
+	  122 -> 71
+	  123 -> 56
+	  124 -> 125
+	  124 -> 126
+	  125 -> 128
+	  126 -> 48
+	  127 -> 168
+	  128 -> 224
+	  129 -> 161
+	  130 -> 93
+	  131 -> 65
+	  132 -> 133
+	  132 -> 134
+	  133 -> 165
+	  134 -> 176
+	  135 -> 51
+	  136 -> 124
+	  137 -> 20
+	  138 -> 111
+	  139 -> 240
+	  139 -> 162
+	  139 -> 47
+	  140 -> 180
+	  141 -> 117
+	  141 -> 151
+	  142 -> 168
+	  143 -> 159
+	  144 -> 145
+	  144 -> 146
+	  145 -> 217
+	  147 -> 184
+	  148 -> 172
+	  149 -> 53
+	  150 -> 211
+	  151 -> 152
+	  152 -> 10
+	  153 -> 135
+	  154 -> 38
+	  155 -> 108
+	  156 -> 73
+	  156 -> 137
+	  157 -> 158
+	  158 -> 51
+	  159 -> 186
+	  160 -> 3
+	  161 -> 139
+	  162 -> 16
+	  163 -> 180
+	  164 -> 184
+	  165 -> 8
+	  165 -> 166
+	  165 -> 95
+	  166 -> 49
+	  167 -> 94
+	  168 -> 32
+	  168 -> 227
+	  168 -> 44
+	  168 -> 17
+	  168 -> 147
+	  168 -> 52
+	  168 -> 116
+	  168 -> 182
+	  168 -> 220
+	  169 -> 170
+	  169 -> 171
+	  170 -> 84
+	  171 -> 74
+	  172 -> 235
+	  173 -> 234
+	  174 -> 168
+	  175 -> 164
+	  176 -> 177
+	  176 -> 154
+	  176 -> 69
+	  177 -> 155
+	  178 -> 41
+	  179 -> 70
+	  180 -> 139
+	  181 -> 140
+	  182 -> 141
+	  183 -> 22
+	  184 -> 78
+	  185 -> 81
+	  186 -> 187
+	  186 -> 188
+	  187 -> 88
+	  188 -> 129
+	  189 -> 190
+	  189 -> 191
+	  190 -> 205
+	  191 -> 142
+	  192 -> 226
+	  193 -> 194
+	  193 -> 195
+	  194 -> 105
+	  195 -> 51
+	  196 -> 180
+	  197 -> 193
+	  198 -> 200
+	  198 -> 199
+	  199 -> 15
+	  200 -> 216
+	  201 -> 202
+	  201 -> 203
+	  202 -> 46
+	  203 -> 192
+	  204 -> 168
+	  205 -> 206
+	  205 -> 207
+	  206 -> 119
+	  207 -> 142
+	  208 -> 209
+	  208 -> 210
+	  209 -> 156
+	  210 -> 179
+	  211 -> 235
+	  212 -> 213
+	  212 -> 214
+	  214 -> 144
+	  215 -> 168
+	  216 -> 12
+	  217 -> 218
+	  217 -> 219
+	  219 -> 76
+	  220 -> 30
+	  221 -> 136
+	  221 -> 123
+	  222 -> 27
+	  223 -> 198
+	  224 -> 7
+	  225 -> 55
+	  226 -> 58
+	  227 -> 228
+	  228 -> 229
+	  228 -> 230
+	  229 -> 23
+	  230 -> 23
+	  231 -> 168
+	  232 -> 109
+	  233 -> 57
+	  233 -> 123
+	  234 -> 168
+	  235 -> 168
+	  236 -> 237
+	  236 -> 238
+	  237 -> 31
+	  238 -> 42
+	  239 -> 235
+	  240 -> 236
+}
+

@@ -1,0 +1,158 @@
+# INITIATION / SMOKING HABIT
+# Global afterthought dialogue to pick up smoking.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 不行。在即将吸入之际毅然扔掉这支烟。[忽略这个想法。]"];
+	  3 [label="Variable[\"whirling.sense_smoking_volition_withdrawal\"]"];
+	  4 [label="Variable[\"whirling.sense_smoking_volition_withdrawal\"]", shape=diamond];
+	  5 [label="!(Variable[\"whirling.sense_smoking_volition_withdrawal\"])", shape=diamond];
+	  6 [label="Electrochemistry: 你选中了最出色的战士！这位尼古丁的士兵是多么的肥美多汁。你还等什么？点烟吧——重返自我！"];
+	  7 [label="Logic: 不过，人们真的会*一直*看着吗？毕竟人们可能会去厕所，或者你也可能会在不同的……"];
+	  8 [label="CheckHeldRightGroup(\"smokes\")"];
+	  9 [label="CheckHeldRightGroup(\"smokes\")", shape=diamond];
+	  10 [label="!(CheckHeldRightGroup(\"smokes\"))", shape=diamond];
+	  11 [label="Electrochemistry: 闭嘴吧。生米正在煮成熟饭呢……"];
+	  12 [label="You: 如果我吸了，会有怎样的不良影响？"];
+	  13 [label="You: 快让这坏家伙欲火焚身，然后猛吸一口。"];
+	  14 [label="Volition: 那之所以有助于集中注意力，是因为导致你注意力涣散的正是*尼古丁戒断症状*。吸烟只是在缓解它自己造成的问题罢了……"];
+	  15 [label="Variable[\"character.smoking_logic_wont_always_be_looking\"]"];
+	  16 [label="Variable[\"character.smoking_logic_wont_always_be_looking\"]", shape=diamond];
+	  17 [label="!(Variable[\"character.smoking_logic_wont_always_be_looking\"])", shape=diamond];
+	  18 [label="Tutorial Agent: 你刚刚错过了开始吸烟的机会。不过别担心，开始抽烟的选项会在3小时候再次开启。"];
+	  19 [label="Electrochemistry: 随着浓郁，温和的烟雾吸入肺部，一股温柔的怀念*立刻*充溢你的脑海，身躯*以及*灵魂。这是你所怀念的*自己*，年轻时的你。霹雳特警强尼*强势回归*。而且他简直酷炫到爆了。"];
+	  20 [label="Electrochemistry: 就在这里，你的口袋里装着一支勇敢的小小军队。人称第一吸烟排。二十位勇敢的士兵向你立正敬礼，时刻准备为你赴汤蹈火，指挥官……"];
+	  21 [label="You: 点烟！"];
+	  22 [label="Jump to: [Electrochemistry: \"Already you regret it -- looking at...\"]"];
+	  23 [label="Variable[\"tc.turn_off_tutorial_node\"]"];
+	  24 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  25 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  26 [label="Electrochemistry: 摇滚警察大驾光临，瞧一瞧看一看呐，乡亲们！霹雳特警强尼从裤兜中掏出了打火机。弹指之间，火苗窜起，顶级的满足感。扑面而来……"];
+	  27 [label="Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")"];
+	  28 [label="Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")", shape=diamond];
+	  29 [label="!(Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\"))", shape=diamond];
+	  30 [label="CheckHeldRightGroup(\"smokes\")"];
+	  31 [label="CheckHeldRightGroup(\"smokes\")", shape=diamond];
+	  32 [label="!(CheckHeldRightGroup(\"smokes\"))", shape=diamond];
+	  33 [label="Jump to: [SMOKEHUB]"];
+	  34 [label="Frittte clerk: “嘿，这里不许抽烟。”女孩的声音不带丝毫兴趣或热情。她讲话的时候甚至都没有抬头看你一眼：“请不要在弗莱特胡闹。”"];
+	  35 [label="Electrochemistry: 随着浓郁，温和的烟雾吸入肺部，一股温柔的怀念*立刻*充溢你的脑海，身躯*以及*灵魂。这是你所怀念的*自己*，年轻时的你。霹雳特警强尼*强势回归*。而且他简直酷炫到爆了。"];
+	  36 [label="Variable[\"tc.turn_off_tutorial_node\"]"];
+	  37 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  38 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  39 [label="Electrochemistry: 你已经感到后悔了——仅仅是因为看着这包烟……但别担心。你可以稍后再来。香烟军队对你忠心耿耿。你还有整整*一辈子*可以随时返回阅兵式的主席台。"];
+	  40 [label="Electrochemistry: 不良影响？比如获得“荣耀”的风险很高？还有一定几率成为酷炫的*天才*。众所周知，吸烟会让你成为“知识分子”。"];
+	  41 [label="Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")"];
+	  42 [label="Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")", shape=diamond];
+	  43 [label="!(Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\"))", shape=diamond];
+	  44 [label="You: 我不会这么做的。[忽略思维。]"];
+	  45 [label="Logic: 吸烟稍微有助于集中集中注意力，这可是货真价实的。"];
+	  46 [label="You: 我不想*现在就*点烟，还有人看着呢。"];
+	  47 [label="You: 抽出一支烟。"];
+	  48 [label="Untitled hub (02)"];
+	  49 [label="Perception (Sight): 打火机是廉价的一次性塑料做的。安全锁已经解除了——对你而言，安全锁*一直*形同虚设。"];
+	  50 [label="Idiot Doom Spiral: 穿着恶臭运动服的男人一本正经地点了点头。“这是冒险途中应得的休息。我们都需要这种放松。”"];
+	  51 [label="Variable[\"auto.smoke_fritte\"]"];
+	  52 [label="Variable[\"auto.smoke_fritte\"]", shape=diamond];
+	  53 [label="!(Variable[\"auto.smoke_fritte\"])", shape=diamond];
+	  54 [label="Electrochemistry: 摇滚警察大驾光临，瞧一瞧看一看呐，乡亲们！霹雳特警强尼从裤兜中掏出了打火机。弹指之间，火苗窜起，顶级的满足感。扑面而来……"];
+	  55 [label="Jump to: [SMOKEHUB]"];
+	  56 [label="Jump to: [Untitled hub (02)]"];
+	  57 [label="Electrochemistry: 闭嘴点烟！你想浑浑噩噩地度过余生吗？这玩意会给你急需的酷炫派头。"];
+	  58 [label="You: 我已经犯过心脏病了。也许吸烟有害健康？"];
+	  59 [label="You: 把烟塞回烟盒里。[忽略这个想法。]"];
+	  60 [label="SMOKEHUB"];
+	  61 [label="Horrific Necktie: 是啊，*哥们儿*！（领带绕在你的脖子上，兴奋地颤抖着。）请务必点上这支烟。你*迫切需要*在嘴边叼上一位天降尼古丁的神兵！安抚一下你的瘾头。前往极乐世界。成为*天才*吧！"];
+	  62 [label="Horrific Necktie: 踏入光芒，在净化之火中重生吧，*哥们儿*！"];
+	  63 [label="Electrochemistry: 不，真正*有害健康*的是烦恼和担忧。*压力*才是导致你心脏停跳的罪魁祸首。吸烟只会减轻你的压力。这是一剂良药。"];
+	  64 [label="Tutorial Agent: 在屏幕右下角，你可以看到有一个香烟按钮！香烟可以给予你所有智力技能+1加成，包括：逻辑思维、能说会道、标新立异、见微知著、博学多闻以及故弄玄虚。在进行白色检定前吸烟会很好用。不过，吸烟是有害健康的。"];
+	  65 [label="Electrochemistry: ……唠唠叨叨，啰啰嗦嗦。真无聊。点烟吧！"];
+	  66 [label="Variable[\"auto.smoke_doomspiral\"]"];
+	  67 [label="Variable[\"auto.smoke_doomspiral\"]", shape=diamond];
+	  68 [label="!(Variable[\"auto.smoke_doomspiral\"])", shape=diamond];
+	  69 [label="Electrochemistry: 有人看着？你这懦夫！人们*一直*在看着——所以这样才*酷*呢，别废话了！"];
+	  0 -> 1
+	  1 -> 20
+	  2 -> 22
+	  3 -> 4
+	  3 -> 5
+	  4 -> 66
+	  5 -> 57
+	  6 -> 41
+	  7 -> 15
+	  8 -> 9
+	  8 -> 10
+	  9 -> 35
+	  10 -> 19
+	  11 -> 48
+	  12 -> 40
+	  13 -> 8
+	  14 -> 3
+	  15 -> 16
+	  15 -> 17
+	  16 -> 58
+	  17 -> 33
+	  19 -> 23
+	  20 -> 44
+	  20 -> 47
+	  21 -> 30
+	  22 -> 39
+	  23 -> 24
+	  23 -> 25
+	  25 -> 65
+	  26 -> 49
+	  27 -> 28
+	  27 -> 29
+	  28 -> 63
+	  29 -> 56
+	  30 -> 32
+	  30 -> 31
+	  31 -> 26
+	  32 -> 55
+	  33 -> 61
+	  34 -> 11
+	  35 -> 23
+	  36 -> 37
+	  36 -> 38
+	  38 -> 18
+	  39 -> 36
+	  40 -> 45
+	  41 -> 42
+	  41 -> 43
+	  42 -> 62
+	  43 -> 61
+	  44 -> 39
+	  45 -> 14
+	  46 -> 70
+	  47 -> 6
+	  48 -> 2
+	  48 -> 12
+	  48 -> 13
+	  49 -> 52
+	  50 -> 48
+	  51 -> 53
+	  51 -> 54
+	  52 -> 34
+	  53 -> 67
+	  54 -> 49
+	  55 -> 61
+	  56 -> 48
+	  57 -> 33
+	  58 -> 64
+	  59 -> 39
+	  60 -> 59
+	  60 -> 60
+	  60 -> 21
+	  60 -> 46
+	  61 -> 61
+	  62 -> 56
+	  63 -> 27
+	  65 -> 57
+	  66 -> 68
+	  66 -> 69
+	  67 -> 51
+	  68 -> 48
+	  69 -> 7
+}
+

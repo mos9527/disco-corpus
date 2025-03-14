@@ -1,0 +1,105 @@
+# INVENTORY / LIBRARY CARD
+# dead working class husband library card
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="A Folded Library Card: 这张借书证被对折了起来，摸起来还有点潮湿。正面写着：“加姆洛克公共图书馆借书证。签发给比莉·梅让，截至53年7月。”"];
+	  3 [label="Variable[\"TASK.identify_corpse_boardwalk\"]"];
+	  4 [label="Variable[\"TASK.identify_corpse_boardwalk\"]", shape=diamond];
+	  5 [label="!(Variable[\"TASK.identify_corpse_boardwalk\"])", shape=diamond];
+	  6 [label="IsKimHere()"];
+	  7 [label="IsKimHere()", shape=diamond];
+	  8 [label="!(IsKimHere())", shape=diamond];
+	  9 [label="library card hub"];
+	  10 [label="A Folded Library Card: 有什么东西告诉你，你应该给他们打个电话。"];
+	  11 [label="Jump to: [library card hub]"];
+	  12 [label="A Folded Library Card: 你把借书证放在一边。"];
+	  13 [label="Variable[\"TASK.report_corpse_wo_taking_main_task\"]"];
+	  14 [label="Variable[\"TASK.report_corpse_wo_taking_main_task\"]", shape=diamond];
+	  15 [label="!(Variable[\"TASK.report_corpse_wo_taking_main_task\"])", shape=diamond];
+	  16 [label="Kim Kitsuragi: “我们应该先决定怎么处理这具尸体，然后再采取其他行动。我们再看一眼那具尸体，充分讨论一下。”"];
+	  17 [label="You: [把它放在一边。]"];
+	  18 [label="Logic: 比莉是一个男女通用的名字。会是死者的名字吗，*或者*是他家庭成员的？"];
+	  19 [label="IsTaskActive(\"TASK.examine_libray_card_wo_taking_main_task\")--[[ Variable[ ]]"];
+	  20 [label="IsTaskActive(\"TASK.examine_libray_card_wo_taking_main_task\")--[[ Variable[ ]]", shape=diamond];
+	  21 [label="!(IsTaskActive(\"TASK.examine_libray_card_wo_taking_main_task\")--[[ Variable[ ]])", shape=diamond];
+	  22 [label="You: 看看背面。"];
+	  23 [label="A Folded Library Card: 不管这张借书证的主人是谁，肯定是位热心读者：你发现一张用蓝色铅笔书写的借书清单：“惊魂无线电”，“靠近我和太阳近一些”。清单上的最后一个是M·蒂博的“闪耀曲线”。图书馆印章显示这本书已经归还了。"];
+	  24 [label="IsKimHere()"];
+	  25 [label="IsKimHere()", shape=diamond];
+	  26 [label="!(IsKimHere())", shape=diamond];
+	  27 [label="Jump to: [library card hub]"];
+	  28 [label="Logic: 在采取进一步行动之前，你应该先决定如何处理那具尸体。和警督谈谈这件事吧。"];
+	  29 [label="Kim Kitsuragi: “很好，我们已经检查过借书证——对我们的同事而言，这就够了。现在可以用我的锐影呼叫警察局，把这个案子交给他们。”"];
+	  30 [label="A Folded Library Card: “如有遗失，请将借书证归还给图书馆。拨打005-02-55-211或者前往加姆洛克，麦罗埃街街78号。开放时间：上午9时至下午18时。”"];
+	  31 [label="Reaction Speed: 好主意。这里有大量信息可以作为参考。"];
+	  32 [label="IsKimHere()"];
+	  33 [label="IsKimHere()", shape=diamond];
+	  34 [label="!(IsKimHere())", shape=diamond];
+	  35 [label="Kim Kitsuragi: “很好。”他记下笔记。“我们应该去锐影那边打个电话，看看能不能了解一下比莉·梅让的信息。”"];
+	  36 [label="Conceptualization: 大部分标题似乎都是科幻类的。还有一些惊悚类。"];
+	  37 [label="Kim Kitsuragi: “我们已经决定把这件事交给警局去处理了，所以没必要打给图书馆。"];
+	  38 [label="Logic: 你已经决定让警局去处理这件事情，所以没必要打给图书馆。"];
+	  39 [label="IsKimHere()"];
+	  40 [label="IsKimHere()", shape=diamond];
+	  41 [label="!(IsKimHere())", shape=diamond];
+	  42 [label="IsTaskActive(\"TASK.examine_library_card_with_main_task\")--[[ Variable[ ]]"];
+	  43 [label="IsTaskActive(\"TASK.examine_library_card_with_main_task\")--[[ Variable[ ]]", shape=diamond];
+	  44 [label="!(IsTaskActive(\"TASK.examine_library_card_with_main_task\")--[[ Variable[ ]])", shape=diamond];
+	  45 [label="You: 看看里面。"];
+	  0 -> 1
+	  1 -> 2
+	  2 -> 19
+	  3 -> 4
+	  3 -> 5
+	  4 -> 43
+	  5 -> 13
+	  6 -> 8
+	  6 -> 7
+	  7 -> 16
+	  8 -> 29
+	  9 -> 17
+	  9 -> 46
+	  9 -> 23
+	  10 -> 11
+	  11 -> 9
+	  13 -> 14
+	  13 -> 15
+	  14 -> 33
+	  15 -> 6
+	  16 -> 11
+	  17 -> 20
+	  18 -> 9
+	  19 -> 21
+	  19 -> 22
+	  20 -> 40
+	  22 -> 31
+	  23 -> 37
+	  24 -> 26
+	  24 -> 27
+	  25 -> 36
+	  26 -> 10
+	  27 -> 9
+	  28 -> 11
+	  30 -> 3
+	  31 -> 11
+	  32 -> 34
+	  32 -> 35
+	  33 -> 38
+	  34 -> 39
+	  35 -> 32
+	  36 -> 28
+	  37 -> 11
+	  38 -> 11
+	  39 -> 41
+	  39 -> 42
+	  40 -> 30
+	  41 -> 12
+	  42 -> 44
+	  42 -> 45
+	  43 -> 25
+	  44 -> 11
+	  45 -> 24
+}
+

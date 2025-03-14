@@ -1,0 +1,73 @@
+# BOARDWALK / REPORTING TO KIM
+# If Kim wasn't with you when you first discovered the body then you're going to have to tell him about it. (Jumps here from Kim's main; then jumps back).
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Jump to: [WHIRLING / KIM MAIN]"];
+	  3 [label="Kim Kitsuragi: “不过这一切好像有点太麻烦了，还有一个选择就是汇报警局，把案子交给我们的同事去处理。”"];
+	  4 [label="Kim Kitsuragi: “如果我们接下案子，那就需要确认男人的身份，还要处理好尸体。我可以自己把尸体送到停尸房，或者我们也可以找哈迪兄弟寻求帮助。”"];
+	  5 [label="Kim Kitsuragi: “好吧。不过警局可能会需要我们提供细节。回我的锐影打电话之前，我们最好保证没有遗漏任何东西。”"];
+	  6 [label="Kim Kitsuragi: “你认真的吗？”警督的脸色立马变了，表情愈发阴沉。"];
+	  7 [label="Kim Kitsuragi: “很好，我们应该打给图书馆——也许那边能提供一些线索。如果我们决定接下案子的话，那就这么办了。”"];
+	  8 [label="Kim Kitsuragi: “也许，不过我们真的没有那么多时间，也没有那么多资源可以浪费。不过，如果你想接的话——那就请便吧。”"];
+	  9 [label="You: “等等——那现场验尸呢？”"];
+	  10 [label="Kim Kitsuragi: “说得好。”"];
+	  11 [label="You: “我们还是把案子留给警局吧，我不想再在上面浪费时间了。”"];
+	  12 [label="Kim Kitsuragi: 警督点点头，若有所思。“在我看来有两种选择。要么我们接下这起案子，顺着线索确认尸体身份——或者，汇报给我的警局，把案子交给同事去处理。”"];
+	  13 [label="You: “我想让我们俩全权负责这起案件。”"];
+	  14 [label="Kim Kitsuragi: “他死去多久了？你有没有确认他的*身份*，口袋搜查过了吗？他还在那个地方吗？”"];
+	  15 [label="You: “你说得对，我没发现什么犯罪行为。这个话题就到此为止吧。”"];
+	  16 [label="Jump to: [what do we do]"];
+	  17 [label="Variable[\"boardwalk.library_card_know_phone_number\"]  and  Variable[\"TASK.call_jamrock_library\"] == false"];
+	  18 [label="Variable[\"boardwalk.library_card_know_phone_number\"]  and  Variable[\"TASK.call_jamrock_library\"] == false", shape=diamond];
+	  19 [label="!(Variable[\"boardwalk.library_card_know_phone_number\"]  and  Variable[\"TASK.call_jamrock_library\"] == false)", shape=diamond];
+	  20 [label="Kim Kitsuragi: “接下案子意味着我们需要确认男人的身份，还要处理尸体。我可以自己把尸体送到停尸房，或者我们也可以找哈迪兄弟寻求帮助。”"];
+	  21 [label="Kim Kitsuragi: “在我们离开之前——先确认没有遗漏任何东西——特别是任何身份信息。”"];
+	  22 [label="Jump to: [what do we do]"];
+	  23 [label="what do we do kim 2"];
+	  24 [label="You: “哇哦，放松点…我什么都还没做呢，只是想先跟你说一声。”"];
+	  25 [label="Kim Kitsuragi: “如果死因不像是犯罪行为导致的话，那就没必要现场验尸——而且在我看来，这就是一起简单的事故。”"];
+	  26 [label="Kim Kitsuragi: “要我说，我们应该在验尸报告里写下‘头部创伤’，然后就到此为止。这样至少可以节省两个小时不必要的工作。”"];
+	  27 [label="Kim Kitsuragi: “我们还要给加姆洛克图书馆去个电话，看看能不能了解到这位比莉·梅让的信息。”"];
+	  28 [label="You: “我在他的口袋里发现了一张加姆洛克公共图书馆的借书证，签发给一个名叫比莉·梅让的人。尸体还在那个地方。”"];
+	  29 [label="Kim Kitsuragi: “好吧。不过我们还是要打给警局，让他们知道我们准备接下额外的案子，这样他们就能把尸体带走。”"];
+	  30 [label="You: “我在他的口袋里发现了一张借书证，不过还没仔细检查。尸体还在那个地方。”"];
+	  31 [label="You: “是啊，但是…这样是不是有点太草率了？”"];
+	  0 -> 1
+	  1 -> 6
+	  3 -> 24
+	  4 -> 24
+	  5 -> 2
+	  6 -> 15
+	  7 -> 21
+	  8 -> 23
+	  9 -> 26
+	  10 -> 17
+	  11 -> 5
+	  12 -> 4
+	  13 -> 30
+	  14 -> 25
+	  14 -> 29
+	  14 -> 31
+	  15 -> 10
+	  17 -> 19
+	  17 -> 20
+	  18 -> 28
+	  19 -> 22
+	  20 -> 3
+	  21 -> 2
+	  23 -> 9
+	  23 -> 11
+	  23 -> 13
+	  24 -> 12
+	  25 -> 27
+	  26 -> 32
+	  26 -> 16
+	  27 -> 2
+	  28 -> 7
+	  29 -> 18
+	  30 -> 7
+	  31 -> 8
+}
+

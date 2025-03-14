@@ -1,0 +1,512 @@
+# CONTAINERYARD / CLOAK JUMP
+# You see a policeman-cloak -- jump to it. Get it. If you're above, to be precise! Otherwise, you can just pick it up or whatever.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: “警督……”（指向斗篷。）“我觉得那是我的。”"];
+	  3 [label="Policeman Cloak: Variable[\"plaza.tribunal_saw_death_dream\"]"];
+	  4 [label="Variable[\"plaza.tribunal_saw_death_dream\"]", shape=diamond];
+	  5 [label="!(Variable[\"plaza.tribunal_saw_death_dream\"])", shape=diamond];
+	  6 [label="Shivers: 尸体俯视着整个院子，就算如此远离震中，那股恶臭还是让人作呕，让你眼泪盈眶。"];
+	  7 [label="Jump to: [Into the abyss]"];
+	  8 [label="Policeman Cloak: Variable[\"backyard.jump_kim_esprit_crane\"]  or  Variable[\"cargo.encyclo_kvalsund\"]"];
+	  9 [label="Variable[\"backyard.jump_kim_esprit_crane\"]  or  Variable[\"cargo.encyclo_kvalsund\"]", shape=diamond];
+	  10 [label="!(Variable[\"backyard.jump_kim_esprit_crane\"]  or  Variable[\"cargo.encyclo_kvalsund\"])", shape=diamond];
+	  11 [label="Kim Kitsuragi: “我觉得这个巨大的老虎钳有一种特别的美。不过你说得对，我们要专注在你的*斗篷*上……”"];
+	  12 [label="You: 喝一杯是想干嘛？那不就毁掉这个时刻了？"];
+	  13 [label="Esprit de Corps: *它会为你挡风遮雨，为你舍弃自己的生命*——斗篷传递出这条信息。"];
+	  14 [label="You: 该死。你说得对！如果现在有啤酒在我脸上喷涌，那就真是太*成功*了。"];
+	  15 [label="You: “你真觉得那件斗篷是我的吗？我是不是该把它拿回来？跳过去？”"];
+	  16 [label="You: 闭上眼睛，让你的感官去体会周围的世界。"];
+	  17 [label="Jump to: [Midjumphub]"];
+	  18 [label="Shivers: 这个小后院，坤诺的王国，当它不再被一具腐烂的尸体支配的时候，看起来几乎如田园诗一般。"];
+	  19 [label="Horrific Necktie: 好吧，那就无聊一点，呼吸！因为那份甜蜜兴奋起来吧，宝贝！"];
+	  20 [label="Horrific Necktie: 当你放手的那一瞬间，眼泪如浪潮一般冲破大坝，把一切全都冲走了。"];
+	  21 [label="Empathy: 他的眼神里混杂着工程师般的兴趣，还有第一次看见马的六岁孩童的惊叹。"];
+	  22 [label="You: 只是一件警察的斗篷……我现在不想处理它的事。[离开。]"];
+	  23 [label="You: 这件斗篷现在不关我的事。[离开。]"];
+	  24 [label="Savoir Faire: 没人听见你的叫喊声，不过这让你感觉内心充满力量。现在，你的双脚牢牢踩在混凝土上面，港口的喧闹声又冲了回来。"];
+	  25 [label="Horrific Necktie: 领带会引导你度过这一关。它是你的灵兽，既是你的敌人，又是朋友。突然间，一种轻松的感觉掠过你的全身——你又没事了。"];
+	  26 [label="Kim Kitsuragi: “我原以为我们可以去找工会老大，让他帮我们把尸体弄下来。这就是我们来这里的原因，不是吗？”他并没有等待你的回答。"];
+	  27 [label="Perception (Sight): 确实是的。"];
+	  28 [label="Logic: 考虑到马丁内斯有限的警力——你觉得我们是不是可以来点逻辑上的飞跃，说它是你的呢？"];
+	  29 [label="Savoir Faire: 混凝土路面欢迎着你，你意识到自己已经有一阵子没感觉到如此地活跃、机敏和能干。一定是肾上腺素的原因。"];
+	  30 [label="Jump to: [Midjumphub]"];
+	  31 [label="You: （扯一扯你的领带。）天啦，我快不能呼吸了……别这么做了，领带，你不应该是我的*朋友*吗！"];
+	  32 [label="Savoir Faire: 过了一会儿，你停止了啜泣。这里没人看见你刚才崩溃的样子，你的心情确实感觉放松了不少。是时候继续前进了。"];
+	  33 [label="Kim Kitsuragi: “当然。”他担忧地看着你。“小心一点，好吗，看起来你差点拉伤肌肉了。”"];
+	  34 [label="Policeman Cloak: Variable[\"TASK.interview_union_boss\"]  and  Variable[\"TASK.interview_union_boss_done\"] == false"];
+	  35 [label="Variable[\"TASK.interview_union_boss\"]  and  Variable[\"TASK.interview_union_boss_done\"] == false", shape=diamond];
+	  36 [label="!(Variable[\"TASK.interview_union_boss\"]  and  Variable[\"TASK.interview_union_boss_done\"] == false)", shape=diamond];
+	  37 [label="Interfacing: 那是一台库瓦桑德10-20HK起重机。"];
+	  38 [label="Kim Kitsuragi: “我们在做什么？我们离闯入工业港口只有咫尺之遥——他们一定会为我们提供信息。我觉得那也是我们的目的……”"];
+	  39 [label="You: 你个王八蛋的，那是我的斗篷！"];
+	  40 [label="Policeman Cloak: 没有注意到你的存在，斗篷依然无助地上下翻飞着。"];
+	  41 [label="Policeman Cloak: IsTHCPresent(\"aces_high\")"];
+	  42 [label="IsTHCPresent(\"aces_high\")", shape=diamond];
+	  43 [label="!(IsTHCPresent(\"aces_high\"))", shape=diamond];
+	  44 [label="You: 把一切都释放出来，放手吧，让它发生。"];
+	  45 [label="Policeman Cloak: Variable[\"backyard.jump_wc_fail\"]"];
+	  46 [label="Variable[\"backyard.jump_wc_fail\"]", shape=diamond];
+	  47 [label="!(Variable[\"backyard.jump_wc_fail\"])", shape=diamond];
+	  48 [label="Kim Kitsuragi: 他的眼睛勾画着起重机的轮廓，似乎想要记住它那宏伟的形状。然后他注意到你的视线。"];
+	  49 [label="Savoir Faire: 没人听到你的话语，不过不要紧。你感觉很骄傲。现在，你的双脚牢牢踩在混凝土上面，港口的喧闹声又冲了回来。"];
+	  50 [label="Kim Kitsuragi: “呃，看起来也不是太危险——最多两米。等你什么时候准备好了，我会在你身后。”"];
+	  51 [label="You: 我猜可能没什么重要的吧。[离开。]"];
+	  52 [label="You: “是啊，现在不行。”[离开。]"];
+	  53 [label="Policeman Cloak: Variable[\"backyard.jump_whitecheck_chasm\"]"];
+	  54 [label="Variable[\"backyard.jump_whitecheck_chasm\"]", shape=diamond];
+	  55 [label="!(Variable[\"backyard.jump_whitecheck_chasm\"])", shape=diamond];
+	  56 [label="Policeman Cloak: Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"]"];
+	  57 [label="Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"]", shape=diamond];
+	  58 [label="!(Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"])", shape=diamond];
+	  59 [label="You: “弗兰考格斯！！！”\n“为了人民！！！”\n“瑞瓦肖！！！”\n“扭矩！！！”\n“回收品！！！”"];
+	  60 [label="Kim Kitsuragi: “单位发给你的警用斗篷？是的，没错，我觉得要拿回来。”"];
+	  61 [label="Jump to: [Into the abyss]"];
+	  62 [label="Horrific Necktie: 悲伤，压力，过去和现在的失败，还有做你自己的负担。如果不是因为领带的牢牢把握，你也可能会被冲走的。"];
+	  63 [label="Jump to: [CLOAKENHUB]"];
+	  64 [label="Horrific Necktie: 这可真是浑然天成啊，*哥们*。想象一下自己一手抓着酒瓶，一手夹着点燃的香烟！而且还是在半空中！"];
+	  65 [label="Policeman Cloak: SetVariableValue(\"cargo.cloakjump_wc_failed\", true) --[[ Variable[ ]]"];
+	  66 [label="Jump to: [CLOAKENHUB]"];
+	  67 [label="Shivers: 当你在空中翱翔的时候，马丁内斯还在进行着它的日常。抗议者响亮的呼喊声跟交通堵塞的引擎声混杂在一起；海浪拍打着码头，浓密微咸的海风充满你的肺部。"];
+	  68 [label="Kim Kitsuragi: “喂，喂……出什么事了？”他听起来真的很担心。"];
+	  69 [label="Policeman Cloak: IsKimHere()"];
+	  70 [label="IsKimHere()", shape=diamond];
+	  71 [label="!(IsKimHere())", shape=diamond];
+	  72 [label="Horrific Necktie: 感觉这种窒息感，宝贝！"];
+	  73 [label="kimstuffhubbing"];
+	  74 [label="Jump to: [Midjumphub]"];
+	  75 [label="Kim Kitsuragi: 他再次看向在风中飞舞的那件可怜的衣物。"];
+	  76 [label="Kim Kitsuragi: “是的……我们正忙着处理——你的斗篷呢……”"];
+	  77 [label="Kim Kitsuragi: “很好。等你感觉好一点之后，我们随时可以回来。毕竟这只是一件斗篷。”他看了看周围。"];
+	  78 [label="Jump to: [CLOAKENHUB]"];
+	  79 [label="You: “一件警察的斗篷！那是一件警察的斗篷！！！”"];
+	  80 [label="You: 看看四周。"];
+	  81 [label="Kim Kitsuragi: “我去！”警督大声呼喊。“我的攀爬技巧可能不如你的跳跃一样迪斯科，不过我们还能来下前扑吗？”"];
+	  82 [label="Policeman Cloak: 白色矩形，现在在风中清晰可见，好像证实了你的假设。但是这个警察是谁？"];
+	  83 [label="Kim Kitsuragi: “斗篷？我*的确*认为它是你的，没错。至于你应不应该去拿……”他看着平台对面，还有下面冰冷的人行道。"];
+	  84 [label="You: “看，警督！（指向斗篷。）有人把他的斗篷落下了。”"];
+	  85 [label="Electrochemistry: 别说这些荒唐话，当然不是了。"];
+	  86 [label="Jump to: [Into the abyss]"];
+	  87 [label="Kim Kitsuragi: 他看了看周围，头发被风吹地沙沙作响。“或者我们只是在*探索*。”"];
+	  88 [label="Into the abyss"];
+	  89 [label="Kim Kitsuragi: “你也许能跳过去。看起来你以前好像玩过田径。”"];
+	  90 [label="You: 先不要放走这个时刻。"];
+	  91 [label="Policeman Cloak: Variable[\"backyard.jump_midshivers_perception_hearing_success\"]"];
+	  92 [label="Variable[\"backyard.jump_midshivers_perception_hearing_success\"]", shape=diamond];
+	  93 [label="!(Variable[\"backyard.jump_midshivers_perception_hearing_success\"])", shape=diamond];
+	  94 [label="You: “还不赖，一点也不赖。”"];
+	  95 [label="Horrific Necktie: 我懂你的，我懂你，*兄弟*。让我稍微帮你调整一下呼吸……怎么样，感觉好多了吗？"];
+	  96 [label="You: “我很好，金……我……我只是……”（继续拉扯你的领带。）“我不能*呼吸*了。”"];
+	  97 [label="Policeman Cloak: 你的手指碰触到斗篷，几乎感觉它想要通过你的指尖传递一条安慰的信息……"];
+	  98 [label="Jump to: [Midjumphub]"];
+	  99 [label="Policeman Cloak: 看来某人把他的防水斗篷落在栏杆上了。"];
+	  100 [label="Logic: 你是警察。这是你的斗篷。别把事情搞复杂了。"];
+	  101 [label="Jump to: [CLOAKENHUB]"];
+	  102 [label="Savoir Faire: 你会吗？因为感觉像是有一块肌肉拉伤了。或者是两块。"];
+	  103 [label="You: 有意思。为什么有人会把斗篷落在这里，我怎么才能拿到它呢？"];
+	  104 [label="Policeman Cloak: CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true  and  CheckEquippedGroup(\"alcohol\") == false"];
+	  105 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true  and  CheckEquippedGroup(\"alcohol\") == false", shape=diamond];
+	  106 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true  and  CheckEquippedGroup(\"alcohol\") == false)", shape=diamond];
+	  107 [label="Midjumphub"];
+	  108 [label="Shivers: 还有它实际上的统治者，小鬼国王坤诺，正指着*你*，跟他的朋友说话。他在说什么？"];
+	  109 [label="You: 继续在咸腥的空气中航行。"];
+	  110 [label="You: “库瓦桑德10-20HK……”（指着那台起重机。）"];
+	  111 [label="You: “它只是一台机器，警督。像是一个巨大的铁锤，或者是老虎钳。没什么好看的。”"];
+	  112 [label="Kim Kitsuragi: “是的，的确可以这么形容它。”他转向你，脸上带着一丝微笑，然后又把目光转移到起重机身上。“它的确是一项令人惊叹的工程学成就。”"];
+	  113 [label="Electrochemistry: 真不知道你为什么还没动手。"];
+	  114 [label="Policeman Cloak: Variable[\"backyard.jump_wc_fail\"]"];
+	  115 [label="Variable[\"backyard.jump_wc_fail\"]", shape=diamond];
+	  116 [label="!(Variable[\"backyard.jump_wc_fail\"])", shape=diamond];
+	  117 [label="Policeman Cloak: 防水斗篷在风中独自摇摆。不会再有人去管它了。"];
+	  118 [label="Esprit de Corps: 有人倒下了！一名骑兵被留在了敌人后方！"];
+	  119 [label="Perception (Sight): 当风吹起斗篷的时候，你几乎可以肯定自己在它的背面看到一个白色的矩形。"];
+	  120 [label="Policeman Cloak: IsKimHere()"];
+	  121 [label="IsKimHere()", shape=diamond];
+	  122 [label="!(IsKimHere())", shape=diamond];
+	  123 [label="Policeman Cloak: IsKimHere()"];
+	  124 [label="IsKimHere()", shape=diamond];
+	  125 [label="!(IsKimHere())", shape=diamond];
+	  126 [label="Kim Kitsuragi: “是吗？”他看着你，有些惊讶。“库瓦桑德出产很多重型设备，不过就算是对于他们来说，这也是很叹为观止的。”"];
+	  127 [label="Esprit de Corps: 你可以发誓这更像是一种本能，但是你*知道*这是一件警察的斗篷。\n你可以发誓，相比真切的视觉，这更像是一种本能，但是你*知道*斗篷上有RCM的标志矩形。这是一件警察的斗篷。"];
+	  128 [label="Jump to: [Into the abyss]"];
+	  129 [label="Logic: 搞定了！"];
+	  130 [label="Savoir Faire: 紧绷的脚踝微微刺痛，血液在你的耳中轰鸣——你已经准备好与下面的混凝土路面亲密接触了。"];
+	  131 [label="Authority: 我们会处理好那具尸体的。我们全都会处理好的！"];
+	  132 [label="Policeman Cloak: Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")"];
+	  133 [label="Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")", shape=diamond];
+	  134 [label="!(Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\"))", shape=diamond];
+	  135 [label="Savoir Faire: 眼泪从你的脸颊上滑落。你捂住胸口，语无伦次地喃喃自语。情况还能比现在更糟糕吗？"];
+	  136 [label="Electrochemistry: 而且，你现在就应该去喝一杯——你的手里*现在*就应该拿着一瓶酒。"];
+	  137 [label="You: 不，一杯酒*会*毁掉这极致清醒一刻的原始之美。"];
+	  138 [label="Kim Kitsuragi: “我理解。等你感觉好一点之后，我们随时可以回来。毕竟这只是一件斗篷。”"];
+	  139 [label="Horrific Necktie: 领带稍微放开了一些，你脖子周围恶意的紧扼感放松了不少。你周围的世界又恢复了颜色。"];
+	  140 [label="Policeman Cloak: Variable[\"backyard.jump_esprit_fired\"]"];
+	  141 [label="Variable[\"backyard.jump_esprit_fired\"]", shape=diamond];
+	  142 [label="!(Variable[\"backyard.jump_esprit_fired\"])", shape=diamond];
+	  143 [label="Jump to: [Into the abyss]"];
+	  144 [label="Volition: 你可能会在那里死掉的！该死，该死，该死，该死……我让你失望了。我们可不是这么约定的！"];
+	  145 [label="Policeman Cloak: IsKimHere()"];
+	  146 [label="IsKimHere()", shape=diamond];
+	  147 [label="!(IsKimHere())", shape=diamond];
+	  148 [label="You: 抓住斗篷。[离开。]"];
+	  149 [label="Empathy: 他以为你又忘记自己在哪了。"];
+	  150 [label="Kim Kitsuragi: 然后他又转回到风中翻飞的那块悲惨的布料。"];
+	  151 [label="Untitled hub"];
+	  152 [label="Policeman Cloak: Variable[\"auto.near_cloak\"]"];
+	  153 [label="Variable[\"auto.near_cloak\"]", shape=diamond];
+	  154 [label="!(Variable[\"auto.near_cloak\"])", shape=diamond];
+	  155 [label="Policeman Cloak: Variable[\"backyard.jump_wc_fail_voliton_panic_attac\"]"];
+	  156 [label="Variable[\"backyard.jump_wc_fail_voliton_panic_attac\"]", shape=diamond];
+	  157 [label="!(Variable[\"backyard.jump_wc_fail_voliton_panic_attac\"])", shape=diamond];
+	  158 [label="You: 眼泪流了下来。不知道从何而来。就像一支游击队从灌木丛中发起突袭，瞬间将你淹没。"];
+	  159 [label="You: “谢谢，我觉得好像起作用了。”（松开你的领带。）"];
+	  160 [label="You: “我去……”（吹一声口哨。）那台起重机可真是够大的！”"];
+	  161 [label="Jump to: [CLOAKENHUB]"];
+	  162 [label="Kim Kitsuragi: “我就知道你能做到的！”警督呼喊着。“我这样爬下去可能不如你的纵身一跃那么迪斯科，但至少我们可以探索港口了。”"];
+	  163 [label="Policeman Cloak: Variable[\"backyard.cloak_perception_white_rectangle\"]"];
+	  164 [label="Variable[\"backyard.cloak_perception_white_rectangle\"]", shape=diamond];
+	  165 [label="!(Variable[\"backyard.cloak_perception_white_rectangle\"])", shape=diamond];
+	  166 [label="You: “看，警督！（指向那件翻飞的斗篷。）有人把斗篷落下了。”"];
+	  167 [label="CLOAKENHUB"];
+	  168 [label="Policeman Cloak: IsKimHere()"];
+	  169 [label="IsKimHere()", shape=diamond];
+	  170 [label="!(IsKimHere())", shape=diamond];
+	  171 [label="Policeman Cloak: Variable[\"backyard.cloak_logic_your_cloak\"]"];
+	  172 [label="Variable[\"backyard.cloak_logic_your_cloak\"]", shape=diamond];
+	  173 [label="!(Variable[\"backyard.cloak_logic_your_cloak\"])", shape=diamond];
+	  174 [label="You: “我们到底在这里干什么？”"];
+	  175 [label="Savoir Faire: 我滴个乖乖，真是有够*高*的！要是跳过去你绝对是疯了。这肯定会没命的！\n不！不可以！还是太高了。不管你在想什么，你不是一个体操运动员，你是个拳击手——而且你爬的实在有点太高了……\n我滴个乖乖，真是有够*高*的！‘看起来好像不危险啊……’警督这么建议一定是疯了！这样肯定会没命的。（眩晕几乎要把你推向崩溃的边缘。）"];
+	  176 [label="Kim Kitsuragi: “喂，喂……出什么事了？你还好吗？”他听起来真的很担心。"];
+	  177 [label="Jump to: [Into the abyss]"];
+	  178 [label="You: “我没事，金……我……我只是现在做不到。”"];
+	  179 [label="Policeman Cloak: IsTaskActive(\"TASK.ask_for_help_from_the_harbour\")--[[ Variable[ ]]"];
+	  180 [label="IsTaskActive(\"TASK.ask_for_help_from_the_harbour\")--[[ Variable[ ]]", shape=diamond];
+	  181 [label="!(IsTaskActive(\"TASK.ask_for_help_from_the_harbour\")--[[ Variable[ ]])", shape=diamond];
+	  182 [label="You: “你个王八蛋的，那是件警察的斗篷！”"];
+	  183 [label="Policeman Cloak: IsKimHere()"];
+	  184 [label="IsKimHere()", shape=diamond];
+	  185 [label="!(IsKimHere())", shape=diamond];
+	  186 [label="You: 我他妈的要*呼吸*，你这条可怕的领带。"];
+	  187 [label="Kim Kitsuragi: 这里的风变得很有侵略性。警督看着远方集装箱堆场里那台巨大的起重机。"];
+	  188 [label="Kim Kitsuragi: “是啊，它可能是你的。”他看着你。“毕竟上面确实有RCM的标记。”"];
+	  189 [label="You: “你觉得我应该把它拿回来？”"];
+	  190 [label="Savoir Faire: 时间不多了——继续航行吧，稍后再庆祝。"];
+	  191 [label="Kim Kitsuragi: “但是我有点跑题了。我们要专注你的*斗篷*。”他看着在风中飞舞的那件可怜的衣物。"];
+	  192 [label="You: 为了你的斗篷——跳过这个平台！"];
+	  193 [label="You: Variable[\"backyard.jump_whitecheck_chasm\"]"];
+	  194 [label="Variable[\"backyard.jump_whitecheck_chasm\"]", shape=diamond];
+	  195 [label="!(Variable[\"backyard.jump_whitecheck_chasm\"])", shape=diamond];
+	  196 [label="Savoir Faire: 你听不见他的话。不要紧——是时候开始考虑一下着陆的事了。"];
+	  197 [label="Kim Kitsuragi: “我记得我们正打算去见这座*被围困城堡*的国王——艾弗拉特——我们走访名单上的一个人。这样我们也许就能说服他的手下。”"];
+	  198 [label="You: 让他享受这惊奇的一刻。"];
+	  199 [label="Jump to: [Into the abyss]"];
+	  200 [label="You: 我现在手里就有一瓶酒——我可以试试！"];
+	  201 [label="Savoir Faire: 你的双脚牢牢踩在混凝土上面，港口的喧闹声又冲了回来。"];
+	  202 [label="Inland Empire: 这是*你的*斗篷。你能感觉到。"];
+	  203 [label="Policeman Cloak: Variable[\"cargo.saw_cloak\"]"];
+	  204 [label="Variable[\"cargo.saw_cloak\"]", shape=diamond];
+	  205 [label="!(Variable[\"cargo.saw_cloak\"])", shape=diamond];
+	  206 [label="Kim Kitsuragi: “是的。上面确实有RCM的标志。而且我们是马丁内斯唯一的警探。”"];
+	  207 [label="Policeman Cloak: IsKimHere()"];
+	  208 [label="IsKimHere()", shape=diamond];
+	  209 [label="!(IsKimHere())", shape=diamond];
+	  210 [label="You: 无视这件斗篷。[离开。]"];
+	  211 [label="Savoir Faire: 你跳向空中，一阵冷风将你吞没，让你的感官也变得敏锐起来。"];
+	  212 [label="Perception (Hearing): “会飞的混球……长翅膀的猪头……屎都会飞了……”风只从伊苏林迪海洋那里捎过来这几个字眼。"];
+	  213 [label="Conceptualization: 斗篷看起来像是一袋在风中漂浮的巧克力糖。谁知道里面可能隐藏着什么？！"];
+	  214 [label="You: “没错，现在不行——我下次再跳过去。”"];
+	  215 [label="Policeman Cloak: 看来某人把他的防水斗篷落在栏杆上了。你能清晰地看见它的背面有一个白色的矩形。\n防水斗篷还挂在栏杆上。代表瑞瓦肖公民武装的白色矩形在它的背面清晰可见。\n看来某人把他的防水斗篷落在栏杆上了。你能清晰地看见它的背面有一个白色的矩形。"];
+	  216 [label="othersideintro"];
+	  217 [label="Policeman Cloak: 一件防水斗篷仍然挂在栏杆上。没人前来认领。\n一件很可能带有RCM标志的防水斗篷仍然挂在栏杆上。"];
+	  218 [label="Visual Calculus: 在这种时刻会是非常不合理的。"];
+	  219 [label="Kim Kitsuragi: “是的，有可能是你的。毕竟上面有RCM的标志。现在——该怎么把它拿回来呢？”他在判断落差。\n“是的，有可能是你的。那上面有RCM的标志，而且你有对自己的装备粗心大意的习惯——”他在判断落差。"];
+	  220 [label="You: [离开。]"];
+	  221 [label="Kim Kitsuragi: 他轻轻摇了摇你的肩膀：“没事的，你只是稍微*有点*惊恐发作。试着慢慢呼吸，好吗？”"];
+	  222 [label="Jump to: [CLOAKENHUB]"];
+	  223 [label="Jump to: [CLOAKENHUB]"];
+	  224 [label="Jump to: [CLOAKENHUB]"];
+	  225 [label="Policeman Cloak: Variable[\"backyard.cloak_greeting_done\"]"];
+	  226 [label="Variable[\"backyard.cloak_greeting_done\"]", shape=diamond];
+	  227 [label="!(Variable[\"backyard.cloak_greeting_done\"])", shape=diamond];
+	  228 [label="Electrochemistry: 是啊。你会像个超级摇滚巨星一样。一个飞翔的传说。"];
+	  229 [label="Electrochemistry: 你对我亲爱的酒鬼朋友做了什么？你一点都不好玩了。"];
+	  230 [label="Policeman Cloak: 斗篷在风中动人地飞舞。几乎就在你伸手可及的地方，如果你可以……放手去做。"];
+	  0 -> 1
+	  1 -> 3
+	  2 -> 207
+	  3 -> 4
+	  3 -> 5
+	  4 -> 118
+	  5 -> 153
+	  6 -> 132
+	  7 -> 89
+	  8 -> 10
+	  8 -> 11
+	  9 -> 74
+	  10 -> 151
+	  11 -> 76
+	  12 -> 86
+	  13 -> 87
+	  14 -> 229
+	  15 -> 84
+	  16 -> 131
+	  17 -> 108
+	  18 -> 109
+	  19 -> 223
+	  20 -> 63
+	  21 -> 38
+	  22 -> 178
+	  23 -> 62
+	  24 -> 8
+	  25 -> 223
+	  26 -> 88
+	  27 -> 29
+	  28 -> 172
+	  29 -> 124
+	  30 -> 108
+	  31 -> 70
+	  32 -> 67
+	  33 -> 64
+	  34 -> 36
+	  34 -> 37
+	  35 -> 198
+	  36 -> 39
+	  37 -> 9
+	  38 -> 88
+	  39 -> 130
+	  40 -> 29
+	  41 -> 43
+	  41 -> 44
+	  42 -> 82
+	  43 -> 163
+	  44 -> 21
+	  45 -> 48
+	  45 -> 47
+	  46 -> 215
+	  47 -> 145
+	  48 -> 77
+	  49 -> 8
+	  50 -> 214
+	  51 -> 129
+	  52 -> 144
+	  53 -> 56
+	  53 -> 55
+	  54 -> 212
+	  55 -> 176
+	  56 -> 58
+	  56 -> 59
+	  57 -> 19
+	  58 -> 7
+	  59 -> 25
+	  60 -> 149
+	  61 -> 89
+	  62 -> 26
+	  63 -> 168
+	  64 -> 18
+	  65 -> 46
+	  66 -> 168
+	  67 -> 137
+	  68 -> 179
+	  69 -> 72
+	  69 -> 71
+	  70 -> 177
+	  71 -> 73
+	  72 -> 136
+	  73 -> 112
+	  73 -> 161
+	  73 -> 199
+	  73 -> 111
+	  74 -> 108
+	  75 -> 162
+	  76 -> 162
+	  77 -> 79
+	  78 -> 168
+	  79 -> 169
+	  80 -> 188
+	  81 -> 202
+	  82 -> 101
+	  83 -> 51
+	  84 -> 189
+	  85 -> 152
+	  86 -> 89
+	  87 -> 150
+	  89 -> 168
+	  90 -> 57
+	  91 -> 93
+	  91 -> 94
+	  92 -> 31
+	  93 -> 197
+	  94 -> 50
+	  95 -> 32
+	  96 -> 222
+	  97 -> 14
+	  98 -> 108
+	  99 -> 119
+	  100 -> 168
+	  101 -> 168
+	  102 -> 64
+	  103 -> 231
+	  104 -> 106
+	  104 -> 107
+	  105 -> 65
+	  106 -> 18
+	  107 -> 17
+	  107 -> 91
+	  107 -> 13
+	  107 -> 110
+	  108 -> 213
+	  109 -> 30
+	  110 -> 127
+	  111 -> 12
+	  112 -> 192
+	  113 -> 219
+	  114 -> 116
+	  114 -> 117
+	  118 -> 141
+	  119 -> 164
+	  120 -> 122
+	  120 -> 123
+	  121 -> 220
+	  122 -> 28
+	  123 -> 125
+	  123 -> 126
+	  124 -> 42
+	  125 -> 60
+	  125 -> 95
+	  126 -> 192
+	  127 -> 80
+	  127 -> 23
+	  128 -> 89
+	  129 -> 168
+	  130 -> 68
+	  131 -> 31
+	  132 -> 134
+	  132 -> 135
+	  133 -> 96
+	  134 -> 184
+	  135 -> 187
+	  135 -> 45
+	  136 -> 105
+	  137 -> 230
+	  138 -> 67
+	  139 -> 160
+	  140 -> 142
+	  140 -> 143
+	  141 -> 128
+	  142 -> 120
+	  143 -> 89
+	  144 -> 156
+	  145 -> 147
+	  145 -> 148
+	  146 -> 34
+	  147 -> 103
+	  148 -> 98
+	  149 -> 224
+	  150 -> 102
+	  151 -> 201
+	  151 -> 138
+	  151 -> 15
+	  152 -> 154
+	  152 -> 155
+	  153 -> 216
+	  154 -> 226
+	  155 -> 157
+	  155 -> 158
+	  156 -> 133
+	  157 -> 215
+	  158 -> 33
+	  159 -> 78
+	  160 -> 113
+	  161 -> 168
+	  162 -> 202
+	  163 -> 165
+	  163 -> 166
+	  164 -> 24
+	  164 -> 183
+	  165 -> 208
+	  166 -> 220
+	  167 -> 193
+	  167 -> 175
+	  167 -> 16
+	  167 -> 81
+	  167 -> 53
+	  167 -> 221
+	  168 -> 170
+	  168 -> 171
+	  169 -> 220
+	  170 -> 41
+	  171 -> 173
+	  171 -> 174
+	  172 -> 40
+	  173 -> 83
+	  174 -> 180
+	  175 -> 66
+	  176 -> 97
+	  177 -> 89
+	  178 -> 139
+	  179 -> 181
+	  179 -> 182
+	  180 -> 27
+	  181 -> 35
+	  182 -> 121
+	  183 -> 185
+	  183 -> 186
+	  184 -> 69
+	  185 -> 159
+	  186 -> 20
+	  187 -> 22
+	  188 -> 190
+	  189 -> 61
+	  190 -> 99
+	  191 -> 162
+	  192 -> 194
+	  193 -> 195
+	  193 -> 196
+	  194 -> 54
+	  195 -> 54
+	  196 -> 31
+	  197 -> 88
+	  198 -> 49
+	  199 -> 89
+	  200 -> 114
+	  201 -> 200
+	  202 -> 217
+	  203 -> 205
+	  203 -> 206
+	  204 -> 217
+	  205 -> 203
+	  206 -> 190
+	  207 -> 209
+	  207 -> 210
+	  208 -> 211
+	  208 -> 167
+	  209 -> 104
+	  209 -> 52
+	  210 -> 129
+	  211 -> 108
+	  212 -> 92
+	  213 -> 225
+	  214 -> 146
+	  215 -> 204
+	  216 -> 2
+	  216 -> 85
+	  216 -> 149
+	  217 -> 168
+	  218 -> 191
+	  219 -> 90
+	  220 -> 144
+	  221 -> 140
+	  222 -> 168
+	  223 -> 168
+	  224 -> 168
+	  225 -> 227
+	  225 -> 228
+	  226 -> 218
+	  227 -> 100
+	  228 -> 75
+	  229 -> 75
+	  230 -> 168
+}
+

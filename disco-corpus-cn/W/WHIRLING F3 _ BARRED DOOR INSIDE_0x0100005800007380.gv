@@ -1,0 +1,60 @@
+# WHIRLING F3 / BARRED DOOR INSIDE
+# From the inside, the door opens easily.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Barred Door: 你之前见过一扇被封住的门，这就是它的内侧。"];
+	  3 [label="You: 解封这扇门。[离开]"];
+	  4 [label="Variable[\"whirling.barreddoor_greeting_done\"]"];
+	  5 [label="Variable[\"whirling.barreddoor_greeting_done\"]", shape=diamond];
+	  6 [label="!(Variable[\"whirling.barreddoor_greeting_done\"])", shape=diamond];
+	  7 [label="Conceptualization: 折叠M维度，出自流行的科幻小说系列*系统之内*。看看，有人突然心情变好了（而且还会看科幻小说。）"];
+	  8 [label="barreddoorinsidehub"];
+	  9 [label="You: 再轻轻地给门来上一拳，以防万一。"];
+	  10 [label="Barred Door: 这扇门很小，但看起来很沉。它从里面挡住了。"];
+	  11 [label="Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]"];
+	  12 [label="Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]", shape=diamond];
+	  13 [label="!(Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"])", shape=diamond];
+	  14 [label="Barred Door: 门震动了一下，像是在嘲笑你。"];
+	  15 [label="Inland Empire: 是的。我们*确实*有可能会重新出现在M平原上。准备迎接灵力冲击。（或者是屋顶。）"];
+	  16 [label="You: 让门继续保持封住的状态。[离开。]"];
+	  17 [label="You: “所以另一边有什么呢？”"];
+	  18 [label="Jump to: [barreddoorinsidehub]"];
+	  19 [label="Kim Kitsuragi: “除非我们能转变成折叠M维度，我希望出去就是屋顶。”"];
+	  20 [label="Kim Kitsuragi: “除非我们能转变成折叠M维度，我希望出去就是屋顶——我们可以找卡拉洁问问这条路线，看看她有什么反应？”"];
+	  21 [label="Barred Door: 这就是你之前试图踹开的那扇封住的门。"];
+	  22 [label="Variable[\"whirling.barreddoor_physinst_kick_in_success_failed\"]"];
+	  23 [label="Variable[\"whirling.barreddoor_physinst_kick_in_success_failed\"]", shape=diamond];
+	  24 [label="!(Variable[\"whirling.barreddoor_physinst_kick_in_success_failed\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 4
+	  2 -> 8
+	  4 -> 5
+	  4 -> 6
+	  5 -> 23
+	  6 -> 10
+	  7 -> 15
+	  8 -> 16
+	  8 -> 9
+	  8 -> 3
+	  8 -> 17
+	  9 -> 14
+	  10 -> 8
+	  11 -> 12
+	  11 -> 13
+	  12 -> 19
+	  13 -> 20
+	  14 -> 18
+	  15 -> 18
+	  17 -> 11
+	  18 -> 8
+	  19 -> 7
+	  20 -> 7
+	  21 -> 8
+	  22 -> 24
+	  22 -> 25
+	  23 -> 21
+	  24 -> 2
+}
+

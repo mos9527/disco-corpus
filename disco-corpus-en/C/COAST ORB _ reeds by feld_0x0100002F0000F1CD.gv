@@ -28,7 +28,7 @@ digraph G {
 	  23 [label="Untitled hub (02)"];
 	  24 [label="Jump to: [boathouse hub]"];
 	  25 [label="Jump to: [boathouse hub]"];
-	  26 [label="You: [Leave.]"];
+	  26 [label="You: [Leave.]\n\"Let's go.\" [Leave.]"];
 	  27 [label="Kim Kitsuragi: \"Good. Now that's done. When do you think we will return to our impending apocalypse of a murder investigation?\""];
 	  28 [label="Composure: They're not really going to get the chance to get comfortable here."];
 	  29 [label="boathouse hub"];
@@ -39,7 +39,7 @@ digraph G {
 	  34 [label="Variable[\"TASK.restock_trap_done\"]"];
 	  35 [label="Variable[\"TASK.restock_trap_done\"]", shape=diamond];
 	  36 [label="!(Variable[\"TASK.restock_trap_done\"])", shape=diamond];
-	  37 [label="Trap: Boathouses: The locusts aren't doing all too well, but they're still in there. This isn't the empty trap. That must have been another one."];
+	  37 [label="Trap: Boathouses: The locusts aren't doing all too well, but they're still in there. This isn't the empty trap. That must have been another one.\nThe locusts aren't doing all too well, but they're still in there. This isn't the empty trap. That one was by the canal.\nThe locusts aren't doing all too well, but they're still in there. This isn't the empty trap. That one Morell was setting up, near the cryptozoologists camp.\nThe locusts aren't doing all too well, but they're still in there. This isn't the empty trap. That one was in Land's End, in the northern tip of this peninsula."];
 	  38 [label="endhub"];
 	  39 [label="Trap: Boathouses: A familiar apparatus lies among the reeds -- another one of Morell's traps, weighed down by stones to keep it in place."];
 	  40 [label="Trap: Boathouses: This trap's not too hard to spot -- once you know what to look for. Keeping it hidden has not been a priority for the cryptozoologist."];
@@ -77,7 +77,7 @@ digraph G {
 	  72 [label="!(IsKimHere())", shape=diamond];
 	  73 [label="SetVariableValue(\"coast.reeds_checked_counter\", Variable[\"coast.reeds_checked_counter\"] +once(1)) "];
 	  74 [label="Jump to: [remorse hub]"];
-	  75 [label="Trap: Boathouses: Behind you, the ruins of a residential building rise over the reeds, shielding them from the wind. The reeds rustle confidentially."];
+	  75 [label="Trap: Boathouses: Behind you, the ruins of a residential building rise over the reeds, shielding them from the wind. The reeds rustle confidentially.\nThe reeds rustle confidentially, while the residential building, menacing in the darkness behind you, shield them from the wind.\nBehind you, a ruined residential building looms over the reeds, shielding them from the wind. They rustle confidentially, in tune with the pitter-patter of the rain.\nBehind you, the ruins of a residential building loom over the reeds. They whisper amongst themselves confidentially. Snowflakes cling to their shivering stems."];
 	  76 [label="Jump to: [boathouse hub]"];
 	  77 [label="You: \"But what if it *was* the phasmid? What if it ate them and got out?\""];
 	  78 [label="Kim Kitsuragi: \"Right.\" It does not look like he thinks you're right. \"Anyway, that's for the cryptozoologists to figure out now.\" He adds, for clarity: \"*We're* not cryptozoologists -- we're cops.\""];
@@ -91,7 +91,7 @@ digraph G {
 	  86 [label="IsKimHere()", shape=diamond];
 	  87 [label="!(IsKimHere())", shape=diamond];
 	  88 [label="You: \"You're right. This crypto-research has been stupid.\""];
-	  89 [label="Kim Kitsuragi: \"Okay. But after that we get back to our own assignments. We've done a thorough survey of the coast now -- just running around is no longer useful.\""];
+	  89 [label="Kim Kitsuragi: \"Okay. But after that we get back to our own assignments. We've done a thorough survey of the coast now -- just running around is no longer useful.\"\n\"Okay. But after that we get back to our own assignments. There really is *no* explanation for why we're taking such a detour at this point in the investigation -- none whatsoever.\""];
 	  90 [label="Kim Kitsuragi: The lieutenant's gaze follows yours and lingers on the reeds, the sand, the water beyond. Then he turns back to you expectantly."];
 	  91 [label="Kim Kitsuragi: Neither does the lieutenant. He just raises his collar -- it's cold out, as always."];
 	  92 [label="Kim Kitsuragi: He purses his lips. \"Perhaps our cryptozoologists have competition in the form of an actual entomologist? Or someone else is sabotaging them? I could present more theories, but then I would be taking this on as a case -- which I'm *not*.\""];
@@ -119,7 +119,7 @@ digraph G {
 	  114 [label="Variable[\"coast.reeds_checked_counter\"] == 2", shape=diamond];
 	  115 [label="!(Variable[\"coast.reeds_checked_counter\"] == 2)", shape=diamond];
 	  116 [label="Trap: Boathouses: Nothing has changed about this trap. You need to check the others."];
-	  117 [label="You: \"I want to make it clear that I don't *actually* believe the phasmid exists, okay?\""];
+	  117 [label="You: \"I want to make it clear that I don't *actually* believe the phasmid exists, okay?\"\n\"Again -- I want to make it absolutely *clear* that I don't really believe the phasmid exists, okay?\""];
 	  118 [label="SetVariableValue(\"coast.reeds_checked_counter\", Variable[\"coast.reeds_checked_counter\"] +once(1)) "];
 	  119 [label="Variable[\"TASK.report_to_cryptozoologists_3_done\"]"];
 	  120 [label="Variable[\"TASK.report_to_cryptozoologists_3_done\"]", shape=diamond];
@@ -134,7 +134,7 @@ digraph G {
 	  129 [label="!(Variable[\"coast.reeds_checked_counter\"] == 1)", shape=diamond];
 	  130 [label="Trap: Boathouses: This trap is also full of panicked locusts. No sign of any cryptozoological beast inside."];
 	  131 [label="You: Say nothing, just put the trap down."];
-	  132 [label="You: \"I *must* stress that I did not expect a cryptozoological monstrosity to be in this trap.\""];
+	  132 [label="You: \"I *must* stress that I did not expect a cryptozoological monstrosity to be in this trap.\"\n\"One more time, I *must* stress that I did not expect a cryptozoological monstrosity to be in this trap.\""];
 	  133 [label="Kim Kitsuragi: The lieutenant studies the trap with you. \"Well, the bait worked on *something*. This doesn't mean it was a reed-monster, though. Unless you see one in there? I just see an empty trap...\""];
 	  134 [label="SetVariableValue(\"coast.reeds_checked_counter\", Variable[\"coast.reeds_checked_counter\"] +once(1)) "];
 	  135 [label="CancelTask(\"TASK.open_gary_door_cancelled\")--[[ Variable[ ]]"];
@@ -179,8 +179,8 @@ digraph G {
 	  174 [label="Variable[\"coast.traps_dying_regret_done\"]"];
 	  175 [label="Variable[\"coast.traps_dying_regret_done\"]", shape=diamond];
 	  176 [label="!(Variable[\"coast.traps_dying_regret_done\"])", shape=diamond];
-	  177 [label="Trap: Boathouses: The reeds whisper around the sepulchral trap, as though suddenly filled with fear."];
-	  178 [label="Reeds: Morell's trap stands empty, just like the boathouses around it. The wind ruffles your sweaty hair."];
+	  177 [label="Trap: Boathouses: The reeds whisper around the sepulchral trap, as though suddenly filled with fear.\nThe reeds whisper around the sepulchral trap, as though suddenly filled with fear. Even the snow does not quiet them.\nThe reeds shudder in the falling rain, whispering. It is as though the sepulchral trap has filled them with some strange, novel fear."];
+	  178 [label="Reeds: Morell's trap stands empty, just like the boathouses around it. The wind ruffles your sweaty hair.\n Morell's trap stands empty, just like the boathouses around it. The reeds susurrate softly amidst the falling snow.\nMorell's trap stands empty, just like the boathouses around it. The reeds chafe against one another while the rain falls."];
 	  179 [label="You: Release the locusts into the empty trap."];
 	  180 [label="Variable[\"TASK.report_to_cryptozoologists_1\"]"];
 	  181 [label="Variable[\"TASK.report_to_cryptozoologists_1\"]", shape=diamond];

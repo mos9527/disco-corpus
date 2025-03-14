@@ -1,0 +1,109 @@
+# APT / EMPTY ROOM DOOR
+# APARTMENT #10. A door leading to the apt with a real estate agent.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Suggestion: 花言巧语可是进不去的。还是官方一点吧。"];
+	  3 [label="Jump to: [locked door hub]"];
+	  4 [label="Half Light: 吓吓他们。就说怀疑有*重大罪行*！"];
+	  5 [label="Locked Door: 脚步声突然中止了，但是没有人来开门。"];
+	  6 [label="Inland Empire: 你能感觉到另一侧的紧张感。"];
+	  7 [label="Locked Door: “拜托！”短暂的停顿过后，你开始听到大门解锁的声音。"];
+	  8 [label="You: [离开。]"];
+	  9 [label="Kim Kitsuragi: “我们走吧，”警督说到，“我们没有进入那个房间的理由。”"];
+	  10 [label="You: “如果我怀疑有*非法闯入*事件的话，就不需要搜查令了。”"];
+	  11 [label="Untitled hub (02)"];
+	  12 [label="You: 敲门。"];
+	  13 [label="Locked Door: 你听到里面有人走动的声音，像是在重新摆放家具。门牌上的数字写着10。"];
+	  14 [label="You: 再敲一次。"];
+	  15 [label="IsKimHere()"];
+	  16 [label="IsKimHere()", shape=diamond];
+	  17 [label="!(IsKimHere())", shape=diamond];
+	  18 [label="Locked Door: “什么？当然不是！”"];
+	  19 [label="Locked Door: 10号门又关上了。"];
+	  20 [label="Perception (Hearing): 听起来是个女人，有女性鞋子的声音。"];
+	  21 [label="Logic: 你有*很多*需要进去的理由。"];
+	  22 [label="You: [离开。]"];
+	  23 [label="Rhetoric: 哎呀，还挺简单的嘛。"];
+	  24 [label="You: “你在里面制造*吗啡*吗？！”"];
+	  25 [label="You: 敲门。"];
+	  26 [label="Locked Door: “我*必须*开门吗？”你再次听见高跟鞋的咔哒声，好像另一边有人正朝门口走来。现在她的语气里多了几分防备的意味……"];
+	  27 [label="Locked Door: “你有搜查令吗？如果没有的话，我没有义务这么做。”"];
+	  28 [label="You: “那就开门，我要*核查*你的身份。”"];
+	  29 [label="Locked Door: 这次脚步靠近一点。“是谁？”一个女性的声音响起，谨慎而紧张。"];
+	  30 [label="SetVariableValue(\"character.trigger_master_investigator_thought\", true) --[[ Variable[ ]]"];
+	  31 [label="IsKimHere()"];
+	  32 [label="IsKimHere()", shape=diamond];
+	  33 [label="!(IsKimHere())", shape=diamond];
+	  34 [label="Variable[\"apt.master_investigator_doors_opened\"] >=3"];
+	  35 [label="Variable[\"apt.master_investigator_doors_opened\"] >=3", shape=diamond];
+	  36 [label="!(Variable[\"apt.master_investigator_doors_opened\"] >=3)", shape=diamond];
+	  37 [label="You: “我是警察。请开门。”"];
+	  38 [label="Kim Kitsuragi: “这招挺聪明的，”警督一边说着，一边朝打开的大门点了点头。"];
+	  39 [label="Variable[\"TASK.report_back_to_cleaning_lady_done\"]"];
+	  40 [label="Variable[\"TASK.report_back_to_cleaning_lady_done\"]", shape=diamond];
+	  41 [label="!(Variable[\"TASK.report_back_to_cleaning_lady_done\"])", shape=diamond];
+	  42 [label="Locked Door: 什么也没发生。房地产中介一定是离开了。"];
+	  43 [label="Logic: 一般来说，如果你有*任何*理由的话——字面上的意义——那做起事来就容易的多。"];
+	  44 [label="locked door hub"];
+	  45 [label="Jump to: [locked door hub]"];
+	  46 [label="You: “这个房间应该是空的。你是闯进去的吗？”"];
+	  47 [label="Physical Instrument: 之后再说吧。进入这扇门像是一次身体上的*挑战*。"];
+	  0 -> 1
+	  1 -> 40
+	  2 -> 21
+	  3 -> 45
+	  4 -> 2
+	  5 -> 6
+	  6 -> 20
+	  7 -> 35
+	  9 -> 48
+	  10 -> 7
+	  11 -> 8
+	  11 -> 12
+	  12 -> 43
+	  13 -> 45
+	  14 -> 30
+	  15 -> 16
+	  15 -> 17
+	  16 -> 9
+	  17 -> 48
+	  18 -> 4
+	  19 -> 11
+	  20 -> 46
+	  21 -> 24
+	  21 -> 10
+	  21 -> 28
+	  23 -> 32
+	  24 -> 7
+	  25 -> 5
+	  26 -> 27
+	  27 -> 15
+	  28 -> 7
+	  29 -> 38
+	  29 -> 22
+	  30 -> 23
+	  31 -> 33
+	  31 -> 34
+	  32 -> 39
+	  34 -> 36
+	  34 -> 37
+	  35 -> 31
+	  36 -> 23
+	  37 -> 26
+	  39 -> 41
+	  39 -> 42
+	  40 -> 19
+	  41 -> 13
+	  42 -> 11
+	  43 -> 3
+	  44 -> 25
+	  44 -> 22
+	  44 -> 14
+	  44 -> 47
+	  45 -> 45
+	  46 -> 18
+	  47 -> 44
+}
+

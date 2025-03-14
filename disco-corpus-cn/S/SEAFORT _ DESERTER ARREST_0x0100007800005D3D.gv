@@ -1,0 +1,1636 @@
+# SEAFORT / DESERTER ARREST
+# Arrest him finally
+#
+#PERCEPTION (HEARING) red check
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: “也许我可以让莉莉恩帮忙看着他？”\n“也许我可以让拾网人帮忙看着他？”"];
+	  3 [label="You: “*但是*什么？有些事情我没弄明白，对吗？”"];
+	  4 [label="IsTHCPresent(\"jamais_vu\")"];
+	  5 [label="IsTHCPresent(\"jamais_vu\")", shape=diamond];
+	  6 [label="!(IsTHCPresent(\"jamais_vu\"))", shape=diamond];
+	  7 [label="Cuno: “是啊，其实——不行。”他挠挠头。“它会沉的。”"];
+	  8 [label="Cuno: “这*的确*是个问题，”男孩说到。“坤诺真的遇到过这种问题。在一个该死的‘课本’里。当他去上什么狗屁*小学校*的时候。三只猪头和一条船什么的……”"];
+	  9 [label="Drama: 大人，要想让他们相信，您必须非常有说服力，非常*清醒*。"];
+	  10 [label="You: “金，他在害怕……”"];
+	  11 [label="Kim Kitsuragi: 警督挫败地摇摇头。“我回来找你的时候，那里谁能看着他呢？”"];
+	  12 [label="You: “*我*可以回来找你。等我把他带到分局之后。”"];
+	  13 [label="You: （说到：）“你将会被送往最近的分局等候区，接受初步调查。”"];
+	  14 [label="Shivers: 起风了。周围水面的寂静被打破了，海浪微微颤抖。警督继续念叨着，就像一串咒语……"];
+	  15 [label="You: （说到：）“你的旅人权被暂停了。现场警员提供的信息将会成为控方的呈堂证供。”"];
+	  16 [label="You: “你明白了吗？”"];
+	  17 [label="You: “嘘，金！你听见了吗？”"];
+	  18 [label="Logic: 但那意味着……"];
+	  19 [label="Variable[\"character.habit_alcohol\"]"];
+	  20 [label="Variable[\"character.habit_alcohol\"]", shape=diamond];
+	  21 [label="!(Variable[\"character.habit_alcohol\"])", shape=diamond];
+	  22 [label="Kim Kitsuragi: “那可能也是他感到震惊的一部分。不过你说得对——好像有点不太对劲。德罗斯先生……”他拍拍男人的肩膀。"];
+	  23 [label="Kim Kitsuragi: “他的瞳孔好像扩张了。现在还是……”他检查着紧张症患者的眼睛。"];
+	  24 [label="You: “他在这里待了很长时间。谁知道它陪伴了他多久？”（总结。）"];
+	  25 [label="Kim Kitsuragi: “这是T-9瞄准镜，德罗斯先生。你开枪的时候，它是不是装在步枪上的？”"];
+	  26 [label="Variable[\"seafort.deserter_perc_sweat\"]"];
+	  27 [label="Variable[\"seafort.deserter_perc_sweat\"]", shape=diamond];
+	  28 [label="!(Variable[\"seafort.deserter_perc_sweat\"])", shape=diamond];
+	  29 [label="You: 等等……"];
+	  30 [label="You: Variable[\"seafort.deserter_rc_perchear_wait_listen\"]"];
+	  31 [label="Variable[\"seafort.deserter_rc_perchear_wait_listen\"]", shape=diamond];
+	  32 [label="!(Variable[\"seafort.deserter_rc_perchear_wait_listen\"])", shape=diamond];
+	  33 [label="The Deserter: “真是一场闹剧！你们*说*什么呢？这是……”老人的声音突然被一阵狂风吞没了。“……真的，我们……”"];
+	  34 [label="Cuno: “哦耶，我他妈的能看见它！”"];
+	  35 [label="IsCunoInParty()"];
+	  36 [label="IsCunoInParty()", shape=diamond];
+	  37 [label="!(IsCunoInParty())", shape=diamond];
+	  38 [label="You: “也许吧。总之——它只是试着隐藏自己。退化只是一种副作用。”"];
+	  39 [label="IsKimHere()"];
+	  40 [label="IsKimHere()", shape=diamond];
+	  41 [label="!(IsKimHere())", shape=diamond];
+	  42 [label="You: “*你*可以回来接我。等你把他带回分局之后。”"];
+	  43 [label="Cuno: “哦耶——不行。”他摇摇头。“那破玩意里只能塞下两个人。我猜*你*可以把他带回去，不过……”他眯起眼睛，突然意识到了什么。"];
+	  44 [label="Logic: 等等！但是有一个问题啊——你回来的路上谁看着他呢？"];
+	  45 [label="Cuno: 他白眼都要翻上天了。“妈的，这他妈是三头猪和一条船过河的问题……”"];
+	  46 [label="Jump to: [You: \"\"No. Forget it.\" Inspect the man.\"]"];
+	  47 [label="The Deserter: 他看起来*不再*激动了。一动不动。一阵海风吹来，他的塑料斗篷上下飞舞。"];
+	  48 [label="IsKimHere()"];
+	  49 [label="IsKimHere()", shape=diamond];
+	  50 [label="!(IsKimHere())", shape=diamond];
+	  51 [label="Kim Kitsuragi: 他点头回应，转向坐在木块上的男人。“伊索夫·利连诺维奇·德罗斯，你因为谋杀科尔奈上校而被逮捕了。你将会被送往最近的分局等候区，接受初步调查。”\n他点头回应，转向坐在木块上的男人。“伊索夫·利连诺维奇·德罗斯，你因为谋杀埃利斯·科顿艾尔而被逮捕了。你将会被送往最近的分局等候区，接受初步调查。”\n他点头回应，转向坐在木块上的男人。“伊索夫·利连诺维奇·德罗斯，你因为谋杀科尔奈上校——莱利而被逮捕了。你将会被送往最近的分局等候区，接受初步调查。”"];
+	  52 [label="Shivers: 起风了。周围水面的寂静被打破了，海浪微微颤抖。警督继续念叨着，就像一串咒语……"];
+	  53 [label="Kim Kitsuragi: “不需要你的确认，先生。”警督转向你。“现在——上船吧……”"];
+	  54 [label="You: “这不是个问题。”"];
+	  55 [label="Shivers: 你皮肤上的汗毛突然立了起来。"];
+	  56 [label="Inland Empire: 这些话语沉甸甸的，好像来源于你的心底。你已经说过500多次了……"];
+	  57 [label="Composure: 所有古怪动作，烦躁，还有他表现出来的情绪波动的总和……"];
+	  58 [label="You: 什么？"];
+	  59 [label="Kim Kitsuragi: “什么？”"];
+	  60 [label="You: “我妻子也说过我疯了。所以我们不能……”"];
+	  61 [label="Insulindian Phasmid: 胳膊和腿精妙地纠缠在一起，在芦苇丛中慢慢展开节肢，一个接着一个——然后站在那里，在可怕的沉默中挥舞着镰刀样的手臂。"];
+	  62 [label="Insulindian Phasmid: ……竹节虫！你睁开双眼，它就在那里，慢慢地旋转——在绝对的沉默中——它的节肢修长而纤细。"];
+	  63 [label="Reaction Speed: 不！它是神秘动物！"];
+	  64 [label="Volition: 天啦……也许你*是*呢。"];
+	  65 [label="The Deserter: “到底看见什么了？！一只昆虫？”他没明白。"];
+	  66 [label="Electrochemistry: 精神错乱！是因为饮酒导致的精神错乱！"];
+	  67 [label="You: “我在竹节虫的巢穴里找到了一些东西，德罗斯先生。”\n“我们在竹节虫的巢穴里找到了一些东西，德罗斯先生。”"];
+	  68 [label="The Deserter: “看看看……”他凝视着芦苇丛，陷入沉默。"];
+	  69 [label="You: “我暂时先不打扰你了。”[离开。]"];
+	  70 [label="The Deserter: 他的身体一阵轻微地颤抖——之后什么也没发生。他双手颤抖，呼吸平缓。"];
+	  71 [label="The Deserter: 塑料斗篷感觉很粗糙。男人一阵轻微地颤抖——除此之外，没有别的反应。他感觉自己渺小又脆弱。"];
+	  72 [label="Kim Kitsuragi: “需要找医生来检查一下。希望你们分局的医疗人员比57分局的好一些。对于护士来说，这个状况有点……太超前了。”"];
+	  73 [label="Jump to: [PHASMID QUESTIONS]"];
+	  74 [label="Variable[\"seafort.deserter_empathy_not_just_chemical\"]"];
+	  75 [label="Variable[\"seafort.deserter_empathy_not_just_chemical\"]", shape=diamond];
+	  76 [label="!(Variable[\"seafort.deserter_empathy_not_just_chemical\"])", shape=diamond];
+	  77 [label="Empathy: 男人轻轻颤抖着，他的眼睛被瞳孔吞没了。"];
+	  78 [label="The Deserter: 没反应。只是呆呆地看着——甚至连愤怒都没有留下。"];
+	  79 [label="Variable[\"seafort.passport_main_hub_reached\"]"];
+	  80 [label="Variable[\"seafort.passport_main_hub_reached\"]", shape=diamond];
+	  81 [label="!(Variable[\"seafort.passport_main_hub_reached\"])", shape=diamond];
+	  82 [label="Cuno: “喂……”男子在你说出‘你被逮’的时候打断了你，他压低了声音：“你确定我们查清楚所有破事了？”"];
+	  83 [label="The Deserter: “我……”他环顾四周，样子很困惑。"];
+	  84 [label="Electrochemistry: 瞳孔也在扩张，眼珠变得越来越黑……"];
+	  85 [label="IsCunoInParty()"];
+	  86 [label="IsCunoInParty()", shape=diamond];
+	  87 [label="!(IsCunoInParty())", shape=diamond];
+	  88 [label="IsKimHere()"];
+	  89 [label="IsKimHere()", shape=diamond];
+	  90 [label="!(IsKimHere())", shape=diamond];
+	  91 [label="Cuno: “我的意思是，他特别迷恋那个叫卡拉洁的派对女郎……”他点点头。“是啊……也许吧？”"];
+	  92 [label="The Deserter: 颤抖的嘴唇像是在叹息。没有其他回应。"];
+	  93 [label="You: “也许你是对的……”"];
+	  94 [label="Variable[\"seafort.deserter_logic_who_watches_over\"]"];
+	  95 [label="Variable[\"seafort.deserter_logic_who_watches_over\"]", shape=diamond];
+	  96 [label="!(Variable[\"seafort.deserter_logic_who_watches_over\"])", shape=diamond];
+	  97 [label="Cuno: 他的眼睛睁得大大的。“坤诺知道哪里出问题了。你回来接我的时候，村子里谁能看着这个该死的杀人犯呢？”"];
+	  98 [label="Logic: 莉莉恩。你可以找她帮忙。"];
+	  99 [label="Inland Empire: 有些事正在发生。停住。"];
+	  100 [label="Perception (Hearing): 不，听！快听！"];
+	  101 [label="Kim Kitsuragi: “警官——你确定吗？”他压低了声音。“也许我们还能挖出更多信息。”"];
+	  102 [label="Kim Kitsuragi: “你的旅人权被暂停了。现场警员提供的信息将会成为控方的呈堂证供。我们将会在一周内为你指派法律顾问，而且必须在44天内出庭——你明白了吗？”"];
+	  103 [label="Variable[\"seafort.deserter_perc_sweat\"]"];
+	  104 [label="Variable[\"seafort.deserter_perc_sweat\"]", shape=diamond];
+	  105 [label="!(Variable[\"seafort.deserter_perc_sweat\"])", shape=diamond];
+	  106 [label="Kim Kitsuragi: “他不是一个人畜无害的老人。”警督摇摇头。"];
+	  107 [label="Inland Empire: ……你想要这么说。在你还没来得及说出‘你被’，突然感到一阵厌倦……"];
+	  108 [label="IsCunoInParty()"];
+	  109 [label="IsCunoInParty()", shape=diamond];
+	  110 [label="!(IsCunoInParty())", shape=diamond];
+	  111 [label="The Deserter: “如果我不想呢？如果我想待在这里呢？”他看着你，眼里满是恐惧。"];
+	  112 [label="Electrochemistry: 瞳孔也在扩张，眼珠变得越来越黑……"];
+	  113 [label="Visual Calculus: 从东边吹来的风，很冷。"];
+	  114 [label="You: “德罗斯先生，该走了。”"];
+	  115 [label="phasmid_appearance"];
+	  116 [label="Jump to: [Inland Empire: \"Beckoning you to come to it.\"]"];
+	  117 [label="The Deserter: “那-那个……”老人结结巴巴。"];
+	  118 [label="Kim Kitsuragi: “这也就是我们再次接近它的时候，一定要非常、非常小心的原因。”"];
+	  119 [label="You: （点点头。）“我们已经问的很彻底了。”"];
+	  120 [label="Cuno: “是啊，老头。等一下。”他看着你。“我们*慢慢地*离开死亡岛，好吗？这里已经差不多完事了……”他看向高射炮塔。"];
+	  121 [label="Cuno: “是吗？只是说说话。当然了。你他妈都*陷入*他妈的恍惚状态了好吗。”"];
+	  122 [label="Cuno: “我没看出这只昆虫是怎么帮上忙的……比如说？怎么做到的？无所谓了……”"];
+	  123 [label="Cuno: 他睁大眼睛，似乎这样能帮他接受这种想法。他戳了戳老人。“哟——你有没有*见过*一只大昆虫？”"];
+	  124 [label="IsKimHere()"];
+	  125 [label="IsKimHere()", shape=diamond];
+	  126 [label="!(IsKimHere())", shape=diamond];
+	  127 [label="You: “是啊，其实，那样看起来应该挺糟糕的。”"];
+	  128 [label="Logic: 莉莉恩。也许你可以找她帮忙？"];
+	  129 [label="Jump to: [Untitled hub (04)]"];
+	  130 [label="IsCunoInParty()"];
+	  131 [label="IsCunoInParty()", shape=diamond];
+	  132 [label="!(IsCunoInParty())", shape=diamond];
+	  133 [label="Empathy: 你吓到他了……也许是因为沉默？他很快振作了起来。不过——他可能会怕谁呢？"];
+	  134 [label="Kim Kitsuragi: “这是个问题，”警督说到。“我回来找你的时候，谁看着他呢？”"];
+	  135 [label="Jump to: [TEAM hub]"];
+	  136 [label="Half Light: ……你想要这么说，但是，该死的，等等！‘你被逮……’还卡在你的喉咙里，你突然想到：如果我*错过*了什么呢？"];
+	  137 [label="The Deserter: “但是……”他的眼睛里满是突如其来的恐惧：“但你不是说我会被送到……呃，那个……”"];
+	  138 [label="Jump to: [TEAM hub]"];
+	  139 [label="You: “首先，你需要跟我一起到船那边去。”"];
+	  140 [label="Jump to: [SOLO hub]"];
+	  141 [label="Composure: 他在退化，很快。"];
+	  142 [label="Shivers: 你皮肤上的汗毛竖了起来。"];
+	  143 [label="IsCunoInParty()"];
+	  144 [label="IsCunoInParty()", shape=diamond];
+	  145 [label="!(IsCunoInParty())", shape=diamond];
+	  146 [label="Volition: 四个简单的词语——谢天谢地。如果他能看见，那你就没有发疯。"];
+	  147 [label="tell_me_tell_me"];
+	  148 [label="You: “那是什么！？！”（指向它。）"];
+	  149 [label="Variable[\"seafort.deserter_volition_maybe_insane\"]"];
+	  150 [label="Variable[\"seafort.deserter_volition_maybe_insane\"]", shape=diamond];
+	  151 [label="!(Variable[\"seafort.deserter_volition_maybe_insane\"])", shape=diamond];
+	  152 [label="Untitled hub"];
+	  153 [label="You: 在他的鼻子下面打个响指。"];
+	  154 [label="IsKimHere()"];
+	  155 [label="IsKimHere()", shape=diamond];
+	  156 [label="!(IsKimHere())", shape=diamond];
+	  157 [label="IsCunoInParty()"];
+	  158 [label="IsCunoInParty()", shape=diamond];
+	  159 [label="!(IsCunoInParty())", shape=diamond];
+	  160 [label="Kim Kitsuragi: “年纪大了，而且受惊过度。”他看着他，然后是你。"];
+	  161 [label="You: “也许这种*犀利*是那只竹节虫身上的什么东西引起的？”"];
+	  162 [label="Inland Empire: 还*不止*如此。还记得它是怎么说的吗。"];
+	  163 [label="The Deserter: 他凝视着芦苇丛。你的话语没有对他产生任何影响。也许你应该……"];
+	  164 [label="You: 把奥兰治护照拿给他看。"];
+	  165 [label="Variable[\"yard.cuno_armour_sea_branch_finished\"] == true"];
+	  166 [label="Variable[\"yard.cuno_armour_sea_branch_finished\"] == true", shape=diamond];
+	  167 [label="!(Variable[\"yard.cuno_armour_sea_branch_finished\"] == true)", shape=diamond];
+	  168 [label="Kim Kitsuragi: “之后我们再仔细调查一下吧。我想我应该比他有用一些……”他朝着老人点点头。"];
+	  169 [label="Endurance: 他全身的气力已经耗尽——只剩下一副脆弱的老骨头，包裹在运动服裤子和防风夹克衫里。"];
+	  170 [label="Cuno: “为什么不呢？”"];
+	  171 [label="Jump to: [PHASMID QUESTIONS]"];
+	  172 [label="Cuno: “你的意思是*性冲动*？”"];
+	  173 [label="Cuno: “是啊，是啊。因为——现在看看他。没有那么*犀利*了是不是？而且它走了，离开了。也许它，比如说，能让他坚持下去，就像我老爹靠酒精和闪电丸续命一样……”"];
+	  174 [label="Insulindian Phasmid: 沉默地旋转着——节肢和触须，像头发丝一样。"];
+	  175 [label="Variable[\"coast.morell_phasmid_last_seen\"]"];
+	  176 [label="Variable[\"coast.morell_phasmid_last_seen\"]", shape=diamond];
+	  177 [label="!(Variable[\"coast.morell_phasmid_last_seen\"])", shape=diamond];
+	  178 [label="You: “也许这么多年以来，竹节虫就是这样隐匿自己的吧？”"];
+	  179 [label="Logic: 他刚刚意识到，有些问题你没弄明白。"];
+	  180 [label="Jump to: [CUNOTEAM hub]"];
+	  181 [label="Inland Empire: 什么也没有。对他来说只有芦苇。芦苇和荒芜。"];
+	  182 [label="get_more"];
+	  183 [label="You: “你明白了吗，先生？”"];
+	  184 [label="Reaction Speed: ……你想要这么说。你刚准备说出‘你被逮……’，突然脑后传来一阵警告的声音：你真把一切都搞清楚了吗？"];
+	  185 [label="The Deserter: “我……”他环顾四周，样子很困惑。"];
+	  186 [label="Volition: 这个勇敢的男人为什么会崩溃呢？"];
+	  187 [label="Half Light: 他不害怕监狱。他在害怕别的……"];
+	  188 [label="Jump to: [TEAM hub]"];
+	  189 [label="You: “你能待在这里吗，我回内陆找人来押送你？”"];
+	  190 [label="Shivers: 你皮肤上的汗毛竖了起来。"];
+	  191 [label="Kim Kitsuragi: “要非常、*非常*小心，”警督低语到，然后朝着巨大的节肢动物靠近了一步……"];
+	  192 [label="Inland Empire: 它在召唤你。"];
+	  193 [label="You: “我不知道这是什么意思……”"];
+	  194 [label="Insulindian Phasmid: 太兴奋了。你睁开双眼，它还在那里——一只巨大的竹节虫，慢慢地旋转——它的节肢修长而纤细。死一般地沉寂……"];
+	  195 [label="Variable[\"seafort.deserter_volition_cannot_be\"]"];
+	  196 [label="Variable[\"seafort.deserter_volition_cannot_be\"]", shape=diamond];
+	  197 [label="!(Variable[\"seafort.deserter_volition_cannot_be\"])", shape=diamond];
+	  198 [label="Electrochemistry: 就像对某种可怕的物质上瘾了一样。"];
+	  199 [label="You: “我觉得他对那个东西上瘾了。”"];
+	  200 [label="Kim Kitsuragi: 他点点头。“他的确精力充沛，而且口齿清晰。这么多年的独处，没有什么卫生保健或者是药物治疗，我本来以为情况会更糟糕一些。”"];
+	  201 [label="Kim Kitsuragi: “如果坤诺把它踢进海里去了，就像他说的——那退潮会把它送回这里。这也能说得通。德罗斯先生可能把它捡了起来。或者……甚至是竹节虫做的？如果是它，这就太不可思议了……”"];
+	  202 [label="Cuno: “告诉你？在你*久久地*盯着它看的时候？”他看着老人，然后看着你。“你是个疯子警察，你知道吗？坤诺喜欢。”"];
+	  203 [label="Jump to: [Untitled hub (04)]"];
+	  204 [label="Cuno: “喂——喂。”他在老人的鼻子下面挥了挥手。“你开的枪——嘣！——然后丢掉了证物。*昆虫*又把它捡回来了。是这么回事吗？”"];
+	  205 [label="Jump to: [The Deserter: \"\"What?!\" The old man's eyes fill wi...\"]"];
+	  206 [label="Composure: 所有古怪动作，烦躁，还有他表现出来的情绪波动的总和……"];
+	  207 [label="Variable[\"seafort.deserter_halflight_not_afraid_of_jail\"]"];
+	  208 [label="Variable[\"seafort.deserter_halflight_not_afraid_of_jail\"]", shape=diamond];
+	  209 [label="!(Variable[\"seafort.deserter_halflight_not_afraid_of_jail\"])", shape=diamond];
+	  210 [label="Conceptualization: 在困惑和愤怒之下——突发的旧事如新症，跟你一样？这个想法一闪而过，更紧迫的事情占据了它的位置……"];
+	  211 [label="IsTHCPresent(\"jamais_vu\")"];
+	  212 [label="IsTHCPresent(\"jamais_vu\")", shape=diamond];
+	  213 [label="!(IsTHCPresent(\"jamais_vu\"))", shape=diamond];
+	  214 [label="Reaction Speed: 之后也许就太迟了，情况变了，你确定这里已经完事了？"];
+	  215 [label="Empathy: 这种恐惧，是所有无法控制的动作，还有他表现出来的情绪波动的总和……"];
+	  216 [label="You: “也许你是对的……”"];
+	  217 [label="The Deserter: “这个世界……”老人又打断了你们。“你们在*说*什么呢？这是……”他的声音突然被一阵狂风吞没了。“我们……”\n“这个世界……”老人重复到。“你们在*说*什么呢？这是……”他的声音突然被一阵狂风吞没了。“我们……”"];
+	  218 [label="Perception (Hearing): 又来了，在你北边，自从你来到这个海岸，它就一直在那里——芦苇在低语，茎杆互相摩擦。不过，在那中间……"];
+	  219 [label="Visual Calculus: 很冷。来自东边。"];
+	  220 [label="Variable[\"seafort.deserter_volition_he_can_see\"]"];
+	  221 [label="Variable[\"seafort.deserter_volition_he_can_see\"]", shape=diamond];
+	  222 [label="!(Variable[\"seafort.deserter_volition_he_can_see\"])", shape=diamond];
+	  223 [label="Insulindian Phasmid: 它真的在那里。慢慢地旋转——在绝对的沉默中——它的节肢修长而纤细。"];
+	  224 [label="You: “它在那里！我看见它了！”\n“有的！我看见它了！”"];
+	  225 [label="You: “德罗斯先生？”"];
+	  226 [label="The Deserter: 颤抖的嘴唇似乎在叹息。只有这些。你瓦解了他的防线。"];
+	  227 [label="Kim Kitsuragi: “竹节虫的出现，再加上被逮捕的压力。他在这里待了一辈子。离开这里，对于他来说……”他摇摇头。"];
+	  228 [label="Jump to: [Untitled hub (04)]"];
+	  229 [label="You: “它肯定有毒——那只竹节虫。它告诉我的。”"];
+	  230 [label="You: “你把它弄丢了，对吗，德罗斯先生？”"];
+	  231 [label="IsKimHere()"];
+	  232 [label="IsKimHere()", shape=diamond];
+	  233 [label="!(IsKimHere())", shape=diamond];
+	  234 [label="Cuno: “你确定吗？”他小声说到。“你确定我们都查清楚了？”"];
+	  235 [label="Volition: 谢天谢地。如果他可以看见，那你就没有发疯。"];
+	  236 [label="IsKimHere()"];
+	  237 [label="IsKimHere()", shape=diamond];
+	  238 [label="!(IsKimHere())", shape=diamond];
+	  239 [label="You: “不可能的。我只是跟它说说话而已。”"];
+	  240 [label="You: “它就在那里，你看不见吗？”（指过去。）"];
+	  241 [label="You: （点点头。）“我们已经问的很彻底了。”"];
+	  242 [label="Variable[\"seafort.deserter_wc_health_success\"]"];
+	  243 [label="Variable[\"seafort.deserter_wc_health_success\"]", shape=diamond];
+	  244 [label="!(Variable[\"seafort.deserter_wc_health_success\"])", shape=diamond];
+	  245 [label="The Deserter: “但是……”"];
+	  246 [label="Logic: 不过——你回来这里的时候，谁看着他呢？"];
+	  247 [label="Variable[\"seafort.deserter_inland_weary\"]"];
+	  248 [label="Variable[\"seafort.deserter_inland_weary\"]", shape=diamond];
+	  249 [label="!(Variable[\"seafort.deserter_inland_weary\"])", shape=diamond];
+	  250 [label="Shivers: 你皮肤上的汗毛竖了起来。"];
+	  251 [label="You: “我们走吧。我没有手铐，所以你在我前面走。”"];
+	  252 [label="You: “德罗斯先生，你听见了吗？”"];
+	  253 [label="The Deserter: “真是一场闹剧。你在*说*什么呢——内陆？这是……”老人的声音突然被一阵狂风吞没了。"];
+	  254 [label="IsKimHere()"];
+	  255 [label="IsKimHere()", shape=diamond];
+	  256 [label="!(IsKimHere())", shape=diamond];
+	  257 [label="Insulindian Phasmid: 没人可以。你睁开双眼，它还在那里——一只巨大的竹节虫，慢慢地旋转——它的节肢修长而纤细。死一般地沉寂……"];
+	  258 [label="Half Light: 你感觉双腿在身下颤抖，惯用握枪的那只手本能举了起来……"];
+	  259 [label="IsKimHere()"];
+	  260 [label="IsKimHere()", shape=diamond];
+	  261 [label="!(IsKimHere())", shape=diamond];
+	  262 [label="Insulindian Phasmid: ……在一起。你睁开双眼，它还在那里——一只巨大的竹节虫，慢慢地旋转——它的节肢修长而纤细……"];
+	  263 [label="Kim Kitsuragi: “德罗斯先生？”"];
+	  264 [label="You: “等我一下。”[离开。]"];
+	  265 [label="You: “是的。你*忘记*它在那里了。”"];
+	  266 [label="Kim Kitsuragi: “现在它离开了，他似乎就没那么*有活力*了……”他望向大海。“老实说，此时此刻，我已经做好了相信任何东西的准备。也许它的确*能*影响别人的心理状态。”"];
+	  267 [label="Insulindian Phasmid: 沉默地旋转着——节肢和触须，像头发丝一样。"];
+	  268 [label="You: “对于他这种年纪的男人来说，他似乎……有点*失常*。冲动过头。”"];
+	  269 [label="Kim Kitsuragi: “这种直觉是有根据的。长时间暴露在某种可能是神经变性的东西面前……还有，以后在接近未知物种的时候，请务必小心一些，警探。”"];
+	  270 [label="Variable[\"seafort.phasmid_talking_hub_reached\"]"];
+	  271 [label="Variable[\"seafort.phasmid_talking_hub_reached\"]", shape=diamond];
+	  272 [label="!(Variable[\"seafort.phasmid_talking_hub_reached\"])", shape=diamond];
+	  273 [label="Composure: 在给他做健康检查时发现的一些东西，现在也能说通了。"];
+	  274 [label="Half Light: 最后的余烬已经熄灭。战争结束了。"];
+	  275 [label="Kim Kitsuragi: “他听见我们的话了……幽灵？”"];
+	  276 [label="Variable[\"seafort.deserter_phasmid_hub_left\"]"];
+	  277 [label="Variable[\"seafort.deserter_phasmid_hub_left\"]", shape=diamond];
+	  278 [label="!(Variable[\"seafort.deserter_phasmid_hub_left\"])", shape=diamond];
+	  279 [label="Cuno: “好吧。”男孩转向他。“给他权利！”"];
+	  280 [label="Cuno: “你明白了吗？”"];
+	  281 [label="Variable[\"seafort.deserter_rc_perchear_wait_listen\"]"];
+	  282 [label="Variable[\"seafort.deserter_rc_perchear_wait_listen\"]", shape=diamond];
+	  283 [label="!(Variable[\"seafort.deserter_rc_perchear_wait_listen\"])", shape=diamond];
+	  284 [label="Jump to: [seafort.deserter_volition_he_can_see]"];
+	  285 [label="Volition: 谢天谢地。如果*他*可以看见，那你就没有发疯。"];
+	  286 [label="Insulindian Phasmid: 它真的在那里。慢慢地旋转——在绝对的沉默中——它的节肢修长而纤细……"];
+	  287 [label="Cuno: “我的意思是，就像有一只他妈的巨大的竹节虫从你背后跳了出来，说要逮捕你……”他摇摇头。“那这种狗屁事情，*任何人*都受不了的。就连坤诺也是。”"];
+	  288 [label="Jump to: [Untitled hub (04)]"];
+	  289 [label="Cuno: “没错……”坤诺靠近老人的脸，直勾勾地盯着他的眼睛。“他的眼睛挺*古怪*的，不是吗？”"];
+	  290 [label="Jump to: [Untitled hub (04)]"];
+	  291 [label="Cuno: “怎么回事？比如说——它他妈的特别大……”他轻轻地推了推老人：“怎么回事？”"];
+	  292 [label="Cuno: “我不敢*相信*，那个头盔，老兄，我他妈的把它踢到海里去了，结果它又跑这里来了。或者……你——你会不会觉得是*竹节虫*把它带过来的？”他眯起眼睛，环顾四周。"];
+	  293 [label="Jump to: [Untitled hub (04)]"];
+	  294 [label="You: “也许你是对的……”"];
+	  295 [label="You: “这不是个问题。”"];
+	  296 [label="You: （转向嫌疑人。）“还有一件事，德罗斯先生……”"];
+	  297 [label="TEAM hub"];
+	  298 [label="Perception (Sight): 看，他在流汗，额头上出现了豆大的汗珠。"];
+	  299 [label="Pain Threshold: 就像跟爱人分离。"];
+	  300 [label="Kim Kitsuragi: “事实上，不行……”他挠挠头。"];
+	  301 [label="You: “我最终还是疯了……”（用手抱住脑袋。）"];
+	  302 [label="Jump to: [Untitled hub (04)]"];
+	  303 [label="You: 不，不是这样的。"];
+	  304 [label="Untitled hub (04)"];
+	  305 [label="The Deserter: 他再次把目光转回到芦苇丛——就像他经常做的一样。米黄色，白条纹……"];
+	  306 [label="Kim Kitsuragi: “我的意思是，为什么不呢？它有三米高……”他取下眼镜擦拭着——再次戴回去的时候，他还在凝望大海。"];
+	  307 [label="The Deserter: 没有反应。他的呼吸很平缓，霎那间他显得异常苍老。80岁左右。"];
+	  308 [label="Jump to: [PHASMID QUESTIONS]"];
+	  309 [label="You: （转向嫌疑人。）“还有一件事，德罗斯先生……”"];
+	  310 [label="You: “你明白了吗，先生？”"];
+	  311 [label="The Deserter: “不……我不想。我必须待在*这里*。”他看着芦苇丛，眼里的恐惧越积越多。"];
+	  312 [label="Half Light: 他不害怕监狱。他在害怕别的……"];
+	  313 [label="You: 什么？"];
+	  314 [label="Cuno: “也许我们都能塞进去……”"];
+	  315 [label="Cuno: “是啊，还有那个狗屎……”他怜悯地看着他。“老头子受不了。太过头了。”"];
+	  316 [label="Cuno: “嗯……”他看着那个生物。"];
+	  317 [label="Cuno: “那我们*他妈的*为什么能看见？”他挠挠头。“或者——等一下！时间比较长。比如说，需要时间渗透，而且，如果你跟它待在一起的话……”\n“那我们*他妈的*为什么能看见？”他挠挠头。“或者——等一下！时间比较长。比如说，需要时间渗透，而且，如果你跟它待在一起的话……”"];
+	  318 [label="Jump to: [Untitled hub (04)]"];
+	  319 [label="You: “你的旅人权被暂停了。现场警员提供的信息将会成为控方的呈堂证供。”"];
+	  320 [label="Kim Kitsuragi: “不见得。”他摇摇头。“我们可以把他护送到码头，然后我们其中一个把他带回内陆，另一个在这里等着，不过……”"];
+	  321 [label="The Deserter: “……”"];
+	  322 [label="Variable[\"seafort.deserter_rc_perchear_wait_listen\"]"];
+	  323 [label="Variable[\"seafort.deserter_rc_perchear_wait_listen\"]", shape=diamond];
+	  324 [label="!(Variable[\"seafort.deserter_rc_perchear_wait_listen\"])", shape=diamond];
+	  325 [label="You: “好吧，所以你是说我们都能塞进去？”"];
+	  326 [label="Kim Kitsuragi: “我能看见。”"];
+	  327 [label="Electrochemistry: *或者*你只是太兴奋了。"];
+	  328 [label="stick_it"];
+	  329 [label="IsKimHere()"];
+	  330 [label="IsKimHere()", shape=diamond];
+	  331 [label="!(IsKimHere())", shape=diamond];
+	  332 [label="You: “年纪大，再加上受到惊吓，没错。”"];
+	  333 [label="Empathy: 这不仅仅是化学。"];
+	  334 [label="Kim Kitsuragi: “我完全忘记要做笔记了。希望我还能全想起来。”他怀疑地摇摇头。“这份报告真是够要命的——*谢天谢地*，我们还有相片。”"];
+	  335 [label="Composure: 这是一个老人——终归如此。不再是一个坏掉的锡兵，而是一个男人的残躯。"];
+	  336 [label="Volition: 他是个勇敢的男人——为什么会崩溃呢？"];
+	  337 [label="Variable[\"seafort.deserter_halflight_not_afraid_of_jail\"]"];
+	  338 [label="Variable[\"seafort.deserter_halflight_not_afraid_of_jail\"]", shape=diamond];
+	  339 [label="!(Variable[\"seafort.deserter_halflight_not_afraid_of_jail\"])", shape=diamond];
+	  340 [label="CUNOTEAM hub"];
+	  341 [label="You: “嘘，坤诺！你听见了吗？”"];
+	  342 [label="IsKimHere()"];
+	  343 [label="IsKimHere()", shape=diamond];
+	  344 [label="!(IsKimHere())", shape=diamond];
+	  345 [label="You: “是的。对于他这个年纪的人来说……他似乎有点*不对劲*。”"];
+	  346 [label="Jump to: [Untitled hub (04)]"];
+	  347 [label="Variable[\"yard.cuno_armour_sea_branch_finished\"] == true"];
+	  348 [label="Variable[\"yard.cuno_armour_sea_branch_finished\"] == true", shape=diamond];
+	  349 [label="!(Variable[\"yard.cuno_armour_sea_branch_finished\"] == true)", shape=diamond];
+	  350 [label="IsCunoInParty()"];
+	  351 [label="IsCunoInParty()", shape=diamond];
+	  352 [label="!(IsCunoInParty())", shape=diamond];
+	  353 [label="You: 不。不是这么回事。"];
+	  354 [label="Jump to: [The Deserter: \"\"What?!\" The old man's eyes fill wi...\"]"];
+	  355 [label="Jump to: [PHASMID HUB]"];
+	  356 [label="The Deserter: “什么？！”因为这些话语，老人的眼睛里突然闪现出意料之外的恐惧。“但你不是说我会被送到……”"];
+	  357 [label="The Deserter: “不，我不想这样！我必须待在这里。”他看着芦苇丛，眼里的恐惧越积越多。"];
+	  358 [label="You: 首先：“空间够*三个人*吗？”"];
+	  359 [label="The Deserter: “这个操蛋的世界……”他凝视着什么——谁知道是什么——在灰尘里。“这个世界……这是什么？”"];
+	  360 [label="Logic: 他刚刚意识到，有些问题你没弄明白。"];
+	  361 [label="Logic: 你真的把*一切*都搞清楚了吗，警探？"];
+	  362 [label="Perception (Hearing): 某种完全不同的东西。听起来像一支琴弓，非常缓慢地在小提琴的弦上拉动着。一个用芦苇和蒲草做成的小提琴。"];
+	  363 [label="Logic: 轮胎破了之后，他一直被困在这座岛上……"];
+	  364 [label="Variable[\"seafort.orb_dinghy_clicked\"]"];
+	  365 [label="Variable[\"seafort.orb_dinghy_clicked\"]", shape=diamond];
+	  366 [label="!(Variable[\"seafort.orb_dinghy_clicked\"])", shape=diamond];
+	  367 [label="Kim Kitsuragi: “我能看见。”"];
+	  368 [label="Kim Kitsuragi: “是的。被逮捕，还有竹节虫的出现——两者的压力加在一起……”他看着你。“不过你觉得还不仅仅是这样，对吗？”"];
+	  369 [label="Kim Kitsuragi: “嗯……”他看着那个生物……"];
+	  370 [label="Kim Kitsuragi: “某种催产素释放机制？对瞳孔产生了影响。这个已经远远超出我的理解范围了，警探。”"];
+	  371 [label="Kim Kitsuragi: “告诉你？是啊，很好。在你那*漫长*的瞪眼比赛中。我能理解。”他先是看着男人，然后看着你。"];
+	  372 [label="Kim Kitsuragi: “我们应该考虑先回内陆。去寻求帮助。他在这里很安全。如果我们抓紧时间的话……”"];
+	  373 [label="The Deserter: 没有回应。他又走神了。"];
+	  374 [label="Variable[\"seafort.deserter_esprit_arrest\"]"];
+	  375 [label="Variable[\"seafort.deserter_esprit_arrest\"]", shape=diamond];
+	  376 [label="!(Variable[\"seafort.deserter_esprit_arrest\"])", shape=diamond];
+	  377 [label="The Deserter: “……”"];
+	  378 [label="Cuno: “但是要*非常*小心……”男孩低语到，然后朝着巨大的节肢动物靠近了一步……"];
+	  379 [label="Variable[\"seafort.deserter_volition_he_can_see\"]"];
+	  380 [label="Variable[\"seafort.deserter_volition_he_can_see\"]", shape=diamond];
+	  381 [label="!(Variable[\"seafort.deserter_volition_he_can_see\"])", shape=diamond];
+	  382 [label="The Deserter: 老人抱紧自己，寻求温暖。眼睛依旧茫然地看向内陆。"];
+	  383 [label="IsKimHere()"];
+	  384 [label="IsKimHere()", shape=diamond];
+	  385 [label="!(IsKimHere())", shape=diamond];
+	  386 [label="You: “我们都能塞进那条小船？”"];
+	  387 [label="You: “不。忘了吧。”查看那个老人。"];
+	  388 [label="Rhetoric: 没什么——他是打算说‘没什么’。"];
+	  389 [label="You: “*你*可以回来接我。等你把他带回分局之后。”"];
+	  390 [label="The Deserter: “这是什么……闹剧吗？”他环顾四周，带着一种奇怪的绝望。“这是一场该死的闹剧，我不能……”"];
+	  391 [label="You: “也许我可以让莉莉恩帮忙看着他？”\n“也许我可以让拾网人帮忙看着他？”"];
+	  392 [label="Variable[\"seafort.deserter_reaction_everything\"]"];
+	  393 [label="Variable[\"seafort.deserter_reaction_everything\"]", shape=diamond];
+	  394 [label="!(Variable[\"seafort.deserter_reaction_everything\"])", shape=diamond];
+	  395 [label="Jump to: [CheckItem(\"deserter_gun\")]"];
+	  396 [label="Variable[\"seafort.deserter_wc_health_success\"]"];
+	  397 [label="Variable[\"seafort.deserter_wc_health_success\"]", shape=diamond];
+	  398 [label="!(Variable[\"seafort.deserter_wc_health_success\"])", shape=diamond];
+	  399 [label="Inland Empire: 你说出这些话语，感觉像锡制的，沉甸甸，好像来源于你的心底。你已经说过几百次了……"];
+	  400 [label="Kim Kitsuragi: “我们应该先试一下。囚犯押送协议说要求两个人……”"];
+	  401 [label="SOLO hub"];
+	  402 [label="Half Light: 你感觉双腿在身下颤抖，惯用握枪的那只手本能地伸向枪套——去抓手枪……"];
+	  403 [label="CheckEquipped(\"gun_villiers\")  or  CheckEquipped(\"gun_ruby\")"];
+	  404 [label="CheckEquipped(\"gun_villiers\")  or  CheckEquipped(\"gun_ruby\")", shape=diamond];
+	  405 [label="!(CheckEquipped(\"gun_villiers\")  or  CheckEquipped(\"gun_ruby\"))", shape=diamond];
+	  406 [label="Insulindian Phasmid: 只有这个老人——还有那只慢慢旋转的巨大竹节虫——在绝对的沉默中——它的节肢修长而纤细……"];
+	  407 [label="Insulindian Phasmid: 它还在那里——像一个展开的芦苇状壳质装置。"];
+	  408 [label="Electrochemistry: 你很兴奋。快吸气，你只是太兴奋了！"];
+	  409 [label="Volition: 你没有发疯。"];
+	  410 [label="Kim Kitsuragi: “他进入了某种……意识活动的固定状态。”警督小心地检查着他。“好消息是——这就解决了我们的运输问题。不是吗，德罗斯先生？”"];
+	  411 [label="The Deserter: 颤抖的嘴唇似乎在叹息。"];
+	  412 [label="You: “在这之前——在我评估他的状态的时候——他似乎出奇地有活力。”"];
+	  413 [label="Variable[\"seafort.phasmid_touching_hub\"]"];
+	  414 [label="Variable[\"seafort.phasmid_touching_hub\"]", shape=diamond];
+	  415 [label="!(Variable[\"seafort.phasmid_touching_hub\"])", shape=diamond];
+	  416 [label="Variable[\"seafort.deserter_wc_health_success\"]"];
+	  417 [label="Variable[\"seafort.deserter_wc_health_success\"]", shape=diamond];
+	  418 [label="!(Variable[\"seafort.deserter_wc_health_success\"])", shape=diamond];
+	  419 [label="Esprit de Corps: ……你计划这么说。在你还没来得及说出‘你被……’之前，男孩就打断了你："];
+	  420 [label="Empathy: 这种恐惧——是所有无法控制的动作，还有他表现出来的情绪波动的总和……"];
+	  421 [label="Composure: 所有古怪动作，烦躁，还有他表现出来的情绪波动的总和……"];
+	  422 [label="Perception (Sight): 他在流汗，额头上出现了豆大的汗珠。"];
+	  423 [label="Cuno: “我们不需要你的许可，”男孩转向你。“不过，我们要聊聊*船*的事。我们怎么带走他？”"];
+	  424 [label="Cuno: “什么？”"];
+	  425 [label="Cuno: “我能看见。”"];
+	  426 [label="IsKimHere()"];
+	  427 [label="IsKimHere()", shape=diamond];
+	  428 [label="!(IsKimHere())", shape=diamond];
+	  429 [label="The Deserter: “这是什么……闹剧吗？”他环顾四周，带着一种奇怪的绝望。“这是一场该死的闹剧，我不能……”"];
+	  430 [label="Kim Kitsuragi: “试试别的？我们刚才唤回了他一下。”"];
+	  431 [label="Variable[\"TASK.return_to_mainland\"]"];
+	  432 [label="Variable[\"TASK.return_to_mainland\"]", shape=diamond];
+	  433 [label="!(Variable[\"TASK.return_to_mainland\"])", shape=diamond];
+	  434 [label="Jump to: [The Deserter: \"\"Huh?\" He leans closer with a stran...\"]"];
+	  435 [label="The Deserter: “不……”他的话没有说完。他只能发出一个单音节。他的手麻木了，眼睛直勾勾地盯着它们。"];
+	  436 [label="Variable[\"TASK.extract_a_motive_done\"]"];
+	  437 [label="Variable[\"TASK.extract_a_motive_done\"]", shape=diamond];
+	  438 [label="!(Variable[\"TASK.extract_a_motive_done\"])", shape=diamond];
+	  439 [label="You: 等等……"];
+	  440 [label="You: Variable[\"seafort.deserter_rc_perchear_wait_listen\"]"];
+	  441 [label="Variable[\"seafort.deserter_rc_perchear_wait_listen\"]", shape=diamond];
+	  442 [label="!(Variable[\"seafort.deserter_rc_perchear_wait_listen\"])", shape=diamond];
+	  443 [label="You: “我们将会在一周内为你指派法律顾问，而且必须在44天内出庭——你明白了吗？”"];
+	  444 [label="Variable[\"seafort.deserter_perc_sweat\"]"];
+	  445 [label="Variable[\"seafort.deserter_perc_sweat\"]", shape=diamond];
+	  446 [label="!(Variable[\"seafort.deserter_perc_sweat\"])", shape=diamond];
+	  447 [label="Kim Kitsuragi: “也许我们都能塞进去……”警督说到。"];
+	  448 [label="Variable[\"TASK.find_phasmid\"]  or Variable[\"TASK.find_phasmid_done\"]"];
+	  449 [label="Variable[\"TASK.find_phasmid\"]  or Variable[\"TASK.find_phasmid_done\"]", shape=diamond];
+	  450 [label="!(Variable[\"TASK.find_phasmid\"]  or Variable[\"TASK.find_phasmid_done\"])", shape=diamond];
+	  451 [label="Jump to: [seafort.deserter_volition_he_can_see]"];
+	  452 [label="You: “不，我没有发疯——你搞错了。”"];
+	  453 [label="Insulindian Phasmid: 但是你*可以*。你睁开双眼，它还在那里——一只巨大的竹节虫，慢慢地旋转——它的节肢修长而纤细……"];
+	  454 [label="Variable[\"seafort.deserter_reaction_its_the_cryptid\"]"];
+	  455 [label="Variable[\"seafort.deserter_reaction_its_the_cryptid\"]", shape=diamond];
+	  456 [label="!(Variable[\"seafort.deserter_reaction_its_the_cryptid\"])", shape=diamond];
+	  457 [label="You: “我不知道那是什么鬼东西……”"];
+	  458 [label="You: “也许吧。总之——它只是试着隐藏自己。退化只是一种副作用。”"];
+	  459 [label="Jump to: [Untitled hub (04)]"];
+	  460 [label="The Deserter: 一阵风吹来，塑料斗篷在他的脸庞周围扑腾。他佝偻着后背，嘴巴大张着。"];
+	  461 [label="Perception (Hearing): 某种完全不同的东西。听起来像一支琴弓，非常缓慢地在小提琴的弦上拉动着。一个用芦苇和蒲草做成的小提琴。"];
+	  462 [label="IsKimHere()"];
+	  463 [label="IsKimHere()", shape=diamond];
+	  464 [label="!(IsKimHere())", shape=diamond];
+	  465 [label="Kim Kitsuragi: “你明白了吗？”"];
+	  466 [label="You: （不，我需要的都有了，说吧：）“伊索夫·利连诺维奇·德罗斯，你因为谋杀科奈尔上校而被逮捕了。”\n（不，我需要的都有了，说吧：）“伊索夫·利连诺维奇·德罗斯，你因为谋杀埃利斯·科顿艾尔而被逮捕了。”\n（不，我需要的都有了，说吧：）“伊索夫·利连诺维奇·德罗斯，你因为谋杀雇佣兵莱利而被逮捕了。”"];
+	  467 [label="Volition: 他是个勇敢的男人——为什么会崩溃呢？"];
+	  468 [label="Conceptualization: 感觉就像是一个*咒语*。"];
+	  469 [label="The Deserter: “真是一场闹剧。你在*说*什么呢——手铐？这是……”老人的声音突然被一阵狂风吞没了。"];
+	  470 [label="Reaction Speed: 但是那就意味着……"];
+	  471 [label="You: “金，*你*能看见它吗？！”"];
+	  472 [label="Electrochemistry: 太迟了，你戒酒太晚了！"];
+	  473 [label="You: “一只巨大的昆虫，小心！”"];
+	  474 [label="Variable[\"seafort.phasmid_and_nest_done\"] == false"];
+	  475 [label="Variable[\"seafort.phasmid_and_nest_done\"] == false", shape=diamond];
+	  476 [label="!(Variable[\"seafort.phasmid_and_nest_done\"] == false)", shape=diamond];
+	  477 [label="Jump to: [Untitled hub (04)]"];
+	  478 [label="Jump to: [Untitled hub (04)]"];
+	  479 [label="Kim Kitsuragi: “他把瞄准镜弄丢了。然后不知怎么的，它又跑到那边去了。是那个有收集癖的竹节虫帮的忙？”警督端详着你手中闪闪发亮的镜片。"];
+	  480 [label="The Deserter: 沉默。甚至连叹息都没有。"];
+	  481 [label="Perception (Hearing): 又来了，在你北边，自从你来到这个海岸，它就一直在那里——芦苇在低语，茎杆互相摩擦。不过，在那中间……"];
+	  482 [label="Cuno: ……然后就没了。淹没在男孩的声音里——“也许船上有位置够我们三个人……”\n……然后就没了。淹没在男孩的声音里——“也许船上*有*位置够我们三个人……”"];
+	  483 [label="Insulindian Phasmid: 它真的在那里。慢慢地旋转——在绝对的沉默中——它的节肢修长而纤细……"];
+	  484 [label="Jump to: [Untitled hub (04)]"];
+	  485 [label="Rhetoric: 你想到那些话了，一清二楚。"];
+	  486 [label="The Deserter: 他似乎没有注意这个问题。海浪慢慢地拍打着南边的海堡……"];
+	  487 [label="The Deserter: 老人看着他的步枪握在你手里——莫名有些惊慌……"];
+	  488 [label="Empathy: 这种恐惧是所有无法控制的动作，还有他表现出来的情绪波动的总和。"];
+	  489 [label="Variable[\"seafort.deserter_logic_who_watches_over\"]"];
+	  490 [label="Variable[\"seafort.deserter_logic_who_watches_over\"]", shape=diamond];
+	  491 [label="!(Variable[\"seafort.deserter_logic_who_watches_over\"])", shape=diamond];
+	  492 [label="Inland Empire: 有些事正在发生。停住。"];
+	  493 [label="You: （转向嫌疑人。）“还有一件事，德罗斯先生……”"];
+	  494 [label="The Deserter: “哈？”他靠近了一些，脸上的表情很奇怪。"];
+	  495 [label="Variable[\"seafort.deserter_one_more_thing\"]"];
+	  496 [label="Variable[\"seafort.deserter_one_more_thing\"]", shape=diamond];
+	  497 [label="!(Variable[\"seafort.deserter_one_more_thing\"])", shape=diamond];
+	  498 [label="Kim Kitsuragi: “好吧，”警督点点头。“不如*我*把他送去分局，你在岛上等着呢？”"];
+	  499 [label="Perception (Hearing): 又来了，在你北边，自从你来到这个海岸，它就一直在那里——芦苇在低语，茎杆互相摩擦。不过，在那中间……"];
+	  500 [label="Perception (Hearing): 某种完全不同的东西。听起来像一支琴弓，非常缓慢地在小提琴的弦上拉动着。一个用芦苇和蒲草做成的小提琴。"];
+	  501 [label="Logic: 如果他也看见了，那你没有*完全*发疯。"];
+	  502 [label="You: “天啦，我太兴奋了……”"];
+	  503 [label="The Deserter: 他看起来很困惑。“那里什么都没有。”"];
+	  504 [label="You: 在他的眼前挥挥手。"];
+	  505 [label="PHASMID QUESTIONS"];
+	  506 [label="Kim Kitsuragi: “人类就是人类。是不是需要……神经性干预才能让*腺体*工作，我不知道……”"];
+	  507 [label="Kim Kitsuragi: “瞄准镜，知道她身上的瘀伤，他对奥兰治小姐的*性情*……”他点点头。“我明白你的意思。”"];
+	  508 [label="Jump to: [Untitled hub (04)]"];
+	  509 [label="You: “现在我先让你休息一下，德罗斯先生。”（总结。）"];
+	  510 [label="IsKimHere()"];
+	  511 [label="IsKimHere()", shape=diamond];
+	  512 [label="!(IsKimHere())", shape=diamond];
+	  513 [label="Variable[\"seafort.deserter_wc_health_success\"]"];
+	  514 [label="Variable[\"seafort.deserter_wc_health_success\"]", shape=diamond];
+	  515 [label="!(Variable[\"seafort.deserter_wc_health_success\"])", shape=diamond];
+	  516 [label="Pain Threshold: 就像跟爱人分离。"];
+	  517 [label="You: “你是说我们都能塞进去？”"];
+	  518 [label="Variable[\"seafort.deserter_logic_totally_not_insane\"]"];
+	  519 [label="Variable[\"seafort.deserter_logic_totally_not_insane\"]", shape=diamond];
+	  520 [label="!(Variable[\"seafort.deserter_logic_totally_not_insane\"])", shape=diamond];
+	  521 [label="Variable[\"seafort.deserter_eyes_covered\"]"];
+	  522 [label="Variable[\"seafort.deserter_eyes_covered\"]", shape=diamond];
+	  523 [label="!(Variable[\"seafort.deserter_eyes_covered\"])", shape=diamond];
+	  524 [label="IsKimHere()"];
+	  525 [label="IsKimHere()", shape=diamond];
+	  526 [label="!(IsKimHere())", shape=diamond];
+	  527 [label="Cuno: “去他妈的，为什么不呢？那种像幽灵一样的大昆虫很可能会把你搞得乱七八糟的。”"];
+	  528 [label="Cuno: 男孩在老人面前挥挥手。"];
+	  529 [label="You: “伊索夫·利连诺维奇·德罗斯，你因为谋杀雇佣兵首领科顿艾尔而被逮捕了。你将会被送往最近的分局等候区，接受初步调查。”"];
+	  530 [label="Shivers: 你皮肤上的汗毛突然立了起来。"];
+	  531 [label="Jump to: [CUNOTEAM hub]"];
+	  532 [label="You: 不。不是这么回事。"];
+	  533 [label="Jump to: [themainhub]"];
+	  534 [label="Electrochemistry: 瞳孔也在扩张，眼珠变得越来越黑。"];
+	  535 [label="The Deserter: ……不过曷城警督不在这里。只有这个年迈的逃兵。他的黑眼睛转向你，说到：“金是谁？这里没有叫金的人。”"];
+	  536 [label="Half Light: 你感觉双腿在身下颤抖，惯用握枪的那只手本能地伸向枪套——但是你并没有枪……"];
+	  537 [label="Kim Kitsuragi: 你感觉警督把手搭在你的背后。然后你听见他说出了四个字："];
+	  538 [label="The Deserter: 老人看着芦苇，然后看着你：“你在说什么呢？”"];
+	  539 [label="You: “不，这是只该死的神秘动物，那个……”"];
+	  540 [label="Volition: 不。不可能的！"];
+	  541 [label="Reaction Speed: 它是一只神秘动物！"];
+	  542 [label="Variable[\"seafort.deserter_volition_not_insane\"]"];
+	  543 [label="Variable[\"seafort.deserter_volition_not_insane\"]", shape=diamond];
+	  544 [label="!(Variable[\"seafort.deserter_volition_not_insane\"])", shape=diamond];
+	  545 [label="Jump to: [Untitled hub (04)]"];
+	  546 [label="You: 把陶瓷头盔给他看。\n拍拍你头上的头盔。"];
+	  547 [label="Empathy: 你已经从这个可怜人那里得到了想要的一切。"];
+	  548 [label="Jump to: [Untitled hub (04)]"];
+	  549 [label="get_morest_cuno"];
+	  550 [label="The Deserter: “什么？！”因为这些话语，老人的眼睛里突然闪现出意料之外的恐惧。“但你不是说我会被送到……呃，那个……”"];
+	  551 [label="Shivers: 你皮肤上的汗毛竖了起来。"];
+	  552 [label="Reaction Speed: 但是那就意味着……"];
+	  553 [label="Logic: 如果他也看见了，那你*完全*没有发疯。"];
+	  554 [label="IsKimHere()"];
+	  555 [label="IsKimHere()", shape=diamond];
+	  556 [label="!(IsKimHere())", shape=diamond];
+	  557 [label="Jump to: [PHASMID QUESTIONS]"];
+	  558 [label="IsKimHere()"];
+	  559 [label="IsKimHere()", shape=diamond];
+	  560 [label="!(IsKimHere())", shape=diamond];
+	  561 [label="Cuno: “是啊，他崩溃了。我们要带他去看医生。好消息是——这就解决了船和猪头过河的问题。他哪里都不会去。他被困在这里了……”"];
+	  562 [label="You: “我不能让一个小孩带着杀人嫌疑犯去警局吧。”"];
+	  563 [label="The Deserter: “那-那个……”老人结结巴巴。然后又是一声叹息。"];
+	  564 [label="IsKimHere()"];
+	  565 [label="IsKimHere()", shape=diamond];
+	  566 [label="!(IsKimHere())", shape=diamond];
+	  567 [label="Kim Kitsuragi: “警官，”在你说到*逮*字的时候，警督打断了你。他低声说到。“你确定吗？也许我们还能挖出更多信息……”"];
+	  568 [label="You: “我回来找你的时候，谁看着他呢？”"];
+	  569 [label="Kim Kitsuragi: “你回来找我？不如我去，然后派船回来接你怎么样？”"];
+	  570 [label="You: “我来吧，还是别扯个不停了。”"];
+	  571 [label="Perception (Hearing): 你觉得自己听见了某种声音，不过那里只有芦苇……"];
+	  572 [label="The Deserter: “我不行，我的橡皮艇……”他指向破掉的轮胎。“我的轮胎破了，充不了气。”"];
+	  573 [label="Insulindian Phasmid: 它真的在那里。慢慢地旋转——在绝对的沉默中——它的节肢修长而纤细。"];
+	  574 [label="You: 眨眨眼。"];
+	  575 [label="You: “巨大的竹节虫！”"];
+	  576 [label="PHASMID HUB"];
+	  577 [label="Variable[\"TASK.extract_a_motive_done\"] == true"];
+	  578 [label="Variable[\"TASK.extract_a_motive_done\"] == true", shape=diamond];
+	  579 [label="!(Variable[\"TASK.extract_a_motive_done\"] == true)", shape=diamond];
+	  580 [label="Kim Kitsuragi: “你确定吗？你看了它*很长*一段时间。好像你都被催眠了一样。”他想到。“你被催眠了吗？”"];
+	  581 [label="Jump to: [PHASMID QUESTIONS]"];
+	  582 [label="Kim Kitsuragi: “这个护照，还有海岸边浮标里的其他文件，都是你拿走的吗？”"];
+	  583 [label="Jump to: [CheckItem(\"deserter_gun\")]"];
+	  584 [label="Cuno: 你感觉男孩拽着你的袖子——在黑暗中——只说了四个字："];
+	  585 [label="Logic: 但那意味着……"];
+	  586 [label="IsKimHere()"];
+	  587 [label="IsKimHere()", shape=diamond];
+	  588 [label="!(IsKimHere())", shape=diamond];
+	  589 [label="Variable[\"TASK.extract_a_motive_done\"] == true"];
+	  590 [label="Variable[\"TASK.extract_a_motive_done\"] == true", shape=diamond];
+	  591 [label="!(Variable[\"TASK.extract_a_motive_done\"] == true)", shape=diamond];
+	  592 [label="IsKimHere()"];
+	  593 [label="IsKimHere()", shape=diamond];
+	  594 [label="!(IsKimHere())", shape=diamond];
+	  595 [label="You: “他*已经*表现出了上瘾行为。而且*不仅仅*是止痛药。”\n“他表现出了上瘾的症状。而且不是*普通*的症状。”"];
+	  596 [label="You: “船的空间够塞下三个人的吗？”"];
+	  597 [label="Visual Calculus: 很冷。来自东边。"];
+	  598 [label="Cuno: “看着这个*杀人犯*？”他指着老人，摇摇头。"];
+	  599 [label="The Deserter: “这个操蛋的世界……”他凝视着什么——谁知道是什么——在灰尘里。“这个世界……这是什么？”"];
+	  600 [label="Conceptualization: 在困惑和愤怒之下——突发的旧事如新症，跟你一样？这个想法一闪而过，更紧迫的事情占据了它的位置……"];
+	  601 [label="Jump to: [CUNOTEAM hub]"];
+	  602 [label="Variable[\"seafort.deserter_esprit_arrest\"]"];
+	  603 [label="Variable[\"seafort.deserter_esprit_arrest\"]", shape=diamond];
+	  604 [label="!(Variable[\"seafort.deserter_esprit_arrest\"])", shape=diamond];
+	  605 [label="You: “你在害怕……”"];
+	  606 [label="You: 等等……"];
+	  607 [label="You: Variable[\"seafort.deserter_rc_perchear_wait_listen\"]"];
+	  608 [label="Variable[\"seafort.deserter_rc_perchear_wait_listen\"]", shape=diamond];
+	  609 [label="!(Variable[\"seafort.deserter_rc_perchear_wait_listen\"])", shape=diamond];
+	  610 [label="You: 什么？"];
+	  611 [label="Reaction Speed: 不，它是神秘动物！"];
+	  612 [label="You: 轻轻地拍一下他的肩膀。"];
+	  613 [label="You: “德罗斯先生？”"];
+	  614 [label="You: “我觉得是因为*竹节虫*。”"];
+	  615 [label="Untitled hub (04)"];
+	  616 [label="Variable[\"coast.morell_phasmid_last_seen\"]"];
+	  617 [label="Variable[\"coast.morell_phasmid_last_seen\"]", shape=diamond];
+	  618 [label="!(Variable[\"coast.morell_phasmid_last_seen\"])", shape=diamond];
+	  619 [label="Kim Kitsuragi: “嗯。”警督观察着老人。“德罗斯先生——你*曾经*有没有见过一只竹节虫，假装成芦苇的样子？”"];
+	  620 [label="Kim Kitsuragi: “它有*三米*高。是一种未被发现的物种。我还没准备好相信*任何事*——不过，没错，我可以相信它拥有影响他人心理状态的能力。”"];
+	  621 [label="You: “他*已经*表现出了上瘾行为。而且*不仅仅*是对止痛药。”\n“他表现出了上瘾的症状。而且不是*普通*的症状。”"];
+	  622 [label="Kim Kitsuragi: “你应该对未知物种更小心一些，警探。你确定它不会对你造成什么*影响*吗？”"];
+	  623 [label="You: “不可能的。我只是跟它说说话而已。”"];
+	  624 [label="Kim Kitsuragi: “我完全忘记笔记的事了——希望我还能全想起来。“他摇摇头。“这份报告绝对够要命的——他们肯定会以为我们疯了。”"];
+	  625 [label="Jump to: [Untitled hub (04)]"];
+	  626 [label="Jump to: [CUNOTEAM hub]"];
+	  627 [label="Untitled hub"];
+	  628 [label="Cuno: “是啊，你也看见了？”他看着毫无反应的老人。“有点神经质了，是吗？我知道那种感觉。我也没嗑闪电丸了……”"];
+	  629 [label="IsKimHere()"];
+	  630 [label="IsKimHere()", shape=diamond];
+	  631 [label="!(IsKimHere())", shape=diamond];
+	  632 [label="Cuno: “哟，老兄——我不知道。我不知道*退化*是什么意思。我也不知道要不要离得它那么近——盯着它整整5分钟……你真是个疯子警察。”"];
+	  633 [label="Variable[\"seafort.phasmid_and_nest_done\"] == false"];
+	  634 [label="Variable[\"seafort.phasmid_and_nest_done\"] == false", shape=diamond];
+	  635 [label="!(Variable[\"seafort.phasmid_and_nest_done\"] == false)", shape=diamond];
+	  636 [label="Cuno: “哦耶，”男孩兴致勃勃地说到。“坤诺知道流浪汉。坤诺从没见过像他这样犀利的流浪汉，更别说他已经流浪这么多年了。”"];
+	  637 [label="Cuno: “关于那个……”坤诺眯起眼睛，看着那个偷窥。“我和坤妮把那破玩意提到海里去了。她从尸体上拿下来，然后踹了一脚，像玩橄榄球一样。它是怎么会冲到这里来的……”他停顿下来——眯起眼睛。“我不知道。”"];
+	  638 [label="You: “但是，谁看着他呢——在那边——在我回来接你的时候？”"];
+	  639 [label="Inland Empire: 有些事正在发生。停住。"];
+	  640 [label="Drama: 没有它，没人会相信你的。"];
+	  641 [label="The Deserter: 老人看着沙地里的步枪，然后抬头看着你——莫名有些惊慌……"];
+	  642 [label="Esprit de Corps: ……你计划这么说。在你还没来得及说出‘你被……’之前，警督就打断了你："];
+	  643 [label="Variable[\"seafort.deserter_halflight_not_afraid_of_jail\"]"];
+	  644 [label="Variable[\"seafort.deserter_halflight_not_afraid_of_jail\"]", shape=diamond];
+	  645 [label="!(Variable[\"seafort.deserter_halflight_not_afraid_of_jail\"])", shape=diamond];
+	  646 [label="Kim Kitsuragi: “不不，在这座岛上要花上一整天时间的。你去押送犯人，我在这里等着。我可以跟你一起护送他到码头。”"];
+	  647 [label="You: “也许你是对的，好吧……”"];
+	  648 [label="The Deserter: “你们在*说*什么？这是……”老人的声音突然被一阵狂风吞没了。“……真的，我们……”"];
+	  649 [label="Variable[\"seafort.deserter_rc_perchear_wait_listen\"]"];
+	  650 [label="Variable[\"seafort.deserter_rc_perchear_wait_listen\"]", shape=diamond];
+	  651 [label="!(Variable[\"seafort.deserter_rc_perchear_wait_listen\"])", shape=diamond];
+	  652 [label="Variable[\"seafort.deserter_eyes_covered\"]"];
+	  653 [label="Variable[\"seafort.deserter_eyes_covered\"]", shape=diamond];
+	  654 [label="!(Variable[\"seafort.deserter_eyes_covered\"])", shape=diamond];
+	  655 [label="Logic: 他是对的。你疯了。"];
+	  656 [label="Insulindian Phasmid: 竹节虫3米多高。它用针孔般的小眼睛直直地盯着你，还有它那小的出奇的脑袋。"];
+	  657 [label="Variable[\"tc.insulindian_phasmid\"]"];
+	  658 [label="Variable[\"tc.insulindian_phasmid\"]", shape=diamond];
+	  659 [label="!(Variable[\"tc.insulindian_phasmid\"])", shape=diamond];
+	  660 [label="You: “先生，你怎么可能*看*不见竹节虫呢？”"];
+	  661 [label="The Deserter: 男人没有回应——他一直盯着一个地方，目光呆滞，眼珠从眼窝里鼓了出来，嘴巴在颤抖。"];
+	  662 [label="Empathy: 带着恐惧和渴望。"];
+	  663 [label="You: “这人怎么了？”\n“你怎么了，德罗斯先生？”"];
+	  664 [label="You: “他跟竹节虫之间的关系会不会有些荷尔蒙的成分？”"];
+	  665 [label="Kim Kitsuragi: “像一种毒品吗？”"];
+	  666 [label="Kim Kitsuragi: “最后要逮捕他的时候，他的确好像很忧虑。就像他不想离开这个地方。还有那个昆虫也许……”他看着自己的笔记本。"];
+	  667 [label="Cuno: “说过话，哈？你确定它没有对*你*有什么奇怪的影响吗？你看起来，好像，被催眠了。”"];
+	  668 [label="Jump to: [Untitled hub (04)]"];
+	  669 [label="The Deserter: “那-那个……”老人结结巴巴。然后又是一声叹息。"];
+	  670 [label="IsCunoInParty()"];
+	  671 [label="IsCunoInParty()", shape=diamond];
+	  672 [label="!(IsCunoInParty())", shape=diamond];
+	  673 [label="You: “我们将会在一周内为你指派法律顾问，而且必须在44天内出庭。”"];
+	  674 [label="You: “*我*可以回来接你。等我把他带回分局之后。”"];
+	  675 [label="The Deserter: “……”"];
+	  676 [label="Perception (Sight): 他在流汗，额头上出现了豆大的汗珠。"];
+	  677 [label="Pain Threshold: 就像跟爱人分离。"];
+	  678 [label="You: “但是什么？”"];
+	  679 [label="solo_decision"];
+	  680 [label="You: “你明白了吗，先生？”"];
+	  681 [label="You: “没必要客气，我来吧。”"];
+	  682 [label="You: “我们都能塞进那条小船？”"];
+	  683 [label="Perception (Hearing): 你觉得自己听见了某种声音，不过那里只有芦苇。现在——我们该怎么做呢？"];
+	  684 [label="Variable[\"seafort.deserter_logic_totally_not_insane\"]"];
+	  685 [label="Variable[\"seafort.deserter_logic_totally_not_insane\"]", shape=diamond];
+	  686 [label="!(Variable[\"seafort.deserter_logic_totally_not_insane\"])", shape=diamond];
+	  687 [label="The Deserter: “我猜你就是，右翼分子。”黑暗中传来老人的声音。“我什么也没看见——这是不是意味着我没有被逮捕？”\n“我猜你就是，同伴。”你听到黑暗中传来老人的声音。“我什么也没看见——这是不是意味着我没有被逮捕？”"];
+	  688 [label="CheckItem(\"gun_villiers\")  or  CheckItem(\"gun_ruby\")"];
+	  689 [label="CheckItem(\"gun_villiers\")  or  CheckItem(\"gun_ruby\")", shape=diamond];
+	  690 [label="!(CheckItem(\"gun_villiers\")  or  CheckItem(\"gun_ruby\"))", shape=diamond];
+	  691 [label="You: “坤诺，*你*能看见它吗？！”"];
+	  692 [label="The Deserter: “告诉我你看见了什么，可恶，我在芦苇丛里什么都没看见……”"];
+	  693 [label="IsTHCPresent(\"the_waste_land_of_reality\")"];
+	  694 [label="IsTHCPresent(\"the_waste_land_of_reality\")", shape=diamond];
+	  695 [label="!(IsTHCPresent(\"the_waste_land_of_reality\"))", shape=diamond];
+	  696 [label="Variable[\"character.habit_pyrholidon\"]  or  Variable[\"character.habit_speed\"]"];
+	  697 [label="Variable[\"character.habit_pyrholidon\"]  or  Variable[\"character.habit_speed\"]", shape=diamond];
+	  698 [label="!(Variable[\"character.habit_pyrholidon\"]  or  Variable[\"character.habit_speed\"])", shape=diamond];
+	  699 [label="The Deserter: “看看看……”他凝视着芦苇丛，看着你指向的地方。"];
+	  700 [label="Kim Kitsuragi: “介于此，还有他用作小船的破轮胎——我觉得把他留在这里很安全，我们可以去寻求帮助。不过我恐怕，首先需要医疗援助。”"];
+	  701 [label="You: “他*看不见*它，金。对于他来说，那只是芦苇。”\n“他*看不见*它，金。对于他来说，那只是芦苇。”\n“他*看不见*它，坤诺。对于他来说，那只是芦苇。”\n“他*看不见*它，坤诺。对于他来说，那只是芦苇。”"];
+	  702 [label="The Deserter: 没有回应。"];
+	  703 [label="You: “我跟竹节虫*聊过*了。它说它在摧毁他。”"];
+	  704 [label="The Deserter: “我……”他看着它。“我弄丢……”"];
+	  705 [label="Perception (Sight): 眼睛里的黑色逐渐褪去，瞳孔正在恢复正常。"];
+	  706 [label="The Deserter: 他眨眨眼，继续盯着芦苇丛。“那个……幽灵。”"];
+	  707 [label="Shivers: 起风了。周围水面的寂静被打破了，海浪微微颤抖……"];
+	  708 [label="Perception (Hearing): 你觉得自己听见了某种声音，不过那里只有芦苇……"];
+	  709 [label="IsKimHere()"];
+	  710 [label="IsKimHere()", shape=diamond];
+	  711 [label="!(IsKimHere())", shape=diamond];
+	  712 [label="Jump to: [Untitled hub (04)]"];
+	  713 [label="Cuno: 男孩茫然地看着你。然后是那个老人。“你他妈看不起我啊？我当然可以啊。我*可以*带他走。”"];
+	  714 [label="Cuno: “呃——不如坤诺回来接*你*怎么样？”"];
+	  715 [label="The Deserter: “这个操蛋的世界……”老人又打断了你们。“你在*说*什么呢？这是……”他的声音突然被一阵狂风吞没了。“我们……”\n“这个操蛋的世界……”老人又打断了你们。“你在*说*什么呢？这是……”他的声音突然被一阵狂风吞没了。“我们……”"];
+	  716 [label="Jump to: [Untitled hub (04)]"];
+	  717 [label="The Deserter: “那-那个……”老人结结巴巴。然后又是一声叹息。"];
+	  718 [label="The Deserter: “……”"];
+	  719 [label="CheckItem(\"deserter_gun\")"];
+	  720 [label="CheckItem(\"deserter_gun\")", shape=diamond];
+	  721 [label="!(CheckItem(\"deserter_gun\"))", shape=diamond];
+	  722 [label="Half Light: 他不害怕监狱。他在害怕别的。"];
+	  723 [label="Kim Kitsuragi: ……然后就没了。淹没在警督的声音里——“也许船上有位置够我们三个人……”\n……然后就没了。淹没在警督的声音里——“也许船上*有*位置够我们三个人……”"];
+	  724 [label="Jump to: [TEAM hub]"];
+	  725 [label="The Deserter: “一场闹剧——这个世界。这是……这是我们……”他的声音突然被一阵狂风吞没了。"];
+	  726 [label="Jump to: [SOLO hub]"];
+	  727 [label="Variable[\"character.habit_pyrholidon\"]  or  Variable[\"character.habit_speed\"]"];
+	  728 [label="Variable[\"character.habit_pyrholidon\"]  or  Variable[\"character.habit_speed\"]", shape=diamond];
+	  729 [label="!(Variable[\"character.habit_pyrholidon\"]  or  Variable[\"character.habit_speed\"])", shape=diamond];
+	  730 [label="Volition: 谢天谢地。如果他能看见，那你就没有发疯。"];
+	  731 [label="insane_or_booze"];
+	  732 [label="You: “*现在*你能看见了吗？”（指着竹节虫）"];
+	  733 [label="You: “也许这么多年以来，竹节虫就是这样隐匿自己的吧？”"];
+	  734 [label="Kim Kitsuragi: “那为什么*我们*可以看见？”他想到。“哦，你的意思是不管是什么原因造成的，都是随着*时间*造成的？青少年，小孩，醉鬼——目击是短暂的。因此并不可靠。任何和它长时间待在一起的人……”\n“那为什么我们可以看见它？”他想到。“哦，你的意思是不管是什么原因造成的，都是随着*时间*造成的？青少年，小孩，醉鬼——目击是短暂的。因此并不可靠。任何和它长时间待在一起的人……”"];
+	  735 [label="You: “就好像……他对它着迷了。”"];
+	  736 [label="Kim Kitsuragi: “你的意思是信息素？”"];
+	  737 [label="You: 把拆下来的瞄准镜给他看。"];
+	  738 [label="Cuno: “他老了，受惊过度。坤诺见过这个……就像，疯狂灌了一大堆酒之后的坤诺的老爹一样……”他话说到一半就停了下来。"];
+	  739 [label="Cuno: “就像，闪电丸上瘾？”"];
+	  740 [label="Cuno: “哇哦，就像恋爱吗？”男孩盯着你。看起来他在试着解决一个难题——不过他瞬间就放弃了。“哦耶，不，我不知道……”"];
+	  741 [label="Jump to: [Untitled hub (04)]"];
+	  742 [label="You: “你就*忘记*它在那里了。”"];
+	  0 -> 1
+	  1 -> 437
+	  2 -> 599
+	  3 -> 97
+	  4 -> 5
+	  4 -> 6
+	  5 -> 601
+	  6 -> 602
+	  7 -> 180
+	  8 -> 430
+	  9 -> 582
+	  10 -> 358
+	  11 -> 493
+	  12 -> 499
+	  13 -> 137
+	  14 -> 15
+	  15 -> 719
+	  16 -> 322
+	  17 -> 59
+	  18 -> 653
+	  19 -> 20
+	  19 -> 21
+	  20 -> 66
+	  21 -> 732
+	  22 -> 703
+	  23 -> 334
+	  24 -> 88
+	  25 -> 481
+	  26 -> 27
+	  26 -> 28
+	  27 -> 84
+	  28 -> 313
+	  29 -> 30
+	  30 -> 32
+	  30 -> 31
+	  31 -> 282
+	  32 -> 282
+	  33 -> 552
+	  34 -> 286
+	  35 -> 36
+	  35 -> 37
+	  36 -> 739
+	  37 -> 487
+	  38 -> 633
+	  39 -> 40
+	  39 -> 41
+	  40 -> 200
+	  41 -> 637
+	  42 -> 714
+	  43 -> 44
+	  44 -> 94
+	  45 -> 430
+	  46 -> 388
+	  47 -> 228
+	  48 -> 49
+	  48 -> 50
+	  49 -> 643
+	  50 -> 108
+	  51 -> 357
+	  52 -> 102
+	  53 -> 298
+	  54 -> 134
+	  55 -> 61
+	  56 -> 469
+	  57 -> 14
+	  58 -> 363
+	  59 -> 649
+	  60 -> 263
+	  61 -> 115
+	  62 -> 116
+	  63 -> 455
+	  64 -> 149
+	  65 -> 147
+	  66 -> 732
+	  67 -> 163
+	  68 -> 330
+	  70 -> 154
+	  71 -> 154
+	  72 -> 303
+	  73 -> 506
+	  74 -> 75
+	  74 -> 76
+	  75 -> 736
+	  75 -> 304
+	  76 -> 713
+	  77 -> 478
+	  78 -> 275
+	  79 -> 80
+	  79 -> 81
+	  80 -> 583
+	  81 -> 168
+	  82 -> 550
+	  83 -> 674
+	  84 -> 424
+	  85 -> 86
+	  85 -> 87
+	  86 -> 120
+	  87 -> 383
+	  88 -> 89
+	  88 -> 90
+	  89 -> 667
+	  90 -> 629
+	  91 -> 289
+	  92 -> 562
+	  93 -> 716
+	  94 -> 96
+	  94 -> 95
+	  95 -> 296
+	  95 -> 639
+	  96 -> 179
+	  97 -> 99
+	  98 -> 532
+	  99 -> 98
+	  100 -> 188
+	  101 -> 182
+	  102 -> 676
+	  103 -> 104
+	  103 -> 105
+	  104 -> 535
+	  105 -> 723
+	  106 -> 360
+	  107 -> 247
+	  108 -> 109
+	  108 -> 110
+	  109 -> 420
+	  110 -> 107
+	  111 -> 186
+	  112 -> 402
+	  113 -> 55
+	  114 -> 726
+	  115 -> 148
+	  115 -> 575
+	  116 -> 192
+	  117 -> 72
+	  118 -> 546
+	  119 -> 280
+	  121 -> 38
+	  122 -> 289
+	  123 -> 670
+	  124 -> 125
+	  124 -> 126
+	  125 -> 22
+	  126 -> 292
+	  127 -> 716
+	  128 -> 135
+	  129 -> 616
+	  130 -> 131
+	  130 -> 132
+	  131 -> 205
+	  132 -> 435
+	  133 -> 534
+	  134 -> 391
+	  135 -> 298
+	  136 -> 680
+	  137 -> 397
+	  138 -> 298
+	  139 -> 573
+	  140 -> 402
+	  141 -> 365
+	  142 -> 61
+	  143 -> 144
+	  143 -> 145
+	  144 -> 585
+	  145 -> 688
+	  146 -> 220
+	  147 -> 472
+	  147 -> 692
+	  147 -> 302
+	  148 -> 539
+	  149 -> 150
+	  149 -> 151
+	  150 -> 63
+	  151 -> 612
+	  152 -> 153
+	  152 -> 613
+	  152 -> 505
+	  153 -> 70
+	  154 -> 155
+	  154 -> 156
+	  155 -> 411
+	  156 -> 157
+	  157 -> 158
+	  157 -> 159
+	  158 -> 529
+	  159 -> 225
+	  160 -> 628
+	  161 -> 525
+	  162 -> 417
+	  163 -> 305
+	  164 -> 308
+	  165 -> 166
+	  165 -> 167
+	  166 -> 201
+	  167 -> 549
+	  168 -> 460
+	  169 -> 309
+	  170 -> 33
+	  171 -> 506
+	  172 -> 346
+	  172 -> 46
+	  173 -> 347
+	  174 -> 528
+	  175 -> 176
+	  175 -> 177
+	  176 -> 178
+	  176 -> 354
+	  177 -> 742
+	  178 -> 318
+	  179 -> 3
+	  180 -> 341
+	  181 -> 356
+	  182 -> 241
+	  182 -> 297
+	  183 -> 358
+	  184 -> 393
+	  185 -> 16
+	  186 -> 299
+	  187 -> 644
+	  188 -> 298
+	  189 -> 253
+	  190 -> 61
+	  193 -> 258
+	  194 -> 116
+	  195 -> 196
+	  195 -> 197
+	  196 -> 449
+	  197 -> 64
+	  198 -> 152
+	  199 -> 559
+	  200 -> 161
+	  201 -> 549
+	  202 -> 509
+	  203 -> 616
+	  204 -> 481
+	  205 -> 551
+	  206 -> 52
+	  207 -> 208
+	  207 -> 209
+	  208 -> 678
+	  209 -> 53
+	  210 -> 100
+	  211 -> 212
+	  211 -> 213
+	  212 -> 210
+	  213 -> 100
+	  214 -> 680
+	  215 -> 14
+	  216 -> 217
+	  217 -> 113
+	  218 -> 611
+	  219 -> 142
+	  220 -> 221
+	  220 -> 222
+	  221 -> 18
+	  222 -> 502
+	  223 -> 191
+	  224 -> 658
+	  225 -> 226
+	  226 -> 506
+	  227 -> 73
+	  228 -> 616
+	  229 -> 630
+	  230 -> 306
+	  231 -> 232
+	  231 -> 233
+	  232 -> 480
+	  233 -> 351
+	  234 -> 550
+	  235 -> 285
+	  236 -> 237
+	  236 -> 238
+	  237 -> 227
+	  238 -> 288
+	  239 -> 121
+	  240 -> 436
+	  241 -> 51
+	  242 -> 243
+	  242 -> 244
+	  243 -> 489
+	  244 -> 206
+	  245 -> 10
+	  245 -> 183
+	  246 -> 490
+	  247 -> 248
+	  247 -> 249
+	  248 -> 362
+	  249 -> 184
+	  250 -> 61
+	  251 -> 470
+	  252 -> 726
+	  253 -> 219
+	  254 -> 256
+	  254 -> 257
+	  255 -> 368
+	  256 -> 536
+	  257 -> 116
+	  258 -> 329
+	  259 -> 261
+	  259 -> 262
+	  260 -> 538
+	  261 -> 143
+	  262 -> 116
+	  263 -> 662
+	  264 -> 432
+	  265 -> 620
+	  266 -> 307
+	  267 -> 621
+	  268 -> 578
+	  269 -> 479
+	  270 -> 272
+	  270 -> 273
+	  271 -> 162
+	  272 -> 417
+	  273 -> 616
+	  274 -> 593
+	  275 -> 374
+	  276 -> 278
+	  276 -> 279
+	  278 -> 587
+	  279 -> 486
+	  280 -> 378
+	  281 -> 283
+	  281 -> 284
+	  282 -> 482
+	  283 -> 709
+	  284 -> 380
+	  285 -> 380
+	  286 -> 379
+	  287 -> 73
+	  288 -> 616
+	  289 -> 334
+	  290 -> 616
+	  291 -> 703
+	  292 -> 485
+	  293 -> 305
+	  294 -> 716
+	  295 -> 8
+	  296 -> 720
+	  297 -> 390
+	  297 -> 359
+	  297 -> 392
+	  297 -> 683
+	  297 -> 12
+	  297 -> 440
+	  298 -> 445
+	  299 -> 402
+	  300 -> 138
+	  301 -> 260
+	  302 -> 616
+	  303 -> 77
+	  304 -> 738
+	  304 -> 547
+	  304 -> 164
+	  304 -> 510
+	  305 -> 231
+	  306 -> 546
+	  307 -> 336
+	  308 -> 506
+	  309 -> 584
+	  310 -> 312
+	  311 -> 337
+	  312 -> 338
+	  313 -> 462
+	  314 -> 627
+	  315 -> 271
+	  316 -> 174
+	  317 -> 743
+	  318 -> 305
+	  319 -> 83
+	  320 -> 246
+	  321 -> 681
+	  321 -> 606
+	  322 -> 324
+	  322 -> 325
+	  323 -> 500
+	  324 -> 572
+	  325 -> 401
+	  326 -> 731
+	  327 -> 732
+	  328 -> 224
+	  328 -> 302
+	  329 -> 331
+	  329 -> 332
+	  330 -> 264
+	  331 -> 614
+	  332 -> 236
+	  333 -> 74
+	  334 -> 641
+	  335 -> 511
+	  336 -> 423
+	  337 -> 339
+	  337 -> 340
+	  338 -> 517
+	  339 -> 424
+	  340 -> 2
+	  340 -> 675
+	  340 -> 387
+	  340 -> 42
+	  340 -> 597
+	  340 -> 29
+	  341 -> 425
+	  342 -> 344
+	  342 -> 345
+	  343 -> 623
+	  344 -> 668
+	  345 -> 590
+	  346 -> 616
+	  347 -> 349
+	  347 -> 350
+	  348 -> 293
+	  349 -> 638
+	  350 -> 352
+	  350 -> 353
+	  351 -> 204
+	  352 -> 294
+	  353 -> 718
+	  354 -> 357
+	  355 -> 577
+	  356 -> 242
+	  357 -> 468
+	  358 -> 321
+	  359 -> 211
+	  360 -> 679
+	  361 -> 214
+	  362 -> 724
+	  363 -> 640
+	  364 -> 366
+	  364 -> 367
+	  365 -> 364
+	  366 -> 640
+	  367 -> 146
+	  368 -> 271
+	  369 -> 268
+	  370 -> 478
+	  371 -> 509
+	  373 -> 431
+	  374 -> 376
+	  374 -> 377
+	  375 -> 234
+	  376 -> 82
+	  377 -> 311
+	  379 -> 381
+	  379 -> 382
+	  380 -> 586
+	  381 -> 554
+	  383 -> 385
+	  383 -> 386
+	  384 -> 160
+	  385 -> 35
+	  386 -> 7
+	  387 -> 47
+	  388 -> 181
+	  389 -> 647
+	  390 -> 493
+	  391 -> 106
+	  392 -> 394
+	  392 -> 395
+	  393 -> 680
+	  394 -> 136
+	  395 -> 720
+	  396 -> 398
+	  396 -> 399
+	  397 -> 215
+	  398 -> 57
+	  399 -> 13
+	  400 -> 649
+	  401 -> 139
+	  401 -> 189
+	  401 -> 607
+	  401 -> 251
+	  402 -> 329
+	  403 -> 405
+	  403 -> 406
+	  404 -> 259
+	  405 -> 689
+	  406 -> 192
+	  407 -> 148
+	  408 -> 732
+	  409 -> 543
+	  410 -> 412
+	  411 -> 701
+	  412 -> 39
+	  413 -> 416
+	  413 -> 415
+	  414 -> 335
+	  415 -> 625
+	  416 -> 418
+	  416 -> 419
+	  417 -> 274
+	  418 -> 616
+	  419 -> 375
+	  420 -> 708
+	  421 -> 708
+	  422 -> 26
+	  423 -> 341
+	  424 -> 33
+	  425 -> 235
+	  426 -> 428
+	  426 -> 429
+	  427 -> 371
+	  428 -> 741
+	  429 -> 99
+	  430 -> 460
+	  431 -> 433
+	  431 -> 434
+	  433 -> 277
+	  434 -> 495
+	  435 -> 389
+	  436 -> 438
+	  436 -> 439
+	  437 -> 565
+	  438 -> 48
+	  439 -> 441
+	  440 -> 442
+	  440 -> 443
+	  441 -> 323
+	  442 -> 323
+	  443 -> 185
+	  444 -> 446
+	  444 -> 447
+	  445 -> 112
+	  446 -> 187
+	  447 -> 725
+	  448 -> 450
+	  448 -> 451
+	  449 -> 542
+	  450 -> 63
+	  451 -> 220
+	  452 -> 454
+	  453 -> 116
+	  454 -> 456
+	  454 -> 457
+	  455 -> 697
+	  456 -> 728
+	  457 -> 504
+	  458 -> 270
+	  459 -> 305
+	  460 -> 706
+	  461 -> 483
+	  462 -> 464
+	  462 -> 465
+	  463 -> 617
+	  464 -> 175
+	  465 -> 245
+	  466 -> 495
+	  467 -> 677
+	  468 -> 13
+	  469 -> 219
+	  470 -> 653
+	  471 -> 255
+	  472 -> 732
+	  473 -> 504
+	  474 -> 476
+	  474 -> 477
+	  475 -> 370
+	  476 -> 267
+	  477 -> 616
+	  478 -> 616
+	  479 -> 25
+	  480 -> 548
+	  481 -> 314
+	  482 -> 342
+	  482 -> 518
+	  483 -> 379
+	  484 -> 305
+	  485 -> 530
+	  486 -> 171
+	  487 -> 133
+	  488 -> 52
+	  489 -> 491
+	  489 -> 492
+	  490 -> 569
+	  490 -> 54
+	  491 -> 361
+	  492 -> 128
+	  493 -> 396
+	  494 -> 496
+	  495 -> 497
+	  495 -> 498
+	  496 -> 400
+	  497 -> 56
+	  498 -> 648
+	  498 -> 571
+	  499 -> 58
+	  500 -> 114
+	  500 -> 252
+	  501 -> 685
+	  502 -> 194
+	  503 -> 657
+	  504 -> 70
+	  505 -> 664
+	  505 -> 265
+	  505 -> 67
+	  506 -> 228
+	  507 -> 228
+	  508 -> 616
+	  509 -> 461
+	  510 -> 512
+	  510 -> 513
+	  511 -> 79
+	  512 -> 460
+	  513 -> 515
+	  513 -> 516
+	  514 -> 421
+	  515 -> 422
+	  516 -> 424
+	  517 -> 170
+	  518 -> 520
+	  518 -> 521
+	  519 -> 553
+	  520 -> 522
+	  521 -> 523
+	  521 -> 524
+	  522 -> 484
+	  523 -> 287
+	  524 -> 526
+	  524 -> 527
+	  525 -> 475
+	  526 -> 634
+	  527 -> 347
+	  528 -> 92
+	  529 -> 551
+	  530 -> 61
+	  531 -> 341
+	  532 -> 564
+	  534 -> 53
+	  535 -> 656
+	  536 -> 329
+	  537 -> 327
+	  538 -> 576
+	  538 -> 474
+	  538 -> 458
+	  539 -> 62
+	  540 -> 195
+	  541 -> 455
+	  542 -> 544
+	  542 -> 545
+	  543 -> 449
+	  544 -> 541
+	  545 -> 616
+	  546 -> 78
+	  547 -> 626
+	  548 -> 305
+	  549 -> 310
+	  549 -> 119
+	  550 -> 514
+	  551 -> 61
+	  552 -> 522
+	  553 -> 519
+	  554 -> 556
+	  554 -> 557
+	  555 -> 369
+	  556 -> 316
+	  557 -> 506
+	  558 -> 560
+	  558 -> 561
+	  559 -> 666
+	  560 -> 740
+	  561 -> 506
+	  562 -> 716
+	  563 -> 717
+	  564 -> 566
+	  564 -> 567
+	  565 -> 355
+	  566 -> 130
+	  567 -> 182
+	  568 -> 570
+	  569 -> 391
+	  570 -> 217
+	  571 -> 448
+	  572 -> 141
+	  573 -> 191
+	  574 -> 408
+	  575 -> 504
+	  576 -> 240
+	  576 -> 69
+	  576 -> 733
+	  576 -> 661
+	  577 -> 579
+	  577 -> 580
+	  578 -> 508
+	  579 -> 507
+	  580 -> 459
+	  581 -> 506
+	  582 -> 707
+	  583 -> 720
+	  584 -> 426
+	  585 -> 522
+	  586 -> 588
+	  586 -> 589
+	  587 -> 373
+	  588 -> 85
+	  589 -> 592
+	  589 -> 591
+	  590 -> 91
+	  591 -> 122
+	  592 -> 594
+	  592 -> 595
+	  593 -> 165
+	  594 -> 671
+	  595 -> 290
+	  596 -> 43
+	  597 -> 531
+	  598 -> 600
+	  599 -> 4
+	  600 -> 602
+	  601 -> 341
+	  602 -> 604
+	  602 -> 605
+	  603 -> 101
+	  604 -> 568
+	  605 -> 111
+	  606 -> 608
+	  607 -> 609
+	  607 -> 610
+	  608 -> 650
+	  609 -> 650
+	  610 -> 501
+	  611 -> 455
+	  612 -> 71
+	  613 -> 662
+	  614 -> 555
+	  615 -> 704
+	  615 -> 229
+	  615 -> 199
+	  615 -> 24
+	  615 -> 665
+	  615 -> 413
+	  615 -> 702
+	  616 -> 618
+	  616 -> 619
+	  617 -> 533
+	  617 -> 734
+	  618 -> 669
+	  619 -> 117
+	  620 -> 118
+	  621 -> 23
+	  622 -> 624
+	  622 -> 459
+	  623 -> 581
+	  624 -> 9
+	  625 -> 305
+	  626 -> 341
+	  627 -> 333
+	  627 -> 615
+	  628 -> 558
+	  629 -> 632
+	  629 -> 631
+	  630 -> 372
+	  631 -> 202
+	  632 -> 203
+	  633 -> 635
+	  633 -> 636
+	  634 -> 317
+	  635 -> 173
+	  636 -> 161
+	  637 -> 485
+	  638 -> 45
+	  639 -> 727
+	  640 -> 582
+	  641 -> 133
+	  642 -> 603
+	  643 -> 645
+	  643 -> 646
+	  644 -> 300
+	  645 -> 402
+	  646 -> 216
+	  646 -> 682
+	  647 -> 217
+	  648 -> 250
+	  649 -> 651
+	  649 -> 652
+	  650 -> 218
+	  651 -> 684
+	  652 -> 654
+	  652 -> 655
+	  653 -> 223
+	  654 -> 574
+	  655 -> 407
+	  656 -> 404
+	  657 -> 659
+	  657 -> 660
+	  658 -> 693
+	  659 -> 65
+	  660 -> 68
+	  661 -> 663
+	  662 -> 198
+	  663 -> 384
+	  664 -> 710
+	  665 -> 622
+	  666 -> 414
+	  667 -> 38
+	  667 -> 239
+	  668 -> 616
+	  669 -> 291
+	  670 -> 672
+	  670 -> 673
+	  671 -> 348
+	  672 -> 319
+	  673 -> 281
+	  674 -> 715
+	  675 -> 466
+	  676 -> 103
+	  677 -> 53
+	  678 -> 11
+	  679 -> 467
+	  679 -> 494
+	  680 -> 111
+	  681 -> 217
+	  682 -> 301
+	  683 -> 140
+	  684 -> 686
+	  684 -> 687
+	  685 -> 471
+	  686 -> 653
+	  687 -> 410
+	  688 -> 690
+	  688 -> 691
+	  689 -> 403
+	  690 -> 537
+	  691 -> 34
+	  692 -> 147
+	  693 -> 696
+	  693 -> 695
+	  694 -> 473
+	  695 -> 19
+	  696 -> 698
+	  696 -> 699
+	  697 -> 328
+	  698 -> 694
+	  699 -> 330
+	  700 -> 506
+	  701 -> 124
+	  702 -> 463
+	  703 -> 343
+	  704 -> 230
+	  705 -> 169
+	  706 -> 276
+	  707 -> 320
+	  708 -> 315
+	  709 -> 712
+	  709 -> 711
+	  710 -> 737
+	  711 -> 172
+	  712 -> 616
+	  713 -> 93
+	  713 -> 127
+	  714 -> 563
+	  714 -> 295
+	  715 -> 598
+	  716 -> 616
+	  717 -> 129
+	  718 -> 444
+	  719 -> 721
+	  719 -> 722
+	  720 -> 488
+	  721 -> 642
+	  722 -> 207
+	  723 -> 17
+	  723 -> 326
+	  724 -> 298
+	  725 -> 190
+	  726 -> 402
+	  727 -> 729
+	  727 -> 730
+	  728 -> 409
+	  729 -> 732
+	  730 -> 452
+	  731 -> 193
+	  731 -> 453
+	  731 -> 60
+	  731 -> 503
+	  731 -> 540
+	  732 -> 700
+	  733 -> 735
+	  734 -> 266
+	  735 -> 427
+	  736 -> 388
+	  736 -> 269
+	  737 -> 705
+	  738 -> 628
+	  739 -> 596
+	  740 -> 478
+	  741 -> 616
+	  742 -> 123
+}
+

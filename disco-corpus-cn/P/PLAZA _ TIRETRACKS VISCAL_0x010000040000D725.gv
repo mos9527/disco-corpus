@@ -1,0 +1,187 @@
+# PLAZA / TIRETRACKS VISCAL
+# You notice a set of a motor carriage tracks backing into the fence.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 我就是从这里开車出发的。"];
+	  3 [label="Set of Tracks: Variable[\"whirling.garte_mentions_cavalry\"]  or  Variable[\"whirling.garte_gives_directions_to_yard\"]"];
+	  4 [label="Variable[\"whirling.garte_mentions_cavalry\"]  or  Variable[\"whirling.garte_gives_directions_to_yard\"]", shape=diamond];
+	  5 [label="!(Variable[\"whirling.garte_mentions_cavalry\"]  or  Variable[\"whirling.garte_gives_directions_to_yard\"])", shape=diamond];
+	  6 [label="You: 接下来发生了什么？"];
+	  7 [label="Set of Tracks: DayCount() > 1"];
+	  8 [label="DayCount() > 1", shape=diamond];
+	  9 [label="!(DayCount() > 1)", shape=diamond];
+	  10 [label="drovethroughfencehub"];
+	  11 [label="viscal_viscal_viscal"];
+	  12 [label="Authority: 围栏上的洞看起来并没有*那么*大。"];
+	  13 [label="Jump to: [trackshub]"];
+	  14 [label="Visual Calculus: ……然后朝南边开去。肯定很匆忙。"];
+	  15 [label="Jump to: [drovethroughfencehub]"];
+	  16 [label="You: 好吧。接下来发生了什么？"];
+	  17 [label="Set of Tracks: Variable[\"plaza.tracks_viscal_concept_blackcheck\"]"];
+	  18 [label="Variable[\"plaza.tracks_viscal_concept_blackcheck\"]", shape=diamond];
+	  19 [label="!(Variable[\"plaza.tracks_viscal_concept_blackcheck\"])", shape=diamond];
+	  20 [label="You: “我就是从这里开車出发的……在把車开进海里之前。”"];
+	  21 [label="Set of Tracks: Variable[\"plaza.tracks_viscal_wc_success_done\"]"];
+	  22 [label="Variable[\"plaza.tracks_viscal_wc_success_done\"]", shape=diamond];
+	  23 [label="!(Variable[\"plaza.tracks_viscal_wc_success_done\"])", shape=diamond];
+	  24 [label="Set of Tracks: Variable[\"whirling.garte_mentions_cavalry\"]"];
+	  25 [label="Variable[\"whirling.garte_mentions_cavalry\"]", shape=diamond];
+	  26 [label="!(Variable[\"whirling.garte_mentions_cavalry\"])", shape=diamond];
+	  27 [label="You: 我想我明白了。[离开。]"];
+	  28 [label="You: “一辆車穿破了围栏。”"];
+	  29 [label="You: “那辆撞倒萨马拉黄油广告牌的汽車，就是从这里出发的。”"];
+	  30 [label="Set of Tracks: Variable[\"plaza.tracks_viscal_whitecheck\"]"];
+	  31 [label="Variable[\"plaza.tracks_viscal_whitecheck\"]", shape=diamond];
+	  32 [label="!(Variable[\"plaza.tracks_viscal_whitecheck\"])", shape=diamond];
+	  33 [label="You: 我为什么要看这个？"];
+	  34 [label="Visual Calculus: 你可以*跟踪*痕迹往南走。那边似乎有一条运河。看看它们会通向什么地方。（如果有时间的话。）"];
+	  35 [label="Interfacing: 事实上，你都不知道自己为什么会在这里停下来。你永远也不会这么肆无忌惮地开車。更何况你也没車。"];
+	  36 [label="Visual Calculus: 几天前，一起未知事故留下了这串轮胎印。这是一条用烧焦的橡胶写下的信息。"];
+	  37 [label="Visual Calculus: 司机从院子里倒了出去，但他没有刹住车，撞到了隔壁的大楼……"];
+	  38 [label="Perception (Sight): 警察的习惯。你什么都看。"];
+	  39 [label="Perception (Sight): 很难说。因为宿醉的缘故，你的视线很模糊，很难集中精神。"];
+	  40 [label="Set of Tracks: IsKimHere()"];
+	  41 [label="IsKimHere()", shape=diamond];
+	  42 [label="!(IsKimHere())", shape=diamond];
+	  43 [label="Visual Calculus: 是的。最后半沉没在海中。你离开的时候一定是喝醉了。"];
+	  44 [label="Authority: 他夸大其词了。大家会把世界上一切的坏事都归咎到*警察*身上。这跟你一点关系也没有。"];
+	  45 [label="Visual Calculus: 不，这些痕迹一点意思也没有。就让清洁工把它们全部清扫掉吧。"];
+	  46 [label="Kim Kitsuragi: 警督的目光追随着轮胎的痕迹。“似乎有些道理。一种近似……显而易见的无节制放纵。”"];
+	  47 [label="trackshub"];
+	  48 [label="Set of Tracks: Variable[\"coast.sunken_dialogue_done\"]"];
+	  49 [label="Variable[\"coast.sunken_dialogue_done\"]", shape=diamond];
+	  50 [label="!(Variable[\"coast.sunken_dialogue_done\"])", shape=diamond];
+	  51 [label="You: 该死的酒保。"];
+	  52 [label="Jump to: [drovethroughfencehub]"];
+	  53 [label="Jump to: [trackshub]"];
+	  54 [label="You: 不知道为什么，这个感觉很重要。"];
+	  55 [label="Visual Calculus: 也许吧。可能吧。"];
+	  56 [label="Jump to: [viscal_viscal_viscal]"];
+	  57 [label="You: 重现运动轨迹。"];
+	  58 [label="You: Variable[\"plaza.tracks_viscal_whitecheck\"]"];
+	  59 [label="Variable[\"plaza.tracks_viscal_whitecheck\"]", shape=diamond];
+	  60 [label="!(Variable[\"plaza.tracks_viscal_whitecheck\"])", shape=diamond];
+	  61 [label="Visual Calculus: 这些痕迹还是原来的样子。也许更陈旧了。幸运的是，清洁工还没有注意到它们的存在。"];
+	  62 [label="Kim Kitsuragi: “你说得对。这是一座对汽車特别友好的城市。”"];
+	  63 [label="You: 那辆撞倒萨马拉黄油广告牌的汽車，就是从这里出发的，对吧？"];
+	  64 [label="Kim Kitsuragi: “难怪餐厅经理给我们指示通往院子的方向时，模样似乎有些沮丧。”"];
+	  65 [label="You: 现在不行。[离开。]"];
+	  66 [label="Visual Calculus: ……然后加速冲向围栏。\n……然后加速冲向围栏。根据餐厅经理说的，留下一个*大到弗兰考格斯骑兵都能穿过去*的洞。\n……然后加速冲向围栏。根据餐厅经理说的，留下一个*大到弗兰考格斯骑兵都能穿过去*的洞。（为什么又会有那种负罪感？）"];
+	  67 [label="Inland Empire: 这莫名让你感觉有些……害怕。你不知道为什么。"];
+	  68 [label="Perception (Sight): 你看见一组沾着棕色烂泥的轮胎印，覆盖在广场的地砖上。"];
+	  69 [label="Visual Calculus: 有些橡胶粘在褴褛飞旋正前方的瓷砖上。这里是A点。司机就是从那里出发的……"];
+	  70 [label="Inland Empire: 一种不祥的预兆：前面有不好的事情发生了。"];
+	  71 [label="Kim Kitsuragi: “好吧，”他朝着围栏上的破洞比了个手势，“你的确给我们提供了一个通往犯罪现场的捷径。”"];
+	  72 [label="Logic: 这跟案子没有联系，你想到。"];
+	  73 [label="logichub"];
+	  74 [label="You: 到底是什么样的車从这里冲过去了？"];
+	  75 [label="You: “这跟案子有关吗？”"];
+	  76 [label="You: 这个洞也没那么让人印象深刻。"];
+	  77 [label="Visual Calculus: 当然是！这是个很好的联想。"];
+	  78 [label="Kim Kitsuragi: “是的，没错。不过，”他朝着围栏上的破洞比了个手势，“你的确给我们提供了一个通往犯罪现场的捷径。”"];
+	  79 [label="Perception (Sight): 很难说。"];
+	  80 [label="Kim Kitsuragi: “我不确定……马丁内斯有不少交通事。环岛那里现在还在大塞車。我不认为这跟吊人的案子有什么联系。”"];
+	  0 -> 1
+	  1 -> 21
+	  2 -> 43
+	  3 -> 4
+	  3 -> 5
+	  4 -> 64
+	  5 -> 79
+	  6 -> 37
+	  7 -> 8
+	  7 -> 9
+	  8 -> 80
+	  9 -> 39
+	  10 -> 76
+	  10 -> 20
+	  10 -> 27
+	  10 -> 28
+	  10 -> 29
+	  11 -> 2
+	  11 -> 27
+	  11 -> 54
+	  11 -> 63
+	  12 -> 17
+	  13 -> 47
+	  14 -> 40
+	  15 -> 10
+	  16 -> 37
+	  17 -> 18
+	  17 -> 19
+	  18 -> 74
+	  19 -> 6
+	  20 -> 3
+	  21 -> 22
+	  21 -> 23
+	  22 -> 61
+	  23 -> 68
+	  24 -> 25
+	  24 -> 26
+	  25 -> 48
+	  26 -> 6
+	  28 -> 62
+	  29 -> 46
+	  30 -> 32
+	  30 -> 31
+	  31 -> 36
+	  32 -> 45
+	  33 -> 38
+	  34 -> 15
+	  35 -> 16
+	  36 -> 70
+	  37 -> 14
+	  38 -> 73
+	  39 -> 13
+	  40 -> 41
+	  40 -> 42
+	  41 -> 10
+	  42 -> 11
+	  43 -> 56
+	  44 -> 35
+	  45 -> 53
+	  46 -> 52
+	  47 -> 65
+	  47 -> 33
+	  47 -> 75
+	  47 -> 57
+	  48 -> 49
+	  48 -> 50
+	  49 -> 6
+	  50 -> 12
+	  51 -> 44
+	  52 -> 10
+	  53 -> 47
+	  54 -> 55
+	  55 -> 71
+	  56 -> 11
+	  57 -> 58
+	  58 -> 59
+	  58 -> 60
+	  59 -> 30
+	  60 -> 30
+	  61 -> 40
+	  62 -> 67
+	  63 -> 78
+	  64 -> 72
+	  66 -> 24
+	  67 -> 52
+	  68 -> 47
+	  69 -> 66
+	  70 -> 56
+	  71 -> 52
+	  72 -> 13
+	  73 -> 16
+	  73 -> 51
+	  73 -> 77
+	  74 -> 7
+	  75 -> 81
+	  76 -> 44
+	  77 -> 56
+	  78 -> 52
+	  79 -> 13
+	  80 -> 34
+}
+

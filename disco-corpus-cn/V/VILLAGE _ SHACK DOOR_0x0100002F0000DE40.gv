@@ -1,0 +1,86 @@
+# VILLAGE / SHACK DOOR
+# The shack door dialogue, if you have gained access to the shack where you can sleep. It's locked until you get it from the Washerwoman.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Shack Door: Variable[\"village.hq_door_first_greeting_done\"]  and  IsHourBetween(21, 4)"];
+	  3 [label="Variable[\"village.hq_door_first_greeting_done\"]  and  IsHourBetween(21, 4)", shape=diamond];
+	  4 [label="!(Variable[\"village.hq_door_first_greeting_done\"]  and  IsHourBetween(21, 4))", shape=diamond];
+	  5 [label="Shack Door: 很晚了，天越来越冷。今天就到此为止吧。\n现在很晚了，而且还在下雨。今天就到此为止吧。\n现在很晚了，而且还在下雪。今天就到此为止吧。"];
+	  6 [label="Shack Door: IsKimHere()"];
+	  7 [label="IsKimHere()", shape=diamond];
+	  8 [label="!(IsKimHere())", shape=diamond];
+	  9 [label="Kim Kitsuragi: “我在外面等着，给你一点时间和隐私处理新的生活安排。不过你也知道……”\n“我在外面等着，给你一点时间和隐私处理新的生活安排，顺便找找有没有露比的痕迹。不过你也知道……”"];
+	  10 [label="Kim Kitsuragi: “今天的工作结束之后，我会留在褴褛飞旋过夜。明天一早，我们在棚屋门口见。”"];
+	  11 [label="Kim Kitsuragi: “我回飞旋旅社的房间休息。明天早上在棚屋前面见。”\n“现在很晚了。你自己打扫一下这个棚屋吧。我肯定你能处理好跟洗衣女工的关系……我回飞旋旅社的房间休息。明天早上在棚屋前面见。”"];
+	  12 [label="Shack Door: IsHourBetween(21, 4)"];
+	  13 [label="IsHourBetween(21, 4)", shape=diamond];
+	  14 [label="!(IsHourBetween(21, 4))", shape=diamond];
+	  15 [label="You: “晚安，金。”（让他回去休息。）"];
+	  16 [label="Shack Door: Variable[\"TASK.washerwoman_hiding_something\"]  and  Variable[\"TASK.washerwoman_hiding_something_done\"] == false"];
+	  17 [label="Variable[\"TASK.washerwoman_hiding_something\"]  and  Variable[\"TASK.washerwoman_hiding_something_done\"] == false", shape=diamond];
+	  18 [label="!(Variable[\"TASK.washerwoman_hiding_something\"]  and  Variable[\"TASK.washerwoman_hiding_something_done\"] == false)", shape=diamond];
+	  19 [label="You: 还不行。[离开。]"];
+	  20 [label="Kim Kitsuragi: “晚安，警官。明早我们在棚屋门口见。”"];
+	  21 [label="You: 用钥匙打开棚屋门。"];
+	  22 [label="Kim Kitsuragi: “恐怕我们现在没时间休息了，警官。我们真应该返回飞旋旅社。”"];
+	  23 [label="Shack Door: ……"];
+	  24 [label="Kim Kitsuragi: “晚安。”他笑了。“还有，不要尝试甩掉我自己破案。”"];
+	  25 [label="You: 没关系。[离开。]"];
+	  26 [label="You: “好吧。”[离开。]"];
+	  27 [label="You: 进入棚屋。"];
+	  28 [label="Shack Door: IsHourBetween(21, 4)"];
+	  29 [label="IsHourBetween(21, 4)", shape=diamond];
+	  30 [label="!(IsHourBetween(21, 4))", shape=diamond];
+	  31 [label="You: “那我就在这里休息。明早见。”（继续转动钥匙。）"];
+	  32 [label="Shack Door: Variable[\"TASK.locate_ruby_on_the_coast_done\"]  and  Variable[\"TASK.return_to_whirling_done\"] == false"];
+	  33 [label="Variable[\"TASK.locate_ruby_on_the_coast_done\"]  and  Variable[\"TASK.return_to_whirling_done\"] == false", shape=diamond];
+	  34 [label="!(Variable[\"TASK.locate_ruby_on_the_coast_done\"]  and  Variable[\"TASK.return_to_whirling_done\"] == false)", shape=diamond];
+	  35 [label="You: 进入棚屋。"];
+	  36 [label="Shack Door: 伴随着一阵悦耳的咔哒声，钥匙转动了。现在你可以进入棚屋了。"];
+	  37 [label="Shack Door: 这扇门曾经有过辉煌的日子——由于大海的盐分和海风，上面的油漆已经开始剥落。就连门锁看起来也有些锈蚀。"];
+	  0 -> 1
+	  1 -> 33
+	  2 -> 3
+	  2 -> 4
+	  3 -> 5
+	  4 -> 38
+	  5 -> 16
+	  5 -> 36
+	  5 -> 20
+	  6 -> 8
+	  6 -> 7
+	  7 -> 29
+	  8 -> 12
+	  9 -> 10
+	  10 -> 37
+	  11 -> 17
+	  12 -> 13
+	  12 -> 14
+	  13 -> 24
+	  14 -> 37
+	  15 -> 21
+	  16 -> 18
+	  16 -> 19
+	  17 -> 32
+	  18 -> 28
+	  20 -> 28
+	  21 -> 6
+	  22 -> 27
+	  24 -> 28
+	  27 -> 24
+	  28 -> 30
+	  28 -> 31
+	  29 -> 11
+	  30 -> 9
+	  31 -> 25
+	  32 -> 34
+	  32 -> 35
+	  33 -> 23
+	  34 -> 2
+	  35 -> 24
+	  37 -> 26
+	  37 -> 22
+}
+

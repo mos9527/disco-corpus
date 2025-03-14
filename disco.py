@@ -40,6 +40,19 @@ def escape_filename(s: str):
     return s
 
 
+lockit = dialog["DialoguesLockitChinese"]
+lang_def = defaultdict(dict)
+# TODO: Argparse?
+if False:
+    for data in lockit.mSource.mTerms:
+        term, text = data.Term, data.Languages
+        term = term.split("/")
+        if len(term) == 1:
+            cat, aid = "Unknown", term[0]
+        else:
+            cat, aid = term
+        lang_def[aid][cat] = text
+
 DEST = "disco-corpus-en"
 os.makedirs(DEST, exist_ok=True)
 
@@ -60,7 +73,7 @@ def process_one(convo_id):
         writeline = lambda *a, **k: print(*a, **k, file=f)
 
         writeline("#", ctitle)
-        writeline("#", cdesc)
+        writeline("#", "\n#".join(cdesc.split("\n")))
         writeline("#", "=" * 50)
         graph = defaultdict(set)
         entry_is_fork = (
@@ -75,9 +88,27 @@ def process_one(convo_id):
         writeline("digraph G {")
         for u, entry in enumerate(convo.dialogueEntries):
             entry_fields = from_fields(entry.fields)
+            aid = entry_fields.get("Articy Id", None)
+            lang = lang_def.get(aid, None)
+
+            def get_field(name):
+                fallback = entry_fields.get(name, None)
+                if lang:
+                    ret = lang.get(name, fallback)
+                    if ret:
+                        return ret[0]
+                return fallback
+
             if not entry_is_fork(entry):
-                text = entry_fields.get("Dialogue Text", None)
-                text = text or entry_fields.get("Title", None)
+                text = get_field("Dialogue Text")
+                for alt in range(1, 10):
+                    text_alt = get_field(f"Alternate{alt}")
+                    if text_alt:
+                        text += "\\n" + text_alt
+                    else:
+                        break
+                text = text or get_field("Title")
+
                 actor = int(entry_fields.get("Actor", 0))
                 actor = actors.get(actor, {}).get("Name", None)
                 if actor:
@@ -100,5 +131,5 @@ from concurrent.futures import ThreadPoolExecutor
 
 with ThreadPoolExecutor() as executor:
     for convo_id, convo in tqdm(enumerate(disco.conversations)):
-        executor.submit(process_one, convo_id)
-        # process_one(convo_id)
+        # executor.submit(process_one, convo_id)
+        process_one(convo_id)

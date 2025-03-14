@@ -1,0 +1,47 @@
+# CHURCH ORB / figurine
+# this pops up and tells you you should give dolores dei your figurine
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Reaction Speed: 别这么悲观。爱情是不会轻易磨灭的！"];
+	  3 [label="You: 我应该回答说是。现在这是我的任务了。"];
+	  4 [label="You: 什么？（环顾四周。）把谁赢回来？我不能把她赢回来，她可是个早就已经去世的历史人物。"];
+	  5 [label="You: 什么？"];
+	  6 [label="You: 没，我什么也不记得。我不想考虑这件事。再见。[放弃思维。]"];
+	  7 [label="figurinesintahub"];
+	  8 [label="Reaction Speed: 哈！无罪女王德洛莉丝·黛喜欢小雕像，对吗？喜欢把小人夹在她得手指之间，还记得吗？"];
+	  9 [label="Reaction Speed: 不……它应该是*美丽的*。非常小巧。体贴。聪明！"];
+	  10 [label="You: 还是忘了吧……[放弃思维。]"];
+	  11 [label="Volition: 不管是什么，看来没有深入窥探是个正确决定。"];
+	  12 [label="Inland Empire: 这不好笑……你感觉不太好。"];
+	  13 [label="Reaction Speed: 你手上有革命战士雕像啊。你应该送给她。把她的心赢回来！"];
+	  14 [label="Reaction Speed: 真是那么，那么，*那么*的漂亮……俏皮又神秘。雕像肯定就是这么用的！"];
+	  15 [label="CheckItem(\"figurine_set_headless_faln_rider\")"];
+	  16 [label="CheckItem(\"figurine_set_headless_faln_rider\")", shape=diamond];
+	  17 [label="!(CheckItem(\"figurine_set_headless_faln_rider\"))", shape=diamond];
+	  18 [label="Reaction Speed: 你手上有无头FALN骑士雕像啊。你应该送给她。把她的心赢回来！"];
+	  0 -> 1
+	  1 -> 9
+	  2 -> 13
+	  3 -> 15
+	  4 -> 2
+	  5 -> 16
+	  6 -> 10
+	  7 -> 11
+	  7 -> 3
+	  7 -> 4
+	  8 -> 5
+	  8 -> 7
+	  9 -> 12
+	  10 -> 10
+	  12 -> 11
+	  12 -> 3
+	  13 -> 8
+	  15 -> 17
+	  15 -> 18
+	  16 -> 19
+	  17 -> 14
+	  18 -> 8
+}
+

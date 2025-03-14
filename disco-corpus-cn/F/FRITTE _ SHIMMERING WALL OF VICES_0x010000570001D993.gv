@@ -1,0 +1,149 @@
+# FRITTE / SHIMMERING WALL OF VICES
+# Alcohol + cigarettes behind the counter.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Electrochemistry: 不用担心你的小脑袋。让我们集中在重要的事情上吧。"];
+	  3 [label="Frittte clerk: “当然。”她把头歪到架子上。“所以……你打算买点什么吗，还是……？”"];
+	  4 [label="Frittte clerk: “但是我有义务提醒你，抽烟喝酒有害身体健康。不过我猜你应该已经知道了。”"];
+	  5 [label="Kim Kitsuragi: “当然不是了，”警督瞪了你一眼，赶紧开口。“弗利多可是合法经营的公司。没别的事了吧，警探？”"];
+	  6 [label="Frittte clerk: 店员看见你盯着她身后的货品。“我有义务提醒你，烟酒有害身体健康。”"];
+	  7 [label="Jump to: [alcohol smokes hub]"];
+	  8 [label="You: 现在不行。[离开。]"];
+	  9 [label="You: “灰域是什么？”"];
+	  10 [label="Conceptualization: 它的美丽，它的真实，它的诗意……"];
+	  11 [label="Jump to: [alcohol smokes hub]"];
+	  12 [label="Shimmering Wall of Vices: 彩色的香烟和酒瓶陈列在商店墙上，邀请你靠得再近一些。"];
+	  13 [label="Frittte clerk: “呃，陈年伏特加挺特别的，我猜。它在灰域里存放了几年，所以价格特别贵，酒劲也特别大。”"];
+	  14 [label="You: （什么也不说。默默接受。）"];
+	  15 [label="Untitled hub"];
+	  16 [label="Frittte clerk: “给你，先生。”"];
+	  17 [label="Electrochemistry: 要知道——如果你不买下这些美丽的酒水，你就永远无法完成酒精的*任务*了。"];
+	  18 [label="Tutorial Agent: 使用药物（鼻通灵和镁）可以抵消药物的伤害。注意！使用药物会给你带来无法预见的后果。"];
+	  19 [label="Frittte clerk: “我有义务提醒你，抽烟喝酒有害身体健康。不过我猜你应该已经知道了。”"];
+	  20 [label="Electrochemistry: 切！连那种*好*药都不卖，还有什么意思嘛？"];
+	  21 [label="You: “给我一瓶高度比尔森啤酒。”"];
+	  22 [label="You: “给我来包阿斯特拉香烟。”"];
+	  23 [label="Variable[\"gates.frittte_vice_hub_reached\"]"];
+	  24 [label="Variable[\"gates.frittte_vice_hub_reached\"]", shape=diamond];
+	  25 [label="!(Variable[\"gates.frittte_vice_hub_reached\"])", shape=diamond];
+	  26 [label="You: [离开。]"];
+	  27 [label="Jump to: [alcohol smokes hub]"];
+	  28 [label="Electrochemistry: 还好你是个*不清醒*的酒鬼！"];
+	  29 [label="Frittte clerk: “你知道的……”她耸耸肩，没兴趣做进一步解释。"];
+	  30 [label="You: “给我来瓶陈年伏特加。”"];
+	  31 [label="Frittte clerk: “给你，先生。”"];
+	  32 [label="Variable[\"tc.turn_off_tutorial_node\"]"];
+	  33 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  34 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  35 [label="Frittte clerk: “给你，先生。”"];
+	  36 [label="You: “感谢你的回答。”"];
+	  37 [label="You: “你们这儿有卖思必得的吗？”"];
+	  38 [label="You: “好吧。消化这些东西会对我的*身体*有什么影响？”"];
+	  39 [label="Perception (Sight): 灯光下，酒瓶在朝你眨眼。包装好的香烟也在闪闪发光。就好像是在窥视某种天堂。你的膝盖有些无力……"];
+	  40 [label="Variable[\"TASK.get_a_drink\"]"];
+	  41 [label="Variable[\"TASK.get_a_drink\"]", shape=diamond];
+	  42 [label="!(Variable[\"TASK.get_a_drink\"])", shape=diamond];
+	  43 [label="Frittte clerk: 店员看见你盯着她身后的货品。“我有义务提醒你，烟酒有害身体健康，”她补充到，“但是我猜你应该已经知道了。”"];
+	  44 [label="Volition: 不要问，不要看，*什么*也不要做。就这么离开。回去工作。"];
+	  45 [label="alcohol smokes hub"];
+	  46 [label="Jump to: [alcohol smokes hub]"];
+	  47 [label="You: “给我来瓶海军准将红郎姆。”"];
+	  48 [label="Jump to: [alcohol smokes hub]"];
+	  49 [label="Frittte clerk: 她盯着你，有些不确定。“我的意思是，我已经说过它会损害你的健康了？我不知道它们还有什么效果。”"];
+	  50 [label="You: “我身在天堂。我真的全部都想要。”"];
+	  51 [label="IsKimHere()"];
+	  52 [label="IsKimHere()", shape=diamond];
+	  53 [label="!(IsKimHere())", shape=diamond];
+	  54 [label="Electrochemistry: 就在那儿，深绿色的玻璃瓶里，一个红宝石的世界，沉入空虚！是温热的大河在流淌，满载美酒。葡萄酒，啤酒，爱之酒。"];
+	  55 [label="Tutorial Agent: 有些物质能够以生命或士气为代价，给予你基础属性强大的加成。香烟可以提高你的智力，但会消耗你的生命。酒精能提高你的体格，但会损伤你的士气。"];
+	  56 [label="Frittte clerk: 店员看见你盯着她身后的货品。“呃，我猜不是……确实不是。”她整理了一下自己的帽子。"];
+	  57 [label="Frittte clerk: “给你，先生。”"];
+	  58 [label="Frittte clerk: “没有。”她捋了捋帽子下面的头发。“弗利多只卖合法药物，严格遵守法律。”"];
+	  59 [label="Frittte clerk: 她困惑地朝你眨眨眼。“……哈？思必得，你是说……那种*思必得*？没有，弗利多不卖那个……”"];
+	  60 [label="You: “请再多跟我说说这些产品。”"];
+	  61 [label="You: “你们这里有没有……私下出售的东西？”"];
+	  62 [label="You: “这可*不是*适合戒瘾患者的好地方。”"];
+	  63 [label="Frittte clerk: 店员看见你盯着她身后的货品。“呃……当然。如果你想要什么，我可以帮你拿。只要告诉我，然后给钱就行……”她整理了一下自己的帽子。"];
+	  0 -> 1
+	  1 -> 12
+	  2 -> 36
+	  2 -> 38
+	  3 -> 7
+	  4 -> 45
+	  5 -> 20
+	  6 -> 46
+	  7 -> 46
+	  9 -> 29
+	  10 -> 44
+	  11 -> 46
+	  12 -> 23
+	  13 -> 9
+	  13 -> 36
+	  13 -> 38
+	  14 -> 10
+	  15 -> 8
+	  15 -> 51
+	  15 -> 14
+	  15 -> 63
+	  16 -> 27
+	  17 -> 46
+	  18 -> 11
+	  19 -> 45
+	  20 -> 47
+	  21 -> 31
+	  22 -> 58
+	  23 -> 24
+	  23 -> 25
+	  24 -> 6
+	  25 -> 39
+	  27 -> 46
+	  28 -> 19
+	  29 -> 2
+	  30 -> 16
+	  31 -> 27
+	  32 -> 33
+	  32 -> 34
+	  33 -> 11
+	  34 -> 56
+	  35 -> 27
+	  36 -> 3
+	  37 -> 60
+	  38 -> 50
+	  39 -> 55
+	  40 -> 41
+	  40 -> 42
+	  41 -> 17
+	  42 -> 46
+	  43 -> 45
+	  44 -> 40
+	  45 -> 37
+	  45 -> 48
+	  45 -> 21
+	  45 -> 22
+	  45 -> 30
+	  45 -> 26
+	  45 -> 61
+	  45 -> 62
+	  46 -> 46
+	  47 -> 35
+	  48 -> 46
+	  49 -> 32
+	  50 -> 64
+	  51 -> 53
+	  51 -> 54
+	  52 -> 5
+	  53 -> 20
+	  54 -> 15
+	  55 -> 18
+	  56 -> 28
+	  57 -> 27
+	  58 -> 49
+	  59 -> 52
+	  60 -> 13
+	  61 -> 59
+	  62 -> 57
+	  63 -> 4
+}
+

@@ -1,0 +1,720 @@
+# DOOMED / ELECTRONIC DOORBELL
+# This is a doorbell intercom that lets you call up all the failed businesses in the Doomed Commercial Area.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: “嗯。我现在没时间跟你解释。稍后再说吧……”他看向大海，几乎可以说充满渴望。"];
+	  3 [label="You: “大堂，A栋。”"];
+	  4 [label="You: “瑞瓦肖冰城”"];
+	  5 [label="Electronic Doorbell: 就像猫的胡须一般，你的胡子先感受了一下，然后是嘴唇：对讲机那锈蚀的金属，冰冷而又高不可攀。你正在亲吻一个门铃，但它却依然沉默不语。\n你亲吻了门铃。对讲机冰冷的金属已经生锈，难以触碰，却有种莫名的熟悉。门铃依然没有发出任何声音。"];
+	  6 [label="Plaisance: “……但是门铃坏了，书店甚至都不在清单上，所以我帮不了你。请别再打来了。谢谢。”"];
+	  7 [label="Interfacing: 再试一次，你按的不够用力。"];
+	  8 [label="You: “不，我已经明确声明过，我不是毁灭者。”"];
+	  9 [label="You: “有个混账朝我的窗户扔了一只鞋。”"];
+	  10 [label="Kim Kitsuragi: “我也不知道是怎么回事。”警督检查着门铃。“也许我们应该别碰这玩意了。”"];
+	  11 [label="Tricentennial Electrics: 对讲机里的声音没有回应，但你能听到她的呼吸声。风再次吹进你的话筒，噼里啪啦的声音在电话亭里回荡。"];
+	  12 [label="Tricentennial Electrics: 她再次尝试抑制住哭泣。结果*还是*没有完全成功。她安静的啜泣声古老又遥远，像是用旧蜡制圆筒播出来的一样。"];
+	  13 [label="Tricentennial Electrics: “总算能忘记你了，真好。”"];
+	  14 [label="You: “我这是怎么了？”"];
+	  15 [label="Electronic Doorbell: 你按下门铃，一阵走调的旋律开始响起……然后一个女人拿起了听筒……"];
+	  16 [label="Electronic Doorbell: 你按响门铃，但是什么也没发生……他们不想跟你说话。"];
+	  17 [label="window hub"];
+	  18 [label="You: “金，我们遇到紧急状况了吗？”"];
+	  19 [label="Untitled hub (03)"];
+	  20 [label="Jump to: [Electronic Doorbell: \"Twelve name cards on the call box r...\"]"];
+	  21 [label="Jump to: [Electronic Doorbell: \"Twelve name cards on the call box r...\"]"];
+	  22 [label="Electronic Doorbell: Variable[\"doomed.doorbell_heard_plaisance\"]"];
+	  23 [label="Variable[\"doomed.doorbell_heard_plaisance\"]", shape=diamond];
+	  24 [label="!(Variable[\"doomed.doorbell_heard_plaisance\"])", shape=diamond];
+	  25 [label="Electronic Doorbell: 你听见相同的等候室音乐，但是再也没有人拿起听筒了……"];
+	  26 [label="Tricentennial Electrics: “您是打来订购的吗？”"];
+	  27 [label="You: “忘记什么？”"];
+	  28 [label="Tricentennial Electrics: 她没有回答。"];
+	  29 [label="Electronic Doorbell: 你按下键盘上的井号，终止了这次通话。电话亭上有12张名牌，写着："];
+	  30 [label="You: “我明白的，你不想跟我说话。*从来*就没人想跟我说话。”"];
+	  31 [label="hang up hub"];
+	  32 [label="You: “上次我们谈话的时候有点混乱。你把我跟其他人搞混了。”"];
+	  33 [label="You: “请不要挂断。我只是想解释一下。”"];
+	  34 [label="Drama: 这是在开玩笑吗？"];
+	  35 [label="Electronic Doorbell: 看来有人用打火机熔掉了半边塑料——门铃没用了。"];
+	  36 [label="Jump to: [main hub]"];
+	  37 [label="Electronic Doorbell: IsKimHere()"];
+	  38 [label="IsKimHere()", shape=diamond];
+	  39 [label="!(IsKimHere())", shape=diamond];
+	  40 [label="You: 什么也不说。你已经给门铃好好上了一课。"];
+	  41 [label="Electronic Doorbell: 没人回应。你已经无能为力了。"];
+	  42 [label="Kim Kitsuragi: “我明白了。”警督脸上露出令人费解的表情。"];
+	  43 [label="Jump to: [main hub]"];
+	  44 [label="Tricentennial Electrics: “是的，你好，这里是三生电气。”一个女人的声音通过电流传了出来，噼里啪啦的，显得很脆弱。"];
+	  45 [label="Electronic Doorbell: 你按下门铃，一阵嗡嗡声响起，你在等待她的回应。外面很冷，你可以听见风吹进扬声器的声音。"];
+	  46 [label="Plaisance: “请原谅？你不是坤诺。请问你*是谁*？”"];
+	  47 [label="Jump to: [Electronic Doorbell: \"Twelve name cards on the call box r...\"]"];
+	  48 [label="Jump to: [main hub]"];
+	  49 [label="You: “普莱桑斯，是我！请开门，我想进去。”"];
+	  50 [label="Electronic Doorbell: Variable[\"doomed.radiocomputer_fortress_accident_why_failed_clicked\"]"];
+	  51 [label="Variable[\"doomed.radiocomputer_fortress_accident_why_failed_clicked\"]", shape=diamond];
+	  52 [label="!(Variable[\"doomed.radiocomputer_fortress_accident_why_failed_clicked\"])", shape=diamond];
+	  53 [label="You: 挂断通话。"];
+	  54 [label="post shivers hub"];
+	  55 [label="You: 再打给她。（按下气流SCA的门铃）"];
+	  56 [label="You: “喂，又是我。我想跟你说说话。”"];
+	  57 [label="Physical Instrument: 你的手变得冰凉，呼吸也变得清晰可见，在空气中形成一团银色的烟雾。"];
+	  58 [label="You: “来吧，古老的录音。哭吧。”"];
+	  59 [label="Tricentennial Electrics: “就好像我的脑袋被清空了一样……”"];
+	  60 [label="Volition: 糟糕的感应又来了。放松。让自己远离它。"];
+	  61 [label="You: “东德尔塔弹球（请从B栋进入）”"];
+	  62 [label="Inland Empire: 你上次亲吻是什么时候？"];
+	  63 [label="Rhetoric: 这不仅仅是故意毁坏他人财物的行为——这是直接抛出窗外了啊！"];
+	  64 [label="Perception (Hearing): 又是电流声，就像紧贴在耳边的海螺一样，对你轻声低语。"];
+	  65 [label="Tricentennial Electrics: “我的天……”"];
+	  66 [label="You: “我说什么不重要，你打算就这么继续下去，对吗？”"];
+	  67 [label="Tricentennial Electrics: 一间拥有老式乐钟的办公室里，电话声响起，有人穿着一双高跟鞋走过。电流声就像一张温暖的毛毯，把那些声音包裹了起来。"];
+	  68 [label="Logic: 东德尔塔商业中心？这肯定是那个诅咒商业区的名字！"];
+	  69 [label="Untitled hub (03)"];
+	  70 [label="Kim Kitsuragi: “我明白了。”警督不再问了。"];
+	  71 [label="You: “艾玛时装工作室”"];
+	  72 [label="You: “阿特米普青年运动员拳击&体操”\n“阿特米普拳击……”（剩下的部分已经被破坏掉了。）"];
+	  73 [label="Electronic Doorbell: 你等了一两分钟，但从电话亭里只得到了沉默——没人接电话。"];
+	  74 [label="Plaisance: “坤诺！别再打过来了！成年人没时间陪你玩那些愚蠢的游戏。”"];
+	  75 [label="Jump to: [main hub]"];
+	  76 [label="You: 再按一次。"];
+	  77 [label="Electronic Doorbell: Variable[\"doomed.doorbell_whitecheck_volition\"]"];
+	  78 [label="Variable[\"doomed.doorbell_whitecheck_volition\"]", shape=diamond];
+	  79 [label="!(Variable[\"doomed.doorbell_whitecheck_volition\"])", shape=diamond];
+	  80 [label="Inland Empire: 不，感觉有些不对……你确定她是在跟*你*说话吗？"];
+	  81 [label="Tricentennial Electrics: “你为什么要打过来？我不明白……你已经走了好几个月。”她听起来像是在颤抖。“我还以为你一点都不在乎。”"];
+	  82 [label="You: “上次我们谈话的时候，你不是已经说过了吗？”"];
+	  83 [label="Electronic Doorbell: Variable[\"plaza.doorbell_shivers_high\"]"];
+	  84 [label="Variable[\"plaza.doorbell_shivers_high\"]", shape=diamond];
+	  85 [label="!(Variable[\"plaza.doorbell_shivers_high\"])", shape=diamond];
+	  86 [label="Electronic Doorbell: Variable[\"whirling.viscal_window_done\"]"];
+	  87 [label="Variable[\"whirling.viscal_window_done\"]", shape=diamond];
+	  88 [label="!(Variable[\"whirling.viscal_window_done\"])", shape=diamond];
+	  89 [label="You: “我不知道。我只知道我房间的窗户破了，需要处理一下。”"];
+	  90 [label="You: “气流SCA”"];
+	  91 [label="You: “其实，我*确实*遇到了跟窗户有关的紧急情况。”（看向飞旋旅社二楼。）"];
+	  92 [label="You: “有个混账朝我的窗户扔了一只鞋——然后还强迫我喝了一瓶海军准将红朗姆。”"];
+	  93 [label="Jump to: [Electronic Doorbell: \"Twelve name cards on the call box r...\"]"];
+	  94 [label="You: “喂？有人在吗？”"];
+	  95 [label="You: “喂？”"];
+	  96 [label="You: “天啦，请不要哭。”"];
+	  97 [label="Kim Kitsuragi: 警督跟你交换了一下眼色。"];
+	  98 [label="Tricentennial Electrics: 一阵电流声盖住了她的话语；当她再次开口的时候，听起来她就像是在水下一样："];
+	  99 [label="You: “刚才出什么事了？”"];
+	  100 [label="Tricentennial Electrics: 又一只海鸥飞过……站在这里越来越冷，你凝视着沉默的电话亭。"];
+	  101 [label="Electronic Doorbell: 你只能听到电流的声音，但是没人接电话。"];
+	  102 [label="Plaisance: “请不要再打过来了，我没时间管这个。谢谢。”"];
+	  103 [label="You: “你是一份电话录音。”"];
+	  104 [label="Kim Kitsuragi: “这肯定是某种……接线故障。我们还是不要摆弄门铃了，它看起来挺古老的。”"];
+	  105 [label="Shivers: 如果你想要我的话，就来海滩找我，在最后的那场舞会上。"];
+	  106 [label="Electronic Doorbell: Variable[\"yard.cuno_intro_hub\"]"];
+	  107 [label="Variable[\"yard.cuno_intro_hub\"]", shape=diamond];
+	  108 [label="!(Variable[\"yard.cuno_intro_hub\"])", shape=diamond];
+	  109 [label="You: （试着模仿坤诺。）“滚开，猪头，我是坤诺！我他妈才不管呢，快放我进去。”"];
+	  110 [label="You: 忽略它。"];
+	  111 [label="You: “是的，你好，请问能让我进来吗？”"];
+	  112 [label="You: “抱歉，其实我在这里没什么事做。”"];
+	  113 [label="You: “我们认识吗？”"];
+	  114 [label="Shivers: 寒冷深深地埋藏在你的皮肤底下，你感觉自己像是在跟一个100多年前的人说话。就在这栋建筑的某个地方，水淹没了地下室的地板。"];
+	  115 [label="Tricentennial Electrics: 沉默。现在你唯一能听到的只有电流声，还有海浪拍打岸边的声音。"];
+	  116 [label="Jump to: [main hub]"];
+	  117 [label="Jump to: [main hub]"];
+	  118 [label="You: 什么也不说。"];
+	  119 [label="Jump to: [main hub]"];
+	  120 [label="Jump to: [main hub]"];
+	  121 [label="Kim Kitsuragi: “不，跟窗户没有关系。”"];
+	  122 [label="You: 我不在乎它是什么。"];
+	  123 [label="shoe hub"];
+	  124 [label="Electronic Doorbell: IsKimHere()"];
+	  125 [label="IsKimHere()", shape=diamond];
+	  126 [label="!(IsKimHere())", shape=diamond];
+	  127 [label="Electrochemistry: 是一个女人，而且她认识你！你的心跳开始加速。"];
+	  128 [label="You: “等等，告诉我发生了什么。我做了什么？”"];
+	  129 [label="Tricentennial Electrics: “自从我来这里工作以后，一切都不同了……就好像我的脑袋被清空了一样……”"];
+	  130 [label="You: “法布龙出租車……”（剩下的部分被烧掉了。）"];
+	  131 [label="Jump to: [main hub]"];
+	  132 [label="Electronic Doorbell: 沉默。按了门铃但是没人应答。"];
+	  133 [label="You: “坤诺是谁？我是警察，请把门打开。”"];
+	  134 [label="Electronic Doorbell: Variable[\"doomed.doorbell_interfacing_press_again_24h_window\"]"];
+	  135 [label="Variable[\"doomed.doorbell_interfacing_press_again_24h_window\"]", shape=diamond];
+	  136 [label="!(Variable[\"doomed.doorbell_interfacing_press_again_24h_window\"])", shape=diamond];
+	  137 [label="Perception (Hearing): 你几乎能听见他们的呼吸声。"];
+	  138 [label="Reaction Speed: 她一定是把你跟其他人搞混了。"];
+	  139 [label="You: “我当然在乎了。我只是经历了一段比较困难的时间。”"];
+	  140 [label="Tricentennial Electrics: “天啦，我还以为再也听不到你的声音了。”"];
+	  141 [label="Untitled hub (02)"];
+	  142 [label="You: “我身上刚刚发生了一些很*奇怪*的事情。”"];
+	  143 [label="You: “大堂，B栋：褴褛飞旋”"];
+	  144 [label="You: （空白卡片）"];
+	  145 [label="Electronic Doorbell: 门铃表示赞同。整个电话亭看起来都放松了不少。"];
+	  146 [label="You: “我是警察，请把门打开。”"];
+	  147 [label="Kim Kitsuragi: “不知道，”他耸耸肩。相比其他名字来说，这个由三个词组成的公司名称特别模糊："];
+	  148 [label="Untitled hub (02)"];
+	  149 [label="Conceptualization: 她的声音很古老，就像是用旧蜡制圆筒播出来的一样。她的听筒一定是坏了。"];
+	  150 [label="Electronic Doorbell: Variable[\"reputation.the_destroyer\"] > 1"];
+	  151 [label="Variable[\"reputation.the_destroyer\"] > 1", shape=diamond];
+	  152 [label="!(Variable[\"reputation.the_destroyer\"] > 1)", shape=diamond];
+	  153 [label="Untitled hub (03)"];
+	  154 [label="You: “你是谁？你在*哪*？”"];
+	  155 [label="You: “咳咳……”（挺直腰板。）“没错，是*我*。我又来了，卑微地重新回到你的生活。”"];
+	  156 [label="You: “米歇尔？我不叫米歇尔。我是哈里。”"];
+	  157 [label="Electronic Doorbell: IsKimHere()"];
+	  158 [label="IsKimHere()", shape=diamond];
+	  159 [label="!(IsKimHere())", shape=diamond];
+	  160 [label="Tricentennial Electrics: 你还没有说完，那个声音又开始说话了：“是你……”"];
+	  161 [label="Tricentennial Electrics: “你为什么要打过来？我不明白……你已经走了好几个月。”她听起来像是有些颤抖。“我还以为你一点都不在乎。”"];
+	  162 [label="You: “快停下来！别再重复你说过的话了！”"];
+	  163 [label="You: “说完了吗？现在我们可以谈谈吗？”"];
+	  164 [label="Tricentennial Electrics: “总算是能忘记了，真是太好了。”"];
+	  165 [label="Kim Kitsuragi: “所以……”那种奇怪又异常的思维模式结束了。警督插了进来，检查着对讲机。"];
+	  166 [label="Electronic Doorbell: 沉默。没人回应。"];
+	  167 [label="plaisanceheard"];
+	  168 [label="Plaisance: “请不要这么做！门铃不是玩具，而且它甚至都不能正常工作。请别再打过来，谢谢。”"];
+	  169 [label="Jump to: [main hub]"];
+	  170 [label="You: “没有紧急状况，谢谢。”（再次看向其他按钮。）"];
+	  171 [label="Tricentennial Electrics: “是你。我的天，我还以为再也听不到你的声音了……”"];
+	  172 [label="Drama: 谁在乎你记不记得她？随它去吧。"];
+	  173 [label="Volition: 好吧，也许没有*更健康*，但是喝太多导致记不起过去任何一段感情，其实是一种*奖励*。遗忘是你手中的王牌。"];
+	  174 [label="Half Light: 怒气在你胸中聚集……"];
+	  175 [label="You: 继续听。"];
+	  176 [label="You: “有人在吗？”"];
+	  177 [label="Electronic Doorbell: Variable[\"tc.doomed_commercial_area\"]"];
+	  178 [label="Variable[\"tc.doomed_commercial_area\"]", shape=diamond];
+	  179 [label="!(Variable[\"tc.doomed_commercial_area\"])", shape=diamond];
+	  180 [label="Electronic Doorbell: IsKimHere()"];
+	  181 [label="IsKimHere()", shape=diamond];
+	  182 [label="!(IsKimHere())", shape=diamond];
+	  183 [label="Shivers: 我在这里待了整整三百年。反复无常，清晰明亮。钠和雨水构成了我。"];
+	  184 [label="Shivers: 她的话语太过冰冷，让人无法领会。她闻起来是钠灯和車窗上雨滴的味道。她的眼睛像指示灯，注视着黑暗走廊里你的身影，忽明忽暗。"];
+	  185 [label="Kim Kitsuragi: “不要误会，但是——在我们这段短暂的合作期间——你身上总是会发生*奇怪*的事情。”"];
+	  186 [label="Logic: 这*倒是*真的。"];
+	  187 [label="You: “只是一个录音……我还以为……”"];
+	  188 [label="Jump to: [main hub]"];
+	  189 [label="Electronic Doorbell: 恭喜，你毁掉了阿特米普拳击俱乐部的门铃。现在它没用了。"];
+	  190 [label="Electronic Doorbell: 你听见一个哔声，这代表线路已经挂断。"];
+	  191 [label="Kim Kitsuragi: “嗯……按钮看起来挺新的。可能还没接好。”他退后一步，检查着清单上的其他名字。"];
+	  192 [label="Electronic Doorbell: 这次是一个和蔼可亲的女声：“感谢您拨打24小时窗户公司。这是一条语音消息。您是否遇到了与窗户有关的紧急状况？非工作时间，请拨打0-0-7-2-5-4-7-7-6-5-1。街道无情人有情，我们会*永远*陪伴在你左右。”"];
+	  193 [label="Untitled hub"];
+	  194 [label="You: “我是警察，听说地下室有个冰箱，我需要你放我进去。”"];
+	  195 [label="Tricentennial Electrics: “……这样真的很好。”"];
+	  196 [label="You: “什么？”"];
+	  197 [label="Electronic Doorbell: IsKimHere()"];
+	  198 [label="IsKimHere()", shape=diamond];
+	  199 [label="!(IsKimHere())", shape=diamond];
+	  200 [label="Reaction Speed: 等等，难道她……？"];
+	  201 [label="Jump to: [main hub]"];
+	  202 [label="Electronic Doorbell: Variable[\"doomed.doorbell_half_light_beat_it_up\"]"];
+	  203 [label="Variable[\"doomed.doorbell_half_light_beat_it_up\"]", shape=diamond];
+	  204 [label="!(Variable[\"doomed.doorbell_half_light_beat_it_up\"])", shape=diamond];
+	  205 [label="half light beating hub"];
+	  206 [label="Electronic Doorbell: Variable[\"doomed.doorbell_punched_the_doorbell\"]"];
+	  207 [label="Variable[\"doomed.doorbell_punched_the_doorbell\"]", shape=diamond];
+	  208 [label="!(Variable[\"doomed.doorbell_punched_the_doorbell\"])", shape=diamond];
+	  209 [label="Electronic Doorbell: IsKimHere()"];
+	  210 [label="IsKimHere()", shape=diamond];
+	  211 [label="!(IsKimHere())", shape=diamond];
+	  212 [label="Half Light: 只是看到“安德罗·奥兰多”这个名字就让你怒气冲冲。对于你的男子汉气概来说，它的存在就是一个*威胁*，更别提你的头发了。"];
+	  213 [label="Reaction Speed: 等等！那气流SCA出什么事了？清单上没有三生电气。"];
+	  214 [label="You: “一只鞋被扔出窗外了！”"];
+	  215 [label="You: “听着，我要挂断了。”"];
+	  216 [label="Electronic Doorbell: Variable[\"doomed.doorbell_shivers_first\"]"];
+	  217 [label="Variable[\"doomed.doorbell_shivers_first\"]", shape=diamond];
+	  218 [label="!(Variable[\"doomed.doorbell_shivers_first\"])", shape=diamond];
+	  219 [label="Tricentennial Electrics: “是的，你好，这里是三生电气。”是你之前听到过的声音。“您是打来订购的吗？”"];
+	  220 [label="Physical Instrument: 你盯着对讲机，口腔里突然充满一阵奇怪的金属味道。"];
+	  221 [label="You: (挂断通话。)"];
+	  222 [label="Volition: 上次你就是在这里挂断电话的，但是录音还在继续。"];
+	  223 [label="Tricentennial Electrics: 没人回应，只有电流的声音越来越强，仿佛落雨一般。然后一个女人的声音响起，跟之前的完全不一样。不知怎么的，听起来美妙又*完整*。在你的脑海里缓缓爬行。"];
+	  224 [label="You: [离开。]"];
+	  225 [label="Electronic Doorbell: 你按响门铃，但是什么也没发生。"];
+	  226 [label="You: “安德罗·奥兰多发型SCA”"];
+	  227 [label="Electronic Doorbell: 你的拳头砸进金属里，纯粹的物理性报复。一开始感觉很好，然后就开始疼了。"];
+	  228 [label="Kim Kitsuragi: “你就打算继续这样砸下去，是吗？”"];
+	  229 [label="Jump to: [Electronic Doorbell: \"Twelve name cards on the call box r...\"]"];
+	  230 [label="Shivers: 他们失败了。"];
+	  231 [label="You: “是的，我就是毁灭者。”"];
+	  232 [label="You: “等等，三生电气？我还以为自己打给气流SCA了。”"];
+	  233 [label="You: “气流SCA”"];
+	  234 [label="You: Variable[\"doomed.doorbell_whitecheck_volition\"]"];
+	  235 [label="Variable[\"doomed.doorbell_whitecheck_volition\"]", shape=diamond];
+	  236 [label="!(Variable[\"doomed.doorbell_whitecheck_volition\"])", shape=diamond];
+	  237 [label="Shivers: 听起来像是一个幽灵。风吹起你的衣衫，你感觉与周围的环境逐渐分离。在这栋建筑的某个地方——有一段冰冷的记忆挥之不去。"];
+	  238 [label="Tricentennial Electrics: 她听上去像是要哭出来了。"];
+	  239 [label="You: “好吧，那就再见了。”(挂断通话。)"];
+	  240 [label="Jump to: [Electronic Doorbell: \"You press the number sign on the ke...\"]"];
+	  241 [label="You: “谢谢你。现在请告诉我，这个*笑话*是谁搞出来的？”"];
+	  242 [label="Tricentennial Electrics: 她的声音逐渐融化在长途电话的电流声中。你有时候也会听见远处有人说话的声音，但却一个词也辨认不出来。"];
+	  243 [label="Tricentennial Electrics: “这样很好。”"];
+	  244 [label="Tricentennial Electrics: 又一只海鸥飞过……站在这里越来越冷，你凝视着沉默的电话亭。"];
+	  245 [label="You: （挂断通话。）"];
+	  246 [label="Kim Kitsuragi: “嗯……按钮看起来挺新的。如果还没接好的话，我一点也不会觉得惊讶。这是骰子匠人的吗？”他退后一步，检查着清单上的其他名字。"];
+	  247 [label="Volition: 然后，你突然明白了。"];
+	  248 [label="Electronic Doorbell: 一个老旧的公共电话亭，上面有一个按钮矩阵，列出了东德尔塔商业中心的所有公司。"];
+	  249 [label="You: “24小时窗户”"];
+	  250 [label="Electronic Doorbell: 按钮看起来很新，但是有人拿走了名牌。当你试着按响它的时候，什么也没发生。"];
+	  251 [label="Electronic Doorbell: 你按响门铃，但是没有人应答。"];
+	  252 [label="Jump to: [main hub]"];
+	  253 [label="Conceptualization: 对于一家美发店来说，这名字还真是有些不太吉利……对于任何人的头发来说，都不是什么好兆头。"];
+	  254 [label="Kim Kitsuragi: “总之，恐怕你不会在这里得到任何帮助。”他抬头望着幽灵般高高耸立的房子。“这地方已经荒废了。”"];
+	  255 [label="Jump to: [Electronic Doorbell: \"Twelve name cards on the call box r...\"]"];
+	  256 [label="Electronic Doorbell: 他们不想跟你说话。"];
+	  257 [label="Electronic Doorbell: 你听见对讲机扬声器发出的电流声。感觉像是有人拿起了听筒，但是什么也没说。"];
+	  258 [label="You: “你是谁？我已经进来了，但是没有看见任何三生电气的人。这地方已经荒废了。”"];
+	  259 [label="Tricentennial Electrics: “米歇尔，拜托……”她停了下来，你能听见她沉重的呼吸声——因为古老的电流显得有些失真。"];
+	  260 [label="You: “你说这样很好，但是忘记到底有什么好的？”"];
+	  261 [label="You: “该死！”(挂断通话。)"];
+	  262 [label="Empathy: 不管是不是真的，你的镜像神经元做出了反应：听到这个让你感觉到痛苦。"];
+	  263 [label="Kim Kitsuragi: “这是一段卡在电路系统里的电话录音。应该是很久以前某个租客留下的。这种事情偶尔会发生。这里完事了吗？我们还有其他谜题要破解呢。”"];
+	  264 [label="You: “等等，你是说一段录音被困在电路里了？”"];
+	  265 [label="main hub"];
+	  266 [label="You: 不，我会让你看看，一个绅士是怎么对待门铃的！（亲吻门铃。）"];
+	  267 [label="Kim Kitsuragi: “呃……”警督说到。“这样有点不卫生。”（有这个可能。）"];
+	  268 [label="Kim Kitsuragi: 警督叹了口气，但什么也没说。他抬头看着这栋大楼。"];
+	  269 [label="Jump to: [main hub]"];
+	  270 [label="You: “我把鞋子扔到窗外了。”"];
+	  271 [label="Electronic Doorbell: Variable[\"doomed.doorbell_know_revachol_ice_city\"]"];
+	  272 [label="Variable[\"doomed.doorbell_know_revachol_ice_city\"]", shape=diamond];
+	  273 [label="!(Variable[\"doomed.doorbell_know_revachol_ice_city\"])", shape=diamond];
+	  274 [label="You: “抱歉，我只是随便按了下门铃，没什么重要的事情。”"];
+	  275 [label="Electronic Doorbell: 那种奇怪又异常的思维模式结束了。你留在原地，盯着电子门铃。"];
+	  276 [label="Electronic Doorbell: Variable[\"doomed.dicemaker_greeting_done\"]"];
+	  277 [label="Variable[\"doomed.dicemaker_greeting_done\"]", shape=diamond];
+	  278 [label="!(Variable[\"doomed.dicemaker_greeting_done\"])", shape=diamond];
+	  279 [label="You: “要塞事故SCA”"];
+	  280 [label="Electronic Doorbell: 沉默。要塞事故没人在。"];
+	  281 [label="Drama: 她觉得你是那个熊孩子！不知道他会怎么说？"];
+	  282 [label="You: 不可能。我应该给它打出点火花。（用拳头去捶打门铃。）"];
+	  283 [label="You: 我应该不去管那个门铃。"];
+	  284 [label="Electronic Doorbell: IsKimHere()"];
+	  285 [label="IsKimHere()", shape=diamond];
+	  286 [label="!(IsKimHere())", shape=diamond];
+	  287 [label="Electronic Doorbell: IsKimHere()"];
+	  288 [label="IsKimHere()", shape=diamond];
+	  289 [label="!(IsKimHere())", shape=diamond];
+	  290 [label="Plaisance: “哦，抱歉，警官，我还以为你是……”一阵微弱的电流干扰了她的话语。"];
+	  291 [label="Electronic Doorbell: 电话亭上有12张名牌，写着："];
+	  292 [label="You: “金，瑞瓦肖冰城是什么？”"];
+	  293 [label="Logic: 这只说对了一半。这些街道*确实*很无情，但他们也不会陪伴在你左右。"];
+	  294 [label="Volition: 不，等等。你生活中最不需要的就是更歇斯底里的情绪。忘了它吧。找点别的事情做。"];
+	  295 [label="You: （撒谎。）“没错，我是来下订单的。”"];
+	  296 [label="Tricentennial Electrics: “自从我来这里工作以后，一切都不同了……就好像我的脑袋被清空了一样……”"];
+	  297 [label="Jump to: [Electronic Doorbell: \"You press the number sign on the ke...\"]"];
+	  298 [label="You: “等等，你是在重复自己的话吗？”"];
+	  299 [label="You: “你觉得这样*好玩*吗，欺骗一名警官？”"];
+	  300 [label="You: “为什么还是感觉像是*我的*错一样？”"];
+	  301 [label="Half Light: 你就打算站在那里，*承受*一个门铃吗？"];
+	  302 [label="Kim Kitsuragi: “没错，我一直想问这个……发生什么事了？”"];
+	  303 [label="You: 挂断。"];
+	  304 [label="Tricentennial Electrics: “我的天……”"];
+	  305 [label="You: “怎么了？”"];
+	  306 [label="You: “喂，你还在吗？”"];
+	  307 [label="You: “普莱桑斯，是我！我正在调查诅咒商业区，我们之前讨论过的！”"];
+	  308 [label="Electronic Doorbell: IsKimHere()"];
+	  309 [label="IsKimHere()", shape=diamond];
+	  310 [label="!(IsKimHere())", shape=diamond];
+	  311 [label="Volition: 不管她说了什么，都伤不到你。现在的你已经不同往日。更强壮，更健康，而且……"];
+	  312 [label="You: “你能放我进来吗？我需要进到建筑里面去。”"];
+	  313 [label="Tricentennial Electrics: “米歇尔，拜托……”就连她的呼吸，说完一句话之后尾音消退的方式，全都一模一样。"];
+	  314 [label="Electronic Doorbell: 你按下键盘上的井号，终止了这次通话。电话亭上有12张名牌，写着："];
+	  0 -> 1
+	  1 -> 249
+	  2 -> 70
+	  3 -> 22
+	  4 -> 133
+	  5 -> 63
+	  6 -> 191
+	  7 -> 135
+	  8 -> 269
+	  9 -> 42
+	  10 -> 31
+	  11 -> 57
+	  12 -> 263
+	  13 -> 248
+	  14 -> 276
+	  15 -> 75
+	  16 -> 302
+	  17 -> 18
+	  17 -> 171
+	  17 -> 92
+	  18 -> 122
+	  19 -> 123
+	  19 -> 293
+	  20 -> 292
+	  21 -> 292
+	  22 -> 24
+	  22 -> 23
+	  23 -> 25
+	  24 -> 15
+	  25 -> 43
+	  26 -> 150
+	  27 -> 239
+	  28 -> 307
+	  28 -> 261
+	  29 -> 117
+	  30 -> 245
+	  31 -> 240
+	  31 -> 262
+	  32 -> 66
+	  33 -> 161
+	  34 -> 67
+	  34 -> 163
+	  34 -> 300
+	  35 -> 132
+	  36 -> 266
+	  37 -> 38
+	  37 -> 39
+	  38 -> 277
+	  39 -> 253
+	  40 -> 256
+	  41 -> 94
+	  42 -> 255
+	  43 -> 266
+	  44 -> 26
+	  45 -> 221
+	  46 -> 103
+	  47 -> 292
+	  48 -> 266
+	  49 -> 291
+	  50 -> 51
+	  50 -> 52
+	  51 -> 231
+	  52 -> 36
+	  53 -> 241
+	  54 -> 96
+	  54 -> 97
+	  54 -> 53
+	  55 -> 45
+	  56 -> 66
+	  57 -> 242
+	  57 -> 164
+	  58 -> 243
+	  59 -> 222
+	  59 -> 119
+	  60 -> 33
+	  60 -> 197
+	  61 -> 167
+	  62 -> 285
+	  63 -> 124
+	  64 -> 220
+	  65 -> 60
+	  66 -> 11
+	  67 -> 177
+	  67 -> 222
+	  68 -> 266
+	  69 -> 265
+	  69 -> 246
+	  69 -> 14
+	  69 -> 143
+	  70 -> 255
+	  71 -> 74
+	  72 -> 207
+	  73 -> 132
+	  74 -> 107
+	  75 -> 266
+	  76 -> 193
+	  77 -> 80
+	  77 -> 79
+	  78 -> 312
+	  79 -> 295
+	  80 -> 114
+	  80 -> 155
+	  80 -> 156
+	  81 -> 129
+	  81 -> 140
+	  81 -> 157
+	  82 -> 314
+	  83 -> 85
+	  83 -> 86
+	  84 -> 106
+	  85 -> 185
+	  86 -> 88
+	  86 -> 89
+	  87 -> 64
+	  88 -> 124
+	  89 -> 71
+	  90 -> 258
+	  91 -> 125
+	  92 -> 42
+	  93 -> 292
+	  94 -> 44
+	  95 -> 28
+	  96 -> 28
+	  97 -> 306
+	  98 -> 196
+	  99 -> 101
+	  100 -> 309
+	  101 -> 202
+	  102 -> 191
+	  103 -> 12
+	  104 -> 31
+	  105 -> 142
+	  106 -> 108
+	  106 -> 109
+	  107 -> 282
+	  108 -> 168
+	  109 -> 46
+	  110 -> 230
+	  111 -> 305
+	  112 -> 305
+	  113 -> 260
+	  114 -> 54
+	  115 -> 240
+	  115 -> 100
+	  115 -> 30
+	  115 -> 262
+	  116 -> 266
+	  117 -> 266
+	  118 -> 244
+	  119 -> 266
+	  120 -> 266
+	  121 -> 47
+	  122 -> 20
+	  123 -> 9
+	  123 -> 271
+	  123 -> 215
+	  123 -> 90
+	  123 -> 93
+	  124 -> 126
+	  124 -> 127
+	  125 -> 303
+	  126 -> 41
+	  127 -> 139
+	  128 -> 297
+	  129 -> 59
+	  130 -> 35
+	  131 -> 266
+	  132 -> 36
+	  133 -> 291
+	  134 -> 136
+	  134 -> 137
+	  135 -> 149
+	  136 -> 132
+	  137 -> 304
+	  137 -> 95
+	  138 -> 173
+	  139 -> 297
+	  140 -> 201
+	  141 -> 198
+	  142 -> 186
+	  143 -> 16
+	  144 -> 251
+	  145 -> 121
+	  146 -> 291
+	  147 -> 76
+	  148 -> 77
+	  148 -> 111
+	  149 -> 214
+	  150 -> 152
+	  150 -> 153
+	  151 -> 288
+	  152 -> 121
+	  153 -> 232
+	  153 -> 8
+	  153 -> 40
+	  154 -> 260
+	  155 -> 260
+	  156 -> 297
+	  157 -> 160
+	  157 -> 159
+	  158 -> 98
+	  159 -> 306
+	  160 -> 141
+	  161 -> 34
+	  162 -> 11
+	  163 -> 130
+	  164 -> 216
+	  164 -> 27
+	  165 -> 264
+	  166 -> 189
+	  167 -> 134
+	  167 -> 110
+	  167 -> 49
+	  167 -> 147
+	  167 -> 308
+	  167 -> 275
+	  168 -> 191
+	  169 -> 266
+	  170 -> 47
+	  171 -> 128
+	  172 -> 81
+	  173 -> 55
+	  174 -> 58
+	  174 -> 188
+	  174 -> 301
+	  175 -> 68
+	  176 -> 224
+	  177 -> 179
+	  177 -> 180
+	  178 -> 69
+	  179 -> 266
+	  180 -> 182
+	  180 -> 183
+	  181 -> 105
+	  183 -> 84
+	  184 -> 142
+	  185 -> 187
+	  186 -> 120
+	  187 -> 243
+	  188 -> 266
+	  189 -> 202
+	  190 -> 170
+	  191 -> 253
+	  192 -> 294
+	  193 -> 195
+	  193 -> 259
+	  193 -> 296
+	  193 -> 233
+	  193 -> 112
+	  193 -> 113
+	  194 -> 305
+	  195 -> 165
+	  196 -> 161
+	  197 -> 200
+	  197 -> 199
+	  198 -> 166
+	  199 -> 70
+	  200 -> 83
+	  200 -> 299
+	  201 -> 266
+	  202 -> 204
+	  202 -> 205
+	  203 -> 206
+	  204 -> 189
+	  205 -> 267
+	  205 -> 283
+	  205 -> 284
+	  206 -> 208
+	  206 -> 209
+	  207 -> 190
+	  208 -> 102
+	  209 -> 211
+	  209 -> 212
+	  210 -> 19
+	  211 -> 36
+	  212 -> 202
+	  213 -> 194
+	  214 -> 42
+	  215 -> 239
+	  216 -> 218
+	  216 -> 219
+	  217 -> 115
+	  218 -> 54
+	  219 -> 56
+	  219 -> 313
+	  219 -> 32
+	  220 -> 65
+	  221 -> 315
+	  222 -> 176
+	  222 -> 222
+	  223 -> 184
+	  225 -> 7
+	  226 -> 252
+	  227 -> 151
+	  228 -> 154
+	  229 -> 292
+	  230 -> 36
+	  231 -> 269
+	  232 -> 305
+	  233 -> 235
+	  234 -> 236
+	  234 -> 237
+	  235 -> 78
+	  236 -> 78
+	  237 -> 82
+	  238 -> 217
+	  239 -> 298
+	  240 -> 29
+	  241 -> 130
+	  242 -> 223
+	  243 -> 13
+	  244 -> 181
+	  245 -> 276
+	  246 -> 253
+	  247 -> 104
+	  248 -> 178
+	  249 -> 226
+	  250 -> 37
+	  251 -> 254
+	  252 -> 266
+	  253 -> 213
+	  254 -> 21
+	  255 -> 292
+	  256 -> 36
+	  257 -> 138
+	  258 -> 305
+	  259 -> 238
+	  260 -> 116
+	  261 -> 298
+	  262 -> 175
+	  263 -> 70
+	  264 -> 2
+	  265 -> 225
+	  265 -> 3
+	  265 -> 227
+	  265 -> 131
+	  265 -> 4
+	  265 -> 72
+	  265 -> 73
+	  265 -> 234
+	  265 -> 144
+	  265 -> 145
+	  265 -> 280
+	  265 -> 250
+	  265 -> 91
+	  265 -> 61
+	  266 -> 5
+	  267 -> 121
+	  268 -> 48
+	  269 -> 266
+	  270 -> 42
+	  271 -> 273
+	  271 -> 274
+	  272 -> 257
+	  274 -> 169
+	  275 -> 120
+	  276 -> 278
+	  276 -> 279
+	  277 -> 247
+	  278 -> 192
+	  279 -> 281
+	  280 -> 50
+	  281 -> 168
+	  282 -> 228
+	  283 -> 146
+	  284 -> 286
+	  284 -> 287
+	  285 -> 268
+	  286 -> 121
+	  287 -> 289
+	  287 -> 290
+	  288 -> 229
+	  289 -> 121
+	  290 -> 6
+	  291 -> 266
+	  292 -> 148
+	  293 -> 17
+	  294 -> 270
+	  295 -> 305
+	  296 -> 99
+	  297 -> 29
+	  298 -> 314
+	  299 -> 11
+	  300 -> 243
+	  301 -> 203
+	  302 -> 87
+	  303 -> 29
+	  304 -> 158
+	  305 -> 172
+	  306 -> 116
+	  307 -> 291
+	  308 -> 310
+	  308 -> 311
+	  309 -> 10
+	  310 -> 31
+	  311 -> 174
+	  312 -> 66
+	  313 -> 162
+	  314 -> 118
+}
+

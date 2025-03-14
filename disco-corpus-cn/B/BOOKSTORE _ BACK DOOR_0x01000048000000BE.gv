@@ -1,0 +1,199 @@
+# BOOKSTORE / BACK DOOR
+# It's the back door of "Crime, Romance, and Biographies of Famous People". You can look at it, use a key object on it or try to force it open.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: “不要哭，千万别哭…”（扇自己的脸。）“我不想被人看到我掉眼泪！”"];
+	  3 [label="Warded Door: 略施小力之后，你终于拧动了钥匙。里面安静地可怕。轻轻推开门，一股冷空气溜了进去。"];
+	  4 [label="Shivers: 外面，风从海岸边呼啸而过。一栋火柴盒般的建筑矗立在圣吉莱纳路的旁边，里面的男人仿佛一根随时准备点燃自己的小火柴。"];
+	  5 [label="Physical Instrument: 走开，小子！别像只蛆虫一样扭扭捏捏了，根本没什么好担心的。"];
+	  6 [label="Physical Instrument: 没错，好好考虑你周围的环境。如果想要成功，你需要一个坚实的地面，还有一个合适的支点。"];
+	  7 [label="Pain Threshold: 在你的撞击下，门不断震动着。突然，铰链折断，门板破裂，碎片飞溅，你猛的一下摔倒在眼前的黑暗之中。"];
+	  8 [label="Shivers: 你感觉脖子后面的汗毛竖了起来，就好像此刻有人正站在你身后。"];
+	  9 [label="Warded Door: 看起来你基本没对门造成什么伤害，不过——它仍然紧闭着，上面挂着许多小符咒和装饰品。"];
+	  10 [label="Warded Door: Variable[\"tc.wards_plais\"]"];
+	  11 [label="Variable[\"tc.wards_plais\"]", shape=diamond];
+	  12 [label="!(Variable[\"tc.wards_plais\"])", shape=diamond];
+	  13 [label="electroshivers"];
+	  14 [label="Kim Kitsuragi: “警探，你是负责人。”警督朝着门比了个手势。"];
+	  15 [label="Plaisance: “到底*出什么事*了？！”书店里响起一个不安又尖锐的声音。“你真打算砸破后门吗？”"];
+	  16 [label="You: 那扇门怎么样？"];
+	  17 [label="You: “那是…我看见的是*血*吗？”（摸摸自己的前额。）"];
+	  18 [label="You: 用力撞门，然后大喊：“欢迎来到瑞瓦肖！”"];
+	  19 [label="Kim Kitsuragi: 警督盯着站在那里的你，一言不发地沉思着。“你不会想再试一次吧？”"];
+	  20 [label="Kim Kitsuragi: “你没事吧？”警督靠近了几步，眼神柔和，略显担忧。“我必须承认，这个看起来…很猛烈，而且很痛苦。”"];
+	  21 [label="Plaisance: “我警告你，别去招惹那些幽灵，警官！”你可以听见她惊恐地后退了一步。“别去招惹那些幽灵，不然你会破坏门上的神圣*守护*的！”"];
+	  22 [label="Physical Instrument: 稳住呼吸，沉住核心——你可以的。一只肩膀向前，你已经准备好像攻城槌一样撞击大门。"];
+	  23 [label="back door hub"];
+	  24 [label="Warded Door: Variable[\"doomed.bookstore_backdoor_redcheck_smash\"]"];
+	  25 [label="Variable[\"doomed.bookstore_backdoor_redcheck_smash\"]", shape=diamond];
+	  26 [label="!(Variable[\"doomed.bookstore_backdoor_redcheck_smash\"])", shape=diamond];
+	  27 [label="Half Light: 一种不舒服的感觉在你的胃部打了个结…"];
+	  28 [label="You: 把门撞开。"];
+	  29 [label="You: Variable[\"doomed.bookstore_backdoor_redcheck_smash\"]"];
+	  30 [label="Variable[\"doomed.bookstore_backdoor_redcheck_smash\"]", shape=diamond];
+	  31 [label="!(Variable[\"doomed.bookstore_backdoor_redcheck_smash\"])", shape=diamond];
+	  32 [label="You: [离开。]"];
+	  33 [label="You: 检查一下周围的环境。"];
+	  34 [label="Warded Door: IsTHCPresent(\"coach_physical_instrument\")"];
+	  35 [label="IsTHCPresent(\"coach_physical_instrument\")", shape=diamond];
+	  36 [label="!(IsTHCPresent(\"coach_physical_instrument\"))", shape=diamond];
+	  37 [label="Perception (Hearing): 一个空洞、黑暗的回音…"];
+	  38 [label="You: 摸摸自己的后颈：这是什么感觉？"];
+	  39 [label="You: 再撞一次门——什么话也不说。"];
+	  40 [label="runhub"];
+	  41 [label="breakhub"];
+	  42 [label="You: 用力撞门，然后大声吼叫：“举起手来，现在！”"];
+	  43 [label="Warded Door: Variable[\"doomed.bookstore_backdoor_shivers\"]"];
+	  44 [label="Variable[\"doomed.bookstore_backdoor_shivers\"]", shape=diamond];
+	  45 [label="!(Variable[\"doomed.bookstore_backdoor_shivers\"])", shape=diamond];
+	  46 [label="You: “呃，金？也许你应该先进去…”"];
+	  47 [label="Warded Door: 你面前是一堵缺了个把手的沉重大门，上面挂着几十个（甚至上百个）形状古怪的塞美尼小装饰品和符咒。看起来像是锁着的。"];
+	  48 [label="Warded Door: 只有一声回音…里面没有人。"];
+	  49 [label="Physical Instrument: 门是用一块坚实的木头做成的，不过已经上了年月——铰链十分破旧，上面还覆盖着一层红色的锈迹。这个方案应该是可行的。"];
+	  50 [label="You: 也许我*应该*把它砸开？但是我得先制定战略…"];
+	  51 [label="You: 用力撞门，然后大声吼叫：“去他妈的系统！”"];
+	  52 [label="Warded Door: 你面前是一堵缺了个把手的沉重大门，上面挂着几十个（甚至上百个）形状古怪的小装饰品和符咒。看起来像是锁着的。"];
+	  53 [label="You: “天啦…”（试着正常呼吸。）“这真心不是最好的主意，对吧…”"];
+	  54 [label="You: 用钥匙打开门。"];
+	  55 [label="Jump to: [back door hub]"];
+	  56 [label="You: 用力撞门，然后大声吼叫：“不许动，你们这些坏人！”"];
+	  57 [label="Jump to: [back door hub]"];
+	  58 [label="Jump to: [breakhub]"];
+	  59 [label="Warded Door: CheckItem(\"key_bookstore_backdoor\")"];
+	  60 [label="CheckItem(\"key_bookstore_backdoor\")", shape=diamond];
+	  61 [label="!(CheckItem(\"key_bookstore_backdoor\"))", shape=diamond];
+	  62 [label="You: 首先——检查一下自己的姿势。"];
+	  63 [label="You: 敲敲门。"];
+	  64 [label="Physical Instrument: 如果…你把它砸碎呢？"];
+	  65 [label="noelectro"];
+	  66 [label="Plaisance: 一个声音从另一个房间里传了出来：“你在做什么，警官？！”听起来好像很担心——担心你的健康。"];
+	  67 [label="Shivers: 一个惊慌失措的女人用力捏紧了脖子上的吊坠，直到吊坠在她掌心留下一个深深的印记。几米开外，一个男人手拿钥匙，僵硬地站在原地。里面的某个地方，蜘蛛正在勤劳的织网。"];
+	  68 [label="Warded Door: Variable[\"doomed.bookstore_backdoor_greeting_done\"]"];
+	  69 [label="Variable[\"doomed.bookstore_backdoor_greeting_done\"]", shape=diamond];
+	  70 [label="!(Variable[\"doomed.bookstore_backdoor_greeting_done\"])", shape=diamond];
+	  71 [label="You: 用力撞门，然后大声吼叫：“操，疼死了！”"];
+	  72 [label="Pain Threshold: 你撞向木门，看见门框上出现了一个小小的裂缝。再试一次应该就能突破到另一边，但是你已经做到了…"];
+	  73 [label="itspainstop"];
+	  74 [label="Jump to: [back door hub]"];
+	  75 [label="You: “我自找的。我的身体就应该遭受这种*虚弱*和*失望*。”"];
+	  76 [label="Pain Threshold: 哎哟，该死！这是哪个白痴提的主意，说要*破门而入*？难道你不知道这样会*很疼*吗？！"];
+	  77 [label="Warded Door: IsKimHere()"];
+	  78 [label="IsKimHere()", shape=diamond];
+	  79 [label="!(IsKimHere())", shape=diamond];
+	  80 [label="You: [打开门进去。]"];
+	  81 [label="Warded Door: IsKimHere()"];
+	  82 [label="IsKimHere()", shape=diamond];
+	  83 [label="!(IsKimHere())", shape=diamond];
+	  84 [label="Physical Instrument: 房间里光线昏暗，杂乱地堆放着旧理发店的垃圾，但是通往大门的道路十分干净。"];
+	  0 -> 1
+	  1 -> 10
+	  2 -> 82
+	  3 -> 8
+	  4 -> 67
+	  5 -> 73
+	  6 -> 41
+	  8 -> 27
+	  9 -> 75
+	  10 -> 11
+	  10 -> 12
+	  11 -> 47
+	  12 -> 52
+	  13 -> 46
+	  13 -> 81
+	  13 -> 38
+	  14 -> 81
+	  15 -> 21
+	  16 -> 49
+	  17 -> 82
+	  18 -> 7
+	  19 -> 40
+	  20 -> 15
+	  21 -> 9
+	  22 -> 58
+	  23 -> 32
+	  23 -> 50
+	  23 -> 54
+	  23 -> 28
+	  23 -> 63
+	  24 -> 25
+	  24 -> 26
+	  25 -> 72
+	  26 -> 77
+	  27 -> 43
+	  28 -> 29
+	  29 -> 30
+	  29 -> 31
+	  30 -> 24
+	  31 -> 24
+	  33 -> 85
+	  34 -> 35
+	  34 -> 36
+	  35 -> 5
+	  36 -> 73
+	  37 -> 57
+	  38 -> 4
+	  39 -> 7
+	  40 -> 39
+	  40 -> 71
+	  40 -> 42
+	  40 -> 18
+	  40 -> 51
+	  40 -> 56
+	  41 -> 33
+	  41 -> 62
+	  42 -> 7
+	  43 -> 44
+	  43 -> 45
+	  44 -> 13
+	  45 -> 65
+	  46 -> 14
+	  47 -> 59
+	  48 -> 37
+	  49 -> 55
+	  50 -> 6
+	  51 -> 7
+	  52 -> 59
+	  53 -> 82
+	  54 -> 3
+	  55 -> 23
+	  56 -> 7
+	  57 -> 23
+	  58 -> 41
+	  59 -> 60
+	  59 -> 61
+	  60 -> 23
+	  61 -> 68
+	  62 -> 22
+	  63 -> 48
+	  64 -> 23
+	  65 -> 81
+	  65 -> 46
+	  66 -> 40
+	  67 -> 81
+	  67 -> 46
+	  68 -> 69
+	  68 -> 70
+	  69 -> 23
+	  70 -> 64
+	  71 -> 7
+	  72 -> 78
+	  73 -> 17
+	  73 -> 2
+	  73 -> 76
+	  73 -> 53
+	  74 -> 23
+	  75 -> 82
+	  76 -> 34
+	  77 -> 80
+	  77 -> 79
+	  78 -> 19
+	  79 -> 66
+	  81 -> 83
+	  81 -> 84
+	  82 -> 20
+	  83 -> 15
+	  84 -> 16
+}
+

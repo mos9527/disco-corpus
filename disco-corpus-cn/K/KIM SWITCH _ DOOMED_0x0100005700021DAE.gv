@@ -1,0 +1,115 @@
+# KIM SWITCH / DOOMED
+# After breaking down the back door in the bookstore you and Kim discover yourself in a gym.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="CheckItem(\"flashlight\")"];
+	  3 [label="CheckItem(\"flashlight\")", shape=diamond];
+	  4 [label="!(CheckItem(\"flashlight\"))", shape=diamond];
+	  5 [label="You: “在我看来像是健身房。”"];
+	  6 [label="Kim Kitsuragi: “现在，我们该继续前进了，走吧？”"];
+	  7 [label="Kim Kitsuragi: “没必要寻找什么*超自然*解释，用老一套的理由就够了。我们该走了吧？”"];
+	  8 [label="Kim Kitsuragi: “没必要寻找什么*超自然*解释，用老一套的理由就够了。我们先去拿手电筒吧，怎么样？”"];
+	  9 [label="IsDaytime()"];
+	  10 [label="IsDaytime()", shape=diamond];
+	  11 [label="!(IsDaytime())", shape=diamond];
+	  12 [label="Kim Kitsuragi: “是的，因为这里*关门*了……”"];
+	  13 [label="Variable[\"TASK.doomed_investigation\"]  or  Variable[\"tc.doomed_commercial_area\"]  or  Variable[\"plaza.annette_heard_of_doomed\"]"];
+	  14 [label="Variable[\"TASK.doomed_investigation\"]  or  Variable[\"tc.doomed_commercial_area\"]  or  Variable[\"plaza.annette_heard_of_doomed\"]", shape=diamond];
+	  15 [label="!(Variable[\"TASK.doomed_investigation\"]  or  Variable[\"tc.doomed_commercial_area\"]  or  Variable[\"plaza.annette_heard_of_doomed\"])", shape=diamond];
+	  16 [label="CheckItem(\"flashlight\")"];
+	  17 [label="CheckItem(\"flashlight\")", shape=diamond];
+	  18 [label="!(CheckItem(\"flashlight\"))", shape=diamond];
+	  19 [label="You: “那我们就去拿手电筒吧。”"];
+	  20 [label="kimdoomedgymswitch"];
+	  21 [label="Kim Kitsuragi: “不，这是个健身房，”他不同意这个看法。“不过看起来已经很久没人了……”"];
+	  22 [label="Kim Kitsuragi: “我觉得你说的对，”他说道。“不过看起来已经很久没人来过了……”"];
+	  23 [label="Kim Kitsuragi: “我们去拿手电筒吧，怎么样？”"];
+	  24 [label="You: “这是场冒险！”"];
+	  25 [label="Kim Kitsuragi: “不知道电还能不能用……还好我们身上带着手电筒。走之前记得先从包里拿出来。”"];
+	  26 [label="Kim Kitsuragi: “我们*没必要*探索一个废弃的健身房，你应该知道的。再说，已经很久没人来过这里了……”"];
+	  27 [label="Perception (Sight): 窗户上落下些许灰尘，在日光下闪烁着点点光芒。除此之外，这个房间一片漆黑。"];
+	  28 [label="You: “我觉得可能是针对青少年运动员的阿特米普拳击俱乐部。”"];
+	  29 [label="You: “不知道，金……但我的脑袋很疼……我的脑袋伤的*很重*。”"];
+	  30 [label="Kim Kitsuragi: “是的，不过已经很久没人来过这里了。”他的脚在满是灰尘的地板上拖出一条痕迹……"];
+	  31 [label="Kim Kitsuragi: “*没必要*把门撞开，你知道的……”他看了看这个“很久没人待过的地方”。"];
+	  32 [label="Perception (Sight): 窗户上落下些许灰尘，在街灯的照耀下闪烁着点点光芒。除此之外，这个房间一片漆黑。"];
+	  33 [label="You: “我们还是走吧，我肯定这里只是个普通的废弃房屋，没什么神秘的。”"];
+	  34 [label="You: “这是阴间。是来世。”"];
+	  35 [label="Untitled hub (02)"];
+	  36 [label="Kim Kitsuragi: “不知道电还能不能用……如果想继续调查的话，应该找个手电筒。我的锐影里应该有一只。”"];
+	  37 [label="Inland Empire: 一种奇异的感觉涌上你的心头……"];
+	  38 [label="Kim Kitsuragi: 警督点点头。"];
+	  39 [label="IsTaskActive(\"TASK.go_see_the_fridge\")--[[ Variable[ ]]"];
+	  40 [label="IsTaskActive(\"TASK.go_see_the_fridge\")--[[ Variable[ ]]", shape=diamond];
+	  41 [label="!(IsTaskActive(\"TASK.go_see_the_fridge\")--[[ Variable[ ]])", shape=diamond];
+	  42 [label="CheckEquipped(\"flashlight\")"];
+	  43 [label="CheckEquipped(\"flashlight\")", shape=diamond];
+	  44 [label="!(CheckEquipped(\"flashlight\"))", shape=diamond];
+	  45 [label="You: “如果这里这么多年没人是有*原因*的呢……”"];
+	  46 [label="CheckItem(\"flashlight\")"];
+	  47 [label="CheckItem(\"flashlight\")", shape=diamond];
+	  48 [label="!(CheckItem(\"flashlight\"))", shape=diamond];
+	  49 [label="Kim Kitsuragi: “不知道电还有没有用……还好我们身上带着手电筒。”"];
+	  50 [label="Kim Kitsuragi: “听起来不错。”"];
+	  0 -> 1
+	  1 -> 20
+	  2 -> 3
+	  2 -> 4
+	  3 -> 6
+	  4 -> 23
+	  5 -> 30
+	  9 -> 10
+	  9 -> 11
+	  10 -> 27
+	  11 -> 32
+	  12 -> 13
+	  13 -> 14
+	  13 -> 15
+	  14 -> 46
+	  15 -> 2
+	  16 -> 17
+	  16 -> 18
+	  17 -> 42
+	  18 -> 36
+	  19 -> 38
+	  20 -> 34
+	  20 -> 5
+	  20 -> 24
+	  20 -> 28
+	  20 -> 29
+	  21 -> 16
+	  22 -> 16
+	  24 -> 21
+	  25 -> 9
+	  26 -> 16
+	  27 -> 37
+	  28 -> 22
+	  29 -> 39
+	  30 -> 16
+	  31 -> 16
+	  32 -> 37
+	  33 -> 50
+	  34 -> 21
+	  35 -> 33
+	  35 -> 19
+	  35 -> 45
+	  36 -> 9
+	  37 -> 35
+	  39 -> 40
+	  39 -> 41
+	  40 -> 31
+	  41 -> 26
+	  42 -> 43
+	  42 -> 44
+	  43 -> 49
+	  44 -> 25
+	  45 -> 12
+	  46 -> 48
+	  46 -> 47
+	  47 -> 7
+	  48 -> 8
+	  49 -> 9
+}
+

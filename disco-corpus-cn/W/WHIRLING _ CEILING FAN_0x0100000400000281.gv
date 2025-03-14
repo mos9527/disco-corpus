@@ -1,0 +1,295 @@
+# WHIRLING / CEILING FAN
+# The ceiling fan is spinning like the blades of some rickety old airship about to fall on you. A truly horrendous neck-tie has somehow attached itself to one of the blades.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 抓紧你的胸口。"];
+	  3 [label="Jump to: [Operation Neck-Tie]"];
+	  4 [label="Ceiling Fan: 还在继续。现在是开始担忧的好时机。"];
+	  5 [label="Jump to: [Operation Neck-Tie]"];
+	  6 [label="Pain Threshold: 你可以承受的。只要记得呼吸就好。"];
+	  7 [label="You: 抓紧你的胸口。"];
+	  8 [label="Untitled hub"];
+	  9 [label="Ceiling Fan: 灯关上了。"];
+	  10 [label="Jump to: [Operation Neck-Tie]"];
+	  11 [label="Pain Threshold: 还在继续。现在是开始担忧的好时机。"];
+	  12 [label="Ceiling Fan: Variable[\"whirling.lights_are_on\"]"];
+	  13 [label="Variable[\"whirling.lights_are_on\"]", shape=diamond];
+	  14 [label="!(Variable[\"whirling.lights_are_on\"])", shape=diamond];
+	  15 [label="Ceiling Fan: 电灯又关上了。"];
+	  16 [label="Ceiling Fan: 灯是打开的。"];
+	  17 [label="Ceiling Fan: 那种刺痛感总算是减弱了。你可以再试一次，看看到底会有多痛——不过你也可能会死的。"];
+	  18 [label="Ceiling Fan: 压力总算是减弱了。你发现自己出了一身冷汗，别动弹——希望这样你就不会死掉。"];
+	  19 [label="Savoir Faire: 你伸出手去抓领带……不过这是什么？不断辐射开来的胸痛！恐惧感向你袭来。"];
+	  20 [label="Pain Threshold: 你可以承受的。只要慢慢呼吸就好。"];
+	  21 [label="Ceiling Fan: 不太妙啊。感觉就像是尖锐的石头在碾磨你的胸口，让你动弹不得。"];
+	  22 [label="Ceiling Fan: 持续了好长时间。"];
+	  23 [label="Pain Threshold: 这次你也可以承受的。只要慢慢吸气就好。"];
+	  24 [label="Ceiling Fan: 吊扇有两根拉线开关——一个连着风扇，另一个连着小灯泡。一条令人不快的领带不知怎么地挂在了一片扇叶上。"];
+	  25 [label="Pain Threshold: 小黑点在你的视网膜上舞动着。几乎有种让人愉悦的感觉。"];
+	  26 [label="Ceiling Fan: Variable[\"whirling.fan_caught_the_tie\"]"];
+	  27 [label="Variable[\"whirling.fan_caught_the_tie\"]", shape=diamond];
+	  28 [label="!(Variable[\"whirling.fan_caught_the_tie\"])", shape=diamond];
+	  29 [label="You: 抓紧你的胳膊。"];
+	  30 [label="Ceiling Fan: 扇叶吱呀吱呀地停了下来。现在应该能更容易够着领带了。\n扇叶吱呀吱呀地停了下来。"];
+	  31 [label="You: [离开。]"];
+	  32 [label="Inland Empire: 你看着那条领带，一种不祥的预感充斥着你。"];
+	  33 [label="Savoir Faire: 哦不，又开始了。你没有抓到它，现在你半边胸口都麻痹了。"];
+	  34 [label="Ceiling Fan: Variable[\"whirling.ceiling_fan_heartattack_felt\"]"];
+	  35 [label="Variable[\"whirling.ceiling_fan_heartattack_felt\"]", shape=diamond];
+	  36 [label="!(Variable[\"whirling.ceiling_fan_heartattack_felt\"])", shape=diamond];
+	  37 [label="You: 把你的手按压在自己胸口，确保自己的心脏还在正常跳动。"];
+	  38 [label="Savoir Faire: 哦不，又开始了。你没有抓到它，现在你的左胳膊感觉有些麻痹，再加上半边胸口。"];
+	  39 [label="Endurance: 去做吧——*如果你想死的话*，胸口的那阵刺痛这样对你说到。现在的你可谓是命悬一线……"];
+	  40 [label="You: 平静地吸气呼气。"];
+	  41 [label="Pain Threshold: 你可以承受的。这次并不像上次那么糟糕。"];
+	  42 [label="Savoir Faire: 你伸出手去抓领带……不过这是什么？不断扩散、辐射开来的胸痛！厄运降临在了你头上。"];
+	  43 [label="Ceiling Fan: Variable[\"whirling.ceiling_fan_heartattack_felt\"]"];
+	  44 [label="Variable[\"whirling.ceiling_fan_heartattack_felt\"]", shape=diamond];
+	  45 [label="!(Variable[\"whirling.ceiling_fan_heartattack_felt\"])", shape=diamond];
+	  46 [label="Ceiling Fan: Variable[\"whirling.ceiling_fan_heartattack_felt\"]"];
+	  47 [label="Variable[\"whirling.ceiling_fan_heartattack_felt\"]", shape=diamond];
+	  48 [label="!(Variable[\"whirling.ceiling_fan_heartattack_felt\"])", shape=diamond];
+	  49 [label="You: 放马过来吧。"];
+	  50 [label="You: 抓住领带。"];
+	  51 [label="You: Variable[\"whirling.fan_caught_the_tie\"]"];
+	  52 [label="Variable[\"whirling.fan_caught_the_tie\"]", shape=diamond];
+	  53 [label="!(Variable[\"whirling.fan_caught_the_tie\"])", shape=diamond];
+	  54 [label="Ceiling Fan: Variable[\"whirling.ceiling_fan_off\"]"];
+	  55 [label="Variable[\"whirling.ceiling_fan_off\"]", shape=diamond];
+	  56 [label="!(Variable[\"whirling.ceiling_fan_off\"])", shape=diamond];
+	  57 [label="Ceiling Fan: 开关一定是坏了，因为什么也没发生。你开始觉得房间里的空间像是汽化了的尿液。"];
+	  58 [label="Jump to: [Operation Neck-Tie]"];
+	  59 [label="Ceiling Fan: Variable[\"whirling.fan_heart_damage\"]"];
+	  60 [label="Variable[\"whirling.fan_heart_damage\"]", shape=diamond];
+	  61 [label="!(Variable[\"whirling.fan_heart_damage\"])", shape=diamond];
+	  62 [label="Pain Threshold: 压力总算消退了。你发现自己出了一身冷汗。尽量不要移动地太快——也许这样你就不会崩溃。"];
+	  63 [label="Ceiling Fan: 你手中攥着一条极其鲜艳的领带，上面大概有4、5种不同的图案。领结的样子让你想到了套索。"];
+	  64 [label="You: 拉一下灯泡。"];
+	  65 [label="Jump to: [Operation Neck-Tie]"];
+	  66 [label="Ceiling Fan: 风扇在旋转。\n风扇纹丝不动。"];
+	  67 [label="Pain Threshold: 还在继续。"];
+	  68 [label="Ceiling Fan: Variable[\"whirling.ceiling_fan_heartattack_felt\"]"];
+	  69 [label="Variable[\"whirling.ceiling_fan_heartattack_felt\"]", shape=diamond];
+	  70 [label="!(Variable[\"whirling.ceiling_fan_heartattack_felt\"])", shape=diamond];
+	  71 [label="Pain Threshold: 你的眼睛因为光敏性而备受煎熬。这不太好。"];
+	  72 [label="Ceiling Fan: IsHourBetween(0,  21)  and  DayCount() == 1"];
+	  73 [label="IsHourBetween(0,  21)  and  DayCount() == 1", shape=diamond];
+	  74 [label="!(IsHourBetween(0,  21)  and  DayCount() == 1)", shape=diamond];
+	  75 [label="Ceiling Fan: Variable[\"whirling.fan_pain_threshold\"]"];
+	  76 [label="Variable[\"whirling.fan_pain_threshold\"]", shape=diamond];
+	  77 [label="!(Variable[\"whirling.fan_pain_threshold\"])", shape=diamond];
+	  78 [label="Ceiling Fan: Variable[\"whirling.fan_pain_threshold_heart\"]"];
+	  79 [label="Variable[\"whirling.fan_pain_threshold_heart\"]", shape=diamond];
+	  80 [label="!(Variable[\"whirling.fan_pain_threshold_heart\"])", shape=diamond];
+	  81 [label="Inland Empire: 或者它被放在那里是一种惩罚？你觉得这个生物好像是你的*朋友*，想要重新回到你的脖子上。这样你和它就能一起在这个奇怪的世界继续冒险！"];
+	  82 [label="Savoir Faire: 你猛地垫了一下脚，抓住了领带……唰的一声！领带从扇叶上松脱了下来。\n你猛地垫了一下脚，抓住了领带……啪的一声！它被扇叶释放了。警告！警告！领带失去控制。"];
+	  83 [label="Pain Threshold: 这只是宿醉引起的一点光敏性。不用反应地这么激烈。"];
+	  84 [label="Ceiling Fan: Variable[\"whirling.fan_interfacing_turn_blades_off\"]"];
+	  85 [label="Variable[\"whirling.fan_interfacing_turn_blades_off\"]", shape=diamond];
+	  86 [label="!(Variable[\"whirling.fan_interfacing_turn_blades_off\"])", shape=diamond];
+	  87 [label="Pain Threshold: 那种刺痛感总算是减弱了。你可以再试一次，看看到底会有多痛。（很痛。）不过你真的想冒这个险吗？"];
+	  88 [label="Ceiling Fan: Variable[\"whirling.fan_pain_threshold_heart\"]"];
+	  89 [label="Variable[\"whirling.fan_pain_threshold_heart\"]", shape=diamond];
+	  90 [label="!(Variable[\"whirling.fan_pain_threshold_heart\"])", shape=diamond];
+	  91 [label="Pain Threshold: 这次感觉更加糟糕。也许你应该别去拿那条领带了？"];
+	  92 [label="You: 平静地呼吸。"];
+	  93 [label="Ceiling Fan: Variable[\"whirling.fan_heart_damage\"]"];
+	  94 [label="Variable[\"whirling.fan_heart_damage\"]", shape=diamond];
+	  95 [label="!(Variable[\"whirling.fan_heart_damage\"])", shape=diamond];
+	  96 [label="Ceiling Fan: 这一切都不是真正的心脏病发作。不过是个玩笑而已。也许你应该多锻炼锻炼。"];
+	  97 [label="Pain Threshold: 还是很不好。绝对比上次更糟糕。"];
+	  98 [label="Pain Threshold: 这不是*真正*的心脏病发作。这是个玩笑。可能只是你的肺或者食道。食道基本上什么都没做。"];
+	  99 [label="Pain Threshold: 不太妙啊。感觉就像是尖锐的石头在碾磨你的胸口，让你动弹不得。"];
+	  100 [label="Operation Neck-Tie"];
+	  101 [label="Ceiling Fan: 这次感觉更加糟糕。也许你应该别去拿那条领带了？"];
+	  102 [label="Ceiling Fan: Variable[\"whirling.ceiling_fan_off\"]"];
+	  103 [label="Variable[\"whirling.ceiling_fan_off\"]", shape=diamond];
+	  104 [label="!(Variable[\"whirling.ceiling_fan_off\"])", shape=diamond];
+	  105 [label="Ceiling Fan: IsHourBetween(0,  17)  and  DayCount() == 1"];
+	  106 [label="IsHourBetween(0,  17)  and  DayCount() == 1", shape=diamond];
+	  107 [label="!(IsHourBetween(0,  17)  and  DayCount() == 1)", shape=diamond];
+	  108 [label="Logic: 如果它是你的*朋友*，为什么它会挂在那上面？谁会把朋友绑在吊扇上？也许这玩意有点危险……"];
+	  109 [label="Ceiling Fan: Variable[\"whirling.fan_light_damage_done\"]"];
+	  110 [label="Variable[\"whirling.fan_light_damage_done\"]", shape=diamond];
+	  111 [label="!(Variable[\"whirling.fan_light_damage_done\"])", shape=diamond];
+	  112 [label="Untitled hub"];
+	  113 [label="Ceiling Fan: 这是个严重的错误！马上把灯关掉！你几乎能感觉到光子在你的脑袋里烧穿了一个洞。"];
+	  114 [label="You: 再拉一次把灯关掉。"];
+	  115 [label="Jump to: [Operation Neck-Tie]"];
+	  116 [label="Ceiling Fan: Variable[\"whirling.necktie_personified\"]"];
+	  117 [label="Variable[\"whirling.necktie_personified\"]", shape=diamond];
+	  118 [label="!(Variable[\"whirling.necktie_personified\"])", shape=diamond];
+	  119 [label="Ceiling Fan: Variable[\"whirling.fan_logic_doubt\"]"];
+	  120 [label="Variable[\"whirling.fan_logic_doubt\"]", shape=diamond];
+	  121 [label="!(Variable[\"whirling.fan_logic_doubt\"])", shape=diamond];
+	  122 [label="Interfacing: 你知道自己应该做什么吗？你应该把风扇停下来，然后再试一次，这样会容易很多。"];
+	  123 [label="Pain Threshold: 持续了好长时间。"];
+	  124 [label="Jump to: [Operation Neck-Tie]"];
+	  125 [label="You: 拉一下风扇。"];
+	  126 [label="Ceiling Fan: 这不是*真正*的心脏病发作。这是个玩笑。可能只是你的肺或者食道。食道基本上什么都没做。"];
+	  127 [label="Ceiling Fan: 你手中攥着一条丑到吓人的领带，上面大概有4、5种不同的图案。领结的样子让你想到了套索。"];
+	  128 [label="Ceiling Fan: 还是有感觉。绝对比上次更糟糕。"];
+	  129 [label="Pain Threshold: 这不是真正的心脏病发作。也许你应该多锻炼锻炼。"];
+	  130 [label="Jump to: [Operation Neck-Tie]"];
+	  0 -> 1
+	  1 -> 24
+	  1 -> 66
+	  2 -> 78
+	  3 -> 100
+	  4 -> 18
+	  5 -> 100
+	  6 -> 8
+	  7 -> 88
+	  8 -> 40
+	  8 -> 7
+	  9 -> 125
+	  10 -> 100
+	  11 -> 62
+	  12 -> 13
+	  12 -> 14
+	  13 -> 15
+	  14 -> 16
+	  15 -> 65
+	  16 -> 65
+	  17 -> 116
+	  18 -> 102
+	  19 -> 6
+	  20 -> 113
+	  21 -> 22
+	  22 -> 4
+	  23 -> 29
+	  24 -> 81
+	  25 -> 125
+	  26 -> 27
+	  26 -> 28
+	  27 -> 82
+	  28 -> 72
+	  29 -> 78
+	  30 -> 10
+	  32 -> 3
+	  33 -> 41
+	  34 -> 35
+	  34 -> 36
+	  35 -> 130
+	  36 -> 98
+	  37 -> 88
+	  38 -> 23
+	  39 -> 116
+	  40 -> 88
+	  41 -> 40
+	  41 -> 37
+	  42 -> 20
+	  43 -> 44
+	  43 -> 45
+	  44 -> 101
+	  45 -> 21
+	  46 -> 48
+	  46 -> 47
+	  47 -> 96
+	  48 -> 127
+	  49 -> 75
+	  50 -> 51
+	  51 -> 52
+	  51 -> 53
+	  52 -> 26
+	  53 -> 26
+	  54 -> 56
+	  54 -> 55
+	  55 -> 57
+	  56 -> 30
+	  57 -> 10
+	  58 -> 100
+	  59 -> 60
+	  59 -> 61
+	  60 -> 33
+	  61 -> 19
+	  62 -> 5
+	  63 -> 109
+	  64 -> 110
+	  65 -> 100
+	  66 -> 100
+	  67 -> 97
+	  68 -> 69
+	  68 -> 70
+	  69 -> 91
+	  70 -> 99
+	  71 -> 125
+	  72 -> 73
+	  72 -> 74
+	  73 -> 93
+	  74 -> 59
+	  75 -> 76
+	  75 -> 77
+	  76 -> 25
+	  77 -> 71
+	  78 -> 80
+	  78 -> 79
+	  79 -> 46
+	  80 -> 43
+	  81 -> 100
+	  82 -> 117
+	  83 -> 49
+	  83 -> 115
+	  84 -> 85
+	  84 -> 86
+	  85 -> 39
+	  86 -> 116
+	  87 -> 5
+	  88 -> 89
+	  88 -> 90
+	  89 -> 34
+	  90 -> 68
+	  91 -> 67
+	  92 -> 78
+	  93 -> 94
+	  93 -> 95
+	  94 -> 38
+	  95 -> 42
+	  96 -> 58
+	  97 -> 87
+	  98 -> 131
+	  99 -> 124
+	  100 -> 64
+	  100 -> 50
+	  100 -> 126
+	  100 -> 31
+	  101 -> 129
+	  102 -> 104
+	  102 -> 103
+	  103 -> 116
+	  104 -> 123
+	  105 -> 106
+	  105 -> 107
+	  106 -> 114
+	  107 -> 12
+	  108 -> 120
+	  109 -> 112
+	  109 -> 111
+	  110 -> 12
+	  111 -> 105
+	  112 -> 2
+	  112 -> 92
+	  113 -> 83
+	  114 -> 9
+	  115 -> 100
+	  116 -> 118
+	  116 -> 119
+	  117 -> 63
+	  118 -> 128
+	  119 -> 121
+	  119 -> 122
+	  120 -> 32
+	  121 -> 3
+	  122 -> 84
+	  123 -> 11
+	  124 -> 100
+	  125 -> 54
+	  126 -> 58
+	  127 -> 3
+	  128 -> 17
+	  129 -> 131
+	  130 -> 100
+}
+

@@ -1,0 +1,78 @@
+# PLAZA ORB / working class husband
+# AUTHORITY: It's a working class woman's drunk husband.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 那是她的丈夫！那个不见的丈夫！"];
+	  3 [label="You: 是我。"];
+	  4 [label="Authority: 没什么好光荣的，新人！一点都不光荣。"];
+	  5 [label="You: 这都是废话。[放弃思维。]"];
+	  6 [label="Authority: 不是。不要再搞些乱七八糟的了，新人！"];
+	  7 [label="You: [放弃思维。]"];
+	  8 [label="Authority: 全部搞定。只用好好工作一天就够了。"];
+	  9 [label="You: 给我来杯香槟！我要*加入*。"];
+	  10 [label="Variable[\"tc.mullen\"]"];
+	  11 [label="Variable[\"tc.mullen\"]", shape=diamond];
+	  12 [label="!(Variable[\"tc.mullen\"])", shape=diamond];
+	  13 [label="You: 案子解决了！"];
+	  14 [label="Empathy: 但他*确实*失踪了啊。你也听到她说了，口气那么担心。"];
+	  15 [label="Authority: 看啦！工人阶级醉汉！你应该知道这是什么意思，对吧？"];
+	  16 [label="Logic: 她不是再三告诉你自己的丈夫没有失踪吗？"];
+	  17 [label="Variable[\"plaza.working_authority_logic_husband_not_missing\"]"];
+	  18 [label="Variable[\"plaza.working_authority_logic_husband_not_missing\"]", shape=diamond];
+	  19 [label="!(Variable[\"plaza.working_authority_logic_husband_not_missing\"])", shape=diamond];
+	  20 [label="You: 等等，我到底搞定什么了？"];
+	  21 [label="You: 那是……呃……第三个选项？"];
+	  22 [label="Jump to: [Authority case hub]"];
+	  23 [label="Authority: 是的。而且你发现他了。现在去告诉那个女工人吧。保护市民，服务市民，新人！"];
+	  24 [label="You: 这样说不通。我只会让自己出洋相的。"];
+	  25 [label="Authority: 如果有荣誉的话，就不需要香槟了，新人。*马上*把你的发现告诉女工人吧。"];
+	  26 [label="You: 那是工人阶级起义的未来领袖。"];
+	  27 [label="You: 太明显了。我甚至都不用再想一遍。再见。[完成思维。]"];
+	  28 [label="Authority case hub"];
+	  29 [label="Answer hub"];
+	  30 [label="Authority: 你说*我搞定什么了*是什么意思？看看那个醉汉有多工人阶级？"];
+	  31 [label="Authority: 不，不是的。"];
+	  32 [label="Authority: 迪克·马伦又是谁啊？"];
+	  33 [label="Authority: 婚姻有意义吗？很光荣呢？你不是一个肮脏的哲学家，你是一名执法人员。是时候*把案子放在第一位*了，不要太计较自己的名声。我们可以之后再处理知觉管理的问题。"];
+	  0 -> 1
+	  1 -> 16
+	  2 -> 24
+	  3 -> 9
+	  5 -> 5
+	  6 -> 23
+	  8 -> 28
+	  8 -> 21
+	  9 -> 26
+	  10 -> 12
+	  10 -> 13
+	  11 -> 33
+	  12 -> 9
+	  13 -> 11
+	  14 -> 30
+	  15 -> 8
+	  15 -> 14
+	  16 -> 18
+	  17 -> 19
+	  17 -> 20
+	  18 -> 15
+	  19 -> 30
+	  20 -> 31
+	  21 -> 7
+	  22 -> 29
+	  23 -> 17
+	  24 -> 34
+	  26 -> 32
+	  28 -> 2
+	  28 -> 27
+	  28 -> 22
+	  29 -> 25
+	  29 -> 10
+	  30 -> 29
+	  31 -> 23
+	  32 -> 3
+	  33 -> 10
+	  33 -> 6
+}
+
