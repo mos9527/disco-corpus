@@ -1,0 +1,640 @@
+# SEAFORT INT / FELD INSULAR CONSOLE
+# old electronic console – turn on lights and open blast door if fuel in generator
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Jump to: [consolinghub]"];
+	  3 [label="Encyclopedia: It's an air-gapped system. An *off-air* military model. Its circuits are nearly impossible to *bend*, i.e. it cannot be remote controlled."];
+	  4 [label="Feld \"Insular\" Console: The dial slides under the dusty glass, dark and silent despite the power being on. You make out defunct stations on the UKV frequency. The words \"FELD INSULAR\" are written on the band."];
+	  5 [label="You: \"What's there?\" (Point to the door.)"];
+	  6 [label="Kim Kitsuragi: \"Extra good that I do.\""];
+	  7 [label="Perception (Sight): Pollen drifts in the light shaft."];
+	  8 [label="IsTaskActive(\"TASK.fuel_generator\")--[[ Variable[ ]]"];
+	  9 [label="IsTaskActive(\"TASK.fuel_generator\")--[[ Variable[ ]]", shape=diamond];
+	  10 [label="!(IsTaskActive(\"TASK.fuel_generator\")--[[ Variable[ ]])", shape=diamond];
+	  11 [label="You: \"Wait, what about this fuel I found from my MC?\" (Show him the canister.)"];
+	  12 [label="You: What does it... *do*?"];
+	  13 [label="You: [Leave.]"];
+	  14 [label="Kim Kitsuragi: \"Electrical devices do not work without electricity.\" The lieutenant looks on as you fiddle with the dial. \"We need to power the generator upstairs first.\""];
+	  15 [label="Feld \"Insular\" Console: Who's to say this thing even works? You have to supply it with power first. There must be a generator nearby."];
+	  16 [label="Interfacing: The boat engine!"];
+	  17 [label="Kim Kitsuragi: \"I don't know.\""];
+	  18 [label="You: \"I'm scared.\""];
+	  19 [label="Cuno: \"Cuno doesn't know, but Cuno wants to know.\""];
+	  20 [label="You: \"Don't worry, kid. I'm a cop. Maybe I don't have a gun, but I'm a cop.\""];
+	  21 [label="Feld \"Insular\" Console: Green paint flakes off the monoblock aluminium cabinet. There are rows of switches on the front panel, a frequency band and even a keyboard..."];
+	  22 [label="Kim Kitsuragi: \"The console of an antique computation device.\" The lieutenant points to the wires running into the machine. \"There was a generator upstairs, with wires coming out. They terminate here.\""];
+	  23 [label="IsKimHere()"];
+	  24 [label="IsKimHere()", shape=diamond];
+	  25 [label="!(IsKimHere())", shape=diamond];
+	  26 [label="IsCunoInParty()"];
+	  27 [label="IsCunoInParty()", shape=diamond];
+	  28 [label="!(IsCunoInParty())", shape=diamond];
+	  29 [label="Variable[\"seafort.console_logic_soona_idea\"]"];
+	  30 [label="Variable[\"seafort.console_logic_soona_idea\"]", shape=diamond];
+	  31 [label="!(Variable[\"seafort.console_logic_soona_idea\"])", shape=diamond];
+	  32 [label="Logic: You're right. You're not a *circuit bender*. You don't know about these things."];
+	  33 [label="You: [Leave.]"];
+	  34 [label="Perception (Sight): Pollen drifts in the light shaft."];
+	  35 [label="cuno_is_here"];
+	  36 [label="Kim Kitsuragi: \"This is an air-gapped system.\" The lieutenant inspects the indicator. \"*Off-air,* I think they call it. That won't work.\""];
+	  37 [label="You: Nod in agreement."];
+	  38 [label="Kim Kitsuragi: \"Don't be. I have a gun.\" He takes out his sidearm, checks the barrel, then holsters it again."];
+	  39 [label="Half Light: A sudden wave of anxiety makes your skin crawl."];
+	  40 [label="Half Light: A sudden anxious fear makes your skin crawl."];
+	  41 [label="You: Maybe I could contact Soona -- the programmer lady? She could open the door remotely..."];
+	  42 [label="Kim Kitsuragi: \"No, I'm not, but it would not be very good military technology if programmer ladies could control it remotely. Also, it's ancient. Incompatible.\""];
+	  43 [label="Variable[\"seafort.console_radio_dial_discussion_had\"]"];
+	  44 [label="Variable[\"seafort.console_radio_dial_discussion_had\"]", shape=diamond];
+	  45 [label="!(Variable[\"seafort.console_radio_dial_discussion_had\"])", shape=diamond];
+	  46 [label="Kim Kitsuragi: \"So did I. Not back there, but... I've felt it since we came here.\""];
+	  47 [label="Variable[\"TASK.open_blast_door_done\"]"];
+	  48 [label="Variable[\"TASK.open_blast_door_done\"]", shape=diamond];
+	  49 [label="!(Variable[\"TASK.open_blast_door_done\"])", shape=diamond];
+	  50 [label="CheckItem(\"bullet\")"];
+	  51 [label="CheckItem(\"bullet\")", shape=diamond];
+	  52 [label="!(CheckItem(\"bullet\"))", shape=diamond];
+	  53 [label="You: \"Let's go.\" [Leave.]"];
+	  54 [label="GainTask(\"TASK.fuel_the_generator\")--[[ Variable[ ]]"];
+	  55 [label="You: Nah, it won't work. The canister feels light."];
+	  56 [label="Jump to: [consolinghub]"];
+	  57 [label="Jump to: [consolinghub]"];
+	  58 [label="Variable[\"seafort.console_radio_dial_discussion_had\"]"];
+	  59 [label="Variable[\"seafort.console_radio_dial_discussion_had\"]", shape=diamond];
+	  60 [label="!(Variable[\"seafort.console_radio_dial_discussion_had\"])", shape=diamond];
+	  61 [label="Feld \"Insular\" Console: The glass is dusty, it's hard to make out the writing on the band. Nothing has changed about it."];
+	  62 [label="Interfacing: Automatic boot."];
+	  63 [label="Cuno: \"Old hardware.\" He points to the wires running into the machine. \"From the big power-box upstairs. Circuit-bender shit. Military-grade.\""];
+	  64 [label="IsNight()"];
+	  65 [label="IsNight()", shape=diamond];
+	  66 [label="!(IsNight())", shape=diamond];
+	  67 [label="Kim Kitsuragi: \"There's barely anything left. That won't work.\""];
+	  68 [label="Cuno: \"Aw shit, it's on...\" He grins. \"Turn: Emergency -- Open!\""];
+	  69 [label="Kim Kitsuragi: \"'Urgence -- Ouvert!', 'Allumer', 'Radiodiffusé'.\" He inspects the dials. \"Sounds like this device was used to control the electronics here. Maybe it still does?\""];
+	  70 [label="Interfacing: This device was used to control the electronics in the room. It could open doors, control lights, function as a radiocomputer..."];
+	  71 [label="Kim Kitsuragi: \"I think yes. Let's see...\" He points to the emergency dial switch. \"That one. The emergency open...\""];
+	  72 [label="You: \"Let's go.\" [Leave.]"];
+	  73 [label="Variable[\"seafort.console_half_light_fear\"]"];
+	  74 [label="Variable[\"seafort.console_half_light_fear\"]", shape=diamond];
+	  75 [label="!(Variable[\"seafort.console_half_light_fear\"])", shape=diamond];
+	  76 [label="Cuno: \"Whoa... Told you. Military mega grade. Also, like, four hundred years old, I think? A thousand?\""];
+	  77 [label="Variable[\"seafort.console_half_light_fear\"]"];
+	  78 [label="Variable[\"seafort.console_half_light_fear\"]", shape=diamond];
+	  79 [label="!(Variable[\"seafort.console_half_light_fear\"])", shape=diamond];
+	  80 [label="Cuno: \"Why? The door is open -- we can just fuck on now.\""];
+	  81 [label="Cuno: \"Fucking great. Spooky island shit is gonna shit on us and we can't even *shoot* it.\""];
+	  82 [label="You: (Peek into the canister.)"];
+	  83 [label="Feld \"Insular\" Console: The keys rattle like teeth. This keyboard hasn't been functional in decades."];
+	  84 [label="Feld \"Insular\" Console: A dim golden glow animates the console. Faint, like a ghost-light. 'Urgence -- Ouvert!' reads one dial key. 'Allumer', reads another."];
+	  85 [label="Cuno: \"No, no, no...\" He stares at you as you fiddle with the dial. \"We gotta juice this thing first. Power it up! Pow-pow-power it up, get it?\""];
+	  86 [label="You: \"Okay.\""];
+	  87 [label="Kim Kitsuragi: \"INSULAR...\" The lieutenant leans in to inspect the cursive writing. \"This is an *off-air* radiocomputer, I believe. Used for military communications.\""];
+	  88 [label="Logic: Wait, actually, this would not be very good military technology if *programmer ladies* could control it remotely... It's probably not connected to the front. Or just plain broken. Nice idea, though..."];
+	  89 [label="Feld \"Insular\" Console: With the door open, the dial switch has locked into place -- a security measure of some sort."];
+	  90 [label="IsCunoInParty()"];
+	  91 [label="IsCunoInParty()", shape=diamond];
+	  92 [label="!(IsCunoInParty())", shape=diamond];
+	  93 [label="Jump to: [cuno_is_here]"];
+	  94 [label="Shivers: A thin wisp of smoke rises from a charred black firepit... the wind picks up, then dies down again."];
+	  95 [label="Feld \"Insular\" Console: 'Urgence -- Ouvert!' reads one dial key. 'Allumer', reads another. 'Radiodiffusé', says the frequency band."];
+	  96 [label="IsCunoInParty()"];
+	  97 [label="IsCunoInParty()", shape=diamond];
+	  98 [label="!(IsCunoInParty())", shape=diamond];
+	  99 [label="Variable[\"seafort.console_lights_are_on\"]"];
+	  100 [label="Variable[\"seafort.console_lights_are_on\"]", shape=diamond];
+	  101 [label="!(Variable[\"seafort.console_lights_are_on\"])", shape=diamond];
+	  102 [label="go_in_bros"];
+	  103 [label="Half Light: A sudden wave of anxiety makes your skin crawl."];
+	  104 [label="Jump to: [consolinghub]"];
+	  105 [label="Cuno: \"Cuno knows. This place is spooky as fuck.\""];
+	  106 [label="CheckItem(\"fuel_canister_rcm\")"];
+	  107 [label="CheckItem(\"fuel_canister_rcm\")", shape=diamond];
+	  108 [label="!(CheckItem(\"fuel_canister_rcm\"))", shape=diamond];
+	  109 [label="Reaction Speed: Of course. Anything else you want with this console?"];
+	  110 [label="Variable[\"seafort.console_electricity_on\"]"];
+	  111 [label="Variable[\"seafort.console_electricity_on\"]", shape=diamond];
+	  112 [label="!(Variable[\"seafort.console_electricity_on\"])", shape=diamond];
+	  113 [label="You: \"Failing that we could... go back to the mainland and get some from...\""];
+	  114 [label="Feld \"Insular\" Console: The console looks on as you talk, mute and unpowered. Its dials are covered in dust."];
+	  115 [label="Cuno: \"The fuck is this....\" He stares at the dials: \"'Urgence -- Ouvert!', 'Allumer', 'Radiodiffusé'. Maybe, like, press the buttons or something.\""];
+	  116 [label="Shivers: No, it's more than that. There's something there, waiting."];
+	  117 [label="You: Could this console open the blast door?"];
+	  118 [label="Kim Kitsuragi: \"It's on...\" He smiles. \"Turn: Emergency -- Open!\""];
+	  119 [label="IsCunoInParty()"];
+	  120 [label="IsCunoInParty()", shape=diamond];
+	  121 [label="!(IsCunoInParty())", shape=diamond];
+	  122 [label="Interfacing: There are barrels all around. One of them must still have fuel in it... Pour it into a generator and voila!"];
+	  123 [label="Jump to: [consolinghub]"];
+	  124 [label="Jump to: [consolinghub]"];
+	  125 [label="Jump to: [go_in_bros]"];
+	  126 [label="IsTaskActive(\"TASK.fuel_generator\")--[[ Variable[ ]]"];
+	  127 [label="IsTaskActive(\"TASK.fuel_generator\")--[[ Variable[ ]]", shape=diamond];
+	  128 [label="!(IsTaskActive(\"TASK.fuel_generator\")--[[ Variable[ ]])", shape=diamond];
+	  129 [label="You: \"Don't worry, I've got a gun. No bullets, but I have a gun.\""];
+	  130 [label="Cuno: \"Are you?\" He squints at you -- squints into your soul. \"*Are you?*\""];
+	  131 [label="Kim Kitsuragi: Nothing happens. \"We need to restore power before using this, officer. There was a generator that you missed...\" He looks upstairs. \"It didn't look like there was fuel in it.\""];
+	  132 [label="Feld \"Insular\" Console: Nothing happens as you turn the dial. The power is off, the console stands silent."];
+	  133 [label="IsKimHere()"];
+	  134 [label="IsKimHere()", shape=diamond];
+	  135 [label="!(IsKimHere())", shape=diamond];
+	  136 [label="IsKimHere()"];
+	  137 [label="IsKimHere()", shape=diamond];
+	  138 [label="!(IsKimHere())", shape=diamond];
+	  139 [label="Jump to: [consolinghub]"];
+	  140 [label="Perception (Sight): Pollen drifts in the light shaft."];
+	  141 [label="You: \"I don't have a gun.\""];
+	  142 [label="You: \"I also have a gun.\""];
+	  143 [label="Kim Kitsuragi: \"Then it's extra good that mine is not.\""];
+	  144 [label="Kim Kitsuragi: \"I know. It was not easy to acquire.\""];
+	  145 [label="Small Blast Door: The door comes screeching to a halt. Behind it you see a hole in the concrete wall, where light shines in."];
+	  146 [label="Shivers: No, it's more than that. There's something there, waiting."];
+	  147 [label="Shivers: No, it's more than that. There's something there, waiting."];
+	  148 [label="IsKimHere()"];
+	  149 [label="IsKimHere()", shape=diamond];
+	  150 [label="!(IsKimHere())", shape=diamond];
+	  151 [label="Feld \"Insular\" Console: The keys rattle like teeth as black dust rises from them. This must be the console of some antique computation device. The wires from the generator upstairs are routed into its innards."];
+	  152 [label="Kim Kitsuragi: \"Possibly...\" He inspects the dials. \"'Urgence -- Ouvert!', 'Allumer', 'Radiodiffusé'. It sounds like this device was used to control the electronics here. Maybe it still does?\""];
+	  153 [label="Variable[\"seafort.console_electricity_on\"]"];
+	  154 [label="Variable[\"seafort.console_electricity_on\"]", shape=diamond];
+	  155 [label="!(Variable[\"seafort.console_electricity_on\"])", shape=diamond];
+	  156 [label="You: No. It's too far fetched."];
+	  157 [label="IsCunoInParty()"];
+	  158 [label="IsCunoInParty()", shape=diamond];
+	  159 [label="!(IsCunoInParty())", shape=diamond];
+	  160 [label="Jump to: [consolinghub]"];
+	  161 [label="IsCunoInParty()"];
+	  162 [label="IsCunoInParty()", shape=diamond];
+	  163 [label="!(IsCunoInParty())", shape=diamond];
+	  164 [label="Feld \"Insular\" Console: Nothing happens."];
+	  165 [label="IsKimHere()"];
+	  166 [label="IsKimHere()", shape=diamond];
+	  167 [label="!(IsKimHere())", shape=diamond];
+	  168 [label="Feld \"Insular\" Console: The dial slides under the glass, dark and silent. Restoring electric power has not breathed life into it."];
+	  169 [label="You: \"What if we get into another fight?\""];
+	  170 [label="IsCunoInParty()"];
+	  171 [label="IsCunoInParty()", shape=diamond];
+	  172 [label="!(IsCunoInParty())", shape=diamond];
+	  173 [label="Cuno: \"Who the fuck is Soona?\" he grunts. \"Never mind. It won't work. This is fucking... military mega-grade shit, you know? It's also, like, four hundred years old.\""];
+	  174 [label="GainTask(\"TASK.fuel_the_generator\")--[[ Variable[ ]]"];
+	  175 [label="Cuno: \"Fucking great news, cop. Scare away whatever shit out there's gonna spook on us with an *empty fucking gun*.\""];
+	  176 [label="Cuno: \"It's sweet you got government fuel -- way sweet -- but there ain't shit left in there. You need, like, a full load. Let's check outside when you're done with this.\""];
+	  177 [label="Jump to: [consolinghub]"];
+	  178 [label="IsCunoInParty()"];
+	  179 [label="IsCunoInParty()", shape=diamond];
+	  180 [label="!(IsCunoInParty())", shape=diamond];
+	  181 [label="IsKimHere()"];
+	  182 [label="IsKimHere()", shape=diamond];
+	  183 [label="!(IsKimHere())", shape=diamond];
+	  184 [label="Variable[\"seafort.console_hub_reached\"]"];
+	  185 [label="Variable[\"seafort.console_hub_reached\"]", shape=diamond];
+	  186 [label="!(Variable[\"seafort.console_hub_reached\"])", shape=diamond];
+	  187 [label="Jump to: [Feld \"Insular\" Console: \"The console stands by, mutely. 'Urg...\"]"];
+	  188 [label="Variable[\"church.soona_greeting_done\"]  and  Variable[\"tc.radiocomputer\"]  and  Variable[\"TASK.open_blast_door\"]  and  Variable[\"TASK.open_blast_door_done\"] == false"];
+	  189 [label="Variable[\"church.soona_greeting_done\"]  and  Variable[\"tc.radiocomputer\"]  and  Variable[\"TASK.open_blast_door\"]  and  Variable[\"TASK.open_blast_door_done\"] == false", shape=diamond];
+	  190 [label="!(Variable[\"church.soona_greeting_done\"]  and  Variable[\"tc.radiocomputer\"]  and  Variable[\"TASK.open_blast_door\"]  and  Variable[\"TASK.open_blast_door_done\"] == false)", shape=diamond];
+	  191 [label="IsKimHere()"];
+	  192 [label="IsKimHere()", shape=diamond];
+	  193 [label="!(IsKimHere())", shape=diamond];
+	  194 [label="IsCunoInParty()"];
+	  195 [label="IsCunoInParty()", shape=diamond];
+	  196 [label="!(IsCunoInParty())", shape=diamond];
+	  197 [label="Kim Kitsuragi: \"But, officer,\" he looks you in the eye, \"then we would have to *swim* back to the mainland. Let's just look around, okay.\""];
+	  198 [label="Jump to: [consolinghub]"];
+	  199 [label="Small Blast Door: The blast door opens with a series of clicks. A shaft of light appears, then widens, as the light shines in."];
+	  200 [label="Cuno: \"Fuckin' right!\" Cuno points to the opening."];
+	  201 [label="IsTaskActive(\"TASK.fuel_generator\")--[[ Variable[ ]]"];
+	  202 [label="IsTaskActive(\"TASK.fuel_generator\")--[[ Variable[ ]]", shape=diamond];
+	  203 [label="!(IsTaskActive(\"TASK.fuel_generator\")--[[ Variable[ ]])", shape=diamond];
+	  204 [label="Interfacing: It's on! Automatic boot. Now, just turn the key..."];
+	  205 [label="You: Run your fingers across the keyboard."];
+	  206 [label="Feld \"Insular\" Console: The lighting in the room turns on with a sizzle. A dim, ambient orange."];
+	  207 [label="Variable[\"seafort.console_electricity_on\"]"];
+	  208 [label="Variable[\"seafort.console_electricity_on\"]", shape=diamond];
+	  209 [label="!(Variable[\"seafort.console_electricity_on\"])", shape=diamond];
+	  210 [label="Jump to: [consolinghub]"];
+	  211 [label="Variable[\"TASK.fuel_the_generator_done\"]"];
+	  212 [label="Variable[\"TASK.fuel_the_generator_done\"]", shape=diamond];
+	  213 [label="!(Variable[\"TASK.fuel_the_generator_done\"])", shape=diamond];
+	  214 [label="Hand/Eye Coordination: Harry, this reminds you -- you're out of bullets."];
+	  215 [label="You: \"What's there?\""];
+	  216 [label="GainTask(\"TASK.fuel_the_generator\")--[[ Variable[ ]]"];
+	  217 [label="Reaction Speed: What about the fuel you found in the MC? The red government-marked fuel..."];
+	  218 [label="Untitled hub (03)"];
+	  219 [label="Reaction Speed: Yeah, okay. There's barely anything left in there. You have to find a larger supply."];
+	  220 [label="Variable[\"seafort.console_electricity_on\"]"];
+	  221 [label="Variable[\"seafort.console_electricity_on\"]", shape=diamond];
+	  222 [label="!(Variable[\"seafort.console_electricity_on\"])", shape=diamond];
+	  223 [label="Feld \"Insular\" Console: The dial slides under the glass, silently. You make out defunct stations on the UKV frequency. The words \"FELD INSULAR\" are written on the band."];
+	  224 [label="Jump to: [consolinghub]"];
+	  225 [label="Cuno: \"Try fucking with that one. It's red.\" He points to the emergency dial switch. It is large and alarmingly red."];
+	  226 [label="You: \"Before -- outside. When we were walking across the sand, I felt someone watching me.\""];
+	  227 [label="Feld \"Insular\" Console: The console stands by, mutely. 'Urgence -- Ouvert!' reads a dial key. 'Allumer,' reads another. The frequency band says: 'Radiodiffusé.'"];
+	  228 [label="You: What is this? (Run your fingers across the keyboard.)"];
+	  229 [label="IsKimHere()"];
+	  230 [label="IsKimHere()", shape=diamond];
+	  231 [label="!(IsKimHere())", shape=diamond];
+	  232 [label="Variable[\"seafort.console_kim_reacted_to_on\"]"];
+	  233 [label="Variable[\"seafort.console_kim_reacted_to_on\"]", shape=diamond];
+	  234 [label="!(Variable[\"seafort.console_kim_reacted_to_on\"])", shape=diamond];
+	  235 [label="Variable[\"seafort.console_kim_said_needs_electricity_from_generator\"]"];
+	  236 [label="Variable[\"seafort.console_kim_said_needs_electricity_from_generator\"]", shape=diamond];
+	  237 [label="!(Variable[\"seafort.console_kim_said_needs_electricity_from_generator\"])", shape=diamond];
+	  238 [label="Logic: An *idea* lights up in your head..."];
+	  239 [label="Jump to: [consolinghub]"];
+	  240 [label="You: \"Before -- outside. When we were walking across the sand, I felt someone watching me.\""];
+	  241 [label="You: \"My gun is out of bullets, by the way.\""];
+	  242 [label="IsCunoInParty()"];
+	  243 [label="IsCunoInParty()", shape=diamond];
+	  244 [label="!(IsCunoInParty())", shape=diamond];
+	  245 [label="Cuno: \"Cuno isn't a machine-meister.\" He stares at the dials. \"'Urgence -- Ouvert!', 'Allumer', 'Radiodiffusé'.... Yeah, why the fuck not?\""];
+	  246 [label="You: \"Don't worry kid. I'm a good guy with a gun.\""];
+	  247 [label="You: Turn: 'Emergency -- Open!'"];
+	  248 [label="You: \"Wait, what about this fuel I found from my MC?\" (Show him the canister.)"];
+	  249 [label="Variable[\"seafort.generator_where_do_wires_lead\"]"];
+	  250 [label="Variable[\"seafort.generator_where_do_wires_lead\"]", shape=diamond];
+	  251 [label="!(Variable[\"seafort.generator_where_do_wires_lead\"])", shape=diamond];
+	  252 [label="You: Push: 'Light (Interior)'."];
+	  253 [label="Feld \"Insular\" Console: The console is powered off and covered in dust. 'Urgence -- Ouvert!' reads a dial key. 'Allumer', reads another. The frequency band says: 'Radiodiffusé'."];
+	  254 [label="IsKimHere()"];
+	  255 [label="IsKimHere()", shape=diamond];
+	  256 [label="!(IsKimHere())", shape=diamond];
+	  257 [label="Cuno: \"Cuno's gonna stop you right there. This...\" he strokes the console, \"ain't gonna work.\" He points upward, to the generator. \"Not without the juice. You gotta fuel that shit if you want it to work. Let's look outside maybe?\""];
+	  258 [label="Kim Kitsuragi: \"We should look around outside. There are barrels all over, maybe one of them still has something in it...\" He looks into the dim light to his right."];
+	  259 [label="Kim Kitsuragi: \"We're better off looking for a mechanical solution -- if we need one at all.\""];
+	  260 [label="You: \"Or we could get some from the boat engine?\""];
+	  261 [label="Kim Kitsuragi: \"My Kineema?\" He shakes his head. \"I don't want to do that. Let's just look around.\""];
+	  262 [label="Jump to: [consolinghub]"];
+	  263 [label="Kim Kitsuragi: \"After you.\" The lieutenant gestures at the opening."];
+	  264 [label="IsNight()"];
+	  265 [label="IsNight()", shape=diamond];
+	  266 [label="!(IsNight())", shape=diamond];
+	  267 [label="Variable[\"seafort.console_half_light_fear\"]"];
+	  268 [label="Variable[\"seafort.console_half_light_fear\"]", shape=diamond];
+	  269 [label="!(Variable[\"seafort.console_half_light_fear\"])", shape=diamond];
+	  270 [label="Small Blast Door: The door comes screeching to a halt. Behind it you see a hole in the concrete wall, where light shines in."];
+	  271 [label="Kim Kitsuragi: \"The console of an antique computation device.\" The lieutenant points to the wires running into the machine. \"The generator upstairs, with wires coming out. They terminate here.\""];
+	  272 [label="consolinghub"];
+	  273 [label="You: Turn: 'Emergency -- Open!'"];
+	  274 [label="You: Slide: 'Radio' dial."];
+	  275 [label="You: \"Are you sure?\""];
+	  276 [label="Feld \"Insular\" Console: The old button is stuck."];
+	  277 [label="Kim Kitsuragi: \"Don't worry. I have a gun.\" He takes out his sidearm, checks the barrel, then holsters it again."];
+	  278 [label="IsKimHere()"];
+	  279 [label="IsKimHere()", shape=diamond];
+	  280 [label="!(IsKimHere())", shape=diamond];
+	  281 [label="You: \"There was something I needed to do with this console first...\""];
+	  0 -> 1
+	  1 -> 185
+	  2 -> 273
+	  3 -> 240
+	  4 -> 189
+	  5 -> 17
+	  6 -> 126
+	  7 -> 104
+	  8 -> 9
+	  8 -> 10
+	  9 -> 16
+	  10 -> 175
+	  11 -> 177
+	  12 -> 182
+	  14 -> 2
+	  15 -> 127
+	  16 -> 249
+	  16 -> 114
+	  16 -> 37
+	  16 -> 261
+	  17 -> 95
+	  18 -> 38
+	  19 -> 94
+	  20 -> 82
+	  21 -> 33
+	  21 -> 229
+	  21 -> 206
+	  22 -> 273
+	  23 -> 24
+	  23 -> 25
+	  24 -> 119
+	  25 -> 179
+	  26 -> 27
+	  26 -> 28
+	  27 -> 258
+	  28 -> 15
+	  29 -> 30
+	  29 -> 31
+	  30 -> 41
+	  30 -> 157
+	  31 -> 134
+	  32 -> 124
+	  34 -> 40
+	  35 -> 130
+	  35 -> 227
+	  35 -> 20
+	  35 -> 53
+	  35 -> 247
+	  35 -> 216
+	  35 -> 282
+	  36 -> 276
+	  36 -> 87
+	  37 -> 115
+	  38 -> 50
+	  39 -> 268
+	  40 -> 74
+	  41 -> 192
+	  42 -> 57
+	  43 -> 44
+	  43 -> 45
+	  44 -> 224
+	  45 -> 61
+	  46 -> 126
+	  47 -> 48
+	  47 -> 49
+	  48 -> 90
+	  49 -> 137
+	  50 -> 51
+	  50 -> 52
+	  51 -> 126
+	  52 -> 215
+	  54 -> 107
+	  55 -> 110
+	  56 -> 273
+	  57 -> 273
+	  58 -> 59
+	  58 -> 60
+	  59 -> 4
+	  60 -> 169
+	  61 -> 211
+	  62 -> 56
+	  63 -> 273
+	  64 -> 65
+	  64 -> 66
+	  65 -> 7
+	  66 -> 104
+	  67 -> 114
+	  67 -> 37
+	  67 -> 261
+	  68 -> 56
+	  69 -> 71
+	  70 -> 225
+	  71 -> 161
+	  73 -> 75
+	  73 -> 76
+	  74 -> 148
+	  75 -> 199
+	  76 -> 3
+	  77 -> 80
+	  77 -> 79
+	  78 -> 117
+	  79 -> 201
+	  80 -> 105
+	  81 -> 94
+	  82 -> 220
+	  83 -> 229
+	  84 -> 233
+	  85 -> 2
+	  86 -> 260
+	  87 -> 3
+	  88 -> 124
+	  89 -> 140
+	  90 -> 92
+	  90 -> 93
+	  91 -> 174
+	  92 -> 89
+	  93 -> 35
+	  94 -> 126
+	  95 -> 71
+	  96 -> 98
+	  96 -> 99
+	  97 -> 77
+	  98 -> 3
+	  99 -> 101
+	  99 -> 102
+	  100 -> 277
+	  101 -> 221
+	  102 -> 5
+	  102 -> 73
+	  102 -> 170
+	  102 -> 142
+	  102 -> 143
+	  102 -> 241
+	  102 -> 18
+	  102 -> 242
+	  103 -> 78
+	  104 -> 273
+	  105 -> 94
+	  106 -> 108
+	  106 -> 109
+	  107 -> 218
+	  108 -> 178
+	  109 -> 228
+	  110 -> 112
+	  110 -> 113
+	  111 -> 85
+	  112 -> 254
+	  113 -> 262
+	  114 -> 178
+	  116 -> 201
+	  117 -> 212
+	  118 -> 62
+	  119 -> 121
+	  119 -> 122
+	  120 -> 86
+	  121 -> 133
+	  122 -> 107
+	  123 -> 273
+	  124 -> 273
+	  125 -> 103
+	  126 -> 128
+	  126 -> 129
+	  127 -> 123
+	  128 -> 217
+	  129 -> 176
+	  130 -> 94
+	  131 -> 259
+	  132 -> 2
+	  133 -> 136
+	  133 -> 135
+	  134 -> 88
+	  135 -> 97
+	  136 -> 138
+	  136 -> 139
+	  137 -> 200
+	  138 -> 162
+	  139 -> 273
+	  140 -> 39
+	  141 -> 6
+	  142 -> 145
+	  143 -> 126
+	  144 -> 126
+	  145 -> 34
+	  146 -> 264
+	  147 -> 199
+	  148 -> 150
+	  148 -> 151
+	  149 -> 250
+	  150 -> 243
+	  151 -> 273
+	  152 -> 71
+	  153 -> 155
+	  153 -> 156
+	  154 -> 47
+	  155 -> 236
+	  156 -> 32
+	  157 -> 160
+	  157 -> 159
+	  158 -> 246
+	  159 -> 96
+	  160 -> 273
+	  161 -> 163
+	  161 -> 164
+	  162 -> 271
+	  163 -> 146
+	  164 -> 125
+	  165 -> 168
+	  165 -> 167
+	  166 -> 132
+	  167 -> 26
+	  168 -> 263
+	  169 -> 278
+	  170 -> 172
+	  170 -> 173
+	  171 -> 226
+	  172 -> 96
+	  173 -> 124
+	  174 -> 16
+	  175 -> 94
+	  176 -> 228
+	  177 -> 273
+	  178 -> 180
+	  178 -> 181
+	  179 -> 68
+	  180 -> 205
+	  181 -> 184
+	  181 -> 183
+	  182 -> 69
+	  183 -> 195
+	  184 -> 186
+	  184 -> 187
+	  185 -> 111
+	  186 -> 21
+	  187 -> 228
+	  188 -> 190
+	  188 -> 191
+	  189 -> 239
+	  190 -> 134
+	  191 -> 193
+	  191 -> 194
+	  192 -> 36
+	  193 -> 91
+	  194 -> 196
+	  194 -> 197
+	  195 -> 116
+	  196 -> 96
+	  197 -> 188
+	  198 -> 273
+	  199 -> 265
+	  200 -> 35
+	  201 -> 203
+	  201 -> 204
+	  202 -> 107
+	  203 -> 54
+	  204 -> 56
+	  205 -> 84
+	  206 -> 125
+	  207 -> 209
+	  207 -> 210
+	  208 -> 58
+	  209 -> 43
+	  210 -> 273
+	  211 -> 213
+	  211 -> 214
+	  212 -> 279
+	  213 -> 230
+	  214 -> 126
+	  215 -> 19
+	  216 -> 123
+	  217 -> 219
+	  218 -> 83
+	  218 -> 11
+	  218 -> 55
+	  219 -> 228
+	  220 -> 222
+	  220 -> 223
+	  221 -> 207
+	  222 -> 165
+	  223 -> 189
+	  224 -> 273
+	  225 -> 161
+	  226 -> 106
+	  227 -> 178
+	  228 -> 149
+	  229 -> 232
+	  229 -> 231
+	  230 -> 153
+	  231 -> 158
+	  232 -> 234
+	  232 -> 235
+	  233 -> 56
+	  234 -> 23
+	  235 -> 237
+	  235 -> 238
+	  236 -> 255
+	  237 -> 166
+	  238 -> 29
+	  239 -> 273
+	  240 -> 46
+	  241 -> 144
+	  242 -> 244
+	  242 -> 245
+	  243 -> 63
+	  244 -> 152
+	  245 -> 71
+	  246 -> 131
+	  247 -> 154
+	  248 -> 67
+	  249 -> 251
+	  249 -> 252
+	  250 -> 272
+	  251 -> 22
+	  252 -> 100
+	  253 -> 56
+	  254 -> 256
+	  254 -> 257
+	  255 -> 14
+	  256 -> 120
+	  257 -> 202
+	  258 -> 8
+	  259 -> 57
+	  260 -> 198
+	  261 -> 188
+	  262 -> 273
+	  263 -> 103
+	  264 -> 266
+	  264 -> 267
+	  265 -> 141
+	  266 -> 39
+	  267 -> 269
+	  267 -> 270
+	  268 -> 147
+	  269 -> 264
+	  270 -> 64
+	  271 -> 273
+	  272 -> 12
+	  272 -> 13
+	  272 -> 274
+	  272 -> 275
+	  272 -> 118
+	  272 -> 248
+	  272 -> 253
+	  273 -> 154
+	  274 -> 208
+	  275 -> 42
+	  276 -> 125
+	  277 -> 50
+	  278 -> 280
+	  278 -> 281
+	  279 -> 72
+	  280 -> 171
+	  281 -> 81
+}
+

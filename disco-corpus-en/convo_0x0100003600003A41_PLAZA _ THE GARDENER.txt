@@ -1,0 +1,970 @@
+# PLAZA / THE GARDENER
+# The Gardener stands on the corner of Whirling and is there to help you navigate the streets of Martinaise. Later it turns out she's a Union spy. You get to know from here that Joyce is in town.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Savoir Faire: Pier? Buildings? Apartments? You should *explore*, maybe scale a wall?"];
+	  3 [label="The Gardener: IsKimHere()"];
+	  4 [label="IsKimHere()", shape=diamond];
+	  5 [label="!(IsKimHere())", shape=diamond];
+	  6 [label="You: \"The body is down.\""];
+	  7 [label="The Gardener: \"Oh... right.\" She scratches her cheek. \"Can you tell me when you've taken him away then?\""];
+	  8 [label="You: \"The body is gone.\""];
+	  9 [label="You: \"Go on, it's okay.\""];
+	  10 [label="You: \"But?\""];
+	  11 [label="The Gardener: Variable[\"whirling.mirror_first_greeting_done\"]"];
+	  12 [label="Variable[\"whirling.mirror_first_greeting_done\"]", shape=diamond];
+	  13 [label="!(Variable[\"whirling.mirror_first_greeting_done\"])", shape=diamond];
+	  14 [label="The Gardener: IsKimHere()"];
+	  15 [label="IsKimHere()", shape=diamond];
+	  16 [label="!(IsKimHere())", shape=diamond];
+	  17 [label="The Gardener: IsKimHere()"];
+	  18 [label="IsKimHere()", shape=diamond];
+	  19 [label="!(IsKimHere())", shape=diamond];
+	  20 [label="You: \"Yes. That's the one.\""];
+	  21 [label="You: \"You don't like the boat?\""];
+	  22 [label="You: Let it go."];
+	  23 [label="The Gardener: \"Anything else?\" The girl watches you rub your sides for warmth."];
+	  24 [label="You: \"Working on what?\""];
+	  25 [label="You: \"Cool. And what are you doing here?\""];
+	  26 [label="The Gardener: \"Of course. Where to?\""];
+	  27 [label="You: \"Thanks, that's all for now.\""];
+	  28 [label="You: What's going on here?"];
+	  29 [label="You: The traffic jam?"];
+	  30 [label="You: Why am I thinking this, I said I'm black as fuck."];
+	  31 [label="music"];
+	  32 [label="You: \"Nothing, this is just something my brain told me.\""];
+	  33 [label="The Gardener: CheckItem(\"ammonia_ampoule\")"];
+	  34 [label="CheckItem(\"ammonia_ampoule\")", shape=diamond];
+	  35 [label="!(CheckItem(\"ammonia_ampoule\"))", shape=diamond];
+	  36 [label="Inland Empire: Her gloves -- you get the feeling that you need them. You have a dead body to deal with, after all."];
+	  37 [label="Composure: She's very well composed. Back straight."];
+	  38 [label="The Gardener: Variable[\"plaza.gardener_authority_clean_the_graffito\"]"];
+	  39 [label="Variable[\"plaza.gardener_authority_clean_the_graffito\"]", shape=diamond];
+	  40 [label="!(Variable[\"plaza.gardener_authority_clean_the_graffito\"])", shape=diamond];
+	  41 [label="Jump to: [MAIN HUB]"];
+	  42 [label="The Gardener: Variable[\"plaza.gardener_perc_black\"]"];
+	  43 [label="Variable[\"plaza.gardener_perc_black\"]", shape=diamond];
+	  44 [label="!(Variable[\"plaza.gardener_perc_black\"])", shape=diamond];
+	  45 [label="music"];
+	  46 [label="The Gardener: IsKimHere()"];
+	  47 [label="IsKimHere()", shape=diamond];
+	  48 [label="!(IsKimHere())", shape=diamond];
+	  49 [label="The Gardener: \"I have a greenhouse in the yard there.\" She gestures over her shoulder. \"I've been trying to get some work done...\""];
+	  50 [label="The Gardener: \"It's there.\" She points north. \"In the yard, right through the hole in the fence.\""];
+	  51 [label="You: \"It was sent to processing in the morgue.\""];
+	  52 [label="Drama: Of course, sire, of course."];
+	  53 [label="Perception (Sight): Okay. The stimuli end."];
+	  54 [label="You: \"It's alright, I didn't mean to startle you.\""];
+	  55 [label="Encyclopedia: *Pig* is a widely-used term for members of the Police. It's not loving."];
+	  56 [label="The Gardener: \"Okay.\" She straightens her back."];
+	  57 [label="You: \"It's gone from the *tree*.\""];
+	  58 [label="Jump to: [MAIN HUB]"];
+	  59 [label="Rhetoric: She realizes she's about to criticize your work -- or lack thereof."];
+	  60 [label="You: \"You're black.\""];
+	  61 [label="You: \"So, what kind of music do you listen to nowadays?\""];
+	  62 [label="The Gardener: \"We don't see a lot of police around here, that's all.\""];
+	  63 [label="The Gardener: \"Me? I'm just a gardener.\""];
+	  64 [label="Interfacing: Those gloves would really come in handy for the autopsy."];
+	  65 [label="The Gardener: CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"]"];
+	  66 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"]", shape=diamond];
+	  67 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"])", shape=diamond];
+	  68 [label="The Gardener: \"Sure -- I'm done with them.\" She takes a small capsule out of her breast pocket and hands it to you."];
+	  69 [label="Drama: Surely it was nothing, sire. Just paranoia."];
+	  70 [label="You: Yeah, I'm not gonna say that."];
+	  71 [label="You: \"I was talking to him, yes.\""];
+	  72 [label="The Gardener: Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"]"];
+	  73 [label="Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"]", shape=diamond];
+	  74 [label="!(Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"])", shape=diamond];
+	  75 [label="Jump to: [MAIN HUB]"];
+	  76 [label="The Gardener: IsKimHere()"];
+	  77 [label="IsKimHere()", shape=diamond];
+	  78 [label="!(IsKimHere())", shape=diamond];
+	  79 [label="Jump to: [directions hub]"];
+	  80 [label="Composure: She hides it well, but behind the sweat and dirt there is something... else. In her rigid posture."];
+	  81 [label="Authority: Nothing to see here. Just a regular law official reacting to every day stimuli. Nothing noteworthy here."];
+	  82 [label="Jump to: [directions hub]"];
+	  83 [label="The Gardener: \"Of course. What can I help you with?\""];
+	  84 [label="The Gardener: \"Of course, I won't hold you back.\" She wipes her brow with the canary yellow glove."];
+	  85 [label="The Gardener: \"There's the pier, the Capeside apartment buildings. Some more tenements... Not a lot, really.\""];
+	  86 [label="You: \"What is on the other side of the canal?\""];
+	  87 [label="Conceptualization: Yeah, keep her in the *loop*. It's strangely enjoyable to report back on the minute progress you've made. Even to strangers."];
+	  88 [label="The Gardener: IsKimHere()"];
+	  89 [label="IsKimHere()", shape=diamond];
+	  90 [label="!(IsKimHere())", shape=diamond];
+	  91 [label="The Gardener: \"I'm a night hawk, what can I say?\" She flashes a smile."];
+	  92 [label="Drama: There's a little meanness in that smile."];
+	  93 [label="Perception (Smell): Even all the way over here, there's a drop of death in the spring air."];
+	  94 [label="You: No. I don't want to say that."];
+	  95 [label="Kim Kitsuragi: \"No need to worry,\" the lieutenant steps in, \"we're not saying you did.\""];
+	  96 [label="The Gardener: \"Oh. Okay.\" She doesn't quite know what to say. \"Thanks for keeping me in the know, sir.\""];
+	  97 [label="Jump to: [MAIN HUB]"];
+	  98 [label="You: Shake it off, you seem to be under some kind of cold spell..."];
+	  99 [label="The Gardener: Variable[\"plaza.gardener_black_done\"]  or  Variable[\"plaza.gardener_viscal_rc_failed\"]"];
+	  100 [label="Variable[\"plaza.gardener_black_done\"]  or  Variable[\"plaza.gardener_viscal_rc_failed\"]", shape=diamond];
+	  101 [label="!(Variable[\"plaza.gardener_black_done\"]  or  Variable[\"plaza.gardener_viscal_rc_failed\"])", shape=diamond];
+	  102 [label="Jump to: [MAIN HUB]"];
+	  103 [label="You: \"I have some questions for you.\""];
+	  104 [label="The Gardener: \"It's raining again...\" The young woman resting by the wheelbarrow sighs."];
+	  105 [label="gloves_are_here"];
+	  106 [label="You: \"My partner told me you may have ammonia -- can I have some?\""];
+	  107 [label="You: \"What is in the East?\""];
+	  108 [label="The Gardener: \"The harbour gates. Some kind of commotion, I think? I don't follow the local politics.\" She shrugs. \"A Frittte store too.\""];
+	  109 [label="You: \"What is in the West?\""];
+	  110 [label="Jump to: [directions hub]"];
+	  111 [label="Rhetoric: You didn't say she wrote it, you asked what it was doing there."];
+	  112 [label="Authority: No! Do *not* keep this random civilian in any loops."];
+	  113 [label="The Gardener: \"Snow has nutrients in it -- helps everything green up in the spring. At least that's what my grandma always told me.\" She smiles shyly."];
+	  114 [label="The Gardener: \"Mhmh.\" She looks at her wheelbarrow, where the snow is slowly melting."];
+	  115 [label="You: \"Are you by any chance keeping an eye on us?\""];
+	  116 [label="Kim Kitsuragi: \"We should probably proceed with our business in Martinaise.\" The lieutenant interrupts her, turning to you. \"Unless you didn't have any more *official* questions?\""];
+	  117 [label="You: \"Do you listen to disco?\""];
+	  118 [label="Jump to: [MAIN HUB]"];
+	  119 [label="Jump to: [MAIN HUB]"];
+	  120 [label="You: \"What about the other sign. *Pigs go home*? Who are these pigs?\""];
+	  121 [label="Authority: Even if she didn't write it, she should CLEAN IT."];
+	  122 [label="The Gardener: \"Like gone-gone?\" The girl repeats, her face beaming with appreciation."];
+	  123 [label="The Gardener: Variable[\"plaza.gardener_main_hub_reached\"]"];
+	  124 [label="Variable[\"plaza.gardener_main_hub_reached\"]", shape=diamond];
+	  125 [label="!(Variable[\"plaza.gardener_main_hub_reached\"])", shape=diamond];
+	  126 [label="The Gardener: \"Yes.\" She looks relieved. \"It smells pretty bad, so I have to take breaks.\""];
+	  127 [label="Kim Kitsuragi: \"Yes. A representative of the harbour. She should have set up operations nearby.\""];
+	  128 [label="You: \"What is in the South?\""];
+	  129 [label="You: \"Maybe.\" (Nod.) \"Pleased to meet you, Just A Gardener. I have another question.\""];
+	  130 [label="You: Squint your eyes and look at her intently."];
+	  131 [label="You: Variable[\"plaza.gardener_viscal_rc\"]"];
+	  132 [label="Variable[\"plaza.gardener_viscal_rc\"]", shape=diamond];
+	  133 [label="!(Variable[\"plaza.gardener_viscal_rc\"])", shape=diamond];
+	  134 [label="The Gardener: Variable[\"plaza.gardener_viscal_rc\"]"];
+	  135 [label="Variable[\"plaza.gardener_viscal_rc\"]", shape=diamond];
+	  136 [label="!(Variable[\"plaza.gardener_viscal_rc\"])", shape=diamond];
+	  137 [label="Visual Calculus: Are you entirely sure you're black as *fuck*? You should really check out that mirror thing. For now, go with she's black. It's important to the case."];
+	  138 [label="Jump to: [MAIN HUB]"];
+	  139 [label="The Gardener: Variable[\"TASK.perform_field_autopsy\"]"];
+	  140 [label="Variable[\"TASK.perform_field_autopsy\"]", shape=diamond];
+	  141 [label="!(Variable[\"TASK.perform_field_autopsy\"])", shape=diamond];
+	  142 [label="The Gardener: Variable[\"TASK.ask_gardner_why_is_she_gardening_in_march_done\"]"];
+	  143 [label="Variable[\"TASK.ask_gardner_why_is_she_gardening_in_march_done\"]", shape=diamond];
+	  144 [label="!(Variable[\"TASK.ask_gardner_why_is_she_gardening_in_march_done\"])", shape=diamond];
+	  145 [label="You: \"I have to run.\" [Leave.]"];
+	  146 [label="The Gardener: \"Oh that...\" She points north. \"That's right there, in the yard.\""];
+	  147 [label="Jump to: [MAIN HUB]"];
+	  148 [label="You: So what? I'm also black."];
+	  149 [label="Perception (Sight): I don't know -- what's the problem? You're just *reacting to stimuli*."];
+	  150 [label="The Gardener: \"I don't know...\" She looks around. \"Whatever's on the radio?\""];
+	  151 [label="Jump to: [directions hub]"];
+	  152 [label="intro_hub"];
+	  153 [label="You: \"Good to meet you, Just-A-Gardener. Another question then.\""];
+	  154 [label="The Gardener: Variable[\"plaza.gardener_first_ending_done\"]"];
+	  155 [label="Variable[\"plaza.gardener_first_ending_done\"]", shape=diamond];
+	  156 [label="!(Variable[\"plaza.gardener_first_ending_done\"])", shape=diamond];
+	  157 [label="The Gardener: \"Some shops and a bridge. The canal bridge leads to the coast, but it's broken, I think? Some kind of accident probably.\""];
+	  158 [label="Empathy: She's not okay with it. It's a display of power and she feels threatened by it. You don't know why."];
+	  159 [label="Jump to: [MAIN HUB]"];
+	  160 [label="Perception (Sight): The place looks the part. There's graffito everywhere and the traffic jam behind you is completely *unregulated*."];
+	  161 [label="Jump to: [MAIN HUB]"];
+	  162 [label="The Gardener: Variable[\"TASK.inspect_body_parts\"]"];
+	  163 [label="Variable[\"TASK.inspect_body_parts\"]", shape=diamond];
+	  164 [label="!(Variable[\"TASK.inspect_body_parts\"])", shape=diamond];
+	  165 [label="You: \"You could clean it up if you get a chance. Be a citizen -- be a winner.\""];
+	  166 [label="Empathy: There's discomfort. She stops mid sentence."];
+	  167 [label="Perception (Sight): She's black."];
+	  168 [label="Kim Kitsuragi: \"We should proceed with our business in Martinaise.\" The lieutenant turns to you."];
+	  169 [label="The Gardener: \"I don't know... the abandoned kind? It used to gather every spring, but there's nothing to do there now. Just drug addicts.\""];
+	  170 [label="The Gardener: \"Uh... I'm gonna say no.\""];
+	  171 [label="The Gardener: \"I'm glad to hear that.\" A quick smile. \"Thank you, officer. Looks like I'll get mint in the ground by April.\""];
+	  172 [label="You: I don't care, I just wanna enjoy the nice moment."];
+	  173 [label="Empathy: She seems more perplexed than cornered."];
+	  174 [label="Composure: She's a pro. Nothing short of coming face to face with the fatman himself would make her admit it right now."];
+	  175 [label="You: \"What is this *fuck the police* business?\""];
+	  176 [label="The Gardener: \"Excuse me?\" She doesn't understand."];
+	  177 [label="MAIN HUB"];
+	  178 [label="The Gardener: Variable[\"auto.is_raining\"]"];
+	  179 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  180 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  181 [label="The Gardener: Variable[\"auto.is_snowing\"]"];
+	  182 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  183 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  184 [label="the_girl_is"];
+	  185 [label="You: \"Nothing.\""];
+	  186 [label="The Gardener: \"You're back.\""];
+	  187 [label="The Gardener: \"Thank you.\" She smiles politely. \"My head is about to explode from all the salts I've had to inhale.\""];
+	  188 [label="The Gardener: Variable[\"TASK.perform_field_autopsy\"]"];
+	  189 [label="Variable[\"TASK.perform_field_autopsy\"]", shape=diamond];
+	  190 [label="!(Variable[\"TASK.perform_field_autopsy\"])", shape=diamond];
+	  191 [label="The Gardener: \"Go easy on that stuff. It gave me a terrible headache.\""];
+	  192 [label="You: \"Okay then. Snow it is.\""];
+	  193 [label="Jump to: [SNOWHUB]"];
+	  194 [label="Visual Calculus: That's right. And the canal, the bookstore, the harbour gates... This is a great vantage point -- for keeping an eye on *you*."];
+	  195 [label="The Gardener: \"Okay.\""];
+	  196 [label="You: \"It's so late and you're still here.\""];
+	  197 [label="Inland Empire: Odd..."];
+	  198 [label="Jump to: [MAIN HUB]"];
+	  199 [label="You: \"Evrart confirmed, he sent you to spy on us.\""];
+	  200 [label="The Gardener: \"Okay,\" she replies, shoulders relaxing."];
+	  201 [label="You: \"I've investigated the body. Shouldn't be long till we get it down.\""];
+	  202 [label="You: \"No, the body is down on the ground.\""];
+	  203 [label="You: \"I'm looking for a dead body.\""];
+	  204 [label="The Gardener: \"Oh, that must be the woman on the giant boat.\" She points northwest. \"There's one docked on the pier. It arrived a couple of weeks ago. It's very hard to miss.\""];
+	  205 [label="The Gardener: Variable[\"plaza.gardener_prehub_reached\"]"];
+	  206 [label="Variable[\"plaza.gardener_prehub_reached\"]", shape=diamond];
+	  207 [label="!(Variable[\"plaza.gardener_prehub_reached\"])", shape=diamond];
+	  208 [label="The Gardener: Variable[\"plaza.gardener_gloves_inland\"]"];
+	  209 [label="Variable[\"plaza.gardener_gloves_inland\"]", shape=diamond];
+	  210 [label="!(Variable[\"plaza.gardener_gloves_inland\"])", shape=diamond];
+	  211 [label="The Gardener: \"Oh?\" She cranes her neck. \"Well, I didn't write it there. I'm just sitting here.\""];
+	  212 [label="Drama: You get a strange feeling, looking at that smile. It spoils the moment. It is disingenuous."];
+	  213 [label="The Gardener: \"Ask me a normal question or leave me alone.\""];
+	  214 [label="You: Noted, but I'll keep it to myself."];
+	  215 [label="The Gardener: Variable[\"plaza.gardener_asked_fuck_the_police\"]"];
+	  216 [label="Variable[\"plaza.gardener_asked_fuck_the_police\"]", shape=diamond];
+	  217 [label="!(Variable[\"plaza.gardener_asked_fuck_the_police\"])", shape=diamond];
+	  218 [label="Jump to: [MAIN HUB]"];
+	  219 [label="The Gardener: \"If you don't have anything normal to say I had something I needed to think about.\""];
+	  220 [label="Conceptualization: What are you waiting for, ask about the disco already. You need some fresh jams to get out of this rut."];
+	  221 [label="Inland Empire: In the West is the miracle..."];
+	  222 [label="The Gardener: Variable[\"XP.got_gloves\"]"];
+	  223 [label="Variable[\"XP.got_gloves\"]", shape=diamond];
+	  224 [label="!(Variable[\"XP.got_gloves\"])", shape=diamond];
+	  225 [label="The Gardener: \"Is that so?\" Her face remains expressionless as she shrugs. \"I don't know anything about that. Must be a misunderstanding.\""];
+	  226 [label="Jump to: [MAIN HUB]"];
+	  227 [label="You: \"Never mind.\""];
+	  228 [label="The Gardener: \"In heaven?\" A quick smile. \"Thank you, officer. Looks like I'll get mint in the ground by April.\""];
+	  229 [label="Jump to: [MAIN HUB]"];
+	  230 [label="The Gardener: \"I am pleased to meet you too, officer.\""];
+	  231 [label="The Gardener: \"Sure -- I'm done with it.\" She takes a small capsule out of her breast pocket and hands it to you."];
+	  232 [label="directions hub"];
+	  233 [label="You: \"I didn't say you wrote it.\""];
+	  234 [label="The Gardener: \"Sir, it was *implied* in your question.\""];
+	  235 [label="Rhetoric: The timidness is gone for a second. Something else takes it's place. A readiness."];
+	  236 [label="Visual Calculus: All you can see is the fact that her skin is a different colour from yours. That's literally all. You're gonna have to run with that."];
+	  237 [label="Reaction Speed: Better to get off before it starts. Nothing left to gain here."];
+	  238 [label="The Gardener: \"It is, because he sent you to harass me, didn't he? You shouldn't listen to him.\" She points to the defaced sign above her on the corner. \"It was probably him, who wrote that.\""];
+	  239 [label="The Gardener: There's silence. The smallest of smiles."];
+	  240 [label="Jump to: [MAIN HUB]"];
+	  241 [label="The Gardener: \"What does that mean?\" She doesn't flinch."];
+	  242 [label="The Gardener: Variable[\"plaza.gardener_interfacing_gloves\"]"];
+	  243 [label="Variable[\"plaza.gardener_interfacing_gloves\"]", shape=diamond];
+	  244 [label="!(Variable[\"plaza.gardener_interfacing_gloves\"])", shape=diamond];
+	  245 [label="Logic: She's still here, because you're still here."];
+	  246 [label="Jump to: [MAIN HUB]"];
+	  247 [label="You: \"It's alright, I'm just asking.\""];
+	  248 [label="You: \"Can I borrow your gloves? I'm doing an autopsy.\""];
+	  249 [label="The Gardener: \"It was clear just an hour ago...\""];
+	  250 [label="The Gardener: \"What do you mean?\""];
+	  251 [label="You: \"Later.\" [Leave.]"];
+	  252 [label="The Gardener: \"See you around, officer.\""];
+	  253 [label="The Gardener: \"In Martinaise, sir. In the city of Revachol...\" She looks around, thinking what else to say. \"This intersection is called Roundabout North.\""];
+	  254 [label="The Gardener: \"Wild Pines? You mean the company woman?\""];
+	  255 [label="You: \"Tell me, what exactly have you been doing in your greenhouse -- in *March*?\""];
+	  256 [label="The Gardener: \"Sure thing.\" She narrows her eyes."];
+	  257 [label="The Gardener: \"A bit much? What are you talking about? That's what my grandma told me, okay?\""];
+	  258 [label="You: \"What nutrients?\""];
+	  259 [label="Reaction Speed: No, you don't. Just back up, cancel this."];
+	  260 [label="The Gardener: IsKimHere()"];
+	  261 [label="IsKimHere()", shape=diamond];
+	  262 [label="!(IsKimHere())", shape=diamond];
+	  263 [label="The Gardener: \"Uh... I'm gonna say no.\""];
+	  264 [label="Inland Empire: Psst! Her gloves -- they'll help you with the autopsy."];
+	  265 [label="Visual Calculus: She has changed the subject and won't let you get back to this."];
+	  266 [label="Jump to: [directions hub]"];
+	  267 [label="You: \"This street sign says fuck the police.\" (Point to it.)"];
+	  268 [label="The Gardener: \"I don't know anything about that either. As I said, I didn't write it.\""];
+	  269 [label="The Gardener: \"Down...?\" The gardener straightens her back. \"Do you mean the body is finally gone?\""];
+	  270 [label="You: \"It's not in the yard anymore. It's in... some other place now.\""];
+	  271 [label="The Gardener: \"It felt like springtime just a few days ago...\""];
+	  272 [label="optionsgohere"];
+	  273 [label="Kim Kitsuragi: \"Don't worry, miss. We're here to clean it up -- you can get to work soon.\""];
+	  274 [label="You: \"You sound surprised.\""];
+	  275 [label="The Gardener: \"I can't believe it's snowing again...\" The young woman resting by the wheelbarrow sighs."];
+	  276 [label="You: \"One more thing... Can I borrow your gloves?\""];
+	  277 [label="You: \"Do you still have your salts? I think I could use some.\""];
+	  278 [label="The Gardener: \"It's just water...\" She looks at the water, squinting. \"No, actually, I think they call it the Martinaise Inlet. There are some islands in the bay, but they're hard to reach.\""];
+	  279 [label="The Gardener: \"We're in Martinaise, sir.\" She looks around. \"This intersection is called... Roundabout North, I think.\""];
+	  280 [label="Kim Kitsuragi: \"He knows where we are. He just wants directions.\" The lieutenant seems uncomfortable with the level of disorientation you are displaying."];
+	  281 [label="The Gardener: Variable[\"TASK.perform_field_autopsy_done\"]  and  CheckItem(\"gloves_garden\") == false"];
+	  282 [label="Variable[\"TASK.perform_field_autopsy_done\"]  and  CheckItem(\"gloves_garden\") == false", shape=diamond];
+	  283 [label="!(Variable[\"TASK.perform_field_autopsy_done\"]  and  CheckItem(\"gloves_garden\") == false)", shape=diamond];
+	  284 [label="Rhetoric: Absolutely gone."];
+	  285 [label="The Gardener: Variable[\"plaza.gardener_conze_yes_keep_her_in_the_loop\"]"];
+	  286 [label="Variable[\"plaza.gardener_conze_yes_keep_her_in_the_loop\"]", shape=diamond];
+	  287 [label="!(Variable[\"plaza.gardener_conze_yes_keep_her_in_the_loop\"])", shape=diamond];
+	  288 [label="Drama: Yes, think about the cute grandma, not the weird snow."];
+	  289 [label="The Gardener: IsKimHere()"];
+	  290 [label="IsKimHere()", shape=diamond];
+	  291 [label="!(IsKimHere())", shape=diamond];
+	  292 [label="The Gardener: IsKimHere()"];
+	  293 [label="IsKimHere()", shape=diamond];
+	  294 [label="!(IsKimHere())", shape=diamond];
+	  295 [label="Kim Kitsuragi: \"You've been resting here for quite a *while*, haven't you?\" The lieutenant intervenes, looking at her intently."];
+	  296 [label="Visual Calculus: Glad to have been of service. Now you know -- the locals are keeping tabs on you."];
+	  297 [label="Suggestion: He didn't think you were about to bust a case."];
+	  298 [label="Kim Kitsuragi: \"We should proceed with our business in Martinaise.\" The lieutenant turns to you."];
+	  299 [label="The Gardener: \"I like the city at night. Don't you?\" She looks into the darkness and smiles again."];
+	  300 [label="Jump to: [MAIN HUB]"];
+	  301 [label="Jump to: [MAIN HUB]"];
+	  302 [label="You: \"No, just gone.\""];
+	  303 [label="The Gardener: \"As you *probably* know, there's a corpse hanging from a tree there. It smells pretty bad. So I have to take breaks.\""];
+	  304 [label="The Gardener: IsKimHere()"];
+	  305 [label="IsKimHere()", shape=diamond];
+	  306 [label="!(IsKimHere())", shape=diamond];
+	  307 [label="The Gardener: \"I'm working.\""];
+	  308 [label="The Gardener: \"Sure, keep them. I have another pair.\" She hands you the rubber gloves with no visible annoyance."];
+	  309 [label="The Gardener: \"Just coast. There's a little fishing village there... and a fish market. But that got closed down ages ago.\""];
+	  310 [label="The Gardener: \"What do you mean?\""];
+	  311 [label="Reaction Speed: Salts? Ammonium salts? Perhaps useful for later."];
+	  312 [label="You: The plaza?"];
+	  313 [label="Jump to: [MAIN HUB]"];
+	  314 [label="Kim Kitsuragi: \"I understand -- the RCM isn't welcome here and the locals want to keep an eye on us.\""];
+	  315 [label="Kim Kitsuragi: \"That was the last time, miss.\" He looks at you with a stern expression. \"Our questioning here is concluded. Let's go.\""];
+	  316 [label="You: \"Nothing.\""];
+	  317 [label="You: \"The police need directions.\""];
+	  318 [label="Perception (Sight): Uhm... are you sure? In the mirror it looked like you were pink, grey and more than a little reddish."];
+	  319 [label="Perception (Sight): You *really* need to take a look at that mirror upstairs."];
+	  320 [label="You: \"There's more to you than that.\""];
+	  321 [label="You: \"Who are you exactly?\""];
+	  322 [label="The Gardener: \"Okay.\""];
+	  323 [label="Authority: She's probably not gonna do it."];
+	  324 [label="You: An entrance to the yard?"];
+	  325 [label="The Gardener: Variable[\"plaza.gardener_you_are_black\"]"];
+	  326 [label="Variable[\"plaza.gardener_you_are_black\"]", shape=diamond];
+	  327 [label="!(Variable[\"plaza.gardener_you_are_black\"])", shape=diamond];
+	  328 [label="You: \"So, what kind of music do you listen to nowadays?\""];
+	  329 [label="Half Light: Really? *None.* Maybe just a *tiny* bit of annoyance."];
+	  330 [label="Jump to: [MAIN HUB]"];
+	  331 [label="The Gardener: \"Oh... right.\" She scratches her cheek. \"But not from the yard. I understand.\""];
+	  332 [label="You: *Should* I say that?"];
+	  333 [label="The Gardener: Variable[\"whirling.mirror_saw_your_face\"]"];
+	  334 [label="Variable[\"whirling.mirror_saw_your_face\"]", shape=diamond];
+	  335 [label="!(Variable[\"whirling.mirror_saw_your_face\"])", shape=diamond];
+	  336 [label="Kim Kitsuragi: \"We should probably proceed with our business in Martinaise.\" The lieutenant interrupts her, turning to you. \"Unless you didn't have any more *official* questions?\""];
+	  337 [label="Empathy: She doesn't like that *giant* boat. Nor does she like the woman on it."];
+	  338 [label="Jump to: [MAIN HUB]"];
+	  339 [label="The Gardener: \"Is there?\""];
+	  340 [label="Composure: The quickness of the reply certainly does not prove you wrong."];
+	  341 [label="The Gardener: Variable[\"plaza.gardener_got_gloves_in_exit\"]"];
+	  342 [label="Variable[\"plaza.gardener_got_gloves_in_exit\"]", shape=diamond];
+	  343 [label="!(Variable[\"plaza.gardener_got_gloves_in_exit\"])", shape=diamond];
+	  344 [label="The Gardener: \"Hello again, officer. How are things?\""];
+	  345 [label="You: \"Where am I?\""];
+	  346 [label="You: \"Do you know where I could find the representative for Wild Pines?\""];
+	  347 [label="The Gardener: IsKimHere()"];
+	  348 [label="IsKimHere()", shape=diamond];
+	  349 [label="!(IsKimHere())", shape=diamond];
+	  350 [label="The Gardener: Variable[\"plaza.gardener_drama_catches_a_momentspoiling_smile\"]"];
+	  351 [label="Variable[\"plaza.gardener_drama_catches_a_momentspoiling_smile\"]", shape=diamond];
+	  352 [label="!(Variable[\"plaza.gardener_drama_catches_a_momentspoiling_smile\"])", shape=diamond];
+	  353 [label="Kim Kitsuragi: \"Relax, miss. This is not an interrogation. We are just checking some facts.\""];
+	  354 [label="Jump to: [SNOWHUB]"];
+	  355 [label="The Gardener: IsKimHere()"];
+	  356 [label="IsKimHere()", shape=diamond];
+	  357 [label="!(IsKimHere())", shape=diamond];
+	  358 [label="Kim Kitsuragi: \"You don't have to stay up because of us.\""];
+	  359 [label="Jump to: [MAIN HUB]"];
+	  360 [label="The Gardener: \"Gone to heaven?\" A quick smile. \"Thank you, officer. Looks like I'll get mint in the ground by April.\""];
+	  361 [label="You: \"There's a corpse there, keeping you from doing your work.\""];
+	  362 [label="Jump to: [MAIN HUB]"];
+	  363 [label="The Gardener: Variable[\"plaza.gardener_empathy_dislike_boat\"]"];
+	  364 [label="Variable[\"plaza.gardener_empathy_dislike_boat\"]", shape=diamond];
+	  365 [label="!(Variable[\"plaza.gardener_empathy_dislike_boat\"])", shape=diamond];
+	  366 [label="The Gardener: Variable[\"plaza.gardener_shivers_fish_market\"]"];
+	  367 [label="Variable[\"plaza.gardener_shivers_fish_market\"]", shape=diamond];
+	  368 [label="!(Variable[\"plaza.gardener_shivers_fish_market\"])", shape=diamond];
+	  369 [label="You: \"What kind of a fish market is this?\""];
+	  370 [label="quicklyahub"];
+	  371 [label="Jump to: [MAIN HUB]"];
+	  372 [label="You: \"What is up in the North?\""];
+	  373 [label="Empathy: She seems more perplexed than threatened."];
+	  374 [label="Horrific Necktie: Ask her about music -- it'll get the convo flowing, don't worry!"];
+	  375 [label="The Gardener: \"Can you tell me when you've taken him away then. Because I'm sort of waiting for *that*.\""];
+	  376 [label="The Gardener: \"No, of course not! I don't understand what this is about...\" She looks towards the yard and her expression clears."];
+	  377 [label="The Gardener: \"Maybe you shouldn't be. I mean... you do your job, but that kid is beyond help. And he certainly won't help *you*.\" She shakes her head."];
+	  378 [label="The Gardener: \"Yes. I'm tired.\""];
+	  379 [label="You: \"Okay.\""];
+	  380 [label="The Gardener: \"I don't know...\" She looks around. \"Whatever's on the radio I guess. What does this have to do with snow, or gardening in March?\""];
+	  381 [label="The Gardener: SetVariableValue(\"tc.that_in_revachol\", true) --[[ Variable[ ]]"];
+	  382 [label="Jump to: [MAIN HUB]"];
+	  383 [label="The Gardener: Variable[\"plaza.gardener_dead_body_discussed\"]"];
+	  384 [label="Variable[\"plaza.gardener_dead_body_discussed\"]", shape=diamond];
+	  385 [label="!(Variable[\"plaza.gardener_dead_body_discussed\"])", shape=diamond];
+	  386 [label="You: No, those gloves aren't really my style. [Leave.]"];
+	  387 [label="The Gardener: \"No problem.\" She nods, brushing a fleck of soil off her cheek."];
+	  388 [label="You: \"I'm... disorientated. I don't know where I am.\""];
+	  389 [label="You: \"Just tell me where we are, okay?\""];
+	  390 [label="endhub"];
+	  391 [label="Jump to: [MAIN HUB]"];
+	  392 [label="Visual Calculus: Stop looking at her, look around! What do you see?"];
+	  393 [label="You: \"You're black.\""];
+	  394 [label="The Gardener: \"The kid did this, right? The red-haired rat? Can't say a sentence without *f****t* or *kipt*... He's always giving me trouble.\""];
+	  395 [label="The Gardener: \"It is, because he sent you to harass me. He's playing you.\" She shakes her head. \"He hates the police, okay? A lot of people do around here.\""];
+	  396 [label="The Gardener: She shifts in her seat awkwardly."];
+	  397 [label="Jump to: [directions hub]"];
+	  398 [label="The Gardener: \"An autopsy? Wow. Sure, keep them.\" She hands you the rubber gloves. \"I have another pair.\""];
+	  399 [label="Empathy: She's relieved someone has come for it -- finally."];
+	  400 [label="Perception (Sight): She must be very diligent about the glove-use, because her hands are clean and delicate."];
+	  401 [label="Perception (Sight): She must be very diligent about the glove-use, because her hands are clean and delicate."];
+	  402 [label="The Gardener: Variable[\"plaza.gardener_interfacing_gloves\"]"];
+	  403 [label="Variable[\"plaza.gardener_interfacing_gloves\"]", shape=diamond];
+	  404 [label="!(Variable[\"plaza.gardener_interfacing_gloves\"])", shape=diamond];
+	  405 [label="Authority: No! Do *not* report back to this random civilian about anything."];
+	  406 [label="You: \"The grandma is a bit too much.\""];
+	  407 [label="The Gardener: \"Nitrogen and sulphur mostly.\" She points to the sky. \"And whatever factories and aerostatics exhale too I guess.\""];
+	  408 [label="Kim Kitsuragi: \"That's okay, miss -- do what you have to do.\" The lieutenant nods at you. \"I think we're done here. Let's go.\""];
+	  409 [label="The Gardener: \"Okay.\""];
+	  410 [label="You: \"Thank you.\" [Leave]"];
+	  411 [label="Empathy: She's uncomfortable. Maybe you should drop this line of questioning."];
+	  412 [label="Jump to: [MAIN HUB]"];
+	  413 [label="Jump to: [directions hub]"];
+	  414 [label="The Gardener: \"Well... as you *probably* know, there's a corpse hanging from a tree there. It smells pretty bad. So I have to take breaks.\""];
+	  415 [label="Perception (Sight): What if I told you there's a *mirror* on your bathroom wall, upstairs? You *may* want to take a look."];
+	  416 [label="The Gardener: \"I'm okay with it. Was there something else?\""];
+	  417 [label="Empathy: She would probably prefer not to go into it. It wasn't easy to pick up on either..."];
+	  418 [label="Shivers: Rows of stalls under a broad roof, where silvery fish were heaped on newspapers. Water, water everywhere -- pouring from the heavens, in the shadow of the old church."];
+	  419 [label="Jump to: [MAIN HUB]"];
+	  420 [label="The Gardener: \"The RCM in Martinaise?\" The young woman looks up at you. \"What can I help you with?\""];
+	  421 [label="Interfacing: If there's a corpse, then you're going to need those gloves for the autopsy."];
+	  422 [label="You: \"Do you listen to disco?\""];
+	  423 [label="You: \"Okay.\""];
+	  424 [label="You: \"Yes. What are you doing here?\""];
+	  425 [label="The Gardener: \"Okay, well, I didn't,\" she leans back, shoulders relaxing."];
+	  426 [label="The Gardener: \"Well uh...\" She points to her wheelbarrow, surprised at the question. \"This might be the last snow we get. At least I hope so...\""];
+	  427 [label="SNOWHUB"];
+	  428 [label="Drama: She feels interrogated now. It's hard to say if she's lying."];
+	  429 [label="You: \"That's not important right now.\""];
+	  430 [label="The Gardener: \"Yes, I'm black, how many times are you gonna say that?\""];
+	  431 [label="The Gardener: \"Sure thing.\" She narrows her eyes."];
+	  432 [label="The Gardener: Variable[\"TASK.get_ammonium_done\"]"];
+	  433 [label="Variable[\"TASK.get_ammonium_done\"]", shape=diamond];
+	  434 [label="!(Variable[\"TASK.get_ammonium_done\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 124
+	  2 -> 398
+	  3 -> 4
+	  3 -> 5
+	  4 -> 359
+	  5 -> 301
+	  6 -> 270
+	  7 -> 88
+	  8 -> 123
+	  9 -> 304
+	  10 -> 415
+	  11 -> 12
+	  11 -> 13
+	  12 -> 320
+	  13 -> 416
+	  14 -> 16
+	  14 -> 15
+	  15 -> 337
+	  16 -> 413
+	  17 -> 18
+	  17 -> 19
+	  18 -> 169
+	  19 -> 257
+	  20 -> 205
+	  21 -> 417
+	  22 -> 418
+	  23 -> 79
+	  24 -> 49
+	  25 -> 308
+	  26 -> 233
+	  27 -> 388
+	  28 -> 69
+	  29 -> 195
+	  30 -> 138
+	  31 -> 329
+	  31 -> 317
+	  32 -> 196
+	  33 -> 34
+	  33 -> 35
+	  34 -> 363
+	  35 -> 433
+	  36 -> 209
+	  37 -> 119
+	  38 -> 40
+	  38 -> 39
+	  39 -> 248
+	  39 -> 166
+	  40 -> 76
+	  41 -> 178
+	  42 -> 43
+	  42 -> 44
+	  43 -> 185
+	  44 -> 148
+	  45 -> 186
+	  45 -> 61
+	  46 -> 48
+	  46 -> 47
+	  47 -> 128
+	  48 -> 20
+	  49 -> 72
+	  50 -> 94
+	  51 -> 172
+	  52 -> 392
+	  53 -> 81
+	  54 -> 201
+	  55 -> 122
+	  56 -> 324
+	  57 -> 332
+	  58 -> 178
+	  59 -> 273
+	  60 -> 251
+	  61 -> 151
+	  62 -> 161
+	  63 -> 80
+	  64 -> 243
+	  65 -> 66
+	  65 -> 67
+	  66 -> 375
+	  67 -> 45
+	  68 -> 192
+	  69 -> 392
+	  70 -> 238
+	  71 -> 378
+	  72 -> 73
+	  72 -> 74
+	  73 -> 75
+	  74 -> 167
+	  75 -> 178
+	  76 -> 77
+	  76 -> 78
+	  77 -> 96
+	  78 -> 302
+	  79 -> 233
+	  80 -> 371
+	  81 -> 420
+	  82 -> 233
+	  83 -> 178
+	  84 -> 282
+	  85 -> 2
+	  86 -> 310
+	  87 -> 286
+	  88 -> 90
+	  88 -> 91
+	  89 -> 299
+	  90 -> 432
+	  91 -> 143
+	  92 -> 120
+	  93 -> 82
+	  94 -> 53
+	  95 -> 426
+	  96 -> 98
+	  97 -> 178
+	  98 -> 23
+	  99 -> 101
+	  99 -> 102
+	  102 -> 178
+	  103 -> 83
+	  104 -> 250
+	  105 -> 387
+	  105 -> 277
+	  106 -> 232
+	  107 -> 109
+	  108 -> 398
+	  109 -> 279
+	  110 -> 233
+	  111 -> 121
+	  111 -> 234
+	  111 -> 54
+	  112 -> 41
+	  113 -> 289
+	  114 -> 247
+	  115 -> 377
+	  116 -> 219
+	  117 -> 264
+	  118 -> 178
+	  119 -> 178
+	  120 -> 269
+	  121 -> 38
+	  122 -> 51
+	  122 -> 271
+	  122 -> 303
+	  123 -> 125
+	  123 -> 126
+	  124 -> 182
+	  125 -> 206
+	  126 -> 305
+	  127 -> 205
+	  128 -> 158
+	  129 -> 231
+	  130 -> 132
+	  131 -> 133
+	  131 -> 134
+	  132 -> 135
+	  133 -> 135
+	  134 -> 136
+	  134 -> 137
+	  135 -> 393
+	  136 -> 237
+	  137 -> 394
+	  138 -> 178
+	  139 -> 141
+	  139 -> 142
+	  140 -> 265
+	  141 -> 36
+	  142 -> 144
+	  142 -> 145
+	  143 -> 246
+	  144 -> 198
+	  145 -> 155
+	  146 -> 400
+	  147 -> 178
+	  148 -> 11
+	  149 -> 60
+	  149 -> 95
+	  150 -> 374
+	  151 -> 233
+	  152 -> 104
+	  152 -> 275
+	  152 -> 252
+	  153 -> 231
+	  154 -> 156
+	  154 -> 157
+	  156 -> 403
+	  157 -> 87
+	  158 -> 152
+	  159 -> 178
+	  160 -> 104
+	  160 -> 252
+	  161 -> 178
+	  162 -> 164
+	  162 -> 165
+	  163 -> 363
+	  164 -> 312
+	  165 -> 56
+	  166 -> 59
+	  167 -> 42
+	  168 -> 331
+	  169 -> 79
+	  170 -> 14
+	  171 -> 213
+	  172 -> 52
+	  173 -> 32
+	  173 -> 380
+	  173 -> 118
+	  174 -> 227
+	  175 -> 177
+	  176 -> 412
+	  177 -> 256
+	  177 -> 322
+	  177 -> 197
+	  177 -> 6
+	  177 -> 200
+	  177 -> 8
+	  177 -> 202
+	  177 -> 107
+	  177 -> 176
+	  177 -> 146
+	  177 -> 278
+	  177 -> 249
+	  177 -> 318
+	  178 -> 180
+	  178 -> 181
+	  179 -> 105
+	  180 -> 345
+	  181 -> 184
+	  181 -> 183
+	  182 -> 276
+	  183 -> 179
+	  184 -> 60
+	  184 -> 333
+	  184 -> 149
+	  185 -> 17
+	  186 -> 153
+	  187 -> 33
+	  188 -> 190
+	  188 -> 191
+	  189 -> 64
+	  190 -> 422
+	  191 -> 58
+	  192 -> 115
+	  193 -> 428
+	  194 -> 116
+	  194 -> 215
+	  195 -> 221
+	  196 -> 92
+	  197 -> 93
+	  198 -> 178
+	  199 -> 226
+	  200 -> 302
+	  201 -> 97
+	  202 -> 7
+	  203 -> 384
+	  204 -> 338
+	  205 -> 208
+	  205 -> 207
+	  206 -> 187
+	  207 -> 421
+	  208 -> 210
+	  208 -> 211
+	  209 -> 106
+	  211 -> 112
+	  212 -> 351
+	  213 -> 241
+	  214 -> 297
+	  215 -> 217
+	  215 -> 218
+	  216 -> 239
+	  217 -> 396
+	  218 -> 178
+	  219 -> 219
+	  220 -> 380
+	  220 -> 118
+	  221 -> 267
+	  222 -> 224
+	  222 -> 225
+	  223 -> 253
+	  224 -> 85
+	  225 -> 175
+	  226 -> 178
+	  227 -> 397
+	  228 -> 213
+	  229 -> 178
+	  230 -> 372
+	  231 -> 192
+	  232 -> 129
+	  232 -> 27
+	  232 -> 108
+	  232 -> 204
+	  232 -> 110
+	  232 -> 373
+	  232 -> 346
+	  232 -> 347
+	  233 -> 235
+	  234 -> 236
+	  235 -> 121
+	  235 -> 54
+	  236 -> 260
+	  237 -> 160
+	  238 -> 293
+	  239 -> 409
+	  240 -> 178
+	  241 -> 31
+	  242 -> 244
+	  242 -> 245
+	  243 -> 106
+	  244 -> 140
+	  245 -> 3
+	  246 -> 178
+	  247 -> 201
+	  248 -> 399
+	  249 -> 178
+	  250 -> 65
+	  253 -> 382
+	  254 -> 46
+	  255 -> 427
+	  256 -> 331
+	  257 -> 429
+	  258 -> 408
+	  259 -> 70
+	  259 -> 394
+	  259 -> 30
+	  260 -> 262
+	  260 -> 263
+	  261 -> 316
+	  262 -> 214
+	  263 -> 356
+	  264 -> 209
+	  265 -> 314
+	  266 -> 233
+	  267 -> 212
+	  268 -> 55
+	  269 -> 285
+	  270 -> 229
+	  271 -> 178
+	  272 -> 9
+	  272 -> 10
+	  272 -> 362
+	  273 -> 188
+	  274 -> 62
+	  275 -> 272
+	  276 -> 309
+	  277 -> 68
+	  278 -> 222
+	  279 -> 414
+	  280 -> 111
+	  281 -> 283
+	  281 -> 284
+	  282 -> 253
+	  283 -> 189
+	  284 -> 57
+	  284 -> 203
+	  285 -> 288
+	  285 -> 287
+	  286 -> 113
+	  287 -> 406
+	  288 -> 428
+	  289 -> 291
+	  289 -> 292
+	  290 -> 354
+	  291 -> 355
+	  292 -> 294
+	  292 -> 295
+	  293 -> 296
+	  294 -> 266
+	  295 -> 379
+	  296 -> 139
+	  297 -> 241
+	  298 -> 360
+	  299 -> 301
+	  300 -> 178
+	  301 -> 178
+	  302 -> 361
+	  303 -> 305
+	  304 -> 306
+	  304 -> 307
+	  305 -> 274
+	  306 -> 363
+	  307 -> 24
+	  308 -> 330
+	  309 -> 419
+	  310 -> 389
+	  310 -> 390
+	  311 -> 363
+	  312 -> 195
+	  313 -> 178
+	  314 -> 240
+	  315 -> 298
+	  316 -> 89
+	  317 -> 26
+	  318 -> 339
+	  319 -> 339
+	  320 -> 340
+	  321 -> 63
+	  322 -> 103
+	  323 -> 302
+	  324 -> 195
+	  325 -> 328
+	  325 -> 327
+	  326 -> 431
+	  327 -> 242
+	  328 -> 381
+	  329 -> 402
+	  330 -> 178
+	  331 -> 376
+	  332 -> 150
+	  333 -> 336
+	  333 -> 335
+	  334 -> 319
+	  335 -> 11
+	  336 -> 413
+	  337 -> 364
+	  338 -> 178
+	  339 -> 341
+	  340 -> 425
+	  340 -> 130
+	  341 -> 344
+	  341 -> 343
+	  342 -> 253
+	  343 -> 223
+	  344 -> 178
+	  345 -> 311
+	  346 -> 255
+	  347 -> 349
+	  347 -> 350
+	  348 -> 281
+	  349 -> 111
+	  350 -> 352
+	  350 -> 353
+	  351 -> 28
+	  351 -> 173
+	  352 -> 383
+	  353 -> 355
+	  354 -> 428
+	  355 -> 357
+	  355 -> 358
+	  356 -> 117
+	  357 -> 220
+	  358 -> 300
+	  359 -> 178
+	  360 -> 213
+	  361 -> 127
+	  362 -> 178
+	  363 -> 365
+	  363 -> 366
+	  364 -> 21
+	  364 -> 22
+	  365 -> 152
+	  366 -> 368
+	  366 -> 369
+	  367 -> 370
+	  367 -> 99
+	  368 -> 79
+	  369 -> 170
+	  370 -> 321
+	  370 -> 154
+	  370 -> 25
+	  371 -> 178
+	  372 -> 86
+	  373 -> 424
+	  373 -> 423
+	  374 -> 45
+	  375 -> 88
+	  376 -> 395
+	  377 -> 293
+	  378 -> 315
+	  379 -> 410
+	  380 -> 174
+	  381 -> 348
+	  382 -> 178
+	  383 -> 385
+	  383 -> 386
+	  384 -> 50
+	  385 -> 147
+	  387 -> 37
+	  388 -> 254
+	  389 -> 280
+	  391 -> 178
+	  392 -> 313
+	  392 -> 325
+	  392 -> 29
+	  393 -> 326
+	  394 -> 430
+	  394 -> 71
+	  395 -> 293
+	  396 -> 199
+	  397 -> 233
+	  398 -> 401
+	  399 -> 94
+	  400 -> 230
+	  401 -> 411
+	  402 -> 404
+	  402 -> 405
+	  403 -> 253
+	  404 -> 342
+	  405 -> 41
+	  406 -> 258
+	  407 -> 194
+	  408 -> 314
+	  409 -> 162
+	  411 -> 268
+	  411 -> 228
+	  412 -> 178
+	  413 -> 233
+	  414 -> 305
+	  415 -> 339
+	  416 -> 159
+	  417 -> 152
+	  418 -> 367
+	  419 -> 178
+	  420 -> 153
+	  421 -> 243
+	  422 -> 171
+	  423 -> 323
+	  424 -> 308
+	  425 -> 302
+	  426 -> 114
+	  427 -> 193
+	  427 -> 259
+	  427 -> 131
+	  427 -> 407
+	  428 -> 290
+	  429 -> 216
+	  430 -> 261
+	  431 -> 360
+	  432 -> 434
+	  432 -> 435
+	  433 -> 363
+	  434 -> 163
+}
+

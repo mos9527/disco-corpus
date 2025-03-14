@@ -1,0 +1,172 @@
+# WHIRLING F2 ORB / Moralist Quest Initiation
+# Empathy tells you it's time to take responsibility... by convening a committee to spread responsibility around.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Empathy: Good, you're up. Listen, there's something that's been bothering you for a few days now."];
+	  3 [label="Empathy: It's a suspicion, or a feeling, really, that things are not quite *in hand* around here..."];
+	  4 [label="Empathy: But who's focusing on *the big questions*?"];
+	  5 [label="Empathy: But have you ever seen them? How do you know they're even there? More importantly, how do you know they aren't waiting for *your participation*?"];
+	  6 [label="Jump to: [Empathy: \"Only the most even-keeled minds in...\"]"];
+	  7 [label="You: Not my problem. [Discard thought.]"];
+	  8 [label="Empathy: You've got to find out who bears *la responsabilité*."];
+	  9 [label="You: I assumed the most qualified and highly credentialed people were taking care of that stuff."];
+	  10 [label="Esprit de Corps: Your half-brother, the lieutenant, is a natural place to start."];
+	  11 [label="Variable[\"tc.harry\"]"];
+	  12 [label="Variable[\"tc.harry\"]", shape=diamond];
+	  13 [label="!(Variable[\"tc.harry\"])", shape=diamond];
+	  14 [label="Empathy: Every day things seem to spin more and more wildly out of control. The centre isn't holding. And despite your efforts to *moderate* and *contain* these energies, things only seem to be getting worse."];
+	  15 [label="You: What am I supposed to do?"];
+	  16 [label="Untitled hub"];
+	  17 [label="You: No way. I've got too much on my plate as it is. [Opt out.]"];
+	  18 [label="Empathy: Come on. You know in your lungs that true authority flows from institutions, not individuals. That's the single principle that separates civilisation from barbarism."];
+	  19 [label="Empathy: If you want your work to be *accepted*, you'll have to go through the appropriate process."];
+	  20 [label="Esprit de Corps: The one you seem so set on driving away, the lieutenant, is a natural place to start."];
+	  21 [label="Empathy: Oh, sure. You've been making progress on your case, interviewing people, *solving side tasks*..."];
+	  22 [label="You: What exactly *is* la responsabilité?"];
+	  23 [label="Empathy: La responsabilité isn't concerned with trivial questions like *who killed who*. It's about the real issues: the human welfare index, the price of staple goods, the transition to real democracy..."];
+	  24 [label="Variable[\"reputation.kim\"] >1"];
+	  25 [label="Variable[\"reputation.kim\"] >1", shape=diamond];
+	  26 [label="!(Variable[\"reputation.kim\"] >1)", shape=diamond];
+	  27 [label="Jump to: [Empathy: \"You've got to find out who bears *l...\"]"];
+	  28 [label="You: I thought I *was* assigning responsibility, for the murder?"];
+	  29 [label="IsTHCPresent(\"lawbringer\")"];
+	  30 [label="IsTHCPresent(\"lawbringer\")", shape=diamond];
+	  31 [label="!(IsTHCPresent(\"lawbringer\"))", shape=diamond];
+	  32 [label="Empathy: Open your eyes. Stop getting distracted by details. It's time you started focussing on what really matters."];
+	  33 [label="Empathy: Whoa, whoa, *whoa*. This isn't some kind of *dictatorship*. You can't simply seize la responsabilité for yourself. It must be given by a legitimate authority..."];
+	  34 [label="You: And what happens once we've assigned responsibility?"];
+	  35 [label="You: This really doesn't sound like my job."];
+	  36 [label="You: Do we really have time for all this?"];
+	  37 [label="Rhetoric: In other words, it must be diffused across the entire bureaucracy, so that no one can ever truly say *who is responsible for what*."];
+	  38 [label="Authority: You don't need no stinkin' committee. You're the Law."];
+	  39 [label="Authority: Technicalities."];
+	  40 [label="Electrochemistry: Fun stuff, that's what they're capable of."];
+	  41 [label="Half Light: MASS EXECUTIONS."];
+	  42 [label="Savoir Faire: A little self-dealing?"];
+	  43 [label="You: And who should sit on this committee?"];
+	  44 [label="Empathy: Only the most even-keeled minds in Martinaise."];
+	  45 [label="Empathy: Together, you'll be able to discover who has la responsabilité in Revachol. And if necessary, you'll have the *wisdom and expertise* to assign it among yourselves."];
+	  46 [label="Empathy: Don't run away from it now, Harry. You know it's the *right thing to do*."];
+	  47 [label="You: Alright, give it to me. *I'll* accept responsibility. (Proceed.)"];
+	  48 [label="Accept hub"];
+	  49 [label="Empathy: Rest assured, no matter what happens it will be done through the proper channels."];
+	  50 [label="Jump to: [Accept hub]"];
+	  51 [label="You: Wait, I thought things were going pretty well?"];
+	  52 [label="You: But I'm the Law. Can't I just do it myself?"];
+	  53 [label="You: Sounds like too much responsibility for me. I don't want it."];
+	  54 [label="Jump to: [Empathy: \"This is a grave abdication of la re...\"]"];
+	  55 [label="Empathy: It is human nature to crave la responsabilité and to deny it. That's why it must be distributed across many different organisations, agencies, offices, and portfolios."];
+	  56 [label="Empathy: Most likely your findings will be collected in a report, which will be carefully reviewed by your superiors."];
+	  57 [label="You: What is it?"];
+	  58 [label="You: Let's get right to it: What needs to be done?"];
+	  59 [label="Empathy: The most awesome, terrible thing..."];
+	  60 [label="You: I'm prepared to take on this awesome burden. [Accept task.]"];
+	  61 [label="Jump to: [firsthub]"];
+	  62 [label="You: You know what, this sounds like a drag. [Refuse task.]"];
+	  63 [label="Empathy: This is a grave abdication of la responsabilité. A note will be appended to your personnel file."];
+	  64 [label="Empathy: Please, you're thinking about this too narrowly."];
+	  65 [label="Jump to: [firsthub]"];
+	  66 [label="Empathy: Harry, Harry. You're thinking about this too narrowly."];
+	  67 [label="firsthub"];
+	  68 [label="Empathy: Good luck. Your report is eagerly anticipated."];
+	  69 [label="You: (Sigh.) You're right. Who's going to sit on this committee?"];
+	  70 [label="Empathy: Like a committee."];
+	  71 [label="Volition: Swift, decisive action."];
+	  72 [label="Logic: An earth-shattering deduction from your psyche. What will those guys come up with next?"];
+	  73 [label="Jump to: [Untitled hub]"];
+	  74 [label="Empathy: There is always time to follow best practices. Once someone's decided to *cut corners* for the sake of expediency, who knows what else they're capable of?"];
+	  75 [label="Empathy: Once they've reviewed it, those same superiors will produce a set of recommendations to be taken up at the next meeting of the *standing committee*."];
+	  76 [label="Jump to: [Untitled hub]"];
+	  0 -> 1
+	  1 -> 2
+	  2 -> 57
+	  3 -> 73
+	  4 -> 9
+	  4 -> 35
+	  4 -> 15
+	  5 -> 15
+	  6 -> 44
+	  8 -> 16
+	  9 -> 5
+	  10 -> 45
+	  11 -> 12
+	  11 -> 13
+	  12 -> 67
+	  13 -> 65
+	  14 -> 58
+	  14 -> 51
+	  14 -> 7
+	  15 -> 27
+	  16 -> 28
+	  16 -> 22
+	  16 -> 47
+	  17 -> 64
+	  18 -> 39
+	  19 -> 66
+	  20 -> 45
+	  21 -> 4
+	  22 -> 59
+	  23 -> 77
+	  24 -> 25
+	  24 -> 26
+	  25 -> 10
+	  26 -> 20
+	  27 -> 8
+	  28 -> 11
+	  29 -> 30
+	  29 -> 31
+	  30 -> 38
+	  31 -> 68
+	  32 -> 15
+	  33 -> 71
+	  34 -> 56
+	  35 -> 32
+	  36 -> 75
+	  37 -> 74
+	  38 -> 68
+	  39 -> 19
+	  40 -> 62
+	  41 -> 42
+	  42 -> 40
+	  43 -> 44
+	  44 -> 24
+	  45 -> 48
+	  46 -> 17
+	  46 -> 70
+	  47 -> 33
+	  48 -> 34
+	  48 -> 60
+	  48 -> 63
+	  49 -> 50
+	  50 -> 48
+	  51 -> 21
+	  52 -> 18
+	  53 -> 46
+	  54 -> 64
+	  55 -> 37
+	  56 -> 76
+	  57 -> 3
+	  58 -> 8
+	  59 -> 55
+	  60 -> 69
+	  61 -> 68
+	  62 -> 54
+	  64 -> 23
+	  65 -> 68
+	  66 -> 23
+	  67 -> 43
+	  67 -> 52
+	  67 -> 53
+	  67 -> 36
+	  69 -> 6
+	  70 -> 29
+	  71 -> 41
+	  72 -> 14
+	  73 -> 16
+	  74 -> 72
+	  75 -> 49
+	  76 -> 16
+}
+

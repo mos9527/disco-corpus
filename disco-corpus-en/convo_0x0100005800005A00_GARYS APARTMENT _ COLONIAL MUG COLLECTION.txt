@@ -1,0 +1,134 @@
+# GARYS APARTMENT / COLONIAL MUG COLLECTION
+# You examine Gary's racist mugs.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Inland Empire: Perhaps you should break into apartments more often?"];
+	  3 [label="Colonial Mug Collection: Yes, your broken mug friend would have felt very much at home here."];
+	  4 [label="Jump to: [mughub]"];
+	  5 [label="mughub"];
+	  6 [label="Colonial Mug Collection: Yes, your broken mug friend would feel very much at home here. The same humour, the same mocking lines..."];
+	  7 [label="Kim Kitsuragi: IsKimHere()"];
+	  8 [label="IsKimHere()", shape=diamond];
+	  9 [label="!(IsKimHere())", shape=diamond];
+	  10 [label="You: Cynical slippery bastard."];
+	  11 [label="You: I don't think I like the owner of this apartment."];
+	  12 [label="You: Thanks, good to know. I have no opinion on this."];
+	  13 [label="Conceptualization: You ain't gonna change someone's mind by calling them a bastard."];
+	  14 [label="Logic: Who knows? Could be, but this 'clothes in the trash' lead doesn't really seem like it's going anywhere. Still, good thing to keep in mind."];
+	  15 [label="Kim Kitsuragi: \"I'm beginning to feel better about breaking into this man's apartment.\""];
+	  16 [label="You: Tap on the mugs."];
+	  17 [label="Empathy: Of course. So very free."];
+	  18 [label="Conceptualization: Of course... You slippery bastard."];
+	  19 [label="Conceptualization: No one's telling you to like him. You might learn something from him, though."];
+	  20 [label="Kim Kitsuragi: Variable[\"backyard.gary_mug_empathy\"]"];
+	  21 [label="Variable[\"backyard.gary_mug_empathy\"]", shape=diamond];
+	  22 [label="!(Variable[\"backyard.gary_mug_empathy\"])", shape=diamond];
+	  23 [label="Jump to: [mughub]"];
+	  24 [label="You: \"Do you really think it's the same person who put the dead man's clothes in the trash?\""];
+	  25 [label="Logic: An interesting little clue. Let's see where this goes. Clues have a way of magically connecting to other clues -- down the road."];
+	  26 [label="Conceptualization: It looks like the artist is celebrating diversity, but underneath he's just making fun of these people."];
+	  27 [label="Rhetoric: And so *fun*."];
+	  28 [label="Conceptualization: There's something disdainful in the way the curves and lines of the bodies were drawn."];
+	  29 [label="Logic: The owner of this collection could be dumping his trash in the Whirling's container."];
+	  30 [label="Kim Kitsuragi: IsKimHere()"];
+	  31 [label="IsKimHere()", shape=diamond];
+	  32 [label="!(IsKimHere())", shape=diamond];
+	  33 [label="Jump to: [mughub]"];
+	  34 [label="Logic: You could ask Evrart who this person is? Once you're done here..."];
+	  35 [label="Kim Kitsuragi: \"There's the missing tin soldier,\" the lieutenant looks at the mugs next to each other. \"Whoever lives here might have used the Whirling's container to dump his trash...\""];
+	  36 [label="Kim Kitsuragi: \"Who knows?\" The lieutenant opens his notebook. \"I'm not expecting too much from this *clothes in the trash* lead either way. It might turn out to be some random local matter. But still -- a nice coincidence.\""];
+	  37 [label="Colonial Mug Collection: A little ring. Though cheerful, the images on the ceramic make you vaguely uncomfortable."];
+	  38 [label="Kim Kitsuragi: The lieutenant picks up one of the mugs, then puts it back down with a look of disdain."];
+	  39 [label="You: Recall the Yellow Man mug you found in the Whirling trash container."];
+	  40 [label="You: Typical asshole."];
+	  41 [label="Empathy: This person is unhappy."];
+	  42 [label="You: What do I mean *uncomfortable*?"];
+	  43 [label="Empathy: The owner of these mugs doesn't like people of other ethnicities very much."];
+	  44 [label="Empathy: Anytime."];
+	  45 [label="Kim Kitsuragi: IsKimHere()"];
+	  46 [label="IsKimHere()", shape=diamond];
+	  47 [label="!(IsKimHere())", shape=diamond];
+	  48 [label="You: Move on from the mugs. [Leave.]"];
+	  49 [label="Empathy: The images betray a lack of interest in human beings. They are merely unflattering caricatures."];
+	  50 [label="Kim Kitsuragi: Variable[\"backyard.gary_mug_savoir\"]  or  Variable[\"backyard.gary_mug_empathy\"]"];
+	  51 [label="Variable[\"backyard.gary_mug_savoir\"]  or  Variable[\"backyard.gary_mug_empathy\"]", shape=diamond];
+	  52 [label="!(Variable[\"backyard.gary_mug_savoir\"]  or  Variable[\"backyard.gary_mug_empathy\"])", shape=diamond];
+	  53 [label="You: So what? They can think what they want. This is a free world."];
+	  54 [label="Colonial Mug Collection: A row of mugs sits on the shelf. Each one depicts a human figure: a dark-skinned woman grinning amidst mysterious symbols, a broad-shouldered man shovelling potatoes, and others."];
+	  55 [label="You: Whip out your Yellow Man mug and compare."];
+	  56 [label="You: I don't see these as stereotypes. I think they are honest acknowledgements of difference."];
+	  57 [label="Kim Kitsuragi: \"And now they've drawn the ire of the Union. The plot thickens, as they say.\""];
+	  0 -> 1
+	  1 -> 55
+	  2 -> 4
+	  3 -> 7
+	  4 -> 5
+	  5 -> 39
+	  5 -> 16
+	  5 -> 49
+	  5 -> 24
+	  5 -> 56
+	  6 -> 7
+	  7 -> 8
+	  7 -> 9
+	  8 -> 35
+	  9 -> 29
+	  10 -> 13
+	  11 -> 19
+	  12 -> 45
+	  13 -> 46
+	  14 -> 34
+	  15 -> 23
+	  16 -> 37
+	  17 -> 27
+	  18 -> 46
+	  19 -> 46
+	  20 -> 21
+	  20 -> 22
+	  21 -> 44
+	  22 -> 26
+	  23 -> 5
+	  24 -> 30
+	  25 -> 2
+	  26 -> 57
+	  26 -> 10
+	  26 -> 11
+	  27 -> 46
+	  28 -> 50
+	  29 -> 25
+	  30 -> 32
+	  30 -> 31
+	  31 -> 36
+	  32 -> 14
+	  33 -> 5
+	  34 -> 33
+	  35 -> 58
+	  36 -> 34
+	  37 -> 28
+	  38 -> 15
+	  39 -> 3
+	  40 -> 41
+	  41 -> 46
+	  42 -> 20
+	  43 -> 40
+	  43 -> 12
+	  43 -> 54
+	  44 -> 46
+	  45 -> 48
+	  45 -> 47
+	  46 -> 38
+	  47 -> 23
+	  49 -> 51
+	  50 -> 52
+	  50 -> 53
+	  51 -> 43
+	  52 -> 46
+	  53 -> 17
+	  54 -> 5
+	  55 -> 6
+	  56 -> 18
+	  57 -> 25
+}
+

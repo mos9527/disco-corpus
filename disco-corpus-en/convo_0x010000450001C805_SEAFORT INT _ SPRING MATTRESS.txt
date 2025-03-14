@@ -1,0 +1,262 @@
+# SEAFORT INT / SPRING MATTRESS
+# (mattress interactable) (this is where you sleep)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Spring Mattress: There's a greasy old spring mattress in the corner, resting on piles of softcover books. White linen and a pillow are visible under a worn-out karakul blanket."];
+	  3 [label="You: Maybe a little shut-eye, just for an hour... [Go to sleep.]"];
+	  4 [label="Esprit de Corps: You don't have to be a hero."];
+	  5 [label="Cuno: \"Cool, whatever. Cuno doesn't really give a shit.\""];
+	  6 [label="IsKimHere()"];
+	  7 [label="IsKimHere()", shape=diamond];
+	  8 [label="!(IsKimHere())", shape=diamond];
+	  9 [label="You: \"How recently...\""];
+	  10 [label="Variable[\"seafort.mattress_declined_sleep_once\"]"];
+	  11 [label="Variable[\"seafort.mattress_declined_sleep_once\"]", shape=diamond];
+	  12 [label="!(Variable[\"seafort.mattress_declined_sleep_once\"])", shape=diamond];
+	  13 [label="You: \"There are signs that someone... lives...\""];
+	  14 [label="Kim Kitsuragi: \"You know, officer...\" He looks at you with a touch of concern. \"You *can* rest here if you're feeling tired. I will keep watch. You could use some rest for what's ahead.\""];
+	  15 [label="Kim Kitsuragi: \"Yes. Any time. If you need a rest *later*, it's okay by me.\""];
+	  16 [label="Endurance: Technically speaking, you *could* rest here if you're hurting... someone else has. It should be possible."];
+	  17 [label="Endurance: Still rather inviting, all things considered. It's much warmer inside than out there..."];
+	  18 [label="Jump to: [mattresshub]"];
+	  19 [label="You: Curl up with your knees close to your chest."];
+	  20 [label="You: Huh, I wonder if..."];
+	  21 [label="You: Inspect the linen."];
+	  22 [label="Pain Threshold: A flash of pain interrupts you, making you wince instead of letting the words out."];
+	  23 [label="You: How recently..."];
+	  24 [label="Variable[\"seafort.mattress_hub_reached\"]"];
+	  25 [label="Variable[\"seafort.mattress_hub_reached\"]", shape=diamond];
+	  26 [label="!(Variable[\"seafort.mattress_hub_reached\"])", shape=diamond];
+	  27 [label="IsKimHere()"];
+	  28 [label="IsKimHere()", shape=diamond];
+	  29 [label="!(IsKimHere())", shape=diamond];
+	  30 [label="IsKimHere()"];
+	  31 [label="IsKimHere()", shape=diamond];
+	  32 [label="!(IsKimHere())", shape=diamond];
+	  33 [label="Endurance: You didn't realize how tired you were. Your body is still nowhere near healed..."];
+	  34 [label="Inland Empire: Also -- what if the bad thing happens again?"];
+	  35 [label="IsCunoInParty()"];
+	  36 [label="IsCunoInParty()", shape=diamond];
+	  37 [label="!(IsCunoInParty())", shape=diamond];
+	  38 [label="Jump to: [mattresshub]"];
+	  39 [label="Variable[\"church.stained_greeting_done\"]  or  Variable[\"doomed.book_gi_quiz_result_dei_is_greatest\"]"];
+	  40 [label="Variable[\"church.stained_greeting_done\"]  or  Variable[\"doomed.book_gi_quiz_result_dei_is_greatest\"]", shape=diamond];
+	  41 [label="!(Variable[\"church.stained_greeting_done\"]  or  Variable[\"doomed.book_gi_quiz_result_dei_is_greatest\"])", shape=diamond];
+	  42 [label="Spring Mattress: The blanket feels cold. The entire room does -- concrete and cold. Minutes pass. Half an hour maybe? The sounds of the sea beyond grow distant. Your eyelids close. Until..."];
+	  43 [label="You: Until?"];
+	  44 [label="Spring Mattress: You feel yourself standing up in the darkness. Right next to the mattress. Slowly, the world begins to hatch from the blackness. It's evening..."];
+	  45 [label="IsCunoInParty()"];
+	  46 [label="IsCunoInParty()", shape=diamond];
+	  47 [label="!(IsCunoInParty())", shape=diamond];
+	  48 [label="Logic: Someone has been squatting here. Very recently -- the fire guy the twins mentioned?"];
+	  49 [label="Variable[\"seafort.mattress_pain_episode\"]"];
+	  50 [label="Variable[\"seafort.mattress_pain_episode\"]", shape=diamond];
+	  51 [label="!(Variable[\"seafort.mattress_pain_episode\"])", shape=diamond];
+	  52 [label="You: \"Do you think whoever slept here is...\""];
+	  53 [label="Spring Mattress: The greasy old spring mattress lies in the corner, fresh linen under the heavy karakul cover."];
+	  54 [label="Cuno: \"I'm gonna say it again -- Cuno doesn't feel like carrying your corpse off this island, so maybe you should fucking crash?\""];
+	  55 [label="Kim Kitsuragi: \"Maybe it's better to get back to the mainland? Rest there -- you've earned it.\""];
+	  56 [label="Spring Mattress: Sleep."];
+	  57 [label="Variable[\"seafort.mattress_slept_once\"]"];
+	  58 [label="Variable[\"seafort.mattress_slept_once\"]", shape=diamond];
+	  59 [label="!(Variable[\"seafort.mattress_slept_once\"])", shape=diamond];
+	  60 [label="Cuno: \"Hey... Cuno doesn't wanna *hurt your feelings*, but you look like shit. Maybe you should lie down in the bed -- like recover. Before you die.\""];
+	  61 [label="Spring Mattress: The blanket feels cold. It's someone else's blanket, and the room is all concrete and cold. Sounds of the sea beyond grow distant, slowly. Your eyelids close."];
+	  62 [label="IsKimHere()"];
+	  63 [label="IsKimHere()", shape=diamond];
+	  64 [label="!(IsKimHere())", shape=diamond];
+	  65 [label="Variable[\"TASK.ask_twins_about_island_done\"]"];
+	  66 [label="Variable[\"TASK.ask_twins_about_island_done\"]", shape=diamond];
+	  67 [label="!(Variable[\"TASK.ask_twins_about_island_done\"])", shape=diamond];
+	  68 [label="Endurance: The bed is quite inviting, all things considered. It's much warmer inside than out there..."];
+	  69 [label="Pain Threshold: You force the rest of the sentence out through pain, thick as molasses, without really hearing it."];
+	  70 [label="You: Curl up with your knees close to your chest."];
+	  71 [label="IsCunoInParty()"];
+	  72 [label="IsCunoInParty()", shape=diamond];
+	  73 [label="!(IsCunoInParty())", shape=diamond];
+	  74 [label="Spring Mattress: You face the concrete wall. There's less light there, in the dark corner. Like a dog you lie there..."];
+	  75 [label="Spring Mattress: Maybe it's actually better on the mainland... in your own bed. This place is getting less welcoming."];
+	  76 [label="You: Could they still be..."];
+	  77 [label="Pain Threshold: You push the rest of the thought through pain thick as molasses, without really concentrating on it."];
+	  78 [label="Variable[\"seafort.mattress_slept_once\"]"];
+	  79 [label="Variable[\"seafort.mattress_slept_once\"]", shape=diamond];
+	  80 [label="!(Variable[\"seafort.mattress_slept_once\"])", shape=diamond];
+	  81 [label="Endurance: You didn't realize how tired you were. Your body is still nowhere near healed..."];
+	  82 [label="Pain Threshold: A flash of pain interrupts you, making you grimace instead of spewing out the words."];
+	  83 [label="You: No time to rest now. [Leave.]"];
+	  84 [label="Logic: Someone has been squatting here. Very recently."];
+	  85 [label="Spring Mattress: It stands out because it's freshly washed."];
+	  86 [label="Variable[\"seafort.mattress_pain_episode\"]"];
+	  87 [label="Variable[\"seafort.mattress_pain_episode\"]", shape=diamond];
+	  88 [label="!(Variable[\"seafort.mattress_pain_episode\"])", shape=diamond];
+	  89 [label="You: \"How recently...\""];
+	  90 [label="IsCunoInParty()"];
+	  91 [label="IsCunoInParty()", shape=diamond];
+	  92 [label="!(IsCunoInParty())", shape=diamond];
+	  93 [label="Pain Threshold: A flash of pain interrupts your thought, making you grimace."];
+	  94 [label="IsCunoInParty()"];
+	  95 [label="IsCunoInParty()", shape=diamond];
+	  96 [label="!(IsCunoInParty())", shape=diamond];
+	  97 [label="You: Pull your legs under your chin."];
+	  98 [label="You: \"Do you think whoever slept here is...\""];
+	  99 [label="You: Curl up with your knees close to your chest."];
+	  100 [label="mattresshub"];
+	  101 [label="You: \"There are signs that someone... lives...\""];
+	  102 [label="Variable[\"seafort.mattress_pain_episode\"]"];
+	  103 [label="Variable[\"seafort.mattress_pain_episode\"]", shape=diamond];
+	  104 [label="!(Variable[\"seafort.mattress_pain_episode\"])", shape=diamond];
+	  105 [label="Spring Mattress: Sleep."];
+	  106 [label="Kim Kitsuragi: \"Someone has been squatting here.\" The lieutenant inspects the bed. \"The linen is fresh. Recently washed.\""];
+	  107 [label="Kim Kitsuragi: \"The offer still stands,\" he says, looking out the pillbox window. \"Take it -- you don't look so good.\""];
+	  108 [label="IsKimHere()"];
+	  109 [label="IsKimHere()", shape=diamond];
+	  110 [label="!(IsKimHere())", shape=diamond];
+	  111 [label="Inland Empire: The mattress is soggy, but that linen feels more inviting than the pain and exhaustion. It's not too cold here..."];
+	  112 [label="Pain Threshold: You force the rest of the sentence out through pain, thick as molasses, no longer able to hear yourself speak."];
+	  113 [label="Spring Mattress: The greasy old spring mattress lies in the corner."];
+	  114 [label="Cuno: \"What, you wanna like... live on this fucking island now?\" He crosses his arms. \"Go sleep in your own bed.\""];
+	  115 [label="Spring Mattress: You face the concrete wall. There's less light there, in the dark corner. Like a dog you lie there..."];
+	  116 [label="Cuno: \"Check this shit. Someone's been squatting here.\" The kid waves his hand at the bed. \"Cuno knows because this shit looks like Cuno's place.\""];
+	  0 -> 1
+	  1 -> 58
+	  2 -> 6
+	  3 -> 79
+	  6 -> 8
+	  6 -> 7
+	  7 -> 107
+	  8 -> 35
+	  9 -> 22
+	  10 -> 11
+	  10 -> 12
+	  12 -> 109
+	  13 -> 22
+	  14 -> 101
+	  15 -> 4
+	  16 -> 112
+	  17 -> 101
+	  18 -> 101
+	  19 -> 42
+	  20 -> 94
+	  21 -> 86
+	  22 -> 87
+	  23 -> 94
+	  24 -> 25
+	  24 -> 26
+	  25 -> 53
+	  26 -> 2
+	  27 -> 28
+	  27 -> 29
+	  28 -> 108
+	  29 -> 95
+	  30 -> 32
+	  30 -> 31
+	  31 -> 56
+	  32 -> 72
+	  33 -> 98
+	  34 -> 38
+	  35 -> 36
+	  35 -> 37
+	  36 -> 117
+	  37 -> 21
+	  38 -> 101
+	  39 -> 40
+	  39 -> 41
+	  40 -> 75
+	  41 -> 116
+	  42 -> 43
+	  43 -> 44
+	  44 -> 106
+	  45 -> 46
+	  45 -> 47
+	  46 -> 19
+	  47 -> 100
+	  48 -> 20
+	  48 -> 77
+	  48 -> 23
+	  49 -> 50
+	  49 -> 51
+	  50 -> 16
+	  51 -> 78
+	  52 -> 22
+	  53 -> 27
+	  54 -> 69
+	  55 -> 38
+	  57 -> 59
+	  57 -> 60
+	  58 -> 114
+	  59 -> 24
+	  60 -> 101
+	  61 -> 57
+	  62 -> 64
+	  62 -> 65
+	  63 -> 71
+	  64 -> 45
+	  65 -> 67
+	  65 -> 68
+	  66 -> 48
+	  67 -> 85
+	  68 -> 101
+	  69 -> 61
+	  70 -> 42
+	  71 -> 73
+	  71 -> 74
+	  72 -> 115
+	  73 -> 76
+	  74 -> 82
+	  75 -> 34
+	  76 -> 94
+	  77 -> 16
+	  78 -> 80
+	  78 -> 81
+	  79 -> 30
+	  80 -> 39
+	  81 -> 63
+	  82 -> 103
+	  83 -> 10
+	  84 -> 20
+	  84 -> 77
+	  84 -> 23
+	  85 -> 66
+	  86 -> 88
+	  86 -> 89
+	  87 -> 14
+	  88 -> 113
+	  89 -> 83
+	  90 -> 92
+	  90 -> 93
+	  91 -> 5
+	  93 -> 49
+	  94 -> 96
+	  94 -> 97
+	  95 -> 54
+	  96 -> 17
+	  97 -> 62
+	  98 -> 83
+	  99 -> 42
+	  100 -> 3
+	  100 -> 84
+	  101 -> 83
+	  102 -> 104
+	  102 -> 105
+	  103 -> 61
+	  104 -> 70
+	  106 -> 9
+	  106 -> 52
+	  106 -> 13
+	  107 -> 69
+	  108 -> 110
+	  108 -> 111
+	  109 -> 15
+	  110 -> 91
+	  111 -> 101
+	  112 -> 14
+	  113 -> 18
+	  114 -> 38
+	  115 -> 33
+	  116 -> 90
+	  116 -> 99
+	  116 -> 102
+}
+

@@ -1,0 +1,142 @@
+# ICE / AFTER CRYING KIM
+# Automatically starts after Acele's dialogue ends with her line "Crying is good. Get it out and then maybe we can talk, okay?"
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: \"A what?\""];
+	  3 [label="Kim Kitsuragi: \"In the future, could you please refrain from emoting too much on duty? The quasi-legal status of the RCM means we need to project strength twice as consistently as any other police force in the world.\""];
+	  4 [label="You: \"Sounds like typical macho bullshit to me.\""];
+	  5 [label="Drama: 'Tis possible thou couldst persuade the lieutenant 'twas all a part of thy 'unorthodox' method. But can thou persuade *thyself*?"];
+	  6 [label="crygasmhub"];
+	  7 [label="You: \"What's there to talk about?\""];
+	  8 [label="Kim Kitsuragi: \"So, what do *you* think happened?\""];
+	  9 [label="Kim Kitsuragi: \"Thank you.\""];
+	  10 [label="You: \"I can. And I'm sorry, Kim. I promise this is the last time.\""];
+	  11 [label="You: Convince yourself that you *didn't* melt down just now."];
+	  12 [label="You: Variable[\"ice.kim_believes_crying_was_a_ruse\"]"];
+	  13 [label="Variable[\"ice.kim_believes_crying_was_a_ruse\"]", shape=diamond];
+	  14 [label="!(Variable[\"ice.kim_believes_crying_was_a_ruse\"])", shape=diamond];
+	  15 [label="Kim Kitsuragi: \"Uh huh.\""];
+	  16 [label="You: \"Right. I mean, who *cries* in public, like for real?\""];
+	  17 [label="Jump to: [Kim Kitsuragi: \"\"Glad to hear it was 'minor.' Can y...\"]"];
+	  18 [label="You: \"... you could torture me, abandon me, even *divorce* me, and I'd be dry as a desert, yessir.\" (Wipe your eyes.)"];
+	  19 [label="Kim Kitsuragi: \"Yes. A clever ruse. I see.\""];
+	  20 [label="You: \"I experienced a minor malfunction. I'm okay now.\""];
+	  21 [label="You: \"The RCM?\""];
+	  22 [label="You: \"You don't. But you *will*.\""];
+	  23 [label="Kim Kitsuragi: The lieutenant blinks. \"So you're saying you *didn't* break down in tears just now and nearly tear your shirt off?\""];
+	  24 [label="Kim Kitsuragi: \"Do you, uh, want to *talk* about what just happened?\""];
+	  25 [label="Kim Kitsuragi: Variable[\"ice.kim_believes_crying_was_a_ruse\"]"];
+	  26 [label="Variable[\"ice.kim_believes_crying_was_a_ruse\"]", shape=diamond];
+	  27 [label="!(Variable[\"ice.kim_believes_crying_was_a_ruse\"])", shape=diamond];
+	  28 [label="Kim Kitsuragi: \"Then let's go.\""];
+	  29 [label="You: \"Okay, I'll control my emotions.\""];
+	  30 [label="Kim Kitsuragi: \"Who indeed?\""];
+	  31 [label="Kim Kitsuragi: The lieutenant merely nods."];
+	  32 [label="Jump to: [Kim Kitsuragi: \"\"In the future, could you please re...\"]"];
+	  33 [label="You: \"Don't worry, Kim, it was *all a ruse*.\" (Wink at Kim.)"];
+	  34 [label="Kim Kitsuragi: \"That's us. Revachol Citizens Militia. The police.\""];
+	  35 [label="You: \"That's probably a good idea.\""];
+	  36 [label="Kim Kitsuragi: \"Normally I'm opposed to discussing one's feelings, especially on-duty, but I think this is an exceptional case...\""];
+	  37 [label="Kim Kitsuragi: \"Glad to hear it was 'minor.' Can you go on?\""];
+	  38 [label="You: \"The end is near anyway, I might as well see this through...\""];
+	  39 [label="Drama: Thy pen of lies runneth dry. Best to simplie deny the Truth baldfacedly."];
+	  40 [label="Empathy: You get the feeling you're being handled with kid gloves because your cheeks are still soaking wet."];
+	  41 [label="You: \"What? Nothing happened!!\""];
+	  42 [label="You: \"I've never cried once in my life...\""];
+	  43 [label="You: \"It's when you totally break down and it feels a little better afterwards. I don't know where I got the expression from. I may have just invented it.\""];
+	  44 [label="Drama: Hrmm, methinks my liege doth protest too much."];
+	  45 [label="You: \"Weakness is strength.\""];
+	  46 [label="Kim Kitsuragi: \"Not when projecting strength -- then it's just weakness.\""];
+	  47 [label="Kim Kitsuragi: Variable[\"plaza.kineema_station_call_done\"]"];
+	  48 [label="Variable[\"plaza.kineema_station_call_done\"]", shape=diamond];
+	  49 [label="!(Variable[\"plaza.kineema_station_call_done\"])", shape=diamond];
+	  50 [label="You: \"Yes. It is my duty, after all.\""];
+	  51 [label="You: \"A crygasm.\""];
+	  52 [label="You: \"It was nothing.\" [Leave.]"];
+	  53 [label="Kim Kitsuragi: \"Yes, I've definitely never seen you cry before, nor lent you my handkerchief to dry your tears.\""];
+	  54 [label="Conceptualization: A performance that would make the star of a radio melodrama blush."];
+	  55 [label="Drama: Believeth in thyself, my liege! 'Twas all a clever ruse."];
+	  56 [label="Kim Kitsuragi: \"Good. Controlling your emotions sounds good.\""];
+	  57 [label="Kim Kitsuragi: \"That may be so, but such is Revachol and this is what is expected of us -- in Revachol.\""];
+	  58 [label="You: \"Okay, then it isn't strength. You're right.\""];
+	  59 [label="You: \"Absolutely. Superstars always get back up and try again.\""];
+	  60 [label="Kim Kitsuragi: \"Okay, right. Enough of this.\""];
+	  0 -> 1
+	  1 -> 25
+	  2 -> 44
+	  2 -> 21
+	  3 -> 46
+	  3 -> 22
+	  3 -> 30
+	  4 -> 58
+	  5 -> 6
+	  6 -> 53
+	  6 -> 11
+	  6 -> 52
+	  6 -> 21
+	  7 -> 37
+	  8 -> 5
+	  9 -> 18
+	  10 -> 29
+	  11 -> 12
+	  12 -> 13
+	  12 -> 14
+	  13 -> 26
+	  14 -> 26
+	  15 -> 19
+	  16 -> 31
+	  17 -> 38
+	  18 -> 48
+	  19 -> 16
+	  19 -> 23
+	  20 -> 38
+	  21 -> 35
+	  22 -> 33
+	  23 -> 43
+	  24 -> 36
+	  24 -> 7
+	  25 -> 27
+	  25 -> 28
+	  26 -> 56
+	  27 -> 40
+	  29 -> 57
+	  30 -> 33
+	  32 -> 3
+	  33 -> 20
+	  34 -> 46
+	  34 -> 30
+	  35 -> 37
+	  36 -> 8
+	  37 -> 10
+	  37 -> 51
+	  37 -> 60
+	  37 -> 39
+	  38 -> 29
+	  39 -> 42
+	  40 -> 18
+	  41 -> 24
+	  42 -> 15
+	  43 -> 3
+	  44 -> 55
+	  45 -> 47
+	  46 -> 59
+	  46 -> 4
+	  47 -> 49
+	  47 -> 50
+	  48 -> 54
+	  49 -> 61
+	  50 -> 29
+	  51 -> 2
+	  52 -> 32
+	  53 -> 45
+	  54 -> 33
+	  55 -> 34
+	  56 -> 18
+	  57 -> 41
+	  58 -> 9
+	  59 -> 29
+	  60 -> 45
+}
+

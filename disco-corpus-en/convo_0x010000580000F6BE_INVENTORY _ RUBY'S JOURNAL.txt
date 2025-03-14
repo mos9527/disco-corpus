@@ -1,0 +1,430 @@
+# INVENTORY / RUBY'S JOURNAL
+# Here you can learn about Ruby's involvement with La Puta Madre.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Empathy: No, stop... He wouldn't do that."];
+	  3 [label="Kim Kitsuragi: \"Either way, we need to keep an eye on him. Somewhere along the way, we might have been fed a lie or two...\""];
+	  4 [label="You: Put the journal away. [Leave.]"];
+	  5 [label="Encyclopedia: Schneller is a stationary brand from Gottwald beloved among architects and engineers."];
+	  6 [label="Ruby's Journal: The large cursive of someone who writes quickly and confidently."];
+	  7 [label="You: What did she write the day Lely died?"];
+	  8 [label="You: Read the entry from March 12th."];
+	  9 [label="Variable[\"boardwalk.ruby_killed_herself\"]"];
+	  10 [label="Variable[\"boardwalk.ruby_killed_herself\"]", shape=diamond];
+	  11 [label="!(Variable[\"boardwalk.ruby_killed_herself\"])", shape=diamond];
+	  12 [label="framedhub"];
+	  13 [label="Kim Kitsuragi: \"Maybe there's a Hardie boy we've yet to meet who acted as his accomplice? Either way, we need to keep an eye on him.\""];
+	  14 [label="IsKimHere()"];
+	  15 [label="IsKimHere()", shape=diamond];
+	  16 [label="!(IsKimHere())", shape=diamond];
+	  17 [label="You: \"No mention of La Puta Madre...\""];
+	  18 [label="Conceptualization: She's got good taste and must have taken whatever she recorded here seriously."];
+	  19 [label="Ruby's Journal: It's a mix of logistical notes, diagrams, and personal reflections, all dated."];
+	  20 [label="Ruby's Journal: The first entry is from August 2nd of last year. It reads simply: \"I know my position is precarious. All I can do is make myself as useful as I can while looking for a way out. (Remember: no one is indispensable.)\""];
+	  21 [label="Ruby's Journal: Hard to tell exactly -- it's mostly noted down in code. Looks like contact information, quantities, directions."];
+	  22 [label="Ruby's Journal: \"Been holed up here for three days now. I'm used to being alone and all, but -- I don't know when I'll be able to leave, or if I'll be ratted out. They *will* rat me out, of course. I've made it a point to believe in the best in people (the boys, for example), but -- experience tells me...\""];
+	  23 [label="Ruby's Journal: \"Even when I leave here (if I leave here alive) -- what's my next move?... Staging a lynching is a crime, even if I'm not accused of murder on top of that. Forever on the run? Not really my idea of the open road. 
+
+Man, I was really looking forward to winning.\""];
+	  24 [label="Jump to: [looking through the journal]"];
+	  25 [label="Kim Kitsuragi: \"No, it's dirty.\""];
+	  26 [label="Kim Kitsuragi: \"I wouldn't go so far as to say that -- we have other reasons to arrest her.\" He frowns."];
+	  27 [label="Variable[\"boardwalk.journal_main_hub_reached\"]"];
+	  28 [label="Variable[\"boardwalk.journal_main_hub_reached\"]", shape=diamond];
+	  29 [label="!(Variable[\"boardwalk.journal_main_hub_reached\"])", shape=diamond];
+	  30 [label="Ruby's Journal: The most recent entry is from today. It reads:"];
+	  31 [label="IsKimHere()"];
+	  32 [label="IsKimHere()", shape=diamond];
+	  33 [label="!(IsKimHere())", shape=diamond];
+	  34 [label="You: \"T-man wouldn't fuck me over!\""];
+	  35 [label="Jump to: [Ruby's Journal: \"The thick journal bound in brown le...\"]"];
+	  36 [label="Ruby's Journal: It's made of full-grain leather. The lower left corner of the back cover sports an embossed brand name: \"SCHNELLER.\""];
+	  37 [label="Variable[\"inventory.ruby_kill_inland\"]"];
+	  38 [label="Variable[\"inventory.ruby_kill_inland\"]", shape=diamond];
+	  39 [label="!(Variable[\"inventory.ruby_kill_inland\"])", shape=diamond];
+	  40 [label="Empathy: This was important to her -- when it was still hers."];
+	  41 [label="You: \"I don't know...\""];
+	  42 [label="Kim Kitsuragi: \"We could learn a lot from this.\""];
+	  43 [label="Logic: She is referring to betraying her previous employer. Does this suggest she did it in self-defence?"];
+	  44 [label="Untitled hub (03)"];
+	  45 [label="Half Light: You didn't follow through. You should have shot her in the head."];
+	  46 [label="Inland Empire: Is it? Can you be sure? What if you are secretly being manipulated by La Puta Madre as you pursue this investigation. What if he wiped your memory on purpose?"];
+	  47 [label="You: This is not me. I wouldn't do something like that."];
+	  48 [label="rubyjournalmainhub"];
+	  49 [label="You: No, I couldn't."];
+	  50 [label="Ruby's Journal: \"Did M feel truly betrayed by me? I was feeling threatened -- he'd have to know if he threatened people, they'd take measures to protect themselves. Even I know that. Economic measures first of all. Gotta make a living, right. I can still hear his voice in the receiver, taste the plastic...\""];
+	  51 [label="Variable[\"TASK.locate_ruby_on_the_coast_done\"]"];
+	  52 [label="Variable[\"TASK.locate_ruby_on_the_coast_done\"]", shape=diamond];
+	  53 [label="!(Variable[\"TASK.locate_ruby_on_the_coast_done\"])", shape=diamond];
+	  54 [label="You: \"Seems plausible.\""];
+	  55 [label="Kim Kitsuragi: \"Either way, we need to keep an eye on her.\""];
+	  56 [label="Logic: On purpose? That's pretty far-fetched."];
+	  57 [label="Ruby's Journal: \"Great. M's peone is coming to town, no doubt to investigate the lynching, but also -- I feel it in my gut -- to finally put a bullet in my head. While I'm napping in my lorry or on a smoke break... Well, I won't stick around just to twist my own neck by constantly looking over my shoulder.\""];
+	  58 [label="Jump to: [You: \"Read the entry from March 12th.\"]"];
+	  59 [label="Half Light: Too late to do that now, *assassino grande*! Better start looking over your shoulder now."];
+	  60 [label="Kim Kitsuragi: \"No, I don't think you are.\" He looks you straight in the eye for a moment, then sighs. \"Ask someone in your precinct if you want to be sure.\""];
+	  61 [label="You: \"Who *is* La Puta Madre?\""];
+	  62 [label="You: \"So she died for nothing?\""];
+	  63 [label="You: \"Then who do you think killed Lely?\" (Conclude.)"];
+	  64 [label="You: \"But no one heard the shot...\""];
+	  65 [label="Ruby's Journal: The journal falls open. About two thirds of its ruled pages have been filled."];
+	  66 [label="Ruby's Journal: Short, wry observations of people and places -- probably a way to pass the time on the road. Also, what appear to be attempts to sort through some difficult decisions. There are a few passages with many questions in them."];
+	  67 [label="Jump to: [looking through the journal]"];
+	  68 [label="Drama: He truly does not believe you are. Perhaps he shouldn't be so trusting..."];
+	  69 [label="Volition: His trust is well placed. You aren't. You can *feel* it."];
+	  70 [label="Variable[\"tc.la_puta_madre\"]"];
+	  71 [label="Variable[\"tc.la_puta_madre\"]", shape=diamond];
+	  72 [label="!(Variable[\"tc.la_puta_madre\"])", shape=diamond];
+	  73 [label="You: \"But no one heard the shot...\""];
+	  74 [label="Variable[\"TASK.confront_hardie_about_drug_trade_done\"]"];
+	  75 [label="Variable[\"TASK.confront_hardie_about_drug_trade_done\"]", shape=diamond];
+	  76 [label="!(Variable[\"TASK.confront_hardie_about_drug_trade_done\"])", shape=diamond];
+	  77 [label="Jump to: [looking through the journal]"];
+	  78 [label="Ruby's Journal: The entry ends abruptly."];
+	  79 [label="Logic: You have no idea what she means. These are personal notes, don't expect to understand all of it."];
+	  80 [label="Kim Kitsuragi: \"Klaasje was the one who pointed the finger at Ruby. Perhaps she was trying to steer us away from herself? Or...\" He stops to think."];
+	  81 [label="Variable[\"boardwalk.ruby_killed_herself\"]"];
+	  82 [label="Variable[\"boardwalk.ruby_killed_herself\"]", shape=diamond];
+	  83 [label="!(Variable[\"boardwalk.ruby_killed_herself\"])", shape=diamond];
+	  84 [label="Volition: Don't get emotional."];
+	  85 [label="You: How far back do the entries go?"];
+	  86 [label="You: Anything personal?"];
+	  87 [label="Kim Kitsuragi: \"There could be useful information about local operations in those notes. We have a junior sergeant at my station who's good with codes -- I can give this to her after we finish this.\""];
+	  88 [label="Ruby's Journal: \"Even when I leave here (if I leave here alive) -- what's my next move?... Staging a lynching is a crime, even if I'm not accused of murder on top of that. Forever on the run? Not really my idea of the open road. 
+
+Man, I was really looking forward to winning.\""];
+	  89 [label="Empathy: No, not even the old you. No you would do that."];
+	  90 [label="Composure: Kim's posture is unusually rigid -- he's used to this sort of thing, but he's not particularly happy about being used to it."];
+	  91 [label="Authority: Staff issues, always tough on the leadership. You smell traces of betrayal."];
+	  92 [label="You: Am I sure this is a mistake? Look at me."];
+	  93 [label="Authority: The call was a courtesy. He must have held her in high regard to personally tell her he knew about her plan to run drugs for the competition."];
+	  94 [label="You: Flip through the pages."];
+	  95 [label="Reaction Speed: \"The call\"? Did M call her personally? Why?"];
+	  96 [label="You: What kinds of logistics?"];
+	  97 [label="You: What's the most recent entry? (Conclude with journal.)"];
+	  98 [label="Inland Empire: Things played out just as she had feared. Except *you* didn't shoot her."];
+	  99 [label="Half Light: It's in you to do something like this -- kill her. Physically at least. You could pull the trigger if you had to."];
+	  100 [label="Logic: Small wonder -- would you talk about La Puta Madre in your journal? You do see an 'M' though -- La Puta Madre? 'M' is mentioned on March 9th and March 15th."];
+	  101 [label="You: Not now."];
+	  102 [label="Untitled hub (02)"];
+	  103 [label="Empathy: That must have been one hell of a conversation."];
+	  104 [label="Ruby's Journal: A thick journal. The cover is worn, like someone used to carry it around in their back pocket."];
+	  105 [label="You: What a coincidence..."];
+	  106 [label="Kim Kitsuragi: \"The head of a major Jamrock gang specializing in drug production and trafficking -- a very bad person.\""];
+	  107 [label="Kim Kitsuragi: \"Could have been Titus. Then again...\" He pauses to think."];
+	  108 [label="Kim Kitsuragi: \"It looks like she might have been... framed?\" The lieutenant taps on the page."];
+	  109 [label="You: \"She killed the merc, then turned the gun on herself -- case closed. It's so tidy!\""];
+	  110 [label="Kim Kitsuragi: \"It's good she left in a hurry. We could learn a lot from this...\""];
+	  111 [label="Inland Empire: Whatever you may *look* like, you don't *feel* like a hired assassin."];
+	  112 [label="Esprit de Corps: You should show all this to the lieutenant, see what he makes of it."];
+	  113 [label="Variable[\"boardwalk.journal_encyc_schneller\"]"];
+	  114 [label="Variable[\"boardwalk.journal_encyc_schneller\"]", shape=diamond];
+	  115 [label="!(Variable[\"boardwalk.journal_encyc_schneller\"])", shape=diamond];
+	  116 [label="You: Read the entry from March 9th first."];
+	  117 [label="Variable[\"boardwalk.ruby_red_check_rhet_failed\"]"];
+	  118 [label="Variable[\"boardwalk.ruby_red_check_rhet_failed\"]", shape=diamond];
+	  119 [label="!(Variable[\"boardwalk.ruby_red_check_rhet_failed\"])", shape=diamond];
+	  120 [label="You: Goddamn right, I should have."];
+	  121 [label="You: I'm okay with the idea."];
+	  122 [label="Half Light: Something tells you you should be extra careful from now on."];
+	  123 [label="You: \"Kim, am I really a La Puta Madre agent?\""];
+	  124 [label="Kim Kitsuragi: \"She was in plenty of trouble even without the murder charge.\" He looks down. \"Still, it's a nasty business.\""];
+	  125 [label="Variable[\"boardwalk.ruby_killed_herself\"]"];
+	  126 [label="Variable[\"boardwalk.ruby_killed_herself\"]", shape=diamond];
+	  127 [label="!(Variable[\"boardwalk.ruby_killed_herself\"])", shape=diamond];
+	  128 [label="Volition: Professionalism is his coping mechanism."];
+	  129 [label="Kim Kitsuragi: \"What about this 'M'?\" He points at the page you're staring at. \"Could this be La Puta Madre? Here: March 9th and March 15th.\""];
+	  130 [label="Inland Empire: The thought steadies your nerves. The journal stops shaking in your hand."];
+	  131 [label="You: Unwind the strap. (Move on.)"];
+	  132 [label="You: Study the handwriting."];
+	  133 [label="You: Examine the cover."];
+	  134 [label="You: Anything about... La Puta Madre?"];
+	  135 [label="Ruby's Journal: Esoteric radio technology. The most recent ones probably pertain to the Latitude Compressor: sketches, calculations of distance and density. You make out a familiar spiral shape."];
+	  136 [label="Inland Empire: That's a good, pragmatic approach."];
+	  137 [label="Kim Kitsuragi: \"Besides, I'm not sure her life as a fugitive is going to be much better than with us.\""];
+	  138 [label="Kim Kitsuragi: \"I don't think she killed the mercenary.\" The lieutenant taps on the page. \"It looks like she might have been... framed?\""];
+	  139 [label="Variable[\"TASK.return_to_whirling\"]"];
+	  140 [label="Variable[\"TASK.return_to_whirling\"]", shape=diamond];
+	  141 [label="!(Variable[\"TASK.return_to_whirling\"])", shape=diamond];
+	  142 [label="Esprit de Corps: This whole thing was a detour -- and a fatal one, he thinks."];
+	  143 [label="Esprit de Corps: That would be a first -- or a fourth -- but who's counting, he thinks. Very rarely does anyone actually get framed."];
+	  144 [label="You: \"Okay. What do you mean, framed?\""];
+	  145 [label="Untitled hub (05)"];
+	  146 [label="Variable[\"boardwalk.ruby_killed_herself\"]"];
+	  147 [label="Variable[\"boardwalk.ruby_killed_herself\"]", shape=diamond];
+	  148 [label="!(Variable[\"boardwalk.ruby_killed_herself\"])", shape=diamond];
+	  149 [label="You: \"If she didn't do it, then maybe it's good that we didn't catch her?\""];
+	  150 [label="Jump to: [looking through the journal]"];
+	  151 [label="Inland Empire: Maybe it's the old you? Or maybe she was just paranoid..."];
+	  152 [label="Variable[\"inventory.ruby_logic_m\"]"];
+	  153 [label="Variable[\"inventory.ruby_logic_m\"]", shape=diamond];
+	  154 [label="!(Variable[\"inventory.ruby_logic_m\"])", shape=diamond];
+	  155 [label="Jump to: [rubyjournalmainhub]"];
+	  156 [label="IsKimHere()"];
+	  157 [label="IsKimHere()", shape=diamond];
+	  158 [label="!(IsKimHere())", shape=diamond];
+	  159 [label="You: What are the diagrams of?"];
+	  160 [label="Jump to: [framedhub]"];
+	  161 [label="Kim Kitsuragi: \"Maybe she had an accomplice. Either way, we need to keep an eye on her.\""];
+	  162 [label="Kim Kitsuragi: \"One thing is for certain: We have business back in the Whirling-in-Rags. Questions to ask. We should get to it.\""];
+	  163 [label="You: This is a coincidence. I would never kill people for a mob boss."];
+	  164 [label="Kim Kitsuragi: \"By the Hardie boys, by Klaasje, by us.\""];
+	  165 [label="You: Flip through the pages again."];
+	  166 [label="Ruby's Journal: Nothing on March 4th... March 5th, though: \"Well, *that's* bound to come back and bite me in the ass. I'm bad at this -- loyal to a fault. Except... But that's another matter entirely.\""];
+	  167 [label="Half Light: Yes, you could. You'd pull it one, two, three times -- and watch her fall."];
+	  168 [label="Drama: He's not 100% sure you're not indebted to this very, very bad person."];
+	  169 [label="IsKimHere()"];
+	  170 [label="IsKimHere()", shape=diamond];
+	  171 [label="!(IsKimHere())", shape=diamond];
+	  172 [label="Untitled hub (06)"];
+	  173 [label="Ruby's Journal: The thick journal bound in brown leather is full of candour and diagrams."];
+	  174 [label="Inland Empire: Were you *supposed* to find her, even apart from the investigation, then? On M's request? No, you wouldn't do something like this. This must be a mistake."];
+	  175 [label="Variable[\"inventory.ruby_kill_concept\"]"];
+	  176 [label="Variable[\"inventory.ruby_kill_concept\"]", shape=diamond];
+	  177 [label="!(Variable[\"inventory.ruby_kill_concept\"])", shape=diamond];
+	  178 [label="You: \"Seems plausible.\""];
+	  179 [label="You: \"I don't know...\""];
+	  180 [label="Interfacing: Perhaps too confidently -- many phrases and even paragraphs have been crossed out, with tiny corrections scrawled above and in the margins."];
+	  181 [label="Conceptualization: She had good taste and must have taken what she recorded here seriously."];
+	  182 [label="Jump to: [Untitled hub (05)]"];
+	  183 [label="looking through the journal"];
+	  184 [label="Interfacing: The way some of those question marks trail off into ellipses -- she was going through a tough time."];
+	  185 [label="You: (Look at the cover again.)"];
+	  186 [label="Ruby's Journal: That name isn't mentioned as far as you can tell."];
+	  187 [label="Ruby's Journal: \"Then again, isn't that what I've been doing ever since I got the call.\""];
+	  0 -> 1
+	  1 -> 27
+	  2 -> 103
+	  3 -> 163
+	  5 -> 114
+	  6 -> 181
+	  7 -> 167
+	  8 -> 22
+	  9 -> 10
+	  9 -> 11
+	  10 -> 182
+	  11 -> 18
+	  12 -> 124
+	  12 -> 150
+	  12 -> 63
+	  13 -> 163
+	  14 -> 16
+	  14 -> 15
+	  15 -> 17
+	  16 -> 151
+	  17 -> 130
+	  18 -> 183
+	  19 -> 31
+	  20 -> 67
+	  21 -> 157
+	  22 -> 50
+	  23 -> 140
+	  24 -> 184
+	  25 -> 90
+	  26 -> 138
+	  27 -> 28
+	  27 -> 29
+	  28 -> 174
+	  29 -> 105
+	  30 -> 51
+	  31 -> 32
+	  31 -> 33
+	  32 -> 81
+	  33 -> 184
+	  34 -> 3
+	  35 -> 174
+	  36 -> 5
+	  37 -> 38
+	  37 -> 39
+	  38 -> 45
+	  39 -> 58
+	  40 -> 183
+	  41 -> 55
+	  42 -> 184
+	  43 -> 79
+	  44 -> 145
+	  44 -> 110
+	  44 -> 62
+	  45 -> 121
+	  45 -> 164
+	  45 -> 92
+	  46 -> 56
+	  47 -> 152
+	  48 -> 4
+	  48 -> 133
+	  48 -> 166
+	  48 -> 95
+	  49 -> 168
+	  50 -> 78
+	  51 -> 52
+	  51 -> 53
+	  52 -> 23
+	  53 -> 88
+	  54 -> 55
+	  55 -> 163
+	  56 -> 103
+	  57 -> 188
+	  58 -> 8
+	  59 -> 103
+	  60 -> 70
+	  61 -> 107
+	  62 -> 125
+	  63 -> 80
+	  63 -> 108
+	  64 -> 162
+	  65 -> 48
+	  66 -> 185
+	  67 -> 184
+	  68 -> 69
+	  69 -> 161
+	  70 -> 72
+	  70 -> 71
+	  71 -> 68
+	  72 -> 61
+	  73 -> 13
+	  74 -> 75
+	  74 -> 76
+	  75 -> 93
+	  76 -> 104
+	  77 -> 184
+	  78 -> 74
+	  79 -> 67
+	  80 -> 64
+	  80 -> 41
+	  80 -> 54
+	  81 -> 82
+	  81 -> 83
+	  82 -> 42
+	  83 -> 111
+	  84 -> 44
+	  85 -> 20
+	  86 -> 66
+	  87 -> 126
+	  88 -> 140
+	  89 -> 103
+	  90 -> 12
+	  91 -> 67
+	  92 -> 112
+	  93 -> 77
+	  94 -> 19
+	  95 -> 118
+	  96 -> 21
+	  97 -> 30
+	  98 -> 176
+	  99 -> 49
+	  99 -> 106
+	  99 -> 122
+	  99 -> 47
+	  100 -> 153
+	  101 -> 151
+	  102 -> 8
+	  103 -> 77
+	  104 -> 146
+	  105 -> 46
+	  106 -> 169
+	  107 -> 73
+	  107 -> 34
+	  107 -> 179
+	  107 -> 180
+	  108 -> 144
+	  109 -> 25
+	  110 -> 184
+	  111 -> 103
+	  112 -> 24
+	  113 -> 115
+	  113 -> 116
+	  114 -> 9
+	  115 -> 40
+	  116 -> 57
+	  117 -> 120
+	  117 -> 119
+	  118 -> 99
+	  119 -> 175
+	  120 -> 59
+	  121 -> 137
+	  123 -> 60
+	  124 -> 12
+	  125 -> 128
+	  125 -> 127
+	  126 -> 129
+	  127 -> 67
+	  128 -> 67
+	  129 -> 173
+	  130 -> 103
+	  131 -> 65
+	  132 -> 6
+	  133 -> 36
+	  134 -> 187
+	  135 -> 67
+	  136 -> 103
+	  137 -> 161
+	  138 -> 143
+	  139 -> 141
+	  139 -> 142
+	  140 -> 24
+	  141 -> 170
+	  142 -> 84
+	  143 -> 12
+	  144 -> 165
+	  145 -> 132
+	  145 -> 4
+	  145 -> 134
+	  146 -> 148
+	  146 -> 149
+	  147 -> 139
+	  148 -> 109
+	  149 -> 26
+	  150 -> 184
+	  151 -> 89
+	  152 -> 154
+	  152 -> 155
+	  153 -> 173
+	  154 -> 14
+	  155 -> 48
+	  156 -> 158
+	  156 -> 159
+	  157 -> 87
+	  158 -> 67
+	  159 -> 136
+	  160 -> 12
+	  161 -> 163
+	  162 -> 123
+	  163 -> 131
+	  164 -> 12
+	  165 -> 184
+	  166 -> 43
+	  167 -> 2
+	  168 -> 161
+	  169 -> 171
+	  169 -> 172
+	  170 -> 147
+	  171 -> 113
+	  172 -> 117
+	  172 -> 102
+	  173 -> 48
+	  174 -> 37
+	  175 -> 177
+	  175 -> 178
+	  176 -> 100
+	  177 -> 58
+	  178 -> 3
+	  179 -> 3
+	  180 -> 156
+	  181 -> 183
+	  182 -> 146
+	  183 -> 160
+	  183 -> 97
+	  183 -> 98
+	  183 -> 7
+	  183 -> 135
+	  183 -> 85
+	  183 -> 86
+	  183 -> 186
+	  184 -> 91
+	  185 -> 35
+	  186 -> 101
+	  187 -> 96
+}
+

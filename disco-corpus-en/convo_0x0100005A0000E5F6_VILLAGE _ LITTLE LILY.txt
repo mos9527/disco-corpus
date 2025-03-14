@@ -1,0 +1,520 @@
+# VILLAGE / LITTLE LILY
+# One of Netpicker's kids not running around in the village, instead she sits on the sofa. You can exchange a few words with her.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Jump to: [Little Lily: \"\"Yes!\" She lights with recognition....\"]"];
+	  3 [label="IsKimHere()"];
+	  4 [label="IsKimHere()", shape=diamond];
+	  5 [label="!(IsKimHere())", shape=diamond];
+	  6 [label="Kim Kitsuragi: \"I'll keep an eye on him.\" The lieutenant cuts in faster than you can reply. \"Don't worry.\""];
+	  7 [label="Little Lily: \"Good.\" She hugs Lamby close to her again."];
+	  8 [label="You: ..."];
+	  9 [label="Jump to: [Untitled hub (04)]"];
+	  10 [label="Little Lily: \"Uh huh,\" she nods. \"Mom is great! You know what's great about my mom?\""];
+	  11 [label="Suggestion: You might be able to get on Garte's good side if you replace the broken skua you almost certainly broke?"];
+	  12 [label="Jump to: [main-hub-lilykid]"];
+	  13 [label="You: \"Rebel?\""];
+	  14 [label="You: \"And where are the gloves now?\""];
+	  15 [label="Empathy: She doesn't want you to think she stole them."];
+	  16 [label="You: \"I need those gloves.\""];
+	  17 [label="Variable[\"TASK.ask_little_lily_about_gloves\"]"];
+	  18 [label="Variable[\"TASK.ask_little_lily_about_gloves\"]", shape=diamond];
+	  19 [label="!(Variable[\"TASK.ask_little_lily_about_gloves\"])", shape=diamond];
+	  20 [label="Jump to: [main-hub-lilykid]"];
+	  21 [label="You: \"Do you know anyone named Ruby?\""];
+	  22 [label="Half Light: FUCK OFF."];
+	  23 [label="Jump to: [Untitled hub (02)]"];
+	  24 [label="You: \"No can do. I got a potty mouth till I die.\""];
+	  25 [label="You: I won't swear! I just won't! I'll just go quiet, you watch!"];
+	  26 [label="Little Lily: \"Bye!\" The girl's large, curious eyes remain fixed on you."];
+	  27 [label="You: \"What's that?\" (Point at the stuffed bird hanging from the ceiling.)"];
+	  28 [label="You: \"Everything?\""];
+	  29 [label="Little Lily: \"Isn't he soft?\" She's right, Lamby is very soft. She rubs the white fur against your cheek, then returns the lamb into her lap, cuddling it."];
+	  30 [label="You: \"Wait, you mean spooky, right?\""];
+	  31 [label="Little Lily: \"Oooh...\" She doesn't seem to understand, but you have conveyed the 'important' part, at least."];
+	  32 [label="FinishTask(\"TASK.ask_little_lily_about_gloves_done\")--[[ Variable[ ]]"];
+	  33 [label="Jump to: [main-hub-lilykid]"];
+	  34 [label="Kim Kitsuragi: The lieutenant sighs, and kneels to be eye-level with the girl. \"Maybe someone you know has acted a little different, lately?\""];
+	  35 [label="Little Lily: \"Yes!\" She lights with recognition. \"The twins got in trouble for saying *bad words*.\""];
+	  36 [label="Untitled hub (04)"];
+	  37 [label="Volition: Guess you held your ground. It can be good, being honest with yourself."];
+	  38 [label="Untitled hub (05)"];
+	  39 [label="Jump to: [main-hub-lilykid]"];
+	  40 [label="You: \"Not really, but I'd like to.\""];
+	  41 [label="You: \"Revolutionary?\""];
+	  42 [label="You: \"Why is it 'booky'?\""];
+	  43 [label="Kim Kitsuragi: \"Press your damn cheek against Lamby, okay?\" The lieutenant sounds authoritative -- and surprisingly gruff."];
+	  44 [label="FinishTask(\"TASK.ask_little_girl_in_village_about_gloves_done\")--[[ Variable[ ]]"];
+	  45 [label="Variable[\"village.lily_greeting_done\"]"];
+	  46 [label="Variable[\"village.lily_greeting_done\"]", shape=diamond];
+	  47 [label="!(Variable[\"village.lily_greeting_done\"])", shape=diamond];
+	  48 [label="Little Lily: \"Yesss.\" She frowns. \"They don't want to play with me. They're older and play outside!\""];
+	  49 [label="Little Lily: \"That's nice! My mom is great,\" she nods. \"She's never angry or anything.\""];
+	  50 [label="Little Lily: \"*Everything*!\" She shouts with glee."];
+	  51 [label="IsKimHere()"];
+	  52 [label="IsKimHere()", shape=diamond];
+	  53 [label="!(IsKimHere())", shape=diamond];
+	  54 [label="You: \"I guess they do look alike.\""];
+	  55 [label="Variable[\"village.lily_sugg_take_bird\"]"];
+	  56 [label="Variable[\"village.lily_sugg_take_bird\"]", shape=diamond];
+	  57 [label="!(Variable[\"village.lily_sugg_take_bird\"])", shape=diamond];
+	  58 [label="GainTask(\"TASK.get_the_armoured_gloves_from_lillys_sandcastle\")--[[ Variable[ ]]"];
+	  59 [label="Jump to: [main-hub-lilykid]"];
+	  60 [label="You: \"Anything. Maybe something you saw or heard that was weird?\""];
+	  61 [label="Little Lily: \"What?\" She covers Lamby's ears by cupping his whole head in her small palms."];
+	  62 [label="Little Lily: She stares at you, waiting for an answer."];
+	  63 [label="Volition: Was it good to lie to a child? Maybe it doesn't matter. It's not your responsibility."];
+	  64 [label="Volition: ..."];
+	  65 [label="Jump to: [Untitled hub (02)]"];
+	  66 [label="You: \"Well, can I have it?\""];
+	  67 [label="Little Lily: \"Vee-eery booky!\" She's clutching her stuffed toy and shaking her head. \"Don't go there.\""];
+	  68 [label="You: \"What's this?\" (Show her the stuffed bird you took from the ceiling.)"];
+	  69 [label="Reaction Speed: Wasn't Garte, the cafeteria manager, trying to repair a piece of taxidermy?"];
+	  70 [label="Jump to: [main-hub-lilykid]"];
+	  71 [label="Little Lily: \"My mom tells me that I'm a big girl, but she doesn't know that I can't say *ll*. Or like, sometimes I can, but then... *ll*... *rr*... *llrr*...\""];
+	  72 [label="Little Lily: \"Yep!\" The girl nods firmly. \"I don't say bad words. Lamby doesn't either.\""];
+	  73 [label="Little Lily: \"Yes.\" She yawns, and leans back into the cushion."];
+	  74 [label="Little Lily: \"Hello, mister!\" A young girl, barely four or five years old, sits on the sofa. She is looking at you with frank curiosity."];
+	  75 [label="Little Lily: \"Noo, mister!\" Her eyes grow wider as she shakes her head. \"Even Lamby doesn't like it.\" She hugs her stuffed toy tighter."];
+	  76 [label="Little Lily: \"Yesssss, I am! Little Lily!\" She gazes at you with her big eyes. \"You know my mom?\""];
+	  77 [label="You: \"There was a phasmid in it! I was trying to catch it.\""];
+	  78 [label="Jump to: [main-hub-lilykid]"];
+	  79 [label="You: \"Are the twins outside your brothers?\""];
+	  80 [label="Little Lily: \"I dunno.\""];
+	  81 [label="Little Lily: \"It's old and broken.\" She nods. \"Dan-ze-ruus, Mom says. I listen to mom. Lamby also listens. Brothers listen. They tried going there, but it was scary and they ran away!\""];
+	  82 [label="CheckItem(\"ruffed_grouse_taxidermy\")"];
+	  83 [label="CheckItem(\"ruffed_grouse_taxidermy\")", shape=diamond];
+	  84 [label="!(CheckItem(\"ruffed_grouse_taxidermy\"))", shape=diamond];
+	  85 [label="You: \"I don't deserve it. I'm scum.\""];
+	  86 [label="Kim Kitsuragi: \"Where did you get these gloves?\""];
+	  87 [label="CheckItem(\"ruffed_grouse_taxidermy\")"];
+	  88 [label="CheckItem(\"ruffed_grouse_taxidermy\")", shape=diamond];
+	  89 [label="!(CheckItem(\"ruffed_grouse_taxidermy\"))", shape=diamond];
+	  90 [label="You: \"Where are your parents?\""];
+	  91 [label="Untitled hub (03)"];
+	  92 [label="Jump to: [Untitled hub (04)]"];
+	  93 [label="Little Lily: It has only lasted three seconds. The girl still waits for her answer."];
+	  94 [label="You: \"I heard you kids might have gotten into the Feld building?\""];
+	  95 [label="Little Lily: \"It's Lamby! He's my friend. Sort of, like...\" She holds the fuzzy beast up to demonstrate."];
+	  96 [label="Little Lily: \"Lamby usually doesn't like strangers, but you're also fuzzy like Lamby.\""];
+	  97 [label="Little Lily: \"Oooh...\" She doesn't seem to understand, but the lieutenant's tone has conveyed to her the 'important' part."];
+	  98 [label="Little Lily: \"Sure! I mean you already took it. I don't like it anyway... it looks angry.\""];
+	  99 [label="Little Lily: \"Lamby doesn't like bad words. Please promise!\""];
+	  100 [label="You: \"What's that thing you're holding?\" (Point at her toy.)"];
+	  101 [label="You: \"Lamby looks like he's falling apart.\""];
+	  102 [label="Variable[\"TASK.sylvie_talk_to_garte_done\"]"];
+	  103 [label="Variable[\"TASK.sylvie_talk_to_garte_done\"]", shape=diamond];
+	  104 [label="!(Variable[\"TASK.sylvie_talk_to_garte_done\"])", shape=diamond];
+	  105 [label="Savoir Faire: All right. You just need to grab it from the ceiling and go!"];
+	  106 [label="You: \"I heard there was a girl here who has armoured gloves. Is that you?\""];
+	  107 [label="Little Lily: \"Found them when Lamby and I were playing hide-and-seek. In an empty house where no one lives! I think someone hid them there...\""];
+	  108 [label="Little Lily: She pouts. \"I hid them. The twins were going to take them. They're stupid...\" She lifts her stuffed toy up and looks into its one remaining eye, as though searching for confirmation."];
+	  109 [label="Little Lily: \"They're in my sandcastle.\" She points somewhere outside. \"Behind our house. Under the sand. You can break the castle, it's not very good.\""];
+	  110 [label="IsKimHere()"];
+	  111 [label="IsKimHere()", shape=diamond];
+	  112 [label="!(IsKimHere())", shape=diamond];
+	  113 [label="You: \"Poor Girl Child Revolution. What have the bourgeois done to you?\""];
+	  114 [label="Little Lily: She gasps. \"No! Don't say bad words! Promise?\""];
+	  115 [label="You: \"Okay.\" (Lie.)"];
+	  116 [label="Volition: Yes. There you are."];
+	  117 [label="Little Lily: \"Uh, mister, what were you doing in my fireplace?\""];
+	  118 [label="Little Lily: \"Hello, mister!\" The Net Picker's daughter waves at you."];
+	  119 [label="Little Lily: \"Haa haa, yessss!\" She smiles, hugging her fuzzy toy."];
+	  120 [label="Jump to: [main-hub-lilykid]"];
+	  121 [label="Little Lily: \"They look... ai-dent-ik!\" She slowly processes the word, then snickers with laughter."];
+	  122 [label="Little Lily: \"Sure! Just go and get it. I don't like it anyway... it looks angry.\""];
+	  123 [label="Little Lily: \"Sure! Just go and get it. I don't like it anyway... it looks angry.\""];
+	  124 [label="You: \"Are you Lilienne's daughter?\""];
+	  125 [label="Little Lily: \"Ohh, okay!\" She nods seriously."];
+	  126 [label="You: \"Can I have it? I know someone who really likes stuffed birds.\""];
+	  127 [label="You: Press your cheek against Lamby."];
+	  128 [label="You: \"Where did you get them?\""];
+	  129 [label="You: \"Anything that will help me dismantle Capitalism, so that you can inherit Communism, O' Girl Child Revolution?\""];
+	  130 [label="Little Lily: \"Noo-noooo, that's not it.\" She frowns, looking at her tattered toy. \"You know what you are, Lamby.\""];
+	  131 [label="IsKimHere()"];
+	  132 [label="IsKimHere()", shape=diamond];
+	  133 [label="!(IsKimHere())", shape=diamond];
+	  134 [label="Little Lily: \"Okay, then. I'm sorry.\" She presses her own cheek against Lamby and smiles, sadly."];
+	  135 [label="CheckItem(\"ruffed_grouse_taxidermy\")"];
+	  136 [label="CheckItem(\"ruffed_grouse_taxidermy\")", shape=diamond];
+	  137 [label="!(CheckItem(\"ruffed_grouse_taxidermy\"))", shape=diamond];
+	  138 [label="Jump to: [Untitled hub (02)]"];
+	  139 [label="Little Lily: Lamby remains silent. The fireplace flickers and cackles. She hugs the doll close to her chest and laughs."];
+	  140 [label="You: But what if I don't want to be a man who swears? What if I want to be a No-Bad-Word Cop?"];
+	  141 [label="Jump to: [main-hub-lilykid]"];
+	  142 [label="IsKimHere()"];
+	  143 [label="IsKimHere()", shape=diamond];
+	  144 [label="!(IsKimHere())", shape=diamond];
+	  145 [label="Little Lily: \"Cap-capi-capeel...\" She struggles to pronounce the words. She shakes her head. \"No.\""];
+	  146 [label="You: \"Is that it?\""];
+	  147 [label="You: \"But bad words can be good! It can be healthy to express yourself with them.\""];
+	  148 [label="Volition: You can't abandon swearing for a simple reason: You're just a man who swears."];
+	  149 [label="You: \"Revisionist?\""];
+	  150 [label="You: \"Nothing.\""];
+	  151 [label="IsKimHere()"];
+	  152 [label="IsKimHere()", shape=diamond];
+	  153 [label="!(IsKimHere())", shape=diamond];
+	  154 [label="You: \"It's grown-up business. You wouldn't understand. Just tell me where they are.\""];
+	  155 [label="Little Lily: \"Sure! I mean you already took it. I don't like it anyway... it looks angry.\""];
+	  156 [label="Little Lily: She turns the stuffed lamb to face her. \"What does that mean, Lamby?\" The doll offers no reply. Stuffing hangs out its rear."];
+	  157 [label="You: \"Good-bye.\" [Leave.]"];
+	  158 [label="Little Lily: \"It's a *grouse*,\" she yelps, smiling broadly."];
+	  159 [label="Little Lily: \"Yessss,\" she yelps happily! \"Lamby was a re-luz-ion...ry.\""];
+	  160 [label="Little Lily: \"We don't go there. Mom and auntie think we do, but it's very booky.\""];
+	  161 [label="Variable[\"village.lily_altgreet_fireplace\"]"];
+	  162 [label="Variable[\"village.lily_altgreet_fireplace\"]", shape=diamond];
+	  163 [label="!(Variable[\"village.lily_altgreet_fireplace\"])", shape=diamond];
+	  164 [label="Little Lily: \"Uhhhhh...\" She sits her doll on her lap. Its ragged limbs reach out toward you, as if longing for a cuddle. \"Like what?\""];
+	  165 [label="You: \"Bad words are for losers. Good on you for not saying them.\""];
+	  166 [label="You: Hey, why can't I swear off swearing for real?"];
+	  167 [label="Jump to: [Untitled hub (02)]"];
+	  168 [label="Jump to: [main-hub-lilykid]"];
+	  169 [label="Little Lily: She clutches a small stuffed animal. Occasionally she twirls it around."];
+	  170 [label="Little Lily: She twirls the furry doll around in the air, giggling happily."];
+	  171 [label="Little Lily: \"Ohh, okay!\" She twirls her fuzzy beast in the air."];
+	  172 [label="Jump to: [main-hub-lilykid]"];
+	  173 [label="Little Lily: \"Yes. Very soft.\" Suddenly she pushes the stuffed animal toward your face."];
+	  174 [label="Little Lily: \"Mhmh,\" she replies, nodding. \"It's very, very booky.\""];
+	  175 [label="Kim Kitsuragi: \"Kids.\" The lieutenant shakes his head."];
+	  176 [label="You: \"I see. Thank you for the tip; I'll talk to them about it.\" (Move on.)"];
+	  177 [label="Variable[\"village.lily_volition_said_you_swear\"]"];
+	  178 [label="Variable[\"village.lily_volition_said_you_swear\"]", shape=diamond];
+	  179 [label="!(Variable[\"village.lily_volition_said_you_swear\"])", shape=diamond];
+	  180 [label="You: ... Fuck. I guess I am a man who swears."];
+	  181 [label="Volition: Because it's just not you. I'm sorry."];
+	  182 [label="You: \"I'm talking to the children to learn from them. Has anything strange happened here lately?\""];
+	  183 [label="You: \"Revacholian?\""];
+	  184 [label="You: \"Remote Viewer?\""];
+	  185 [label="Kim Kitsuragi: \"I think she means 'revolutionary'.\""];
+	  186 [label="You: \"Lamby looks soft.\""];
+	  187 [label="You: \"I need them for a very important police investigation.\""];
+	  188 [label="Little Lily: \"You're welcome!\""];
+	  189 [label="You: \"What's wrong with bad words? I love bad words.\""];
+	  190 [label="You: What? No clever answers from the body and brain? Nothing?"];
+	  191 [label="Little Lily: The little girl tilts her head. \"Do you promise you won't say bad words anymore?\""];
+	  192 [label="main-hub-lilykid"];
+	  193 [label="You: \"Yes, we met earlier.\""];
+	  194 [label="You: \"Is there anything you can tell me about the building?\""];
+	  195 [label="Suggestion: You might be able to get on Garte's good side if you make up for the skua you broke?"];
+	  196 [label="You: \"Revanchist?\""];
+	  197 [label="Untitled hub"];
+	  198 [label="You: \"Never mind. Have you just seen or heard anything weird lately?\""];
+	  199 [label="Jump to: [main-hub-lilykid]"];
+	  200 [label="You: \"No, do tell me.\""];
+	  201 [label="Little Lily: \"They look the same! Haa ha haa! Sometimes I can't tell them 'part.\""];
+	  202 [label="Kim Kitsuragi: \"We're going to need those gloves. It's for important police business.\" He enunciates the last two words carefully."];
+	  203 [label="Little Lily: \"Why?\" She looks at you suspiciously."];
+	  204 [label="Little Lily: She frowns, delaying divulging her secret. \"Oo-kay,\" she says finally with some reluctance. \"I hid them inside my sandcastle. Behind the house.\" She points somewhere outside. \"You can take them.\""];
+	  205 [label="Little Lily: \"My mom's outside, and I don't really know about my dad.\" She gives you a bright smile like it's a good thing."];
+	  206 [label="IsKimHere()"];
+	  207 [label="IsKimHere()", shape=diamond];
+	  208 [label="!(IsKimHere())", shape=diamond];
+	  209 [label="Little Lily: \"Nooooo! Don't be bad too!\" Her face bunches up in a scowl."];
+	  210 [label="Volition: Please, don't make this more difficult for yourself. It's okay to swear. It can be healthy, even."];
+	  211 [label="Variable[\"village.orb_nethouse_tried_catching_phasmid\"]"];
+	  212 [label="Variable[\"village.orb_nethouse_tried_catching_phasmid\"]", shape=diamond];
+	  213 [label="!(Variable[\"village.orb_nethouse_tried_catching_phasmid\"])", shape=diamond];
+	  214 [label="Little Lily: Lamby is a stuffed lamb that, admittedly, has seen better days. One of the eye-buttons is missing and the fur is tattered in several parts."];
+	  215 [label="You: \"Oh, okay. Well, pleased to meet you, Lamby.\""];
+	  216 [label="Little Lily: \"Yessss, Lamby has lived a long life.\" She waves the lamb around in the air. \"Lamby was a... re.. a rev...\" She stumbles on her words."];
+	  217 [label="You: \"They look identical, right? I said the same thing.\""];
+	  218 [label="Little Lily: \"Haa ha haa!\" She continues laughing. \"Lamby tells them part.\" She waves her fuzzy doll in the air."];
+	  219 [label="Jump to: [main-hub-lilykid]"];
+	  220 [label="Little Lily: \"Ooooh.\" She looks alarmed. \"I had gloves, very big ones! Heavy too.\""];
+	  221 [label="Little Lily: \"Ll... Luby... Rr... R-luuby.\" Suddenly the girl gets all serious and leans in, as if she's about to tell you a secret."];
+	  222 [label="Untitled hub (02)"];
+	  223 [label="Reaction Speed: He's not going to let you make a fool of yourself or the RCM in front of this girl. Not while he's here."];
+	  224 [label="You: \"Yes, but what's it *for*?\""];
+	  225 [label="You: \"Uh, okay, thanks.\""];
+	  0 -> 1
+	  1 -> 212
+	  2 -> 36
+	  3 -> 4
+	  3 -> 5
+	  4 -> 35
+	  5 -> 114
+	  5 -> 199
+	  6 -> 224
+	  7 -> 64
+	  8 -> 65
+	  9 -> 37
+	  10 -> 201
+	  10 -> 29
+	  11 -> 56
+	  12 -> 193
+	  13 -> 131
+	  14 -> 109
+	  15 -> 14
+	  16 -> 204
+	  17 -> 18
+	  17 -> 19
+	  18 -> 33
+	  19 -> 45
+	  20 -> 193
+	  21 -> 222
+	  22 -> 140
+	  23 -> 223
+	  24 -> 210
+	  25 -> 211
+	  27 -> 159
+	  28 -> 120
+	  29 -> 12
+	  30 -> 175
+	  31 -> 110
+	  32 -> 59
+	  33 -> 193
+	  34 -> 36
+	  35 -> 223
+	  36 -> 24
+	  36 -> 116
+	  36 -> 167
+	  37 -> 168
+	  38 -> 141
+	  38 -> 181
+	  39 -> 193
+	  40 -> 10
+	  41 -> 160
+	  42 -> 68
+	  43 -> 128
+	  44 -> 59
+	  45 -> 48
+	  45 -> 47
+	  46 -> 119
+	  47 -> 75
+	  48 -> 202
+	  49 -> 71
+	  50 -> 40
+	  51 -> 53
+	  51 -> 54
+	  52 -> 186
+	  53 -> 121
+	  54 -> 219
+	  55 -> 57
+	  55 -> 58
+	  56 -> 198
+	  57 -> 70
+	  58 -> 60
+	  59 -> 193
+	  60 -> 2
+	  61 -> 100
+	  62 -> 149
+	  63 -> 168
+	  64 -> 8
+	  64 -> 181
+	  65 -> 223
+	  66 -> 136
+	  67 -> 195
+	  67 -> 31
+	  68 -> 159
+	  69 -> 198
+	  70 -> 193
+	  71 -> 111
+	  72 -> 22
+	  73 -> 139
+	  74 -> 170
+	  75 -> 161
+	  76 -> 41
+	  76 -> 194
+	  77 -> 126
+	  78 -> 193
+	  79 -> 49
+	  80 -> 226
+	  80 -> 67
+	  80 -> 127
+	  81 -> 79
+	  82 -> 84
+	  82 -> 85
+	  83 -> 169
+	  84 -> 106
+	  85 -> 132
+	  86 -> 108
+	  87 -> 89
+	  87 -> 90
+	  88 -> 99
+	  89 -> 124
+	  90 -> 206
+	  91 -> 24
+	  91 -> 116
+	  91 -> 148
+	  91 -> 167
+	  92 -> 37
+	  93 -> 9
+	  94 -> 76
+	  95 -> 215
+	  96 -> 142
+	  97 -> 110
+	  98 -> 83
+	  99 -> 37
+	  100 -> 96
+	  101 -> 217
+	  102 -> 104
+	  102 -> 105
+	  103 -> 196
+	  104 -> 11
+	  105 -> 169
+	  106 -> 221
+	  107 -> 15
+	  108 -> 143
+	  109 -> 17
+	  110 -> 112
+	  110 -> 113
+	  111 -> 176
+	  112 -> 34
+	  113 -> 157
+	  114 -> 207
+	  115 -> 7
+	  116 -> 94
+	  117 -> 78
+	  117 -> 151
+	  118 -> 193
+	  119 -> 40
+	  120 -> 193
+	  121 -> 220
+	  122 -> 83
+	  123 -> 83
+	  124 -> 77
+	  125 -> 173
+	  126 -> 88
+	  127 -> 30
+	  128 -> 108
+	  129 -> 146
+	  130 -> 52
+	  131 -> 133
+	  131 -> 134
+	  132 -> 44
+	  133 -> 135
+	  134 -> 142
+	  135 -> 137
+	  135 -> 138
+	  136 -> 156
+	  137 -> 123
+	  138 -> 223
+	  139 -> 23
+	  140 -> 182
+	  141 -> 193
+	  142 -> 144
+	  142 -> 145
+	  143 -> 203
+	  144 -> 16
+	  145 -> 3
+	  146 -> 74
+	  147 -> 62
+	  148 -> 178
+	  149 -> 131
+	  150 -> 172
+	  151 -> 153
+	  151 -> 154
+	  152 -> 87
+	  153 -> 129
+	  154 -> 205
+	  155 -> 83
+	  156 -> 199
+	  157 -> 26
+	  158 -> 103
+	  159 -> 121
+	  160 -> 43
+	  160 -> 195
+	  160 -> 31
+	  161 -> 163
+	  161 -> 164
+	  162 -> 46
+	  163 -> 118
+	  164 -> 130
+	  164 -> 61
+	  165 -> 73
+	  166 -> 63
+	  167 -> 223
+	  168 -> 193
+	  169 -> 193
+	  170 -> 83
+	  171 -> 173
+	  172 -> 193
+	  173 -> 128
+	  173 -> 86
+	  174 -> 43
+	  174 -> 195
+	  175 -> 34
+	  176 -> 189
+	  177 -> 179
+	  177 -> 180
+	  178 -> 39
+	  179 -> 191
+	  180 -> 117
+	  181 -> 25
+	  181 -> 181
+	  182 -> 165
+	  183 -> 131
+	  184 -> 131
+	  185 -> 160
+	  186 -> 174
+	  187 -> 32
+	  188 -> 200
+	  189 -> 115
+	  190 -> 192
+	  191 -> 93
+	  192 -> 69
+	  192 -> 101
+	  192 -> 107
+	  192 -> 80
+	  192 -> 21
+	  192 -> 183
+	  192 -> 91
+	  192 -> 28
+	  192 -> 125
+	  192 -> 158
+	  192 -> 95
+	  193 -> 50
+	  194 -> 82
+	  195 -> 56
+	  196 -> 131
+	  197 -> 225
+	  197 -> 226
+	  197 -> 67
+	  197 -> 127
+	  198 -> 36
+	  199 -> 193
+	  200 -> 51
+	  201 -> 218
+	  201 -> 55
+	  202 -> 98
+	  203 -> 155
+	  203 -> 188
+	  204 -> 17
+	  205 -> 20
+	  206 -> 208
+	  206 -> 209
+	  207 -> 6
+	  208 -> 92
+	  209 -> 38
+	  210 -> 8
+	  210 -> 181
+	  211 -> 213
+	  211 -> 214
+	  212 -> 162
+	  213 -> 46
+	  214 -> 216
+	  214 -> 187
+	  214 -> 102
+	  215 -> 97
+	  216 -> 197
+	  216 -> 42
+	  216 -> 13
+	  216 -> 150
+	  216 -> 184
+	  216 -> 185
+	  217 -> 122
+	  218 -> 220
+	  219 -> 193
+	  220 -> 152
+	  221 -> 72
+	  222 -> 177
+	  222 -> 147
+	  222 -> 166
+	  222 -> 190
+	  223 -> 66
+	  224 -> 81
+	  225 -> 171
+}
+

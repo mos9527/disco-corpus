@@ -1,0 +1,512 @@
+# CONTAINERYARD / CLOAK JUMP
+# You see a policeman-cloak -- jump to it. Get it. If you're above, to be precise! Otherwise, you can just pick it up or whatever.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"Lieutenant...\" (Point to the cloak.) \"I think that's mine.\""];
+	  3 [label="Policeman Cloak: Variable[\"plaza.tribunal_saw_death_dream\"]"];
+	  4 [label="Variable[\"plaza.tribunal_saw_death_dream\"]", shape=diamond];
+	  5 [label="!(Variable[\"plaza.tribunal_saw_death_dream\"])", shape=diamond];
+	  6 [label="Shivers: The corpse is dominating the yard and the stench is nauseating, even so far from the epicentre. It brings tears to your eyes."];
+	  7 [label="Jump to: [Into the abyss]"];
+	  8 [label="Policeman Cloak: Variable[\"backyard.jump_kim_esprit_crane\"]  or  Variable[\"cargo.encyclo_kvalsund\"]"];
+	  9 [label="Variable[\"backyard.jump_kim_esprit_crane\"]  or  Variable[\"cargo.encyclo_kvalsund\"]", shape=diamond];
+	  10 [label="!(Variable[\"backyard.jump_kim_esprit_crane\"]  or  Variable[\"cargo.encyclo_kvalsund\"])", shape=diamond];
+	  11 [label="Kim Kitsuragi: \"I think there's a certain beauty in this giant pair of pliers. But you're right, we were focusing on your *cloak*...\""];
+	  12 [label="You: What was that about a drink? Wouldn't that ruin the moment?"];
+	  13 [label="Esprit de Corps: *I will shield you from the elements and give my life for yours* -- that's what the cloak is relaying."];
+	  14 [label="You: Damn, you're right! Beer gushing into my face would really *nail it* right now."];
+	  15 [label="You: \"Do you really think this cloak is mine? Should I go for it? Jump?\""];
+	  16 [label="You: Close your eyes, let your senses take in the world around you."];
+	  17 [label="Jump to: [Midjumphub]"];
+	  18 [label="Shivers: The little backyard, Kingdom of Cuno, looks almost idyllic when it's not dominated by a decomposing human being."];
+	  19 [label="Horrific Necktie: Fine, be boring, breathe! -- Get high on some of that sweet-sweet O, baby!"];
+	  20 [label="Horrific Necktie: As you let go a tidal wave of tears breaks through the dam and washes away everything."];
+	  21 [label="Empathy: The look in his eyes is a mix of the engineer-like interest and the wonder of a six year old seeing a horse for the first time."];
+	  22 [label="You: Just a cop's cloak... I don't want to deal with this right now. [Leave.]"];
+	  23 [label="You: The cloak does not concern me at the moment. [Leave.]"];
+	  24 [label="Savoir Faire: No one hears your shouts, but it makes you feel powerful inside. Now, with your feet firmly planted on the concrete, the noise of the harbour rushes back in."];
+	  25 [label="Horrific Necktie: The necktie is guiding you through this. It's your spirit animal, both your nemesis and friend. Suddenly a feeling of ease brushes through you -- you're fine again."];
+	  26 [label="Kim Kitsuragi: \"I was under the assumption we could ask the leader of this Union to help us get this body down. This is why we're here, right?\" He doesn't wait for you to answer."];
+	  27 [label="Perception (Sight): Indeed it is."];
+	  28 [label="Logic: Considering the limited police presence in Martinaise -- you think we might take a leap of logic and say it's yours?"];
+	  29 [label="Savoir Faire: As the concrete floor welcomes you, you realize it's been a while since you felt so alive, alert, capable. Must be the adrenaline."];
+	  30 [label="Jump to: [Midjumphub]"];
+	  31 [label="You: (Tug on your tie.) God, now I can't breathe at all... Stop doing this to me, necktie, you were supposed to be a *friend*!"];
+	  32 [label="Savoir Faire: After a while your sobbing stops. Up here no one saw the little meltdown you just had and your heart actually feels lighter now. Time to proceed."];
+	  33 [label="Kim Kitsuragi: \"Sure.\" He looks at you, worried. \"Just be careful, okay? Looks like you almost strained a muscle there.\""];
+	  34 [label="Policeman Cloak: Variable[\"TASK.interview_union_boss\"]  and  Variable[\"TASK.interview_union_boss_done\"] == false"];
+	  35 [label="Variable[\"TASK.interview_union_boss\"]  and  Variable[\"TASK.interview_union_boss_done\"] == false", shape=diamond];
+	  36 [label="!(Variable[\"TASK.interview_union_boss\"]  and  Variable[\"TASK.interview_union_boss_done\"] == false)", shape=diamond];
+	  37 [label="Interfacing: That machine is a Kvalsund 10-20 HK."];
+	  38 [label="Kim Kitsuragi: \"What are we doing? We're awfully close to breaking into the industrial harbour -- they're bound to have information for us. I thought that was our intention...\""];
+	  39 [label="You: You son of a gun, it's my cloak!"];
+	  40 [label="Policeman Cloak: Unaware of your existence the cloak continues its helpless flapping."];
+	  41 [label="Policeman Cloak: IsTHCPresent(\"aces_high\")"];
+	  42 [label="IsTHCPresent(\"aces_high\")", shape=diamond];
+	  43 [label="!(IsTHCPresent(\"aces_high\"))", shape=diamond];
+	  44 [label="You: Just let it all out, let it go, let it happen."];
+	  45 [label="Policeman Cloak: Variable[\"backyard.jump_wc_fail\"]"];
+	  46 [label="Variable[\"backyard.jump_wc_fail\"]", shape=diamond];
+	  47 [label="!(Variable[\"backyard.jump_wc_fail\"])", shape=diamond];
+	  48 [label="Kim Kitsuragi: His eyes trace the crane's contour as if trying to memorize its majestic shape. Then he notices your gaze."];
+	  49 [label="Savoir Faire: No one is listening to your words, but it doesn't matter. You feel pride. Now, with your feet firmly planted on the concrete, the noise of the harbour rushes back in."];
+	  50 [label="Kim Kitsuragi: \"Well, it doesn't seem too dangerous -- two metres tops. Whenever you're ready to do it, I'll be right behind you.\""];
+	  51 [label="You: I guess it's probably nothing. [Leave.]"];
+	  52 [label="You: \"Yeah, not right now.\" [Leave.]"];
+	  53 [label="Policeman Cloak: Variable[\"backyard.jump_whitecheck_chasm\"]"];
+	  54 [label="Variable[\"backyard.jump_whitecheck_chasm\"]", shape=diamond];
+	  55 [label="!(Variable[\"backyard.jump_whitecheck_chasm\"])", shape=diamond];
+	  56 [label="Policeman Cloak: Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"]"];
+	  57 [label="Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"]", shape=diamond];
+	  58 [label="!(Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"])", shape=diamond];
+	  59 [label="You: \"FRANCONEGRO!!!\""];
+	  60 [label="Kim Kitsuragi: \"The service cloak issued to you by your station? Yes, yes I do.\""];
+	  61 [label="Jump to: [Into the abyss]"];
+	  62 [label="Horrific Necktie: The sadness, the stress, the failures of the past and present and the weight of being you. It would wash you away, too, if it weren't for the firm grip of your necktie."];
+	  63 [label="Jump to: [CLOAKENHUB]"];
+	  64 [label="Horrific Necktie: He's so on the money, *bratan*. Just imagine yourself dual-wielding a bottle and a flaming cigarette! Whilst airborne!"];
+	  65 [label="Policeman Cloak: SetVariableValue(\"cargo.cloakjump_wc_failed\", true) --[[ Variable[ ]]"];
+	  66 [label="Jump to: [CLOAKENHUB]"];
+	  67 [label="Shivers: Martinaise goes about its daily routine as you soar through the air. The loud voices of protesters mix with the engine sounds from the traffic jam; waves crash against the pier and dense, salty sea air fills your lungs."];
+	  68 [label="Kim Kitsuragi: \"Hey, hey... what happened?\" He sounds genuinely worried."];
+	  69 [label="Policeman Cloak: IsKimHere()"];
+	  70 [label="IsKimHere()", shape=diamond];
+	  71 [label="!(IsKimHere())", shape=diamond];
+	  72 [label="Horrific Necktie: Feel the squeeze, baby!"];
+	  73 [label="kimstuffhubbing"];
+	  74 [label="Jump to: [Midjumphub]"];
+	  75 [label="Kim Kitsuragi: He turns back to the sad piece of fabric flapping in the wind."];
+	  76 [label="Kim Kitsuragi: \"Yes... we were in the middle of something -- your cloak...\""];
+	  77 [label="Kim Kitsuragi: \"Good. We can always come back when you're feeling better. It's just a cloak after all.\" He looks around."];
+	  78 [label="Jump to: [CLOAKENHUB]"];
+	  79 [label="You: \"A cop's cloak! It's a cop's cloak!!!\""];
+	  80 [label="You: Look around."];
+	  81 [label="Kim Kitsuragi: \"Hell yeah!\" The lieutenant exclaims. \"My climbing might not have been as disco as your jump, but can we still get an Ace's High?\""];
+	  82 [label="Policeman Cloak: The white rectangle, now clearly visible in the wind, seems to confirm your hypothesis. But who's the cop?"];
+	  83 [label="Kim Kitsuragi: \"The cloak? I *do* think it's yours, yes. As to whether you should go for it...\" He looks over the ledge, at the cold pavement below."];
+	  84 [label="You: \"Look, lieutenant. (Point to the cloak.) Someone left their cloak behind.\""];
+	  85 [label="Electrochemistry: Don't be ridiculous, of course not."];
+	  86 [label="Jump to: [Into the abyss]"];
+	  87 [label="Kim Kitsuragi: \"Or it could be that we're just *exploring*.\" He looks around, wind rustling his hair."];
+	  88 [label="Into the abyss"];
+	  89 [label="Kim Kitsuragi: \"You could probably make the jump. You look like you've done some track and field in your day.\""];
+	  90 [label="You: Don't let go of the moment yet."];
+	  91 [label="Policeman Cloak: Variable[\"backyard.jump_midshivers_perception_hearing_success\"]"];
+	  92 [label="Variable[\"backyard.jump_midshivers_perception_hearing_success\"]", shape=diamond];
+	  93 [label="!(Variable[\"backyard.jump_midshivers_perception_hearing_success\"])", shape=diamond];
+	  94 [label="You: \"Not bad, not too bad at all.\""];
+	  95 [label="Horrific Necktie: I got you, I got you, *bratan*. Let me just adjust your breathing a little bit... There, isn't that better?"];
+	  96 [label="You: \"I'm alright, Kim... I... I just...\" (Keep tugging on your tie.) \"I can't *breathe*.\""];
+	  97 [label="Policeman Cloak: As your fingers touch the tarpaulin it almost feels like the cloak wants to deliver a message of comfort through your fingertips..."];
+	  98 [label="Jump to: [Midjumphub]"];
+	  99 [label="Policeman Cloak: Looks like someone left his tarpaulin cloak hanging on the railing here."];
+	  100 [label="Logic: You are the cop. It's your cloak. Don't make things complicated."];
+	  101 [label="Jump to: [CLOAKENHUB]"];
+	  102 [label="Savoir Faire: Will you? Because it feels like you strained a muscle there. Or two."];
+	  103 [label="You: Interesting. Why would someone leave a cloak there, and how can I get to it?"];
+	  104 [label="Policeman Cloak: CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true  and  CheckEquippedGroup(\"alcohol\") == false"];
+	  105 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true  and  CheckEquippedGroup(\"alcohol\") == false", shape=diamond];
+	  106 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true  and  CheckEquippedGroup(\"alcohol\") == false)", shape=diamond];
+	  107 [label="Midjumphub"];
+	  108 [label="Shivers: And its de-facto ruler, Cuno the Gremlin King, is pointing at *you*, talking to his friend. What is he saying?"];
+	  109 [label="You: Continue the voyage through the salty air."];
+	  110 [label="You: \"Kvalsund 10-20 HK...\" (Point at the crane.)"];
+	  111 [label="You: \"It's just a machine, lieutenant. Like a giant hammer or a pair of pliers. Nothing to see here.\""];
+	  112 [label="Kim Kitsuragi: \"Yes, that's one way of putting it.\" He turns to you with a faint smile, then looks back at the crane. \"It's certainly an impressive achievement of engineering.\""];
+	  113 [label="Electrochemistry: Don't really know why you haven't yet."];
+	  114 [label="Policeman Cloak: Variable[\"backyard.jump_wc_fail\"]"];
+	  115 [label="Variable[\"backyard.jump_wc_fail\"]", shape=diamond];
+	  116 [label="!(Variable[\"backyard.jump_wc_fail\"])", shape=diamond];
+	  117 [label="Policeman Cloak: The tarpaulin cloak swings alone for a while there in the wind. No one's coming for it anymore."];
+	  118 [label="Esprit de Corps: Man down! A trooper has been left behind the enemy lines!"];
+	  119 [label="Perception (Sight): When the wind ruffles the cloak you can most definitely see a white rectangle on its back."];
+	  120 [label="Policeman Cloak: IsKimHere()"];
+	  121 [label="IsKimHere()", shape=diamond];
+	  122 [label="!(IsKimHere())", shape=diamond];
+	  123 [label="Policeman Cloak: IsKimHere()"];
+	  124 [label="IsKimHere()", shape=diamond];
+	  125 [label="!(IsKimHere())", shape=diamond];
+	  126 [label="Kim Kitsuragi: \"Is it?\" He looks at you, impressed. \"Kvalsund makes lot of heavy equipment, but this is phenomenal even for them.\""];
+	  127 [label="Esprit de Corps: You could swear it's more of an instinct than anything else, but you *know* it's a cop's cloak."];
+	  128 [label="Jump to: [Into the abyss]"];
+	  129 [label="Logic: Nailed it!"];
+	  130 [label="Savoir Faire: Ankles tingling from the tension, blood roaring in your ears -- you are ready for your rendezvous with the concrete pavement below."];
+	  131 [label="Authority: We'll take care of that body too. We'll take care of all of it!"];
+	  132 [label="Policeman Cloak: Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")"];
+	  133 [label="Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")", shape=diamond];
+	  134 [label="!(Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\"))", shape=diamond];
+	  135 [label="Savoir Faire: Tears run down your face. You're clutching your chest and mumbling incoherently. How much worse can it get?"];
+	  136 [label="Electrochemistry: Also, you should be having a drink right now -- you should have a bottle of alcohol in your hand *right now*."];
+	  137 [label="You: No, a drink *would* ruin the pristine beauty of this moment of ultimate sobriety."];
+	  138 [label="Kim Kitsuragi: \"I understand. We can always come back when you're feeling better. It's just a cloak after all.\""];
+	  139 [label="Horrific Necktie: The necktie lets go a little, its vicious grip easing around your neck. Colours return to the world around you."];
+	  140 [label="Policeman Cloak: Variable[\"backyard.jump_esprit_fired\"]"];
+	  141 [label="Variable[\"backyard.jump_esprit_fired\"]", shape=diamond];
+	  142 [label="!(Variable[\"backyard.jump_esprit_fired\"])", shape=diamond];
+	  143 [label="Jump to: [Into the abyss]"];
+	  144 [label="Volition: You could have died there! Shit, shit, shit, shit... I'm failing you. This wasn't part of our deal!"];
+	  145 [label="Policeman Cloak: IsKimHere()"];
+	  146 [label="IsKimHere()", shape=diamond];
+	  147 [label="!(IsKimHere())", shape=diamond];
+	  148 [label="You: Grab the cloak. [Leave.]"];
+	  149 [label="Empathy: He's thinking you've forgotten where you are again."];
+	  150 [label="Kim Kitsuragi: Then he turns back to the sad piece of fabric flapping in the wind."];
+	  151 [label="Untitled hub"];
+	  152 [label="Policeman Cloak: Variable[\"auto.near_cloak\"]"];
+	  153 [label="Variable[\"auto.near_cloak\"]", shape=diamond];
+	  154 [label="!(Variable[\"auto.near_cloak\"])", shape=diamond];
+	  155 [label="Policeman Cloak: Variable[\"backyard.jump_wc_fail_voliton_panic_attac\"]"];
+	  156 [label="Variable[\"backyard.jump_wc_fail_voliton_panic_attac\"]", shape=diamond];
+	  157 [label="!(Variable[\"backyard.jump_wc_fail_voliton_panic_attac\"])", shape=diamond];
+	  158 [label="You: The tears just come. From nowhere. Like a sudden guerrilla attack from the bushes, they overwhelm you."];
+	  159 [label="You: \"Thanks, I think it's working.\" (Let go of your tie.)"];
+	  160 [label="You: \"Motherfucker...\" (Let out a whistle.) \"Now that's a huge crane!\""];
+	  161 [label="Jump to: [CLOAKENHUB]"];
+	  162 [label="Kim Kitsuragi: \"I knew you could do it!\" The lieutenant exclaims. \"My climbing down might not have been as disco as your jump, but at least we can explore the harbour now.\""];
+	  163 [label="Policeman Cloak: Variable[\"backyard.cloak_perception_white_rectangle\"]"];
+	  164 [label="Variable[\"backyard.cloak_perception_white_rectangle\"]", shape=diamond];
+	  165 [label="!(Variable[\"backyard.cloak_perception_white_rectangle\"])", shape=diamond];
+	  166 [label="You: \"Look, lieutenant! (Point to the flapping cloak.) Someone left his cloak behind.\""];
+	  167 [label="CLOAKENHUB"];
+	  168 [label="Policeman Cloak: IsKimHere()"];
+	  169 [label="IsKimHere()", shape=diamond];
+	  170 [label="!(IsKimHere())", shape=diamond];
+	  171 [label="Policeman Cloak: Variable[\"backyard.cloak_logic_your_cloak\"]"];
+	  172 [label="Variable[\"backyard.cloak_logic_your_cloak\"]", shape=diamond];
+	  173 [label="!(Variable[\"backyard.cloak_logic_your_cloak\"])", shape=diamond];
+	  174 [label="You: \"What exactly are we doing up here?\""];
+	  175 [label="Savoir Faire: Holy wow, that's *high*! You'd have to be a total madman to jump. This is certain death!"];
+	  176 [label="Kim Kitsuragi: \"Hey, hey... what's happening? You okay?\" He sounds genuinely worried."];
+	  177 [label="Jump to: [Into the abyss]"];
+	  178 [label="You: \"I'm alright, Kim... I... I just can't do it right now.\""];
+	  179 [label="Policeman Cloak: IsTaskActive(\"TASK.ask_for_help_from_the_harbour\")--[[ Variable[ ]]"];
+	  180 [label="IsTaskActive(\"TASK.ask_for_help_from_the_harbour\")--[[ Variable[ ]]", shape=diamond];
+	  181 [label="!(IsTaskActive(\"TASK.ask_for_help_from_the_harbour\")--[[ Variable[ ]])", shape=diamond];
+	  182 [label="You: \"You son of a gun, it's a cop's cloak!\""];
+	  183 [label="Policeman Cloak: IsKimHere()"];
+	  184 [label="IsKimHere()", shape=diamond];
+	  185 [label="!(IsKimHere())", shape=diamond];
+	  186 [label="You: Just let me fucking *breathe*, Horrific Necktie."];
+	  187 [label="Kim Kitsuragi: The wind is aggressive up here. The lieutenant looks at the enormous crane towering in the distance, over the container yard."];
+	  188 [label="Kim Kitsuragi: \"Yes. It was probably you.\" He looks at you. \"It does bear the RCM insignia after all.\""];
+	  189 [label="You: \"You think I should get it?\""];
+	  190 [label="Savoir Faire: Time is running out -- continue the voyage and celebrate later."];
+	  191 [label="Kim Kitsuragi: \"But I digress. We were focusing on your *cloak* here.\" He looks at the sad piece of fabric flapping in the wind."];
+	  192 [label="You: Go for the cloak -- jump over the ledge!"];
+	  193 [label="You: Variable[\"backyard.jump_whitecheck_chasm\"]"];
+	  194 [label="Variable[\"backyard.jump_whitecheck_chasm\"]", shape=diamond];
+	  195 [label="!(Variable[\"backyard.jump_whitecheck_chasm\"])", shape=diamond];
+	  196 [label="Savoir Faire: His words remain indiscernible. No matter -- it's time to start thinking about the landing."];
+	  197 [label="Kim Kitsuragi: \"I was under the impression we're on our way to meet the king of this *castle under siege* -- Evrart -- one of the people we're interviewing. This way we may be able to get around his henchmen.\""];
+	  198 [label="You: Let him have this moment of wonder."];
+	  199 [label="Jump to: [Into the abyss]"];
+	  200 [label="You: I have a bottle in hand right now -- I could go for it!"];
+	  201 [label="Savoir Faire: With your feet firmly planted on the concrete, the noise of the harbour rushes back in."];
+	  202 [label="Inland Empire: This is *your* cloak. You can feel it."];
+	  203 [label="Policeman Cloak: Variable[\"cargo.saw_cloak\"]"];
+	  204 [label="Variable[\"cargo.saw_cloak\"]", shape=diamond];
+	  205 [label="!(Variable[\"cargo.saw_cloak\"])", shape=diamond];
+	  206 [label="Kim Kitsuragi: \"Yes. It does bear the RCM insignia. And we're the only detectives in Martinaise.\""];
+	  207 [label="Policeman Cloak: IsKimHere()"];
+	  208 [label="IsKimHere()", shape=diamond];
+	  209 [label="!(IsKimHere())", shape=diamond];
+	  210 [label="You: Ignore the cloak. [Leave.]"];
+	  211 [label="Savoir Faire: As you leap in the air, a chilly breeze engulfs you, sharpening you senses."];
+	  212 [label="Perception (Hearing): \"Flying f****t... winged pig... shit is airborne...\" These are the only words the wind coming in from the Insulindian ocean carries to you."];
+	  213 [label="Conceptualization: The cloak looks like a bag of goodies floating in the wind. Who knows what its pockets may hide?!"];
+	  214 [label="You: \"Right, I can't do it right now -- I'll make the jump next time.\""];
+	  215 [label="Policeman Cloak: Looks like someone left his tarpaulin cloak hanging on the railing here. There is a white rectangle clearly visible on its back."];
+	  216 [label="othersideintro"];
+	  217 [label="Policeman Cloak: A tarpaulin cloak is still caught on the railing. No one has claimed it for their own."];
+	  218 [label="Visual Calculus: That would be incredibly unsound at this moment."];
+	  219 [label="Kim Kitsuragi: \"Yes. It is probably yours. It does bear the RCM insignia after all. Now -- how to retrieve it?\" He judges the drop."];
+	  220 [label="You: [Leave.]"];
+	  221 [label="Kim Kitsuragi: \"It's okay, you're just having a *little* panic attack. Try to breathe as slowly as you can, alright?\" He shakes you gently by the shoulder."];
+	  222 [label="Jump to: [CLOAKENHUB]"];
+	  223 [label="Jump to: [CLOAKENHUB]"];
+	  224 [label="Jump to: [CLOAKENHUB]"];
+	  225 [label="Policeman Cloak: Variable[\"backyard.cloak_greeting_done\"]"];
+	  226 [label="Variable[\"backyard.cloak_greeting_done\"]", shape=diamond];
+	  227 [label="!(Variable[\"backyard.cloak_greeting_done\"])", shape=diamond];
+	  228 [label="Electrochemistry: Yeah. You'd be like the ultimate rock and roll mega star. A flying legend."];
+	  229 [label="Electrochemistry: What have you done to my precious alcoholic friend? You're no fun anymore."];
+	  230 [label="Policeman Cloak: The cloak flaps in the wind, invitingly. It's almost within your reach, if you only just... just go for it."];
+	  0 -> 1
+	  1 -> 3
+	  2 -> 207
+	  3 -> 4
+	  3 -> 5
+	  4 -> 118
+	  5 -> 153
+	  6 -> 132
+	  7 -> 89
+	  8 -> 10
+	  8 -> 11
+	  9 -> 74
+	  10 -> 151
+	  11 -> 76
+	  12 -> 86
+	  13 -> 87
+	  14 -> 229
+	  15 -> 84
+	  16 -> 131
+	  17 -> 108
+	  18 -> 109
+	  19 -> 223
+	  20 -> 63
+	  21 -> 38
+	  22 -> 178
+	  23 -> 62
+	  24 -> 8
+	  25 -> 223
+	  26 -> 88
+	  27 -> 29
+	  28 -> 172
+	  29 -> 124
+	  30 -> 108
+	  31 -> 70
+	  32 -> 67
+	  33 -> 64
+	  34 -> 36
+	  34 -> 37
+	  35 -> 198
+	  36 -> 39
+	  37 -> 9
+	  38 -> 88
+	  39 -> 130
+	  40 -> 29
+	  41 -> 43
+	  41 -> 44
+	  42 -> 82
+	  43 -> 163
+	  44 -> 21
+	  45 -> 48
+	  45 -> 47
+	  46 -> 215
+	  47 -> 145
+	  48 -> 77
+	  49 -> 8
+	  50 -> 214
+	  51 -> 129
+	  52 -> 144
+	  53 -> 56
+	  53 -> 55
+	  54 -> 212
+	  55 -> 176
+	  56 -> 58
+	  56 -> 59
+	  57 -> 19
+	  58 -> 7
+	  59 -> 25
+	  60 -> 149
+	  61 -> 89
+	  62 -> 26
+	  63 -> 168
+	  64 -> 18
+	  65 -> 46
+	  66 -> 168
+	  67 -> 137
+	  68 -> 179
+	  69 -> 72
+	  69 -> 71
+	  70 -> 177
+	  71 -> 73
+	  72 -> 136
+	  73 -> 112
+	  73 -> 161
+	  73 -> 199
+	  73 -> 111
+	  74 -> 108
+	  75 -> 162
+	  76 -> 162
+	  77 -> 79
+	  78 -> 168
+	  79 -> 169
+	  80 -> 188
+	  81 -> 202
+	  82 -> 101
+	  83 -> 51
+	  84 -> 189
+	  85 -> 152
+	  86 -> 89
+	  87 -> 150
+	  89 -> 168
+	  90 -> 57
+	  91 -> 93
+	  91 -> 94
+	  92 -> 31
+	  93 -> 197
+	  94 -> 50
+	  95 -> 32
+	  96 -> 222
+	  97 -> 14
+	  98 -> 108
+	  99 -> 119
+	  100 -> 168
+	  101 -> 168
+	  102 -> 64
+	  103 -> 231
+	  104 -> 106
+	  104 -> 107
+	  105 -> 65
+	  106 -> 18
+	  107 -> 17
+	  107 -> 91
+	  107 -> 13
+	  107 -> 110
+	  108 -> 213
+	  109 -> 30
+	  110 -> 127
+	  111 -> 12
+	  112 -> 192
+	  113 -> 219
+	  114 -> 116
+	  114 -> 117
+	  118 -> 141
+	  119 -> 164
+	  120 -> 122
+	  120 -> 123
+	  121 -> 220
+	  122 -> 28
+	  123 -> 125
+	  123 -> 126
+	  124 -> 42
+	  125 -> 60
+	  125 -> 95
+	  126 -> 192
+	  127 -> 80
+	  127 -> 23
+	  128 -> 89
+	  129 -> 168
+	  130 -> 68
+	  131 -> 31
+	  132 -> 134
+	  132 -> 135
+	  133 -> 96
+	  134 -> 184
+	  135 -> 187
+	  135 -> 45
+	  136 -> 105
+	  137 -> 230
+	  138 -> 67
+	  139 -> 160
+	  140 -> 142
+	  140 -> 143
+	  141 -> 128
+	  142 -> 120
+	  143 -> 89
+	  144 -> 156
+	  145 -> 147
+	  145 -> 148
+	  146 -> 34
+	  147 -> 103
+	  148 -> 98
+	  149 -> 224
+	  150 -> 102
+	  151 -> 201
+	  151 -> 138
+	  151 -> 15
+	  152 -> 154
+	  152 -> 155
+	  153 -> 216
+	  154 -> 226
+	  155 -> 157
+	  155 -> 158
+	  156 -> 133
+	  157 -> 215
+	  158 -> 33
+	  159 -> 78
+	  160 -> 113
+	  161 -> 168
+	  162 -> 202
+	  163 -> 165
+	  163 -> 166
+	  164 -> 24
+	  164 -> 183
+	  165 -> 208
+	  166 -> 220
+	  167 -> 193
+	  167 -> 175
+	  167 -> 16
+	  167 -> 81
+	  167 -> 53
+	  167 -> 221
+	  168 -> 170
+	  168 -> 171
+	  169 -> 220
+	  170 -> 41
+	  171 -> 173
+	  171 -> 174
+	  172 -> 40
+	  173 -> 83
+	  174 -> 180
+	  175 -> 66
+	  176 -> 97
+	  177 -> 89
+	  178 -> 139
+	  179 -> 181
+	  179 -> 182
+	  180 -> 27
+	  181 -> 35
+	  182 -> 121
+	  183 -> 185
+	  183 -> 186
+	  184 -> 69
+	  185 -> 159
+	  186 -> 20
+	  187 -> 22
+	  188 -> 190
+	  189 -> 61
+	  190 -> 99
+	  191 -> 162
+	  192 -> 194
+	  193 -> 195
+	  193 -> 196
+	  194 -> 54
+	  195 -> 54
+	  196 -> 31
+	  197 -> 88
+	  198 -> 49
+	  199 -> 89
+	  200 -> 114
+	  201 -> 200
+	  202 -> 217
+	  203 -> 205
+	  203 -> 206
+	  204 -> 217
+	  205 -> 203
+	  206 -> 190
+	  207 -> 209
+	  207 -> 210
+	  208 -> 211
+	  208 -> 167
+	  209 -> 104
+	  209 -> 52
+	  210 -> 129
+	  211 -> 108
+	  212 -> 92
+	  213 -> 225
+	  214 -> 146
+	  215 -> 204
+	  216 -> 2
+	  216 -> 85
+	  216 -> 149
+	  217 -> 168
+	  218 -> 191
+	  219 -> 90
+	  220 -> 144
+	  221 -> 140
+	  222 -> 168
+	  223 -> 168
+	  224 -> 168
+	  225 -> 227
+	  225 -> 228
+	  226 -> 218
+	  227 -> 100
+	  228 -> 75
+	  229 -> 75
+	  230 -> 168
+}
+

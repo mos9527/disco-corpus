@@ -1,0 +1,722 @@
+# ICE / ACELE ON ICE
+# this is where the "recording device", "what are you doing here on the ice?" and "questioning" branches are located.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="CheckEquipped(\"hat_t500\")"];
+	  3 [label="CheckEquipped(\"hat_t500\")", shape=diamond];
+	  4 [label="!(CheckEquipped(\"hat_t500\"))", shape=diamond];
+	  5 [label="You: \"And the wires?\""];
+	  6 [label="Acele Contact mic hub."];
+	  7 [label="You: \"Oh no, you completely misunderstood me. I might be a homo-sexual myself.\""];
+	  8 [label="Acele: \"I don't really know what I'm doing. They use synthesizers, too. I don't have a synthesizer.\""];
+	  9 [label="Jump to: [Acele coming down HUB]"];
+	  10 [label="You: \"So, what trouble you've gotten into -- with the police.\""];
+	  11 [label="You: \"I *know* what Jamrock is but... let's say I didn't.\""];
+	  12 [label="Acele: \"*Rich* people. Rich people are east of the river.\""];
+	  13 [label="Acele: \"Oh, they are. And I'm scum.\""];
+	  14 [label="Acele: \"C'mon, man. We're in it. This is North Jamrock -- Martinaise. Sort of. The technicalities are confusing.\""];
+	  15 [label="Jump to: [Acele: \"\"Okay.\"\"]"];
+	  16 [label="Jump to: [Acele: \"\"Oh yeah...\" She looks you over, as...\"]"];
+	  17 [label="Acele: \"Um...\""];
+	  18 [label="Acele: \"The mic? I don't exactly know. Somehow it doesn't pick up vibrations from the air. The box said it only picks up *structure-borne sound*. If you like technobabble.\""];
+	  19 [label="Jump to: [Acele: \"\"Yes?\"\"]"];
+	  20 [label="Acele: She breathes on her fingers. Looks like she doesn't know what to say."];
+	  21 [label="You: \"Yes, you heard right. You should try to be more like Contact Mike: a successful athlete and an *inspirational figure* who has overcome social, physical, and mental obstacles.\""];
+	  22 [label="You: \"This isn't about me. This is about your lack of respect for one of boxing's greats -- and for *yourself*.\""];
+	  23 [label="You: \"Stuff like what?\""];
+	  24 [label="Jump to: [Acele: \"\"Go ahead.\"\"]"];
+	  25 [label="You: (Sneer.) \"I bet they're *really* rich. They must be very special people to be so rich...\""];
+	  26 [label="Kim Kitsuragi: \"Khm...\" The lieutenant steps in. \"Faubourg -- not *In Faubourg* -- is a massive banlieue south of Jamrock Quarter. It is the largest ghetto in Revachol -- possibly the world.\""];
+	  27 [label="Acele: She nods, very cautiously."];
+	  28 [label="CheckEquipped(\"hat_amphibian_sports_visor\")"];
+	  29 [label="CheckEquipped(\"hat_amphibian_sports_visor\")", shape=diamond];
+	  30 [label="!(CheckEquipped(\"hat_amphibian_sports_visor\"))", shape=diamond];
+	  31 [label="Acele: \"Thanks.\" She puts it on. It's a bit large for her."];
+	  32 [label="Acele: \"Thanks.\" She puts it on. It's a bit large for her."];
+	  33 [label="You: \"Now about that *Arno* guy you mentioned.\""];
+	  34 [label="You: \"Yes, contact mics.\""];
+	  35 [label="You: \"How does that thing work?\""];
+	  36 [label="Acele: \"What *don't* you have a problem with?\""];
+	  37 [label="Acele: \"What is it with you and this Mike guy?\" She pauses. The question is rhetorical."];
+	  38 [label="You: \"On second thought, screw Contact Mike. He's not a champion -- you are! Look at you here in front of a saggy tent, picking your nose to drug-addict music. The world of sports is in awe of your faith and dedication.\""];
+	  39 [label="Acele: \"Yup.\" She squints her eyes a little. \"They were pretty... I'm sorry we sold those.\""];
+	  40 [label="Variable[\"ice.acele_knew_amphetamine_gives_cold_resistance\"]"];
+	  41 [label="Variable[\"ice.acele_knew_amphetamine_gives_cold_resistance\"]", shape=diamond];
+	  42 [label="!(Variable[\"ice.acele_knew_amphetamine_gives_cold_resistance\"])", shape=diamond];
+	  43 [label="Acele: \"Hmm...\" She looks eastward. \"Maybe you're right. Most of them do speak three languages.\""];
+	  44 [label="Jump to: [Acele coming down HUB]"];
+	  45 [label="You: \"Tell me more about the microphone.\""];
+	  46 [label="Encyclopedia: It's probably amphetamine -- It makes you *feel* impervious to the elements, but doesn't actually make you any less cold."];
+	  47 [label="IsKimHere()"];
+	  48 [label="IsKimHere()", shape=diamond];
+	  49 [label="!(IsKimHere())", shape=diamond];
+	  50 [label="Acele: \"My dad was a drunk. Plus, I guess I just wanted to drink too, you know? Get my *party on*.\""];
+	  51 [label="You: \"I had another question.\""];
+	  52 [label="You: \"You're not scum.\""];
+	  53 [label="Acele: \"Is this a rhetorical question?\""];
+	  54 [label="Acele: \"The usual. I had a shitty run as a teenager.\""];
+	  55 [label="Physical Instrument: That's not fair. And an understatement."];
+	  56 [label="Rhetoric: An entire *litany* spews forth!"];
+	  57 [label="Conceptualization: Women's fencing. It's an elegant activity."];
+	  58 [label="Acele: \"Good for you then. Women's fencing *is* a pretty graceful sight.\""];
+	  59 [label="Jump to: [Acele: \"\"Now, uh... we were talking about m...\"]"];
+	  60 [label="Acele: \"Sorry, I don't really want that.\" She looks away."];
+	  61 [label="Jump to: [Acele: \"\"Yes?\"\"]"];
+	  62 [label="You: \"Sorry, I don't know why I said that. There was something else I wanted to know...\""];
+	  63 [label="Acele problem HUB"];
+	  64 [label="Acele: \"Oh! Well, good for you.\""];
+	  65 [label="You: \"Neither do I actually. I have no idea what I'm talking about. Get down? Grind?\""];
+	  66 [label="You: \"Wait, what happened to the headphones?\""];
+	  67 [label="Acele: \"My boyfriend sold them.\""];
+	  68 [label="You: \"Why? Why can you take it?\""];
+	  69 [label="Logic: And why is that?"];
+	  70 [label="You: \"What's *the usual*?\""];
+	  71 [label="IsKimHere()"];
+	  72 [label="IsKimHere()", shape=diamond];
+	  73 [label="!(IsKimHere())", shape=diamond];
+	  74 [label="CheckEquipped(\"hat_revolutionary\")"];
+	  75 [label="CheckEquipped(\"hat_revolutionary\")", shape=diamond];
+	  76 [label="!(CheckEquipped(\"hat_revolutionary\"))", shape=diamond];
+	  77 [label="Encyclopedia: Your mangled brain would like you to know there is a boxer called Contact Mike."];
+	  78 [label="You: \"Yes, but before we return to the contact mic -- tell me more about this *Arno* guy you mentioned.\""];
+	  79 [label="Acele: \"Mhm...\" She breathes on her fingers again to warm them. \"Thought so.\""];
+	  80 [label="Acele: \"That's real cool. Hope you don't mind missing out on all that great homo-sexual content the world has got to offer.\""];
+	  81 [label="You: \"I grind.\""];
+	  82 [label="You: Just nod."];
+	  83 [label="You: \"Now *this* is where a hat would come in handy.\""];
+	  84 [label="Acele: \"No man, fuck that, I'm cool... I'm sorry I said that. I'm sorry about the *fuck*.\""];
+	  85 [label="logicitup"];
+	  86 [label="You: Sigh."];
+	  87 [label="Acele: \"Aren't they?\" She seems perplexed. \"I thought they were as *Vacholiere* as any of us, just way richer.\""];
+	  88 [label="You: \"I had another question.\" (Conclude.)"];
+	  89 [label="Acele: \"Alright...\" She smiles a little, without meaning to."];
+	  90 [label="You: \"Oh, okay. Good to know.\""];
+	  91 [label="CheckEquipped(\"hat_camionneur\")"];
+	  92 [label="CheckEquipped(\"hat_camionneur\")", shape=diamond];
+	  93 [label="!(CheckEquipped(\"hat_camionneur\"))", shape=diamond];
+	  94 [label="Acele: \"Thanks.\" She puts it on. It's a bit large for her."];
+	  95 [label="Acele: \"Thanks.\" She puts it on. It's a bit large for her."];
+	  96 [label="You: \"What's a 'contact microphone'?\""];
+	  97 [label="Acele: \"Actually just one wire, I picked on it till the braiding came loose. The wire leads to a contact microphone.\""];
+	  98 [label="encythepency"];
+	  99 [label="You: \"No, I mean the boxer Contact Mike.\""];
+	  100 [label="Acele: \"Yes?\""];
+	  101 [label="Acele: \"Okay then. That's cool.\""];
+	  102 [label="You: \"Nor do I, but I have concrete evidence that I rock. In the form of a wrecked tape player and a completely trashed hostel room.\""];
+	  103 [label="You: \"I'd say I'm just about normal. Now about that mic -- Not Mike. Mic.\""];
+	  104 [label="You: \"And what are these recordings for -- the cracks, the footsteps?\""];
+	  105 [label="You: \"Why are you freezing out here, while the boys are inside?\""];
+	  106 [label="Empathy: The girl is truly proud of herself."];
+	  107 [label="You: \"Lying to the police is nothing to be proud of. Now, another question, if you can manage to tell the truth.\""];
+	  108 [label="Jump to: [Acele: \"\"Go ahead.\"\"]"];
+	  109 [label="Reaction Speed: What happened to the old headphones?"];
+	  110 [label="Acele: \"Uh...\" She's confused. \"Yeah, I record stuff with it.\""];
+	  111 [label="Acele: \"I... don't know what that means.\""];
+	  112 [label="You: \"Never mind all that. I had questions about that mic...\""];
+	  113 [label="Acele: \"Yeah, I got that, but what *don't* you have a problem with?\""];
+	  114 [label="Empathy: She looks at the recording device, the thing she thought would fill her hours with joy and escape. It's turning out to be an empty fantasy. She feels childish, very useless all of a sudden."];
+	  115 [label="You: \"Why not just leave some of it outside so you don't have to freeze?\""];
+	  116 [label="Variable[\"ice.acele_authority_done\"]"];
+	  117 [label="Variable[\"ice.acele_authority_done\"]", shape=diamond];
+	  118 [label="!(Variable[\"ice.acele_authority_done\"])", shape=diamond];
+	  119 [label="Jump to: [Acele coming down HUB]"];
+	  120 [label="Acele: \"No, man. Fuck it, I'm cool... I'm sorry I said that. I'm sorry about the *fuck*.\""];
+	  121 [label="Jump to: [Acele coming down HUB]"];
+	  122 [label="Jump to: [Acele Contact mic hub.]"];
+	  123 [label="Acele: \"Now, uh... we were talking about my contact mic?\" She picks up the device and inspects it, avoiding your eyes."];
+	  124 [label="Acele: \"Ah! No. This is a *contact microphone*, it's for recording *inside* solid objects. Contact Mike just beats people up.\""];
+	  125 [label="Encyclopedia: You're welcome."];
+	  126 [label="You: \"Sounds like a place for congregating homo-sexuals.\""];
+	  127 [label="You: \"Sounds interesting. Who is this *Arno* guy?\""];
+	  128 [label="You: \"Self respect is not meant to float any boats but your own.\""];
+	  129 [label="Acele: \"Okay, if it floats your boat I'll be more like Contact Mike and less like me.\""];
+	  130 [label="Acele: \"You do understand it all just sounds like Mike to me, right?\""];
+	  131 [label="Drama: A lie. They were probably pawned off for something ssssuspicious."];
+	  132 [label="Acele: \"The musicians in The Paliseum use them for making music. They loop the stuff, cutting the tapes together. They make music out of cracks in the ice and keys jangling... crazy sounds like that. It's hard to explain.\""];
+	  133 [label="You: \"You mean like those headphones your boyfriend sold.\""];
+	  134 [label="Acele: \"That.\" She nods toward the church. \"The boys think it could be a *place*, like The Paliseum or something. Stupid. It's really...\" she pauses, \"not gonna be a Paliseum, that's for sure.\""];
+	  135 [label="Acele: \"Yeah, Andre and the guys. They're inside. In the tent.\""];
+	  136 [label="Acele: \"Well, it's just questioning, right? You're questioning me -- it's what cops do.\""];
+	  137 [label="You: \"I get that. I'm a major party animal myself. MAJOR.\""];
+	  138 [label="Acele: \"Oh, but I am.\""];
+	  139 [label="Half Light: You don't have any fuckin' problems! Not a single one!"];
+	  140 [label="Acele: \"Thanks.\" She puts it on. It's a bit large for her."];
+	  141 [label="Encyclopedia: Your mangled brain would like you to know there is a boxer called Contact Mike."];
+	  142 [label="Variable[\"ice.acele_dialogue_you_remember_contact_mic\"]"];
+	  143 [label="Variable[\"ice.acele_dialogue_you_remember_contact_mic\"]", shape=diamond];
+	  144 [label="!(Variable[\"ice.acele_dialogue_you_remember_contact_mic\"])", shape=diamond];
+	  145 [label="Acele: \"Same place I got the recorder from. The Paliseum.\""];
+	  146 [label="You: \"I get down.\""];
+	  147 [label="You: \"You're right. Time has deserted me.\""];
+	  148 [label="You: \"Fuck that! I'm completely problem free, you can't tell me otherwise.\""];
+	  149 [label="Acele: \"Anyway, I thought I'd make some, too. It's supposed to be, like, a music place anyway...\" She rubs her shoulders and looks around."];
+	  150 [label="You: \"I had some other questions.\" (Conclude.)"];
+	  151 [label="Acele coming down HUB"];
+	  152 [label="You: \"Want my jacket?\" (Start taking it off.)"];
+	  153 [label="Drama: Fast and clean! A good one. Can't quite say it's a lie, but feels like one. She's better at lying than she'd like everyone to know."];
+	  154 [label="You: \"Wait, what is *In Faubourg*?\""];
+	  155 [label="Acele: \"Sucks, man.\" She squints her eyes for a second trying to remember something... then lets go of it. \"Was there something else? About the contact mic, perhaps?\""];
+	  156 [label="You: \"Women's fencing. Great sport. No problem with that.\""];
+	  157 [label="Acele: \"Contact mics,\" she repeats, turning the device in her hand."];
+	  158 [label="Acele: \"A 'SKULL thing'?\" She shakes her head. \"Man, you sound like a hundred years old when you say that.\""];
+	  159 [label="Acele: \"This?\" She breathes on her freezing fingers. \"It's a portable recording device. It's for field recording. Low quality, but still.\""];
+	  160 [label="Acele: \"Recording, I guess.\""];
+	  161 [label="Electrochemistry: She is on some kind of stimulant -- amphetamine or mephedrone -- and its effects are wearing off fast. She will begin to experience more and more valleys now. And fewer peaks."];
+	  162 [label="Kim Kitsuragi: \"Take this, you're cold.\" The lieutenant begins to take off his jacket."];
+	  163 [label="You: \"You said *it's* supposed to be a music place. What is?\""];
+	  164 [label="You: \"The boys?\""];
+	  165 [label="Variable[\"ice.acele_logic_said_ask_why_outside\"]"];
+	  166 [label="Variable[\"ice.acele_logic_said_ask_why_outside\"]", shape=diamond];
+	  167 [label="!(Variable[\"ice.acele_logic_said_ask_why_outside\"])", shape=diamond];
+	  168 [label="Jump to: [Acele: \"\"Go ahead.\"\"]"];
+	  169 [label="Jump to: [MAINHUB-acelequestions]"];
+	  170 [label="You: \"Got it.\""];
+	  171 [label="Empathy: Thinking about it really cheers her up. It's a long way from here, though."];
+	  172 [label="CheckEquipped(\"hat_mullen\")"];
+	  173 [label="CheckEquipped(\"hat_mullen\")", shape=diamond];
+	  174 [label="!(CheckEquipped(\"hat_mullen\"))", shape=diamond];
+	  175 [label="Jump to: [Acele Contact mic hub.]"];
+	  176 [label="Reaction Speed: Hey, didn't Pissf****t and Fuck the World mention van Eyck, too?"];
+	  177 [label="You: What am I supposed to do with this?"];
+	  178 [label="Jump to: [Acele: \"\"Sure.\"\"]"];
+	  179 [label="maincontacthub"];
+	  180 [label="You: (Give her your hat.) \"Here. You need this more than I do.\""];
+	  181 [label="You: \"Why did you need to move out at such tender age?\""];
+	  182 [label="You: \"Drinking, partying and disco music are bad for you. You should take me as a warning example.\""];
+	  183 [label="You: (Lean in and whisper.) \"Let me guess, these rich people are not from around here...\""];
+	  184 [label="Acele: \"You know, drinking, getting into fights. The ugly stuff that happens when you move out of your parents' place at thirteen. In Faubourg.\""];
+	  185 [label="You: \"You know what? I think you've really learned something from all those times you've been questioned. Some of your lies have been pretty good.\""];
+	  186 [label="Acele: She nods, apprehensively."];
+	  187 [label="thequestionishere"];
+	  188 [label="Acele: \"You tell me.\" She breathes on her fingers again; they're red from the cold."];
+	  189 [label="CheckEquipped(\"hat_bum\")"];
+	  190 [label="CheckEquipped(\"hat_bum\")", shape=diamond];
+	  191 [label="!(CheckEquipped(\"hat_bum\"))", shape=diamond];
+	  192 [label="CheckEquipped(\"hat_rcm\")"];
+	  193 [label="CheckEquipped(\"hat_rcm\")", shape=diamond];
+	  194 [label="!(CheckEquipped(\"hat_rcm\"))", shape=diamond];
+	  195 [label="Encyclopedia: Jamrock is a district of Revachol comprised of the following quarters: Pox, Villalobos, Central Jamrock, Grand-Couron, Old South and the Valley of the Dogs. Learning is great!"];
+	  196 [label="Acele: \"Oh man, you haven't been to The Paliseum?\" She forgets herself for a moment. \"It's *the* coolest place in this whole drug-addled shithole.\""];
+	  197 [label="Acele: \"Oh yeah...\" She looks you over, assessing your age. \"Guess you wouldn't know van Eyck. Or really be a Paliseum-going kind of person... \""];
+	  198 [label="You: \"Because I have a problem with homo-sexuals. Major problem.\""];
+	  199 [label="You: \"Actually, I had some non-mic questions for you.\""];
+	  200 [label="ampfcoldhub"];
+	  201 [label="Acele: \"I got my recordings to do, I feel better outside...\" A wave breaks close-by and covers her in a cold spray."];
+	  202 [label="Acele: \"Thanks.\" She puts it on. It's a bit large for her."];
+	  203 [label="You: \"What's east of the river?\""];
+	  204 [label="Perception (Hearing): \"You *keep* them rich.\""];
+	  205 [label="Jump to: [Acele coming down HUB]"];
+	  206 [label="Acele: \"Yeah...\""];
+	  207 [label="Kim Kitsuragi: \"Agreed,\" the lieutenant notes."];
+	  208 [label="noegg"];
+	  209 [label="Composure: No, you don't. She's mistaken you for an old person! Say you're cool."];
+	  210 [label="Acele: \"I *think* I'm recording cracks in the ice, but there's no way to tell. Not without headphones. I think I just recorded your footsteps, too. Not sure how that will sound...\" She scratches her forehead."];
+	  211 [label="Acele: \"Yeah... maybe you were right about the hat.\""];
+	  212 [label="You: \"All right then.\""];
+	  213 [label="You: (Let it go.) \"Got it...\""];
+	  214 [label="Jump to: [Acele: \"\"Go ahead.\"\"]"];
+	  215 [label="You: \"I... can't think of anything. There's gotta be something, right? That would be normal for a human person.\""];
+	  216 [label="yesegg"];
+	  217 [label="Jump to: [Acele Contact mic hub.]"];
+	  218 [label="Encyclopedia: No idea."];
+	  219 [label="You: \"On second thought, let's go back to the contact mic.\""];
+	  220 [label="You: \"It means I'm hip beyond my years.\""];
+	  221 [label="Composure: The sharp drop in endorphins is almost visible. Like a warm blanket has fallen off her shoulders -- the wave of chill, the quivering jaw. Indications of a drug high."];
+	  222 [label="fakehub"];
+	  223 [label="Variable[\"ice.acele_authority_done\"]  or  Variable[\"ice.acele_ended_crying_in_front_of_her\"]"];
+	  224 [label="Variable[\"ice.acele_authority_done\"]  or  Variable[\"ice.acele_ended_crying_in_front_of_her\"]", shape=diamond];
+	  225 [label="!(Variable[\"ice.acele_authority_done\"]  or  Variable[\"ice.acele_ended_crying_in_front_of_her\"])", shape=diamond];
+	  226 [label="Variable[\"ice.egg_eyck\"]  or  Variable[\"ice.egg_mentions_pumping_van_eyck_jam\"]"];
+	  227 [label="Variable[\"ice.egg_eyck\"]  or  Variable[\"ice.egg_mentions_pumping_van_eyck_jam\"]", shape=diamond];
+	  228 [label="!(Variable[\"ice.egg_eyck\"]  or  Variable[\"ice.egg_mentions_pumping_van_eyck_jam\"])", shape=diamond];
+	  229 [label="IsTHCPresent(\"coach_physical_instrument\")"];
+	  230 [label="IsTHCPresent(\"coach_physical_instrument\")", shape=diamond];
+	  231 [label="!(IsTHCPresent(\"coach_physical_instrument\"))", shape=diamond];
+	  232 [label="Jump to: [Acele Contact mic hub.]"];
+	  233 [label="You: Yeah? Any news on my own name?"];
+	  234 [label="Jump to: [Acele Contact mic hub.]"];
+	  235 [label="Acele: \"Sure.\""];
+	  236 [label="Acele: \"Man, you are one weird cop.\""];
+	  237 [label="Jump to: [Acele: \"\"Okay.\"\"]"];
+	  238 [label="Jump to: [Acele Contact mic hub.]"];
+	  239 [label="You: \"I also have a problem with alcohol.\""];
+	  240 [label="Acele: \"Music stuff mostly. Like this tape recorder, but bigger. And there's piles of it.\""];
+	  241 [label="You: (Look awestruck.) \"Who are these *rich people*? They sound wonderful! I'd like to be one too.\""];
+	  242 [label="Acele: \"Um... thank you?\""];
+	  243 [label="Kim Kitsuragi: \"We're Jamrock. Sort of. Martinaise is called North Jamrock sometimes. Jamrock is also a ghetto, only smaller than Faubourg.\""];
+	  244 [label="Acele: \"I'll try.\""];
+	  245 [label="Jump to: [thequestionishere]"];
+	  246 [label="Acele: She looks back at her tape recorder."];
+	  247 [label="Acele: \"It's a music club and a synthesizer workshop. On Boogie Street, in Jamrock. Musicians live there, like... real musicians. I once saw Arno van Eyck!\""];
+	  248 [label="Acele: \"I'll keep that in mind, for future use.\" She turns to check her tape recorder."];
+	  249 [label="Acele: \"Thanks.\" She puts it on. It's a bit large for her."];
+	  250 [label="IsKimHere()"];
+	  251 [label="IsKimHere()", shape=diamond];
+	  252 [label="!(IsKimHere())", shape=diamond];
+	  253 [label="Reaction Speed: And who are these boys?"];
+	  254 [label="Jump to: [Acele: \"\"Sure.\"\"]"];
+	  255 [label="Acele: \"That stuff is more expensive than I am. More expensive than any of us, really. Doesn't matter. I can take the cold.\""];
+	  256 [label="You: \"Have you been questioned before?\""];
+	  257 [label="Acele: \"Once or twice, yeah. I'm sorry I haven't had the *Revachol experience* they get east of the river.\""];
+	  258 [label="You: \"We do, don't we? Mind if I question you some more?\""];
+	  259 [label="IsKimHere()"];
+	  260 [label="IsKimHere()", shape=diamond];
+	  261 [label="!(IsKimHere())", shape=diamond];
+	  262 [label="Acele: \"Bet they like it that way,\" she mutters. Quietly, under her breath."];
+	  263 [label="Jump to: [Acele: \"\"Yes?\"\"]"];
+	  264 [label="Acele: \"Thanks.\" She puts it on. It's a bit large for her."];
+	  265 [label="Acele: \"Oh, yeah. Egg's *really* into him. Maybe even *too* into him. He's a pretty intense personality.\""];
+	  266 [label="Drama: Everything checks out, sire!"];
+	  267 [label="Reaction Speed: Hey, didn't Pissf****t and Fuck the World mention van Eyck, too?"];
+	  268 [label="Variable[\"pier.skulls_arno_van_eyck\"]"];
+	  269 [label="Variable[\"pier.skulls_arno_van_eyck\"]", shape=diamond];
+	  270 [label="!(Variable[\"pier.skulls_arno_van_eyck\"])", shape=diamond];
+	  271 [label="You: \"Is it like a SKULL thing?\""];
+	  272 [label="Encyclopedia: Nope."];
+	  273 [label="You: \"What's The Paliseum?\""];
+	  274 [label="You: \"Never mind, let's talk about that contact mic instead...\""];
+	  275 [label="Acele: \"Okay... it's a huge ghetto just south of Jamrock.\""];
+	  276 [label="You: \"No. I literally can't remember even the most basic terms sometimes.\""];
+	  277 [label="You: \"Oh no, they're foreign bodies. Agents of international capital. You only need to look close enough.\""];
+	  278 [label="Acele: She looks back at her tape recorder."];
+	  279 [label="CheckEquipped(\"hat_samaran\")"];
+	  280 [label="CheckEquipped(\"hat_samaran\")", shape=diamond];
+	  281 [label="!(CheckEquipped(\"hat_samaran\"))", shape=diamond];
+	  282 [label="Acele: \"Thanks.\" She puts it on. It's a bit large for her."];
+	  283 [label="Pain Threshold: The girl is cold all of a sudden. Very cold."];
+	  284 [label="Jump to: [Acele: \"\"Oh yeah...\" She looks you over, as...\"]"];
+	  285 [label="Variable[\"pier.skulls_arno_van_eyck\"]"];
+	  286 [label="Variable[\"pier.skulls_arno_van_eyck\"]", shape=diamond];
+	  287 [label="!(Variable[\"pier.skulls_arno_van_eyck\"])", shape=diamond];
+	  288 [label="You: \"You know, Contact Mike doesn't *just beat people up*. Contact Mike is a role model.\""];
+	  289 [label="You: \"No, I mean... forget it.\""];
+	  290 [label="You: \"Where did you get the mic from?\""];
+	  291 [label="Acele: \"Yeah, there might be some. I don't think they look down on the homo-sexual underground there. The Paliseum's not that kind of place. It's cool.\""];
+	  292 [label="You: \"What for?\""];
+	  293 [label="Kim Kitsuragi: \"It's okay.\" The lieutenant backs up. He throws you a glance."];
+	  294 [label="Acele: She's shivering a bit."];
+	  295 [label="Jump to: [Acele coming down HUB]"];
+	  296 [label="You: \"I'm scum too.\""];
+	  297 [label="You: \"Yes, I can't even remember how many you've told or which ones I picked up on. Now -- another question.\""];
+	  298 [label="Jump to: [MAINHUB-acelequestions]"];
+	  299 [label="You: (Let it go.) \"Got it...\""];
+	  300 [label="Acele: \"Uh huh, good on you.\" She turns to check her tape recorder."];
+	  301 [label="Jump to: [Acele: \"\"Sure.\"\"]"];
+	  302 [label="Interfacing: Nice. You could maybe bug someone with it? Wire tapping!"];
+	  303 [label="Conceptualization: Interesting term. Time to glean some knowledge!"];
+	  304 [label="Acele: \"A contact mic records sounds from inside things. Like this ice.\""];
+	  305 [label="You: \"Does this have anything to do with Contact Mike?\""];
+	  306 [label="You: \"Don't get me wrong. I'm all for it. This *Paliseum* just sounded like their kind of place.\""];
+	  307 [label="Acele: \"I don't know what that means either.\""];
+	  308 [label="Acele: \"That's cool.\" She breathes on her fingers. Looks like she doesn't know what to say."];
+	  309 [label="You: \"Yes, that does indeed float my boat.\""];
+	  310 [label="You: \"And what is it you're recording exactly?\""];
+	  311 [label="Acele: \"I don't know, man... things. Just stuff you need for life.\""];
+	  312 [label="Acele: \"They got too much stuff crammed in there. No room.\""];
+	  313 [label="Acele: \"See? That's the appropriate way to give a girl a hat...\""];
+	  314 [label="Acele: \"Good luck crossing that river on your police salary then.\""];
+	  315 [label="You: \"Strange. The existence of rich people does not stir any emotions in me.\""];
+	  316 [label="Jump to: [Acele: \"\"Go ahead.\"\"]"];
+	  317 [label="Jump to: [Acele coming down HUB]"];
+	  318 [label="CheckEquipped(\"hat_faln\")"];
+	  319 [label="CheckEquipped(\"hat_faln\")", shape=diamond];
+	  320 [label="!(CheckEquipped(\"hat_faln\"))", shape=diamond];
+	  321 [label="You: \"I'm pretty intense, too.\""];
+	  0 -> 1
+	  1 -> 160
+	  1 -> 136
+	  1 -> 159
+	  2 -> 3
+	  2 -> 4
+	  3 -> 95
+	  4 -> 60
+	  5 -> 97
+	  6 -> 289
+	  6 -> 35
+	  6 -> 291
+	  6 -> 199
+	  6 -> 306
+	  7 -> 64
+	  8 -> 114
+	  9 -> 151
+	  10 -> 54
+	  11 -> 259
+	  12 -> 241
+	  12 -> 183
+	  12 -> 25
+	  12 -> 90
+	  12 -> 316
+	  13 -> 297
+	  13 -> 52
+	  14 -> 195
+	  16 -> 197
+	  17 -> 56
+	  18 -> 217
+	  19 -> 100
+	  20 -> 275
+	  20 -> 147
+	  21 -> 236
+	  22 -> 37
+	  23 -> 240
+	  25 -> 13
+	  26 -> 11
+	  26 -> 181
+	  27 -> 299
+	  28 -> 29
+	  28 -> 30
+	  29 -> 94
+	  30 -> 91
+	  31 -> 9
+	  32 -> 9
+	  33 -> 285
+	  34 -> 157
+	  35 -> 18
+	  36 -> 63
+	  37 -> 129
+	  38 -> 236
+	  39 -> 115
+	  40 -> 41
+	  40 -> 42
+	  41 -> 200
+	  42 -> 121
+	  43 -> 222
+	  44 -> 151
+	  45 -> 254
+	  46 -> 40
+	  47 -> 48
+	  47 -> 49
+	  48 -> 162
+	  49 -> 151
+	  50 -> 185
+	  50 -> 137
+	  50 -> 51
+	  50 -> 182
+	  51 -> 214
+	  52 -> 138
+	  53 -> 277
+	  53 -> 181
+	  54 -> 70
+	  55 -> 234
+	  56 -> 62
+	  56 -> 21
+	  56 -> 38
+	  57 -> 148
+	  57 -> 156
+	  57 -> 215
+	  58 -> 250
+	  59 -> 123
+	  60 -> 9
+	  61 -> 100
+	  62 -> 61
+	  63 -> 215
+	  63 -> 148
+	  63 -> 239
+	  64 -> 112
+	  64 -> 33
+	  65 -> 20
+	  66 -> 67
+	  67 -> 293
+	  68 -> 201
+	  69 -> 165
+	  70 -> 184
+	  71 -> 72
+	  71 -> 73
+	  72 -> 26
+	  73 -> 276
+	  74 -> 75
+	  74 -> 76
+	  75 -> 140
+	  76 -> 280
+	  77 -> 142
+	  78 -> 16
+	  79 -> 123
+	  80 -> 123
+	  81 -> 308
+	  82 -> 149
+	  83 -> 211
+	  84 -> 294
+	  85 -> 105
+	  85 -> 213
+	  86 -> 295
+	  87 -> 278
+	  88 -> 168
+	  89 -> 299
+	  90 -> 206
+	  91 -> 92
+	  91 -> 93
+	  92 -> 283
+	  93 -> 74
+	  94 -> 9
+	  95 -> 9
+	  96 -> 305
+	  97 -> 96
+	  97 -> 170
+	  98 -> 233
+	  98 -> 177
+	  99 -> 124
+	  100 -> 6
+	  101 -> 112
+	  101 -> 33
+	  102 -> 309
+	  103 -> 130
+	  104 -> 132
+	  105 -> 313
+	  106 -> 298
+	  106 -> 107
+	  107 -> 244
+	  109 -> 104
+	  109 -> 66
+	  110 -> 290
+	  110 -> 99
+	  111 -> 81
+	  112 -> 19
+	  113 -> 57
+	  114 -> 221
+	  115 -> 255
+	  116 -> 117
+	  116 -> 118
+	  117 -> 314
+	  118 -> 189
+	  119 -> 151
+	  120 -> 212
+	  120 -> 86
+	  121 -> 151
+	  122 -> 6
+	  123 -> 34
+	  123 -> 78
+	  124 -> 55
+	  125 -> 6
+	  126 -> 292
+	  127 -> 226
+	  128 -> 248
+	  129 -> 128
+	  129 -> 310
+	  130 -> 238
+	  131 -> 266
+	  132 -> 82
+	  133 -> 39
+	  134 -> 253
+	  135 -> 69
+	  136 -> 153
+	  137 -> 89
+	  138 -> 222
+	  139 -> 123
+	  140 -> 9
+	  141 -> 142
+	  142 -> 144
+	  142 -> 143
+	  143 -> 98
+	  144 -> 303
+	  145 -> 274
+	  145 -> 45
+	  146 -> 111
+	  147 -> 155
+	  148 -> 79
+	  149 -> 284
+	  150 -> 24
+	  151 -> 163
+	  151 -> 83
+	  151 -> 180
+	  151 -> 150
+	  151 -> 152
+	  152 -> 120
+	  153 -> 256
+	  153 -> 258
+	  154 -> 53
+	  155 -> 232
+	  156 -> 58
+	  157 -> 122
+	  158 -> 209
+	  159 -> 5
+	  160 -> 311
+	  161 -> 47
+	  162 -> 84
+	  163 -> 134
+	  164 -> 135
+	  165 -> 166
+	  165 -> 167
+	  166 -> 85
+	  167 -> 205
+	  170 -> 15
+	  171 -> 179
+	  172 -> 173
+	  172 -> 174
+	  173 -> 32
+	  174 -> 2
+	  175 -> 6
+	  176 -> 216
+	  177 -> 218
+	  178 -> 235
+	  179 -> 126
+	  179 -> 127
+	  180 -> 116
+	  181 -> 50
+	  182 -> 27
+	  183 -> 87
+	  184 -> 304
+	  185 -> 242
+	  186 -> 222
+	  187 -> 88
+	  187 -> 10
+	  187 -> 203
+	  188 -> 139
+	  189 -> 190
+	  189 -> 191
+	  190 -> 202
+	  191 -> 319
+	  192 -> 193
+	  192 -> 194
+	  193 -> 249
+	  194 -> 172
+	  195 -> 51
+	  195 -> 181
+	  196 -> 247
+	  197 -> 268
+	  198 -> 223
+	  199 -> 237
+	  200 -> 68
+	  200 -> 300
+	  201 -> 44
+	  202 -> 9
+	  203 -> 12
+	  204 -> 222
+	  205 -> 151
+	  206 -> 222
+	  207 -> 59
+	  208 -> 146
+	  208 -> 219
+	  208 -> 271
+	  209 -> 146
+	  209 -> 219
+	  210 -> 109
+	  211 -> 119
+	  212 -> 295
+	  213 -> 246
+	  215 -> 188
+	  216 -> 322
+	  216 -> 219
+	  216 -> 271
+	  217 -> 6
+	  218 -> 6
+	  219 -> 263
+	  220 -> 309
+	  221 -> 161
+	  222 -> 245
+	  223 -> 224
+	  223 -> 225
+	  224 -> 36
+	  225 -> 80
+	  226 -> 227
+	  226 -> 228
+	  227 -> 265
+	  228 -> 197
+	  229 -> 230
+	  229 -> 231
+	  230 -> 77
+	  231 -> 141
+	  232 -> 6
+	  233 -> 273
+	  234 -> 6
+	  235 -> 6
+	  236 -> 22
+	  236 -> 103
+	  238 -> 6
+	  239 -> 113
+	  240 -> 115
+	  240 -> 133
+	  241 -> 315
+	  242 -> 106
+	  243 -> 195
+	  244 -> 169
+	  245 -> 187
+	  246 -> 318
+	  247 -> 171
+	  248 -> 238
+	  249 -> 9
+	  250 -> 251
+	  250 -> 252
+	  251 -> 207
+	  252 -> 59
+	  253 -> 164
+	  254 -> 235
+	  255 -> 46
+	  256 -> 257
+	  257 -> 187
+	  258 -> 317
+	  259 -> 260
+	  259 -> 261
+	  260 -> 243
+	  261 -> 14
+	  262 -> 204
+	  263 -> 100
+	  264 -> 9
+	  265 -> 286
+	  266 -> 104
+	  267 -> 208
+	  268 -> 269
+	  268 -> 270
+	  269 -> 267
+	  270 -> 208
+	  271 -> 158
+	  272 -> 125
+	  273 -> 196
+	  274 -> 302
+	  275 -> 11
+	  275 -> 181
+	  276 -> 71
+	  277 -> 43
+	  278 -> 44
+	  279 -> 281
+	  279 -> 282
+	  280 -> 31
+	  281 -> 192
+	  282 -> 9
+	  283 -> 8
+	  284 -> 197
+	  285 -> 288
+	  285 -> 287
+	  286 -> 176
+	  287 -> 216
+	  288 -> 17
+	  289 -> 178
+	  290 -> 145
+	  291 -> 307
+	  291 -> 198
+	  291 -> 7
+	  292 -> 312
+	  293 -> 151
+	  294 -> 296
+	  295 -> 151
+	  296 -> 186
+	  297 -> 108
+	  299 -> 279
+	  300 -> 238
+	  301 -> 235
+	  302 -> 6
+	  303 -> 154
+	  303 -> 181
+	  304 -> 229
+	  305 -> 110
+	  306 -> 101
+	  307 -> 65
+	  307 -> 220
+	  307 -> 102
+	  308 -> 275
+	  308 -> 147
+	  309 -> 301
+	  310 -> 210
+	  311 -> 131
+	  312 -> 23
+	  313 -> 189
+	  314 -> 222
+	  315 -> 262
+	  317 -> 151
+	  318 -> 320
+	  318 -> 321
+	  319 -> 264
+	  320 -> 28
+	  321 -> 111
+}
+

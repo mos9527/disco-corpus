@@ -1,0 +1,68 @@
+# INVENTORY / PAYS INFERNAL
+# you can read the book (MAYBE)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Un Pays Infernal: Yes, it will make you a little more communist. Not a lot. It won't *unmake* whatever else you are but you will also become a tad bit more communist, yes."];
+	  3 [label="You: Why would I want to?"];
+	  4 [label="Rhetoric: It's capitalism, isn't it?"];
+	  5 [label="Jump to: [un_pays_bookz]"];
+	  6 [label="Jump to: [un_pays_bookz]"];
+	  7 [label="un_pays_bookz"];
+	  8 [label="Un Pays Infernal: This book is written by an angry humanitarian sciences doctor from the La Cherte University in Sur-La-Clef, a Dr. Benoit Mejean. He does not like Sur-La-Clef, La Cherte -- or in fact even the University he teaches in -- but what he likes even less is..."];
+	  9 [label="Un Pays Infernal: You."];
+	  10 [label="Inland Empire: You feel an ominous tingling in your fingertips as they browse the pages..."];
+	  11 [label="You: Good. Here -- almost in the end, limping and bleeding -- is a good time to get into some communism."];
+	  12 [label="IsTHCPresent(\"communist\")"];
+	  13 [label="IsTHCPresent(\"communist\")", shape=diamond];
+	  14 [label="!(IsTHCPresent(\"communist\"))", shape=diamond];
+	  15 [label="Un Pays Infernal: Critical theorists the world over agree: once *everyone* knows *every last shortcoming* of capitalism, capitalism will end. You are but one of billions, and there are over seven billion things wrong with capitalism, but one has to start somewhere. And Benoit Mejean, PhD, wants to start with..."];
+	  16 [label="You: Will this book turn me into a commie?"];
+	  17 [label="Un Pays Infernal: Can't stand the shadow of it. This book promises to *really* get into everything that's wrong with capitalism -- to do so once and for all in an *exhaustive* and *final* manner."];
+	  18 [label="Un Pays Infernal: It will. The more communist books you read the more communist your brain becomes. That's how communism works."];
+	  19 [label="Un Pays Infernal: Sure. The more communist books you read the more communist your brain becomes. That's how communism works."];
+	  20 [label="Un Pays Infernal: Then don't read it. The more communist books you read the more communist your brain becomes. That's how communism works."];
+	  21 [label="Un Pays Infernal: Then you've found the right book. The more communist books you read the more communist your brain becomes. That's how communism works."];
+	  22 [label="You: Nope. [Put the book away.]"];
+	  23 [label="Jump to: [un_pays_bookz]"];
+	  24 [label="You: Read it."];
+	  25 [label="Un Pays Infernal: Capitalism."];
+	  26 [label="Un Pays Infernal: You start reading it, but it's hard to really understand anything. It's all some sort of garbled word-wankery. After a while you give up and put the book down."];
+	  27 [label="You: No it won't. I'm impervious to critical theory."];
+	  28 [label="You: I don't think I want that."];
+	  0 -> 1
+	  1 -> 8
+	  2 -> 11
+	  2 -> 28
+	  2 -> 29
+	  3 -> 15
+	  4 -> 26
+	  5 -> 7
+	  6 -> 7
+	  7 -> 16
+	  7 -> 25
+	  7 -> 3
+	  7 -> 22
+	  8 -> 4
+	  9 -> 6
+	  10 -> 9
+	  11 -> 21
+	  12 -> 13
+	  12 -> 14
+	  13 -> 2
+	  14 -> 19
+	  15 -> 10
+	  16 -> 12
+	  17 -> 7
+	  18 -> 5
+	  19 -> 23
+	  20 -> 5
+	  21 -> 5
+	  23 -> 7
+	  24 -> 27
+	  25 -> 17
+	  27 -> 18
+	  28 -> 20
+}
+

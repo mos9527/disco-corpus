@@ -1,0 +1,291 @@
+# PAWNSHOP / RACK OF SECOND-HAND UNIFORMS
+# You look at and ask Roy about the Man from Hjelmdall T-Shirt.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Bird's Nest Roy: \"A fan... No, I wouldn't go that far. But I do think the Hjelmdallermann Saga is an integral part of our shared reality.\""];
+	  3 [label="You: \"Perhaps I could repay you in some other way?\""];
+	  4 [label="Empathy: He's surprised at your non-recognition."];
+	  5 [label="Bird's Nest Roy: He grimaces. \"I wouldn't go so far as to say that I'm a fan. But I do think the Hjelmdallermann Saga is an integral part of our shared reality.\""];
+	  6 [label="Kim Kitsuragi: Variable[\"canal.hjelmdall_roy_real\"]"];
+	  7 [label="Variable[\"canal.hjelmdall_roy_real\"]", shape=diamond];
+	  8 [label="!(Variable[\"canal.hjelmdall_roy_real\"])", shape=diamond];
+	  9 [label="followinghub"];
+	  10 [label="Bird's Nest Roy: \"Besides, I've been to Katla, though not quite as far north as the Hjelmdall, and watched the northern lights travel across the sky. Very unique energetic tides there.\""];
+	  11 [label="Bird's Nest Roy: He smirks. \"It's a simple matter of cause and effect, and recognizing that they work in both directions.\""];
+	  12 [label="Bird's Nest Roy: \"You'll just have to buy it, then,\" he replies with a dry smile. \"But it's not like it's *expensive*.\""];
+	  13 [label="Jump to: [mainhub]"];
+	  14 [label="Bird's Nest Roy: \"In fact...\" He leans in. \"Most people don't think that the Man from Hjelmdall ever really existed, but they are *wrong*.\""];
+	  15 [label="Kim Kitsuragi: Variable[\"canal.hjelmdall_empathy_surprise\"]"];
+	  16 [label="Variable[\"canal.hjelmdall_empathy_surprise\"]", shape=diamond];
+	  17 [label="!(Variable[\"canal.hjelmdall_empathy_surprise\"])", shape=diamond];
+	  18 [label="You: \"How much are you selling this T-shirt for?\""];
+	  19 [label="Bird's Nest Roy: \"Two reál.\""];
+	  20 [label="pricelogichub"];
+	  21 [label="Bird's Nest Roy: \"It should belong to anyone who is ready to wear it.\""];
+	  22 [label="You: \"The Man from Hjelmdall is a superstar, I'm a superstar -- it would be perfect!\""];
+	  23 [label="Bird's Nest Roy: He drums his fingers on the counter. \"I doubt the real Man from Hjelmdall was as poor a role model as the one in the popular literature.\""];
+	  24 [label="Jump to: [pricelogichub]"];
+	  25 [label="Bird's Nest Roy: \"Hmm, I think you might be thinking about someone else I... dislike music,\" he frowns. \"So I couldn't tell you who.\""];
+	  26 [label="Bird's Nest Roy: \"Oh... I see. That's tough, man, I feel the same way sometimes. The Man from Hjelmdall is the hero of a series of popular books based on a fictional version of Katla.\""];
+	  27 [label="You: \"You said everything's going to be over soon anyway, man. I just want to walk into the end times wearing this t-shirt.\""];
+	  28 [label="Bird's Nest Roy: \"Interesting choice. But sure, why not -- take it. Welcome to Hjelmdall.\""];
+	  29 [label="mainhub"];
+	  30 [label="Kim Kitsuragi: The lieutenant raises his eyebrows. \"That's dirt cheap.\""];
+	  31 [label="You: \"Cool, I'll think about it.\""];
+	  32 [label="You: (Lie) \"I was a very sheltered child -- my parents only let me read boring books about ordinary people, and the Man from Hjelmdall looks *extraordinary*.\""];
+	  33 [label="Bird's Nest Roy: \"The Man from Hjelmdall is the hero of a series of popular books based on a fictional version of Katla, mostly what is nowadays Arda NFD.\""];
+	  34 [label="Jump to: [mainhub]"];
+	  35 [label="Bird's Nest Roy: \"He left his native village of Hjelmdall after his son was kidnapped, having many exciting adventures and killing many enemies with his swords, but he lost his family in the process. Tragic stuff, really.\""];
+	  36 [label="Bird's Nest Roy: \"It's not that complicated. All that's required is a more robust understanding of cause and effect.\""];
+	  37 [label="You: \"I'm going to call bullshit right now.\""];
+	  38 [label="Bird's Nest Roy: \"Neither is the Man a real man, of course, but both the Man and Hjelmdall are an ontological necessity...\" He stops abruptly. \"But, hey, it's not worth getting into an argument about.\""];
+	  39 [label="Physical Instrument: Stop talking about this nerd stuff. It will make you *weedy*."];
+	  40 [label="Bird's Nest Roy: \"Hell yeah, man.\" The shopkeep sounds enthusiastic. \"I don't usually carry printed tees, but this one was just such a pure exemplar.\""];
+	  41 [label="Kim Kitsuragi: IsKimHere()"];
+	  42 [label="IsKimHere()", shape=diamond];
+	  43 [label="!(IsKimHere())", shape=diamond];
+	  44 [label="Rack of Second-Hand Uniforms: *Oh* yeah. The print depicts a muscled  man striding toward you, a giant sword in each hand, encircled by burning embers. Behind him is a cluster of cabins engulfed in flames. Beneath him are the words: \"HJELMDALL BURNING.\""];
+	  45 [label="carewhohub"];
+	  46 [label="Bird's Nest Roy: \"Huh?\""];
+	  47 [label="You: \"I said I lost my memory recently and need help remembering basic facts about reality.\""];
+	  48 [label="Rack of Second-Hand Uniforms: What a shirt. All other shirts pale in comparison to the muscular man with antlers and immense zweihänders."];
+	  49 [label="You: \"Okay, I've thought it over and I want to buy the T-shirt.\""];
+	  50 [label="Bird's Nest Roy: \"Sniffing is okay,\" says the shopkeep. \"But please don't try anything on. Can't have you leaving your photon emissions in the fabric of things you're not going to buy.\""];
+	  51 [label="You: \"You must be a serious Man from Hjelmdall fan.\""];
+	  52 [label="Jump to: [mainhub]"];
+	  53 [label="Kim Kitsuragi: \"It's the Man from Hjelmdall.\""];
+	  54 [label="Bird's Nest Roy: \"Walking away from his burning village, yes.\""];
+	  55 [label="Jump to: [mainhub]"];
+	  56 [label="Bird's Nest Roy: \"That's very sad, man. Then you missed out on some pretty well executed, albeit repetitive adventure literature.\""];
+	  57 [label="Bird's Nest Roy: \"Most people don't think that the Man from Hjemdall really existed, but they're *wrong*.\""];
+	  58 [label="Kim Kitsuragi: \"Okay...\" He sounds incredulous."];
+	  59 [label="Bird's Nest Roy: \"You sound sceptical. It's not that complicated. All that's required is a more robust understanding of cause and effect.\""];
+	  60 [label="Bird's Nest Roy: \"Exactly. Cause and effect work in both directions.\""];
+	  61 [label="Drama: Lie, sire. For no reason."];
+	  62 [label="Encyclopedia: It's for the best, because Hjelmdall is *not* a real place. And thus he could not have gone there."];
+	  63 [label="Bird's Nest Roy: \"That's the Man from Hjelmdall walking away as his village burns.\""];
+	  64 [label="You: \"This shirt celebrates a false hero, a guardian of the masculine order.\""];
+	  65 [label="You: \"Sounds like a good deal, although I wouldn't really know.\""];
+	  66 [label="Bird's Nest Roy: \"Oh, it is.\""];
+	  67 [label="Bird's Nest Roy: \"Welcome to Hjelmdall, officer.\""];
+	  68 [label="You: Oh yeah?"];
+	  69 [label="Encyclopedia: The antlers on the hood of the man's cloak and his piercing blue eyes are familiar...."];
+	  70 [label="You: \"We have a lot in common. I'm a big fan of the Man from Hjelmdall too.\""];
+	  71 [label="You: \"I guess I can't really think of any good reason.\""];
+	  72 [label="Kim Kitsuragi: Variable[\"canal.hjelmdall_mainhub_reached\"]"];
+	  73 [label="Variable[\"canal.hjelmdall_mainhub_reached\"]", shape=diamond];
+	  74 [label="!(Variable[\"canal.hjelmdall_mainhub_reached\"])", shape=diamond];
+	  75 [label="Kim Kitsuragi: IsKimHere()"];
+	  76 [label="IsKimHere()", shape=diamond];
+	  77 [label="!(IsKimHere())", shape=diamond];
+	  78 [label="Rack of Second-Hand Uniforms: Smells like worn cotton. And a little old sweat there?"];
+	  79 [label="Bird's Nest Roy: He thinks about it. \"I suppose that makes sense, yes. Please, go ahead and take it -- Welcome to Hjelmdall.\""];
+	  80 [label="Bird's Nest Roy: \"I sympathize, I do, but this is a for-profit enterprise.\""];
+	  81 [label="You: \"Remind me, who's the Man from Hjelmdall again?\""];
+	  82 [label="Kim Kitsuragi: The lieutenant raises a brow. \"*Hjelmdall* isn't a real place.\""];
+	  83 [label="Rack of Second-Hand Uniforms: Wow! A very large red T-shirt with an impressive print stands out from the other garb."];
+	  84 [label="Jump to: [mainhub]"];
+	  85 [label="Bird's Nest Roy: \"I mean -- even if the Man from Hjelmdall didn't exist before the adventure novels, the stories have made it so that he has. It's simple really.\""];
+	  86 [label="Jump to: [mainhub]"];
+	  87 [label="You: \"Uh huh, say more?'"];
+	  88 [label="Jump to: [mainhub]"];
+	  89 [label="Inland Empire: Very, *very* unique energies indeed. Geomagnetic ley lines, one might even say."];
+	  90 [label="Physical Instrument: Stop talking about this nerd stuff. It will make you *weedy*.  Buy the damn shirt already, it's powerful."];
+	  91 [label="You: \"Couldn't you just give it to me for free then?\""];
+	  92 [label="You: \"What's the deal with the man on this t-shirt?\""];
+	  93 [label="Kim Kitsuragi: IsKimHere()"];
+	  94 [label="IsKimHere()", shape=diamond];
+	  95 [label="!(IsKimHere())", shape=diamond];
+	  96 [label="You: \"Because I'm a broke cop without a cent to my name.\""];
+	  97 [label="Bird's Nest Roy: \"But, yes, the books are very sexist. In a not-entirely-unenjoyable way.\""];
+	  98 [label="Kim Kitsuragi: IsKimHere()"];
+	  99 [label="IsKimHere()", shape=diamond];
+	  100 [label="!(IsKimHere())", shape=diamond];
+	  101 [label="Logic: That's very cheap for a printed t-shirt that's still in pretty good shape."];
+	  102 [label="You: \"That's unusually cheap, isn't it?\""];
+	  103 [label="Bird's Nest Roy: He frowns. \"But... why?\""];
+	  104 [label="Bird's Nest Roy: \"I deal in goods, not services.\""];
+	  105 [label="You: \"What did you mean the Man from Hjelmdall was real?\""];
+	  106 [label="You: Sniff the T-shirt."];
+	  107 [label="Perception (Smell): Worn cotton with a side of flea market or trash bin."];
+	  108 [label="Jump to: [mainhub]"];
+	  109 [label="You: \"I'm not following at all.\""];
+	  110 [label="Conceptualization: His theory isn't exactly *incoherent*, but its logic does suggest some *unusual* neural activity. Interesting..."];
+	  111 [label="Kim Kitsuragi: Variable[\"tc.hjelmdall\"]"];
+	  112 [label="Variable[\"tc.hjelmdall\"]", shape=diamond];
+	  113 [label="!(Variable[\"tc.hjelmdall\"])", shape=diamond];
+	  114 [label="You: \"That's a rad Man from Hjelmdall t-shirt you've got there.\""];
+	  115 [label="Bird's Nest Roy: He inclines his head. \"You should.\""];
+	  116 [label="You: \"Never mind. Tell me more about this Man from Hjelmdall.\""];
+	  117 [label="You: Let go of the T-shirt. [Leave.]"];
+	  118 [label="You: \"He's a music-based superstar, right?\""];
+	  119 [label="You: \"I'm totally with you, man. Reality has a way of bending back on itself.\""];
+	  120 [label="You: Not now. [Leave.]"];
+	  121 [label="Rhetoric: Wow, what?"];
+	  122 [label="Kim Kitsuragi: CheckItem(\"shirt_hjelmdall\")"];
+	  123 [label="CheckItem(\"shirt_hjelmdall\")", shape=diamond];
+	  124 [label="!(CheckItem(\"shirt_hjelmdall\"))", shape=diamond];
+	  125 [label="Inland Empire: You're not imagining it. Photon emissions? What is he talking about?"];
+	  126 [label="Empathy: Their matter-of-fact tone belies their surprise at the fact that you didn't recognize the figure in the print."];
+	  127 [label="You: \"I'm guessing I'm supposed to know who this Man from Hjelmdall is, but I lost my memory recently and need help remembering basic facts about reality.\""];
+	  128 [label="Bird's Nest Roy: \"It's simply a matter of recognizing that cause and effect work in both directions.\""];
+	  0 -> 1
+	  1 -> 73
+	  2 -> 6
+	  3 -> 105
+	  4 -> 15
+	  5 -> 6
+	  6 -> 8
+	  6 -> 7
+	  7 -> 35
+	  8 -> 58
+	  9 -> 88
+	  9 -> 38
+	  9 -> 120
+	  9 -> 110
+	  10 -> 63
+	  11 -> 10
+	  12 -> 13
+	  13 -> 29
+	  14 -> 83
+	  15 -> 16
+	  15 -> 17
+	  16 -> 62
+	  17 -> 46
+	  18 -> 19
+	  19 -> 42
+	  20 -> 32
+	  20 -> 66
+	  20 -> 92
+	  20 -> 103
+	  21 -> 24
+	  22 -> 80
+	  23 -> 98
+	  24 -> 20
+	  25 -> 34
+	  26 -> 76
+	  27 -> 28
+	  29 -> 65
+	  29 -> 106
+	  29 -> 107
+	  29 -> 18
+	  29 -> 115
+	  29 -> 50
+	  29 -> 118
+	  29 -> 93
+	  30 -> 20
+	  31 -> 116
+	  32 -> 57
+	  33 -> 76
+	  34 -> 29
+	  35 -> 87
+	  36 -> 10
+	  37 -> 11
+	  38 -> 122
+	  39 -> 89
+	  40 -> 52
+	  40 -> 71
+	  41 -> 43
+	  41 -> 44
+	  42 -> 31
+	  43 -> 102
+	  44 -> 112
+	  45 -> 128
+	  45 -> 33
+	  45 -> 82
+	  45 -> 119
+	  46 -> 48
+	  46 -> 117
+	  47 -> 26
+	  48 -> 112
+	  49 -> 68
+	  50 -> 126
+	  51 -> 2
+	  52 -> 29
+	  53 -> 55
+	  54 -> 127
+	  55 -> 29
+	  56 -> 34
+	  57 -> 35
+	  58 -> 60
+	  59 -> 10
+	  60 -> 10
+	  61 -> 46
+	  62 -> 111
+	  63 -> 4
+	  64 -> 23
+	  65 -> 67
+	  66 -> 24
+	  68 -> 45
+	  69 -> 29
+	  70 -> 5
+	  71 -> 12
+	  72 -> 74
+	  72 -> 75
+	  73 -> 49
+	  74 -> 84
+	  75 -> 77
+	  75 -> 78
+	  76 -> 14
+	  77 -> 36
+	  78 -> 108
+	  80 -> 13
+	  81 -> 34
+	  82 -> 39
+	  83 -> 121
+	  83 -> 69
+	  84 -> 29
+	  85 -> 99
+	  86 -> 29
+	  87 -> 129
+	  88 -> 29
+	  89 -> 123
+	  90 -> 89
+	  91 -> 104
+	  92 -> 94
+	  93 -> 96
+	  93 -> 95
+	  94 -> 54
+	  95 -> 64
+	  96 -> 81
+	  97 -> 56
+	  98 -> 100
+	  98 -> 101
+	  99 -> 59
+	  100 -> 9
+	  101 -> 20
+	  102 -> 21
+	  103 -> 97
+	  103 -> 3
+	  103 -> 72
+	  103 -> 22
+	  103 -> 27
+	  104 -> 13
+	  105 -> 86
+	  106 -> 79
+	  107 -> 51
+	  108 -> 29
+	  109 -> 37
+	  110 -> 90
+	  111 -> 113
+	  111 -> 114
+	  112 -> 29
+	  113 -> 70
+	  114 -> 41
+	  115 -> 109
+	  116 -> 34
+	  118 -> 25
+	  119 -> 61
+	  121 -> 53
+	  122 -> 124
+	  122 -> 125
+	  123 -> 40
+	  124 -> 91
+	  125 -> 85
+	  126 -> 15
+	  127 -> 47
+	  128 -> 10
+}
+

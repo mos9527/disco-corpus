@@ -1,0 +1,192 @@
+# FRITTE / KNICK-KNACKS STAND
+# The counter.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Frittte clerk: \"I mean, I didn't just see a middle-aged man try to steal a four reál raincoat, did I?\""];
+	  3 [label="Variable[\"gates.frittte_savoire_steal_the_coat\"]"];
+	  4 [label="Variable[\"gates.frittte_savoire_steal_the_coat\"]", shape=diamond];
+	  5 [label="!(Variable[\"gates.frittte_savoire_steal_the_coat\"])", shape=diamond];
+	  6 [label="Variable[\"gates.fritte_tried_to_steal_raincoat_and_failed\"]"];
+	  7 [label="Variable[\"gates.fritte_tried_to_steal_raincoat_and_failed\"]", shape=diamond];
+	  8 [label="!(Variable[\"gates.fritte_tried_to_steal_raincoat_and_failed\"])", shape=diamond];
+	  9 [label="CheckItem(\"jacket_fritte_raincoat\")"];
+	  10 [label="CheckItem(\"jacket_fritte_raincoat\")", shape=diamond];
+	  11 [label="!(CheckItem(\"jacket_fritte_raincoat\"))", shape=diamond];
+	  12 [label="You: Try to grab a package. Any one of them. Slip it up your sleeve and..."];
+	  13 [label="Knick-knacks Stand: To the left of some croissants and juice bottles, you see several packaged raincoats fill a low shelf. One is missing: the one you legally purchased."];
+	  14 [label="Rhetoric: She says 'fuck with Frittte' like it's a saying, or like she's quoting someone. Maybe you can ask her about this later?"];
+	  15 [label="You: [Leave.]"];
+	  16 [label="You: \"No, you didn't. I didn't do it!\""];
+	  17 [label="CheckItem(\"jacket_fritte_raincoat\")"];
+	  18 [label="CheckItem(\"jacket_fritte_raincoat\")", shape=diamond];
+	  19 [label="!(CheckItem(\"jacket_fritte_raincoat\"))", shape=diamond];
+	  20 [label="Knick-knacks Stand: To the left of the croissants and juice bottles, several packaged raincoats fill a low shelf. One is missing. No one need be any wiser."];
+	  21 [label="Kim Kitsuragi: \"Really? A *plastic poncho*?\" The lieutenant sighs and looks away."];
+	  22 [label="You: Steal a raincoat."];
+	  23 [label="You: Variable[\"gates.fritte_savoire_redcheck\"]"];
+	  24 [label="Variable[\"gates.fritte_savoire_redcheck\"]", shape=diamond];
+	  25 [label="!(Variable[\"gates.fritte_savoire_redcheck\"])", shape=diamond];
+	  26 [label="IsKimHere()"];
+	  27 [label="IsKimHere()", shape=diamond];
+	  28 [label="!(IsKimHere())", shape=diamond];
+	  29 [label="Pain Threshold: She's like 14! You're humiliated in front of a minor, what's *wrong* with you, son?!"];
+	  30 [label="You: \"Don't judge me. I needed it for an official police investigation.\""];
+	  31 [label="Jump to: [stuff_hub]"];
+	  32 [label="Jump to: [stuff_hub]"];
+	  33 [label="Frittte clerk: \"Fucking with Frittte is *dangerous*, you know.\" She scratches her cheek, thinking. \"Just leave it there, I'll put it away later.\""];
+	  34 [label="CheckItem(\"jacket_fritte_raincoat\")"];
+	  35 [label="CheckItem(\"jacket_fritte_raincoat\")", shape=diamond];
+	  36 [label="!(CheckItem(\"jacket_fritte_raincoat\"))", shape=diamond];
+	  37 [label="Knick-knacks Stand: You see several packaged raincoats fill a low shelf beneath a display of croissants and juice bottles. The raincoats are transparent, except for the big 'FRITTTE' slogan on the back."];
+	  38 [label="You: \"I want to buy a raincoat.\""];
+	  39 [label="Variable[\"gates.fritte_bought_rain_coat\"]"];
+	  40 [label="Variable[\"gates.fritte_bought_rain_coat\"]", shape=diamond];
+	  41 [label="!(Variable[\"gates.fritte_bought_rain_coat\"])", shape=diamond];
+	  42 [label="Variable[\"gates.fritte_tried_to_steal_raincoat_and_failed\"]"];
+	  43 [label="Variable[\"gates.fritte_tried_to_steal_raincoat_and_failed\"]", shape=diamond];
+	  44 [label="!(Variable[\"gates.fritte_tried_to_steal_raincoat_and_failed\"])", shape=diamond];
+	  45 [label="Variable[\"gates.frittte_savoire_theft_attempted\"]"];
+	  46 [label="Variable[\"gates.frittte_savoire_theft_attempted\"]", shape=diamond];
+	  47 [label="!(Variable[\"gates.frittte_savoire_theft_attempted\"])", shape=diamond];
+	  48 [label="Frittte clerk: \"What is what?\" The girl leans over the counter to see what you're referring to. \"Uhm... a raincoat? You know -- like the one you bought earlier?\""];
+	  49 [label="Variable[\"gates.fritte_savoire_redcheck\"]"];
+	  50 [label="Variable[\"gates.fritte_savoire_redcheck\"]", shape=diamond];
+	  51 [label="!(Variable[\"gates.fritte_savoire_redcheck\"])", shape=diamond];
+	  52 [label="Jump to: [stuff_hub]"];
+	  53 [label="Variable[\"gates.fritte_bought_rain_coat\"]"];
+	  54 [label="Variable[\"gates.fritte_bought_rain_coat\"]", shape=diamond];
+	  55 [label="!(Variable[\"gates.fritte_bought_rain_coat\"])", shape=diamond];
+	  56 [label="Interfacing: The sloppy stacking makes it more difficult to discern the missing one. You will be safe."];
+	  57 [label="Interfacing: The girl delves into the magazine, hair covering her face... vision obscured, she cannot see your hand move."];
+	  58 [label="Frittte clerk: The clerk stares at you, but doesn't say a thing for a moment or two."];
+	  59 [label="Jump to: [stuff_hub]"];
+	  60 [label="Jump to: [stuff_hub]"];
+	  61 [label="Frittte clerk: \"What is what?\" The girl leans over the counter to see what you're referring to. \"Uhm... a raincoat? You know -- like the one you tried to steal earlier?\""];
+	  62 [label="Jump to: [stuff_hub]"];
+	  63 [label="Knick-knacks Stand: To the left of the croissants and juice bottles, several packaged raincoats fill a low shelf. One, however, lies in the dusty floor: the one you tried and failed to steal."];
+	  64 [label="Frittte clerk: \"What is what?\" The girl leans over the counter to see what you're referring to. \"Uhm, it's a raincoat?\""];
+	  65 [label="You: \"I'm sorry... I'm such a mess lately...\""];
+	  66 [label="Frittte clerk: \"I mean, it doesn't even cost that much... like, why would you want to 'fuck with Frittte' over something like this?\""];
+	  67 [label="Variable[\"gates.frittte_savoire_steal_the_coat\"]"];
+	  68 [label="Variable[\"gates.frittte_savoire_steal_the_coat\"]", shape=diamond];
+	  69 [label="!(Variable[\"gates.frittte_savoire_steal_the_coat\"])", shape=diamond];
+	  70 [label="You: \"What's that?\" (Point to the raincoat.)"];
+	  71 [label="Volition: Look at it, detective. And be ashamed. Until you make it right by *legally purchasing* that raincoat, I'll make sure you feel guilty every time you see it."];
+	  72 [label="Interfacing: Her attention is drawn to the raincoats. Stealing one undetected will now be more difficult."];
+	  73 [label="stuff_hub"];
+	  74 [label="Knick-knacks Stand: To the left of the croissants and juice bottles, several packaged raincoats fill a low shelf. One is missing: the one you tried to steal, but then legally purchased."];
+	  75 [label="Volition: A wrong has been made right. You may rest easy now."];
+	  76 [label="Endurance: This will keep you nice and warm out there. Good choice, if a bit goofy looking..."];
+	  77 [label="Interfacing: Down onto one knee. Pretending to do up a shoelace. Take a loose package from the bottom. Slip it in the old sleeve. The girl doesn't notice *a thing*."];
+	  78 [label="Frittte clerk: \"Um, did you...\" The girl stares at the package lying on the floor. It looks a little sad as it lies in the dusty floor."];
+	  79 [label="Frittte clerk: \"If you want to buy one then it's only four reál.\" She taps on the glass counter. The raincoats patiently await purchase."];
+	  80 [label="Jump to: [stuff_hub]"];
+	  81 [label="Frittte clerk: \"Yes -- buy it, please, don't steal it...\" The clerk removes the garment from the dusty floor and hands it over."];
+	  82 [label="Frittte clerk: \"Here you go.\" The clerk removes the garment from the lower shelf and hands it over."];
+	  83 [label="Interfacing: Oh no! I said *don't* let it fall out with a thump! What did you do?"];
+	  84 [label="Interfacing: The girl delves into the magazine, hair covering her face... vision obscured, she cannot see your hand move."];
+	  85 [label="Interfacing: The packages are small. Discreet. Sloppily stacked, making them easier to take unnoticed -- no need to worry about knocking over a display."];
+	  0 -> 1
+	  1 -> 45
+	  2 -> 16
+	  2 -> 66
+	  2 -> 30
+	  3 -> 4
+	  3 -> 5
+	  4 -> 74
+	  5 -> 86
+	  6 -> 8
+	  6 -> 7
+	  7 -> 82
+	  8 -> 83
+	  9 -> 10
+	  9 -> 11
+	  10 -> 57
+	  11 -> 68
+	  12 -> 84
+	  14 -> 33
+	  16 -> 26
+	  17 -> 18
+	  17 -> 19
+	  18 -> 13
+	  19 -> 37
+	  21 -> 59
+	  22 -> 23
+	  23 -> 24
+	  23 -> 25
+	  24 -> 50
+	  25 -> 50
+	  26 -> 27
+	  26 -> 28
+	  27 -> 21
+	  28 -> 59
+	  29 -> 67
+	  30 -> 26
+	  31 -> 74
+	  32 -> 74
+	  33 -> 31
+	  34 -> 35
+	  34 -> 36
+	  35 -> 54
+	  36 -> 64
+	  37 -> 3
+	  38 -> 6
+	  39 -> 40
+	  39 -> 41
+	  40 -> 48
+	  41 -> 65
+	  42 -> 43
+	  42 -> 44
+	  43 -> 62
+	  44 -> 39
+	  45 -> 46
+	  45 -> 47
+	  46 -> 34
+	  47 -> 17
+	  48 -> 61
+	  49 -> 51
+	  49 -> 52
+	  50 -> 58
+	  51 -> 85
+	  52 -> 74
+	  53 -> 56
+	  53 -> 55
+	  54 -> 75
+	  55 -> 20
+	  56 -> 63
+	  57 -> 78
+	  58 -> 29
+	  59 -> 74
+	  60 -> 74
+	  61 -> 81
+	  62 -> 74
+	  63 -> 72
+	  64 -> 80
+	  65 -> 26
+	  66 -> 14
+	  67 -> 69
+	  67 -> 70
+	  68 -> 73
+	  69 -> 32
+	  70 -> 42
+	  71 -> 74
+	  72 -> 32
+	  73 -> 22
+	  73 -> 15
+	  73 -> 38
+	  73 -> 71
+	  75 -> 77
+	  76 -> 60
+	  77 -> 53
+	  78 -> 2
+	  79 -> 9
+	  80 -> 74
+	  81 -> 76
+	  82 -> 77
+	  83 -> 79
+	  84 -> 12
+	  85 -> 74
+}
+

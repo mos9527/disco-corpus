@@ -1,0 +1,100 @@
+# INVENTORY / GUM WRAPPER
+# the chewing gum wrapper you can interact with whether you've messed with the ledger or not
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Apricot Chewing Gum Wrapper: There it is again -- the scent of apricots, with a touch of cinnamon. Smells like the end of some distant summer. The surface of another planet, or some ancient temple."];
+	  3 [label="You: Take a deep, *deep* breath."];
+	  4 [label="Jump to: [main_thought_hub]"];
+	  5 [label="Apricot Chewing Gum Wrapper: The sun sets into the sea, but the water does not boil. Instead it turns to liquid gold. For a moment, the world's store of precious metals seems to increase dramatically, and you are rich..."];
+	  6 [label="You: Ancient temple?"];
+	  7 [label="Encyclopedia: You feel compelled to point out that there's nothing fruity about cinnamon -- It's a spice derived from tree bark."];
+	  8 [label="Encyclopedia: Whatever petrochemical by-products they used to create this artificial flavour have bonded tightly to the wrapper. Or is that just your memory, filling in the gaps?"];
+	  9 [label="You: Wait, come back!"];
+	  10 [label="main_thought_hub"];
+	  11 [label="Apricot Chewing Gum Wrapper: There is a movement next to you. The shuffle of a small coat. Warm, like the evening. But when you turn toward it there's nothing there..."];
+	  12 [label="Inland Empire: You carefully fold the wrapper into a square, before putting it back into your pocket. Lovingly even -- despite the strange feeling of regret."];
+	  13 [label="Apricot Chewing Gum Wrapper: ... until a blossom of skin and flower petals erupts behind your closed eyes. Made of toffee, cream, and distance. You just *had* to take a dive."];
+	  14 [label="Apricot Chewing Gum Wrapper: Yes. From the height of antiquity. A long, long time ago. Millennia ago. On an island of time you can never return to."];
+	  15 [label="Apricot Chewing Gum Wrapper: Bitter, citrus, sweet, it seems to grow stronger, like a glow, with every breath you take..."];
+	  16 [label="Inland Empire: Feels very, very familiar. Harry. Please. You were supposed to discard it."];
+	  17 [label="Variable[\"inventory.wrapper_inland_discard\"]"];
+	  18 [label="Variable[\"inventory.wrapper_inland_discard\"]", shape=diamond];
+	  19 [label="!(Variable[\"inventory.wrapper_inland_discard\"])", shape=diamond];
+	  20 [label="Inland Empire: Feels so, so familiar."];
+	  21 [label="Jump to: [main_thought_hub]"];
+	  22 [label="Apricot Chewing Gum Wrapper: Why are you talking to a gum wrapper?"];
+	  23 [label="You: I'll hang on to it, just in case."];
+	  24 [label="You: [Put the wrapper away.]"];
+	  25 [label="no_ledger_hub"];
+	  26 [label="You: End of summer..."];
+	  27 [label="Apricot Chewing Gum Wrapper: You neatly fold the wrapper into a square before you put it back into your pocket. Carefully. Lovingly even..."];
+	  28 [label="Apricot Chewing Gum Wrapper: Good question, There is no answer or secret phrase written on the inside of the wrapper. Yet you're drawn to it."];
+	  29 [label="Variable[\"inventory.wrapper_inland_discard\"]"];
+	  30 [label="Variable[\"inventory.wrapper_inland_discard\"]", shape=diamond];
+	  31 [label="!(Variable[\"inventory.wrapper_inland_discard\"])", shape=diamond];
+	  32 [label="You: Where did it go?"];
+	  33 [label="Apricot Chewing Gum Wrapper: A crinkled chewing gum wrapper. The worn label reads: 'Tutti Frutti.' It smells faintly of apricots, with a barely noticeable twinge of cinnamon."];
+	  34 [label="Inland Empire: Drawn by regret. Stop, before you *hurt* yourself with the Tutti Frutti wrapper. Throw it away, please."];
+	  35 [label="Jump to: [main_thought_hub]"];
+	  36 [label="Apricot Chewing Gum Wrapper: Can a used wrapper shrug? It seems like that's what the wrapper is doing, somehow. This is not about flowers, or bark? What *is* this about? Why are you looking at this wrapper?"];
+	  37 [label="You: Why do I even care about this?"];
+	  38 [label="Jump to: [no_ledger_hub]"];
+	  39 [label="Endurance: Your heart working overtime, trying to keep up with the panicked synapses firing all over your brain. Moving litres of blood through you, panicking."];
+	  40 [label="Variable[\"inventory.letters_felt_perfume\"]"];
+	  41 [label="Variable[\"inventory.letters_felt_perfume\"]", shape=diamond];
+	  42 [label="!(Variable[\"inventory.letters_felt_perfume\"])", shape=diamond];
+	  43 [label="You: Cinnamon's not a fruit."];
+	  0 -> 1
+	  1 -> 41
+	  2 -> 10
+	  3 -> 15
+	  4 -> 10
+	  5 -> 11
+	  6 -> 14
+	  7 -> 25
+	  8 -> 13
+	  9 -> 22
+	  10 -> 24
+	  10 -> 26
+	  10 -> 3
+	  10 -> 6
+	  11 -> 32
+	  11 -> 9
+	  13 -> 40
+	  14 -> 4
+	  15 -> 8
+	  16 -> 35
+	  17 -> 18
+	  17 -> 19
+	  18 -> 12
+	  19 -> 27
+	  20 -> 35
+	  21 -> 10
+	  22 -> 21
+	  23 -> 17
+	  25 -> 44
+	  25 -> 37
+	  25 -> 23
+	  26 -> 5
+	  28 -> 34
+	  29 -> 30
+	  29 -> 31
+	  30 -> 16
+	  31 -> 20
+	  32 -> 22
+	  33 -> 7
+	  34 -> 38
+	  35 -> 10
+	  36 -> 38
+	  37 -> 28
+	  38 -> 25
+	  39 -> 29
+	  40 -> 42
+	  40 -> 43
+	  41 -> 2
+	  42 -> 33
+	  43 -> 36
+}
+

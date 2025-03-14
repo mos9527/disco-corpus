@@ -1,0 +1,1578 @@
+# WHIRLING F1 / GARTE
+# ltn Kitsuragi suggests you talk to the manager of the Whirling-in-Rags first. Garte is a hub of knowledge on the area and the case and you will come back to him later. He is also a problem, asking you to pay for the night, to pay for "the damages". It does not reflect well on you.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Garte, the Cafeteria Manager: \"Yes, you are! A real decorated hero.\""];
+	  3 [label="Garte, the Cafeteria Manager: \"Oh, it's not?!\" He raises his shoulders like he's about to say something more, but then gets a hold of himself."];
+	  4 [label="Kim Kitsuragi: \"Right... Now, I know it took us a while to arrive at the scene. It also took you a while to call us and report the dead body -- it *was* you who placed the call, yes?\""];
+	  5 [label="You: \"Oh, you mean, do I have *questions*?\" (Ask them.)"];
+	  6 [label="Garte, the Cafeteria Manager: \"Yes, yes, he means do you have questions for me. Like a police officer would.\" The cafeteria manager is clearly agitated again."];
+	  7 [label="Kim Kitsuragi: \"That's good. But there is a timetable for this investigation, dictated to us by the stages of decomposition. And it says we need to move on.\""];
+	  8 [label="You: Slip away unnoticed."];
+	  9 [label="You: Variable[\"whirling.garte_vanishment_succeeded\"]"];
+	  10 [label="Variable[\"whirling.garte_vanishment_succeeded\"]", shape=diamond];
+	  11 [label="!(Variable[\"whirling.garte_vanishment_succeeded\"])", shape=diamond];
+	  12 [label="You: \"Okay.\""];
+	  13 [label="Authority: The words nail the man to his place. Unmoving, he stares down at the counter with his cheeks reddish."];
+	  14 [label="You: \"Fuck this place. I'll take my chances on the streets.\""];
+	  15 [label="Garte, the Cafeteria Manager: \"The ledger does! The ledger has a memory!\" He points to the book. \"The drinks are non-negotiable, there's no way your station will pay for them.\""];
+	  16 [label="Garte, the Cafeteria Manager: \"Don't thank me. You still owe me 30 for the drinks! If you don't have it by tonight I'm not letting you back up there...\" He points upstairs."];
+	  17 [label="Garte, the Cafeteria Manager: \"Are you trying to frighten me now?\" He turns to the lieutenant: \"What is this?\""];
+	  18 [label="Lena, the Cryptozoologist's wife: \"It doesn't look so, sweetie. Are you okay?\" An old woman appears out of the blackness."];
+	  19 [label="Lena, the Cryptozoologist's wife: \"The chair took the brunt of it. Don't worry.\""];
+	  20 [label="Jump to: [money_down_hub]"];
+	  21 [label="You: \"I won't pay for that window... ouch.\" (Grab your side.)"];
+	  22 [label="You: \"You look like a bartender.\""];
+	  23 [label="Authority: He has no respect for you personally, but this man sees himself as a law-abiding citizen -- and you a representative of that law."];
+	  24 [label="Perception (Sight): The small steel tag says as much: \"The Great Skua (Stercorarius skua).\""];
+	  25 [label="Jump to: [Untitled hub]"];
+	  26 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_half_light_adrenalinequestioning\"]"];
+	  27 [label="Variable[\"whirling.garte_half_light_adrenalinequestioning\"]", shape=diamond];
+	  28 [label="!(Variable[\"whirling.garte_half_light_adrenalinequestioning\"])", shape=diamond];
+	  29 [label="You: \"Okay, I'm not gonna hound you on this.\""];
+	  30 [label="Garte, the Cafeteria Manager: \"Oh, thank you.\""];
+	  31 [label="Jump to: [Garte_main_hub]"];
+	  32 [label="You: \"That's right. If there's one thing I know about myself it's that I'm a *total*, raging feminist.\""];
+	  33 [label="You: \"Do you have a phallus in your ear? I said I'm a feminist.\""];
+	  34 [label="Composure: He's very animated all of a sudden. This seems like a touchy subject."];
+	  35 [label="You: \"By *real* do you mean some form of street cred?\""];
+	  36 [label="Garte altintro HUB"];
+	  37 [label="You: \"I can't be a police officer... This is insane.\""];
+	  38 [label="Kim Kitsuragi: \"I am Kim Kitsuragi from Precinct 57. This is an inter-district investigation, so joining me from Precinct 41...\" He looks to you, realizing he still doesn't know your name."];
+	  39 [label="Garte, the Cafeteria Manager: \"Yes,\" he responds tersely."];
+	  40 [label="Garte, the Cafeteria Manager: \"What is this, a joke to you? Is *this* what you get when you call the police now? *This* guy?\" He points at you. \"We've been waiting for a week here!\""];
+	  41 [label="Kim Kitsuragi: \"You said you just got here -- from where? Are you a local?\""];
+	  42 [label="Garte, the Cafeteria Manager: He looks down at the stuffed bird, quietly shaking his head."];
+	  43 [label="You: \"You're right. I probably shouldn't have asked.\""];
+	  44 [label="Garte, the Cafeteria Manager: \"Yes.\""];
+	  45 [label="Conceptualization: Isn't it... evil? The order of magnitude between what is asked of a person -- and what they have?"];
+	  46 [label="You: I had an accident."];
+	  47 [label="Garte, the Cafeteria Manager: \"What are you, a philosopher?\""];
+	  48 [label="Kim Kitsuragi: \"No, don't, there's no need...\" A pattern of creases appears on his forehead. \"You really need to take this up with your station, I have a shortwave radio in my car. Call them, ask for assistance. We have to get this investigation started now.\""];
+	  49 [label="You: \"Sounds like you think *sex* is more than a social construct. Tell me, do you think women are mentally inferior to men?\""];
+	  50 [label="Kim Kitsuragi: \"Forty one,\" the lieutenant steps in."];
+	  51 [label="Garte, the Cafeteria Manager: \"See that door there?\" He points west, toward the pinball table. \"Go out and turn right. There's a...\" He pauses and sighs. \"There's a big hole in the fence. No need for a key, just go through that hole and you'll be in the courtyard.\""];
+	  52 [label="Savoir Faire: As you blow this joint -- behind you a whiny voice shouts:"];
+	  53 [label="Jump to: [Garte_main_hub]"];
+	  54 [label="You: \"So not only am I a cop, but I'm also a hero?\""];
+	  55 [label="You: \"Oh my god, I did all those things?\""];
+	  56 [label="Perception (Sight): A small engraved steel tag says: \"The Great Skua (Stercorarius skua).\""];
+	  57 [label="You: Say nothing."];
+	  58 [label="Garte, the Cafeteria Manager: \"What are you -- crazy? Of course I didn't *kill* him.\""];
+	  59 [label="You: \"Okay. I believe you.\""];
+	  60 [label="Garte, the Cafeteria Manager: \"Oh.\" He's a bit surprised you caught that. \"I meant the Union dockworkers. You know, the guys who *everyone* is saying killed him. Which no one is saying about me -- because I didn't.\""];
+	  61 [label="Garte, the Cafeteria Manager: \"Yes, I am.\""];
+	  62 [label="Garte, the Cafeteria Manager: \"Why would I have a problem with you? You're a hero cop.\""];
+	  63 [label="Garte, the Cafeteria Manager: \"I have *three* cafeterias I manage. Three. Get over it.\""];
+	  64 [label="Garte, the Cafeteria Manager: \"Oh my god! What is your *obsession* with this Sylvie person? Get over it!\""];
+	  65 [label="Garte, the Cafeteria Manager: \"The drinks are on the house, okay? There were *a lot* of drinks on the tab. I still have to charge you for three nights and the broken window, though -- that's 100 square.\""];
+	  66 [label="You: Did I just hear my tie speak to me *twice*?"];
+	  67 [label="You: \"Something tells me you don't like me.\""];
+	  68 [label="You: \"You're being sarcastic.\""];
+	  69 [label="You: \"What have I been doing then? Have you seen me around?\""];
+	  70 [label="Garte, the Cafeteria Manager: \"Am I? Or did you ride in, take the body down, solve the murder, and *not* trash my hostel room?\""];
+	  71 [label="You: \"I didn't know I was a cop. Are you sure?\""];
+	  72 [label="Garte, the Cafeteria Manager: \"Mhm.\""];
+	  73 [label="Garte, the Cafeteria Manager: \"Fantastic.\""];
+	  74 [label="You: \"Okay, then.\""];
+	  75 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_reaction_queastions\"]"];
+	  76 [label="Variable[\"whirling.garte_reaction_queastions\"]", shape=diamond];
+	  77 [label="!(Variable[\"whirling.garte_reaction_queastions\"])", shape=diamond];
+	  78 [label="Garte, the Cafeteria Manager: \"Wow, you're a genius! Yes, that's right -- money. You owe this establishment 130 reál.\" He points to the red ledger on the counter."];
+	  79 [label="Garte, the Cafeteria Manager: \"WATCH OUT!!\""];
+	  80 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_necktie_talked\"]"];
+	  81 [label="Variable[\"whirling.garte_necktie_talked\"]", shape=diamond];
+	  82 [label="!(Variable[\"whirling.garte_necktie_talked\"])", shape=diamond];
+	  83 [label="Jump to: [main debt hub]"];
+	  84 [label="You: \"Isn't there somewhere else I can stay around here?\""];
+	  85 [label="Garte, the Cafeteria Manager: \"You mean somewhere else to run up a huge debt? I don't think so. The Union squeezed most places out of business to fund the strike. You're better off home.\""];
+	  86 [label="Kim Kitsuragi: \"Officer...\" A pattern of creases appears on his forehead. \"You really need to take this up with your station, I have a shortwave radio in my car. Call them, ask for assistance. We have to get this investigation started now.\""];
+	  87 [label="Garte, the Cafeteria Manager: \"You can look, but... the Union squeezed most people out of business to fund the strike. So, I don't know... your best shot is just going home.\""];
+	  88 [label="You: \"I don't remember where my home is.\""];
+	  89 [label="You: \"I don't have a home.\""];
+	  90 [label="Jump to: [Savoir Faire: \"No. You have sustained a trauma to...\"]"];
+	  91 [label="You: \"Thank you for your cooperation.\""];
+	  92 [label="Garte, the Cafeteria Manager: \"I have *three* cafeterias I manage. Three. Get over it.\""];
+	  93 [label="You: \"No! He called me a f****t!\""];
+	  94 [label="You: \"Can I help you with that?\""];
+	  95 [label="Empathy: A very silent wave comes from the lieutenant, like the distant echo of a drum-roll. It's approval."];
+	  96 [label="You: \"I guess I like to be thorough.\""];
+	  97 [label="Kim Kitsuragi: \"Let's go.\""];
+	  98 [label="You: \"I'm not a feminist, I just wanted to see the look on your face.\""];
+	  99 [label="You: Great advice, I'm considering it. (Give the tie an affirmative tug.)"];
+	  100 [label="You: \"What's wrong? Don't you like The Officer?\""];
+	  101 [label="You: \"Oh my god, I did all those things?\""];
+	  102 [label="Garte, the Cafeteria Manager: \"No -- you see -- actually you didn't. You haven't done anything even remotely useful since you got here.\""];
+	  103 [label="Jump to: [Garte altintro HUB]"];
+	  104 [label="You: \"Of course I'm not serious.\""];
+	  105 [label="Garte, the Cafeteria Manager: He rolls his eyes."];
+	  106 [label="You: \"Nothing. I just wanted to see what happens if I say that. Now I do.\""];
+	  107 [label="You: \"Never mind.\""];
+	  108 [label="Garte, the Cafeteria Manager: \"That's wonderful! Really. I think so. But there's a dead body out back. No one wants to work in these conditions! It's been a week!\""];
+	  109 [label="You: \"That's all.\""];
+	  110 [label="Horrific Necktie: Let's bail! Time to push the EJECT button. Sounds like a *responsibility*. You don't like those."];
+	  111 [label="You: \"Fuck you, asshole!\""];
+	  112 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_arrest_authority_success\"]"];
+	  113 [label="Variable[\"whirling.garte_arrest_authority_success\"]", shape=diamond];
+	  114 [label="!(Variable[\"whirling.garte_arrest_authority_success\"])", shape=diamond];
+	  115 [label="Garte, the Cafeteria Manager: \"I'm sorry, but I can't let him stay here if he doesn't pay... He's three days on the slip. If he doesn't have the money by tonight, he'll have to work this from home.\""];
+	  116 [label="Garte, the Cafeteria Manager: \"Don't thank me. You still owe me 70. If you don't have it by tonight I'm not letting you back up there,\" he points upstairs."];
+	  117 [label="You: \"Yes!\""];
+	  118 [label="Lena, the Cryptozoologist's wife: \"What do you mean what do I mean?\" An old woman appears out of the blackness. \"Are you okay?\""];
+	  119 [label="You: \"What?\""];
+	  120 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_debt_window_and_drinks_down\"]"];
+	  121 [label="Variable[\"whirling.garte_debt_window_and_drinks_down\"]", shape=diamond];
+	  122 [label="!(Variable[\"whirling.garte_debt_window_and_drinks_down\"])", shape=diamond];
+	  123 [label="You: \"Cool.\""];
+	  124 [label="Empathy: There's something there and it's not good. That's all you know for now."];
+	  125 [label="Garte, the Cafeteria Manager: Variable[\"whirling.dreamone_apes\"]"];
+	  126 [label="Variable[\"whirling.dreamone_apes\"]", shape=diamond];
+	  127 [label="!(Variable[\"whirling.dreamone_apes\"])", shape=diamond];
+	  128 [label="Kim Kitsuragi: He turns to you, calmly. \"We do not need to assert ourselves here. We only need instructions from him. This is the proprietor, remember?\""];
+	  129 [label="Authority: For a moment, the man fidgets under the lieutenant's gaze. Then he gives in."];
+	  130 [label="Empathy: Does he want you to feel *guilty* of making that hole? It's implied in his voice."];
+	  131 [label="Jump to: [Garte_main_hub]"];
+	  132 [label="Kim Kitsuragi: The lieutenant stands motionless, his expression unreadable."];
+	  133 [label="You: \"Did he hurt you? Is that why? Did you get some kind of sick *kick* out of killing him?\""];
+	  134 [label="Kim Kitsuragi: \"Did the Débardeurs themselves tell her this, or is it a rumour?\""];
+	  135 [label="Jump to: [whirling.garte_logic_hoisted]"];
+	  136 [label="Jump to: [Garte_main_hub]"];
+	  137 [label="You: \"Who, me?\""];
+	  138 [label="You: \"This is the second time you've avoided the subject.\""];
+	  139 [label="Savoir Faire: That's true, yes. And it's worrying. But let's not *fixate* on it. Look at that stupid bartender instead -- he has no idea what's going on! You and your fuck-you-fingers floating in the air. Barkeep's got his mouth agape like an idiot. You showed him."];
+	  140 [label="You: \"Are you the bartender?\""];
+	  141 [label="Garte, the Cafeteria Manager: \"I don't know. Am I?\" He looks at you, taking stock of your cop-ness and finding it lacking."];
+	  142 [label="Esprit de Corps: \"Let him sort it out for himself.\""];
+	  143 [label="You: Say nothing."];
+	  144 [label="You: \"The gloaming. I *am* it.\""];
+	  145 [label="Garte, the Cafeteria Manager: \"What is this, a joke to you? Is *this* what you get when you call the police now? *This* guy?\" He turns to the lieutenant. \"We've been waiting for a week here!\""];
+	  146 [label="Garte, the Cafeteria Manager: \"As a matter of fact, I do.\" He looks behind a pile of coasters, finds a slip of paper, and hands it to the lieutenant."];
+	  147 [label="Kim Kitsuragi: \"I didn't imply that.\" He turns to you. \"Detective?\""];
+	  148 [label="Kim Kitsuragi: \"Yes, Detective Costeau.\" He says the name with a purposefully straight face. \"I have everything. You?\""];
+	  149 [label="Kim Kitsuragi: \"Mhm.\" He checks his little notebook. \"I have everything. You?\""];
+	  150 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_feminist\"]"];
+	  151 [label="Variable[\"whirling.garte_feminist\"]", shape=diamond];
+	  152 [label="!(Variable[\"whirling.garte_feminist\"])", shape=diamond];
+	  153 [label="Garte, the Cafeteria Manager: Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")"];
+	  154 [label="Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")", shape=diamond];
+	  155 [label="!(Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\"))", shape=diamond];
+	  156 [label="You: \"Since I woke up I have trouble remembering even the most basic concepts of reality.\""];
+	  157 [label="You: \"It's not going very well.\""];
+	  158 [label="Garte, the Cafeteria Manager: The man starts to say something, but then thinks better of it. \"Good luck.\""];
+	  159 [label="Garte, the Cafeteria Manager: \"Fine, fuck this. I'll do it myself, I'll call your station... what was it, 41? I'll ask them to pay for the room. The drinks and the window you still have to pay for. That's 70. Are we done, officers?\""];
+	  160 [label="You: \"I'm not very okay.\""];
+	  161 [label="Garte, the Cafeteria Manager: \"Sir, I didn't mean for this to happen. I'm sorry, this has always been a cop-friendly place...\" The man seems shaken by the incident."];
+	  162 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_debt_window_and_drinks_down\"]"];
+	  163 [label="Variable[\"whirling.garte_debt_window_and_drinks_down\"]", shape=diamond];
+	  164 [label="!(Variable[\"whirling.garte_debt_window_and_drinks_down\"])", shape=diamond];
+	  165 [label="You: \"You're being sarcastic.\""];
+	  166 [label="Garte, the Cafeteria Manager: \"What did you *not* do? First you took the body down, then you solved the murder, then you *didn't* trash my hostel room. Maybe you even negotiated the strike?\""];
+	  167 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_tc_real\"]"];
+	  168 [label="Variable[\"whirling.garte_tc_real\"]", shape=diamond];
+	  169 [label="!(Variable[\"whirling.garte_tc_real\"])", shape=diamond];
+	  170 [label="Jump to: [Garte, the Cafeteria Manager: \"The man plucks at the seabird, frow...\"]"];
+	  171 [label="Kim Kitsuragi: \"I know it took us a while to arrive at the scene. But it also took you a while to call us. It was you who placed the call, correct?\""];
+	  172 [label="You: \"Why would the dockworkers lynch this man?\""];
+	  173 [label="Garte, the Cafeteria Manager: \"Yes, the *strike*,\" he makes little quotation marks with his fingers. \"The man they hanged was a security guard for the harbour company, I hear -- a mercenary. The unionistas probably thought they'd send a message.\""];
+	  174 [label="Garte, the Cafeteria Manager: \"Thank you ever so much.\""];
+	  175 [label="You: \"She pertains to the coming apocalypse.\""];
+	  176 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_bartender_later\"]"];
+	  177 [label="Variable[\"whirling.garte_bartender_later\"]", shape=diamond];
+	  178 [label="!(Variable[\"whirling.garte_bartender_later\"])", shape=diamond];
+	  179 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_rhetoric_sequencing_trick\"]"];
+	  180 [label="Variable[\"whirling.garte_rhetoric_sequencing_trick\"]", shape=diamond];
+	  181 [label="!(Variable[\"whirling.garte_rhetoric_sequencing_trick\"])", shape=diamond];
+	  182 [label="Garte, the Cafeteria Manager: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  183 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  184 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  185 [label="Garte, the Cafeteria Manager: \"Ma'am, are you alright?\""];
+	  186 [label="Authority: He has no respect for you personally, but this man sees himself as a law-abiding citizen -- and you a representative of that law. He tries to avoid outright conflict."];
+	  187 [label="Esprit de Corps: Not far from here a 34-year-old man called Jean Vicquemare reluctantly picks his facial hair while a dark-haired woman in an officer's suit waits for an answer. A typical police station morning hums in the background: telephones ringing, the whirr of a roll'o'dex..."];
+	  188 [label="You: Kim is about to say something. Let him."];
+	  189 [label="You: The lady in the wheel-chair is right behind me, isn't she?"];
+	  190 [label="main debt hub"];
+	  191 [label="Authority: That's cop for: \"I haven't offered to pay because I don't have any money either.\""];
+	  192 [label="Suggestion: For a moment, his antipathy is overcome by compassion for the sheer smallness of the money."];
+	  193 [label="Garte, the Cafeteria Manager: \"For survival, to pay *me*. Unless you want to become a *hobo*? Do you want to become a hobo? There's nowhere else to stay in Martinaise and it's a cold spring outside. Money doesn't make you happy but it lets you be *un*happy for a while longer.\""];
+	  194 [label="You: \"I sure as hell haven't felt no love!\""];
+	  195 [label="Jump to: [money hub]"];
+	  196 [label="You: \"'Refusal to aid an officer of the peace.' You are impeding me from carrying out a murder investigation with your inane requests for money.\""];
+	  197 [label="Jump to: [window_and_room]"];
+	  198 [label="Suggestion: There may be some way to get a drink out of him (even for you) but this is not it."];
+	  199 [label="Garte, the Cafeteria Manager: \"What?!\""];
+	  200 [label="Volition: No, don't listen to him. It's madness -- just *talk*."];
+	  201 [label="You: \"Sounded like extortion to me.\""];
+	  202 [label="You: \"It means I'm not ruling out \"Harry\" at this juncture.\""];
+	  203 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_asked_about_sylvie_before\"]"];
+	  204 [label="Variable[\"whirling.garte_asked_about_sylvie_before\"]", shape=diamond];
+	  205 [label="!(Variable[\"whirling.garte_asked_about_sylvie_before\"])", shape=diamond];
+	  206 [label="You: \"Didn't go well?\""];
+	  207 [label="Jump to: [Untitled hub]"];
+	  208 [label="You: \"Fine.\""];
+	  209 [label="Garte, the Cafeteria Manager: \"Good for you. Was there something else? I'd like to get back to what I was doing.\""];
+	  210 [label="Rhetoric: He smiles until he realizes his comeback wasn't very good. Then he frowns again."];
+	  211 [label="You: \"What is gold and orange like a forest fire, but smells like liquor?\""];
+	  212 [label="Drama: He thinks you're stupid, sire."];
+	  213 [label="Lena, the Cryptozoologist's wife: \"Oh, I'm fine. He just tripped over my chair -- check on him!\" She looks at you with concern."];
+	  214 [label="You: \"I don't owe you shit.\""];
+	  215 [label="You: Look at the stuffed bird."];
+	  216 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_esprit_judging\"]"];
+	  217 [label="Variable[\"whirling.garte_esprit_judging\"]", shape=diamond];
+	  218 [label="!(Variable[\"whirling.garte_esprit_judging\"])", shape=diamond];
+	  219 [label="Garte, the Cafeteria Manager: \"That period of my life is over. Not everyone who stands behind a counter is a bartender, okay? I'm the cafeteria manager.\""];
+	  220 [label="You: \"This duskland will be gone soon. It makes no difference if you understand or not.\""];
+	  221 [label="Kim Kitsuragi: \"Sir, I understand your concern, but we're here to do a job, and for us to do it, I need you to stay calm.\""];
+	  222 [label="Jump to: [Kim Kitsuragi: \"\"Right... Now, I know it took us a...\"]"];
+	  223 [label="You: \"She just... what?\""];
+	  224 [label="Logic: He probably means this is where you step in and ask your questions."];
+	  225 [label="Garte_main_hub"];
+	  226 [label="You: \"Why did Sylvie go away?\""];
+	  227 [label="You: \"Everything has something to do with everything.\""];
+	  228 [label="Jump to: [main debt hub]"];
+	  229 [label="Garte, the Cafeteria Manager: \"It does, doesn't it.\""];
+	  230 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_esprit_kitsuragi_cash\"]"];
+	  231 [label="Variable[\"whirling.garte_esprit_kitsuragi_cash\"]", shape=diamond];
+	  232 [label="!(Variable[\"whirling.garte_esprit_kitsuragi_cash\"])", shape=diamond];
+	  233 [label="You: \"I think the tiny apes have started screaming, yes.\""];
+	  234 [label="You: \"I don't remember where my home is.\""];
+	  235 [label="Kim Kitsuragi: \"Sir, leash in your tongue.\" The lieutenant's voice is controlled, yet threatening. Like it's coming from a different person."];
+	  236 [label="Kim Kitsuragi: \"Okay...\" The lieutenant lets out a heavy sigh. \"Let's go. Goodbye, sir.\""];
+	  237 [label="Garte, the Cafeteria Manager: The man wants to say something, then thinks better of it. \"Good luck.\""];
+	  238 [label="You: \"This is me threatening you with excruciating legal procedures, because you're impeding my investigation.\""];
+	  239 [label="Lena, the Cryptozoologist's wife: \"It's a joke, sweetie. I didn't actually think you saw the Kind Green Ape of South Safre in a hostel in Martinaise. That would be ridiculous. Are you okay?\""];
+	  240 [label="You: \"No, I don't think so.\""];
+	  241 [label="Garte, the Cafeteria Manager: \"Not *entirely* cool. You still owe me 100 reál. If you don't have it by tonight, I can't let you back up there...\" He points upstairs, toward your room."];
+	  242 [label="Jump to: [Kim Kitsuragi: \"\"Let's go.\"\"]"];
+	  243 [label="Garte, the Cafeteria Manager: \"I could if I were a bartender. But I'm not, I'm the cafeteria manager. So I won't.\""];
+	  244 [label="Jump to: [Garte_main_hub]"];
+	  245 [label="Empathy: He's very animated all of a sudden. This is clearly a touchy subject for him."];
+	  246 [label="You: \"What have I been doing all that time? Have you seen me around?\""];
+	  247 [label="Garte, the Cafeteria Manager: \"No -- you see -- actually you didn't. You haven't done anything even remotely useful since you got here.\""];
+	  248 [label="Suggestion: Now is not a good time to ask him about the corpse-fridge."];
+	  249 [label="You: \"What do you mean, 'my *buddy*'?\""];
+	  250 [label="Garte, the Cafeteria Manager: \"What is this, a joke to you? There's a dead body out back, and it's been there for a week now! No one wants to work in these conditions!\""];
+	  251 [label="Garte, the Cafeteria Manager: \"I don't really know. You'll have to ask her.\""];
+	  252 [label="Jump to: [Garte_main_hub]"];
+	  253 [label="Jump to: [Garte_main_hub]"];
+	  254 [label="lightitup"];
+	  255 [label="You: \"I'm guessing I didn't do any of those things?\""];
+	  256 [label="Garte, the Cafeteria Manager: \"She just, you know...\" He shrugs."];
+	  257 [label="Jump to: [Garte altintro HUB]"];
+	  258 [label="Jump to: [Garte, the Cafeteria Manager: \"\"No, I only just got here. It was p...\"]"];
+	  259 [label="Garte, the Cafeteria Manager: \"What? Of Martinaise -- no. I live in Jamrock. I only *sometimes* come here to keep an eye on the place. This is just one of the many, many cafeterias I manage.\""];
+	  260 [label="Kim Kitsuragi: The lieutenant nods at you affirmatively, then glances at the exit. \"The body was behind the building, right -- how do we get there?\""];
+	  261 [label="Garte, the Cafeteria Manager: \"You can't arrest me, I haven't done anything.\""];
+	  262 [label="Horrific Necktie: Who does that CLOWN think he is? Arrest him!"];
+	  263 [label="Garte, the Cafeteria Manager: Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")"];
+	  264 [label="Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")", shape=diamond];
+	  265 [label="!(Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\"))", shape=diamond];
+	  266 [label="Garte, the Cafeteria Manager: \"Tsk...\" He rolls his eyes."];
+	  267 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garthe_sayd_they_killed\"]"];
+	  268 [label="Variable[\"whirling.garthe_sayd_they_killed\"]", shape=diamond];
+	  269 [label="!(Variable[\"whirling.garthe_sayd_they_killed\"])", shape=diamond];
+	  270 [label="Ancient Reptilian Brain: Back so soon?"];
+	  271 [label="You: \"I'm doing fine.\""];
+	  272 [label="Kim Kitsuragi: \"Officer,\" he turns to you. \"You need to contact your station. Ask your people for assistance with the money you owe this place. There is a shortwave radio in my car, when you get the time, use it. We need to get this investigation started now.\""];
+	  273 [label="You: \"Isn't there somewhere else I can stay around here?\""];
+	  274 [label="Jump to: [Garte_altgreeting end HUB]"];
+	  275 [label="Garte, the Cafeteria Manager: \"Fine, I'll take it off the bill! You want to sleep in a post-apocalyptic shit-hole, go ahead! But I'm not giving you another room.\""];
+	  276 [label="window_and_room"];
+	  277 [label="Jump to: [Garte, the Cafeteria Manager: \"\"Behind this building, there's a co...\"]"];
+	  278 [label="Garte, the Cafeteria Manager: \"No, I'm not the *bartender*. I'm the cafeteria manager.\""];
+	  279 [label="Garte, the Cafeteria Manager: \"Fuck you, man.\""];
+	  280 [label="Garte, the Cafeteria Manager: \"The locals. Customers, the people who eat here. A lot of dockworkers eat here. Sylvie told me everyone knows the dockworkers did it.\""];
+	  281 [label="You: \"I have another question.\""];
+	  282 [label="Garte, the Cafeteria Manager: \"Haven't you asked me that already? What is it with you and this woman? She has nothing to do with this. \""];
+	  283 [label="Half Light: Suddenly you tense up, blood is being pushed to your muscles. You should hound him on this, hound him *hard*, the prey drive says."];
+	  284 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_bartender_later\"]"];
+	  285 [label="Variable[\"whirling.garte_bartender_later\"]", shape=diamond];
+	  286 [label="!(Variable[\"whirling.garte_bartender_later\"])", shape=diamond];
+	  287 [label="Garte, the Cafeteria Manager: \"What are you, a chauvinist then? Hah!\""];
+	  288 [label="Kim Kitsuragi: There's a shuffle of nylon as Lieutenant Kitsuragi looks for something in the pockets of his orange bomber."];
+	  289 [label="You: No way, I have duties. I'm a cop, I'm not talking to a tie. (Take the tie off.)"];
+	  290 [label="Jump to: [Garte altintro HUB]"];
+	  291 [label="You: \"You look like a bartender.\""];
+	  292 [label="Garte, the Cafeteria Manager: A man in his late twenties with a thin, unimpressive beard notices you approaching. He drops the ledger he was holding and turns to the lieutenant."];
+	  293 [label="You: \"The harbinger of ruin.\""];
+	  294 [label="You: \"I'm currently in-between names.\""];
+	  295 [label="You: \"Yes?\""];
+	  296 [label="Untitled hub"];
+	  297 [label="Garte, the Cafeteria Manager: \"Let's see.\" He dramatically turns a page in the ledger. \"Three nights at a tariff of 20 reál comes to 60 reál. Then there's the window you *annihilated* -- the hole in the window was the first thing I saw when I came to work, so don't try to tell me you didn't! That will be 40 reál in damages.\""];
+	  298 [label="You: I don't know... that just comes off as a lazy effort at re-conceptualizing the antics of a shambling drunk."];
+	  299 [label="You: \"I'll see what I can do.\""];
+	  300 [label="Garte, the Cafeteria Manager: \"But it's not inane, I just... you owe me money.\""];
+	  301 [label="You: \"Cool.\" [Leave.]"];
+	  302 [label="Jump to: [Savoir Faire: \"No. You have sustained a trauma to...\"]"];
+	  303 [label="Jump to: [whirling.garte_logic_hoisted]"];
+	  304 [label="Jump to: [whirling.garte_logic_hoisted]"];
+	  305 [label="Garte, the Cafeteria Manager: \"That period of my life is over. Not everyone who stands behind a counter is a bartender, okay? I'm the cafeteria manager.\""];
+	  306 [label="Garte, the Cafeteria Manager: \"Oh!\" He puffs with indignation. \"You don't owe me *shit*? Well, officer, you're right -- you *don't* owe me shit, you owe me MONEY.\""];
+	  307 [label="Garte, the Cafeteria Manager: \"Look, your *buddy* is over there.\" He looks at the doors, where a man in a bomber jacket is tapping his foot on the floor."];
+	  308 [label="Garte, the Cafeteria Manager: \"Why don't you go and talk to him, okay?\""];
+	  309 [label="Garte, the Cafeteria Manager: \"No, I didn't.\""];
+	  310 [label="Kim Kitsuragi: The lieutenant turns the page in the little notebook he's been scribbling in."];
+	  311 [label="You: \"Mystery solved!\""];
+	  312 [label="Garte, the Cafeteria Manager: \"Extra fine.\""];
+	  313 [label="Jump to: [Garte_main_hub]"];
+	  314 [label="Untitled hub"];
+	  315 [label="Conceptualization: See -- everyone agrees it's your colour scheme. We're on the right track with this name thing."];
+	  316 [label="Untitled hub (05)"];
+	  317 [label="Garte, the Cafeteria Manager: \"Oh, excuse me. You owe me 130 *reál*.\" He pronounces the 'r' with a mock aristocratic accent."];
+	  318 [label="Garte, the Cafeteria Manager: A man in his late twenties stands behind the counter, inspecting a stuffed seabird. As you approach, he gives you a sideways glance, then looks down again."];
+	  319 [label="Drama: His eyes dart from left to right. This man isn't lying, but he *is* hiding something."];
+	  320 [label="Jump to: [Garte altintro HUB]"];
+	  321 [label="You: \"Who, me?\""];
+	  322 [label="Garte, the Cafeteria Manager: \"I asked an employee out. She didn't want to come, but felt obliged to. It was a bad idea. Now what is so god damn fascinating about that for you? It's got nothing to do with the lynching.\""];
+	  323 [label="Kim Kitsuragi: The lieutenant watches you fiddle with your horrific tie, sweat stains forming under your armpits. He puts his hand on your shoulder."];
+	  324 [label="Authority: The words leave your mouth as if walking up the stairs -- everything is going fine until you reach the end and take one step too many:"];
+	  325 [label="You: \"Actually, I might be.\""];
+	  326 [label="You: \"No, I'm just getting my bearings.\""];
+	  327 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_conceptualization_darkness\"]"];
+	  328 [label="Variable[\"whirling.garte_conceptualization_darkness\"]", shape=diamond];
+	  329 [label="!(Variable[\"whirling.garte_conceptualization_darkness\"])", shape=diamond];
+	  330 [label="Jump to: [money hub]"];
+	  331 [label="Kim Kitsuragi: \"No, there's no need...\" The lieutenant is silent for a moment. \"Let's go. Goodbye, sir.\""];
+	  332 [label="Garte, the Cafeteria Manager: \"Okay, you'll only have to pay for the window. And the drinks. That's 70. I'll get the rest from your stupid station.\""];
+	  333 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_debt_window_and_room_down\"]"];
+	  334 [label="Variable[\"whirling.garte_debt_window_and_room_down\"]", shape=diamond];
+	  335 [label="!(Variable[\"whirling.garte_debt_window_and_room_down\"])", shape=diamond];
+	  336 [label="Empathy: Are you supposed to feel guilty about the hole? His sigh tells you: yes."];
+	  337 [label="Jump to: [Garte_main_hub]"];
+	  338 [label="Garte, the Cafeteria Manager: \"Yes, of course.\" He takes a step back."];
+	  339 [label="Jump to: [Kim Kitsuragi: \"\"Sir, I understand your concern, bu...\"]"];
+	  340 [label="Garte, the Cafeteria Manager: \"I don't know who killed him, I'm not the police. That's your job.\""];
+	  341 [label="You: \"Anyone? Have you killed someone else then?\""];
+	  342 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_murder_questioned\"]"];
+	  343 [label="Variable[\"whirling.garte_murder_questioned\"]", shape=diamond];
+	  344 [label="!(Variable[\"whirling.garte_murder_questioned\"])", shape=diamond];
+	  345 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_half_light_volition_stopped\"]"];
+	  346 [label="Variable[\"whirling.garte_half_light_volition_stopped\"]", shape=diamond];
+	  347 [label="!(Variable[\"whirling.garte_half_light_volition_stopped\"])", shape=diamond];
+	  348 [label="Garte, the Cafeteria Manager: \"Is it? Because I thought you were supposed to be investigating the lynching, not my employer conduct.\""];
+	  349 [label="Savoir Faire: Everything goes dark."];
+	  350 [label="Garte, the Cafeteria Manager: \"Isn't it a bit too late for that?\""];
+	  351 [label="Garte, the Cafeteria Manager: \"You're right. It's not.\""];
+	  352 [label="You: \"It's like when you've left your band, but you haven't decided on a solo artist name yet.\""];
+	  353 [label="Garte, the Cafeteria Manager: His face expresses profound doubt in your *having this*."];
+	  354 [label="Garte, the Cafeteria Manager: \"No, you don't owe me street cred. You owe me money. You owe this establishment 130 reál.\" He points to the red ledger on the counter."];
+	  355 [label="Garte, the Cafeteria Manager: \"Another thing you've annihilated is half the bar -- you've run a tab of 30 reál. Actually more, but we'll round it down to 30 for your hard work maintaining the stability and order of Revachol. That's 60 + 40 + 30 = 130 reál. And yes, reál is still money.\""];
+	  356 [label="Ancient Reptilian Brain: If it comes off like that, it's because it *is*. And you *are*."];
+	  357 [label="Ancient Reptilian Brain: Admit it, you just missed the quarter-light. The darkness on the edge of town."];
+	  358 [label="You: \"What do you mean?\""];
+	  359 [label="You: \"Fuck this place. I'll take my chances on the streets.\""];
+	  360 [label="Garte, the Cafeteria Manager: The man stands silently behind the counter, with his eyes fixed on the broken taxidermy, then on the ledger. He does not know what to say anymore."];
+	  361 [label="Garte, the Cafeteria Manager: \"I'll call them for recompensation for the room. But you still owe me 70 for the drinks and the window. And I do *not* think women are mentally inferior to men.\""];
+	  362 [label="Garte, the Cafeteria Manager: \"Not *entirely* cool. You still owe me 60 reál for three nights stay. If you don't have it by tonight, I can't let you back up there...\" He points upstairs, toward your room."];
+	  363 [label="You: \"I'm guessing I didn't do any of those things?\""];
+	  364 [label="Empathy: Everything is cool between you and this guy. He's a big fan. Make some small talk."];
+	  365 [label="Garte, the Cafeteria Manager: He pretends not to hear you, concentrating on the bird instead."];
+	  366 [label="Jump to: [Kim Kitsuragi: \"\"Right... Now, I know it took us a...\"]"];
+	  367 [label="Garte, the Cafeteria Manager: \"She went away because *none of your business*.\""];
+	  368 [label="Garte, the Cafeteria Manager: \"Does she? Maybe she does... maybe she *pertains* to the apocalypse.\" He snorts. \"Sylvie is not here because I asked for her number. The dead body out back didn't help either, but it was mostly me. I hope you appreciate that...\""];
+	  369 [label="Garte, the Cafeteria Manager: \"Forget it.\""];
+	  370 [label="Untitled hub (02)"];
+	  371 [label="You: Kim is about to say something. Let him."];
+	  372 [label="You: \"Oh, I understand, you mean I owe you money.\""];
+	  373 [label="Horrific Necktie: No one is saying that. No one is saying the tie can talk -- that would be ludicrous. It's just that... you should arrest him. It would be *wiser*. He wants to take your money."];
+	  374 [label="Garte, the Cafeteria Manager: Variable[\"reputation.superstar_cop\"] >=2"];
+	  375 [label="Variable[\"reputation.superstar_cop\"] >=2", shape=diamond];
+	  376 [label="!(Variable[\"reputation.superstar_cop\"] >=2)", shape=diamond];
+	  377 [label="Garte, the Cafeteria Manager: \"What did you *not* do? First you took the body down, then you solved the murder, then you *didn't* trash my hostel room. Maybe you even negotiated the strike...\""];
+	  378 [label="You: \"What have I been doing all that time? Have you seen me around?\""];
+	  379 [label="Garte, the Cafeteria Manager: \"I really don't know what to say to that.\" He looks down at the seabird."];
+	  380 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_alt_logic_sylvie\"]"];
+	  381 [label="Variable[\"whirling.garte_alt_logic_sylvie\"]", shape=diamond];
+	  382 [label="!(Variable[\"whirling.garte_alt_logic_sylvie\"])", shape=diamond];
+	  383 [label="Garte, the Cafeteria Manager: \"Yes, I know where *some* things are. But, as I said, I don't live here. I just used to work here. And I'm not going to start working here again, if that's what you think.\""];
+	  384 [label="You: \"Right then. Questions. I got this.\""];
+	  385 [label="You: \"You know, I actually can't think of a single thing.\""];
+	  386 [label="You: (Proceed, but don't show him the coins. They're *yours*.)"];
+	  387 [label="You: \"I'll see what I can do.\""];
+	  388 [label="Garte, the Cafeteria Manager: \"No, not *cool*. You still owe me 30 for the drinks. If you don't have it by tonight I'm not letting you back up there...\" He points upstairs."];
+	  389 [label="Lena, the Cryptozoologist's wife: \"That is too bad.\" An old woman appears out of the blackness. \"We all need a little love. Are you okay?\""];
+	  390 [label="Garte, the Cafeteria Manager: \"Okay, fine. I'll take it off your bill! Sleep in a post-apocalyptic hell-hole if you want to. Just know I won't give you another room.\""];
+	  391 [label="Jump to: [Garte_main_hub]"];
+	  392 [label="Jump to: [Garte altintro HUB]"];
+	  393 [label="Garte, the Cafeteria Manager: A competent work of taxidermy, the white and brown seabird lies among piles of coasters and drying mugs, one of its wings broken. The man is trying to mend it."];
+	  394 [label="Jump to: [Kim Kitsuragi: \"\"Sir, I understand your concern, bu...\"]"];
+	  395 [label="You: \"Did you kill him?\""];
+	  396 [label="Garte, the Cafeteria Manager: \"What are you, an idiot?! I told you I haven't killed anyone!\""];
+	  397 [label="You: \"Did you kill Sylvie?\""];
+	  398 [label="Kim Kitsuragi: \"That's enough.\" You can't tell who the remark is aimed at, you or Garte."];
+	  399 [label="Jump to: [Kim Kitsuragi: \"There's a shuffle of nylon as Lieut...\"]"];
+	  400 [label="You: \"Okay, I'm not gonna hound you on this.\""];
+	  401 [label="Lena, the Cryptozoologist's wife: \"Yes, yes -- check on him!\""];
+	  402 [label="Garte, the Cafeteria Manager: \"What kind of question is that?\""];
+	  403 [label="Untitled hub"];
+	  404 [label="Garte, the Cafeteria Manager: Variable[\"tc.you_are_cop\"]"];
+	  405 [label="Variable[\"tc.you_are_cop\"]", shape=diamond];
+	  406 [label="!(Variable[\"tc.you_are_cop\"])", shape=diamond];
+	  407 [label="Garte_altgreeting end HUB"];
+	  408 [label="You: \"As I said, Detective Raphaël Ambrosius Costeau.\""];
+	  409 [label="Garte, the Cafeteria Manager: \"I have *no idea* what that means.\""];
+	  410 [label="Garte, the Cafeteria Manager: \"Never mind? *Gloaming*? What is this? Is *this* what you get when you call the police now?\" He points at you. \"*This* guy? Lieutenant, we've been waiting for a week here!\""];
+	  411 [label="You: \"What is your problem with me?\""];
+	  412 [label="Jump to: [Garte_main_hub]"];
+	  413 [label="Garte, the Cafeteria Manager: \"Not so fast.\" He points to you. \"You owe me 130 reál.\""];
+	  414 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_vanishment_succeeded\"]"];
+	  415 [label="Variable[\"whirling.garte_vanishment_succeeded\"]", shape=diamond];
+	  416 [label="!(Variable[\"whirling.garte_vanishment_succeeded\"])", shape=diamond];
+	  417 [label="You: Why did I do this? Why did I have use *both* my hands to flip him off? Why both..."];
+	  418 [label="You: \"Okay, you're not under arrest.\""];
+	  419 [label="Garte, the Cafeteria Manager: \"I don't really need you to *say* anything, I just need the money.\""];
+	  420 [label="You: (Count them and give them to him.) \"That's 10 plus 10 plus 20 equals 40. I'm now down to 90, right?\""];
+	  421 [label="You: \"Why do I need it?\""];
+	  422 [label="Garte, the Cafeteria Manager: \"Are you serious? From your work, I don't know... you can take bribes, I guess.\" He looks at the lieutenant. \"I'm sorry. I don't think cops take bribes.\""];
+	  423 [label="You: \"You tell me what this is? Did you *rape* her?\""];
+	  424 [label="You: \"What's the difference?\""];
+	  425 [label="Garte, the Cafeteria Manager: \"Am I? Or did you ride in, take the body down, solve the murder, and *not* trash my hostel room?\""];
+	  426 [label="Jump to: [Garte_main_hub]"];
+	  427 [label="Jump to: [Garte_main_hub]"];
+	  428 [label="You: \"I don't know. I just went for it.\""];
+	  429 [label="You: \"No, man. Help me out: what is golden-orange and smells like liquor?\""];
+	  430 [label="Kim Kitsuragi: \"That's enough now, sir. Good day.\""];
+	  431 [label="You: Pick up the coins."];
+	  432 [label="Garte, the Cafeteria Manager: He demonstratively suppresses a world-weary sigh."];
+	  433 [label="You: \"You're under arrest.\""];
+	  434 [label="Garte, the Cafeteria Manager: \"You're right, you didn't. And it's only taken you *three days* not to.\""];
+	  435 [label="Esprit de Corps: \"Have you seen the way he dresses?\" The man asks. \"It's like he's not even a cop anymore. Shows up in here looking like a clown, reeking of alcohol. Screams at everyone... I'm done with that guy.\""];
+	  436 [label="Garte, the Cafeteria Manager: \"It is, isn't it?\" He looks at you, shaking his head in disbelief."];
+	  437 [label="You: \"The responsibility has taken its toll on my body, but I will take up the mantle once more. This is who I am.\""];
+	  438 [label="Garte, the Cafeteria Manager: \"Mhm.\""];
+	  439 [label="Garte, the Cafeteria Manager: Variable[\"tc.raphael_ambrosius_costeau\"]"];
+	  440 [label="Variable[\"tc.raphael_ambrosius_costeau\"]", shape=diamond];
+	  441 [label="!(Variable[\"tc.raphael_ambrosius_costeau\"])", shape=diamond];
+	  442 [label="You: \"You're right.\""];
+	  443 [label="Kim Kitsuragi: \"If you don't have the money, it's okay. None of us are in this for the wages.\""];
+	  444 [label="You: Wow, there's more of you? Hidden? I'm so cool."];
+	  445 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_alt_cafeteriamanager\"]"];
+	  446 [label="Variable[\"whirling.garte_alt_cafeteriamanager\"]", shape=diamond];
+	  447 [label="!(Variable[\"whirling.garte_alt_cafeteriamanager\"])", shape=diamond];
+	  448 [label="Pain Threshold: With your back against the cold mosaic floor you feel the pain recede. You just need to get up and dust yourself off..."];
+	  449 [label="Garte, the Cafeteria Manager: \"No,\" he leans in for emphasis, \"you cannot.\""];
+	  450 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_logic_hoisted\"]"];
+	  451 [label="Variable[\"whirling.garte_logic_hoisted\"]", shape=diamond];
+	  452 [label="!(Variable[\"whirling.garte_logic_hoisted\"])", shape=diamond];
+	  453 [label="You: \"Do you have a fridge?\""];
+	  454 [label="Inland Empire: Something about it makes you feel bitter..."];
+	  455 [label="You: \"What happened to the bird?\""];
+	  456 [label="You: \"That's the great skua, right?\""];
+	  457 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_alt_cafeteriamanager\"]"];
+	  458 [label="Variable[\"whirling.garte_alt_cafeteriamanager\"]", shape=diamond];
+	  459 [label="!(Variable[\"whirling.garte_alt_cafeteriamanager\"])", shape=diamond];
+	  460 [label="Garte, the Cafeteria Manager: \"And I don't like the dead body that's been hanging out there for a week!\" He gestures somewhere outside. \"No one wants to work in these conditions!\""];
+	  461 [label="You: \"Who exactly is saying that?\""];
+	  462 [label="Garte, the Cafeteria Manager: \"That's a real pity.\" He stares angrily at you."];
+	  463 [label="You: \"Who is this everyone?\""];
+	  464 [label="You: \"But what if I don't have any?\" (Proceed.)"];
+	  465 [label="Rhetoric: Ask him about the body's location *before* asking if he killed him. People give up information in the more innocuous questions, which you can later use in the more sinister ones, not vice versa."];
+	  466 [label="Rhetoric: He's shaken. Barter now and he'll cave in."];
+	  467 [label="Garte, the Cafeteria Manager: \"Are you sure, ma'am?\""];
+	  468 [label="You: \"I sense you're not a fan of mine.\""];
+	  469 [label="Garte, the Cafeteria Manager: \"So *now* you're a cop? Forget it.\""];
+	  470 [label="Garte, the Cafeteria Manager: \"What?\""];
+	  471 [label="Garte, the Cafeteria Manager: \"What's that supposed to mean -- probably?\""];
+	  472 [label="You: \"Who killed him?\""];
+	  473 [label="Kim Kitsuragi: \"I have everything. You?\" He looks in his little notebook."];
+	  474 [label="Jump to: [Garte_main_hub]"];
+	  475 [label="Garte, the Cafeteria Manager: \"You owe me *money*, not a skin care product. Money. You owe this establishment 130 reál.\" He points to the red ledger on the counter."];
+	  476 [label="Kim Kitsuragi: The lieutenant looks at you tugging on your garish tie. He puts his hand on your shoulder:"];
+	  477 [label="You: \"I don't know why I said that. I thought it's something a cop would say.\""];
+	  478 [label="Jump to: [main debt hub]"];
+	  479 [label="Garte, the Cafeteria Manager: \"Money is what grown up people use to pay for things. Things like this hostel room or...\" He peeks into the ledger: \"...or eight bottles of 'Potent Blend' and nine packs of 'Royal Extra'. We use it for everything, really.\""];
+	  480 [label="Garte, the Cafeteria Manager: \"Yes. It is.\""];
+	  481 [label="You: \"But that's horrible.\""];
+	  482 [label="Kim Kitsuragi: There's a shuffle of nylon as Lieutenant Kitsuragi looks for something in the pockets of his orange bomber."];
+	  483 [label="You: So worth it."];
+	  484 [label="Limbic System: How's it going out there? Are the tiny apes screaming about money yet?"];
+	  485 [label="Kim Kitsuragi: \"I'm sorry I couldn't help more.\" Creases line his forehead, above the spectacles. \"You should take this up with your station, I have a shortwave radio in my car, okay? We have to get this investigation started now.\""];
+	  486 [label="Authority: The words nail the Cafeteria Manager to his place. Unmoving he stares down at the counter with his cheeks reddish."];
+	  487 [label="Authority: From the bottom of your blue soul, a term emerges:"];
+	  488 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_noquestions\"]"];
+	  489 [label="Variable[\"whirling.garte_noquestions\"]", shape=diamond];
+	  490 [label="!(Variable[\"whirling.garte_noquestions\"])", shape=diamond];
+	  491 [label="You: \"Can I have a drink?\""];
+	  492 [label="Garte, the Cafeteria Manager: \"I could if I were a bartender. But I'm not, I'm the cafeteria manager. So I won't.\""];
+	  493 [label="Untitled hub"];
+	  494 [label="Garte, the Cafeteria Manager: \"Oh, it's not?!\" He raises his shoulders like he's about to say something more, but then gets a hold of himself."];
+	  495 [label="Garte, the Cafeteria Manager: \"You're right, you didn't. And it's only taken you *three days* not to.\""];
+	  496 [label="Rhetoric: This is it! He said *they* hoisted him up on a tree -- who is this *they* if he doesn't know?"];
+	  497 [label="Reaction Speed: This sounds like something you can *use* -- to call this Sylvie later..."];
+	  498 [label="Tutorial Agent: You've gained a Thought! When this dialogue is over, go to your THOUGHT CABINET and INTERNALIZE it for special bonuses and effects."];
+	  499 [label="Garte, the Cafeteria Manager: Looks like the bird was ripped off the shield that was used to mount it -- most likely on a wall."];
+	  500 [label="Encyclopedia: This is a great skua. The seabird is the symbol for the discovery of the Insulindian isola, the part of the world you are in right now."];
+	  501 [label="Garte, the Cafeteria Manager: \"Behind this building, there's a courtyard.\" He points to the kitchen behind him. \"They hoisted him up on a tree there.\""];
+	  502 [label="You: \"And how do we get there then?\""];
+	  503 [label="Encyclopedia: This man means the heavy cavalry of Innocence Franconegro, sweeping over the plains and nations of the enemies of mankind, 5th Century style. Unified currency and the concept of *cool* came in their wake. They wore lamellar and carried guns. But first and foremost, Franconigerian heavy cavalry was really, really wide. That hole in the fence must be *enormous*."];
+	  504 [label="Garte, the Cafeteria Manager: \"Do I have to answer him?\" He asks the lieutenant. \"Is this mandatory?\""];
+	  505 [label="Half Light: More. Press on, push through..."];
+	  506 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_esprit_kitsuragi_cash\"]"];
+	  507 [label="Variable[\"whirling.garte_esprit_kitsuragi_cash\"]", shape=diamond];
+	  508 [label="!(Variable[\"whirling.garte_esprit_kitsuragi_cash\"])", shape=diamond];
+	  509 [label="Jump to: [main debt hub]"];
+	  510 [label="Empathy: Maybe it's he who's obsessed with \"this Sylvie person\"? Certainly sounds like it."];
+	  511 [label="Garte, the Cafeteria Manager: He turns to the lieutenant. \"Is this what you get when you call the police now? We've been waiting for a week here!\""];
+	  512 [label="Garte, the Cafeteria Manager: \"Oh no,\" he says without looking up. \"You're a hero. A real hero cop.\""];
+	  513 [label="You: \"Wait, did you just say I was a *cop*?\""];
+	  514 [label="Garte, the Cafeteria Manager: The man plucks at the seabird, frowning."];
+	  515 [label="Garte, the Cafeteria Manager: \"Are you serious right now?\""];
+	  516 [label="You: \"Of course -- if by \"The Law\" you mean *blood alcohol level*.\""];
+	  517 [label="You: \"Understood.\""];
+	  518 [label="Garte, the Cafeteria Manager: \"I have three cafeterias to manage. *Three*. Sylvie tends the bar here, not me, I'm only standing in.\""];
+	  519 [label="Kim Kitsuragi: \"Mr... Garte, right?\" The lieutenant glances into his little notebook. \"You run this place?\""];
+	  520 [label="You: \"Never mind.\""];
+	  521 [label="Jump to: [Garte altintro HUB]"];
+	  522 [label="You: \"No, I'm good.\" (Pass on the questions.)"];
+	  523 [label="You: \"No, before I asked you *where*. Now I'm asking you *why* she left.\""];
+	  524 [label="Garte, the Cafeteria Manager: \"You know, I get this all the time. Some hobo comes in here, or some backpacking asshole off the boat. The next day when they can't make their fees they get *aggressive*. I just never thought I'd be in this shit with a cop. Please, just give me the money...\""];
+	  525 [label="You: Put this man in his place."];
+	  526 [label="You: Variable[\"whirling.garte_arrest_authority_success\"]"];
+	  527 [label="Variable[\"whirling.garte_arrest_authority_success\"]", shape=diamond];
+	  528 [label="!(Variable[\"whirling.garte_arrest_authority_success\"])", shape=diamond];
+	  529 [label="Jump to: [main debt hub]"];
+	  530 [label="You: Keep it to yourself and pick up the coins."];
+	  531 [label="money hub"];
+	  532 [label="Ancient Reptilian Brain: I was wrong to let you go. I should have kept you here... is it bright where you are? Is it TERRIFYING? Have you felt THE LOVE?!"];
+	  533 [label="You: \"I don't have a home.\""];
+	  534 [label="Lena, the Cryptozoologist's wife: \"It doesn't look like it is, sweetie. Are you okay?\" An old woman appears out of the blackness."];
+	  535 [label="Kim Kitsuragi: \"Officer, maybe you're better off working this from home for now? You live in Jamrock, right? It's not that far away.\""];
+	  536 [label="Garte, the Cafeteria Manager: \"Don't thank me yet. You still owe me 60 reál for three nights stay. If you don't have it by tonight, I just can't let you up there...\" He points upstairs, toward your room."];
+	  537 [label="You: \"I don't think I have *any* money.\" (Proceed.)"];
+	  538 [label="You: \"Understood.\""];
+	  539 [label="You: \"I have forgotten my name.\""];
+	  540 [label="You: \"I don't like your tone.\""];
+	  541 [label="You: \"You have not entirely convinced me.\""];
+	  542 [label="Garte, the Cafeteria Manager: \"Okay, you got me. She went away because of the dead body out back -- and because I asked for her number. That's why Sylvie went away. I hope you appreciate that...\""];
+	  543 [label="You: \"Am I not a cop? Everything is my business.\""];
+	  544 [label="You: \"Are you the bartender?\""];
+	  545 [label="Garte, the Cafeteria Manager: \"I knew it.\""];
+	  546 [label="Garte, the Cafeteria Manager: \"It's you, it's obviously you. *You* smell like liquor. And you're orange.\""];
+	  547 [label="Untitled hub"];
+	  548 [label="Empathy: That was disdain in his eyes. Even now he's purposefully ignoring you."];
+	  549 [label="Logic: Could the massive property damage upstairs have anything to do with this?"];
+	  550 [label="You: \"What did I do?\""];
+	  551 [label="Jump to: [Garte altintro HUB]"];
+	  552 [label="Garte, the Cafeteria Manager: \"No, I only just got here. It was probably Sylvie who called you. She usually works the bar here. I'm only temporarily taking over her duties.\""];
+	  553 [label="Garte, the Cafeteria Manager: \"Is that so? Mr. Feminist...\" He catches the rest before it leaves his mouth, probably thinking it's best not to say anything."];
+	  554 [label="Garte, the Cafeteria Manager: \"Not so fast Mr. Feminist.\" He points to you. \"You owe me 130 reál.\""];
+	  555 [label="You: \"What do I owe this place for?\""];
+	  556 [label="Jump to: [main debt hub]"];
+	  557 [label="You: Keep the money."];
+	  558 [label="Jump to: [Kim Kitsuragi: \"There's a shuffle of nylon as Lieut...\"]"];
+	  559 [label="You: \"What happens now?\""];
+	  560 [label="You: \"Where can I get money?\""];
+	  561 [label="Ancient Reptilian Brain: Those are the mysteries of the Spinal Cord. The Spinal Cord has yet to reveal itself to you -- its mysteries are unholy mysteries."];
+	  562 [label="Garte, the Cafeteria Manager: \"Good luck.\""];
+	  563 [label="You: \"I have no memory of drinking them. I'm not paying for the drinks.\""];
+	  564 [label="You: \"You have admitted to *sexual* crimes. You will be taken to *sex* prison.\""];
+	  565 [label="Garte, the Cafeteria Manager: He laughs. \"What in the name of God...\""];
+	  566 [label="Garte, the Cafeteria Manager: \"And for god's sake watch out for yourself.\""];
+	  567 [label="Garte, the Cafeteria Manager: \"You're right. It's not.\""];
+	  568 [label="Kim Kitsuragi: \"Khm...\" The lieutenant coughs in your direction. \"Not now.\""];
+	  569 [label="You: \"Did you kill him, Garte?\""];
+	  570 [label="You: \"Why did you have to kill him?\""];
+	  571 [label="Garte, the Cafeteria Manager: \"I would suppose it's because they have nothing better to do.\""];
+	  572 [label="Kim Kitsuragi: \"You mean the strike?\""];
+	  573 [label="Untitled hub"];
+	  574 [label="You: \"This stuff gets on my nerves. I am a feminist.\""];
+	  575 [label="Untitled hub"];
+	  576 [label="Empathy: That was disdain in his eyes. Even now he is purposefully ignoring you. Looks like he's not a fan."];
+	  577 [label="You: \"I do not appreciate your tone. This is no way to talk to an officer.\""];
+	  578 [label="Garte, the Cafeteria Manager: \"No, I haven't *seen you around*. I'm not always here.\" He looks down again and keeps plucking at the bird."];
+	  579 [label="Garte, the Cafeteria Manager: \"No, I'm not the *bartender*. I'm the cafeteria manager.\""];
+	  580 [label="You: \"Nothing. I just wanted to hear you say it.\""];
+	  581 [label="You: \"What's the difference?\""];
+	  582 [label="Kim Kitsuragi: \"But you still know your way around, yes? In case we need directions.\""];
+	  583 [label="Inland Empire: No one is saying the multi-patterned necktie you found tied to the ceiling fan can *talk*. No one. It must be merely *imagination*, but..."];
+	  584 [label="Garte, the Cafeteria Manager: \"Real mature, man! Real mature.\""];
+	  585 [label="Savoir Faire: One moment you're running like the wind, then you've suddenly turned around and are giving him the finger. Furiously, with both hands. Why?!"];
+	  586 [label="Jump to: [Garte_altgreeting end HUB]"];
+	  587 [label="You: \"But what exactly *is* money?\""];
+	  588 [label="You: \"I fucking well can, *bitch*!\""];
+	  589 [label="Garte, the Cafeteria Manager: \"It is.\" He stands silently looking at the coppers on the counter."];
+	  590 [label="Jump to: [Kim Kitsuragi: \"There's a shuffle of nylon as Lieut...\"]"];
+	  591 [label="Garte, the Cafeteria Manager: \"If you run out of money, you die. It's like that for all of us -- me too. That's why I need you to pay me.\" He stops and says, mostly to himself: \"I'm not an asshole.\""];
+	  592 [label="You: \"It's okay. It's going fine.\""];
+	  593 [label="Garte, the Cafeteria Manager: He turns to the lieutenant. \"I'm sorry, but he has to pay, I can't let him stay here any longer if he doesn't. If he doesn't have the money by tonight, then...\" He shrugs."];
+	  594 [label="Kim Kitsuragi: \"It is crude of you. A man has been killed. File a request for compensation with Station 41. We need to work now.\""];
+	  595 [label="You: \"I won't pay for the window.\""];
+	  596 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_debt_window_and_room_down\"]"];
+	  597 [label="Variable[\"whirling.garte_debt_window_and_room_down\"]", shape=diamond];
+	  598 [label="!(Variable[\"whirling.garte_debt_window_and_room_down\"])", shape=diamond];
+	  599 [label="Jump to: [Garte altintro HUB]"];
+	  600 [label="You: \"I wonder what Sylvie has to say about that?\""];
+	  601 [label="Kim Kitsuragi: \"And how do we get there?\""];
+	  602 [label="You: \"But you can still pour me a drink, right?\""];
+	  603 [label="You: \"I do not appreciate your tone. This is no way to talk to an officer.\""];
+	  604 [label="Garte, the Cafeteria Manager: \"No, I haven't *seen you around*. I just got here, remember?\" He looks at you, then at the lieutenant. \"Was there anything else?\""];
+	  605 [label="You: \"Before you said *they* hoisted him up on a tree. Who did you mean by *they*?\""];
+	  606 [label="Garte, the Cafeteria Manager: \"I didn't.\" He turns to the lieutenant: \"I don't appreciate this. What is this?\""];
+	  607 [label="Garte, the Cafeteria Manager: \"Oh.\" He's a bit surprised you caught that. \"People are saying it was the Union dockworkers. That it was a lynching.\""];
+	  608 [label="Jump to: [Garte_main_hub]"];
+	  609 [label="Rhetoric: Have they not been telling you you're a cop?"];
+	  610 [label="You: \"You heard me.\""];
+	  611 [label="You: \"*Reál* sounds like some fancy skin care product... but why would I owe you one hundred and thirty of them?\""];
+	  612 [label="You: [Leave.]"];
+	  613 [label="You: \"So not only am I a cop, but I'm also a hero?\""];
+	  614 [label="You: \"That makes sense. Ever since I got up, I've felt something in me...\" (Look at your hands and feel it flowing through your veins.) \"Now I know it's *The Law*.\""];
+	  615 [label="You: \"Where did this Sylvie go?\""];
+	  616 [label="Jump to: [You: \"\"Wait, did you just say I was a *co...\"]"];
+	  617 [label="You: \"I have been to the precipice. I have seen the end.\""];
+	  618 [label="Empathy: Could he be irritated with you? He avoids eye contact altogether. Like you're not even there."];
+	  619 [label="Kim Kitsuragi: \"Do you have her number?\""];
+	  620 [label="Kim Kitsuragi: \"Thank you,\" the lieutenant says. He opens his little notebook at the cover. The number is safely tucked away in a small pocket."];
+	  621 [label="Horrific Necktie: Somehow the knot is stuck so you can't get it off. The lieutenant watches you struggle with it, the sweat dripping from your brow. He puts his hand on your shoulder:"];
+	  622 [label="Garte, the Cafeteria Manager: \"Oh, so apparently I'm a *bitch* now. Okay, I'll be the 'bitch', and you'll be the broke cop who owes me money, and no one will arrest anyone because that's insane. How's that?\""];
+	  623 [label="Garte, the Cafeteria Manager: \"No, you see...\" There's a tinge of sadness in his voice. \"That's 40 *cents*. Cents are a form of currency one hundred times smaller than the reál. I'm not even going to take this. Come back when you have 130 reál.\""];
+	  624 [label="You: \"One *hundred* times smaller?\""];
+	  625 [label="You: \"Darkness rides.\" (Pick up the coins.)"];
+	  626 [label="Garte, the Cafeteria Manager: He stands silently looking at the coppers on the counter."];
+	  627 [label="Ancient Reptilian Brain: You are *way* cool, cooler than the bottom of the sea. Too cool for this world."];
+	  628 [label="Garte, the Cafeteria Manager: \"Okay, okay...\" He settles down. \"I know what is going on -- and okay. I'll call your station... what did you say it was?\""];
+	  629 [label="Lena, the Cryptozoologist's wife: \"Did one of these \"tiny apes\" have a pale green face?\" An old woman appears out of the blackness."];
+	  630 [label="You: \"No, are *you* okay?\""];
+	  631 [label="money_down_hub"];
+	  632 [label="Garte, the Cafeteria Manager: \"Don't thank me yet. You still owe me 100 reál. If you don't have it by tonight, I just can't let you up there...\" He points upstairs, toward your room."];
+	  633 [label="Kim Kitsuragi: \"Officer... I was thinking more along the lines of your name.\""];
+	  634 [label="Garte, the Cafeteria Manager: \"Yes, you are!\" He looks at you with mock admiration. \"A real decorated hero.\""];
+	  635 [label="You: \"What did I do?\""];
+	  636 [label="You: \"What have I been doing then? Have you seen me around?\""];
+	  637 [label="Garte, the Cafeteria Manager: IsTHCPresent(\"shit_together\")"];
+	  638 [label="IsTHCPresent(\"shit_together\")", shape=diamond];
+	  639 [label="!(IsTHCPresent(\"shit_together\"))", shape=diamond];
+	  640 [label="You: \"Alright, calm down. What is this about?\""];
+	  641 [label="Authority: For a moment, the Cafeteria Manager fidgets under the lieutenant's gaze. Then he gives in."];
+	  642 [label="You: \"You can tell me, Garte. You killed him, right?\""];
+	  643 [label="Garte, the Cafeteria Manager: He ignores you."];
+	  644 [label="Jump to: [Garte, the Cafeteria Manager: \"\"Okay, you got me. She went away be...\"]"];
+	  645 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_tc_real\"]"];
+	  646 [label="Variable[\"whirling.garte_tc_real\"]", shape=diamond];
+	  647 [label="!(Variable[\"whirling.garte_tc_real\"])", shape=diamond];
+	  648 [label="Encyclopedia: The IIR or interisolary reál is the global reserve currency. Whatever part of the world you're in right now, it's safe to assume he means you owe him some money."];
+	  649 [label="You: \"What's *real*?\""];
+	  650 [label="You: I'm not comfortable with this. (Try to somehow tuck the tie away.)"];
+	  651 [label="Jump to: [Garte altintro HUB]"];
+	  652 [label="You: \"It's probably Harry.\""];
+	  653 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_empathy_disdain\"]"];
+	  654 [label="Variable[\"whirling.garte_empathy_disdain\"]", shape=diamond];
+	  655 [label="!(Variable[\"whirling.garte_empathy_disdain\"])", shape=diamond];
+	  656 [label="You: \"Where exactly is the body?\""];
+	  657 [label="You: \"What?\""];
+	  658 [label="Kim Kitsuragi: \"It's your turn.\" He takes a respectful little step back."];
+	  659 [label="You: \"Oh, you mean questions?\""];
+	  660 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_necktie_talked\"]"];
+	  661 [label="Variable[\"whirling.garte_necktie_talked\"]", shape=diamond];
+	  662 [label="!(Variable[\"whirling.garte_necktie_talked\"])", shape=diamond];
+	  663 [label="You: (Proceed and show him the coins you found.) \"Is this money?\""];
+	  664 [label="Garte, the Cafeteria Manager: \"What are you, brain-damaged?\""];
+	  665 [label="Kim Kitsuragi: \"Some do take recompense.\" The lieutenant is dead serious. \"But only to survive.\""];
+	  666 [label="You: This did not need to happen. I gave no such commands to my body."];
+	  667 [label="Ancient Reptilian Brain: It was no accident. Those were *disco moves* from your Spinal Cord. The Spinal Cord has yet to reveal itself to you -- its mysteries are unholy mysteries."];
+	  668 [label="Untitled hub"];
+	  669 [label="Jump to: [Garte_altgreeting end HUB]"];
+	  670 [label="You: \"Goodbye and thank you for your cooperation.\" [Leave.]"];
+	  671 [label="Garte, the Cafeteria Manager: \"You still owe me 70. If you don't have it by tonight I'm not letting you back up there,\" he points upstairs."];
+	  672 [label="Savoir Faire: No. You have sustained a trauma to your lower neck. In addition, you have strained your left trapezius muscle. Pain surges down your back when you move."];
+	  673 [label="You: \"Ouch.\""];
+	  674 [label="Garte ALT start hub"];
+	  675 [label="Garte, the Cafeteria Manager: \"I hope it is.\""];
+	  676 [label="You: \"But you can still pour me a drink, right?\""];
+	  677 [label="Suggestion: There may be some way to get a drink out of him (even for you) but this is not it."];
+	  678 [label="Conceptualization: Reál? Must be cosmetics. Probably a body milk."];
+	  679 [label="Kim Kitsuragi: \"But, you see, he didn't.\""];
+	  680 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_skua_TC\"]"];
+	  681 [label="Variable[\"whirling.garte_skua_TC\"]", shape=diamond];
+	  682 [label="!(Variable[\"whirling.garte_skua_TC\"])", shape=diamond];
+	  683 [label="You: \"I talk to whomever I please.\""];
+	  684 [label="Jump to: [Garte altintro HUB]"];
+	  685 [label="Garte, the Cafeteria Manager: \"That's easy! See that door there?\" He points to the west. \"First you exit through that. Then to your right you should see a big hole in the fence -- a really big one. You can get to the courtyard through there. No need for the keys. The hole is big enough for the Franconigerian cavalry to fit through.\""];
+	  686 [label="Garte, the Cafeteria Manager: \"What?\""];
+	  687 [label="Esprit de Corps: That's cop for: \"I haven't offered to pay because I don't have any money either.\""];
+	  688 [label="Garte, the Cafeteria Manager: \"Are you kidding me?\""];
+	  689 [label="Reaction Speed: He doesn't know? He just said \"they\" hoisted him up on a tree -- who is this they?"];
+	  0 -> 1
+	  1 -> 675
+	  2 -> 551
+	  3 -> 352
+	  4 -> 258
+	  5 -> 6
+	  6 -> 212
+	  7 -> 638
+	  8 -> 9
+	  9 -> 10
+	  9 -> 11
+	  10 -> 415
+	  11 -> 415
+	  12 -> 627
+	  13 -> 272
+	  14 -> 332
+	  15 -> 197
+	  16 -> 431
+	  17 -> 424
+	  17 -> 238
+	  18 -> 90
+	  19 -> 468
+	  20 -> 632
+	  21 -> 391
+	  22 -> 305
+	  23 -> 427
+	  24 -> 455
+	  25 -> 574
+	  26 -> 27
+	  26 -> 28
+	  27 -> 254
+	  28 -> 135
+	  29 -> 30
+	  30 -> 451
+	  31 -> 225
+	  32 -> 554
+	  33 -> 7
+	  34 -> 603
+	  34 -> 291
+	  34 -> 582
+	  34 -> 518
+	  35 -> 355
+	  36 -> 67
+	  36 -> 100
+	  36 -> 613
+	  36 -> 140
+	  36 -> 469
+	  36 -> 215
+	  37 -> 437
+	  38 -> 293
+	  38 -> 294
+	  38 -> 492
+	  38 -> 653
+	  38 -> 143
+	  38 -> 211
+	  38 -> 409
+	  39 -> 38
+	  40 -> 221
+	  41 -> 259
+	  42 -> 652
+	  43 -> 370
+	  44 -> 482
+	  44 -> 12
+	  45 -> 328
+	  46 -> 668
+	  47 -> 156
+	  47 -> 326
+	  47 -> 327
+	  48 -> 237
+	  49 -> 629
+	  50 -> 362
+	  51 -> 337
+	  52 -> 585
+	  53 -> 225
+	  54 -> 635
+	  55 -> 247
+	  56 -> 455
+	  57 -> 170
+	  58 -> 283
+	  59 -> 174
+	  60 -> 464
+	  61 -> 252
+	  62 -> 494
+	  63 -> 253
+	  64 -> 511
+	  65 -> 449
+	  66 -> 374
+	  67 -> 513
+	  68 -> 70
+	  69 -> 579
+	  70 -> 578
+	  70 -> 101
+	  70 -> 255
+	  71 -> 141
+	  72 -> 284
+	  73 -> 353
+	  73 -> 188
+	  74 -> 439
+	  75 -> 76
+	  75 -> 77
+	  76 -> 576
+	  77 -> 371
+	  78 -> 263
+	  79 -> 350
+	  80 -> 81
+	  80 -> 82
+	  81 -> 262
+	  82 -> 190
+	  83 -> 190
+	  84 -> 85
+	  85 -> 360
+	  85 -> 234
+	  85 -> 388
+	  85 -> 534
+	  86 -> 237
+	  87 -> 88
+	  87 -> 89
+	  87 -> 299
+	  87 -> 14
+	  88 -> 236
+	  89 -> 236
+	  90 -> 673
+	  91 -> 162
+	  92 -> 53
+	  93 -> 680
+	  94 -> 307
+	  95 -> 59
+	  95 -> 542
+	  96 -> 209
+	  97 -> 150
+	  98 -> 287
+	  99 -> 477
+	  100 -> 513
+	  101 -> 102
+	  102 -> 69
+	  103 -> 36
+	  104 -> 42
+	  105 -> 552
+	  106 -> 145
+	  107 -> 411
+	  108 -> 395
+	  109 -> 97
+	  110 -> 200
+	  111 -> 79
+	  112 -> 113
+	  112 -> 114
+	  113 -> 488
+	  114 -> 325
+	  115 -> 299
+	  115 -> 14
+	  115 -> 273
+	  115 -> 88
+	  115 -> 89
+	  116 -> 431
+	  117 -> 239
+	  118 -> 302
+	  119 -> 239
+	  120 -> 121
+	  120 -> 122
+	  121 -> 363
+	  122 -> 241
+	  123 -> 120
+	  124 -> 393
+	  125 -> 126
+	  125 -> 127
+	  126 -> 485
+	  127 -> 533
+	  128 -> 201
+	  128 -> 641
+	  128 -> 93
+	  129 -> 171
+	  130 -> 131
+	  131 -> 225
+	  132 -> 133
+	  133 -> 397
+	  134 -> 251
+	  135 -> 451
+	  136 -> 225
+	  137 -> 440
+	  138 -> 64
+	  139 -> 418
+	  139 -> 111
+	  140 -> 580
+	  141 -> 187
+	  142 -> 404
+	  143 -> 222
+	  144 -> 410
+	  145 -> 221
+	  146 -> 498
+	  147 -> 224
+	  148 -> 523
+	  148 -> 5
+	  149 -> 523
+	  149 -> 5
+	  150 -> 152
+	  150 -> 151
+	  151 -> 555
+	  152 -> 414
+	  153 -> 154
+	  153 -> 155
+	  154 -> 584
+	  155 -> 296
+	  156 -> 480
+	  157 -> 535
+	  159 -> 276
+	  160 -> 185
+	  161 -> 65
+	  162 -> 163
+	  162 -> 164
+	  163 -> 537
+	  164 -> 633
+	  165 -> 426
+	  166 -> 364
+	  166 -> 604
+	  166 -> 55
+	  167 -> 168
+	  167 -> 169
+	  168 -> 548
+	  169 -> 679
+	  170 -> 515
+	  171 -> 553
+	  172 -> 572
+	  173 -> 25
+	  174 -> 304
+	  175 -> 369
+	  176 -> 177
+	  176 -> 178
+	  177 -> 63
+	  178 -> 519
+	  179 -> 180
+	  179 -> 181
+	  180 -> 497
+	  181 -> 690
+	  182 -> 184
+	  182 -> 183
+	  183 -> 475
+	  184 -> 499
+	  185 -> 213
+	  186 -> 600
+	  187 -> 216
+	  188 -> 367
+	  189 -> 139
+	  190 -> 66
+	  190 -> 556
+	  190 -> 588
+	  190 -> 560
+	  190 -> 434
+	  191 -> 479
+	  192 -> 45
+	  193 -> 592
+	  194 -> 390
+	  195 -> 532
+	  196 -> 300
+	  197 -> 276
+	  198 -> 582
+	  198 -> 518
+	  199 -> 569
+	  200 -> 296
+	  201 -> 525
+	  202 -> 250
+	  203 -> 204
+	  203 -> 205
+	  204 -> 282
+	  205 -> 368
+	  206 -> 323
+	  207 -> 574
+	  208 -> 312
+	  209 -> 313
+	  210 -> 475
+	  211 -> 689
+	  212 -> 466
+	  213 -> 161
+	  214 -> 306
+	  215 -> 394
+	  216 -> 217
+	  216 -> 218
+	  217 -> 436
+	  218 -> 404
+	  219 -> 582
+	  219 -> 518
+	  220 -> 40
+	  221 -> 339
+	  222 -> 4
+	  223 -> 470
+	  224 -> 75
+	  225 -> 545
+	  225 -> 226
+	  225 -> 386
+	  225 -> 454
+	  225 -> 109
+	  225 -> 657
+	  225 -> 473
+	  225 -> 412
+	  226 -> 203
+	  227 -> 209
+	  228 -> 190
+	  229 -> 288
+	  230 -> 232
+	  230 -> 231
+	  231 -> 479
+	  232 -> 191
+	  233 -> 630
+	  234 -> 86
+	  235 -> 446
+	  236 -> 563
+	  238 -> 159
+	  239 -> 673
+	  240 -> 239
+	  241 -> 567
+	  242 -> 97
+	  243 -> 198
+	  244 -> 225
+	  245 -> 425
+	  245 -> 539
+	  245 -> 677
+	  245 -> 22
+	  246 -> 605
+	  247 -> 637
+	  248 -> 392
+	  249 -> 366
+	  250 -> 340
+	  251 -> 172
+	  252 -> 225
+	  253 -> 225
+	  254 -> 570
+	  254 -> 29
+	  255 -> 435
+	  256 -> 320
+	  257 -> 36
+	  258 -> 553
+	  259 -> 583
+	  260 -> 277
+	  261 -> 419
+	  261 -> 478
+	  261 -> 526
+	  262 -> 190
+	  263 -> 264
+	  263 -> 265
+	  264 -> 80
+	  265 -> 190
+	  266 -> 530
+	  267 -> 268
+	  267 -> 269
+	  268 -> 179
+	  269 -> 574
+	  270 -> 667
+	  270 -> 484
+	  270 -> 46
+	  271 -> 18
+	  272 -> 115
+	  273 -> 87
+	  274 -> 408
+	  275 -> 197
+	  276 -> 671
+	  276 -> 564
+	  276 -> 301
+	  276 -> 596
+	  277 -> 502
+	  278 -> 245
+	  279 -> 399
+	  280 -> 134
+	  281 -> 310
+	  282 -> 443
+	  282 -> 524
+	  283 -> 26
+	  284 -> 285
+	  284 -> 286
+	  285 -> 136
+	  286 -> 321
+	  287 -> 210
+	  288 -> 507
+	  289 -> 622
+	  290 -> 36
+	  291 -> 219
+	  292 -> 654
+	  293 -> 471
+	  294 -> 73
+	  295 -> 474
+	  296 -> 8
+	  296 -> 650
+	  296 -> 214
+	  297 -> 356
+	  298 -> 357
+	  299 -> 158
+	  300 -> 595
+	  301 -> 597
+	  302 -> 673
+	  303 -> 451
+	  304 -> 451
+	  305 -> 425
+	  305 -> 539
+	  306 -> 128
+	  307 -> 308
+	  308 -> 249
+	  308 -> 684
+	  309 -> 643
+	  310 -> 609
+	  311 -> 349
+	  312 -> 31
+	  313 -> 225
+	  314 -> 514
+	  314 -> 68
+	  314 -> 614
+	  315 -> 512
+	  316 -> 401
+	  316 -> 398
+	  317 -> 649
+	  318 -> 375
+	  319 -> 381
+	  320 -> 36
+	  321 -> 440
+	  322 -> 96
+	  322 -> 227
+	  322 -> 43
+	  322 -> 429
+	  322 -> 575
+	  323 -> 444
+	  324 -> 589
+	  325 -> 480
+	  326 -> 480
+	  327 -> 329
+	  327 -> 330
+	  328 -> 626
+	  328 -> 531
+	  329 -> 432
+	  330 -> 532
+	  331 -> 361
+	  332 -> 276
+	  333 -> 336
+	  333 -> 335
+	  334 -> 16
+	  335 -> 116
+	  336 -> 242
+	  337 -> 225
+	  338 -> 458
+	  339 -> 221
+	  340 -> 267
+	  341 -> 644
+	  342 -> 344
+	  342 -> 345
+	  343 -> 60
+	  344 -> 608
+	  345 -> 347
+	  345 -> 348
+	  346 -> 316
+	  347 -> 303
+	  348 -> 96
+	  348 -> 227
+	  348 -> 43
+	  348 -> 429
+	  348 -> 575
+	  349 -> 270
+	  350 -> 303
+	  351 -> 186
+	  352 -> 108
+	  353 -> 466
+	  354 -> 263
+	  355 -> 557
+	  356 -> 669
+	  357 -> 669
+	  358 -> 118
+	  359 -> 48
+	  361 -> 276
+	  362 -> 567
+	  363 -> 496
+	  364 -> 36
+	  365 -> 685
+	  366 -> 4
+	  367 -> 610
+	  368 -> 621
+	  369 -> 413
+	  370 -> 658
+	  370 -> 322
+	  370 -> 295
+	  371 -> 367
+	  372 -> 78
+	  373 -> 99
+	  373 -> 289
+	  373 -> 651
+	  374 -> 376
+	  374 -> 377
+	  375 -> 577
+	  376 -> 549
+	  377 -> 578
+	  377 -> 101
+	  377 -> 255
+	  378 -> 579
+	  379 -> 652
+	  380 -> 382
+	  380 -> 383
+	  381 -> 74
+	  381 -> 223
+	  382 -> 124
+	  383 -> 147
+	  384 -> 354
+	  385 -> 546
+	  386 -> 591
+	  387 -> 486
+	  388 -> 431
+	  389 -> 302
+	  390 -> 20
+	  391 -> 225
+	  392 -> 36
+	  393 -> 500
+	  394 -> 221
+	  395 -> 58
+	  396 -> 342
+	  397 -> 279
+	  398 -> 95
+	  399 -> 288
+	  400 -> 351
+	  401 -> 161
+	  402 -> 581
+	  402 -> 615
+	  402 -> 37
+	  402 -> 71
+	  403 -> 103
+	  404 -> 406
+	  404 -> 407
+	  405 -> 257
+	  406 -> 617
+	  406 -> 74
+	  408 -> 4
+	  409 -> 618
+	  409 -> 107
+	  409 -> 220
+	  410 -> 221
+	  411 -> 62
+	  412 -> 225
+	  413 -> 153
+	  414 -> 416
+	  414 -> 417
+	  415 -> 52
+	  416 -> 586
+	  417 -> 79
+	  418 -> 266
+	  419 -> 228
+	  420 -> 624
+	  421 -> 193
+	  422 -> 666
+	  423 -> 159
+	  424 -> 92
+	  425 -> 364
+	  425 -> 604
+	  425 -> 55
+	  426 -> 225
+	  427 -> 225
+	  428 -> 209
+	  429 -> 547
+	  431 -> 433
+	  432 -> 83
+	  433 -> 261
+	  434 -> 379
+	  435 -> 142
+	  436 -> 187
+	  437 -> 380
+	  438 -> 522
+	  439 -> 441
+	  439 -> 442
+	  440 -> 148
+	  441 -> 149
+	  442 -> 61
+	  443 -> 230
+	  444 -> 628
+	  445 -> 448
+	  445 -> 447
+	  446 -> 487
+	  447 -> 13
+	  448 -> 467
+	  449 -> 634
+	  450 -> 452
+	  450 -> 453
+	  451 -> 207
+	  452 -> 244
+	  453 -> 199
+	  454 -> 456
+	  454 -> 457
+	  454 -> 94
+	  454 -> 57
+	  455 -> 307
+	  456 -> 307
+	  457 -> 459
+	  457 -> 460
+	  458 -> 642
+	  459 -> 129
+	  460 -> 340
+	  461 -> 280
+	  462 -> 304
+	  463 -> 280
+	  464 -> 400
+	  465 -> 225
+	  466 -> 632
+	  467 -> 402
+	  468 -> 513
+	  469 -> 405
+	  470 -> 144
+	  470 -> 521
+	  470 -> 106
+	  471 -> 202
+	  471 -> 540
+	  471 -> 541
+	  472 -> 341
+	  473 -> 523
+	  473 -> 5
+	  474 -> 225
+	  475 -> 263
+	  476 -> 444
+	  477 -> 420
+	  478 -> 190
+	  479 -> 532
+	  480 -> 421
+	  480 -> 558
+	  481 -> 590
+	  483 -> 358
+	  484 -> 233
+	  484 -> 157
+	  484 -> 271
+	  485 -> 237
+	  486 -> 272
+	  487 -> 601
+	  487 -> 196
+	  487 -> 565
+	  488 -> 490
+	  488 -> 491
+	  489 -> 602
+	  490 -> 503
+	  491 -> 450
+	  492 -> 678
+	  493 -> 165
+	  493 -> 54
+	  494 -> 568
+	  495 -> 246
+	  496 -> 574
+	  497 -> 41
+	  498 -> 475
+	  499 -> 501
+	  500 -> 681
+	  501 -> 489
+	  502 -> 686
+	  503 -> 130
+	  504 -> 132
+	  505 -> 346
+	  506 -> 508
+	  506 -> 509
+	  507 -> 510
+	  508 -> 688
+	  509 -> 190
+	  510 -> 31
+	  511 -> 395
+	  512 -> 550
+	  513 -> 403
+	  514 -> 36
+	  515 -> 104
+	  515 -> 517
+	  515 -> 438
+	  516 -> 380
+	  517 -> 72
+	  518 -> 616
+	  518 -> 518
+	  519 -> 39
+	  520 -> 4
+	  521 -> 36
+	  522 -> 260
+	  523 -> 543
+	  524 -> 263
+	  525 -> 527
+	  526 -> 528
+	  526 -> 529
+	  527 -> 112
+	  528 -> 112
+	  529 -> 190
+	  530 -> 288
+	  531 -> 387
+	  531 -> 422
+	  531 -> 561
+	  531 -> 465
+	  531 -> 664
+	  531 -> 538
+	  532 -> 593
+	  532 -> 194
+	  532 -> 359
+	  533 -> 86
+	  534 -> 90
+	  535 -> 388
+	  535 -> 360
+	  535 -> 234
+	  535 -> 84
+	  535 -> 534
+	  536 -> 567
+	  537 -> 591
+	  538 -> 676
+	  539 -> 250
+	  540 -> 461
+	  541 -> 463
+	  542 -> 621
+	  543 -> 645
+	  544 -> 278
+	  545 -> 97
+	  546 -> 315
+	  547 -> 35
+	  547 -> 612
+	  547 -> 373
+	  548 -> 365
+	  549 -> 314
+	  550 -> 378
+	  551 -> 36
+	  552 -> 620
+	  553 -> 638
+	  554 -> 153
+	  555 -> 297
+	  556 -> 190
+	  557 -> 559
+	  558 -> 288
+	  559 -> 594
+	  560 -> 423
+	  561 -> 298
+	  561 -> 445
+	  563 -> 15
+	  564 -> 566
+	  565 -> 49
+	  567 -> 23
+	  568 -> 248
+	  569 -> 309
+	  570 -> 505
+	  571 -> 573
+	  572 -> 173
+	  573 -> 281
+	  573 -> 396
+	  573 -> 606
+	  574 -> 687
+	  575 -> 385
+	  575 -> 137
+	  575 -> 523
+	  576 -> 365
+	  577 -> 3
+	  578 -> 290
+	  579 -> 34
+	  580 -> 105
+	  581 -> 176
+	  582 -> 384
+	  583 -> 661
+	  584 -> 587
+	  585 -> 418
+	  585 -> 189
+	  585 -> 111
+	  586 -> 408
+	  587 -> 646
+	  588 -> 623
+	  589 -> 192
+	  590 -> 288
+	  591 -> 331
+	  592 -> 18
+	  593 -> 536
+	  594 -> 333
+	  595 -> 275
+	  596 -> 598
+	  596 -> 599
+	  597 -> 389
+	  598 -> 672
+	  599 -> 36
+	  600 -> 17
+	  601 -> 51
+	  602 -> 243
+	  603 -> 495
+	  604 -> 428
+	  605 -> 343
+	  606 -> 571
+	  607 -> 462
+	  608 -> 225
+	  609 -> 544
+	  609 -> 138
+	  609 -> 208
+	  609 -> 175
+	  610 -> 554
+	  611 -> 476
+	  613 -> 2
+	  614 -> 516
+	  615 -> 256
+	  616 -> 514
+	  617 -> 40
+	  618 -> 520
+	  619 -> 146
+	  620 -> 206
+	  620 -> 311
+	  621 -> 444
+	  622 -> 235
+	  623 -> 625
+	  623 -> 482
+	  623 -> 12
+	  624 -> 44
+	  625 -> 229
+	  626 -> 192
+	  627 -> 669
+	  628 -> 50
+	  629 -> 240
+	  629 -> 117
+	  629 -> 119
+	  630 -> 19
+	  631 -> 91
+	  631 -> 123
+	  631 -> 21
+	  632 -> 567
+	  633 -> 293
+	  633 -> 294
+	  633 -> 653
+	  633 -> 143
+	  633 -> 211
+	  633 -> 409
+	  634 -> 636
+	  635 -> 166
+	  636 -> 605
+	  637 -> 640
+	  637 -> 639
+	  638 -> 475
+	  639 -> 182
+	  640 -> 525
+	  641 -> 171
+	  642 -> 607
+	  643 -> 506
+	  644 -> 543
+	  645 -> 648
+	  645 -> 647
+	  646 -> 47
+	  647 -> 665
+	  648 -> 167
+	  649 -> 317
+	  650 -> 324
+	  651 -> 36
+	  652 -> 472
+	  653 -> 656
+	  653 -> 655
+	  654 -> 520
+	  655 -> 619
+	  656 -> 502
+	  657 -> 659
+	  658 -> 523
+	  658 -> 660
+	  659 -> 6
+	  660 -> 662
+	  660 -> 663
+	  661 -> 110
+	  662 -> 296
+	  663 -> 481
+	  664 -> 156
+	  664 -> 326
+	  664 -> 327
+	  665 -> 195
+	  666 -> 562
+	  667 -> 298
+	  667 -> 445
+	  668 -> 125
+	  669 -> 408
+	  670 -> 334
+	  671 -> 431
+	  672 -> 160
+	  672 -> 674
+	  672 -> 631
+	  673 -> 185
+	  674 -> 515
+	  674 -> 292
+	  674 -> 318
+	  675 -> 338
+	  676 -> 493
+	  677 -> 425
+	  677 -> 539
+	  678 -> 548
+	  679 -> 525
+	  680 -> 682
+	  680 -> 683
+	  681 -> 24
+	  682 -> 56
+	  683 -> 366
+	  684 -> 36
+	  685 -> 504
+	  686 -> 32
+	  686 -> 33
+	  686 -> 98
+	  686 -> 611
+	  687 -> 510
+	  688 -> 372
+	  688 -> 430
+	  689 -> 574
+}
+

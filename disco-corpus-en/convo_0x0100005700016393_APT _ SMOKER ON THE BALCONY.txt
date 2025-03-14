@@ -1,0 +1,262 @@
+# APT / SMOKER ON THE BALCONY
+# Second meeting with the smoker on the balcony -- he's standing right in front of his apartment door, smoking.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"That's what I'm aiming for, yes.\""];
+	  3 [label="Smoker on the Balcony: \"I have some good news for you. My Sunday friend is visiting me tonight. I told him about you and he'd like to say hello. Step in, he's already waiting.\" He nods towards door #28."];
+	  4 [label="You: \"I found a key hidden under a stone. Was it yours?\" (Show him the key.)"];
+	  5 [label="hubble telescope"];
+	  6 [label="You: \"It made me feel *special*.\""];
+	  7 [label="You: \"*Very* mysterious.\""];
+	  8 [label="Conceptualization: His slender figure is backlit by city lights, its distant streets and motorways flashing like diamonds..."];
+	  9 [label="You: \"By the way, I'm really digging the view here.\" (Point to the city skyline.)"];
+	  10 [label="IsNighttime()"];
+	  11 [label="IsNighttime()", shape=diamond];
+	  12 [label="!(IsNighttime())", shape=diamond];
+	  13 [label="Jump to: [leave hub]"];
+	  14 [label="Electrochemistry: He's right, only losers go to bed early. Time to break out the booze!"];
+	  15 [label="Variable[\"auto.is_snowing\"]"];
+	  16 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  17 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  18 [label="Smoker on the Balcony: \"It was mine. My friends use it from time to time to visit me.\" As he looks at you, something sparkles in his eyes."];
+	  19 [label="Empathy: It feels like a Friday. He seems to be in a good mood tonight."];
+	  20 [label="Kim Kitsuragi: \"His shirt...\" The lieutenant squints his eyes, trying to hold back laughter."];
+	  21 [label="Kim Kitsuragi: \"...\""];
+	  22 [label="You: \"Is it Friday tonight? It feels like Friday.\""];
+	  23 [label="Smoker on the Balcony: \"That's nice, but I don't have anything to tell you. It's my friend you're looking for, not me.\""];
+	  24 [label="Smoker on the Balcony: \"Gendarmerie! You found me.\" The young man on the balcony gives you a bright smile, before taking another drag from his cigarette."];
+	  25 [label="Smoker on the Balcony: \"Beautiful,\" he replies, smiling. As he looks at you, something sparkles in his eyes."];
+	  26 [label="You: \"There's something so *different* about him that I just can't put my finger on...\""];
+	  27 [label="You: \"But I just *found* you again!\""];
+	  28 [label="Smoker on the Balcony: \"Mhmh, that's why I chose this place.\" He looks away, his cigarette end glowing in the dark. \"Martinaise is special, isn't it?\""];
+	  29 [label="Empathy: It's laughter!"];
+	  30 [label="Smoker on the Balcony: \"Yeah, it does feel like the end of the week. Such gentle weather...\""];
+	  31 [label="Kim Kitsuragi: \"Wait, suddenly you're *digging* things?\" the lieutenant whispers to you, shaking his head."];
+	  32 [label="Smoker on the Balcony: \"My Sunday friend,\" he repeats, his smile even wider than before. \"He's brilliant, everyone wants to meet my Sunday friend. You'll see.\""];
+	  33 [label="You: \"There's just something so *mysterious* about the way he talks and moves...\""];
+	  34 [label="You: \"Honestly I'm just trying to not screw anything up.\""];
+	  35 [label="Smoker on the Balcony: \"Beautiful,\" he says again. A nearby street lamp casts shadows on his chin, drawing out the slender cheekbones."];
+	  36 [label="Kim Kitsuragi: \"His shirt...\""];
+	  37 [label="You: [Leave.]"];
+	  38 [label="Smoker on the Balcony: \"We'll talk,\" the smoker assures you, brushing his hand through the hair. \"Just not tonight.\""];
+	  39 [label="Smoker on the Balcony: \"Trust me, you do.\""];
+	  40 [label="Variable[\"apt.smoker_empathy_laughing\"] == true"];
+	  41 [label="Variable[\"apt.smoker_empathy_laughing\"] == true", shape=diamond];
+	  42 [label="!(Variable[\"apt.smoker_empathy_laughing\"] == true)", shape=diamond];
+	  43 [label="Kim Kitsuragi: \"Different, of course.\""];
+	  44 [label="You: \"His shirt... why is his shirt always unbuttoned?\""];
+	  45 [label="Kim Kitsuragi: \"Right after you.\" He nods at the apartment door before you."];
+	  46 [label="Kim Kitsuragi: \"*Very*.\""];
+	  47 [label="Kim Kitsuragi: \"Who knows, detective? It's a... mystery,\" he says, turning his face away from you."];
+	  48 [label="Smoker on the Balcony: \"Just look at it...\" He gestures towards distant motorways, all leading to golden La Delta. \"It's a beautiful night. Who's going to stay in on a night like this?\""];
+	  49 [label="IsKimHere()"];
+	  50 [label="IsKimHere()", shape=diamond];
+	  51 [label="!(IsKimHere())", shape=diamond];
+	  52 [label="You: \"I'm not going to make things just *right*, I'm going to make them *spectacular*.\""];
+	  53 [label="Smoker on the Balcony: \"Then I have some good news for you...\" His eyes narrow. A nearby street lamp casts shadows on his chin, drawing out the slender cheekbones."];
+	  54 [label="Smoker on the Balcony: \"Take care, alright?\" he says with another disarming smile, before slipping off into the night."];
+	  55 [label="Kim Kitsuragi: \"He *smells* good...\" The lieutenant squints his eyes, trying to hold back laughter."];
+	  56 [label="Jump to: [hubble telescope]"];
+	  57 [label="IsKimHere()"];
+	  58 [label="IsKimHere()", shape=diamond];
+	  59 [label="!(IsKimHere())", shape=diamond];
+	  60 [label="Smoker on the Balcony: \"Besides, I've got to run.\""];
+	  61 [label="You: \"Run where?\""];
+	  62 [label="You: \"He smells good. Why on earth does he smell so good?\""];
+	  63 [label="Kim Kitsuragi: \"Come on, detective. Let's go -- we've got a potential witness to interview -- his 'Sunday friend', remember?\" He nods at the apartment door before you."];
+	  64 [label="Kim Kitsuragi: \"His shirt... No, I don't know why his shirt is always unbuttoned.\" His mouth tightens, as though trying to hold something back."];
+	  65 [label="Empathy: It feels like a Friday. He seems to be in a good mood today."];
+	  66 [label="You: \"Very well, I'll talk to him, but first I want to talk to *you*. I have so many questions.\" (Proceed.)"];
+	  67 [label="Perception (Hearing): Somewhere in the distance a baby cries over a blasting radio. There's a family argument reaching its crescendo in an upstairs apartment, while around the corner the air conditioners drone."];
+	  68 [label="leave hub"];
+	  69 [label="Jump to: [hubble telescope]"];
+	  70 [label="Composure: He's barely holding it together. It's all he can do to keep from bursting out in laughter."];
+	  71 [label="You: \"Only if you promise that we'll talk again. It's *important*.\""];
+	  72 [label="Drama: He's trying to dive deep into the mysteries of his *shirt*!"];
+	  73 [label="Untitled hub"];
+	  74 [label="IsKimHere()"];
+	  75 [label="IsKimHere()", shape=diamond];
+	  76 [label="!(IsKimHere())", shape=diamond];
+	  77 [label="minihub"];
+	  78 [label="Smoker on the Balcony: \"Don't worry, we'll meet again.\" He gently rests his hand on your shoulder. \"Come find me in the bar of the Whirling some evening.\""];
+	  79 [label="You: \"Why would I want to meet your friend?\""];
+	  80 [label="Smoker on the Balcony: \"So tell me, are you here to make things *right* again?\""];
+	  81 [label="Conceptualization: And he's gone again. Looks like it's becoming a theme for him."];
+	  82 [label="You: \"Let's go, Kim. We have to interview his Sunday friend.\" [Leave.]"];
+	  83 [label="Empathy: There, he's laughing again!"];
+	  84 [label="Smoker on the Balcony: \"Even the rain feels nice.\" He leans over the railing and sticks out his hand to feel the rain."];
+	  85 [label="IsNighttime()"];
+	  86 [label="IsNighttime()", shape=diamond];
+	  87 [label="!(IsNighttime())", shape=diamond];
+	  88 [label="Smoker on the Balcony: \"To the city.\" He gestures idly towards distant motorways. \"It's a beautiful night.\""];
+	  89 [label="Shivers: A man on high heels stumbles out of a basement club, music blasting over the entire district. It's chilly, and as the chemicals hit his nervous system a thousand shivers ripple through his body."];
+	  90 [label="Kim Kitsuragi: \"Something so mysterious about the way he talks...\" The lieutenant squints his eyes, trying to hold back laughter."];
+	  91 [label="You: [Leave.]"];
+	  92 [label="You: \"Alright, go then.\""];
+	  93 [label="Smoker on the Balcony: He takes another drag of his unfiltered cigarette and looks around. It's getting dark and the neighbouring windows have lit up one by one."];
+	  94 [label="Untitled hub (05)"];
+	  95 [label="You: \"He's such a good listener, I liked talking to him.\""];
+	  96 [label="You: \"He's always leaving... Why is he always leaving, Kim?\""];
+	  97 [label="Kim Kitsuragi: Something flutters in the corner of the lieutenant's mouth as you're saying those words."];
+	  98 [label="You: \"I got your hint. Found the key right under that stone.\""];
+	  99 [label="You: \"Wait, who exactly is visiting you?\""];
+	  100 [label="You: \"Yes, the cleaning lady let me in. She also led me to your apartment.\""];
+	  101 [label="Electrochemistry: And his shirt is still unbuttoned."];
+	  102 [label="You: \"Go, if you must, I don't care. I don't care about people leaving me all the time.\""];
+	  103 [label="Composure: Something tells you you're never going to talk to an individual this cool or mysterious ever again."];
+	  104 [label="Smoker on the Balcony: \"My Sunday friend is visiting me tonight. I told him about you and he'd like to say hello. Step in, he's already waiting.\" He nods towards door #28."];
+	  105 [label="Kim Kitsuragi: \"You liked talking to him...\" The lieutenant squints his eyes, trying to hold back laughter."];
+	  106 [label="Kim Kitsuragi: \"He smells good and that's weird.\""];
+	  107 [label="Inland Empire: He's going to leave you alone again. That's sad."];
+	  108 [label="You: (Ignore his question.) \"I was hoping to talk to a possible witness. Your balcony overlooks the murder scene.\""];
+	  109 [label="Variable[\"auto.is_raining\"]"];
+	  110 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  111 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  112 [label="You: \"His shirt.\""];
+	  113 [label="Kim Kitsuragi: \"It made you feel *special*...\""];
+	  114 [label="You: \"That's weird, right?\""];
+	  115 [label="Perception (Sight): Downstairs a cat crosses the yard, disappearing into the bush."];
+	  116 [label="Smoker on the Balcony: \"It does feel like the end of the week. It's so magical, the white falling against the black...\""];
+	  0 -> 1
+	  1 -> 24
+	  2 -> 35
+	  3 -> 5
+	  4 -> 18
+	  5 -> 67
+	  5 -> 100
+	  5 -> 9
+	  5 -> 80
+	  5 -> 22
+	  6 -> 114
+	  7 -> 47
+	  8 -> 10
+	  9 -> 28
+	  10 -> 11
+	  10 -> 12
+	  11 -> 19
+	  12 -> 66
+	  13 -> 69
+	  14 -> 90
+	  15 -> 16
+	  15 -> 17
+	  16 -> 117
+	  17 -> 30
+	  18 -> 81
+	  19 -> 102
+	  20 -> 113
+	  21 -> 71
+	  22 -> 15
+	  23 -> 94
+	  24 -> 86
+	  25 -> 81
+	  26 -> 43
+	  27 -> 49
+	  28 -> 58
+	  29 -> 38
+	  30 -> 110
+	  31 -> 70
+	  32 -> 57
+	  33 -> 91
+	  34 -> 35
+	  35 -> 3
+	  36 -> 73
+	  38 -> 55
+	  39 -> 57
+	  40 -> 41
+	  40 -> 42
+	  41 -> 84
+	  42 -> 13
+	  43 -> 96
+	  43 -> 33
+	  43 -> 44
+	  43 -> 63
+	  44 -> 20
+	  46 -> 21
+	  47 -> 40
+	  48 -> 14
+	  49 -> 51
+	  49 -> 52
+	  50 -> 69
+	  51 -> 37
+	  52 -> 35
+	  53 -> 105
+	  54 -> 82
+	  55 -> 115
+	  56 -> 5
+	  57 -> 59
+	  57 -> 60
+	  58 -> 31
+	  59 -> 70
+	  60 -> 108
+	  61 -> 89
+	  62 -> 56
+	  64 -> 71
+	  65 -> 102
+	  66 -> 23
+	  67 -> 10
+	  68 -> 97
+	  68 -> 26
+	  68 -> 83
+	  69 -> 5
+	  70 -> 64
+	  71 -> 75
+	  72 -> 65
+	  73 -> 99
+	  73 -> 4
+	  73 -> 101
+	  73 -> 92
+	  74 -> 76
+	  74 -> 77
+	  75 -> 98
+	  76 -> 38
+	  77 -> 72
+	  77 -> 93
+	  78 -> 90
+	  79 -> 39
+	  80 -> 95
+	  81 -> 50
+	  82 -> 45
+	  83 -> 13
+	  84 -> 70
+	  85 -> 88
+	  85 -> 87
+	  86 -> 8
+	  87 -> 68
+	  88 -> 90
+	  89 -> 78
+	  90 -> 7
+	  92 -> 55
+	  93 -> 116
+	  94 -> 2
+	  94 -> 109
+	  94 -> 34
+	  94 -> 53
+	  95 -> 106
+	  96 -> 48
+	  97 -> 29
+	  98 -> 25
+	  99 -> 32
+	  100 -> 25
+	  101 -> 74
+	  102 -> 79
+	  103 -> 27
+	  103 -> 62
+	  103 -> 103
+	  104 -> 5
+	  105 -> 6
+	  106 -> 21
+	  107 -> 104
+	  108 -> 54
+	  109 -> 112
+	  109 -> 111
+	  110 -> 85
+	  111 -> 70
+	  112 -> 36
+	  113 -> 21
+	  114 -> 107
+	  115 -> 61
+	  116 -> 70
+}
+

@@ -1,0 +1,73 @@
+# THOUGHT / SUICIDE COP
+# For when the thought is FIXED. Logic tries to get you to kill yourself if you have a gun and bullets, and tells you you're stupid if you don't.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: Hmm... maybe I should. Yes. (Look at the gun and start thinking about it.)"];
+	  3 [label="Pain Threshold: Sounds like you're the Suicide Cop! With his finger on the *eject* button. Ready to let go of this life! But guess what?"];
+	  4 [label="You: No. It's a sign that I want to live. (Refuse.)"];
+	  5 [label="Pain Threshold: Oh yes. It would be so sweet to taste the barrel once more. That sour metal...  maybe there *is* a way? Not yet. But stick with it -- keep going dark, and it'll finally *click*."];
+	  6 [label="Pain Threshold: You idiot! You don't have a gun or any bullets!"];
+	  7 [label="CheckItem(\"bullet\")"];
+	  8 [label="CheckItem(\"bullet\")", shape=diamond];
+	  9 [label="!(CheckItem(\"bullet\"))", shape=diamond];
+	  10 [label="Pain Threshold: Sounds like you're the Suicide Cop! With his finger on the *eject* button. Ready to let go of this life! But guess what?"];
+	  11 [label="Pain Threshold: You idiot! You've got the bullet, but no gun!"];
+	  12 [label="Composure: You've made such a big show out of it too. You feel like everyone basically *expects* you to do it now."];
+	  13 [label="Pain Threshold: Sounds like you're a potential Suicide Cop! With his finger on the *eject* button. Ready to let go of this life! Guess what?"];
+	  14 [label="Pain Threshold: Oh yes. It would be so sweet to taste the barrel once more. That sour metal...  Oh, but not yet. But stick with it -- keep going dark, and it'll finally *click*."];
+	  15 [label="Pain Threshold: You idiot! You don't have any bullets!"];
+	  16 [label="CheckItem(\"gun_villiers\")  or  CheckItem(\"gun_ruby\")"];
+	  17 [label="CheckItem(\"gun_villiers\")  or  CheckItem(\"gun_ruby\")", shape=diamond];
+	  18 [label="!(CheckItem(\"gun_villiers\")  or  CheckItem(\"gun_ruby\"))", shape=diamond];
+	  19 [label="Pain Threshold: Fine. Keep up the charade another day. This could have been so liberating, but you cling to the case, to your partner, to the world... it's pitiful."];
+	  20 [label="You: Suicide Cop *does* have a ring to it. I should think about it -- but only a little."];
+	  21 [label="Jump to: [Composure: \"You've made such a big show out of...\"]"];
+	  22 [label="Pain Threshold: One bullet should do the trick. You have the gun... and you have the bullet."];
+	  23 [label="You: What's that?"];
+	  24 [label="CheckItem(\"bullet\")"];
+	  25 [label="CheckItem(\"bullet\")", shape=diamond];
+	  26 [label="!(CheckItem(\"bullet\"))", shape=diamond];
+	  27 [label="Volition: What is this? You're not ready to die, this is garbage."];
+	  28 [label="Authority: It *would* be the honourable thing to do. It would really show them. Show her too."];
+	  29 [label="Pain Threshold: Sounds like you're the Suicide Cop! With his finger on the *eject* button. Ready to let go of this life! But guess what?"];
+	  30 [label="You: What a pity. Because that's totally *me*. Suicide Cop."];
+	  31 [label="no_bulletz"];
+	  0 -> 1
+	  1 -> 17
+	  2 -> 15
+	  3 -> 11
+	  4 -> 20
+	  6 -> 12
+	  7 -> 8
+	  7 -> 9
+	  8 -> 14
+	  9 -> 10
+	  10 -> 16
+	  11 -> 12
+	  12 -> 28
+	  13 -> 24
+	  15 -> 12
+	  16 -> 18
+	  16 -> 19
+	  17 -> 7
+	  18 -> 25
+	  20 -> 5
+	  21 -> 12
+	  22 -> 22
+	  23 -> 23
+	  24 -> 26
+	  24 -> 27
+	  25 -> 3
+	  26 -> 30
+	  27 -> 29
+	  28 -> 32
+	  29 -> 6
+	  30 -> 5
+	  31 -> 2
+	  31 -> 4
+	  31 -> 21
+	  31 -> 31
+}
+

@@ -1,0 +1,340 @@
+# INVENTORY / FRACTURED BULLET
+# By inspecting the bullet, you can find out that:
+1. The bullet came from a breech-loaded rifle.
+2. The bullet was shot from some distance, so this was probably not a mercy kill (white check.)
+3. The rifle used was a model mass-produced during the revolutionary war, and the surplus rifles/ammo are still a favourite with third-world guerrillas and Jamrock bangers.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: Wow, I actually *know* this..."];
+	  3 [label="You: \"Worth what? Getting shot?\""];
+	  4 [label="Esprit de Corps: Far away, Lieutenant Kitsuragi is flipping through stations in his Kineema. He is not here examining the bullet with you. He should be... he would find this very intriguing. Mention it to him, later when he's here."];
+	  5 [label="Interfacing: A jacketed bullet... which would have been shot from a military-grade breech-loading rifle, not from a muzzleloader like those typically found on the streets of Martinaise."];
+	  6 [label="Fractured Bullet: The squished little thing has no idea."];
+	  7 [label="Fractured Bullet: But bullets don't talk."];
+	  8 [label="Horrific Necktie: Yeah, what are you, *crazy*? Bullets can't talk. They don't have emotions. A bullet can't keep you company."];
+	  9 [label="Hand/Eye Coordination: A rifle. Revolutionary-period. Your bullet looks to be an old 4.46 mm -- from the surplus left over from the turn of the century. Probably an antique or a retrofitted antique."];
+	  10 [label="Fractured Bullet: Variable[\"inventory.fractured_look_jacket\"]  and  Variable[\"inventory.fractured_look_core\"]"];
+	  11 [label="Variable[\"inventory.fractured_look_jacket\"]  and  Variable[\"inventory.fractured_look_core\"]", shape=diamond];
+	  12 [label="!(Variable[\"inventory.fractured_look_jacket\"]  and  Variable[\"inventory.fractured_look_core\"])", shape=diamond];
+	  13 [label="lookhub"];
+	  14 [label="You: \"Makes you consider every shot. I like it.\""];
+	  15 [label="You: \"It's a jacketed bullet, close to 5 mm in diameter.\""];
+	  16 [label="You: \"Kim, take a look at this. It's a jacketed bullet close to 5 mm in diameter.\""];
+	  17 [label="Endurance: This is a real killer. Not some garbage street ammo. You can *feel* it."];
+	  18 [label="Endurance: We were right. This came from a serious weapon."];
+	  19 [label="Hand/Eye Coordination: Antiques enthusiasts, guerrilla fighters in distant countries, a few lucky Jamrock bangers. You're looking for the same thing you found in that hidden weapons cache -- only in working order."];
+	  20 [label="Jump to: [bulletmainhub]"];
+	  21 [label="You: \"Could the victim have been mixed up with some foreign guerrilla fighters?\""];
+	  22 [label="Kim Kitsuragi: \"What can you say about the bullet so far?\""];
+	  23 [label="You: Eat it!"];
+	  24 [label="Encyclopedia: Prohibiting peacetime law-enforcement to front loaded rifles is a policy enforced by the Moralist International in all the nations of the Reál Belt."];
+	  25 [label="Perception (Sight): The core is lead. The brass jacket probably didn't cover the entire bullet, otherwise the softer metal wouldn't have expanded quite like that."];
+	  26 [label="Kim Kitsuragi: \"But back to the investigation.\""];
+	  27 [label="Inland Empire: Beside his orderly handwriting, the bullet looks especially sad. Like a tiny, shrivelled head of cauliflower."];
+	  28 [label="find_the_gun_bro"];
+	  29 [label="You: It's my friend, I'm gonna start talking to it. It will keep me company."];
+	  30 [label="Inland Empire: Something tells you that won't be any time soon. This'll have to be one of those epic tasks that's open for a while..."];
+	  31 [label="You: \"I think I know where this came from.\" (Dangle the bag thoughtfully.)"];
+	  32 [label="You: Feel the bullet through the bag."];
+	  33 [label="Hand/Eye Coordination: The 4.46 calibre was widely used with the *Belle-Magrave* rifle, a Revacholian manufacturer. The B-M dominated the battlefields of the Insulindian theatre of the Antecentennial Revolution, 50 years ago."];
+	  34 [label="Fractured Bullet: IsKimHere()"];
+	  35 [label="IsKimHere()", shape=diamond];
+	  36 [label="!(IsKimHere())", shape=diamond];
+	  37 [label="Kim Kitsuragi: \"Some new RCM recruits get impatient with their muzzleloaders once they've trained with military-grade weapons, but they realize it's worth it, in the end.\""];
+	  38 [label="lookingforhub"];
+	  39 [label="You: \"I said: What do I do with you, bullet?\""];
+	  40 [label="Fractured Bullet: But the bullet is not edible, sadly."];
+	  41 [label="Visual Calculus: Then find the gun that shot it, and the person who that gun belongs to -- he used it to kill your victim. Neato!"];
+	  42 [label="You: The bullet has nothing more to say. [Put it away.]"];
+	  43 [label="Fractured Bullet: You can just about make out a few striations near the base of the bullet. Little hairlines, linear. It feels standard."];
+	  44 [label="You: \"Yes. Something *mysterious* is afoot with this antique bullet type.\""];
+	  45 [label="Fractured Bullet: Very interesting. You have an unusual, military-grade bullet in your hand. Now all you need is to find a gun that could fire it."];
+	  46 [label="Fractured Bullet: Yes. It's as if you've seen bullets before, officer."];
+	  47 [label="Fractured Bullet: Variable[\"inventory.fractured_esprit_kim\"]"];
+	  48 [label="Variable[\"inventory.fractured_esprit_kim\"]", shape=diamond];
+	  49 [label="!(Variable[\"inventory.fractured_esprit_kim\"])", shape=diamond];
+	  50 [label="Kim Kitsuragi: \"Doesn't seem *that* likely, but we'll check out all possible leads. Next step -- finding the gun itself.\""];
+	  51 [label="Hand/Eye Coordination: Incidentally, you have just such a rifle with you. The dusty old thing you found hidden in the basement below the commercial area. It's unusable, sadly. If it were, the bullet would *probably* fit the chamber."];
+	  52 [label="Fractured Bullet: IsKimHere()"];
+	  53 [label="IsKimHere()", shape=diamond];
+	  54 [label="!(IsKimHere())", shape=diamond];
+	  55 [label="Kim Kitsuragi: \"A jacketed bullet. Okay... It would have been shot from a military-grade breech-loading rifle, not from a muzzleloader like those typically found on the streets of Martinaise.\""];
+	  56 [label="Fractured Bullet: IsKimHere()"];
+	  57 [label="IsKimHere()", shape=diamond];
+	  58 [label="!(IsKimHere())", shape=diamond];
+	  59 [label="You: \"I don't know...\""];
+	  60 [label="Fractured Bullet: It's quite destroyed. Some of the fragments are still lodged in the wound."];
+	  61 [label="Kim Kitsuragi: He nods. \"I have to hand it to the monarchs -- it's quite admirable that they took the advice of criminologists last century and banned the use of breechloaders in peacetime.\""];
+	  62 [label="Fractured Bullet: Variable[\"inventory.fractured_interfacing_interesting_bullet\"]"];
+	  63 [label="Variable[\"inventory.fractured_interfacing_interesting_bullet\"]", shape=diamond];
+	  64 [label="!(Variable[\"inventory.fractured_interfacing_interesting_bullet\"])", shape=diamond];
+	  65 [label="Esprit de Corps: Back at the station, the lieutenant is standing at a counter, diligently filling out paperwork to hand over to a tired records clerk."];
+	  66 [label="Kim Kitsuragi: \"Hmm...\" The lieutenant jots something down in his notebook. \"What are you thinking? Bullet?\""];
+	  67 [label="You: \"Why not?\""];
+	  68 [label="Fractured Bullet: The bullet is still safely sealed away in a plastic bag bearing the RCM stamp."];
+	  69 [label="Jump to: [find_the_gun_bro]"];
+	  70 [label="You: Make?"];
+	  71 [label="Fractured Bullet: The bullet is safely sealed away in a plastic bag bearing the RCM stamp. Kim has filled out the label on the bag with the item number, case number, and date and location the bullet was found."];
+	  72 [label="Fractured Bullet: The squashed bullet has some sharp edges where the jacket has split open. It feels cold, even through the bag."];
+	  73 [label="Fractured Bullet: The jacket of the bullet is made of yellowish metal. It has blossomed out to reveal a dark grey core. The base of the bullet is close to 5 mm in diameter."];
+	  74 [label="Hand/Eye Coordination: You can't remember what happened last week -- what makes you think you're going to remember arcane firearm models?"];
+	  75 [label="Esprit de Corps: You should share your findings with him as soon as possible."];
+	  76 [label="You: And the core?"];
+	  77 [label="Jump to: [bulletmainhub]"];
+	  78 [label="Fractured Bullet: That sounds like something a police detective would do. First you should to learn all you can about this little guy!"];
+	  79 [label="You: Inspect the bullet closer."];
+	  80 [label="You: Try to determine what type of weapon shot this."];
+	  81 [label="You: Variable[\"inventory.fractured_encyc_white_check_succeeded\"]"];
+	  82 [label="Variable[\"inventory.fractured_encyc_white_check_succeeded\"]", shape=diamond];
+	  83 [label="!(Variable[\"inventory.fractured_encyc_white_check_succeeded\"])", shape=diamond];
+	  84 [label="You: \"The shot probably came from a Belle-Magrave rifle.\""];
+	  85 [label="Fractured Bullet: CheckItem(\"antique_rifle\")"];
+	  86 [label="CheckItem(\"antique_rifle\")", shape=diamond];
+	  87 [label="!(CheckItem(\"antique_rifle\"))", shape=diamond];
+	  88 [label="Jump to: [Kim Kitsuragi: \"\"A jacketed bullet. Okay... It woul...\"]"];
+	  89 [label="Visual Calculus: I know! You should find the gun that shot this bullet."];
+	  90 [label="You: Sell it for profit!"];
+	  91 [label="bulletmainhub"];
+	  92 [label="You: \"I mean... have some ideas, but I can't be sure...\""];
+	  93 [label="Kim Kitsuragi: \"You mean some turn-of-the-century surplus firearm?\""];
+	  94 [label="You: \"Seems we're looking for an antiques enthusiast.\""];
+	  95 [label="You: \"Have well-armed Jamrock bangers started crossing over into Martinaise?\""];
+	  96 [label="You: \"What do I do with you, bullet?\""];
+	  97 [label="Kim Kitsuragi: \"If we find who owns it, we will have likely found who *used* it -- possibly to kill our victim.\""];
+	  98 [label="Fractured Bullet: CheckItem(\"antique_rifle\")"];
+	  99 [label="CheckItem(\"antique_rifle\")", shape=diamond];
+	  100 [label="!(CheckItem(\"antique_rifle\"))", shape=diamond];
+	  101 [label="You: Wow, I actually *know* this..."];
+	  102 [label="Jump to: [bulletmainhub]"];
+	  103 [label="Kim Kitsuragi: \"Sure, there's some arms trafficking. But the laws prohibiting the use of breechloaders we inherited from the monarchy have been effective, from what I've seen.\""];
+	  104 [label="Fractured Bullet: Variable[\"inventory.fractured_viscal_find_the_gun\"]"];
+	  105 [label="Variable[\"inventory.fractured_viscal_find_the_gun\"]", shape=diamond];
+	  106 [label="!(Variable[\"inventory.fractured_viscal_find_the_gun\"])", shape=diamond];
+	  107 [label="Kim Kitsuragi: \"Okay. And?\""];
+	  108 [label="You: Who uses Belle-Magrave rifles these days?"];
+	  109 [label="You: \"Our stiff was killed by a jungle gun.\""];
+	  110 [label="You: \"I think we should have more *powerful* guns. We're the law!\""];
+	  111 [label="Kim Kitsuragi: \"Let's find out. Next step -- finding the gun itself.\""];
+	  112 [label="Kim Kitsuragi: \"Even the RCM uses ordinary unjacketed conical bullets. This is... strange. Very strange. I like this, officer. Strange means unique. Unique means incriminating. We need to find the gun that shot it.\""];
+	  113 [label="Kim Kitsuragi: \"In conclusion: the more we know about this bullet of yours, the better.\""];
+	  114 [label="You: Find the gun that shot it!"];
+	  115 [label="Fractured Bullet: Yes. It's as if you've seen bullets before, officer."];
+	  116 [label="Encyclopedia: You wouldn't ordinarily have cause to handle jacketed bullets. The Citizens Militia uses cast bullets only -- little pebbles of metal loaded from the muzzle, usually in a cartridge."];
+	  117 [label="dmrifle"];
+	  118 [label="You: \"That's probably a good thing.\""];
+	  119 [label="Jump to: [bulletmainhub]"];
+	  120 [label="Fractured Bullet: CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  121 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  122 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  123 [label="Fractured Bullet: Variable[\"inventory.fractured_encyc_white_check_succeeded\"]"];
+	  124 [label="Variable[\"inventory.fractured_encyc_white_check_succeeded\"]", shape=diamond];
+	  125 [label="!(Variable[\"inventory.fractured_encyc_white_check_succeeded\"])", shape=diamond];
+	  126 [label="Kim Kitsuragi: \"What's your best guess?\""];
+	  127 [label="Jump to: [bulletmainhub]"];
+	  128 [label="Fractured Bullet: Who would want this *used* bullet?"];
+	  129 [label="Encyclopedia: Highly unusual. The people of Revachol haven't carried breech-loading weapons like this for nearly half a century."];
+	  130 [label="You: Look at the jacket."];
+	  131 [label="Jump to: [lookhub]"];
+	  132 [label="You: \"Belle-Magrave rifle. The ammo points to it.\""];
+	  133 [label="Kim Kitsuragi: \"Imagine if everyone -- cops, citizens -- had access to firearms that could shoot multiple rounds without pausing to reload. After the first shot, the second, third, and so on -- come much easier.\""];
+	  134 [label="Interfacing: What's interesting about the bullet thus far?"];
+	  135 [label="Fractured Bullet: Variable[\"inventory.fractured_main_hub_reached\"]"];
+	  136 [label="Variable[\"inventory.fractured_main_hub_reached\"]", shape=diamond];
+	  137 [label="!(Variable[\"inventory.fractured_main_hub_reached\"])", shape=diamond];
+	  138 [label="Kim Kitsuragi: \"What?\" The lieutenant steps closer."];
+	  139 [label="Kim Kitsuragi: \"Mysterious?\" He shrugs. \"Okay. Either way, we'll know when we find the gun.\""];
+	  140 [label="Hand/Eye Coordination: Antiques enthusiasts, guerrilla fighters in distant countries, a few lucky Jamrock bangers. You're looking for a well-preserved antique, most likely."];
+	  141 [label="You: Is anyone still making these rifles?"];
+	  142 [label="Hand/Eye Coordination: No, but Zieleger, a major firearm manufacturer, ended up with a surplus after the war, so there are still a lot of these old military rifles floating around, usually broken. The quality was appalling."];
+	  143 [label="Kim Kitsuragi: \"An antique. That makes sense. There can't be many breech-loading rifles floating around in Martinaise, or anywhere in Revachol, really...\""];
+	  144 [label="You: It's a jacketed bullet close to 5 mm in diameter."];
+	  145 [label="Kim Kitsuragi: \"Well, if I was the bullet -- which I'm not -- I would say: find the weapon that shot me.\""];
+	  146 [label="You: \"Good idea.\""];
+	  147 [label="Jump to: [bulletmainhub]"];
+	  148 [label="Jump to: [bulletmainhub]"];
+	  0 -> 1
+	  1 -> 136
+	  2 -> 116
+	  3 -> 134
+	  4 -> 128
+	  5 -> 45
+	  6 -> 89
+	  7 -> 121
+	  8 -> 69
+	  9 -> 70
+	  10 -> 11
+	  10 -> 12
+	  11 -> 52
+	  12 -> 132
+	  13 -> 131
+	  13 -> 76
+	  14 -> 134
+	  15 -> 55
+	  16 -> 88
+	  17 -> 25
+	  18 -> 130
+	  19 -> 34
+	  20 -> 91
+	  21 -> 112
+	  22 -> 2
+	  22 -> 15
+	  23 -> 40
+	  24 -> 3
+	  24 -> 14
+	  24 -> 111
+	  25 -> 13
+	  26 -> 38
+	  27 -> 91
+	  28 -> 90
+	  28 -> 115
+	  28 -> 29
+	  28 -> 23
+	  29 -> 7
+	  30 -> 128
+	  31 -> 108
+	  32 -> 72
+	  33 -> 85
+	  34 -> 35
+	  34 -> 36
+	  35 -> 66
+	  36 -> 65
+	  37 -> 24
+	  38 -> 44
+	  38 -> 21
+	  38 -> 94
+	  38 -> 95
+	  39 -> 146
+	  40 -> 69
+	  41 -> 149
+	  43 -> 10
+	  44 -> 140
+	  45 -> 128
+	  46 -> 145
+	  47 -> 48
+	  47 -> 49
+	  48 -> 75
+	  49 -> 103
+	  50 -> 77
+	  51 -> 118
+	  52 -> 53
+	  52 -> 54
+	  53 -> 22
+	  54 -> 135
+	  55 -> 18
+	  56 -> 57
+	  56 -> 58
+	  57 -> 139
+	  58 -> 6
+	  59 -> 97
+	  60 -> 10
+	  61 -> 37
+	  62 -> 64
+	  62 -> 63
+	  63 -> 145
+	  63 -> 101
+	  64 -> 4
+	  65 -> 47
+	  66 -> 103
+	  67 -> 104
+	  68 -> 91
+	  69 -> 28
+	  70 -> 33
+	  71 -> 27
+	  72 -> 117
+	  73 -> 17
+	  74 -> 148
+	  75 -> 103
+	  76 -> 60
+	  77 -> 91
+	  78 -> 105
+	  79 -> 73
+	  80 -> 81
+	  81 -> 82
+	  81 -> 83
+	  82 -> 124
+	  83 -> 124
+	  84 -> 144
+	  85 -> 86
+	  85 -> 87
+	  86 -> 51
+	  87 -> 118
+	  88 -> 55
+	  89 -> 28
+	  90 -> 129
+	  91 -> 96
+	  91 -> 32
+	  91 -> 42
+	  91 -> 79
+	  91 -> 16
+	  91 -> 80
+	  91 -> 31
+	  92 -> 127
+	  93 -> 133
+	  94 -> 50
+	  95 -> 112
+	  96 -> 56
+	  97 -> 114
+	  98 -> 99
+	  98 -> 100
+	  99 -> 19
+	  100 -> 141
+	  101 -> 46
+	  102 -> 91
+	  103 -> 37
+	  104 -> 106
+	  104 -> 107
+	  105 -> 41
+	  106 -> 149
+	  107 -> 84
+	  107 -> 110
+	  107 -> 92
+	  108 -> 98
+	  109 -> 93
+	  110 -> 134
+	  111 -> 77
+	  112 -> 30
+	  113 -> 120
+	  114 -> 78
+	  115 -> 15
+	  116 -> 20
+	  117 -> 142
+	  118 -> 61
+	  119 -> 91
+	  120 -> 122
+	  120 -> 123
+	  121 -> 8
+	  122 -> 69
+	  123 -> 125
+	  123 -> 126
+	  124 -> 9
+	  125 -> 74
+	  126 -> 133
+	  127 -> 91
+	  128 -> 69
+	  129 -> 113
+	  130 -> 43
+	  131 -> 13
+	  132 -> 144
+	  133 -> 26
+	  134 -> 62
+	  135 -> 137
+	  135 -> 138
+	  136 -> 68
+	  137 -> 71
+	  138 -> 39
+	  139 -> 77
+	  140 -> 34
+	  141 -> 143
+	  142 -> 109
+	  143 -> 67
+	  143 -> 119
+	  144 -> 5
+	  145 -> 59
+	  145 -> 147
+	  146 -> 97
+	  147 -> 91
+	  148 -> 91
+}
+

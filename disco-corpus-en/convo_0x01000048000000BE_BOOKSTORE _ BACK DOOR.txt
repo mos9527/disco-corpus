@@ -1,0 +1,199 @@
+# BOOKSTORE / BACK DOOR
+# It's the back door of "Crime, Romance, and Biographies of Famous People". You can look at it, use a key object on it or try to force it open.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"Please don't cry, please don't cry...\" (Slap your face.) \"I don't want anyone to see me cry!\""];
+	  3 [label="Warded Door: After exerting some force you manage to turn the key. It's eerily silent. The door slides slightly open, letting a draft of cold air into the room."];
+	  4 [label="Shivers: Outside, the wind howls in from across the bay. The building at Rue de Saint-Ghislaine stands like a matchbox on its side, with men inside like little wooden sticks ready to catch fire."];
+	  5 [label="Physical Instrument: Walk it off, son! Stop wriggling like a maggot, it's nothing to worry about."];
+	  6 [label="Physical Instrument: That's right, take in your surroundings. You need to have a solid ground and a proper posture if you want to succeed."];
+	  7 [label="Pain Threshold: The door shudders with your impact. Hinges snap, panels crack, splinters fly by as you smash through, tumbling into the darkness ahead."];
+	  8 [label="Shivers: You feel the tiny hairs on the back of your neck rise up, as if someone's standing right behind you."];
+	  9 [label="Warded Door: It barely looks like you've done any damage to the door, however -- it's still locked and closed, covered in dozens of little charms and trinkets."];
+	  10 [label="Warded Door: Variable[\"tc.wards_plais\"]"];
+	  11 [label="Variable[\"tc.wards_plais\"]", shape=diamond];
+	  12 [label="!(Variable[\"tc.wards_plais\"])", shape=diamond];
+	  13 [label="electroshivers"];
+	  14 [label="Kim Kitsuragi: \"Detective, you're the one in charge.\" The lieutenant motions toward the door."];
+	  15 [label="Plaisance: \"What is going *on* there?!\" an upset, high-pitched voice calls out from the bookstore. \"Are you really trying to break down the back door?\""];
+	  16 [label="You: And what about the door?"];
+	  17 [label="You: \"Is that... Is that *blood* I'm seeing?\" (Rub your forehead.)"];
+	  18 [label="You: Smash into the door and shout: \"Welcome to Revachol!\""];
+	  19 [label="Kim Kitsuragi: \"You're not thinking of trying again, are you?\" The lieutenant stares at you as you stand there, silent and brooding."];
+	  20 [label="Kim Kitsuragi: \"Are you alright?\" The lieutenant steps closer, his eyes soft and worried. \"This looked... pretty intense and painful, I must admit.\""];
+	  21 [label="Plaisance: \"I warn you, don't tempt the spirits, officer!\" You can hear her take a frightened step backwards. \"Don't tempt the spirits or you'll damage the holy *wards* on the door!\""];
+	  22 [label="Physical Instrument: Steady breathing, solid core -- you've got this. With one shoulder forward you're ready to smash into the door like a battering ram."];
+	  23 [label="back door hub"];
+	  24 [label="Warded Door: Variable[\"doomed.bookstore_backdoor_redcheck_smash\"]"];
+	  25 [label="Variable[\"doomed.bookstore_backdoor_redcheck_smash\"]", shape=diamond];
+	  26 [label="!(Variable[\"doomed.bookstore_backdoor_redcheck_smash\"])", shape=diamond];
+	  27 [label="Half Light: An uneasy knot forms in the pit of your stomach..."];
+	  28 [label="You: Break down the door."];
+	  29 [label="You: Variable[\"doomed.bookstore_backdoor_redcheck_smash\"]"];
+	  30 [label="Variable[\"doomed.bookstore_backdoor_redcheck_smash\"]", shape=diamond];
+	  31 [label="!(Variable[\"doomed.bookstore_backdoor_redcheck_smash\"])", shape=diamond];
+	  32 [label="You: [Leave.]"];
+	  33 [label="You: Check your surroundings."];
+	  34 [label="Warded Door: IsTHCPresent(\"coach_physical_instrument\")"];
+	  35 [label="IsTHCPresent(\"coach_physical_instrument\")", shape=diamond];
+	  36 [label="!(IsTHCPresent(\"coach_physical_instrument\"))", shape=diamond];
+	  37 [label="Perception (Hearing): A hollowed out, dark echo..."];
+	  38 [label="You: Touch the back of your neck: What is this feeling?"];
+	  39 [label="You: Smash into the door again -- wordless."];
+	  40 [label="runhub"];
+	  41 [label="breakhub"];
+	  42 [label="You: Smash into the door and shout: \"Hands up, now!\""];
+	  43 [label="Warded Door: Variable[\"doomed.bookstore_backdoor_shivers\"]"];
+	  44 [label="Variable[\"doomed.bookstore_backdoor_shivers\"]", shape=diamond];
+	  45 [label="!(Variable[\"doomed.bookstore_backdoor_shivers\"])", shape=diamond];
+	  46 [label="You: \"Uh, Kim? Maybe you should go first...\""];
+	  47 [label="Warded Door: A heavy door with a missing handle stands before you, covered in dozens (if not hundreds) of Semenese trinkets and charms. It appears to be locked."];
+	  48 [label="Warded Door: Only an echo... No one is there."];
+	  49 [label="Physical Instrument: It's made of a solid block of wood, but it has stood there for ages -- the hinges are old and coated with a carmine layer of rust. It should be doable."];
+	  50 [label="You: Maybe I *should* break it down? But not before I strategize..."];
+	  51 [label="You: Smash into the door and shout: \"Fuck the system!\""];
+	  52 [label="Warded Door: A heavy door with a missing handle stands before you, covered in dozens (if not hundreds) of little oddly-shaped trinkets and charms. It appears to be locked."];
+	  53 [label="You: \"Oh god...\" (Try to breathe normally.) \"This really wasn't the best idea, was it...\""];
+	  54 [label="You: Unlock the door with the key."];
+	  55 [label="Jump to: [back door hub]"];
+	  56 [label="You: Smash into the door and shout: \"Freeze, dirtbags!\""];
+	  57 [label="Jump to: [back door hub]"];
+	  58 [label="Jump to: [breakhub]"];
+	  59 [label="Warded Door: CheckItem(\"key_bookstore_backdoor\")"];
+	  60 [label="CheckItem(\"key_bookstore_backdoor\")", shape=diamond];
+	  61 [label="!(CheckItem(\"key_bookstore_backdoor\"))", shape=diamond];
+	  62 [label="You: First -- check your posture."];
+	  63 [label="You: Knock on the door."];
+	  64 [label="Physical Instrument: What if... you just break it down?"];
+	  65 [label="noelectro"];
+	  66 [label="Plaisance: \"What are you doing, officer?!\" A voice rings from the other room. It sounds almost worried -- worried about your health."];
+	  67 [label="Shivers: A panicking woman squeezes the pendant around her neck until it leaves a mark inside her palm. A man, a few metres away, stands frozen with a key in his hand. Somewhere inside a spider is spinning its web."];
+	  68 [label="Warded Door: Variable[\"doomed.bookstore_backdoor_greeting_done\"]"];
+	  69 [label="Variable[\"doomed.bookstore_backdoor_greeting_done\"]", shape=diamond];
+	  70 [label="!(Variable[\"doomed.bookstore_backdoor_greeting_done\"])", shape=diamond];
+	  71 [label="You: Smash into the door and shout: \"Fuck, it hurts!\""];
+	  72 [label="Pain Threshold: You smash into the wood and see a small crack appear on the door frame. It's going to take one more try to break through to the other side, but you've done it..."];
+	  73 [label="itspainstop"];
+	  74 [label="Jump to: [back door hub]"];
+	  75 [label="You: \"I deserve this. My body deserves to suffer for being this *weak* and *disappointing*.\""];
+	  76 [label="Pain Threshold: Ow, shoot! Whose moronic idea was it to just *run through the door*? Don't you know that things like that *hurt*?!"];
+	  77 [label="Warded Door: IsKimHere()"];
+	  78 [label="IsKimHere()", shape=diamond];
+	  79 [label="!(IsKimHere())", shape=diamond];
+	  80 [label="You: [Open the door and enter.]"];
+	  81 [label="Warded Door: IsKimHere()"];
+	  82 [label="IsKimHere()", shape=diamond];
+	  83 [label="!(IsKimHere())", shape=diamond];
+	  84 [label="Physical Instrument: The room is dimly lit and littered with old barber shop rubbish, but the path to the door is clear."];
+	  0 -> 1
+	  1 -> 10
+	  2 -> 82
+	  3 -> 8
+	  4 -> 67
+	  5 -> 73
+	  6 -> 41
+	  8 -> 27
+	  9 -> 75
+	  10 -> 11
+	  10 -> 12
+	  11 -> 47
+	  12 -> 52
+	  13 -> 46
+	  13 -> 81
+	  13 -> 38
+	  14 -> 81
+	  15 -> 21
+	  16 -> 49
+	  17 -> 82
+	  18 -> 7
+	  19 -> 40
+	  20 -> 15
+	  21 -> 9
+	  22 -> 58
+	  23 -> 32
+	  23 -> 50
+	  23 -> 54
+	  23 -> 28
+	  23 -> 63
+	  24 -> 25
+	  24 -> 26
+	  25 -> 72
+	  26 -> 77
+	  27 -> 43
+	  28 -> 29
+	  29 -> 30
+	  29 -> 31
+	  30 -> 24
+	  31 -> 24
+	  33 -> 85
+	  34 -> 35
+	  34 -> 36
+	  35 -> 5
+	  36 -> 73
+	  37 -> 57
+	  38 -> 4
+	  39 -> 7
+	  40 -> 39
+	  40 -> 71
+	  40 -> 42
+	  40 -> 18
+	  40 -> 51
+	  40 -> 56
+	  41 -> 33
+	  41 -> 62
+	  42 -> 7
+	  43 -> 44
+	  43 -> 45
+	  44 -> 13
+	  45 -> 65
+	  46 -> 14
+	  47 -> 59
+	  48 -> 37
+	  49 -> 55
+	  50 -> 6
+	  51 -> 7
+	  52 -> 59
+	  53 -> 82
+	  54 -> 3
+	  55 -> 23
+	  56 -> 7
+	  57 -> 23
+	  58 -> 41
+	  59 -> 60
+	  59 -> 61
+	  60 -> 23
+	  61 -> 68
+	  62 -> 22
+	  63 -> 48
+	  64 -> 23
+	  65 -> 81
+	  65 -> 46
+	  66 -> 40
+	  67 -> 81
+	  67 -> 46
+	  68 -> 69
+	  68 -> 70
+	  69 -> 23
+	  70 -> 64
+	  71 -> 7
+	  72 -> 78
+	  73 -> 17
+	  73 -> 2
+	  73 -> 76
+	  73 -> 53
+	  74 -> 23
+	  75 -> 82
+	  76 -> 34
+	  77 -> 80
+	  77 -> 79
+	  78 -> 19
+	  79 -> 66
+	  81 -> 83
+	  81 -> 84
+	  82 -> 20
+	  83 -> 15
+	  84 -> 16
+}
+

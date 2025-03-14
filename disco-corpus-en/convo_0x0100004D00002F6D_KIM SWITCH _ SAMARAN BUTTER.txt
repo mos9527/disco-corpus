@@ -1,0 +1,154 @@
+# KIM SWITCH / SAMARAN BUTTER
+# Kim asks you what you think might have happened at the canal.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"Reckless traffic hooliganism.\""];
+	  3 [label="You: \"Some top-shelf shenanigans. I want to meet the driver and shake his hand.\""];
+	  4 [label="You: \"On second thought, maybe this doesn't really warrant an investigation.\" [Leave.]"];
+	  5 [label="whohub"];
+	  6 [label="Kim Kitsuragi: \"The traffic hooliganism? I hope not. Fortunately, we're not traffic cops. Should we get back to the murder?\""];
+	  7 [label="trafficcasehub"];
+	  8 [label="You: \"See, Kim, what happened here is -- the driver was a man whose wife was about to give birth...\""];
+	  9 [label="You: \"It had to be someone really cool and courageous.\""];
+	  10 [label="Esprit de Corps: I'm not expecting him to get far with this, the lieutenant consoles himself."];
+	  11 [label="Kim Kitsuragi: \"You're right.\" He straightens his back. \"Let's get back to the murder investigation.\""];
+	  12 [label="You: \"Actually, never mind, I need more evidence to come up with a list of suspects.\""];
+	  13 [label="You: \"Let's move on. We've learned all we can here.\" [Leave.]"];
+	  14 [label="Kim Kitsuragi: Variable[\"canal.kim_samaran_volition\"]"];
+	  15 [label="Variable[\"canal.kim_samaran_volition\"]", shape=diamond];
+	  16 [label="!(Variable[\"canal.kim_samaran_volition\"])", shape=diamond];
+	  17 [label="You: \"I believe it was a Linnea G22.\""];
+	  18 [label="You: \"I have no idea.\""];
+	  19 [label="Kim Kitsuragi: \"I suppose it's not really our job to figure that out.\""];
+	  20 [label="You: \"I don't care and it's not really our concern.\" [Leave.]"];
+	  21 [label="You: That's okay, I love shit stories."];
+	  22 [label="Conceptualization: Well, you're in luck, then."];
+	  23 [label="Kim Kitsuragi: \"I suppose that narrows it down somewhat. Fortunately, we're not traffic cops. Should we get back to the murder?\""];
+	  24 [label="You: Try to come up with a convincing explanation for the driver's actions."];
+	  25 [label="You: Variable[\"canal.canal_tires_red_check_boolean\"]"];
+	  26 [label="Variable[\"canal.canal_tires_red_check_boolean\"]", shape=diamond];
+	  27 [label="!(Variable[\"canal.canal_tires_red_check_boolean\"])", shape=diamond];
+	  28 [label="You: \"After quitting in frustration, he became a recluse, a ghost-driver, searching for death on the streets of Revachol, speeding...\""];
+	  29 [label="Authority: Shut *down*."];
+	  30 [label="Kim Kitsuragi: He seems impressed. \"That's quite likely, from what I can tell.\""];
+	  31 [label="Jump to: [trafficcasehub]"];
+	  32 [label="You: \"It was someone dangerous. Perhaps this is somehow *connected* to the murder?\""];
+	  33 [label="Kim Kitsuragi: \"We're not traffic cops. Should we get back to the murder?\""];
+	  34 [label="Kim Kitsuragi: Variable[\"canal.canal_tires_red_check_boolean\"]"];
+	  35 [label="Variable[\"canal.canal_tires_red_check_boolean\"]", shape=diamond];
+	  36 [label="!(Variable[\"canal.canal_tires_red_check_boolean\"])", shape=diamond];
+	  37 [label="Conceptualization: Somewhere in the depths of your alcohol-addled soul, you find a few threads that you can weave into a story."];
+	  38 [label="Kim Kitsuragi: \"What kind of car do you think it was?\""];
+	  39 [label="Kim Kitsuragi: He raises his eyebrows. \"Oh?\""];
+	  40 [label="carmodelhub"];
+	  41 [label="You: \"I have some ideas about who it might have been.\""];
+	  42 [label="Kim Kitsuragi: \"In conclusion -- it's a colourful theory, but I don't believe Jacob Irw did this. Should we go?\""];
+	  43 [label="You: \"I think it was a Coupris 40.\""];
+	  44 [label="You: \"It looks like someone was in a real hurry.\""];
+	  45 [label="You: \"He was out drinking with his pals when he got the news, and, flushed with paternal pride, he got into his Coupris at once and raced to the clinic...\""];
+	  46 [label="Kim Kitsuragi: He sighs. \"If we must.\""];
+	  47 [label="Kim Kitsuragi: \"The TipTop Tournée champion?\""];
+	  48 [label="You: \"Yeah, I have no idea. Who could it have been?\""];
+	  49 [label="Kim Kitsuragi: The lieutenant shrugs. \"We're not traffic cops. Should we get back to the murder?\""];
+	  50 [label="Kim Kitsuragi: \"Yes, yes, that could very well have been it. Now let's move on. We're not traffic cops.\""];
+	  51 [label="Conceptualization: You've thought of a very touching story. It's shit, though."];
+	  52 [label="You: \"No, we need to find this Jacob Irw before tragedy strikes.\" (Take the task.)"];
+	  53 [label="Jump to: [trafficcasehub]"];
+	  54 [label="Kim Kitsuragi: \"... jumping canals at night?\" He interrupts you. \"If I was Jacob Irw I wouldn't drive in *Martinaise*. The roads are awful.\""];
+	  55 [label="Kim Kitsuragi: The lieutenant patiently listens to the words coming from your mouth."];
+	  56 [label="You: \"We should bring this driver to justice.\" (Take the task.)"];
+	  57 [label="Kim Kitsuragi: Variable[\"canal.samaran_vis_calc_vehicle\"]"];
+	  58 [label="Variable[\"canal.samaran_vis_calc_vehicle\"]", shape=diamond];
+	  59 [label="!(Variable[\"canal.samaran_vis_calc_vehicle\"])", shape=diamond];
+	  60 [label="You: Maybe I shouldn't tell it if it's shit."];
+	  61 [label="Conceptualization: Yes, this is good, this is very good."];
+	  62 [label="Conceptualization: Nope, you're already telling it."];
+	  63 [label="Volition: The urge is strong, but you are stronger."];
+	  64 [label="canalsignswitch"];
+	  65 [label="You: \"After the untimely death of dear friend and fellow racer Alfie Deletraz at Fjordhammer, Jacob Irw was desperately chasing death on the race track -- but death *eluded* him.\""];
+	  66 [label="Rhetoric: No, it's shit."];
+	  67 [label="You: \"This could have only been...\" (Pause dramatically.) \"... Jacob Irw.\""];
+	  0 -> 1
+	  1 -> 64
+	  2 -> 38
+	  3 -> 38
+	  5 -> 48
+	  5 -> 41
+	  6 -> 7
+	  7 -> 4
+	  7 -> 13
+	  7 -> 52
+	  7 -> 24
+	  7 -> 56
+	  8 -> 61
+	  9 -> 23
+	  12 -> 33
+	  14 -> 16
+	  14 -> 15
+	  15 -> 31
+	  16 -> 8
+	  17 -> 30
+	  18 -> 19
+	  19 -> 5
+	  20 -> 11
+	  21 -> 22
+	  22 -> 8
+	  23 -> 7
+	  24 -> 25
+	  25 -> 26
+	  25 -> 27
+	  26 -> 34
+	  27 -> 34
+	  28 -> 54
+	  29 -> 42
+	  30 -> 5
+	  31 -> 7
+	  32 -> 6
+	  33 -> 7
+	  34 -> 35
+	  34 -> 36
+	  35 -> 37
+	  36 -> 51
+	  37 -> 67
+	  38 -> 57
+	  39 -> 32
+	  39 -> 9
+	  39 -> 12
+	  40 -> 17
+	  40 -> 43
+	  41 -> 39
+	  42 -> 53
+	  43 -> 30
+	  44 -> 38
+	  45 -> 50
+	  46 -> 10
+	  47 -> 65
+	  48 -> 49
+	  49 -> 7
+	  50 -> 53
+	  51 -> 60
+	  51 -> 21
+	  52 -> 46
+	  53 -> 7
+	  54 -> 29
+	  55 -> 28
+	  56 -> 46
+	  57 -> 58
+	  57 -> 59
+	  58 -> 40
+	  59 -> 18
+	  60 -> 62
+	  61 -> 66
+	  62 -> 63
+	  63 -> 14
+	  64 -> 2
+	  64 -> 3
+	  64 -> 44
+	  64 -> 20
+	  65 -> 55
+	  66 -> 45
+	  67 -> 47
+}
+

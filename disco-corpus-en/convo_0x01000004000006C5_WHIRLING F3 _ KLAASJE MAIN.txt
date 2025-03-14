@@ -1,0 +1,2462 @@
+# WHIRLING F3 / KLAASJE MAIN
+# Meeting Klaasje again, on the roof
+0) Intro
+1) Your name and 
+2) why u here? (orbs and drugs from room) 
+3) Wildflower
+5) did you hear me night before / last time we saw
+6) Looking for Ruby
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Empathy: That must be her tell: the cigarette. It hurts her to look directly at the corpse so she reverts her gaze to you."];
+	  3 [label="Physical Instrument: No need to dilly-dally. She's tough."];
+	  4 [label="Klaasje (Miss Oranje Disco Dancer): \"I can see that.\" She nods. \"I'm glad all this *onward going* has brought you to me.\""];
+	  5 [label="Klaasje (Miss Oranje Disco Dancer): \"It's okay, it's absolutely okay to be that.\" She nods compassionately. \"What is this about, officers?\""];
+	  6 [label="You: \"No. Not wow.\" (Lean in.) \"I am the most boring cop in the world now. Nothing like *that* will ever happen again.\""];
+	  7 [label="Klaasje (Miss Oranje Disco Dancer): \"I very much doubt that. What brings this *so-called* boring cop back to me?\""];
+	  8 [label="Klaasje (Miss Oranje Disco Dancer): \"Wow...\" Vapour rises from her coffee cup. \"Can it be stopped? And if not, what are we to do with the time left?\""];
+	  9 [label="Klaasje (Miss Oranje Disco Dancer): IsTHCPresent(\"coach_physical_instrument\")"];
+	  10 [label="IsTHCPresent(\"coach_physical_instrument\")", shape=diamond];
+	  11 [label="!(IsTHCPresent(\"coach_physical_instrument\"))", shape=diamond];
+	  12 [label="Jump to: [whirling.kim_klaasje_said_one_thing]"];
+	  13 [label="Jump to: [You: \"\"Back to you.\"\"]"];
+	  14 [label="You: \"So you were the most beautiful?\""];
+	  15 [label="Klaasje (Miss Oranje Disco Dancer): \"It's okay. This is just him being a scintillating wordsmith. I'm used to it.\""];
+	  16 [label="Jump to: [name hub]"];
+	  17 [label="You: \"I'm pretty sure I have the legal right to demand your passport, miss.\""];
+	  18 [label="Kim Kitsuragi: \"Why else?\" He's suddenly very attentive."];
+	  19 [label="Klaasje (Miss Oranje Disco Dancer): \"I'm an unpopular girl.\" She takes a drag. \"There are people back home who don't like me -- if they show up, I'm in a *hurry*.\""];
+	  20 [label="Klaasje (Miss Oranje Disco Dancer): \"I would *love* to change the subject. It's not important. Unless I'm some kind of... suspect?\" She arches an eyebrow."];
+	  21 [label="Drama: She seems to be telling the truth, sire."];
+	  22 [label="Composure: If any of this made her nervous, it certainly doesn't show in her expression or her movements."];
+	  23 [label="You: \"What are you doing here -- in the Whirling-in-Rags?\""];
+	  24 [label="Empathy: That *yeah* is the kind that consoles and sweeps under the rug at the same time."];
+	  25 [label="You: \"Doesn't feel like love at all.\""];
+	  26 [label="Klaasje (Miss Oranje Disco Dancer): \"Are you sure? Love is *terror*...\" She breathes in a large billow of menthol-infused smoke, savours it, then lets it out slowly."];
+	  27 [label="Jump to: [room hub]"];
+	  28 [label="You: \"Understood.\""];
+	  29 [label="Jump to: [You: \"\"Understood.\"\"]"];
+	  30 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_reaction_window_followup\"]"];
+	  31 [label="Variable[\"whirling.klaasje_reaction_window_followup\"]", shape=diamond];
+	  32 [label="!(Variable[\"whirling.klaasje_reaction_window_followup\"])", shape=diamond];
+	  33 [label="You: \"When was it changed? During your stay?\""];
+	  34 [label="Klaasje (Miss Oranje Disco Dancer): She nods, inspecting your sideburns. \"You've got it bad as it is.\""];
+	  35 [label="You: \"Then tell the truth.\""];
+	  36 [label="Half Light: She feels like quarry, encircled... Her eyes dart to the door."];
+	  37 [label="You: \"It could be connected.\""];
+	  38 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"auto.is_raining\"]"];
+	  39 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  40 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  41 [label="Klaasje (Miss Oranje Disco Dancer): \"For my *sins* of course. The long standing sins of a bad, frivolous person.\""];
+	  42 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"TASK.send_corpse_to_processing_done\"]"];
+	  43 [label="Variable[\"TASK.send_corpse_to_processing_done\"]", shape=diamond];
+	  44 [label="!(Variable[\"TASK.send_corpse_to_processing_done\"])", shape=diamond];
+	  45 [label="Jump to: [whirling.klaasje_full_story_hub_reached]"];
+	  46 [label="You: \"Can you tell me more about Lely, the hanged man? My partner needs to hear this.\""];
+	  47 [label="Klaasje (Miss Oranje Disco Dancer): Her eyes widen. \"Oh...\""];
+	  48 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  49 [label="IsKimHere()", shape=diamond];
+	  50 [label="!(IsKimHere())", shape=diamond];
+	  51 [label="You: \"Did you take the documents?\""];
+	  52 [label="Jump to: [Klaasje MAIN]"];
+	  53 [label="Jump to: [TASK.fridge_victims_body_done || TAS ...]"];
+	  54 [label="Jump to: [Untitled hub]"];
+	  55 [label="Klaasje (Miss Oranje Disco Dancer): \"With money, sir.\" She takes a drag. \"It's not exactly the Antistar-sized caboodle I intend for it to be one day, but it's getting there.\""];
+	  56 [label="Klaasje (Miss Oranje Disco Dancer): \"Sure,\" she smiles. \"Onto where?\""];
+	  57 [label="narcohub"];
+	  58 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  59 [label="IsKimHere()", shape=diamond];
+	  60 [label="!(IsKimHere())", shape=diamond];
+	  61 [label="Klaasje (Miss Oranje Disco Dancer): \"Good luck, officer.\""];
+	  62 [label="Half Light: Now she's trapped here, in the cage -- just like you."];
+	  63 [label="Untitled hub (03)"];
+	  64 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasjeone_copotype_apocalypse_days\"]"];
+	  65 [label="Variable[\"whirling.klaasjeone_copotype_apocalypse_days\"]", shape=diamond];
+	  66 [label="!(Variable[\"whirling.klaasjeone_copotype_apocalypse_days\"])", shape=diamond];
+	  67 [label="You: \"There are vortices of dark energy present, but not to Hell -- to another place. A *third* place, much different from our world.\""];
+	  68 [label="Composure: She tries to look indifferent, but still has to take a drag of her cigarette -- so as not to flinch."];
+	  69 [label="Klaasje (Miss Oranje Disco Dancer): \"It's much nicer now.\" Her eyes wander north, toward the yard..."];
+	  70 [label="Empathy: This does not come as good news to him."];
+	  71 [label="You: \"I've found something more *downbeat* for my next appearance.\" (Whip out the tape of \"Smallest Church\")"];
+	  72 [label="Klaasje (Miss Oranje Disco Dancer): \"Ah, I see.\" She takes a pensive drag of her menthol cigarette."];
+	  73 [label="Klaasje (Miss Oranje Disco Dancer): \"That's the one! The Small Sad Church Song! I've missed it, I really have.\""];
+	  74 [label="Conceptualization: We'll show him. You'll tear it up ALL the styles!"];
+	  75 [label="Jump to: [TASK.fridge_victims_body_done || TAS ...]"];
+	  76 [label="Endurance: No. She reached the end of her elasticity about two months ago -- from here on out, every chip and knick and blow stays in there somewhere."];
+	  77 [label="Authority: Do *not* go along with this."];
+	  78 [label="Endurance: Why not? You're a powerhouse."];
+	  79 [label="Physical Instrument: Doesn't matter! The flow of events is already passing you by! The woman said something, now the man's saying something... KEEP YOUR HEAD IN THE GAME, SON!"];
+	  80 [label="Klaasje (Miss Oranje Disco Dancer): \"Officer.\" She nods to you in greeting. \"It's a fine day for questions.\""];
+	  81 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasjeone_encyclo_oranjese_klaasje\"]"];
+	  82 [label="Variable[\"whirling.klaasjeone_encyclo_oranjese_klaasje\"]", shape=diamond];
+	  83 [label="!(Variable[\"whirling.klaasjeone_encyclo_oranjese_klaasje\"])", shape=diamond];
+	  84 [label="Esprit de Corps: Wanna hear what's stupid? Somewhere in a one room apartment on Boogie Street a young man shows Patrol Officer Tillbrook his genital warts, asking if they're *cancer*."];
+	  85 [label="You: \"Revacholian literature too?\""];
+	  86 [label="Klaasje (Miss Oranje Disco Dancer): \"Cool.\" She looks at the white cents in your hand. \"I've made more money by just *being* than I have with Oranjese lit.\""];
+	  87 [label="You: \"What is Miss Oranje '37?\""];
+	  88 [label="Logic: She was 14 at the time."];
+	  89 [label="Klaasje (Miss Oranje Disco Dancer): \"Well-well.\" She leans back. \"It seems I either underestimated you -- or overestimated your hangover, officer.\""];
+	  90 [label="You: \"No, that was *sincere*.\""];
+	  91 [label="Klaasje (Miss Oranje Disco Dancer): \"No, I'm not.\" She waves you off."];
+	  92 [label="You: \"I hate objects. I am part of the Anti-Object Task Force.\""];
+	  93 [label="You: \"It's a feeling. White and filled with doom. Gaseous. Invisible. Deadly. It's everywhere.\""];
+	  94 [label="Klaasje (Miss Oranje Disco Dancer): \"I always wanted to see 'The Only City in the World' in the worst time of the year. It's a tourist thing.\""];
+	  95 [label="Klaasje (Miss Oranje Disco Dancer): \"It is.\" She moves slightly to your left to check her reflection in it."];
+	  96 [label="Rhetoric: Question avoided. Let's conclude that she has admirers. Plenty of them."];
+	  97 [label="You: \"There's a peep hole on the other side, looking into your bedroom.\""];
+	  98 [label="Klaasje (Miss Oranje Disco Dancer): \"Okay...\" There's a pause as she processes this information."];
+	  99 [label="Klaasje (Miss Oranje Disco Dancer): \"I did not.\" She takes a drag of her cigarette. \"Do you think this has something to do with what happened?\""];
+	  100 [label="Kim Kitsuragi: \"Yes. Looking into your bedroom, miss.\" The lieutenant points to her window. The unmade bed is visible through the glass."];
+	  101 [label="You: \"Let's not discuss it any longer.\""];
+	  102 [label="Jump to: [won_won_lost]"];
+	  103 [label="Drama: Pff... It's surely an act. Ask questions. Tough ones, preferably."];
+	  104 [label="You: \"I'm afraid you may be in danger.\""];
+	  105 [label="Klaasje (Miss Oranje Disco Dancer): She thinks for a moment, then shrugs. \"Yes, I am -- regardless of who took the documents.\""];
+	  106 [label="You: \"I'll file this under a *theft* of some kind.\""];
+	  107 [label="Klaasje (Miss Oranje Disco Dancer): \"You mentioned sea water? I was worried I'd been too careless with the latch. The documents were probably,\" she waves her cigarette, \"just washed away...\""];
+	  108 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"TASK.what_happened_between_klaasje_and_hanged_done\"]"];
+	  109 [label="Variable[\"TASK.what_happened_between_klaasje_and_hanged_done\"]", shape=diamond];
+	  110 [label="!(Variable[\"TASK.what_happened_between_klaasje_and_hanged_done\"])", shape=diamond];
+	  111 [label="Electrochemistry: Miss Oranje? Now there is something you should *linger* on."];
+	  112 [label="Jump to: [whirling.klaasje_concept_funky]"];
+	  113 [label="Klaasje (Miss Oranje Disco Dancer): \"Best of luck to you, officers.\""];
+	  114 [label="You: \"Ruby is definitely not at her old crash pad anymore.\""];
+	  115 [label="Jump to: [You: \"\"Now that Kim isn't here -- let's t...\"]"];
+	  116 [label="Jump to: [Klaasje MAIN]"];
+	  117 [label="You: \"Nice view you've got here.\""];
+	  118 [label="Physical Instrument: ...then toned over several years of self-defence training. You can sense it in the sharp pointing of her elbows."];
+	  119 [label="Klaasje (Miss Oranje Disco Dancer): \"Have I ever... This is the fabled Cop of the Apocalypse.\""];
+	  120 [label="klaasje pre hub"];
+	  121 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasjeone_copotype_superstar\"]"];
+	  122 [label="Variable[\"whirling.klaasjeone_copotype_superstar\"]", shape=diamond];
+	  123 [label="!(Variable[\"whirling.klaasjeone_copotype_superstar\"])", shape=diamond];
+	  124 [label="Klaasje (Miss Oranje Disco Dancer): \"I can see that.\" She takes a sip. \"It suits you.\""];
+	  125 [label="You: \"You have? Why?\""];
+	  126 [label="Klaasje (Miss Oranje Disco Dancer): \"The Small Sad Church Song tells it like it is, detective -- *sad*.\""];
+	  127 [label="You: \"I would like to withdraw the comment I made earlier. Given the situation we find ourselves in now, it seems out of place.\""];
+	  128 [label="You: \"Say nothing.\""];
+	  129 [label="Klaasje (Miss Oranje Disco Dancer): \"Wow.\" She turns to the lieutenant. \"What brings *The Phoenix* back to me?\""];
+	  130 [label="You: \"I'm disappointed it's dragging out like this. What a farce...\" (Look around.)"];
+	  131 [label="Klaasje (Miss Oranje Disco Dancer): \"Yeah, man.\" Her face wrinkles into a rock 'n' roll smile."];
+	  132 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_physinst_gym_teacher\"]"];
+	  133 [label="Variable[\"whirling.klaasje_physinst_gym_teacher\"]", shape=diamond];
+	  134 [label="!(Variable[\"whirling.klaasje_physinst_gym_teacher\"])", shape=diamond];
+	  135 [label="Klaasje (Miss Oranje Disco Dancer): \"Of lilacs and lightning.\" She squints her eyes as if to see them in the distance. \"Parks, glass, duraluminium -- Vredefort is a conference city. It's always autumn there. And night. At least it was for me.\""];
+	  136 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_empathy_did_something_wrong_in_oranje\"]"];
+	  137 [label="Variable[\"whirling.klaasje_empathy_did_something_wrong_in_oranje\"]", shape=diamond];
+	  138 [label="!(Variable[\"whirling.klaasje_empathy_did_something_wrong_in_oranje\"])", shape=diamond];
+	  139 [label="Klaasje (Miss Oranje Disco Dancer): \"That's just a phase the Revacholian hero goes through...\" She breathes in the menthol-flavoured fumes, savouring it..."];
+	  140 [label="You: \"Back to you.\""];
+	  141 [label="You: \"What is a beauty pageant?\""];
+	  142 [label="Klaasje (Miss Oranje Disco Dancer): \"It's a competition.\" She takes a drag. \"For stupid girls. Men look at them and choose the most beautiful.\""];
+	  143 [label="Rhetoric: Another innocent tradition bulldozed by the march of ethical *progress*!"];
+	  144 [label="You: \"No. I've just come to talk.\""];
+	  145 [label="Klaasje (Miss Oranje Disco Dancer): \"Not too hard. You told us about the investigation Friday night. Downstairs. At a table full of local kids and dockworkers. You told pretty much everyone. After you showed them your gun...\""];
+	  146 [label="Klaasje (Miss Oranje Disco Dancer): \"Whooh...\" She wipes her brow."];
+	  147 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_intro_cleaning_done\"]"];
+	  148 [label="Variable[\"whirling.klaasje_intro_cleaning_done\"]", shape=diamond];
+	  149 [label="!(Variable[\"whirling.klaasje_intro_cleaning_done\"])", shape=diamond];
+	  150 [label="Klaasje (Miss Oranje Disco Dancer): \"That's pretty hard core,\" she nods. \"I'm part of the Anti-Human Task Force myself.\""];
+	  151 [label="You: (Nod.) \"Anyway.\""];
+	  152 [label="Rhetoric: This is by far not the only reason she's here -- and she isn't really hiding it, either."];
+	  153 [label="Reaction Speed: An evasive manoeuvre. Ask a follow up!"];
+	  154 [label="Klaasje (Miss Oranje Disco Dancer): \"Yeah... I'm trying not to lie to you here. Stop making it hard.\""];
+	  155 [label="Jump to: [room hub]"];
+	  156 [label="You: \"Okay then -- I'll cut you some slack.\""];
+	  157 [label="Klaasje (Miss Oranje Disco Dancer): \"The truth is I'm a horrible girl. Windows break around me. It's not their fault.\""];
+	  158 [label="Klaasje (Miss Oranje Disco Dancer): \"I really don't know, sir.\" She takes a sip of her cold coffee. \"I certainly don't *feel* like I've won. I feel like shit, sir. All the time.\""];
+	  159 [label="You: \"That's it then, I guess.\" (Conclude.)"];
+	  160 [label="You: \"It all seems fortuitous -- for you.\""];
+	  161 [label="You: \"Does that happen to you often?\""];
+	  162 [label="Encyclopedia: The Antistar is (or was) a Vespertine rock and roll star, who liked to do drugs. He did so many drugs he eventually mutated -- into a corpse."];
+	  163 [label="You: \"It's a word. Let's get on with it.\""];
+	  164 [label="Reaction Speed: There may be more to this *mystery* -- at some later time. She's holding back. Let's make a mental note for now."];
+	  165 [label="You: \"If it was recent, who do you think made it -- Ruby?\""];
+	  166 [label="Kim Kitsuragi: \"...At any rate, the suspect isn't there anymore.\""];
+	  167 [label="Klaasje (Miss Oranje Disco Dancer): \"I really don't know what to tell you...\""];
+	  168 [label="Klaasje (Miss Oranje Disco Dancer): \"Now, I'm no expert on cops, but that sounds like one special police officer to me.\""];
+	  169 [label="You: \"Now that Kim isn't here -- let's talk about Sunday night.\""];
+	  170 [label="Kim Kitsuragi: The lieutenant gives you a little look."];
+	  171 [label="Untitled hub (02)"];
+	  172 [label="You: \"Know that I am no longer the Cop of the Apocalypse. The prophecy was wrong. The signs meant nothing. The hangover has passed.\""];
+	  173 [label="Klaasje (Miss Oranje Disco Dancer): \"Nice? I don't know about that, officer...\" She looks north, toward the yard."];
+	  174 [label="Klaasje (Miss Oranje Disco Dancer): \"Like riding a 'copocycle.'\" She takes a sip of her coffee."];
+	  175 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_physinst_dont_dillydally\"]"];
+	  176 [label="Variable[\"whirling.klaasje_physinst_dont_dillydally\"]", shape=diamond];
+	  177 [label="!(Variable[\"whirling.klaasje_physinst_dont_dillydally\"])", shape=diamond];
+	  178 [label="You: \"You ain't seen nothing yet. There's a *karaoke* stage downstairs.\""];
+	  179 [label="Klaasje (Miss Oranje Disco Dancer): She tilts her head to the side and smiles. Vapour rises from her coffee cup."];
+	  180 [label="Klaasje (Miss Oranje Disco Dancer): \"A penitent cop-monk...\" she says to herself. \"What brings this *changed man* to me?\""];
+	  181 [label="Klaasje (Miss Oranje Disco Dancer): \"Wow, there are *copotypes*...\" Vapour rises from the coffee cup in her hand."];
+	  182 [label="Reaction Speed: The victim's ethnicity *could* have been Oranjese... -- something for later?"];
+	  183 [label="Rhetoric: Thankfully -- it's implied."];
+	  184 [label="Klaasje (Miss Oranje Disco Dancer): \"It's not very cool, but what can you do?\""];
+	  185 [label="You: (Lower your thumb.) \"I disapprove of this custom.\""];
+	  186 [label="Klaasje (Miss Oranje Disco Dancer): \"It's okay, he's just getting his bearings. The world of beauty pageants *is* bewildering.\""];
+	  187 [label="You: \"Why?\""];
+	  188 [label="You: \"How do I know you've told us your real name?\""];
+	  189 [label="You: \"Not yet.\""];
+	  190 [label="You: \"You might be.\""];
+	  191 [label="Jump to: [passport]"];
+	  192 [label="You: \"What exactly is the nature of this 'Contamination'?\""];
+	  193 [label="Inland Empire: Somewhere below, military-grade Sad is dripping off the walls... you should say the first thing. It's honest. It will lead to introspection."];
+	  194 [label="Klaasje (Miss Oranje Disco Dancer): \"Sounds like an advanced form of what I've got. With a bit of old love sprinkled on top.\""];
+	  195 [label="Jump to: [room hub]"];
+	  196 [label="Klaasje (Miss Oranje Disco Dancer): \"Huh. This isn't good.\""];
+	  197 [label="peep_whirling"];
+	  198 [label="You: \"Looking into your bedroom, miss.\""];
+	  199 [label="Klaasje (Miss Oranje Disco Dancer): \"Do you think this is somehow *connected* to me?\""];
+	  200 [label="Jump to: [recent_jump]"];
+	  201 [label="You: \"You're right.\""];
+	  202 [label="You: \"The dried flowers on the roof -- could Ruby have left them? These don't fit with anything.\""];
+	  203 [label="You: \"Yes.\""];
+	  204 [label="Jump to: [whirling.klaasje_suggestion_been_thr ...]"];
+	  205 [label="Klaasje (Miss Oranje Disco Dancer): \"It's mostly about the lack of cleaning services. And an abundance of *me*.\""];
+	  206 [label="Klaasje (Miss Oranje Disco Dancer): She laughs: \"There it is again -- man of *words*. I can appreciate that.\""];
+	  207 [label="You: \"Yes, I know about the *crash pad*. Even spoke to the land lady. But Ruby's not there anymore.\""];
+	  208 [label="Jump to: [Klaasje MAIN]"];
+	  209 [label="Klaasje (Miss Oranje Disco Dancer): \"That doesn't surprise me... She's careful. But -- before you ask -- I really have no clue where she could've gone.\""];
+	  210 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"XP.detect_compromized_skillset\"]"];
+	  211 [label="Variable[\"XP.detect_compromized_skillset\"]", shape=diamond];
+	  212 [label="!(Variable[\"XP.detect_compromized_skillset\"])", shape=diamond];
+	  213 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasjeone_empathy_sadness\"]"];
+	  214 [label="Variable[\"whirling.klaasjeone_empathy_sadness\"]", shape=diamond];
+	  215 [label="!(Variable[\"whirling.klaasjeone_empathy_sadness\"])", shape=diamond];
+	  216 [label="Empathy: There is something in her light brown eyes... a sadness. When she thinks about the death of that man."];
+	  217 [label="You: \"Hell? You know not of which you speak!\""];
+	  218 [label="Klaasje (Miss Oranje Disco Dancer): \"I know.\" She smiles with her eyebrows. \"That's *probably* also why the cleaning lady quit.\""];
+	  219 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_comp_flinch_drag\"]"];
+	  220 [label="Variable[\"whirling.klaasje_comp_flinch_drag\"]", shape=diamond];
+	  221 [label="!(Variable[\"whirling.klaasje_comp_flinch_drag\"])", shape=diamond];
+	  222 [label="Physical Instrument: YOU'LL SOUND LIKE A NAMBY-PAMBY!"];
+	  223 [label="Klaasje (Miss Oranje Disco Dancer): \"Wow...\" She shakes her head in silent disbelief, breathing in the coffee smell."];
+	  224 [label="You: \"Johnny Law is about to tear it up. Sad-style.\""];
+	  225 [label="You: \"Yes. *Wow*.\" (Lean in.) \"I am now a herald of the Planetary Slaughterhouse. The Abattoir To Come.\""];
+	  226 [label="You: \"Know that I am no longer the Cop of the Apocalypse. The prophecy was wrong. The signs meant nothing. The hangover has passed.\""];
+	  227 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_run_inland_how_can_you\"]"];
+	  228 [label="Variable[\"whirling.klaasje_run_inland_how_can_you\"]", shape=diamond];
+	  229 [label="!(Variable[\"whirling.klaasje_run_inland_how_can_you\"])", shape=diamond];
+	  230 [label="Physical Instrument: It's about DEDICATION, son. That and you're *probably* a gym teacher. Only a former gym teacher can think these thoughts and drink so much."];
+	  231 [label="Jump to: [Klaasje MAIN]"];
+	  232 [label="Klaasje (Miss Oranje Disco Dancer): \"A bad memory, officer.\""];
+	  233 [label="You: \"What's that?\""];
+	  234 [label="You: \"I have no intention of doing that.\""];
+	  235 [label="Klaasje (Miss Oranje Disco Dancer): \"That's the natural state of the Revacholian hero...\" She breathes in the menthol flavoured fumes, savouring it -- then breathes out."];
+	  236 [label="Klaasje (Miss Oranje Disco Dancer): ...then breathes out. \"Before they plunge into full-core humanity- and world-saving.\""];
+	  237 [label="Conceptualization: What about Revacholian literature? People sometimes reveal things about themselves when they discuss such matters..."];
+	  238 [label="Jump to: [name hub]"];
+	  239 [label="Empathy: Her voice is indifferent to the number."];
+	  240 [label="Jump to: [passport]"];
+	  241 [label="You: \"That's not why you hid it, though.\""];
+	  242 [label="Klaasje (Miss Oranje Disco Dancer): \"Talk around the establishment is you have an industrial Sad-spill in there.\" She taps the roof with her heel."];
+	  243 [label="Jump to: [character.habit_smokes && CheckEquip ...]"];
+	  244 [label="Klaasje (Miss Oranje Disco Dancer): \"Mhm, it's a *mystery*.\" She takes a drag. \"An alcohol-related mystery.\""];
+	  245 [label="Kim Kitsuragi: \"How long have you been staying here?\""];
+	  246 [label="You: \"Here in the Whirling.\""];
+	  247 [label="You: \"Here on the Insulindian isola.\""];
+	  248 [label="Klaasje (Miss Oranje Disco Dancer): \"It turned out to be a tzaraath-infested third-world slum.\""];
+	  249 [label="Jump to: [room hub]"];
+	  250 [label="Klaasje (Miss Oranje Disco Dancer): \"Believe me, you don't wanna get into that shit.\" She flicks the ash from her cigarette."];
+	  251 [label="Authority: Feels like success."];
+	  252 [label="Jump to: [room hub]"];
+	  253 [label="Jump to: [Klaasje MAIN]"];
+	  254 [label="Klaasje (Miss Oranje Disco Dancer): \"I was just thinking -- what a nice day for questions.\" She lights a cigarette. \"Pertaining to a murder investigation.\""];
+	  255 [label="You: \"Can you tell me more about the victim? General information, I mean.\""];
+	  256 [label="Klaasje (Miss Oranje Disco Dancer): \"I did not.\" She takes a drag of her cigarette and smiles. \"Mystery solved then. I kept wondering where it led.\""];
+	  257 [label="You: \"It could just be a coincidence.\""];
+	  258 [label="Klaasje (Miss Oranje Disco Dancer): \"Do you think... this is somehow related to... Ruby passing through there?\""];
+	  259 [label="Kim Kitsuragi: \"Unfortunately, no, but if I were to guess -- long enough. The perforation is under the book shelf on your wall. It should not be hard to cover with some tape.\""];
+	  260 [label="Klaasje (Miss Oranje Disco Dancer): \"God... where is it? I think I need to cover it up.\""];
+	  261 [label="You: \"If I'd make a guess I'd say it's recent.\""];
+	  262 [label="Klaasje (Miss Oranje Disco Dancer): \"How *well* could it have turned out for me. I mean... \" She looks around."];
+	  263 [label="Klaasje (Miss Oranje Disco Dancer): She nods, slowly -- carefully, even."];
+	  264 [label="Jump to: [Klaasje MAIN]"];
+	  265 [label="You: \"Something seems... *off* with this theory I've developed. About Ruby.\""];
+	  266 [label="Suggestion: She did promise she'd be here at night if you don't arrest her... Good girl."];
+	  267 [label="You: In god's name, *wake up*!"];
+	  268 [label="You: Variable[\"whirling.klaasje_drama_white_success_volition_activated\"]"];
+	  269 [label="Variable[\"whirling.klaasje_drama_white_success_volition_activated\"]", shape=diamond];
+	  270 [label="!(Variable[\"whirling.klaasje_drama_white_success_volition_activated\"])", shape=diamond];
+	  271 [label="Jump to: [whirling.klaasje_drama_white_success ...]"];
+	  272 [label="Kim Kitsuragi: \"Miss, we are investigating the murder of the man who was hanged.\" He looks down at the yard. \"The people responsible have asked us to talk to you.\""];
+	  273 [label="Klaasje (Miss Oranje Disco Dancer): IsAfternoon()"];
+	  274 [label="IsAfternoon()", shape=diamond];
+	  275 [label="!(IsAfternoon())", shape=diamond];
+	  276 [label="Klaasje (Miss Oranje Disco Dancer): \"Thank you -- I've put a lot of time and effort into it,\" she says without any discernible irony."];
+	  277 [label="You: \"Cool. I took some. For personal use.\" (Show her the *Preptide*.)"];
+	  278 [label="Conceptualization: It's like she's... disappointed this wasn't about more entertaining matters."];
+	  279 [label="You: \"Miss, I'm investigating, uh...\" (Gesture down to the yard.) \"The people who put him there said to talk to you.\""];
+	  280 [label="Klaasje (Miss Oranje Disco Dancer): \"Have I ever... This is the world's most lamentable cop.\""];
+	  281 [label="You: \"I have *very little* idea of what I'm doing.\""];
+	  282 [label="You: \"Martinaise is very lucky. Only one in a *thousand* cops wakes up as the Superstar Cop.\""];
+	  283 [label="Kim Kitsuragi: \"I am sure it has. In the time we've spent together, I must have covered 30 kilometres. He has a *track and field* approach to police work.\""];
+	  284 [label="Klaasje (Miss Oranje Disco Dancer): \"I'm 28.\" She takes a drag."];
+	  285 [label="Klaasje (Miss Oranje Disco Dancer): \"Fear of failure, fear of death. How it *sucks* to be Oranjese. All national literatures are -- only the name of the nation changes.\""];
+	  286 [label="Klaasje (Miss Oranje Disco Dancer): \"Many things. A roller skating instructor, a secretary, Miss Oranje '37.\" She smiles."];
+	  287 [label="Klaasje (Miss Oranje Disco Dancer): \"No.\" She cranes her neck. \"I was the *most* stupid and mediocre. And I got a crown and a sash -- and a sceptre -- for it. And a scholarship to study Oranjese lit.\""];
+	  288 [label="Klaasje (Miss Oranje Disco Dancer): \"It's okay, I don't mind. The world of beauty pageants is absurd and bewildering.\""];
+	  289 [label="Kim Kitsuragi: \"Why is that?\""];
+	  290 [label="You: \"Okay.\""];
+	  291 [label="You: \"Totally.\""];
+	  292 [label="Klaasje (Miss Oranje Disco Dancer): \"That's where it always comes from, isn't it? From the head -- and from the past.\""];
+	  293 [label="You: \"So do I.\""];
+	  294 [label="You: \"How long have you been wintering?\""];
+	  295 [label="Klaasje (Miss Oranje Disco Dancer): \"Here in the Whirling, here in Martinaise, or here in Revachol?\""];
+	  296 [label="Klaasje (Miss Oranje Disco Dancer): \"Okay.\" She takes a pensive drag of her cigarette."];
+	  297 [label="You: Let her be."];
+	  298 [label="Klaasje (Miss Oranje Disco Dancer): \"No-no.\" She leans in to inspect your sideburns. \"You've got it bad as it is.\""];
+	  299 [label="You: \"Then lie to me.\""];
+	  300 [label="Klaasje (Miss Oranje Disco Dancer): \"It's always good to see you.\" She cracks a weary smile, leaning back against the railing."];
+	  301 [label="Encyclopedia: The chorus of the '35 single \"Megafoning The Entire Human Race,\" instills you with the fuck-it-all swagger that prompts one to plough into grannies on your morning stroll."];
+	  302 [label="Klaasje (Miss Oranje Disco Dancer): She thinks for a moment, then shrugs. \"They couldn't know where I put it. I'm absolutely sure I was not followed. And I've told no one but you...\""];
+	  303 [label="Klaasje (Miss Oranje Disco Dancer): \"Now that I think about it -- you mentioned sea water. I was worried I'd been too careless with the latch. The documents were probably,\" she waves her cigarette, \"just washed away...\""];
+	  304 [label="Klaasje (Miss Oranje Disco Dancer): \"I was just thinking what a nice evening it is.\" She looks around. \"For taking part in a murder investigation.\""];
+	  305 [label="Klaasje (Miss Oranje Disco Dancer): \"Tsk... tsk...\" she says to herself. \"Took it like a common highwayman. Don't think this won't come up again during what will be an opportune moment for me, Officer Disco.\" She smiles."];
+	  306 [label="Jump to: [room hub]"];
+	  307 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasjenick_wordsmith\"]"];
+	  308 [label="Variable[\"whirling.klaasjenick_wordsmith\"]", shape=diamond];
+	  309 [label="!(Variable[\"whirling.klaasjenick_wordsmith\"])", shape=diamond];
+	  310 [label="Jump to: [room hub]"];
+	  311 [label="You: \"Her situation is pretty bad, wherever she is. Maybe she'd hide some place that's meaningful to her?\""];
+	  312 [label="Klaasje (Miss Oranje Disco Dancer): \"Sure.\" She smiles, smoke trailing from the cigarette between her fingers. \"Do whatever you need to do.\""];
+	  313 [label="Jump to: [You: \"\"Titus says he's got a tape where t...\"]"];
+	  314 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasjeone_copotype_apocalypse_seconds\"]"];
+	  315 [label="Variable[\"whirling.klaasjeone_copotype_apocalypse_seconds\"]", shape=diamond];
+	  316 [label="!(Variable[\"whirling.klaasjeone_copotype_apocalypse_seconds\"])", shape=diamond];
+	  317 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"TASK.fridge_victims_body_done\"]"];
+	  318 [label="Variable[\"TASK.fridge_victims_body_done\"]", shape=diamond];
+	  319 [label="!(Variable[\"TASK.fridge_victims_body_done\"])", shape=diamond];
+	  320 [label="The Hanged Man: Where the ripe corpse of a man still lies on the ground, spotted with green and purple."];
+	  321 [label="Electrochemistry: Below her silvery jumpsuit -- an athletic young body. Built long and lean..."];
+	  322 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.kim_klaasje_said_one_thing\"]"];
+	  323 [label="Variable[\"whirling.kim_klaasje_said_one_thing\"]", shape=diamond];
+	  324 [label="!(Variable[\"whirling.kim_klaasje_said_one_thing\"])", shape=diamond];
+	  325 [label="Klaasje (Miss Oranje Disco Dancer): \"Not met *per se*, but I've seen him around, detective. Swooshing by. It has been quite a sight.\""];
+	  326 [label="Conceptualization: It's no mere turn of phrase. This young woman has a deeply rooted understanding of what *sad* means."];
+	  327 [label="You: \"You must have me confused with someone else. I'm just a regular, down-to-earth law official.\""];
+	  328 [label="You: \"I would never do anything interesting like that. I'm trying to become the world's most regular cop.\""];
+	  329 [label="Jump to: [TASK.fridge_victims_body_done || TAS ...]"];
+	  330 [label="Klaasje (Miss Oranje Disco Dancer): \"And what is that situation?\" She looks at the lieutenant."];
+	  331 [label="Klaasje (Miss Oranje Disco Dancer): \"Wow...\" Vapour rises from the coffee cup in her hand."];
+	  332 [label="Encyclopedia: The Phoenix is one of the many nicknames of Guillaume le Million, Revachol's second greatest (male) disco artist. This is an honour."];
+	  333 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_run_endu_medium\"]  or  Variable[\"whirling.klaasje_run_endu_easy\"]"];
+	  334 [label="Variable[\"whirling.klaasje_run_endu_medium\"]  or  Variable[\"whirling.klaasje_run_endu_easy\"]", shape=diamond];
+	  335 [label="!(Variable[\"whirling.klaasje_run_endu_medium\"]  or  Variable[\"whirling.klaasje_run_endu_easy\"])", shape=diamond];
+	  336 [label="Klaasje (Miss Oranje Disco Dancer): She nods approvingly. \"They also say that's why the cleaning lady quit. Because of the *Infernum*.\""];
+	  337 [label="You: \"And where are you from?\""];
+	  338 [label="You: Reasonable?"];
+	  339 [label="Klaasje (Miss Oranje Disco Dancer): \"Sooner or later, everyone does.\""];
+	  340 [label="You: \"Oranjese lit -- what do you *do* with it?\""];
+	  341 [label="Jump to: [name hub]"];
+	  342 [label="Jump to: [name hub]"];
+	  343 [label="You: \"How do you make money then? Money is very important -- everyone tells me that.\""];
+	  344 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  345 [label="IsKimHere()", shape=diamond];
+	  346 [label="!(IsKimHere())", shape=diamond];
+	  347 [label="Logic: There are plenty of other reasons for hiding your documents from the law."];
+	  348 [label="Klaasje (Miss Oranje Disco Dancer): \"If I were to lie to you, I would come up with a more *mainstream* name than *Klaasje Amandou*. It's... a weird name.\""];
+	  349 [label="Klaasje (Miss Oranje Disco Dancer): \"Cool. You told us about the investigation Friday night. Downstairs. At a table full of local kids and dockworkers. You told pretty much everyone. After you showed them your gun, that is...\""];
+	  350 [label="Empathy: She doesn't seem to be overly distressed. Or distressed at all, really."];
+	  351 [label="Esprit de Corps: He's thinking: \"I like this kind of prodding, whatever the situation. It may lead somewhere yet...\""];
+	  352 [label="Klaasje (Miss Oranje Disco Dancer): \"Yeah, it's pretty *De Luxe*.\""];
+	  353 [label="Klaasje (Miss Oranje Disco Dancer): \"Conference centres. A lot of them.\""];
+	  354 [label="Empathy: Behind it is deep, boundless gratitude."];
+	  355 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  356 [label="IsKimHere()", shape=diamond];
+	  357 [label="!(IsKimHere())", shape=diamond];
+	  358 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"tc.ruby_did_it_klaasje_said\"]"];
+	  359 [label="Variable[\"tc.ruby_did_it_klaasje_said\"]", shape=diamond];
+	  360 [label="!(Variable[\"tc.ruby_did_it_klaasje_said\"])", shape=diamond];
+	  361 [label="Klaasje (Miss Oranje Disco Dancer): \"Mhm.\" She takes a drag. \"Go ahead.\""];
+	  362 [label="Kim Kitsuragi: \"Let's see. I wrote down the nickname 'Lelystad'.\" The lieutenant has taken out his notebook. He moves his finger across the page…"];
+	  363 [label="Drama: She doesn't seem to be lying -- she's genuinely spooked by their disappearance."];
+	  364 [label="Kim Kitsuragi: \"Miss, we are investigating the murder of the man down there.\" He looks down at the yard. \"The people who put him there have asked us to talk to you.\""];
+	  365 [label="Klaasje (Miss Oranje Disco Dancer): \"Hello, officer.\" Legs crossed, she leans back against the railing. \"What brings you up here again?\""];
+	  366 [label="Klaasje (Miss Oranje Disco Dancer): \"Tsk... tsk...\" she says to herself. \"Like a common highwayman. This *will* come up again during what will be an opportune moment for me, Officer Disco.\""];
+	  367 [label="Jump to: [narcohub]"];
+	  368 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"village.ww_greeting_done\"]"];
+	  369 [label="Variable[\"village.ww_greeting_done\"]", shape=diamond];
+	  370 [label="!(Variable[\"village.ww_greeting_done\"])", shape=diamond];
+	  371 [label="Jump to: [whirling.klaasje_sunday_night_story_ ...]"];
+	  372 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  373 [label="IsKimHere()", shape=diamond];
+	  374 [label="!(IsKimHere())", shape=diamond];
+	  375 [label="Klaasje (Miss Oranje Disco Dancer): \"Oh yes! Legends of Room #1 have made their way around the building. They say a portal to Hell has opened in there.\""];
+	  376 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_main_greeting_done\"]"];
+	  377 [label="Variable[\"whirling.klaasje_main_greeting_done\"]", shape=diamond];
+	  378 [label="!(Variable[\"whirling.klaasje_main_greeting_done\"])", shape=diamond];
+	  379 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"TASK.get_the_dead_body_down_from_the_tree_done\"]"];
+	  380 [label="Variable[\"TASK.get_the_dead_body_down_from_the_tree_done\"]", shape=diamond];
+	  381 [label="!(Variable[\"TASK.get_the_dead_body_down_from_the_tree_done\"])", shape=diamond];
+	  382 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasjeone_greeting_done\"]  and  IsKimHere()"];
+	  383 [label="Variable[\"whirling.klaasjeone_greeting_done\"]  and  IsKimHere()", shape=diamond];
+	  384 [label="!(Variable[\"whirling.klaasjeone_greeting_done\"]  and  IsKimHere())", shape=diamond];
+	  385 [label="Suggestion: Be careful. Ask something else first. When you go *there*, use words like 'I hear you have been through something difficult.'"];
+	  386 [label="Jump to: [TASK.fridge_victims_body_done || TAS ...]"];
+	  387 [label="You: \"No. That's not me anymore. I am a Superstar Cop now.\""];
+	  388 [label="You: \"Things are very far from *wow*, little miss.\" (Lean in.) \"I am a changed man, a cop reborn to *repent* my shortcomings -- I am the Sorry Cop.\""];
+	  389 [label="You: \"New information has come to light -- it is a matter of *weeks* now. A great reckoning of the classes. Revachol explodes in vigilante violence. It's foretold.\""];
+	  390 [label="Endurance: Indeed. You don't strike yourself like a powerhouse at all."];
+	  391 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_run_endu_difficult\"]"];
+	  392 [label="Variable[\"whirling.klaasje_run_endu_difficult\"]", shape=diamond];
+	  393 [label="!(Variable[\"whirling.klaasje_run_endu_difficult\"])", shape=diamond];
+	  394 [label="Encyclopedia: They will make you into a fiscal colony, divert your natural resources, hold patents and shares, but they won't threaten to *wipe you out any time* like Revachol did in its prime."];
+	  395 [label="You: \"And what's so bad about that?\""];
+	  396 [label="Empathy: The conference centres are filled with people who get angry at you if you do something *wrong*."];
+	  397 [label="Jump to: [name hub]"];
+	  398 [label="Jump to: [name hub]"];
+	  399 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  400 [label="IsKimHere()", shape=diamond];
+	  401 [label="!(IsKimHere())", shape=diamond];
+	  402 [label="You: \"What is Oranjese literature about?\""];
+	  403 [label="Klaasje (Miss Oranje Disco Dancer): \"No-no. *More* stupid -- Oranjese lit.\""];
+	  404 [label="Klaasje (Miss Oranje Disco Dancer): \"C'mon, detective, cut him some slack. This guy's been through some heavy-duty emotional stuff.\""];
+	  405 [label="You: (Look around.) \"Hate to say it, but you've got *Sad* all over the place.\""];
+	  406 [label="You: \"I have other questions for you.\""];
+	  407 [label="Klaasje (Miss Oranje Disco Dancer): She nods. \"The Contamination spreads from room to room. First I escaped upstairs. The Sad got that too. Then I found the handle for the summer door...\""];
+	  408 [label="You: \"I *hate* apricot chewing gum. It betrayed me.\""];
+	  409 [label="You: \"It's a feeling. Acidic and crawling with doom. Gaseous. Invisible. Deadly. It's everywhere.\""];
+	  410 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  411 [label="IsKimHere()", shape=diamond];
+	  412 [label="!(IsKimHere())", shape=diamond];
+	  413 [label="Reaction Speed: Harry, you're becoming soft."];
+	  414 [label="Conceptualization: What was that? Funkytown?"];
+	  415 [label="Jump to: [Klaasje MAIN]"];
+	  416 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"auto.is_snowing\"]"];
+	  417 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  418 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  419 [label="Jump to: [room hub]"];
+	  420 [label="Kim Kitsuragi: \"It's possible.\""];
+	  421 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  422 [label="IsKimHere()", shape=diamond];
+	  423 [label="!(IsKimHere())", shape=diamond];
+	  424 [label="Klaasje (Miss Oranje Disco Dancer): \"Thank you.\" She looks toward the window. A cold wind blows in from the sea."];
+	  425 [label="Logic: She does. She must have *some* idea."];
+	  426 [label="Empathy: She smiles. A bitter little smile. She means it."];
+	  427 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"auto.is_snowing\"]"];
+	  428 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  429 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  430 [label="Shivers: The snow falls on her shoulders, then melts in her light blond hair... Cold and soft."];
+	  431 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  432 [label="IsKimHere()", shape=diamond];
+	  433 [label="!(IsKimHere())", shape=diamond];
+	  434 [label="Klaasje (Miss Oranje Disco Dancer): \"I don't know what to say.\""];
+	  435 [label="Kim Kitsuragi: \"Did you take the documents?\""];
+	  436 [label="Klaasje (Miss Oranje Disco Dancer): \"No, of course not. As I said, it would have been too risky for me to use those documents anyway -- my employer gave them to me. In truth, I should have destroyed them.\""];
+	  437 [label="You: \"Perhaps the people who are after you took it.\""];
+	  438 [label="Jump to: [Klaasje (Miss Oranje Disco Dancer): \"\"Not my favourite topic...\" She fli...\"]"];
+	  439 [label="Empathy: She seems quite relaxed for a victim of assault. But, of course, what *seems* should not be your priority."];
+	  440 [label="Kim Kitsuragi: \"This does not amount to actual corruption. I can easily log it under a confiscation.\""];
+	  441 [label="Jump to: [room hub]"];
+	  442 [label="Kim Kitsuragi: \"She's in dire straits. Could she have hidden in a place to which she has some kind of emotional attachment?\""];
+	  443 [label="Pain Threshold: A cornered animal might seek a hiding place that has some sentimental value."];
+	  444 [label="Klaasje (Miss Oranje Disco Dancer): \"His arrival is a sign of the end times. All this,\" she looks around, \"will come crashing down in mere days.\""];
+	  445 [label="Perception (Sight): Her hair is still slick from the shower."];
+	  446 [label="Authority: Coach Physical Instrument is overdoing it -- even by my standards. Say something else first."];
+	  447 [label="Jump to: [TASK.fridge_victims_body_done || TAS ...]"];
+	  448 [label="Klaasje (Miss Oranje Disco Dancer): \"Oh.\" She pauses. \"Well, you know... I'm sad to hear that.\""];
+	  449 [label="Klaasje (Miss Oranje Disco Dancer): \"And what brings this track-and-field god all the way up here?\""];
+	  450 [label="You: Gym teacher?"];
+	  451 [label="Empathy: The woman doesn't flinch, but there is something in her eyes -- the same sadness? Yes, from when she first told you about the hanging, in the hallway."];
+	  452 [label="Klaasje (Miss Oranje Disco Dancer): \"Vredefort, Republic of Oranje.\""];
+	  453 [label="You: \"What is Oranje?\""];
+	  454 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_cyclo_oranjese_is_she\"]"];
+	  455 [label="Variable[\"whirling.klaasje_cyclo_oranjese_is_she\"]", shape=diamond];
+	  456 [label="!(Variable[\"whirling.klaasje_cyclo_oranjese_is_she\"])", shape=diamond];
+	  457 [label="You: \"A bad memory of what?\""];
+	  458 [label="You: Let it be."];
+	  459 [label="Kim Kitsuragi: \"What's so bad about that?\""];
+	  460 [label="Jump to: [You: \"\"Cool.\"\"]"];
+	  461 [label="Klaasje (Miss Oranje Disco Dancer): \"C'mon, detective, cut him some slack. These may be the final hours of human existence.\""];
+	  462 [label="Klaasje (Miss Oranje Disco Dancer): \"Neither do I,\" she says calmly. \"I think it's *alcohol* that makes you feel like that. It must have something to do with partying.\""];
+	  463 [label="Klaasje (Miss Oranje Disco Dancer): \"They say so in your tourist brochure -- keep travel documents away from your person when west of the river.\""];
+	  464 [label="Klaasje (Miss Oranje Disco Dancer): \"Officer, I like this place, but I don't want to be stuck *wandering* the city like a ghost after being robbed of my travel documents.\""];
+	  465 [label="Klaasje (Miss Oranje Disco Dancer): \"It's *also* why I hid it.\""];
+	  466 [label="You: \"Earlier you said I would have to *interrogate* you. Suspects are interrogated.\""];
+	  467 [label="You: \"What if you contaminate the *this* too?\" (Spread your hands.)"];
+	  468 [label="Klaasje (Miss Oranje Disco Dancer): \"For me it's a mix of *me* with a lack of cleaning services. How about you?\""];
+	  469 [label="Logic: The bills downstairs concur."];
+	  470 [label="You: \"Here in Martinaise.\""];
+	  471 [label="Encyclopedia: Called Iilmaraa. And it didn't. Even after the Mesque colonized it seven ways from Sunday it's an industrial power house."];
+	  472 [label="Kim Kitsuragi: The lieutenant makes a note in his notebook."];
+	  473 [label="You: \"You're right.\""];
+	  474 [label="Perception (Sight): Chipped white polish covers the nail. It's long and sharp, like a mini dagger. The petal crumbles on contact."];
+	  475 [label="Klaasje (Miss Oranje Disco Dancer): \"All right.\" She nods and takes a drag. \"I like it sudden.\""];
+	  476 [label="You: \"That door there...\" (Point to it.) \"Did you know it leads to a downstairs *elevator*?\""];
+	  477 [label="You: \"Not really.\""];
+	  478 [label="Klaasje (Miss Oranje Disco Dancer): \"I'll be fucking covering it up with *a lot* of tape -- that's for sure. Was there anything else back there?\""];
+	  479 [label="You: \"You must have *some* idea -- who might have been interested in making that hole?\""];
+	  480 [label="Jump to: [won_won_lost]"];
+	  481 [label="You: \"Let's get back to those lies you told.\""];
+	  482 [label="Klaasje (Miss Oranje Disco Dancer): \"It was probably just an accident. I was worried I'd been too careless with the latch. The documents were probably just,\" she waves her cigarette, \"washed away...\""];
+	  483 [label="Jump to: [name hub]"];
+	  484 [label="Klaasje (Miss Oranje Disco Dancer): \"Hmh?\""];
+	  485 [label="Klaasje (Miss Oranje Disco Dancer): \"Oh yes. One of my favourites. It cures many ailments.\""];
+	  486 [label="Klaasje (Miss Oranje Disco Dancer): \"Mhm,\" she nods, smiling: \"I.e. *narcomaniacs*.\""];
+	  487 [label="Klaasje (Miss Oranje Disco Dancer): \"Comes in handy when you've done too many opioids.\""];
+	  488 [label="Klaasje (Miss Oranje Disco Dancer): Her face lights up with laughter. \"I'm sorry,\" she gathers herself."];
+	  489 [label="You: \"Like what?\""];
+	  490 [label="Klaasje (Miss Oranje Disco Dancer): \"Ruby? She couldn't have left it. She's not old-fashioned like that. I don't know what that flower was doing there, honestly.\""];
+	  491 [label="Klaasje (Miss Oranje Disco Dancer): \"I wouldn't know, officer. She had a crash pad somewhere on the coast... but she was very secretive about it, even with me.\""];
+	  492 [label="You: \"I have more questions about the deceased, but I need my partner here before I ask...\""];
+	  493 [label="Klaasje (Miss Oranje Disco Dancer): \"Oh, I *do* -- they also say it's why the cleaning lady quit.\""];
+	  494 [label="Visual Calculus: Where the dead body used to hang, clearly visible from the roof. But no longer."];
+	  495 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasjeone_copotype_apocalypse\"]"];
+	  496 [label="Variable[\"whirling.klaasjeone_copotype_apocalypse\"]", shape=diamond];
+	  497 [label="!(Variable[\"whirling.klaasjeone_copotype_apocalypse\"])", shape=diamond];
+	  498 [label="Suggestion: There is the tiniest bit of flattery in there -- the way her eyes move from your shoulder to shoulder."];
+	  499 [label="You: Thanks Coach, but I think I'll *dilly dally* this time."];
+	  500 [label="Jump to: [TASK.fridge_victims_body_done || TAS ...]"];
+	  501 [label="You: \"Things are only getting easier for me. I'm a police man: Too-doo-roo-doo!\" (Imitate a siren.)"];
+	  502 [label="You: \"Actually, Johnny Law isn't going to tear it up, that would be unprofessional.\""];
+	  503 [label="You: \"I stand by my words.\""];
+	  504 [label="Jump to: [TASK.fridge_victims_body_done || TAS ...]"];
+	  505 [label="Endurance: Actually, yeah... How? You have mediocre lungs."];
+	  506 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasjeone_empathy_sadness\"]"];
+	  507 [label="Variable[\"whirling.klaasjeone_empathy_sadness\"]", shape=diamond];
+	  508 [label="!(Variable[\"whirling.klaasjeone_empathy_sadness\"])", shape=diamond];
+	  509 [label="Encyclopedia: Same name that Titus gave you. Like her accent, it sounds Oranjese."];
+	  510 [label="You: \"How old are you?\""];
+	  511 [label="Jump to: [name hub]"];
+	  512 [label="Jump to: [name hub]"];
+	  513 [label="Klaasje (Miss Oranje Disco Dancer): \"Oranjese lit certainly hasn't helped. I've made more money by just *being* than I have with Oranjese lit.\""];
+	  514 [label="Klaasje (Miss Oranje Disco Dancer): \"It was okay.\" She shrugs. \"And it was called Miss *Teen* Oranje '37, actually. You'll be glad to hear the pageant was discontinued.\""];
+	  515 [label="Jump to: [name hub]"];
+	  516 [label="You: \"Why?\""];
+	  517 [label="Klaasje (Miss Oranje Disco Dancer): \"Thank you for your understanding.\" She looks a little surprised."];
+	  518 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  519 [label="IsKimHere()", shape=diamond];
+	  520 [label="!(IsKimHere())", shape=diamond];
+	  521 [label="Kim Kitsuragi: \"My colleague has an *exploratory* sense of humour. Don't hold it against him.\""];
+	  522 [label="You: \"Something is bad,\" point to your head, \"in my head. In the past.\""];
+	  523 [label="Klaasje (Miss Oranje Disco Dancer): \"Yeah.\""];
+	  524 [label="Klaasje (Miss Oranje Disco Dancer): \"Came to see the New New World,\" she shrugs. \"It's a tourist thing.\""];
+	  525 [label="You: \"What happened to the Old World?\""];
+	  526 [label="Rhetoric: This is by far not the only reason she's here -- she isn't overtly hiding it, either."];
+	  527 [label="You: \"No. This is Sassytown. It's where the future of dance lies.\""];
+	  528 [label="Klaasje (Miss Oranje Disco Dancer): \"Pretty. Looks like a dried *may bell* -- is that the one you caught? Sam Bo-style?\""];
+	  529 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_suggestion_admirers\"]"];
+	  530 [label="Variable[\"whirling.klaasje_suggestion_admirers\"]", shape=diamond];
+	  531 [label="!(Variable[\"whirling.klaasje_suggestion_admirers\"])", shape=diamond];
+	  532 [label="Empathy: Something in her demeanour has changed. She's tired, consigned to her fate -- to being here with you and what's to come."];
+	  533 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"TASK.confront_klaasje_with_full_story\"]  and  Variable[\"TASK.confront_klaasje_with_full_story_done\"] == false"];
+	  534 [label="Variable[\"TASK.confront_klaasje_with_full_story\"]  and  Variable[\"TASK.confront_klaasje_with_full_story_done\"] == false", shape=diamond];
+	  535 [label="!(Variable[\"TASK.confront_klaasje_with_full_story\"]  and  Variable[\"TASK.confront_klaasje_with_full_story_done\"] == false)", shape=diamond];
+	  536 [label="Klaasje (Miss Oranje Disco Dancer): \"Honestly, I have no clue.\""];
+	  537 [label="Klaasje (Miss Oranje Disco Dancer): \"Did I?\" She arches an eyebrow and sighs. \"Why do I still feel *suspicion* hanging over me then? What I managed was to get him killed. I understand that.\""];
+	  538 [label="Klaasje (Miss Oranje Disco Dancer): \"*None* of this is fortuitous for me.\""];
+	  539 [label="Jump to: [peep_whirling]"];
+	  540 [label="You: \"I found your buoy. It was empty. Just seawater.\""];
+	  541 [label="Klaasje (Miss Oranje Disco Dancer): \"No, of course not. As I said, it would have been too risky for me to use those documents anyway -- my employer gave them to me. In truth, I should have destroyed them.\""];
+	  542 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.electrochem_miss_oranje\"]"];
+	  543 [label="Variable[\"whirling.electrochem_miss_oranje\"]", shape=diamond];
+	  544 [label="!(Variable[\"whirling.electrochem_miss_oranje\"])", shape=diamond];
+	  545 [label="Jump to: [name hub]"];
+	  546 [label="You: \"Just looking out for your health, miss.\""];
+	  547 [label="Klaasje (Miss Oranje Disco Dancer): \"Like not being able to stay up for 36 hours.\" She thinks. \"Not being happy. It cures *those* ailments. It's just a mirrored speed molecule, basically.\""];
+	  548 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  549 [label="IsKimHere()", shape=diamond];
+	  550 [label="!(IsKimHere())", shape=diamond];
+	  551 [label="Klaasje (Miss Oranje Disco Dancer): \"Have I ever.... This is the one and only Superstar Cop. He's kind of a big deal around here.\""];
+	  552 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_suggestion_phrase_cleverly\"]"];
+	  553 [label="Variable[\"whirling.klaasje_suggestion_phrase_cleverly\"]", shape=diamond];
+	  554 [label="!(Variable[\"whirling.klaasje_suggestion_phrase_cleverly\"])", shape=diamond];
+	  555 [label="Inland Empire: The words *washed away* sound distant and strange suddenly. Somewhere far away, a dog barks."];
+	  556 [label="Esprit de Corps: Across the city, the lieutenant stops to consider a smoke break. He shrugs off the urge: maybe tonight. His absence is palpable. Too late now."];
+	  557 [label="Klaasje (Miss Oranje Disco Dancer): \"They *also* say it's why the cleaning lady quit.\""];
+	  558 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasjeone_copotype_sorry\"]"];
+	  559 [label="Variable[\"whirling.klaasjeone_copotype_sorry\"]", shape=diamond];
+	  560 [label="!(Variable[\"whirling.klaasjeone_copotype_sorry\"])", shape=diamond];
+	  561 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasjeone_copotype_regular\"]"];
+	  562 [label="Variable[\"whirling.klaasjeone_copotype_regular\"]", shape=diamond];
+	  563 [label="!(Variable[\"whirling.klaasjeone_copotype_regular\"])", shape=diamond];
+	  564 [label="You: \"It's gotten pretty hard in the meantime -- but I go on.\""];
+	  565 [label="Klaasje (Miss Oranje Disco Dancer): \"See?\" She turns to the lieutenant. \"'Say nothing'. So strange. Who says that? What is going on here?\""];
+	  566 [label="You: \"I'm sorry. I'm the Sorry Cop.\""];
+	  567 [label="You: \"That's not me anymore. I am just a regular cop now. Regular law official.\""];
+	  568 [label="Klaasje (Miss Oranje Disco Dancer): \"An unnecessary development, if you ask me.\" She shakes her head. \"What brings this supposedly *regular* law official back to me?\""];
+	  569 [label="You: Doesn't matter."];
+	  570 [label="Klaasje (Miss Oranje Disco Dancer): \"Why not? I'll be here until 23.00, drinking coffee most likely...\""];
+	  571 [label="Jump to: [name hub]"];
+	  572 [label="Jump to: [Klaasje (Miss Oranje Disco Dancer): \"\"It's the past.\" She takes a sip of...\"]"];
+	  573 [label="Klaasje (Miss Oranje Disco Dancer): \"Something stupid.\""];
+	  574 [label="Klaasje (Miss Oranje Disco Dancer): \"Oranjese literature. It's what I studied *at the university*.\" She raises both eyebrows."];
+	  575 [label="Klaasje (Miss Oranje Disco Dancer): \"Strange, usually the Revacholian hero does not save women...\" She breathes in the menthol flavoured fumes, savouring it..."];
+	  576 [label="Klaasje (Miss Oranje Disco Dancer): ...then breathes out: \"It's a frivolous pursuit. He saves all of mankind instead.\""];
+	  577 [label="Rhetoric: The march of ethical progress continues."];
+	  578 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  579 [label="IsKimHere()", shape=diamond];
+	  580 [label="!(IsKimHere())", shape=diamond];
+	  581 [label="Jump to: [passport]"];
+	  582 [label="Jump to: [name hub]"];
+	  583 [label="Jump to: [passport]"];
+	  584 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"character.habit_smokes\"]  and  CheckEquippedGroup(\"smokes\")"];
+	  585 [label="Variable[\"character.habit_smokes\"]  and  CheckEquippedGroup(\"smokes\")", shape=diamond];
+	  586 [label="!(Variable[\"character.habit_smokes\"]  and  CheckEquippedGroup(\"smokes\"))", shape=diamond];
+	  587 [label="Jump to: [room hub]"];
+	  588 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.sense_klaasje_bills_four_months\"]"];
+	  589 [label="Variable[\"whirling.sense_klaasje_bills_four_months\"]", shape=diamond];
+	  590 [label="!(Variable[\"whirling.sense_klaasje_bills_four_months\"])", shape=diamond];
+	  591 [label="You: \"Here in Revachol.\""];
+	  592 [label="Encyclopedia: Funk is an aggressive resurgence of *The New* aesthetic of the Revacholian Thirties, but this time originating in Graad. It's brought there by the Iilmaraan diaspora. Funk is more masculine and guitar-oriented than disco. Even more *dangerous*."];
+	  593 [label="You: \"Why was it there?\""];
+	  594 [label="Suggestion: Or an admirer?"];
+	  595 [label="Klaasje (Miss Oranje Disco Dancer): She looks at the door. Suddenly, her eyes widen. \"Oh... Do you think *Ruby* could have gotten in that way? To the *roof*? She could have come up through there!\""];
+	  596 [label="Klaasje (Miss Oranje Disco Dancer): \"Okay.\" She smiles. \"I'm glad *someone's* had fun.\""];
+	  597 [label="Jump to: [won_won_lost]"];
+	  598 [label="Jump to: [Klaasje (Miss Oranje Disco Dancer): \"\"And what brings this track-and-fie...\"]"];
+	  599 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_narcohub_reached\"]"];
+	  600 [label="Variable[\"whirling.klaasje_narcohub_reached\"]", shape=diamond];
+	  601 [label="!(Variable[\"whirling.klaasje_narcohub_reached\"])", shape=diamond];
+	  602 [label="You: \"*Narcomania* is nothing to be proud of, miss.\""];
+	  603 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasjenick_wordsmith\"]"];
+	  604 [label="Variable[\"whirling.klaasjenick_wordsmith\"]", shape=diamond];
+	  605 [label="!(Variable[\"whirling.klaasjenick_wordsmith\"])", shape=diamond];
+	  606 [label="You: \"Nothing.\""];
+	  607 [label="Klaasje (Miss Oranje Disco Dancer): She laughs, turning to the lieutenant. \"There it is again -- man of *words*. I can appreciate that.\""];
+	  608 [label="Klaasje (Miss Oranje Disco Dancer): \"Huh?\" She looks at the drugs in your hand. \"Motherfucker took my Preptide! Looks like you owe me one, officer. I'm talking serious corruption here.\""];
+	  609 [label="You: \"We're done with this subject.\""];
+	  610 [label="Klaasje (Miss Oranje Disco Dancer): \"Tsk... tsk...\" she says to herself with a smile. \"Robbed by common highwaymen.\""];
+	  611 [label="Jump to: [whirling.klaasje_sunday_night_story_ ...]"];
+	  612 [label="Untitled hub"];
+	  613 [label="Composure: She's straight as a stick, suddenly."];
+	  614 [label="Klaasje MAIN"];
+	  615 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_suggestion_been_through_difficult\"]"];
+	  616 [label="Variable[\"whirling.klaasje_suggestion_been_through_difficult\"]", shape=diamond];
+	  617 [label="!(Variable[\"whirling.klaasje_suggestion_been_through_difficult\"])", shape=diamond];
+	  618 [label="Jump to: [Klaasje MAIN]"];
+	  619 [label="Jump to: [TASK.fridge_victims_body_done || TAS ...]"];
+	  620 [label="You: \"Kim, I swear I have no idea what she's talking about.\""];
+	  621 [label="Klaasje (Miss Oranje Disco Dancer): IsTHCPresent(\"coach_physical_instrument\")"];
+	  622 [label="IsTHCPresent(\"coach_physical_instrument\")", shape=diamond];
+	  623 [label="!(IsTHCPresent(\"coach_physical_instrument\"))", shape=diamond];
+	  624 [label="You: Then how am I able to do it..."];
+	  625 [label="Empathy: The woman doesn't flinch, but there is something in her light brown eyes... a sadness."];
+	  626 [label="name hub"];
+	  627 [label="Klaasje (Miss Oranje Disco Dancer): \"Oranjese lit.\""];
+	  628 [label="Esprit de Corps: His partner Émile Mollins can't be there -- he's in another apartment with another man who's showing him a dead dog under the radiator. 'It's dead,' Mollins says. \"No,\" the man replies. \"I touched him. He's warm.\""];
+	  629 [label="Klaasje (Miss Oranje Disco Dancer): \"Nothing. I do nothing with it.\""];
+	  630 [label="Klaasje (Miss Oranje Disco Dancer): MoneyAmount() > 100"];
+	  631 [label="MoneyAmount() > 100", shape=diamond];
+	  632 [label="!(MoneyAmount() > 100)", shape=diamond];
+	  633 [label="You: \"Being what?\""];
+	  634 [label="beauty pageant hub"];
+	  635 [label="Klaasje (Miss Oranje Disco Dancer): \"It's a beauty pageant. Held in the year of our century '37 -- in Oranje.\""];
+	  636 [label="Klaasje (Miss Oranje Disco Dancer): \"When you have the fewest deviations from the norm. I've been told it's a type of mediocrity that I possess.\""];
+	  637 [label="Klaasje (Miss Oranje Disco Dancer): \"It's okay. This is what superstar law officials do. I'm getting used to it.\""];
+	  638 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_namehub_reached\"]"];
+	  639 [label="Variable[\"whirling.klaasje_namehub_reached\"]", shape=diamond];
+	  640 [label="!(Variable[\"whirling.klaasje_namehub_reached\"])", shape=diamond];
+	  641 [label="Klaasje (Miss Oranje Disco Dancer): \"Because it's the funkiest building in Martinaise. And because all the other buildings are bombed to hell.\""];
+	  642 [label="Jump to: [Klaasje MAIN]"];
+	  643 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_roomhub_exited_once\"]"];
+	  644 [label="Variable[\"whirling.klaasje_roomhub_exited_once\"]", shape=diamond];
+	  645 [label="!(Variable[\"whirling.klaasje_roomhub_exited_once\"])", shape=diamond];
+	  646 [label="Klaasje (Miss Oranje Disco Dancer): \"Yeah?\""];
+	  647 [label="Klaasje (Miss Oranje Disco Dancer): \"I don't want to lie to the law. It's not my style.\" She smiles. It's a sad little smile, like she's some miniature bird or tiny field mouse."];
+	  648 [label="Klaasje (Miss Oranje Disco Dancer): \"Officer. What brings you up here in the rain?\" She leans back against the railing."];
+	  649 [label="Klaasje (Miss Oranje Disco Dancer): \"Mhm...\" She flicks the ash from her cigarette absent-mindedly."];
+	  650 [label="Klaasje (Miss Oranje Disco Dancer): \"She *could* have. Maybe she did. Or maybe it's been there for a long time, the local kids use it or something. Was there anything else back there?\""];
+	  651 [label="You: \"This all turned out well enough for you -- you somehow managed to not become a *suspect*.\""];
+	  652 [label="You: \"We have concluded our autopsy and would like to ask questions about Lely.\""];
+	  653 [label="Jump to: [Klaasje (Miss Oranje Disco Dancer): \"\"And what brings this track-and-fie...\"]"];
+	  654 [label="Klaasje (Miss Oranje Disco Dancer): \"Sure,\" she smiles."];
+	  655 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_ruby_pain_sentimental\"]"];
+	  656 [label="Variable[\"whirling.klaasje_ruby_pain_sentimental\"]", shape=diamond];
+	  657 [label="!(Variable[\"whirling.klaasje_ruby_pain_sentimental\"])", shape=diamond];
+	  658 [label="Klaasje (Miss Oranje Disco Dancer): \"Ruby's certainly passionate, but sentimental -- no, not really... Except maybe about radios -- all kinds of radio technology. So sorry I can't be of any more help to you...\""];
+	  659 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  660 [label="IsKimHere()", shape=diamond];
+	  661 [label="!(IsKimHere())", shape=diamond];
+	  662 [label="Klaasje (Miss Oranje Disco Dancer): \"What happened, man? The end was supposed to be mere seconds away. Why are we still here?\""];
+	  663 [label="You: \"Disco Infernum.\""];
+	  664 [label="Rhetoric: She just admitted to being on familiar terms with Hell -- a rough life, certainly."];
+	  665 [label="You: \"No. That's not me anymore. I am the Cop of the Apocalypse now.\""];
+	  666 [label="Kim Kitsuragi: \"Miss, I don't know what he's told you, but there are no superstars among police officers.\""];
+	  667 [label="Jump to: [TASK.fridge_victims_body_done || TAS ...]"];
+	  668 [label="Inland Empire: Isn't that odd? How *can* you run so much?"];
+	  669 [label="You: \"Could I see your passport, please?\""];
+	  670 [label="Klaasje (Miss Oranje Disco Dancer): \"Back to me.\" She breathes in the menthol-flavoured fumes, savouring it in her lungs."];
+	  671 [label="You: \"How do you make money then? Money is very important.\" (Show her some money.)"];
+	  672 [label="Klaasje (Miss Oranje Disco Dancer): \"Yes. And for that I got a crown and a sash -- and a sceptre. And a scholarship to study Oranjese lit.\""];
+	  673 [label="Jump to: [beauty pageant hub]"];
+	  674 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  675 [label="IsKimHere()", shape=diamond];
+	  676 [label="!(IsKimHere())", shape=diamond];
+	  677 [label="Klaasje (Miss Oranje Disco Dancer): \"Supercool.\" She raises her coffee cup as though making a toast. \"Full disclosure -- I was Miss *Teen* Oranje '37. The pageant was discontinued recently.\""];
+	  678 [label="Klaasje (Miss Oranje Disco Dancer): \"Mhm.\" She gestures toward the table. \"I would offer you coffee, but it's garbage -- literally tastes like poison.\" She takes a sip."];
+	  679 [label="You: \"Okay then.\" (Conclude.)"];
+	  680 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  681 [label="IsKimHere()", shape=diamond];
+	  682 [label="!(IsKimHere())", shape=diamond];
+	  683 [label="Klaasje (Miss Oranje Disco Dancer): \"Whooh...\" She wipes her brow."];
+	  684 [label="Empathy: Playfully. She doesn't seem to be overly distressed. Or distressed at all, really."];
+	  685 [label="You: \"That window is new.\""];
+	  686 [label="Klaasje (Miss Oranje Disco Dancer): \"It's hard to contaminate such a wide open space -- even for me. At least I hope so. If I do...\" She smiles a quivering smile. \"Where will any of us go?\""];
+	  687 [label="You: \"Probably, yeah.\""];
+	  688 [label="Electrochemistry: Brother, blast a ziggy now! Press that pleasure button, let the pain recede!"];
+	  689 [label="Klaasje (Miss Oranje Disco Dancer): \"I have no idea, officer.\" She looks at it calmly."];
+	  690 [label="You: \"You came to the right place.\""];
+	  691 [label="Klaasje (Miss Oranje Disco Dancer): \"If you say so, officer -- if you say so.\""];
+	  692 [label="Klaasje (Miss Oranje Disco Dancer): She smirks. \"I'm really not.\""];
+	  693 [label="Jump to: [room hub]"];
+	  694 [label="Klaasje (Miss Oranje Disco Dancer): \"Admirers? I'm too old to be a débutante.\" She looks over the railing at the plaza below. \"And this place is no fashionable society.\""];
+	  695 [label="Klaasje (Miss Oranje Disco Dancer): \"A martial art, sir.\" She raises an eyebrow. \"Is that it?\""];
+	  696 [label="Klaasje (Miss Oranje Disco Dancer): \"I don't know...\" She frowns, uncertain. \"Was there anything else? Back there?\""];
+	  697 [label="You: \"There were tracks on the floor. They're recent.\""];
+	  698 [label="Klaasje (Miss Oranje Disco Dancer): \"Okay... do you have any way of knowing how *long* it has been there?\""];
+	  699 [label="Klaasje (Miss Oranje Disco Dancer): \"No, it's okay. Was there anything more?\""];
+	  700 [label="Shivers: The rain falls on her shoulders, tinting her blond hair light brown. It smells of industrial pollution and brine."];
+	  701 [label="Klaasje (Miss Oranje Disco Dancer): \"I don't know, sir. I said I have no idea what to make of them. Honestly, I think they're just trash\""];
+	  702 [label="Drama: Yes! We demand she be punished for deceiving us. We demand her anxiety. We demand her fear."];
+	  703 [label="Jump to: [whirling.klaasje_talked_about_lely]"];
+	  704 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_talked_about_lely\"]"];
+	  705 [label="Variable[\"whirling.klaasje_talked_about_lely\"]", shape=diamond];
+	  706 [label="!(Variable[\"whirling.klaasje_talked_about_lely\"])", shape=diamond];
+	  707 [label="Kim Kitsuragi: \"Yes, miss. I hope you don't mind.\" The lieutenant hands you his notes."];
+	  708 [label="Klaasje (Miss Oranje Disco Dancer): \"Cryptid? Of course. That must be it.\" She takes a drag of her cigarette, warm amusement in her eyes. \"Thank you, I feel better already.\""];
+	  709 [label="Jump to: [TASK.fridge_victims_body_done || TAS ...]"];
+	  710 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.sense_klaasje_laundry_sad_inland\"]"];
+	  711 [label="Variable[\"whirling.sense_klaasje_laundry_sad_inland\"]", shape=diamond];
+	  712 [label="!(Variable[\"whirling.sense_klaasje_laundry_sad_inland\"])", shape=diamond];
+	  713 [label="You: \"If it *is* recent -- who do you think made it?\""];
+	  714 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  715 [label="IsKimHere()", shape=diamond];
+	  716 [label="!(IsKimHere())", shape=diamond];
+	  717 [label="You: \"Miss, I'm investigating, uh...\" (Gesture down to the body in the yard.) \"The people who put him there said to talk to you.\""];
+	  718 [label="Klaasje (Miss Oranje Disco Dancer): \"I'm sorry for the mess down there. The cleaning lady hasn't come by in *days*. I'm beginning to wonder if she ever will...\""];
+	  719 [label="Kim Kitsuragi: \"I'm Kim Kitsuragi.\" The lieutenant steps in. \"I'm a detective from Precinct 57. I believe you have already met my colleague from Precinct 41.\""];
+	  720 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"TASK.get_the_dead_body_down_from_the_tree_done\"]"];
+	  721 [label="Variable[\"TASK.get_the_dead_body_down_from_the_tree_done\"]", shape=diamond];
+	  722 [label="!(Variable[\"TASK.get_the_dead_body_down_from_the_tree_done\"])", shape=diamond];
+	  723 [label="You: \"Once a cop -- always a cop.\""];
+	  724 [label="Klaasje (Miss Oranje Disco Dancer): \"I doubt it.\" She shakes her head. \"You can't bury that kind of fire. What brought you back to me, Fire Man?\""];
+	  725 [label="You: \"I am sad to say I have shifted *copotype* since we last saw each other. I am a different cop now.\""];
+	  726 [label="Klaasje (Miss Oranje Disco Dancer): \"Klaasje Amandou.\""];
+	  727 [label="Jump to: [name hub]"];
+	  728 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_concept_revacholian_lit\"]"];
+	  729 [label="Variable[\"whirling.klaasje_concept_revacholian_lit\"]", shape=diamond];
+	  730 [label="!(Variable[\"whirling.klaasje_concept_revacholian_lit\"])", shape=diamond];
+	  731 [label="Klaasje (Miss Oranje Disco Dancer): MoneyAmount() > 0"];
+	  732 [label="MoneyAmount() > 0", shape=diamond];
+	  733 [label="!(MoneyAmount() > 0)", shape=diamond];
+	  734 [label="You: \"Understood.\" (Conclude.)"];
+	  735 [label="You: \"Turns out it did suck -- for *you*.\""];
+	  736 [label="Klaasje (Miss Oranje Disco Dancer): \"I'm flattered. You told us about the investigation Friday night. Downstairs. At a table full of local kids and dockworkers. You told pretty much everyone. After you showed them your gun...\""];
+	  737 [label="You: \"For me it's alcoholism, miss.\""];
+	  738 [label="Klaasje (Miss Oranje Disco Dancer): \"I love apricot chewing gum!\""];
+	  739 [label="Jump to: [room hub]"];
+	  740 [label="Empathy: He finds the answer unsatisfying."];
+	  741 [label="Klaasje (Miss Oranje Disco Dancer): She looks at the dried petals in your palm, then lightly touches one with her fingernail."];
+	  742 [label="You: \"Sudden change of topic!\""];
+	  743 [label="You: \"What's Sam Bo?\""];
+	  744 [label="Jump to: [You: \"\"The Hardie boys gave me a recordin...\"]"];
+	  745 [label="Empathy: She's lost in thought -- eyes narrowed, forehead furrowed..."];
+	  746 [label="You: \"There's no way of telling.\""];
+	  747 [label="Jump to: [peep_whirling]"];
+	  748 [label="Volition: There is suddenly a strange glint in her eyes. Not malicious... but dangerous."];
+	  749 [label="Klaasje (Miss Oranje Disco Dancer): IsNight()"];
+	  750 [label="IsNight()", shape=diamond];
+	  751 [label="!(IsNight())", shape=diamond];
+	  752 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_secret_route_discussed\"]"];
+	  753 [label="Variable[\"whirling.klaasje_secret_route_discussed\"]", shape=diamond];
+	  754 [label="!(Variable[\"whirling.klaasje_secret_route_discussed\"])", shape=diamond];
+	  755 [label="Jump to: [whitecheckhastsucceededforonce]"];
+	  756 [label="Klaasje (Miss Oranje Disco Dancer): IsEvening()"];
+	  757 [label="IsEvening()", shape=diamond];
+	  758 [label="!(IsEvening())", shape=diamond];
+	  759 [label="You: \"You heard what I said: Narco-mania is a serious issue and nothing to scoff at, miss.\""];
+	  760 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  761 [label="IsKimHere()", shape=diamond];
+	  762 [label="!(IsKimHere())", shape=diamond];
+	  763 [label="You: \"It was quite impressive. How did you amass such a hoard?\""];
+	  764 [label="You: \"That's all as far as that goes, then.\""];
+	  765 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.medicine_nacra\"]  or Variable[\"whirling.medicine_preptide\"]"];
+	  766 [label="Variable[\"whirling.medicine_nacra\"]  or Variable[\"whirling.medicine_preptide\"]", shape=diamond];
+	  767 [label="!(Variable[\"whirling.medicine_nacra\"]  or Variable[\"whirling.medicine_preptide\"])", shape=diamond];
+	  768 [label="You: \"No further questions.\""];
+	  769 [label="Klaasje (Miss Oranje Disco Dancer): \"I always heard you RCM guys were cool.\" She gestures toward you with her cigarette. \"You are.\""];
+	  770 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_special_exit_done\"]"];
+	  771 [label="Variable[\"whirling.klaasje_special_exit_done\"]", shape=diamond];
+	  772 [label="!(Variable[\"whirling.klaasje_special_exit_done\"])", shape=diamond];
+	  773 [label="You: \"I think I found it, but I couldn't get the land lady to talk.\""];
+	  774 [label="Empathy: There is something in her eyes -- the same sadness? Yes, from back in the hallway when she first told you about the hanging, in the hallway."];
+	  775 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.kim_klaasje_said_one_thing\"]"];
+	  776 [label="Variable[\"whirling.kim_klaasje_said_one_thing\"]", shape=diamond];
+	  777 [label="!(Variable[\"whirling.kim_klaasje_said_one_thing\"])", shape=diamond];
+	  778 [label="Klaasje (Miss Oranje Disco Dancer): \"Welcome to the roof.\" The young woman has a cigarette in one hand and a cup of coffee in the other."];
+	  779 [label="The Hanged Man: Where a ripe corpse still hangs from the tree, spotted with green and purple."];
+	  780 [label="Kim Kitsuragi: \"I'm Kim Kitsuragi.\" The lieutenant steps in. \"I'm a detective from Precinct 57. I see you've already met my colleague.\""];
+	  781 [label="You: \"That is unimportant to the case at hand.\""];
+	  782 [label="Klaasje (Miss Oranje Disco Dancer): \"You're doing just fine -- after all, your path has led you back to me.\""];
+	  783 [label="Kim Kitsuragi: \"I assure you, he is not about to tear it up in *any* style. In fact...\""];
+	  784 [label="You: \"No comment.\""];
+	  785 [label="Klaasje (Miss Oranje Disco Dancer): \"Oh, I've got a couple of good years left on my warranty...\" She looks down at her body shimmering in the silver jumpsuit."];
+	  786 [label="Klaasje (Miss Oranje Disco Dancer): \"Questions? What about?\""];
+	  787 [label="You: \"What is your name, miss? For the record.\""];
+	  788 [label="Klaasje (Miss Oranje Disco Dancer): \"I doubt you will succeed.\" She shakes her head. \"So, what is this about, officers?\""];
+	  789 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"TASK.ask_about_tattoo_done\"]"];
+	  790 [label="Variable[\"TASK.ask_about_tattoo_done\"]", shape=diamond];
+	  791 [label="!(Variable[\"TASK.ask_about_tattoo_done\"])", shape=diamond];
+	  792 [label="Encyclopedia: The Republic of Oranje is a democratic nation on the Mundi isola, north of here, over the sea and across the pale. It is one of the six major Occidental nations to hold stake in the continued occupation of Revachol (the Coalition). People consider it a *reasonable* superpower."];
+	  793 [label="Esprit de Corps: \"He's warm,\" Mollins replies, \"because he's under the radiator.\""];
+	  794 [label="Klaasje (Miss Oranje Disco Dancer): \"Cool.\" She looks at the black note in your hand. \"I've made more money by just *being* than I have with Oranjese lit.\""];
+	  795 [label="Klaasje (Miss Oranje Disco Dancer): \"'The record' -- so official!\""];
+	  796 [label="Klaasje (Miss Oranje Disco Dancer): \"Love is terror.\" She breathes in a large billow of menthol-infused smoke, savours it, then lets it out slowly..."];
+	  797 [label="You: \"What happened to the old New World?\""];
+	  798 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_concept_funky\"]"];
+	  799 [label="Variable[\"whirling.klaasje_concept_funky\"]", shape=diamond];
+	  800 [label="!(Variable[\"whirling.klaasje_concept_funky\"])", shape=diamond];
+	  801 [label="You: \"What's funky?\""];
+	  802 [label="You: \"Any admirers, miss?\""];
+	  803 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"TASK.confront_klaasje_with_full_story_done\"]"];
+	  804 [label="Variable[\"TASK.confront_klaasje_with_full_story_done\"]", shape=diamond];
+	  805 [label="!(Variable[\"TASK.confront_klaasje_with_full_story_done\"])", shape=diamond];
+	  806 [label="Klaasje (Miss Oranje Disco Dancer): She keeps looking at the door with a worried expression. The wind ruffles her hair."];
+	  807 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"tc.ruby_did_it_klaasje_said\"]"];
+	  808 [label="Variable[\"tc.ruby_did_it_klaasje_said\"]", shape=diamond];
+	  809 [label="!(Variable[\"tc.ruby_did_it_klaasje_said\"])", shape=diamond];
+	  810 [label="Logic: Yet? Maybe it's something she's keeping for a later move, when she's more sure of herself..."];
+	  811 [label="Klaasje (Miss Oranje Disco Dancer): \"Clearly, I haven't. We're having this conversation, aren't we? How *well* could it have gone. I mean... \" She looks around."];
+	  812 [label="Empathy: He feels uncomfortable with this conversation. He doesn't know what to add."];
+	  813 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_showed_her_flower\"]"];
+	  814 [label="Variable[\"whirling.klaasje_showed_her_flower\"]", shape=diamond];
+	  815 [label="!(Variable[\"whirling.klaasje_showed_her_flower\"])", shape=diamond];
+	  816 [label="You: Look up to the grey sky."];
+	  817 [label="You: Variable[\"whirling.klaasje_shivers_white_check\"]"];
+	  818 [label="Variable[\"whirling.klaasje_shivers_white_check\"]", shape=diamond];
+	  819 [label="!(Variable[\"whirling.klaasje_shivers_white_check\"])", shape=diamond];
+	  820 [label="Jump to: [whirling.klaasje_shivers_white_check]"];
+	  821 [label="You: \"Let's talk more about this so-called assault.\""];
+	  822 [label="Jump to: [do_it_didnt_do_it]"];
+	  823 [label="Klaasje (Miss Oranje Disco Dancer): \"Oh my god, now it's turning into Narco Mania. It's got to be serious if it's *two words*.\""];
+	  824 [label="Klaasje (Miss Oranje Disco Dancer): \"No-no! You said *narcomania*. What kind of word is that?\""];
+	  825 [label="You: \"I can't seem to find Ruby. Do you have any idea where she might be?\""];
+	  826 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"village.ww_ruby_hub_reached\"]"];
+	  827 [label="Variable[\"village.ww_ruby_hub_reached\"]", shape=diamond];
+	  828 [label="!(Variable[\"village.ww_ruby_hub_reached\"])", shape=diamond];
+	  829 [label="Kim Kitsuragi: \"We found that *crash pad* on the coast, miss, and even spoke to the land lady. She seemed... rather devoted to the suspect...\""];
+	  830 [label="You: \"Is there a cleaning lady? I think I *need* one.\" (Proceed politely.)"];
+	  831 [label="Inland Empire: If that's true then *Revacholian lit* would fit you like a glove."];
+	  832 [label="Esprit de Corps: It's good we discussed your history with her, he thinks. I can play along."];
+	  833 [label="You: \"It has.\""];
+	  834 [label="Klaasje (Miss Oranje Disco Dancer): \"Have I ever...\" She turns to you. \"Have you grown accustomed to your role as a 'police officer'?\""];
+	  835 [label="You: \"Hear that, Kim? I am a *huge* deal around here.\""];
+	  836 [label="You: \"This is part of the... khm... *thing* I told you about.\""];
+	  837 [label="Physical Instrument: Doesn't matter! The flow of events is passing you by! The woman said something, now the man's saying something... KEEP YOUR HEAD IN THE GAME, SON!"];
+	  838 [label="You: \"They tell us you were raped.\""];
+	  839 [label="You: \"Let's return to this later, miss.\" [Leave.]"];
+	  840 [label="You: \"What do you do, miss? What is your *specialization*?\""];
+	  841 [label="Klaasje (Miss Oranje Disco Dancer): \"Nothing -- if you're no longer there.\""];
+	  842 [label="You: \"Oranjese lit?\""];
+	  843 [label="Klaasje (Miss Oranje Disco Dancer): \"Sure.\" She takes a drag."];
+	  844 [label="Klaasje (Miss Oranje Disco Dancer): \"The kind of hurry where you can't afford to *not* find your documents -- but don't worry. This has *nothing* to do with your investigation.\""];
+	  845 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasjeone_result_suck_for_you_suspect\"]"];
+	  846 [label="Variable[\"whirling.klaasjeone_result_suck_for_you_suspect\"]", shape=diamond];
+	  847 [label="!(Variable[\"whirling.klaasjeone_result_suck_for_you_suspect\"])", shape=diamond];
+	  848 [label="Klaasje (Miss Oranje Disco Dancer): \"If I didn't know better, I'd say you feigned that 'fuck-having' line to get me to say something stupid. Was that so?\""];
+	  849 [label="Half Light: Oh my..."];
+	  850 [label="Klaasje (Miss Oranje Disco Dancer): \"Cool. I think I'm developing a pinch of that too. It hasn't done wonders to my taste in interior decoration.\""];
+	  851 [label="Klaasje (Miss Oranje Disco Dancer): \"Funkytown,\" she says and takes a sip of her coffee."];
+	  852 [label="You: \"You're too young to call yourself a disco has-been.\""];
+	  853 [label="Klaasje (Miss Oranje Disco Dancer): She looks at you and nods."];
+	  854 [label="Encyclopedia: Samaran boxing, or Sam Bo. Graceful martial arts stuff. 'Sam Bo- style' implies stealth and cool."];
+	  855 [label="Klaasje (Miss Oranje Disco Dancer): \"Hello again, officer.\" She sounds tired now. All the pep is gone."];
+	  856 [label="Jump to: [peep_whirling]"];
+	  857 [label="Jump to: [peep_whirling]"];
+	  858 [label="Klaasje (Miss Oranje Disco Dancer): \"Shit... I don't know. Maybe it's been there for a long time. Maybe the local kids use it or something. I don't know...\""];
+	  859 [label="Klaasje (Miss Oranje Disco Dancer): \"I'm stuck in Martinaise, just like all of us. I've been up here for... I don't know how long now? I like to call this my *rooftop containment facility*.\""];
+	  860 [label="Klaasje (Miss Oranje Disco Dancer): She narrows her eyes. \"You mean that little thing you caught -- when you first came here? On the roof there?\""];
+	  861 [label="recent_jump"];
+	  862 [label="Jump to: [TASK.fridge_victims_body_done || TAS ...]"];
+	  863 [label="Klaasje (Miss Oranje Disco Dancer): \"Thank you, but actually -- now that I think about it -- you mentioned sea water? I was worried I'd been too careless with the latch mechanism... The documents were probably,\" she waves her cigarette, \"just washed away...\""];
+	  864 [label="Electrochemistry: All things considered -- very. Now linger."];
+	  865 [label="Klaasje (Miss Oranje Disco Dancer): \"Anyway -- I thought it would be *funny* to say I didn't do it. Because I knew about your investigation...\" She cringes. \"Does that make me a suspect? I really must stop saying stupid things...\""];
+	  866 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaaske_authority_legal\"]"];
+	  867 [label="Variable[\"whirling.klaaske_authority_legal\"]", shape=diamond];
+	  868 [label="!(Variable[\"whirling.klaaske_authority_legal\"])", shape=diamond];
+	  869 [label="Rhetoric: It's hard to tell if she means it in earnest or as a joke."];
+	  870 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  871 [label="IsKimHere()", shape=diamond];
+	  872 [label="!(IsKimHere())", shape=diamond];
+	  873 [label="You: \"You seem to have, among other things, Preptide.\""];
+	  874 [label="Kim Kitsuragi: \"Thank you, miss.\" He turns to you. \"We should do a thorough search of the fishing village.\""];
+	  875 [label="Jump to: [You: \"\"I noticed your room is close to mi...\"]"];
+	  876 [label="You: \"No time for pleasantries. We have questions for you.\" (Proceed in a rush.)"];
+	  877 [label="Klaasje (Miss Oranje Disco Dancer): \"Have I ever! This is the biggest fan of Ostentatious Orchestrations I have seen in my *life*. And I have seen a few...\""];
+	  878 [label="Klaasje (Miss Oranje Disco Dancer): \"'Oh yeah,'\" she declares. \"'Life gets hard -- but we go on.'\""];
+	  879 [label="Klaasje (Miss Oranje Disco Dancer): IsTHCPresent(\"white_mourning\")  or  IsTHCPresent(\"caustic_echo\")  or  Variable[\"inventory.ledger_caustic_echo\"]  or  Variable[\"inventory.ledger_white_mourning\"]"];
+	  880 [label="IsTHCPresent(\"white_mourning\")  or  IsTHCPresent(\"caustic_echo\")  or  Variable[\"inventory.ledger_caustic_echo\"]  or  Variable[\"inventory.ledger_white_mourning\"]", shape=diamond];
+	  881 [label="!(IsTHCPresent(\"white_mourning\")  or  IsTHCPresent(\"caustic_echo\")  or  Variable[\"inventory.ledger_caustic_echo\"]  or  Variable[\"inventory.ledger_white_mourning\"])", shape=diamond];
+	  882 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  883 [label="IsKimHere()", shape=diamond];
+	  884 [label="!(IsKimHere())", shape=diamond];
+	  885 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasjeone_result_heard_last_night\"]"];
+	  886 [label="Variable[\"whirling.klaasjeone_result_heard_last_night\"]", shape=diamond];
+	  887 [label="!(Variable[\"whirling.klaasjeone_result_heard_last_night\"])", shape=diamond];
+	  888 [label="Authority: OH YEAH, FEEL THE POWER."];
+	  889 [label="Kim Kitsuragi: \"That is not actually what a police siren sounds like.\" The lieutenant turns to the young woman."];
+	  890 [label="You: \"Those days are behind me. I am here to ask questions.\""];
+	  891 [label="Klaasje (Miss Oranje Disco Dancer): \"I stand corrected. What brings you back to me -- the coming apocalypse?\""];
+	  892 [label="Conceptualization: What is there to do now -- stranded here? The question is personal to her. More than humour."];
+	  893 [label="You: Wait what? I'm a what?"];
+	  894 [label="Reaction Speed: Wasn't the tattoo on the hanged man an *Oranjese* Map of the Waterways? The thought begins to form in your head, then dissipates -- something for later."];
+	  895 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"yard.hanged_encyclopedia_racial_profiler\"]"];
+	  896 [label="Variable[\"yard.hanged_encyclopedia_racial_profiler\"]", shape=diamond];
+	  897 [label="!(Variable[\"yard.hanged_encyclopedia_racial_profiler\"])", shape=diamond];
+	  898 [label="Klaasje (Miss Oranje Disco Dancer): \"It's the past.\" She takes a sip of her coffee. \"People can't go back to the past.\""];
+	  899 [label="Klaasje (Miss Oranje Disco Dancer): \"No!\" She seems glad that you asked. \"Revacholian lit is about how *magnificent and serious* Revachol is. It's about how you have to save the world.\""];
+	  900 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_esprit_warts\"]"];
+	  901 [label="Variable[\"whirling.klaasje_esprit_warts\"]", shape=diamond];
+	  902 [label="!(Variable[\"whirling.klaasje_esprit_warts\"])", shape=diamond];
+	  903 [label="You: \"I do feel the urge to save the world, yes. I guess that's why I'm on this case.\""];
+	  904 [label="You: \"You were 14?\""];
+	  905 [label="Klaasje (Miss Oranje Disco Dancer): \"Indeed.\""];
+	  906 [label="You: \"Cool.\" (Raise your thumb.)"];
+	  907 [label="Jump to: [Klaasje MAIN]"];
+	  908 [label="Shivers: A squall of seagulls under the low-hanging sky. Distant machinery from the harbour. It's wide open and cold."];
+	  909 [label="Klaasje (Miss Oranje Disco Dancer): Then she whispers: \"I'm just a girl whom windows break around.\""];
+	  910 [label="Jump to: [You: \"\"Titus Hardie gave me a recording....\"]"];
+	  911 [label="You: \"It's possible.\""];
+	  912 [label="Empathy: A jitter of fear and disgust moves through her body, beginning from her shoulders and ending in her hips. The cigarette tastes foul to her now."];
+	  913 [label="You: \"What are you contained for then?\""];
+	  914 [label="won_won_lost"];
+	  915 [label="Kim Kitsuragi: The lieutenant looks away, over the railing."];
+	  916 [label="Klaasje (Miss Oranje Disco Dancer): \"The what?\" She narrows her eyes. \"Oh, those ones! I don't know, sir. I said I have no idea what to make of them. Honestly, I think they're just trash.\""];
+	  917 [label="Klaasje (Miss Oranje Disco Dancer): \"Look.\" She greets you, taking a drag. \"It's dark outside, the dogs are barking and I'm still here, drinking my coffee -- just like I promised.\" She smiles faintly."];
+	  918 [label="Jump to: [whirling.klaasje_talked_about_lely]"];
+	  919 [label="Jump to: [Klaasje (Miss Oranje Disco Dancer): \"The young woman cranes her neck, tr...\"]"];
+	  920 [label="You: \"My working hypothesis is that there is a cosmic conspiracy of some kind -- and it's out to get us all.\""];
+	  921 [label="You: \"I have this strange feeling that it was an undiscovered *cryptid* that took your documents.\""];
+	  922 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"]"];
+	  923 [label="Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"]", shape=diamond];
+	  924 [label="!(Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"])", shape=diamond];
+	  925 [label="Klaasje (Miss Oranje Disco Dancer): \"Better safe than sorry.\" She takes a drag and smiles."];
+	  926 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"tc.ruby_did_it_klaasje_said\"]"];
+	  927 [label="Variable[\"tc.ruby_did_it_klaasje_said\"]", shape=diamond];
+	  928 [label="!(Variable[\"tc.ruby_did_it_klaasje_said\"])", shape=diamond];
+	  929 [label="Klaasje (Miss Oranje Disco Dancer): \"Although -- if I remember correctly -- there are still some centuries to go. Very anticlimactic.\""];
+	  930 [label="You: \"Yes, my copotype is unbelievably rare.\""];
+	  931 [label="Composure: What could she be thinking of? It's hard to say -- her shoulders are relaxed, her eyes on the cigarette."];
+	  932 [label="Esprit de Corps: We should have discussed your history before we came here, he thinks. So many unpleasant surprises with this guy..."];
+	  933 [label="Half Light: Sheer terror. Panic and screaming."];
+	  934 [label="Electrochemistry: She's not angry, but it's true: she's gonna have to find some more Preptide now."];
+	  935 [label="Jump to: [Klaasje (Miss Oranje Disco Dancer): \"\"Ah, I see.\" She takes a pensive dr...\"]"];
+	  936 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasjeone_copotype_apocalypse_centuries\"]"];
+	  937 [label="Variable[\"whirling.klaasjeone_copotype_apocalypse_centuries\"]", shape=diamond];
+	  938 [label="!(Variable[\"whirling.klaasjeone_copotype_apocalypse_centuries\"])", shape=diamond];
+	  939 [label="Klaasje (Miss Oranje Disco Dancer): \"A third place? Interesting.\" She takes a sip of coffee. \"That's probably why the cleaning lady quit.\""];
+	  940 [label="Klaasje (Miss Oranje Disco Dancer): \"Have I ever... This man has an *unforgettable* way with words.\""];
+	  941 [label="You: \"I have grown accustomed to the *power*, miss.\""];
+	  942 [label="Klaasje (Miss Oranje Disco Dancer): \"Ah, I can see that you have, officer.\" She nods."];
+	  943 [label="Conceptualization: No, it wouldn't. It would be thematic."];
+	  944 [label="Electrochemistry: It's almost imperceptible in the cold wind, but the blood vessels on her cheeks and neck dilate."];
+	  945 [label="Kim Kitsuragi: \"Yes, I understood that, officer.\" He turns to the young woman."];
+	  946 [label="Jump to: [TASK.fridge_victims_body_done || TAS ...]"];
+	  947 [label="Klaasje (Miss Oranje Disco Dancer): \"Wow indeed... And what brings this herald back to me?\""];
+	  948 [label="Kim Kitsuragi: \"I can assure you -- there really, really are *not*.\""];
+	  949 [label="Klaasje (Miss Oranje Disco Dancer): \"I know,\" she says with great melancholy. \"What now?\""];
+	  950 [label="Perception (Sight): Her birthmarks also signal Oranje. You don't know why, but Oranjese girls tend to come speckled with them."];
+	  951 [label="Empathy: It's the world's most tired smile."];
+	  952 [label="Klaasje (Miss Oranje Disco Dancer): \"I'm afraid you can't, officer.\""];
+	  953 [label="Kim Kitsuragi: \"Thank you for your candour -- why?\""];
+	  954 [label="You: \"What kind of *people* are these -- the ones that don't like you?\""];
+	  955 [label="Logic: Didn't she say you would have to *interrogate* her? Before? And that she *didn't do it*? What was up with that?"];
+	  956 [label="room hub"];
+	  957 [label="Klaasje (Miss Oranje Disco Dancer): \"The World?\" She looks around."];
+	  958 [label="You: \"It's a demon who smells of betrayal. And apricots.\""];
+	  959 [label="Klaasje (Miss Oranje Disco Dancer): \"Betrayed by the things we love -- what a rotten deal...\" She breathes in a large billow of menthol-infused smoke, then lets it out slowly..."];
+	  960 [label="You: \"I don't know what it is.\""];
+	  961 [label="Klaasje (Miss Oranje Disco Dancer): \"I heard this is where the washed up disco has-beens go.\""];
+	  962 [label="Klaasje (Miss Oranje Disco Dancer): \"All right.\" She takes a long, pensive drag of her Astra Menthol."];
+	  963 [label="Klaasje (Miss Oranje Disco Dancer): \"Thanks.\" She smiles. It's a sad little smile, like she's some miniature bird or tiny field mouse."];
+	  964 [label="You: Say nothing."];
+	  965 [label="Jump to: [Klaasje MAIN]"];
+	  966 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"TASK.confront_klaasje_with_full_story_done\"]"];
+	  967 [label="Variable[\"TASK.confront_klaasje_with_full_story_done\"]", shape=diamond];
+	  968 [label="!(Variable[\"TASK.confront_klaasje_with_full_story_done\"])", shape=diamond];
+	  969 [label="You: \"That's all for now.\" (Conclude.)"];
+	  970 [label="You: \"We don't know at this point.\""];
+	  971 [label="You: \"The perforation should be under your bookcase, in your bedroom.\""];
+	  972 [label="Klaasje (Miss Oranje Disco Dancer): \"It's very hard to believe -- that she'd do something like that. But... no. I don't know.\" She squints. \"I just don't know about this, officer.\""];
+	  973 [label="You: \"But this turned out well for you. You've *slipped* past all suspicions.\""];
+	  974 [label="Klaasje (Miss Oranje Disco Dancer): \"For destroying my first love. For working for bad people. The list goes on and on.\""];
+	  975 [label="buoy_buoy"];
+	  976 [label="Klaasje (Miss Oranje Disco Dancer): She flashes you a sudden half-smile. \"Yes, that must be it. Thank you. I feel better already.\""];
+	  977 [label="Reaction Speed: He's trying to throw her off with the bluntness of the question."];
+	  978 [label="Jump to: [beauty pageant hub]"];
+	  979 [label="You: \"Got it.\""];
+	  980 [label="Jump to: [room hub]"];
+	  981 [label="You: \"You have quite the collection of prescription drugs down there.\""];
+	  982 [label="Klaasje (Miss Oranje Disco Dancer): She almost spits out her coffee: \"What did you say?\""];
+	  983 [label="Kim Kitsuragi: \"Is that something that happens to you often, miss?\" His tone isn't aggressive, just inquisitive."];
+	  984 [label="Klaasje (Miss Oranje Disco Dancer): \"Yes, Ruby has her gruff charm.\""];
+	  985 [label="You: \"I guess I should go ask around the fishing village.\""];
+	  986 [label="You: \"I noticed your room is close to mine. I have a personal question.\""];
+	  987 [label="You: \"I need to talk to you about your room again.\""];
+	  988 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"]"];
+	  989 [label="Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"]", shape=diamond];
+	  990 [label="!(Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"])", shape=diamond];
+	  991 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  992 [label="IsKimHere()", shape=diamond];
+	  993 [label="!(IsKimHere())", shape=diamond];
+	  994 [label="Jump to: [klaasje pre hub]"];
+	  995 [label="Klaasje (Miss Oranje Disco Dancer): \"I stand corrected. What brings you back to me -- superstardom?\""];
+	  996 [label="Klaasje (Miss Oranje Disco Dancer): \"Of course there are. Look at him...\" She looks at you, then turns back to the lieutenant. \"He is The Phoenix. What brings The Phoenix back to me?\""];
+	  997 [label="You: (With contempt written all over your face.) \"Fucking *end* already.\""];
+	  998 [label="You: \"Understood, miss.\""];
+	  999 [label="You: \"You're a cop?\""];
+	  1000 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"tc.that_in_revachol\"]"];
+	  1001 [label="Variable[\"tc.that_in_revachol\"]", shape=diamond];
+	  1002 [label="!(Variable[\"tc.that_in_revachol\"])", shape=diamond];
+	  1003 [label="You: \"The world is unimportant -- I want to hear about you.\""];
+	  1004 [label="money_being"];
+	  1005 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"tc.klaasje_age_known\"]"];
+	  1006 [label="Variable[\"tc.klaasje_age_known\"]", shape=diamond];
+	  1007 [label="!(Variable[\"tc.klaasje_age_known\"])", shape=diamond];
+	  1008 [label="You: \"What is beauty?\""];
+	  1009 [label="You: \"I don't think I've ever been 14.\""];
+	  1010 [label="Klaasje (Miss Oranje Disco Dancer): \"Because it's buried in a sealed plastic bag at an undisclosed location on the coast. Along with cash and airline tickets.\""];
+	  1011 [label="Klaasje (Miss Oranje Disco Dancer): \"I don't want to become an indentured servant in a brothel on Boogie Street -- and I don't want my relatives to pay the ransom.\""];
+	  1012 [label="You: \"Why else?\""];
+	  1013 [label="Klaasje (Miss Oranje Disco Dancer): \"Okie-dokie.\" She pours herself more coffee."];
+	  1014 [label="You: \"Where does that door lead to?\" (Point to the door on the roof.)"];
+	  1015 [label="Klaasje (Miss Oranje Disco Dancer): \"Yeaaah...\" She draws out the vowel. \"I've contaminated it pretty bad.\""];
+	  1016 [label="You: \"Is that why you're out here?\""];
+	  1017 [label="Klaasje (Miss Oranje Disco Dancer): \"Don't be alarmed, but Mr. Garte implied there's an industrial Sad-spill in there.\" She taps the roof with her heel."];
+	  1018 [label="Klaasje (Miss Oranje Disco Dancer): \"I'm wintering.\""];
+	  1019 [label="Klaasje (Miss Oranje Disco Dancer): She calculates. \"About four months. I came in November.\""];
+	  1020 [label="Perception (Sight): Watching herself reflected in the bedroom window -- tall and sparkling and draped in smoke."];
+	  1021 [label="Klaasje (Miss Oranje Disco Dancer): \"Why was there a flower on the roof? I don't know, officer. Because of the wind?\""];
+	  1022 [label="Klaasje (Miss Oranje Disco Dancer): She watches you pocket the petals, then closes her eyes as she breathes in the cigarette fumes..."];
+	  1023 [label="You: Look her in the eye."];
+	  1024 [label="You: Variable[\"whirling.klaasje_volition_white_check\"]"];
+	  1025 [label="Variable[\"whirling.klaasje_volition_white_check\"]", shape=diamond];
+	  1026 [label="!(Variable[\"whirling.klaasje_volition_white_check\"])", shape=diamond];
+	  1027 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"auto.is_raining\"]"];
+	  1028 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  1029 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  1030 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  1031 [label="IsKimHere()", shape=diamond];
+	  1032 [label="!(IsKimHere())", shape=diamond];
+	  1033 [label="You: \"It's an old pinball workshop. The room back there. This place used to be a pinball arcade.\""];
+	  1034 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()"];
+	  1035 [label="IsKimHere()", shape=diamond];
+	  1036 [label="!(IsKimHere())", shape=diamond];
+	  1037 [label="Shivers: The wet wind, heavy with brine and industrial pollution from the stacks nearby, ruffles her hair."];
+	  1038 [label="Klaasje (Miss Oranje Disco Dancer): \"I mean, there's no reason for me to think they're somehow connected to her.\""];
+	  1039 [label="Klaasje (Miss Oranje Disco Dancer): \"Lies, I...\" She repeats -- then trails off. It's unclear what she intended to say."];
+	  1040 [label="Jump to: [whirling.klaasje_volition_white_check]"];
+	  1041 [label="Jump to: [lely main hub]"];
+	  1042 [label="Authority: Technically, possession of narcotics is legal in Revachol. But you should still reprimand her."];
+	  1043 [label="Untitled hub"];
+	  1044 [label="Klaasje (Miss Oranje Disco Dancer): \"Wow... a hardened, callous highwayman. Don't think this won't come up again during what will be an opportune moment for me, Officer Disco.\" She smiles."];
+	  1045 [label="Klaasje (Miss Oranje Disco Dancer): \"Ruby has a gruff charm that inspires loyalty... I do wish you luck in your search, officer.\""];
+	  1046 [label="Visual Calculus: Of course she won a beauty pageant. She's very symmetrical."];
+	  1047 [label="You: \"No, I just trashed the place.\""];
+	  1048 [label="Klaasje (Miss Oranje Disco Dancer): \"Thank you for that, officers. Truly.\""];
+	  1049 [label="itsahubforeasiervisualprogramming"];
+	  1050 [label="You: \"How long, do you think, until the hard wears us down?\""];
+	  1051 [label="You: I'll go straight to it. I don't wanna sound like a namby-pamby."];
+	  1052 [label="Physical Instrument: Good on you, boy. She can take it."];
+	  1053 [label="Kim Kitsuragi: \"It would, wouldn't it? It would be *strange*. You see...\""];
+	  1054 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_run_endu_medium\"]"];
+	  1055 [label="Variable[\"whirling.klaasje_run_endu_medium\"]", shape=diamond];
+	  1056 [label="!(Variable[\"whirling.klaasje_run_endu_medium\"])", shape=diamond];
+	  1057 [label="You: \"What is this wild flower?\" (Show her the flower.)"];
+	  1058 [label="Klaasje (Miss Oranje Disco Dancer): \"Right.\" She turns to face the wind, letting it dry her hair."];
+	  1059 [label="Encyclopedia: Same name that Titus gave you. It sounds Oranjese -- as does her accent."];
+	  1060 [label="You: \"Did you do something wrong?\""];
+	  1061 [label="You: \"Cool.\""];
+	  1062 [label="You: \"So you were stupid and mediocre?\""];
+	  1063 [label="Kim Kitsuragi: \"I don't think I've ever heard anything less relevant to any investigation.\""];
+	  1064 [label="Klaasje (Miss Oranje Disco Dancer): \"C'mon, detective, he's the most repentant law official in the land. I don't mind.\""];
+	  1065 [label="You: \"Thank you. That's it -- for the record.\""];
+	  1066 [label="passport"];
+	  1067 [label="do_it_didnt_do_it"];
+	  1068 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.barreddoor_got_open\"]"];
+	  1069 [label="Variable[\"whirling.barreddoor_got_open\"]", shape=diamond];
+	  1070 [label="!(Variable[\"whirling.barreddoor_got_open\"])", shape=diamond];
+	  1071 [label="Klaasje (Miss Oranje Disco Dancer): \"You kicked it down -- you tell me.\""];
+	  1072 [label="You: \"Nice room you've got here.\""];
+	  1073 [label="You: \"Why here?\""];
+	  1074 [label="Jump to: [room hub]"];
+	  1075 [label="You: \"I do.\""];
+	  1076 [label="Kim Kitsuragi: You hear the scribbling of the lieutenant's pen."];
+	  1077 [label="Klaasje (Miss Oranje Disco Dancer): \"A peep hole? You mean like a hole in the wall?\""];
+	  1078 [label="You: \"Why do I feel like you've *won* here?\""];
+	  1079 [label="You: \"Yes. Why was it there?\""];
+	  1080 [label="You: \"The Hardie boys told us what really happened.\""];
+	  1081 [label="Kim Kitsuragi: ...then tears one out and hands it to you. \"We have questions that might help solve some gaps in our field autopsy. I'm sure my colleague has a few of his own while I take notes.\""];
+	  1082 [label="You: Wouldn't it be, um... inappropriate to linger?"];
+	  1083 [label="Suggestion: No one likes to talk about their dirty laundry and their empty bottles. Maybe if you phrase it emotionally..."];
+	  1084 [label="You: \"I was undergoing a massive speed hangover. I needed to prop myself up.\""];
+	  1085 [label="You: \"It was confiscation.\""];
+	  1086 [label="Suggestion: No, no, don't listen to *the stiff*. Be cool."];
+	  1087 [label="You: \"In my head it designates people who abuse substances.\""];
+	  1088 [label="Klaasje (Miss Oranje Disco Dancer): \"Very funky.\" She takes a drag, looking you straight in the eye."];
+	  1089 [label="You: \"The collection includes NACRA -- an opioid antagonist.\""];
+	  1090 [label="Klaasje (Miss Oranje Disco Dancer): IsKimHere()  and  Variable[\"village.ww_rubyhub_with_kim\"]"];
+	  1091 [label="IsKimHere()  and  Variable[\"village.ww_rubyhub_with_kim\"]", shape=diamond];
+	  1092 [label="!(IsKimHere()  and  Variable[\"village.ww_rubyhub_with_kim\"])", shape=diamond];
+	  1093 [label="You: \"I have more questions about the deceased, but I need my partner here before I ask...\""];
+	  0 -> 1
+	  1 -> 750
+	  2 -> 995
+	  3 -> 175
+	  4 -> 75
+	  5 -> 447
+	  6 -> 7
+	  7 -> 668
+	  8 -> 504
+	  9 -> 10
+	  9 -> 11
+	  10 -> 230
+	  11 -> 449
+	  12 -> 322
+	  13 -> 140
+	  14 -> 673
+	  15 -> 516
+	  16 -> 627
+	  17 -> 464
+	  18 -> 19
+	  19 -> 845
+	  20 -> 846
+	  21 -> 582
+	  22 -> 583
+	  23 -> 1019
+	  24 -> 27
+	  25 -> 26
+	  26 -> 585
+	  27 -> 957
+	  28 -> 852
+	  29 -> 28
+	  30 -> 32
+	  30 -> 31
+	  31 -> 33
+	  31 -> 297
+	  32 -> 992
+	  33 -> 154
+	  34 -> 593
+	  35 -> 157
+	  36 -> 858
+	  37 -> 699
+	  38 -> 40
+	  38 -> 39
+	  39 -> 701
+	  40 -> 427
+	  41 -> 975
+	  42 -> 43
+	  42 -> 44
+	  43 -> 69
+	  44 -> 317
+	  46 -> 704
+	  47 -> 48
+	  48 -> 49
+	  48 -> 50
+	  49 -> 435
+	  50 -> 51
+	  51 -> 436
+	  52 -> 615
+	  53 -> 923
+	  54 -> 1044
+	  55 -> 162
+	  56 -> 766
+	  57 -> 765
+	  57 -> 1090
+	  57 -> 277
+	  57 -> 874
+	  58 -> 59
+	  58 -> 60
+	  59 -> 875
+	  60 -> 986
+	  61 -> 208
+	  62 -> 893
+	  63 -> 961
+	  63 -> 738
+	  63 -> 523
+	  63 -> 92
+	  63 -> 959
+	  64 -> 65
+	  64 -> 66
+	  65 -> 444
+	  66 -> 937
+	  67 -> 940
+	  68 -> 219
+	  69 -> 494
+	  70 -> 1050
+	  71 -> 73
+	  72 -> 385
+	  73 -> 125
+	  74 -> 923
+	  75 -> 923
+	  76 -> 75
+	  77 -> 387
+	  77 -> 567
+	  77 -> 568
+	  77 -> 666
+	  77 -> 891
+	  78 -> 391
+	  79 -> 863
+	  80 -> 231
+	  81 -> 82
+	  81 -> 83
+	  82 -> 510
+	  83 -> 1060
+	  84 -> 901
+	  85 -> 900
+	  86 -> 1005
+	  87 -> 636
+	  88 -> 674
+	  89 -> 849
+	  90 -> 737
+	  91 -> 350
+	  92 -> 150
+	  93 -> 194
+	  94 -> 152
+	  95 -> 153
+	  96 -> 253
+	  97 -> 1078
+	  98 -> 913
+	  99 -> 1031
+	  100 -> 98
+	  101 -> 700
+	  102 -> 915
+	  103 -> 966
+	  104 -> 105
+	  105 -> 482
+	  106 -> 864
+	  107 -> 556
+	  108 -> 109
+	  108 -> 110
+	  109 -> 512
+	  110 -> 439
+	  111 -> 543
+	  112 -> 799
+	  113 -> 208
+	  114 -> 209
+	  116 -> 615
+	  117 -> 379
+	  118 -> 719
+	  119 -> 314
+	  120 -> 877
+	  120 -> 117
+	  120 -> 831
+	  121 -> 122
+	  121 -> 123
+	  122 -> 552
+	  123 -> 559
+	  124 -> 498
+	  125 -> 126
+	  126 -> 326
+	  127 -> 330
+	  128 -> 566
+	  129 -> 332
+	  130 -> 950
+	  131 -> 893
+	  132 -> 133
+	  132 -> 134
+	  133 -> 450
+	  133 -> 894
+	  134 -> 599
+	  135 -> 399
+	  136 -> 137
+	  136 -> 138
+	  137 -> 458
+	  137 -> 1061
+	  138 -> 397
+	  139 -> 236
+	  140 -> 671
+	  141 -> 142
+	  142 -> 674
+	  143 -> 516
+	  144 -> 146
+	  145 -> 866
+	  146 -> 685
+	  147 -> 148
+	  147 -> 149
+	  148 -> 242
+	  149 -> 1018
+	  150 -> 243
+	  151 -> 524
+	  152 -> 249
+	  153 -> 30
+	  154 -> 299
+	  154 -> 35
+	  154 -> 156
+	  155 -> 957
+	  156 -> 964
+	  157 -> 355
+	  158 -> 426
+	  159 -> 263
+	  160 -> 539
+	  161 -> 926
+	  162 -> 766
+	  163 -> 56
+	  164 -> 857
+	  165 -> 973
+	  166 -> 167
+	  167 -> 715
+	  168 -> 931
+	  168 -> 172
+	  169 -> 612
+	  170 -> 776
+	  171 -> 736
+	  171 -> 90
+	  171 -> 291
+	  172 -> 448
+	  173 -> 721
+	  174 -> 498
+	  175 -> 176
+	  175 -> 177
+	  176 -> 499
+	  176 -> 1052
+	  177 -> 615
+	  178 -> 223
+	  179 -> 945
+	  180 -> 668
+	  181 -> 949
+	  182 -> 572
+	  183 -> 728
+	  184 -> 513
+	  185 -> 515
+	  186 -> 516
+	  187 -> 463
+	  188 -> 348
+	  189 -> 684
+	  190 -> 91
+	  191 -> 1067
+	  192 -> 468
+	  193 -> 63
+	  194 -> 688
+	  194 -> 25
+	  194 -> 151
+	  195 -> 957
+	  196 -> 614
+	  197 -> 97
+	  197 -> 1034
+	  197 -> 970
+	  197 -> 698
+	  197 -> 479
+	  198 -> 98
+	  199 -> 257
+	  199 -> 971
+	  199 -> 37
+	  200 -> 862
+	  201 -> 262
+	  202 -> 814
+	  203 -> 702
+	  205 -> 981
+	  206 -> 766
+	  207 -> 167
+	  208 -> 615
+	  209 -> 715
+	  210 -> 211
+	  210 -> 212
+	  213 -> 214
+	  213 -> 215
+	  214 -> 775
+	  215 -> 216
+	  216 -> 995
+	  217 -> 493
+	  218 -> 660
+	  219 -> 220
+	  219 -> 221
+	  220 -> 2
+	  221 -> 506
+	  222 -> 446
+	  223 -> 224
+	  223 -> 502
+	  224 -> 784
+	  225 -> 948
+	  226 -> 448
+	  227 -> 228
+	  227 -> 229
+	  228 -> 78
+	  229 -> 449
+	  230 -> 132
+	  231 -> 615
+	  232 -> 793
+	  233 -> 628
+	  234 -> 139
+	  235 -> 108
+	  236 -> 108
+	  237 -> 729
+	  238 -> 627
+	  239 -> 185
+	  239 -> 1010
+	  239 -> 907
+	  240 -> 1067
+	  241 -> 465
+	  242 -> 880
+	  243 -> 585
+	  244 -> 588
+	  245 -> 1020
+	  246 -> 642
+	  247 -> 525
+	  248 -> 471
+	  249 -> 957
+	  250 -> 473
+	  250 -> 1076
+	  251 -> 252
+	  252 -> 957
+	  253 -> 615
+	  254 -> 231
+	  255 -> 919
+	  256 -> 164
+	  257 -> 699
+	  258 -> 257
+	  258 -> 971
+	  258 -> 37
+	  259 -> 200
+	  260 -> 972
+	  261 -> 260
+	  262 -> 38
+	  263 -> 749
+	  264 -> 615
+	  265 -> 434
+	  266 -> 103
+	  267 -> 268
+	  268 -> 269
+	  268 -> 270
+	  269 -> 271
+	  270 -> 271
+	  272 -> 72
+	  273 -> 274
+	  273 -> 275
+	  274 -> 80
+	  275 -> 365
+	  276 -> 1043
+	  277 -> 609
+	  278 -> 615
+	  279 -> 936
+	  280 -> 77
+	  281 -> 783
+	  282 -> 129
+	  283 -> 669
+	  284 -> 398
+	  285 -> 1001
+	  286 -> 952
+	  287 -> 674
+	  288 -> 516
+	  289 -> 1011
+	  290 -> 518
+	  291 -> 349
+	  292 -> 409
+	  292 -> 93
+	  292 -> 151
+	  293 -> 960
+	  294 -> 1020
+	  295 -> 592
+	  295 -> 470
+	  295 -> 246
+	  295 -> 247
+	  296 -> 1021
+	  297 -> 413
+	  298 -> 593
+	  299 -> 648
+	  300 -> 533
+	  301 -> 71
+	  301 -> 785
+	  301 -> 178
+	  301 -> 501
+	  301 -> 565
+	  301 -> 1051
+	  302 -> 107
+	  303 -> 556
+	  304 -> 231
+	  305 -> 870
+	  306 -> 957
+	  307 -> 308
+	  307 -> 309
+	  308 -> 549
+	  309 -> 486
+	  310 -> 957
+	  311 -> 659
+	  312 -> 116
+	  314 -> 315
+	  314 -> 316
+	  315 -> 663
+	  316 -> 64
+	  317 -> 318
+	  317 -> 319
+	  318 -> 69
+	  319 -> 173
+	  320 -> 68
+	  321 -> 118
+	  322 -> 323
+	  322 -> 324
+	  323 -> 720
+	  324 -> 781
+	  325 -> 283
+	  326 -> 500
+	  327 -> 725
+	  328 -> 789
+	  329 -> 923
+	  330 -> 329
+	  331 -> 225
+	  331 -> 388
+	  331 -> 6
+	  332 -> 668
+	  333 -> 334
+	  333 -> 335
+	  334 -> 625
+	  334 -> 570
+	  335 -> 654
+	  336 -> 660
+	  337 -> 452
+	  338 -> 394
+	  339 -> 397
+	  340 -> 630
+	  341 -> 627
+	  342 -> 627
+	  343 -> 514
+	  344 -> 345
+	  344 -> 346
+	  345 -> 289
+	  346 -> 290
+	  346 -> 517
+	  347 -> 240
+	  348 -> 21
+	  349 -> 866
+	  350 -> 519
+	  351 -> 584
+	  352 -> 711
+	  353 -> 249
+	  354 -> 355
+	  355 -> 356
+	  355 -> 357
+	  356 -> 1077
+	  357 -> 251
+	  358 -> 360
+	  358 -> 359
+	  359 -> 596
+	  360 -> 804
+	  361 -> 540
+	  362 -> 1082
+	  363 -> 976
+	  364 -> 72
+	  365 -> 231
+	  366 -> 870
+	  367 -> 57
+	  368 -> 369
+	  368 -> 370
+	  369 -> 774
+	  370 -> 58
+	  372 -> 373
+	  372 -> 374
+	  373 -> 170
+	  374 -> 171
+	  375 -> 834
+	  375 -> 67
+	  375 -> 664
+	  375 -> 217
+	  375 -> 1048
+	  376 -> 377
+	  376 -> 378
+	  377 -> 534
+	  378 -> 779
+	  379 -> 380
+	  379 -> 381
+	  380 -> 42
+	  381 -> 173
+	  382 -> 384
+	  382 -> 383
+	  383 -> 495
+	  384 -> 883
+	  385 -> 616
+	  386 -> 923
+	  387 -> 996
+	  388 -> 180
+	  389 -> 8
+	  390 -> 622
+	  391 -> 392
+	  391 -> 393
+	  392 -> 9
+	  393 -> 505
+	  394 -> 457
+	  394 -> 999
+	  395 -> 842
+	  396 -> 136
+	  397 -> 627
+	  398 -> 627
+	  399 -> 400
+	  399 -> 401
+	  400 -> 459
+	  401 -> 395
+	  402 -> 285
+	  403 -> 843
+	  404 -> 516
+	  405 -> 1016
+	  406 -> 644
+	  407 -> 850
+	  408 -> 960
+	  409 -> 194
+	  410 -> 411
+	  410 -> 412
+	  411 -> 245
+	  412 -> 294
+	  413 -> 694
+	  414 -> 195
+	  415 -> 615
+	  416 -> 417
+	  416 -> 418
+	  417 -> 254
+	  418 -> 757
+	  419 -> 957
+	  420 -> 807
+	  421 -> 422
+	  421 -> 423
+	  422 -> 100
+	  423 -> 198
+	  424 -> 862
+	  425 -> 478
+	  426 -> 201
+	  426 -> 974
+	  427 -> 428
+	  427 -> 429
+	  428 -> 430
+	  429 -> 1038
+	  430 -> 860
+	  431 -> 432
+	  431 -> 433
+	  432 -> 916
+	  433 -> 598
+	  434 -> 160
+	  435 -> 978
+	  436 -> 363
+	  437 -> 302
+	  439 -> 512
+	  440 -> 611
+	  441 -> 957
+	  442 -> 659
+	  443 -> 656
+	  444 -> 130
+	  444 -> 226
+	  444 -> 389
+	  444 -> 998
+	  445 -> 321
+	  446 -> 619
+	  447 -> 923
+	  448 -> 504
+	  449 -> 53
+	  450 -> 79
+	  451 -> 995
+	  452 -> 790
+	  453 -> 232
+	  454 -> 456
+	  454 -> 455
+	  455 -> 951
+	  456 -> 627
+	  457 -> 135
+	  458 -> 573
+	  459 -> 842
+	  460 -> 1062
+	  461 -> 516
+	  462 -> 516
+	  463 -> 1067
+	  464 -> 1012
+	  465 -> 681
+	  466 -> 89
+	  467 -> 958
+	  468 -> 147
+	  469 -> 1074
+	  470 -> 962
+	  471 -> 249
+	  472 -> 741
+	  473 -> 34
+	  474 -> 529
+	  475 -> 415
+	  476 -> 753
+	  477 -> 697
+	  478 -> 748
+	  479 -> 537
+	  480 -> 915
+	  481 -> 1040
+	  482 -> 556
+	  483 -> 627
+	  484 -> 54
+	  485 -> 489
+	  486 -> 766
+	  487 -> 761
+	  488 -> 766
+	  489 -> 548
+	  490 -> 253
+	  491 -> 827
+	  492 -> 312
+	  493 -> 665
+	  494 -> 1049
+	  495 -> 496
+	  495 -> 497
+	  496 -> 119
+	  497 -> 121
+	  498 -> 710
+	  499 -> 222
+	  500 -> 923
+	  501 -> 890
+	  502 -> 1054
+	  503 -> 179
+	  504 -> 923
+	  505 -> 1055
+	  506 -> 507
+	  506 -> 508
+	  507 -> 451
+	  508 -> 626
+	  509 -> 454
+	  510 -> 284
+	  511 -> 627
+	  512 -> 627
+	  513 -> 1005
+	  514 -> 578
+	  515 -> 627
+	  516 -> 1011
+	  517 -> 16
+	  518 -> 520
+	  518 -> 521
+	  519 -> 522
+	  520 -> 584
+	  521 -> 351
+	  522 -> 292
+	  523 -> 24
+	  524 -> 527
+	  525 -> 353
+	  526 -> 29
+	  526 -> 798
+	  526 -> 526
+	  527 -> 692
+	  528 -> 744
+	  528 -> 594
+	  528 -> 743
+	  529 -> 531
+	  529 -> 532
+	  530 -> 803
+	  530 -> 965
+	  531 -> 415
+	  532 -> 966
+	  533 -> 536
+	  533 -> 535
+	  534 -> 967
+	  535 -> 1028
+	  536 -> 811
+	  537 -> 431
+	  538 -> 480
+	  539 -> 197
+	  540 -> 47
+	  541 -> 363
+	  542 -> 544
+	  542 -> 545
+	  543 -> 635
+	  544 -> 1047
+	  545 -> 627
+	  546 -> 305
+	  547 -> 367
+	  548 -> 550
+	  548 -> 551
+	  549 -> 608
+	  550 -> 206
+	  551 -> 836
+	  551 -> 837
+	  551 -> 621
+	  551 -> 726
+	  551 -> 282
+	  552 -> 554
+	  552 -> 555
+	  553 -> 957
+	  554 -> 1084
+	  555 -> 52
+	  556 -> 989
+	  557 -> 660
+	  558 -> 560
+	  558 -> 561
+	  559 -> 280
+	  560 -> 562
+	  561 -> 563
+	  561 -> 564
+	  562 -> 941
+	  563 -> 886
+	  564 -> 4
+	  565 -> 329
+	  566 -> 5
+	  567 -> 569
+	  568 -> 447
+	  569 -> 838
+	  571 -> 627
+	  572 -> 899
+	  573 -> 84
+	  574 -> 402
+	  574 -> 13
+	  575 -> 577
+	  576 -> 108
+	  577 -> 516
+	  578 -> 580
+	  578 -> 581
+	  579 -> 954
+	  580 -> 187
+	  581 -> 1067
+	  582 -> 627
+	  583 -> 1067
+	  584 -> 586
+	  584 -> 587
+	  585 -> 689
+	  586 -> 934
+	  587 -> 957
+	  588 -> 590
+	  588 -> 591
+	  589 -> 469
+	  590 -> 1074
+	  590 -> 28
+	  591 -> 94
+	  592 -> 155
+	  593 -> 1022
+	  594 -> 530
+	  595 -> 1031
+	  596 -> 858
+	  597 -> 915
+	  598 -> 449
+	  599 -> 601
+	  599 -> 602
+	  600 -> 484
+	  601 -> 276
+	  602 -> 983
+	  603 -> 605
+	  603 -> 606
+	  604 -> 549
+	  605 -> 488
+	  606 -> 825
+	  607 -> 766
+	  608 -> 871
+	  609 -> 655
+	  610 -> 870
+	  612 -> 372
+	  613 -> 36
+	  614 -> 1024
+	  614 -> 267
+	  614 -> 653
+	  614 -> 911
+	  614 -> 788
+	  614 -> 541
+	  614 -> 1058
+	  614 -> 169
+	  614 -> 46
+	  614 -> 817
+	  614 -> 1073
+	  614 -> 822
+	  614 -> 1079
+	  614 -> 313
+	  614 -> 826
+	  614 -> 1081
+	  614 -> 1094
+	  614 -> 839
+	  614 -> 840
+	  614 -> 987
+	  614 -> 988
+	  614 -> 481
+	  614 -> 745
+	  614 -> 492
+	  614 -> 114
+	  614 -> 255
+	  615 -> 617
+	  615 -> 618
+	  616 -> 3
+	  617 -> 932
+	  618 -> 615
+	  619 -> 923
+	  620 -> 667
+	  621 -> 624
+	  621 -> 623
+	  622 -> 230
+	  623 -> 333
+	  624 -> 838
+	  625 -> 995
+	  626 -> 453
+	  626 -> 841
+	  626 -> 1066
+	  626 -> 337
+	  626 -> 340
+	  626 -> 670
+	  626 -> 511
+	  627 -> 843
+	  628 -> 794
+	  629 -> 732
+	  630 -> 632
+	  630 -> 633
+	  631 -> 795
+	  632 -> 86
+	  633 -> 286
+	  634 -> 905
+	  634 -> 141
+	  634 -> 1009
+	  634 -> 87
+	  634 -> 1083
+	  634 -> 735
+	  635 -> 1006
+	  636 -> 14
+	  636 -> 1063
+	  637 -> 516
+	  638 -> 640
+	  638 -> 641
+	  639 -> 844
+	  640 -> 727
+	  641 -> 1075
+	  642 -> 615
+	  643 -> 645
+	  643 -> 646
+	  644 -> 963
+	  645 -> 296
+	  646 -> 957
+	  647 -> 910
+	  648 -> 231
+	  649 -> 746
+	  650 -> 748
+	  651 -> 538
+	  652 -> 705
+	  653 -> 449
+	  654 -> 441
+	  655 -> 657
+	  655 -> 658
+	  656 -> 311
+	  657 -> 208
+	  658 -> 208
+	  659 -> 661
+	  659 -> 662
+	  660 -> 322
+	  661 -> 382
+	  662 -> 130
+	  662 -> 226
+	  662 -> 389
+	  662 -> 998
+	  663 -> 336
+	  664 -> 660
+	  665 -> 892
+	  666 -> 997
+	  667 -> 923
+	  668 -> 227
+	  669 -> 953
+	  670 -> 238
+	  671 -> 631
+	  672 -> 674
+	  673 -> 635
+	  674 -> 676
+	  674 -> 677
+	  675 -> 1064
+	  676 -> 462
+	  677 -> 143
+	  678 -> 483
+	  679 -> 1014
+	  680 -> 682
+	  680 -> 683
+	  681 -> 18
+	  682 -> 1013
+	  683 -> 685
+	  684 -> 191
+	  685 -> 95
+	  686 -> 192
+	  686 -> 980
+	  687 -> 797
+	  688 -> 27
+	  689 -> 740
+	  690 -> 854
+	  691 -> 249
+	  692 -> 249
+	  693 -> 957
+	  694 -> 96
+	  695 -> 855
+	  696 -> 197
+	  697 -> 196
+	  698 -> 1035
+	  699 -> 748
+	  700 -> 860
+	  701 -> 1039
+	  702 -> 756
+	  704 -> 706
+	  704 -> 707
+	  705 -> 708
+	  706 -> 362
+	  707 -> 1042
+	  708 -> 303
+	  709 -> 923
+	  710 -> 712
+	  710 -> 713
+	  711 -> 553
+	  712 -> 957
+	  713 -> 859
+	  714 -> 716
+	  714 -> 717
+	  715 -> 442
+	  716 -> 443
+	  717 -> 936
+	  718 -> 120
+	  719 -> 1050
+	  720 -> 722
+	  720 -> 723
+	  721 -> 320
+	  722 -> 780
+	  723 -> 174
+	  724 -> 329
+	  725 -> 331
+	  726 -> 81
+	  727 -> 627
+	  728 -> 730
+	  728 -> 731
+	  729 -> 140
+	  729 -> 85
+	  730 -> 832
+	  731 -> 733
+	  731 -> 734
+	  732 -> 672
+	  732 -> 1062
+	  733 -> 1062
+	  733 -> 343
+	  734 -> 679
+	  735 -> 145
+	  736 -> 866
+	  737 -> 851
+	  738 -> 408
+	  738 -> 293
+	  739 -> 957
+	  740 -> 694
+	  741 -> 474
+	  742 -> 475
+	  743 -> 696
+	  745 -> 419
+	  746 -> 260
+	  747 -> 197
+	  748 -> 264
+	  749 -> 752
+	  749 -> 751
+	  750 -> 918
+	  751 -> 376
+	  752 -> 754
+	  752 -> 755
+	  753 -> 361
+	  754 -> 358
+	  756 -> 758
+	  756 -> 759
+	  757 -> 304
+	  758 -> 273
+	  759 -> 824
+	  760 -> 762
+	  760 -> 763
+	  761 -> 984
+	  762 -> 161
+	  763 -> 55
+	  764 -> 1089
+	  765 -> 768
+	  765 -> 767
+	  766 -> 57
+	  767 -> 441
+	  768 -> 770
+	  769 -> 310
+	  770 -> 772
+	  770 -> 773
+	  772 -> 571
+	  773 -> 1046
+	  774 -> 995
+	  775 -> 777
+	  775 -> 778
+	  776 -> 833
+	  777 -> 933
+	  778 -> 445
+	  779 -> 68
+	  780 -> 70
+	  781 -> 943
+	  782 -> 710
+	  783 -> 74
+	  784 -> 386
+	  785 -> 76
+	  786 -> 447
+	  787 -> 639
+	  788 -> 945
+	  789 -> 792
+	  789 -> 791
+	  790 -> 895
+	  791 -> 896
+	  792 -> 457
+	  792 -> 338
+	  792 -> 999
+	  793 -> 1000
+	  793 -> 233
+	  794 -> 1005
+	  795 -> 908
+	  796 -> 585
+	  797 -> 248
+	  798 -> 800
+	  798 -> 801
+	  799 -> 195
+	  800 -> 414
+	  801 -> 250
+	  802 -> 927
+	  803 -> 805
+	  803 -> 806
+	  804 -> 99
+	  805 -> 256
+	  806 -> 197
+	  807 -> 809
+	  807 -> 810
+	  808 -> 258
+	  809 -> 199
+	  810 -> 858
+	  811 -> 38
+	  812 -> 598
+	  813 -> 816
+	  813 -> 815
+	  814 -> 917
+	  815 -> 861
+	  816 -> 818
+	  817 -> 819
+	  817 -> 820
+	  818 -> 821
+	  819 -> 821
+	  821 -> 438
+	  822 -> 1068
+	  823 -> 604
+	  824 -> 1088
+	  824 -> 610
+	  824 -> 163
+	  825 -> 491
+	  826 -> 828
+	  826 -> 829
+	  827 -> 1091
+	  828 -> 368
+	  829 -> 985
+	  830 -> 375
+	  831 -> 342
+	  832 -> 171
+	  833 -> 558
+	  834 -> 889
+	  835 -> 667
+	  836 -> 946
+	  837 -> 863
+	  838 -> 204
+	  839 -> 771
+	  840 -> 574
+	  841 -> 396
+	  842 -> 575
+	  843 -> 341
+	  844 -> 240
+	  845 -> 848
+	  845 -> 847
+	  846 -> 956
+	  847 -> 1068
+	  848 -> 613
+	  849 -> 192
+	  849 -> 467
+	  849 -> 980
+	  850 -> 588
+	  851 -> 799
+	  852 -> 693
+	  853 -> 249
+	  854 -> 1080
+	  854 -> 743
+	  855 -> 966
+	  856 -> 197
+	  857 -> 197
+	  858 -> 425
+	  859 -> 915
+	  860 -> 203
+	  861 -> 714
+	  861 -> 101
+	  861 -> 165
+	  862 -> 923
+	  863 -> 556
+	  864 -> 979
+	  865 -> 823
+	  866 -> 868
+	  866 -> 869
+	  867 -> 1087
+	  868 -> 1044
+	  869 -> 935
+	  870 -> 872
+	  870 -> 873
+	  871 -> 440
+	  872 -> 547
+	  872 -> 1085
+	  872 -> 1086
+	  873 -> 485
+	  874 -> 113
+	  876 -> 1059
+	  877 -> 879
+	  878 -> 301
+	  879 -> 881
+	  879 -> 882
+	  880 -> 193
+	  881 -> 63
+	  882 -> 884
+	  882 -> 885
+	  883 -> 325
+	  884 -> 557
+	  885 -> 888
+	  885 -> 887
+	  886 -> 878
+	  887 -> 835
+	  888 -> 281
+	  888 -> 724
+	  888 -> 942
+	  888 -> 782
+	  889 -> 620
+	  890 -> 787
+	  891 -> 447
+	  892 -> 504
+	  893 -> 79
+	  894 -> 572
+	  895 -> 897
+	  895 -> 898
+	  896 -> 182
+	  897 -> 572
+	  898 -> 183
+	  899 -> 904
+	  899 -> 234
+	  899 -> 1004
+	  900 -> 902
+	  900 -> 903
+	  901 -> 629
+	  902 -> 233
+	  903 -> 235
+	  904 -> 906
+	  905 -> 239
+	  906 -> 678
+	  907 -> 615
+	  908 -> 687
+	  909 -> 355
+	  911 -> 807
+	  912 -> 808
+	  913 -> 41
+	  914 -> 265
+	  914 -> 202
+	  914 -> 652
+	  914 -> 914
+	  914 -> 159
+	  915 -> 813
+	  916 -> 1039
+	  917 -> 266
+	  920 -> 977
+	  921 -> 709
+	  922 -> 924
+	  922 -> 925
+	  923 -> 364
+	  924 -> 272
+	  925 -> 367
+	  926 -> 928
+	  926 -> 929
+	  927 -> 490
+	  928 -> 695
+	  929 -> 130
+	  929 -> 226
+	  929 -> 389
+	  929 -> 998
+	  930 -> 181
+	  931 -> 278
+	  932 -> 171
+	  933 -> 27
+	  934 -> 306
+	  935 -> 72
+	  936 -> 938
+	  936 -> 939
+	  937 -> 930
+	  938 -> 168
+	  939 -> 660
+	  940 -> 128
+	  940 -> 327
+	  940 -> 328
+	  940 -> 503
+	  940 -> 127
+	  941 -> 124
+	  942 -> 498
+	  943 -> 923
+	  944 -> 329
+	  945 -> 947
+	  946 -> 923
+	  947 -> 668
+	  948 -> 504
+	  949 -> 62
+	  950 -> 627
+	  951 -> 111
+	  952 -> 344
+	  953 -> 463
+	  954 -> 20
+	  955 -> 1068
+	  956 -> 802
+	  956 -> 686
+	  956 -> 23
+	  956 -> 405
+	  956 -> 982
+	  956 -> 1015
+	  956 -> 406
+	  956 -> 476
+	  957 -> 909
+	  958 -> 739
+	  959 -> 243
+	  960 -> 244
+	  961 -> 528
+	  961 -> 29
+	  961 -> 691
+	  961 -> 853
+	  962 -> 643
+	  963 -> 354
+	  964 -> 1023
+	  965 -> 615
+	  966 -> 968
+	  966 -> 969
+	  967 -> 856
+	  968 -> 300
+	  969 -> 650
+	  970 -> 699
+	  971 -> 424
+	  972 -> 651
+	  973 -> 812
+	  974 -> 102
+	  975 -> 104
+	  975 -> 106
+	  975 -> 437
+	  975 -> 921
+	  975 -> 922
+	  976 -> 303
+	  977 -> 542
+	  978 -> 635
+	  979 -> 205
+	  980 -> 957
+	  981 -> 600
+	  982 -> 760
+	  982 -> 607
+	  983 -> 926
+	  984 -> 166
+	  985 -> 61
+	  986 -> 371
+	  987 -> 647
+	  988 -> 990
+	  988 -> 991
+	  989 -> 279
+	  990 -> 718
+	  991 -> 993
+	  991 -> 994
+	  992 -> 472
+	  993 -> 694
+	  994 -> 120
+	  995 -> 447
+	  996 -> 332
+	  997 -> 131
+	  998 -> 899
+	  999 -> 403
+	  1000 -> 1002
+	  1000 -> 1003
+	  1001 -> 237
+	  1002 -> 342
+	  1003 -> 576
+	  1004 -> 634
+	  1004 -> 460
+	  1005 -> 1008
+	  1005 -> 1007
+	  1006 -> 88
+	  1007 -> 674
+	  1008 -> 637
+	  1009 -> 675
+	  1010 -> 579
+	  1011 -> 347
+	  1012 -> 19
+	  1013 -> 22
+	  1014 -> 1069
+	  1015 -> 1017
+	  1016 -> 407
+	  1017 -> 880
+	  1018 -> 410
+	  1019 -> 589
+	  1020 -> 643
+	  1021 -> 595
+	  1022 -> 253
+	  1023 -> 1025
+	  1024 -> 1026
+	  1024 -> 1027
+	  1025 -> 1041
+	  1026 -> 1041
+	  1027 -> 1029
+	  1027 -> 1030
+	  1028 -> 649
+	  1029 -> 416
+	  1030 -> 1032
+	  1030 -> 1033
+	  1031 -> 420
+	  1032 -> 912
+	  1032 -> 477
+	  1033 -> 597
+	  1034 -> 1036
+	  1034 -> 1037
+	  1035 -> 259
+	  1036 -> 747
+	  1036 -> 261
+	  1037 -> 860
+	  1038 -> 480
+	  1039 -> 703
+	  1042 -> 867
+	  1043 -> 769
+	  1043 -> 603
+	  1043 -> 764
+	  1044 -> 870
+	  1045 -> 208
+	  1046 -> 546
+	  1047 -> 218
+	  1048 -> 213
+	  1049 -> 382
+	  1050 -> 786
+	  1051 -> 1053
+	  1052 -> 619
+	  1053 -> 944
+	  1054 -> 1056
+	  1054 -> 1057
+	  1055 -> 622
+	  1056 -> 390
+	  1057 -> 742
+	  1058 -> 660
+	  1059 -> 454
+	  1060 -> 339
+	  1061 -> 184
+	  1062 -> 287
+	  1063 -> 288
+	  1063 -> 1065
+	  1063 -> 461
+	  1063 -> 15
+	  1063 -> 404
+	  1063 -> 186
+	  1063 -> 638
+	  1064 -> 516
+	  1065 -> 796
+	  1066 -> 680
+	  1066 -> 17
+	  1066 -> 241
+	  1066 -> 955
+	  1066 -> 188
+	  1067 -> 144
+	  1067 -> 466
+	  1067 -> 189
+	  1067 -> 190
+	  1068 -> 1070
+	  1068 -> 1071
+	  1069 -> 1072
+	  1070 -> 690
+	  1071 -> 740
+	  1072 -> 352
+	  1073 -> 295
+	  1074 -> 957
+	  1075 -> 298
+	  1076 -> 251
+	  1077 -> 421
+	  1078 -> 158
+	  1079 -> 1022
+	  1080 -> 45
+	  1081 -> 920
+	  1082 -> 865
+	  1083 -> 957
+	  1084 -> 1045
+	  1085 -> 366
+	  1086 -> 1044
+	  1087 -> 307
+	  1088 -> 112
+	  1089 -> 487
+	  1090 -> 1092
+	  1090 -> 1093
+	  1091 -> 830
+	  1092 -> 207
+	  1093 -> 312
+}
+

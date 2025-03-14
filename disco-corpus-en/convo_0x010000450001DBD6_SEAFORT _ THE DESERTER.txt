@@ -1,0 +1,2391 @@
+# SEAFORT / THE DESERTER
+# Meet the Deserter, gun in hand, by the extinguished fire. 
+
+AUTHORITY  (PSYCHE) red check
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="The Deserter: Variable[\"seafort.deserter_no_gun_exit_done\"]"];
+	  3 [label="Variable[\"seafort.deserter_no_gun_exit_done\"]", shape=diamond];
+	  4 [label="!(Variable[\"seafort.deserter_no_gun_exit_done\"])", shape=diamond];
+	  5 [label="You: \"I want to ask again about the people you don't like.\""];
+	  6 [label="The Deserter: \"I ain't going anywhere.\""];
+	  7 [label="The Deserter: IsCunoInParty()"];
+	  8 [label="IsCunoInParty()", shape=diamond];
+	  9 [label="!(IsCunoInParty())", shape=diamond];
+	  10 [label="You: Let it vanish."];
+	  11 [label="The Deserter: \"In Graad they sang 'Brave Children, Favourites of History' and in Hsin-Yao it was...\" He struggles to remember, then gives up. \"...some Samaran shit, I guess.\""];
+	  12 [label="Encyclopedia: In Hsin-Yao they sang \"Boy with a Scythe / Golden Sun.\""];
+	  13 [label="You: \"It's as he said: it's a Triangong. Made in Hsin-Yao.\""];
+	  14 [label="You: \"That's insane.\""];
+	  15 [label="The Deserter: IsTHCPresent(\"communist\")  and  Variable[\"seafort.deserter_revolution_is_possible\"]"];
+	  16 [label="IsTHCPresent(\"communist\")  and  Variable[\"seafort.deserter_revolution_is_possible\"]", shape=diamond];
+	  17 [label="!(IsTHCPresent(\"communist\")  and  Variable[\"seafort.deserter_revolution_is_possible\"])", shape=diamond];
+	  18 [label="Kim Kitsuragi: \"Yes -- what? To get things going again...\" The lieutenant steps closer. \"Fan the flame?\""];
+	  19 [label="The Deserter: \"The combined might of international capital, all at once -- all the greed and terror in the world -- tore into Revachol. It lifted streets from the ground and turned houses into ghosts. We were in the flak tower...\" He gestures toward it."];
+	  20 [label="The Deserter: The old man does not say more. Those black eyes of his keep piercing you, as he looks to some great distance and shakes his head slowly -- retreating from it."];
+	  21 [label="The Deserter: IsKimHere()"];
+	  22 [label="IsKimHere()", shape=diamond];
+	  23 [label="!(IsKimHere())", shape=diamond];
+	  24 [label="You: \"That's right. I'm with the good guys.\""];
+	  25 [label="The Deserter: \"Murderers...\" He stares at the embers, then into your eyes. \"You're the RCM -- you represent the Moralist International, the enemies of humanity, who took this city. I represent their adversary, le Parti communiste d'Insulinde.\""];
+	  26 [label="The Deserter: \"If the Party had surrendered -- then it would not be the Party.\""];
+	  27 [label="The Deserter: \"The what now?\" He cups his ear. \"I can't hear you.\""];
+	  28 [label="You: \"We have *drouamine*. And other opioid based painkillers. You must be in pain.\""];
+	  29 [label="The Deserter: He looks at you, his face parched from the sun and the wind -- there's a wince of pain in there somewhere."];
+	  30 [label="Empathy: Are they not heartbroken? How could they have moved on?"];
+	  31 [label="The Deserter: \"I do.\" He coughs."];
+	  32 [label="The Deserter: \"And others too. Some cordons of Revachol were still fighting. There were cells, I tried to contact them...\" He shakes his head. \"Soon they all went silent. The frequencies, dead.\""];
+	  33 [label="The Deserter: \"At night. I used a dinghy...\" He nods toward the deflated tyre in the reeds. \"I only went after dark then. When I got to the city I stayed underground. Patrols. You lot. The commons too, they'd started snitching...\""];
+	  34 [label="The Deserter: \"Sleeping...\" He coughs. \"Some nights. Ammo-scrounging on others. Those Magraves were shit even before they corroded -- some had bullets in the chamber, however.\""];
+	  35 [label="You: Not important."];
+	  36 [label="Jump to: [deserter hub]"];
+	  37 [label="Jump to: [hiding_deserter]"];
+	  38 [label="The Deserter: The old man looks across the water: at the city, the ruins, the motorways rising above it..."];
+	  39 [label="The Deserter: The old man stares at the reeds. His face shows no emotion -- only a faint tremor passes over his features, like a leaf in the wind."];
+	  40 [label="Jump to: [Cuno: \"\"The fuck?!\" Cuno's looking at you...\"]"];
+	  41 [label="Jump to: [themainhub]"];
+	  42 [label="liberast hub"];
+	  43 [label="The Deserter: IsKimHere()"];
+	  44 [label="IsKimHere()", shape=diamond];
+	  45 [label="!(IsKimHere())", shape=diamond];
+	  46 [label="Savoir Faire: The *position*? Sounds like a hiding place..."];
+	  47 [label="INTRO HUB"];
+	  48 [label="Authority: It's a good line, but your voice slips on *commander*, producing a little squeak. Sounds like you're afraid."];
+	  49 [label="Encyclopedia: It's war time slang for an experienced soldier of high rank. From the days of the Revolution in Revachol."];
+	  50 [label="Jump to: [The Deserter: \"\"It's out of bullets.\" The old man...\"]"];
+	  51 [label="The Deserter: \"The future teaches you to be alone.\""];
+	  52 [label="Jump to: [themainhub]"];
+	  53 [label="You: \"What is La Revacholière?\""];
+	  54 [label="The Deserter: \"It's the *drugs* you're all on. Druggies, winos, and whores...\" He closes his eyes in disgust."];
+	  55 [label="The Deserter: Variable[\"TASK.ballistics_analysis_done\"]"];
+	  56 [label="Variable[\"TASK.ballistics_analysis_done\"]", shape=diamond];
+	  57 [label="!(Variable[\"TASK.ballistics_analysis_done\"])", shape=diamond];
+	  58 [label="Jump to: [Half Light: \"Embers going out.\"]"];
+	  59 [label="The Deserter: \"Yes. Recruited from Jamrock in '07, trained in the Ecole de Contrôle Aérien; consigned to emergency defence duties in '08.\""];
+	  60 [label="You: Say nothing."];
+	  61 [label="The Deserter: IsKimHere()"];
+	  62 [label="IsKimHere()", shape=diamond];
+	  63 [label="!(IsKimHere())", shape=diamond];
+	  64 [label="The Deserter: \"Women *are* more susceptible to bourgeois morals.\" He blinks his black eyes. \"The material base for an uprising has eroded, the working class has betrayed mankind and themselves...\""];
+	  65 [label="You: This is not the time to push."];
+	  66 [label="The Deserter: \"For Reaction to take hold.\""];
+	  67 [label="Jump to: [deserter hub]"];
+	  68 [label="reactionary_boiii"];
+	  69 [label="The Deserter: \"The mask of humanity fall from capital. It has to take it off to kill everyone -- everything you love; all the hope and tenderness in the world. It has to take it off, just for one second. To do the deed.\""];
+	  70 [label="You: \"That's definitely enough now.\""];
+	  71 [label="You: \"You've lost your mind.\""];
+	  72 [label="You: \"You mean the Landing? Retaking of Revachol?\""];
+	  73 [label="The Deserter: \"Sure you are, you're RCM. Answer me -- who calls an operation against 50 million people *Death Blow*?\""];
+	  74 [label="You: \"But you said you were trained and assigned to the Defence Corps.\""];
+	  75 [label="yor_commie"];
+	  76 [label="The Deserter: \"I've been throwing up blood since winter. Red, like beet root -- been passing it in stool too...\""];
+	  77 [label="You: \"Understood.\""];
+	  78 [label="The Deserter: \"It's disgusting...\" He looks down at his shoes; his face parched from the sun and the wind -- there's a wince of pain in there somewhere."];
+	  79 [label="You: \"So in the city you move... underground?\""];
+	  80 [label="You: \"Why don't you just walk there?\""];
+	  81 [label="You: \"There's a small bunker under the Feld building. Have you stayed there?\""];
+	  82 [label="Savoir Faire: Wait! How did he get down there?"];
+	  83 [label="Savoir Faire: Are you sure? Forget about it then..."];
+	  84 [label="Kim Kitsuragi: \"Storm drains?\""];
+	  85 [label="The Deserter: \"Traitors. It's better alone.\" He nods toward Martinaise. \"I watched the people of this city turn the lights back on, more and more each year. Ruins, glimmering in the dark, like a fucking merry-go-round...\""];
+	  86 [label="The Deserter: CheckEquipped(\"jacket_carabineer\")"];
+	  87 [label="CheckEquipped(\"jacket_carabineer\")", shape=diamond];
+	  88 [label="!(CheckEquipped(\"jacket_carabineer\"))", shape=diamond];
+	  89 [label="Empathy: Pride of the \"at least we have this\" kind. This is a cracked honour, a bitter pride. The man sounds like a *communard*. Be careful."];
+	  90 [label="The Deserter: Variable[\"seafort.deserter_halflight_anti_jacket\"]"];
+	  91 [label="Variable[\"seafort.deserter_halflight_anti_jacket\"]", shape=diamond];
+	  92 [label="!(Variable[\"seafort.deserter_halflight_anti_jacket\"])", shape=diamond];
+	  93 [label="You: \"One more time: what have you used this gun for?\""];
+	  94 [label="You: \"When did you first see the deceased?\""];
+	  95 [label="The Deserter: Variable[\"TASK.ballistics_analysis_done\"]"];
+	  96 [label="Variable[\"TASK.ballistics_analysis_done\"]", shape=diamond];
+	  97 [label="!(Variable[\"TASK.ballistics_analysis_done\"])", shape=diamond];
+	  98 [label="Jump to: [The Deserter: \"\"What?!\" The old man's eyes fill wi...\"]"];
+	  99 [label="Jump to: [TEAM hub]"];
+	  100 [label="You: \"Lieutenant Double-Yefreitor.\""];
+	  101 [label="You: \"You don't even have a magazine.\""];
+	  102 [label="Jump to: [INTRO HUB]"];
+	  103 [label="Interfacing: Oh, wait. Yes."];
+	  104 [label="The Deserter: Variable[\"seafort.deserter_main_hub_reached\"]"];
+	  105 [label="Variable[\"seafort.deserter_main_hub_reached\"]", shape=diamond];
+	  106 [label="!(Variable[\"seafort.deserter_main_hub_reached\"])", shape=diamond];
+	  107 [label="The Deserter: IsCunoInParty()"];
+	  108 [label="IsCunoInParty()", shape=diamond];
+	  109 [label="!(IsCunoInParty())", shape=diamond];
+	  110 [label="Jump to: [Kim Kitsuragi: \"\"No.\" The lieutenant aims his pisto...\"]"];
+	  111 [label="You: \"It's not wiped from the board. *I* remember it.\""];
+	  112 [label="The Deserter: Variable[\"seafort.deserter_concept_sadness_and_so\"]"];
+	  113 [label="Variable[\"seafort.deserter_concept_sadness_and_so\"]", shape=diamond];
+	  114 [label="!(Variable[\"seafort.deserter_concept_sadness_and_so\"])", shape=diamond];
+	  115 [label="oh_boy_more_talk"];
+	  116 [label="You: \"When I said I've talked to *her* -- you were curious.\""];
+	  117 [label="The Deserter: Variable[\"seafort.deserter_ency_marching_song\"]"];
+	  118 [label="Variable[\"seafort.deserter_ency_marching_song\"]", shape=diamond];
+	  119 [label="!(Variable[\"seafort.deserter_ency_marching_song\"])", shape=diamond];
+	  120 [label="Authority: Forget about that for a moment. You need to address that remark first."];
+	  121 [label="Jump to: [gun_inspection]"];
+	  122 [label="The Deserter: \"Forty-three years... No.\" He looks into the fire -- a wisp of smoke rises from somewhere between the charred logs. \"I've been on other islands too.\""];
+	  123 [label="The Deserter: \"The boat engine.\" He gestures north. \"On the water...\""];
+	  124 [label="The Deserter: \"Girl Child Revolution.\""];
+	  125 [label="Shivers: Where it's morning. On Rue de Saint-Ghislaine, people are walking, the gas streetlights have already been switched off. Further inland, in Jamrock, the streets come alive with workers: men, women, children rushing -- muddy avenue after muddy avenue. The temperature is rising. Altocumulus clouds form above Precinct 41."];
+	  126 [label="The Deserter: \"Always waiting.\" The old man turns his eyes from the shore and back to you."];
+	  127 [label="You: \"Once a deserter, always a deserter.\""];
+	  128 [label="You: \"What *have* you done then?\""];
+	  129 [label="The Deserter: \"A second is all it took.\""];
+	  130 [label="You: \"For what?\""];
+	  131 [label="You: \"Yes. We all have a tiny bourgeois person in us, trying to run away.\""];
+	  132 [label="You: \"What?\""];
+	  133 [label="You: \"Airships?\""];
+	  134 [label="Half Light: Some kind of great terror. Worse than you've ever seen."];
+	  135 [label="You: (Point to yourself.) \"I'm also a communist.\""];
+	  136 [label="The Deserter: \"No...\" He shakes his head. \"The *opposite* of that. A future human, not a human of the past.\""];
+	  137 [label="You: \"Tell me something else.\""];
+	  138 [label="You: \"Understood -- Iblis.\""];
+	  139 [label="The Deserter: \"Rock and roll posturing...\" He stares at the embers, then into your eyes. \"You're the RCM -- you represent the Moralist International, the enemies of humanity, who took this city. I represent their adversary, le Parti communiste d'Insulinde.\""];
+	  140 [label="You: \"That's a *choice*. You could have become self-employed. Create the system.\""];
+	  141 [label="The Deserter: \"Yes.\" There's a smile on his dry lips. \"That is true, droite. That is true. That's the punishment in the jungle.\""];
+	  142 [label="You: \"Thank you for clearing that up.\" (Conclude.)"];
+	  143 [label="The Deserter: IsKimHere()"];
+	  144 [label="IsKimHere()", shape=diamond];
+	  145 [label="!(IsKimHere())", shape=diamond];
+	  146 [label="The Deserter: \"So you finally found it.\" He looks at you -- then pulls the raincoat tighter around his neck. \"There must have been a small squadron's worth of arms in there. Belle-Magraves, right?\""];
+	  147 [label="The Deserter: IsKimHere()"];
+	  148 [label="IsKimHere()", shape=diamond];
+	  149 [label="!(IsKimHere())", shape=diamond];
+	  150 [label="Half Light: Grand, violent pride swells in him."];
+	  151 [label="Drama: Not in a million years does he believe Cuno is armed. Perhaps it's the best end he can hope for?"];
+	  152 [label="volition_it"];
+	  153 [label="The Deserter: Variable[\"seafort.deserter_drouamine_seen\"]"];
+	  154 [label="Variable[\"seafort.deserter_drouamine_seen\"]", shape=diamond];
+	  155 [label="!(Variable[\"seafort.deserter_drouamine_seen\"])", shape=diamond];
+	  156 [label="The Deserter: IsCunoInParty()"];
+	  157 [label="IsCunoInParty()", shape=diamond];
+	  158 [label="!(IsCunoInParty())", shape=diamond];
+	  159 [label="Jump to: [seafort.deserter_composure_white_suc ...]"];
+	  160 [label="You: \"Iosef Lilianovich Dros, you're under arrest for the murder of the colonel.\""];
+	  161 [label="The Deserter: IsCunoInParty()"];
+	  162 [label="IsCunoInParty()", shape=diamond];
+	  163 [label="!(IsCunoInParty())", shape=diamond];
+	  164 [label="The Deserter: ...then spits it out into the extinguished fire before him. He raises his black eyes, hooded by creased eyelids, to meet yours."];
+	  165 [label="The Deserter: IsCunoInParty()"];
+	  166 [label="IsCunoInParty()", shape=diamond];
+	  167 [label="!(IsCunoInParty())", shape=diamond];
+	  168 [label="The Deserter: IsKimHere()"];
+	  169 [label="IsKimHere()", shape=diamond];
+	  170 [label="!(IsKimHere())", shape=diamond];
+	  171 [label="The Deserter: \"A big wheel of the 4th Regiment of the pederast army.\" He sighs. \"To hell with it. It's a walking stick anyway....\""];
+	  172 [label="You: \"Sorry for disturbing you. Good bye.\""];
+	  173 [label="The Deserter: \"The present to be afraid and cold.\" The old man pulls back the hood of his plastic cape and looks up into the sky. It's blue grey, the same colour as the sea."];
+	  174 [label="You: \"Yes. In the church.\" (Point southwest.)"];
+	  175 [label="Shivers: The cold dissipates. The old man watches you, carefully."];
+	  176 [label="The Deserter: \"Doubt it, dog...\""];
+	  177 [label="Empathy: He's liking this."];
+	  178 [label="The Deserter: \"Things keep falling apart if you don't tend to them.\""];
+	  179 [label="Reaction Speed: Some kind of involuntary response? Something is slightly off with his motorics..."];
+	  180 [label="The Deserter: Variable[\"tc.insurcom\"]"];
+	  181 [label="Variable[\"tc.insurcom\"]", shape=diamond];
+	  182 [label="!(Variable[\"tc.insurcom\"])", shape=diamond];
+	  183 [label="Empathy: It was dear to him. He resents forgetting it."];
+	  184 [label="The Deserter: \"Yes, I am from the Insulindian Citizens Militia. Recruited from Jamrock in '07, trained in the Ecole de Contrôle Aérien; consigned to emergency defence duties in '08.\""];
+	  185 [label="The Deserter: IsMorning()"];
+	  186 [label="IsMorning()", shape=diamond];
+	  187 [label="!(IsMorning())", shape=diamond];
+	  188 [label="You: \"I come from there.\" (Point to the mainland.) \"I can assure you, that is *not* what the people are planning.\""];
+	  189 [label="You: Don't say it."];
+	  190 [label="The Deserter: \"What *can* I do?\" The old man suddenly looks around, suddenly confused."];
+	  191 [label="The Deserter: \"You're a lumpen with a gun.\" He looks away."];
+	  192 [label="You: Say nothing."];
+	  193 [label="Jump to: [political_ideological_officer]"];
+	  194 [label="surrender!"];
+	  195 [label="The Deserter: \"You're with the RCM --\" He waves in your general direction. \"The Coalition-appointed mob that oversees the occupation of Revachol. A so-called 'lieutenant'...\""];
+	  196 [label="Endurance: There's definitely something off with his body. Something more than just metabolism, or even cancer..."];
+	  197 [label="The Deserter: \"No you're not. You're part of the *meat shield*.\" He squints. \"The human shield that surrounds the fascists. While they kill and rape. That's what *you* are.\""];
+	  198 [label="The Deserter: \"There's nothing to look over. The triage is in and it's black. Administer morphine. Moribund.\""];
+	  199 [label="The Deserter: IsKimHere()"];
+	  200 [label="IsKimHere()", shape=diamond];
+	  201 [label="!(IsKimHere())", shape=diamond];
+	  202 [label="You: \"So you've been there?\""];
+	  203 [label="The Deserter: Variable[\"TASK.extract_a_motive_done\"]"];
+	  204 [label="Variable[\"TASK.extract_a_motive_done\"]", shape=diamond];
+	  205 [label="!(Variable[\"TASK.extract_a_motive_done\"])", shape=diamond];
+	  206 [label="The Deserter: IsCunoInParty()"];
+	  207 [label="IsCunoInParty()", shape=diamond];
+	  208 [label="!(IsCunoInParty())", shape=diamond];
+	  209 [label="Cuno: \"Whoa... massive gun.\" Cuno looks at the weapon."];
+	  210 [label="You: \"Okay, you can keep it -- but keep the gun down while we talk.\""];
+	  211 [label="Jump to: [INTRO HUB]"];
+	  212 [label="Conceptualization: You should engage him about inframaterialism. Impress him with all the *ideas* you picked up from the reading group."];
+	  213 [label="The Deserter: SetVariableValue(\"seafort.deserter_bullet_connection\", true) --[[ Variable[ ]]"];
+	  214 [label="You: i wanna see phasmid with kim"];
+	  215 [label="You: \"Lieutenant.\""];
+	  216 [label="You: \"That's it for now, old man. Stay put.\" [Leave.]"];
+	  217 [label="The Deserter: IsKimHere()"];
+	  218 [label="IsKimHere()", shape=diamond];
+	  219 [label="!(IsKimHere())", shape=diamond];
+	  220 [label="The Deserter: \"Yeah-yeah, one move and you'll kill me. Put me against the wall...\" He sighs. \"To hell with it, it's a walking stick anyway.\""];
+	  221 [label="Perception (Hearing): \"I shoulda known they'd send the fucking clowns for me...\" You hear him mumble to the blackened logs."];
+	  222 [label="Conceptualization: He stares on, his wrinkled mouth moving without a sound -- a strange sadness, like a song."];
+	  223 [label="know_rifle"];
+	  224 [label="Jump to: [gun_inspection]"];
+	  225 [label="Composure: He waves erratically -- with his hand, annoyed that he can't remember. A little tremor passes through him."];
+	  226 [label="The Deserter: \"I should've burned that console down...\" He shakes his head."];
+	  227 [label="You: \"It was not rock-and-roll. It was Sad FM!\""];
+	  228 [label="The Deserter: \"The fascists were right about rock-and-roll. It *is* degenerate... Hip-gyrating mental illness music.\""];
+	  229 [label="You: \"I'm not a misanthrope, I'm a half-dead police officer who's just doing his job.\""];
+	  230 [label="something_hub"];
+	  231 [label="The Deserter: \"No -- this is a vulgar criticism.\" He blinks his black eyes. \"The material base for an uprising has eroded, the working class has betrayed mankind and themselves...\""];
+	  232 [label="The Deserter: \"I just *mourn*.\" He stares right through you. Then blinks again."];
+	  233 [label="You: \"Lapse of faith?\""];
+	  234 [label="You: \"What's Reaction?\""];
+	  235 [label="Perception (Hearing): Airships. Multi-rotored airships used in the Landing."];
+	  236 [label="The Deserter: \"I had to, I *had* to fight it. I had to never stop...\" The old man falls silent. His black eyes keep piercing your skin as he looks to some great distance behind you, shaking his head slowly -- retreating from it."];
+	  237 [label="Jump to: [deserter hub]"];
+	  238 [label="The Deserter: \"Take me to them as a prisoner of war. I have relinquished my weapon, I can no longer serve. No superiors can relieve me of my duty, you bulldozed them all to a mass grave for trying to free humanity...\" His hand shakes and he breaks into a coughing fit."];
+	  239 [label="Perception (Sight): A spray of blood from his mouth, on the black charcoal in the firepit..."];
+	  240 [label="You: \"Before that, tell me...\""];
+	  241 [label="You: \"Understood.\""];
+	  242 [label="The Deserter: \"You're inert lumpen with a gun.\""];
+	  243 [label="The Deserter: \"You're insane and grotesque. Everyone steals: vegetables, supplies. It's the life of a dog.\" He coughs once more, then puts his hand on his belly..."];
+	  244 [label="You: (Nod appreciatively.) \"I also live in Hell.\""];
+	  245 [label="The Deserter: \"They're good.\" He nods. \"Plenty of tar. I like that boy on the pack too. Reminds me of the last century.\""];
+	  246 [label="You: \"You don't like this uniform?\" (Gesture toward your coat.)"];
+	  247 [label="The Deserter: \"Oh, I love it. Makes me nostalgic for the time we...\" He pauses for a moment, catching his breath."];
+	  248 [label="Jump to: [themainhub]"];
+	  249 [label="The Deserter: Variable[\"gates.deserter_post_phasmid_hub_reached\"]"];
+	  250 [label="Variable[\"gates.deserter_post_phasmid_hub_reached\"]", shape=diamond];
+	  251 [label="!(Variable[\"gates.deserter_post_phasmid_hub_reached\"])", shape=diamond];
+	  252 [label="The Deserter: Variable[\"seafort.deserter_drama_curious\"]"];
+	  253 [label="Variable[\"seafort.deserter_drama_curious\"]", shape=diamond];
+	  254 [label="!(Variable[\"seafort.deserter_drama_curious\"])", shape=diamond];
+	  255 [label="Rhetoric: No, don't. This man does not subscribe to intellectual daydreams. The communism he mourns is a planetary force."];
+	  256 [label="Rhetoric: He would answer, but something happened. It's like his tape cut off suddenly..."];
+	  257 [label="Jump to: [The Deserter: \"His lip curls into a sneer at the m...\"]"];
+	  258 [label="Jump to: [INTRO HUB]"];
+	  259 [label="Half Light: The danger levels here are hard to read. One moment he's a fire, the next -- a fire gone out."];
+	  260 [label="You: \"I'm looking at another windbag who's got a problem with homo-sexuality.\""];
+	  261 [label="Jump to: [themainhub]"];
+	  262 [label="You: \"No, that's not it. I've talked to her.\""];
+	  263 [label="The Deserter: Variable[\"seafort.deserter_shivers_windstill\"]"];
+	  264 [label="Variable[\"seafort.deserter_shivers_windstill\"]", shape=diamond];
+	  265 [label="!(Variable[\"seafort.deserter_shivers_windstill\"])", shape=diamond];
+	  266 [label="The Deserter: Variable[\"TASK.ballistics_analysis_done\"]"];
+	  267 [label="Variable[\"TASK.ballistics_analysis_done\"]", shape=diamond];
+	  268 [label="!(Variable[\"TASK.ballistics_analysis_done\"])", shape=diamond];
+	  269 [label="You: \"How does it go -- the song?\""];
+	  270 [label="You: \"You're a holdover from, the ICM, the Insulindian Citizens Militia?\""];
+	  271 [label="You: \"Did you close the blast door?\""];
+	  272 [label="The Deserter: \"Sad FM, huh? I always hated that station. Phlegmatic, counter-revolutionary dirges... Sadness is a mental illness, a weapon of the bourgeoisie.\""];
+	  273 [label="The Deserter: \"Real music. It's La Revacholière, you shit-licking boujee dog. *Chanson de soldat* of the black-and-whites.\""];
+	  274 [label="You: \"I don't even know what that is.\""];
+	  275 [label="The Deserter: Variable[\"seafort.deserter_volition_he_couldnt\"]"];
+	  276 [label="Variable[\"seafort.deserter_volition_he_couldnt\"]", shape=diamond];
+	  277 [label="!(Variable[\"seafort.deserter_volition_he_couldnt\"])", shape=diamond];
+	  278 [label="You: \"Women will always betray you.\""];
+	  279 [label="Jump to: [The Deserter: \"The old man does not say more. Thos...\"]"];
+	  280 [label="The Deserter: \"It's not an island, droite.\" He looks around. \"It's a defensive fortification of the Commune of Revachol and I am its last surviving defender.\""];
+	  281 [label="You: \"Airborne landing?\""];
+	  282 [label="The Deserter: He nods."];
+	  283 [label="The Deserter: \"Like you belong to the Moralist Party...\" He squints his eyes at you."];
+	  284 [label="Jump to: [INTRO HUB]"];
+	  285 [label="The Deserter: The old man spits into the fire pit. He does not say anything more. A jitter passes his lower body..."];
+	  286 [label="The Deserter: \"How does anyone survive?\" He looks at his worn running shoes. \"I *steal*.\""];
+	  287 [label="You: \"The police can give you medical services. You need to be looked over.\""];
+	  288 [label="The Deserter: \"The propaganda bunker?\" He coughs. \"I used to, but not anymore.\""];
+	  289 [label="You: \"Storm drains?\""];
+	  290 [label="The Deserter: \"The time we wiped every last fucking one of them off this Earth.\""];
+	  291 [label="The Deserter: \"What is it?\" The old man looks around, confused. \"What do you want from me? I can't go...\""];
+	  292 [label="Drama: Even with the intensity he's putting in those words, and the fidgeting in his pocket, the kid is unconvincing."];
+	  293 [label="The Deserter: \"Disarmed by a kid...\" He smiles to himself. \"To hell with it. It's a walking stick anyway.\""];
+	  294 [label="Cuno: \"The fuck?!\" Cuno's looking at you like you just shat yourself."];
+	  295 [label="The Deserter: IsKimHere()"];
+	  296 [label="IsKimHere()", shape=diamond];
+	  297 [label="!(IsKimHere())", shape=diamond];
+	  298 [label="You: (Now we are done.) \"Iosef Lilianovich Dros, you are under arrest for the murder of the colonel.\""];
+	  299 [label="You: \"Sir, I need you to put down that gun so we can talk further. I'm with the police.\" (Proceed.)"];
+	  300 [label="The Deserter: \"It's a Triangong 4-46.\""];
+	  301 [label="Perception (Sight): Unclouded by cataracts -- his eyesight is sharp."];
+	  302 [label="Jump to: [INTRO HUB]"];
+	  303 [label="Jump to: [themainhub]"];
+	  304 [label="The Deserter: \"You don't fucking tell me what they sang...\" He closes his eyes and exhales to calm himself."];
+	  305 [label="The Deserter: \"God's shithouse.\" He chortles. \"Should've taken it down like they did in Graad; dismantled it for firewood.\""];
+	  306 [label="The Deserter: \"Heh\". The old man squints and looks you straight in the eye -- two black beads, moist from the sea air."];
+	  307 [label="You: Look at the butt of the gun."];
+	  308 [label="The Deserter: \"No.\" He looks into the fire -- a wisp of smoke rises from somewhere between the charred logs. \"I've been on other islands too.\""];
+	  309 [label="The Deserter: CheckItem(\"deserter_gun\")"];
+	  310 [label="CheckItem(\"deserter_gun\")", shape=diamond];
+	  311 [label="!(CheckItem(\"deserter_gun\"))", shape=diamond];
+	  312 [label="Rhetoric: We have entered a world where he said you shouldn't. It is the only world."];
+	  313 [label="The Deserter: \"Forty-three years and 10 months.\""];
+	  314 [label="The Deserter: Variable[\"TASK.light_graffito_on_fire_done\"]"];
+	  315 [label="Variable[\"TASK.light_graffito_on_fire_done\"]", shape=diamond];
+	  316 [label="!(Variable[\"TASK.light_graffito_on_fire_done\"])", shape=diamond];
+	  317 [label="Esprit de Corps: The officers go, leaving behind the writing -- still smouldering. ONE DAY, it says, I WILL RETURN TO YOUR SIDE."];
+	  318 [label="You: \"She better come. I too have given my life to Mazovian socio-economics.\""];
+	  319 [label="You: \"Girl Child Revolution?\""];
+	  320 [label="The Deserter: \"I am not a fool.\" He blinks his black eyes. \"I know -- the material base for an uprising has eroded. The working class has betrayed mankind...\""];
+	  321 [label="The Deserter: \"You could say I misunderstood the historic role of the proletariat, and thought Mazovian socio-economics were fallible. For a second I doubted the irreducible laws of historic materialism.\""];
+	  322 [label="The Deserter: \"And then you see it. As it strangles and beats your friends to death... the sweetest, most courageous people in the world.\" He's silent for a second. \"You see the fear and power in its eyes. Then you *know*.\""];
+	  323 [label="The Deserter: \"Petty-bourgeois terror. It's in all men.\""];
+	  324 [label="Jump to: [deserter hub]"];
+	  325 [label="Jump to: [deserter hub]"];
+	  326 [label="Rhetoric: It remains unclear what *it* is. He makes leaps he doesn't expect you to follow."];
+	  327 [label="You: \"Iblis?\""];
+	  328 [label="You: \"How have you coped -- mentally?\""];
+	  329 [label="Kim Kitsuragi: \"I would imagine it gets tremendously difficult -- mentally -- to live in isolation.\""];
+	  330 [label="Jump to: [deserter hub]"];
+	  331 [label="You: \"How did you get between here and the mainland?\""];
+	  332 [label="You: \"How did you access the building? It's locked, at least now it is...\""];
+	  333 [label="The Deserter: \"There used to be a system that connected the bunkers. Tunnels and such. Under the church and... everywhere. Most of them are gone now, collapsed -- just bricks. All the old infrastructure has...\""];
+	  334 [label="The Deserter: Variable[\"whirling.elevator_taken\"]"];
+	  335 [label="Variable[\"whirling.elevator_taken\"]", shape=diamond];
+	  336 [label="!(Variable[\"whirling.elevator_taken\"])", shape=diamond];
+	  337 [label="The Deserter: \"Loyalist clown uniform...\" He clears his throat, pointing at your coat. \"I see they sent the full *fasces*. Royal treatment.\""];
+	  338 [label="The Deserter: IsKimHere()  or  IsCunoInParty()"];
+	  339 [label="IsKimHere()  or  IsCunoInParty()", shape=diamond];
+	  340 [label="!(IsKimHere()  or  IsCunoInParty())", shape=diamond];
+	  341 [label="Cuno: \"Fucking old man... couldn't keep his rock in...\" he whispers, agitated."];
+	  342 [label="Cuno: \"Wait-wait!\" he turns to you, mouth open. \"Like the fucking... *ancient* army?\""];
+	  343 [label="The Deserter: Variable[\"seafort.deserter_esprit_officers_stepping_out\"]"];
+	  344 [label="Variable[\"seafort.deserter_esprit_officers_stepping_out\"]", shape=diamond];
+	  345 [label="!(Variable[\"seafort.deserter_esprit_officers_stepping_out\"])", shape=diamond];
+	  346 [label="The Deserter: Variable[\"seafort.deserter_concept_why_deserter\"]"];
+	  347 [label="Variable[\"seafort.deserter_concept_why_deserter\"]", shape=diamond];
+	  348 [label="!(Variable[\"seafort.deserter_concept_why_deserter\"])", shape=diamond];
+	  349 [label="Jump to: [themainhub]"];
+	  350 [label="The Deserter: Variable[\"TASK.extract_a_confession\"]"];
+	  351 [label="Variable[\"TASK.extract_a_confession\"]", shape=diamond];
+	  352 [label="!(Variable[\"TASK.extract_a_confession\"])", shape=diamond];
+	  353 [label="Logic: He doesn't recognize it."];
+	  354 [label="Kim Kitsuragi: \"A Samaran rifle... How did you get hold of one?\""];
+	  355 [label="The Deserter: Variable[\"seafort.deserter_prehub_reached\"]"];
+	  356 [label="Variable[\"seafort.deserter_prehub_reached\"]", shape=diamond];
+	  357 [label="!(Variable[\"seafort.deserter_prehub_reached\"])", shape=diamond];
+	  358 [label="Physical Instrument: Yell at him, now! LOUD!"];
+	  359 [label="Authority: The words \"I *am* an enemy commander\" sound cold as iron from your lungs. The old man still hugs his gun..."];
+	  360 [label="You: \"What's a *briscade*?\""];
+	  361 [label="Jump to: [noone_else_here]"];
+	  362 [label="The Deserter: Variable[\"seafort.deserter_modifier_drama_lying_about_bullet\"]"];
+	  363 [label="Variable[\"seafort.deserter_modifier_drama_lying_about_bullet\"]", shape=diamond];
+	  364 [label="!(Variable[\"seafort.deserter_modifier_drama_lying_about_bullet\"])", shape=diamond];
+	  365 [label="You: Let it be."];
+	  366 [label="You: \"Understood.\""];
+	  367 [label="You: \"First, it wasn't *some Samaran shit*. It was 'Boy with a Scythe'...\""];
+	  368 [label="The Deserter: \"I've seen kids lose their minds and start *talking* to the city. Asking it to *protect* them, when the shelling gets bad. Calling it La Revacholière...\""];
+	  369 [label="The Deserter: IsKimHere()"];
+	  370 [label="IsKimHere()", shape=diamond];
+	  371 [label="!(IsKimHere())", shape=diamond];
+	  372 [label="Visual Calculus: From ballistics, it could easily have been a Triangong too."];
+	  373 [label="You: \"The rifle has been patched and modified several times.\""];
+	  374 [label="The Deserter: The old man does not answer. He just stares in front of him."];
+	  375 [label="The Deserter: \"How did it go...\" He looks at his gun in your hand and shakes his head slowly."];
+	  376 [label="The Deserter: Variable[\"seafort.deserter_composure_forgetting\"]"];
+	  377 [label="Variable[\"seafort.deserter_composure_forgetting\"]", shape=diamond];
+	  378 [label="!(Variable[\"seafort.deserter_composure_forgetting\"])", shape=diamond];
+	  379 [label="music_blast_it_what"];
+	  380 [label="You: \"That's steadfast.\""];
+	  381 [label="The Deserter: \"There is nothing serious in this world.\" He looks at the gun in your hand. \"It's a farce.\""];
+	  382 [label="The Deserter: \"A waste.\" He blinks his black eyes. \"The material base for an uprising has eroded, the working class has betrayed mankind and themselves...\""];
+	  383 [label="The Deserter: \"...huddled on the floor. The artillery was eighty kilometres away in Ozonne but I *knew*, I knew the Commune would fall. We would all be turned into ash. So I said I was going to the map room...\" He looks east."];
+	  384 [label="The Deserter: \"That the bourgeois are not human.\""];
+	  385 [label="You: \"That's enough. Another thing...\""];
+	  386 [label="Kim Kitsuragi: \"Now is not the time, detective...\" The lieutenant says, gently."];
+	  387 [label="Inland Empire: He was like a cleric, a shepherd."];
+	  388 [label="The Deserter: \"You *don't* know. You haven't seen it...\" He shakes his head, slowly. \"Iblis...\""];
+	  389 [label="The Deserter: \"No.\" He shakes his head: \"Iblis -- Iblis calls it that.\""];
+	  390 [label="The Deserter: IsKimHere()"];
+	  391 [label="IsKimHere()", shape=diamond];
+	  392 [label="!(IsKimHere())", shape=diamond];
+	  393 [label="You: Really now?"];
+	  394 [label="The Deserter: Variable[\"seafort.deserter_said_you_lieutenant\"]"];
+	  395 [label="Variable[\"seafort.deserter_said_you_lieutenant\"]", shape=diamond];
+	  396 [label="!(Variable[\"seafort.deserter_said_you_lieutenant\"])", shape=diamond];
+	  397 [label="The Deserter: Variable[\"seafort.deserter_said_you_lieutenant_double_yefreitor\"]"];
+	  398 [label="Variable[\"seafort.deserter_said_you_lieutenant_double_yefreitor\"]", shape=diamond];
+	  399 [label="!(Variable[\"seafort.deserter_said_you_lieutenant_double_yefreitor\"])", shape=diamond];
+	  400 [label="The Deserter: \"Trained,\" he nods, \"in *historical materialism*, then assigned as a *political commissar*. By the Party. These things used to mean something.\""];
+	  401 [label="The Deserter: IsKimHere()"];
+	  402 [label="IsKimHere()", shape=diamond];
+	  403 [label="!(IsKimHere())", shape=diamond];
+	  404 [label="The Deserter: \"No wonder. All your minds are rotting from the radio waves...\" He nods toward Martinaise. \"I watched the *traitors* of this city turn the lights back on. More and more each year. Ruins, glittering in the dark, like a fucking merry-go-round...\""];
+	  405 [label="The Deserter: \"I don't want to. They're all traitors -- pigs, rabbits, and dogs. Men without ideals are only animals.\""];
+	  406 [label="Kim Kitsuragi: \"In the city you move underground?\""];
+	  407 [label="The Deserter: \"They stored leaflets there, broadcasting equipment too. Made broadcasts, I think. Propaganda officers... I buried them with their leaflets. They killed themselves. Two young boys.\""];
+	  408 [label="The Deserter: \"A lot of our boys did... I spent some winters there. Never liked it. Kept thinking of them...\" He stares at the ruins of the Feld building. \"No need to go underground anymore. It's better in the ruins on the ground.\""];
+	  409 [label="You: \"That wasn't even ordinary rock, it was...\""];
+	  410 [label="Composure: Like an untrained fighter he leans forward, back hunched, ready to spring."];
+	  411 [label="Cuno: \"I told you not to play shitty rock.\""];
+	  412 [label="You: \"Well, guess what? I *am* an enemy commander.\""];
+	  413 [label="The Deserter: \"Good, *Cuno*. Be that.\" He nods toward Martinaise. \"I saw the *traitors* of this city turn the lights back on. More and more each year. Ruins, glittering in the dark, like a fucking merry-go-round...\""];
+	  414 [label="You: i wanna see phasmid with cuno"];
+	  415 [label="The Deserter: An old man wearing tracksuit trousers leans on the frame stock of his rifle. He gathers a big ball of spit in his mouth..."];
+	  416 [label="You: \"Put the weapon down, NOW!\""];
+	  417 [label="You: \"Kim?\" (Turn to the lieutenant.)"];
+	  418 [label="Interfacing: You don't see a magazine in the well."];
+	  419 [label="You: \"Just put the gun down, okay? I don't know how else to convince you.\""];
+	  420 [label="You: \"Who are you?\""];
+	  421 [label="The Deserter: The old man leans on the frame stock of his rifle, looking up at you."];
+	  422 [label="Kim Kitsuragi: \"We have *come* to ask you questions, nothing more.\" The lieutenant puts his hand on his holster."];
+	  423 [label="Composure: His right eye twitches -- with what? Fear? Rage?"];
+	  424 [label="The Deserter: IsKimHere()"];
+	  425 [label="IsKimHere()", shape=diamond];
+	  426 [label="!(IsKimHere())", shape=diamond];
+	  427 [label="The Deserter: \"Or you're gonna blow my brains out before you question me?\" There's a moment's silence. \"To hell with it. It's a walking stick anyway.\""];
+	  428 [label="The Deserter: \"Everyone has. They named a fucking perfume after it.\""];
+	  429 [label="Jump to: [oh_boy_more_talk]"];
+	  430 [label="address_this_song"];
+	  431 [label="Encyclopedia: They say: 'Triangong 4.46. Hsin-Yao Commune. For Safre -- and for all mankind.'"];
+	  432 [label="You: \"For Safre -- and for all mankind.\""];
+	  433 [label="The Deserter: On the butt you see Vespertine writing, burnt into the wood: Triangong 4.46 mm, made in Hsin-Yao."];
+	  434 [label="The Deserter: Variable[\"village.skiff_said_boombox_to_kim\"]"];
+	  435 [label="Variable[\"village.skiff_said_boombox_to_kim\"]", shape=diamond];
+	  436 [label="!(Variable[\"village.skiff_said_boombox_to_kim\"])", shape=diamond];
+	  437 [label="The Deserter: \"Reactionary rock-and-roll music.\" He gestures north. \"Playing on the water.\""];
+	  438 [label="The Deserter: \"I was just sixteen years old, fifteen when I volunteered. I had a lapse of faith...\" He clears his throat. \"And of courage too.\""];
+	  439 [label="The Deserter: \"Always waiting. Always....\""];
+	  440 [label="Kim Kitsuragi: \"What have you been doing during all this time?\""];
+	  441 [label="Shivers: Where night falls... Hydrogen streetlamps burn on Rue de Saint-Ghislaine, golden light casting black shadows. Further inland, in Jamrock, the street grid appears black -- unlit avenue after unlit avenue. Altocumulus clouds form above Precinct 41."];
+	  442 [label="You: \"I've been there. The city is a tinderbox. It may still happen.\""];
+	  443 [label="You: \"Girl Child Nation is too strong for that.\""];
+	  444 [label="The Deserter: IsKimHere()"];
+	  445 [label="IsKimHere()", shape=diamond];
+	  446 [label="!(IsKimHere())", shape=diamond];
+	  447 [label="Kim Kitsuragi: \"And this was... when?\" The lieutenant instinctively looks to his notebook, but does not take it out."];
+	  448 [label="The Deserter: \"May the 13th, '08, 44 years ago,\" he looks north. \"The horizon was black with Coalition airships. Their petroleum rose to the sky and it looked like... like it *formed* the clouds. Storm clouds. When they started shelling it was... dark magic.\""];
+	  449 [label="The Deserter: Variable[\"tc.aerostatic\"]"];
+	  450 [label="Variable[\"tc.aerostatic\"]", shape=diamond];
+	  451 [label="!(Variable[\"tc.aerostatic\"])", shape=diamond];
+	  452 [label="You: \"That's definitely enough now.\""];
+	  453 [label="You: \"No, I really am a communist. I have communist thoughts in my head.\""];
+	  454 [label="You: \"Murderers. I know what you mean.\""];
+	  455 [label="The Deserter: \"A liberal and a pederast. It's what most liberals are.\""];
+	  456 [label="The Deserter: \"Hmhm.\" His leg jerks."];
+	  457 [label="The Deserter: \"You're the RCM.\" He stares at the embers, then into your eyes. \"You represent the Moralist International, the enemies of humanity, who took this city. I represent their adversary, le Parti communiste d'Insulinde.\""];
+	  458 [label="You: \"Is *that* why you've been here for 43 years? Because the Party didn't surrender?\""];
+	  459 [label="The Deserter: \"Honour is a feudal atavism.\" He looks at the firepit. \"My motive is class.\""];
+	  460 [label="Visual Calculus: He does seem frail, gaunt for his age, more like 75 than 65. Trouble putting on weight could mean cancer."];
+	  461 [label="You: \"That's what you get stealing things.\""];
+	  462 [label="The Deserter: IsCunoInParty()"];
+	  463 [label="IsCunoInParty()", shape=diamond];
+	  464 [label="!(IsCunoInParty())", shape=diamond];
+	  465 [label="You: (You notice the lieutenant is about to say something.)"];
+	  466 [label="The Deserter: \"From bunker to bunker...\" He nods. \"Not anymore, no one cares now, I don't even have to hide. They think I'm another antisocial vagrant. I could walk straight into that town if I wanted. I just...\" He falls silent, his gaze fixed on the shacks huddled together across the water."];
+	  467 [label="Jump to: [PHASMID HUB]"];
+	  468 [label="Jump to: [Cuno: \"\"No fucking way, not on Cuno's life...\"]"];
+	  469 [label="Rhetoric: This looked very much like the murder weapon. It can be used against him to get a confession -- in time..."];
+	  470 [label="The Deserter: IsKimHere()"];
+	  471 [label="IsKimHere()", shape=diamond];
+	  472 [label="!(IsKimHere())", shape=diamond];
+	  473 [label="Jump to: [The Deserter: \"\"Huh?\" He leans closer with a stran...\"]"];
+	  474 [label="Half Light: A shudder of disgust passes his right side. His left side remains motionless."];
+	  475 [label="Jump to: [CUNOTEAM hub]"];
+	  476 [label="Kim Kitsuragi: \"No.\" The lieutenant aims his pistol square at the man's head and says:"];
+	  477 [label="Authority: That was not the right move. You should have pushed on."];
+	  478 [label="The Deserter: \"You heard me. It's good now. Like chalk wiped from the board.\" His gaze turns inwards."];
+	  479 [label="Drama: Look at him raise his bushy brows. That's a lie. He's empty."];
+	  480 [label="Drama: You were right."];
+	  481 [label="You: \"The present...\""];
+	  482 [label="Encyclopedia: Marching song..."];
+	  483 [label="You: \"Yes. Must've been that.\""];
+	  484 [label="The Deserter: \"A fucking perfume...\" he sighs."];
+	  485 [label="You: \"Yes. I get these... cold spells.\""];
+	  486 [label="You: Rub your sides."];
+	  487 [label="Jump to: [themainhub]"];
+	  488 [label="You: \"By the way, I'm a fascist.\""];
+	  489 [label="The Deserter: The rifle's in a shabby state, like a crutch that's seen too much travel. Hieroglyphs are embossed into the forearm made of walnut."];
+	  490 [label="Kim Kitsuragi: \"Worn. Personalized even. Looks like this weapon has seen a lot of use. Hasn't it, sir?\""];
+	  491 [label="The Deserter: No response from the old man. The plastic cape around his shoulders rustles in a small bout of wind."];
+	  492 [label="Empathy: As he speaks, he stresses every word. He's liking this."];
+	  493 [label="Jump to: [themainhub]"];
+	  494 [label="You: \"I have trouble remembering things too.\""];
+	  495 [label="You: \"How did you know I was coming?\""];
+	  496 [label="You: \"For what?\""];
+	  497 [label="The Deserter: CheckItem(\"deserter_gun\")"];
+	  498 [label="CheckItem(\"deserter_gun\")", shape=diamond];
+	  499 [label="!(CheckItem(\"deserter_gun\"))", shape=diamond];
+	  500 [label="The Deserter: IsTHCPresent(\"communist\")"];
+	  501 [label="IsTHCPresent(\"communist\")", shape=diamond];
+	  502 [label="!(IsTHCPresent(\"communist\"))", shape=diamond];
+	  503 [label="The Deserter: \"It won't.\" He blinks his black eyes. \"The material base for an uprising has eroded, the working class has betrayed mankind and themselves...\""];
+	  504 [label="The Deserter: \"It's the same thing... you haven't seen *it*. Not really -- not naked. It's impossible not to be afraid.\""];
+	  505 [label="The Deserter: He does not seemingly react to what you said. Only his right brow moves a little."];
+	  506 [label="You: \"Seen *what*?\""];
+	  507 [label="You: \"I'm a nationalist by the way.\""];
+	  508 [label="You: \"Okay maybe I'm not.\""];
+	  509 [label="The Deserter: \"The congenitally deformed King Filippe II built it to restrict access to the Bay of Revachol. We captured it in '02, retrofitted the fort with an AA gun to defend against an airborne landing -- against the whole world.\""];
+	  510 [label="You: \"I'm a revolutionary too. Today the real revolutionizing is done by entrepreneurs.\""];
+	  511 [label="Kim Kitsuragi: \"The RCM can provide medical services. You need to be looked over.\""];
+	  512 [label="The Deserter: \"At least you know it.\" He nods toward Martinaise. \"The traitors of this city turned the lights back on in the Thirties, after the fighting stopped. Ruins, glittering in the dark, like a fucking merry-go-round...\""];
+	  513 [label="Savoir Faire: Like the secret route in the Whirling-in-Rags? This is one for later. When you really need it."];
+	  514 [label="Composure: Something is very wrong with him now."];
+	  515 [label="Jump to: [seafort.deserter_who_are_you_hub_got]"];
+	  516 [label="You: \"What, specifically, did you not *like* about what you saw the night of the murder?\""];
+	  517 [label="Jump to: [seafort.deserter_drama_curious]"];
+	  518 [label="Rhetoric: This looked very much like the murder weapon. It can be used against him -- later."];
+	  519 [label="Jump to: [The Deserter: \"\"What?!\" The old man's eyes fill wi...\"]"];
+	  520 [label="The Deserter: Variable[\"seafort.deserter_said_you_lieutenant_double_yefreitor\"]"];
+	  521 [label="Variable[\"seafort.deserter_said_you_lieutenant_double_yefreitor\"]", shape=diamond];
+	  522 [label="!(Variable[\"seafort.deserter_said_you_lieutenant_double_yefreitor\"])", shape=diamond];
+	  523 [label="The Deserter: \"And what rank would that be, dog?\""];
+	  524 [label="The Deserter: \"It's out of bullets.\" The old man lays the rifle down, carelessly, then looks at it lying there."];
+	  525 [label="The Deserter: \"I ain't going anywhere.\""];
+	  526 [label="Encyclopedia: It's almost as if they were never there. Only the rifle remains, cradled by the old man."];
+	  527 [label="The Deserter: \"They wouldn't like hearing their name in your mouth. A damn dog...\""];
+	  528 [label="The Deserter: \"You don't understand *anything*.\" The old man squints at you -- you see two black beads, gleaming."];
+	  529 [label="The Deserter: \"It is the anthem of the World Revolution.\" His eyes remain fixed on the sky. \"One of three.\""];
+	  530 [label="The Deserter: \"I fucking know what they sang!\" he hisses. \"I watched those little fuckers die in my arms -- little ones came to help us. Got cut to shreds...\""];
+	  531 [label="Jump to: [oh_boy_more_talk]"];
+	  532 [label="Encyclopedia: This is Vulgate Seraise. You can barely intuit the words. *Know* is stretching it."];
+	  533 [label="Half Light: Embers going out."];
+	  534 [label="The Deserter: \"What are you talking about?\" He squints and looks you straight in the eye -- two black beads, moist from the sea air."];
+	  535 [label="Kim Kitsuragi: \"Told you we shouldn't play Sad FM.\""];
+	  536 [label="The Deserter: \"For her to return.\""];
+	  537 [label="Shivers: Where the afternoon grows late. On Rue de Saint-Ghislaine people walk home, streetlights will soon be lit. Further inland the streets are alive with workers: men, women, children. Streethawks and migrant labourers. The temperature is steady. Altocumulus clouds form above Precinct 41."];
+	  538 [label="The Deserter: Variable[\"seafort.deserter_shivers_in_martinaise\"]  or  Variable[\"seafort.deserter_esprit_officers_stepping_out\"]"];
+	  539 [label="Variable[\"seafort.deserter_shivers_in_martinaise\"]  or  Variable[\"seafort.deserter_esprit_officers_stepping_out\"]", shape=diamond];
+	  540 [label="!(Variable[\"seafort.deserter_shivers_in_martinaise\"]  or  Variable[\"seafort.deserter_esprit_officers_stepping_out\"])", shape=diamond];
+	  541 [label="Conceptualization: So that's why he's 'the deserter.'"];
+	  542 [label="Kim Kitsuragi: \"We keep people alive. We help them survive, whatever the ideological situation. Day in and day out.\""];
+	  543 [label="You: \"Understood.\""];
+	  544 [label="You: \"It wasn't Reaction -- you were just afraid.\""];
+	  545 [label="The Deserter: \"You haven't seen *it*. The face of who you serve -- naked. It's impossible not to be afraid.\""];
+	  546 [label="You: \"What then?\""];
+	  547 [label="Conceptualization: These eyes are charred black by the images that have entered them."];
+	  548 [label="You: Say nothing. Let him finish."];
+	  549 [label="The Deserter: He looks away, to the sea, and lets out a cough."];
+	  550 [label="Jump to: [deserter hub]"];
+	  551 [label="You: \"You never signed the Revacholian Instrument of Surrender...\""];
+	  552 [label="The Deserter: \"Fire-guy...\" He shakes his head. \"Regressive bourgeoisie henchman. Can't even talk like a grown up.\""];
+	  553 [label="Kim Kitsuragi: \"Detective.\" The lieutenant gives you a stern look. \"We have not come here to discuss ideology.\" He then turns to the old man."];
+	  554 [label="sickly_old_man"];
+	  555 [label="Pain Threshold: There's no way he could manage the pain without them. It's safe to say he is addicted to painkillers by now."];
+	  556 [label="The Deserter: Variable[\"seafort.deserter_rhet_loyalist_said\"]"];
+	  557 [label="Variable[\"seafort.deserter_rhet_loyalist_said\"]", shape=diamond];
+	  558 [label="!(Variable[\"seafort.deserter_rhet_loyalist_said\"])", shape=diamond];
+	  559 [label="The Deserter: \"What?\" The old man looks up -- the whites of his eyes are pale yellow."];
+	  560 [label="Kim Kitsuragi: \"So you've been there?\""];
+	  561 [label="Conceptualization: Technically this wasn't traditional rock. It was more *independent melodic*."];
+	  562 [label="The Deserter: \"It's actually quite light. It was sent to us by our brothers in the Hsin-Yao Commune. Military aid.\" He pats the rifle."];
+	  563 [label="Half Light: He's high off the fear."];
+	  564 [label="You: \"What have you been using this gun for?\""];
+	  565 [label="Jump to: [The Deserter: \"\"What have I used it for...\" He loo...\"]"];
+	  566 [label="You: \"Lieutenant-Yefreitor.\""];
+	  567 [label="Jump to: [Kim Kitsuragi: \"\"Put it down *now*, sir.\"\"]"];
+	  568 [label="The Deserter: \"Yes, I bet you've killed a lot of people with it...\" His eyes narrow. \"...you fascist *fuck*.\""];
+	  569 [label="The Deserter: Variable[\"seafort.deserter_encyc_hsin_yao_wipeout\"]"];
+	  570 [label="Variable[\"seafort.deserter_encyc_hsin_yao_wipeout\"]", shape=diamond];
+	  571 [label="!(Variable[\"seafort.deserter_encyc_hsin_yao_wipeout\"])", shape=diamond];
+	  572 [label="The Deserter: IsCunoInParty()"];
+	  573 [label="IsCunoInParty()", shape=diamond];
+	  574 [label="!(IsCunoInParty())", shape=diamond];
+	  575 [label="gun_inspection"];
+	  576 [label="Drama: There was something there -- when he said *talked to her*? He was curious..."];
+	  577 [label="The Deserter: Variable[\"seafort.deserter_ency_seraise_rifle\"]"];
+	  578 [label="Variable[\"seafort.deserter_ency_seraise_rifle\"]", shape=diamond];
+	  579 [label="!(Variable[\"seafort.deserter_ency_seraise_rifle\"])", shape=diamond];
+	  580 [label="The Deserter: \"Those men were commandos. They weren't shit on a stick, like us. They were small and...\" He doesn't say more. The thought dissipates on his lips."];
+	  581 [label="Kim Kitsuragi: \"It doesn't matter if it was made in Shantih-Shantih. All it has to do is use jacketed ammunition. And it does.\""];
+	  582 [label="Kim Kitsuragi: \"Jacketed -- military-grade ammunition. Stable in flight, good for hitting something that's very, very far away...\" He says -- mostly to the old man."];
+	  583 [label="The Deserter: \"Something about shooting *rabbits,* I don't know... I can't remember. It doesn't matter. It's gone now.\""];
+	  584 [label="You: \"So you're a communist soldier? From the communist army?\""];
+	  585 [label="The Deserter: \"I did,\" he breathes out with a wheeze. \"And you opened it -- how?\""];
+	  586 [label="The Deserter: IsAfternoon()"];
+	  587 [label="IsAfternoon()", shape=diamond];
+	  588 [label="!(IsAfternoon())", shape=diamond];
+	  589 [label="You: \"Her, who?\""];
+	  590 [label="You: \"I have another, serious question for you.\""];
+	  591 [label="Esprit de Corps: Patrol Officer Judit Minot points west. \"The fishing village...\" She glances at her watch. \"We meet in 15 minutes. It's a ten minute walk.\""];
+	  592 [label="The Deserter: \"The material base for an uprising has eroded.\" He nods and blinks his black eyes. \"The working class has betrayed mankind and themselves...\""];
+	  593 [label="The Deserter: \"I have done everything a man can do. What have *you* done?\""];
+	  594 [label="The Deserter: \"Aerostatics. The Landing had started. I climbed out -- into hell. There were ships all above. Hissing, whirling, and men pouring out. The chain was submerged so I had to swim back. The fortress was half submerged too, shattered.\""];
+	  595 [label="The Deserter: \"They'd all drowned in the lower levels, or got torn to shreds above. The anti-aircraft gun had malfunctioned -- so had I. I left them without ideological direction...\" He opens his eyes and stares right through you. \"It was real. I'd seen it. I'd seen it *in reality*.\""];
+	  596 [label="Rhetoric: He does not believe a police officer is genuinely revolutionary."];
+	  597 [label="The Deserter: \"*Death Blow*. You're one of them. Tell me, who speaks like that? We had 50 million people on Caillou alone...\""];
+	  598 [label="The Deserter: The old man does not answer. He tilts his silver head and looks at the reeds -- you see a small tremor pass through his legs."];
+	  599 [label="You: \"I'm not 'Coalition-appointed.' I just try to help people.\""];
+	  600 [label="The Deserter: \"You're the RCM.\" He stares at you coldly. \"You represent the Moralist International, the enemies of humanity, who took this city. I represent their adversary, le Parti communiste d'Insulinde.\""];
+	  601 [label="loyalist_rene"];
+	  602 [label="You: \"Nothing.\""];
+	  603 [label="Kim Kitsuragi: \"How is your health, Mr. Dros?\""];
+	  604 [label="The Deserter: He coughs, then looks to his feet, suddenly despondent."];
+	  605 [label="Jump to: [sickly_old_man]"];
+	  606 [label="The Deserter: IsKimHere()"];
+	  607 [label="IsKimHere()", shape=diamond];
+	  608 [label="!(IsKimHere())", shape=diamond];
+	  609 [label="The Deserter: \"Only when my health permits.\" He shrugs. \"I check my old haunts...\""];
+	  610 [label="Jump to: [hiding_deserter]"];
+	  611 [label="Empathy: He does not want to see life moving on. People forgetting. Drinking. Laughing."];
+	  612 [label="Visual Calculus: You *feel* the dots connecting. Little dots on the map he's walked across."];
+	  613 [label="You: \"Killed themselves?\""];
+	  614 [label="The Deserter: Variable[\"XP.connect_pinball_footprints_to_deserter\"]"];
+	  615 [label="Variable[\"XP.connect_pinball_footprints_to_deserter\"]", shape=diamond];
+	  616 [label="!(Variable[\"XP.connect_pinball_footprints_to_deserter\"])", shape=diamond];
+	  617 [label="Cuno: \"Looks like old shit.\""];
+	  618 [label="The Deserter: Variable[\"TASK.extract_a_confession_done\"]"];
+	  619 [label="Variable[\"TASK.extract_a_confession_done\"]", shape=diamond];
+	  620 [label="!(Variable[\"TASK.extract_a_confession_done\"])", shape=diamond];
+	  621 [label="Empathy: He is not afraid of such displays. This was the wrong move..."];
+	  622 [label="You: Pick up the gun lying in the sand."];
+	  623 [label="The Deserter: \"It's not nice, it's a piece of shit.\" He shrugs. \"But it gets the job done.\""];
+	  624 [label="Kim Kitsuragi: The lieutenant pulls his pistol from the holster."];
+	  625 [label="The Deserter: IsKimHere()"];
+	  626 [label="IsKimHere()", shape=diamond];
+	  627 [label="!(IsKimHere())", shape=diamond];
+	  628 [label="You: \"I *am* an enemy commander of rank -- put it down.\""];
+	  629 [label="You: Variable[\"seafort.deserter_authority_red_success\"]"];
+	  630 [label="Variable[\"seafort.deserter_authority_red_success\"]", shape=diamond];
+	  631 [label="!(Variable[\"seafort.deserter_authority_red_success\"])", shape=diamond];
+	  632 [label="You: \"Okay, but keep the gun down while we talk.\""];
+	  633 [label="The Deserter: \"Fucking clown...\" He squeezes his eyelids shut and shakes his head slowly."];
+	  634 [label="You: Let him say it."];
+	  635 [label="The Deserter: The old man pulls back the hood of his plastic cape and looks up into the sky."];
+	  636 [label="The Deserter: \"My name...\" He looks across the water, then back at you: \"...is Iosef Lilianovich Dros, Political Commissar of the 114th Anti-Aircraft Division of the 4th Army of the Commune of Revachol.\""];
+	  637 [label="Composure: His nostrils are still flaring with rage. He brings himself back under his own stewardship, slowly."];
+	  638 [label="The Deserter: \"You're not. You're part of the meat shield surrounding the *real* fascists, while they rape children. That's what *you* are.\""];
+	  639 [label="Drama: Don't be so sure..."];
+	  640 [label="The Deserter: \"The job of a boujee dog.\""];
+	  641 [label="Hand/Eye Coordination: Still warm from his parched hands. Not the metal. The metal is ice cold. This weapon has been modified several times."];
+	  642 [label="Kim Kitsuragi: \"The right type and the right calibre,\" the lieutenant nods -- glancing at the gun."];
+	  643 [label="The Deserter: IsKimHere()"];
+	  644 [label="IsKimHere()", shape=diamond];
+	  645 [label="!(IsKimHere())", shape=diamond];
+	  646 [label="The Deserter: IsCunoInParty()"];
+	  647 [label="IsCunoInParty()", shape=diamond];
+	  648 [label="!(IsCunoInParty())", shape=diamond];
+	  649 [label="The Deserter: \"I left my unit on the eve of the Landing. When I returned here on May 14th the Commune had fallen. Still armed -- and *ideologically trained* -- I wrote a criticism of myself. And resumed partisan duties.\""];
+	  650 [label="You: \"So if I can shoot rabbits, then I can shoot fascists too.\""];
+	  651 [label="You: \"You said this is your *termless surrender*.\""];
+	  652 [label="The Deserter: \"The job of a shit-licker.\""];
+	  653 [label="You: \"You said you deserted your unit?\""];
+	  654 [label="The Deserter: \"It's too long. It's not how a human being should live...\" He grimaces, clearly in pain. \"But I couldn't just forget what I saw.\""];
+	  655 [label="The Deserter: \"It's inhuman. It's sick. It's not how a human being should live, but I had to...\" He grimaces, clearly in pain. \"I couldn't just forget. I couldn't just forget what I saw.\""];
+	  656 [label="Volition: He just *couldn't*..."];
+	  657 [label="You: \"You couldn't give up.\""];
+	  658 [label="Shivers: Where evening comes. On Rue de Saint-Ghislaine hydrogen streetlights switch on, casting black shadows. Further inland, the street grid appears dark -- unlit avenue after unlit avenue. The temperature is dropping. Altocumulus clouds form above Precinct 41."];
+	  659 [label="the_other_hub"];
+	  660 [label="The Deserter: \"No.\" He blinks his black eyes. \"The material base for an uprising has eroded, the working class has betrayed mankind and themselves...\""];
+	  661 [label="Suggestion: What *has* he done? Perhaps a confession will lighten the load..."];
+	  662 [label="The Deserter: \"It's not *enough*,\" he hisses. \"The total, combined power of international capital -- all their fear and terror -- tore into Revachol. Streets rose from the ground... houses turned to ghosts.\" He gestures erratically, then falls silent."];
+	  663 [label="Reaction Speed: He is still not convinced of his safety -- you should not be either."];
+	  664 [label="You: \"What was it used for?\""];
+	  665 [label="The Deserter: \"Coalition military called it Operation *Death Blow*.\" He winces. \"I later found out, on the radio. They called it...\""];
+	  666 [label="Jump to: [deserter hub]"];
+	  667 [label="The Deserter: \"You're with the RCM --\" He waves in your general direction. \"The Coalition-appointed mob that enforces bourgeois morals in Revachol. A so-called 'lieutenant double-yefreitor'...\""];
+	  668 [label="You: \"That means you're a trained communist, right?\""];
+	  669 [label="Composure: The expression on his face is unreadable. There's some sort of interference there... neurological?"];
+	  670 [label="The Deserter: IsKimHere()"];
+	  671 [label="IsKimHere()", shape=diamond];
+	  672 [label="!(IsKimHere())", shape=diamond];
+	  673 [label="Kim Kitsuragi: \"Her, who?\""];
+	  674 [label="You: \"This is a serious situation. You need to be looked over and we can do it.\""];
+	  675 [label="Jump to: [deserter hub]"];
+	  676 [label="You: \"Ever smoke them on the mainland?\" (Point to Land's End.)"];
+	  677 [label="Kim Kitsuragi: The lieutenant exchanges a quick glance with you, then turns to the man..."];
+	  678 [label="Kim Kitsuragi: \"There were posters. Campaigns.\""];
+	  679 [label="The Deserter: IsKimHere()"];
+	  680 [label="IsKimHere()", shape=diamond];
+	  681 [label="!(IsKimHere())", shape=diamond];
+	  682 [label="The Deserter: IsKimHere()"];
+	  683 [label="IsKimHere()", shape=diamond];
+	  684 [label="!(IsKimHere())", shape=diamond];
+	  685 [label="Jump to: [hiding_deserter]"];
+	  686 [label="The Deserter: Variable[\"seafort.phasmid_has_arrived\"]"];
+	  687 [label="Variable[\"seafort.phasmid_has_arrived\"]", shape=diamond];
+	  688 [label="!(Variable[\"seafort.phasmid_has_arrived\"])", shape=diamond];
+	  689 [label="Cuno: \"Ssssssh! You're making us look like shit.\""];
+	  690 [label="The Deserter: IsCunoInParty()"];
+	  691 [label="IsCunoInParty()", shape=diamond];
+	  692 [label="!(IsCunoInParty())", shape=diamond];
+	  693 [label="Cuno: \"Supercool. What's it say?\" He sounds incredulous."];
+	  694 [label="The Deserter: Variable[\"seafort.deserter_rhet_what_did_he_do\"]"];
+	  695 [label="Variable[\"seafort.deserter_rhet_what_did_he_do\"]", shape=diamond];
+	  696 [label="!(Variable[\"seafort.deserter_rhet_what_did_he_do\"])", shape=diamond];
+	  697 [label="Jump to: [hiding_deserter]"];
+	  698 [label="You: \"One more time, Mr. Dros -- the Colonel. We need to talk about you *killing* him.\""];
+	  699 [label="Jump to: [The Deserter: \"\"Petty-bourgeois law...\" He snorts...\"]"];
+	  700 [label="You: \"Been looking at anything else you haven't *liked*?\""];
+	  701 [label="Jump to: [The Deserter: \"\"A tragicomedy...\" He shakes to lif...\"]"];
+	  702 [label="The Deserter: He scoffs. The corner of his black eye twitches. He does not reply to the command."];
+	  703 [label="Reaction Speed: His elbows rest on the frame stock, calmly for now, but he may still get it in his hands. Looks like he knows the weapon..."];
+	  704 [label="You: \"I'm not from the homo army.\""];
+	  705 [label="The Deserter: IsCunoInParty()"];
+	  706 [label="IsCunoInParty()", shape=diamond];
+	  707 [label="!(IsCunoInParty())", shape=diamond];
+	  708 [label="Encyclopedia: He's right. Almost no one remembers there was a third metastasis of the World Revolution, in the Safre Empire, extinguished in '06."];
+	  709 [label="The Deserter: \"No one cares, droite.\" He shakes his head."];
+	  710 [label="The Deserter: \"Talked to *her*?\" He raises his bushy brow and looks down from the sky -- straight into your bloodshot eye."];
+	  711 [label="Authority: You need to address that remark."];
+	  712 [label="You: \"This is a Triangong, made in Hsin-Yao.\""];
+	  713 [label="remember_lyrics"];
+	  714 [label="You: \"You're a holdover from the Army of the Commune of Revachol?\""];
+	  715 [label="You: \"It was not reactionary. It was cool.\""];
+	  716 [label="The Deserter: Variable[\"village.skiff_said_boombox_to_kim\"]"];
+	  717 [label="Variable[\"village.skiff_said_boombox_to_kim\"]", shape=diamond];
+	  718 [label="!(Variable[\"village.skiff_said_boombox_to_kim\"])", shape=diamond];
+	  719 [label="You: \"Again -- you've been hiding here for *43 years*?\""];
+	  720 [label="You: \"I'm afraid she's gone.\""];
+	  721 [label="The Deserter: \"Always...\""];
+	  722 [label="The Deserter: \"The historic opportunity for a revolution has passed. It will not come back anymore. However hard I try, whatever I do.\""];
+	  723 [label="The Deserter: \"Well done. I won't explain it to a minion of capital.\""];
+	  724 [label="The Deserter: IsKimHere()"];
+	  725 [label="IsKimHere()", shape=diamond];
+	  726 [label="!(IsKimHere())", shape=diamond];
+	  727 [label="The Deserter: \"I had to. I *had* to fight it. I could not stop anymore...\" The old man falls silent. His black eyes keep piercing your skin as he looks to some great distance behind you, shaking his head slowly -- retreating from it."];
+	  728 [label="You: \"Coalition military.\""];
+	  729 [label="You: \"Someone who's come to end this madness.\""];
+	  730 [label="the_landing_blow"];
+	  731 [label="iblissss"];
+	  732 [label="Inland Empire: Okay then. Over-mystified that a bit.."];
+	  733 [label="You: \"That's insane.\""];
+	  734 [label="The Deserter: \"No, I am not a soldier. I am an ideological officer -- I belong to the Party, not the Army.\""];
+	  735 [label="The Deserter: IsTHCPresent(\"ultraliberal\")"];
+	  736 [label="IsTHCPresent(\"ultraliberal\")", shape=diamond];
+	  737 [label="!(IsTHCPresent(\"ultraliberal\"))", shape=diamond];
+	  738 [label="The Deserter: \"I *need* to die.\" A droll smile stretches across his mouth. \"You don't have medical facilities, you have guns. That's all they give you, toy guns.\""];
+	  739 [label="Electrochemistry: You also have Drouamine."];
+	  740 [label="The Deserter: \"I haven't. I have holes in my brain. Years missing, others filled with pain only. A decade of...\" His eyes roll into his skull and back..."];
+	  741 [label="The Deserter: IsKimHere()"];
+	  742 [label="IsKimHere()", shape=diamond];
+	  743 [label="!(IsKimHere())", shape=diamond];
+	  744 [label="The Deserter: \"What was it like? There was hope, a little hope. They needed to snuff it out. Martinaise and Coal City were turned to dust...\" He looks south. \"But Jamrock, Faubourg, even Couron; and Boogie Street of course -- those fucking kipts had Kras Mazov coursing in their veins...\""];
+	  745 [label="The Deserter: The old man stares despondently at the logs. It's like he's forgotten you're there..."];
+	  746 [label="The Deserter: Variable[\"seafort.deserter_esprit_officers_stepping_out\"]"];
+	  747 [label="Variable[\"seafort.deserter_esprit_officers_stepping_out\"]", shape=diamond];
+	  748 [label="!(Variable[\"seafort.deserter_esprit_officers_stepping_out\"])", shape=diamond];
+	  749 [label="The Deserter: \"Cities can't talk. It's bourgeois idealism... I don't wanna talk about this shit anymore.\""];
+	  750 [label="Cuno: \"My pig asked you a question. Quit spazzin' out and tell him about the...\" The kid doesn't get to finish the sentence."];
+	  751 [label="Empathy: He's practically tearing up from spite. Hatred got the best of him a long time ago. This man hates everything."];
+	  752 [label="The Deserter: IsKimHere()"];
+	  753 [label="IsKimHere()", shape=diamond];
+	  754 [label="!(IsKimHere())", shape=diamond];
+	  755 [label="Encyclopedia: Southeast Samaran-made. Exotic. Must be defunct too. No modern rifle manufacturer of that name springs to mind."];
+	  756 [label="The Deserter: \"It was sent to us by our brothers in the Hsin-Yao Commune. Military aid.\" He pats the rifle."];
+	  757 [label="The Deserter: \"You're right. It's a good thing I got one in the chamber.\""];
+	  758 [label="noone_else_here"];
+	  759 [label="The Deserter: \"Did I offend your moralist sensibilities? You beat people to death with a baton, you fucking dog!\" The old man spits."];
+	  760 [label="Jump to: [Kim Kitsuragi: \"The lieutenant aims his pistol squa...\"]"];
+	  761 [label="The Deserter: Variable[\"seafort.deserter_laid_down_gun\"]"];
+	  762 [label="Variable[\"seafort.deserter_laid_down_gun\"]", shape=diamond];
+	  763 [label="!(Variable[\"seafort.deserter_laid_down_gun\"])", shape=diamond];
+	  764 [label="Hand/Eye Coordination: It has stayed true to him. He can still make it sing."];
+	  765 [label="You: \"I'm with the police. You can keep the gun, but keep it down. Not *one* move.\" (Proceed.)"];
+	  766 [label="Rhetoric: The time will come to win his trust, comrade. It is not now. You need to take care of the gun first."];
+	  767 [label="You: \"What did you say?\""];
+	  768 [label="Jump to: [themainhub]"];
+	  769 [label="You: \"La Revacholière... I've heard that name, somewhere else. In a dream.\""];
+	  770 [label="You: \"Thank you for clearing that up.\" (Conclude.)"];
+	  771 [label="You: No, he was just confused. Let it go..."];
+	  772 [label="The Deserter: \"I am a deserter, a partisan, and a prisoner of war. This is my termless surrender.\" His eyes turn to the reeds again, dead and dull."];
+	  773 [label="Visual Calculus: There, behind them, across the Delta -- the INSURCOM building. Coalition Government Insulindian Mission Control."];
+	  774 [label="Kim Kitsuragi: \"I did.\""];
+	  775 [label="You: \"That's the length of my entire life.\""];
+	  776 [label="You: \"Nothing in history is guaranteed. But revolution is still a possibility.\""];
+	  777 [label="The Deserter: \"Good.\" He blinks his black eyes. \"The material base for an uprising has eroded, the working class has betrayed mankind and themselves...\""];
+	  778 [label="The Deserter: IsKimHere()"];
+	  779 [label="IsKimHere()", shape=diamond];
+	  780 [label="!(IsKimHere())", shape=diamond];
+	  781 [label="You: \"What was that?\""];
+	  782 [label="Authority: A terrible shame, still within him. The lobes of his ears are red with it, the shame and smallness of what he became."];
+	  783 [label="The Deserter: \"*The* Landing. Coalition military called it 'Operation Death Blow.'\" He winces. \"I later found out, on the radio -- they called it...\""];
+	  784 [label="Conceptualization: Sha'i'tan, Ahura, The Darkened One."];
+	  785 [label="The Deserter: \"You're with the RCM --\" He waves in your general direction. \"The Coalition-appointed mob that enforces bourgeois morals in Revachol.\""];
+	  786 [label="The Deserter: \"I may have. All sorts of little rats have come sniffing around, trying to give up the position...\""];
+	  787 [label="The Deserter: \"I *have* been running out of that stuff...\" A light goes on in his eyes. He smacks his dry lips."];
+	  788 [label="The Deserter: \"I don't even know what... *Inferno*?\""];
+	  789 [label="You: \"What was it like?\""];
+	  790 [label="You: \"They were.\""];
+	  791 [label="The Deserter: \"Minion of capital.\" He spits. \"What do you want?\""];
+	  792 [label="Cuno: \"Hey...\" The kid must have some idea. \"You go to Martinaise lately? Cuno hasn't seen you around...\""];
+	  793 [label="Jump to: [deserter hub]"];
+	  794 [label="The Deserter: His gaze follows your motions. The rifle feels surprisingly light in your hand, frame stocked and patched in places with tape and wire."];
+	  795 [label="You: \"What make of rifle is that, exactly?\""];
+	  796 [label="surrender hub"];
+	  797 [label="Jump to: [surrender hub]"];
+	  798 [label="The Deserter: IsCunoInParty()"];
+	  799 [label="IsCunoInParty()", shape=diamond];
+	  800 [label="!(IsCunoInParty())", shape=diamond];
+	  801 [label="The Deserter: \"My eyesight?\" He clears his throat. \"Yes. Helps me see all the shit.\""];
+	  802 [label="The Deserter: IsKimHere()"];
+	  803 [label="IsKimHere()", shape=diamond];
+	  804 [label="!(IsKimHere())", shape=diamond];
+	  805 [label="You: \"The Hsin-Yao Commune?\""];
+	  806 [label="The Deserter: \"*Real music, real proletkult*.\" He nods. \"That's La Revacholière, not your rock-and-roll misanthropy. *Chanson de soldat* of the black-and-whites.\""];
+	  807 [label="The Deserter: \"There you go.\" His eyes remain fixed on the sky as he sighs and adds: \"One of three.\""];
+	  808 [label="Shivers: All around you, the air slowly circulates the islet, carrying little swallows and black-beaked seagulls in its slow drift. They all -- every one of them, every bird, mammal, and crustacean..."];
+	  809 [label="You: What?"];
+	  810 [label="You: Inspect it closer."];
+	  811 [label="The Deserter: IsCunoInParty()"];
+	  812 [label="IsCunoInParty()", shape=diamond];
+	  813 [label="!(IsCunoInParty())", shape=diamond];
+	  814 [label="Kim Kitsuragi: \"The Commune of Revachol...\" The lieutenant forgets to close his mouth. \"Do you mean the ICM? You're a holdover from the...\""];
+	  815 [label="The Deserter: \"Hiding, fishing, waiting...\" He looks across the water."];
+	  816 [label="Esprit de Corps: The officers go, leaving behind the writing, still smelling of petroleum. ONE DAY, it says, I WILL RETURN TO YOUR SIDE."];
+	  817 [label="You: \"I dare not dream anymore.\""];
+	  818 [label="The Deserter: \"They have *you*.\" He blinks his black eyes. \"The material base for an uprising has eroded, the working class has betrayed mankind and themselves...\""];
+	  819 [label="The Deserter: \"There is no flame to fan.\" He stares right through at him, blinking his dark eyes. \"There is nothing left -- of the world, of our dreams.\""];
+	  820 [label="You: \"You didn't go to the map room.\""];
+	  821 [label="political_ideological_officer"];
+	  822 [label="Kim Kitsuragi: \"His job was to assure the army answers to civilian control -- and follows the ideology of the commune,\" the lieutenant says softly."];
+	  823 [label="Reaction Speed: Awakened from shutdown by the promise of *ideology*."];
+	  824 [label="You: \"We enforce the law. We keep these animals from killing each other.\""];
+	  825 [label="You: \"Did you recently tell two kids to put out their fire? Two twins.\""];
+	  826 [label="Kim Kitsuragi: \"We have come to ask questions regarding a murder investigation.\""];
+	  827 [label="Endurance: There's definitely something off with his body. Something more than just metabolism..."];
+	  828 [label="You: \"How is your health?\""];
+	  829 [label="Jump to: [deserter hub]"];
+	  830 [label="You: \"You like that drouamine, don't you?\""];
+	  831 [label="Rhetoric: René, the royalist on the coast said..."];
+	  832 [label="Kim Kitsuragi: \"Do you go to Martinaise often these days?\""];
+	  833 [label="The Deserter: \"It was hard in the '10s...\" He shakes his head. \"I didn't have partisan training, they were searching for stragglers, those bloodhounds...\" He closes his eyes. \"Floodlights on the water at night.\""];
+	  834 [label="hiding_deserter"];
+	  835 [label="You: \"The weapons cache under Saint-Ghislaine 22B.\" (Point to it.) \"In the basement. Have you been there?\""];
+	  836 [label="The Deserter: Variable[\"seafort.deserter_savoir_how_he_got_into_cache\"]"];
+	  837 [label="Variable[\"seafort.deserter_savoir_how_he_got_into_cache\"]", shape=diamond];
+	  838 [label="!(Variable[\"seafort.deserter_savoir_how_he_got_into_cache\"])", shape=diamond];
+	  839 [label="You: \"Propaganda bunker?\""];
+	  840 [label="Jump to: [deserter hub]"];
+	  841 [label="Cuno: \"Fucking NOW!\""];
+	  842 [label="You: Assess his body language."];
+	  843 [label="You: Variable[\"seafort.deserter_composure_white_succeeded\"]"];
+	  844 [label="Variable[\"seafort.deserter_composure_white_succeeded\"]", shape=diamond];
+	  845 [label="!(Variable[\"seafort.deserter_composure_white_succeeded\"])", shape=diamond];
+	  846 [label="Jump to: [The Deserter: \"\"Three weeks ago, when the rich hag...\"]"];
+	  847 [label="You: \"Nice gun you got there.\""];
+	  848 [label="You: \"How did you get hold of it?\""];
+	  849 [label="The Deserter: \"You're a glorified night-watchman.\" He looks you in the eye. \"This is a service rifle. I can only lay it down before an enemy commander of corresponding rank.\""];
+	  850 [label="Jump to: [Pain Threshold: \"Like an amputated limb in the sand.\"]"];
+	  851 [label="The Deserter: IsKimHere()"];
+	  852 [label="IsKimHere()", shape=diamond];
+	  853 [label="!(IsKimHere())", shape=diamond];
+	  854 [label="Interfacing: There does not seem to be a magazine in the well...  the rifle's side is clearly visible."];
+	  855 [label="You: \"You've retained your eyesight.\""];
+	  856 [label="themainhub"];
+	  857 [label="The Deserter: \"Fucking clowns...\" He squeezes his eyelids shut and shakes his head slowly."];
+	  858 [label="The Deserter: \"It's out of bullets.\" He lays the rifle down, slowly. Then just looks at it lying there."];
+	  859 [label="You: \"Those words: 'the future teaches you...'\""];
+	  860 [label="You: I know Seraise?"];
+	  861 [label="You: (Whisper.) \"Kim, I know Seraise.\""];
+	  862 [label="You: \"For Safre -- and for all mankind?\""];
+	  863 [label="The Deserter: IsCunoInParty()"];
+	  864 [label="IsCunoInParty()", shape=diamond];
+	  865 [label="!(IsCunoInParty())", shape=diamond];
+	  866 [label="The Deserter: The old man keeps following your motions with his gaze. His right arm twitches suddenly..."];
+	  867 [label="The Deserter: Variable[\"TASK.advanced_ballistics_analysis_done\"]"];
+	  868 [label="Variable[\"TASK.advanced_ballistics_analysis_done\"]", shape=diamond];
+	  869 [label="!(Variable[\"TASK.advanced_ballistics_analysis_done\"])", shape=diamond];
+	  870 [label="The Deserter: \"Hmhm.\" The old man smacks his lips."];
+	  871 [label="You: \"You've been on this island for 43 years?\""];
+	  872 [label="The Deserter: \"It's not how a human being should live, but I had to...\" He grimaces, clearly in pain. \"...I couldn't just forget. I couldn't just forget what I saw.\""];
+	  873 [label="Esprit de Corps: Two police officers step out of the Whirling-in-Rags cafeteria. Satellite-Officer Jean Vicquemare inspects giant letters across the plaza mosaic, in dark red government-marked heavy fuel oil."];
+	  874 [label="The Deserter: \"There is nothing serious in this world.\" He looks at the gun lying on the ground. \"It's a farce.\""];
+	  875 [label="The Deserter: \"Survive?\" The old man spits into the dead fire. \"For *what*?\""];
+	  876 [label="You: \"And when was this exactly?\""];
+	  877 [label="You: \"Dark magic?\""];
+	  878 [label="The Deserter: \"Let's.\" He looks you in the eye. \"You represent the Moralist International, the enemies of humanity, who took this city. I represent their adversary, le Parti communiste d'Insulinde.\""];
+	  879 [label="The Deserter: IsKimHere()"];
+	  880 [label="IsKimHere()", shape=diamond];
+	  881 [label="!(IsKimHere())", shape=diamond];
+	  882 [label="You: \"I'm not really into politics myself.\""];
+	  883 [label="You: \"I also have holes in my brain.\" (Point to your head.)"];
+	  884 [label="The Deserter: Variable[\"plaza.rene_revolution_party_didnt_surrender\"]"];
+	  885 [label="Variable[\"plaza.rene_revolution_party_didnt_surrender\"]", shape=diamond];
+	  886 [label="!(Variable[\"plaza.rene_revolution_party_didnt_surrender\"])", shape=diamond];
+	  887 [label="Jump to: [deserter hub]"];
+	  888 [label="You: \"One more question -- do you smoke Tioumoutiri cigarettes?\""];
+	  889 [label="The Deserter: He opens his eyes and looks at something, to your left... then at you."];
+	  890 [label="The Deserter: \"I didn't have to. Came in through the storm drains.\""];
+	  891 [label="You: \"Tell me another thing...\" (Conclude.)"];
+	  892 [label="Cuno: \"No fucking way, not on Cuno's life...\" he mumbles. With his finger pointing at the deserter -- through his jacket pocket -- the kid turns to the old man."];
+	  893 [label="Cuno: \"Officer Cuno's got his Kiejl A9 pointed at your fucking head and he's gonna blow it clean off if you don't drop your weapon right now!\" His pointed finger is moving inside his pocket."];
+	  894 [label="The Deserter: Variable[\"gates.deserter_composure_catatonic\"]"];
+	  895 [label="Variable[\"gates.deserter_composure_catatonic\"]", shape=diamond];
+	  896 [label="!(Variable[\"gates.deserter_composure_catatonic\"])", shape=diamond];
+	  897 [label="Conceptualization: The present..."];
+	  898 [label="Kim Kitsuragi: The lieutenant aims his pistol square at the man's forehead."];
+	  899 [label="Kim Kitsuragi: \"Put it down *now*, sir.\""];
+	  900 [label="The Deserter: \"Clearly not *you*. What do you want from me anyway?\""];
+	  901 [label="The Deserter: Another spitball lands in the ashes. That's all the answer he gives."];
+	  902 [label="Kim Kitsuragi: \"If you do not comply, we will take you in. Do you understand?\""];
+	  903 [label="Kim Kitsuragi: \"No one said it has to be a Belle-Magrave...\" The lieutenant does not take his eyes off the old man. \"We were just guessing.\""];
+	  904 [label="Kim Kitsuragi: \"I wonder how old it is.\""];
+	  905 [label="Logic: 51 - 8 = 43"];
+	  906 [label="The Deserter: \"How did it go...\" He looks at his gun on the ground and shakes his head slowly."];
+	  907 [label="The Deserter: Variable[\"seafort.deserter_ency_shooting_royalists\"]"];
+	  908 [label="Variable[\"seafort.deserter_ency_shooting_royalists\"]", shape=diamond];
+	  909 [label="!(Variable[\"seafort.deserter_ency_shooting_royalists\"])", shape=diamond];
+	  910 [label="deserter hub"];
+	  911 [label="Jump to: [INTRO HUB]"];
+	  912 [label="blasty_blast"];
+	  913 [label="You: \"How have you survived all this time?\""];
+	  914 [label="The Deserter: IsNight()"];
+	  915 [label="IsNight()", shape=diamond];
+	  916 [label="!(IsNight())", shape=diamond];
+	  917 [label="You: \"What have you been doing all this time?\""];
+	  918 [label="Esprit de Corps: Two police officers step out of the Whirling-in-Rags cafeteria. Satellite-Officer Jean Vicquemare inspects a series of burnt black letters splashed across the plaza mosaic."];
+	  919 [label="The Deserter: The old man suddenly looks around, confused. \"What *can* I do? What is there...\""];
+	  920 [label="The Deserter: \"Airships. I climbed out.\" He closes his eyes: \"Into hell. The Landing was complete. The chain was submerged, I had to swim back. The fortress was half submerged too. Shattered.\""];
+	  921 [label="The Deserter: \"I ran. I climbed the chain link across the water and hid inland. In the bunkers underground, like the weakest of the weak... a mouse. Frightened of the ordnance all night and the sound of the rotors in the morning, whirring -- *thith-thith-thith...*\" He looks at the sky."];
+	  922 [label="You: \"What is this place? This island...\""];
+	  923 [label="The Deserter: \"All the real communists are dead. They died fighting for *communism* -- are you *dead*?\" His voice turns into a hiss: \"No. You're an inert lumpen with a gun.\""];
+	  924 [label="You: \"So you were like a priest?\""];
+	  925 [label="The Deserter: \"Scientific communism!\" The tracksuit-clad old man is suddenly reanimated. \"A *comissaire politique* is a knight-philosopher of the Revolution, a future human.\""];
+	  926 [label="You: \"Understood.\" (Conclude.)"];
+	  927 [label="The Deserter: \"I don't think you did.\" He stares at the firepit. \"You live in a delusion. Radio shows, speed racing, and sporting goods. It's not real...\""];
+	  928 [label="The Deserter: He nods slowly. Then another tremor."];
+	  929 [label="You: \"Yep -- that's me.\""];
+	  930 [label="You: \"What do you steal?\""];
+	  931 [label="Rhetoric: Now hold on there..."];
+	  932 [label="The Deserter: IsKimHere()"];
+	  933 [label="IsKimHere()", shape=diamond];
+	  934 [label="!(IsKimHere())", shape=diamond];
+	  935 [label="The Deserter: \"It's the little joys...\" A crooked smile appears on his face. \"A dark joke. A sunshiny day. Morphine...\""];
+	  936 [label="Jump to: [deserter hub]"];
+	  937 [label="You: \"How have you concealed yourself all these years?\""];
+	  938 [label="The Deserter: \"Minions of capital,\" he spits. \"What do you want?\""];
+	  939 [label="Hand/Eye Coordination: It has stayed true to him. He can still make it sing."];
+	  940 [label="Cuno: \"This guy's smoked a lot of people with this, huh?\""];
+	  941 [label="The Deserter: IsCunoInParty()"];
+	  942 [label="IsCunoInParty()", shape=diamond];
+	  943 [label="!(IsCunoInParty())", shape=diamond];
+	  944 [label="You: \"A Samaran-made rifle.\""];
+	  945 [label="The Deserter: Variable[\"seafort.deserter_authority_red_success\"]"];
+	  946 [label="Variable[\"seafort.deserter_authority_red_success\"]", shape=diamond];
+	  947 [label="!(Variable[\"seafort.deserter_authority_red_success\"])", shape=diamond];
+	  948 [label="The Deserter: \"A big time operator of the pederast army. How about I keep it, huh? Hand it over to a real killer. A *briscade*.\""];
+	  949 [label="The Deserter: \"It's out of bullets.\" The old man lays the rifle down, carelessly -- then stares at it, just lying there."];
+	  950 [label="The Deserter: \"You *fasces* are pathetic when you're alone...\" He snorts. \"To hell with it. It's a walking stick anyway...\""];
+	  951 [label="The Deserter: \"Military aid,\" he pats the rifle, \"from our brothers in the Hsin-Yao Commune.\""];
+	  952 [label="Pain Threshold: Like an amputated limb in the sand."];
+	  953 [label="The Deserter: IsTHCPresent(\"communist\")"];
+	  954 [label="IsTHCPresent(\"communist\")", shape=diamond];
+	  955 [label="!(IsTHCPresent(\"communist\"))", shape=diamond];
+	  956 [label="Jump to: [The Deserter: \"\"You *fasces* are pathetic when you...\"]"];
+	  957 [label="You: \"Nothing. We have serious things to talk about.\""];
+	  958 [label="Kim Kitsuragi: \"What does it say?\" he asks doubtfully."];
+	  959 [label="The Deserter: The old man blinks slowly. A strange jitter comes over him, he pushes his right leg down and does not reply."];
+	  960 [label="Jump to: [gun_inspection]"];
+	  961 [label="The Deserter: IsKimHere()"];
+	  962 [label="IsKimHere()", shape=diamond];
+	  963 [label="!(IsKimHere())", shape=diamond];
+	  964 [label="The Deserter: \"From the Insulindian Citizens Militia -- the Army of the Revolution. I was recruited in Jamrock in '07, trained in the Ecole de Contrôle Aérien and consigned to emergency defence duties in '08.\""];
+	  965 [label="The Deserter: Variable[\"tc.date_fifty_one\"]"];
+	  966 [label="Variable[\"tc.date_fifty_one\"]", shape=diamond];
+	  967 [label="!(Variable[\"tc.date_fifty_one\"])", shape=diamond];
+	  968 [label="The Deserter: \"I was on Résurrection until they turned it into a *spa* in '18. Then I was on E48, a nameless sound, until the sea washed over it. Then I came back here. That was...\" He thinks. \"Twenty-two years ago.\""];
+	  969 [label="Encyclopedia: 'So if I can shoot rabbits then I can shoot fascists too' -- those are the next lines."];
+	  970 [label="The Deserter: He squints and looks you straight in the eye -- two black beads, moist from the sea air."];
+	  971 [label="The Deserter: IsCunoInParty()"];
+	  972 [label="IsCunoInParty()", shape=diamond];
+	  973 [label="!(IsCunoInParty())", shape=diamond];
+	  974 [label="You: \"But you didn't say that, Kim.\""];
+	  975 [label="The Deserter: He nods."];
+	  976 [label="Jump to: [deserter hub]"];
+	  977 [label="The Deserter: \"No. I climbed the chain link across the water and hid inland. In the bunkers there, like the weakest of the weak... a mouse. Frightened of the ordnance all night and the sound of the rotors in the morning, whirring -- *thith-thith-thith...*\" He looks at the sky."];
+	  978 [label="bourgeois_hub"];
+	  979 [label="You: \"I've always suspected the same..\""];
+	  980 [label="The Deserter: \"The black-eyed angel,\" he nods."];
+	  981 [label="The Deserter: Variable[\"seafort.deserter_ie_shepherd\"]"];
+	  982 [label="Variable[\"seafort.deserter_ie_shepherd\"]", shape=diamond];
+	  983 [label="!(Variable[\"seafort.deserter_ie_shepherd\"])", shape=diamond];
+	  984 [label="You: \"Liberast?\""];
+	  985 [label="The Deserter: \"*You're* insane.\" He stares at the firepit. \"Radio shows, speed racing, sporting goods... None of it is real.\""];
+	  986 [label="You: \"Understood.\""];
+	  987 [label="Jump to: [deserter hub]"];
+	  988 [label="You: \"Are you the *fire-guy*?\""];
+	  989 [label="You: (Point to yourself.) \"I'm a moralist.\""];
+	  990 [label="You: \"I'm not a liberal. I told you I'm a communist.\""];
+	  991 [label="The Deserter: Variable[\"seafort.deserter_viscal_cancer\"]"];
+	  992 [label="Variable[\"seafort.deserter_viscal_cancer\"]", shape=diamond];
+	  993 [label="!(Variable[\"seafort.deserter_viscal_cancer\"])", shape=diamond];
+	  994 [label="The Deserter: \"We communards still hoped and they needed to snuff that hope out. The East capitulated, Martinaise and Coal City were turned to dust...\" He looks south. \"But Jamrock, Faubourg, even Couron; and Boogie Street of course -- those fucking kipts had Mazov coursing through their veins...\""];
+	  995 [label="You: \"Another thing...\""];
+	  996 [label="Cuno: \"Oh yeah... that's hard core, Cuno's gonna like this.\""];
+	  997 [label="You: (Whisper.) \"Cuno, I know Seraise.\""];
+	  998 [label="Cuno: \"Cuno's dad has this shit. Wine belly.\" The kid looks at you. \"The cops can take care of this, right? Medicine shit. With, like, facilities.\""];
+	  999 [label="Cuno: \"Cuno could do this shit. Live all alone like this. Cuno could hack it.\""];
+	  1000 [label="Volition: But he can now."];
+	  1001 [label="You: \"Is that a Belle-Magrave?\""];
+	  1002 [label="The Deserter: Variable[\"seafort.deserter_reaction_not_jumpyde\"]"];
+	  1003 [label="Variable[\"seafort.deserter_reaction_not_jumpyde\"]", shape=diamond];
+	  1004 [label="!(Variable[\"seafort.deserter_reaction_not_jumpyde\"])", shape=diamond];
+	  1005 [label="Jump to: [INTRO HUB]"];
+	  1006 [label="You: \"Your weapon has stayed true to you. Mine has stayed true to me too.\" (Put your hand on your belt.)"];
+	  1007 [label="The Deserter: \"Have you come to make me one of them?\" His grip on the rifle tightens."];
+	  1008 [label="You: \"I know La Revacholière. It's the marching song of the World Revolution.\""];
+	  1009 [label="Shivers: Keep their distance."];
+	  1010 [label="You: \"I'm not a shit-licking boujee dog. I'm a half-dead police officer who's just doing his job.\""];
+	  1011 [label="You: Stow the gun. (Conclude.)"];
+	  1012 [label="The Deserter: \"That's what the little guys told us.\" The old man says silently. \"Every day at 4 o'clock in the morning, they'd go on and on about their Safre, their mankind, and Mazov...\""];
+	  1013 [label="You: \"This uses jacketed ammunition. 4.46.\""];
+	  1014 [label="Jump to: [gun_inspection]"];
+	  1015 [label="The Deserter: IsKimHere()"];
+	  1016 [label="IsKimHere()", shape=diamond];
+	  1017 [label="!(IsKimHere())", shape=diamond];
+	  1018 [label="Jump to: [themainhub]"];
+	  1019 [label="You: \"How long have you been on this island?\""];
+	  1020 [label="Jump to: [themainhub]"];
+	  1021 [label="solo_solo"];
+	  1022 [label="You: \"I fuelled the generator. Then used the console.\""];
+	  1023 [label="Esprit de Corps: Patrol Officer Judit Minot points west. \"The fishing village...\" She glances at her watch. \"We meet in 15 minutes. It's a ten minute walk.\""];
+	  1024 [label="You: \"I've seen it.\" (Shake your head.) \"Capital is too powerful. The rich are very well organized.\""];
+	  1025 [label="Jump to: [deserter hub]"];
+	  1026 [label="Jump to: [deserter hub]"];
+	  1027 [label="You: \"I understand. Communists are natural cowards. Quantity over quality.\""];
+	  1028 [label="Jump to: [Conceptualization: \"These eyes are charred black by the...\"]"];
+	  1029 [label="The Deserter: \"No you're not.\" He coughs. \"You're a *liberast*.\""];
+	  1030 [label="You: \"Wait, what does a 'political commissar' do?\""];
+	  1031 [label="The Deserter: He shakes his head and says: \"Iblis.\""];
+	  1032 [label="You: \"First, I'm not *one of them*.\""];
+	  1033 [label="You: \"I know what it looks like. But I have secret plans to turn the RCM into a Mazovian revolutionary unit.\""];
+	  1034 [label="You: \"I'm with the RCM -- let's leave it at that.\""];
+	  1035 [label="You: \"The communards signed the Revacholian Instrument of Surrender.\""];
+	  1036 [label="The Deserter: \"Liberal reactionaries signed that instrument -- traitors, who should have been burned alive...\" He draws his breath. \"I answer to the Communist Party.\""];
+	  1037 [label="Kim Kitsuragi: \"Is that part of why you've been here all this time? Because the Party didn't surrender?\""];
+	  1038 [label="You: \"Honourable.\""];
+	  1039 [label="Jump to: [deserter hub]"];
+	  1040 [label="Jump to: [political_ideological_officer]"];
+	  1041 [label="The Deserter: \"You're part of the *meat shield*.\" He squints. \"The human meat shield that surrounds the fascists and the license holders. You take the fire, while they rape and kill. That's what *you* are.\""];
+	  1042 [label="The Deserter: \"Supplies, vegetables...\" He winces. \"I collect rainwater. It's the life of a dog, not a human being.\" He coughs once more, then puts his hand on his belly..."];
+	  1043 [label="The Deserter: IsKimHere()"];
+	  1044 [label="IsKimHere()", shape=diamond];
+	  1045 [label="!(IsKimHere())", shape=diamond];
+	  1046 [label="Kim Kitsuragi: \"Propaganda bunker?\""];
+	  1047 [label="You: \"They were damaged beyond use.\""];
+	  1048 [label="The Deserter: \"I know.\""];
+	  1049 [label="The Deserter: \"Useless now. Rusted away...\""];
+	  1050 [label="Jump to: [INTRO HUB]"];
+	  1051 [label="Jump to: [PHASMID QUESTIONS]"];
+	  1052 [label="You: \"You didn't say that, Cuno. You weren't even on the boat.\""];
+	  1053 [label="Cuno: \"Fuck yeah, this is happening,\" he comments breathlessly, in awe of the potential violence implied."];
+	  1054 [label="Jump to: [The Deserter: \"\"Them fucking...\" He looks at the c...\"]"];
+	  1055 [label="Jump to: [TASK.extract_a_motive_done]"];
+	  1056 [label="Variable[\"TASK.get_yourself_organised_done\"]"];
+	  1057 [label="Variable[\"TASK.get_yourself_organised_done\"]", shape=diamond];
+	  1058 [label="!(Variable[\"TASK.get_yourself_organised_done\"])", shape=diamond];
+	  1059 [label="You: \"No, I really am a communist. I have communist thoughts in my head.\""];
+	  0 -> 1
+	  1 -> 104
+	  2 -> 3
+	  2 -> 4
+	  4 -> 6
+	  5 -> 258
+	  7 -> 8
+	  7 -> 9
+	  8 -> 1054
+	  9 -> 260
+	  10 -> 527
+	  11 -> 12
+	  12 -> 115
+	  13 -> 370
+	  14 -> 873
+	  15 -> 16
+	  15 -> 17
+	  16 -> 542
+	  17 -> 662
+	  18 -> 820
+	  19 -> 384
+	  20 -> 548
+	  21 -> 22
+	  21 -> 23
+	  22 -> 387
+	  23 -> 728
+	  24 -> 25
+	  25 -> 239
+	  26 -> 242
+	  26 -> 734
+	  26 -> 1039
+	  27 -> 826
+	  27 -> 603
+	  28 -> 788
+	  29 -> 676
+	  30 -> 331
+	  31 -> 677
+	  32 -> 332
+	  33 -> 199
+	  34 -> 613
+	  35 -> 83
+	  36 -> 911
+	  37 -> 835
+	  38 -> 841
+	  39 -> 1052
+	  40 -> 295
+	  41 -> 857
+	  42 -> 985
+	  42 -> 509
+	  42 -> 454
+	  43 -> 44
+	  43 -> 45
+	  44 -> 520
+	  45 -> 161
+	  46 -> 553
+	  47 -> 806
+	  47 -> 300
+	  47 -> 172
+	  47 -> 1007
+	  47 -> 272
+	  47 -> 848
+	  47 -> 214
+	  47 -> 247
+	  47 -> 856
+	  47 -> 989
+	  47 -> 766
+	  47 -> 415
+	  48 -> 949
+	  49 -> 362
+	  50 -> 950
+	  51 -> 898
+	  52 -> 857
+	  53 -> 530
+	  54 -> 577
+	  55 -> 56
+	  55 -> 57
+	  56 -> 582
+	  57 -> 491
+	  58 -> 534
+	  59 -> 650
+	  60 -> 229
+	  61 -> 62
+	  61 -> 63
+	  62 -> 536
+	  63 -> 972
+	  64 -> 723
+	  65 -> 920
+	  66 -> 68
+	  67 -> 911
+	  68 -> 545
+	  68 -> 131
+	  68 -> 1028
+	  68 -> 235
+	  68 -> 877
+	  69 -> 323
+	  70 -> 20
+	  71 -> 21
+	  72 -> 666
+	  73 -> 729
+	  73 -> 730
+	  73 -> 137
+	  73 -> 455
+	  74 -> 401
+	  75 -> 192
+	  75 -> 135
+	  75 -> 489
+	  75 -> 883
+	  75 -> 508
+	  75 -> 990
+	  75 -> 511
+	  76 -> 461
+	  77 -> 605
+	  78 -> 30
+	  79 -> 467
+	  80 -> 406
+	  81 -> 289
+	  82 -> 837
+	  83 -> 611
+	  84 -> 334
+	  85 -> 78
+	  86 -> 88
+	  86 -> 87
+	  87 -> 338
+	  88 -> 47
+	  89 -> 1051
+	  90 -> 91
+	  90 -> 92
+	  91 -> 89
+	  92 -> 1051
+	  93 -> 566
+	  94 -> 847
+	  95 -> 96
+	  95 -> 97
+	  96 -> 213
+	  97 -> 644
+	  100 -> 171
+	  101 -> 758
+	  102 -> 47
+	  103 -> 480
+	  104 -> 105
+	  104 -> 106
+	  105 -> 687
+	  106 -> 356
+	  107 -> 108
+	  107 -> 109
+	  108 -> 858
+	  109 -> 634
+	  110 -> 477
+	  111 -> 528
+	  112 -> 113
+	  112 -> 114
+	  113 -> 768
+	  113 -> 366
+	  114 -> 304
+	  115 -> 368
+	  115 -> 770
+	  115 -> 771
+	  115 -> 270
+	  116 -> 369
+	  117 -> 118
+	  117 -> 119
+	  118 -> 120
+	  119 -> 712
+	  120 -> 431
+	  121 -> 576
+	  122 -> 969
+	  123 -> 211
+	  124 -> 501
+	  125 -> 315
+	  126 -> 497
+	  127 -> 594
+	  128 -> 779
+	  129 -> 130
+	  130 -> 66
+	  131 -> 506
+	  132 -> 385
+	  133 -> 595
+	  134 -> 507
+	  134 -> 70
+	  135 -> 1030
+	  136 -> 1041
+	  137 -> 390
+	  138 -> 283
+	  139 -> 239
+	  140 -> 244
+	  141 -> 794
+	  142 -> 29
+	  143 -> 144
+	  143 -> 145
+	  144 -> 679
+	  145 -> 996
+	  145 -> 790
+	  146 -> 1048
+	  146 -> 791
+	  147 -> 148
+	  147 -> 149
+	  148 -> 84
+	  149 -> 290
+	  150 -> 206
+	  151 -> 525
+	  152 -> 658
+	  153 -> 154
+	  153 -> 155
+	  154 -> 740
+	  155 -> 555
+	  156 -> 157
+	  156 -> 158
+	  157 -> 793
+	  158 -> 698
+	  160 -> 1056
+	  161 -> 162
+	  161 -> 163
+	  162 -> 98
+	  163 -> 474
+	  164 -> 302
+	  165 -> 166
+	  165 -> 167
+	  166 -> 209
+	  167 -> 849
+	  167 -> 945
+	  168 -> 169
+	  168 -> 170
+	  169 -> 477
+	  170 -> 573
+	  171 -> 363
+	  172 -> 218
+	  173 -> 52
+	  174 -> 306
+	  175 -> 518
+	  176 -> 41
+	  177 -> 1015
+	  178 -> 121
+	  179 -> 619
+	  180 -> 181
+	  180 -> 182
+	  181 -> 774
+	  182 -> 962
+	  183 -> 970
+	  184 -> 650
+	  185 -> 186
+	  185 -> 187
+	  186 -> 125
+	  187 -> 587
+	  188 -> 321
+	  189 -> 190
+	  190 -> 977
+	  191 -> 402
+	  192 -> 550
+	  193 -> 822
+	  194 -> 1034
+	  194 -> 1035
+	  194 -> 825
+	  194 -> 600
+	  194 -> 24
+	  195 -> 194
+	  196 -> 551
+	  197 -> 402
+	  198 -> 606
+	  199 -> 200
+	  199 -> 201
+	  200 -> 407
+	  201 -> 79
+	  202 -> 34
+	  203 -> 204
+	  203 -> 205
+	  204 -> 746
+	  205 -> 339
+	  206 -> 208
+	  206 -> 207
+	  207 -> 997
+	  208 -> 90
+	  209 -> 563
+	  209 -> 757
+	  210 -> 951
+	  211 -> 47
+	  212 -> 256
+	  213 -> 644
+	  214 -> 99
+	  215 -> 171
+	  216 -> 762
+	  217 -> 219
+	  217 -> 220
+	  218 -> 858
+	  219 -> 107
+	  220 -> 859
+	  221 -> 478
+	  222 -> 112
+	  223 -> 998
+	  223 -> 308
+	  223 -> 861
+	  223 -> 862
+	  223 -> 863
+	  224 -> 576
+	  225 -> 377
+	  226 -> 496
+	  227 -> 273
+	  228 -> 912
+	  229 -> 653
+	  230 -> 320
+	  230 -> 777
+	  230 -> 721
+	  230 -> 818
+	  230 -> 319
+	  231 -> 723
+	  232 -> 1027
+	  233 -> 322
+	  234 -> 324
+	  235 -> 133
+	  235 -> 782
+	  236 -> 1029
+	  237 -> 911
+	  238 -> 240
+	  239 -> 885
+	  240 -> 560
+	  241 -> 928
+	  242 -> 402
+	  243 -> 1044
+	  244 -> 513
+	  245 -> 742
+	  246 -> 248
+	  247 -> 291
+	  248 -> 857
+	  249 -> 251
+	  249 -> 252
+	  250 -> 39
+	  251 -> 292
+	  252 -> 254
+	  252 -> 255
+	  253 -> 116
+	  253 -> 772
+	  254 -> 430
+	  255 -> 42
+	  256 -> 193
+	  258 -> 47
+	  259 -> 259
+	  260 -> 760
+	  261 -> 857
+	  262 -> 711
+	  263 -> 265
+	  263 -> 266
+	  264 -> 810
+	  264 -> 487
+	  265 -> 253
+	  266 -> 268
+	  266 -> 269
+	  267 -> 643
+	  268 -> 583
+	  269 -> 310
+	  270 -> 59
+	  271 -> 586
+	  272 -> 229
+	  273 -> 483
+	  274 -> 656
+	  275 -> 277
+	  275 -> 278
+	  276 -> 152
+	  277 -> 296
+	  278 -> 64
+	  279 -> 20
+	  280 -> 665
+	  280 -> 927
+	  281 -> 784
+	  282 -> 785
+	  283 -> 988
+	  284 -> 47
+	  285 -> 670
+	  286 -> 736
+	  287 -> 739
+	  288 -> 680
+	  289 -> 334
+	  290 -> 150
+	  291 -> 895
+	  292 -> 294
+	  293 -> 151
+	  294 -> 469
+	  295 -> 297
+	  295 -> 298
+	  296 -> 441
+	  297 -> 658
+	  297 -> 918
+	  298 -> 43
+	  299 -> 626
+	  300 -> 756
+	  301 -> 752
+	  302 -> 47
+	  303 -> 857
+	  304 -> 638
+	  305 -> 577
+	  306 -> 534
+	  307 -> 434
+	  308 -> 969
+	  309 -> 312
+	  309 -> 311
+	  310 -> 376
+	  311 -> 907
+	  312 -> 716
+	  312 -> 228
+	  312 -> 60
+	  313 -> 776
+	  313 -> 275
+	  313 -> 381
+	  313 -> 14
+	  314 -> 316
+	  314 -> 317
+	  315 -> 919
+	  316 -> 874
+	  317 -> 539
+	  318 -> 383
+	  319 -> 722
+	  320 -> 723
+	  321 -> 129
+	  322 -> 132
+	  323 -> 545
+	  323 -> 131
+	  323 -> 1028
+	  323 -> 877
+	  324 -> 911
+	  325 -> 911
+	  326 -> 725
+	  327 -> 981
+	  328 -> 741
+	  329 -> 85
+	  330 -> 911
+	  331 -> 33
+	  332 -> 891
+	  333 -> 611
+	  334 -> 336
+	  334 -> 337
+	  335 -> 514
+	  336 -> 686
+	  337 -> 47
+	  338 -> 340
+	  338 -> 341
+	  339 -> 939
+	  340 -> 792
+	  341 -> 562
+	  342 -> 1022
+	  343 -> 345
+	  343 -> 346
+	  344 -> 1024
+	  345 -> 539
+	  346 -> 348
+	  346 -> 349
+	  347 -> 189
+	  347 -> 127
+	  348 -> 977
+	  349 -> 857
+	  350 -> 352
+	  350 -> 353
+	  351 -> 519
+	  352 -> 470
+	  353 -> 58
+	  354 -> 757
+	  355 -> 357
+	  355 -> 358
+	  356 -> 422
+	  357 -> 416
+	  358 -> 797
+	  359 -> 524
+	  360 -> 901
+	  361 -> 759
+	  362 -> 364
+	  362 -> 365
+	  363 -> 481
+	  364 -> 950
+	  365 -> 636
+	  366 -> 529
+	  367 -> 531
+	  368 -> 750
+	  369 -> 371
+	  369 -> 372
+	  370 -> 868
+	  371 -> 864
+	  372 -> 582
+	  373 -> 1016
+	  374 -> 121
+	  375 -> 584
+	  376 -> 378
+	  376 -> 379
+	  377 -> 183
+	  378 -> 970
+	  379 -> 228
+	  379 -> 716
+	  379 -> 975
+	  379 -> 410
+	  379 -> 60
+	  379 -> 1053
+	  380 -> 873
+	  381 -> 262
+	  382 -> 723
+	  383 -> 783
+	  384 -> 979
+	  385 -> 663
+	  386 -> 728
+	  387 -> 982
+	  388 -> 732
+	  389 -> 732
+	  390 -> 392
+	  390 -> 393
+	  391 -> 823
+	  392 -> 942
+	  393 -> 733
+	  394 -> 396
+	  394 -> 397
+	  395 -> 398
+	  396 -> 786
+	  397 -> 400
+	  397 -> 399
+	  398 -> 668
+	  399 -> 195
+	  400 -> 822
+	  401 -> 403
+	  401 -> 404
+	  402 -> 554
+	  403 -> 286
+	  404 -> 78
+	  405 -> 612
+	  406 -> 467
+	  407 -> 614
+	  408 -> 686
+	  409 -> 690
+	  410 -> 259
+	  411 -> 380
+	  412 -> 949
+	  413 -> 78
+	  414 -> 476
+	  415 -> 164
+	  416 -> 691
+	  417 -> 761
+	  418 -> 359
+	  419 -> 951
+	  420 -> 637
+	  421 -> 47
+	  422 -> 903
+	  423 -> 425
+	  424 -> 426
+	  424 -> 427
+	  425 -> 423
+	  426 -> 7
+	  427 -> 525
+	  428 -> 484
+	  428 -> 263
+	  429 -> 115
+	  430 -> 230
+	  430 -> 367
+	  430 -> 1009
+	  430 -> 1011
+	  430 -> 53
+	  431 -> 578
+	  432 -> 1013
+	  433 -> 225
+	  434 -> 436
+	  434 -> 437
+	  435 -> 438
+	  436 -> 123
+	  437 -> 61
+	  438 -> 544
+	  438 -> 234
+	  439 -> 497
+	  440 -> 816
+	  441 -> 315
+	  442 -> 504
+	  443 -> 232
+	  444 -> 446
+	  444 -> 447
+	  445 -> 543
+	  446 -> 977
+	  447 -> 664
+	  448 -> 386
+	  448 -> 878
+	  449 -> 451
+	  449 -> 452
+	  450 -> 236
+	  451 -> 782
+	  452 -> 280
+	  453 -> 924
+	  454 -> 389
+	  455 -> 930
+	  455 -> 991
+	  456 -> 238
+	  457 -> 239
+	  458 -> 26
+	  459 -> 1040
+	  460 -> 933
+	  461 -> 141
+	  462 -> 464
+	  462 -> 465
+	  463 -> 999
+	  464 -> 288
+	  464 -> 462
+	  465 -> 607
+	  466 -> 835
+	  468 -> 893
+	  469 -> 1019
+	  470 -> 472
+	  470 -> 473
+	  471 -> 441
+	  472 -> 918
+	  474 -> 102
+	  476 -> 568
+	  478 -> 709
+	  479 -> 798
+	  480 -> 950
+	  481 -> 173
+	  482 -> 117
+	  483 -> 485
+	  484 -> 488
+	  485 -> 54
+	  486 -> 175
+	  487 -> 857
+	  488 -> 639
+	  489 -> 432
+	  490 -> 492
+	  491 -> 961
+	  492 -> 1015
+	  493 -> 857
+	  494 -> 971
+	  495 -> 435
+	  496 -> 537
+	  497 -> 499
+	  497 -> 500
+	  498 -> 382
+	  499 -> 875
+	  500 -> 502
+	  500 -> 503
+	  501 -> 231
+	  502 -> 660
+	  503 -> 723
+	  504 -> 327
+	  505 -> 597
+	  506 -> 69
+	  507 -> 191
+	  508 -> 924
+	  509 -> 72
+	  509 -> 282
+	  510 -> 1042
+	  511 -> 739
+	  512 -> 78
+	  513 -> 686
+	  514 -> 468
+	  516 -> 1055
+	  517 -> 253
+	  518 -> 1019
+	  520 -> 522
+	  520 -> 523
+	  521 -> 668
+	  522 -> 395
+	  523 -> 100
+	  523 -> 567
+	  523 -> 215
+	  524 -> 851
+	  526 -> 303
+	  527 -> 954
+	  528 -> 769
+	  529 -> 11
+	  530 -> 305
+	  531 -> 115
+	  532 -> 862
+	  532 -> 308
+	  532 -> 998
+	  532 -> 863
+	  533 -> 494
+	  534 -> 354
+	  535 -> 380
+	  536 -> 671
+	  537 -> 315
+	  538 -> 540
+	  538 -> 541
+	  539 -> 126
+	  540 -> 440
+	  541 -> 347
+	  542 -> 876
+	  543 -> 724
+	  544 -> 505
+	  545 -> 327
+	  546 -> 922
+	  547 -> 325
+	  548 -> 237
+	  549 -> 888
+	  550 -> 911
+	  551 -> 1037
+	  552 -> 285
+	  553 -> 827
+	  554 -> 675
+	  554 -> 329
+	  554 -> 142
+	  554 -> 28
+	  554 -> 831
+	  555 -> 606
+	  556 -> 558
+	  556 -> 559
+	  557 -> 602
+	  558 -> 937
+	  559 -> 937
+	  560 -> 34
+	  561 -> 410
+	  561 -> 716
+	  561 -> 228
+	  561 -> 60
+	  562 -> 940
+	  563 -> 411
+	  564 -> 516
+	  566 -> 171
+	  567 -> 900
+	  568 -> 1008
+	  569 -> 571
+	  569 -> 572
+	  570 -> 10
+	  570 -> 111
+	  571 -> 303
+	  572 -> 574
+	  572 -> 575
+	  573 -> 295
+	  574 -> 957
+	  575 -> 713
+	  575 -> 811
+	  575 -> 13
+	  575 -> 1012
+	  575 -> 374
+	  575 -> 1014
+	  576 -> 809
+	  577 -> 579
+	  577 -> 580
+	  578 -> 224
+	  579 -> 434
+	  580 -> 308
+	  581 -> 961
+	  582 -> 493
+	  583 -> 226
+	  584 -> 735
+	  585 -> 913
+	  586 -> 588
+	  586 -> 589
+	  587 -> 538
+	  588 -> 659
+	  589 -> 124
+	  590 -> 498
+	  591 -> 817
+	  592 -> 723
+	  593 -> 445
+	  594 -> 596
+	  595 -> 134
+	  596 -> 725
+	  597 -> 731
+	  598 -> 391
+	  599 -> 601
+	  600 -> 239
+	  601 -> 552
+	  601 -> 241
+	  601 -> 1036
+	  602 -> 553
+	  603 -> 76
+	  604 -> 830
+	  605 -> 555
+	  606 -> 608
+	  606 -> 609
+	  607 -> 330
+	  608 -> 1000
+	  609 -> 335
+	  610 -> 835
+	  611 -> 37
+	  612 -> 82
+	  613 -> 409
+	  614 -> 616
+	  614 -> 617
+	  615 -> 678
+	  616 -> 686
+	  617 -> 375
+	  618 -> 620
+	  618 -> 621
+	  619 -> 1019
+	  620 -> 351
+	  621 -> 798
+	  622 -> 795
+	  623 -> 1002
+	  623 -> 796
+	  624 -> 850
+	  625 -> 627
+	  625 -> 628
+	  626 -> 625
+	  627 -> 850
+	  628 -> 630
+	  629 -> 632
+	  629 -> 631
+	  630 -> 946
+	  631 -> 946
+	  632 -> 168
+	  633 -> 222
+	  634 -> 173
+	  635 -> 304
+	  636 -> 773
+	  637 -> 532
+	  638 -> 402
+	  639 -> 430
+	  640 -> 1009
+	  640 -> 53
+	  640 -> 367
+	  641 -> 576
+	  642 -> 177
+	  643 -> 645
+	  643 -> 646
+	  644 -> 267
+	  645 -> 871
+	  646 -> 648
+	  646 -> 649
+	  647 -> 618
+	  648 -> 178
+	  649 -> 966
+	  650 -> 535
+	  651 -> 521
+	  652 -> 1009
+	  652 -> 53
+	  652 -> 367
+	  653 -> 439
+	  654 -> 657
+	  655 -> 657
+	  656 -> 276
+	  657 -> 976
+	  658 -> 315
+	  659 -> 1025
+	  659 -> 188
+	  659 -> 279
+	  659 -> 443
+	  659 -> 444
+	  660 -> 723
+	  661 -> 695
+	  662 -> 326
+	  663 -> 449
+	  664 -> 510
+	  665 -> 598
+	  666 -> 911
+	  667 -> 194
+	  668 -> 929
+	  669 -> 992
+	  670 -> 672
+	  670 -> 673
+	  671 -> 674
+	  672 -> 590
+	  673 -> 124
+	  674 -> 198
+	  675 -> 911
+	  676 -> 246
+	  677 -> 833
+	  678 -> 995
+	  679 -> 681
+	  679 -> 682
+	  680 -> 1047
+	  681 -> 840
+	  682 -> 684
+	  682 -> 685
+	  683 -> 561
+	  684 -> 202
+	  685 -> 835
+	  686 -> 688
+	  686 -> 689
+	  687 -> 250
+	  688 -> 203
+	  689 -> 716
+	  689 -> 228
+	  689 -> 60
+	  690 -> 692
+	  690 -> 693
+	  691 -> 842
+	  692 -> 703
+	  693 -> 433
+	  694 -> 696
+	  694 -> 697
+	  695 -> 128
+	  695 -> 65
+	  696 -> 1026
+	  697 -> 835
+	  698 -> 700
+	  700 -> 702
+	  702 -> 622
+	  703 -> 1003
+	  704 -> 710
+	  705 -> 707
+	  705 -> 708
+	  706 -> 40
+	  707 -> 221
+	  708 -> 570
+	  709 -> 362
+	  710 -> 174
+	  710 -> 958
+	  710 -> 486
+	  711 -> 431
+	  712 -> 370
+	  713 -> 651
+	  713 -> 495
+	  714 -> 184
+	  715 -> 229
+	  716 -> 718
+	  716 -> 719
+	  717 -> 807
+	  718 -> 274
+	  719 -> 314
+	  720 -> 593
+	  721 -> 777
+	  721 -> 721
+	  721 -> 818
+	  721 -> 444
+	  721 -> 319
+	  722 -> 15
+	  723 -> 67
+	  724 -> 726
+	  724 -> 727
+	  725 -> 448
+	  726 -> 877
+	  727 -> 1029
+	  728 -> 1032
+	  729 -> 1032
+	  730 -> 455
+	  730 -> 1033
+	  730 -> 137
+	  730 -> 729
+	  730 -> 730
+	  731 -> 328
+	  731 -> 138
+	  732 -> 1041
+	  733 -> 986
+	  734 -> 74
+	  734 -> 987
+	  735 -> 737
+	  735 -> 738
+	  736 -> 932
+	  737 -> 931
+	  738 -> 153
+	  739 -> 555
+	  740 -> 789
+	  741 -> 744
+	  741 -> 743
+	  742 -> 615
+	  743 -> 156
+	  744 -> 32
+	  745 -> 249
+	  746 -> 748
+	  746 -> 749
+	  747 -> 592
+	  748 -> 539
+	  749 -> 430
+	  750 -> 926
+	  751 -> 86
+	  752 -> 754
+	  752 -> 755
+	  753 -> 355
+	  754 -> 165
+	  755 -> 753
+	  756 -> 765
+	  757 -> 103
+	  758 -> 705
+	  758 -> 420
+	  758 -> 261
+	  758 -> 361
+	  758 -> 210
+	  759 -> 362
+	  760 -> 899
+	  761 -> 763
+	  761 -> 764
+	  762 -> 2
+	  763 -> 526
+	  764 -> 1006
+	  765 -> 803
+	  766 -> 303
+	  767 -> 51
+	  768 -> 857
+	  769 -> 429
+	  770 -> 307
+	  771 -> 640
+	  772 -> 180
+	  773 -> 962
+	  774 -> 313
+	  775 -> 655
+	  776 -> 661
+	  777 -> 723
+	  778 -> 780
+	  778 -> 781
+	  779 -> 18
+	  780 -> 233
+	  781 -> 921
+	  782 -> 547
+	  782 -> 821
+	  783 -> 598
+	  784 -> 667
+	  785 -> 194
+	  786 -> 46
+	  787 -> 556
+	  788 -> 466
+	  788 -> 884
+	  788 -> 245
+	  789 -> 745
+	  790 -> 1050
+	  791 -> 249
+	  792 -> 610
+	  793 -> 911
+	  794 -> 642
+	  795 -> 301
+	  796 -> 417
+	  796 -> 418
+	  796 -> 101
+	  796 -> 629
+	  796 -> 633
+	  796 -> 413
+	  797 -> 797
+	  798 -> 800
+	  798 -> 801
+	  799 -> 893
+	  800 -> 759
+	  801 -> 475
+	  802 -> 804
+	  802 -> 805
+	  803 -> 110
+	  804 -> 706
+	  805 -> 479
+	  806 -> 483
+	  807 -> 11
+	  808 -> 264
+	  809 -> 1010
+	  810 -> 490
+	  811 -> 813
+	  811 -> 814
+	  812 -> 343
+	  813 -> 1022
+	  814 -> 965
+	  815 -> 915
+	  816 -> 539
+	  817 -> 778
+	  818 -> 723
+	  819 -> 1027
+	  820 -> 978
+	  821 -> 669
+	  821 -> 1031
+	  822 -> 926
+	  823 -> 388
+	  824 -> 458
+	  825 -> 787
+	  826 -> 286
+	  827 -> 551
+	  828 -> 76
+	  829 -> 911
+	  830 -> 936
+	  831 -> 557
+	  832 -> 610
+	  833 -> 143
+	  834 -> 836
+	  834 -> 80
+	  834 -> 81
+	  834 -> 889
+	  834 -> 892
+	  835 -> 146
+	  836 -> 838
+	  836 -> 839
+	  837 -> 35
+	  837 -> 333
+	  838 -> 611
+	  839 -> 408
+	  840 -> 911
+	  841 -> 703
+	  842 -> 844
+	  843 -> 845
+	  843 -> 846
+	  844 -> 159
+	  845 -> 159
+	  847 -> 624
+	  848 -> 757
+	  849 -> 704
+	  850 -> 953
+	  851 -> 853
+	  851 -> 854
+	  852 -> 899
+	  853 -> 799
+	  854 -> 359
+	  855 -> 802
+	  856 -> 160
+	  856 -> 5
+	  856 -> 517
+	  856 -> 421
+	  856 -> 843
+	  856 -> 299
+	  856 -> 623
+	  856 -> 93
+	  856 -> 565
+	  856 -> 216
+	  856 -> 699
+	  856 -> 860
+	  856 -> 701
+	  856 -> 94
+	  857 -> 222
+	  858 -> 953
+	  859 -> 717
+	  860 -> 533
+	  861 -> 959
+	  862 -> 1013
+	  863 -> 865
+	  863 -> 866
+	  864 -> 941
+	  865 -> 960
+	  866 -> 179
+	  867 -> 869
+	  867 -> 870
+	  868 -> 904
+	  869 -> 55
+	  870 -> 1015
+	  871 -> 309
+	  872 -> 657
+	  873 -> 747
+	  874 -> 262
+	  875 -> 977
+	  876 -> 449
+	  877 -> 19
+	  878 -> 239
+	  879 -> 881
+	  879 -> 882
+	  880 -> 1038
+	  881 -> 459
+	  882 -> 243
+	  883 -> 405
+	  884 -> 886
+	  884 -> 887
+	  885 -> 832
+	  886 -> 557
+	  887 -> 911
+	  888 -> 31
+	  889 -> 36
+	  890 -> 147
+	  891 -> 38
+	  892 -> 894
+	  893 -> 293
+	  894 -> 896
+	  894 -> 897
+	  895 -> 468
+	  896 -> 515
+	  897 -> 482
+	  897 -> 635
+	  898 -> 900
+	  899 -> 428
+	  900 -> 49
+	  901 -> 260
+	  902 -> 902
+	  903 -> 373
+	  904 -> 375
+	  905 -> 872
+	  905 -> 1020
+	  906 -> 584
+	  907 -> 909
+	  907 -> 910
+	  908 -> 714
+	  909 -> 1021
+	  910 -> 585
+	  910 -> 938
+	  910 -> 652
+	  910 -> 654
+	  910 -> 591
+	  910 -> 720
+	  910 -> 914
+	  910 -> 923
+	  911 -> 47
+	  912 -> 496
+	  912 -> 1023
+	  913 -> 287
+	  914 -> 916
+	  914 -> 917
+	  915 -> 442
+	  916 -> 185
+	  917 -> 816
+	  918 -> 344
+	  919 -> 1026
+	  920 -> 596
+	  921 -> 450
+	  922 -> 281
+	  923 -> 402
+	  924 -> 136
+	  925 -> 824
+	  926 -> 457
+	  927 -> 1040
+	  928 -> 75
+	  929 -> 402
+	  930 -> 1043
+	  931 -> 931
+	  931 -> 140
+	  932 -> 934
+	  932 -> 935
+	  933 -> 512
+	  934 -> 463
+	  935 -> 606
+	  936 -> 911
+	  937 -> 834
+	  938 -> 249
+	  939 -> 1006
+	  940 -> 492
+	  941 -> 944
+	  941 -> 943
+	  942 -> 751
+	  943 -> 257
+	  944 -> 952
+	  945 -> 947
+	  945 -> 948
+	  946 -> 360
+	  947 -> 48
+	  948 -> 852
+	  949 -> 851
+	  950 -> 50
+	  951 -> 765
+	  952 -> 223
+	  953 -> 955
+	  953 -> 956
+	  954 -> 767
+	  955 -> 303
+	  956 -> 951
+	  957 -> 176
+	  958 -> 433
+	  959 -> 961
+	  960 -> 576
+	  961 -> 963
+	  961 -> 964
+	  962 -> 815
+	  963 -> 812
+	  964 -> 650
+	  965 -> 968
+	  965 -> 967
+	  966 -> 906
+	  967 -> 1020
+	  968 -> 911
+	  969 -> 908
+	  970 -> 58
+	  971 -> 973
+	  971 -> 974
+	  972 -> 412
+	  973 -> 380
+	  974 -> 775
+	  975 -> 1001
+	  976 -> 911
+	  977 -> 450
+	  978 -> 549
+	  978 -> 980
+	  978 -> 453
+	  978 -> 71
+	  979 -> 21
+	  980 -> 785
+	  981 -> 984
+	  981 -> 983
+	  982 -> 394
+	  982 -> 925
+	  983 -> 1041
+	  984 -> 456
+	  985 -> 1040
+	  986 -> 284
+	  987 -> 911
+	  988 -> 27
+	  989 -> 197
+	  990 -> 402
+	  991 -> 993
+	  991 -> 994
+	  992 -> 196
+	  993 -> 828
+	  994 -> 32
+	  995 -> 890
+	  996 -> 90
+	  997 -> 694
+	  998 -> 288
+	  998 -> 462
+	  999 -> 414
+	  1000 -> 471
+	  1001 -> 301
+	  1002 -> 1004
+	  1002 -> 1005
+	  1003 -> 419
+	  1004 -> 855
+	  1005 -> 47
+	  1006 -> 569
+	  1007 -> 424
+	  1008 -> 808
+	  1009 -> 518
+	  1010 -> 641
+	  1011 -> 867
+	  1012 -> 581
+	  1013 -> 95
+	  1014 -> 576
+	  1015 -> 1017
+	  1015 -> 1018
+	  1016 -> 905
+	  1017 -> 647
+	  1018 -> 857
+	  1019 -> 122
+	  1020 -> 857
+	  1021 -> 715
+	  1021 -> 271
+	  1022 -> 227
+	  1023 -> 318
+	  1024 -> 819
+	  1025 -> 911
+	  1026 -> 911
+	  1027 -> 546
+	  1028 -> 548
+	  1029 -> 1057
+	  1030 -> 599
+	  1031 -> 732
+	  1032 -> 73
+	  1033 -> 139
+	  1034 -> 879
+	  1035 -> 1037
+	  1036 -> 880
+	  1037 -> 26
+	  1038 -> 460
+	  1039 -> 911
+	  1040 -> 822
+	  1041 -> 402
+	  1042 -> 1044
+	  1043 -> 1045
+	  1043 -> 1046
+	  1044 -> 604
+	  1045 -> 77
+	  1045 -> 829
+	  1046 -> 408
+	  1047 -> 1049
+	  1048 -> 683
+	  1049 -> 683
+	  1050 -> 47
+	  1052 -> 342
+	  1053 -> 564
+	  1056 -> 1058
+	  1056 -> 1059
+	  1057 -> 212
+	  1058 -> 42
+}
+

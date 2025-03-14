@@ -1,0 +1,670 @@
+# INVENTORY / DOCUMENTS
+# Interaction with the documents Evrart asks you to sign.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Rhetoric: He won't say it outright, but he's suggesting forgery."];
+	  3 [label="Rhetoric: He is not altogether comfortable with your contribution to progress in this instance."];
+	  4 [label="You: Try to find a loophole in the deal."];
+	  5 [label="You: Variable[\"cargo.evrartdocument_logic_wc_to_see_whats_up_with_the_signatures\"]"];
+	  6 [label="Variable[\"cargo.evrartdocument_logic_wc_to_see_whats_up_with_the_signatures\"]", shape=diamond];
+	  7 [label="!(Variable[\"cargo.evrartdocument_logic_wc_to_see_whats_up_with_the_signatures\"])", shape=diamond];
+	  8 [label="Kim Kitsuragi: \"I should have seen it,\" the lieutenant says with regret. \"The people in the village are going to move out on their own accord sooner or later.\""];
+	  9 [label="You: What are the ramifications here?"];
+	  10 [label="Jump to: [agreement form]"];
+	  11 [label="Logic: You are of course going to have to find a new weapon and hope you can finish this case without Evrart's help."];
+	  12 [label="You: Wait, what are the ramifications of this?"];
+	  13 [label="Jump to: [agreement form]"];
+	  14 [label="Jump to: [agreement form]"];
+	  15 [label="White Envelope: Variable[\"village.ww_redcheck_viscal_forgery\"]"];
+	  16 [label="Variable[\"village.ww_redcheck_viscal_forgery\"]", shape=diamond];
+	  17 [label="!(Variable[\"village.ww_redcheck_viscal_forgery\"])", shape=diamond];
+	  18 [label="White Envelope: IsKimHere()"];
+	  19 [label="IsKimHere()", shape=diamond];
+	  20 [label="!(IsKimHere())", shape=diamond];
+	  21 [label="Kim Kitsuragi: \"Yes...\" He reluctantly nods. \"It's probably the smart choice.\""];
+	  22 [label="Inland Empire: This is either an ominous or cool architectural choice -- hard to say."];
+	  23 [label="You: This is terrible. Poor people. Can't I do something?"];
+	  24 [label="Kim Kitsuragi: \"I am not sure whether working with Evrart is particularly ethical either... But I understand and respect your position.\" He looks off to the side, deep in thought."];
+	  25 [label="Interfacing: All you need to do now is mail the signatures to Evrart's accountant in La Delta."];
+	  26 [label="White Envelope: CheckItem(\"white_envelope_lilienne_and_idiot_doom\")"];
+	  27 [label="CheckItem(\"white_envelope_lilienne_and_idiot_doom\")", shape=diamond];
+	  28 [label="!(CheckItem(\"white_envelope_lilienne_and_idiot_doom\"))", shape=diamond];
+	  29 [label="White Envelope: You take the legal documents out of the envelope: a 12-40 month construction period and the zoning plan in the addendum. Underneath all this -- Lilienne's signature and an empty line, waiting for a signee."];
+	  30 [label="White Envelope: You take the legal documents out of the envelope: a 12-40 month construction period and the zoning plan in the addendum. Underneath all this -- your failed forgery."];
+	  31 [label="Logic: Well, you *could* trick Evrart. Get someone random to sign the document. By the time the Union boss finds out, your business here will already be concluded."];
+	  32 [label="Logic: There are none. The signatures of the drunks are worthless and once Evrart is ready to start the construction, he'll need to actually get Lilienne and Isobel to sign."];
+	  33 [label="Kim Kitsuragi: \"I should have seen it.\" The lieutenant frowns as he reads over the document again."];
+	  34 [label="You: \"Fuck these people. What have they ever done for me? We move on.\""];
+	  35 [label="White Envelope: IsKimHere()"];
+	  36 [label="IsKimHere()", shape=diamond];
+	  37 [label="!(IsKimHere())", shape=diamond];
+	  38 [label="Kim Kitsuragi: \"Of course... I should have seen it.\" The lieutenant frowns as he reads over the document again."];
+	  39 [label="Logic: How very rational of you. Rational of Evrart, too -- he will, no doubt, benefit from the village being abandoned."];
+	  40 [label="White Envelope: Variable[\"cargo.evrartdocument_forged_two_signature\"]"];
+	  41 [label="Variable[\"cargo.evrartdocument_forged_two_signature\"]", shape=diamond];
+	  42 [label="!(Variable[\"cargo.evrartdocument_forged_two_signature\"])", shape=diamond];
+	  43 [label="You: The name: \"Isobel Sadie.\""];
+	  44 [label="You: \"Kim, what do you think of this?\""];
+	  45 [label="White Envelope: IsKimHere()"];
+	  46 [label="IsKimHere()", shape=diamond];
+	  47 [label="!(IsKimHere())", shape=diamond];
+	  48 [label="Kim Kitsuragi: \"Hmmmm,\" the lieutenant hums, watching you examine the document again."];
+	  49 [label="Logic: There is no loophole. The simple truth is the current residents are going to lose their street access and for the next 12-40 months their lives will be dominated by constant construction noise right next door."];
+	  50 [label="Interfacing: It appears you have drawn a line instead of a signature. A puny line. Looks like the late stages of dementia."];
+	  51 [label="White Envelope: CancelTask(\"TASK.find_two_random_people_to_sign_the_papers_cancelled\")--[[ Variable[ ]]"];
+	  52 [label="Kim Kitsuragi: \"However... We'll need access to the coast before we do anything. Evrart won't believe you got villagers' signatures if you can't even get to the village.\" He shrugs. \"You can try a forgery as soon as we can cross the water lock.\""];
+	  53 [label="Logic: There is no loophole. The simple truth is the current residents are going to lose their street access and for the next 12-40 months their lives will be dominated by constant construction noise right next door."];
+	  54 [label="Logic: How very rational of you. Rational of Evrart, too -- he will, no doubt, benefit from the village being abandoned."];
+	  55 [label="Logic: Or! You *could* try to trick Evrart. Get someone random to sign the document. By the time the Union boss finds out, your business here will already be concluded."];
+	  56 [label="Jump to: [agreement form]"];
+	  57 [label="You: Good thing I forged the signatures."];
+	  58 [label="White Envelope: IsKimHere()"];
+	  59 [label="IsKimHere()", shape=diamond];
+	  60 [label="!(IsKimHere())", shape=diamond];
+	  61 [label="You: \"Did I just ruin it?\""];
+	  62 [label="Kim Kitsuragi: \"We'll need to find you a new weapon -- and we'll need to hope to finish the case without Evrart's help.\" He sighs."];
+	  63 [label="Kim Kitsuragi: \"Good. Evrart will have to start over with his scheming.\" The lieutenant nods. \"When Isobel disputes her signature the document will be rendered null and void.\""];
+	  64 [label="White Envelope: IsKimHere()"];
+	  65 [label="IsKimHere()", shape=diamond];
+	  66 [label="!(IsKimHere())", shape=diamond];
+	  67 [label="Untitled hub"];
+	  68 [label="Kim Kitsuragi: \"I am not sure whether working with Evrart is particularly ethical either... But I understand and respect your position.\" He looks off to the side, deep in thought."];
+	  69 [label="Jump to: [agreement form]"];
+	  70 [label="White Envelope: CheckItem(\"white_envelope_signed_wrong\")"];
+	  71 [label="CheckItem(\"white_envelope_signed_wrong\")", shape=diamond];
+	  72 [label="!(CheckItem(\"white_envelope_signed_wrong\"))", shape=diamond];
+	  73 [label="White Envelope: IsKimHere()"];
+	  74 [label="IsKimHere()", shape=diamond];
+	  75 [label="!(IsKimHere())", shape=diamond];
+	  76 [label="Kim Kitsuragi: \"Good. Evrart will have to start over with his scheming.\" The lieutenant nods. \"When she denies that this is her signature the document will be rendered null and void.\""];
+	  77 [label="You: Have I ruined the document?"];
+	  78 [label="White Envelope: Variable[\"village.netpicker_got_her_signature\"]  or  Variable[\"village.netpicker_signature_for_washerwoman\"]"];
+	  79 [label="Variable[\"village.netpicker_got_her_signature\"]  or  Variable[\"village.netpicker_signature_for_washerwoman\"]", shape=diamond];
+	  80 [label="!(Variable[\"village.netpicker_got_her_signature\"]  or  Variable[\"village.netpicker_signature_for_washerwoman\"])", shape=diamond];
+	  81 [label="You: Two names: *Isobel Sadie* and *Lilienne Carter*."];
+	  82 [label="Jump to: [agreement form]"];
+	  83 [label="White Envelope: Variable[\"village.netpicker_got_her_signature\"]  or  Variable[\"village.netpicker_signature_for_washerwoman\"]"];
+	  84 [label="Variable[\"village.netpicker_got_her_signature\"]  or  Variable[\"village.netpicker_signature_for_washerwoman\"]", shape=diamond];
+	  85 [label="!(Variable[\"village.netpicker_got_her_signature\"]  or  Variable[\"village.netpicker_signature_for_washerwoman\"])", shape=diamond];
+	  86 [label="White Envelope: Variable[\"TASK.forge_liliennes_and_isobels_signatures\"]"];
+	  87 [label="Variable[\"TASK.forge_liliennes_and_isobels_signatures\"]", shape=diamond];
+	  88 [label="!(Variable[\"TASK.forge_liliennes_and_isobels_signatures\"])", shape=diamond];
+	  89 [label="Kim Kitsuragi: He nods approvingly. \"Not a decision I would normally condone, but, under the circumstances...\""];
+	  90 [label="You: I guess that's just the cost of progress."];
+	  91 [label="You: Okay, let's do this! (Commence the forgery.)"];
+	  92 [label="You: Variable[\"village.ww_redcheck_viscal_forgery\"]"];
+	  93 [label="Variable[\"village.ww_redcheck_viscal_forgery\"]", shape=diamond];
+	  94 [label="!(Variable[\"village.ww_redcheck_viscal_forgery\"])", shape=diamond];
+	  95 [label="agreement form"];
+	  96 [label="White Envelope: Variable[\"cargo.evrartdocument_logic_wc_to_see_whats_up_with_the_signatures\"]"];
+	  97 [label="Variable[\"cargo.evrartdocument_logic_wc_to_see_whats_up_with_the_signatures\"]", shape=diamond];
+	  98 [label="!(Variable[\"cargo.evrartdocument_logic_wc_to_see_whats_up_with_the_signatures\"])", shape=diamond];
+	  99 [label="Jump to: [agreement form]"];
+	  100 [label="White Envelope: Variable[\"TASK.forge_liliennes_and_isobels_signatures_done\"]"];
+	  101 [label="Variable[\"TASK.forge_liliennes_and_isobels_signatures_done\"]", shape=diamond];
+	  102 [label="!(Variable[\"TASK.forge_liliennes_and_isobels_signatures_done\"])", shape=diamond];
+	  103 [label="Logic: There is no loophole. The simple truth is the current residents are going to lose their street access and for the next 12-40 months their lives will be dominated by constant construction noise right next door."];
+	  104 [label="Logic: Putting the good of others before your own... You're a good man, Harry. A good and honourable man. And guns can be replaced -- people can't."];
+	  105 [label="Jump to: [agreement form]"];
+	  106 [label="Jump to: [agreement form]"];
+	  107 [label="You: Alright, I'm ready to take the damage for the sake of my conscience."];
+	  108 [label="White Envelope: Variable[\"cargo.evrartenvelope_viscal_youthcentre_very_close_to_houses\"]"];
+	  109 [label="Variable[\"cargo.evrartenvelope_viscal_youthcentre_very_close_to_houses\"]", shape=diamond];
+	  110 [label="!(Variable[\"cargo.evrartenvelope_viscal_youthcentre_very_close_to_houses\"])", shape=diamond];
+	  111 [label="Jump to: [agreement form]"];
+	  112 [label="White Envelope: Variable[\"cargo.evrartdocument_forged_one_signature\"]"];
+	  113 [label="Variable[\"cargo.evrartdocument_forged_one_signature\"]", shape=diamond];
+	  114 [label="!(Variable[\"cargo.evrartdocument_forged_one_signature\"])", shape=diamond];
+	  115 [label="White Envelope: You take the legal documents out of the envelope: a 12-40 month construction period and the zoning plan in the addendum. It's signed by Lilienne Carter and 'Idiot Doom Spiral'."];
+	  116 [label="Jump to: [agreement form]"];
+	  117 [label="You: What are the ramifications here?"];
+	  118 [label="Logic: There are none. Your forged signatures are worthless and once Evrart is ready to start the construction, he'll need to actually get Lilienne and Isobel to sign."];
+	  119 [label="White Envelope: IsKimHere()"];
+	  120 [label="IsKimHere()", shape=diamond];
+	  121 [label="!(IsKimHere())", shape=diamond];
+	  122 [label="Logic: No one would judge you. After all, what is a cop without his gun? Is he really even a cop anymore?"];
+	  123 [label="Interfacing: But it's not, and the document will be nullified if she disputes it. That means Evrart will have to start over."];
+	  124 [label="Interfacing: No, it's just a line. Forgery obviously isn't your strong suit -- sorry for suggesting it. If you get someone to *actually* sign this, it should be fine."];
+	  125 [label="Rhetoric: ...how else are you going to build something? It's always inconvenient to build things, and citizens inevitably have disagreements over such construction projects, but there's no other way."];
+	  126 [label="Logic: This is probably the smart choice. Now go mail the document and don't think about it anymore."];
+	  127 [label="Jump to: [agreement form]"];
+	  128 [label="White Envelope: Variable[\"village.netpicker_signature_for_washerwoman\"]"];
+	  129 [label="Variable[\"village.netpicker_signature_for_washerwoman\"]", shape=diamond];
+	  130 [label="!(Variable[\"village.netpicker_signature_for_washerwoman\"])", shape=diamond];
+	  131 [label="You: \"I thought of forging Isobel Sadies signature, but then decided against it. But now I see it may be the right thing to do.\""];
+	  132 [label="Untitled hub"];
+	  133 [label="Esprit de Corps: He feels guilty about failing to protect the inhabitants of the fishing village from a greedy mob boss."];
+	  134 [label="White Envelope: You take the legal documents out of the envelope: a 12-40 month construction period and the zoning plan in the addendum. It's signed by 'Idiot Doom Spiral' and someone called 'Domwtclall Abheqoeel', apparently."];
+	  135 [label="You: What have I done?"];
+	  136 [label="Kim Kitsuragi: \"Any halfway competent notary should be able to handle this. *Not* getting her signature was probably the best thing to do.\""];
+	  137 [label="Jump to: [agreement form]"];
+	  138 [label="Jump to: [agreement form]"];
+	  139 [label="Visual Calculus: There was a mail delivery box in the plaza, near the corner of the bookstore."];
+	  140 [label="Kim Kitsuragi: \"Now all we have to do is mail these. I think I saw a mailbox on the plaza.\""];
+	  141 [label="White Envelope: CancelTask(\"TASK.find_two_random_people_to_sign_the_papers_cancelled\")--[[ Variable[ ]]"];
+	  142 [label="White Envelope: You take the legal documents out of the envelope: a 12-40 month construction period and the zoning plan in the addendum."];
+	  143 [label="Interfacing: With a confident flourish you complete your forgery. What do you see on the signature line?"];
+	  144 [label="Jump to: [agreement form]"];
+	  145 [label="Logic: Once the construction starts it'll probably take a few months -- a year maybe -- for even the most stubborn occupants to get tired of living like this. After that they'll sell their property for cheap and move out."];
+	  146 [label="Logic: Well, you *could* trick Evrart. Get some random people to sign the document. By the time the Union boss finds out, your business here will already be concluded."];
+	  147 [label="Kim Kitsuragi: \"Yes -- being an *asshole* makes this much easier. Let's go.\""];
+	  148 [label="Interfacing: Indeed. Your forgery looks very convincing right next to Lilienne's actual signature. It might as well be real."];
+	  149 [label="Kim Kitsuragi: He purses his lips. \"Forgery, yes. It would render the document invalid.\""];
+	  150 [label="Kim Kitsuragi: \"You probably don't have a pen.\" He takes one out of his pocket. \"Here, you can keep this. I have another one.\""];
+	  151 [label="You: \"Oh yeah, let's do this.\""];
+	  152 [label="White Envelope: You take the legal documents out of the envelope: a 12-40 month construction period and the zoning plan in the addendum. It's signed by Isobel Sadie and Lilienne Carter."];
+	  153 [label="White Envelope: Variable[\"cargo.evrartdocument_failed_forge_two_signature\"]"];
+	  154 [label="Variable[\"cargo.evrartdocument_failed_forge_two_signature\"]", shape=diamond];
+	  155 [label="!(Variable[\"cargo.evrartdocument_failed_forge_two_signature\"])", shape=diamond];
+	  156 [label="Logic: There is no loophole. The simple truth is the current residents are going to lose their street access and for the next 12-40 months their lives will be dominated by constant construction noise right next door."];
+	  157 [label="You: Good thing I got those drunks to sign this."];
+	  158 [label="Logic: That was a nice move, yes."];
+	  159 [label="You: Isobel and Lilienne have a rough 12 to 40 months ahead of them."];
+	  160 [label="Jump to: [agreement form]"];
+	  161 [label="Interfacing: But it is not, and the document will be nullified if Isobel disputes it. That means Evrart will have to start over."];
+	  162 [label="Kim Kitsuragi: \"Evrart probably has eyes on us, but...\" He pauses to think. \"If the second signature were to be somehow *wrong*...\""];
+	  163 [label="You: \"That's illegal. I expected more from you, Kim.\""];
+	  164 [label="White Envelope: IsKimHere()"];
+	  165 [label="IsKimHere()", shape=diamond];
+	  166 [label="!(IsKimHere())", shape=diamond];
+	  167 [label="White Envelope: You take the legal documents out of the envelope: a 12-40 month construction period and the zoning plan in the addendum. Underneath all this -- on the signature lines -- your little forgery."];
+	  168 [label="White Envelope: You take the legal documents out of the envelope: a 12-40 month construction period and the zoning plan in the addendum. Underneath all this -- Lilienne's signature and your little forgery."];
+	  169 [label="Visual Calculus: It's going to be awfully close to the already existing buildings. Almost wall to wall, practically integrating them into the youth centre."];
+	  170 [label="Logic: Again, the document doesn't seem to have any hidden clause. Maybe, just maybe, what you see is what you get with Mr. Evrart?"];
+	  171 [label="White Envelope: Variable[\"village.ww_got_her_signature\"]"];
+	  172 [label="Variable[\"village.ww_got_her_signature\"]", shape=diamond];
+	  173 [label="!(Variable[\"village.ww_got_her_signature\"])", shape=diamond];
+	  174 [label="Logic: There is no loophole. The simple truth is the current residents are going to lose their street access and for the next 12-40 months their lives will be dominated by constant construction noise right next door."];
+	  175 [label="Untitled hub"];
+	  176 [label="Kim Kitsuragi: The lieutenant gives you a long look before speaking. \"For what it's worth, I think you're doing the right thing. Firearms can be replaced. People not so much.\""];
+	  177 [label="Kim Kitsuragi: \"Let's go get it then.\""];
+	  178 [label="Kim Kitsuragi: \"This isn't going to work,\" the lieutenant says, looking over your shoulder. \"It doesn't even look like a name. Just a scratch mark.\""];
+	  179 [label="You: Damn it... it sounds like too much. I'm going to fucking mail."];
+	  180 [label="Jump to: [Esprit de Corps: \"He feels guilty about failing to pr...\"]"];
+	  181 [label="White Envelope: Variable[\"canal.lever_waterlock_closed\"]"];
+	  182 [label="Variable[\"canal.lever_waterlock_closed\"]", shape=diamond];
+	  183 [label="!(Variable[\"canal.lever_waterlock_closed\"])", shape=diamond];
+	  184 [label="White Envelope: IsKimHere()"];
+	  185 [label="IsKimHere()", shape=diamond];
+	  186 [label="!(IsKimHere())", shape=diamond];
+	  187 [label="You: \"I considered forgery and ruled it out. It's illegal and unethical.\""];
+	  188 [label="White Envelope: CheckItem(\"white_envelope_signed_right\")"];
+	  189 [label="CheckItem(\"white_envelope_signed_right\")", shape=diamond];
+	  190 [label="!(CheckItem(\"white_envelope_signed_right\"))", shape=diamond];
+	  191 [label="You: Look at the zoning plan."];
+	  192 [label="White Envelope: The youth centre cuts into the ocean like the bow of some great modern ship. Apparently it's going to cover most -- if not all -- of the street and the square between the existing houses. It's three storeys tall."];
+	  193 [label="Kim Kitsuragi: \"Yes.\" The lieutenant nods. \"Too bad we can't see Evrart's face when he finds out.\""];
+	  194 [label="Jump to: [agreement form]"];
+	  195 [label="You: This is terrible. Poor people. Can't I do something?"];
+	  196 [label="White Envelope: Variable[\"cargo.evrartenvelope_viscal_youthcentre_very_close_to_houses\"]"];
+	  197 [label="Variable[\"cargo.evrartenvelope_viscal_youthcentre_very_close_to_houses\"]", shape=diamond];
+	  198 [label="!(Variable[\"cargo.evrartenvelope_viscal_youthcentre_very_close_to_houses\"])", shape=diamond];
+	  199 [label="Kim Kitsuragi: \"Now all we have to do is mail these. I think I saw a mailbox on the plaza.\""];
+	  200 [label="Kim Kitsuragi: \"Any halfway competent notary should be able to handle this. *Not* getting Isobel's actual signature was probably the best thing to do.\""];
+	  201 [label="White Envelope: IsKimHere()"];
+	  202 [label="IsKimHere()", shape=diamond];
+	  203 [label="!(IsKimHere())", shape=diamond];
+	  204 [label="Jump to: [agreement form]"];
+	  205 [label="Kim Kitsuragi: \"You made the right choice.\" The lieutenant smiles approvingly. \"Now let's move out and solve this case.\""];
+	  206 [label="Interfacing: Indeed. They look distinctly different and very convincing. These might as well be their actual signatures."];
+	  207 [label="Kim Kitsuragi: \"Good. Evrart will have to start over with his scheming.\" The lieutenant nods. \"When Isobel and Lilienne dispute the signatures the document will be rendered null and void.\""];
+	  208 [label="White Envelope: (CheckItem(\"kind_green_ape_pen\")  or  CheckItem(\"blue_oblong_pen\")) == false"];
+	  209 [label="(CheckItem(\"kind_green_ape_pen\")  or  CheckItem(\"blue_oblong_pen\")) == false", shape=diamond];
+	  210 [label="!((CheckItem(\"kind_green_ape_pen\")  or  CheckItem(\"blue_oblong_pen\")) == false)", shape=diamond];
+	  211 [label="Kim Kitsuragi: \"No, it's just a little line. Let's get an actual signature on top of it and it'll be fine.\""];
+	  212 [label="Rhetoric: He is not altogether comfortable with your contribution to progress in this instance."];
+	  213 [label="Jump to: [agreement form]"];
+	  214 [label="Interfacing: The pen is shaking in your hand as you draw a pathetic little line."];
+	  215 [label="Logic: There doesn't seem to be anything of interest here. No fine print. You're smart. You can read."];
+	  216 [label="You: What are the ramifications here?"];
+	  217 [label="Jump to: [agreement form]"];
+	  218 [label="You: (Sigh.) \"Okay, damn it... it sounds like too much. Let's fucking mail it.\""];
+	  219 [label="Logic: Once the construction starts it'll probably take a few months -- a year maybe -- for even the most stubborn occupants to get tired of living like this. After that they'll sell their property for cheap and move out."];
+	  220 [label="White Envelope: Variable[\"village.documents_refused_to_forge\"]"];
+	  221 [label="Variable[\"village.documents_refused_to_forge\"]", shape=diamond];
+	  222 [label="!(Variable[\"village.documents_refused_to_forge\"])", shape=diamond];
+	  223 [label="White Envelope: Variable[\"cargo.evrartdocument_failed_forge_one_signature\"]"];
+	  224 [label="Variable[\"cargo.evrartdocument_failed_forge_one_signature\"]", shape=diamond];
+	  225 [label="!(Variable[\"cargo.evrartdocument_failed_forge_one_signature\"])", shape=diamond];
+	  226 [label="White Envelope: Variable[\"village.netpicker_got_her_signature\"]"];
+	  227 [label="Variable[\"village.netpicker_got_her_signature\"]", shape=diamond];
+	  228 [label="!(Variable[\"village.netpicker_got_her_signature\"])", shape=diamond];
+	  229 [label="Logic: It's hard to imagine anyone enduring these conditions. The stubborn ones might last for a year, but before 40 months are through, they'll sell their property for pennies and move on."];
+	  230 [label="Untitled hub"];
+	  231 [label="Interfacing: Indeed. To be honest, it does look very convincing. The calligraphy is close to superb. It might as well be her actual signature."];
+	  232 [label="You: \"Alright, I'm ready to take the damage for the sake of my conscience.\""];
+	  233 [label="Jump to: [agreement form]"];
+	  234 [label="White Envelope: Variable[\"cargo.inland_youthcentre_omnious_or_cool\"]"];
+	  235 [label="Variable[\"cargo.inland_youthcentre_omnious_or_cool\"]", shape=diamond];
+	  236 [label="!(Variable[\"cargo.inland_youthcentre_omnious_or_cool\"])", shape=diamond];
+	  237 [label="Kim Kitsuragi: \"Any halfway competent notary should be able to handle this. *Not* getting their actual signatures was probably the best thing to do.\""];
+	  238 [label="Kim Kitsuragi: \"I should have seen it.\" He frowns as he reads over the document again. \"People will move away on their own accord. Yes, I suppose change always has a price.\""];
+	  239 [label="You: I guess that's just the cost of progress."];
+	  240 [label="White Envelope: Variable[\"village.idiot_signed_by_rosemary\"]"];
+	  241 [label="Variable[\"village.idiot_signed_by_rosemary\"]", shape=diamond];
+	  242 [label="!(Variable[\"village.idiot_signed_by_rosemary\"])", shape=diamond];
+	  243 [label="White Envelope: You take the legal documents out of the envelope: a 12-40 month construction period and the zoning plan in the addendum. It's signed by 'Idiot Doom' Spiral and someone called 'Don't Call Abigail', apparently."];
+	  244 [label="Kim Kitsuragi: \"I'm no property lawyer, but it looks fine,\" the lieutenant replies, flipping through the documents. \"I like the print size. They're not selling or leasing anything. It's not a perfect solution, but...\" He shrugs."];
+	  245 [label="Logic: Once the construction starts it'll probably take a few months -- a year maybe -- for even the most stubborn occupants to get tired of living like this. After that they'll sell their property cheap and move out."];
+	  246 [label="Logic: You could always *not* mail the signatures to Evrart's accountant. But then you'll never see your gun again."];
+	  247 [label="Kim Kitsuragi: \"No, it's just a little line. Let's get an actual signature on top of it and it'll be fine.\""];
+	  248 [label="Interfacing: The line gets even shakier and starts to curve towards the bottom of the page."];
+	  249 [label="Jump to: [agreement form]"];
+	  250 [label="Interfacing: All you need to do now is mail the signatures to Evrart's accountant in La Delta."];
+	  251 [label="Interfacing: But they're not, and the document will be nullified if they dispute it. That means Evrart will have to start over."];
+	  252 [label="You: \"You're suggesting...\""];
+	  253 [label="You: \"I was actually thinking of forging Isobel Sadie's signature...\""];
+	  254 [label="Kim Kitsuragi: He nods. \"Not the sort of act I would normally condone, but, under the circumstances, if done *discreetly*... it may be the only way to save what's left of the village.\""];
+	  255 [label="Kim Kitsuragi: \"It's not the sort of act I would normally encourage, but, under the circumstances, if done *discreetly*... it may be the only way to save what's left of the village.\""];
+	  256 [label="White Envelope: CheckItem(\"white_envelope_lilienne_signed\")"];
+	  257 [label="CheckItem(\"white_envelope_lilienne_signed\")", shape=diamond];
+	  258 [label="!(CheckItem(\"white_envelope_lilienne_signed\"))", shape=diamond];
+	  259 [label="White Envelope: IsKimHere()"];
+	  260 [label="IsKimHere()", shape=diamond];
+	  261 [label="!(IsKimHere())", shape=diamond];
+	  262 [label="White Envelope: Variable[\"cargo.evrartdocument_failed_wc_once\"]"];
+	  263 [label="Variable[\"cargo.evrartdocument_failed_wc_once\"]", shape=diamond];
+	  264 [label="!(Variable[\"cargo.evrartdocument_failed_wc_once\"])", shape=diamond];
+	  265 [label="White Envelope: IsKimHere()"];
+	  266 [label="IsKimHere()", shape=diamond];
+	  267 [label="!(IsKimHere())", shape=diamond];
+	  268 [label="Logic: That was a nice move, yes."];
+	  269 [label="Kim Kitsuragi: \"All we can do now is *not* mail these to Evrart's accountant.\" He pauses. \"Your gun would probably stay missing though.\""];
+	  270 [label="White Envelope: IsTaskActive(\"TASK.find_two_random_people_to_sign_the_papers\")--[[ Variable[ ]]"];
+	  271 [label="IsTaskActive(\"TASK.find_two_random_people_to_sign_the_papers\")--[[ Variable[ ]]", shape=diamond];
+	  272 [label="!(IsTaskActive(\"TASK.find_two_random_people_to_sign_the_papers\")--[[ Variable[ ]])", shape=diamond];
+	  273 [label="White Envelope: You take the legal documents out of the envelope: a 12-40 month construction period and the zoning plan in the addendum. Underneath all this -- Lilienne's signature and your little forgery."];
+	  274 [label="Kim Kitsuragi: \"Of course... I should have seen it.\" He frowns as he reads over the document again. \"People will move away on their own accord. I'm not sure they should...\""];
+	  275 [label="You: Put the documents back in the envelope. [Leave.]"];
+	  276 [label="White Envelope: Variable[\"TASK.find_two_random_people_to_sign_the_papers_done\"]"];
+	  277 [label="Variable[\"TASK.find_two_random_people_to_sign_the_papers_done\"]", shape=diamond];
+	  278 [label="!(Variable[\"TASK.find_two_random_people_to_sign_the_papers_done\"])", shape=diamond];
+	  279 [label="You: Wait, what are the ramifications of this?"];
+	  280 [label="You: \"I don't need my gun. I'm not going to mail it.\" (Cancel task.)"];
+	  281 [label="You: \"Damn it... I really need my gun -- and to see where this is going.\""];
+	  282 [label="You: I don't need my gun. I'm not going to mail it."];
+	  283 [label="White Envelope: IsKimHere()"];
+	  284 [label="IsKimHere()", shape=diamond];
+	  285 [label="!(IsKimHere())", shape=diamond];
+	  286 [label="Conceptualization: My money is on cool. Looks like a cubic pyrite."];
+	  287 [label="Jump to: [agreement form]"];
+	  288 [label="Logic: Okay. Cool. Honourable too. Just walk away with your head held high."];
+	  289 [label="White Envelope: IsTaskActive(\"TASK.find_two_random_people_to_sign_the_papers\")--[[ Variable[ ]]"];
+	  290 [label="IsTaskActive(\"TASK.find_two_random_people_to_sign_the_papers\")--[[ Variable[ ]]", shape=diamond];
+	  291 [label="!(IsTaskActive(\"TASK.find_two_random_people_to_sign_the_papers\")--[[ Variable[ ]])", shape=diamond];
+	  292 [label="White Envelope: Variable[\"village.netpicker_got_her_signature\"]"];
+	  293 [label="Variable[\"village.netpicker_got_her_signature\"]", shape=diamond];
+	  294 [label="!(Variable[\"village.netpicker_got_her_signature\"])", shape=diamond];
+	  295 [label="Interfacing: No, it's just a line. Forgery obviously isn't your strong suit -- sorry for suggesting it. If you get someone to *actually* sign this, it should be fine."];
+	  296 [label="Kim Kitsuragi: \"Evrart probably has eyes on us, but...\" He pauses to think. \"We could try to get other people to sign this instead of those listed. *Or* you could forge their signatures yourself. By the time he finds out, we'll already be gone.\""];
+	  297 [label="Kim Kitsuragi: \"Yes.\" The lieutenant nods. \"Too bad we won't see Evrart's face when he finds out.\""];
+	  298 [label="You: Damn it... I really need my gun."];
+	  299 [label="You: Keep drawing."];
+	  300 [label="Jump to: [agreement form]"];
+	  0 -> 1
+	  1 -> 40
+	  2 -> 86
+	  3 -> 127
+	  4 -> 5
+	  5 -> 6
+	  5 -> 7
+	  6 -> 96
+	  7 -> 96
+	  8 -> 270
+	  9 -> 246
+	  10 -> 95
+	  11 -> 107
+	  11 -> 179
+	  12 -> 220
+	  13 -> 95
+	  14 -> 95
+	  15 -> 16
+	  15 -> 17
+	  16 -> 143
+	  17 -> 215
+	  18 -> 19
+	  18 -> 20
+	  19 -> 8
+	  20 -> 230
+	  21 -> 234
+	  22 -> 235
+	  23 -> 64
+	  24 -> 180
+	  25 -> 290
+	  26 -> 27
+	  26 -> 28
+	  27 -> 115
+	  28 -> 112
+	  29 -> 95
+	  30 -> 95
+	  31 -> 13
+	  32 -> 157
+	  33 -> 297
+	  34 -> 147
+	  35 -> 36
+	  35 -> 37
+	  36 -> 208
+	  37 -> 252
+	  38 -> 162
+	  39 -> 160
+	  40 -> 41
+	  40 -> 42
+	  41 -> 167
+	  42 -> 70
+	  43 -> 232
+	  44 -> 245
+	  45 -> 46
+	  45 -> 47
+	  46 -> 194
+	  47 -> 158
+	  48 -> 144
+	  49 -> 280
+	  49 -> 90
+	  49 -> 196
+	  50 -> 77
+	  51 -> 138
+	  52 -> 82
+	  53 -> 240
+	  53 -> 12
+	  53 -> 23
+	  54 -> 301
+	  55 -> 214
+	  56 -> 95
+	  57 -> 73
+	  58 -> 59
+	  58 -> 60
+	  59 -> 178
+	  60 -> 300
+	  60 -> 135
+	  61 -> 293
+	  62 -> 233
+	  62 -> 219
+	  63 -> 201
+	  64 -> 65
+	  64 -> 66
+	  65 -> 38
+	  66 -> 31
+	  67 -> 131
+	  67 -> 187
+	  68 -> 133
+	  69 -> 95
+	  70 -> 72
+	  70 -> 71
+	  71 -> 241
+	  72 -> 26
+	  73 -> 74
+	  73 -> 75
+	  74 -> 298
+	  75 -> 269
+	  76 -> 136
+	  77 -> 227
+	  78 -> 80
+	  78 -> 79
+	  79 -> 43
+	  80 -> 81
+	  81 -> 128
+	  82 -> 95
+	  83 -> 84
+	  83 -> 85
+	  84 -> 53
+	  85 -> 49
+	  86 -> 88
+	  86 -> 87
+	  87 -> 254
+	  88 -> 221
+	  89 -> 209
+	  90 -> 164
+	  91 -> 92
+	  92 -> 93
+	  92 -> 94
+	  93 -> 15
+	  94 -> 15
+	  95 -> 4
+	  95 -> 44
+	  95 -> 276
+	  95 -> 91
+	  95 -> 191
+	  96 -> 97
+	  96 -> 98
+	  97 -> 277
+	  98 -> 263
+	  99 -> 95
+	  100 -> 101
+	  100 -> 102
+	  101 -> 174
+	  102 -> 171
+	  103 -> 9
+	  103 -> 159
+	  104 -> 11
+	  105 -> 95
+	  106 -> 95
+	  107 -> 289
+	  108 -> 109
+	  108 -> 110
+	  109 -> 111
+	  110 -> 169
+	  111 -> 95
+	  112 -> 113
+	  112 -> 114
+	  113 -> 274
+	  114 -> 188
+	  115 -> 95
+	  116 -> 95
+	  117 -> 118
+	  118 -> 57
+	  119 -> 120
+	  119 -> 121
+	  120 -> 231
+	  121 -> 175
+	  122 -> 10
+	  123 -> 25
+	  124 -> 105
+	  125 -> 116
+	  126 -> 288
+	  127 -> 95
+	  128 -> 129
+	  128 -> 130
+	  129 -> 148
+	  130 -> 207
+	  131 -> 255
+	  132 -> 163
+	  132 -> 151
+	  133 -> 137
+	  134 -> 95
+	  135 -> 50
+	  136 -> 140
+	  137 -> 95
+	  138 -> 95
+	  139 -> 271
+	  140 -> 290
+	  141 -> 69
+	  142 -> 95
+	  143 -> 78
+	  144 -> 95
+	  145 -> 90
+	  145 -> 196
+	  146 -> 56
+	  147 -> 205
+	  148 -> 184
+	  149 -> 132
+	  150 -> 55
+	  151 -> 256
+	  152 -> 95
+	  153 -> 154
+	  153 -> 155
+	  154 -> 30
+	  155 -> 142
+	  156 -> 217
+	  156 -> 157
+	  157 -> 45
+	  158 -> 195
+	  159 -> 18
+	  160 -> 95
+	  161 -> 251
+	  162 -> 2
+	  163 -> 24
+	  164 -> 165
+	  164 -> 166
+	  165 -> 239
+	  166 -> 54
+	  167 -> 95
+	  168 -> 95
+	  169 -> 197
+	  170 -> 266
+	  171 -> 172
+	  171 -> 173
+	  172 -> 103
+	  173 -> 83
+	  174 -> 57
+	  174 -> 117
+	  175 -> 283
+	  175 -> 299
+	  176 -> 62
+	  177 -> 205
+	  178 -> 61
+	  179 -> 126
+	  180 -> 133
+	  181 -> 182
+	  181 -> 183
+	  182 -> 82
+	  183 -> 52
+	  184 -> 185
+	  184 -> 186
+	  185 -> 63
+	  186 -> 161
+	  187 -> 68
+	  188 -> 189
+	  188 -> 190
+	  189 -> 152
+	  190 -> 224
+	  191 -> 193
+	  192 -> 108
+	  193 -> 195
+	  194 -> 95
+	  195 -> 202
+	  196 -> 198
+	  196 -> 199
+	  197 -> 22
+	  198 -> 106
+	  199 -> 271
+	  200 -> 200
+	  201 -> 203
+	  201 -> 204
+	  202 -> 33
+	  203 -> 146
+	  204 -> 95
+	  206 -> 35
+	  207 -> 238
+	  208 -> 210
+	  208 -> 211
+	  209 -> 150
+	  210 -> 55
+	  211 -> 250
+	  212 -> 14
+	  213 -> 95
+	  214 -> 58
+	  215 -> 99
+	  216 -> 32
+	  217 -> 95
+	  218 -> 21
+	  219 -> 240
+	  219 -> 23
+	  220 -> 222
+	  220 -> 223
+	  221 -> 67
+	  222 -> 253
+	  223 -> 225
+	  223 -> 226
+	  224 -> 168
+	  225 -> 257
+	  226 -> 228
+	  226 -> 229
+	  227 -> 296
+	  228 -> 124
+	  229 -> 247
+	  230 -> 281
+	  230 -> 282
+	  230 -> 34
+	  231 -> 284
+	  232 -> 206
+	  233 -> 95
+	  234 -> 236
+	  234 -> 237
+	  235 -> 287
+	  236 -> 106
+	  237 -> 200
+	  238 -> 3
+	  239 -> 260
+	  240 -> 242
+	  240 -> 243
+	  241 -> 244
+	  242 -> 134
+	  243 -> 95
+	  244 -> 125
+	  245 -> 159
+	  246 -> 119
+	  247 -> 250
+	  248 -> 77
+	  249 -> 95
+	  250 -> 139
+	  251 -> 251
+	  252 -> 149
+	  253 -> 89
+	  254 -> 209
+	  255 -> 209
+	  256 -> 258
+	  256 -> 259
+	  257 -> 29
+	  258 -> 153
+	  259 -> 261
+	  259 -> 262
+	  260 -> 275
+	  261 -> 39
+	  262 -> 264
+	  262 -> 265
+	  263 -> 170
+	  264 -> 216
+	  265 -> 267
+	  265 -> 268
+	  266 -> 48
+	  267 -> 144
+	  268 -> 218
+	  269 -> 119
+	  270 -> 272
+	  270 -> 273
+	  271 -> 51
+	  272 -> 138
+	  273 -> 95
+	  274 -> 213
+	  276 -> 278
+	  276 -> 279
+	  277 -> 156
+	  278 -> 100
+	  279 -> 145
+	  280 -> 176
+	  281 -> 177
+	  282 -> 104
+	  283 -> 285
+	  283 -> 286
+	  284 -> 76
+	  285 -> 123
+	  286 -> 106
+	  287 -> 95
+	  289 -> 291
+	  289 -> 292
+	  290 -> 141
+	  291 -> 69
+	  292 -> 294
+	  292 -> 295
+	  293 -> 212
+	  294 -> 248
+	  295 -> 105
+	  296 -> 181
+	  297 -> 218
+	  298 -> 122
+	  299 -> 249
+	  300 -> 95
+}
+

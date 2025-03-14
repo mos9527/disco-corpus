@@ -1,0 +1,421 @@
+# WHIRLING F3 / BARRED DOOR
+# This is the door on the roof. 
+Phys Inst white get in
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"I thought it was an Ace's High moment, Kim.\""];
+	  3 [label="Barred Door: It's barred from the inside. You hear the bar rattle in the brackets."];
+	  4 [label="Jump to: [BARRED_DOOR_HUB]"];
+	  5 [label="Barred Door: This is the door to the pinball workshop that you left barred on the inside."];
+	  6 [label="You: \"*Disrespecting* the force?!?!\" (Kick the door.)"];
+	  7 [label="Pain Threshold: This kind of stuff would hurt -- if not for you not caring about little things like that."];
+	  8 [label="Klaasje (Miss Oranje Disco Dancer): \"Suck on that, door.\""];
+	  9 [label="Kim Kitsuragi: \"To the workshop behind the wall.\" He points somewhere within. \"This must be the barred door we saw -- we *could* return and open it from the inside.\" He looks at the door with suspicion."];
+	  10 [label="Physical Instrument: You kick it -- gung ho style, *entering the premises* style -- but the door fails to respect the force. All you hear is the bar rattling inside, laughing at you."];
+	  11 [label="Barred Door: Variable[\"whirling.barreddoor_halflight_kick_it\"]"];
+	  12 [label="Variable[\"whirling.barreddoor_halflight_kick_it\"]", shape=diamond];
+	  13 [label="!(Variable[\"whirling.barreddoor_halflight_kick_it\"])", shape=diamond];
+	  14 [label="You: Swallow the rage."];
+	  15 [label="Klaasje (Miss Oranje Disco Dancer): \"I think the brackets broke inside. I've always wanted to know what's in there...\""];
+	  16 [label="You: \"Where does this lead to?\""];
+	  17 [label="Kim Kitsuragi: \"It is not the first closed door we've found in this building -- there is also your mysterious blue kitchen door.\""];
+	  18 [label="Kim Kitsuragi: \"The vigilantes, the cadaver, and...\" He nods toward the young woman. \"A number of people connected to the case are *in* or around this building. This door is part of it. It's not *unimportant*.\""];
+	  19 [label="Physical Instrument: Something cracks inside."];
+	  20 [label="Kim Kitsuragi: \"I don't know. The further we get, the more this building seems to be tied to the case...\""];
+	  21 [label="Physical Instrument: It is an unbelievably satisfying sound."];
+	  22 [label="Shivers: Below, the hostel-cafeteria creaks and groans under your added weight -- a skeleton of composite support beams and cantilevers."];
+	  23 [label="Barred Door: Variable[\"whirling.barreddoor_shivers_creeking\"]"];
+	  24 [label="Variable[\"whirling.barreddoor_shivers_creeking\"]", shape=diamond];
+	  25 [label="!(Variable[\"whirling.barreddoor_shivers_creeking\"])", shape=diamond];
+	  26 [label="You: Let's get in there. [Leave.]"];
+	  27 [label="Kim Kitsuragi: \"I don't see how this is going to give new results.\" He measures the door, stoically. \"There must be another way in there.\""];
+	  28 [label="Perception (Sight): It could be that your eyesight is still too poor to notice it... behind that window."];
+	  29 [label="Inland Empire: No one knows. It is a fleeting feeling."];
+	  30 [label="Barred Door: CheckItem(\"key_workshop_spare\")"];
+	  31 [label="CheckItem(\"key_workshop_spare\")", shape=diamond];
+	  32 [label="!(CheckItem(\"key_workshop_spare\"))", shape=diamond];
+	  33 [label="Barred Door: Variable[\"whirling.steel_door_stereo_investigation\"]  or  Variable[\"whirling.steel_door_mega_investigation\"]"];
+	  34 [label="Variable[\"whirling.steel_door_stereo_investigation\"]  or  Variable[\"whirling.steel_door_mega_investigation\"]", shape=diamond];
+	  35 [label="!(Variable[\"whirling.steel_door_stereo_investigation\"]  or  Variable[\"whirling.steel_door_mega_investigation\"])", shape=diamond];
+	  36 [label="Barred Door: The door receives a thorough disciplining."];
+	  37 [label="Barred Door: This is a small, heavy door. There is no lock in sight."];
+	  38 [label="Kim Kitsuragi: \"I don't see how this is going to give new results.\" He measures the door, stoically. \"There must be another way in there.\""];
+	  39 [label="Kim Kitsuragi: \"Through the kitchen door, perhaps? Let's explore, rather than destroy.\""];
+	  40 [label="Barred Door: Variable[\"TASK.investigate_mysterious_door\"]  and  Variable[\"TASK.investigate_mysterious_door_done\"] == false"];
+	  41 [label="Variable[\"TASK.investigate_mysterious_door\"]  and  Variable[\"TASK.investigate_mysterious_door_done\"] == false", shape=diamond];
+	  42 [label="!(Variable[\"TASK.investigate_mysterious_door\"]  and  Variable[\"TASK.investigate_mysterious_door_done\"] == false)", shape=diamond];
+	  43 [label="You: \"I thought it was an Ace's Low moment, Kim.\""];
+	  44 [label="Klaasje (Miss Oranje Disco Dancer): \"All right,\" the woman nods approvingly: \"Let's trash the place.\""];
+	  45 [label="Barred Door: Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]  or  IsHourBetween(7, 22) == false"];
+	  46 [label="Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]  or  IsHourBetween(7, 22) == false", shape=diamond];
+	  47 [label="!(Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]  or  IsHourBetween(7, 22) == false)", shape=diamond];
+	  48 [label="Kim Kitsuragi: \"The door has withstood your *demolishing* attempts.\" He measures the door, stoically. \"There must be another way in.\""];
+	  49 [label="Barred Door: Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]  or  IsHourBetween(7, 22) == false"];
+	  50 [label="Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]  or  IsHourBetween(7, 22) == false", shape=diamond];
+	  51 [label="!(Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]  or  IsHourBetween(7, 22) == false)", shape=diamond];
+	  52 [label="Kim Kitsuragi: \"No -- still a mini-investigation.\" He pretends to make a note in his notebook."];
+	  53 [label="Empathy: It totally was."];
+	  54 [label="Logic: Must be something valuable inside to go through the trouble of protecting it -- the door is very sturdy indeed."];
+	  55 [label="You: Push."];
+	  56 [label="Barred Door: Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]"];
+	  57 [label="Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]", shape=diamond];
+	  58 [label="!(Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"])", shape=diamond];
+	  59 [label="Half Light: Your foot is ready to explode and punish this *object*!"];
+	  60 [label="Barred Door: Variable[\"whirling.barreddoor_pain_resist_footkick\"]"];
+	  61 [label="Variable[\"whirling.barreddoor_pain_resist_footkick\"]", shape=diamond];
+	  62 [label="!(Variable[\"whirling.barreddoor_pain_resist_footkick\"])", shape=diamond];
+	  63 [label="You: \"Let's see.\" [Leave.]"];
+	  64 [label="Barred Door: Variable[\"whirling.barreddoor_hearing_heavy\"]"];
+	  65 [label="Variable[\"whirling.barreddoor_hearing_heavy\"]", shape=diamond];
+	  66 [label="!(Variable[\"whirling.barreddoor_hearing_heavy\"])", shape=diamond];
+	  67 [label="You: Tap on the roof with your foot."];
+	  68 [label="Barred Door: Variable[\"whirling.barreddoor_physinst_kicked_once\"]"];
+	  69 [label="Variable[\"whirling.barreddoor_physinst_kicked_once\"]", shape=diamond];
+	  70 [label="!(Variable[\"whirling.barreddoor_physinst_kicked_once\"])", shape=diamond];
+	  71 [label="Klaasje (Miss Oranje Disco Dancer): The woman takes a drag of her ziggie and nods: \"Demolish the place.\""];
+	  72 [label="You: What?"];
+	  73 [label="Inland Empire: You are a numb, imprecise instrument to ignore this feeling..."];
+	  74 [label="Kim Kitsuragi: \"It's the barred door we saw.\" He looks at the door with suspicion. \"I don't know why we didn't open it from the inside -- we *should*.\""];
+	  75 [label="Kim Kitsuragi: \"I hate it when that happens.\""];
+	  76 [label="Kim Kitsuragi: \"We should search downstairs, in the kitchen -- just in case. Maybe there's a door that leads up, that we don't know of.\""];
+	  77 [label="Physical Instrument: Something cracks inside. It is an unbelievably satisfying sound."];
+	  78 [label="Kim Kitsuragi: \"I don't know about that...\" The lieutenant smiles an uncomfortable smile."];
+	  79 [label="BARRED_DOOR_HUB"];
+	  80 [label="You: [Leave.]"];
+	  81 [label="Shivers: A dull thump. Somewhere inside a wind brace rattles from the imperceptible motion of the building."];
+	  82 [label="Barred Door: IsKimHere()"];
+	  83 [label="IsKimHere()", shape=diamond];
+	  84 [label="!(IsKimHere())", shape=diamond];
+	  85 [label="Perception (Sight): It could be that your eyesight is still too poor to notice it... behind that window."];
+	  86 [label="Barred Door: IsKimHere()"];
+	  87 [label="IsKimHere()", shape=diamond];
+	  88 [label="!(IsKimHere())", shape=diamond];
+	  89 [label="Barred Door: The sturdy wood door has lost *all* respect for you."];
+	  90 [label="Perception (Hearing): Sounds like it's heavy too. Very sturdy."];
+	  91 [label="Barred Door: Variable[\"whirling.steel_door_unlocked\"]"];
+	  92 [label="Variable[\"whirling.steel_door_unlocked\"]", shape=diamond];
+	  93 [label="!(Variable[\"whirling.steel_door_unlocked\"])", shape=diamond];
+	  94 [label="Kim Kitsuragi: \"I don't know.\" He makes a note in his notebook."];
+	  95 [label="Kim Kitsuragi: \"Let's not.\""];
+	  96 [label="Barred Door: The door receives a thorough disciplining -- at the cost of your foot. Your foot hurts. A lot."];
+	  97 [label="Barred Door: Variable[\"TASK.investigate_mysterious_door\"]"];
+	  98 [label="Variable[\"TASK.investigate_mysterious_door\"]", shape=diamond];
+	  99 [label="!(Variable[\"TASK.investigate_mysterious_door\"])", shape=diamond];
+	  100 [label="Barred Door: Variable[\"whirling.barreddoor_inland_go_downstairs\"]"];
+	  101 [label="Variable[\"whirling.barreddoor_inland_go_downstairs\"]", shape=diamond];
+	  102 [label="!(Variable[\"whirling.barreddoor_inland_go_downstairs\"])", shape=diamond];
+	  103 [label="Barred Door: Variable[\"whirling.barreddoor_physinst_kicked_once\"]"];
+	  104 [label="Variable[\"whirling.barreddoor_physinst_kicked_once\"]", shape=diamond];
+	  105 [label="!(Variable[\"whirling.barreddoor_physinst_kicked_once\"])", shape=diamond];
+	  106 [label="You: \"Do you think it's important?\""];
+	  107 [label="Jump to: [BARRED_DOOR_HUB]"];
+	  108 [label="Barred Door: IsKimHere()"];
+	  109 [label="IsKimHere()", shape=diamond];
+	  110 [label="!(IsKimHere())", shape=diamond];
+	  111 [label="Inland Empire: Below... in the Union box... was there something behind the window? In the hawthorn branches, brushing against the glass."];
+	  112 [label="Barred Door: IsTHCPresent(\"the_destroyer\")"];
+	  113 [label="IsTHCPresent(\"the_destroyer\")", shape=diamond];
+	  114 [label="!(IsTHCPresent(\"the_destroyer\"))", shape=diamond];
+	  115 [label="Physical Instrument: It is an unbelievably satisfying sound."];
+	  116 [label="Barred Door: IsKimHere()"];
+	  117 [label="IsKimHere()", shape=diamond];
+	  118 [label="!(IsKimHere())", shape=diamond];
+	  119 [label="Electrochemistry: Its pain and grovelling is much to your liking."];
+	  120 [label="Empathy: She sounds genuinely curious."];
+	  121 [label="Klaasje (Miss Oranje Disco Dancer): \"Nice.\" The young woman nods."];
+	  122 [label="Jump to: [BARRED_DOOR_HUB]"];
+	  123 [label="Barred Door: Variable[\"auto.visited_pinball_workshop\"]"];
+	  124 [label="Variable[\"auto.visited_pinball_workshop\"]", shape=diamond];
+	  125 [label="!(Variable[\"auto.visited_pinball_workshop\"])", shape=diamond];
+	  126 [label="Physical Instrument: Something cracks inside. It is an unbelievably satisfying sound."];
+	  127 [label="Barred Door: Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]"];
+	  128 [label="Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]", shape=diamond];
+	  129 [label="!(Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"])", shape=diamond];
+	  130 [label="Kim Kitsuragi: \"The vigilantes, the cadaver, and...\" He nods to where they young woman once stood. \"A number of people connected to the case are *in* or around this building. This door is part of it. It's not *unimportant*.\""];
+	  131 [label="Kim Kitsuragi: \"Sounds like the property damage wasn't in vain, at least. Would it hurt to look in?\""];
+	  132 [label="You: Kick the door in."];
+	  133 [label="You: Variable[\"whirling.barreddoor_physinst_kick_in_success\"]"];
+	  134 [label="Variable[\"whirling.barreddoor_physinst_kick_in_success\"]", shape=diamond];
+	  135 [label="!(Variable[\"whirling.barreddoor_physinst_kick_in_success\"])", shape=diamond];
+	  136 [label="Jump to: [BARRED_DOOR_HUB]"];
+	  137 [label="You: \"See? The main investigation and the door below are merging into a *stereo*-investigation.\""];
+	  138 [label="You: \"I could say something, but I'm not going to, because I don't gloat.\""];
+	  139 [label="Jump to: [BARRED_DOOR_HUB]"];
+	  140 [label="Jump to: [BARRED_DOOR_HUB]"];
+	  141 [label="Electrochemistry: Filling you with a *belief* in your own body."];
+	  142 [label="You: Shake it off."];
+	  143 [label="You: Ignore the feeling."];
+	  144 [label="Barred Door: Variable[\"TASK.investigate_mysterious_door\"]"];
+	  145 [label="Variable[\"TASK.investigate_mysterious_door\"]", shape=diamond];
+	  146 [label="!(Variable[\"TASK.investigate_mysterious_door\"])", shape=diamond];
+	  147 [label="Kim Kitsuragi: \"We should search downstairs. There are things about this building we don't know yet.\""];
+	  148 [label="Physical Instrument: Something cracks inside."];
+	  149 [label="You: \"Ow.\""];
+	  150 [label="Kim Kitsuragi: He doesn't say anything."];
+	  151 [label="Barred Door: IsKimHere()"];
+	  152 [label="IsKimHere()", shape=diamond];
+	  153 [label="!(IsKimHere())", shape=diamond];
+	  154 [label="Kim Kitsuragi: \"The further we get, the more this building seems to be tied to the case...\""];
+	  155 [label="Kim Kitsuragi: \"It must be connected to the room we found behind the kitchen door. Maybe we should go back and take that elevator up...\" He looks at the door with suspicion."];
+	  156 [label="Jump to: [BARRED_DOOR_HUB]"];
+	  157 [label="You: \"How?\""];
+	  158 [label="Barred Door: Variable[\"whirling.barreddoor_inside_main_hub_reached\"] == true"];
+	  159 [label="Variable[\"whirling.barreddoor_inside_main_hub_reached\"] == true", shape=diamond];
+	  160 [label="!(Variable[\"whirling.barreddoor_inside_main_hub_reached\"] == true)", shape=diamond];
+	  161 [label="Barred Door: Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]  or  IsHourBetween(7, 22) == false"];
+	  162 [label="Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]  or  IsHourBetween(7, 22) == false", shape=diamond];
+	  163 [label="!(Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]  or  IsHourBetween(7, 22) == false)", shape=diamond];
+	  164 [label="Physical Instrument: The door is oblivious to your distress."];
+	  165 [label="You: \"So maybe the door below *is* a *mega*-investigation.\""];
+	  166 [label="Rhetoric: You should have gloated."];
+	  167 [label="Barred Door: Variable[\"TASK.enter_the_mysterious_door_done\"]"];
+	  168 [label="Variable[\"TASK.enter_the_mysterious_door_done\"]", shape=diamond];
+	  169 [label="!(Variable[\"TASK.enter_the_mysterious_door_done\"])", shape=diamond];
+	  170 [label="Barred Door: Variable[\"whirling.elevator_taken_up\"]"];
+	  171 [label="Variable[\"whirling.elevator_taken_up\"]", shape=diamond];
+	  172 [label="!(Variable[\"whirling.elevator_taken_up\"])", shape=diamond];
+	  173 [label="Physical Instrument: You kick it -- gung ho-style, *entering the premises*-style -- but the door fails to respect the force. All you hear is the bar rattling inside, laughing at you."];
+	  174 [label="Barred Door: Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]  or  IsHourBetween(7, 22) == false"];
+	  175 [label="Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]  or  IsHourBetween(7, 22) == false", shape=diamond];
+	  176 [label="!(Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]  or  IsHourBetween(7, 22) == false)", shape=diamond];
+	  177 [label="Barred Door: The door receives a thorough disciplining -- and it doesn't even hurt!"];
+	  178 [label="Barred Door: IsKimHere()"];
+	  179 [label="IsKimHere()", shape=diamond];
+	  180 [label="!(IsKimHere())", shape=diamond];
+	  181 [label="Barred Door: Variable[\"whirling.barreddoor_physinst_kick_in_success\"]"];
+	  182 [label="Variable[\"whirling.barreddoor_physinst_kick_in_success\"]", shape=diamond];
+	  183 [label="!(Variable[\"whirling.barreddoor_physinst_kick_in_success\"])", shape=diamond];
+	  184 [label="Visual Calculus: It seems like the brackets broke inside."];
+	  185 [label="You: \"Fucking piece of shit!\""];
+	  186 [label="Logic: The key... to the kitchen door. From behind the window. Use it on the door."];
+	  0 -> 1
+	  1 -> 159
+	  2 -> 79
+	  3 -> 91
+	  4 -> 80
+	  5 -> 80
+	  6 -> 113
+	  7 -> 61
+	  8 -> 141
+	  9 -> 108
+	  10 -> 87
+	  11 -> 12
+	  11 -> 13
+	  12 -> 6
+	  12 -> 14
+	  13 -> 123
+	  14 -> 90
+	  15 -> 121
+	  16 -> 92
+	  17 -> 107
+	  18 -> 33
+	  19 -> 116
+	  20 -> 22
+	  21 -> 142
+	  22 -> 23
+	  23 -> 24
+	  23 -> 25
+	  24 -> 68
+	  24 -> 143
+	  25 -> 57
+	  27 -> 30
+	  28 -> 157
+	  29 -> 86
+	  30 -> 32
+	  30 -> 31
+	  31 -> 124
+	  32 -> 112
+	  33 -> 34
+	  33 -> 35
+	  34 -> 138
+	  34 -> 139
+	  34 -> 166
+	  35 -> 4
+	  36 -> 120
+	  37 -> 80
+	  38 -> 30
+	  39 -> 28
+	  40 -> 41
+	  40 -> 42
+	  41 -> 20
+	  42 -> 155
+	  43 -> 79
+	  44 -> 83
+	  45 -> 48
+	  45 -> 47
+	  46 -> 10
+	  47 -> 174
+	  48 -> 30
+	  49 -> 51
+	  49 -> 52
+	  50 -> 141
+	  51 -> 8
+	  52 -> 140
+	  53 -> 64
+	  54 -> 137
+	  55 -> 3
+	  56 -> 58
+	  56 -> 59
+	  57 -> 131
+	  58 -> 18
+	  59 -> 11
+	  60 -> 62
+	  60 -> 63
+	  61 -> 178
+	  62 -> 97
+	  64 -> 66
+	  64 -> 67
+	  65 -> 55
+	  66 -> 137
+	  67 -> 82
+	  68 -> 70
+	  68 -> 71
+	  69 -> 72
+	  70 -> 45
+	  71 -> 109
+	  72 -> 29
+	  73 -> 157
+	  74 -> 157
+	  75 -> 140
+	  76 -> 107
+	  77 -> 142
+	  78 -> 54
+	  79 -> 56
+	  79 -> 16
+	  79 -> 133
+	  79 -> 81
+	  81 -> 57
+	  82 -> 84
+	  82 -> 85
+	  83 -> 96
+	  84 -> 60
+	  85 -> 157
+	  86 -> 88
+	  86 -> 89
+	  87 -> 104
+	  88 -> 186
+	  88 -> 150
+	  89 -> 123
+	  90 -> 65
+	  91 -> 93
+	  91 -> 94
+	  92 -> 171
+	  93 -> 95
+	  94 -> 98
+	  95 -> 60
+	  96 -> 141
+	  97 -> 99
+	  97 -> 100
+	  98 -> 17
+	  99 -> 77
+	  100 -> 102
+	  100 -> 103
+	  101 -> 144
+	  101 -> 73
+	  102 -> 179
+	  103 -> 105
+	  103 -> 106
+	  104 -> 27
+	  105 -> 49
+	  106 -> 40
+	  107 -> 80
+	  108 -> 110
+	  108 -> 111
+	  109 -> 38
+	  110 -> 30
+	  111 -> 101
+	  112 -> 114
+	  112 -> 115
+	  113 -> 36
+	  114 -> 7
+	  115 -> 122
+	  116 -> 118
+	  116 -> 119
+	  117 -> 75
+	  118 -> 157
+	  119 -> 50
+	  120 -> 64
+	  121 -> 142
+	  122 -> 80
+	  123 -> 125
+	  123 -> 126
+	  124 -> 117
+	  125 -> 187
+	  126 -> 122
+	  127 -> 129
+	  127 -> 130
+	  128 -> 78
+	  129 -> 127
+	  130 -> 33
+	  131 -> 64
+	  131 -> 2
+	  131 -> 43
+	  132 -> 134
+	  133 -> 136
+	  133 -> 135
+	  134 -> 182
+	  135 -> 182
+	  136 -> 80
+	  137 -> 76
+	  138 -> 151
+	  139 -> 80
+	  140 -> 80
+	  141 -> 152
+	  142 -> 57
+	  143 -> 74
+	  144 -> 146
+	  144 -> 147
+	  145 -> 39
+	  146 -> 148
+	  147 -> 28
+	  148 -> 21
+	  149 -> 165
+	  150 -> 167
+	  151 -> 153
+	  151 -> 154
+	  152 -> 132
+	  153 -> 162
+	  154 -> 22
+	  155 -> 108
+	  156 -> 80
+	  157 -> 145
+	  158 -> 160
+	  158 -> 161
+	  159 -> 5
+	  160 -> 37
+	  161 -> 163
+	  161 -> 164
+	  162 -> 185
+	  163 -> 15
+	  164 -> 60
+	  165 -> 53
+	  166 -> 140
+	  167 -> 169
+	  167 -> 170
+	  168 -> 128
+	  169 -> 175
+	  170 -> 172
+	  170 -> 173
+	  171 -> 9
+	  172 -> 156
+	  173 -> 69
+	  174 -> 176
+	  174 -> 177
+	  175 -> 149
+	  176 -> 19
+	  177 -> 50
+	  178 -> 180
+	  178 -> 181
+	  179 -> 158
+	  180 -> 157
+	  181 -> 184
+	  181 -> 183
+	  182 -> 168
+	  183 -> 46
+	  184 -> 26
+	  185 -> 165
+	  186 -> 157
+}
+

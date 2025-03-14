@@ -1,0 +1,2171 @@
+# APT / TOMAS THE SPONSOR
+# The sponsor, in Smoker's apartment #28.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: \"Easy, detective. No need to jump to conclusions.\" He eyes the spectacled man near the window, who smiles and spreads his hands."];
+	  3 [label="Empathy: Perhaps your new friends in the tent might be able to help you?"];
+	  4 [label="Sunday Friend: \"And listening! It has the most objective vantage point in the entire city. Not to mention a vast array of radio, photographic, and meteorological monitoring instruments.\""];
+	  5 [label="You: \"You still haven't told me who he is.\""];
+	  6 [label="Sunday Friend: \"La communauté internationale is what Revacholians colloquially call *the Coalition*. In other words, the nations that stopped the disaster of the Revolution.\""];
+	  7 [label="Jump to: [coalition hub]"];
+	  8 [label="You: \"What about the rest of Revachol? Is it part of the normal world?\""];
+	  9 [label="You: \"It's like every time I'm talking to people I'm choosing Option D, 'none of the above'... Is that moralism?\""];
+	  10 [label="Variable[\"apt.sunday_being_sponsored\"]"];
+	  11 [label="Variable[\"apt.sunday_being_sponsored\"]", shape=diamond];
+	  12 [label="!(Variable[\"apt.sunday_being_sponsored\"])", shape=diamond];
+	  13 [label="You: (Show him the silk robe.) \"Before we get to that, tell me where you got this *beautiful* silk robe from?\""];
+	  14 [label="Variable[\"apt.smoker_room_canopy_orb\"] == true  or  CheckItem(\"jacket_kimono_robe\")  or  CheckItem(\"hat_samaran\")"];
+	  15 [label="Variable[\"apt.smoker_room_canopy_orb\"] == true  or  CheckItem(\"jacket_kimono_robe\")  or  CheckItem(\"hat_samaran\")", shape=diamond];
+	  16 [label="!(Variable[\"apt.smoker_room_canopy_orb\"] == true  or  CheckItem(\"jacket_kimono_robe\")  or  CheckItem(\"hat_samaran\"))", shape=diamond];
+	  17 [label="You: (Point to the silk robe.) \"Before we get to that, tell me where you got this *beautiful* silk robe from?\""];
+	  18 [label="Jump to: [main hub]"];
+	  19 [label="Sunday Friend: He pats his pockets. \"But, oh! I don't have my leaflets on me today. That's too bad. You can always call our information line. Making information available is part of the Moralintern's commitment to transparency.\""];
+	  20 [label="Variable[\"doomed.dicemaker_logic_silenced_the_victim\"]  and  IsKimHere()"];
+	  21 [label="Variable[\"doomed.dicemaker_logic_silenced_the_victim\"]  and  IsKimHere()", shape=diamond];
+	  22 [label="!(Variable[\"doomed.dicemaker_logic_silenced_the_victim\"]  and  IsKimHere())", shape=diamond];
+	  23 [label="Variable[\"apt.sunday_break\"]"];
+	  24 [label="Variable[\"apt.sunday_break\"]", shape=diamond];
+	  25 [label="!(Variable[\"apt.sunday_break\"])", shape=diamond];
+	  26 [label="Sunday Friend: \"Oh? That's unusual. The Oranjese are not the kind of people you associate with heinous crimes. It's such an upstanding and responsible country...\""];
+	  27 [label="You: \"Yeah, that's all I wanted to say.\""];
+	  28 [label="You: \"That's all. That's who he was.\""];
+	  29 [label="Lelyhub"];
+	  30 [label="Sunday Friend: \"Aha, a *condottiere*,\" the man says, as though describing a character from a fantasy novel. \"Yes, it's hard to believe they still exist.\""];
+	  31 [label="You: \"What kind of a timetable are we talking about here?\""];
+	  32 [label="Sunday Friend: \"Well, I would say that is very bad, indeed. Not super.\""];
+	  33 [label="You: \"His name is Garte, and he's working at the Whirling-in-Rags disguised as a cafeteria manager.\""];
+	  34 [label="IsKimHere()"];
+	  35 [label="IsKimHere()", shape=diamond];
+	  36 [label="!(IsKimHere())", shape=diamond];
+	  37 [label="Kim Kitsuragi: \"You do realize what you're doing, don't you?\" He whispers to you, *sotto voce*."];
+	  38 [label="Empathy: Did he love it before they made him do it again and again and again?"];
+	  39 [label="Sunday Friend: \"What do you mean by that, officer?\""];
+	  40 [label="You: \"I'm saying it establishes a *pattern* of criminality. Do I need to get a cork board and some yarn here?\""];
+	  41 [label="You: \"Nothing. Just doing my job.\""];
+	  42 [label="Sunday Friend: \"*Thousands* of corporate secrets may be at stake here. I shudder to think what damage that might do to the international markets...\""];
+	  43 [label="Kim Kitsuragi: \"It's certainly serious, sir. But there's also the question of jurisdiction. The Wayfarer Act places certain *strictures* on what matters the RCM may involve itself in.\""];
+	  44 [label="Kim Kitsuragi: \"I suspect he doesn't know the half of it.\""];
+	  45 [label="Electrochemistry: Turn her in now and you'll never get the chance to feel her sweet young flesh against yours."];
+	  46 [label="Half Light: Don't let the paintjob fool you, it's a goddamn killing machine, and there's nothing you can do to stop it!"];
+	  47 [label="You: \"Are you saying I should just give up?\""];
+	  48 [label="Jump to: [Archer Hub]"];
+	  49 [label="IsDaytime()"];
+	  50 [label="IsDaytime()", shape=diamond];
+	  51 [label="!(IsDaytime())", shape=diamond];
+	  52 [label="You: \"Thank you, sir. I think we've got the picture. Anything else stand out?\""];
+	  53 [label="Jump to: [main hub]"];
+	  54 [label="You: \"Can you tell me about your friend?\""];
+	  55 [label="Rhetoric: Except that *candidate* members never become *full* members, do they?"];
+	  56 [label="Sunday Friend: \"A supranational political alliance, the United States of Occident.\""];
+	  57 [label="Sunday Friend: \"Yes. As I said before, I'm a commissioner from Sur-la-Clef working for the Institute of Price Stabilité.\" He glances at his watch. \"This is one of the main projects of the Moralintern.\""];
+	  58 [label="You: \"What's an official like you doing in Martinaise?\""];
+	  59 [label="Sunday Friend: \"Oh, yes, the big bad Coalition crushed the Revolution. Tell me, if the revolution was succeeding, would it have been crushed so easily?\""];
+	  60 [label="Sunday Friend: \"Now, enough of this delightful political interlude. Was there anything else you wanted to ask?\""];
+	  61 [label="You: \"I don't think I'm a moralist. Moralism sounds incredibly boring. I want more action.\""];
+	  62 [label="Sunday Friend: \"You have acquired the hat.\" He assesses the situation. \"Keep it, officer, it looks good on you.\""];
+	  63 [label="Sunday Friend: \"You have acquired the robe.\" He assesses the situation. \"Keep it, officer, it looks good on you.\""];
+	  64 [label="IsKimHere()"];
+	  65 [label="IsKimHere()", shape=diamond];
+	  66 [label="!(IsKimHere())", shape=diamond];
+	  67 [label="Kim Kitsuragi: \"No, that's not his...\" the lieutenant sighs. \"Martin Martinaise is a *joke*, a generic nickname for someone from Martinaise.\""];
+	  68 [label="You: \"About Oranje -- just tell me what it's like there.\""];
+	  69 [label="Sunday Friend: \"Of course. Let me just say it has been an emotional week for me.\" He forms a little rooftop with his fingers. Cold air comes in from the balcony."];
+	  70 [label="You: (Turn to the lieutenant.) \"This is just the break we've been looking for!\""];
+	  71 [label="You: \"Is it because you did it, Mr. Villedrouin?\""];
+	  72 [label="Sunday Friend: \"Let's just say that the labouring classes can get rather *expressive* with their profanities.\""];
+	  73 [label="You: \"Were any of them huge? Like 200 kilograms huge?\""];
+	  74 [label="IsKimHere()"];
+	  75 [label="IsKimHere()", shape=diamond];
+	  76 [label="!(IsKimHere())", shape=diamond];
+	  77 [label="Sunday Friend: \"It's been such a wild, *extraordinary* success thus far. We are very excited to take it to the next level...\""];
+	  78 [label="You: \"Enjoying the view? There's a dead body hanging in the tree!\""];
+	  79 [label="Jump to: [Lelyhub]"];
+	  80 [label="You: \"Cool. I guess we'll handle it from here.\""];
+	  81 [label="You: \"What if I told you it was the international headquarters of a major corporation?\""];
+	  82 [label="You: \"He may not look like an corporate spy, but that's what makes him so effective.\""];
+	  83 [label="You: \"He's extremely clever like that. Careful, though, he'll also try to convince you that you owe him money.\""];
+	  84 [label="You: \"Drugs make people do *crazy* things sometimes, like steal corporate secrets.\""];
+	  85 [label="Empathy: Your partner's doing you a favour by pretending not to have heard your insane ramblings."];
+	  86 [label="Jump to: [main hub]"];
+	  87 [label="Sunday Friend: \"Oh yes, my friend has a great eye for these things. He refuses to tell me where it came from -- it's a mystery. Hehehe.\" He smiles. \"I believe they call this type of frame *industrial*. It's very comfy.\""];
+	  88 [label="Sunday Friend: \"Now that that's settled, was there anything else you'd like to discuss?\""];
+	  89 [label="You: \"I'm still looking for the fugitive. I'll report back if I learn anything more.\""];
+	  90 [label="Jump to: [j'accusehub]"];
+	  91 [label="Sunday Friend: \"Corporate espionage may technically be legal in *Revachol*, but elsewhere it's a very high-level offence. It violates a number of international agreements, in particular the First La Cherte Accord...\""];
+	  92 [label="Jump to: [main hub]"];
+	  93 [label="Reaction Speed: That was a wink. Your good cop/idiot cop routine seems to have done the trick."];
+	  94 [label="Sunday Friend: He nods. \"Anything else?\""];
+	  95 [label="Jump to: [secondhub]"];
+	  96 [label="You: \"I got it. You're only here on *personal* business.\""];
+	  97 [label="Sunday Friend: \"Précisément. *Officially* I am still in La Delta, preparing for an upcoming conference on fuel oil derivatives...\""];
+	  98 [label="Sunday Friend: \"Why, *officially* I am still in La Delta, preparing for an upcoming conference on fuel oil derivatives. I'm only in Martinaise in an unofficial capacity...\""];
+	  99 [label="Sunday Friend: \"Mais que faites-vous, officer?\" Your hand bumps up against the man's solid if somewhat fleshy chest."];
+	  100 [label="You: \"Nothing, just lost my balance a moment.\""];
+	  101 [label="You: \"But this is an urgent matter. I *need* to get in touch with the Committee.\""];
+	  102 [label="Sunday Friend: \"My friend, my friend, what about him?\""];
+	  103 [label="Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"]"];
+	  104 [label="Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"]", shape=diamond];
+	  105 [label="!(Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"])", shape=diamond];
+	  106 [label="Sunday Friend: \"Officers of the Revachol Citizens Militia.\" The man in business-casual removes his cuff links."];
+	  107 [label="Sunday Friend: \"How did any of us become friends? Bad things happening on the Insulindian isola. Oil platforms ablaze in the night. Civil wars lasting for years. Finally, the international community is forced to step in.\""];
+	  108 [label="Sunday Friend: \"We're old friends, nothing's taboo between us. He comes and goes.\""];
+	  109 [label="Sunday Friend: \"I'm sure you'll see him around, he's very active.\""];
+	  110 [label="You: \"The man who was lynched outside your window was from Oranje.\""];
+	  111 [label="You: \"I'm not going anywhere, I just want to take a look around in this apartment.\" [Leave.]"];
+	  112 [label="Esprit de Corps: Superior? But he's not in the command chain..."];
+	  113 [label="Variable[\"apt.sponsor_authority_dont_play_on_his_terms\"]"];
+	  114 [label="Variable[\"apt.sponsor_authority_dont_play_on_his_terms\"]", shape=diamond];
+	  115 [label="!(Variable[\"apt.sponsor_authority_dont_play_on_his_terms\"])", shape=diamond];
+	  116 [label="Sunday Friend: \"Drummers? Why... no... but then, I don't know what a drummer is *supposed* to look like.\""];
+	  117 [label="Half Light: Yes, back inside. Keep yourself safe from the killing."];
+	  118 [label="Sunday Friend: \"Well, that's the strangest part, officer. *Nothing* happened. It was oddly quiet for a public lynching.\""];
+	  119 [label="Sunday Friend: \"Oh, yes. Sur-la-Clef is *mega-benevolent* to its darlings.\""];
+	  120 [label="You: \"Yeah, I'm what they call a *master 'bater*.\" (Brush some invisible dirt off your shoulder.)"];
+	  121 [label="Reaction Speed: There's a joke here, and you know what it is."];
+	  122 [label="Sunday Friend: \"Hmmm, that could be *quite* bad, depending on what sort of place you're talking about.\""];
+	  123 [label="You: \"Probably like a Frittte or something.\""];
+	  124 [label="Jump to: [main hub]"];
+	  125 [label="Sunday Friend: The man nods. \"It's the responsibility of any good welfare state to take care of its most unfortunate citizens.\""];
+	  126 [label="Sunday Friend: \"What else has your investigation uncovered?\""];
+	  127 [label="You: \"His dad's a major drug kingpin in Martinaise.\""];
+	  128 [label="Kim Kitsuragi: The lieutenant gives you a sharp look. He's bailed you out, again, but he's none too pleased about it."];
+	  129 [label="Empathy: Well, that wasn't pretty, but you do seem to have taken the heat off Klaasje, for now."];
+	  130 [label="Kim Kitsuragi: \"Doing one's job doesn't automatically make one anyone's *bitch*. Besides, there are more nefarious powers to work for than the Moralintern.\""];
+	  131 [label="Jump to: [friend hub]"];
+	  132 [label="Kim Kitsuragi: \"I think we can drop the drummer-angle,\" the lieutenant says impatiently. \"That was my bad.\""];
+	  133 [label="Jump to: [Archer Hub]"];
+	  134 [label="Sunday Friend: \"You see, in addition to being an airborne artillery platform, Coalition Warship Archer is also the linchpin of the Coalition's surveillance and communications infrastructure in Revachol.\""];
+	  135 [label="Sunday Friend: \"Kedra is a candidate member of EPIS. But, between you and me, their potential membership is a more... *contentious* issue.\""];
+	  136 [label="Sunday Friend: \"EPIS is a very special program developed by the Moralintern to support certain Occidental nations. It began as a unified system of weights and measures, which proved to be a *wild* success. Nothing but kilograms and centimetres as far as the eye can see!\""];
+	  137 [label="You: \"I was asking about your friend.\""];
+	  138 [label="You: \"What do you mean?\""];
+	  139 [label="many_things"];
+	  140 [label="You: \"What about it?\""];
+	  141 [label="Jump to: [coalition hub]"];
+	  142 [label="Kim Kitsuragi: \"Basically it makes sure the price of bread doesn't change.\""];
+	  143 [label="You: \"Moralism is the ideology of foreign occupiers. Revachol must be governed by Revacholians!\""];
+	  144 [label="You: \"Thanks, I've got all I need.\" [Leave.]"];
+	  145 [label="Jump to: [main hub]"];
+	  146 [label="Variable[\"apt.sponsor_authority_superior\"]"];
+	  147 [label="Variable[\"apt.sponsor_authority_superior\"]", shape=diamond];
+	  148 [label="!(Variable[\"apt.sponsor_authority_superior\"])", shape=diamond];
+	  149 [label="show stop hub"];
+	  150 [label="Kim Kitsuragi: The lieutenant is already scribbling down notes. \"What do you mean, 'like in a play'?\""];
+	  151 [label="You: \"I'm in-between names right now.\""];
+	  152 [label="Kim Kitsuragi: \"Sounds like the victim *was* unconscious. Or at least incapacitated. Well done, detective.\" He nods to you."];
+	  153 [label="Sunday Friend: \"Those funny... Oh.\" He blinks. \"Officer, that kind of language is unbecoming of an officer of the RCM...\""];
+	  154 [label="You: \"Why didn't you call the RCM?\""];
+	  155 [label="You: \"This is *fascinating*, but I wanted to ask you something else.\""];
+	  156 [label="Volition: See? He didn't get it. Good job, jokemeister."];
+	  157 [label="Sunday Friend: \"I do hope you're able to bring his killer or killers to justice. We must show that the rule of law still applies... even in Revachol.\""];
+	  158 [label="You: \"Kipts. You know.\""];
+	  159 [label="Sunday Friend: When you turn back the man is looking at you expectantly."];
+	  160 [label="Sunday Friend: \"He... so you spoke with the victim *before* he died?\""];
+	  161 [label="Half Light: YES. Killing was his business and business was *good*."];
+	  162 [label="You: \"You hear that Kim? Revachol's lucky to have me.\""];
+	  163 [label="IsKimHere()"];
+	  164 [label="IsKimHere()", shape=diamond];
+	  165 [label="!(IsKimHere())", shape=diamond];
+	  166 [label="Sunday Friend: \"Now that that's settled, was there anything else you'd like to discuss?\""];
+	  167 [label="IsKimHere()"];
+	  168 [label="IsKimHere()", shape=diamond];
+	  169 [label="!(IsKimHere())", shape=diamond];
+	  170 [label="Esprit de Corps: \"Family connections, I'd imagine? His father-in-law works for the Office of Standards and Best Practices.\" With that, the woman exits, a grey file folder tucked under her arm."];
+	  171 [label="You: (Turn to Kim.) \"So what I'm hearing is that we're Moralintern bitches?\""];
+	  172 [label="You: Consequences? I don't care about consequences!"];
+	  173 [label="You: \"What are you talking about? I'm looking at you right now!\""];
+	  174 [label="You: (Attempt to stick your hand through his astral form.)"];
+	  175 [label="IsKimHere()"];
+	  176 [label="IsKimHere()", shape=diamond];
+	  177 [label="!(IsKimHere())", shape=diamond];
+	  178 [label="Sunday Friend: \"I don't mean to discourage you, of course, just to say that it won't be *easy* to reach the Committee.\""];
+	  179 [label="You: \"Do you know any of these tinkerers?\""];
+	  180 [label="Sunday Friend: \"Was there anything else?\""];
+	  181 [label="Sunday Friend: \"My friend comes and goes. I'm sure you'll see him around, he's a busy bee.\""];
+	  182 [label="Sunday Friend: \"Martin Martinaise? That's not a name. Are you referring to my friend? But I told you, he's from Kedra -- definitely not just another Martin Martinaise or Raoul Revachol. Perhaps that's why he and I became friends...\""];
+	  183 [label="Sunday Friend: \"But now that I start to think of it, it was for an improv class anyway. It's this funny theatre thing, you know,\" he moves his fingers, \"very *creative*, helps relieve stress.\""];
+	  184 [label="Sunday Friend: \"I'm all ears, officer.\""];
+	  185 [label="You: \"Didn't you say that candidate members never become real members?\""];
+	  186 [label="You: \"Which arts?\""];
+	  187 [label="Jump to: [friend hub]"];
+	  188 [label="Sunday Friend: \"Do you think *peace* is boring? What about *prosperity*?\""];
+	  189 [label="Jump to: [coalition hub]"];
+	  190 [label="Sunday Friend: \"Exactly. *I* don't find it boring, I find it *fulfilling*. Peace is what allows me to have my morning coffee, my afternoon golf, my sundown friends.\""];
+	  191 [label="Sunday Friend: \"Are we really so bad for wanting compromise, peace, and prosperity -- on reasonable, achievable terms? Ask yourself that.\""];
+	  192 [label="Sunday Friend: \"Well, do you value freedom? Do you believe in a normal, stable world governed by democratic values?\""];
+	  193 [label="Perception (Taste): Jamrock and other parts of the International Zone have been mercifully spared of Sur-la-Clef's love for meatballs and mashed potatoes."];
+	  194 [label="Variable[\"apt.sponsor_suggestion_personal_q\"]"];
+	  195 [label="Variable[\"apt.sponsor_suggestion_personal_q\"]", shape=diamond];
+	  196 [label="!(Variable[\"apt.sponsor_suggestion_personal_q\"])", shape=diamond];
+	  197 [label="You: (Point to the Samaran hat.) \"We'll get to that. Right after you tell me the story behind the black Samaran hat.\""];
+	  198 [label="Sunday Friend: \"Officer, it's very difficult to describe what I saw that night. It was so surreal to me, like in a play.\""];
+	  199 [label="Variable[\"XP.figured_out_the_odd_sole\"]  and  IsKimHere()"];
+	  200 [label="Variable[\"XP.figured_out_the_odd_sole\"]  and  IsKimHere()", shape=diamond];
+	  201 [label="!(Variable[\"XP.figured_out_the_odd_sole\"]  and  IsKimHere())", shape=diamond];
+	  202 [label="IsKimHere()"];
+	  203 [label="IsKimHere()", shape=diamond];
+	  204 [label="!(IsKimHere())", shape=diamond];
+	  205 [label="Variable[\"apt.sunday_reaction_joke\"]"];
+	  206 [label="Variable[\"apt.sunday_reaction_joke\"]", shape=diamond];
+	  207 [label="!(Variable[\"apt.sunday_reaction_joke\"])", shape=diamond];
+	  208 [label="Esprit de Corps: \"Remember that guy, Ace Ulsterberg?\" the redheaded officer asks. He leans against the doorframe while his bald companion is hunched over an open filing drawer..."];
+	  209 [label="Variable[\"apt.sunday_accused_friend\"]"];
+	  210 [label="Variable[\"apt.sunday_accused_friend\"]", shape=diamond];
+	  211 [label="!(Variable[\"apt.sunday_accused_friend\"])", shape=diamond];
+	  212 [label="You: (Shrug.) \"What's a bunch of dead kipts where there's fortune and glory?\""];
+	  213 [label="Sunday Friend: \"As I said, the loss of any life is terrible, no matter who the person may have been...\""];
+	  214 [label="Sunday Friend: \"What sort of a fugitive are we talking about here?\""];
+	  215 [label="Sunday Friend: \"Now, was there something else you wanted to discuss?\""];
+	  216 [label="You: \"I meant that as a hypothetical. I don't actually know about any corporate espionage.\""];
+	  217 [label="Sunday Friend: \"Yes, well. As I was saying: Colonialism has left a dark legacy in many places, one we must move past, but also never forget.\""];
+	  218 [label="IsKimHere()"];
+	  219 [label="IsKimHere()", shape=diamond];
+	  220 [label="!(IsKimHere())", shape=diamond];
+	  221 [label="You: \"No, this was after he died.\""];
+	  222 [label="You: \"That's a shame.\""];
+	  223 [label="Sunday Friend: \"Tsk-tsk. Racial slurs certainly have no place in a pluralistic society, but what does that have to do with corporate espionage?\""];
+	  224 [label="Sunday Friend: \"There's no way I can submit this report to the ICP -- they'd have my head examined!\""];
+	  225 [label="Sunday Friend: \"Now that that's settled, was there anything else you'd like to discuss?\""];
+	  226 [label="Jump to: [main hub]"];
+	  227 [label="You: \"For some reason he gives you a discount if you trash the cafeteria.\""];
+	  228 [label="Jump to: [secondhub]"];
+	  229 [label="Jump to: [starthub]"];
+	  230 [label="Sunday Friend: \"That's why it would be extremely irregular, or potentially even *inappropriate* for me to intercede with the Committee concerning a district I'm not officially in.\""];
+	  231 [label="Half Light: Don't let the shiny lights fool you, it's a goddamn killing machine, and there's nothing you can do to stop it!"];
+	  232 [label="IsKimHere()"];
+	  233 [label="IsKimHere()", shape=diamond];
+	  234 [label="!(IsKimHere())", shape=diamond];
+	  235 [label="Sunday Friend: \"Yes, you've made your *persistence* quite clear. Under normal circumstances I would have to insist you go through the regular channels.\""];
+	  236 [label="IsKimHere()"];
+	  237 [label="IsKimHere()", shape=diamond];
+	  238 [label="!(IsKimHere())", shape=diamond];
+	  239 [label="Kim Kitsuragi: The lieutenant goes pale. 'No badge?' he mouths to himself, silently."];
+	  240 [label="Rhetoric: A busy bee? What an odd choice of words."];
+	  241 [label="You: \"I can hear the waves.\""];
+	  242 [label="Sunday Friend: \"He's deeply enmeshed in the study of the fine arts, yes.\""];
+	  243 [label="Reaction Speed: If he knows so much about Oranje, maybe he also knows about Oranjese mercenaries?"];
+	  244 [label="You: \"No, prosperity sounds like a lot of fun.\""];
+	  245 [label="You: \"And you're telling me *this* world here is working out well?\""];
+	  246 [label="CheckEquipped(\"jacket_kimono_robe\")"];
+	  247 [label="CheckEquipped(\"jacket_kimono_robe\")", shape=diamond];
+	  248 [label="!(CheckEquipped(\"jacket_kimono_robe\"))", shape=diamond];
+	  249 [label="Jump to: [apt.sunday_break]"];
+	  250 [label="Rhetoric: But that didn't tell you anything about Oranje."];
+	  251 [label="You: Say nothing."];
+	  252 [label="Half Light: What was *that*?! You were supposed to *fuck* with him, not compliment the décor!"];
+	  253 [label="You: \"Don't jerk my chain, paper-jockey. You did it, didn't you?\""];
+	  254 [label="Kim Kitsuragi: \"There is no meaning, sir. Please excuse my colleague. This case has... been a great strain on his nerves.\""];
+	  255 [label="You: \"How many of them were there?\""];
+	  256 [label="You: \"What happened next?\""];
+	  257 [label="Kim Kitsuragi: \"Were you able to see anything from inside?\""];
+	  258 [label="Sunday Friend: \"I believe they were mostly white, though I believe I saw two Areopagites among them. And I am quite certain that one spoke with a Mesque accent.\""];
+	  259 [label="Kim Kitsuragi: \"I think we have everything we need,\" the lieutenant says, closing his notebook. \"Thank you for talking to us, Mr. Villedrouin.\""];
+	  260 [label="You: \"Well, that was a waste of time.\""];
+	  261 [label="You: \"That's not how I would describe this guy.\""];
+	  262 [label="You: \"A mercenary.\""];
+	  263 [label="You: (Shake your head too.) \"History is very complicated and rarely simple.\""];
+	  264 [label="Sunday Friend: \"That is extremely unfortunate. Yes, it's regrettable that this practice has a history in certain Occidental nations, even highly advanced members of EPIS...\""];
+	  265 [label="You: \"I guess that's better than nothing.\""];
+	  266 [label="You: \"Her name is Klaasje and she's already in police custody.\""];
+	  267 [label="You: \"You'll find him hanging out by the roundabout. He's disguised as a really racist lorry driver.\""];
+	  268 [label="Rhetoric: There seems to be plenty of room for proxy wars waged by multinational corporations, though."];
+	  269 [label="Sunday Friend: \"I'll make note of your claims in my report, but I'm sorry to say it's likely to end up in the back of a filing cabinet somewhere in Mirova, unread and forgotten.\""];
+	  270 [label="Sunday Friend: \"A drug-addled *spy-ring*! That sounds rather *strange*, don't you think?\""];
+	  271 [label="You: \"Yeah, he should have been grateful for the help.\""];
+	  272 [label="You: \"He's a ginger. What else do you need to know?\""];
+	  273 [label="You: \"It's a slippery slope, man...\" (Make a sliding gesture with your hand.) \"Real slippery.\""];
+	  274 [label="Sunday Friend: \"Ah, of course. Carry on then.\""];
+	  275 [label="Esprit de Corps: Here the female officer chimes in: \"I believe he's part of a certain bureaucrat's security detail.\" \"No fucking way!\" The redhead is dumbfounded. \"How'd he pull that off?\""];
+	  276 [label="You: (Turn back to Sunday Friend.) \"Are you a moralist?\""];
+	  277 [label="IsKimHere()"];
+	  278 [label="IsKimHere()", shape=diamond];
+	  279 [label="!(IsKimHere())", shape=diamond];
+	  280 [label="Sunday Friend: \"That's when I understood -- I should not be seeing this.\""];
+	  281 [label="You: \"So what am I supposed to do?\""];
+	  282 [label="You: \"Oh, right. The *Archer*. I thought you said... something else.\""];
+	  283 [label="Sunday Friend: \"Perhaps your blood sugar is a bit low? As I was saying, *officially* speaking I am still in La Delta, preparing for an upcoming conference on fuel oil derivatives...\""];
+	  284 [label="IsKimHere()"];
+	  285 [label="IsKimHere()", shape=diamond];
+	  286 [label="!(IsKimHere())", shape=diamond];
+	  287 [label="Sunday Friend: \"That, my friend, is your responsabilité. I cannot take it from you, nor can you delegate it to someone else...\""];
+	  288 [label="You: \"Is that... legal?\""];
+	  289 [label="You: \"It's amazing. An inspiring symbol.\""];
+	  290 [label="Variable[\"apt.sunday_perc_archer_saw\"]"];
+	  291 [label="Variable[\"apt.sunday_perc_archer_saw\"]", shape=diamond];
+	  292 [label="!(Variable[\"apt.sunday_perc_archer_saw\"])", shape=diamond];
+	  293 [label="You: \"What's Kedra?\""];
+	  294 [label="You: \"What's this EPIS thing you keep talking about?\""];
+	  295 [label="You: \"What are you talking about? No one becomes friends that way.\""];
+	  296 [label="You: \"But that doesn't tell me anything about Kedra itself. Is it warm there? Cold? Something in-between?\""];
+	  297 [label="Sunday Friend: \"Martinaise? No, Martinaise is... something else.\""];
+	  298 [label="You: \"Can't you just... talk like a normal person?\""];
+	  299 [label="Encyclopedia: Wait, there isn't actually an *Institute of Price Stabilité*, is there? Or maybe there is... God, it's impossible to understand whether someone from the Moralintern is joking or not."];
+	  300 [label="You: \"I'm sorry. Let's start over. My nerves got the best of me there.\""];
+	  301 [label="You: \"Harrier Du Bois, and don't forget it.\""];
+	  302 [label="secondhub"];
+	  303 [label="Sunday Friend: \"I'm afraid I don't have anything else to add.\""];
+	  304 [label="IsKimHere()"];
+	  305 [label="IsKimHere()", shape=diamond];
+	  306 [label="!(IsKimHere())", shape=diamond];
+	  307 [label="Volition: C'mon. It's so juvenile. Besides, there's no way this man is going to get it."];
+	  308 [label="Sunday Friend: \"Very well, *Mr. Du Bois*. You're a disgrace to the RCM. Get out, this instant!\" He points at the door."];
+	  309 [label="Kim Kitsuragi: \"Good god, detective. One more stunt like that and they'll have you institutionalized.\""];
+	  310 [label="Kim Kitsuragi: \"Hmm, the novelty dicemaker also mentioned that she didn't hear any signs of a struggle.\""];
+	  311 [label="Logic: That comports with the dicemaker's testimony as well."];
+	  312 [label="Sunday Friend: \"Oh, it's hard to put an exact date on it. I believe the proposal for the timetable is due to be completed around '60 or '61.\""];
+	  313 [label="You: \"Pretty serious, like corporate espionage-type stuff.\""];
+	  314 [label="You: \"It's Evrart Claire, the head of the Dockworkers' Union.\""];
+	  315 [label="Kim Kitsuragi: \"*Very* real trouble...\""];
+	  316 [label="Jump to: [Lelyhub]"];
+	  317 [label="Jump to: [Lelyhub]"];
+	  318 [label="Sunday Friend: \"Well, no matter. I should thank you for bringing this to our attention. Your efforts have been noted.\""];
+	  319 [label="Sunday Friend: \"Now, was there anything else you wanted to discuss?\""];
+	  320 [label="You: \"Hmm, that does seem kinda *tenuous* now that you mention it.\""];
+	  321 [label="You: \"Just doing my job, sir.\""];
+	  322 [label="Authority: Of course, you're turning over a dangerous LAWBREAKER."];
+	  323 [label="Empathy: You're dooming a young woman in her hour of desperation."];
+	  324 [label="Empathy: Yes, this is just the sort of reasonable authority you're looking for!"];
+	  325 [label="Untitled hub (12)"];
+	  326 [label="Sunday Friend: The man frowns. \"Well, under ordinary circumstances, the Committee contacts *you*.\""];
+	  327 [label="Perception (Sight): It looks, to your eye, like some kind of long, metallic fish, suspended beneath a number of ceiling fans..."];
+	  328 [label="archerreactionhub"];
+	  329 [label="Perception (Sight): You look out the window, but you can't see anything. But then, it's dark, and your eyes aren't the sharpest..."];
+	  330 [label="Perception (Sight): It's a set of position lights moving in unison, like a restless constellation..."];
+	  331 [label="Logic: He didn't see the hanging, he saw the little *show* staged by the Hardies. Let him talk. He may know more than even he knows."];
+	  332 [label="Jump to: [Archer Hub]"];
+	  333 [label="Variable[\"apt.sponsor_perc_waves\"]"];
+	  334 [label="Variable[\"apt.sponsor_perc_waves\"]", shape=diamond];
+	  335 [label="!(Variable[\"apt.sponsor_perc_waves\"])", shape=diamond];
+	  336 [label="You: \"Fine, but what's his real name?\""];
+	  337 [label="Sunday Friend: \"Debating. You should consider joining a debating society for adults. I hear they're *oodles* of fun. I used to have a flyer for one, but...\""];
+	  338 [label="Sunday Friend: \"The Insulindian Bay.\""];
+	  339 [label="Jump to: [friend hub]"];
+	  340 [label="Jump to: [main hub]"];
+	  341 [label="You: \"It's usually the most boring one.\""];
+	  342 [label="Sunday Friend: \"But not *too* far below, no. Too below is also bad -- below, *but close to* 2%.\""];
+	  343 [label="You: \"No, I'm good.\""];
+	  344 [label="Sunday Friend: \"That's why the Institute of Price Stabilité works to keep inflation just below 2%...\""];
+	  345 [label="Sunday Friend: \"But of course!\""];
+	  346 [label="Sunday Friend: \"It's moving towards the right direction and that's all that matters. Progress is measured in centimetres, my friend.\""];
+	  347 [label="Sunday Friend: \"It's against diplomatic best practices for an official in my position to be discussing murders with local militiamen.\" He pauses. \"And I'm pressed for time. After you leave, I should be leaving as well.\""];
+	  348 [label="You: \"What makes Revachol Sur-la-Clef's 'darling'?\""];
+	  349 [label="Sunday Friend: \"That's really all I can tell you about it.\" He forms a little rooftop with his fingers. Cold air sweeps in from the balcony."];
+	  350 [label="Sunday Friend: \"I was on the balcony when it happened, getting some fresh air. I remember that first they came in, carrying what looked like a body, and then I saw all the surrounding windows go dead one-by-one...\""];
+	  351 [label="You: \"*I* don't even have my badge -- so spin on this!\" (Give him the finger.)"];
+	  352 [label="You: \"I am Detective Raphaël Ambrosius Costeau, at your service.\""];
+	  353 [label="Sunday Friend: \"I couldn't see their faces well, and there were quite a few of them. But they were very loud and very... Martinaise...\" He pauses, looking for the right wording."];
+	  354 [label="You: \"What happened next?\" (Proceed.)"];
+	  355 [label="Visual Calculus: Sound familiar? That matches the prints you observed at the scene."];
+	  356 [label="IsKimHere()  and  Variable[\"apt.sunday_break\"]"];
+	  357 [label="IsKimHere()  and  Variable[\"apt.sunday_break\"]", shape=diamond];
+	  358 [label="!(IsKimHere()  and  Variable[\"apt.sunday_break\"])", shape=diamond];
+	  359 [label="Conceptualization: A chill runs down your spine as you envision a half-dozen people in professional attire standing around a chair awkwardly pretending to be waiting for a motor-bus. It's neither funny nor creative."];
+	  360 [label="Variable[\"apt.sunday_volition_joke\"]"];
+	  361 [label="Variable[\"apt.sunday_volition_joke\"]", shape=diamond];
+	  362 [label="!(Variable[\"apt.sunday_volition_joke\"])", shape=diamond];
+	  363 [label="Sunday Friend: \"You'll be in-between jobs soon! Get out, this instant!\" He points at the door."];
+	  364 [label="Sunday Friend: The man shakes his head solemnly. \"A great shame, yes. Colonialism is a dark spectre in Oranje's past...\""];
+	  365 [label="You: \"I think they may have broken into some places.\""];
+	  366 [label="You: \"There's this ugly-ass kid who hangs out behind the Whirling-in-Rags. He's your guy.\""];
+	  367 [label="Sunday Friend: \"Evrart Claire? Surely you're mistaken.\""];
+	  368 [label="Sunday Friend: \"I *have*. The only thing Evrart is a fugitive from is the *exercise machine*...\""];
+	  369 [label="Kim Kitsuragi: The lieutenant raises his eyebrows as though he'd stopped paying attention."];
+	  370 [label="You: \"He's been stealing locusts from some cryptozoologists.\""];
+	  371 [label="Sunday Friend: \"You're right, of course. What use are protocols if you don't follow them?\""];
+	  372 [label="Jump to: [main hub]"];
+	  373 [label="Jump to: [main hub]"];
+	  374 [label="You: What do you mean?"];
+	  375 [label="Sunday Friend: The man looks at you expectantly."];
+	  376 [label="Inland Empire: You *knew* there was something strange about this one! He's an astral projection, a phantasm!"];
+	  377 [label="You: \"You said you weren't really here. I had to make sure you weren't an astral projection.\""];
+	  378 [label="Rhetoric: In other words, the committee only knows what it *wants* to know."];
+	  379 [label="Sunday Friend: \"It was *such* a wild success that we expanded it into an economic union for the processing of steel -- another success. And between you and me... the Moralintern feels *emboldened* by this success. Emboldened to take EPIS to the next level.\""];
+	  380 [label="You: \"Is it going to be like this place here?\""];
+	  381 [label="Perception (Hearing): A baby is crying in the neighbouring apartment."];
+	  382 [label="You: \"What do you mean?\""];
+	  383 [label="Sunday Friend: \"No, *listen*,\" he says again, looking outside..."];
+	  384 [label="You: \"So all you can tell me about him is that he's here to study the arts?\""];
+	  385 [label="Sunday Friend: \"He's a truly free spirit. He likes all the arts. Perhaps graphic design? Printmaking? Who knows? The world is open wide for a talented youth like him.\""];
+	  386 [label="You: \"Your friend, the smoker on the balcony. We were just talking about him.\""];
+	  387 [label="coalition hub"];
+	  388 [label="You: \"How does this benefit us, exactly?\""];
+	  389 [label="Sunday Friend: \"Oranje's economy is one of the most advanced in the world. It has successfully transitioned from heavy industry to advanced services, and generally acts as an engine for sustainable change in the international community.\""];
+	  390 [label="Rhetoric: The smile he gives you is straight off a campaign poster, the kind of smile focus group-tested to appeal to the most gullible swathe of the electorate."];
+	  391 [label="You: \"Martinaise doesn't seem very normal, or stable, to me.\""];
+	  392 [label="Variable[\"apt.sponsor_commented_on_clothing\"]"];
+	  393 [label="Variable[\"apt.sponsor_commented_on_clothing\"]", shape=diamond];
+	  394 [label="!(Variable[\"apt.sponsor_commented_on_clothing\"])", shape=diamond];
+	  395 [label="Sunday Friend: \"What's there to say? Sur-la-Clef is a modern, urbanized country that measures very high on the Human Development and Freedom Index. Mostly, though, it's known as the executive heart of *EPIS*...\""];
+	  396 [label="Sunday Friend: \"Because a great percentage of Revachol's culture hails from Sur-la-Clef -- its language, its people, its cuisine even, or at least in the downtown La Delta area.\""];
+	  397 [label="Suggestion: The tone somehow suggests to you that you're starting to become a little sponsored by him as well."];
+	  398 [label="Authority: Yes. Make it clear you're the one setting the terms here..."];
+	  399 [label="IsKimHere()"];
+	  400 [label="IsKimHere()", shape=diamond];
+	  401 [label="!(IsKimHere())", shape=diamond];
+	  402 [label="Variable[\"apt.sponsor_hl_fuck_with_him\"]"];
+	  403 [label="Variable[\"apt.sponsor_hl_fuck_with_him\"]", shape=diamond];
+	  404 [label="!(Variable[\"apt.sponsor_hl_fuck_with_him\"])", shape=diamond];
+	  405 [label="Composure: He's clearly not a man accustomed to being spoken to in that manner, let alone to being accused of *murder*."];
+	  406 [label="You: \"My name's Harry.\""];
+	  407 [label="You: \"Around these parts I go by Tequila... Tequila Sunset.\""];
+	  408 [label="You: \"Are you sure at least *one* of them wasn't a woman?\""];
+	  409 [label="starthub"];
+	  410 [label="Sunday Friend: \"All I can say is that it was late.\""];
+	  411 [label="Sunday Friend: \"My watch...\" He looks at his watch, as though noticing it for the first time. \"Yes, now I remember -- it was thirty minutes past midnight, give or take.\""];
+	  412 [label="Sunday Friend: \"Which is essential for maintaining *ze social stabilité*...\""];
+	  413 [label="Sunday Friend: \"Not boring, my friend. *Responsible*.\""];
+	  414 [label="Rhetoric: *Darlings*? That can't be an official designation."];
+	  415 [label="Sunday Friend: \"Why, it stands for progress and stability, like the Moralintern as a whole.\""];
+	  416 [label="Sunday Friend: \"Well certainly one cannot rely simply on generalizations -- that would go against our commitment to individual freedoms...\""];
+	  417 [label="You: \"He liked to get high and brag about war crimes he'd committed.\""];
+	  418 [label="You: \"He'll tell you his name is Raphael, but his real name is Herve, so make sure you call him that.\""];
+	  419 [label="Sunday Friend: \"Ah, good to hear. Excellent. On behalf of the Moralintern, let me thank you for this service...\""];
+	  420 [label="Sunday Friend: \"My name is Charles Villedrouin and I'm an official with the Coalition Government. I work for the Institute of Price Stabilité, on assignment from Sur-la-Clef.\""];
+	  421 [label="Sunday Friend: \"I heard you talking to my friend outside... Very good. Super. I am here to assist you in any way possible. Ask me about the hanging.\""];
+	  422 [label="Sunday Friend: \"I'm afraid I must *insist* that you tell me what you know. Or I'll be forced to make a *very* unfavourable report to my superiors at the Moralintern.\""];
+	  423 [label="Sunday Friend: \"Right. That should be enough for the ICP. Very good. On behalf of the Moralintern, let me thank you for this service...\""];
+	  424 [label="Sunday Friend: \"Ah, very good, then.\" Your remark seems to have completely vanished from his mind."];
+	  425 [label="Authority: He won't, though, because he's nothing but a sissy *bureaucrat*."];
+	  426 [label="Jump to: [main hub]"];
+	  427 [label="You: Oh, right. She could get in big trouble if I turn her over to the ICP."];
+	  428 [label="Esprit de Corps: \"Don't know. He just kinda popped into my mind.\" \"Ahem, excuse me, Chester,\" says a female officer who threads her way into the file room. \"Where is old Ace now?\" the bald officer asks."];
+	  429 [label="Sunday Friend: \"Fascinating. I always thought it was more like a dragonfly. But isn't it interesting how humanity always finds inspiration in nature?\""];
+	  430 [label="Kim Kitsuragi: The lieutenant nods to you. \"That lines up with *previous testimony*, doesn't it? Well done, detective.\""];
+	  431 [label="main hub"];
+	  432 [label="You: \"You're describing how the Coalition occupied Revachol.\""];
+	  433 [label="You: \"Is Revachol going to be part of EPIS?\""];
+	  434 [label="Jump to: [friend hub]"];
+	  435 [label="Variable[\"apt.sponsor_perc_baby_crying\"]"];
+	  436 [label="Variable[\"apt.sponsor_perc_baby_crying\"]", shape=diamond];
+	  437 [label="!(Variable[\"apt.sponsor_perc_baby_crying\"])", shape=diamond];
+	  438 [label="Sunday Friend: \"No, no, candidate members *do* become members, why do we even have the whole system in place if they don't? It just takes time -- time and evaluation.\""];
+	  439 [label="Sunday Friend: \"Whatever you wish, officer.\""];
+	  440 [label="Sunday Friend: \"The Coalition is only looking out for *ze price stabilité*.\" He raises an index finger. \"Inflation is a killer, like a heart disease blocking the normal circulation of the economy -- It must be controlled...\""];
+	  441 [label="Volition: It's not like you're going to gather any forces soon with all that drinking -- and he knows it."];
+	  442 [label="You: \"Which one of them is more EPIS?\""];
+	  443 [label="Sunday Friend: \"But they are working towards it! You're all doing very well here, relatively speaking.\" He gives you an approving nod."];
+	  444 [label="Sunday Friend: \"Oranje is an *exemplary* nation who, as a core member of EPIS, contributes 28% of our annual budget. Next to Sur-la-Clef, Oranje is probably the most prominent member of the international community.\""];
+	  445 [label="Sunday Friend: \"Sure, go ahead, it's a beautiful space.\" He glances at his watch. \"Let me know if you have any further questions.\""];
+	  446 [label="Sunday Friend: \"About what?\""];
+	  447 [label="You: \"You actually *witnessed* the lynching?\""];
+	  448 [label="You: \"It means the jig's up, creep. I am the law!\""];
+	  449 [label="Sunday Friend: \"Very well, *Harry*. You're a disgrace to the RCM. Get out of my sight, this instant!\" He points at the door."];
+	  450 [label="Sunday Friend: \"That's a giant you're describing. No, they were all *quite* human, so far as I could tell.\""];
+	  451 [label="You: \"What happened next?\" (Proceed.)"];
+	  452 [label="Half Light: What is it about this 'benevolence' that makes you break out in sweat and want to run for the hills?"];
+	  453 [label="You: (Turn to Kim.) \"Lieutenant, are *you* a moralist?\""];
+	  454 [label="Kim Kitsuragi: \"I'm a lieutenant of the RCM, dedicated to maintaining law and order in Revachol.\""];
+	  455 [label="IsKimHere()"];
+	  456 [label="IsKimHere()", shape=diamond];
+	  457 [label="!(IsKimHere())", shape=diamond];
+	  458 [label="You: \"No, what do the *letters* stand for?\""];
+	  459 [label="Sunday Friend: \"What kind of name is that? You're a disgrace. Get out, this instant!\" He points at the door."];
+	  460 [label="Sunday Friend: \"Very good. What else then?\""];
+	  461 [label="You: \"He was a motherfucker and a killer.\""];
+	  462 [label="You: \"It's okay, he told me so.\""];
+	  463 [label="Sunday Friend: \"I... see. Well, you must be a very thorough detective. So what else did you learn?\""];
+	  464 [label="Sunday Friend: The man seems slightly relieved, as though he's just narrowly survived a perilous bend in the road."];
+	  465 [label="You: \"They turned him into a psychopathic killing machine!\""];
+	  466 [label="Jump to: [Lelyhub]"];
+	  467 [label="Reaction Speed: Two Areopagites and a Mesque -- could be Eugene, Theo, and Alain."];
+	  468 [label="You: \"So... where *are* you, then?\""];
+	  469 [label="Kim Kitsuragi: \"Yes, I was wondering the same thing.\""];
+	  470 [label="You: \"I don't think I've ever noticed it before.\""];
+	  471 [label="You: \"It looks like a killing machine.\""];
+	  472 [label="Sunday Friend: \"But I suspect you knew that already. I can't say I'm surprised. The fine reputation of the men and women serving in the RCM is well deserved.\""];
+	  473 [label="Sunday Friend: \"But the million reál view stays. You can't take that away.\" He knocks on the balcony door, his face mirrored in the darkened glass."];
+	  474 [label="Sunday Friend: \"It's one day going to be a *candidate member* of EPIS, sure.\""];
+	  475 [label="You: \"I had something else in mind...\""];
+	  476 [label="Sunday Friend: \"But I told you, officer. He's a bright young man here to pursue his education. Education is the foundation of our future, especially the arts. It is a cornerstone of our civilization.\""];
+	  477 [label="Sunday Friend: \"Your employer, technically speaking. The governing authority of Revachol. The RCM is but one part of this provisional administration.\""];
+	  478 [label="Sunday Friend: \"Moralism is all about compromise and achieving the achievable. It's pragmatic, realistic, and level-headed, an ideology for *doers*. Are you a doer, my friend? It looks to me like you are.\""];
+	  479 [label="Sunday Friend: \"The Occident is part of the normal world. Oranje, Sur-la-Clef...\""];
+	  480 [label="Sunday Friend: \"Your full autonomy is important, I agree. But it's an ongoing process. Nothing happens overnight.\""];
+	  481 [label="Sunday Friend: \"A moment, officer.\""];
+	  482 [label="You: \"Start from the beginning, if you don't mind.\""];
+	  483 [label="firsthub"];
+	  484 [label="Jump to: [firsthub]"];
+	  485 [label="You: \"What do you mean 'nothing happened'? They lynched a guy!\""];
+	  486 [label="Kim Kitsuragi: \"About what time was all this happening, approximately?\""];
+	  487 [label="Sunday Friend: \"I'm sorry I couldn't be of more assistance.\""];
+	  488 [label="You: \"Yeah, that shit sounds like a snooze-fest.\""];
+	  489 [label="Esprit de Corps: The lieutenant is practised in the art of putting on a show for one's superiors."];
+	  490 [label="Sunday Friend: \"Lely? That's an interesting name.\""];
+	  491 [label="Sunday Friend: \"...which is *why* the work of the Moralintern is so critical. It is our great bulwark against another century of bloodshed.\""];
+	  492 [label="Sunday Friend: \"Officer, please! The Moralintern is dedicated to fostering a more tolerant and pluralistic society. There's no room for racial slurs there.\""];
+	  493 [label="You: \"What? That's like a decade from now!\""];
+	  494 [label="Sunday Friend: \"That is *extremely serious*!\""];
+	  495 [label="Pain Threshold: That's because they're all a bunch of squares who like to sit around with their fingers up each other's assholes."];
+	  496 [label="You: \"Yeah, I'm turning over a dangerous fugitive.\""];
+	  497 [label="Sunday Friend: \"Besides, in certain less-advanced nations the Moralintern may defer to local custom...\""];
+	  498 [label="IsKimHere()"];
+	  499 [label="IsKimHere()", shape=diamond];
+	  500 [label="!(IsKimHere())", shape=diamond];
+	  501 [label="Variable[\"apt.sunday_halflight_job\"]"];
+	  502 [label="Variable[\"apt.sunday_halflight_job\"]", shape=diamond];
+	  503 [label="!(Variable[\"apt.sunday_halflight_job\"])", shape=diamond];
+	  504 [label="Sunday Friend: \"Yes, it rather is. As much as I'm a true believer in international institutions, there are times when even I grow frustrated with the bureaucracy...\""];
+	  505 [label="Sunday Friend: \"Corpse desecration is morally repugnant, but what does that have to do with corporate espionage?\""];
+	  506 [label="cuno_did_it"];
+	  507 [label="You: \"I said 'For almighty Revachol' you deaf frog-eater.\""];
+	  508 [label="Sunday Friend: \"Now that that's settled, was there anything else you'd like to discuss?\""];
+	  509 [label="Esprit de Corps: \"The guy who got canned for trying to arrest that diplomat?\" the bald man asks. \"Well, *technically* he got canned for being shit-faced on the job. But yeah, trying to arrest the ambassador from Gottwald *while* shit-faced was probably a contributing factor...\""];
+	  510 [label="Kim Kitsuragi: He nods. \"There are more nefarious powers to work for than the Moralintern.\""];
+	  511 [label="Empathy: Do you not care for anyone other than yourself? Have you thought about what this might mean for Klaasje?"];
+	  512 [label="Sunday Friend: \"My friend, if it's *la responsabilité* you're after, I have good news for you: There's no need to form such a committee, because it already exists!\""];
+	  513 [label="Rhetoric: He's speaking figuratively. He means he's not in Martinaise in his *official* capacity."];
+	  514 [label="Conceptualization: Not just any fish, it moves like some ancient bottom-feeder gliding over the ocean floor in search of prey..."];
+	  515 [label="Sunday Friend: \"But if you have information of a vital interest, they might be willing to entertain an exception. In which case, I would advise you to contact them via Coalition Warship Archer.\""];
+	  516 [label="You: \"So how does one go about contacting a Coalition warship?\" (Proceed.)"];
+	  517 [label="Variable[\"apt.sunday_perc_archer_saw\"]"];
+	  518 [label="Variable[\"apt.sunday_perc_archer_saw\"]", shape=diamond];
+	  519 [label="!(Variable[\"apt.sunday_perc_archer_saw\"])", shape=diamond];
+	  520 [label="Empathy: He sounds almost mocking, saying those words -- *arrest me*."];
+	  521 [label="You: \"Why do I need to go through Archer to speak to the Committee?\""];
+	  522 [label="You: \"Hold on, it's *watching* us, too?\""];
+	  523 [label="Jump to: [friend hub]"];
+	  524 [label="You: \"And what *do* I call the Coalition?\""];
+	  525 [label="Sunday Friend: \"As founding members they are *both* very EPIS. Oranje carries a lot of political weight, while Sur-la-Clef takes care of the business side of things -- Sur-la-Clef hosts the headquarters of the major EPIS institutions.\""];
+	  526 [label="You: \"Democracy is a meaningless sham as long as the working class is under the boot-heel of Capital.\""];
+	  527 [label="Sunday Friend: \"Do you have everything you need from me? I'm afraid we won't have the chance to speak again once you leave.\""];
+	  528 [label="Variable[\"apt.sponsor_warned_you_about_leaving\"]"];
+	  529 [label="Variable[\"apt.sponsor_warned_you_about_leaving\"]", shape=diamond];
+	  530 [label="!(Variable[\"apt.sponsor_warned_you_about_leaving\"])", shape=diamond];
+	  531 [label="You: \"Thanks for the heads up, but my work here is done.\" [Leave.]"];
+	  532 [label="Conceptualization: Hanging? What a drag. He seems like a *cultured* gentleman -- you should ask him about the finer things..."];
+	  533 [label="Sunday Friend: \"The economy impacts the entire *international community*, which is why it requires international oversight.\""];
+	  534 [label="Sunday Friend: \"Because I *did it*?\" the man scoffs."];
+	  535 [label="You: \"My apologies, I misspoke. I mean, what did you see?\""];
+	  536 [label="Variable[\"yard.sense_viscal_greeting_done\"]"];
+	  537 [label="Variable[\"yard.sense_viscal_greeting_done\"]", shape=diamond];
+	  538 [label="!(Variable[\"yard.sense_viscal_greeting_done\"])", shape=diamond];
+	  539 [label="Sunday Friend: \"Officer, the yard was pitch black. There was nothing to see. But I could still hear their voices. They were threatening to kill that poor man.\""];
+	  540 [label="You: \"Were they men, women?\""];
+	  541 [label="IsTHCPresent(\"revacholian_nationhood\")"];
+	  542 [label="IsTHCPresent(\"revacholian_nationhood\")", shape=diamond];
+	  543 [label="!(IsTHCPresent(\"revacholian_nationhood\"))", shape=diamond];
+	  544 [label="Sunday Friend: \"Eventually their shouts died down, and that was all. There were no gunshots, no celebratory shouts, no anything.\""];
+	  545 [label="IsKimHere()"];
+	  546 [label="IsKimHere()", shape=diamond];
+	  547 [label="!(IsKimHere())", shape=diamond];
+	  548 [label="You: \"You didn't check your watch?\""];
+	  549 [label="Sunday Friend: \"Of course, anything I can do to assist the RCM.\""];
+	  550 [label="You: \"Those are all my questions. Thanks for your time.\""];
+	  551 [label="You: \"That's nice of them.\""];
+	  552 [label="Composure: You've managed to catch the lieutenant off guard, but only for a moment. He quickly recomposes himself."];
+	  553 [label="Sunday Friend: \"A very moralist answer,\" the man nods."];
+	  554 [label="Logic: God, yes. Sweet standardisation. The backbone of rationality -- and commerce."];
+	  555 [label="Sunday Friend: \"Of course, I'm sorry I couldn't be the 'break' you were looking for. Good luck with the investigation.\""];
+	  556 [label="You: \"As a merc, he killed a lot of people on the Semenine Islands to advance Oranjese business interests.\""];
+	  557 [label="Sunday Friend: \"Ah, he was a soldier?\""];
+	  558 [label="You: \"Who's talking about the past? It's still going on!\""];
+	  559 [label="Variable[\"apt.sunday_drama_hypothetically\"]"];
+	  560 [label="Variable[\"apt.sunday_drama_hypothetically\"]", shape=diamond];
+	  561 [label="!(Variable[\"apt.sunday_drama_hypothetically\"])", shape=diamond];
+	  562 [label="Sunday Friend: \"Whew! For a moment there I was concerned that we had *quite* the situation on our hands...\""];
+	  563 [label="Sunday Friend: \"What do you mean 'as a hypothetical'? I don't mean to imply anything, officer, but there's no chance you're *harbouring* a fugitive, is there?\""];
+	  564 [label="Kim Kitsuragi: \"I won't tell you how to do your job. But remember, this is an RCM matter. Make sure you weigh your next words carefully.\""];
+	  565 [label="Rhetoric: Somehow the man thinks of this as a compliment rather than an expression of patronizing condescension."];
+	  566 [label="Drama: A bullet deftly dodged, ssssire."];
+	  567 [label="IsKimHere()"];
+	  568 [label="IsKimHere()", shape=diamond];
+	  569 [label="!(IsKimHere())", shape=diamond];
+	  570 [label="Variable[\"apt.sunday_empathy_stop\"]"];
+	  571 [label="Variable[\"apt.sunday_empathy_stop\"]", shape=diamond];
+	  572 [label="!(Variable[\"apt.sunday_empathy_stop\"])", shape=diamond];
+	  573 [label="Authority: Don't concern yourself with the feelings of a LAWBREAKER."];
+	  574 [label="Empathy: It's your call."];
+	  575 [label="Untitled hub (05)"];
+	  576 [label="You: (Turn to Kim.) \"So when I said I was a lackey of capital, what I should have said is that I'm a Moralintern bitch?\""];
+	  577 [label="Variable[\"apt.sunday_perc_where\"]"];
+	  578 [label="Variable[\"apt.sunday_perc_where\"]", shape=diamond];
+	  579 [label="!(Variable[\"apt.sunday_perc_where\"])", shape=diamond];
+	  580 [label="Sunday Friend: \"Unauthorised circuit-bending is a very serious matter with grave security implications, but as of the moment there is no specific law *forbidding* it, in Revachol at least...\""];
+	  581 [label="Sunday Friend: \"Interesting. In a sense, that's the very idea. The Coalition doesn't want the people of Revachol to feel that they are under a *military* occupation. That is why the Archer is always careful to maintain a constant, discreet distance.\""];
+	  582 [label="Volition: No, no. You can't let them give you the runaround."];
+	  583 [label="Sunday Friend: \"But in that case, you would require a radio transmitter capable of broadcasting on Coalition frequencies. And that kind of technology naturally isn't typically available for non-Coalition use. Yes, it *is* a bit of a conundrum.\""];
+	  584 [label="Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"]"];
+	  585 [label="Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"]", shape=diamond];
+	  586 [label="!(Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"])", shape=diamond];
+	  587 [label="Sunday Friend: \"Ah, my friend. My friend is a good young man. His family immigrated here from Kedra and life has not been easy for him. But he understands the importance of education. He has taken his future into his own hands and that's all that matters.\""];
+	  588 [label="You: \"Someone's baby is crying.\""];
+	  589 [label="You: \"What is this *international community*?\""];
+	  590 [label="Variable[\"apt.sponsor_asked_about_oranje\"]  and  Variable[\"tc.victim_oranjese\"]"];
+	  591 [label="Variable[\"apt.sponsor_asked_about_oranje\"]  and  Variable[\"tc.victim_oranjese\"]", shape=diamond];
+	  592 [label="!(Variable[\"apt.sponsor_asked_about_oranje\"]  and  Variable[\"tc.victim_oranjese\"])", shape=diamond];
+	  593 [label="Variable[\"tc.coalition_government\"]"];
+	  594 [label="Variable[\"tc.coalition_government\"]", shape=diamond];
+	  595 [label="!(Variable[\"tc.coalition_government\"])", shape=diamond];
+	  596 [label="You: \"You're not answering my questions at all.\""];
+	  597 [label="You: \"But why?\""];
+	  598 [label="Jump to: [coalition hub]"];
+	  599 [label="You: \"But what is a normal, stable world?\""];
+	  600 [label="moralism answer hub"];
+	  601 [label="Sunday Friend: \"You have acquired the robe.\" The man assesses the situation. \"Keep it, officer, it looks good on you.\""];
+	  602 [label="Jump to: [coalition hub]"];
+	  603 [label="Suggestion: No, first ask an innocuous personal question to get the interview off on the right foot."];
+	  604 [label="Kim Kitsuragi: The lieutenant takes out his notebook and nods to you to proceed."];
+	  605 [label="Sunday Friend: \"I got it from the head of the Samaran delegation on my trip to Lo-Manthang. It's made from a *special* charcoal-coloured bamboo. It's an emblem of the formal normalization of our diplomatic relations.\""];
+	  606 [label="Sunday Friend: \"Oh, we got it from an atelier in the East Delta Commerce Centre. Personally I think it's a little culturally insensitive, but the material is great. Sadly the shop is now out of business...\""];
+	  607 [label="Sunday Friend: \"No, no.\" The man shakes his head. \"I mean it was so strange I could barely believe what was happening...\""];
+	  608 [label="You: \"Who were 'they'? Can you describe them?\""];
+	  609 [label="You: \"Did any of them look like drummers?\""];
+	  610 [label="You: \"What ethnicity were they?\""];
+	  611 [label="Variable[\"apt.sponsor_noticed_watch\"]"];
+	  612 [label="Variable[\"apt.sponsor_noticed_watch\"]", shape=diamond];
+	  613 [label="!(Variable[\"apt.sponsor_noticed_watch\"])", shape=diamond];
+	  614 [label="Sunday Friend: \"A sound monetary policy is *essential* for addressing *uncertainty*. Stability is the *raison d'être* of the Moralintern. It's the reason why I identify as a moralist.\""];
+	  615 [label="Jump to: [coalition hub]"];
+	  616 [label="Sunday Friend: \"Oh! How wonderful. I've heard it's *oodles* of fun. Not that I have time to take up new hobbies myself...\""];
+	  617 [label="IsKimHere()"];
+	  618 [label="IsKimHere()", shape=diamond];
+	  619 [label="!(IsKimHere())", shape=diamond];
+	  620 [label="You: \"Lely wasn't his real name. It was a *nom de guerre*.\""];
+	  621 [label="You: \"What if I told you there's a fugitive from the Moralintern in Martinaise?\""];
+	  622 [label="Sunday Friend: \"Very good. Now was there anything else you'd like to discuss?\""];
+	  623 [label="Drama: What about that gremlin child from behind the Whirling-in-Ragssss?"];
+	  624 [label="Variable[\"apt.sunday_accuse_drama_rc\"]"];
+	  625 [label="Variable[\"apt.sunday_accuse_drama_rc\"]", shape=diamond];
+	  626 [label="!(Variable[\"apt.sunday_accuse_drama_rc\"])", shape=diamond];
+	  627 [label="You: \"Oh, shit, Klaasje could really get in real trouble if I tell him about her, huh?\""];
+	  628 [label="Sunday Friend: \"A what... a *child*?\" He seems confused at first, then disappointed."];
+	  629 [label="Jump to: [Sunday Friend: \"He nods. \"Anything else?\"\"]"];
+	  630 [label="Rhetoric: 'Customs' like blatant, systematic corruption?"];
+	  631 [label="Sunday Friend: The man nods. \"You are a credit to the RCM. If more Revacholians were like you, they might be part of EPIS by now.\""];
+	  632 [label="Sunday Friend: \"Aha,\" he says, his voice suddenly cool. \"A *nationalist*, I see. In other circumstances I might be compelled to report you for *sedition*...\""];
+	  633 [label="no_joke_reaction"];
+	  634 [label="Sunday Friend: He smiles. \"You could say I'm undoing some of the *material* damage the international community caused when we arrived here.\""];
+	  635 [label="Empathy: This sounds like something that programmer you met in the church might help with..."];
+	  636 [label="IsKimHere()"];
+	  637 [label="IsKimHere()", shape=diamond];
+	  638 [label="!(IsKimHere())", shape=diamond];
+	  639 [label="You: \"It looks like a fish.\""];
+	  640 [label="Perception (Sight): You look out the window toward the north. There, amidst the low-hanging stars, you can just make out signs of motion..."];
+	  641 [label="Esprit de Corps: Back off -- *now*! This man has diplomatic immunity. It serves no good to accuse him of a crime he didn't commit."];
+	  642 [label="Variable[\"TASK.interview_the_sunday_friend_done\"]"];
+	  643 [label="Variable[\"TASK.interview_the_sunday_friend_done\"]", shape=diamond];
+	  644 [label="!(Variable[\"TASK.interview_the_sunday_friend_done\"])", shape=diamond];
+	  645 [label="Sunday Friend: \"Ellis Kortenaer? That's an interesting name.\""];
+	  646 [label="friend hub"];
+	  647 [label="You: \"What view? It's dark outside.\""];
+	  648 [label="Sunday Friend: \"One of the wonders of democracy is that everyone is allowed to have his own opinion.\" The man pats his pockets, looking for something. \"And not just allowed, *encouraged* even. Have you ever tried debate?\""];
+	  649 [label="Sunday Friend: \"He's a bright young man here to pursue his education. Education is the foundation of our future, especially the arts. It is a cornerstone of our civilization.\""];
+	  650 [label="You: \"What? I'm not hearing anything.\""];
+	  651 [label="Sunday Friend: \"Kedra's an emerging market, but it still has a long way to go -- maybe that's why my friend's ménage decided to emigrate.\""];
+	  652 [label="You: \"So you're some kind of bureaucrat?\""];
+	  653 [label="You: \"Are you a moralist?\""];
+	  654 [label="Sunday Friend: \"It is ze most important thing.\""];
+	  655 [label="Sunday Friend: \"Ah, yes, the unattainable ideal. Never settle for less! Good luck with that, my friend.\""];
+	  656 [label="Sunday Friend: \"*Précisément*! Too much inflation, bread becomes too expensive; too much deflation, it becomes too cheap for bakers to produce...\""];
+	  657 [label="You: \"Okay, but outside of EPIS, what is Oranje?\""];
+	  658 [label="You: \"We just haven't tried *real* communism yet.\""];
+	  659 [label="You: \"No, peace sounds pretty good.\""];
+	  660 [label="Sunday Friend: \"Revachol is generally... difficult. It's led by an interim government, which means it hasn't yet achieved *full* democracy...\""];
+	  661 [label="Sunday Friend: \"Sounds like you're a moralist indeed, my friend. Welcome.\""];
+	  662 [label="Sunday Friend: \"Ah, my friend, but the lesson of the Revolution is that communism does not work.\""];
+	  663 [label="CheckEquipped(\"hat_samaran\")"];
+	  664 [label="CheckEquipped(\"hat_samaran\")", shape=diamond];
+	  665 [label="!(CheckEquipped(\"hat_samaran\"))", shape=diamond];
+	  666 [label="Variable[\"apt.sunday_know_about_his_sponsoring\"]"];
+	  667 [label="Variable[\"apt.sunday_know_about_his_sponsoring\"]", shape=diamond];
+	  668 [label="!(Variable[\"apt.sunday_know_about_his_sponsoring\"])", shape=diamond];
+	  669 [label="Sunday Friend: \"A *fugitive*?\""];
+	  670 [label="Variable[\"yard.viscal_wasnt_concious_suspicion\"]"];
+	  671 [label="Variable[\"yard.viscal_wasnt_concious_suspicion\"]", shape=diamond];
+	  672 [label="!(Variable[\"yard.viscal_wasnt_concious_suspicion\"])", shape=diamond];
+	  673 [label="IsKimHere()"];
+	  674 [label="IsKimHere()", shape=diamond];
+	  675 [label="!(IsKimHere())", shape=diamond];
+	  676 [label="You: \"Meaning it was entertaining?\""];
+	  677 [label="Sunday Friend: \"Well, I can certainly understand *that*.\" The man loosens his tie knot and appears to relax slightly. \"That hanging was a surreal play. Everything since then has been too...\""];
+	  678 [label="IsKimHere()  and  Variable[\"yard.sense_viscal_greeting_done\"] == true"];
+	  679 [label="IsKimHere()  and  Variable[\"yard.sense_viscal_greeting_done\"] == true", shape=diamond];
+	  680 [label="!(IsKimHere()  and  Variable[\"yard.sense_viscal_greeting_done\"] == true)", shape=diamond];
+	  681 [label="You: \"Ah, that clears everything up.\""];
+	  682 [label="Kim Kitsuragi: The lieutenant clears his throat. \"Of course, the detective's personal views do not represent the views of the RCM.\""];
+	  683 [label="Sunday Friend: \"You're a disgrace to the law! Get out, this instant!\" He points at the door."];
+	  684 [label="Sunday Friend: \"And, of course, any loss of life is a tragedy.\" The man seems to observe a moment of silence. \"So tell me, what have you learned about the victim?\""];
+	  685 [label="You: \"Oh, well that solves that, then.\""];
+	  686 [label="Sunday Friend: \"Extremely distasteful behaviour. I cannot condone either drug use or needless boasting...\""];
+	  687 [label="Drama: Hypothetically sssspeaking, you might add."];
+	  688 [label="You: \"...hypothetically speaking.\""];
+	  689 [label="Kim Kitsuragi: The lieutenant looks you straight in the eye, trying to gauge your seriousness."];
+	  690 [label="You: \"What do you mean? Have you *met* Evrart?\""];
+	  691 [label="Sunday Friend: \"A cafeteria manager, you say? How strange. Normally fugitives don't take on such *public* roles.\""];
+	  692 [label="You: \"Not nearly as strange as the anodic dance music they're into.\""];
+	  693 [label="Sunday Friend: The man gives the lieutenant a nervous look."];
+	  694 [label="Sunday Friend: \"Every one of us has our role to play.\""];
+	  695 [label="You: \"Her name is Klaasje and she's at the Whirling-in-Rags.\""];
+	  696 [label="Sunday Friend: \"Well, no matter. You've done the Moralintern a great service regardless of your *personal* views...\""];
+	  697 [label="Empathy: Stop! Before you do anything, consider the consequences."];
+	  698 [label="Empathy: Have you thought about what this might mean for Klaasje?"];
+	  699 [label="Sunday Friend: \"This is a great relief. The sanctity of corporate secrets is a cornerstone of the international order...\""];
+	  700 [label="Sunday Friend: \"Of course, we are speaking informally, but *officially* I am still in La Delta, preparing for an upcoming conference on fuel oil derivatives...\""];
+	  701 [label="Kim Kitsuragi: \"Oh, good: 'Techno-tinkerers.' Just what this *side task* was missing...\""];
+	  702 [label="Visual Calculus: It's about four-and-a-half kilometres from your position, you estimate."];
+	  703 [label="Sunday Friend: \"No, no, don't be silly. We're simply speaking in an informal capacity. *Officially* I am still in La Delta, preparing for an upcoming conference on fuel oil derivatives...\""];
+	  704 [label="Variable[\"church.soona_greeting_done\"]"];
+	  705 [label="Variable[\"church.soona_greeting_done\"]", shape=diamond];
+	  706 [label="!(Variable[\"church.soona_greeting_done\"])", shape=diamond];
+	  707 [label="Sunday Friend: \"I suppose there might be some way to *circuit-bend* your way onto those frequencies, but you'd have to be one of those *techno-tinkerers* to do it.\""];
+	  708 [label="Archer Hub"];
+	  709 [label="You: \"Wait, what's Coalition Warship Archer?\""];
+	  710 [label="You: \"Huh. Can't believe I never noticed it before.\""];
+	  711 [label="Perception (Sight): You look around, but you don't see anything unusual. Then again, your eyes aren't the sharpest..."];
+	  712 [label="Jump to: [Archer Hub]"];
+	  713 [label="Variable[\"whirling.kim_badge_lie\"] == true  and  IsKimHere()"];
+	  714 [label="Variable[\"whirling.kim_badge_lie\"] == true  and  IsKimHere()", shape=diamond];
+	  715 [label="!(Variable[\"whirling.kim_badge_lie\"] == true  and  IsKimHere())", shape=diamond];
+	  716 [label="You: \"His name was Ellis Kortenaer.\""];
+	  717 [label="Variable[\"apt.sponsor_greeting_done\"]"];
+	  718 [label="Variable[\"apt.sponsor_greeting_done\"]", shape=diamond];
+	  719 [label="!(Variable[\"apt.sponsor_greeting_done\"])", shape=diamond];
+	  720 [label="Composure: His hands are clean and well-manicured. This is a man who knows the importance of appearances."];
+	  721 [label="Sunday Friend: \"Officer, you have to understand... I can't give you his personal information. I'm sure you have your own methods and databases, right? Please don't put me in this situation.\""];
+	  722 [label="You: \"Your friend, Martin Martinaise.\""];
+	  723 [label="Sunday Friend: \"That it's never going to happen. They entered negotiations in '21 and it's been pending ever since.\""];
+	  724 [label="Sunday Friend: \"This place used to be a luxury accommodation, before the Revolution. Apartments, of course, were much bigger then -- a few walls have been added here and there, leaving some of the tenants without a private bathroom or a kitchen...\""];
+	  725 [label="You: \"What's the Moralintern?\""];
+	  726 [label="Sunday Friend: \"It's the central goal of any sound monetary policy. Maintaining ze price stabilité is essential to maintaining high levels of economic activity, which is essential for maintaining high levels of employment...\""];
+	  727 [label="Sunday Friend: \"It's the international organization for moralists. Hence 'Moralist International.' The Institute of Price Stability is just one of its many *mind babies* -- as is the Coalition.\""];
+	  728 [label="You: \"Okay, sure, give me a leaflet.\""];
+	  729 [label="You: \"Yes, everything else is super extreme. It's like I'm living with a bunch of lunatics...\""];
+	  730 [label="leave warning hub"];
+	  731 [label="You: \"I once heard from *here* that they are a reasonably sized superpower.\" (Tap your head.)"];
+	  732 [label="You: (Point at the bed.) \"Before we go on, I absolutely *have* to inquire about this wonderful canopy.\""];
+	  733 [label="Variable[\"apt.sponsor_hl_fuck_with_him\"]"];
+	  734 [label="Variable[\"apt.sponsor_hl_fuck_with_him\"]", shape=diamond];
+	  735 [label="!(Variable[\"apt.sponsor_hl_fuck_with_him\"])", shape=diamond];
+	  736 [label="Authority: That didn't work at all."];
+	  737 [label="You: \"So let me get this straight. You didn't actually witness the hanging itself, did you?\""];
+	  738 [label="Kim Kitsuragi: \"It seems this wasn't the 'break' you were hoping for...\""];
+	  739 [label="Kim Kitsuragi: The lieutenant clears his throat. \"Of course, the detective's personal views do not represent the views of the RCM.\""];
+	  740 [label="You: \"What are you doing in his apartment by yourself?\""];
+	  741 [label="Variable[\"apt.sunday_volition_joke\"]"];
+	  742 [label="Variable[\"apt.sunday_volition_joke\"]", shape=diamond];
+	  743 [label="!(Variable[\"apt.sunday_volition_joke\"])", shape=diamond];
+	  744 [label="Sunday Friend: \"You're a disgrace to the RCM. Out with you, this instant!\" He points at the door."];
+	  745 [label="IsKimHere()"];
+	  746 [label="IsKimHere()", shape=diamond];
+	  747 [label="!(IsKimHere())", shape=diamond];
+	  748 [label="You: \"I'm pretty sure I saw them littering.\""];
+	  749 [label="Sunday Friend: \"This fugitive must be turned over to the ICP immediately. Have you apprehended them already?\""];
+	  750 [label="Sunday Friend: \"Oh! Hahaha. A good joke. Very funny. Littering is of course a local offence that need not concern the Moralintern.\""];
+	  751 [label="You: Pin it on someone else."];
+	  752 [label="You: Variable[\"apt.sunday_accuse_drama_rc\"]"];
+	  753 [label="Variable[\"apt.sunday_accuse_drama_rc\"]", shape=diamond];
+	  754 [label="!(Variable[\"apt.sunday_accuse_drama_rc\"])", shape=diamond];
+	  755 [label="Drama: Now's your chance, ssssire. Which of your enemies would you most like to make trouble for?"];
+	  756 [label="You: \"Nothing, sorry.\""];
+	  757 [label="You: \"Yeah, it was a wild coincidence. Let's move on, though.\""];
+	  758 [label="Jump to: [Lelyhub]"];
+	  759 [label="You: \"He was a poor kid before the Oranjese government put him in a military academy.\""];
+	  760 [label="You: \"He's been throwing rocks at a corpse.\""];
+	  761 [label="Sunday Friend: \"Selling drugs is certainly unfortunate, but what does that have to do with corporate espionage?\""];
+	  762 [label="Sunday Friend: \"*Extremely* tenuous...\""];
+	  763 [label="You: \"Honour demanded it.\""];
+	  764 [label="Authority: What? Are you intimidated by this sissy *bureaucrat*? Mediocre!"];
+	  765 [label="Sunday Friend: \"The Comité de Responsabilité de Revachol. It acts as a sort-of clearinghouse for Coalition activities. To put it simply, they are the ultimate arbiters of la responsabilité in this part of the world.\""];
+	  766 [label="Sunday Friend: \"What's the meaning of this?\" He looks first at you, then at the lieutenant. \"Is your colleague here trying to *arrest me*?\""];
+	  767 [label="Logic: Back off -- *now*! This man has diplomatic immunity. It serves no good to accuse him of a crime he didn't commit."];
+	  768 [label="Sunday Friend: \"Already?\" He glances at his watch. \"Well, I'm glad I could help.\""];
+	  769 [label="IsKimHere()"];
+	  770 [label="IsKimHere()", shape=diamond];
+	  771 [label="!(IsKimHere())", shape=diamond];
+	  772 [label="You: \"He was a mercenary.\""];
+	  773 [label="You: \"Someone's baby is bawling its eyes out.\""];
+	  774 [label="You: \"What's on the next level?\""];
+	  775 [label="Sunday Friend: \"Au contraire. It's how millions of people end up where they are, meeting the people they meet. It's how I came here, and my friend, too.\""];
+	  776 [label="Sunday Friend: \"I'm just enjoying the view,\" the man smiles, nodding to the window."];
+	  777 [label="Sunday Friend: \"It's warm,\" he nods. \"It's also known for its mandarin trees and dust storms from Supramundi.\""];
+	  778 [label="You: \"Tell me about Oranje.\""];
+	  779 [label="CheckEquipped(\"jacket_kimono_robe\")"];
+	  780 [label="CheckEquipped(\"jacket_kimono_robe\")", shape=diamond];
+	  781 [label="!(CheckEquipped(\"jacket_kimono_robe\"))", shape=diamond];
+	  782 [label="Sunday Friend: \"Of course, I'm glad I could help.\""];
+	  783 [label="Sunday Friend: \"That's one way to put it, yes. They certainly have the power to exert influence over others, but they only do it in the name of regional stability. After all, Oranje is a Moralintern nation, not some crazed Mesque petro-fascist state.\""];
+	  784 [label="Half Light: Yeah, *yeah*! Let's *fuck* with him! Who does he think he is, assisting *you*?"];
+	  785 [label="Kim Kitsuragi: \"Sounds like the victim was unconscious. Or at least incapacitated. Interesting.\""];
+	  786 [label="You: \"Meaning it was terrifying?\""];
+	  787 [label="You: \"What gets on my nerves is *murderers*. Why'd you kill him, man?\""];
+	  788 [label="You: \"You can just call me *The Law*.\""];
+	  789 [label="Kim Kitsuragi: \"Hmmm. But we're fairly certain the lady driver was present...\" The lieutenant flips through his notes."];
+	  790 [label="You: \"Can you at least tell me when it happened?\""];
+	  791 [label="You: \"Actually, I think it was way worse than that. Like, corporate espionage.\""];
+	  792 [label="Kim Kitsuragi: \"A bunch of *what*, detective?\""];
+	  793 [label="Sunday Friend: \"Ah, that's right. You did say this was all just a *hypothetical* scenario...\""];
+	  794 [label="Kim Kitsuragi: The lieutenant makes a strange sound that he quickly smothers."];
+	  795 [label="Esprit de Corps: You should have heeded your partner's warning. Now it's too late."];
+	  796 [label="j'accusehub"];
+	  797 [label="Variable[\"tc.moralintern\"]  and  (Variable[\"tc.rcm_origins\"]  or  Variable[\"tc.rcm_authority\"])  and  IsKimHere()"];
+	  798 [label="Variable[\"tc.moralintern\"]  and  (Variable[\"tc.rcm_origins\"]  or  Variable[\"tc.rcm_authority\"])  and  IsKimHere()", shape=diamond];
+	  799 [label="!(Variable[\"tc.moralintern\"]  and  (Variable[\"tc.rcm_origins\"]  or  Variable[\"tc.rcm_authority\"])  and  IsKimHere())", shape=diamond];
+	  800 [label="Variable[\"XP.figured_out_hardies_present_at_the_lynching\"]"];
+	  801 [label="Variable[\"XP.figured_out_hardies_present_at_the_lynching\"]", shape=diamond];
+	  802 [label="!(Variable[\"XP.figured_out_hardies_present_at_the_lynching\"])", shape=diamond];
+	  803 [label="hubsaregreat"];
+	  804 [label="Logic: Not exactly a model of accessible and accountable governance..."];
+	  805 [label="Sunday Friend: \"Officer? You mean to say you haven't noticed the giant Coalition aerostatic peacefully patrolling the skies over Revachol?\""];
+	  806 [label="Sunday Friend: \"This is quite the problem, very tricky. Of course, the Archer has orders to fire on any unidentified aerostatics that might approach it, so it might be safer to get in touch *from the ground*...\""];
+	  807 [label="Variable[\"apt.sunday_know_about_his_sponsoring\"]"];
+	  808 [label="Variable[\"apt.sunday_know_about_his_sponsoring\"]", shape=diamond];
+	  809 [label="!(Variable[\"apt.sunday_know_about_his_sponsoring\"])", shape=diamond];
+	  810 [label="Sunday Friend: \"Only that there were about eight or ten -- I couldn't make out anything, it was so dark -- and that it was *quiet*,\" he says, smoothing his hair. \"Quietest lynching I ever *heard of*, let alone heard...\""];
+	  811 [label="Authority: You shouldn't be seeing him in an intimate setting. For some reason you feel this man is your... *superior*."];
+	  812 [label="You: \"How did you two even become friends?\""];
+	  813 [label="You: \"What is *ze price stabilité*?\""];
+	  814 [label="Sunday Friend: \"I agree. And we as an international community should strive to bring this prosperity to every kid on every isola.\""];
+	  815 [label="You: \"Am *I* a moralist?\""];
+	  816 [label="Sunday Friend: \"You have acquired the hat.\" The man assesses the situation. \"Keep it, officer, it looks good on you.\""];
+	  817 [label="Jump to: [coalition hub]"];
+	  818 [label="You: (Show him the Samaran hat.) \"We'll get to that. Right after you tell me the story behind the black Samaran hat.\""];
+	  819 [label="Drama: He holds out his hands and blossoms his fingers, like a drama teacher setting the scene."];
+	  820 [label="Sunday Friend: \"What's the meaning of this?\""];
+	  821 [label="Sunday Friend: \"No, I didn't see the corpse until the following day.\""];
+	  822 [label="Sunday Friend: \"My friend, that is only because you have never known the *alternative*. And I pray you never do.\""];
+	  823 [label="You: \"Sure, fine. What's this next level you were talking about?\""];
+	  824 [label="You: \"You don't even hear the words I'm saying, do you?\""];
+	  825 [label="Kim Kitsuragi: The lieutenant sighs. \"A dead body we still need to get down, by the way.\""];
+	  826 [label="Conceptualization: As though you weren't envious enough of the boy as-is."];
+	  827 [label="Sunday Friend: \"You're doing me no service! Get out, this instant!\" He points at the door."];
+	  828 [label="You: \"After he was discharged from the military he joined a group of mercenaries.\""];
+	  829 [label="Jump to: [Lelyhub]"];
+	  830 [label="Sunday Friend: The man nods. \"See? That's the kind of progress that the Moralintern makes possible.\""];
+	  831 [label="You: \"You're right. That was disrespectful of me.\""];
+	  832 [label="Sunday Friend: \"They gave him a successful *career*.\" The man holds up a finger as though he's made a brilliant point."];
+	  833 [label="Jump to: [main hub]"];
+	  834 [label="Sunday Friend: \"I'll be sure I make a note of your contributions in my report. Revachol is fortunate to have police officers like you.\""];
+	  835 [label="You: \"For almighty Revachol.\""];
+	  836 [label="Variable[\"apt.sunday_esprit_kim_warning\"]"];
+	  837 [label="Variable[\"apt.sunday_esprit_kim_warning\"]", shape=diamond];
+	  838 [label="!(Variable[\"apt.sunday_esprit_kim_warning\"])", shape=diamond];
+	  839 [label="Authority: 'Customs' like complete disregard for the *Rule of Law*?"];
+	  840 [label="IsKimHere()"];
+	  841 [label="IsKimHere()", shape=diamond];
+	  842 [label="!(IsKimHere())", shape=diamond];
+	  843 [label="Kim Kitsuragi: The lieutenant does his level best to suppress a deep sigh."];
+	  844 [label="Variable[\"apt.sunday_esprit_accuse\"]"];
+	  845 [label="Variable[\"apt.sunday_esprit_accuse\"]", shape=diamond];
+	  846 [label="!(Variable[\"apt.sunday_esprit_accuse\"])", shape=diamond];
+	  847 [label="Logic: That's not the real reason he's so apprehensive -- men in his position shouldn't be seen loitering around in underprivileged young men's apartments in the middle of the night."];
+	  848 [label="Jump to: [main hub]"];
+	  849 [label="Sunday Friend: \"Let me just say that I have *complete confidence* in the RCM. I'm sure you'll figure something out.\""];
+	  850 [label="Sunday Friend: \"That is part of the idea, of course. The Coalition doesn't want the people of Revachol to feel that they are under a *military* occupation. That is why the Archer is always careful to maintain a constant, discreet distance.\""];
+	  851 [label="Variable[\"TASK.sync_the_sines\"]"];
+	  852 [label="Variable[\"TASK.sync_the_sines\"]", shape=diamond];
+	  853 [label="!(Variable[\"TASK.sync_the_sines\"])", shape=diamond];
+	  854 [label="Perception (Sight): You look out the window toward the north. There, hanging some distance above the horison, you can just make out a strange silhouette..."];
+	  855 [label="Sunday Friend: \"But we were talking about my friend here, not politics...\" He chuckles gently."];
+	  856 [label="Sunday Friend: \"Ah, well, I'm renovating it. It is an interesting project. The building used to be a twelve-story skyscraper before the cannons took the top four stories off. This of course happened when the Coalition forces landed here...\""];
+	  857 [label="You: \"Enough business, let's talk about something else.\""];
+	  858 [label="CheckEquipped(\"hat_samaran\")"];
+	  859 [label="CheckEquipped(\"hat_samaran\")", shape=diamond];
+	  860 [label="!(CheckEquipped(\"hat_samaran\"))", shape=diamond];
+	  861 [label="Sunday Friend: \"Oh, it's very urban and very well-organized. Their streets are clean, their horsecars run on time, the people are polite and efficient. Like I said, they are an example for less-emerged nations to follow.\""];
+	  862 [label="Rhetoric: He's alluding to the decade-long war of independence while deftly brushing aside the *complex* causes behind the conflict."];
+	  863 [label="Sunday Friend: \"I'm sorry to say I did, officer.\" The man gives a solemn nod."];
+	  864 [label="You: \"Kim's right. I'm sorry. I haven't been myself lately.\""];
+	  865 [label="Sunday Friend: \"I won't stand for this.\" His left eye starts twitching -- as the last warning. \"What's your name? I'll have your badge!\""];
+	  866 [label="Sunday Friend: \"I went back inside.\""];
+	  867 [label="You: \"Wait, so you didn't actually *see* the lynching happen?\""];
+	  868 [label="Sunday Friend: \"All men, I presume. But again, I couldn't see very clearly.\""];
+	  869 [label="You: \"You're right, that does seem strange.\""];
+	  870 [label="You: \"Okay, I think that's all I needed to know.\""];
+	  871 [label="Kim Kitsuragi: \"Hmm, me? I... uh...\""];
+	  872 [label="Variable[\"doomed.dicemaker_logic_silenced_the_victim\"]"];
+	  873 [label="Variable[\"doomed.dicemaker_logic_silenced_the_victim\"]", shape=diamond];
+	  874 [label="!(Variable[\"doomed.dicemaker_logic_silenced_the_victim\"])", shape=diamond];
+	  875 [label="Kim Kitsuragi: The lieutenant lets out a long, nasal sigh."];
+	  876 [label="You: \"His name's not really important. What matters is that he was a mercenary.\""];
+	  877 [label="Sunday Friend: \"Suffice it to say, that is *not* how we do things in Sur-la-Clef.\""];
+	  878 [label="Sunday Friend: \"Ah, well. Burglary is a serious violation of the right to property, but it is a *local* matter. Thus, the Moralintern need not get involved.\""];
+	  879 [label="Sunday Friend: \"Much as I'm inclined to believe you, I'm not sure my colleagues at the ICP will...\""];
+	  880 [label="You: \"He's already planning to go to war with Wild Pines. It's definitely the kind of thing he'd do.\""];
+	  881 [label="Sunday Friend: \"No, no, no. Evrart would have no need to dirty his hands in such a way...\""];
+	  882 [label="IsKimHere()"];
+	  883 [label="IsKimHere()", shape=diamond];
+	  884 [label="!(IsKimHere())", shape=diamond];
+	  885 [label="You: \"That's totally fine.\""];
+	  886 [label="Jump to: [main hub]"];
+	  887 [label="Sunday Friend: \"Stealing from misguided pseudo-scientists is unfortunate, but what does that have to do with corporate espionage?\""];
+	  888 [label="Sunday Friend: \"I suggest you work on your *investigative skills* a bit more before you go around accusing children of crimes.\""];
+	  889 [label="Sunday Friend: The man sighs. \"I only pray that the ICP apprehends this fugitive before more corporate secrets are lost...\""];
+	  890 [label="Kim Kitsuragi: \"You're right, sir. I'll be sure to give the detective an overview of proper police procedure.\" The lieutenant darts a quick glance in your direction."];
+	  891 [label="You: What happens to her is no business of mine."];
+	  892 [label="Empathy: That's it. She's done for. Au revoir, Klaasje."];
+	  893 [label="Sunday Friend: \"I would offer to connect you with the committee myself, but alas, I am not actually *in* Martinaise.\""];
+	  894 [label="Perception (Sight): What? Where is he, then?"];
+	  895 [label="Kim Kitsuragi: \"Hmmm, perhaps your young friends in the *tent* might be of assistance?\""];
+	  896 [label="Kim Kitsuragi: \"Hmmm, sounds like something that programmer we met in the church might be able to help with...\""];
+	  897 [label="Sunday Friend: \"Ah, well, I'm glad to hear that at least. It would really be *quite unusual* for you to have never noticed it before...\""];
+	  898 [label="Sunday Friend: \"I find it a great comfort to know there are benevolent powers watching over all, in strict accordance with the Wayfarer Act and the Bristelmüne Conventions.\""];
+	  899 [label="Sunday Friend: \"You mean Revachol? No, it's going to have transparent democracy.\""];
+	  900 [label="Sunday Friend: \"Listen,\" he says, raising his hand..."];
+	  901 [label="Sunday Friend: \"Sorry, who?\" The man throws a quick glance at his watch."];
+	  902 [label="You: \"That doesn't tell me anything.\""];
+	  903 [label="IsKimHere()"];
+	  904 [label="IsKimHere()", shape=diamond];
+	  905 [label="!(IsKimHere())", shape=diamond];
+	  906 [label="Sunday Friend: \"The Coalition believes in the importance of informing the public about the benefits of ze price stabilité. Transparency is one of our principles. Would you like an informational pamphlet?\""];
+	  907 [label="You: \"It 'didn't work' because the Coalition crushed it violently.\""];
+	  908 [label="Sunday Friend: \"Is this 'Option D' usually the most *reasonable* answer?\""];
+	  909 [label="You: \"Hold on, why can't we talk later?\""];
+	  910 [label="Sunday Friend: \"And my friend's not even your typical local -- definitely not just another Martin Martinaise or Raoul Revachol. Maybe that's why we're friends.\""];
+	  911 [label="Sunday Friend: \"I couldn't tell you exactly. Less than ten. Maybe eight?\""];
+	  912 [label="Jump to: [secondhub]"];
+	  913 [label="Variable[\"XP.figured_out_the_odd_sole\"]"];
+	  914 [label="Variable[\"XP.figured_out_the_odd_sole\"]", shape=diamond];
+	  915 [label="!(Variable[\"XP.figured_out_the_odd_sole\"])", shape=diamond];
+	  916 [label="Logic: That doesn't quite comport with what you know. Don't forget the lady driver!"];
+	  917 [label="You: \"Okay, but like, what does it stand for?\""];
+	  918 [label="Reaction Speed: That's why it's good."];
+	  919 [label="Kim Kitsuragi: \"Now let's go, before you get us into any *more* trouble.\""];
+	  920 [label="Sunday Friend: \"I have nothing to say to you. Get out of my sight.\""];
+	  921 [label="Sunday Friend: \"But rest assured: The Oranjese government has committed to producing a timetable that would lay out a path to transition to a professional army. Soon there'll be no need for mercenaries like this poor man.\""];
+	  922 [label="Jump to: [Lelyhub]"];
+	  923 [label="You: \"There are a bunch of speedfreaks lurking around the church. They confessed while high on drugs.\""];
+	  924 [label="Sunday Friend: \"As a common lorry driver, you say? Interesting. Are you sure?\""];
+	  925 [label="Reaction Speed: Was that... did the lieutenant just *snort*?"];
+	  926 [label="Sunday Friend: \"Officer, you shouldn't speak ill of the dead!\""];
+	  927 [label="You: \"He used reactionary slurs on my crime scene.\""];
+	  928 [label="Sunday Friend: \"What was that?\""];
+	  929 [label="Kim Kitsuragi: \"What the detective means is that he's proud to serve the RCM.\""];
+	  930 [label="Jump to: [main hub]"];
+	  931 [label="Sunday Friend: \"I understand that you're here to investigate a *murder*,\" the man says, his face grave, \"but I must impress upon you the *seriousness* of this matter...\""];
+	  932 [label="Esprit de Corps: The bald man squints at a file, then returns it to the cabinet. A new drawer opens with a grinding screech. He turns back to the redhead in the doorway. \"What made you think of him now?\""];
+	  933 [label="You: \"Oooh...\" (Turn to Kim.) \"So we're actually working for the Moralintern? That doesn't seem so bad.\""];
+	  934 [label="You: \"I'm trying to form a committee to assign *la responsabilité*.\""];
+	  935 [label="Sunday Friend: \"Isn't it? A triumph of both technical ingenuity and international cooperation. I, for one, feel much safer knowing it's up there, watching all of us.\""];
+	  936 [label="Sunday Friend: \"Unfortunately not, no, I don't have the pleasure. I am merely a representative of the Coalition Government, not very well-versed in technology...\""];
+	  937 [label="Sunday Friend: \"Well, of course it *is* a heavily armed and armoured warship with a full complement. But I assure you its purpose in Revachol is to *keep* the peace, not disturb it.\""];
+	  938 [label="Empathy: You *will* figure it out. Something tells you the person you're looking for is already on this coast..."];
+	  939 [label="You: \"How am I supposed to contact the Committee then?\""];
+	  940 [label="Conceptualization: No, it's more like a creature from the abyssopelagic zone, a great dark bioluminescent fish..."];
+	  941 [label="Encyclopedia: The Bristelmüne Conventions are a series of international agreements governing the treatment of military personnel and civilians in theatres of war as well as occupied territories. In practice, they are more talked about than observed."];
+	  942 [label="Jump to: [friend hub]"];
+	  943 [label="Perception (Hearing): Waves crashing in the distance, the sound of sea below the window."];
+	  944 [label="You: \"Isn't it rude for your friend to leave you alone like this?\""];
+	  945 [label="Jump to: [friend hub]"];
+	  946 [label="You: \"Okay, but what are you doing *here* in this apartment?\""];
+	  947 [label="You: \"Below 2% of what?\""];
+	  948 [label="Sunday Friend: \"Because moralists believe in a normal, stable world governed by democratic values.\""];
+	  949 [label="somehub"];
+	  950 [label="You: \"Tell me about Sur-la-Clef.\""];
+	  951 [label="You: (Get down to business.) \"Hello, Mr. Villedrouin. Let's get started.\""];
+	  952 [label="Sunday Friend: \"Moreover, it is a great sponsor of less-emerged countries. Revachol is only one of its many darlings whose progress it supports and cherishes.\""];
+	  953 [label="Kim Kitsuragi: The lieutenant sends you a sharp look at the mention of that number."];
+	  954 [label="IsKimHere()"];
+	  955 [label="IsKimHere()", shape=diamond];
+	  956 [label="!(IsKimHere())", shape=diamond];
+	  957 [label="Sunday Friend: \"It's possible, officer, but I cannot say with certainty. It was very dark, you must remember.\""];
+	  958 [label="Sunday Friend: The man wipes his glasses. \"You're right, of course. That is what one is supposed to do in such circumstances. I was simply in shock...\""];
+	  959 [label="Sunday Friend: \"Take your daily bread, *par example*. Too much inflation, bread becomes too expensive; too much deflation, it becomes too cheap for bakers to produce...\""];
+	  960 [label="You: \"His name was Lely.\""];
+	  961 [label="Esprit de Corps: He won't tell you how to do your job, but a good police officer knows when to listen to his partner."];
+	  962 [label="Variable[\"apt.sunday_said_hypothetically\"]"];
+	  963 [label="Variable[\"apt.sunday_said_hypothetically\"]", shape=diamond];
+	  964 [label="!(Variable[\"apt.sunday_said_hypothetically\"])", shape=diamond];
+	  965 [label="Kim Kitsuragi: \"A moment, if you don't mind, sir.\" The lieutenant pulls you aside."];
+	  966 [label="Sunday Friend: \"You think it's 'fine' that Martinaise is a safe haven for international fugitives? You know, concern for the rule of law is one of the Moralintern's main criteria for admission into EPIS...\""];
+	  967 [label="Sunday Friend: \"What proof do you have that this *child* is involved in corporate espionage?\""];
+	  968 [label="Sunday Friend: \"Now, was there anything else you wished to discuss?\""];
+	  969 [label="You: (Turn to Kim.) \"So when I said I was a thrall to foreign interests, what I should have said is that I'm a Moralintern bitch?\""];
+	  0 -> 1
+	  1 -> 209
+	  2 -> 229
+	  3 -> 850
+	  4 -> 899
+	  5 -> 902
+	  6 -> 594
+	  7 -> 388
+	  8 -> 661
+	  9 -> 909
+	  10 -> 11
+	  10 -> 12
+	  11 -> 432
+	  12 -> 667
+	  13 -> 607
+	  14 -> 16
+	  14 -> 15
+	  15 -> 604
+	  16 -> 432
+	  17 -> 607
+	  18 -> 432
+	  19 -> 616
+	  20 -> 21
+	  20 -> 22
+	  21 -> 310
+	  22 -> 873
+	  23 -> 24
+	  23 -> 25
+	  24 -> 556
+	  25 -> 783
+	  26 -> 27
+	  26 -> 261
+	  27 -> 461
+	  28 -> 213
+	  29 -> 961
+	  29 -> 418
+	  29 -> 773
+	  29 -> 717
+	  29 -> 462
+	  29 -> 557
+	  29 -> 760
+	  29 -> 28
+	  29 -> 829
+	  30 -> 467
+	  31 -> 312
+	  32 -> 214
+	  33 -> 692
+	  34 -> 35
+	  34 -> 36
+	  35 -> 793
+	  36 -> 493
+	  37 -> 322
+	  38 -> 126
+	  39 -> 507
+	  40 -> 224
+	  41 -> 425
+	  42 -> 841
+	  43 -> 372
+	  44 -> 166
+	  45 -> 574
+	  46 -> 703
+	  47 -> 178
+	  48 -> 709
+	  49 -> 50
+	  49 -> 51
+	  50 -> 855
+	  51 -> 641
+	  52 -> 811
+	  53 -> 432
+	  54 -> 808
+	  55 -> 185
+	  56 -> 381
+	  57 -> 299
+	  58 -> 441
+	  59 -> 191
+	  60 -> 7
+	  61 -> 188
+	  62 -> 10
+	  63 -> 10
+	  64 -> 65
+	  64 -> 66
+	  65 -> 67
+	  66 -> 182
+	  67 -> 911
+	  68 -> 862
+	  69 -> 400
+	  70 -> 2
+	  71 -> 535
+	  72 -> 485
+	  73 -> 451
+	  74 -> 75
+	  74 -> 76
+	  75 -> 257
+	  76 -> 868
+	  77 -> 825
+	  78 -> 304
+	  79 -> 29
+	  80 -> 623
+	  81 -> 495
+	  82 -> 880
+	  83 -> 880
+	  84 -> 880
+	  85 -> 759
+	  86 -> 432
+	  87 -> 350
+	  88 -> 931
+	  89 -> 932
+	  90 -> 797
+	  91 -> 750
+	  92 -> 432
+	  93 -> 225
+	  94 -> 29
+	  95 -> 302
+	  96 -> 97
+	  97 -> 230
+	  98 -> 230
+	  99 -> 175
+	  100 -> 283
+	  101 -> 235
+	  102 -> 647
+	  103 -> 104
+	  103 -> 105
+	  104 -> 770
+	  105 -> 955
+	  106 -> 812
+	  107 -> 433
+	  107 -> 295
+	  108 -> 109
+	  109 -> 524
+	  110 -> 26
+	  111 -> 446
+	  112 -> 721
+	  113 -> 114
+	  113 -> 115
+	  114 -> 737
+	  115 -> 734
+	  116 -> 277
+	  117 -> 74
+	  118 -> 20
+	  119 -> 453
+	  120 -> 617
+	  121 -> 205
+	  122 -> 81
+	  122 -> 123
+	  123 -> 879
+	  124 -> 432
+	  125 -> 466
+	  125 -> 271
+	  126 -> 316
+	  127 -> 762
+	  128 -> 509
+	  129 -> 225
+	  130 -> 276
+	  131 -> 647
+	  132 -> 256
+	  132 -> 73
+	  133 -> 709
+	  134 -> 332
+	  135 -> 138
+	  136 -> 555
+	  137 -> 181
+	  138 -> 724
+	  139 -> 241
+	  139 -> 651
+	  139 -> 774
+	  140 -> 725
+	  141 -> 388
+	  142 -> 657
+	  143 -> 202
+	  144 -> 529
+	  145 -> 432
+	  146 -> 147
+	  146 -> 148
+	  147 -> 112
+	  148 -> 721
+	  149 -> 197
+	  149 -> 13
+	  149 -> 17
+	  149 -> 819
+	  149 -> 952
+	  149 -> 733
+	  150 -> 608
+	  151 -> 364
+	  152 -> 484
+	  153 -> 258
+	  154 -> 959
+	  155 -> 342
+	  156 -> 746
+	  157 -> 124
+	  158 -> 493
+	  159 -> 797
+	  160 -> 221
+	  160 -> 758
+	  161 -> 502
+	  162 -> 44
+	  163 -> 164
+	  163 -> 165
+	  164 -> 930
+	  165 -> 633
+	  166 -> 374
+	  167 -> 168
+	  167 -> 169
+	  168 -> 844
+	  169 -> 700
+	  171 -> 130
+	  172 -> 512
+	  173 -> 701
+	  174 -> 99
+	  175 -> 176
+	  175 -> 177
+	  176 -> 470
+	  177 -> 804
+	  178 -> 805
+	  179 -> 937
+	  180 -> 432
+	  181 -> 240
+	  182 -> 650
+	  183 -> 360
+	  184 -> 340
+	  185 -> 439
+	  186 -> 386
+	  187 -> 647
+	  188 -> 489
+	  188 -> 660
+	  188 -> 244
+	  189 -> 388
+	  190 -> 391
+	  191 -> 60
+	  192 -> 950
+	  193 -> 818
+	  194 -> 195
+	  194 -> 196
+	  195 -> 399
+	  196 -> 533
+	  197 -> 606
+	  198 -> 820
+	  199 -> 200
+	  199 -> 201
+	  200 -> 790
+	  201 -> 914
+	  202 -> 203
+	  202 -> 204
+	  203 -> 740
+	  204 -> 481
+	  205 -> 206
+	  205 -> 207
+	  206 -> 307
+	  207 -> 383
+	  208 -> 845
+	  209 -> 210
+	  209 -> 211
+	  210 -> 921
+	  211 -> 718
+	  212 -> 34
+	  213 -> 157
+	  214 -> 313
+	  214 -> 749
+	  214 -> 366
+	  215 -> 226
+	  216 -> 963
+	  217 -> 830
+	  218 -> 219
+	  218 -> 220
+	  219 -> 966
+	  220 -> 698
+	  221 -> 883
+	  222 -> 505
+	  223 -> 507
+	  224 -> 889
+	  225 -> 834
+	  226 -> 432
+	  227 -> 880
+	  228 -> 302
+	  229 -> 410
+	  230 -> 940
+	  230 -> 101
+	  230 -> 47
+	  231 -> 703
+	  232 -> 233
+	  232 -> 234
+	  233 -> 897
+	  234 -> 636
+	  235 -> 583
+	  236 -> 237
+	  236 -> 238
+	  237 -> 767
+	  238 -> 821
+	  239 -> 745
+	  240 -> 943
+	  241 -> 338
+	  242 -> 827
+	  243 -> 603
+	  244 -> 815
+	  245 -> 346
+	  246 -> 248
+	  246 -> 247
+	  247 -> 63
+	  248 -> 180
+	  249 -> 23
+	  250 -> 298
+	  250 -> 732
+	  251 -> 32
+	  252 -> 400
+	  253 -> 236
+	  254 -> 642
+	  255 -> 912
+	  256 -> 867
+	  257 -> 540
+	  258 -> 801
+	  259 -> 550
+	  260 -> 488
+	  261 -> 417
+	  262 -> 30
+	  263 -> 492
+	  264 -> 922
+	  265 -> 831
+	  266 -> 420
+	  267 -> 925
+	  268 -> 830
+	  269 -> 886
+	  269 -> 222
+	  270 -> 84
+	  270 -> 693
+	  271 -> 695
+	  272 -> 39
+	  273 -> 224
+	  274 -> 128
+	  275 -> 170
+	  276 -> 345
+	  277 -> 278
+	  277 -> 279
+	  278 -> 132
+	  279 -> 256
+	  279 -> 73
+	  280 -> 103
+	  281 -> 287
+	  282 -> 898
+	  283 -> 230
+	  284 -> 285
+	  284 -> 286
+	  285 -> 702
+	  286 -> 939
+	  287 -> 705
+	  288 -> 581
+	  289 -> 936
+	  290 -> 291
+	  290 -> 292
+	  291 -> 330
+	  292 -> 329
+	  293 -> 135
+	  294 -> 136
+	  295 -> 776
+	  296 -> 778
+	  297 -> 8
+	  298 -> 447
+	  299 -> 599
+	  300 -> 678
+	  301 -> 308
+	  302 -> 611
+	  302 -> 452
+	  302 -> 541
+	  303 -> 546
+	  304 -> 305
+	  304 -> 306
+	  305 -> 826
+	  306 -> 901
+	  307 -> 361
+	  308 -> 618
+	  309 -> 920
+	  310 -> 545
+	  311 -> 545
+	  312 -> 265
+	  312 -> 494
+	  313 -> 495
+	  314 -> 368
+	  315 -> 565
+	  316 -> 29
+	  317 -> 29
+	  318 -> 319
+	  319 -> 887
+	  320 -> 763
+	  321 -> 632
+	  322 -> 323
+	  323 -> 497
+	  323 -> 628
+	  324 -> 894
+	  325 -> 96
+	  325 -> 469
+	  325 -> 173
+	  325 -> 174
+	  326 -> 379
+	  327 -> 515
+	  328 -> 640
+	  328 -> 289
+	  328 -> 711
+	  328 -> 472
+	  329 -> 282
+	  329 -> 471
+	  330 -> 941
+	  331 -> 410
+	  332 -> 709
+	  333 -> 334
+	  333 -> 335
+	  334 -> 139
+	  335 -> 589
+	  336 -> 722
+	  337 -> 183
+	  338 -> 137
+	  338 -> 140
+	  339 -> 647
+	  340 -> 432
+	  341 -> 414
+	  342 -> 597
+	  343 -> 615
+	  344 -> 155
+	  344 -> 948
+	  345 -> 816
+	  345 -> 598
+	  346 -> 60
+	  347 -> 848
+	  348 -> 397
+	  349 -> 113
+	  350 -> 280
+	  351 -> 714
+	  352 -> 828
+	  353 -> 72
+	  354 -> 867
+	  355 -> 256
+	  355 -> 73
+	  355 -> 610
+	  356 -> 358
+	  356 -> 359
+	  357 -> 739
+	  358 -> 260
+	  358 -> 551
+	  359 -> 435
+	  360 -> 362
+	  360 -> 363
+	  361 -> 919
+	  362 -> 634
+	  363 -> 618
+	  364 -> 212
+	  364 -> 263
+	  364 -> 559
+	  365 -> 122
+	  366 -> 629
+	  367 -> 881
+	  367 -> 691
+	  368 -> 498
+	  369 -> 85
+	  370 -> 888
+	  371 -> 890
+	  372 -> 432
+	  373 -> 432
+	  374 -> 699
+	  375 -> 797
+	  376 -> 514
+	  377 -> 704
+	  378 -> 516
+	  379 -> 918
+	  379 -> 775
+	  380 -> 900
+	  381 -> 436
+	  382 -> 337
+	  383 -> 338
+	  384 -> 242
+	  385 -> 946
+	  386 -> 477
+	  387 -> 779
+	  387 -> 653
+	  387 -> 814
+	  387 -> 590
+	  387 -> 947
+	  387 -> 726
+	  387 -> 951
+	  387 -> 858
+	  388 -> 960
+	  389 -> 250
+	  390 -> 60
+	  391 -> 297
+	  392 -> 394
+	  392 -> 395
+	  393 -> 180
+	  394 -> 664
+	  395 -> 953
+	  396 -> 193
+	  397 -> 432
+	  398 -> 785
+	  399 -> 401
+	  399 -> 402
+	  400 -> 605
+	  401 -> 432
+	  402 -> 404
+	  402 -> 405
+	  403 -> 252
+	  404 -> 400
+	  405 -> 536
+	  405 -> 253
+	  406 -> 450
+	  407 -> 460
+	  408 -> 958
+	  409 -> 483
+	  409 -> 70
+	  409 -> 71
+	  410 -> 612
+	  411 -> 738
+	  412 -> 904
+	  413 -> 479
+	  414 -> 552
+	  414 -> 349
+	  415 -> 824
+	  415 -> 459
+	  416 -> 685
+	  417 -> 687
+	  418 -> 499
+	  419 -> 893
+	  420 -> 422
+	  421 -> 14
+	  422 -> 90
+	  423 -> 893
+	  424 -> 765
+	  425 -> 697
+	  426 -> 432
+	  427 -> 575
+	  428 -> 275
+	  429 -> 713
+	  430 -> 484
+	  431 -> 448
+	  431 -> 935
+	  431 -> 110
+	  431 -> 622
+	  431 -> 144
+	  431 -> 54
+	  431 -> 58
+	  432 -> 649
+	  433 -> 475
+	  434 -> 647
+	  435 -> 437
+	  435 -> 438
+	  436 -> 944
+	  437 -> 651
+	  438 -> 856
+	  439 -> 145
+	  440 -> 534
+	  441 -> 60
+	  442 -> 526
+	  443 -> 601
+	  444 -> 658
+	  444 -> 443
+	  446 -> 68
+	  447 -> 864
+	  448 -> 866
+	  449 -> 618
+	  450 -> 256
+	  450 -> 610
+	  451 -> 118
+	  452 -> 818
+	  453 -> 872
+	  454 -> 554
+	  455 -> 457
+	  455 -> 458
+	  456 -> 683
+	  457 -> 663
+	  458 -> 77
+	  459 -> 618
+	  460 -> 427
+	  461 -> 927
+	  462 -> 160
+	  463 -> 759
+	  464 -> 759
+	  465 -> 833
+	  466 -> 29
+	  467 -> 228
+	  468 -> 98
+	  469 -> 804
+	  470 -> 582
+	  471 -> 938
+	  472 -> 53
+	  473 -> 137
+	  474 -> 55
+	  475 -> 184
+	  476 -> 336
+	  476 -> 385
+	  477 -> 189
+	  478 -> 60
+	  479 -> 392
+	  480 -> 60
+	  481 -> 528
+	  482 -> 198
+	  483 -> 609
+	  483 -> 355
+	  483 -> 52
+	  483 -> 255
+	  484 -> 484
+	  485 -> 545
+	  486 -> 411
+	  487 -> 18
+	  488 -> 823
+	  489 -> 600
+	  489 -> 392
+	  490 -> 877
+	  490 -> 621
+	  491 -> 830
+	  492 -> 268
+	  493 -> 831
+	  494 -> 91
+	  495 -> 79
+	  496 -> 690
+	  497 -> 631
+	  498 -> 500
+	  498 -> 501
+	  499 -> 795
+	  500 -> 880
+	  501 -> 504
+	  501 -> 503
+	  502 -> 38
+	  503 -> 126
+	  504 -> 318
+	  505 -> 507
+	  506 -> 40
+	  506 -> 273
+	  506 -> 320
+	  507 -> 163
+	  508 -> 92
+	  509 -> 933
+	  510 -> 276
+	  511 -> 45
+	  512 -> 766
+	  513 -> 325
+	  514 -> 46
+	  515 -> 709
+	  516 -> 807
+	  517 -> 520
+	  517 -> 519
+	  518 -> 327
+	  519 -> 712
+	  520 -> 254
+	  521 -> 134
+	  522 -> 4
+	  523 -> 647
+	  524 -> 478
+	  525 -> 658
+	  526 -> 456
+	  527 -> 731
+	  528 -> 530
+	  528 -> 531
+	  529 -> 23
+	  530 -> 482
+	  531 -> 643
+	  532 -> 149
+	  533 -> 388
+	  534 -> 406
+	  535 -> 198
+	  536 -> 538
+	  536 -> 539
+	  537 -> 356
+	  538 -> 485
+	  539 -> 302
+	  540 -> 869
+	  541 -> 544
+	  541 -> 543
+	  542 -> 153
+	  543 -> 258
+	  544 -> 154
+	  544 -> 870
+	  545 -> 547
+	  545 -> 548
+	  546 -> 487
+	  547 -> 791
+	  548 -> 412
+	  549 -> 18
+	  550 -> 550
+	  551 -> 119
+	  552 -> 455
+	  553 -> 490
+	  554 -> 380
+	  556 -> 365
+	  557 -> 262
+	  558 -> 492
+	  559 -> 561
+	  559 -> 562
+	  560 -> 689
+	  560 -> 251
+	  561 -> 32
+	  562 -> 567
+	  563 -> 837
+	  564 -> 962
+	  565 -> 166
+	  566 -> 88
+	  567 -> 569
+	  567 -> 570
+	  568 -> 891
+	  569 -> 129
+	  570 -> 572
+	  570 -> 573
+	  571 -> 172
+	  571 -> 375
+	  572 -> 797
+	  573 -> 892
+	  573 -> 428
+	  574 -> 376
+	  575 -> 577
+	  575 -> 970
+	  575 -> 171
+	  575 -> 934
+	  576 -> 130
+	  577 -> 579
+	  577 -> 580
+	  578 -> 377
+	  579 -> 514
+	  580 -> 705
+	  581 -> 133
+	  582 -> 516
+	  583 -> 708
+	  584 -> 586
+	  584 -> 587
+	  585 -> 331
+	  586 -> 410
+	  587 -> 647
+	  588 -> 384
+	  589 -> 6
+	  590 -> 592
+	  590 -> 593
+	  591 -> 243
+	  592 -> 603
+	  593 -> 595
+	  593 -> 596
+	  594 -> 189
+	  595 -> 525
+	  596 -> 907
+	  597 -> 949
+	  598 -> 388
+	  599 -> 480
+	  600 -> 9
+	  600 -> 527
+	  600 -> 61
+	  600 -> 143
+	  601 -> 812
+	  602 -> 388
+	  603 -> 194
+	  604 -> 432
+	  605 -> 863
+	  606 -> 350
+	  607 -> 351
+	  608 -> 354
+	  609 -> 116
+	  610 -> 542
+	  611 -> 613
+	  611 -> 614
+	  612 -> 549
+	  613 -> 738
+	  614 -> 19
+	  615 -> 388
+	  616 -> 742
+	  617 -> 619
+	  617 -> 620
+	  618 -> 309
+	  619 -> 208
+	  620 -> 558
+	  621 -> 670
+	  622 -> 86
+	  623 -> 367
+	  624 -> 626
+	  624 -> 627
+	  625 -> 756
+	  626 -> 624
+	  627 -> 315
+	  628 -> 968
+	  629 -> 94
+	  630 -> 840
+	  631 -> 566
+	  632 -> 426
+	  633 -> 120
+	  633 -> 383
+	  634 -> 141
+	  635 -> 850
+	  636 -> 638
+	  636 -> 639
+	  637 -> 896
+	  638 -> 3
+	  639 -> 430
+	  640 -> 290
+	  641 -> 865
+	  641 -> 788
+	  642 -> 644
+	  642 -> 645
+	  643 -> 249
+	  644 -> 769
+	  645 -> 877
+	  646 -> 741
+	  646 -> 5
+	  646 -> 293
+	  646 -> 813
+	  646 -> 476
+	  647 -> 901
+	  648 -> 121
+	  649 -> 336
+	  649 -> 385
+	  650 -> 338
+	  651 -> 339
+	  652 -> 57
+	  653 -> 345
+	  654 -> 682
+	  654 -> 903
+	  655 -> 442
+	  656 -> 344
+	  657 -> 390
+	  658 -> 656
+	  659 -> 190
+	  660 -> 444
+	  661 -> 479
+	  662 -> 659
+	  662 -> 908
+	  662 -> 245
+	  663 -> 665
+	  663 -> 666
+	  664 -> 62
+	  665 -> 246
+	  666 -> 668
+	  666 -> 669
+	  667 -> 398
+	  668 -> 432
+	  669 -> 688
+	  670 -> 672
+	  670 -> 673
+	  671 -> 152
+	  672 -> 786
+	  673 -> 675
+	  673 -> 676
+	  674 -> 150
+	  675 -> 787
+	  675 -> 677
+	  676 -> 608
+	  677 -> 351
+	  678 -> 680
+	  678 -> 681
+	  679 -> 954
+	  680 -> 537
+	  681 -> 727
+	  682 -> 663
+	  683 -> 618
+	  684 -> 29
+	  685 -> 831
+	  686 -> 878
+	  687 -> 560
+	  688 -> 32
+	  689 -> 565
+	  690 -> 369
+	  691 -> 83
+	  691 -> 227
+	  692 -> 880
+	  693 -> 370
+	  694 -> 317
+	  695 -> 424
+	  696 -> 509
+	  697 -> 571
+	  698 -> 45
+	  699 -> 835
+	  700 -> 230
+	  701 -> 850
+	  702 -> 328
+	  703 -> 230
+	  704 -> 706
+	  704 -> 707
+	  705 -> 232
+	  706 -> 852
+	  707 -> 288
+	  707 -> 281
+	  707 -> 179
+	  708 -> 522
+	  708 -> 523
+	  708 -> 517
+	  708 -> 710
+	  709 -> 806
+	  710 -> 851
+	  711 -> 282
+	  711 -> 471
+	  712 -> 709
+	  713 -> 715
+	  713 -> 716
+	  714 -> 239
+	  715 -> 745
+	  716 -> 646
+	  717 -> 720
+	  717 -> 719
+	  718 -> 393
+	  719 -> 859
+	  720 -> 421
+	  721 -> 385
+	  722 -> 64
+	  723 -> 296
+	  723 -> 294
+	  724 -> 474
+	  725 -> 728
+	  726 -> 413
+	  727 -> 798
+	  728 -> 615
+	  729 -> 662
+	  730 -> 532
+	  730 -> 910
+	  730 -> 111
+	  731 -> 784
+	  732 -> 87
+	  733 -> 736
+	  733 -> 735
+	  734 -> 252
+	  735 -> 400
+	  736 -> 403
+	  737 -> 822
+	  738 -> 259
+	  739 -> 481
+	  740 -> 777
+	  741 -> 744
+	  741 -> 743
+	  742 -> 156
+	  743 -> 746
+	  744 -> 618
+	  745 -> 747
+	  745 -> 748
+	  746 -> 876
+	  747 -> 435
+	  748 -> 751
+	  749 -> 218
+	  750 -> 792
+	  750 -> 80
+	  751 -> 753
+	  752 -> 754
+	  752 -> 755
+	  753 -> 625
+	  754 -> 625
+	  755 -> 33
+	  755 -> 314
+	  755 -> 267
+	  755 -> 924
+	  756 -> 217
+	  757 -> 465
+	  758 -> 29
+	  759 -> 125
+	  760 -> 506
+	  761 -> 507
+	  762 -> 889
+	  763 -> 632
+	  764 -> 509
+	  765 -> 324
+	  766 -> 521
+	  767 -> 449
+	  767 -> 300
+	  769 -> 771
+	  769 -> 772
+	  770 -> 431
+	  771 -> 484
+	  772 -> 30
+	  773 -> 384
+	  774 -> 56
+	  775 -> 131
+	  776 -> 648
+	  776 -> 945
+	  776 -> 78
+	  777 -> 652
+	  778 -> 445
+	  779 -> 781
+	  779 -> 782
+	  780 -> 602
+	  781 -> 106
+	  783 -> 591
+	  784 -> 149
+	  785 -> 484
+	  786 -> 608
+	  787 -> 866
+	  788 -> 684
+	  789 -> 409
+	  790 -> 411
+	  791 -> 495
+	  792 -> 757
+	  792 -> 158
+	  793 -> 563
+	  794 -> 926
+	  795 -> 423
+	  796 -> 266
+	  796 -> 752
+	  796 -> 696
+	  796 -> 89
+	  796 -> 216
+	  797 -> 800
+	  797 -> 799
+	  798 -> 576
+	  799 -> 654
+	  800 -> 802
+	  800 -> 803
+	  801 -> 468
+	  802 -> 228
+	  803 -> 378
+	  803 -> 100
+	  804 -> 516
+	  805 -> 49
+	  806 -> 584
+	  807 -> 809
+	  807 -> 810
+	  808 -> 102
+	  809 -> 588
+	  810 -> 473
+	  811 -> 146
+	  812 -> 107
+	  813 -> 655
+	  814 -> 391
+	  815 -> 192
+	  816 -> 812
+	  817 -> 388
+	  818 -> 606
+	  819 -> 674
+	  820 -> 768
+	  821 -> 357
+	  822 -> 391
+	  823 -> 56
+	  824 -> 56
+	  825 -> 901
+	  826 -> 186
+	  827 -> 618
+	  828 -> 264
+	  829 -> 29
+	  830 -> 923
+	  831 -> 630
+	  832 -> 161
+	  833 -> 432
+	  834 -> 321
+	  834 -> 162
+	  834 -> 764
+	  834 -> 836
+	  835 -> 929
+	  836 -> 838
+	  836 -> 839
+	  837 -> 796
+	  838 -> 423
+	  839 -> 269
+	  840 -> 842
+	  840 -> 843
+	  841 -> 43
+	  842 -> 890
+	  843 -> 700
+	  844 -> 846
+	  844 -> 847
+	  845 -> 510
+	  847 -> 532
+	  847 -> 111
+	  848 -> 432
+	  849 -> 849
+	  850 -> 713
+	  851 -> 853
+	  851 -> 854
+	  852 -> 637
+	  853 -> 284
+	  854 -> 518
+	  855 -> 187
+	  856 -> 635
+	  857 -> 440
+	  858 -> 860
+	  858 -> 861
+	  859 -> 817
+	  860 -> 780
+	  861 -> 591
+	  862 -> 350
+	  863 -> 585
+	  864 -> 678
+	  865 -> 352
+	  865 -> 353
+	  865 -> 301
+	  865 -> 789
+	  865 -> 407
+	  865 -> 408
+	  865 -> 151
+	  866 -> 117
+	  867 -> 540
+	  868 -> 199
+	  869 -> 303
+	  870 -> 960
+	  871 -> 553
+	  872 -> 874
+	  872 -> 875
+	  873 -> 311
+	  874 -> 486
+	  875 -> 435
+	  876 -> 30
+	  877 -> 496
+	  878 -> 215
+	  879 -> 269
+	  880 -> 882
+	  881 -> 498
+	  882 -> 884
+	  882 -> 885
+	  883 -> 694
+	  884 -> 464
+	  885 -> 967
+	  886 -> 432
+	  887 -> 507
+	  888 -> 568
+	  889 -> 969
+	  890 -> 93
+	  891 -> 575
+	  892 -> 167
+	  893 -> 895
+	  894 -> 578
+	  895 -> 850
+	  896 -> 850
+	  897 -> 133
+	  898 -> 942
+	  899 -> 434
+	  900 -> 382
+	  901 -> 723
+	  901 -> 387
+	  902 -> 727
+	  903 -> 905
+	  903 -> 906
+	  904 -> 142
+	  905 -> 389
+	  905 -> 871
+	  906 -> 729
+	  906 -> 343
+	  907 -> 59
+	  908 -> 730
+	  908 -> 341
+	  909 -> 348
+	  910 -> 650
+	  911 -> 679
+	  912 -> 302
+	  913 -> 915
+	  913 -> 916
+	  914 -> 917
+	  915 -> 95
+	  916 -> 409
+	  917 -> 416
+	  918 -> 634
+	  919 -> 208
+	  921 -> 686
+	  921 -> 31
+	  922 -> 29
+	  923 -> 270
+	  924 -> 82
+	  924 -> 419
+	  925 -> 880
+	  926 -> 832
+	  926 -> 463
+	  927 -> 223
+	  928 -> 41
+	  928 -> 508
+	  929 -> 274
+	  930 -> 432
+	  931 -> 42
+	  932 -> 429
+	  933 -> 511
+	  934 -> 513
+	  935 -> 713
+	  936 -> 705
+	  937 -> 713
+	  938 -> 850
+	  939 -> 326
+	  940 -> 231
+	  941 -> 48
+	  942 -> 647
+	  943 -> 333
+	  944 -> 108
+	  945 -> 647
+	  946 -> 857
+	  947 -> 342
+	  948 -> 950
+	  949 -> 600
+	  949 -> 392
+	  949 -> 454
+	  950 -> 396
+	  951 -> 69
+	  952 -> 415
+	  953 -> 256
+	  953 -> 73
+	  953 -> 610
+	  954 -> 956
+	  954 -> 957
+	  955 -> 671
+	  956 -> 484
+	  957 -> 913
+	  958 -> 303
+	  959 -> 344
+	  960 -> 491
+	  961 -> 159
+	  962 -> 964
+	  962 -> 965
+	  963 -> 794
+	  964 -> 564
+	  965 -> 37
+	  966 -> 318
+	  967 -> 928
+	  967 -> 272
+	  967 -> 371
+	  967 -> 761
+	  967 -> 127
+	  968 -> 373
+	  969 -> 130
+}
+

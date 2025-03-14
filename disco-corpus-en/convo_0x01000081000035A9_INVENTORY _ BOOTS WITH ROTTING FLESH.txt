@@ -1,0 +1,100 @@
+# INVENTORY / BOOTS WITH ROTTING FLESH
+# You can look at these boots closely if you dare.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Boots with Rotting Flesh: Even less pleasant now that you know the name of the man pieces of whose flesh are still stuck to the insides of the boots."];
+	  3 [label="Variable[\"TASK.run_serial_number\"]"];
+	  4 [label="Variable[\"TASK.run_serial_number\"]", shape=diamond];
+	  5 [label="!(Variable[\"TASK.run_serial_number\"])", shape=diamond];
+	  6 [label="You: [Put the boots away.]"];
+	  7 [label="Boots with Rotting Flesh: These boots were probably left on the corpse because they were impossible to pull off while it was hanging. They're not exactly pleasant to look at right now, much less smell."];
+	  8 [label="Variable[\"TASK.run_serial_number\"]  and  Variable[\"plaza.serial_number_1\"]"];
+	  9 [label="Variable[\"TASK.run_serial_number\"]  and  Variable[\"plaza.serial_number_1\"]", shape=diamond];
+	  10 [label="!(Variable[\"TASK.run_serial_number\"]  and  Variable[\"plaza.serial_number_1\"])", shape=diamond];
+	  11 [label="Jump to: [what_to_do_hub]"];
+	  12 [label="Boots with Rotting Flesh: Hopefully you will know who they belonged to very soon."];
+	  13 [label="Variable[\"plaza.kineema_serial_given_fake\"]"];
+	  14 [label="Variable[\"plaza.kineema_serial_given_fake\"]", shape=diamond];
+	  15 [label="!(Variable[\"plaza.kineema_serial_given_fake\"])", shape=diamond];
+	  16 [label="You: Look at the soles of the boots."];
+	  17 [label="Boots with Rotting Flesh: \"Fairweather T-500 / VE\" is imprinted under each heel."];
+	  18 [label="look_it_up"];
+	  19 [label="You: Isn't there a saying about walking in another man's shoes?"];
+	  20 [label="Boots with Rotting Flesh: The size seems about right. Once you get the foul-smelling flesh-gunk out."];
+	  21 [label="Jump to: [look_it_up]"];
+	  22 [label="Variable[\"TASK.run_serial_number_personal_info_done\"]"];
+	  23 [label="Variable[\"TASK.run_serial_number_personal_info_done\"]", shape=diamond];
+	  24 [label="!(Variable[\"TASK.run_serial_number_personal_info_done\"])", shape=diamond];
+	  25 [label="Boots with Rotting Flesh: You've seen too much to be that naive, even if you don't remember it. You'll never know what it was like to be him."];
+	  26 [label="You: Look inside the boots."];
+	  27 [label="Boots with Rotting Flesh: All those graceful whorls again, and the serial number hidden among them."];
+	  28 [label="Boots with Rotting Flesh: Still just pieces of sock and rotting cadaver."];
+	  29 [label="Boots with Rotting Flesh: You'll know more about them once you run the serial number you found."];
+	  30 [label="Boots with Rotting Flesh: Graceful whorls cover the boots' glossy surface. These will be gorgeous once you get them clean."];
+	  31 [label="what_to_do_hub"];
+	  32 [label="Variable[\"TASK.run_serial_number_personal_info\"]"];
+	  33 [label="Variable[\"TASK.run_serial_number_personal_info\"]", shape=diamond];
+	  34 [label="!(Variable[\"TASK.run_serial_number_personal_info\"])", shape=diamond];
+	  35 [label="Boots with Rotting Flesh: You missed your chance to learn more about them by telling Alice the wrong serial number."];
+	  36 [label="Boots with Rotting Flesh: Hopefully soon you'll know more about them."];
+	  37 [label="Variable[\"yard.hanged_serial_number_seen\"] == false"];
+	  38 [label="Variable[\"yard.hanged_serial_number_seen\"] == false", shape=diamond];
+	  39 [label="!(Variable[\"yard.hanged_serial_number_seen\"] == false)", shape=diamond];
+	  40 [label="You: Look the boots over carefully."];
+	  41 [label="You: Will I ever be able to wear them?"];
+	  0 -> 1
+	  1 -> 7
+	  2 -> 31
+	  3 -> 4
+	  3 -> 5
+	  4 -> 29
+	  5 -> 18
+	  7 -> 22
+	  8 -> 9
+	  8 -> 10
+	  9 -> 36
+	  10 -> 3
+	  11 -> 31
+	  12 -> 31
+	  13 -> 14
+	  13 -> 15
+	  14 -> 35
+	  15 -> 8
+	  16 -> 17
+	  17 -> 21
+	  18 -> 40
+	  18 -> 16
+	  18 -> 26
+	  18 -> 6
+	  19 -> 25
+	  20 -> 11
+	  21 -> 18
+	  22 -> 24
+	  22 -> 23
+	  23 -> 2
+	  24 -> 32
+	  25 -> 11
+	  26 -> 28
+	  27 -> 21
+	  28 -> 21
+	  29 -> 31
+	  30 -> 21
+	  31 -> 41
+	  31 -> 19
+	  31 -> 6
+	  32 -> 33
+	  32 -> 34
+	  33 -> 12
+	  34 -> 13
+	  35 -> 31
+	  36 -> 31
+	  37 -> 38
+	  37 -> 39
+	  38 -> 30
+	  39 -> 27
+	  40 -> 37
+	  41 -> 20
+}
+

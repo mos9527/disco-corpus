@@ -1,0 +1,125 @@
+# DAYCHANGE / TEQUILA BED
+# The dialogue between You and your bed. You can sleep, not sleep, read your ledger.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: Go to sleep."];
+	  3 [label="Bed: The sheets feel at once coarse and clammy against your skin. The bed sags beneath your weight as you stretch out and finally close your eyes..."];
+	  4 [label="Bed: Variable[\"whirling.dreamtwo_open_case\"]"];
+	  5 [label="Variable[\"whirling.dreamtwo_open_case\"]", shape=diamond];
+	  6 [label="!(Variable[\"whirling.dreamtwo_open_case\"])", shape=diamond];
+	  7 [label="You: Go to sleep."];
+	  8 [label="You: Go to sleep."];
+	  9 [label="Bed: The bed is cold and not particularly inviting, but it's yours. The sheets look awful..."];
+	  10 [label="You: Go to sleep."];
+	  11 [label="Bed: Across the room, the heating system hums its soft lullaby. The mattress feels soft and sheets warm. It only takes you moments for the world to fall away..."];
+	  12 [label="Bed: And then sleep doesn't come."];
+	  13 [label="Bed: The window is fixed, the sheets are new, it's easier to fall asleep than ever before..."];
+	  14 [label="Bed: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  15 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  16 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  17 [label="bedmainhub"];
+	  18 [label="Bed: Variable[\"yard.hanged_autopsy_finished_day_1\"]"];
+	  19 [label="Variable[\"yard.hanged_autopsy_finished_day_1\"]", shape=diamond];
+	  20 [label="!(Variable[\"yard.hanged_autopsy_finished_day_1\"])", shape=diamond];
+	  21 [label="Bed: Variable[\"whirling.bed_tutorial_shown\"]"];
+	  22 [label="Variable[\"whirling.bed_tutorial_shown\"]", shape=diamond];
+	  23 [label="!(Variable[\"whirling.bed_tutorial_shown\"])", shape=diamond];
+	  24 [label="Bed: ..."];
+	  25 [label="Bed: Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  26 [label="Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  27 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  28 [label="Bed: The sheets feel at once coarse and clammy against your skin. The bed sags beneath your weight as you stretch out and finally close your eyes..."];
+	  29 [label="You: Crawl in."];
+	  30 [label="Bed: Variable[\"auto.inside_shack\"]"];
+	  31 [label="Variable[\"auto.inside_shack\"]", shape=diamond];
+	  32 [label="!(Variable[\"auto.inside_shack\"])", shape=diamond];
+	  33 [label="Bed: Variable[\"auto.inside_shack\"]"];
+	  34 [label="Variable[\"auto.inside_shack\"]", shape=diamond];
+	  35 [label="!(Variable[\"auto.inside_shack\"])", shape=diamond];
+	  36 [label="You: No time to rest yet. [Leave.]"];
+	  37 [label="Bed: The passage of time has not made the sheets any less coarse. The bed sags beneath your weight as you close your eyes and drift off into an uneasy sleep..."];
+	  38 [label="Bed: Variable[\"auto.inside_shack\"]"];
+	  39 [label="Variable[\"auto.inside_shack\"]", shape=diamond];
+	  40 [label="!(Variable[\"auto.inside_shack\"])", shape=diamond];
+	  41 [label="Bed: Across the room, the heating system hums a soft lullaby. The mattress feels soft and sheets warm. After some time you fall into uneasy sleep..."];
+	  42 [label="You: Go to sleep."];
+	  43 [label="Tutorial Agent: The option to go to sleep becomes available every night after 21.00."];
+	  44 [label="Bed: The bed is comforting, if a bit run down. Still, you've earned a rest."];
+	  45 [label="Bed: The day has not made the sheets any less coarse. The bed sags beneath your weight as you close your eyes and fall into uneasy sleep..."];
+	  46 [label="Bed: The bed is still cold from the broken window, and not too inviting. But it's yours. You've earned it."];
+	  47 [label="You: Go to sleep."];
+	  48 [label="You: Go to sleep."];
+	  49 [label="Bed: The bed's a little nicer now. You could get a good night's sleep here."];
+	  50 [label="Bed: Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  51 [label="Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  52 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  53 [label="Bed: ..."];
+	  0 -> 1
+	  1 -> 34
+	  2 -> 31
+	  3 -> 13
+	  4 -> 5
+	  4 -> 6
+	  5 -> 47
+	  6 -> 9
+	  7 -> 31
+	  8 -> 31
+	  9 -> 22
+	  10 -> 31
+	  11 -> 54
+	  13 -> 25
+	  14 -> 16
+	  14 -> 17
+	  15 -> 18
+	  16 -> 44
+	  17 -> 2
+	  17 -> 37
+	  17 -> 7
+	  17 -> 8
+	  17 -> 10
+	  17 -> 43
+	  17 -> 48
+	  17 -> 49
+	  17 -> 30
+	  18 -> 20
+	  18 -> 21
+	  19 -> 3
+	  20 -> 29
+	  21 -> 24
+	  21 -> 23
+	  22 -> 18
+	  23 -> 15
+	  25 -> 27
+	  25 -> 28
+	  26 -> 50
+	  27 -> 4
+	  28 -> 13
+	  29 -> 19
+	  30 -> 32
+	  30 -> 33
+	  31 -> 11
+	  32 -> 51
+	  33 -> 35
+	  33 -> 36
+	  34 -> 45
+	  35 -> 26
+	  37 -> 25
+	  38 -> 40
+	  38 -> 41
+	  39 -> 42
+	  40 -> 46
+	  42 -> 31
+	  43 -> 18
+	  44 -> 22
+	  46 -> 22
+	  47 -> 31
+	  48 -> 31
+	  49 -> 22
+	  50 -> 52
+	  50 -> 53
+	  51 -> 14
+	  52 -> 38
+}
+

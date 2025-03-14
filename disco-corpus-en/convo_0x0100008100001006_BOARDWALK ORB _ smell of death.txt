@@ -1,0 +1,97 @@
+# BOARDWALK ORB / smell of death
+# You smell something awfully familiar...
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: \"Eyes up, detective. Something's not right here.\""];
+	  3 [label="Kim Kitsuragi: The lieutenant has already brought a handkerchief to his nose."];
+	  4 [label="Endurance: Keep it in now. Don't overreact. Breathe."];
+	  5 [label="Perception (Smell): The smell... It's awful and familiar."];
+	  6 [label="Perception (Smell): No, it's much worse than that."];
+	  7 [label="Variable[\"yard.hanged_copporooni_copo_messinian_sound\"]"];
+	  8 [label="Variable[\"yard.hanged_copporooni_copo_messinian_sound\"]", shape=diamond];
+	  9 [label="!(Variable[\"yard.hanged_copporooni_copo_messinian_sound\"])", shape=diamond];
+	  10 [label="IsKimHere()"];
+	  11 [label="IsKimHere()", shape=diamond];
+	  12 [label="!(IsKimHere())", shape=diamond];
+	  13 [label="You: It's a dead corpse isn't it?"];
+	  14 [label="Perception (Smell): Don't be naive."];
+	  15 [label="You: Hold on, that *is* awful. (Cover your nose.)"];
+	  16 [label="Jump to: [Perception (Smell): \"You've never smelled anything this...\"]"];
+	  17 [label="Perception (Smell): You've never smelled anything this bad before. It's pungent, but with a faintly cloying sweetness like cheap perfume on Death itself."];
+	  18 [label="Encyclopedia: The signs of decaying meat. It announces itself from two dozen metres away. A warning, a *memento mori*."];
+	  19 [label="Half Light: Something cold wakes in the pit of your stomach: fear."];
+	  20 [label="Untitled hub (02)"];
+	  21 [label="You: What is it then?"];
+	  22 [label="You: \"Heads up, lieutenant. Something's not right here.\""];
+	  23 [label="You: \"Kim, what's that smell?\""];
+	  24 [label="Kim Kitsuragi: The lieutenant has already brought a handkerchief to his nose."];
+	  25 [label="You: Oh no..."];
+	  26 [label="Variable[\"yard.hanged_seen\"] == true  or  Variable[\"yard.sense_smell_rotting_corpse\"] == true"];
+	  27 [label="Variable[\"yard.hanged_seen\"] == true  or  Variable[\"yard.sense_smell_rotting_corpse\"] == true", shape=diamond];
+	  28 [label="!(Variable[\"yard.hanged_seen\"] == true  or  Variable[\"yard.sense_smell_rotting_corpse\"] == true)", shape=diamond];
+	  29 [label="Perception (Smell): Yes. A sense of dread washes over you as you look ahead."];
+	  30 [label="You: Goddamnit..."];
+	  31 [label="You: I don't want to be here."];
+	  32 [label="Untitled hub"];
+	  33 [label="Variable[\"yard.hanged_seen\"] == true  or  Variable[\"yard.sense_smell_rotting_corpse\"] == true"];
+	  34 [label="Variable[\"yard.hanged_seen\"] == true  or  Variable[\"yard.sense_smell_rotting_corpse\"] == true", shape=diamond];
+	  35 [label="!(Variable[\"yard.hanged_seen\"] == true  or  Variable[\"yard.sense_smell_rotting_corpse\"] == true)", shape=diamond];
+	  36 [label="Perception (Smell): It doesn't help. You can still smell it."];
+	  37 [label="Perception (Smell): What is that awful smell?"];
+	  38 [label="You: What is it?"];
+	  39 [label="You: Isn't it just the rotting fish?"];
+	  40 [label="Perception (Smell): A sense of dread washes over you as you look ahead."];
+	  41 [label="Logic: It *is* death. It must be."];
+	  0 -> 1
+	  1 -> 27
+	  4 -> 40
+	  4 -> 39
+	  5 -> 33
+	  6 -> 21
+	  7 -> 9
+	  7 -> 10
+	  8 -> 42
+	  9 -> 19
+	  10 -> 12
+	  10 -> 13
+	  11 -> 24
+	  11 -> 23
+	  12 -> 32
+	  12 -> 14
+	  12 -> 31
+	  13 -> 30
+	  14 -> 21
+	  15 -> 37
+	  16 -> 18
+	  17 -> 20
+	  18 -> 11
+	  19 -> 8
+	  20 -> 26
+	  20 -> 22
+	  21 -> 17
+	  22 -> 3
+	  23 -> 25
+	  24 -> 2
+	  25 -> 17
+	  26 -> 28
+	  26 -> 29
+	  27 -> 5
+	  28 -> 38
+	  30 -> 41
+	  31 -> 41
+	  32 -> 16
+	  32 -> 40
+	  32 -> 39
+	  33 -> 35
+	  33 -> 36
+	  34 -> 15
+	  35 -> 6
+	  36 -> 4
+	  37 -> 33
+	  38 -> 18
+	  39 -> 34
+	  41 -> 11
+}
+

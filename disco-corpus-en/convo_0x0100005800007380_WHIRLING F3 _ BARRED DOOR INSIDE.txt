@@ -1,0 +1,60 @@
+# WHIRLING F3 / BARRED DOOR INSIDE
+# From the inside, the door opens easily.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Barred Door: This is the inside of the barred door you've seen before."];
+	  3 [label="You: Unbar the door. [Leave]"];
+	  4 [label="Variable[\"whirling.barreddoor_greeting_done\"]"];
+	  5 [label="Variable[\"whirling.barreddoor_greeting_done\"]", shape=diamond];
+	  6 [label="!(Variable[\"whirling.barreddoor_greeting_done\"])", shape=diamond];
+	  7 [label="Conceptualization: Folded M dimension. A reference to the popular science fiction series *In System*. Look who's in a good mood suddenly (and reads science fiction)."];
+	  8 [label="barreddoorinsidehub"];
+	  9 [label="You: Lightly punch the door once more. Just in case."];
+	  10 [label="Barred Door: The door is small but heavy-looking. It's barred from the inside."];
+	  11 [label="Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]"];
+	  12 [label="Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"]", shape=diamond];
+	  13 [label="!(Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.enter_cavern_done\"])", shape=diamond];
+	  14 [label="Barred Door: The door shudders a bit, as though it were laughing at you."];
+	  15 [label="Inland Empire: Yes. It *is* quite likely that we will re-emerge on the M-Plain. Brace for psychokinetic impact. (Or the roof.)"];
+	  16 [label="You: Let the door remain barred. [Leave.]"];
+	  17 [label="You: \"So what's on the other side?\""];
+	  18 [label="Jump to: [barreddoorinsidehub]"];
+	  19 [label="Kim Kitsuragi: \"Unless we've veered off into a folded M dimension, I'm expecting to step out on the roof.\""];
+	  20 [label="Kim Kitsuragi: \"Unless we've veered off into a folded M dimension, I'm expecting to step out on the roof -- we could ask Klaasje about this route, see how she reacts?\""];
+	  21 [label="Barred Door: This is the barred door you tried to kick in before."];
+	  22 [label="Variable[\"whirling.barreddoor_physinst_kick_in_success_failed\"]"];
+	  23 [label="Variable[\"whirling.barreddoor_physinst_kick_in_success_failed\"]", shape=diamond];
+	  24 [label="!(Variable[\"whirling.barreddoor_physinst_kick_in_success_failed\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 4
+	  2 -> 8
+	  4 -> 5
+	  4 -> 6
+	  5 -> 23
+	  6 -> 10
+	  7 -> 15
+	  8 -> 16
+	  8 -> 9
+	  8 -> 3
+	  8 -> 17
+	  9 -> 14
+	  10 -> 8
+	  11 -> 12
+	  11 -> 13
+	  12 -> 19
+	  13 -> 20
+	  14 -> 18
+	  15 -> 18
+	  17 -> 11
+	  18 -> 8
+	  19 -> 7
+	  20 -> 7
+	  21 -> 8
+	  22 -> 24
+	  22 -> 25
+	  23 -> 21
+	  24 -> 2
+}
+

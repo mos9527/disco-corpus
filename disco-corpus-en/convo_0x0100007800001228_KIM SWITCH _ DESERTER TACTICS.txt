@@ -1,0 +1,145 @@
+# KIM SWITCH / DESERTER TACTICS
+# Kim talks to you on the side and says you got him, push motive angle.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: \"Ballistics. Let him cook here for a minute or two -- we can have another look at the set-up he had there, with the mattress.\" He nods southeast to the tower. \"Ballistics always impresses these military types.\""];
+	  3 [label="You: \"Do you think he did it?\""];
+	  4 [label="You: \"I'm trying to get him to confess...\""];
+	  5 [label="Drama: Yes, sire! Make a production of this examination!"];
+	  6 [label="Kim Kitsuragi: \"Good.\" He nods. \"We're doing very good. He *wants* to confess -- I can see that. We just need to pile it on, a little more -- the more we have on him, the closer he is...\""];
+	  7 [label="Kim Kitsuragi: \"Remember,\" the lieutenant whispers. \"He wants to tell us -- but he doesn't want to *help* us. It needs to look like we already have everything.\""];
+	  8 [label="Variable[\"TASK.check_seafort_done\"]"];
+	  9 [label="Variable[\"TASK.check_seafort_done\"]", shape=diamond];
+	  10 [label="!(Variable[\"TASK.check_seafort_done\"])", shape=diamond];
+	  11 [label="Variable[\"TASK.inspect_the_phasmid\"]"];
+	  12 [label="Variable[\"TASK.inspect_the_phasmid\"]", shape=diamond];
+	  13 [label="!(Variable[\"TASK.inspect_the_phasmid\"])", shape=diamond];
+	  14 [label="Kim Kitsuragi: He smiles. \"You should be proud. Come on -- let's wrap this up.\""];
+	  15 [label="Kim Kitsuragi: \"Ballistics. Let him cook here for a minute or two -- we can have another look around the island for a sniper's nest.\" He looks to the small tower on the coast. \"I think we should check out the post.\""];
+	  16 [label="CheckItem(\"deserter_gun\")"];
+	  17 [label="CheckItem(\"deserter_gun\")", shape=diamond];
+	  18 [label="!(CheckItem(\"deserter_gun\"))", shape=diamond];
+	  19 [label="Variable[\"seafort.kimswitch_emp_more_to_it\"]"];
+	  20 [label="Variable[\"seafort.kimswitch_emp_more_to_it\"]", shape=diamond];
+	  21 [label="!(Variable[\"seafort.kimswitch_emp_more_to_it\"])", shape=diamond];
+	  22 [label="Logic: You hear that? He thinks you're *this* close..."];
+	  23 [label="Jump to: [get_on_this_kim_switch_business]"];
+	  24 [label="Kim Kitsuragi: \"Yes, good going -- that should be our *first* priority.\""];
+	  25 [label="Kim Kitsuragi: \"I can see that, yes. I'm not judging.\""];
+	  26 [label="Jump to: [do_the_motive]"];
+	  27 [label="You: \"We really did, didn't we?\""];
+	  28 [label="Suggestion: It doesn't have to hold in court. Just establish a line of sight and he'll do the rest himself."];
+	  29 [label="Jump to: [do_the_motive]"];
+	  30 [label="You: \"Okay, let's do this.\" (Conclude.)"];
+	  31 [label="Kim Kitsuragi: \"Well, I can think of one thing. The gun.\" He smiles very politely. \"We should pick it up, and discuss it in front of him. Make a show of it.\""];
+	  32 [label="get_on_this_kim_switch_business"];
+	  33 [label="Kim Kitsuragi: \"Remember,\" the lieutenant whispers. \"He wants to tell us -- but he doesn't want to *help* us. It needs to look like we already have everything.\""];
+	  34 [label="Variable[\"seafort.kimswitch_lets_do_ballistics\"]"];
+	  35 [label="Variable[\"seafort.kimswitch_lets_do_ballistics\"]", shape=diamond];
+	  36 [label="!(Variable[\"seafort.kimswitch_lets_do_ballistics\"])", shape=diamond];
+	  37 [label="You: \"You think he has more? Than this case?\""];
+	  38 [label="You: \"How do you think the questioning is going?\""];
+	  39 [label="You: \"What can I put on him -- to get him to fess up?\""];
+	  40 [label="Variable[\"seafort.nest_mainhub_got\"]"];
+	  41 [label="Variable[\"seafort.nest_mainhub_got\"]", shape=diamond];
+	  42 [label="!(Variable[\"seafort.nest_mainhub_got\"])", shape=diamond];
+	  43 [label="You: Pat him on the back. [Leave.]"];
+	  44 [label="You: \"What am I missing? What haven't I done?\""];
+	  45 [label="Variable[\"seafort.deserter_motive_with_companion\"]"];
+	  46 [label="Variable[\"seafort.deserter_motive_with_companion\"]", shape=diamond];
+	  47 [label="!(Variable[\"seafort.deserter_motive_with_companion\"])", shape=diamond];
+	  48 [label="Kim Kitsuragi: \"We just need to get him back to the mainland.\" A crooked little smile. \"We actually did it...\""];
+	  49 [label="do_the_motive"];
+	  50 [label="Jump to: [do_the_motive]"];
+	  51 [label="Kim Kitsuragi: \"Also, the gun.\" He smiles very politely. \"We should pick it up and discuss it in front of him. Make a show of it.\""];
+	  52 [label="Variable[\"seafort.kimswitch_logic_deserter_knows_more\"]"];
+	  53 [label="Variable[\"seafort.kimswitch_logic_deserter_knows_more\"]", shape=diamond];
+	  54 [label="!(Variable[\"seafort.kimswitch_logic_deserter_knows_more\"])", shape=diamond];
+	  55 [label="You: \"Let's get him back before we congratulate ourselves.\""];
+	  56 [label="Kim Kitsuragi: \"He's a communard. The victim was a mercenary. We should get him talking politics again. You could even tell him we already *have* a motive.\""];
+	  57 [label="Empathy: There is palpable excitement in his tone. He likes him for this -- *a lot*. But there's something more too..."];
+	  58 [label="Kim Kitsuragi: \"Oh yes...\" He nods. \"And -- he hasn't spoken to anybody in a long time. If we get him open, who knows what will pour out...\""];
+	  59 [label="You: \"I'm slapping myself to get ideas!\""];
+	  60 [label="Logic: He thinks the deserter has more than just this case in him. Forty-four years here..."];
+	  61 [label="Kim Kitsuragi: He nods. \"From nothing to this in a day...\" A crooked little smile. \"This is *good*, we just need a confession first, and then *maybe* a solid motive later.\""];
+	  62 [label="Jump to: [do_the_motive]"];
+	  63 [label="Jump to: [do_the_motive]"];
+	  0 -> 1
+	  1 -> 33
+	  2 -> 29
+	  3 -> 62
+	  4 -> 25
+	  5 -> 30
+	  6 -> 23
+	  7 -> 58
+	  8 -> 10
+	  8 -> 11
+	  9 -> 17
+	  10 -> 41
+	  11 -> 13
+	  11 -> 14
+	  12 -> 49
+	  13 -> 3
+	  15 -> 29
+	  16 -> 18
+	  16 -> 19
+	  17 -> 30
+	  18 -> 35
+	  19 -> 21
+	  19 -> 22
+	  20 -> 61
+	  22 -> 51
+	  23 -> 33
+	  24 -> 63
+	  25 -> 64
+	  26 -> 50
+	  27 -> 15
+	  28 -> 17
+	  29 -> 50
+	  30 -> 46
+	  31 -> 5
+	  32 -> 12
+	  33 -> 58
+	  34 -> 36
+	  34 -> 37
+	  35 -> 52
+	  36 -> 32
+	  37 -> 59
+	  38 -> 7
+	  39 -> 57
+	  40 -> 42
+	  40 -> 43
+	  41 -> 2
+	  42 -> 16
+	  44 -> 9
+	  45 -> 48
+	  45 -> 47
+	  46 -> 34
+	  47 -> 8
+	  48 -> 56
+	  48 -> 28
+	  49 -> 4
+	  49 -> 39
+	  49 -> 40
+	  49 -> 45
+	  49 -> 60
+	  49 -> 31
+	  50 -> 50
+	  51 -> 5
+	  52 -> 54
+	  52 -> 55
+	  53 -> 44
+	  53 -> 38
+	  55 -> 15
+	  56 -> 27
+	  57 -> 20
+	  58 -> 44
+	  59 -> 26
+	  60 -> 53
+	  61 -> 50
+	  62 -> 50
+	  63 -> 50
+}
+

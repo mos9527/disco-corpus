@@ -1,0 +1,67 @@
+# INVENTORY / PHOTO OF TATTOOS
+# instant photo of the hanged man's tattoos by Kim Kitsuragi
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Suggestion: Someone close to the victim might know."];
+	  3 [label="Photo of Tattoos: Gone."];
+	  4 [label="Photo of Tattoos: For you to discover. You've gotten as far as you will without assistance."];
+	  5 [label="Photo of Tattoos: It almost looks like the electronic patterns inside a radiocomputer or an old filament memory, but not quite."];
+	  6 [label="interacthereyo"];
+	  7 [label="Variable[\"yard.hanged_tats_night_sky\"]"];
+	  8 [label="Variable[\"yard.hanged_tats_night_sky\"]", shape=diamond];
+	  9 [label="!(Variable[\"yard.hanged_tats_night_sky\"])", shape=diamond];
+	  10 [label="Photo of Tattoos: An intricate web of blue lines stretches across the torso of the hanged man, from the right shoulder to the solar plexus. Each time the lines intersect, a small white star is formed in their crossing. Hundreds of fading asterisks riddle his skin; their concentration is highest around his heart."];
+	  11 [label="You: Who are you?"];
+	  12 [label="Variable[\"yard.hanged_tats_national_pattern\"]"];
+	  13 [label="Variable[\"yard.hanged_tats_national_pattern\"]", shape=diamond];
+	  14 [label="!(Variable[\"yard.hanged_tats_national_pattern\"])", shape=diamond];
+	  15 [label="Jump to: [interacthereyo]"];
+	  16 [label="Encyclopedia: Someone who knows about history could tell you."];
+	  17 [label="Photo of Tattoos: It still kind of looks like a map of the stars in the night sky, but... something's not right."];
+	  18 [label="You: What's the meaning of this tattoo?"];
+	  19 [label="Variable[\"yard.hanged_tats_micro_electronic\"]"];
+	  20 [label="Variable[\"yard.hanged_tats_micro_electronic\"]", shape=diamond];
+	  21 [label="!(Variable[\"yard.hanged_tats_micro_electronic\"])", shape=diamond];
+	  22 [label="You: [Put the photo away.]"];
+	  23 [label="Variable[\"yard.hanged_tats_insepcted\"]"];
+	  24 [label="Variable[\"yard.hanged_tats_insepcted\"]", shape=diamond];
+	  25 [label="!(Variable[\"yard.hanged_tats_insepcted\"])", shape=diamond];
+	  26 [label="Photo of Tattoos: The pattern still kind of has an ethnic feel to it, but nothing familiar..."];
+	  27 [label="Photo of Tattoos: It could be anything... religious symbols, a road map. It could even be purely decorative. Who knows?"];
+	  0 -> 1
+	  1 -> 10
+	  2 -> 17
+	  3 -> 16
+	  4 -> 2
+	  5 -> 6
+	  6 -> 19
+	  6 -> 12
+	  6 -> 23
+	  7 -> 8
+	  7 -> 9
+	  8 -> 18
+	  9 -> 20
+	  10 -> 7
+	  11 -> 3
+	  12 -> 14
+	  12 -> 15
+	  13 -> 27
+	  14 -> 24
+	  15 -> 6
+	  16 -> 16
+	  17 -> 6
+	  18 -> 4
+	  19 -> 21
+	  19 -> 22
+	  20 -> 5
+	  21 -> 13
+	  23 -> 25
+	  23 -> 26
+	  24 -> 28
+	  25 -> 6
+	  26 -> 6
+	  27 -> 6
+}
+

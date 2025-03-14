@@ -1,0 +1,149 @@
+# FRITTE / SHIMMERING WALL OF VICES
+# Alcohol + cigarettes behind the counter.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Electrochemistry: Don't worry your pretty little head about it. Let's concentrate on what's IMPORTANT here."];
+	  3 [label="Frittte clerk: \"Sure.\" She tilts her head back at the shelf. \"So... are you going to buy anything, or...?\""];
+	  4 [label="Frittte clerk: \"But I'm obliged to inform you that both alcohol and cigarettes damage your health. But I guess you already know that.\""];
+	  5 [label="Kim Kitsuragi: \"Of course not,\" the lieutenant says, glaring at you. \"Frittte is an establishment that acts within the law. Is that all, detective?\""];
+	  6 [label="Frittte clerk: \"Again, I'm obliged to inform you that both alcohol and cigarettes damage your health.\""];
+	  7 [label="Jump to: [alcohol smokes hub]"];
+	  8 [label="You: Not right now. [Leave.]"];
+	  9 [label="You: \"What is pale?\""];
+	  10 [label="Conceptualization: The beauty, the truth, the poetry of it all..."];
+	  11 [label="Jump to: [alcohol smokes hub]"];
+	  12 [label="Shimmering Wall of Vices: A colourful display of cigarettes and alcohol bottles lines the shop wall, inviting you closer."];
+	  13 [label="Frittte clerk: \"Um, the pale-aged vodka is special, I guess. It's stored in pale for a couple of years, which makes it super expensive and super strong.\""];
+	  14 [label="You: (Say nothing. Just take it in.)"];
+	  15 [label="Untitled hub"];
+	  16 [label="Frittte clerk: \"Here you go, mister.\""];
+	  17 [label="Electrochemistry: Know this -- you will never finish your alcohol *quest* if you don't buy beautiful alcohol."];
+	  18 [label="Tutorial Agent: Use medication (like NOSAPHED and MAGNESIUM) to counteract the negative effects of substances. NOTE! Consuming substances can have unforeseen consequences for you."];
+	  19 [label="Frittte clerk: \"I'm obliged to inform you that both alcohol and cigarettes damage your health. But I guess you already know that.\""];
+	  20 [label="Electrochemistry: Bah! What's the point if they don't even sell the *good* drugs?"];
+	  21 [label="You: \"Give me Potent Pilsner beer.\""];
+	  22 [label="You: \"Give me Astra cigarettes.\""];
+	  23 [label="Variable[\"gates.frittte_vice_hub_reached\"]"];
+	  24 [label="Variable[\"gates.frittte_vice_hub_reached\"]", shape=diamond];
+	  25 [label="!(Variable[\"gates.frittte_vice_hub_reached\"])", shape=diamond];
+	  26 [label="You: [Leave.]"];
+	  27 [label="Jump to: [alcohol smokes hub]"];
+	  28 [label="Electrochemistry: Good thing you're an *unrecovering* alcoholic then!"];
+	  29 [label="Frittte clerk: \"You know...\" She shrugs, uninterested in explaining it further."];
+	  30 [label="You: \"Give me pale-aged vodka.\""];
+	  31 [label="Frittte clerk: \"Here you go, mister.\""];
+	  32 [label="Variable[\"tc.turn_off_tutorial_node\"]"];
+	  33 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  34 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  35 [label="Frittte clerk: \"Here you go, mister.\""];
+	  36 [label="You: \"Thanks for your answer.\""];
+	  37 [label="You: \"Do you sell speed at this establishment?\""];
+	  38 [label="You: \"Okay. What will consuming this stuff do to my *body*?\""];
+	  39 [label="Perception (Sight): The bottles wink at you in the light. The smokes too glitter in their wrapping. It's like looking into a kind of heaven. Your knees are weak..."];
+	  40 [label="Variable[\"TASK.get_a_drink\"]"];
+	  41 [label="Variable[\"TASK.get_a_drink\"]", shape=diamond];
+	  42 [label="!(Variable[\"TASK.get_a_drink\"])", shape=diamond];
+	  43 [label="Frittte clerk: \"I'm obliged to inform you that both alcohol and cigarettes damage your health,\" she comments as you eye the goods behind her, \"but I guess you already know that.\""];
+	  44 [label="Volition: Don't ask, don't look, don't do *anything* here. Just go away. Get back to work."];
+	  45 [label="alcohol smokes hub"];
+	  46 [label="Jump to: [alcohol smokes hub]"];
+	  47 [label="You: \"Give me Commodore Red wine.\""];
+	  48 [label="Jump to: [alcohol smokes hub]"];
+	  49 [label="Frittte clerk: \"I mean, I already said it'd hurt you? I don't know what else they do.\" She stares at  you, unsure."];
+	  50 [label="You: \"I am in Heaven. I need it all so bad.\""];
+	  51 [label="IsKimHere()"];
+	  52 [label="IsKimHere()", shape=diamond];
+	  53 [label="!(IsKimHere())", shape=diamond];
+	  54 [label="Electrochemistry: There, in that dark green glass, a world of ruby, all in vain! The great flowing river of warmth: Wine-alcohol. Beer-alcohol. Love-alcohol."];
+	  55 [label="Tutorial Agent: Substances give powerful bonuses to your main stats, at the cost of damage to your Health or Morale. CIGARETTES raise your INTELLECT while damaging your Health, ALCOHOL raises PHYSIQUE while damaging your Morale."];
+	  56 [label="Frittte clerk: \"Um... Guess not, no.\" She looks at the wall of goods behind her, then adjusts her hat."];
+	  57 [label="Frittte clerk: \"Here you go, mister.\""];
+	  58 [label="Frittte clerk: \"No.\" She fixes her hair underneath her cap. \"Frittte only sells legal drugs, like the law says.\""];
+	  59 [label="Frittte clerk: \"... Huh? Speed, like... *speed* speed? No, Frittte doesn't do that...\" She blinks at you, bewildered."];
+	  60 [label="You: \"Please, tell me more about these products.\""];
+	  61 [label="You: \"Do you sell any... under the counter vices?\""];
+	  62 [label="You: \"This is *not* a good place for a recovering addict.\""];
+	  63 [label="Frittte clerk: \"Um... Sure. If you want something, I can get it for you. Just let me know and pay and stuff...\" She adjusts her hat."];
+	  0 -> 1
+	  1 -> 12
+	  2 -> 36
+	  2 -> 38
+	  3 -> 7
+	  4 -> 45
+	  5 -> 20
+	  6 -> 46
+	  7 -> 46
+	  9 -> 29
+	  10 -> 44
+	  11 -> 46
+	  12 -> 23
+	  13 -> 9
+	  13 -> 36
+	  13 -> 38
+	  14 -> 10
+	  15 -> 8
+	  15 -> 51
+	  15 -> 14
+	  15 -> 63
+	  16 -> 27
+	  17 -> 46
+	  18 -> 11
+	  19 -> 45
+	  20 -> 47
+	  21 -> 31
+	  22 -> 58
+	  23 -> 24
+	  23 -> 25
+	  24 -> 6
+	  25 -> 39
+	  27 -> 46
+	  28 -> 19
+	  29 -> 2
+	  30 -> 16
+	  31 -> 27
+	  32 -> 33
+	  32 -> 34
+	  33 -> 11
+	  34 -> 56
+	  35 -> 27
+	  36 -> 3
+	  37 -> 60
+	  38 -> 50
+	  39 -> 55
+	  40 -> 41
+	  40 -> 42
+	  41 -> 17
+	  42 -> 46
+	  43 -> 45
+	  44 -> 40
+	  45 -> 37
+	  45 -> 48
+	  45 -> 21
+	  45 -> 22
+	  45 -> 30
+	  45 -> 26
+	  45 -> 61
+	  45 -> 62
+	  46 -> 46
+	  47 -> 35
+	  48 -> 46
+	  49 -> 32
+	  50 -> 64
+	  51 -> 53
+	  51 -> 54
+	  52 -> 5
+	  53 -> 20
+	  54 -> 15
+	  55 -> 18
+	  56 -> 28
+	  57 -> 27
+	  58 -> 49
+	  59 -> 52
+	  60 -> 13
+	  61 -> 59
+	  62 -> 57
+	  63 -> 4
+}
+

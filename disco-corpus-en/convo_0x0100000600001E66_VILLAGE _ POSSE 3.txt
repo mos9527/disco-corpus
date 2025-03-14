@@ -1,0 +1,1589 @@
+# VILLAGE / POSSE 3
+# the end where you ask your final questions.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"I cannot. I cannot live without this job... fuck you then! And fuck me! I'll go.\""];
+	  3 [label="Trant Heidelstam: He slowly nods."];
+	  4 [label="Kim Kitsuragi: IsKimHere()"];
+	  5 [label="IsKimHere()", shape=diamond];
+	  6 [label="!(IsKimHere())", shape=diamond];
+	  7 [label="Esprit de Corps: And Station 41 and the glow of its desk lamps, the clicking of coffee mugs, clouds of cigarette smoke and the ringing telephone... your youth. There is still a way back."];
+	  8 [label="Esprit de Corps: You haven't been drinking, she thinks. So maybe this time..."];
+	  9 [label="You: \"What?\""];
+	  10 [label="You: \"No way. I was a natural philosopher.\""];
+	  11 [label="Kim Kitsuragi: CheckItem(\"jacket_faln\")  or  CheckItem(\"pants_faln\")  or  CheckItem(\"hat_faln\")  or  CheckItem(\"shirt_faln\")  or  CheckItem(\"shoes_faln\")"];
+	  12 [label="CheckItem(\"jacket_faln\")  or  CheckItem(\"pants_faln\")  or  CheckItem(\"hat_faln\")  or  CheckItem(\"shirt_faln\")  or  CheckItem(\"shoes_faln\")", shape=diamond];
+	  13 [label="!(CheckItem(\"jacket_faln\")  or  CheckItem(\"pants_faln\")  or  CheckItem(\"hat_faln\")  or  CheckItem(\"shirt_faln\")  or  CheckItem(\"shoes_faln\"))", shape=diamond];
+	  14 [label="Kim Kitsuragi: \"Some of your more, khm, *old-school* social views...\""];
+	  15 [label="Kim Kitsuragi: \"High school. Harry! Your goings-on with Cuno, Andre, Acele -- the whole thing on the ice. That's why you're so *juvie*.\""];
+	  16 [label="Jean Vicquemare: \"Yeah... Or seven? You're not doing too good there. It's an old-man thing. Two *old-years* equals one normal year. That -- and Dora Ingerlund really tore you a new one. A big one.\""];
+	  17 [label="You: \"Who was she?\""];
+	  18 [label="Jean Vicquemare: \"I think she taught in the Académie des Arts, east of the river. Way east. Hard to say which came first -- the middle class chick or the drink? Egg and the chicken kinda thing...\""];
+	  19 [label="You: \"Wait, Dora Ingerlund?\""];
+	  20 [label="Kim Kitsuragi: Variable[\"village.posse_41st_concept_iconic\"]"];
+	  21 [label="Variable[\"village.posse_41st_concept_iconic\"]", shape=diamond];
+	  22 [label="!(Variable[\"village.posse_41st_concept_iconic\"])", shape=diamond];
+	  23 [label="Kim Kitsuragi: IsNight()"];
+	  24 [label="IsNight()", shape=diamond];
+	  25 [label="!(IsNight())", shape=diamond];
+	  26 [label="Kim Kitsuragi: \"No -- good luck with *your* report.\" The lieutenant smiles warmly."];
+	  27 [label="Kim Kitsuragi: Variable[\"tc.lenas_address\"]"];
+	  28 [label="Variable[\"tc.lenas_address\"]", shape=diamond];
+	  29 [label="!(Variable[\"tc.lenas_address\"])", shape=diamond];
+	  30 [label="You: \"Yeah... no. You're staying here, Cuno. You're too young.\""];
+	  31 [label="Jump to: [You: \"\"Good bye, then.\" (End.)\"]"];
+	  32 [label="Rhetoric: He's *really* considering it."];
+	  33 [label="Kim Kitsuragi: IsMorning()"];
+	  34 [label="IsMorning()", shape=diamond];
+	  35 [label="!(IsMorning())", shape=diamond];
+	  36 [label="Shivers: Under the night sky the great district sleeps: A chessboard of old wooden houses in the snow, 80,000 living souls inside. Firetraps as far as the eye can see -- from Main Street to Precinct 41 atop the motorway, to Boogie Street glowing on the horizon..."];
+	  37 [label="Kim Kitsuragi: IsMorning()"];
+	  38 [label="IsMorning()", shape=diamond];
+	  39 [label="!(IsMorning())", shape=diamond];
+	  40 [label="Kim Kitsuragi: Variable[\"village.posse_esprit_final\"]"];
+	  41 [label="Variable[\"village.posse_esprit_final\"]", shape=diamond];
+	  42 [label="!(Variable[\"village.posse_esprit_final\"])", shape=diamond];
+	  43 [label="Jean Vicquemare: \"You can't be a cop. You're twelve. And you say 'f****t' every four seconds.\""];
+	  44 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  45 [label="IsCunoInParty()", shape=diamond];
+	  46 [label="!(IsCunoInParty())", shape=diamond];
+	  47 [label="Kim Kitsuragi: Variable[\"gates.mhead_fight_success\"]"];
+	  48 [label="Variable[\"gates.mhead_fight_success\"]", shape=diamond];
+	  49 [label="!(Variable[\"gates.mhead_fight_success\"])", shape=diamond];
+	  50 [label="You: \"Are you *seriously* using this moment to assert male privilege!?!\""];
+	  51 [label="Inland Empire: Compared to the intersection, in front of Video Revachol 24 -- it's nothing. Compared to that, everything is possible."];
+	  52 [label="Kim Kitsuragi: IsHighestPolitical(\"revacholian_nationhood\")"];
+	  53 [label="IsHighestPolitical(\"revacholian_nationhood\")", shape=diamond];
+	  54 [label="!(IsHighestPolitical(\"revacholian_nationhood\"))", shape=diamond];
+	  55 [label="Kim Kitsuragi: Variable[\"TASK.return_to_mainland_done\"]"];
+	  56 [label="Variable[\"TASK.return_to_mainland_done\"]", shape=diamond];
+	  57 [label="!(Variable[\"TASK.return_to_mainland_done\"])", shape=diamond];
+	  58 [label="Judit Minot: \"Before you were a cop, you were a gym teacher in Couron.\" She looks around. \"It's getting really cold outside. Should we maybe...\""];
+	  59 [label="You: \"The collection of FALN sportswear I've amassed...\""];
+	  60 [label="Cuno: \"Your lame taste in music. Like from -- the Forties. Even the way you *stand* and stretch and shit... Cuno's seen this shit before. In *gym* class.\""];
+	  61 [label="You: \"Was she called Dora Du Bois?\""];
+	  62 [label="You: \"No? Because a suspect seemed to think...\""];
+	  63 [label="You: \"Really?\""];
+	  64 [label="Conceptualization: They *are* damn iconic though -- Torson and McLaine!"];
+	  65 [label="You: \"An iconic duo I take it?\""];
+	  66 [label="Judit Minot: \"Jamrock is the largest ghetto in Revachol. Faubourg, technically... but it's divided into *eleven* districts. Jamrock only has us.\""];
+	  67 [label="Cuno: \"Cuno's likin' this shit. Jamrock is the real shit -- Martinaise is fucking white as balls. Sea-shit. This ain't a real ghetto.\""];
+	  68 [label="Kim Kitsuragi: Variable[\"village.posse_4_esprit_price_gottlieb\"]"];
+	  69 [label="Variable[\"village.posse_4_esprit_price_gottlieb\"]", shape=diamond];
+	  70 [label="!(Variable[\"village.posse_4_esprit_price_gottlieb\"])", shape=diamond];
+	  71 [label="Kim Kitsuragi: Variable[\"village.posse_kim_shivers\"]"];
+	  72 [label="Variable[\"village.posse_kim_shivers\"]", shape=diamond];
+	  73 [label="!(Variable[\"village.posse_kim_shivers\"])", shape=diamond];
+	  74 [label="Kim Kitsuragi: \"Talk to Captain Pryce? I'd rather not ruffle the feathers of *two* captains with my doom-mongering.\""];
+	  75 [label="Esprit de Corps: Would fit in? Am crazy enough? Can take the stress? He doesn't know how to finish the sentence."];
+	  76 [label="You: \"But I didn't promise anything.\""];
+	  77 [label="Shivers: Under the night sky the great district sleeps: A dark chessboard of wooden houses in the rain, 80,000 living souls inside. Firetraps as far as the eye can see -- from Main Street to Precinct 41 atop the motorway, to Boogie Street glowing on the rainswept horizon..."];
+	  78 [label="Shivers: Under the violet morning sky the great district wakes: A chessboard of wooden houses, 80,000 living souls and chimney stacks. Firetraps as far as the eye can see -- from Main Street to Precinct 41, to Boogie Street forking into the glowing horizon..."];
+	  79 [label="Kim Kitsuragi: Variable[\"auto.is_snowing\"]"];
+	  80 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  81 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  82 [label="Jean Vicquemare: \"So I *have* to. Jude?\""];
+	  83 [label="Kim Kitsuragi: Variable[\"auto.is_snowing\"]"];
+	  84 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  85 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  86 [label="Kim Kitsuragi: IsEvening()"];
+	  87 [label="IsEvening()", shape=diamond];
+	  88 [label="!(IsEvening())", shape=diamond];
+	  89 [label="Inland Empire: It's not the locals he's worried about -- but an eleven year old girl."];
+	  90 [label="You: The FALN gear..."];
+	  91 [label="You: \"I'm ready.\" (End.)"];
+	  92 [label="Jump to: [Inland Empire: \"Now! Now you will *finally* get to...\"]"];
+	  93 [label="Jean Vicquemare: Jean Vicquemare: \"...\""];
+	  94 [label="Trant Heidelstam: \"It's tough. One of the toughest addictions to overcome. Comparable *only* to heavy synthetic opiates. Even morphine is easier to kick than alcohol -- statistically. The odds are against him. Especially at his age.\""];
+	  95 [label="You: \"My life is forfeit. All I'm good for is this work. I *will* quit.\""];
+	  96 [label="Trant Heidelstam: \"...\""];
+	  97 [label="You: \"Okay then. Fuck it. I have a shack here. I don't need you all.\""];
+	  98 [label="You: \"A special forces gym teacher?\""];
+	  99 [label="Kim Kitsuragi: IsKimHere()"];
+	  100 [label="IsKimHere()", shape=diamond];
+	  101 [label="!(IsKimHere())", shape=diamond];
+	  102 [label="Judit Minot: \"It is... it *is* getting cold out...\" She looks around -- at the dilapidated fishing village."];
+	  103 [label="You: \"Okay. I see now.\" (Conclude.)"];
+	  104 [label="You: \"When was this?\""];
+	  105 [label="Kim Kitsuragi: Variable[\"tc.welkin\"]"];
+	  106 [label="Variable[\"tc.welkin\"]", shape=diamond];
+	  107 [label="!(Variable[\"tc.welkin\"])", shape=diamond];
+	  108 [label="Jean Vicquemare: \"Something like that. Half-Vaasan.\""];
+	  109 [label="Suggestion: He's anything but a loser. Although he would like to be seen as one. It's cooler that way."];
+	  110 [label="Jean Vicquemare: \"Okay. It's an understaffed station where there's too much work, so we need to get back to it. It's not your problem anymore.\""];
+	  111 [label="You: \"What happened? Why did we need to go there?\""];
+	  112 [label="Perception (Hearing): Your clearance will not go up while you're within earshot of the Union headquarters."];
+	  113 [label="Jump to: [Untitled hub]"];
+	  114 [label="Untitled hub (06)"];
+	  115 [label="Jean Vicquemare: \"Like you... promised?\""];
+	  116 [label="Jean Vicquemare: \"You have to be *fifteen* for the junior officer program -- you're not even that.\""];
+	  117 [label="Kim Kitsuragi: IsNight()"];
+	  118 [label="IsNight()", shape=diamond];
+	  119 [label="!(IsNight())", shape=diamond];
+	  120 [label="Kim Kitsuragi: IsAfternoon()"];
+	  121 [label="IsAfternoon()", shape=diamond];
+	  122 [label="!(IsAfternoon())", shape=diamond];
+	  123 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  124 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  125 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  126 [label="Judit Minot: \"Look...\" She turns to face the sea. \"It's about to rain soon. It's time to go home.\""];
+	  127 [label="Volition: I told you it's not that bad."];
+	  128 [label="Conceptualization: Of course."];
+	  129 [label="Kim Kitsuragi: Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"]"];
+	  130 [label="Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"]", shape=diamond];
+	  131 [label="!(Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"])", shape=diamond];
+	  132 [label="Kim Kitsuragi: Variable[\"ice.andre_composure_done\"]"];
+	  133 [label="Variable[\"ice.andre_composure_done\"]", shape=diamond];
+	  134 [label="!(Variable[\"ice.andre_composure_done\"])", shape=diamond];
+	  135 [label="You: How I can run for *five hours* a day..."];
+	  136 [label="Kim Kitsuragi: IsTHCPresent(\"homosexual_underground\")"];
+	  137 [label="IsTHCPresent(\"homosexual_underground\")", shape=diamond];
+	  138 [label="!(IsTHCPresent(\"homosexual_underground\"))", shape=diamond];
+	  139 [label="Rhetoric: The farce needs to end. Everyone sees that."];
+	  140 [label="You: \"Contact Mike is a reprise of the most inspiring basic sporting principle of open competition! A 5,000-1 rank outsider!\""];
+	  141 [label="Kim Kitsuragi: \"Your moves on the church floor -- which, honestly, were just *jump aerobics*. Your use of the word *graffito*...\""];
+	  142 [label="Jump to: [Untitled hub (06)]"];
+	  143 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  144 [label="IsCunoInParty()", shape=diamond];
+	  145 [label="!(IsCunoInParty())", shape=diamond];
+	  146 [label="Cuno: \"No, pig, that explains *everything*.\" The boy looks at you. \"The running. The jumping. The *shot-put*. Your whack moustache...\""];
+	  147 [label="You: \"The FALN gear...\""];
+	  148 [label="Judit Minot: \"Look...\" She turns to face the sea. \"The sun is going down. It's time to go home.\""];
+	  149 [label="Jump to: [Untitled hub (04)]"];
+	  150 [label="Jump to: [Untitled hub]"];
+	  151 [label="Kim Kitsuragi: IsKimHere()"];
+	  152 [label="IsKimHere()", shape=diamond];
+	  153 [label="!(IsKimHere())", shape=diamond];
+	  154 [label="Jean Vicquemare: \"Thank you again, lieutenant.\""];
+	  155 [label="Rhetoric: This truly came as a surprise to him. Not a bad one. But he's at a loss."];
+	  156 [label="Kim Kitsuragi: \"I would have to tie things up in GRIH first. But... I mean, whatever is coming -- Jamrock *will* be more central to it than the harbour.\" The lieutenant turns very serious all of a sudden."];
+	  157 [label="Judit Minot: She listens to you sadly. The wind blows."];
+	  158 [label="Cuno: \"Fuck do you think? Gonna rock that law enforcement shit with you guys -- Detective Cuno.\" He chews on a piece of imaginary chewing gum. \"Like you promised.\""];
+	  159 [label="Cuno: \"You gonna *lie* after what we just been through? Let Cuno refresh you: Cuno said he'd take your crippled ass to the island, if you take Cuno to Jamrock. Boatman Cuno.\""];
+	  160 [label="Jean Vicquemare: \"You're what? Ten? Eleven?\""];
+	  161 [label="Trant Heidelstam: \"Maybe you can take the kid with you,\" the special consultant says, looking at the boy. \"Enrol him a year earlier and say he's fourteen. *If* he...\""];
+	  162 [label="Shivers: Under the night sky the great district sleeps: A dark chessboard of wooden houses in the rain, 80,000 living souls inside. Firetraps as far as the eye can see -- from Main Street to Precinct 41 atop the motorway, to Boogie Street glowing on the rainswept horizon..."];
+	  163 [label="Shivers: The great district hums with the noise of human habitation: A chessboard of wooden houses, 80,000 living souls. Firetraps as far as the eye can see -- from Main Street to Grand Couron, from Precinct 41 to Boogie Street forking into the distant horizon..."];
+	  164 [label="Kim Kitsuragi: IsKimHere()"];
+	  165 [label="IsKimHere()", shape=diamond];
+	  166 [label="!(IsKimHere())", shape=diamond];
+	  167 [label="Endurance: The bloating *has* gone down since you woke up that morning..."];
+	  168 [label="Jean Vicquemare: \"You manipulative fuck... Fine. It's cold and we have vehicles in the square. And the perp needs to be taken into custody too -- let's get a move on.\""];
+	  169 [label="Perception (Hearing): Jingling his car keys in his pocket."];
+	  170 [label="Jean Vicquemare: \"Well -- now you're a cop,\" he pauses, \"or... not anymore, so I guess you're a gym teacher again.\""];
+	  171 [label="Empathy: His smirk suggests barely contained laughter."];
+	  172 [label="Kim Kitsuragi: \"I knew it. I knew no normal human being can run like that. He's an-honest-to-god gym teacher.\""];
+	  173 [label="You: \"How I can run for *six hours* a day...\""];
+	  174 [label="Untitled hub (04)"];
+	  175 [label="You: \"Oh okay. Six years is not that much.\""];
+	  176 [label="Rhetoric: In other words -- he's heard *enough* about this."];
+	  177 [label="Judit Minot: \"Good.\" She looks at you, then Vicquemare..."];
+	  178 [label="Kim Kitsuragi: Variable[\"TASK.return_to_mainland_done\"]"];
+	  179 [label="Variable[\"TASK.return_to_mainland_done\"]", shape=diamond];
+	  180 [label="!(Variable[\"TASK.return_to_mainland_done\"])", shape=diamond];
+	  181 [label="Jump to: [Untitled hub]"];
+	  182 [label="Kim Kitsuragi: \"They should know as soon as possible. It would do you good to deliver some positive news for a change.\""];
+	  183 [label="You: (Lower your voice.) \"Jean, he has nothing.\""];
+	  184 [label="Cuno: \"I promise I won't say it.\" He shakes his head so hard his face turns red. \"I won't say any of it anymore.\""];
+	  185 [label="Kim Kitsuragi: Variable[\"apt.cuno_homework_orb_seen\"]"];
+	  186 [label="Variable[\"apt.cuno_homework_orb_seen\"]", shape=diamond];
+	  187 [label="!(Variable[\"apt.cuno_homework_orb_seen\"])", shape=diamond];
+	  188 [label="Inland Empire: Now! Now you will *finally* get to know who you are!"];
+	  189 [label="Shivers: Under the violet morning sky the great district wakes: A chessboard of wooden houses, 80,000 living souls and chimney stacks. Firetraps as far as the eye can see -- from Main Street to Precinct 41. To Boogie Street forking into the glowing horizon..."];
+	  190 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  191 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  192 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  193 [label="Jean Vicquemare: \"I don't care -- he can't be a cop. He's twelve. And says 'f****t' every four seconds.\""];
+	  194 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  195 [label="IsCunoInParty()", shape=diamond];
+	  196 [label="!(IsCunoInParty())", shape=diamond];
+	  197 [label="Composure: Your moves on the church floor -- which -- let's be honest -- were mostly *jump aerobics*."];
+	  198 [label="Untitled hub (06)"];
+	  199 [label="You: \"Wait. I have a *few* questions before you go. About who I am...\""];
+	  200 [label="Judit Minot: \"You haven't told us about that -- you've just told us about being a gym teacher.\""];
+	  201 [label="You: \"Why did I join the RCM then?\""];
+	  202 [label="Jean Vicquemare: \"God, I don't know...\" He thinks. \"Six years ago? She was way before my time.\""];
+	  203 [label="Cuno: \"What?! Bitches dream of the 41st. Why you think Cuno's *in* this shit? Word is it's fucking violent. Your Captain Pryce dusted like... a thousand people.\""];
+	  204 [label="You: \"Did we recently shoot up a church by any chance?\" (Point to the church.)"];
+	  205 [label="Jean Vicquemare: \"Our *enemies* were hiding in *a* church -- to the best of our information. That's it. I'm not talking about this anymore. Your security clearance is *shit-tier* right now. You have to wait for it to go up.\""];
+	  206 [label="Shivers: Distant traffic. A scrap of newspaper drifts by, carried by the wind."];
+	  207 [label="You: \"No, I meant *investigate*. Come work in Precinct 41.\""];
+	  208 [label="Jean Vicquemare: \"We've been hearing whispers in Jamrock too. Ever since fall. I agree that something is happening. People are tense. I hear a fan spinning. Fast. Something is about to hit it.\""];
+	  209 [label="You: \"No one. Forget it.\""];
+	  210 [label="Cuno: \"THE FUCK?!\" He spreads his arms. \"Cuno's been *seen* with you, out in the open. He's free game right now. Singin' to the popophone. Fuckin' informant shit. Got pig all over me -- smoked pig.\""];
+	  211 [label="Cuno: \"Not POSSIBLE is me staying here. *Fucking* understand that. I'm not dying here, f****t. I'm coming with you.\""];
+	  212 [label="Judit Minot: \"For god's sake...\" She sighs. \"Yes, we'll do it.\""];
+	  213 [label="Esprit de Corps: Even now -- you're his colleague."];
+	  214 [label="Kim Kitsuragi: \"I do like the sound of that...\" He returns her smile."];
+	  215 [label="Shivers: Under the afternoon sky the great district hums: A chessboard of wooden houses, 80,000 living souls and chimney stacks. Firetraps as far as the eye can see -- from Main Street to Precinct 41, to Boogie Street forking into the snowswept horizon..."];
+	  216 [label="Kim Kitsuragi: Variable[\"auto.is_snowing\"]"];
+	  217 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  218 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  219 [label="Kim Kitsuragi: Variable[\"village.posse_final_shivers\"]"];
+	  220 [label="Variable[\"village.posse_final_shivers\"]", shape=diamond];
+	  221 [label="!(Variable[\"village.posse_final_shivers\"])", shape=diamond];
+	  222 [label="Kim Kitsuragi: CheckEquipped(\"jacket_faln\")  and  (CheckEquipped(\"pants_faln\")  or  CheckEquipped(\"hat_faln\"))"];
+	  223 [label="CheckEquipped(\"jacket_faln\")  and  (CheckEquipped(\"pants_faln\")  or  CheckEquipped(\"hat_faln\"))", shape=diamond];
+	  224 [label="!(CheckEquipped(\"jacket_faln\")  and  (CheckEquipped(\"pants_faln\")  or  CheckEquipped(\"hat_faln\")))", shape=diamond];
+	  225 [label="Judit Minot: \"Wonderful,\" the woman looks north. \"Then can we please just go back to Jamrock now?\""];
+	  226 [label="Kim Kitsuragi: IsKimHere()"];
+	  227 [label="IsKimHere()", shape=diamond];
+	  228 [label="!(IsKimHere())", shape=diamond];
+	  229 [label="Judit Minot: Judit Minot: \"...\""];
+	  230 [label="Judit Minot: Judit Minot: \"...\""];
+	  231 [label="You: \"I will win, Jean. I swear to god and to Revachol, I will win.\""];
+	  232 [label="Judit Minot: \"...\""];
+	  233 [label="You: \"That does explain a lot.\""];
+	  234 [label="Jump to: [Untitled hub (03)]"];
+	  235 [label="Cuno: \"Your lame-ass pants before. Like this... fucking retro shit that's going on. Cuno's seen all this before -- in *gym* class...\""];
+	  236 [label="Jean Vicquemare: \"Incredibly bangable?\""];
+	  237 [label="You: \"Figures.\""];
+	  238 [label="Jean Vicquemare: \"So have I. You *bitterly* drop *Dearest Dora* and *really tore me a new one*... twice a week I think? It comes up.\""];
+	  239 [label="Jump to: [Untitled hub (06)]"];
+	  240 [label="Jean Vicquemare: \"No.\""];
+	  241 [label="Jump to: [Untitled hub (06)]"];
+	  242 [label="Jean Vicquemare: \"Okay -- it's not the Bloody Murder Station. It's an old converted silk mill with green desk lamps and a coffee corner. A lot of good people work there. Hard. Every day.\""];
+	  243 [label="Cuno: \"Yeah, that shit is fucking famous on Channel 8. Cuno hears this shit.\""];
+	  244 [label="Jean Vicquemare: \"Thank you, Cuno. You bring light to my day.\""];
+	  245 [label="You: \"Want to do that at Station 41?\""];
+	  246 [label="You: \"A cryptozoologist. She lives in Jamrock, on Tabernacle road. She told me about this phasmid.\""];
+	  247 [label="Untitled hub (05)"];
+	  248 [label="Esprit de Corps: Perhaps it was an *unspoken* agreement between you and the junior officer?"];
+	  249 [label="Cuno: \"Cuno's fuckin' nineteen.\""];
+	  250 [label="Cuno: \"You don't have to make *them* cops -- only Cuno. Cuno's an asset.\""];
+	  251 [label="Shivers: The great district hums in the falling rain: A chessboard of wooden houses, 80,000 living souls. Firetraps as far as the eye can see -- from Main Street to Grand Couron, from Precinct 41 to Boogie Street forking into the rainswept horizon..."];
+	  252 [label="Shivers: A grey rain falls on Martinaise. The city soaks in it, cold and dripping. Waves hit the concrete breakers. The homeless huddle by the fires behind the fences. There, among the shacks, is your home. Stay. Have a drink. Forever."];
+	  253 [label="Jean Vicquemare: \"No, he's not. What is he, ten? Eleven?\""];
+	  254 [label="Kim Kitsuragi: Variable[\"TASK.return_to_mainland_done\"]"];
+	  255 [label="Variable[\"TASK.return_to_mainland_done\"]", shape=diamond];
+	  256 [label="!(Variable[\"TASK.return_to_mainland_done\"])", shape=diamond];
+	  257 [label="Perception (Sight): She's avoiding your gaze."];
+	  258 [label="Physical Instrument: How you're able to perform a 360-degree spin-kick despite your less than stellar workout routine."];
+	  259 [label="Perception (Sight): Think! You can *detect*. In Jamrock. Boogie Street. Couron. Le Royaume, underground. Coal City. On the 8/81-- it will all be yours to sieve through when the last snow has melted."];
+	  260 [label="Kim Kitsuragi: IsHighestPolitical(\"moralist\")"];
+	  261 [label="IsHighestPolitical(\"moralist\")", shape=diamond];
+	  262 [label="!(IsHighestPolitical(\"moralist\"))", shape=diamond];
+	  263 [label="You: \"I'm ready.\" (End.)"];
+	  264 [label="You: \"I'll just go back to the island and *live* there. I don't care.\""];
+	  265 [label="Judit Minot: \"Detective.\" She looks at Vicquemare. \"I just don't want this *trial* to go on any longer. It's cold outside, and... let's just go.\""];
+	  266 [label="Kim Kitsuragi: Variable[\"tc.down_with_racism\"]  or  IsHighestPolitical(\"revacholian_nationhood\")"];
+	  267 [label="Variable[\"tc.down_with_racism\"]  or  IsHighestPolitical(\"revacholian_nationhood\")", shape=diamond];
+	  268 [label="!(Variable[\"tc.down_with_racism\"]  or  IsHighestPolitical(\"revacholian_nationhood\"))", shape=diamond];
+	  269 [label="Jump to: [Untitled hub (03)]"];
+	  270 [label="Jean Vicquemare: \"It's not a mystery. Some chick fucked you over. Also, you're a drunk.\""];
+	  271 [label="Pain Threshold: You really went with it too. Really maximized the damage."];
+	  272 [label="Jean Vicquemare: \"You're too unstable to work for a mob boss. You're suicidal, Harry. No mob boss would take you.\""];
+	  273 [label="Logic: He would immediately backpedal out of it."];
+	  274 [label="You: \"Good bye, then.\" (End.)"];
+	  275 [label="Judit Minot: \"... get back to it. We left Torson and McLaine to run the C-Wing. It's not good.\""];
+	  276 [label="Judit Minot: \"That's not true...\""];
+	  277 [label="Jump to: [Untitled hub (06)]"];
+	  278 [label="You: \"Good luck with your report.\""];
+	  279 [label="Judit Minot: \"Jean...\" She stops."];
+	  280 [label="You: \"I'm sorry. We just can't. It's not possible.\""];
+	  281 [label="Kim Kitsuragi: Variable[\"auto.is_snowing\"]"];
+	  282 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  283 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  284 [label="Shivers: Under the evening sky the great district turns on its lights: A chessboard of wooden houses, 80,000 living souls inside. Firetraps as far as the eye can see -- from Main Street to Precinct 41 atop the motorway, to Boogie Street forking into the dark horizon..."];
+	  285 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  286 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  287 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  288 [label="Jean Vicquemare: \"He can't be a cop, Harry. He's twelve. And he says 'f****t' every four seconds.\""];
+	  289 [label="Jump to: [PosseEndgame()]"];
+	  290 [label="Untitled hub (02)"];
+	  291 [label="Judit Minot: \"Wonderful,\" the woman looks north. \"Then can we please just go back to Jamrock now?\""];
+	  292 [label="Kim Kitsuragi: Variable[\"TASK.return_to_mainland_done\"]"];
+	  293 [label="Variable[\"TASK.return_to_mainland_done\"]", shape=diamond];
+	  294 [label="!(Variable[\"TASK.return_to_mainland_done\"])", shape=diamond];
+	  295 [label="Judit Minot: \"He has... That's true.\""];
+	  296 [label="You: \"I need to be the greatest, Jean. I was *born* for this. I *will* stop. To be better.\""];
+	  297 [label="You: \"Precinct 41... what kind of station is it?\""];
+	  298 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  299 [label="IsCunoInParty()", shape=diamond];
+	  300 [label="!(IsCunoInParty())", shape=diamond];
+	  301 [label="Inland Empire: You, every morning, walking from Voyager Road to teach gym. She -- leaving for the academy with her spring coat on. The air filled with the smell of smoke and raspberries and incredible hope. An ocean full of hope."];
+	  302 [label="You: \"*SIX* years?\""];
+	  303 [label="Trant Heidelstam: The special consultant glances at his wrist-watch."];
+	  304 [label="Jump to: [Untitled hub (06)]"];
+	  305 [label="Trant Heidelstam: \"There's also a lot of outside help involved. Not only me.\" He smiles. \"Other losers too.\""];
+	  306 [label="You: \"So I work in the Bloody Murder Station?\" (Conclude.)"];
+	  307 [label="Esprit de Corps: They speak of change. The city. The tension on the streets. They speak of the events of April and the blood on the streets in May."];
+	  308 [label="Kim Kitsuragi: \"Well -- first I will go back to my station and write the most detailed report anyone has ever seen. It will have to be good to cover all this. Then I will have a serious talk with my captain.\""];
+	  309 [label="Jean Vicquemare: \"Flattered? You're Lieutenant Kitsuragi. *We* would be flattered if you even considered...\""];
+	  310 [label="Volition: We're looking at a real brick here. The sooner you start the better."];
+	  311 [label="Jean Vicquemare: \"Already did. Let's go?\""];
+	  312 [label="Composure: His hands are shaking and his face is white."];
+	  313 [label="Shivers: Under the pink morning sky the great district wakes: A chessboard of wooden houses, 80,000 living souls and chimney stacks. Firetraps as far as the eye can see -- from Main Street to Precinct 41. To Boogie Street forking into the snowswept horizon..."];
+	  314 [label="Kim Kitsuragi: IsNight()"];
+	  315 [label="IsNight()", shape=diamond];
+	  316 [label="!(IsNight())", shape=diamond];
+	  317 [label="Untitled hub"];
+	  318 [label="Physical Instrument: The fact that you don't even know what homo-sexuality is."];
+	  319 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  320 [label="IsCunoInParty()", shape=diamond];
+	  321 [label="!(IsCunoInParty())", shape=diamond];
+	  322 [label="You: \"I'm ready.\" (End.)"];
+	  323 [label="Judit Minot: Judit Minot: \"...\""];
+	  324 [label="Kim Kitsuragi: IsTHCCookingOrFixed(\"the_waste_land_of_reality\") or  SubstanceUsedOnce(\"alcohol\") == false"];
+	  325 [label="IsTHCCookingOrFixed(\"the_waste_land_of_reality\") or  SubstanceUsedOnce(\"alcohol\") == false", shape=diamond];
+	  326 [label="!(IsTHCCookingOrFixed(\"the_waste_land_of_reality\") or  SubstanceUsedOnce(\"alcohol\") == false)", shape=diamond];
+	  327 [label="You: \"Let's go.\" (No time.)"];
+	  328 [label="Kim Kitsuragi: \"Of course! Contact Mike!\""];
+	  329 [label="Kim Kitsuragi: Variable[\"ice.andre_composure_done\"]"];
+	  330 [label="Variable[\"ice.andre_composure_done\"]", shape=diamond];
+	  331 [label="!(Variable[\"ice.andre_composure_done\"])", shape=diamond];
+	  332 [label="You: \"It couldn't have been six. Three. Let's go with three.\""];
+	  333 [label="Jean Vicquemare: \"She was extremely fuckable, Harry. Gorgeous. A gorgeous bourgeois woman. Waifish. Like a *welkin* basically.\""];
+	  334 [label="Jean Vicquemare: \"I've only seen a picture -- but it's obvious you formed a real spiritual connection with how *pretty* she was. One you never recuperated from.\""];
+	  335 [label="Jean Vicquemare: \"Yeah... You're not doing too good there. It's an old-man thing I think. Two *old-years* equals one normal year. That -- and Dora Ingerlund really tore you a new one. A big one.\""];
+	  336 [label="You: \"And the C-Wing is...\""];
+	  337 [label="Jean Vicquemare: \"God...\" He sighs. \"There are four wings, Harry: A, B, C, and D. We're in C. It's made of losers and clock-punchers. You and I *re-conceptualized* it as a task force. It was a mistake.\""];
+	  338 [label="You: \"And Pryce is...\""];
+	  339 [label="Kim Kitsuragi: \"He's one of the most highly regarded men in the force. You're lucky.\""];
+	  340 [label="Esprit de Corps: A lowset house, windswept -- and without you. Traffic whooshes by..."];
+	  341 [label="Kim Kitsuragi: \"Detective, we just stopped a small-scale war. Something is happening to Revachol.\" He takes a look around -- into the deepening shadows of the streets -- then pulls up his collar."];
+	  342 [label="Perception (Sight): It says: \"Tensions rise in Terminal YC In light of the Débardeurs' strike in Terminal B, among representatives of heavy industry in Coal City...\" you read."];
+	  343 [label="Kim Kitsuragi: \"Work *with* Pryce?\" A crooked smile quivers on his lips. \"I'm flattered, but I don't know if I...\""];
+	  344 [label="Jean Vicquemare: \"Fine. If we're gonna drop you off anyway.\""];
+	  345 [label="Jean Vicquemare: \"No, he's not. He's twelve.\""];
+	  346 [label="Jean Vicquemare: \"I know a hundred kids with nothing, Harry. We can't make them all cops.\""];
+	  347 [label="Composure: His teeth are clenched and his throat moves in a gulping motion."];
+	  348 [label="Jean Vicquemare: \"*If* you make it -- if you've been sober for 10 months -- tell us. I'll work with you again. But not like this. Never like this again. This is over.\""];
+	  349 [label="Kim Kitsuragi: Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"]"];
+	  350 [label="Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"]", shape=diamond];
+	  351 [label="!(Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"])", shape=diamond];
+	  352 [label="Composure: Your posture. The constant *stretches*... The disco star aspirations."];
+	  353 [label="Kim Kitsuragi: IsKimHere()"];
+	  354 [label="IsKimHere()", shape=diamond];
+	  355 [label="!(IsKimHere())", shape=diamond];
+	  356 [label="Volition: No. You *can* stop. Just wade through the hell. Month after month. Year after year -- you against the nothingness. It's possible, because *time* is possible."];
+	  357 [label="Rhetoric: For the Revachol Citizens Militia. A blue forget-me-not in the grey sky."];
+	  358 [label="Esprit de Corps: It's more than that. He just can't. One final time..."];
+	  359 [label="Kim Kitsuragi: \"Harry... it explains *everything*. The running around. The jumping. The *shot-put*. Your inexplicable facial hair...\""];
+	  360 [label="Kim Kitsuragi: \"The fact that you don't seem to *know* what homo-sexuality is...\""];
+	  361 [label="Kim Kitsuragi: Variable[\"ice.tentflap_greeting_done\"]  and  Variable[\"yard.cuno_intro_hub\"]"];
+	  362 [label="Variable[\"ice.tentflap_greeting_done\"]  and  Variable[\"yard.cuno_intro_hub\"]", shape=diamond];
+	  363 [label="!(Variable[\"ice.tentflap_greeting_done\"]  and  Variable[\"yard.cuno_intro_hub\"])", shape=diamond];
+	  364 [label="Savoir Faire: And this guy too."];
+	  365 [label="You: \"So we weren't even married...\""];
+	  366 [label="You: \"Okay then.\""];
+	  367 [label="Judit Minot: \"Talks concluded?\" She hugs herself for warmth."];
+	  368 [label="Esprit de Corps: Somewhere under the curved roof of a former silk factory, shaped like a ladybird with two chimneys, Police Captain Ptolemy Pryce sits behind a heavy wooden desk. Resident medic Nix Gottlieb pours him coffee. It's silent in the captain's office..."];
+	  369 [label="Judit Minot: \"Ptolemy Pryce? He's the son of the old Pryce -- one of the founders of the RCM.\""];
+	  370 [label="Trant Heidelstam: \"Shooting up churches never is. I was out of town, to be clear....\""];
+	  371 [label="Authority: He means it. The RCM and its enemies will not be discussed on this coast."];
+	  372 [label="You: \"About what?\""];
+	  373 [label="Logic: Dammit. Yes. *That*."];
+	  374 [label="Jean Vicquemare: \"You have to be *fifteen* for the junior officer program -- and you are not.\""];
+	  375 [label="Jean Vicquemare: \"Good bye, Harry. And -- I know it won't happen, but...\" He looks at you, heart steeled and eyes cold."];
+	  376 [label="Jean Vicquemare: Another sigh -- of surrender."];
+	  377 [label="Shivers: Under the violet morning sky the great district wakes: A chessboard of wooden houses, 80,000 living souls and chimney stacks. Firetraps as far as the eye can see -- from Main Street to Precinct 41, to Boogie Street forking into the rainswept horizon..."];
+	  378 [label="Suggestion: She is going to be over the moon."];
+	  379 [label="Shivers: Under the night sky the great district sleeps: A chessboard of old wooden houses in the snow, 80,000 living souls inside. Firetraps as far as the eye can see -- from Main Street to Precinct 41 atop the motorway, to Boogie Street glowing on the horizon..."];
+	  380 [label="Shivers: Under the evening sky the great district turns on its lights: A chessboard of wooden houses, 80,000 living souls inside. Firetraps as far as the eye can see -- from Main Street to Precinct 41 atop the motorway, to Boogie Street disappearing into the rain on the horizon..."];
+	  381 [label="Shivers: The great district hums in the falling rain: A chessboard of wooden houses, 80,000 living souls. Firetraps as far as the eye can see -- from Main Street to Grand Couron, from Precinct 41 to Boogie Street forking into the rainswept horizon..."];
+	  382 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  383 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  384 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  385 [label="Kim Kitsuragi: Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"]"];
+	  386 [label="Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"]", shape=diamond];
+	  387 [label="!(Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"])", shape=diamond];
+	  388 [label="Jean Vicquemare: \"Even the insect -- I don't care. But you're an *alcoholic*. And you've been drinking -- again. I won't let my life unravel because of this.\""];
+	  389 [label="Electrochemistry: No. You can figure it out. *Replace* it! Replace the alcohol with amphetamine. Or GBL! Fuck it -- morphine! Graffito removal agent! Anything. It'll buy you time. All you need is time."];
+	  390 [label="Empathy: For the world."];
+	  391 [label="Jean Vicquemare: The man looks westward, impatiently."];
+	  392 [label="You: \"Lieutenant Kitsuragi -- what will you do now?\""];
+	  393 [label="Untitled hub (07)"];
+	  394 [label="You: \"Oh god -- *Contact Mike*...\""];
+	  395 [label="Jean Vicquemare: \"Yes, you *taught gym* in Couron. I believe that's the term? Taught gym at a high school. You were a high school gym teacher.\""];
+	  396 [label="Kim Kitsuragi: \"Some of your more, khm, *old-school* wording choices. Your posture even. The constant *stretches*...\""];
+	  397 [label="Kim Kitsuragi: Variable[\"village.posse_gym_endur_stamina\"]"];
+	  398 [label="Variable[\"village.posse_gym_endur_stamina\"]", shape=diamond];
+	  399 [label="!(Variable[\"village.posse_gym_endur_stamina\"])", shape=diamond];
+	  400 [label="Kim Kitsuragi: Variable[\"tc.dora_du_is_her_full_name\"]"];
+	  401 [label="Variable[\"tc.dora_du_is_her_full_name\"]", shape=diamond];
+	  402 [label="!(Variable[\"tc.dora_du_is_her_full_name\"])", shape=diamond];
+	  403 [label="You: \"Was her name Dora?\""];
+	  404 [label="Jean Vicquemare: \"Dora something. Dora Ingerlund?\" He thinks. \"Yeah. You mentioned her name.\""];
+	  405 [label="Jean Vicquemare: \"No. It was six. Like *ancient*. It's an old-man thing. Two *old-years* equals one normal year. That -- and Dora Ingerlund really tore you a new one. A big one.\""];
+	  406 [label="You: \"Some chick -- who?\""];
+	  407 [label="Jean Vicquemare: \"Yeah. Dora Ingerlund, I think.\""];
+	  408 [label="Kim Kitsuragi: \"That's not true. Jamrock is too big for one precinct. You're just understaffed. And everyone respects the 41st -- you have Captain Pryce.\""];
+	  409 [label="Jean Vicquemare: \"So he remembers *that*... Yes, there may have been a raid on *some* churches. It wasn't good press.\""];
+	  410 [label="Jean Vicquemare: \"Who is Lena?\""];
+	  411 [label="Kim Kitsuragi: \"She and her husband were conducting the search for the phasmid. It's their discovery -- in part.\""];
+	  412 [label="Jump to: [Untitled hub (06)]"];
+	  413 [label="Shivers: You close your eyes and hear the dogs bark. A lone woman sits by a factory window, dreaming of meteorite strikes. On Rue Saint-Gérôme a square bullet slides into a square-shaped chamber. In Old South a man without eyelids smiles. Spring has come. It's time."];
+	  414 [label="Kim Kitsuragi: Variable[\"auto.is_snowing\"]"];
+	  415 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  416 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  417 [label="Kim Kitsuragi: Variable[\"auto.is_snowing\"]"];
+	  418 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  419 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  420 [label="Kim Kitsuragi: Variable[\"village.posse_final_shivers\"]"];
+	  421 [label="Variable[\"village.posse_final_shivers\"]", shape=diamond];
+	  422 [label="!(Variable[\"village.posse_final_shivers\"])", shape=diamond];
+	  423 [label="Judit Minot: \"Wonderful,\" the woman looks north. \"Then can we please just go back to Jamrock now?\""];
+	  424 [label="Kim Kitsuragi: Variable[\"village.posse_esprit_final\"]"];
+	  425 [label="Variable[\"village.posse_esprit_final\"]", shape=diamond];
+	  426 [label="!(Variable[\"village.posse_esprit_final\"])", shape=diamond];
+	  427 [label="Kim Kitsuragi: Variable[\"auto.is_snowing\"]"];
+	  428 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  429 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  430 [label="Esprit de Corps: \"Torson?\"
+\"Yes.\"
+\"McLaine?\"
+\"Yes.\"
+\"Heidelstam?\"
+\"No.\"
+\"Vicquemare?\"
+\"Yes.\"
+\"Du Bois?\"
+\"Yes.\""];
+	  431 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  432 [label="IsCunoInParty()", shape=diamond];
+	  433 [label="!(IsCunoInParty())", shape=diamond];
+	  434 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  435 [label="IsCunoInParty()", shape=diamond];
+	  436 [label="!(IsCunoInParty())", shape=diamond];
+	  437 [label="Jump to: [Inland Empire: \"Now! Now you will *finally* get to...\"]"];
+	  438 [label="Suggestion: They're leaving. They're all turning away from you."];
+	  439 [label="Untitled hub (04)"];
+	  440 [label="Kim Kitsuragi: IsHighestPolitical(\"communist\")"];
+	  441 [label="IsHighestPolitical(\"communist\")", shape=diamond];
+	  442 [label="!(IsHighestPolitical(\"communist\"))", shape=diamond];
+	  443 [label="Kim Kitsuragi: SubstanceUsedOnce(\"alcohol\") == false  or  IsTHCCookingOrFixed(\"the_waste_land_of_reality\")"];
+	  444 [label="SubstanceUsedOnce(\"alcohol\") == false  or  IsTHCCookingOrFixed(\"the_waste_land_of_reality\")", shape=diamond];
+	  445 [label="!(SubstanceUsedOnce(\"alcohol\") == false  or  IsTHCCookingOrFixed(\"the_waste_land_of_reality\"))", shape=diamond];
+	  446 [label="Judit Minot: \"Honestly -- anything that ends this *trial* is okay with me.\" A quick nod."];
+	  447 [label="Jean Vicquemare: \"Don't pity yourself. You've managed not to die thus far. You'll manage now.\""];
+	  448 [label="Kim Kitsuragi: IsTHCPresent(\"homosexual_underground\")"];
+	  449 [label="IsTHCPresent(\"homosexual_underground\")", shape=diamond];
+	  450 [label="!(IsTHCPresent(\"homosexual_underground\"))", shape=diamond];
+	  451 [label="Physical Instrument: Also -- *this* guy. Just... everything about this guy."];
+	  452 [label="Kim Kitsuragi: Variable[\"TASK.buy_faln_pants_from_cuno_done\"]  and  CheckEquipped(\"pants_bellbottom\") == false"];
+	  453 [label="Variable[\"TASK.buy_faln_pants_from_cuno_done\"]  and  CheckEquipped(\"pants_bellbottom\") == false", shape=diamond];
+	  454 [label="!(Variable[\"TASK.buy_faln_pants_from_cuno_done\"]  and  CheckEquipped(\"pants_bellbottom\") == false)", shape=diamond];
+	  455 [label="Kim Kitsuragi: IsKimHere()"];
+	  456 [label="IsKimHere()", shape=diamond];
+	  457 [label="!(IsKimHere())", shape=diamond];
+	  458 [label="Suggestion: She is going to be over the moon. It will do you good to deliver some *good* news to someone for a change."];
+	  459 [label="Cuno: \"They're gonna hang me by the nuts if you leave me here. You want that on you? A dead kid?\" He narrows his eyes. \"Or you want Cuno at your station, solving shit? Like we *just* did.\""];
+	  460 [label="Cuno: \"Hey, f****t! Understand this -- they're gonna hang me by the nuts if you leave me here. You want that on you? A dead kid? *Or* you want the Cuno at your station, solving shit? Like we *just* did?\""];
+	  461 [label="Shivers: The great district hums with the noise of human habitation: A chessboard of wooden houses, 80,000 living souls. Firetraps as far as the eye can see -- from Main Street to Grand Couron, from Precinct 41 to Boogie Street forking into the distant horizon..."];
+	  462 [label="You: \"I'm ready.\" (End.)"];
+	  463 [label="Kim Kitsuragi: \"He is very passionate about this.\""];
+	  464 [label="Judit Minot: \"Jean -- I think he hasn't. I can see it on his face...\""];
+	  465 [label="Jean Vicquemare: \"No.\" There's a silence. \"Sure, you got the case together -- you can *do* policework -- in bouts. That's not a surprise to me.\""];
+	  466 [label="You: \"Okay. Am I a dirty cop working for La Puta Madre?\""];
+	  467 [label="You: \"You said in Couron? I was a gym teacher there?\""];
+	  468 [label="Jump to: [Untitled hub (03)]"];
+	  469 [label="Kim Kitsuragi: IsKimHere()"];
+	  470 [label="IsKimHere()", shape=diamond];
+	  471 [label="!(IsKimHere())", shape=diamond];
+	  472 [label="Hand/Eye Coordination: God... even this javelin-throwing freak here..."];
+	  473 [label="Jean Vicquemare: \"Du Bois?\" He shakes his head. \"It was... Dora Ingerlund, I think. You've said her name. But you weren't married. You were engaged.\""];
+	  474 [label="Untitled hub (05)"];
+	  475 [label="Jump to: [Untitled hub (06)]"];
+	  476 [label="Jean Vicquemare: \"Yeah -- not like *us*. Two clinically depressed old men. Where's the contrast here? We're garbage.\""];
+	  477 [label="Jump to: [Untitled hub (06)]"];
+	  478 [label="Jump to: [Untitled hub (06)]"];
+	  479 [label="You: \"Guys. Cuno's enrolling in a junior officer program.\""];
+	  480 [label="Shivers: Under the evening sky the great district turns on its lights: A chessboard of wooden houses, 80,000 living souls inside. Firetraps as far as the eye can see -- from Main Street to Precinct 41 atop the motorway, to Boogie Street forking into the snowswept horizon..."];
+	  481 [label="Kim Kitsuragi: IsMorning()"];
+	  482 [label="IsMorning()", shape=diamond];
+	  483 [label="!(IsMorning())", shape=diamond];
+	  484 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  485 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  486 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  487 [label="Esprit de Corps: \"Really?\" Nix Gottlieb looks up from the list. \"I hear he's quite unstable.\"
+\"You say that like it's a *bad* thing,\" Captain Ptolemy Pryce points his pen at the doctor. It's dim in his office and the curtains are drawn. \"Harry's our man, he'll pull through -- and when he does, he'll side with Revachol.\"
+\"Understood.\" Gottlieb returns to the list. \"Minot?\"
+\"Of course.\""];
+	  488 [label="Kim Kitsuragi: Variable[\"village.posse_achievement_kim\"]"];
+	  489 [label="Variable[\"village.posse_achievement_kim\"]", shape=diamond];
+	  490 [label="!(Variable[\"village.posse_achievement_kim\"])", shape=diamond];
+	  491 [label="Kim Kitsuragi: IsKimHere()"];
+	  492 [label="IsKimHere()", shape=diamond];
+	  493 [label="!(IsKimHere())", shape=diamond];
+	  494 [label="Judit Minot: Judit Minot: \"...\""];
+	  495 [label="Kim Kitsuragi: IsTHCCookingOrFixed(\"the_waste_land_of_reality\")  or  SubstanceUsedOnce(\"alcohol\") == false"];
+	  496 [label="IsTHCCookingOrFixed(\"the_waste_land_of_reality\")  or  SubstanceUsedOnce(\"alcohol\") == false", shape=diamond];
+	  497 [label="!(IsTHCCookingOrFixed(\"the_waste_land_of_reality\")  or  SubstanceUsedOnce(\"alcohol\") == false)", shape=diamond];
+	  498 [label="Conceptualization: If you declare your life forfeit; if you declare yourself a doomed man... A doomed man does not need comfort. From *anything*. He can go on without drink, or help. Like a clockwork."];
+	  499 [label="You: \"I can -- I will just pass time until my mind reconfigures from the abuse it's taken. I can do that now. I've taught myself.\""];
+	  500 [label="You: \"I'm not that person anymore. I became something else and that something else *will* quit.\""];
+	  501 [label="You: \"I'm not that person anymore. I became something else. And that something else *has* quit.\""];
+	  502 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  503 [label="IsCunoInParty()", shape=diamond];
+	  504 [label="!(IsCunoInParty())", shape=diamond];
+	  505 [label="Untitled hub (02)"];
+	  506 [label="You: \"The collection of FALN sportswear I've amassed...\""];
+	  507 [label="Perception (Smell): The smell of sweat and glue, the worn floorboards..."];
+	  508 [label="Endurance: The *incredible* stamina output..."];
+	  509 [label="Endurance: The raw, robust stamina output..."];
+	  510 [label="Kim Kitsuragi: CheckItem(\"jacket_faln\")  and  CheckItem(\"pants_faln\")  and  CheckItem(\"hat_faln\")  and  CheckItem(\"shirt_faln\")  and  CheckItem(\"shoes_faln\")"];
+	  511 [label="CheckItem(\"jacket_faln\")  and  CheckItem(\"pants_faln\")  and  CheckItem(\"hat_faln\")  and  CheckItem(\"shirt_faln\")  and  CheckItem(\"shoes_faln\")", shape=diamond];
+	  512 [label="!(CheckItem(\"jacket_faln\")  and  CheckItem(\"pants_faln\")  and  CheckItem(\"hat_faln\")  and  CheckItem(\"shirt_faln\")  and  CheckItem(\"shoes_faln\"))", shape=diamond];
+	  513 [label="You: \"Huh?\""];
+	  514 [label="Reaction Speed: Not Dora *Du Bois*?"];
+	  515 [label="Jump to: [Untitled hub (06)]"];
+	  516 [label="Jean Vicquemare: \"He meant *join* us. At Precinct 41. Transfer.\""];
+	  517 [label="You: \"Yeah. Sure.\""];
+	  518 [label="Jump to: [Untitled hub (03)]"];
+	  519 [label="Judit Minot: \"Tabernacle? It's on the way over. Near where you live, on Perdition...\" She looks at Vicquemare."];
+	  520 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  521 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  522 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  523 [label="Kim Kitsuragi: IsEvening()"];
+	  524 [label="IsEvening()", shape=diamond];
+	  525 [label="!(IsEvening())", shape=diamond];
+	  526 [label="You: Not now."];
+	  527 [label="Shivers: Under the night sky the great district sleeps: A black chessboard of old wooden houses, 80,000 living souls inside. Firetraps as far as the eye can see -- from Main Street to Precinct 41 atop the motorway, to Boogie Street forking into the darkened horizon..."];
+	  528 [label="Shivers: Under the afternoon sky the great district hums: A chessboard of wooden houses, 80,000 living souls and chimney stacks. Firetraps as far as the eye can see -- from Main Street to Precinct 41. To Boogie Street forking into the snowswept horizon..."];
+	  529 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  530 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  531 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  532 [label="Kim Kitsuragi: IsAfternoon()"];
+	  533 [label="IsAfternoon()", shape=diamond];
+	  534 [label="!(IsAfternoon())", shape=diamond];
+	  535 [label="Jean Vicquemare: \"You can't be a cop. You're a child. And you say 'f****t' every four seconds.\""];
+	  536 [label="Jean Vicquemare: \"I don't care -- he can't be a cop. He's just a kid. A kid who says 'f****t' every four seconds.\""];
+	  537 [label="You: The collection of FALN sportswear I've amassed..."];
+	  538 [label="Kim Kitsuragi: Variable[\"tc.down_with_racism\"]  or  IsHighestPolitical(\"revacholian_nationhood\")"];
+	  539 [label="Variable[\"tc.down_with_racism\"]  or  IsHighestPolitical(\"revacholian_nationhood\")", shape=diamond];
+	  540 [label="!(Variable[\"tc.down_with_racism\"]  or  IsHighestPolitical(\"revacholian_nationhood\"))", shape=diamond];
+	  541 [label="Rhetoric: For the planetary proletariat."];
+	  542 [label="Jean Vicquemare: \"You manipulative son of a bitch...\" He shakes his head and sniffles. \"It *is* cold, and we have vehicles in the square. The perp needs to be taken into custody. Let's get a move on.\""];
+	  543 [label="You: \"Why am I *like* this?\""];
+	  544 [label="Kim Kitsuragi: IsKimHere()"];
+	  545 [label="IsKimHere()", shape=diamond];
+	  546 [label="!(IsKimHere())", shape=diamond];
+	  547 [label="You: \"When was this? When was I a gym teacher?\""];
+	  548 [label="Encyclopedia: Couron is just east of Jamrock. It was a short walk, every morning -- to the baseball field or the sports building..."];
+	  549 [label="Cuno: \"Cuno fucking *knew* there had to be something wrong if you can run like that...\""];
+	  550 [label="Jean Vicquemare: \"You've been on about Mike again?\" The detective shakes his head. \"I hate that guy.\""];
+	  551 [label="Kim Kitsuragi: CheckEquipped(\"jacket_faln\")  and  (CheckEquipped(\"pants_faln\")  or  CheckEquipped(\"hat_faln\"))"];
+	  552 [label="CheckEquipped(\"jacket_faln\")  and  (CheckEquipped(\"pants_faln\")  or  CheckEquipped(\"hat_faln\"))", shape=diamond];
+	  553 [label="!(CheckEquipped(\"jacket_faln\")  and  (CheckEquipped(\"pants_faln\")  or  CheckEquipped(\"hat_faln\")))", shape=diamond];
+	  554 [label="You: \"I've heard enough.\" (End it.)"];
+	  555 [label="You: \"Torson and McLaine?\""];
+	  556 [label="Jean Vicquemare: \"Us? We're the *Bloody Murder Station*, haven't you heard? We're the bad guys. No one likes us.\""];
+	  557 [label="Jean Vicquemare: \"Thank you, Cuno,\" he says with an amused half-smile. \"You're being kind. It's an understaffed station and the district is too big -- which is why we need to...\" He tilts his head northward and clicks his tongue."];
+	  558 [label="Judit Minot: \"And we also have a huge case load, lieutenant,\" she says with a smile. \"Piles that we need to get back to. Mountains, even.\""];
+	  559 [label="Encyclopedia: She lives at 1113 Tabernacle Road, in Jamrock. Remember?"];
+	  560 [label="Esprit de Corps: Detective Kuuno de Ruyter."];
+	  561 [label="Jump to: [Untitled hub (06)]"];
+	  562 [label="Jean Vicquemare: \"Fuck it, let's go.\" The man points down the street. \"Trant brought his motor carriage. It's a 20 minute drive to Jamrock.\""];
+	  563 [label="Shivers: Under the pink morning sky the great district wakes: A chessboard of wooden houses, 80,000 living souls and chimney stacks. Firetraps as far as the eye can see -- from Main Street to Precinct 41, to Boogie Street forking into the snowswept horizon..."];
+	  564 [label="Judit Minot: \"Look...\" She turns to face the sea. \"It's raining. It's time to go home.\""];
+	  565 [label="Shivers: Under the violet morning sky the great district wakes: A chessboard of wooden houses, 80,000 living souls and chimney stacks. Firetraps as far as the eye can see -- from Main Street to Precinct 41. To Boogie Street forking into the rainswept horizon..."];
+	  566 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  567 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  568 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  569 [label="Kim Kitsuragi: IsNighttime()"];
+	  570 [label="IsNighttime()", shape=diamond];
+	  571 [label="!(IsNighttime())", shape=diamond];
+	  572 [label="Judit Minot: \"Detective.\" She looks at Vicquemare. \"I just don't want this *trial* to go on any longer. It's cold outside, and...\""];
+	  573 [label="Jean Vicquemare: \"No. We're done, Harry. You're drunk. You'll get a station call once you've sobered up.\""];
+	  574 [label="Esprit de Corps: No one knows what to say. But they agree. Keeping you on the force endangers civilians."];
+	  575 [label="Jean Vicquemare: \"Okay.\" He sighs. \"We have vehicles in the square. And the perpetrator needs to be taken into custody. Let's go.\""];
+	  576 [label="Jean Vicquemare: \"I don't *want* to. But you discovered a new species. And solved the murder...\" He shrugs."];
+	  577 [label="You: \"Who *am* I?\""];
+	  578 [label="Jean Vicquemare: \"Who *are* you? You're a gym teacher, Harry.\""];
+	  579 [label="Jean Vicquemare: \"No,\" he remarks dryly, \"a regular one.\""];
+	  580 [label="You: \"How I can keep going for *twelve hours* a day...\""];
+	  581 [label="Judit Minot: \"Look...\" She turns to face the sea. \"The sun is about to go down. It's time to go home.\""];
+	  582 [label="Inland Empire: Heartbreak Welkin."];
+	  583 [label="Judit Minot: \"Mack 'The Torso' Torson and Chester McLaine --\" She arches an eyebrow. \"They're not fit to run a wing. Believe me. Things are shaky as it is.\""];
+	  584 [label="Jump to: [Untitled hub]"];
+	  585 [label="Inland Empire: Le Retour..."];
+	  586 [label="Kim Kitsuragi: \"Perhaps...\" He pauses, deep in thought. \"There are people who say the Zone of Control will not hold up long. They're not on the radio -- yet. But there are parties out there...\""];
+	  587 [label="You: \"Jean. I want Cuno at our station, solving this shit.\""];
+	  588 [label="Cuno: \"Cuno's fuckin' nineteen.\""];
+	  589 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  590 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  591 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  592 [label="Shivers: Under the evening sky the great district turns on its lights: A chessboard of wooden houses, 80,000 living souls inside. Firetraps as far as the eye can see -- from Main Street to Precinct 41 atop the motorway, to Boogie Street disappearing into the rain on the horizon..."];
+	  593 [label="Shivers: The great district hums in the slowly falling snow: A chessboard of wooden houses, 80,000 living souls and chimney stacks. Firetraps as far as the eye can see -- from Main Street to Precinct 41, to Boogie Street forking into the white horizon..."];
+	  594 [label="Esprit de Corps: \"Torson?\"
+\"Yes.\"
+\"McLaine?\"
+\"Yes.\"
+\"Heidelstam?\"
+\"No.\"
+\"Vicquemare?\"
+\"Yes.\"
+\"Du Bois?\"
+\"Of course.\""];
+	  595 [label="Shivers: Under the evening sky the great district turns on its lights: A chessboard of wooden houses, 80,000 living souls inside. Firetraps as far as the eye can see -- from Main Street to Precinct 41 atop the motorway, to Boogie Street forking into the snowswept horizon..."];
+	  596 [label="Shivers: The great district hums in the slowly falling snow: A chessboard of wooden houses, 80,000 living souls and chimney stacks. Firetraps as far as the eye can see -- from Main Street to Precinct 41. To Boogie Street forking into the white horizon..."];
+	  597 [label="Jump to: [Shivers: \"You close your eyes and hear the do...\"]"];
+	  598 [label="Empathy: He's genuinely scared of being left behind."];
+	  599 [label="Judit Minot: \"Wonderful,\" the woman looks north. \"Then can we please just go back to Jamrock now?\""];
+	  600 [label="Jean Vicquemare: \"Okay, you're right. She was extremely fuckable, Harry. Gorgeous. A gorgeous bourgeois woman. Waifish. Like a *welkin* basically.\""];
+	  601 [label="Kim Kitsuragi: IsKimHere()"];
+	  602 [label="IsKimHere()", shape=diamond];
+	  603 [label="!(IsKimHere())", shape=diamond];
+	  604 [label="Jean Vicquemare: \"Well, good luck finding her once we get back.\""];
+	  605 [label="Empathy: There's an enormous sadness in that admission."];
+	  606 [label="Jean Vicquemare: He nods. \"He's too old. He's been like this for too long. I've seen him try many times. It's a farce by now.\""];
+	  607 [label="Reaction Speed: The houses, the streets, the motorways singing. Hold on. This is a fight we can *win*."];
+	  608 [label="Cuno: \"Listen to this shit, man...\" He throws up his hands."];
+	  609 [label="Jean Vicquemare: \"Fucking Harry... Fuck you for bringing this kid with you. It's *only* because he's defending you -- it's the *only* reason you're not staying here to die.\""];
+	  610 [label="You: \"Wait. I have a *few* questions before we go. About who I am.\""];
+	  611 [label="You: \"The phasmid -- I need to tell Lena about this ASAP.\""];
+	  612 [label="You: \"Cuno -- what will you do now?\""];
+	  613 [label="You: \"Good bye then. I'll just become a bum now. A bum cop.\""];
+	  614 [label="Jean Vicquemare: \"About who you *are*?\""];
+	  615 [label="Jean Vicquemare: \"Well -- obviously you're not a gym teacher anymore, but...\""];
+	  616 [label="Jean Vicquemare: \"No one is married anymore. This is Revachol.\""];
+	  617 [label="Pain Threshold: Pain Welkin."];
+	  618 [label="Encyclopedia: Vaasa is where beautiful and impossibly blonde people come from."];
+	  619 [label="Jean Vicquemare: \"Thank you, lieutenant. You're being kind. It *is* an understaffed station and the district *is* too big -- which is why we need to...\" He tilts his head northward..."];
+	  620 [label="Untitled hub (03)"];
+	  621 [label="Endurance: Watch out or she'll faint."];
+	  622 [label="Kim Kitsuragi: Variable[\"TASK.return_to_mainland_done\"]"];
+	  623 [label="Variable[\"TASK.return_to_mainland_done\"]", shape=diamond];
+	  624 [label="!(Variable[\"TASK.return_to_mainland_done\"])", shape=diamond];
+	  625 [label="Cuno: \"Hey, f****t! You don't get it. Cuno's got pig all over him -- Cuno smells of bacon grease. Been *seen* with you. Fuckin' informant shit. You think no one *sees* this?\" He spreads his arms."];
+	  626 [label="Cuno: \"I won't say it! I won't say it anymore.\""];
+	  627 [label="Jean Vicquemare: \"He can't be a cop, Harry. He's a child. A child who says 'f****t' every four seconds.\""];
+	  628 [label="Kim Kitsuragi: Variable[\"tc.lenas_address\"]"];
+	  629 [label="Variable[\"tc.lenas_address\"]", shape=diamond];
+	  630 [label="!(Variable[\"tc.lenas_address\"])", shape=diamond];
+	  631 [label="Savoir Faire: It explains everything. All the running around. The jumping. The *bicep girth*."];
+	  632 [label="Jean Vicquemare: \"Okay, so he's stayed clear for what? A week?\" He sighs."];
+	  633 [label="Rhetoric: For Revachol."];
+	  634 [label="You: \"I know it's difficult to believe, but I will do it. For the white banner of the Commune.\""];
+	  635 [label="Judit Minot: \"Anything that ends the *trial* is okay with me.\" A quick nod."];
+	  636 [label="You: \"But before...\""];
+	  637 [label="Kim Kitsuragi: Variable[\"ice.acele_asked_about_contact_mike\"]"];
+	  638 [label="Variable[\"ice.acele_asked_about_contact_mike\"]", shape=diamond];
+	  639 [label="!(Variable[\"ice.acele_asked_about_contact_mike\"])", shape=diamond];
+	  640 [label="Jean Vicquemare: \"He's been on about Mike again?\" The detective shakes his head. \"I hate that guy.\""];
+	  641 [label="Untitled hub (03)"];
+	  642 [label="Jean Vicquemare: \"The regular -- you found some chick. She inspired you to fight the *big fight*. Be more than you are. All that.\""];
+	  643 [label="Jump to: [Untitled hub (03)]"];
+	  644 [label="Jean Vicquemare: \"My point is, you need to see a *psychiatrist* about this shit. Not a psychologist -- several degrees harder. Is there's something harder than a psychiatrist?\" He pauses to think. \"A forensic psychiatrist. Go talk to that.\""];
+	  645 [label="Jean Vicquemare: \"Extremely fuckable, Harry. Gorgeous. A gorgeous bourgeois woman. Waifish. Like a *welkin* basically.\""];
+	  646 [label="Judit Minot: \"He's telling the truth. You were a gym teacher in Couron.\" She looks around. \"It's getting really cold outside. Should we maybe...\""];
+	  647 [label="Kim Kitsuragi: IsKimHere()"];
+	  648 [label="IsKimHere()", shape=diamond];
+	  649 [label="!(IsKimHere())", shape=diamond];
+	  650 [label="Kim Kitsuragi: \"Detective, we just stopped a small-scale war. Something is happening to Revachol.\" He pulls up his collar and looks around, the cold spring light reflected in the lenses of his glasses."];
+	  651 [label="Kim Kitsuragi: Variable[\"tc.the_return\"]"];
+	  652 [label="Variable[\"tc.the_return\"]", shape=diamond];
+	  653 [label="!(Variable[\"tc.the_return\"])", shape=diamond];
+	  654 [label="Kim Kitsuragi: \"I don't know what, yet -- but it's going to be a hard spring for the RCM. We need to get ready. Infiltrate. Investigate.\""];
+	  655 [label="Untitled hub (06)"];
+	  656 [label="Drama: I'm quite sure it wasn't like that, sire."];
+	  657 [label="You: \"His dad's in a coma and his only friend is gone.\""];
+	  658 [label="Shivers: Under the night sky the great district sleeps: A black chessboard of old wooden houses, 80,000 living souls inside. Firetraps as far as the eye can see -- from Main Street to Precinct 41 atop the motorway, to Boogie Street forking into the darkened horizon..."];
+	  659 [label="Volition: Six years and you haven't gotten over it, what the hell is wrong with you?"];
+	  660 [label="Shivers: Under the evening sky the great district turns on its lights: A chessboard of wooden houses, 80,000 living souls inside. Firetraps as far as the eye can see -- from Main Street to Precinct 41 atop the motorway, to Boogie Street forking into the dark horizon..."];
+	  661 [label="Kim Kitsuragi: Variable[\"auto.is_snowing\"]"];
+	  662 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  663 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  664 [label="Rhetoric: For revenge."];
+	  665 [label="Shivers: Stop and you can go to the Burnt Out Quarter. And meet me there -- wafting above the burnt ruins. Like the smell of caramel -- Le Retour is waiting."];
+	  666 [label="Trant Heidelstam: \"Agreed. The public relations potential of this is too valuable to let go.\""];
+	  667 [label="Esprit de Corps: But he's been drinking, she thinks. This is exactly how he gets out of this every time. It's bad for him, but..."];
+	  668 [label="Untitled hub"];
+	  669 [label="Jean Vicquemare: \"Oh -- you don't say?\" He arches an eyebrow. \"Does he also *vault an impassible gulf of finance and privilege*?\""];
+	  670 [label="Jean Vicquemare: \"In your twenties or late twenties. You've really let yourself go since then.\" He looks you over."];
+	  671 [label="Kim Kitsuragi: \"Your love of *retro-style* dance music. How you're able to perform a 360-degree spin-kick...\""];
+	  672 [label="Kim Kitsuragi: Variable[\"gates.mhead_fight_success\"]"];
+	  673 [label="Variable[\"gates.mhead_fight_success\"]", shape=diamond];
+	  674 [label="!(Variable[\"gates.mhead_fight_success\"])", shape=diamond];
+	  675 [label="You: \"No, I meant -- what did she do?\""];
+	  676 [label="Jean Vicquemare: \"She was incredibly fuckable. A beautiful bourgeois woman. Waifish. Like a *welkin* basically.\""];
+	  677 [label="Conceptualization: Snow Welkin. Blonde Welkin..."];
+	  678 [label="You: \"*Now* I've heard enough.\""];
+	  679 [label="Jump to: [Jean Vicquemare: \"\"So have I. You *bitterly* drop *De...\"]"];
+	  680 [label="Trant Heidelstam: \"I assure you -- I wouldn't consult for a corrupt unit.\""];
+	  681 [label="Untitled hub"];
+	  682 [label="Kim Kitsuragi: IsKimHere()"];
+	  683 [label="IsKimHere()", shape=diamond];
+	  684 [label="!(IsKimHere())", shape=diamond];
+	  685 [label="Kim Kitsuragi: \"The press will blow over,\" he says in a reassuring tone. \"Jamrock is lucky to have you. And it's often considered to be the greatest of the districts -- you're lucky to have it.\""];
+	  686 [label="Judit Minot: \"... get back to it. We left Torson and McLaine to run the C-Wing. It's not good.\""];
+	  687 [label="Jump to: [Untitled hub (06)]"];
+	  688 [label="You: \"Wait, you mean The Return?\""];
+	  689 [label="Trant Heidelstam: \"Yes.\" His face darkens. \"I hear worries -- from systems analysts in Vesper and Messina. International risks departments in banks. People like that.\""];
+	  690 [label="Jean Vicquemare: \"Well, you can do that in all the spare time you're going to have.\""];
+	  691 [label="You: \"She's a cryptozoologist. She told me about this phasmid...\""];
+	  692 [label="You: \"He was good. On the island. He can do this.\""];
+	  693 [label="Kim Kitsuragi: Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"]"];
+	  694 [label="Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"]", shape=diamond];
+	  695 [label="!(Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"])", shape=diamond];
+	  696 [label="Kim Kitsuragi: Variable[\"yard.cuno_offered_to_hook_you_up_get_you_hookin\"]"];
+	  697 [label="Variable[\"yard.cuno_offered_to_hook_you_up_get_you_hookin\"]", shape=diamond];
+	  698 [label="!(Variable[\"yard.cuno_offered_to_hook_you_up_get_you_hookin\"])", shape=diamond];
+	  699 [label="Kim Kitsuragi: CheckItem(\"jacket_faln\")  and  CheckItem(\"pants_faln\")  and  CheckItem(\"hat_faln\")  and  CheckItem(\"shirt_faln\")  and  CheckItem(\"shoes_faln\")"];
+	  700 [label="CheckItem(\"jacket_faln\")  and  CheckItem(\"pants_faln\")  and  CheckItem(\"hat_faln\")  and  CheckItem(\"shirt_faln\")  and  CheckItem(\"shoes_faln\")", shape=diamond];
+	  701 [label="!(CheckItem(\"jacket_faln\")  and  CheckItem(\"pants_faln\")  and  CheckItem(\"hat_faln\")  and  CheckItem(\"shirt_faln\")  and  CheckItem(\"shoes_faln\"))", shape=diamond];
+	  702 [label="Pain Threshold: Some of your more *old-school* social views. Your love of retro music."];
+	  703 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  704 [label="IsCunoInParty()", shape=diamond];
+	  705 [label="!(IsCunoInParty())", shape=diamond];
+	  0 -> 1
+	  1 -> 4
+	  2 -> 503
+	  3 -> 168
+	  4 -> 5
+	  4 -> 6
+	  5 -> 577
+	  6 -> 466
+	  7 -> 608
+	  8 -> 667
+	  9 -> 55
+	  10 -> 200
+	  11 -> 12
+	  11 -> 13
+	  12 -> 507
+	  13 -> 581
+	  14 -> 509
+	  15 -> 171
+	  16 -> 17
+	  16 -> 679
+	  17 -> 236
+	  18 -> 645
+	  19 -> 108
+	  20 -> 21
+	  20 -> 22
+	  21 -> 65
+	  21 -> 527
+	  22 -> 150
+	  23 -> 24
+	  23 -> 25
+	  24 -> 341
+	  25 -> 651
+	  26 -> 373
+	  27 -> 28
+	  27 -> 29
+	  28 -> 560
+	  29 -> 247
+	  30 -> 210
+	  31 -> 274
+	  32 -> 516
+	  33 -> 34
+	  33 -> 35
+	  34 -> 123
+	  35 -> 163
+	  36 -> 421
+	  37 -> 38
+	  37 -> 39
+	  38 -> 190
+	  39 -> 462
+	  40 -> 41
+	  40 -> 42
+	  41 -> 488
+	  42 -> 704
+	  43 -> 627
+	  44 -> 45
+	  44 -> 46
+	  45 -> 178
+	  46 -> 276
+	  47 -> 48
+	  47 -> 49
+	  48 -> 258
+	  49 -> 132
+	  50 -> 353
+	  51 -> 259
+	  52 -> 53
+	  52 -> 54
+	  53 -> 634
+	  54 -> 441
+	  55 -> 56
+	  55 -> 57
+	  56 -> 616
+	  57 -> 170
+	  58 -> 254
+	  59 -> 453
+	  60 -> 509
+	  61 -> 474
+	  62 -> 272
+	  63 -> 647
+	  64 -> 20
+	  65 -> 477
+	  66 -> 151
+	  67 -> 244
+	  68 -> 69
+	  68 -> 70
+	  69 -> 307
+	  70 -> 113
+	  71 -> 72
+	  71 -> 73
+	  72 -> 342
+	  73 -> 652
+	  74 -> 518
+	  74 -> 207
+	  75 -> 155
+	  76 -> 159
+	  77 -> 421
+	  78 -> 421
+	  79 -> 80
+	  79 -> 81
+	  80 -> 564
+	  81 -> 78
+	  82 -> 324
+	  83 -> 84
+	  83 -> 85
+	  84 -> 596
+	  85 -> 661
+	  86 -> 88
+	  86 -> 87
+	  87 -> 382
+	  88 -> 533
+	  89 -> 114
+	  90 -> 136
+	  91 -> 177
+	  92 -> 188
+	  93 -> 289
+	  94 -> 607
+	  95 -> 503
+	  96 -> 575
+	  97 -> 448
+	  98 -> 580
+	  99 -> 100
+	  99 -> 101
+	  100 -> 328
+	  101 -> 551
+	  102 -> 234
+	  103 -> 470
+	  104 -> 202
+	  105 -> 106
+	  105 -> 107
+	  106 -> 678
+	  107 -> 334
+	  108 -> 619
+	  109 -> 585
+	  110 -> 340
+	  111 -> 205
+	  112 -> 181
+	  113 -> 682
+	  114 -> 588
+	  114 -> 658
+	  114 -> 693
+	  114 -> 183
+	  114 -> 280
+	  115 -> 656
+	  116 -> 626
+	  117 -> 118
+	  117 -> 119
+	  118 -> 521
+	  119 -> 524
+	  120 -> 121
+	  120 -> 122
+	  121 -> 285
+	  122 -> 33
+	  123 -> 124
+	  123 -> 125
+	  124 -> 377
+	  125 -> 79
+	  126 -> 18
+	  127 -> 304
+	  128 -> 150
+	  129 -> 130
+	  129 -> 131
+	  130 -> 288
+	  131 -> 628
+	  132 -> 133
+	  132 -> 134
+	  133 -> 197
+	  134 -> 352
+	  135 -> 136
+	  136 -> 137
+	  136 -> 138
+	  137 -> 318
+	  138 -> 539
+	  139 -> 394
+	  140 -> 670
+	  141 -> 509
+	  142 -> 198
+	  143 -> 144
+	  143 -> 145
+	  144 -> 550
+	  145 -> 142
+	  146 -> 552
+	  147 -> 453
+	  148 -> 18
+	  149 -> 174
+	  150 -> 682
+	  151 -> 152
+	  151 -> 153
+	  152 -> 686
+	  153 -> 432
+	  154 -> 688
+	  155 -> 309
+	  156 -> 559
+	  157 -> 413
+	  158 -> 115
+	  159 -> 657
+	  160 -> 589
+	  161 -> 184
+	  162 -> 219
+	  163 -> 421
+	  164 -> 165
+	  164 -> 166
+	  165 -> 489
+	  166 -> 291
+	  167 -> 633
+	  168 -> 188
+	  169 -> 198
+	  170 -> 669
+	  171 -> 269
+	  172 -> 142
+	  173 -> 453
+	  174 -> 19
+	  174 -> 365
+	  175 -> 335
+	  176 -> 476
+	  177 -> 563
+	  178 -> 179
+	  178 -> 180
+	  179 -> 203
+	  180 -> 276
+	  181 -> 682
+	  182 -> 378
+	  183 -> 346
+	  184 -> 185
+	  185 -> 186
+	  185 -> 187
+	  186 -> 561
+	  187 -> 212
+	  188 -> 611
+	  189 -> 219
+	  190 -> 192
+	  190 -> 191
+	  191 -> 566
+	  192 -> 216
+	  193 -> 627
+	  194 -> 195
+	  194 -> 196
+	  195 -> 243
+	  196 -> 368
+	  197 -> 509
+	  198 -> 544
+	  198 -> 578
+	  198 -> 612
+	  198 -> 613
+	  198 -> 297
+	  198 -> 393
+	  198 -> 467
+	  198 -> 435
+	  198 -> 319
+	  199 -> 615
+	  200 -> 233
+	  201 -> 643
+	  202 -> 660
+	  203 -> 558
+	  204 -> 410
+	  205 -> 371
+	  206 -> 71
+	  207 -> 343
+	  208 -> 519
+	  209 -> 311
+	  210 -> 160
+	  211 -> 349
+	  212 -> 376
+	  213 -> 252
+	  214 -> 32
+	  215 -> 421
+	  216 -> 217
+	  216 -> 218
+	  217 -> 313
+	  218 -> 189
+	  219 -> 220
+	  219 -> 221
+	  220 -> 598
+	  221 -> 598
+	  222 -> 224
+	  222 -> 223
+	  223 -> 90
+	  224 -> 700
+	  225 -> 229
+	  226 -> 227
+	  226 -> 228
+	  227 -> 292
+	  228 -> 91
+	  229 -> 289
+	  230 -> 289
+	  231 -> 503
+	  232 -> 96
+	  233 -> 545
+	  234 -> 642
+	  235 -> 509
+	  236 -> 50
+	  236 -> 514
+	  236 -> 676
+	  236 -> 237
+	  237 -> 646
+	  238 -> 303
+	  239 -> 198
+	  240 -> 366
+	  240 -> 62
+	  241 -> 198
+	  242 -> 66
+	  243 -> 368
+	  244 -> 688
+	  245 -> 74
+	  246 -> 629
+	  247 -> 209
+	  247 -> 246
+	  248 -> 480
+	  248 -> 30
+	  249 -> 116
+	  250 -> 658
+	  250 -> 588
+	  250 -> 693
+	  251 -> 421
+	  252 -> 348
+	  253 -> 249
+	  254 -> 256
+	  254 -> 255
+	  255 -> 506
+	  256 -> 257
+	  257 -> 506
+	  258 -> 509
+	  259 -> 666
+	  260 -> 261
+	  260 -> 262
+	  261 -> 357
+	  262 -> 665
+	  263 -> 177
+	  264 -> 448
+	  265 -> 610
+	  266 -> 267
+	  266 -> 268
+	  267 -> 14
+	  268 -> 673
+	  269 -> 642
+	  270 -> 271
+	  271 -> 401
+	  272 -> 681
+	  273 -> 127
+	  274 -> 375
+	  275 -> 682
+	  276 -> 110
+	  277 -> 198
+	  278 -> 26
+	  279 -> 692
+	  280 -> 211
+	  281 -> 282
+	  281 -> 283
+	  282 -> 36
+	  283 -> 659
+	  284 -> 421
+	  285 -> 286
+	  285 -> 287
+	  286 -> 251
+	  287 -> 418
+	  288 -> 627
+	  290 -> 404
+	  290 -> 407
+	  291 -> 495
+	  292 -> 293
+	  292 -> 294
+	  293 -> 263
+	  293 -> 463
+	  295 -> 606
+	  296 -> 503
+	  297 -> 557
+	  298 -> 299
+	  298 -> 300
+	  299 -> 146
+	  300 -> 632
+	  301 -> 644
+	  302 -> 16
+	  303 -> 239
+	  304 -> 198
+	  305 -> 109
+	  306 -> 242
+	  307 -> 113
+	  308 -> 372
+	  309 -> 156
+	  310 -> 277
+	  311 -> 478
+	  312 -> 599
+	  313 -> 219
+	  314 -> 315
+	  314 -> 316
+	  315 -> 567
+	  316 -> 86
+	  317 -> 61
+	  317 -> 407
+	  318 -> 509
+	  319 -> 320
+	  319 -> 321
+	  320 -> 322
+	  321 -> 226
+	  322 -> 177
+	  323 -> 289
+	  324 -> 325
+	  324 -> 326
+	  325 -> 636
+	  326 -> 447
+	  328 -> 641
+	  329 -> 330
+	  329 -> 331
+	  330 -> 141
+	  331 -> 397
+	  332 -> 406
+	  333 -> 105
+	  334 -> 570
+	  335 -> 17
+	  335 -> 679
+	  336 -> 337
+	  337 -> 305
+	  338 -> 369
+	  339 -> 368
+	  340 -> 241
+	  341 -> 655
+	  342 -> 652
+	  343 -> 75
+	  344 -> 456
+	  345 -> 249
+	  346 -> 250
+	  347 -> 161
+	  348 -> 93
+	  349 -> 350
+	  349 -> 351
+	  350 -> 43
+	  351 -> 536
+	  352 -> 509
+	  353 -> 354
+	  353 -> 355
+	  354 -> 464
+	  355 -> 601
+	  356 -> 499
+	  357 -> 51
+	  358 -> 543
+	  359 -> 11
+	  360 -> 509
+	  361 -> 362
+	  361 -> 363
+	  362 -> 602
+	  363 -> 269
+	  364 -> 473
+	  365 -> 617
+	  366 -> 367
+	  367 -> 304
+	  368 -> 68
+	  369 -> 683
+	  370 -> 111
+	  371 -> 112
+	  372 -> 23
+	  373 -> 310
+	  374 -> 461
+	  375 -> 213
+	  376 -> 562
+	  377 -> 421
+	  378 -> 622
+	  379 -> 219
+	  380 -> 219
+	  381 -> 219
+	  382 -> 384
+	  382 -> 383
+	  383 -> 380
+	  384 -> 83
+	  385 -> 386
+	  385 -> 387
+	  386 -> 193
+	  387 -> 537
+	  388 -> 496
+	  389 -> 356
+	  390 -> 52
+	  391 -> 169
+	  392 -> 308
+	  393 -> 264
+	  393 -> 97
+	  393 -> 614
+	  393 -> 199
+	  394 -> 99
+	  395 -> 508
+	  396 -> 509
+	  397 -> 400
+	  397 -> 399
+	  398 -> 452
+	  399 -> 510
+	  400 -> 402
+	  400 -> 403
+	  401 -> 317
+	  402 -> 290
+	  403 -> 408
+	  404 -> 515
+	  405 -> 17
+	  405 -> 679
+	  406 -> 405
+	  407 -> 515
+	  408 -> 620
+	  409 -> 370
+	  410 -> 27
+	  411 -> 182
+	  412 -> 198
+	  413 -> 595
+	  414 -> 416
+	  414 -> 417
+	  415 -> 481
+	  416 -> 284
+	  417 -> 419
+	  417 -> 420
+	  418 -> 594
+	  419 -> 215
+	  420 -> 422
+	  420 -> 423
+	  421 -> 414
+	  422 -> 314
+	  423 -> 323
+	  424 -> 426
+	  424 -> 427
+	  425 -> 488
+	  426 -> 431
+	  427 -> 429
+	  427 -> 430
+	  428 -> 597
+	  429 -> 529
+	  430 -> 40
+	  431 -> 433
+	  431 -> 434
+	  432 -> 67
+	  433 -> 688
+	  434 -> 436
+	  434 -> 437
+	  436 -> 492
+	  437 -> 188
+	  438 -> 389
+	  439 -> 2
+	  439 -> 231
+	  439 -> 296
+	  439 -> 500
+	  439 -> 501
+	  439 -> 502
+	  439 -> 635
+	  439 -> 95
+	  440 -> 442
+	  440 -> 443
+	  441 -> 542
+	  442 -> 260
+	  443 -> 445
+	  443 -> 446
+	  444 -> 573
+	  445 -> 574
+	  446 -> 668
+	  447 -> 31
+	  448 -> 450
+	  448 -> 451
+	  449 -> 360
+	  450 -> 266
+	  451 -> 364
+	  452 -> 454
+	  452 -> 455
+	  453 -> 235
+	  454 -> 60
+	  455 -> 457
+	  455 -> 458
+	  456 -> 412
+	  457 -> 459
+	  458 -> 479
+	  459 -> 312
+	  460 -> 312
+	  461 -> 219
+	  462 -> 177
+	  463 -> 601
+	  464 -> 167
+	  465 -> 388
+	  466 -> 240
+	  467 -> 396
+	  468 -> 642
+	  469 -> 472
+	  469 -> 471
+	  470 -> 172
+	  471 -> 143
+	  472 -> 638
+	  473 -> 174
+	  474 -> 332
+	  474 -> 302
+	  474 -> 175
+	  475 -> 198
+	  476 -> 150
+	  477 -> 198
+	  478 -> 198
+	  479 -> 694
+	  480 -> 421
+	  481 -> 483
+	  481 -> 484
+	  482 -> 485
+	  483 -> 582
+	  484 -> 486
+	  484 -> 487
+	  485 -> 565
+	  486 -> 126
+	  487 -> 704
+	  488 -> 490
+	  488 -> 491
+	  489 -> 600
+	  490 -> 225
+	  491 -> 493
+	  491 -> 494
+	  493 -> 274
+	  494 -> 289
+	  495 -> 497
+	  495 -> 498
+	  496 -> 465
+	  497 -> 295
+	  498 -> 390
+	  499 -> 503
+	  500 -> 503
+	  501 -> 503
+	  502 -> 504
+	  502 -> 505
+	  503 -> 609
+	  504 -> 444
+	  505 -> 233
+	  505 -> 10
+	  505 -> 98
+	  506 -> 449
+	  507 -> 549
+	  508 -> 398
+	  509 -> 452
+	  510 -> 512
+	  510 -> 513
+	  511 -> 59
+	  512 -> 173
+	  513 -> 333
+	  514 -> 174
+	  515 -> 198
+	  516 -> 343
+	  517 -> 517
+	  518 -> 621
+	  519 -> 344
+	  520 -> 522
+	  520 -> 523
+	  521 -> 77
+	  522 -> 281
+	  523 -> 525
+	  523 -> 526
+	  524 -> 590
+	  525 -> 120
+	  526 -> 128
+	  527 -> 219
+	  528 -> 219
+	  529 -> 531
+	  529 -> 532
+	  530 -> 381
+	  531 -> 428
+	  532 -> 534
+	  532 -> 535
+	  533 -> 530
+	  534 -> 37
+	  535 -> 627
+	  536 -> 627
+	  537 -> 136
+	  538 -> 540
+	  538 -> 541
+	  539 -> 703
+	  540 -> 47
+	  541 -> 51
+	  542 -> 188
+	  543 -> 270
+	  544 -> 546
+	  544 -> 547
+	  545 -> 359
+	  546 -> 298
+	  547 -> 671
+	  548 -> 361
+	  549 -> 142
+	  550 -> 642
+	  551 -> 553
+	  551 -> 554
+	  552 -> 147
+	  553 -> 511
+	  554 -> 680
+	  555 -> 584
+	  556 -> 648
+	  557 -> 687
+	  558 -> 214
+	  559 -> 247
+	  560 -> 212
+	  561 -> 198
+	  562 -> 117
+	  563 -> 421
+	  564 -> 18
+	  565 -> 219
+	  566 -> 568
+	  566 -> 569
+	  567 -> 162
+	  568 -> 662
+	  569 -> 571
+	  569 -> 572
+	  570 -> 148
+	  571 -> 482
+	  572 -> 3
+	  573 -> 232
+	  574 -> 139
+	  575 -> 92
+	  576 -> 82
+	  577 -> 579
+	  578 -> 9
+	  579 -> 233
+	  579 -> 10
+	  580 -> 449
+	  581 -> 18
+	  582 -> 618
+	  583 -> 64
+	  584 -> 682
+	  585 -> 621
+	  586 -> 690
+	  587 -> 129
+	  588 -> 374
+	  589 -> 592
+	  589 -> 591
+	  590 -> 593
+	  591 -> 415
+	  592 -> 421
+	  593 -> 421
+	  594 -> 425
+	  595 -> 219
+	  596 -> 219
+	  597 -> 414
+	  598 -> 697
+	  599 -> 230
+	  600 -> 105
+	  601 -> 603
+	  601 -> 604
+	  602 -> 15
+	  603 -> 269
+	  604 -> 456
+	  605 -> 94
+	  606 -> 439
+	  607 -> 440
+	  608 -> 265
+	  609 -> 358
+	  610 -> 392
+	  611 -> 623
+	  612 -> 158
+	  613 -> 448
+	  614 -> 198
+	  615 -> 669
+	  616 -> 104
+	  616 -> 555
+	  617 -> 334
+	  618 -> 149
+	  619 -> 275
+	  620 -> 689
+	  620 -> 245
+	  620 -> 278
+	  621 -> 479
+	  622 -> 624
+	  622 -> 625
+	  623 -> 411
+	  624 -> 691
+	  625 -> 460
+	  626 -> 347
+	  627 -> 627
+	  628 -> 630
+	  628 -> 631
+	  629 -> 520
+	  630 -> 605
+	  631 -> 222
+	  632 -> 94
+	  633 -> 51
+	  634 -> 503
+	  635 -> 8
+	  636 -> 58
+	  637 -> 640
+	  637 -> 639
+	  638 -> 395
+	  639 -> 642
+	  640 -> 642
+	  641 -> 548
+	  641 -> 103
+	  641 -> 201
+	  641 -> 140
+	  641 -> 468
+	  642 -> 301
+	  643 -> 642
+	  644 -> 176
+	  645 -> 105
+	  646 -> 254
+	  647 -> 649
+	  647 -> 650
+	  648 -> 409
+	  649 -> 44
+	  650 -> 655
+	  651 -> 653
+	  651 -> 654
+	  652 -> 586
+	  653 -> 621
+	  654 -> 206
+	  655 -> 480
+	  655 -> 76
+	  655 -> 30
+	  656 -> 248
+	  657 -> 385
+	  658 -> 421
+	  659 -> 475
+	  660 -> 219
+	  661 -> 664
+	  661 -> 663
+	  662 -> 379
+	  663 -> 528
+	  664 -> 51
+	  665 -> 7
+	  666 -> 576
+	  667 -> 667
+	  668 -> 637
+	  668 -> 63
+	  669 -> 102
+	  670 -> 469
+	  671 -> 509
+	  672 -> 674
+	  672 -> 675
+	  673 -> 672
+	  674 -> 329
+	  675 -> 677
+	  676 -> 105
+	  677 -> 583
+	  678 -> 238
+	  679 -> 238
+	  680 -> 273
+	  681 -> 204
+	  681 -> 556
+	  681 -> 336
+	  681 -> 338
+	  681 -> 306
+	  682 -> 684
+	  682 -> 685
+	  683 -> 339
+	  684 -> 194
+	  685 -> 154
+	  686 -> 682
+	  687 -> 198
+	  688 -> 587
+	  689 -> 208
+	  690 -> 279
+	  691 -> 157
+	  692 -> 385
+	  693 -> 696
+	  693 -> 695
+	  694 -> 345
+	  695 -> 253
+	  696 -> 698
+	  696 -> 699
+	  697 -> 89
+	  698 -> 114
+	  699 -> 701
+	  699 -> 702
+	  700 -> 538
+	  701 -> 135
+	  702 -> 509
+	  703 -> 705
+	  703 -> 706
+	  704 -> 424
+	  705 -> 164
+}
+

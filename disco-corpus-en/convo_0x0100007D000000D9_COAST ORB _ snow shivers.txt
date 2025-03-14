@@ -1,0 +1,441 @@
+# COAST ORB / snow shivers
+# If it snows when you cross the desolate beach, Shivers tells you a little about Revachol.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Shivers: A chill comes over you, crawling down your back. The sand under your feet is wet. Somewhere in the south, tarpaulin flap in the wind."];
+	  3 [label="Shivers: Someone's stuffed a big old polar anorak into a concrete pipe under the boardwalk. It would keep you warm. You will probably never happen across it, but who knows."];
+	  4 [label="You: What's in the east?"];
+	  5 [label="Shivers: Your teeth chatter as the snow melts on your exposed skin, running down your chest and your back in icy rivulets. Your hat is of little help. To distract yourself, you look around..."];
+	  6 [label="Esprit de Corps: On the bridge, Officers Torson and McLaine are standing guard. The muscular Torson wears jeans and a leather jacket. When Vicquemare passes him, the young man remarks..."];
+	  7 [label="Shivers: Snow falls on the utility district: the library, the florist, the Saramirizian restaurant that offers homemade wine. And also on the brothels and drug dens, and the chop shops of the zemlyaki."];
+	  8 [label="Shivers: A serpentine strip of land weaving its way into the Martinaise inlet. Unfortunates on the run -- from the law, from themselves -- sometimes hide out on nearby islets. Little dots in the ocean that are occasionally submerged when the tide is high and the weather foul."];
+	  9 [label="Jump to: [snowshiversmainhub]"];
+	  10 [label="HasShirt()  or  HasJacket()"];
+	  11 [label="HasShirt()  or  HasJacket()", shape=diamond];
+	  12 [label="!(HasShirt()  or  HasJacket())", shape=diamond];
+	  13 [label="Shivers: The canal you crossed to get here, and beyond it -- Martinaise proper, the district the police forgot to police. There is laughter, lights, attempts at entrepreneurial activity, cynicism."];
+	  14 [label="Jean Vicquemare: \"Funny apery.\" Vicquemare finally manages to pull his gloves on. There's a small tear along the inside seam of the left glove. \"Male-centric workplace humour. Have you seen him?\""];
+	  15 [label="Shivers: The stairs descend -- to Central Jamrock. A man named Kuklov has a snow-covered stall there, in the market across the bridge. He sells kebab infested with fly larvae to your colleagues who believe eating it will make them immune to food poisoning."];
+	  16 [label="Shivers: All of this built around a lake that formed in a meteorite strike. At the centre of this lake, there is a little ship. There are lights at the bottom of its hull. They are lights directed toward the sea floor, looking for something, like whiskers..."];
+	  17 [label="Shivers: The abandoned church. One of two remaining stave churches which were collectively called les Sept Soeurs. The other six sisters were destroyed during the Revolution."];
+	  18 [label="Untitled hub (03)"];
+	  19 [label="You: How does it feel?"];
+	  20 [label="You: What is there?"];
+	  21 [label="You: Stomp your feet for warmth, brushing off the snow. [Finish thought.]"];
+	  22 [label="Shivers: Winter, slow to let go of Revachol, flecks some more wet snow from above..."];
+	  23 [label="You: What do I see?"];
+	  24 [label="IsKimHere()  and  HasJacket() == false"];
+	  25 [label="IsKimHere()  and  HasJacket() == false", shape=diamond];
+	  26 [label="!(IsKimHere()  and  HasJacket() == false)", shape=diamond];
+	  27 [label="Shivers: More winding coastline lined with abandoned buildings. Crumbling piers, salt water lapping at their dark piles. Grey and red, forgotten city blocks. What remains of the pre-revolutionary effort to gentrify the coast."];
+	  28 [label="Esprit de Corps: Patrol Officer Judit Minot stands in the corner, beneath the narrow awning that hangs over the main entrance. She is watching the snow absent-mindedly as she searches for her gloves in her briefcase."];
+	  29 [label="Judit Minot: \"Where are hell are they...\" she mutters under her breath."];
+	  30 [label="Nix Gottlieb: The surgeon watches her for a moment, pulling on his cigarette. \"You know, it's not so cold that you're going to get frostbite without your gloves.\""];
+	  31 [label="Untitled hub (02)"];
+	  32 [label="Shivers: Below the old mines -- L'Ossuaire Municipal, Revachol's underground cemetery. *Les petits rats* brave the underground passageways, trying to get to Le Royaume..."];
+	  33 [label="Kim Kitsuragi: \"We should keep moving. Who knows when this snow will let up?\""];
+	  34 [label="snowshiversmainhub"];
+	  35 [label="Jump to: [snowshiversmainhub]"];
+	  36 [label="Electrochemistry: Did someone say *untold quantities of cocaine*? Drop everything immediately and go looking for this hoard!"];
+	  37 [label="Jump to: [snowshiversmainhub]"];
+	  38 [label="You: And further..."];
+	  39 [label="Variable[\"tc.motorway_881\"]"];
+	  40 [label="Variable[\"tc.motorway_881\"]", shape=diamond];
+	  41 [label="!(Variable[\"tc.motorway_881\"])", shape=diamond];
+	  42 [label="Jump to: [Shivers: \"Around you, the snow continues to f...\"]"];
+	  43 [label="You: Where is Ruby?"];
+	  44 [label="Variable[\"plaza.kineema_57th_hub\"]"];
+	  45 [label="Variable[\"plaza.kineema_57th_hub\"]", shape=diamond];
+	  46 [label="!(Variable[\"plaza.kineema_57th_hub\"])", shape=diamond];
+	  47 [label="Shivers: The spring thaw will come in earnest. Just not yet."];
+	  48 [label="You: That's all?"];
+	  49 [label="Jump to: [snowshiversmainhub]"];
+	  50 [label="Shivers: A fenced-off yard. There's a truck belonging to a logistics company parked next to the gate. Bright light from a building behind the fence reflects off its hood."];
+	  51 [label="Jump to: [snowshiversmainhub]"];
+	  52 [label="Shivers: The abandoned church, its walls covered with hoarfrost now. One of les Sept Soeurs. The other six sisters were destroyed during the Revolution."];
+	  53 [label="You: And on the other side of the inlet?"];
+	  54 [label="You: What am I doing?"];
+	  55 [label="Shivers: Snow falls and there is no answer. Some things are not for mortals to know."];
+	  56 [label="Shivers: ...heavy drug users do slip through and hole up in the Old Military Hospital, hoping to find something to get high on among the hastily abandoned supplies. Or just to overdose in peace."];
+	  57 [label="Shivers: A line of motor garages with armoured carapaces, hunched in the cold. A mechanic is hard at work, patching up bullet holes in the side of a Coupris 40. These are the garages of Precinct 41. Snow settles on the roof of the re-purposed silk mill that serves as your station. Shivering RCM personnel hurry in and out of the main entrance."];
+	  58 [label="Esprit de Corps: Satellite-Officer Jean Vicquemare rushes down the station stairs, angrily hunched over in the falling slush."];
+	  59 [label="You: And further north?"];
+	  60 [label="You: Look around you."];
+	  61 [label="Shivers: And to think -- it seemed as though it were already spring."];
+	  62 [label="Shivers: More coalition aerostatics. Occasionally, lights flash as they manoeuvre through the falling snow. One large airship carries crates in its belly."];
+	  63 [label="Shivers: All around her, white snow on the extinguished coke furnaces, and on the weather-worn shacks, where fathers beat their sons after drinking. The snow melts on your fingers, turning to water."];
+	  64 [label="Variable[\"coast.snowshivers_esprit\"]"];
+	  65 [label="Variable[\"coast.snowshivers_esprit\"]", shape=diamond];
+	  66 [label="!(Variable[\"coast.snowshivers_esprit\"])", shape=diamond];
+	  67 [label="You: But still..."];
+	  68 [label="Shivers: Looking up at the sky, melted snow dripping from your hair..."];
+	  69 [label="Shivers: The melting snow seeps through your thin clothes. Grandmothers don't let their grandchildren out dressed so lightly in this weather. At least your hair is protected from getting wet and sticking together. You look around..."];
+	  70 [label="Kim Kitsuragi: The lieutenant looks at your feet with some concern, but makes no comment."];
+	  71 [label="Untitled hub (02)"];
+	  72 [label="Shivers: ...after rubies, melchiorite, lapis lazuli plundered from Safre and Seol during the time of the Suzerain. In the burial chambers of the kings: Grand Old Filippe, Guillaume II, and even in the mausoleum of Filippe the Opulent."];
+	  73 [label="You: No, it was home. I want more."];
+	  74 [label="Shivers: Children under 14. They go underground, looking for artefacts to sell to foreign museums -- and for fabled relics. Their parents let them. They go deeper..."];
+	  75 [label="Shivers: ...was once a park, a place for reflection and recuperation for the patients of the Old Military Hospital. In the Twenties, it was used as a quarantine centre during a measles outbreak that killed many children. Most everyone has avoided the hospital and surrounding park ever since."];
+	  76 [label="Mack Torson: \"Where's your homo, homey?\""];
+	  77 [label="DayCount() < 3"];
+	  78 [label="DayCount() < 3", shape=diamond];
+	  79 [label="!(DayCount() < 3)", shape=diamond];
+	  80 [label="Shivers: The Bay of Revachol, vastness, great depth -- over 1200 m at its deepest. Water, air brinier than here. It is crisscrossed by huge cargo ships bearing company logos: Wild Pines, ZAMM, Moriyn."];
+	  81 [label="Shivers: And, at the farthest reaches of the Bay of Revachol -- the shadow of Coalition Warship Archer, on perpetual patrol duty, ready to unleash artillery fire if you were to rise up against the market. You shudder."];
+	  82 [label="You: For what?"];
+	  83 [label="Shivers: No more. The coal was supplanted by petroleum from the ocean floor and hydropower from the Esperance. Everything crumbled. These days, only the weakest remain in Coal City. Their hopes of getting rich linger in the defunct shafts under their feet."];
+	  84 [label="You: What's below me?"];
+	  85 [label="You: Wipe the snow from your shoulder."];
+	  86 [label="Shivers: The raised motorway, 8/81, with vehicles whooshing past one another day and night, while those who reside beneath the motorway attempt to carry on with their lives in the snow and the slush. And south of the 8/81 is the Pox."];
+	  87 [label="Jean Vicquemare: \"Huh? Yeah.\" He takes out his gloves and struggles to pull them onto his hands."];
+	  88 [label="Jean Vicquemare: \"In Martinaise. He's in Martinaise.\""];
+	  89 [label="Shivers: Around you, the snow continues to fall. To the west, the ocean swells."];
+	  90 [label="Shivers: Further out, the lights burn bright on Résurrection; way beyond Martinaise -- a popular spa destination for ample-bodied Ozonne kids with equally ample pockets."];
+	  91 [label="You: Look around."];
+	  92 [label="Shivers: Near. Snow falls into dark water. She prays, though she doesn't believe. There is a hum in the air."];
+	  93 [label="Jump to: [snowshiversmainhub]"];
+	  94 [label="You: What's above?"];
+	  95 [label="You: Le Royaume..."];
+	  96 [label="Logic: How can it be pure if it's magenta?"];
+	  97 [label="Jump to: [Shivers: \"Around you, the snow continues to f...\"]"];
+	  98 [label="Shivers: The snow falls lazily, making the beach sand paler still, mixing with the rust-coloured sewage run-off."];
+	  99 [label="You: How does it feel?"];
+	  100 [label="IsKimHere()  and  HasShoes() == false"];
+	  101 [label="IsKimHere()  and  HasShoes() == false", shape=diamond];
+	  102 [label="!(IsKimHere()  and  HasShoes() == false)", shape=diamond];
+	  103 [label="Chester McLaine: \"It's not like that. They're what is called *hetero-sexual life partners*. They have a battle-tested relationship. A 'bröderbund', if you will.\""];
+	  104 [label="Chester McLaine: \"That would have been irresponsible.\""];
+	  105 [label="Untitled hub (04)"];
+	  106 [label="Variable[\"TASK.enter_cavern_done\"]"];
+	  107 [label="Variable[\"TASK.enter_cavern_done\"]", shape=diamond];
+	  108 [label="!(Variable[\"TASK.enter_cavern_done\"])", shape=diamond];
+	  109 [label="You: No need for secrets."];
+	  110 [label="Jump to: [snowshiversmainhub]"];
+	  111 [label="CheckEquipped(\"jacket_patrol_cloak\")  or  CheckEquipped(\"jacket_nansencoat\")"];
+	  112 [label="CheckEquipped(\"jacket_patrol_cloak\")  or  CheckEquipped(\"jacket_nansencoat\")", shape=diamond];
+	  113 [label="!(CheckEquipped(\"jacket_patrol_cloak\")  or  CheckEquipped(\"jacket_nansencoat\"))", shape=diamond];
+	  114 [label="Shivers: Coalition aerostatics hang like apparitions under the cloud cover. Occasionally, lights flash as they manoeuvre through the falling snow."];
+	  115 [label="Shivers: The mausoleum contains untold quantities of gold -- and that special, purest-of-the-pure magenta cocaine favoured by Revacholian royalty."];
+	  116 [label="Variable[\"TASK.establish_church_dance_club_done\"]"];
+	  117 [label="Variable[\"TASK.establish_church_dance_club_done\"]", shape=diamond];
+	  118 [label="!(Variable[\"TASK.establish_church_dance_club_done\"])", shape=diamond];
+	  119 [label="Shivers: No need for anything anymore."];
+	  120 [label="You: Shake the shivers off. [Discard thought.]"];
+	  121 [label="You: What's in the north?"];
+	  122 [label="Shivers: Like all monuments, it's also a warning. Six-story ruins on the south side of the roundabout cast a long shadow over the profligate king."];
+	  123 [label="Shivers: The waters turn black. Coal City in the shadow of Saint-Martin, a boom town, back when coal extracted from countless shafts near the city was needed to power Revachol."];
+	  124 [label="You: Deeper..."];
+	  125 [label="Untitled hub"];
+	  126 [label="Jean Vicquemare: \"What?\""];
+	  127 [label="Mack Torson: \"With that animal? Never again, man. What, is he still down there, in... you know, south of the interchange? The... what was it?\""];
+	  128 [label="Jump to: [endhub]"];
+	  129 [label="endhub"];
+	  130 [label="Judit Minot: She nods, then looks down at her hands. No frostbite, sure, but a web of thin red cracks around the wrists. She is visibly embarrassed by the delicacy of her skin."];
+	  131 [label="Jump to: [snowshiversmainhub]"];
+	  132 [label="You: And on the islets?"];
+	  133 [label="Jump to: [snowshiversmainhub]"];
+	  134 [label="Shivers: It has been a cold year. All things waiting for spring will have to wait a bit longer."];
+	  135 [label="Shivers: You're warm in your hat and your coat. Like a well-equipped explorer, you comfortably survey the white landscape."];
+	  136 [label="Shivers: Two kilometres underground, in a winding shaft along whose walls mirrors have been placed so that daylight may eternally fall upon the richest of all the kings."];
+	  137 [label="Mack Torson: \"Is there something wrong?\""];
+	  138 [label="You: The Pox..."];
+	  139 [label="Variable[\"plaza.rainshivers_esprit\"]  or  Variable[\"coast.snowshivers_esprit\"]"];
+	  140 [label="Variable[\"plaza.rainshivers_esprit\"]  or  Variable[\"coast.snowshivers_esprit\"]", shape=diamond];
+	  141 [label="!(Variable[\"plaza.rainshivers_esprit\"]  or  Variable[\"coast.snowshivers_esprit\"])", shape=diamond];
+	  142 [label="Shivers: That's all."];
+	  143 [label="HasHat()"];
+	  144 [label="HasHat()", shape=diamond];
+	  145 [label="!(HasHat())", shape=diamond];
+	  146 [label="Shivers: The melting snow seeps through your thin clothes. Grandmothers don't let their grandchildren out dressed so lightly in this weather. You look around..."];
+	  147 [label="Shivers: Your teeth chatter as the snow melts on your exposed skin, running down your chest and your back in icy rivulets. To distract yourself, you look around..."];
+	  148 [label="Conceptualization: Clean white light, coming from the windows of a clean cube-shaped office building hidden amidst ruins. A secret..."];
+	  149 [label="Variable[\"coast.snowshivers_esprit_2\"]"];
+	  150 [label="Variable[\"coast.snowshivers_esprit_2\"]", shape=diamond];
+	  151 [label="!(Variable[\"coast.snowshivers_esprit_2\"])", shape=diamond];
+	  152 [label="Mack Torson: \"Hetero... sexual. Life... partners.\""];
+	  153 [label="Jump to: [Shivers: \"Around you, the snow continues to f...\"]"];
+	  154 [label="Chester McLaine: \"Damn, I don't know. Even a real *bröderbund* like that can't survive everything...\""];
+	  155 [label="Shivers: The remains of a camp on a jagged piece of rock -- a tent, old dishes and cutlery. Long since abandoned. A hermit crab scuttles among the debris, looking for a new shell."];
+	  156 [label="You: Tell me a secret of the sands, wind."];
+	  157 [label="Jump to: [snowshiversmainhub]"];
+	  158 [label="You: What's in the south?"];
+	  159 [label="Variable[\"plaza.rainshivers_esprit\"]"];
+	  160 [label="Variable[\"plaza.rainshivers_esprit\"]", shape=diamond];
+	  161 [label="!(Variable[\"plaza.rainshivers_esprit\"])", shape=diamond];
+	  162 [label="Esprit de Corps: It's the only home you have now. But you can't go back. Not like this."];
+	  163 [label="Judit Minot: Suddenly, she smiles at some thought that had just come to her, nods to the surgeon again, and sprints down the stairs, gloveless, into the falling snow."];
+	  164 [label="Shivers: Then there's Ozonne... but the snow falls too thick. You cannot see that far."];
+	  165 [label="You: What's in the west?"];
+	  166 [label="Shivers: You're warm in your coat, though your cold, damp hair sticks to your head unpleasantly -- you should have a hat. You survey the landscape around you."];
+	  167 [label="You: Les *petits rats*..."];
+	  168 [label="Shivers: The Pox is completely wild now. Evergreen thickets covered in snow and industrial dust. Feral dogs and even wolves roaming in packs. The police try to keep the deepest corners cordoned off."];
+	  169 [label="Shivers: The raised motorway, 8/81, separating Martinaise from Jamrock. Vehicles whoosh past one another day and night, while those who reside in the labyrinthine alleyways beneath the motorway attempt to carry on with their lives in the snow and the slush. And south of the 8/81 is the Pox."];
+	  170 [label="Mack Torson: \"Wonder if Vic's found his hetero-sexual life partner yet.\" The man in the fishnet wifebeater looks over at Chester McLaine."];
+	  171 [label="Shivers: An abandoned church that's being turned into a dance club. Four youths are hard at work there, making it ever harder core."];
+	  172 [label="CheckEquipped(\"jacket_patrol_cloak\")  or  CheckEquipped(\"jacket_nansencoat\")"];
+	  173 [label="CheckEquipped(\"jacket_patrol_cloak\")  or  CheckEquipped(\"jacket_nansencoat\")", shape=diamond];
+	  174 [label="!(CheckEquipped(\"jacket_patrol_cloak\")  or  CheckEquipped(\"jacket_nansencoat\"))", shape=diamond];
+	  175 [label="Shivers: The sky is full of great battleships. White clouds collide with one another, and the world is drenched with their debris."];
+	  176 [label="Kim Kitsuragi: The lieutenant looks at you standing there shivering with some concern, but makes no comment."];
+	  177 [label="You: And beyond that?"];
+	  178 [label="You: Further south..."];
+	  179 [label="Jean Vicquemare: \"No, nothing. It's just... Judit went to his place and found the Monday mail unopened. I think he's still there. You didn't, like, drink with him over the weekend did you?\""];
+	  180 [label="You: That's where Cuno said he's gonna go..."];
+	  181 [label="Shivers: Yes. To peel the gold off with his fingernails."];
+	  182 [label="IsKimHere()"];
+	  183 [label="IsKimHere()", shape=diamond];
+	  184 [label="!(IsKimHere())", shape=diamond];
+	  185 [label="Variable[\"plaza.shivers_activated\"]"];
+	  186 [label="Variable[\"plaza.shivers_activated\"]", shape=diamond];
+	  187 [label="!(Variable[\"plaza.shivers_activated\"])", shape=diamond];
+	  188 [label="HasShirt()  or  HasJacket()"];
+	  189 [label="HasShirt()  or  HasJacket()", shape=diamond];
+	  190 [label="!(HasShirt()  or  HasJacket())", shape=diamond];
+	  191 [label="Shivers: Someone is scraping snow off their windshield. At the roundabout, in the midst of which a statue of Filippe the III serves as a destination for grade-school field trips and a fine perch for winter birds."];
+	  192 [label="Shivers: Layer upon layer of sand poisoned with industrial run-off. The storm drainage. Hidden bunkers. Rats scuttle..."];
+	  193 [label="Variable[\"plaza.rain_shivers_above\"]"];
+	  194 [label="Variable[\"plaza.rain_shivers_above\"]", shape=diamond];
+	  195 [label="!(Variable[\"plaza.rain_shivers_above\"])", shape=diamond];
+	  196 [label="Shivers: ...where the Filippian kings were interred, with their doctors and their admirals. Mausoleums, burial chambers, leaf gold still remains on the Double Door of the Morning."];
+	  197 [label="You: How can it be pure if it's magenta?"];
+	  198 [label="Jump to: [Untitled hub (02)]"];
+	  199 [label="Shivers: Few *petits rats* return from the shafts -- and even fewer find what they're looking for. A small child steps out of a black tunnel, with silver trinkets in her pockets."];
+	  200 [label="You: Before that? Before the curtains are drawn..."];
+	  0 -> 1
+	  1 -> 22
+	  2 -> 132
+	  3 -> 110
+	  4 -> 13
+	  5 -> 24
+	  6 -> 76
+	  7 -> 16
+	  8 -> 18
+	  9 -> 34
+	  10 -> 11
+	  10 -> 12
+	  11 -> 147
+	  12 -> 148
+	  13 -> 192
+	  14 -> 138
+	  15 -> 7
+	  16 -> 82
+	  17 -> 59
+	  18 -> 53
+	  18 -> 133
+	  19 -> 144
+	  20 -> 32
+	  21 -> 183
+	  22 -> 121
+	  22 -> 60
+	  23 -> 176
+	  24 -> 25
+	  24 -> 26
+	  25 -> 177
+	  26 -> 100
+	  27 -> 178
+	  28 -> 150
+	  29 -> 30
+	  30 -> 131
+	  31 -> 17
+	  31 -> 52
+	  32 -> 126
+	  34 -> 4
+	  34 -> 166
+	  34 -> 43
+	  34 -> 84
+	  34 -> 21
+	  34 -> 122
+	  34 -> 94
+	  34 -> 159
+	  35 -> 34
+	  36 -> 96
+	  37 -> 34
+	  38 -> 50
+	  39 -> 40
+	  39 -> 41
+	  40 -> 86
+	  41 -> 170
+	  42 -> 89
+	  43 -> 92
+	  44 -> 45
+	  44 -> 46
+	  45 -> 158
+	  46 -> 58
+	  48 -> 123
+	  49 -> 34
+	  50 -> 149
+	  51 -> 34
+	  52 -> 59
+	  53 -> 165
+	  54 -> 68
+	  55 -> 199
+	  56 -> 179
+	  57 -> 77
+	  58 -> 64
+	  59 -> 8
+	  60 -> 98
+	  61 -> 19
+	  62 -> 134
+	  63 -> 37
+	  64 -> 65
+	  64 -> 66
+	  65 -> 6
+	  66 -> 163
+	  67 -> 56
+	  68 -> 23
+	  69 -> 24
+	  70 -> 34
+	  71 -> 85
+	  71 -> 125
+	  71 -> 198
+	  72 -> 137
+	  73 -> 15
+	  74 -> 71
+	  75 -> 169
+	  76 -> 127
+	  77 -> 78
+	  77 -> 79
+	  78 -> 160
+	  79 -> 140
+	  80 -> 81
+	  81 -> 9
+	  82 -> 2
+	  83 -> 20
+	  84 -> 193
+	  85 -> 200
+	  86 -> 139
+	  87 -> 153
+	  88 -> 89
+	  89 -> 73
+	  89 -> 91
+	  90 -> 18
+	  91 -> 2
+	  92 -> 143
+	  93 -> 34
+	  94 -> 194
+	  95 -> 197
+	  96 -> 199
+	  97 -> 89
+	  98 -> 186
+	  99 -> 144
+	  100 -> 101
+	  100 -> 102
+	  101 -> 70
+	  102 -> 34
+	  103 -> 87
+	  104 -> 128
+	  105 -> 48
+	  105 -> 38
+	  106 -> 107
+	  106 -> 108
+	  107 -> 49
+	  108 -> 109
+	  108 -> 157
+	  109 -> 119
+	  110 -> 34
+	  111 -> 112
+	  111 -> 113
+	  112 -> 167
+	  113 -> 10
+	  114 -> 134
+	  115 -> 36
+	  116 -> 117
+	  116 -> 118
+	  117 -> 172
+	  118 -> 31
+	  119 -> 110
+	  120 -> 129
+	  121 -> 116
+	  122 -> 38
+	  123 -> 83
+	  124 -> 72
+	  125 -> 168
+	  125 -> 95
+	  126 -> 103
+	  127 -> 88
+	  128 -> 130
+	  130 -> 164
+	  131 -> 34
+	  132 -> 156
+	  133 -> 34
+	  134 -> 54
+	  135 -> 24
+	  136 -> 115
+	  137 -> 180
+	  138 -> 75
+	  139 -> 141
+	  139 -> 142
+	  140 -> 171
+	  141 -> 154
+	  142 -> 93
+	  143 -> 145
+	  143 -> 146
+	  144 -> 173
+	  145 -> 111
+	  146 -> 24
+	  147 -> 24
+	  148 -> 51
+	  149 -> 152
+	  149 -> 151
+	  150 -> 29
+	  151 -> 42
+	  152 -> 14
+	  153 -> 89
+	  154 -> 154
+	  155 -> 90
+	  156 -> 3
+	  157 -> 34
+	  158 -> 39
+	  159 -> 161
+	  159 -> 162
+	  160 -> 28
+	  161 -> 44
+	  162 -> 97
+	  163 -> 42
+	  164 -> 201
+	  165 -> 27
+	  166 -> 24
+	  167 -> 74
+	  168 -> 67
+	  169 -> 139
+	  170 -> 155
+	  171 -> 59
+	  172 -> 174
+	  172 -> 175
+	  173 -> 136
+	  174 -> 189
+	  175 -> 99
+	  176 -> 34
+	  177 -> 124
+	  178 -> 57
+	  179 -> 104
+	  180 -> 182
+	  181 -> 168
+	  182 -> 184
+	  182 -> 185
+	  183 -> 33
+	  184 -> 47
+	  185 -> 187
+	  185 -> 188
+	  186 -> 61
+	  187 -> 135
+	  188 -> 190
+	  188 -> 191
+	  189 -> 69
+	  190 -> 5
+	  191 -> 105
+	  192 -> 106
+	  193 -> 195
+	  193 -> 196
+	  194 -> 62
+	  195 -> 114
+	  196 -> 168
+	  196 -> 181
+	  197 -> 55
+	  198 -> 71
+	  199 -> 63
+	  200 -> 80
+}
+

@@ -1,0 +1,56 @@
+# WHIRLING F1 / orb communist quest
+# Orb for wondering whether the Hardies are a communist cell. PART OF THE COMMUNIST DREAM QUEST.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Titus Hardie: And from his perch at the end of the table, Titus Hardie himself stares at you with a cold contempt that makes you want to leave the cafeteria straightaway."];
+	  3 [label="You: What do you mean? Aren't they Evrart's guys?"];
+	  4 [label="You: Alright, guess I'll look elsewhere then. [Leave.]"];
+	  5 [label="Glen: No, they don't. Glen seems to be contemplating grievous bodily harm while he massages his raw knuckles..."];
+	  6 [label="Shanky: A little man, hardly bigger than a child, with a lean, hateful face..."];
+	  7 [label="Variable[\"whirling.hardie_hub_reached\"]"];
+	  8 [label="Variable[\"whirling.hardie_hub_reached\"]", shape=diamond];
+	  9 [label="!(Variable[\"whirling.hardie_hub_reached\"])", shape=diamond];
+	  10 [label="You: Let's keep moving, then. [Leave.]"];
+	  11 [label="You: Let's keep moving, then. [Leave.]"];
+	  12 [label="Fat Angus: Meanwhile, Fat Angus keeps shooting you furtive glances and mumbling uneasily to himself..."];
+	  13 [label="You: What do you mean? Who are they?"];
+	  14 [label="Untitled hub"];
+	  15 [label="Rhetoric: You may not know them, but they seem to know exactly who *you* are..."];
+	  16 [label="Alain: You've seen the expression on this one's face before, on a dozen hardened thieves and killers..."];
+	  17 [label="Untitled hub (02)"];
+	  18 [label="Titus Hardie: And here, guarding the entrance to his den, the undisputed alpha wolf, radiating contempt for you and all you represent."];
+	  19 [label="Perception (Smell): Perception (Smell): \"...\""];
+	  20 [label="Fat Angus: Meanwhile, the fat one keeps shooting you furtive looks while mumbling uneasily to himself..."];
+	  21 [label="Rhetoric: They are, but they don't seem too keen to talk with you, do they?"];
+	  22 [label="Eugene: In the far back, Eugene is doing his best to ignore you..."];
+	  23 [label="Rhetoric: Wait... No, something about this bunch doesn't smell right..."];
+	  24 [label="Rhetoric: Besides, you're pretty sure they consider themselves social democrats."];
+	  25 [label="You: They look pretty organised to me."];
+	  0 -> 1
+	  1 -> 24
+	  2 -> 25
+	  3 -> 22
+	  5 -> 23
+	  6 -> 17
+	  7 -> 9
+	  7 -> 10
+	  8 -> 18
+	  9 -> 15
+	  12 -> 3
+	  13 -> 7
+	  14 -> 11
+	  14 -> 14
+	  15 -> 5
+	  16 -> 21
+	  17 -> 4
+	  17 -> 12
+	  18 -> 16
+	  20 -> 19
+	  21 -> 6
+	  22 -> 13
+	  23 -> 8
+	  24 -> 5
+}
+

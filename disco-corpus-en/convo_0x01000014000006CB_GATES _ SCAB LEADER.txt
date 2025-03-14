@@ -1,0 +1,929 @@
+# GATES / SCAB LEADER
+# Scab Leader, a large mercenary in disguise. Shouts a lot about LETTING US WORK, doesn't actually provide much information for now, except being suspicious and shouting.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Composure: Do not be fooled by the programming. There is a precarious balance inside him, keeping him in check. But it's shaky as hell. And he's tired of it all..."];
+	  3 [label="You: \"A bouncer? Where? I frequent a lot of bars, maybe it's one I know.\""];
+	  4 [label="Authority: Now that *is* interesting."];
+	  5 [label="Jump to: [smallintrohub]"];
+	  6 [label="Scab Leader: Variable[\"gates.scableader_greeting_done\"]"];
+	  7 [label="Variable[\"gates.scableader_greeting_done\"]", shape=diamond];
+	  8 [label="!(Variable[\"gates.scableader_greeting_done\"])", shape=diamond];
+	  9 [label="You: \"No.\""];
+	  10 [label="Jump to: [MAINHUB]"];
+	  11 [label="You: \"We'll see.\""];
+	  12 [label="You: \"I don't really drink. But work *has* taken me to some. Which one was it?\""];
+	  13 [label="You: \"Okay, I wanted to discuss something else.\""];
+	  14 [label="Jump to: [gates.scableader_reaction_introduced ...]"];
+	  15 [label="You: \"Uh. I'll be going now.\" [Leave.]"];
+	  16 [label="Scab Leader: Variable[\"TASK.talk_merc_tattoo_done\"]"];
+	  17 [label="Variable[\"TASK.talk_merc_tattoo_done\"]", shape=diamond];
+	  18 [label="!(Variable[\"TASK.talk_merc_tattoo_done\"])", shape=diamond];
+	  19 [label="Jump to: [MAINHUB]"];
+	  20 [label="Scab Leader: \"I don't know how the Union has a trained killer up there, but that one's no joke. And my men are tired. And hungry. They're WORKERS, not fighters.\""];
+	  21 [label="Physical Instrument: Yes. Of course."];
+	  22 [label="You: \"Makes sense, I guess. Never mind, not gonna pry.\""];
+	  23 [label="You: \"Are you a mercenary hired by Wild Pines?\""];
+	  24 [label="You: Don't interrupt him. (Hear it.)"];
+	  25 [label="Scab Leader: Silence. He takes the photo. Grey eyes dart  back and forth on the glossy surface -- his face is unmoving."];
+	  26 [label="You: \"Actually, no.\" (Take the photo back.)"];
+	  27 [label="You: \"They were on the body of the man who was hanged behind the cafeteria there.\" (Give him the photo.)"];
+	  28 [label="Untitled hub (02)"];
+	  29 [label="Physical Instrument: Wrong. You did the right thing with Measurehead. The ballerina antics won you the fight."];
+	  30 [label="You: \"Okay, I gotta ask. Where exactly are you from?\""];
+	  31 [label="Kim Kitsuragi: \"Everyone understands you're *the law*. That's why you have that insignia on your arm. So you don't have to keep saying it.\""];
+	  32 [label="Scab Leader: \"RIGHT TO WORK! RIGHT TO WORK!\" the ostensible leader of the strikebreakers chants furiously. \"SHAME ON YOU!\""];
+	  33 [label="Scab Leader: Variable[\"gates.scableader_abrupt_end\"]"];
+	  34 [label="Variable[\"gates.scableader_abrupt_end\"]", shape=diamond];
+	  35 [label="!(Variable[\"gates.scableader_abrupt_end\"])", shape=diamond];
+	  36 [label="Scab Leader: \"That's what they always say, before stabbing you in the back. You want boots? Go find your own.\""];
+	  37 [label="Physical Instrument: Prissy milksop. Get back to me when you've grown a backbone!"];
+	  38 [label="Rhetoric: Silence is the answer. There's something off here but he won't say what."];
+	  39 [label="Drama: Loincloth? Now, you see, that's not really what a scab would say is it? Better not to press the issue further, sire. He seems... tense."];
+	  40 [label="Empathy: You see dead flesh -- in colourful rivers of Polychrome -- melting skin and hair."];
+	  41 [label="You: \"Not right now, but I might have been there. I don't really remember things well.\""];
+	  42 [label="Jump to: [gates.scableader_reaction_introduced ...]"];
+	  43 [label="Physical Instrument: Never thought you so spineless. Where's your wrecking ball spirit, your brutal mojo?"];
+	  44 [label="You: Damn, you're right. Super sweet. Where can I get in on this bad-ass boot fashion?"];
+	  45 [label="Scab Leader: \"Around.\" He shifts his gaze away. \"Eminent Domain. Previous... workplace.\""];
+	  46 [label="Scab Leader: \"You do that.\""];
+	  47 [label="You: \"Have you considered storming in? Like, all of you?\""];
+	  48 [label="Scab Leader: \"Why don't *you* go arrest them instead? I'm sure they've done plenty of criminal shit, they have *that look*.\""];
+	  49 [label="You: \"It's a... gut feeling.\""];
+	  50 [label="achievementhub"];
+	  51 [label="Scab Leader: \"Bad.\" The man glares at you. \"Standing on a narrow bridge, he's got a strategically advantageous position. And he's trained.\""];
+	  52 [label="Scab Leader: \"What are you talking about? I'm not tense.\""];
+	  53 [label="Scab Leader: IsKimHere()"];
+	  54 [label="IsKimHere()", shape=diamond];
+	  55 [label="!(IsKimHere())", shape=diamond];
+	  56 [label="Shivers: Below -- broken-down, battered people mill on the dusty streets with no purpose. Yet amongst them there is no sight of this man. *Nowhere*."];
+	  57 [label="You: Say very quietly: \"Is there a *tribunal* being convened by any chance?\""];
+	  58 [label="Kim Kitsuragi: \"Okay. Of course.\" The lieutenant says, his voice a soothing calm. He looks at you."];
+	  59 [label="You: \"You can have that.\" (Conclude.)"];
+	  60 [label="Scab Leader: \"Nah, you've earned it.\" He turns toward the gate, slowly, and yells: \"All right now! FREE COMMERCE! KEEP THE GOODS FLOWING!\""];
+	  61 [label="Scab Leader: \"It's just... nature. This guy,\" he points at the picture, \"he used to say evil is when nature and spirit meet in the wrong place.\""];
+	  62 [label="Scab Leader: \"We shot the boy, he was useless, but the girl... she was nice. A little fat you know. But not too old.\""];
+	  63 [label="Jump to: [Savoir Faire: \"As he does, he stomps his foot on t...\"]"];
+	  64 [label="You: \"Wait, you can't get by Measurehead? But *I* got by Measurehead. I kicked him in the face.\""];
+	  65 [label="Scab Leader: He smirks. \"Not before you get in there and get your ass whooped. Learn by failure, I always say.\""];
+	  66 [label="You: \"I'm interviewing people about a murder that took place here. Behind the hostel-cafeteria there.\""];
+	  67 [label="Scab Leader: Variable[\"reputation.the_law\"] >=6"];
+	  68 [label="Variable[\"reputation.the_law\"] >=6", shape=diamond];
+	  69 [label="!(Variable[\"reputation.the_law\"] >=6)", shape=diamond];
+	  70 [label="Scab Leader: \"Rights of people. Rights of workers. To have gainful employment. To make a salary and feed their families.\""];
+	  71 [label="Scab Leader: \"Hah! Couldn't handle us. A cause gives the workers strength. Gives them power.\" He bellows at the gates: \"We have -- A RIGHT TO WORK!\""];
+	  72 [label="You: \"Those are some sweet boots. Can I have them?\""];
+	  73 [label="Savoir Faire: Ask the man. Ask around. The doors of good taste are open to you. Be in vogue."];
+	  74 [label="Scab Leader: \"No.\""];
+	  75 [label="Jump to: [gates.scableader_reaction_introduced ...]"];
+	  76 [label="You: \"You're not from The Domain.\""];
+	  77 [label="Jump to: [MAINHUB]"];
+	  78 [label="shiveringisles"];
+	  79 [label="You: Ignore the discrepancy."];
+	  80 [label="You: \"Sure, why not?\""];
+	  81 [label="Scab Leader: The physically impressive man-tower has turned his attention back to the gates. He ignores your presence."];
+	  82 [label="Scab Leader: \"Besides, we're not that different.\" He leans closer. \"It helps if people see us talking -- cops and strikebreakers together. Shows authorities are on our side. Builds confidence.\""];
+	  83 [label="Composure: Yes, he's tense."];
+	  84 [label="Scab Leader: He nods. \"You go take the bastards down a peg or two. Squeeze them a little. Show them the rule of law.\" He bellows at the gates: \"LET US WORK!\""];
+	  85 [label="Scab Leader: \"Hell no. I'm just an honest scab. I won't have talk like that around here, you understand?\""];
+	  86 [label="Untitled hub (02)"];
+	  87 [label="Scab Leader: \"Fucking bug...\" He breathes out slowly -- his giant chest deflating and his mouth slightly open."];
+	  88 [label="Esprit de Corps: There could be weapons aiming at us right now -- somewhere above, in the buildings. The other merc. Don't push this -- he's thinking -- this is not the time."];
+	  89 [label="You: \"It was on your colonel.\" (Give him the photo.)"];
+	  90 [label="Jump to: [Scab Leader: \"\"You here to fuck with us? Beat the...\"]"];
+	  91 [label="Scab Leader: IsKimHere()"];
+	  92 [label="IsKimHere()", shape=diamond];
+	  93 [label="!(IsKimHere())", shape=diamond];
+	  94 [label="Scab Leader: \"We're all workers. Right? Workers stick together. Came from the Eminent Domain, in Jamrock. Background's in odd-jobs -- heavy lifting, cargo hauling, bouncer work. I know the drill.\""];
+	  95 [label="Scab Leader: \"RIGHT TO WORK!\" He again shakes his large fist, then turns back to you. \"It's shameful, cops doing nothing. You should bring backup, open the gates for us. Blockading gainful employment for workers is a *crime*.\""];
+	  96 [label="You: \"Who are all these strikebreakers?\" (Look around.)"];
+	  97 [label="Scab Leader: \"Might be time. Don't let the fat bastards tread on you. Cops tend to side with the higher-ups, but you're essentially still *workers*.\""];
+	  98 [label="You: \"I don't know...\""];
+	  99 [label="You: \"Sweet, I know bars. Been thrown out from several. Maybe that's why you seem familiar.\""];
+	  100 [label="You: \"Come on, why not?\""];
+	  101 [label="You: \"Okay okay, I got it. None of this *rob the poor* stuff.\""];
+	  102 [label="You: \"I need you to be my champion against Jean-Luc up there.\""];
+	  103 [label="Scab Leader: \"Your gut's got too much alcohol in it. Getting delirious.\" The bulky man guffaws and turns away from you, focusing again on the harbour gates."];
+	  104 [label="Scab Leader: Variable[\"gates.scableader_personal_details\"] >= 2"];
+	  105 [label="Variable[\"gates.scableader_personal_details\"] >= 2", shape=diamond];
+	  106 [label="!(Variable[\"gates.scableader_personal_details\"] >= 2)", shape=diamond];
+	  107 [label="Reaction Speed: You've been talking to him for quite a while now -- something is off with this guy. Ask him where he's from."];
+	  108 [label="You: \"Yeah, I think I've been there.\""];
+	  109 [label="You: \"What is a *strike*?\""];
+	  110 [label="You: \"This is an official matter, not to be discussed with outsiders.\""];
+	  111 [label="You: \"I thought you looked real familiar for a second there.\""];
+	  112 [label="Scab Leader: \"Establishment hasn't had its fill, is that right? First they obstruct our work, then they come for our shoes.\""];
+	  113 [label="Scab Leader: \"Maybe you should ask *them* the questions, like why we're not allowed to make a living here?\" He bellows to the gates: \"SHAME ON YOU!\""];
+	  114 [label="Scab Leader: IsKimHere()"];
+	  115 [label="IsKimHere()", shape=diamond];
+	  116 [label="!(IsKimHere())", shape=diamond];
+	  117 [label="Scab Leader: Suddenly the laughter stops. \"Drowned in a creek a week later. Spirits my ass.\""];
+	  118 [label="Scab Leader: After a while, he cranes his head side-to-side and sighs: \"Fucking loincloths really did him in.\""];
+	  119 [label="Scab Leader: \"Yeah.\""];
+	  120 [label="Scab Leader: \"Good choice.\" He nods."];
+	  121 [label="Scab Leader: \"You bet it was.\""];
+	  122 [label="Scab Leader: Variable[\"tc.scab_leader_is_a_merc\"]"];
+	  123 [label="Variable[\"tc.scab_leader_is_a_merc\"]", shape=diamond];
+	  124 [label="!(Variable[\"tc.scab_leader_is_a_merc\"])", shape=diamond];
+	  125 [label="Scab Leader: \"Unexpected situation. But we hold the pressure on, until someone makes a mistake. Then it's our time, we strike.\" The man rubs his jaw -- a lightly bearded square wedge."];
+	  126 [label="Scab Leader: \"Good. We're fighting for a cause here.\" He chants at the gates: \"RIGHT TO WORK! RIGHT TO WORK!\""];
+	  127 [label="Call Me Mañana: \"So do we, scab!\" the loitering man hollers in return."];
+	  128 [label="Scab Leader: \"Big mess. Caused by Union greed.\" He shoots you a wary, distrustful look. \"But I only fight for the rights of people.\""];
+	  129 [label="eminenthub"];
+	  130 [label="You: Don't care. I already have boots of my own, thank you."];
+	  131 [label="You: \"Why don't you just *talk* to them?\""];
+	  132 [label="Scab Leader: \"Went native on the chief, huh?\" He nods in approval. \"Those ballerina antics were reckless. Should have just punched him in the throat again.\""];
+	  133 [label="Jump to: [MAINHUB]"];
+	  134 [label="Scab Leader: \"So anyway, cop. That's where I'm from. It would be *stupid* to doubt that.\""];
+	  135 [label="Scab Leader: \"Our colonel is *deep* in the bush here. Deep in the fucking bush, in Banaital, '41... Monsoon season. He's on a reconnaissance mission.\""];
+	  136 [label="Scab Leader: \"He's spent a month behind enemy lines scouting kipt villages. Nothing but fucking bugs and snakes for fun. Men are getting restless... there's talk of switching *employers*...\" He licks his lips, as if drunk suddenly."];
+	  137 [label="Scab Leader: \"What's the matter, militiaman... no stomach for it?\" He looks at the photo in your hand and smiles. \"This man was worth a thousand loincloths. We're done talking here.\""];
+	  138 [label="Scab Leader: IsKimHere()"];
+	  139 [label="IsKimHere()", shape=diamond];
+	  140 [label="!(IsKimHere())", shape=diamond];
+	  141 [label="You: \"What *is* evil?\""];
+	  142 [label="Scab Leader: \"Don't think so,\" he grunts."];
+	  143 [label="MAINHUB"];
+	  144 [label="Scab Leader: \"Beats me. They mumble nonsense about *board rooms* and *workers' rights*. While we --\" he raises his fist and starts shouting again, \"-- HAVE THE RIGHT TO WORK!\""];
+	  145 [label="You: \"Never heard of it. Are you lying?\""];
+	  146 [label="You: \"Why should I?\""];
+	  147 [label="Scab Leader: Variable[\"reputation.the_law\"] >=3"];
+	  148 [label="Variable[\"reputation.the_law\"] >=3", shape=diamond];
+	  149 [label="!(Variable[\"reputation.the_law\"] >=3)", shape=diamond];
+	  150 [label="You: \"I'm hardly the establishment.\""];
+	  151 [label="Jump to: [gates.scableader_reaction_introduced ...]"];
+	  152 [label="You: \"I don't know what makes me say that.\""];
+	  153 [label="Composure: His shirt is far too small and an unpleasantly tight fit. While the overalls, held up by a belt, seem to fit a man with much *more* corpulence."];
+	  154 [label="Scab Leader: \"Main gate's locked -- would take *heavy ordnance* to bust it open. Could try to get in through the secretary's office.\" He points up the stairs. \"Door's locked. The guard's blocking the way to the access panel.\""];
+	  155 [label="Scab Leader: \"RIGHT TO WORK!\" He seems to have returned to his previous routine, as if he'd never seen the photo of the tattoo."];
+	  156 [label="Scab Leader: Variable[\"gates.scableader_altgreet_mhead_failed\"]"];
+	  157 [label="Variable[\"gates.scableader_altgreet_mhead_failed\"]", shape=diamond];
+	  158 [label="!(Variable[\"gates.scableader_altgreet_mhead_failed\"])", shape=diamond];
+	  159 [label="You: \"I want to get into the harbour too.\""];
+	  160 [label="Scab Leader: He ignores your question, choosing instead to turn to the emaciated workers -- raising both fists in the air. The clothes are obviously not his."];
+	  161 [label="Drama: Pretty okay, as far as lies go."];
+	  162 [label="Half Light: Don't talk to him any longer. Just leave, please."];
+	  163 [label="Inland Empire: Suddenly this feels like a really, *really* bad idea."];
+	  164 [label="Kim Kitsuragi: \"Actually...\" The lieutenant turns to you. \"I think we should maybe even *get going* now?\""];
+	  165 [label="You: \"Okay. This isn't useful.\" (Take the photo back.) \"You knew him right?\""];
+	  166 [label="You: \"You were there?\""];
+	  167 [label="Jump to: [Scab Leader: \"\"What's the matter, militiaman... n...\"]"];
+	  168 [label="Scab Leader: \"No -- I was in the Domain. In Jamrock. Being a bouncer.\""];
+	  169 [label="Authority: He's under orders. And orders -- are orders."];
+	  170 [label="Jump to: [You: \"\"I think you may be able to help me...\"]"];
+	  171 [label="Physical Instrument: Not bad advice, actually. This might do the trick.."];
+	  172 [label="You: \"What's going on here?\""];
+	  173 [label="Scab Leader: \"I know nothing about a murder.\" His reply is snappy and terse."];
+	  174 [label="You: \"Curiosity. Going to figure out this strike mess.\""];
+	  175 [label="Scab Leader: He looks annoyed. \"Things are busy enough. You going to waste less of my time?\""];
+	  176 [label="Jump to: [Scab Leader: \"The physically impressive man-tower...\"]"];
+	  177 [label="You: \"Oh, okay, whatever. Too much of a hassle.\""];
+	  178 [label="You: \"Why so tense?\""];
+	  179 [label="Scab Leader: The man has turned his attention elsewhere, he shakes his fist slowly -- while observing you from the corner of his eye."];
+	  180 [label="Jump to: [MAINHUB]"];
+	  181 [label="Composure: Fine. It was probably nothing."];
+	  182 [label="You: \"How bad could one guy be? You seem capable.\""];
+	  183 [label="Scab Leader: IsKimHere()"];
+	  184 [label="IsKimHere()", shape=diamond];
+	  185 [label="!(IsKimHere())", shape=diamond];
+	  186 [label="Scab Leader: \"RIGHT TO WORK!!\" the man chants, then turns to you. \"Back again, eh? Here to show the militia's support for our cause?\""];
+	  187 [label="Half Light: And dangerous. Somewhere below it all..."];
+	  188 [label="Physical Instrument: When the man moves around, you perceive some *serious abs* underneath his tight-fitting shirt. This man is in *shape*."];
+	  189 [label="Physical Instrument: It's hard to do that, when you want to beat a man into a pulp instead."];
+	  190 [label="You: \"Uhm... loin-cloths?\""];
+	  191 [label="You: \"You're not really a *scab leader*, are you?\""];
+	  192 [label="You: \"Can I have it back?\" (Conclude.)"];
+	  193 [label="Savoir Faire: Boots -- black in colour, crafted of hardened leather, if you had to guess. They look sturdy and stable, useful in rugged environments."];
+	  194 [label="Physical Instrument: Imagine what you could do with boots like this. Not be a little fuckin' weakling baby, for starters. There are boots for mewling and there are boots for smashing shit."];
+	  195 [label="You: \"And you are unable to breach the entrance?\""];
+	  196 [label="Jump to: [MAINHUB]"];
+	  197 [label="You: Shudder and breathe on your hands."];
+	  198 [label="Scab Leader: \"You here to fuck with us? Beat the honest worker down?\""];
+	  199 [label="Jump to: [Scab Leader: \"The physically impressive man-tower...\"]"];
+	  200 [label="Scab Leader: Variable[\"gates.scableader_altgreet_mhead_punched\"]"];
+	  201 [label="Variable[\"gates.scableader_altgreet_mhead_punched\"]", shape=diamond];
+	  202 [label="!(Variable[\"gates.scableader_altgreet_mhead_punched\"])", shape=diamond];
+	  203 [label="Scab Leader: IsKimHere()"];
+	  204 [label="IsKimHere()", shape=diamond];
+	  205 [label="!(IsKimHere())", shape=diamond];
+	  206 [label="Scab Leader: \"We were promised work.\" He points to the gates. \"We'd be in there -- WORKING -- if the bastards hadn't shut the gates.\""];
+	  207 [label="Scab Leader: \"I work hard.\" His voice booms ever louder: \"And I would work *even harder* -- if the fuckers would LET US WORK!\""];
+	  208 [label="Scab Leader: Another grunt. He's turned his attention to the gates and seems tense."];
+	  209 [label="Jump to: [MAINHUB]"];
+	  210 [label="Scab Leader: \"Go ahead.\" He turns toward the gate, slowly, and yells: \"All right now. FREE COMMERCE! KEEP THE GOODS FLOWING!\""];
+	  211 [label="You: \"You don't have any tips on how to punch a guy out, do you? Say, a really big race-theorist guarding a button?\""];
+	  212 [label="Scab Leader: \"We're here to fight for a cause. Stripes usually have problems with people who have *causes*.\""];
+	  213 [label="Scab Leader: \"Am I a suspect?\" His eyes narrow. \"Done no crimes. I only fight for the rights of people.\""];
+	  214 [label="Scab Leader: \"Huge Semenese guy standing up there on the overhead passage. Won't let anyone by. The access panel is right behind him.\""];
+	  215 [label="You: Sweet boots? I require details."];
+	  216 [label="Scab Leader: \"And I don't mean the scrawny Mesque punk either.\" He points at the dockworker idling on the staircase. \"I mean Head-Measurer -- or whatever he is.\""];
+	  217 [label="compyhub"];
+	  218 [label="Scab Leader: \"Nice aggression with the native.\" He nods in approval. \"Don't let the chief fool you next time. You don't need to be that up in his face -- leave yourself space to move.\""];
+	  219 [label="Scab Leader: He abruptly changes the subject: \"Let's talk about our right to work.\""];
+	  220 [label="You: \"So what are you going to do now?\""];
+	  221 [label="You: \"How come you're built like a brick shit-house, but the other scabs are so scrawny?\""];
+	  222 [label="You: I don't want to ask that."];
+	  223 [label="Scab Leader: Variable[\"TASK.talk_merc_tattoo_done\"]"];
+	  224 [label="Variable[\"TASK.talk_merc_tattoo_done\"]", shape=diamond];
+	  225 [label="!(Variable[\"TASK.talk_merc_tattoo_done\"])", shape=diamond];
+	  226 [label="Half Light: His neck muscles tense up, the veins on his neck bulge. Be careful -- he's holding it *deep* in but there are things in there you don't want to meet."];
+	  227 [label="Scab Leader: \"What it *means*....\" He points to one tiny star in the web of lines, away from the man's heart, almost on his stomach."];
+	  228 [label="Visual Calculus: In what must have been Semenine."];
+	  229 [label="Jump to: [IsKimHere()]"];
+	  230 [label="Esprit de Corps: There is absolutely no need to push this any further."];
+	  231 [label="Rhetoric: I'm going to interpret that as a *yes*. There's a tribunal. And it won't be long until it's ready."];
+	  232 [label="Scab Leader: \"Basteeerds! We have a RIGHT TO WORK!\" the man yells towards the harbour gates. His voice is the loudest of the lot -- and oddly screechy for a man his size."];
+	  233 [label="Scab Leader: \"Have fun.\" He snorts. \"Union shits are on full strike. Don't think they're going to let you through the gates. You trying to meet their fat boss?\""];
+	  234 [label="Physical Instrument: Something stirs in your stomach."];
+	  235 [label="You: \"What exactly is your goal here?\""];
+	  236 [label="You: \"What kind of a cause are we talking about?\""];
+	  237 [label="You: \"I don't *think* I've chosen any sides yet.\""];
+	  238 [label="bootsohubbo"];
+	  239 [label="Savoir Faire: I stand corrected."];
+	  240 [label="Jump to: [Scab Leader: \"The physically impressive man-tower...\"]"];
+	  241 [label="Scab Leader: \"No.\" He slowly shakes his head. \"I'm not a fighter -- I'm a WORKER!\""];
+	  242 [label="Scab Leader: \"FREE FLOW OF COMMERCE!\" The man yells and wipes his face. Sweat is dripping down his brow."];
+	  243 [label="Pain Threshold: With some strange emotion. This is about to get really graphic. Last moment to back off."];
+	  244 [label="Scab Leader: \"Our boy -- he's only a captain then -- but he knows how these men think. If they don't see action soon...\" His voice gets strangely quiet. A long, long way from *right to work*. His gaze pierces the paper."];
+	  245 [label="Physical Instrument: He's clenching his teeth. There is silent pressure behind them."];
+	  246 [label="You: \"Evil.\""];
+	  247 [label="Scab Leader: CheckItem(\"instant_photo_tattoos\")"];
+	  248 [label="CheckItem(\"instant_photo_tattoos\")", shape=diamond];
+	  249 [label="!(CheckItem(\"instant_photo_tattoos\"))", shape=diamond];
+	  250 [label="You: \"What about it? You're 'right to work'?\""];
+	  251 [label="Scab Leader: \"Hold up and stay frosty, everyone! Cops are here.\" The broad-shouldered alpha male turns to you. He's a full head taller than everybody else here."];
+	  252 [label="You: \"Already got that. I'm interested in *your* background.\""];
+	  253 [label="Scab Leader: \"No, don't think we've met before.\" His eyes narrow with mistrust. \"I came to help out *the people*.\""];
+	  254 [label="You: If only I had boots like this, I could stomp many things. Got a problem, punk? Eat my boot."];
+	  255 [label="Jump to: [gates.scableader_reaction_introduced ...]"];
+	  256 [label="You: I don't really care what either of you think. I'm a cool-ass bitch, baby. You can't *fake* stardom."];
+	  257 [label="You: \"I mean, where did you get them? I would like a pair of my own.\""];
+	  258 [label="You: \"Absolutely nothing?\""];
+	  259 [label="Shivers: Life in the Domain is even worse off than in Martinaise. The cold air is stiff from the fumes of motor carriages and lorries roaring overhead."];
+	  260 [label="bootsohubo"];
+	  261 [label="Scab Leader: IsKimHere()"];
+	  262 [label="IsKimHere()", shape=diamond];
+	  263 [label="!(IsKimHere())", shape=diamond];
+	  264 [label="Scab Leader: Variable[\"gates.mhead_fight_failure\"]  or  Variable[\"gates.mhead_fight_failed_mid_success\"]"];
+	  265 [label="Variable[\"gates.mhead_fight_failure\"]  or  Variable[\"gates.mhead_fight_failed_mid_success\"]", shape=diamond];
+	  266 [label="!(Variable[\"gates.mhead_fight_failure\"]  or  Variable[\"gates.mhead_fight_failed_mid_success\"])", shape=diamond];
+	  267 [label="Scab Leader: IsKimHere()"];
+	  268 [label="IsKimHere()", shape=diamond];
+	  269 [label="!(IsKimHere())", shape=diamond];
+	  270 [label="Scab Leader: Variable[\"gates.scableader_person_to_brick\"]"];
+	  271 [label="Variable[\"gates.scableader_person_to_brick\"]", shape=diamond];
+	  272 [label="!(Variable[\"gates.scableader_person_to_brick\"])", shape=diamond];
+	  273 [label="Half Light: He's stopping this to control himself. You were on to something."];
+	  274 [label="Scab Leader: The beefy man snorts and spits on the ground. \"They know me -- that's bullshit.\" He turns his attention back to the harbour gates."];
+	  275 [label="Drama: It just has to be said -- that was not a convincing line."];
+	  276 [label="Scab Leader: The man's breathing steadies but his eyes are still narrow. Slowly he's trying to get his 'Right to Work' dance back on..."];
+	  277 [label="Jump to: [Untitled hub (02)]"];
+	  278 [label="Encyclopedia: Banaital is one of the inhabited islands of the Semenese archipelago, near the pale. Covered in  jungle. It was the anchor point for the Semenese nationalists -- in the proxy war held on the islanders' territory."];
+	  279 [label="Empathy: The story must have stirred up some conflicting emotions. The man looks tired for a second..."];
+	  280 [label="Scab Leader: \"She was quite the entertainment. For the week she lasted. Expired in the hands of Sarge Mason -- the kinda guy who'd make Chief there,\" he nods towards the man on the gates, \"shit his pants and cry like a bitch.\""];
+	  281 [label="Scab Leader: \"I can tell you what this one means. Only one.\" He squints at it. It's so small. \"You wanna hear what happened here?\""];
+	  282 [label="You: Say nothing."];
+	  283 [label="Scab Leader: Variable[\"gates.scab_leader_bouncer\"]"];
+	  284 [label="Variable[\"gates.scab_leader_bouncer\"]", shape=diamond];
+	  285 [label="!(Variable[\"gates.scab_leader_bouncer\"])", shape=diamond];
+	  286 [label="Scab Leader: \"You caught him off guard -- that only happens once. Now he's alert, standing on a narrow bridge and *my* men are tired and hungry...\""];
+	  287 [label="Kim Kitsuragi: \"It would be better -- for the neighbourhood -- if you went home. At least for now. If you can't get in anyway.\""];
+	  288 [label="Scab Leader: \"Worked at... *Territorial*. Ring a bell?\""];
+	  289 [label="Shivers: A monstrous shadow, high above the firetraps of the Domain -- the 8/81 motorway running over this district of Jamrock. Concrete pillars rise up from the midst of the dilapidated wooden houses. On the horizon, barely visible, the hazy machinery of the harbour..."];
+	  290 [label="Drama: Every once in a while, it is like you can see glimpses of another guy under the guise of this *fighter for jobs*. He seems a more brutal, cunning and suspicious person. Just a hunch. Or... you just might be paranoid!"];
+	  291 [label="Empathy: The mention of a killing sends a barely noticeable shiver of tenseness through him. Interesting..."];
+	  292 [label="Scab Leader: \"We came here to help the harbour run smoothly in time of crisis. If Union fucks don't want work, they ought let in those *WHO DO WANT WORK*.\""];
+	  293 [label="You: \"Yes.\""];
+	  294 [label="Jump to: [MAINHUB]"];
+	  295 [label="Physical Instrument: Get your daily infusion of vitamin PB -- for Police Brutality. Makes you feel like a boss. The man in charge."];
+	  296 [label="You: It's just a pair of boots. Who cares?"];
+	  297 [label="You: Ill-fitting... what does that mean?"];
+	  298 [label="Scab Leader: The burly man has a set of not-very-sweet-nor-impressive boots protruding out from under the baggy, hanging folds. They are of little interest to you."];
+	  299 [label="Jump to: [gates.scableader_reaction_introduced ...]"];
+	  300 [label="Jump to: [MAINHUB]"];
+	  301 [label="Jump to: [gates.scableader_reaction_introduced ...]"];
+	  302 [label="Jump to: [gates.scableader_reaction_introduced ...]"];
+	  303 [label="Jump to: [MAINHUB]"];
+	  304 [label="You: \"No one there knows you.\""];
+	  305 [label="You: \"Actually, no.\" (Take the photo back.) \"You knew him right?\""];
+	  306 [label="Jump to: [MAINHUB]"];
+	  307 [label="Jump to: [gates.scableader_reaction_introduced ...]"];
+	  308 [label="You: \"I wasn't done asking questions.\""];
+	  309 [label="Scab Leader: The hulking man oozes stark scepticism."];
+	  310 [label="You: \"Well shit. I'll have to check around then. Maybe there's a boot store around.\""];
+	  311 [label="Scab Leader: The beefy man snorts and spits on the ground. \"Yeah. I don't know either.\" He turns his attention back to the harbour gates."];
+	  312 [label="Scab Leader: \"Like civilized folk, you mean?\" The man rubs his chin. \"These native fucks don't understand *civilized*.\""];
+	  313 [label="Kim Kitsuragi: \"Why not? I see *numerous* reasons not to pick a side in this local matter.\""];
+	  314 [label="Scab Leader: IsKimHere()"];
+	  315 [label="IsKimHere()", shape=diamond];
+	  316 [label="!(IsKimHere())", shape=diamond];
+	  317 [label="Scab Leader: \"Fucking loincloth...\" He stares you down mutely for a second."];
+	  318 [label="You: \"I think you may be able to help me decipher some tattoos.\" (Take out the picture.)"];
+	  319 [label="Scab Leader: \"At dawn he comes upon two kipts, breeding in the bushes by the river. Or maybe they weren't breeding -- maybe they were just making eyes at each other. I like to think they were breeding...\""];
+	  320 [label="Jump to: [MAINHUB]"];
+	  321 [label="Scab Leader: Variable[\"gates.scableader_greeting_done\"]"];
+	  322 [label="Variable[\"gates.scableader_greeting_done\"]", shape=diamond];
+	  323 [label="!(Variable[\"gates.scableader_greeting_done\"])", shape=diamond];
+	  324 [label="You: \"I am the law.\""];
+	  325 [label="Scab Leader: \"Honest men and women. With rights -- to work. To be useful. Not toys for corporate interests.\" The man runs a hand through his steadily graying military haircut."];
+	  326 [label="Scab Leader: \"When a bunch of ungrateful, lazy cockroaches can't get their act together. Decide to block honest work for other people.\" He shifts uncomfortably in his worker's overalls."];
+	  327 [label="Composure: There's something odd in the way he carries himself. His set of clothing looks vaguely mismatched. The different pieces of the attire seem ill-fitting."];
+	  328 [label="Scab Leader: \"Wouldn't put it past these harbour bugs. They'd do *anything* to stay alive.\""];
+	  329 [label="Scab Leader: \"What's it to you?\" Deep-set suspicion drips from every syllable."];
+	  330 [label="You: \"Hey *tough guy*, I had more questions.\""];
+	  331 [label="Savoir Faire: As he does, he stomps his foot on the pavement and... stop everything! Look at that sweet pair of boots on his feet! They would absolutely complement your *soul*, would let your style fly even higher!"];
+	  332 [label="Scab Leader: Variable[\"gates.scableader_composure_higher\"]"];
+	  333 [label="Variable[\"gates.scableader_composure_higher\"]", shape=diamond];
+	  334 [label="!(Variable[\"gates.scableader_composure_higher\"])", shape=diamond];
+	  335 [label="Scab Leader: Variable[\"gates.mhead_fight_success\"]"];
+	  336 [label="Variable[\"gates.mhead_fight_success\"]", shape=diamond];
+	  337 [label="!(Variable[\"gates.mhead_fight_success\"])", shape=diamond];
+	  338 [label="Scab Leader: He squints at you --  a little spark of violence gutters in his eyes. Then he blinks and turns to his men. \"We're done here. I have a strike to break.\""];
+	  339 [label="You: \"'Hell no, I'm just an honest scab?' That didn't sound too convincing.\""];
+	  340 [label="Jump to: [Untitled hub (02)]"];
+	  341 [label="You: \"Of course. Yes. Forget about it. Let's discuss something else.\" (Cancel task.)"];
+	  342 [label="Rhetoric: He clearly does not think poking the hornet's nest is a wise plan anymore."];
+	  343 [label="Kim Kitsuragi: The lieutenant turns to you. \"I think we should maybe even *get going* now?\""];
+	  344 [label="Scab Leader: \"Fucking mask is getting sweaty. I want take my mask off, but...\" He shrugs."];
+	  345 [label="Jump to: [Untitled hub (02)]"];
+	  346 [label="Physical Instrument: He might have some advice, but you gotta at least *try* to fight Measurehead first. Return if you fail."];
+	  347 [label="Scab Leader: \"Yeah, I saw your ballerina moves up there.\" The man spits out a yellow clot. \"In a real fight these acrobatics will get you killed faster than a bullet.\""];
+	  348 [label="Scab Leader: \"We have families to feed, you piece of shit!\" He points his finger at the man sitting on the railing."];
+	  349 [label="Scab Leader: \"Uh huh. Was a long time ago.\" The man is quickly losing interest in talking with you."];
+	  350 [label="Scab Leader: Variable[\"gates.scableader_shivers_fires\"]"];
+	  351 [label="Variable[\"gates.scableader_shivers_fires\"]", shape=diamond];
+	  352 [label="!(Variable[\"gates.scableader_shivers_fires\"])", shape=diamond];
+	  353 [label="Jump to: [smallintrohub]"];
+	  354 [label="Scab Leader: Variable[\"gates.scableader_composure_blackcheck\"]"];
+	  355 [label="Variable[\"gates.scableader_composure_blackcheck\"]", shape=diamond];
+	  356 [label="!(Variable[\"gates.scableader_composure_blackcheck\"])", shape=diamond];
+	  357 [label="Scab Leader: Variable[\"gates.scableader_mid_greet_exit\"]"];
+	  358 [label="Variable[\"gates.scableader_mid_greet_exit\"]", shape=diamond];
+	  359 [label="!(Variable[\"gates.scableader_mid_greet_exit\"])", shape=diamond];
+	  360 [label="Kim Kitsuragi: \"We're not picking a side in this just yet, sir.\""];
+	  361 [label="Scab Leader: \"No. They will give up eventually. Or get drunk. Leave the button unguarded. Then we charge.\" The man rubs his jaw -- a perfect, lightly bearded square wedge."];
+	  362 [label="Rhetoric: Odd out of place colonial reference there, Mr. Scab Leader..."];
+	  363 [label="Reaction Speed: A punch is not imminent, but it's being cocked. Hard."];
+	  364 [label="Scab Leader: \"God...\" He suddenly bursts out laughing. \"Mason couldn't let go. Cut the tits off her cold body and fuckin' ate them. Said primitive spirits were watching over him now...\""];
+	  365 [label="Scab Leader: \"Don't think so,\" he grunts, barely glancing at it."];
+	  366 [label="Untitled hub"];
+	  367 [label="You: \"Yes.\""];
+	  368 [label="Visual Calculus: On the photo in your hands -- the dead man's skin is studded with stars. Tens, hundreds of them, littering his dead skin."];
+	  369 [label="You: \"I'm just going to leave now.\" [Leave.]"];
+	  370 [label="Rhetoric: His manner of speaking is wooden, the tone of voice bland and uninspired. Almost as if compiling replies from a set of learned phrases."];
+	  371 [label="You: \"This really isn't my area of expertise.\""];
+	  372 [label="You: \"Maybe.\""];
+	  373 [label="You: I don't think the boots really fit *my style*. They look militant and uncomfortable."];
+	  374 [label="You: Don't. No need. Focus on something else."];
+	  375 [label="You: \"Regardless, I have some questions for you.\" (Proceed.)"];
+	  376 [label="Scab Leader: He pauses, then abruptly changes the subject: \"Let's talk about our right to work.\""];
+	  377 [label="Jump to: [MAINHUB]"];
+	  378 [label="Scab Leader: \"Pity.\" He turns around and bellows at the gates: \"LET US WORK!\""];
+	  379 [label="You: \"You wearing new clothes?\""];
+	  380 [label="Kim Kitsuragi: \"I have a question.\" The lieutenant looks him in the eye. \"Why do all these men follow your leadership?\""];
+	  381 [label="You: \"Okay.\" (Back off.)"];
+	  382 [label="Scab Leader: \"How about you fuck off now, huh?\""];
+	  383 [label="Inland Empire: There's a word on the tip of your tongue. Colourless, odourless. It's..."];
+	  384 [label="Scab Leader: Wordless, he takes the photo and looks at it. Grey eyes dart back and forth on the glossy surface -- his face is unmoving."];
+	  385 [label="You: \"Can you tell me what the tattoo means?\""];
+	  386 [label="You: \"We're investigating a murder. These tattoos were on the victim's body.\" (Give him the photo.)"];
+	  387 [label="Authority: He seems to be following his orders well enough for now -- but beneath it all there is a boiling rage. And a dangerous carelessness."];
+	  388 [label="Kim Kitsuragi: \"Yes, people get that you are *the law*. You really don't have to keep saying it.\""];
+	  389 [label="You: \"Routine. Part of the investigation.\""];
+	  390 [label="Savoir Faire: Geez, live a little. At least give things a try. It's just boots. A set of sweet, stylish boots."];
+	  391 [label="Scab Leader: \"I don't trust cops, but... I can see you understand the --\" He raises his voice and chants: \"RIGHT TO WORK! RIGHT TO WORK!\""];
+	  392 [label="Scab Leader: Variable[\"gates.scableader_altgreet_tattoos\"]"];
+	  393 [label="Variable[\"gates.scableader_altgreet_tattoos\"]", shape=diamond];
+	  394 [label="!(Variable[\"gates.scableader_altgreet_tattoos\"])", shape=diamond];
+	  395 [label="Jump to: [MAINHUB]"];
+	  396 [label="Perception (Hearing): You hear a tiny rattle, a small radio, cracking somewhere -- an earpiece?"];
+	  397 [label="Composure: Hard as a stone. But beneath it..."];
+	  398 [label="Scab Leader: \"Wait. They might go home eventually. Or get drunk. Leave the access panel unguarded. Or the company sends someone to reason with them...\""];
+	  399 [label="You: \"What do the strikers want?\""];
+	  400 [label="You: \"Looks like too much trouble for my taste.\" [Leave.]"];
+	  401 [label="smallintrohub"];
+	  402 [label="Scab Leader: He nods. \"You go, take the bastards down a peg or two. Squeeze them a little. Show them the rule of law.\" He bellows at the gates: \"LET US WORK!\""];
+	  403 [label="You: \"Excuse me, I had further inquiries.\""];
+	  404 [label="You: \"Wait -- *Head-Measurer*?\""];
+	  405 [label="Scab Leader: \"Yeah?\" The man grunts. \"What makes you say that?\""];
+	  406 [label="Scab Leader: \"You think they follow because I'm big and loud? No, they follow the rules of the market. The rules of the economy. Because they were --\" he starts bellowing, \"-- GIVEN A JOB TO DO.\""];
+	  407 [label="Scab Leader: Variable[\"gates.scableader_reaction_introduced_personal_question\"]"];
+	  408 [label="Variable[\"gates.scableader_reaction_introduced_personal_question\"]", shape=diamond];
+	  409 [label="!(Variable[\"gates.scableader_reaction_introduced_personal_question\"])", shape=diamond];
+	  410 [label="Jump to: [MAINHUB]"];
+	  411 [label="Untitled hub (02)"];
+	  412 [label="Rhetoric: He clearly does not think poking the hornet's nest is a wise plan anymore."];
+	  413 [label="Scab Leader: \"No. I was somewhere else. That's just a *guess*. As to what this one little star on his belly might mean. I'm just a bouncer.\""];
+	  0 -> 1
+	  1 -> 336
+	  2 -> 14
+	  3 -> 289
+	  4 -> 407
+	  5 -> 402
+	  6 -> 8
+	  6 -> 7
+	  7 -> 32
+	  8 -> 358
+	  9 -> 126
+	  10 -> 143
+	  11 -> 310
+	  12 -> 289
+	  13 -> 200
+	  14 -> 408
+	  16 -> 17
+	  16 -> 18
+	  17 -> 393
+	  18 -> 6
+	  19 -> 143
+	  20 -> 131
+	  20 -> 47
+	  21 -> 302
+	  22 -> 180
+	  23 -> 224
+	  24 -> 245
+	  25 -> 398
+	  26 -> 120
+	  27 -> 25
+	  28 -> 401
+	  28 -> 172
+	  28 -> 325
+	  29 -> 377
+	  30 -> 330
+	  31 -> 252
+	  32 -> 33
+	  33 -> 34
+	  33 -> 35
+	  34 -> 331
+	  34 -> 404
+	  34 -> 309
+	  35 -> 19
+	  36 -> 151
+	  37 -> 177
+	  38 -> 63
+	  39 -> 341
+	  40 -> 118
+	  41 -> 350
+	  42 -> 408
+	  43 -> 177
+	  44 -> 73
+	  45 -> 311
+	  46 -> 75
+	  47 -> 48
+	  48 -> 315
+	  49 -> 103
+	  50 -> 196
+	  50 -> 13
+	  51 -> 20
+	  52 -> 83
+	  53 -> 54
+	  53 -> 55
+	  54 -> 381
+	  55 -> 308
+	  56 -> 129
+	  57 -> 87
+	  58 -> 88
+	  59 -> 60
+	  60 -> 369
+	  61 -> 346
+	  62 -> 283
+	  62 -> 165
+	  63 -> 332
+	  64 -> 348
+	  65 -> 347
+	  66 -> 174
+	  67 -> 68
+	  67 -> 69
+	  68 -> 262
+	  69 -> 184
+	  70 -> 371
+	  71 -> 82
+	  72 -> 74
+	  73 -> 72
+	  74 -> 178
+	  74 -> 258
+	  74 -> 100
+	  75 -> 408
+	  76 -> 406
+	  77 -> 143
+	  78 -> 198
+	  78 -> 375
+	  79 -> 182
+	  80 -> 204
+	  81 -> 143
+	  82 -> 402
+	  83 -> 188
+	  84 -> 300
+	  85 -> 227
+	  86 -> 57
+	  86 -> 340
+	  86 -> 382
+	  87 -> 364
+	  88 -> 278
+	  89 -> 385
+	  90 -> 199
+	  91 -> 92
+	  91 -> 93
+	  92 -> 344
+	  93 -> 307
+	  94 -> 290
+	  95 -> 80
+	  95 -> 98
+	  95 -> 372
+	  96 -> 326
+	  97 -> 392
+	  98 -> 268
+	  99 -> 289
+	  100 -> 112
+	  101 -> 36
+	  102 -> 242
+	  103 -> 77
+	  104 -> 105
+	  104 -> 106
+	  105 -> 107
+	  106 -> 396
+	  107 -> 304
+	  108 -> 350
+	  109 -> 327
+	  110 -> 95
+	  111 -> 254
+	  112 -> 101
+	  112 -> 150
+	  113 -> 349
+	  114 -> 115
+	  114 -> 116
+	  115 -> 58
+	  116 -> 278
+	  117 -> 235
+	  118 -> 367
+	  119 -> 246
+	  120 -> 91
+	  121 -> 346
+	  122 -> 123
+	  122 -> 124
+	  123 -> 388
+	  124 -> 14
+	  125 -> 122
+	  126 -> 82
+	  127 -> 143
+	  128 -> 291
+	  129 -> 99
+	  129 -> 3
+	  129 -> 76
+	  129 -> 12
+	  130 -> 299
+	  131 -> 313
+	  132 -> 29
+	  133 -> 143
+	  134 -> 129
+	  135 -> 279
+	  136 -> 244
+	  137 -> 230
+	  138 -> 139
+	  138 -> 140
+	  139 -> 164
+	  140 -> 209
+	  141 -> 61
+	  142 -> 163
+	  143 -> 96
+	  143 -> 319
+	  143 -> 102
+	  143 -> 236
+	  143 -> 109
+	  143 -> 370
+	  143 -> 212
+	  143 -> 23
+	  143 -> 30
+	  143 -> 159
+	  144 -> 189
+	  145 -> 339
+	  146 -> 213
+	  147 -> 148
+	  147 -> 149
+	  148 -> 67
+	  149 -> 252
+	  150 -> 36
+	  151 -> 408
+	  152 -> 312
+	  153 -> 380
+	  153 -> 79
+	  154 -> 217
+	  155 -> 378
+	  156 -> 157
+	  156 -> 158
+	  157 -> 16
+	  158 -> 219
+	  159 -> 234
+	  160 -> 38
+	  161 -> 41
+	  161 -> 145
+	  161 -> 108
+	  162 -> 86
+	  163 -> 89
+	  163 -> 27
+	  163 -> 387
+	  163 -> 342
+	  164 -> 343
+	  165 -> 167
+	  166 -> 284
+	  167 -> 137
+	  168 -> 346
+	  169 -> 346
+	  170 -> 319
+	  171 -> 220
+	  172 -> 252
+	  173 -> 292
+	  174 -> 128
+	  175 -> 11
+	  175 -> 373
+	  176 -> 81
+	  177 -> 241
+	  178 -> 52
+	  179 -> 181
+	  180 -> 143
+	  181 -> 63
+	  182 -> 51
+	  182 -> 131
+	  182 -> 47
+	  183 -> 185
+	  183 -> 186
+	  184 -> 389
+	  185 -> 252
+	  186 -> 402
+	  187 -> 95
+	  188 -> 328
+	  189 -> 411
+	  190 -> 119
+	  191 -> 345
+	  192 -> 211
+	  193 -> 195
+	  194 -> 239
+	  195 -> 154
+	  196 -> 143
+	  197 -> 260
+	  198 -> 9
+	  198 -> 146
+	  198 -> 294
+	  199 -> 81
+	  200 -> 202
+	  200 -> 203
+	  201 -> 16
+	  202 -> 132
+	  203 -> 205
+	  203 -> 206
+	  204 -> 314
+	  205 -> 403
+	  206 -> 50
+	  207 -> 332
+	  208 -> 210
+	  209 -> 143
+	  210 -> 369
+	  211 -> 65
+	  212 -> 9
+	  212 -> 294
+	  213 -> 291
+	  214 -> 183
+	  215 -> 194
+	  216 -> 64
+	  216 -> 131
+	  216 -> 405
+	  216 -> 47
+	  217 -> 298
+	  217 -> 79
+	  218 -> 171
+	  219 -> 322
+	  220 -> 399
+	  221 -> 208
+	  222 -> 21
+	  223 -> 225
+	  223 -> 226
+	  224 -> 243
+	  225 -> 85
+	  226 -> 276
+	  227 -> 229
+	  228 -> 282
+	  229 -> 91
+	  230 -> 413
+	  231 -> 383
+	  232 -> 28
+	  233 -> 66
+	  233 -> 110
+	  234 -> 280
+	  235 -> 207
+	  236 -> 70
+	  237 -> 97
+	  238 -> 257
+	  238 -> 297
+	  238 -> 44
+	  238 -> 374
+	  238 -> 255
+	  239 -> 37
+	  240 -> 81
+	  241 -> 197
+	  242 -> 162
+	  243 -> 24
+	  243 -> 306
+	  244 -> 320
+	  245 -> 386
+	  246 -> 121
+	  247 -> 249
+	  247 -> 250
+	  248 -> 366
+	  249 -> 142
+	  250 -> 90
+	  251 -> 199
+	  252 -> 94
+	  253 -> 291
+	  254 -> 296
+	  255 -> 408
+	  256 -> 240
+	  257 -> 45
+	  258 -> 329
+	  259 -> 56
+	  260 -> 216
+	  260 -> 130
+	  261 -> 264
+	  261 -> 263
+	  262 -> 31
+	  263 -> 252
+	  264 -> 266
+	  264 -> 267
+	  265 -> 156
+	  266 -> 16
+	  267 -> 269
+	  267 -> 270
+	  268 -> 361
+	  269 -> 84
+	  270 -> 272
+	  270 -> 273
+	  271 -> 222
+	  271 -> 223
+	  272 -> 42
+	  274 -> 77
+	  275 -> 86
+	  276 -> 190
+	  277 -> 86
+	  278 -> 136
+	  279 -> 384
+	  280 -> 365
+	  281 -> 368
+	  281 -> 26
+	  282 -> 281
+	  283 -> 285
+	  283 -> 286
+	  284 -> 168
+	  285 -> 414
+	  286 -> 131
+	  286 -> 47
+	  287 -> 362
+	  288 -> 161
+	  289 -> 351
+	  290 -> 253
+	  290 -> 22
+	  291 -> 259
+	  291 -> 179
+	  292 -> 53
+	  293 -> 71
+	  294 -> 143
+	  295 -> 72
+	  296 -> 43
+	  297 -> 153
+	  298 -> 256
+	  299 -> 408
+	  300 -> 143
+	  301 -> 408
+	  302 -> 408
+	  303 -> 143
+	  304 -> 275
+	  305 -> 137
+	  306 -> 143
+	  307 -> 408
+	  308 -> 176
+	  309 -> 301
+	  310 -> 46
+	  311 -> 77
+	  312 -> 363
+	  313 -> 379
+	  314 -> 316
+	  314 -> 317
+	  315 -> 288
+	  316 -> 221
+	  317 -> 39
+	  318 -> 248
+	  319 -> 62
+	  320 -> 143
+	  321 -> 323
+	  321 -> 324
+	  322 -> 133
+	  323 -> 251
+	  324 -> 147
+	  325 -> 293
+	  326 -> 400
+	  327 -> 355
+	  328 -> 95
+	  329 -> 111
+	  329 -> 390
+	  329 -> 175
+	  330 -> 176
+	  331 -> 333
+	  332 -> 334
+	  332 -> 335
+	  333 -> 261
+	  334 -> 302
+	  335 -> 337
+	  335 -> 338
+	  336 -> 201
+	  337 -> 265
+	  338 -> 274
+	  339 -> 318
+	  340 -> 86
+	  341 -> 138
+	  342 -> 210
+	  343 -> 231
+	  344 -> 169
+	  345 -> 412
+	  346 -> 197
+	  347 -> 287
+	  348 -> 127
+	  349 -> 10
+	  350 -> 352
+	  350 -> 353
+	  351 -> 78
+	  352 -> 129
+	  353 -> 402
+	  354 -> 356
+	  354 -> 357
+	  355 -> 218
+	  356 -> 271
+	  357 -> 360
+	  357 -> 359
+	  358 -> 187
+	  359 -> 233
+	  360 -> 379
+	  361 -> 122
+	  362 -> 315
+	  363 -> 397
+	  364 -> 117
+	  365 -> 163
+	  366 -> 386
+	  366 -> 191
+	  367 -> 135
+	  368 -> 321
+	  370 -> 354
+	  371 -> 268
+	  372 -> 310
+	  373 -> 391
+	  374 -> 134
+	  375 -> 113
+	  376 -> 322
+	  377 -> 143
+	  378 -> 300
+	  379 -> 160
+	  380 -> 4
+	  381 -> 277
+	  382 -> 114
+	  383 -> 412
+	  384 -> 398
+	  385 -> 228
+	  386 -> 25
+	  387 -> 2
+	  388 -> 252
+	  389 -> 214
+	  390 -> 177
+	  391 -> 5
+	  392 -> 394
+	  392 -> 395
+	  393 -> 6
+	  394 -> 155
+	  395 -> 143
+	  396 -> 232
+	  397 -> 40
+	  398 -> 125
+	  399 -> 144
+	  401 -> 376
+	  401 -> 237
+	  401 -> 238
+	  401 -> 15
+	  402 -> 300
+	  403 -> 176
+	  404 -> 215
+	  405 -> 152
+	  405 -> 305
+	  405 -> 49
+	  406 -> 303
+	  407 -> 409
+	  407 -> 410
+	  408 -> 396
+	  409 -> 104
+	  410 -> 143
+	  411 -> 192
+	  411 -> 193
+	  411 -> 166
+	  411 -> 141
+	  411 -> 247
+	  411 -> 59
+	  412 -> 307
+	  413 -> 346
+}
+

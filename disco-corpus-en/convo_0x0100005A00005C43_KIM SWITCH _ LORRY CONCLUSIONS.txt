@@ -1,0 +1,152 @@
+# KIM SWITCH / LORRY CONCLUSIONS
+# A post-lorry-search dialogue with Kim, going over the necessary information and coming to some conclusions.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"A lot of women there. Especially for a lady driver's cabin.\""];
+	  3 [label="Kim Kitsuragi: \"We should return to the murder case. See what Joyce tells us about the lynching. When we're done for the day, I'll call my station and suggest our narcotics department look into it.\""];
+	  4 [label="Kim Kitsuragi: \"And last but not least, it looks like the Hardie boys knew this driver, as we know that she was present at the lynching. This may be the Union connection we've been searching for.\""];
+	  5 [label="Untitled hub"];
+	  6 [label="Kim Kitsuragi: \"I'm going to say -- no.\""];
+	  7 [label="Kim Kitsuragi: Variable[\"jam.abandoned_seen_article\"] == true"];
+	  8 [label="Variable[\"jam.abandoned_seen_article\"] == true", shape=diamond];
+	  9 [label="!(Variable[\"jam.abandoned_seen_article\"] == true)", shape=diamond];
+	  10 [label="Esprit de Corps: Unimportant?"];
+	  11 [label="Kim Kitsuragi: \"We didn't find anything *conclusive* linking them to the smuggling operation, but somehow I doubt that Evrart Claire would be oblivious to something like this happening right under his nose.\""];
+	  12 [label="Kim Kitsuragi: \"And last but not least, it's *Ruby's cabin* we found. This is an undeniable connection to the Union.\""];
+	  13 [label="Kim Kitsuragi: \"I'm especially intrigued by that radio transmitter -- particularly the sheer number of stations it can connect. Looks like this alleged drug trade casts a wide net.\""];
+	  14 [label="You: \"The Union really is in neck-deep with everything around here, isn't it?\""];
+	  15 [label="You: \"What about the movie posters? How do they factor into all this?\""];
+	  16 [label="Kim Kitsuragi: Variable[\"TASK.confront_hardie_about_drug_trade\"]"];
+	  17 [label="Variable[\"TASK.confront_hardie_about_drug_trade\"]", shape=diamond];
+	  18 [label="!(Variable[\"TASK.confront_hardie_about_drug_trade\"])", shape=diamond];
+	  19 [label="You: \"I don't think there's anything to discuss.\" [Leave.]"];
+	  20 [label="You: \"Klaasje might have been right about Ruby -- she looks awfully lot like one of the poster girls in the cabin.\""];
+	  21 [label="Esprit de Corps: The probe and the case *converged*, he thinks. This was quite the find."];
+	  22 [label="Kim Kitsuragi: \"Honestly, I'm quite worried by what we've seen so far. The evidence seems to point to a rather extensive and well-organized operation.\""];
+	  23 [label="Kim Kitsuragi: Variable[\"jam.abandoned_seen_maps\"] == true"];
+	  24 [label="Variable[\"jam.abandoned_seen_maps\"] == true", shape=diamond];
+	  25 [label="!(Variable[\"jam.abandoned_seen_maps\"] == true)", shape=diamond];
+	  26 [label="You: \"Okay -- debrief over?\" [Leave.]"];
+	  27 [label="lorryfinaleswitch"];
+	  28 [label="You: \"Corruption?\""];
+	  29 [label="Kim Kitsuragi: \"Perhaps you're right...\" He stops to think. \"This is one connection I find a little dubious, to be honest. I prefer not to profile people's emotions. Perhaps it's because I'm not very good at it, but still.\""];
+	  30 [label="Kim Kitsuragi: \"One way or another, they seem to be -- logistically, if nothing else. But don't expect to bust this open during our stay here. At best, this is an angle we can use against them. To other ends. As extra ammunition.\""];
+	  31 [label="Kim Kitsuragi: \"I'm not sure what the ULAN frequencies are all about, but they may hold some significance. Perhaps it's a better way to connect between fleets while avoiding frequency bleed, or maybe it's used to tap into RCM networks...\""];
+	  32 [label="Jump to: [littlemainhub]"];
+	  33 [label="Rhetoric: He just doesn't like flimsy connections. Especially of *this* kind."];
+	  34 [label="Kim Kitsuragi: \"My suggestion is -- we use it against the Union in any way we can. To our own ends. It's a slippery eel, but we just might be able to pin them down *indirectly*. Down the road.\""];
+	  35 [label="You: \"Could the film industry be involved?\""];
+	  36 [label="Reaction Speed: Meaning: someone as slippery as Evrart won't be caught by a couple of cops and some stuff they found in some cabin."];
+	  37 [label="Kim Kitsuragi: \"As... *elegant* as they are, I don't think they are relevant to the drug trade.\""];
+	  38 [label="Kim Kitsuragi: Variable[\"jam.abandoned_seen_radio\"] == true"];
+	  39 [label="Variable[\"jam.abandoned_seen_radio\"] == true", shape=diamond];
+	  40 [label="!(Variable[\"jam.abandoned_seen_radio\"] == true)", shape=diamond];
+	  41 [label="You: \"Will the RCM open an investigation into this?\""];
+	  42 [label="Half Light: Listening in on your calls? Between you and your station? A worrying prospect..."];
+	  43 [label="Kim Kitsuragi: \"There are more than enough grounds to start an official investigation -- some time later, when we're done here. We do *not* want to get caught in that...\" He stops to think."];
+	  44 [label="Logic: This means it's well funded. Technology like that... a major player must be financing it."];
+	  45 [label="Kim Kitsuragi: \"Yes, well...\" He doesn't say more."];
+	  46 [label="Reaction Speed: In short: this is a future angle. Possibly a good one."];
+	  47 [label="You: \"Seems like something police would do. What do you think of all this, Kim?\""];
+	  48 [label="You: \"So it turns out this *is* is connected to the Union.\""];
+	  49 [label="Kim Kitsuragi: \"Like Joyce told us, yes -- logistically. But don't expect to bust this open during our stay here. At best, this is an angle we can use against them. To other ends. As extra ammunition.\""];
+	  50 [label="Jump to: [littlemainhub]"];
+	  51 [label="Empathy: Actually, he's not bad at it at all."];
+	  52 [label="Kim Kitsuragi: Variable[\"whirling.hardie_went_through_ruby_info\"]"];
+	  53 [label="Variable[\"whirling.hardie_went_through_ruby_info\"]", shape=diamond];
+	  54 [label="!(Variable[\"whirling.hardie_went_through_ruby_info\"])", shape=diamond];
+	  55 [label="You: \"How do you think this is connected to the Union?\""];
+	  56 [label="Kim Kitsuragi: \"The fact that one hasn't started already gives me pause. An investigation, I mean. Especially if the Madre grouping is involved... and I can't imagine they aren't. It's certainly worrisome.\""];
+	  57 [label="Jump to: [littlemainhub]"];
+	  58 [label="Kim Kitsuragi: The lieutenant nods -- but he's not happy."];
+	  59 [label="Jump to: [littlemainhub]"];
+	  60 [label="Kim Kitsuragi: \"Oh, and the maps we found. They reveal the *geographical* extent of the operation -- looks like they've used abandoned tunnels and access roads to stay hidden. This is useful info.\""];
+	  61 [label="littlemainhub"];
+	  62 [label="You: \"Maybe the trader is some sort of cinephile.\""];
+	  63 [label="You: \"What are you thinking?\""];
+	  64 [label="Kim Kitsuragi: He nods. \"All the same, I don't like the idea of Internal Affairs descending on the matter. That won't help anyone either.\""];
+	  65 [label="Electrochemistry: Don't be fooled, desire always plays a role."];
+	  66 [label="Kim Kitsuragi: \"Debrief over,\" he nods. \"After you.\""];
+	  0 -> 1
+	  1 -> 27
+	  2 -> 45
+	  3 -> 43
+	  4 -> 21
+	  5 -> 2
+	  5 -> 35
+	  5 -> 62
+	  6 -> 32
+	  7 -> 8
+	  7 -> 9
+	  8 -> 31
+	  9 -> 23
+	  10 -> 32
+	  11 -> 34
+	  12 -> 61
+	  13 -> 44
+	  14 -> 30
+	  15 -> 37
+	  16 -> 17
+	  16 -> 18
+	  17 -> 52
+	  18 -> 61
+	  19 -> 58
+	  20 -> 29
+	  21 -> 61
+	  22 -> 38
+	  23 -> 24
+	  23 -> 25
+	  24 -> 60
+	  25 -> 16
+	  26 -> 67
+	  27 -> 19
+	  27 -> 47
+	  28 -> 64
+	  29 -> 51
+	  30 -> 36
+	  31 -> 42
+	  32 -> 61
+	  33 -> 50
+	  34 -> 46
+	  35 -> 6
+	  36 -> 59
+	  37 -> 66
+	  38 -> 40
+	  38 -> 39
+	  39 -> 13
+	  40 -> 7
+	  41 -> 3
+	  42 -> 23
+	  43 -> 63
+	  44 -> 7
+	  45 -> 10
+	  46 -> 59
+	  47 -> 22
+	  48 -> 49
+	  49 -> 36
+	  50 -> 61
+	  51 -> 33
+	  52 -> 53
+	  52 -> 54
+	  53 -> 12
+	  54 -> 4
+	  55 -> 11
+	  56 -> 28
+	  57 -> 61
+	  59 -> 61
+	  60 -> 16
+	  61 -> 41
+	  61 -> 14
+	  61 -> 15
+	  61 -> 48
+	  61 -> 20
+	  61 -> 55
+	  61 -> 26
+	  62 -> 45
+	  63 -> 56
+	  64 -> 57
+	  65 -> 5
+}
+

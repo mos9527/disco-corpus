@@ -1,0 +1,173 @@
+# VILLAGE / ABIGAIL
+# Don't Call Abigail -- a member of the Union of Moribund Alcoholics, who talks about (not calling) Abigail.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Don't Call Abigail: IsKimHere()"];
+	  3 [label="IsKimHere()", shape=diamond];
+	  4 [label="!(IsKimHere())", shape=diamond];
+	  5 [label="You: Don't lean in."];
+	  6 [label="Don't Call Abigail: His breath smells harsh like a toxic swamp as he whispers to you: \"Don't call Abigail. Don't call Abigail!\" He then waves his hand, as if shooing you away."];
+	  7 [label="Don't Call Abigail: Variable[\"village.abigail_drunk_alt_greet\"]"];
+	  8 [label="Variable[\"village.abigail_drunk_alt_greet\"]", shape=diamond];
+	  9 [label="!(Variable[\"village.abigail_drunk_alt_greet\"])", shape=diamond];
+	  10 [label="You: \"Hey, I'm on an important official investigation, I demand you answer my questions.\""];
+	  11 [label="Don't Call Abigail: \"Abigail?\" His voice perks up, then trails into a string of random babbling. \"Abigail, where are you?\""];
+	  12 [label="Don't Call Abigail: \"Don't ya call her, ya hear. Don't call Abigail...\""];
+	  13 [label="Don't Call Abigail: He draws out a disgusting snort, then mumbles, waving a finger in your general direction: \"Ugh... Abigail... don't ya... fuckin'... call Abigail.\""];
+	  14 [label="You: Let him sleep it off. [Leave.]"];
+	  15 [label="Jump to: [abigailhasbeengreeted]"];
+	  16 [label="abigailhasbeengreeted"];
+	  17 [label="Don't Call Abigail: \"Don't call Abigail.\" The drunk man looks at you with his sad, swollen eyes."];
+	  18 [label="Suggestion: Abigail is his wife or girlfriend. Chances are, she's gone. Calling her wouldn't make it any better or worse."];
+	  19 [label="You: \"Who are you? What's your name?\""];
+	  20 [label="Don't Call Abigail: \"Abigail!\" He grunts. \"Don't... don't call her.\" He waves a finger in your general direction."];
+	  21 [label="Don't Call Abigail: He glares at you. \"Don't ya fuckin' call her, hear me.\" His voice trembles with every word, becoming ever weaker. \"Abigail,\" he whimpers in the end."];
+	  22 [label="Don't Call Abigail: Variable[\"village.abigail_drunk_counter\"] >= 5"];
+	  23 [label="Variable[\"village.abigail_drunk_counter\"] >= 5", shape=diamond];
+	  24 [label="!(Variable[\"village.abigail_drunk_counter\"] >= 5)", shape=diamond];
+	  25 [label="You: \"Hey, wake up!\""];
+	  26 [label="Electrochemistry: Never thought you'd see such a thing in your life, but this guy's a little *too* drunk."];
+	  27 [label="You: \"This is making me uncomfortable.\" [Leave.]"];
+	  28 [label="Don't Call Abigail: The drunk man starts coughing, a really disgusting hacking cough."];
+	  29 [label="Don't Call Abigail: The man hiccups, then mumbles something unintelligible."];
+	  30 [label="You: Walk away. [Leave.]"];
+	  31 [label="Don't Call Abigail: \"Don't call Abigail,\" grumbles an unshaven man with a ruddy nose. He narrows his eyes at you as if in recognition, then turns his head away."];
+	  32 [label="Don't Call Abigail: He waves his hand, as if shooing you away, all the while murmuring something indecipherable."];
+	  33 [label="Endurance: He does not sound well at all."];
+	  34 [label="Don't Call Abigail: \"Don't... call Abigail...\" he whimpers softly, his voice trailing off into nothingness."];
+	  35 [label="Kim Kitsuragi: The lieutenant sighs. \"You really don't have to... Besides, he will understand you anyway.\""];
+	  36 [label="You: Lean in."];
+	  37 [label="Perception (Smell): The noxious odour emanating from the drunken man is strong and familiar."];
+	  38 [label="Kim Kitsuragi: \"Right, you might have found the one person who doesn't know you are the law, given how drunk he is.\""];
+	  39 [label="mainabigail"];
+	  40 [label="You: \"I'll call whoever I want, don't tell me what to do.\""];
+	  41 [label="Don't Call Abigail: \"Abigail... oh, Abigail...\" He mutters while trying to brush something off his extremely dirty trousers. His movements are slow and awkward."];
+	  42 [label="Don't Call Abigail: There's no waking him from his stupor. His mind is elsewhere."];
+	  43 [label="You: \"Have you seen any women around here lately?\""];
+	  44 [label="Don't Call Abigail: The dozing man mumbles something inaudible."];
+	  45 [label="You: \"Why shouldn't I call Abigail?\""];
+	  46 [label="Don't Call Abigail: IsKimHere()"];
+	  47 [label="IsKimHere()", shape=diamond];
+	  48 [label="!(IsKimHere())", shape=diamond];
+	  49 [label="Don't Call Abigail: His eyes move around erratically, the look in them hazy and unfocused. \"Don't call Abigail,\" he says."];
+	  50 [label="Jump to: [mainabigail]"];
+	  51 [label="Don't Call Abigail: Variable[\"village.abigail_greeting_done\"]"];
+	  52 [label="Variable[\"village.abigail_greeting_done\"]", shape=diamond];
+	  53 [label="!(Variable[\"village.abigail_greeting_done\"])", shape=diamond];
+	  54 [label="Don't Call Abigail: IsKimHere()"];
+	  55 [label="IsKimHere()", shape=diamond];
+	  56 [label="!(IsKimHere())", shape=diamond];
+	  57 [label="Rhetoric: You're not going to get anything from this guy. He's too drunk."];
+	  58 [label="Don't Call Abigail: IsKimHere()"];
+	  59 [label="IsKimHere()", shape=diamond];
+	  60 [label="!(IsKimHere())", shape=diamond];
+	  61 [label="Don't Call Abigail: He snorts and beckons you to lean in closer."];
+	  62 [label="You: \"Who is Abigail?\""];
+	  63 [label="Kim Kitsuragi: \"There's no use in yelling at drunks,\" the lieutenant interjects. \"He's barely holding it together.\""];
+	  64 [label="Kim Kitsuragi: \"There was little chance he'd be a reliable witness, anyway.\""];
+	  65 [label="You: \"Tell me about your friends.\" (Point to the others.)"];
+	  66 [label="You: \"I am the law.\""];
+	  67 [label="Don't Call Abigail: Variable[\"reputation.the_law\"] >=5"];
+	  68 [label="Variable[\"reputation.the_law\"] >=5", shape=diamond];
+	  69 [label="!(Variable[\"reputation.the_law\"] >=5)", shape=diamond];
+	  70 [label="Don't Call Abigail: Variable[\"reputation.the_law\"] >=3"];
+	  71 [label="Variable[\"reputation.the_law\"] >=3", shape=diamond];
+	  72 [label="!(Variable[\"reputation.the_law\"] >=3)", shape=diamond];
+	  73 [label="You: \"Where am I? What is this place?\""];
+	  74 [label="Don't Call Abigail: \"Don'... don'...\" the man stammers, \"don't call...\" Slowly, his head nods off to the side and he passes out, tongue dangling from his mouth."];
+	  75 [label="Don't Call Abigail: \"Don't call... don't call her...\" The drunk man speaks in his sleep. Drool dribbles from the left side of his mouth and down his jacket lapel."];
+	  0 -> 1
+	  1 -> 7
+	  2 -> 3
+	  2 -> 4
+	  3 -> 65
+	  5 -> 33
+	  6 -> 22
+	  7 -> 8
+	  7 -> 9
+	  8 -> 76
+	  9 -> 52
+	  10 -> 59
+	  11 -> 22
+	  12 -> 16
+	  13 -> 18
+	  14 -> 43
+	  15 -> 16
+	  16 -> 27
+	  16 -> 41
+	  16 -> 67
+	  16 -> 63
+	  17 -> 40
+	  18 -> 58
+	  19 -> 50
+	  20 -> 58
+	  21 -> 22
+	  22 -> 24
+	  22 -> 23
+	  23 -> 75
+	  24 -> 51
+	  25 -> 43
+	  26 -> 40
+	  27 -> 45
+	  28 -> 34
+	  29 -> 22
+	  30 -> 35
+	  31 -> 38
+	  32 -> 22
+	  33 -> 22
+	  35 -> 42
+	  36 -> 6
+	  37 -> 12
+	  38 -> 42
+	  39 -> 66
+	  39 -> 10
+	  39 -> 74
+	  39 -> 44
+	  39 -> 46
+	  39 -> 19
+	  39 -> 30
+	  40 -> 20
+	  41 -> 15
+	  43 -> 11
+	  45 -> 62
+	  46 -> 48
+	  46 -> 49
+	  47 -> 36
+	  48 -> 42
+	  49 -> 22
+	  50 -> 40
+	  51 -> 53
+	  51 -> 54
+	  52 -> 17
+	  53 -> 32
+	  54 -> 56
+	  54 -> 57
+	  55 -> 39
+	  56 -> 42
+	  57 -> 26
+	  58 -> 60
+	  58 -> 61
+	  59 -> 64
+	  60 -> 28
+	  61 -> 5
+	  61 -> 37
+	  62 -> 13
+	  63 -> 28
+	  65 -> 21
+	  66 -> 71
+	  67 -> 69
+	  67 -> 70
+	  68 -> 47
+	  69 -> 55
+	  70 -> 72
+	  70 -> 73
+	  71 -> 68
+	  72 -> 42
+	  73 -> 29
+	  74 -> 2
+	  75 -> 25
+	  75 -> 14
+}
+

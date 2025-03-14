@@ -1,0 +1,2091 @@
+# VILLAGE / POSSE 2
+# the defence part with the big defence hub etc
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Cuno: \"I'll make it tight, pig. Don't worry, the Cunn is on it.\""];
+	  3 [label="Empathy: He gulps, overcome with awe."];
+	  4 [label="You: \"That's right, it was a massacre. They got what was coming to them.\""];
+	  5 [label="You: Gulp."];
+	  6 [label="Kim Kitsuragi: \"Not as far as I could see. There were other things there, though...\" He turns to you."];
+	  7 [label="Jump to: [Untitled hub]"];
+	  8 [label="Trant Heidelstam: \"There are species of bees that, under the influence of kairomones, take wasp larvae to their hives. Ants do the same with aphids thinking they're...\" he stops. \"Do you think this is how it's stayed hidden?\""];
+	  9 [label="Kim Kitsuragi: \"Yes -- it's very okay.\""];
+	  10 [label="Jump to: [Untitled hub (03)]"];
+	  11 [label="Untitled hub (03)"];
+	  12 [label="Cuno: \"Pig, what the fuck is wrong with you?! Why you choking? Lay it on them! We have it!\""];
+	  13 [label="Jean Vicquemare: \"Of course. There *is* no motive...\" He sighs."];
+	  14 [label="Jump to: [Kim Kitsuragi: \"\"Also -- we have a sniper's nest wi...\"]"];
+	  15 [label="Jean Vicquemare: \"*Masterpiece*...\" He rolls his eyes. \"Get over yourself, Harry -- I can still smell the booze on the wind.\""];
+	  16 [label="Kim Kitsuragi: Variable[\"village.posse_percept_alcohol_smell\"]"];
+	  17 [label="Variable[\"village.posse_percept_alcohol_smell\"]", shape=diamond];
+	  18 [label="!(Variable[\"village.posse_percept_alcohol_smell\"])", shape=diamond];
+	  19 [label="Endurance: The iron smell of blood rises to your mouth."];
+	  20 [label="Trant Heidelstam: \"You know, Harry -- if I may interrupt -- it would help if you had *evidence*. Any proof -- and I'd play ball here. The PR potential would be quite something for the RCM.\""];
+	  21 [label="Kim Kitsuragi: Variable[\"village.posse_phasmid_limbs\"]"];
+	  22 [label="Variable[\"village.posse_phasmid_limbs\"]", shape=diamond];
+	  23 [label="!(Variable[\"village.posse_phasmid_limbs\"])", shape=diamond];
+	  24 [label="Suggestion: Move on. Don't gloat."];
+	  25 [label="Jean Vicquemare: \"Cool. To me it sounds like you got played by Evrart Claire. Duped -- for the hundredth time.\""];
+	  26 [label="Kim Kitsuragi: Variable[\"village.posse_union_assassination\"]"];
+	  27 [label="Variable[\"village.posse_union_assassination\"]", shape=diamond];
+	  28 [label="!(Variable[\"village.posse_union_assassination\"])", shape=diamond];
+	  29 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  30 [label="IsCunoInParty()", shape=diamond];
+	  31 [label="!(IsCunoInParty())", shape=diamond];
+	  32 [label="Jean Vicquemare: \"Yes, we can *see* the jacket. Fuck the world. Fuck police duty. Fuck Jean Vicquemare -- that's what it says to me. Fuck me. We've been through this.\""];
+	  33 [label="Jean Vicquemare: \"Yes, we can see the jacket. 'Hey everybody -- I'm working undercover in a *hard fetish gang*. I don't care about anyone or anything.' We've been through this.\""];
+	  34 [label="Jump to: [Untitled hub (03)]"];
+	  35 [label="You: \"I also solved the case. It's *solved*. All of it.\""];
+	  36 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_rc_dodge_ruud_shot\"] == false"];
+	  37 [label="Variable[\"plaza.tribunal_rc_dodge_ruud_shot\"] == false", shape=diamond];
+	  38 [label="!(Variable[\"plaza.tribunal_rc_dodge_ruud_shot\"] == false)", shape=diamond];
+	  39 [label="Kim Kitsuragi: Variable[\"church.kim_racism_reconciled\"]"];
+	  40 [label="Variable[\"church.kim_racism_reconciled\"]", shape=diamond];
+	  41 [label="!(Variable[\"church.kim_racism_reconciled\"])", shape=diamond];
+	  42 [label="Jean Vicquemare: \"Okay, he did *something*...\""];
+	  43 [label="You: \"There was also a dead man -- on the boardwalk. A missing person I found.\""];
+	  44 [label="Kim Kitsuragi: It doesn't look like the lieutenant wishes you to push this angle further."];
+	  45 [label="Cuno: \"No.\" He does not take the order. \"Cuno's going *all in*.\""];
+	  46 [label="You: \"Cuno -- Shush.\""];
+	  47 [label="Cuno: \"No.\" He stops you. \"You've explained enough, pig. Cuno takes care of this shit now.\""];
+	  48 [label="You: \"Yes. Go home or fuck off.\""];
+	  49 [label="Cuno: \"Yeah, spin that real shit, pig. Murder weapon, big boy shit.\""];
+	  50 [label="Empathy: He's genuinely alarmed now."];
+	  51 [label="Jean Vicquemare: \"Who? Who got what was coming to them? The civilians? Lieutenant Kitsuragi? Why are you even *here* after he got shot? What else could you possibly fuck up?\""];
+	  52 [label="Authority: Something that proves you haven't completely lost it. Something *solid*. You've *done* things. Good things. List those."];
+	  53 [label="Logic: That makes sense, yes."];
+	  54 [label="Kim Kitsuragi: \"I tried to... but I only got a blur.\""];
+	  55 [label="Cuno: \"Stop squealing on yourself. Cuno *needs* to get out of this shithole.\" He turns to Vicquemare. \"Pig's talking whack to impress you. It didn't go down like that. He done good. Tell them!\""];
+	  56 [label="Trant Heidelstam: \"Of course. Excuse me. I just thought it was noteworthy.\""];
+	  57 [label="Jean Vicquemare: \"Okay-okay...\" He rubs his temples. \"Will he confess? To *prosecution*? No phasmid weirdness, just straight up confess?\""];
+	  58 [label="Jean Vicquemare: \"Klaasje -- as in the suspect Lieutenant Kitsuragi brought in? I've read his reports -- don't fuck with me.\""];
+	  59 [label="Kim Kitsuragi: Variable[\"seafort.deserter_health_phasmid\"]  or  Variable[\"seafort.deserter_phasmid_degradation_discussed\"]  or  Variable[\"seafort.deserter_phasmid_caused_randy_discussed\"]"];
+	  60 [label="Variable[\"seafort.deserter_health_phasmid\"]  or  Variable[\"seafort.deserter_phasmid_degradation_discussed\"]  or  Variable[\"seafort.deserter_phasmid_caused_randy_discussed\"]", shape=diamond];
+	  61 [label="!(Variable[\"seafort.deserter_health_phasmid\"]  or  Variable[\"seafort.deserter_phasmid_degradation_discussed\"]  or  Variable[\"seafort.deserter_phasmid_caused_randy_discussed\"])", shape=diamond];
+	  62 [label="Conceptualization: Oh, it's *way* more than that."];
+	  63 [label="Jean Vicquemare: \"And none of this can hide the smell of booze on the wind.\" He buttons his jacket."];
+	  64 [label="Jump to: [Judit Minot: \"\"Jean, maybe...\" She stops and sigh...\"]"];
+	  65 [label="Trant Heidelstam: \"Some kind of a... what were they called? A bower? Yes. Things collected for a mating display. This would indicate a male. But... I don't know of *insects* displaying bowery behaviour.\""];
+	  66 [label="Jump to: [IsCunoInParty()]"];
+	  67 [label="Jean Vicquemare: \"Literal *cryptozoologists* are involved? That's it. No more phasmid-talk. There's no PR-value in delirium tremens.\""];
+	  68 [label="Cuno: \"It will NEVER be seen again! It wasn't seen for a *hundred* years. Fuck Cuno and let's all pretend there was no miracle. We don't need a giant insect, everything is so *good* without it in this fuck-hole...\" He looks around."];
+	  69 [label="Volition: The sheer willpower in him MUST be making some dent in their incredulity. Some part of them must be thinking..."];
+	  70 [label="Kim Kitsuragi: IsKimHere()"];
+	  71 [label="IsKimHere()", shape=diamond];
+	  72 [label="!(IsKimHere())", shape=diamond];
+	  73 [label="Jean Vicquemare: \"What? Hand Claire the terminal?\""];
+	  74 [label="Untitled hub"];
+	  75 [label="You: \"Eat the pigs!\""];
+	  76 [label="Jean Vicquemare: \"It doesn't matter how I know about *Al Gul*. What matters is -- you're Evrart Claire's messenger now. A *Union man*, as he calls it. He's a *mob boss*, did you know?\""];
+	  77 [label="Jean Vicquemare: \"Agreed.\""];
+	  78 [label="Judit Minot: \"The body was transported to Precinct 41. Our morgue. I had Tillbrook and Mollins take care of funeral arrangements and family-stuff.\""];
+	  79 [label="Judit Minot: \"Of course.\" She turns to Vicquemare. \"Call it community outreach, right?\""];
+	  80 [label="Kim Kitsuragi: IsHighestCopotype(\"sorry_cop\")"];
+	  81 [label="IsHighestCopotype(\"sorry_cop\")", shape=diamond];
+	  82 [label="!(IsHighestCopotype(\"sorry_cop\"))", shape=diamond];
+	  83 [label="Kim Kitsuragi: \"Odder still -- he is also a Mazovian socio-economist, who believes in liquidating the ruling class. How he reconciles these two points of view, I do not know -- but he is *vocal* on both of them.\""];
+	  84 [label="Kim Kitsuragi: \"He apprehended a straggler who stayed hidden for fifty years, ever since the Revolution; who's probably committed other murders over those years...\" He pauses. \"Oh -- and he also discovered a new species.\""];
+	  85 [label="Untitled hub (02)"];
+	  86 [label="You: \"The curse turned out to be possibly entroponetical. Part of my larger investigation -- into Martinaise itself.\""];
+	  87 [label="Kim Kitsuragi: IsKimHere()"];
+	  88 [label="IsKimHere()", shape=diamond];
+	  89 [label="!(IsKimHere())", shape=diamond];
+	  90 [label="Cuno: \"Yo -- Imma stop you right there, fuck-face. It's Cuno-time.\""];
+	  91 [label="Jump to: [Untitled hub (03)]"];
+	  92 [label="Cuno: \"Yeah -- some fucked up grandpa did it. Fuckin' grandpa in the woods or some shit. Old shit. Cuno doesn't know about that. Look -- the REAL shit here is...\""];
+	  93 [label="Jump to: [Untitled hub (04)]"];
+	  94 [label="Untitled hub (04)"];
+	  95 [label="Composure: His hand is shaking with rage and excitement."];
+	  96 [label="Jean Vicquemare: \"I don't know. I zoned out. Harry --\" He turns you. \"Did you just pick up some island bum and pin it on him?\""];
+	  97 [label="Untitled hub"];
+	  98 [label="Trant Heidelstam: \"Actually, you know -- this would indicate it was a male. This is far from anything in my field, but I think such nests are called 'bowers'. They are for attracting mates.\""];
+	  99 [label="Trant Heidelstam: \"Interesting... Then it is *especially* vulnerable to disease. A single strain of bacteria could wipe out the entire species. We're *probably* talking conservation efforts here...\" He looks around, quickly assessing the coast."];
+	  100 [label="Judit Minot: \"This would really help with some of the... *problems* we've been having.\""];
+	  101 [label="Trant Heidelstam: \"We can still work 'Cop Discovers New Species' in there. I know a good guy in La Majeste. But only *after* the École Supérieure people find it. This *cannot* be done by fringe people.\""];
+	  102 [label="Jean Vicquemare: \"What was that?\" He cups his ear -- the wind blows. \"It sounded like you set up a night club in the church.\""];
+	  103 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  104 [label="IsCunoInParty()", shape=diamond];
+	  105 [label="!(IsCunoInParty())", shape=diamond];
+	  106 [label="Jean Vicquemare: \"I'm 100% sure it didn't *turn out* to be that. You know, cut the amateur entroponetic two-millimetre-hole shit -- this isn't Paradox B. We're a police force.\""];
+	  107 [label="You: \"The state he's in now? I don't know. But *we* got a confession -- he confessed to us.\""];
+	  108 [label="Untitled hub (03)"];
+	  109 [label="Kim Kitsuragi: \"No, detective -- we *have* a motive...\" He gestures for you to speak up."];
+	  110 [label="Kim Kitsuragi: \"*Possibly* induced,\" he corrects you. \"But even without that -- this man spent fifty years on the islands in the bay. In solitude. Loathing what Revachol has become. There's plenty for prosecution to pick from in terms of motive.\""];
+	  111 [label="You: \"It's more than that -- a perfect folding mechanism. Like the phasmid.\""];
+	  112 [label="Inland Empire: Way, *way* more."];
+	  113 [label="Jean Vicquemare: \"It doesn't hide the smell of booze on the wind either.\" He buttons his jacket."];
+	  114 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  115 [label="IsCunoInParty()", shape=diamond];
+	  116 [label="!(IsCunoInParty())", shape=diamond];
+	  117 [label="Jean Vicquemare: \"What?\" He lowers his voice. \"On behalf of...\""];
+	  118 [label="You: \"The fatso.\""];
+	  119 [label="You: \"It was an accident.\""];
+	  120 [label="You: \"I masterminded a solution to an unsolvable problem.\""];
+	  121 [label="Jean Vicquemare: \"Great. Thanks.\" He turns to you. \"You snorted the drugs. I know you did. Fuck it. It's all right. I mean -- honestly. *Anything* but the drink.\""];
+	  122 [label="Perception (Hearing): You hear gasps beneath the howling of the wind."];
+	  123 [label="Reaction Speed: In his mind he's already planning a nature reserve and *knows a good guy* for that."];
+	  124 [label="Kim Kitsuragi: Variable[\"village.posse_union_assassination\"]"];
+	  125 [label="Variable[\"village.posse_union_assassination\"]", shape=diamond];
+	  126 [label="!(Variable[\"village.posse_union_assassination\"])", shape=diamond];
+	  127 [label="Savoir Faire: It could maybe roll it? Like a dung-beetle."];
+	  128 [label="Jump to: [Untitled hub (03)]"];
+	  129 [label="POSSE 2"];
+	  130 [label="Authority: He thinks of apologizing but decides against it."];
+	  131 [label="You: That's not a good idea."];
+	  132 [label="Kim Kitsuragi: \"The RCM consists of policemen of the state that *is*. So -- a little discrepancy there.\" He turns back to Vicquemare."];
+	  133 [label="Kim Kitsuragi: \"It's worrying. Especially in light of his political views. Detective Du Bois is -- as you may know -- a fascist. A far-right woman-hater and, of course, also into race-stuff. Which -- for a police officer --\" He shakes his head. \"Not good.\""];
+	  134 [label="Kim Kitsuragi: Variable[\"village.posse_2_ultraliberal_highest\"]"];
+	  135 [label="Variable[\"village.posse_2_ultraliberal_highest\"]", shape=diamond];
+	  136 [label="!(Variable[\"village.posse_2_ultraliberal_highest\"])", shape=diamond];
+	  137 [label="Kim Kitsuragi: Variable[\"seafort.deserter_health_phasmid\"]  or  Variable[\"seafort.deserter_phasmid_degradation_discussed\"]"];
+	  138 [label="Variable[\"seafort.deserter_health_phasmid\"]  or  Variable[\"seafort.deserter_phasmid_degradation_discussed\"]", shape=diamond];
+	  139 [label="!(Variable[\"seafort.deserter_health_phasmid\"]  or  Variable[\"seafort.deserter_phasmid_degradation_discussed\"])", shape=diamond];
+	  140 [label="You: \"The killer -- Lilianovich Dros -- we have a strong motive for him.\""];
+	  141 [label="Esprit de Corps: 'Cut it out' is indeed what he is thinking."];
+	  142 [label="You: \"Uh -- big boy shit?\""];
+	  143 [label="You: \"It had gathered *items* in its nest: behold, a passport.\""];
+	  144 [label="Kim Kitsuragi: Variable[\"auto.is_snowing\"]"];
+	  145 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  146 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  147 [label="Cuno: \"Why are you not fucking shitting yourselves -- what's wrong?!\" He glares at the officers standing silently in the rain. The water is coming down hard, washing the concrete..."];
+	  148 [label="Logic: It's not going well. Present something now -- something sane and clear. Make your case."];
+	  149 [label="Jean Vicquemare: \"You went in drunk and you got yourself shot -- and others killed.\" He sighs, then continues more calmly: \"Why are you even *here* after Kitsuragi got shot?\""];
+	  150 [label="Kim Kitsuragi: Variable[\"village.posse_2_logic_sane\"]"];
+	  151 [label="Variable[\"village.posse_2_logic_sane\"]", shape=diamond];
+	  152 [label="!(Variable[\"village.posse_2_logic_sane\"])", shape=diamond];
+	  153 [label="Jean Vicquemare: \"This is *not* a joke. We *will* dump you, Harry. We will leave you here -- and you'll be just another bum on the coast. Take this as your *trial*. Stop fucking around.\""];
+	  154 [label="Volition: Stop taking this abuse. YOU. SOLVED. THE. CASE."];
+	  155 [label="Trant Heidelstam: \"Of course. As I said, I'm only guessing. *I* didn't see it.\" He pauses, turning something over in his head. \"It must be robust, if it can move a whole helmet with its limbs...\""];
+	  156 [label="Trant Heidelstam: He nods. \"At that size, this creature would have a lot of surface area to put neurons into. It's basic geometry.\""];
+	  157 [label="Trant Heidelstam: \"Of course. I'm getting ahead of myself. Stick insects have primitive nervous systems. Still -- this creature would have a lot of surface area to put neurons into...\""];
+	  158 [label="Trant Heidelstam: \"Incredible...\" he repeats, turning to Vicquemare. \"It's a toughie that you don't have a photo. This would look very, very flashy in the papers. None of it says *vigilante murderers* to me at all. Great PR.\""];
+	  159 [label="You: \"Wait -- when did you do this?\""];
+	  160 [label="Kim Kitsuragi: Variable[\"TASK.fridge_victims_body_done\"]"];
+	  161 [label="Variable[\"TASK.fridge_victims_body_done\"]", shape=diamond];
+	  162 [label="!(Variable[\"TASK.fridge_victims_body_done\"])", shape=diamond];
+	  163 [label="Rhetoric: Get the kid in line. You could use his help here."];
+	  164 [label="Cuno: \"Yeah, suit. Check this shit out -- the merc was bangin' some chick he wanted to bang. So he shot him. Chick's called Klaasje.\""];
+	  165 [label="You: \"He's a trained sniper. The weapon he used is more than capable of making the shot.\""];
+	  166 [label="Jean Vicquemare: \"Jealousy... I thought this Lilianovich was an old man. To have been hiding for fifty years... seventy-something?\""];
+	  167 [label="Perception (Smell): God dammit, doesn't it ever *leave*?! It *is* there! Like, in your bones or something..."];
+	  168 [label="Electrochemistry: It's just a little celebration."];
+	  169 [label="Cuno: \"There's a fucking FOUR-TON MANTIS on the island.\""];
+	  170 [label="You: \"It was completely white on the inside, but brown and beige on the outside. Like reeds.\""];
+	  171 [label="Untitled hub (02)"];
+	  172 [label="Jean Vicquemare: \"It's a scope. From a gun. Nothing about this even *remotely* proves the existence of a giant insect. Here's my theory, Harry.\""];
+	  173 [label="Trant Heidelstam: \"Plants turning into bugs *is* a typical hallucination. Arche-typical even, dating back to many ancient tribal societies.\""];
+	  174 [label="You: Just nod."];
+	  175 [label="Trant Heidelstam: \"For the sake of political neutrality I would like to *not* partake in anything Union-related.\""];
+	  176 [label="You: \"I just told some people some things. No big deal. Things are calmer now.\""];
+	  177 [label="Judit Minot: \"God... Calm down, Jean.\""];
+	  178 [label="Jump to: [Untitled hub (03)]"];
+	  179 [label="Kim Kitsuragi: CheckEquipped(\"jacket_pissflaubert\")"];
+	  180 [label="CheckEquipped(\"jacket_pissflaubert\")", shape=diamond];
+	  181 [label="!(CheckEquipped(\"jacket_pissflaubert\"))", shape=diamond];
+	  182 [label="Jean Vicquemare: \"Talked? Okay. What you're giving us -- it's not news. It's not proof. Or an observation. It's a cryptozoological factoid. You can get it from Paradox B, Aquarius, any *mystery* station. Here's *my* theory.\""];
+	  183 [label="Kim Kitsuragi: \"Wait, it's better if I...\" he says in a lowered voice."];
+	  184 [label="Kim Kitsuragi: \"Well...\" A cold gust of wind. He pulls up his collar. \"The drinking, the lost gun, also losing his badge -- that's all true. *And* he's been drinking on the job.\""];
+	  185 [label="Kim Kitsuragi: \"Odder still -- he is also an ultraliberal 'hustler' who is always...\" The lieutenant pinches the root of his nose. \"*On the grind.* How he reconciles these two points of view, I do not know -- but he is vocal about both of them.\""];
+	  186 [label="Kim Kitsuragi: \"Other than that one time, he has tirelessly worked on the case. And he solved it. We have a confession, a murder weapon, *and* the perpetrator -- locked on the island right now, awaiting transportation.\""];
+	  187 [label="Trant Heidelstam: \"A... new species?\""];
+	  188 [label="Kim Kitsuragi: \"A colossal stick insect. It was on the island, camouflaged as the reeds. It... unfolded from the reeds. I think we may be dealing with the Insulindian phasmid.\""];
+	  189 [label="Judit Minot: \"So it *is* connected...?\""];
+	  190 [label="You: \"Also, the phasmid was female. The reeds are its nest.\""];
+	  191 [label="You: \"The previous head of the Débardeurs' Union was assassinated by *our* killer.\""];
+	  192 [label="Cuno: \"Yeah, big shit.\" He nods and crosses his arms, regally. \"Now listen up suit-fuck. You're gonna shit yourself, because it's gonna get wacko-natural.\""];
+	  193 [label="Untitled hub (02)"];
+	  194 [label="Judit Minot: \"Lieutenant. Really... I...\""];
+	  195 [label="Cuno: \"Yeah, big shit. We taking them *all* down. We cleaning this shit up.\" He nods and crosses his arms, regally. \"Now listen up suit-fuck. You're gonna shit yourself, because it's gonna get wacko-natural.\""];
+	  196 [label="You: \"Wait. It's *not* going to get that. Let me...\""];
+	  197 [label="Jean Vicquemare: \"What?!\" he scoffs, then turns to you. \"Sorry, kid, me and Harry need to...\""];
+	  198 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  199 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  200 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  201 [label="Untitled hub (05)"];
+	  202 [label="Kim Kitsuragi: Variable[\"ice.andre_ok_drug_lab\"]  or  Variable[\"ice.andre_logic_cut\"]"];
+	  203 [label="Variable[\"ice.andre_ok_drug_lab\"]  or  Variable[\"ice.andre_logic_cut\"]", shape=diamond];
+	  204 [label="!(Variable[\"ice.andre_ok_drug_lab\"]  or  Variable[\"ice.andre_logic_cut\"])", shape=diamond];
+	  205 [label="Jean Vicquemare: \"Without it...\" He shakes his head."];
+	  206 [label="Kim Kitsuragi: \"When you were out.\""];
+	  207 [label="You: \"Yeah, and the club is called *Disco Elysium*.\""];
+	  208 [label="Jump to: [Untitled hub (03)]"];
+	  209 [label="Jean Vicquemare: \"What was that?\" He cups his ear -- the wind blows. \"It sounded like you set up a night club in the church.\""];
+	  210 [label="Kim Kitsuragi: \"There was a *fridge* we needed. And a possible witness. He was just chasing a lead and ended up advising a local shopkeeper -- it was okay.\""];
+	  211 [label="Kim Kitsuragi: Variable[\"village.posse_used_anomaly_as_excuse\"]  or  Variable[\"village.posse_church_hole_mentioned\"]"];
+	  212 [label="Variable[\"village.posse_used_anomaly_as_excuse\"]  or  Variable[\"village.posse_church_hole_mentioned\"]", shape=diamond];
+	  213 [label="!(Variable[\"village.posse_used_anomaly_as_excuse\"]  or  Variable[\"village.posse_church_hole_mentioned\"])", shape=diamond];
+	  214 [label="Trant Heidelstam: \"The custom started in Graad, where they have patronyms: Krasovich, Larsovich, etc. The revolutionaries saw this as a chauvinist atavism so they used matronyms, derived from the mother's name, instead.\""];
+	  215 [label="You: \"Cuno. Keep your head in the game.\""];
+	  216 [label="Kim Kitsuragi: IsKimHere()"];
+	  217 [label="IsKimHere()", shape=diamond];
+	  218 [label="!(IsKimHere())", shape=diamond];
+	  219 [label="You: \"He's a trained sniper. The weapon he used is more than capable of making the shot.\""];
+	  220 [label="Jean Vicquemare: \"And it worked? He got a war going?\""];
+	  221 [label="Inland Empire: It's *way* more than that."];
+	  222 [label="You: \"It's *way* more than that. It will win me Dora back.\""];
+	  223 [label="Jean Vicquemare: \"*Perfect folding mechanism*...\" He rolls his eyes. \"Get over yourself, Harry -- I can still smell the booze on the wind.\""];
+	  224 [label="You: \"Oh yeah, it's going to get wacko-natural. Tell him.\""];
+	  225 [label="Suggestion: They're not going to consider more than one piece of evidence -- choose wisely."];
+	  226 [label="Untitled hub"];
+	  227 [label="You: \"Maybe I got too deep into what the cryptozoologists were telling me...\""];
+	  228 [label="Jump to: [Untitled hub (03)]"];
+	  229 [label="Untitled hub (02)"];
+	  230 [label="Kim Kitsuragi: \"He didn't quite *solve* it -- he cross-pollinated information between the company rep and Evrart. Until the rep came to see that the Union desires war. At which point Mrs. Messier decided to...\" He shrugs."];
+	  231 [label="Reaction Speed: There is *no* challenging the fury the kid is about to unleash."];
+	  232 [label="You: \"I moved information between the company rep and Evrart. Until the rep came to see that the Union *wants* war. At which point Mrs. Messier decided to go.\""];
+	  233 [label="Kim Kitsuragi: \"He did everything he could,\" the lieutenant interrupts him. \"*We* did everything we could. The company hired unvetted mercenaries. Lieutenant Du Bois got between them and the locals.\""];
+	  234 [label="Kim Kitsuragi: \"And then there's the motor carriage in the sea -- something I was *not* present for...\" He breathes in sharply. \"But -- despite all this -- he is a great detective. One of the best I've seen, in fact.\""];
+	  235 [label="Jean Vicquemare: \"...\""];
+	  236 [label="Kim Kitsuragi: \"I know this sounds fantastic. But I'm a four times decorated lieutenant of the RCM. I do not make up encounters with *cryptids* to spice up my day. I am very, very sane.\""];
+	  237 [label="You: \"Boom. Boom. Boom.\""];
+	  238 [label="You: \"It's incredible. But it was real.\""];
+	  239 [label="Kim Kitsuragi: \"It's worrying. Especially considering his political views. Detective Du Bois is -- as you may know -- a Mazovian socio-economist. He wants to liquidate the ruling class. Which -- again -- for a police officer... is a little odd.\""];
+	  240 [label="You: \"It had gathered *items* in its nest: a helmet, a scope, and a passport.\""];
+	  241 [label="Cuno: \"Yo, Cuno feels like you weren't really *listening* to Cuno.\" He drills his left temple with his index finger. \"You were hearin' -- but you weren't listenin'. F***y f*g and the armour boys came to Martinaise to fuck shit up.\""];
+	  242 [label="Authority: Something that proves you haven't lost your mind."];
+	  243 [label="Kim Kitsuragi: Variable[\"village.posse_2_logic_sane\"]"];
+	  244 [label="Variable[\"village.posse_2_logic_sane\"]", shape=diamond];
+	  245 [label="!(Variable[\"village.posse_2_logic_sane\"])", shape=diamond];
+	  246 [label="Jean Vicquemare: \"What is this man -- eighty? Ninety? What are we talking about here? A *octogenarian* sniper?\""];
+	  247 [label="Kim Kitsuragi: \"Actually -- you didn't.\""];
+	  248 [label="Jean Vicquemare: \"Of course, lieutenant. Of course. We should treat the case and the phasmid as completely separate from each other. People are not going to...\" He shakes his head."];
+	  249 [label="Trant Heidelstam: \"Incredible...\" he repeats, turning to Vicquemare. \"The PR value of this is exceptional. 'Cop Discovers New Species.' Maybe even: 'Discovers the Insulindian Phasmid.' No... That's too much.\""];
+	  250 [label="Trant Heidelstam: \"Absolutely -- this is great. This does not say 'vigilante murderers' to me at all. This says: science, news, human interest.\" He smiles. \"You know, it's a really good thing you have that photo.\""];
+	  251 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  252 [label="IsCunoInParty()", shape=diamond];
+	  253 [label="!(IsCunoInParty())", shape=diamond];
+	  254 [label="Jump to: [Untitled hub (03)]"];
+	  255 [label="Jean Vicquemare: \"Yeah, I'm not going to waste more time with this -- whatever it was, it wasn't entroponetical, or a giant bug. Cut the Paradox B shit, we're a police force.\""];
+	  256 [label="Logic: This is good. They can't deny it."];
+	  257 [label="Jump to: [Untitled hub (03)]"];
+	  258 [label="You: \"It's my masterpiece. They'll teach this in cop-school.\""];
+	  259 [label="You: \"Vrrr... Viva la Revolución!\""];
+	  260 [label="Kim Kitsuragi: CheckEquipped(\"jacket_fucktheworld\")"];
+	  261 [label="CheckEquipped(\"jacket_fucktheworld\")", shape=diamond];
+	  262 [label="!(CheckEquipped(\"jacket_fucktheworld\"))", shape=diamond];
+	  263 [label="Jump to: [IsKimHere()]"];
+	  264 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  265 [label="IsCunoInParty()", shape=diamond];
+	  266 [label="!(IsCunoInParty())", shape=diamond];
+	  267 [label="Jump to: [Untitled hub]"];
+	  268 [label="Rhetoric: It's so much better if he does this. A million times better."];
+	  269 [label="Kim Kitsuragi: \"Detective, it's better if *I* do that...\" he says in a lowered voice."];
+	  270 [label="Kim Kitsuragi: \"He did so at considerable risk to his own life. He was shot -- not once, but twice. We stopped an execution, not a negotiation. The loss of life was minimal compared to what it could have been.\""];
+	  271 [label="Kim Kitsuragi: \"On the case?\""];
+	  272 [label="Kim Kitsuragi: IsHighestCopotype(\"apocalypse_cop\")"];
+	  273 [label="IsHighestCopotype(\"apocalypse_cop\")", shape=diamond];
+	  274 [label="!(IsHighestCopotype(\"apocalypse_cop\"))", shape=diamond];
+	  275 [label="Kim Kitsuragi: IsHighestPolitical(\"communist\")"];
+	  276 [label="IsHighestPolitical(\"communist\")", shape=diamond];
+	  277 [label="!(IsHighestPolitical(\"communist\"))", shape=diamond];
+	  278 [label="Kim Kitsuragi: \"It's just strange. Especially in light of his political views. Detective Du Bois is -- as you may know -- a true blue moralist. A man of the centre. Not prone to political outbursts. Which is commendable. But also... at odds with his behaviour.\""];
+	  279 [label="Kim Kitsuragi: Variable[\"seafort.deserter_rc_logic_link_between_des_and_edgar\"]"];
+	  280 [label="Variable[\"seafort.deserter_rc_logic_link_between_des_and_edgar\"]", shape=diamond];
+	  281 [label="!(Variable[\"seafort.deserter_rc_logic_link_between_des_and_edgar\"])", shape=diamond];
+	  282 [label="Kim Kitsuragi: Variable[\"auto.is_snowing\"]"];
+	  283 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  284 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  285 [label="You: \"So what do you say? Wanna take this hot shit back?\" (Point to yourself.)"];
+	  286 [label="Hand/Eye Coordination: He means murder weapon."];
+	  287 [label="Drama: Don't tell him about the phasmid. He *will not* believe it. IT. DIDN'T. HAPPEN."];
+	  288 [label="You: \"Just a hunch.\""];
+	  289 [label="Trant Heidelstam: \"Well -- then it wouldn't matter if it's male or female. The bower would just be rudimentary behaviour from before the parthenogenetic mutation.\""];
+	  290 [label="Jean Vicquemare: \"It needs to be white coats and glassware for this fly. We need professionals...\" He looks at the reeds."];
+	  291 [label="Jump to: [Untitled hub (03)]"];
+	  292 [label="Untitled hub (03)"];
+	  293 [label="Jump to: [Untitled hub (03)]"];
+	  294 [label="You: \"Yeah, I reinvigorated the local nightlife.\""];
+	  295 [label="Jump to: [Trant Heidelstam: \"\"Of course. Excuse me. I just thoug...\"]"];
+	  296 [label="Cuno: \"Fucking snitch binoclard...\" He collects himself. \"Yeah -- that chick. Get over it pig, she didn't do it. It was grandpa on the island. Merc was fuckin' her and he couldn't hack it. Cuno can hack it.\""];
+	  297 [label="Physical Instrument: This left a mark. They can't deny it, son -- you got the bastard."];
+	  298 [label="Inland Empire: That's it. The verdict."];
+	  299 [label="Jump to: [Jean Vicquemare: \"\"Fine. Brilliant theory. A real mas...\"]"];
+	  300 [label="Rhetoric: Put the best proof forth. As solid as you've got."];
+	  301 [label="Jean Vicquemare: \"Okay. One question -- how do you know that?\""];
+	  302 [label="You: \"This was there.\" (Show him the helmet.)"];
+	  303 [label="Jump to: [Untitled hub (03)]"];
+	  304 [label="You: Keep it to yourself."];
+	  305 [label="Kim Kitsuragi: IsHighestCopotype(\"superstar_cop\")"];
+	  306 [label="IsHighestCopotype(\"superstar_cop\")", shape=diamond];
+	  307 [label="!(IsHighestCopotype(\"superstar_cop\"))", shape=diamond];
+	  308 [label="Kim Kitsuragi: IsHighestPolitical(\"ultraliberal\")"];
+	  309 [label="IsHighestPolitical(\"ultraliberal\")", shape=diamond];
+	  310 [label="!(IsHighestPolitical(\"ultraliberal\"))", shape=diamond];
+	  311 [label="Untitled hub"];
+	  312 [label="Kim Kitsuragi: \"Detective?\" He turns to you."];
+	  313 [label="Kim Kitsuragi: \"It's just strange. Especially in light of his political views. Detective Du Bois is -- as you may know -- a true blue moralist. A man of the centre. Not prone to political outbursts. Which is commendable. But also... at odds with his behaviour.\""];
+	  314 [label="You: \"He may have committed *other* murders over the years.\""];
+	  315 [label="Jean Vicquemare: \"This sounds insane, Harry. What did you *do* on that island?\""];
+	  316 [label="Judit Minot: \"Speak up, lieutenant,\" she tries to reassure you. \"It's okay. I believe there was a straggler.\""];
+	  317 [label="Trant Heidelstam: \"Female? What makes you think so?\""];
+	  318 [label="Trant Heidelstam: \"As in cloning itself? What makes you think so?\""];
+	  319 [label="Jump to: [Untitled hub (03)]"];
+	  320 [label="Cuno: \"Get off the church-shit. It's making you sound crazy.\""];
+	  321 [label="Kim Kitsuragi: IsKimHere()"];
+	  322 [label="IsKimHere()", shape=diamond];
+	  323 [label="!(IsKimHere())", shape=diamond];
+	  324 [label="You: \"Yeah! And I discovered a hitherto unexplored entroponetical phenomenon in there too -- a two-millimetre hole in the world.\""];
+	  325 [label="Jean Vicquemare: \"*Why*? That's not what you were supposed to do here.\""];
+	  326 [label="Judit Minot: \"Jean -- it *is* his style.\""];
+	  327 [label="You: \"He's a trained sniper. The weapon he used is more than capable of making the shot.\""];
+	  328 [label="Kim Kitsuragi: IsKimHere()"];
+	  329 [label="IsKimHere()", shape=diamond];
+	  330 [label="!(IsKimHere())", shape=diamond];
+	  331 [label="Jean Vicquemare: \"Jealousy? He's what -- eighty? *Ninety*? Didn't you say he's been in hiding since the Revolution?\""];
+	  332 [label="You: \"I'm still not *completely* satisfied with it. It could be just a *little* neater.\""];
+	  333 [label="Jump to: [seafort.deserter_bullet_connection]"];
+	  334 [label="Jean Vicquemare: \"That's not how personal relationships work, Harry. You found a straggler. The first since the Thirties. Kudos. But that doesn't *change* anything.\""];
+	  335 [label="Kim Kitsuragi: Variable[\"village.posse_trant_matronym\"]"];
+	  336 [label="Variable[\"village.posse_trant_matronym\"]", shape=diamond];
+	  337 [label="!(Variable[\"village.posse_trant_matronym\"])", shape=diamond];
+	  338 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  339 [label="IsCunoInParty()", shape=diamond];
+	  340 [label="!(IsCunoInParty())", shape=diamond];
+	  341 [label="You: \"*This* is especially strange.\" (Show him the passport.)"];
+	  342 [label="Jean Vicquemare: \"With a corpse? That's it. No more phasmid-talk. There's no PR-value in delirium tremens.\""];
+	  343 [label="Kim Kitsuragi: IsKimHere()"];
+	  344 [label="IsKimHere()", shape=diamond];
+	  345 [label="!(IsKimHere())", shape=diamond];
+	  346 [label="Jean Vicquemare: \"Sounds like you got *played*, Harry. Because you were off your tits on Al Gul.\""];
+	  347 [label="Jean Vicquemare: \"Is that why you want us to investigate the assassination of the previous Union head thing? To get off Evrart's hook?\""];
+	  348 [label="Rhetoric: Dammit. Not *that* jacket, the one you got for the Doom Spiral. Forget it... It's not worth the effort."];
+	  349 [label="You: \"Cuno's a street kid I helped.\""];
+	  350 [label="Authority: It's still a point for you. No denying it."];
+	  351 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_shoulder_wound_avoided_cuirass\"]"];
+	  352 [label="Variable[\"plaza.tribunal_shoulder_wound_avoided_cuirass\"]", shape=diamond];
+	  353 [label="!(Variable[\"plaza.tribunal_shoulder_wound_avoided_cuirass\"])", shape=diamond];
+	  354 [label="Kim Kitsuragi: IsTHCPresent(\"sorry_cop\")"];
+	  355 [label="IsTHCPresent(\"sorry_cop\")", shape=diamond];
+	  356 [label="!(IsTHCPresent(\"sorry_cop\"))", shape=diamond];
+	  357 [label="Kim Kitsuragi: \"He can talk human beings into telling him anything. And he doesn't stop. In all the time I've spent with him, he has not once stopped working on the case. He is tireless. Madly driven.\""];
+	  358 [label="Jean Vicquemare: \"...\""];
+	  359 [label="You: \"It's probably not connected per se -- but the perpetrator knew of its existence.\""];
+	  360 [label="You: \"It may only be a small thing, but I found a man's jacket!\""];
+	  361 [label="Jean Vicquemare: \"You're right. It's *is* a small thing.\" He looks around. \"Does anyone care? About a jacket? No one?\""];
+	  362 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  363 [label="IsCunoInParty()", shape=diamond];
+	  364 [label="!(IsCunoInParty())", shape=diamond];
+	  365 [label="Cuno: \"Smoked all those dinky fuckers. Saved this shit -- Martinaise shit. I see he's mournin' and shit.... His main pig got semi-wasted. Sent to the boo-boo-mobile -- Cuno steps up. Cuno fucking FILLS those shoes. Big boy shoes -- Detective Cuno.\""];
+	  366 [label="You: \"Cuno, if you're going to interrupt -- make it snappier.\""];
+	  367 [label="Jean Vicquemare: \"A straggler -- from the Revolution?\" He sounds incredulous."];
+	  368 [label="Perception (Sight): His eyes are welling up now."];
+	  369 [label="Cuno: \"Why are you not fucking shitting yourselves -- what's wrong?!\" He glares at the officers standing silently in the falling snow. They look back at him, seemingly at a loss."];
+	  370 [label="Untitled hub (02)"];
+	  371 [label="You: \"It's wild. But I have a confession *and* a murder weapon. He's on the island now -- waiting for arrest.\""];
+	  372 [label="Jean Vicquemare: \"This sounds insane, Harry. What did you *do* on that island? What happened to you?\""];
+	  373 [label="Authority: It's not going well. You have to present something sane and forceful. Make your case. You've done stuff. Good stuff."];
+	  374 [label="Jean Vicquemare: \"This sounds hysterical, Harry. What did you *do* on that island? What happened to you?\""];
+	  375 [label="You: \"It had gathered *items* in its nest: a helmet, a scope, and a passport.\""];
+	  376 [label="You: \"I think it emits a chemical that makes it look even more like the reeds.\""];
+	  377 [label="Kim Kitsuragi: \"Because I'm a police detective. And manufacturing drugs is *illegal*.\""];
+	  378 [label="You: \"Uhm... Okay then.\""];
+	  379 [label="You: \"Nothing. It's not important.\""];
+	  380 [label="Inland Empire: It's *definitely* your style to solve *side-shit*."];
+	  381 [label="Judit Minot: \"So... it *is* what a soldier of the ICM would be called.\""];
+	  382 [label="Kim Kitsuragi: Variable[\"village.posse_deserter_auth_cuno_explain\"]"];
+	  383 [label="Variable[\"village.posse_deserter_auth_cuno_explain\"]", shape=diamond];
+	  384 [label="!(Variable[\"village.posse_deserter_auth_cuno_explain\"])", shape=diamond];
+	  385 [label="Kim Kitsuragi: Variable[\"TASK.arrest_klaasje_done\"] == false"];
+	  386 [label="Variable[\"TASK.arrest_klaasje_done\"] == false", shape=diamond];
+	  387 [label="!(Variable[\"TASK.arrest_klaasje_done\"] == false)", shape=diamond];
+	  388 [label="Kim Kitsuragi: IsKimHere()"];
+	  389 [label="IsKimHere()", shape=diamond];
+	  390 [label="!(IsKimHere())", shape=diamond];
+	  391 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  392 [label="IsCunoInParty()", shape=diamond];
+	  393 [label="!(IsCunoInParty())", shape=diamond];
+	  394 [label="You: \"No. I know what I saw. It was *real*.\""];
+	  395 [label="Untitled hub"];
+	  396 [label="Jump to: [Untitled hub (03)]"];
+	  397 [label="Jean Vicquemare: \"Yes-yes. Fallen through a gap in the boardwalk, drunk.\""];
+	  398 [label="Cuno: \"You fucking twisting his words again! My pig's wasn't *duped*. This pig's fucking *mastermind* shit. He doesn't do like that. He doesn't get fucked. Tell em --\" He gestures for you to speak."];
+	  399 [label="Inland Empire: Win *who* back, you don't even know her name!"];
+	  400 [label="Cuno: \"Yeah,\" he agrees, giving you a quick look. \"Cuno's been around, seen shit, *real* shit -- he's not a fucking toddler!\""];
+	  401 [label="Jean Vicquemare: The man sighs. Deeply."];
+	  402 [label="Kim Kitsuragi: IsTHCPresent(\"communist\")"];
+	  403 [label="IsTHCPresent(\"communist\")", shape=diamond];
+	  404 [label="!(IsTHCPresent(\"communist\"))", shape=diamond];
+	  405 [label="You: Say nothing."];
+	  406 [label="Trant Heidelstam: \"I must say, this,\" he points to the photo, \"is absolutely extraordinary. It's... I don't even have *words* for it.\""];
+	  407 [label="Kim Kitsuragi: \"Yes -- but *also*...\""];
+	  408 [label="Jean Vicquemare: \"By god... is it somehow *connected* to the case?\""];
+	  409 [label="You: \"I also looked into the mystery of the Doomed Commercial Area.\""];
+	  410 [label="Cuno: \"Yeah-yeah, straggler, sure.\" He nods to you, then turns back to Vicquemare. \"You getting this *smart* shit? The old fuck killed him. Confessed to it too. We got him snitchin' on himself -- popo style.\""];
+	  411 [label="Untitled hub (03)"];
+	  412 [label="Reaction Speed: Wacko-natural. I think I know what it's gonna be..."];
+	  413 [label="Cuno: \"There's a fucking FOUR-TON MANTIS on the island.\""];
+	  414 [label="You: \"If Kim were here right now, he'd tell you it was inevitable.\""];
+	  415 [label="You: \"I got shot too -- in that fight.\" (Point to your leg.) \"I did my absolute best.\""];
+	  416 [label="Encyclopedia: Bowers are built by males of species who can't afford colourful mating displays physically -- this one *was* plain coloured..."];
+	  417 [label="Kim Kitsuragi: \"Nothing is off the table, but -- I want to stress this -- the find does not have to be connected to the case. The case is 100% prosecutable -- without *any* kairomones.\""];
+	  418 [label="Kim Kitsuragi: Variable[\"seafort.phasmid_touching_hub\"]"];
+	  419 [label="Variable[\"seafort.phasmid_touching_hub\"]", shape=diamond];
+	  420 [label="!(Variable[\"seafort.phasmid_touching_hub\"])", shape=diamond];
+	  421 [label="Kim Kitsuragi: IsKimHere()"];
+	  422 [label="IsKimHere()", shape=diamond];
+	  423 [label="!(IsKimHere())", shape=diamond];
+	  424 [label="You: \"Actually, I'm not that sure if I *have* a motive. I had another thing...\""];
+	  425 [label="Kim Kitsuragi: IsKimHere()"];
+	  426 [label="IsKimHere()", shape=diamond];
+	  427 [label="!(IsKimHere())", shape=diamond];
+	  428 [label="Cuno: \"Yeah. Politics shit. My pig also connected, like... the weapon to him...\" He looks to you."];
+	  429 [label="Logic: He's not getting it."];
+	  430 [label="Jean Vicquemare: \"Okay, Cuno -- okay.\" He rubs his temples, then turns to you. \"And he'll confess? To *prosecution* too?\""];
+	  431 [label="Jump to: [Untitled hub (03)]"];
+	  432 [label="Authority: There. No one is saying anything. The silence agrees."];
+	  433 [label="You: \"Listen -- he was acting violent. Scatterbrained. In a *fragile* mental state.\""];
+	  434 [label="Kim Kitsuragi: \"A strange psychosexual fixation. Aggravated -- possibly -- by proximity to the phasmid and its chemicals. He himself gave a political reason -- said he had killed an enemy combatant.\""];
+	  435 [label="Kim Kitsuragi: \"Yes -- until we stopped it.\" The lieutenant is quick to correct him. \"He saw the mercenary as an *enemy combatant* -- there's plenty for prosecution to pick from, as far as motive is concerned.\""];
+	  436 [label="Cuno: \"Fucking gimp... it's more than *interesting*. Cuno's pig's laying down science here. Shit's legit.\""];
+	  437 [label="Jean Vicquemare: \"What you're giving us is not news. It's not proof, it's not even an observation. It's a cryptozoological factoid. You can get it from Paradox B, Aquarius, any *mystery* station...\" He stops. \"Here's *my* theory.\""];
+	  438 [label="You: \"I *did* hallucinate a talking tie...\""];
+	  439 [label="Jean Vicquemare: \"No shit.\""];
+	  440 [label="Cuno: \"I knew it! The bitch sees it. Bitches are fucking *smart*. But you dicks are dumb as fuck! It's real, I told you.\""];
+	  441 [label="Jump to: [Untitled hub (03)]"];
+	  442 [label="Jean Vicquemare: \"Maybe? Certainly. You're Evrart Claire's go-to-guy now. He's a *mob boss*, did you know?\""];
+	  443 [label="Kim Kitsuragi: \"I don't even know which jacket he's talking about. There have been... many things that he's found. He gets meticulous. But it's okay.\""];
+	  444 [label="Jean Vicquemare: \"Who's *Cuno*?\""];
+	  445 [label="Conceptualization: It's *interesting* time. Forget about the rest."];
+	  446 [label="Jean Vicquemare: \"Okay...\" A slow nod."];
+	  447 [label="Kim Kitsuragi: Variable[\"village.posse_nest_bower_discussed\"]"];
+	  448 [label="Variable[\"village.posse_nest_bower_discussed\"]", shape=diamond];
+	  449 [label="!(Variable[\"village.posse_nest_bower_discussed\"])", shape=diamond];
+	  450 [label="Kim Kitsuragi: \"It's worrying. Especially considering his political views. Detective Du Bois is -- as you may know -- a Mazovian socio-economist. He wants to liquidate the ruling class. Which -- again -- for a police officer... is a little odd.\""];
+	  451 [label="Kim Kitsuragi: IsTHCPresent(\"ultraliberal\")  and  Variable[\"village.posse_2_ultraliberal_highest\"] == false"];
+	  452 [label="IsTHCPresent(\"ultraliberal\")  and  Variable[\"village.posse_2_ultraliberal_highest\"] == false", shape=diamond];
+	  453 [label="!(IsTHCPresent(\"ultraliberal\")  and  Variable[\"village.posse_2_ultraliberal_highest\"] == false)", shape=diamond];
+	  454 [label="Rhetoric: Yes. Let's let the big boys talk."];
+	  455 [label="Kim Kitsuragi: \"Well, except that one time when he stopped to sing karaoke. Which -- by the way -- was a valiant effort. He really sang his heart out.\""];
+	  456 [label="Kim Kitsuragi: He takes out the photo of the phasmid and shows it to the officers across the yard. The wind blows, flapping the glossy rectangle in his hand."];
+	  457 [label="Jean Vicquemare: \"Fucking hell, is that... Is this somehow *connected* to the case?\" He ignores you, still staring at the phasmid."];
+	  458 [label="Kim Kitsuragi: \"Yes -- but *also*...\""];
+	  459 [label="Jean Vicquemare: \"Yes. It really does make it hard to fire the drunk...\" His tired eyes follow the photo as the lieutenant puts it away."];
+	  460 [label="Rhetoric: There! You need to make your case -- now. The floor is all yours, he prepared it well."];
+	  461 [label="You: \"Khm... I *also* started a night club. In the church.\""];
+	  462 [label="You: \"It had gathered *items* in its nest: a helmet and a scope.\""];
+	  463 [label="Esprit de Corps: Don't think it's a good idea to let him speak."];
+	  464 [label="Cuno: \"Yeah -- smoked a ton of people -- unsolved shit.\" He nods and crosses his arms regally. \"Now listen up, suit-fuck. You're gonna shit yourself, because it's gonna get wacko-natural.\""];
+	  465 [label="Cuno: \"WHAT?! I can't fucking *believe* this shit... He's lying!\" He turns back to them. \"He's fucking lying. We were *just* there, he went up to it. He fucking touched it!\""];
+	  466 [label="Jean Vicquemare: \"You went in drunk and got people killed.\" He shakes his head. \"Why are you even *here* -- after Kitsuragi got shot? What else could you possibly fuck up?\""];
+	  467 [label="You: \"I solved the case. A straggler from the Revolution shot the merc. He was hiding for *fifty* years on that island before I found him.\""];
+	  468 [label="Jean Vicquemare: \"You just left him on the island -- unguarded?\""];
+	  469 [label="Logic: There is a *perfect* explanation for that!"];
+	  470 [label="You: \"It had gathered *items* in its nest: a helmet and a scope.\""];
+	  471 [label="Untitled hub (02)"];
+	  472 [label="You: \"To me it seemed to have... *some* character.\""];
+	  473 [label="Kim Kitsuragi: \"I told them a police raid will sweep the church in two days. Which, by the way -- it will. If they have any brains they won't be producing in there.\""];
+	  474 [label="You: \"Why?\""];
+	  475 [label="Jean Vicquemare: \"What?\" He cups his ear -- the wind blows. \"It sounded like you set up a drug lab!\""];
+	  476 [label="Suggestion: It's not *that* okay. Get off this subject. Now."];
+	  477 [label="Untitled hub"];
+	  478 [label="Kim Kitsuragi: IsKimHere()"];
+	  479 [label="IsKimHere()", shape=diamond];
+	  480 [label="!(IsKimHere())", shape=diamond];
+	  481 [label="Trant Heidelstam: \"This man would be Lilian's son -- Lilianovich.\" He turns to Vicquemare. \"The custom was overturned after the revolutions failed, but not before making it to Revachol.\""];
+	  482 [label="Jean Vicquemare: \"Thank you, Trant. Thank you for that piece of cultural theory.\" He turns to you. \"You said you have a *motive*.\""];
+	  483 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  484 [label="IsCunoInParty()", shape=diamond];
+	  485 [label="!(IsCunoInParty())", shape=diamond];
+	  486 [label="You: \"He also had political reasons.\""];
+	  487 [label="Cuno: \"Yeah. Check this shit -- he's like some fucking old school warrior. Man From Hjelmdall shit. Only against rich people and... pederasts I think? Cuno doesn't know what a pederast is, Cuno's not a university...\""];
+	  488 [label="Untitled hub"];
+	  489 [label="Kim Kitsuragi: \"Also -- we have ballistics from the gun, matching the bullet found in the dead mercenary's head. *And* two officers on the scene that Mr. Dros *confessed* to.\""];
+	  490 [label="Jean Vicquemare: \"Cryptozoology? You're giving me *cryptozoology*? Trant was feeling *pity* for you -- you use the chance to go *full crypto*!\""];
+	  491 [label="Jean Vicquemare: \"Get over yourself -- you're not a *perfectionist*. You're a cop and you did a good job. With a lot of help from Lieutenant Kitsuragi.\""];
+	  492 [label="Kim Kitsuragi: SubstanceUsedOnce(\"alcohol\") == false  or  IsTHCCookingOrFixed(\"the_waste_land_of_reality\")"];
+	  493 [label="SubstanceUsedOnce(\"alcohol\") == false  or  IsTHCCookingOrFixed(\"the_waste_land_of_reality\")", shape=diamond];
+	  494 [label="!(SubstanceUsedOnce(\"alcohol\") == false  or  IsTHCCookingOrFixed(\"the_waste_land_of_reality\"))", shape=diamond];
+	  495 [label="Jean Vicquemare: \"You experienced a *delirium hallucination*. It's typical of cognitive damage. From years of chronic alcoholism. You started *seeing shit* in the reeds -- and convinced this poor kid of it too.\""];
+	  496 [label="Jean Vicquemare: \"It's a helmet. From the victim. Nothing about this even *remotely* proves the existence of a giant insect. Here's my theory, Harry.\""];
+	  497 [label="Jean Vicquemare: \"The tie's talking again -- that's it. No more phasmid-talk. There's no PR-value in delirium tremens.\""];
+	  498 [label="Cuno: \"Fucking... Cuno doesn't have a photo camera 'cause Cuno *is* fucking POOR, okay?! That sucks about the Cuno. So Cuno didn't take a fucking PHOTO. And Cuno didn't paint a fucking picture.\""];
+	  499 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  500 [label="IsCunoInParty()", shape=diamond];
+	  501 [label="!(IsCunoInParty())", shape=diamond];
+	  502 [label="Judit Minot: \"Fuck it -- I believe him.\" She looks at Vicquemare and shrugs."];
+	  503 [label="Kim Kitsuragi: Variable[\"village.posse_said_phasmid_real\"]"];
+	  504 [label="Variable[\"village.posse_said_phasmid_real\"]", shape=diamond];
+	  505 [label="!(Variable[\"village.posse_said_phasmid_real\"])", shape=diamond];
+	  506 [label="Jean Vicquemare: \"If that's even remotely true, then a clandestine investigation will be required. It smells like *bad news* to me -- a classic shitkid case that'll get people killed. Or fired.\""];
+	  507 [label="Savoir Faire: Not discussing it further *out here in the open* is probably a good idea. People must have seen you return from the island. Word travels fast..."];
+	  508 [label="Jump to: [Untitled hub (03)]"];
+	  509 [label="Judit Minot: \"Still,\" she says quietly. \"Good work with the missing person, detective.\""];
+	  510 [label="You: \"This is what I've been trying to tell you about.\""];
+	  511 [label="Esprit de Corps: That's it. The cavalry has arrived."];
+	  512 [label="Esprit de Corps: But a case against Evrart would be big..."];
+	  513 [label="Kim Kitsuragi: SubstanceUsedOnce(\"alcohol\") == false  or  IsTHCFixed(\"the_waste_land_of_reality\")"];
+	  514 [label="SubstanceUsedOnce(\"alcohol\") == false  or  IsTHCFixed(\"the_waste_land_of_reality\")", shape=diamond];
+	  515 [label="!(SubstanceUsedOnce(\"alcohol\") == false  or  IsTHCFixed(\"the_waste_land_of_reality\"))", shape=diamond];
+	  516 [label="Kim Kitsuragi: \"He did so at considerable risk to his own life. He was shot, and survived only because of his armour. We stopped an execution, not a negotiation. The loss of life was minimal compared to what it could have been.\""];
+	  517 [label="Jean Vicquemare: \"*One* week.\""];
+	  518 [label="Jean Vicquemare: \"I don't doubt you, lieutenant. If you say it was the Insulindian phasmid then it was the Insulindian Phasmid.\""];
+	  519 [label="Empathy: This is a very, very sad man who has just seen something that's made him forget his sadness."];
+	  520 [label="Kim Kitsuragi: Variable[\"seafort.phasmid_touching_hub\"]"];
+	  521 [label="Variable[\"seafort.phasmid_touching_hub\"]", shape=diamond];
+	  522 [label="!(Variable[\"seafort.phasmid_touching_hub\"])", shape=diamond];
+	  523 [label="Untitled hub (03)"];
+	  524 [label="You: \"You have to believe me. There *was* a giant phasmid on the island.\""];
+	  525 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  526 [label="IsCunoInParty()", shape=diamond];
+	  527 [label="!(IsCunoInParty())", shape=diamond];
+	  528 [label="Cuno: \"You don't *know* what happened here. You don't know this shit. Automatic fucking weapons. Urban battleground shit. Battle lines drawn in *blood*. Blood Meridian. You don't *know* this shit.\""];
+	  529 [label="Cuno: \"Now -- Cuno wasn't there. Right -- you getting this? Cuno was breaking it up with Cuno's main bitch C. Parting-of-the-ways shit. But when Cuno got there -- pig had fucking *cleaned up*. Blood and ruin.\""];
+	  530 [label="Jump to: [Untitled hub (02)]"];
+	  531 [label="Cuno: \"Yeah, fucko. He's on the island right now. In a coma or some shit. Oh -- and we also got the gun. Gun-of-the-killer shit. You know what I mean. *Now* let's get our big boy shit on...\""];
+	  532 [label="Kim Kitsuragi: \"You had to see it... It had the subdued colours of a female. And the nesting behaviour too, I think.\""];
+	  533 [label="You: \"It told me.\""];
+	  534 [label="You: \"The perpetrator seemed intoxicated somehow. Like an addict. It's just a hunch, but...\""];
+	  535 [label="Jump to: [Untitled hub]"];
+	  536 [label="You: \"What do you mean?\""];
+	  537 [label="You: \"Yeah! I did some kids a solid. Turned their lives around.\""];
+	  538 [label="You: \"Yeah! And I discovered a hitherto unexplored entroponetical phenomenon in there too -- a two-millimetre hole in the world.\""];
+	  539 [label="Jean Vicquemare: \"I don't care what your drug lab is called...\" He calms himself. \"Fuck it. You're done as a cop -- become a polonium dealer for all I care.\""];
+	  540 [label="Encyclopedia: Paradox B is a fringe science magazine published in Graad. Its mission is to explain theories like telekinesis and intraisolary pale, before they get out of hand."];
+	  541 [label="Jean Vicquemare: \"No, it didn't -- it didn't turn out to be entroponetical *again*. Enough with the isolary-pale two-millimetre-hole-in-the-world line. This isn't Paradox B. We're a police force.\""];
+	  542 [label="Logic: He thinks this detail bolsters your straggler theory."];
+	  543 [label="Authority: Bring him to heel."];
+	  544 [label="Jean Vicquemare: \"Klaasje -- as in the suspect he let escape? From Kitsuragi's report?\""];
+	  545 [label="Cuno: \"You were *just* up his asscrack for the mass murder shit. Now it's nothing? Why do you think that shit *happened?*\""];
+	  546 [label="Jean Vicquemare: \"Phasmid... Jude, I think we should just go and write Harry a station call. It's getting...\""];
+	  547 [label="Jean Vicquemare: \"Yeah, okay, I get it -- people develop fucked up psyches in solitude. If he's been hiding for fifty *years* it's understandable.\""];
+	  548 [label="Judit Minot: \"It's a clean win.\""];
+	  549 [label="Kim Kitsuragi: Variable[\"seafort.deserter_bullet_connection\"]"];
+	  550 [label="Variable[\"seafort.deserter_bullet_connection\"]", shape=diamond];
+	  551 [label="!(Variable[\"seafort.deserter_bullet_connection\"])", shape=diamond];
+	  552 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  553 [label="IsCunoInParty()", shape=diamond];
+	  554 [label="!(IsCunoInParty())", shape=diamond];
+	  555 [label="Jean Vicquemare: \"I'm pulling the plug on this *straggler* thing.\" He shakes his head. \"You're gonna get a station call to explain what happened. Coast guard is gonna scan the island. That's it.\""];
+	  556 [label="Cuno: \"Yeah, and it had like these... tufts of reeds on it. Even after it unfolded. And bitch -- it unfolded like crazy! It was fucking beautiful.\""];
+	  557 [label="You: \"Intuition. Turns out I have a wide intellectual base in here.\" (Point to your head.)"];
+	  558 [label="Half Light: Maybe it's true?"];
+	  559 [label="Cuno: \"Shit was there -- display the shit, pig. The shit! It's the proof.\""];
+	  560 [label="Judit Minot: \"Cuno -- please. If it's on the island, then it will be seen again. Calm down...\""];
+	  561 [label="Jean Vicquemare: \"...\""];
+	  562 [label="Jean Vicquemare: \"Fuck you. You just got played by Evrart Claire. Duped -- for the hundredth time.\""];
+	  563 [label="Untitled hub"];
+	  564 [label="Kim Kitsuragi: \"It's not *quite* like that... The move allowed us to stabilize things here. It was *not* bad for Martinaise. And we don't owe anyone anything.\""];
+	  565 [label="Kim Kitsuragi: IsKimHere()"];
+	  566 [label="IsKimHere()", shape=diamond];
+	  567 [label="!(IsKimHere())", shape=diamond];
+	  568 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  569 [label="IsCunoInParty()", shape=diamond];
+	  570 [label="!(IsCunoInParty())", shape=diamond];
+	  571 [label="Kim Kitsuragi: IsKimHere()"];
+	  572 [label="IsKimHere()", shape=diamond];
+	  573 [label="!(IsKimHere())", shape=diamond];
+	  574 [label="You: \"It's *way* more than that. I'll win her back with this.\""];
+	  575 [label="Empathy: He appreciated you remembering."];
+	  576 [label="Kim Kitsuragi: \"Don't make this *harder* for yourself,\" he says in a lowered voice."];
+	  577 [label="Kim Kitsuragi: \"Well...\" He pulls up his collar. \"The drinking, the gun-losing, also losing the badge -- that's all true. Although he has *not* been drinking on the job this week.\""];
+	  578 [label="Kim Kitsuragi: \"As you can see -- it's about three metres tall. In fact, we think it may be the largest land invertebrate ever discovered.\""];
+	  579 [label="Kim Kitsuragi: \"Well... except that one time when he stopped to sing karaoke. Which, by the way -- I have to disagree with you, Mr. Vicquemare -- was a valiant effort. He really sang his heart out.\""];
+	  580 [label="Kim Kitsuragi: Variable[\"seafort.phasmid_touching_hub\"]"];
+	  581 [label="Variable[\"seafort.phasmid_touching_hub\"]", shape=diamond];
+	  582 [label="!(Variable[\"seafort.phasmid_touching_hub\"])", shape=diamond];
+	  583 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  584 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  585 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  586 [label="Kim Kitsuragi: He takes out the photo and shows it to the officers across the yard. Rain comes down, he covers the glossy photo of the phasmid with his hand."];
+	  587 [label="Kim Kitsuragi: \"The old man was not *aware* of the phasmid's presence. Exhibiting a strange, atypical dementia, he fell into a stupor after its appearance. He became near-catatonic.\""];
+	  588 [label="You: Say nothing."];
+	  589 [label="You: \"So -- as you can see, I'm a *pretty okay* detective.\""];
+	  590 [label="You: \"It had gathered *items* in its nest: behold, a passport.\""];
+	  591 [label="Untitled hub"];
+	  592 [label="Half Light: Oh no.... *all* in."];
+	  593 [label="Rhetoric: Not bad, Cuno. Could be a little *shorter* though."];
+	  594 [label="You: Say nothing."];
+	  595 [label="Jean Vicquemare: \"Don't make this about Lieutenant Kitsuragi. He's a *great* cop -- and you almost got him killed. I don't even understand why you're *here* after he got shot.\""];
+	  596 [label="You: \"Ha ha ha...\" (Laugh nervously.) \"I don't know why I won't stop talking about the *three-metres-tall stick insect*. There was no insect!\""];
+	  597 [label="You: \"I talked to it. It told me about the pale and the Oxygen Holocaust, and how its antenna turned into a foot.\""];
+	  598 [label="Jump to: [Untitled hub]"];
+	  599 [label="Jump to: [Untitled hub (03)]"];
+	  600 [label="Drama: He's really softening it up there."];
+	  601 [label="Untitled hub (03)"];
+	  602 [label="Jean Vicquemare: \"That's great! *Night club owner* is a great new career -- because you're *done* as a police officer.\""];
+	  603 [label="Kim Kitsuragi: Variable[\"village.posse_sugg_drug_baron\"]"];
+	  604 [label="Variable[\"village.posse_sugg_drug_baron\"]", shape=diamond];
+	  605 [label="!(Variable[\"village.posse_sugg_drug_baron\"])", shape=diamond];
+	  606 [label="Jean Vicquemare: \"Get a grip. No one cares about your *entroponetic adventures* right now.\""];
+	  607 [label="Jump to: [Untitled hub (03)]"];
+	  608 [label="You: \"I don't have time for this. Straight to the motive, please.\""];
+	  609 [label="Untitled hub (02)"];
+	  610 [label="Judit Minot: \"A detective *and* a civilian. Jean -- *and* the gun. He has it...\""];
+	  611 [label="Cuno: \"Yeah, he was like a fuckin' assassin, tell him...\""];
+	  612 [label="Kim Kitsuragi: IsKimHere()"];
+	  613 [label="IsKimHere()", shape=diamond];
+	  614 [label="!(IsKimHere())", shape=diamond];
+	  615 [label="You: \"I did all I could. Every second was a struggle.\""];
+	  616 [label="Jean Vicquemare: \"No -- I don't *have* to believe you made a *zoological discovery*. That is not a must. And even if you did... you're a cop. Who cares?\""];
+	  617 [label="Trant Heidelstam: \"That's not *proof*, it's a description. But -- befitting a stick insect. If it's camouflaged to look like the reeds then it would have to be pretty large.\""];
+	  618 [label="Untitled hub (03)"];
+	  619 [label="Jean Vicquemare: \"Bugs everywhere. *Plants* turning into bugs. It's a typical hallucination. Every drunk past the age of forty has seen it.\""];
+	  620 [label="Jean Vicquemare: \"You think? Claire played you like a fiddle. You got duped -- for the hundredth time.\""];
+	  621 [label="Kim Kitsuragi: \"No. It's *nothing* like that. He was reckless with information -- but ethical. We don't owe anyone anything. This allowed us to stabilize things in Martinaise.\""];
+	  622 [label="Jean Vicquemare: \"You're right, lieutenant -- I don't.\" He turns to you. \"You snorted the drugs, I know you did. It's all right, I mean, at this point -- *anything* is but the drink.\""];
+	  623 [label="Jean Vicquemare: \"I don't care. You took some drugs from some kid. And then snorted them. It's all right -- honestly. *Anything* but the drink.\""];
+	  624 [label="Jean Vicquemare: \"You're not the only cop in the world, Harry. This all comes back to us.\""];
+	  625 [label="Jump to: [Untitled hub (03)]"];
+	  626 [label="You: \"Observation.\""];
+	  627 [label="Kim Kitsuragi: \"Then there's the... self-flagellation issue. He likes to apologize -- profusely. Making it sound like he's guilty of at least first degree murder. It's not a good communication strategy for an officer. It's...\""];
+	  628 [label="Jump to: [IsTHCPresent(\"revacholian_nationhood ...]"];
+	  629 [label="You: \"Boom shakalaka.\""];
+	  630 [label="Kim Kitsuragi: \"It's worrying. Especially in light of his political views. Detective Du Bois is -- as you may know -- a fascist. A far-right woman-hater and, of course, also into race-stuff. Which -- for a police officer --\" He shakes his head. \"Not good.\""];
+	  631 [label="You: \"Wait, by gun of the killer, Cuno means the murder weapon. We have it.\""];
+	  632 [label="Cuno: \"You aren't fucking *listening*! The bum is nothing. This is science history here. It was the Insulindian phasmid. It's *connected* to this shit.\" He turns to you. \"Tell him!\""];
+	  633 [label="You: \"There was no Insulindian phasmid.\""];
+	  634 [label="You: \"The company hired unvetted mercenaries. It was their fault. I did all I could.\""];
+	  635 [label="Jean Vicquemare: \"A straggler? From the *Revolution?*\" He sounds incredulous."];
+	  636 [label="You: \"It's no joke. I found the Insulindian phasmid. I discovered a new species.\""];
+	  637 [label="Empathy: He's genuinely concerned now."];
+	  638 [label="Judit Minot: \"Lieutenant, please. The straggler -- just... stick to that. You said you *solved* the case?\""];
+	  639 [label="Trant Heidelstam: \"Hmm, yes. That would be a kairomone -- a pheromone that's seemingly beneficial to the host. It usually stimulates the affected nervous system -- not a human's, of course, but perhaps a predator's?\""];
+	  640 [label="Jean Vicquemare: \"Wait -- he tried to set up a drug lab?\""];
+	  641 [label="Kim Kitsuragi: \"No. He just let some youths set up a club in the church. They *thought* they could produce in there. They won't. The building was abandoned. It was an okay idea -- better than having them out on the ice.\""];
+	  642 [label="You: \"Yeah! I reinvigorated the local nightlife.\""];
+	  643 [label="Electrochemistry: Hmm..."];
+	  644 [label="Jean Vicquemare: \"That's great! *Entroponaut* is a great new career for you -- *after* police officer. I don't care. Go live in the fucking pale.\""];
+	  645 [label="Kim Kitsuragi: Variable[\"village.posse_used_anomaly_as_excuse\"]"];
+	  646 [label="Variable[\"village.posse_used_anomaly_as_excuse\"]", shape=diamond];
+	  647 [label="!(Variable[\"village.posse_used_anomaly_as_excuse\"])", shape=diamond];
+	  648 [label="You: \"Rue de Saint-Ghislaine 10. A commercial building where all businesses go bankrupt. I looked into it.\""];
+	  649 [label="Jean Vicquemare: \"Okay, Trant, thank you. I get it. Harry...\" He looks at you sternly. \"No more giant insects -- you said you have a *motive*.\""];
+	  650 [label="You: \"He killed the mercenary in an act of jealousy.\""];
+	  651 [label="Logic: He wasn't quite sure about the straggler before he heard this detail. It must have convinced him."];
+	  652 [label="Empathy: He understands you *have* to nail this."];
+	  653 [label="Jean Vicquemare: \"Okay. Mastermind.\""];
+	  654 [label="Cuno: \"Yeah, like... the ballistics too, pig. We got him *knee deep* in popo shit.\""];
+	  655 [label="Jump to: [Untitled hub]"];
+	  656 [label="Jean Vicquemare: \"Fine. Brilliant theory. A real masterpiece. You'll get a station call and you can tell all about it -- to some *other* officer. We'll send the coast guard to the island. Maybe they'll find your giant insect too.\""];
+	  657 [label="Jump to: [Untitled hub (03)]"];
+	  658 [label="Jean Vicquemare: \"And how do you know that?\""];
+	  659 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  660 [label="IsCunoInParty()", shape=diamond];
+	  661 [label="!(IsCunoInParty())", shape=diamond];
+	  662 [label="Trant Heidelstam: \"You're right about that...\""];
+	  663 [label="You: \"Edgar Claire.\""];
+	  664 [label="You: \"Maybe...\""];
+	  665 [label="You: \"Hey -- how do you know about Al Gul?\""];
+	  666 [label="Volition: Chin up. Keep focusing on the positives here."];
+	  667 [label="Jean Vicquemare: \"I've never doubted you can pull yourself together and work -- in bouts. Bouts don't last.\" He buttons his jacket. \"I can still smell the booze on the wind.\""];
+	  668 [label="Jean Vicquemare: \"You think?\""];
+	  669 [label="Jump to: [Untitled hub (03)]"];
+	  670 [label="Kim Kitsuragi: Variable[\"tc.dora_is_her_name\"]"];
+	  671 [label="Variable[\"tc.dora_is_her_name\"]", shape=diamond];
+	  672 [label="!(Variable[\"tc.dora_is_her_name\"])", shape=diamond];
+	  673 [label="Reaction Speed: Dodged the bullet there. For a moment it seemed like you were just wasting time."];
+	  674 [label="Kim Kitsuragi: IsTHCPresent(\"revacholian_nationhood\")  and  Variable[\"village.posse_2_fascist_highest\"] == false"];
+	  675 [label="IsTHCPresent(\"revacholian_nationhood\")  and  Variable[\"village.posse_2_fascist_highest\"] == false", shape=diamond];
+	  676 [label="!(IsTHCPresent(\"revacholian_nationhood\")  and  Variable[\"village.posse_2_fascist_highest\"] == false)", shape=diamond];
+	  677 [label="Kim Kitsuragi: IsHighestPolitical(\"revacholian_nationhood\")"];
+	  678 [label="IsHighestPolitical(\"revacholian_nationhood\")", shape=diamond];
+	  679 [label="!(IsHighestPolitical(\"revacholian_nationhood\"))", shape=diamond];
+	  680 [label="Kim Kitsuragi: \"He apprehended a revolutionary brigade who stayed hidden for fifty years, ever since the Revolution; who's probably committed other murders over those years...\" He pauses. \"Oh -- and he also discovered a new species.\""];
+	  681 [label="Kim Kitsuragi: He takes out the photo and shows it to the officers across the yard. Thick white snow falls all around you -- flakes stick to the glossy photo of the phasmid."];
+	  682 [label="You: \"Boom shakalaka, motherfucker!\""];
+	  683 [label="Jean Vicquemare: \"Lieutenant -- is it somehow *connected* to the case?\" He pays you no heed."];
+	  684 [label="Trant Heidelstam: \"We could order a search. I could get people from EPIS on the island, entomologists, doctors. There must be signs of it in the reeds -- if we found the Insulindian phasmid, well -- that would be absolutely *exceptional*. The PR value alone...\""];
+	  685 [label="Jump to: [Untitled hub (02)]"];
+	  686 [label="Rhetoric: You may want to rethink your strategy of letting a 12 year old present your case."];
+	  687 [label="Cuno: \"This case -- this fucking grandpa shit.... this ugly shit? It's *nothing*. We saw a ghost. A real life ghost. Like he fucking proved *ghosts* are real -- it's that big, popo. It's fucking...\""];
+	  688 [label="Judit Minot: \"Lieutenant, please -- you have to have more than just some *mantis*. The straggler -- stick to that. You said you solved the murder.\""];
+	  689 [label="Jean Vicquemare: \"What is this, a joke? We *will* dump you, Harry. We will leave you here -- you'll be just another bum on the coast. This is a *trial*. Stop fucking around.\""];
+	  690 [label="Jump to: [Untitled hub (03)]"];
+	  691 [label="Kim Kitsuragi: Variable[\"village.posse_nest_bower_discussed\"]"];
+	  692 [label="Variable[\"village.posse_nest_bower_discussed\"]", shape=diamond];
+	  693 [label="!(Variable[\"village.posse_nest_bower_discussed\"])", shape=diamond];
+	  694 [label="Judit Minot: \"They're not going to go for this speculation in the Constabulatory.\""];
+	  695 [label="You: \"Yeah. *And* a night club. In the church. It was a huge operation to set it up.\""];
+	  696 [label="Jean Vicquemare: \"You turned a church into a night club -- the *kids* are probably shooting up in there... What else did you do? Desecrate the altar? Shit in the chancel?\""];
+	  697 [label="Jean Vicquemare: \"It's not what you were *sent* to do here.\""];
+	  698 [label="Judit Minot: \"Jean -- it's his style. He does side cases. I'm sure it was important enough. Call it community outreach.\""];
+	  699 [label="You: \"He killed the mercenary hoping to start a war between the company and the Union.\""];
+	  700 [label="Judit Minot: \"Jean. He has it. No more cooperation needed. He had a civilian there for the confession -- this is doable.\""];
+	  701 [label="Volition: It will pass -- in time."];
+	  702 [label="Cuno: He comes to a sudden, abrupt stop."];
+	  703 [label="Jean Vicquemare: \"Okay. We'll see about it when we get coast guard on the island.\""];
+	  704 [label="You: \"I know things about it. I think it reproduces by parthenogenesis.\""];
+	  705 [label="Cuno: \"Large?!\" The kid slaps his forehead in disbelief. \"Gimp, it was fucking *gigantic*!\""];
+	  706 [label="You: \"It had taken this -- from the killer.\" (Show him the scope.)"];
+	  707 [label="You: \"I *did* have a conversation with a corpse...\""];
+	  708 [label="Reaction Speed: And eyes too -- your return from the island must not have gone unnoticed."];
+	  709 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  710 [label="IsCunoInParty()", shape=diamond];
+	  711 [label="!(IsCunoInParty())", shape=diamond];
+	  712 [label="Jump to: [Untitled hub (03)]"];
+	  713 [label="Kim Kitsuragi: \"No. I wouldn't say it was...\" He looks to you."];
+	  714 [label="Trant Heidelstam: \"I would prefer *not* to partake in anything Union-related.\" The consultant, too, has lowered his voice. \"For political neutrality.\""];
+	  715 [label="Logic: This has to be good stuff for him to backpedal out of it at first mention."];
+	  716 [label="Reaction Speed: Damn, now it sounds like you were just wasting time."];
+	  717 [label="Jean Vicquemare: \"You've spent the week with him -- on this case. What is your take?\""];
+	  718 [label="Kim Kitsuragi: IsKimHere()"];
+	  719 [label="IsKimHere()", shape=diamond];
+	  720 [label="!(IsKimHere())", shape=diamond];
+	  721 [label="Untitled hub (02)"];
+	  722 [label="Esprit de Corps: Here comes the cavalry."];
+	  723 [label="Kim Kitsuragi: Variable[\"whirling.minot_karaoke\"]"];
+	  724 [label="Variable[\"whirling.minot_karaoke\"]", shape=diamond];
+	  725 [label="!(Variable[\"whirling.minot_karaoke\"])", shape=diamond];
+	  726 [label="Kim Kitsuragi: \"And he *solved* it. Near-perfectly. In one week we have: a confession, a murder weapon -- *and* the perpetrator. Locked on the island right now, awaiting transportation.\""];
+	  727 [label="You: \"I think it reproduces by parthenogenesis.\""];
+	  728 [label="Jean Vicquemare: \"Are you done?\""];
+	  729 [label="You: \"He may have committed other murders over the years -- we have him confessing to one too. A big one.\""];
+	  730 [label="Authority: His patience has all but run out. The boy better wrap it up..."];
+	  731 [label="Cuno: \"Yo -- this is like the biggest moment in history right now. You wanna fucking listen to what's coming out of Cuno's *mouth*.\" He points to his crooked scowl."];
+	  732 [label="Cuno: \"We saw a giant insect. White as fuck. *Literally* the Insulindian phasmid or some shit. Praying mantis-style. It was three metres tall, and this pig right here...\" He points his finger at you."];
+	  733 [label="You: \"There was an Insulindian phasmid. But it's not connected to the case.\""];
+	  734 [label="came alone"];
+	  735 [label="You: \"I don't know. What I *do* know is -- there was no giant stick insect on the island. That would be insane.\""];
+	  736 [label="Logic: She's right. This is not going well for you. You have to present something coherent -- and sane."];
+	  737 [label="You: \"Its nervous system may be stored in its long limbs.\""];
+	  738 [label="You: (Conclude.) \"It had mandibles that looked like hair. And it was completely white on the inside.\""];
+	  739 [label="You: \"It was a sensing entity. There was something there.\""];
+	  740 [label="Jean Vicquemare: \"It wasn't the fucking wind! You said you started a drug lab.\" He takes a moment to collect himself. \"Fine. I don't care. You're done as a cop -- become a polonium dealer for all I care.\""];
+	  741 [label="Jean Vicquemare: He shrugs. \"I don't know what a 'Doomed Commercial Area' is.\""];
+	  742 [label="Cuno: \"This pig *helps* people, okay? He's a fuckin' handy helper, he does that shit. He finds insects and solves side-shit. It's his style. Side-style.\""];
+	  743 [label="Jean Vicquemare: \"It's not what he was sent here to do. He was sent here to solve a murder -- not look into commercial areas.\""];
+	  744 [label="Jean Vicquemare: \"No, it didn't -- it didn't turn out to be entroponetical *again*. Enough with two millimetre holes and the giant bugs -- this isn't Paradox B. We're a police force.\""];
+	  745 [label="Kim Kitsuragi: Variable[\"village.posse_used_anomaly_as_excuse\"]  or  Variable[\"village.posse_church_hole_mentioned\"]"];
+	  746 [label="Variable[\"village.posse_used_anomaly_as_excuse\"]  or  Variable[\"village.posse_church_hole_mentioned\"]", shape=diamond];
+	  747 [label="!(Variable[\"village.posse_used_anomaly_as_excuse\"]  or  Variable[\"village.posse_church_hole_mentioned\"])", shape=diamond];
+	  748 [label="Jump to: [IsCunoInParty()]"];
+	  749 [label="Judit Minot: \"It *is* what a soldier of the ICM would be called.\""];
+	  750 [label="Hand/Eye Coordination: Slam the weapon man, the murder weapon."];
+	  751 [label="You: \"I think once he's resuscitated -- yes. We got him talking once. He'll talk again.\""];
+	  752 [label="Kim Kitsuragi: He nods. \"A strange psychosexual fascination. The result of spending all this time in solitude, on the islands of this bay... And trauma too. He himself gave a political reason. In his mind, he had killed an enemy combatant.\""];
+	  753 [label="Jean Vicquemare: \"Jude, he's drunk. It's cold. I'm fucking freezing. Let's get him to the station when he's sobered up. In two weeks or something.\""];
+	  754 [label="Jump to: [Untitled hub]"];
+	  755 [label="You: \"I approached it and had a conversation with it. We talked.\""];
+	  756 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  757 [label="IsCunoInParty()", shape=diamond];
+	  758 [label="!(IsCunoInParty())", shape=diamond];
+	  759 [label="Jean Vicquemare: \"Understood. Of course.\""];
+	  760 [label="Cuno: \"The fuck, you puss? This'll send shit flying. Trust Cuno. Grandpa laid down some real shit. *Conspiracy*-style.\""];
+	  761 [label="Jean Vicquemare: \"How? It seems to be ongoing. I see red banners on the gates.\""];
+	  762 [label="You: \"I did it for the World Revolution.\""];
+	  763 [label="Cuno: \"You fucking twisting his words again! My pig's not *dirty*. This is fucking *paladin* shit. He don't bend like that. Tell em --\" He gestures for you to speak."];
+	  764 [label="Judit Minot: \"Jean, stop brutalizing him... He's trying.\""];
+	  765 [label="Kim Kitsuragi: \"You don't want to know.\""];
+	  766 [label="You: \"Cuno's great. I should have taken him to the island. He'd tell you it's all true.\""];
+	  767 [label="You: \"To hell with it. You wouldn't understand anyway.\""];
+	  768 [label="Jean Vicquemare: \"Yeah... it was what it was...\""];
+	  769 [label="You: \"So -- as you can see, I'm a *pretty okay* detective.\""];
+	  770 [label="Rhetoric: That's it. The argument is lost."];
+	  771 [label="Jean Vicquemare: \"Go? And *hand* the terminal over to the Claire brothers?\""];
+	  772 [label="Trant Heidelstam: \"Mhm...\" He ignores your answer. \"Then it wouldn't matter if it's male or female. The bower would just be rudimentary behaviour from before the parthenogenetic mutation.\""];
+	  773 [label="Trant Heidelstam: \"Interesting...\" He ignores your answers. \"Then it is *especially* vulnerable to disease. A single strain of bacteria could wipe out the entire species. We're probably talking conservation efforts here...\" He looks around, quickly assessing the coast."];
+	  774 [label="Rhetoric: Now you make your case. Now is the time. Now or never."];
+	  775 [label="Kim Kitsuragi: Variable[\"village.posse_2_rhetoric_yell\"]"];
+	  776 [label="Variable[\"village.posse_2_rhetoric_yell\"]", shape=diamond];
+	  777 [label="!(Variable[\"village.posse_2_rhetoric_yell\"])", shape=diamond];
+	  778 [label="Kim Kitsuragi: \"Odder still -- he is also a full blown fascist. An ultranationalist woman-hater and more than a little racist. How he reconciles these two points of view...\" He shrugs. \"But he is *vocal* about both.\""];
+	  779 [label="Kim Kitsuragi: \"Odder still -- he is also a full blown fascist. An ultranationalist woman-hater and more than a little racist. Which, I guess, goes well with the *grind*? I do not know -- but he is *vocal* about both beliefs.\""];
+	  780 [label="Kim Kitsuragi: Variable[\"village.posse_2_fascist_highest\"]"];
+	  781 [label="Variable[\"village.posse_2_fascist_highest\"]", shape=diamond];
+	  782 [label="!(Variable[\"village.posse_2_fascist_highest\"])", shape=diamond];
+	  783 [label="Kim Kitsuragi: \"The killer did not seem to be *aware* of the phasmid's presence. Exhibiting a strange, atypical dementia, he fell into a stupor after its appearance. He became near-catatonic.\""];
+	  784 [label="You: \"Khm... yes. I believe the pheromone it emits may be responsible for the killer's mental degradation.\""];
+	  785 [label="You: \"Boom. Boom. Boom.\""];
+	  786 [label="Jean Vicquemare: \"Yes. I understand. He was in the fight.\""];
+	  787 [label="Cuno: \"Second -- you dinky fucking asshole. This pig right here,\" he points to you, \"this oink-oink motherfucker *solved* that shit. On Death Island. Case solved. Go home, or fuck off.\""];
+	  788 [label="Cuno: \"Too late -- we're *in* this. There's a fucking FOUR-TON MANTIS on the island.\""];
+	  789 [label="You: \"There was an Insulindian phasmid. *And* it may be connected to the case.\""];
+	  790 [label="Empathy: Ouch..."];
+	  791 [label="Jean Vicquemare: \"Fuck it. Fine. I don't care. Your life as a cop is over -- become a polonium dealer for all I care.\""];
+	  792 [label="Jean Vicquemare: \"That's great! *Entroponaut* is a great new career for you -- *after* police officer. I don't care. Go live in the pale.\""];
+	  793 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  794 [label="IsCunoInParty()", shape=diamond];
+	  795 [label="!(IsCunoInParty())", shape=diamond];
+	  796 [label="Untitled hub"];
+	  797 [label="Cuno: \"This narrow-minded pig,\" he mumbles, drilling his temples with his index fingers. \"I can't fucking...\""];
+	  798 [label="Cuno: \"Fucking... listen to him, pig! Grandpa's *deranged*. Cuno knows you don't believe this phasmid shit -- but he was hatin' rich people, some kind of *pederasts* too... fuckin' hating *everything*.\""];
+	  799 [label="Cuno: \"Snitch binoclard...\" He collects himself. \"Yeah. Klaasje -- that chick. But she didn't do it. It was this old fuck. Grandpa on the island. Merc was fucking her and he couldn't hack it. Cuno can hack it.\""];
+	  800 [label="Judit Minot: \"Jean, maybe...\" She stops and sighs."];
+	  801 [label="Trant Heidelstam: \"Well, that's not exactly *proof*. It's a theory. But -- it *is* interesting.\""];
+	  802 [label="You: \"The damage alcohol has done to my mind *is* extensive...\""];
+	  803 [label="Untitled hub (03)"];
+	  804 [label="Jean Vicquemare: \"You bet it was. Sounds to me like you got *played* -- because you were off your tits on Al Gul.\""];
+	  805 [label="Kim Kitsuragi: IsKimHere()"];
+	  806 [label="IsKimHere()", shape=diamond];
+	  807 [label="!(IsKimHere())", shape=diamond];
+	  808 [label="Kim Kitsuragi: IsKimHere()"];
+	  809 [label="IsKimHere()", shape=diamond];
+	  810 [label="!(IsKimHere())", shape=diamond];
+	  811 [label="Cuno: \"Yeah -- he really fucked the Cuno on that,\" the kid says with a respectful glance. \"But that's old shit. Cuno's now. Pig's just being a good pig. That's cool to Cuno.\""];
+	  812 [label="Jean Vicquemare: \"What you're giving us -- it's not news. It's not proof. Or an observation. It's a cryptozoological factoid. You can get it from Paradox B, Aquarius, any *mystery* station. Here's *my* theory.\""];
+	  813 [label="You: \"Yeah! And he's not ten, he's fucking twelve!\""];
+	  814 [label="Jump to: [Untitled hub (03)]"];
+	  815 [label="Jean Vicquemare: \"Thank you for the input, Lieutenant Kitsuragi. I didn't mean to suggest you didn't handle the situation...\" He brushes a stray strand of hair out of his eye and coughs."];
+	  816 [label="Jean Vicquemare: \"On Lieutenant-Yefreitor Du Bois.\""];
+	  817 [label="Judit Minot: \"See?\""];
+	  818 [label="Kim Kitsuragi: \"I had a major collision with him on the subject. He yielded, and is now striving to be a crypto-fascist. That is: a regular police officer who *thinks* these things but doesn't say them. So that's... yeah.\""];
+	  819 [label="Kim Kitsuragi: Variable[\"TASK.sing_karaoke_done\"]"];
+	  820 [label="Variable[\"TASK.sing_karaoke_done\"]", shape=diamond];
+	  821 [label="!(Variable[\"TASK.sing_karaoke_done\"])", shape=diamond];
+	  822 [label="Kim Kitsuragi: \"A colossal stick insect -- three metres tall. It's on the island, camouflaged as the reeds. It... unfolded from them. I did not -- unfortunately -- get a photo. But I believe it may have been the Insulindian phasmid.\""];
+	  823 [label="Jean Vicquemare: \"Fucking hell is that...\" The man cranes his neck, still looking at the photo. \"Is this somehow... *connected* to the case?\""];
+	  824 [label="Untitled hub"];
+	  825 [label="You: \"*And* I also fixed the strike situation.\""];
+	  826 [label="You: \"He, uh... being a Communard probably had to do with it. You know, class warfare stuff.\""];
+	  827 [label="Cuno: \"First of all, yo -- those guys were all f****ts. The guys in the armour? F****ts. The Union guys? F****ts. So yeah --\" He stares Vicquemare in the eye. \"Suck Cuno's dick. You don't *know* me.\""];
+	  828 [label="You: \"Look -- point is, we solved the case.\""];
+	  829 [label="You: \"Look -- point is, we saved as many people as we could.\""];
+	  830 [label="You: \"It was a straggler -- from the Revolution. Who's stayed in hiding for 50 years. I found him.\""];
+	  831 [label="Volition: No. There was a giant insect and they *have* to understand that. You will find proof. Don't give up."];
+	  832 [label="Electrochemistry: It was definitely female."];
+	  833 [label="Kim Kitsuragi: \"Yes, but also reed-coloured -- beige and brown, a little green -- on the outside. After unfolding from a single stalk, it still retained parts that looked like reed tufts on its limbs.\""];
+	  834 [label="You: \"It could have been male, actually...\""];
+	  835 [label="Trant Heidelstam: \"Very interesting.\" He looks around, quickly assessing the coast. \"Such organisms are extremely vulnerable to disease. A single strain of bacteria could wipe out the whole species. We're probably looking at conservation efforts here...\""];
+	  836 [label="Trant Heidelstam: \"It must be robust if it can move a helmet with its limbs...\" He trails off, lost in thought."];
+	  837 [label="Kim Kitsuragi: Variable[\"seafort.deserter_wc_health_success\"]"];
+	  838 [label="Variable[\"seafort.deserter_wc_health_success\"]", shape=diamond];
+	  839 [label="!(Variable[\"seafort.deserter_wc_health_success\"])", shape=diamond];
+	  840 [label="You: \"Yeah! I did some kids a solid. Turned their lives around.\""];
+	  841 [label="Jean Vicquemare: \"What were you even doing in some commercial area? Your *job* was to solve a murder, not *Martinaise*.\""];
+	  842 [label="Trant Heidelstam: \"Lilianovich?\" The special consultant raises an eyebrow. \"A Revolutionary matronym...\""];
+	  843 [label="You: \"A Revolutionary matronym?\""];
+	  844 [label="You: \"He killed him in an act of rage induced by the phasmid's semiochemicals.\""];
+	  845 [label="Jean Vicquemare: \"*Resuscitated* -- that sounds great...\""];
+	  846 [label="Cuno: \"You ain't saying shit, because you don't got shit to say.\""];
+	  847 [label="Cuno: \"Worse than Cuno's violent dad. Shakes like a pig, eyes like saucers. Wavin' at nothing. That's some dark shit -- and he's been with that bug for like -- ever. Don't close your mind to this shit!\""];
+	  848 [label="Kim Kitsuragi: \"Also -- we have a sniper's nest with full view of the room in which the mercenary died. Right on the island. *And* two officers on the scene that Mr. Dros *confessed* to.\""];
+	  849 [label="Perception (Smell): God dammit -- it *is* bad. Even you can smell it."];
+	  850 [label="Drama: You did not -- under any circumstances -- *talk* to it."];
+	  851 [label="Jean Vicquemare: \"You experienced a *delirium hallucination*. It's typical of cognitive damage. From chronic alcoholism. Which is what you have. So you started *seeing shit* in the reeds.\""];
+	  852 [label="Jean Vicquemare: \"It's a passport. Waterlogged paper. Nothing about this even *remotely* proves the existence of a giant insect. Here's my theory, Harry.\""];
+	  853 [label="You: \"Yeah. But for, like, conservative Revolution.\""];
+	  854 [label="You: \"How did you know I found him?\""];
+	  855 [label="Suggestion: You're doing good here. Perhaps only for a moment, but still..."];
+	  856 [label="You: \"Yeah... maybe I didn't.\""];
+	  857 [label="Kim Kitsuragi: \"He did so at considerable risk to his person. Remember -- he was shot. We stopped an execution, not a negotiation. The loss of life was minimal compared to what it could have been.\""];
+	  858 [label="Kim Kitsuragi: \"Then there's the apocalypse thing. At first I thought it was a joke -- but it's not. He actually thinks the world is about to end. In a *bloodletting*, or a *gloaming*. We're about to *become vapour*, even...\""];
+	  859 [label="Rhetoric: You should yell something."];
+	  860 [label="You: \"I AM A POLICEMAN OF THE STATE TO COME!\""];
+	  861 [label="Kim Kitsuragi: \"Then there's the *boring cop* issue. Despite all the obvious and almost grotesque mannerisms and sartorial choices he still insists he isn't *characteristic* enough. It's...\""];
+	  862 [label="Kim Kitsuragi: \"Odder still -- he is also an ultraliberal 'hustler' who is always...\" The lieutenant pinches the root of his nose. \"*On the grind.* Which I guess, goes well with some of his racism. I don't know -- he is vocal about both beliefs though.\""];
+	  863 [label="Kim Kitsuragi: \"It's odd. Especially in light of his political views. Detective Du Bois is -- as you may know -- a 'hustler'. He...\" The lieutenant pinches the root of his nose. \"Grinds. He makes *the reál*. He's a 'visionary' and a 'money engineer', which is just...\" He shakes his head."];
+	  864 [label="Cuno: \"Hardie *boys* or whatever the fuck they are -- they were tellin' everyone and their mom how they wasted one of those armour fucks. It was *always* gonna go down like that. My pig stepped up -- got fucked in the leg for it. Sacrifice style.\""];
+	  865 [label="Cuno: \"Yeah -- and solved that shit. Fucking... grandpa in the woods did it. Old shit. Cuno doesn't know about that. Look -- the REAL SHIT here is...\""];
+	  866 [label="Cuno: \"This fucking *old* popo *discovered* it. Me and the pig-bacon discovered a new *species*. It was beautiful. It was...\" He pauses, out of breath, then continues: \"You ain't seen this kind of animal before. Fucking *miracle* shit.\""];
+	  867 [label="Jean Vicquemare: \"...\""];
+	  868 [label="Volition: No. There was a giant insect and they *have* to understand that. You will find proof. Don't give up."];
+	  869 [label="Authority: It's not going well. You have to present something now. Something sane and forceful. Make your case."];
+	  870 [label="You: \"Yeah -- from the Revolution. He may have killed others too.\""];
+	  871 [label="Kim Kitsuragi: IsKimHere()"];
+	  872 [label="IsKimHere()", shape=diamond];
+	  873 [label="!(IsKimHere())", shape=diamond];
+	  874 [label="Trant Heidelstam: \"Like a cephalopod's? Phasmids, I think, only have nerves in their heads and abdomens, though... there is a correlation between invertebrate size and intelligence. Was it...?\""];
+	  875 [label="You: \"I still think it was female.\""];
+	  876 [label="You: \"Intelligent? It behaved like an insect.\""];
+	  877 [label="Suggestion: You know -- it might have been a *bad* idea to tell him that. Unless you want to be a drug baron and not a cop, of course..."];
+	  878 [label="Kim Kitsuragi: IsKimHere()"];
+	  879 [label="IsKimHere()", shape=diamond];
+	  880 [label="!(IsKimHere())", shape=diamond];
+	  881 [label="Kim Kitsuragi: IsKimHere()"];
+	  882 [label="IsKimHere()", shape=diamond];
+	  883 [label="!(IsKimHere())", shape=diamond];
+	  884 [label="Trant Heidelstam: \"This man's mother was Lilian. He's Lilian's son -- Lilianovich. The custom was overturned after the Revolution failed, but not before it made it to Revachol.\""];
+	  885 [label="Jean Vicquemare: \"Okay.\" He rubs his temples. \"And he'll confess? To the *prosecution* too?\""];
+	  886 [label="Cuno: \"But he did that shit. To get the Union fucks killed, so they'd get the other fucks killed. Boom! Giant kill-storm. Mastermind shit -- only, like, a really old mastermind who's fucking stupid.\""];
+	  887 [label="You: \"Wait -- Jean. Was there *not* a giant kill-storm?\""];
+	  888 [label="Jean Vicquemare: \"...\""];
+	  889 [label="Untitled hub (04)"];
+	  890 [label="Kim Kitsuragi: Variable[\"village.posse_concept_way_more\"]"];
+	  891 [label="Variable[\"village.posse_concept_way_more\"]", shape=diamond];
+	  892 [label="!(Variable[\"village.posse_concept_way_more\"])", shape=diamond];
+	  893 [label="You: \"It emits a chemical that makes it look *more* like the reeds.\""];
+	  894 [label="Untitled hub"];
+	  895 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  896 [label="IsCunoInParty()", shape=diamond];
+	  897 [label="!(IsCunoInParty())", shape=diamond];
+	  898 [label="You: \"I examined the insect. Up close.\""];
+	  899 [label="Logic: ...if he is *that* certain. And they are not. C'mon..."];
+	  900 [label="Kim Kitsuragi: \"This is a conversation for when we are no longer out in the open, in Martinaise, where Evrart and Edgar Claire have ears everywhere.\" The lieutenant lowers his voice -- just a little."];
+	  901 [label="Logic: This has to be good stuff for him to backpedal out of it at first mention."];
+	  902 [label="Reaction Speed: Silence. Good. The man doesn't know what to say."];
+	  903 [label="Perception (Hearing): Silence. The wind blows."];
+	  904 [label="Jump to: [Untitled hub (03)]"];
+	  905 [label="You: \"I confiscated drugs from Cuno's dad.\""];
+	  906 [label="Electrochemistry: You know, maybe you should become a beach bum? Just a thought... Because this isn't going too good."];
+	  907 [label="Authority: Quit while you're ahead? Or... no?"];
+	  908 [label="You: \"Yes. What he said.\""];
+	  909 [label="You: \"Yeah, it was a massacre -- we got wiped. Where the hell were *you*?!\""];
+	  910 [label="You: \"I'm just sorry.\""];
+	  911 [label="Untitled hub (02)"];
+	  912 [label="You: \"I did everything I could. The company had hired unvetted...\""];
+	  913 [label="Cuno: \"Why are you not fucking shitting yourselves -- what's wrong?!\" He glares at the officers, who stand silently in the cold wind. In the distance a wave breaks..."];
+	  914 [label="Trant Heidelstam: \"Did he just say... Insulindian phasmid?\""];
+	  915 [label="Cuno: \"POOR kid?! Fuck you, f****t! Cuno's loaded!\" The boy clenches his bony fists so hard the knuckles turn white. \"Can't *believe* you're not believing me...\""];
+	  916 [label="You: \"It's okay. A giant insect -- three metres tall -- came out of the reeds and left him in a catatonic state.\""];
+	  917 [label="You: \"The biggest land invertebrate ever found? It's anything but funny. Also, I think it's connected to the case.\""];
+	  918 [label="Trant Heidelstam: \"Incredible... Were there eggs in the nest?\""];
+	  919 [label="Shivers: In the mist-coloured distance over the water, nothing moves. No trace of it..."];
+	  920 [label="You: \"I didn't. It's the wind. You misheard.\""];
+	  921 [label="Suggestion: This isn't going to change a lot of minds, Harry."];
+	  922 [label="Kim Kitsuragi: \"Four kids were living in a tent on the ice. They were going to drown when it melted. It's not optimal, but the building *was* abandoned. So he put them in there. It's okay.\""];
+	  923 [label="Jean Vicquemare: \"Yeah, honestly -- it doesn't sound too important. Since it's not connected to the case -- or a giant living organism.\""];
+	  924 [label="Kim Kitsuragi: \"There was a possible witness in there. And it was close to the crime scene. He was just chasing a lead and ended up advising a local shopkeeper -- it was okay.\""];
+	  925 [label="Cuno: \"Alright, yeah.\" He bites his lip. \"Cuno's in it.\""];
+	  926 [label="Rhetoric: Hah!"];
+	  927 [label="Authority: Take the advice."];
+	  928 [label="Jean Vicquemare: \"Cryptozoology? You're giving me *cryptozoology*? You say you have a motive and you use the chance to go *full crypto* on me!\""];
+	  929 [label="You: \"Its nervous system is stored in its *limbs*.\""];
+	  930 [label="Cuno: \"Suit, we have a *shitload* of proof. Spin it on them, pig!\""];
+	  931 [label="Inland Empire: No. It's not true. It was there. It was real. You remember every detail of its sounds, its movements, its presence..."];
+	  932 [label="Cuno: He points to his skull. \"But it's in my head. In here. Cuno's *eyes* took the picture. It's RIGHT FUCKING HERE. I can't BELIEVE you're not getting this...\" He grinds his teeth."];
+	  933 [label="You: \"Yeah -- I actually just got manipulated into it.\""];
+	  934 [label="Jean Vicquemare: \"See -- no one cares.\""];
+	  935 [label="You: \"Hosiannah.\""];
+	  936 [label="Reaction Speed: Damn, now it sounds like you were just wasting time."];
+	  937 [label="You: \"The firefight is a trivial matter compared to the greatest discovery of this *century*.\""];
+	  938 [label="Kim Kitsuragi: \"Stop being sorry for five minutes,\" he says in a lowered voice."];
+	  939 [label="Kim Kitsuragi: \"Then there's the... superstardom. He likes to -- from time to time -- allude to being a *superstar law official*. At first I thought it was a joke, but... now I'm not so sure. He says *disco* about twenty times a day.\""];
+	  940 [label="You: \"Khm... yes, the phasmid may have contributed to his mental state in some way. Over the years.\""];
+	  0 -> 1
+	  1 -> 129
+	  2 -> 686
+	  3 -> 688
+	  4 -> 51
+	  5 -> 317
+	  6 -> 446
+	  7 -> 97
+	  8 -> 418
+	  9 -> 641
+	  10 -> 524
+	  11 -> 888
+	  11 -> 219
+	  12 -> 928
+	  13 -> 258
+	  14 -> 849
+	  15 -> 493
+	  16 -> 17
+	  16 -> 18
+	  17 -> 702
+	  18 -> 658
+	  19 -> 299
+	  20 -> 114
+	  21 -> 22
+	  21 -> 23
+	  22 -> 226
+	  23 -> 851
+	  24 -> 304
+	  25 -> 26
+	  26 -> 27
+	  26 -> 28
+	  27 -> 348
+	  28 -> 806
+	  29 -> 30
+	  29 -> 31
+	  30 -> 124
+	  31 -> 765
+	  32 -> 349
+	  33 -> 349
+	  34 -> 524
+	  35 -> 270
+	  36 -> 37
+	  36 -> 38
+	  37 -> 352
+	  38 -> 858
+	  39 -> 40
+	  39 -> 41
+	  40 -> 819
+	  41 -> 403
+	  42 -> 186
+	  43 -> 398
+	  44 -> 141
+	  45 -> 593
+	  46 -> 45
+	  47 -> 231
+	  48 -> 194
+	  49 -> 93
+	  50 -> 689
+	  51 -> 154
+	  52 -> 832
+	  53 -> 836
+	  54 -> 791
+	  55 -> 294
+	  56 -> 652
+	  57 -> 890
+	  58 -> 800
+	  59 -> 60
+	  59 -> 61
+	  60 -> 435
+	  61 -> 753
+	  62 -> 891
+	  63 -> 493
+	  64 -> 801
+	  65 -> 660
+	  66 -> 757
+	  67 -> 173
+	  68 -> 69
+	  69 -> 900
+	  70 -> 72
+	  70 -> 71
+	  71 -> 901
+	  72 -> 117
+	  73 -> 804
+	  74 -> 75
+	  74 -> 260
+	  74 -> 934
+	  74 -> 854
+	  75 -> 563
+	  76 -> 26
+	  77 -> 713
+	  78 -> 625
+	  79 -> 674
+	  80 -> 81
+	  80 -> 82
+	  81 -> 628
+	  82 -> 862
+	  83 -> 235
+	  84 -> 187
+	  85 -> 785
+	  85 -> 238
+	  86 -> 879
+	  87 -> 88
+	  87 -> 89
+	  88 -> 44
+	  89 -> 842
+	  90 -> 512
+	  91 -> 524
+	  92 -> 831
+	  93 -> 94
+	  94 -> 632
+	  94 -> 730
+	  94 -> 315
+	  94 -> 142
+	  95 -> 867
+	  96 -> 633
+	  97 -> 738
+	  97 -> 739
+	  97 -> 728
+	  97 -> 143
+	  97 -> 471
+	  97 -> 376
+	  97 -> 377
+	  98 -> 417
+	  99 -> 123
+	  100 -> 251
+	  101 -> 291
+	  102 -> 293
+	  103 -> 104
+	  103 -> 105
+	  104 -> 55
+	  105 -> 878
+	  106 -> 541
+	  107 -> 611
+	  108 -> 434
+	  108 -> 165
+	  109 -> 928
+	  110 -> 14
+	  111 -> 223
+	  112 -> 489
+	  113 -> 493
+	  114 -> 115
+	  114 -> 116
+	  115 -> 931
+	  116 -> 225
+	  117 -> 229
+	  118 -> 175
+	  119 -> 805
+	  120 -> 347
+	  121 -> 397
+	  122 -> 579
+	  123 -> 268
+	  124 -> 125
+	  124 -> 126
+	  125 -> 764
+	  126 -> 399
+	  127 -> 7
+	  128 -> 524
+	  129 -> 719
+	  130 -> 718
+	  131 -> 455
+	  132 -> 629
+	  134 -> 136
+	  134 -> 135
+	  135 -> 780
+	  136 -> 779
+	  137 -> 138
+	  137 -> 139
+	  138 -> 313
+	  139 -> 784
+	  140 -> 843
+	  141 -> 91
+	  142 -> 192
+	  143 -> 98
+	  144 -> 145
+	  144 -> 146
+	  145 -> 370
+	  146 -> 198
+	  147 -> 915
+	  148 -> 244
+	  149 -> 154
+	  150 -> 152
+	  150 -> 151
+	  151 -> 52
+	  152 -> 374
+	  153 -> 598
+	  153 -> 597
+	  153 -> 637
+	  153 -> 918
+	  154 -> 371
+	  155 -> 127
+	  156 -> 599
+	  157 -> 599
+	  158 -> 54
+	  159 -> 206
+	  160 -> 161
+	  160 -> 162
+	  161 -> 210
+	  162 -> 925
+	  163 -> 797
+	  164 -> 386
+	  165 -> 57
+	  166 -> 59
+	  167 -> 16
+	  168 -> 667
+	  169 -> 197
+	  170 -> 896
+	  171 -> 707
+	  171 -> 342
+	  171 -> 303
+	  172 -> 66
+	  173 -> 500
+	  174 -> 175
+	  175 -> 902
+	  176 -> 347
+	  177 -> 903
+	  178 -> 524
+	  179 -> 180
+	  179 -> 181
+	  180 -> 33
+	  181 -> 362
+	  182 -> 757
+	  183 -> 269
+	  184 -> 402
+	  185 -> 235
+	  186 -> 280
+	  187 -> 581
+	  188 -> 283
+	  189 -> 521
+	  190 -> 318
+	  191 -> 70
+	  192 -> 413
+	  193 -> 814
+	  193 -> 367
+	  193 -> 48
+	  193 -> 829
+	  193 -> 830
+	  194 -> 464
+	  195 -> 413
+	  196 -> 789
+	  197 -> 731
+	  198 -> 200
+	  198 -> 199
+	  199 -> 147
+	  200 -> 914
+	  201 -> 634
+	  201 -> 734
+	  201 -> 790
+	  202 -> 203
+	  202 -> 204
+	  203 -> 872
+	  204 -> 322
+	  205 -> 856
+	  206 -> 379
+	  206 -> 475
+	  207 -> 540
+	  208 -> 524
+	  209 -> 841
+	  209 -> 325
+	  209 -> 295
+	  210 -> 79
+	  211 -> 212
+	  211 -> 213
+	  212 -> 542
+	  213 -> 106
+	  214 -> 882
+	  215 -> 926
+	  216 -> 217
+	  216 -> 218
+	  217 -> 220
+	  218 -> 392
+	  219 -> 655
+	  220 -> 436
+	  221 -> 489
+	  222 -> 335
+	  223 -> 493
+	  224 -> 169
+	  225 -> 301
+	  226 -> 899
+	  226 -> 756
+	  226 -> 558
+	  227 -> 67
+	  228 -> 524
+	  229 -> 664
+	  229 -> 174
+	  229 -> 118
+	  230 -> 73
+	  231 -> 828
+	  232 -> 772
+	  233 -> 723
+	  234 -> 358
+	  235 -> 237
+	  236 -> 519
+	  237 -> 459
+	  238 -> 684
+	  239 -> 860
+	  240 -> 65
+	  241 -> 865
+	  242 -> 869
+	  243 -> 245
+	  243 -> 246
+	  244 -> 243
+	  245 -> 870
+	  246 -> 372
+	  247 -> 537
+	  248 -> 695
+	  249 -> 100
+	  250 -> 205
+	  251 -> 253
+	  251 -> 254
+	  252 -> 321
+	  253 -> 922
+	  254 -> 524
+	  255 -> 541
+	  256 -> 432
+	  257 -> 524
+	  258 -> 15
+	  259 -> 25
+	  260 -> 262
+	  260 -> 263
+	  261 -> 32
+	  262 -> 179
+	  264 -> 266
+	  264 -> 267
+	  265 -> 706
+	  266 -> 438
+	  267 -> 97
+	  268 -> 816
+	  269 -> 269
+	  270 -> 722
+	  271 -> 817
+	  272 -> 274
+	  272 -> 275
+	  273 -> 859
+	  274 -> 306
+	  275 -> 277
+	  275 -> 278
+	  276 -> 240
+	  277 -> 678
+	  279 -> 281
+	  279 -> 282
+	  280 -> 681
+	  281 -> 84
+	  282 -> 284
+	  282 -> 285
+	  283 -> 682
+	  284 -> 584
+	  285 -> 264
+	  286 -> 94
+	  287 -> 736
+	  287 -> 5
+	  287 -> 917
+	  288 -> 692
+	  289 -> 53
+	  290 -> 920
+	  291 -> 524
+	  292 -> 539
+	  292 -> 538
+	  292 -> 643
+	  293 -> 524
+	  294 -> 923
+	  295 -> 56
+	  296 -> 610
+	  297 -> 433
+	  298 -> 755
+	  299 -> 657
+	  300 -> 895
+	  301 -> 21
+	  302 -> 497
+	  303 -> 524
+	  304 -> 418
+	  305 -> 307
+	  305 -> 308
+	  306 -> 940
+	  307 -> 80
+	  308 -> 310
+	  308 -> 311
+	  309 -> 864
+	  310 -> 314
+	  311 -> 936
+	  311 -> 683
+	  311 -> 590
+	  311 -> 406
+	  311 -> 511
+	  312 -> 85
+	  313 -> 403
+	  314 -> 465
+	  315 -> 50
+	  316 -> 736
+	  316 -> 917
+	  317 -> 533
+	  318 -> 289
+	  318 -> 627
+	  318 -> 534
+	  319 -> 524
+	  320 -> 320
+	  321 -> 323
+	  321 -> 324
+	  322 -> 209
+	  323 -> 102
+	  324 -> 646
+	  325 -> 479
+	  326 -> 381
+	  327 -> 886
+	  328 -> 330
+	  328 -> 331
+	  329 -> 110
+	  330 -> 553
+	  331 -> 164
+	  332 -> 492
+	  333 -> 550
+	  334 -> 113
+	  335 -> 337
+	  335 -> 338
+	  336 -> 491
+	  337 -> 929
+	  338 -> 340
+	  338 -> 341
+	  339 -> 437
+	  340 -> 659
+	  341 -> 853
+	  342 -> 173
+	  343 -> 345
+	  343 -> 346
+	  344 -> 230
+	  345 -> 232
+	  345 -> 857
+	  346 -> 564
+	  347 -> 566
+	  348 -> 128
+	  349 -> 624
+	  350 -> 34
+	  351 -> 353
+	  351 -> 354
+	  352 -> 517
+	  353 -> 271
+	  354 -> 356
+	  354 -> 357
+	  355 -> 939
+	  356 -> 816
+	  357 -> 820
+	  358 -> 407
+	  359 -> 189
+	  360 -> 261
+	  361 -> 904
+	  362 -> 364
+	  362 -> 365
+	  363 -> 798
+	  364 -> 797
+	  365 -> 703
+	  366 -> 2
+	  367 -> 532
+	  368 -> 144
+	  369 -> 915
+	  370 -> 468
+	  371 -> 469
+	  372 -> 638
+	  373 -> 832
+	  374 -> 638
+	  375 -> 98
+	  376 -> 640
+	  377 -> 641
+	  378 -> 9
+	  379 -> 422
+	  380 -> 608
+	  381 -> 483
+	  382 -> 384
+	  382 -> 385
+	  383 -> 797
+	  384 -> 163
+	  385 -> 387
+	  385 -> 388
+	  386 -> 545
+	  387 -> 58
+	  388 -> 390
+	  388 -> 391
+	  389 -> 109
+	  390 -> 613
+	  391 -> 393
+	  391 -> 394
+	  392 -> 488
+	  393 -> 657
+	  394 -> 620
+	  395 -> 768
+	  395 -> 350
+	  395 -> 767
+	  396 -> 524
+	  397 -> 855
+	  398 -> 509
+	  399 -> 335
+	  400 -> 576
+	  401 -> 273
+	  402 -> 404
+	  402 -> 405
+	  403 -> 83
+	  404 -> 675
+	  405 -> 824
+	  406 -> 460
+	  407 -> 360
+	  407 -> 941
+	  408 -> 137
+	  409 -> 742
+	  410 -> 368
+	  411 -> 224
+	  411 -> 595
+	  411 -> 196
+	  412 -> 412
+	  413 -> 197
+	  414 -> 596
+	  415 -> 149
+	  416 -> 472
+	  417 -> 249
+	  418 -> 420
+	  418 -> 421
+	  419 -> 250
+	  420 -> 158
+	  421 -> 424
+	  421 -> 423
+	  422 -> 924
+	  423 -> 698
+	  424 -> 389
+	  425 -> 427
+	  425 -> 428
+	  426 -> 166
+	  427 -> 484
+	  428 -> 751
+	  429 -> 11
+	  430 -> 890
+	  431 -> 524
+	  432 -> 257
+	  433 -> 548
+	  434 -> 550
+	  435 -> 334
+	  436 -> 302
+	  437 -> 757
+	  438 -> 498
+	  439 -> 173
+	  440 -> 24
+	  441 -> 524
+	  442 -> 26
+	  443 -> 905
+	  444 -> 572
+	  445 -> 97
+	  446 -> 903
+	  447 -> 449
+	  447 -> 450
+	  448 -> 773
+	  449 -> 774
+	  451 -> 453
+	  451 -> 454
+	  452 -> 781
+	  453 -> 235
+	  454 -> 629
+	  455 -> 769
+	  456 -> 122
+	  457 -> 137
+	  458 -> 785
+	  459 -> 520
+	  460 -> 524
+	  461 -> 202
+	  462 -> 65
+	  463 -> 687
+	  464 -> 413
+	  465 -> 316
+	  466 -> 154
+	  467 -> 636
+	  468 -> 470
+	  469 -> 288
+	  470 -> 98
+	  471 -> 835
+	  471 -> 876
+	  472 -> 156
+	  473 -> 379
+	  473 -> 475
+	  473 -> 159
+	  474 -> 378
+	  475 -> 602
+	  476 -> 10
+	  477 -> 649
+	  477 -> 380
+	  477 -> 86
+	  478 -> 480
+	  478 -> 481
+	  479 -> 160
+	  480 -> 794
+	  481 -> 543
+	  482 -> 56
+	  483 -> 485
+	  483 -> 486
+	  484 -> 332
+	  485 -> 300
+	  486 -> 429
+	  487 -> 887
+	  488 -> 259
+	  488 -> 616
+	  488 -> 333
+	  488 -> 111
+	  488 -> 222
+	  488 -> 575
+	  489 -> 549
+	  490 -> 556
+	  491 -> 63
+	  492 -> 494
+	  492 -> 495
+	  493 -> 167
+	  494 -> 850
+	  495 -> 916
+	  496 -> 66
+	  497 -> 173
+	  498 -> 933
+	  499 -> 501
+	  499 -> 502
+	  500 -> 499
+	  501 -> 771
+	  502 -> 441
+	  503 -> 505
+	  503 -> 506
+	  504 -> 503
+	  505 -> 304
+	  506 -> 508
+	  507 -> 442
+	  508 -> 524
+	  509 -> 351
+	  510 -> 458
+	  511 -> 592
+	  512 -> 715
+	  513 -> 515
+	  513 -> 516
+	  514 -> 578
+	  515 -> 184
+	  516 -> 722
+	  517 -> 273
+	  518 -> 825
+	  519 -> 775
+	  520 -> 522
+	  520 -> 523
+	  521 -> 359
+	  522 -> 685
+	  523 -> 361
+	  523 -> 906
+	  523 -> 43
+	  523 -> 140
+	  523 -> 525
+	  523 -> 462
+	  523 -> 410
+	  523 -> 826
+	  523 -> 286
+	  523 -> 190
+	  523 -> 191
+	  524 -> 617
+	  525 -> 528
+	  525 -> 527
+	  526 -> 90
+	  527 -> 735
+	  528 -> 530
+	  529 -> 366
+	  530 -> 193
+	  531 -> 287
+	  532 -> 833
+	  533 -> 448
+	  534 -> 8
+	  535 -> 97
+	  536 -> 474
+	  537 -> 697
+	  538 -> 645
+	  539 -> 103
+	  540 -> 87
+	  541 -> 541
+	  542 -> 750
+	  543 -> 383
+	  544 -> 297
+	  545 -> 889
+	  546 -> 799
+	  547 -> 612
+	  548 -> 62
+	  549 -> 552
+	  549 -> 551
+	  550 -> 490
+	  551 -> 849
+	  552 -> 554
+	  552 -> 555
+	  553 -> 547
+	  554 -> 336
+	  555 -> 801
+	  556 -> 618
+	  557 -> 813
+	  558 -> 932
+	  559 -> 171
+	  560 -> 68
+	  561 -> 74
+	  562 -> 26
+	  563 -> 665
+	  563 -> 666
+	  564 -> 447
+	  565 -> 568
+	  565 -> 567
+	  566 -> 622
+	  567 -> 29
+	  568 -> 570
+	  568 -> 571
+	  569 -> 812
+	  570 -> 445
+	  571 -> 573
+	  571 -> 574
+	  572 -> 766
+	  573 -> 396
+	  574 -> 400
+	  575 -> 686
+	  576 -> 816
+	  577 -> 818
+	  578 -> 312
+	  579 -> 42
+	  580 -> 582
+	  580 -> 583
+	  581 -> 188
+	  582 -> 823
+	  583 -> 585
+	  583 -> 586
+	  584 -> 587
+	  585 -> 457
+	  586 -> 122
+	  587 -> 189
+	  588 -> 409
+	  589 -> 458
+	  590 -> 65
+	  591 -> 913
+	  591 -> 46
+	  592 -> 828
+	  593 -> 787
+	  594 -> 414
+	  595 -> 154
+	  596 -> 375
+	  597 -> 373
+	  598 -> 97
+	  599 -> 524
+	  600 -> 292
+	  601 -> 696
+	  601 -> 921
+	  601 -> 207
+	  602 -> 252
+	  603 -> 605
+	  603 -> 606
+	  604 -> 644
+	  605 -> 208
+	  606 -> 923
+	  607 -> 524
+	  608 -> 296
+	  609 -> 328
+	  609 -> 487
+	  610 -> 704
+	  611 -> 165
+	  612 -> 614
+	  612 -> 615
+	  613 -> 12
+	  614 -> 13
+	  615 -> 668
+	  616 -> 20
+	  617 -> 265
+	  618 -> 803
+	  618 -> 227
+	  618 -> 708
+	  618 -> 395
+	  618 -> 439
+	  619 -> 663
+	  620 -> 26
+	  621 -> 177
+	  622 -> 815
+	  623 -> 713
+	  624 -> 510
+	  625 -> 524
+	  626 -> 692
+	  627 -> 276
+	  628 -> 675
+	  629 -> 684
+	  630 -> 39
+	  631 -> 49
+	  632 -> 201
+	  633 -> 466
+	  634 -> 467
+	  635 -> 372
+	  635 -> 871
+	  636 -> 373
+	  637 -> 639
+	  638 -> 737
+	  639 -> 838
+	  640 -> 642
+	  641 -> 601
+	  642 -> 603
+	  643 -> 208
+	  644 -> 252
+	  645 -> 648
+	  645 -> 647
+	  646 -> 607
+	  647 -> 793
+	  648 -> 326
+	  649 -> 363
+	  650 -> 426
+	  651 -> 797
+	  652 -> 425
+	  652 -> 651
+	  652 -> 845
+	  652 -> 827
+	  652 -> 700
+	  653 -> 430
+	  654 -> 431
+	  655 -> 797
+	  656 -> 64
+	  657 -> 524
+	  658 -> 21
+	  659 -> 661
+	  659 -> 662
+	  660 -> 560
+	  661 -> 171
+	  662 -> 500
+	  663 -> 175
+	  664 -> 443
+	  665 -> 76
+	  666 -> 658
+	  667 -> 493
+	  668 -> 670
+	  669 -> 524
+	  670 -> 672
+	  670 -> 673
+	  673 -> 608
+	  674 -> 676
+	  674 -> 677
+	  675 -> 134
+	  676 -> 452
+	  677 -> 680
+	  677 -> 679
+	  678 -> 631
+	  679 -> 309
+	  680 -> 187
+	  681 -> 122
+	  682 -> 824
+	  683 -> 137
+	  684 -> 461
+	  685 -> 193
+	  686 -> 531
+	  687 -> 369
+	  688 -> 148
+	  689 -> 597
+	  689 -> 637
+	  690 -> 524
+	  691 -> 693
+	  691 -> 694
+	  692 -> 290
+	  693 -> 99
+	  694 -> 536
+	  695 -> 792
+	  696 -> 252
+	  697 -> 255
+	  698 -> 744
+	  699 -> 216
+	  700 -> 704
+	  701 -> 658
+	  702 -> 729
+	  703 -> 298
+	  704 -> 802
+	  705 -> 438
+	  706 -> 172
+	  707 -> 343
+	  708 -> 760
+	  709 -> 712
+	  709 -> 711
+	  710 -> 761
+	  711 -> 507
+	  712 -> 524
+	  713 -> 473
+	  713 -> 740
+	  713 -> 877
+	  714 -> 716
+	  715 -> 228
+	  716 -> 608
+	  717 -> 272
+	  718 -> 720
+	  718 -> 721
+	  719 -> 234
+	  720 -> 526
+	  721 -> 35
+	  721 -> 938
+	  721 -> 909
+	  721 -> 910
+	  721 -> 911
+	  722 -> 36
+	  723 -> 725
+	  723 -> 726
+	  724 -> 580
+	  725 -> 456
+	  726 -> 280
+	  727 -> 319
+	  728 -> 242
+	  729 -> 195
+	  730 -> 732
+	  731 -> 733
+	  732 -> 95
+	  733 -> 868
+	  734 -> 416
+	  734 -> 635
+	  734 -> 4
+	  734 -> 415
+	  735 -> 690
+	  736 -> 150
+	  737 -> 875
+	  738 -> 834
+	  739 -> 156
+	  740 -> 103
+	  741 -> 478
+	  742 -> 327
+	  743 -> 717
+	  744 -> 541
+	  745 -> 747
+	  745 -> 748
+	  746 -> 745
+	  747 -> 256
+	  748 -> 794
+	  749 -> 650
+	  750 -> 328
+	  751 -> 846
+	  752 -> 550
+	  753 -> 19
+	  754 -> 797
+	  755 -> 182
+	  756 -> 758
+	  756 -> 759
+	  757 -> 496
+	  758 -> 852
+	  759 -> 513
+	  760 -> 507
+	  761 -> 344
+	  762 -> 562
+	  763 -> 509
+	  764 -> 509
+	  765 -> 623
+	  766 -> 624
+	  767 -> 77
+	  768 -> 186
+	  769 -> 684
+	  770 -> 907
+	  771 -> 804
+	  772 -> 53
+	  773 -> 123
+	  774 -> 524
+	  775 -> 777
+	  775 -> 778
+	  776 -> 131
+	  776 -> 861
+	  777 -> 629
+	  778 -> 235
+	  779 -> 235
+	  780 -> 782
+	  780 -> 783
+	  781 -> 863
+	  782 -> 185
+	  783 -> 912
+	  784 -> 588
+	  785 -> 408
+	  786 -> 788
+	  787 -> 193
+	  788 -> 197
+	  789 -> 868
+	  790 -> 101
+	  791 -> 103
+	  792 -> 923
+	  793 -> 795
+	  793 -> 796
+	  794 -> 743
+	  795 -> 699
+	  796 -> 425
+	  796 -> 651
+	  796 -> 845
+	  796 -> 215
+	  796 -> 827
+	  796 -> 700
+	  797 -> 544
+	  798 -> 848
+	  799 -> 610
+	  800 -> 754
+	  801 -> 339
+	  802 -> 440
+	  803 -> 176
+	  803 -> 763
+	  803 -> 120
+	  803 -> 119
+	  804 -> 564
+	  805 -> 808
+	  805 -> 807
+	  806 -> 565
+	  807 -> 29
+	  808 -> 810
+	  808 -> 811
+	  809 -> 444
+	  810 -> 905
+	  811 -> 121
+	  812 -> 757
+	  813 -> 401
+	  814 -> 524
+	  815 -> 130
+	  816 -> 514
+	  817 -> 518
+	  818 -> 403
+	  819 -> 821
+	  819 -> 822
+	  820 -> 724
+	  821 -> 727
+	  822 -> 236
+	  823 -> 137
+	  824 -> 770
+	  824 -> 589
+	  824 -> 630
+	  824 -> 239
+	  825 -> 762
+	  826 -> 216
+	  827 -> 529
+	  828 -> 92
+	  829 -> 866
+	  830 -> 411
+	  831 -> 691
+	  832 -> 919
+	  833 -> 419
+	  834 -> 837
+	  835 -> 123
+	  836 -> 127
+	  837 -> 840
+	  837 -> 839
+	  838 -> 305
+	  838 -> 535
+	  839 -> 418
+	  840 -> 923
+	  841 -> 937
+	  842 -> 609
+	  842 -> 844
+	  843 -> 214
+	  844 -> 329
+	  845 -> 701
+	  846 -> 219
+	  847 -> 927
+	  848 -> 549
+	  849 -> 168
+	  850 -> 226
+	  851 -> 559
+	  852 -> 66
+	  853 -> 25
+	  854 -> 78
+	  855 -> 908
+	  856 -> 669
+	  857 -> 722
+	  858 -> 276
+	  859 -> 776
+	  860 -> 132
+	  861 -> 276
+	  862 -> 235
+	  863 -> 403
+	  864 -> 594
+	  865 -> 831
+	  866 -> 3
+	  867 -> 689
+	  868 -> 524
+	  869 -> 869
+	  870 -> 247
+	  871 -> 873
+	  871 -> 874
+	  872 -> 248
+	  873 -> 476
+	  874 -> 714
+	  875 -> 155
+	  876 -> 157
+	  877 -> 604
+	  878 -> 880
+	  878 -> 881
+	  879 -> 211
+	  880 -> 746
+	  881 -> 883
+	  881 -> 884
+	  882 -> 885
+	  883 -> 482
+	  884 -> 382
+	  885 -> 890
+	  886 -> 654
+	  887 -> 546
+	  888 -> 847
+	  889 -> 752
+	  889 -> 107
+	  890 -> 892
+	  890 -> 893
+	  891 -> 112
+	  892 -> 221
+	  893 -> 802
+	  894 -> 705
+	  894 -> 930
+	  894 -> 170
+	  894 -> 463
+	  894 -> 591
+	  894 -> 241
+	  894 -> 894
+	  895 -> 897
+	  895 -> 898
+	  896 -> 557
+	  897 -> 618
+	  898 -> 813
+	  899 -> 504
+	  900 -> 709
+	  901 -> 710
+	  902 -> 178
+	  903 -> 935
+	  904 -> 524
+	  905 -> 569
+	  906 -> 626
+	  907 -> 600
+	  908 -> 816
+	  909 -> 577
+	  910 -> 355
+	  911 -> 360
+	  911 -> 786
+	  911 -> 941
+	  912 -> 47
+	  913 -> 915
+	  914 -> 96
+	  915 -> 559
+	  916 -> 153
+	  917 -> 373
+	  918 -> 6
+	  919 -> 856
+	  919 -> 600
+	  920 -> 741
+	  921 -> 320
+	  922 -> 477
+	  923 -> 255
+	  924 -> 79
+	  925 -> 653
+	  926 -> 108
+	  927 -> 656
+	  928 -> 556
+	  929 -> 802
+	  930 -> 225
+	  931 -> 619
+	  932 -> 561
+	  933 -> 621
+	  934 -> 809
+	  935 -> 824
+	  936 -> 749
+	  937 -> 183
+	  938 -> 816
+	  939 -> 276
+	  940 -> 189
+}
+

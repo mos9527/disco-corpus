@@ -1,0 +1,360 @@
+# DOOMED / CENTRAL FURNACE
+# This is an industrial oven on the first floor of Doomed. You can interact with it and contact Dicemaker.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Central Furnace: A thick layer of coal dust covers the furnace, colouring it pitch-black."];
+	  3 [label="Inland Empire: Three dangerous stripes appear onto your cheeks, telling stories of your wild soul."];
+	  4 [label="Central Furnace: A hollow ring echoes through the furnace. Your toe hurts."];
+	  5 [label="You: Yell \"Hello!\" into the furnace."];
+	  6 [label="You: Variable[\"doomed.furnace_phys_in_whitecheck\"]"];
+	  7 [label="Variable[\"doomed.furnace_phys_in_whitecheck\"]", shape=diamond];
+	  8 [label="!(Variable[\"doomed.furnace_phys_in_whitecheck\"])", shape=diamond];
+	  9 [label="Kim Kitsuragi: \"And *this* protects you?\""];
+	  10 [label="You: Wipe it clean."];
+	  11 [label="Kim Kitsuragi: \"Hmm, maybe you should let your voice rest, officer. Try again later.\""];
+	  12 [label="Central Furnace: The chatter from the chimney continue on as before. You seem to have made no impression on whatever's *up there*."];
+	  13 [label="You: \"I'm not sure, Kim... but I think I can hear someone talking upstairs.\""];
+	  14 [label="Electrochemistry: Or maybe you're just hungover again."];
+	  15 [label="You: Smear your hands with coal."];
+	  16 [label="You: No, let's not express ourselves. Let's just wipe our hands clean on our pants."];
+	  17 [label="Kim Kitsuragi: \"Please wipe your face clean, officer.\""];
+	  18 [label="Central Furnace: IsKimHere()"];
+	  19 [label="IsKimHere()", shape=diamond];
+	  20 [label="!(IsKimHere())", shape=diamond];
+	  21 [label="Kim Kitsuragi: \"What are you doing?\" the lieutenant asks when he sees you climb half-way inside the furnace."];
+	  22 [label="Endurance: Could it be psychological? Because your physical health is fine."];
+	  23 [label="Kim Kitsuragi: \"Thank you,\" the lieutenant nods. \"So, where were we?\" He turns back to the furnace."];
+	  24 [label="Central Furnace: \"Hello?\" you hear a woman's voice answer."];
+	  25 [label="Inland Empire: Looks like this furnace has a face and it's a face of agony."];
+	  26 [label="Authority: You can feel your cheeks turn red under the lieutenant's gaze -- you look like a kid, not a police officer. Even the war-paint can't conceal the embarrassment."];
+	  27 [label="Untitled hub"];
+	  28 [label="Central Furnace: Variable[\"doomed.seen_furnace\"]"];
+	  29 [label="Variable[\"doomed.seen_furnace\"]", shape=diamond];
+	  30 [label="!(Variable[\"doomed.seen_furnace\"])", shape=diamond];
+	  31 [label="Central Furnace: Variable[\"doomed.seen_safety_curtains\"]"];
+	  32 [label="Variable[\"doomed.seen_safety_curtains\"]", shape=diamond];
+	  33 [label="!(Variable[\"doomed.seen_safety_curtains\"])", shape=diamond];
+	  34 [label="Kim Kitsuragi: \"We should ask the lady in the bookstore what's going on with these curtains.\""];
+	  35 [label="Central Furnace: Variable[\"doomed.furnace_redcheck_authority\"]"];
+	  36 [label="Variable[\"doomed.furnace_redcheck_authority\"]", shape=diamond];
+	  37 [label="!(Variable[\"doomed.furnace_redcheck_authority\"])", shape=diamond];
+	  38 [label="You: \"It gives me confidence and that's all that matters, Kim.\""];
+	  39 [label="Central Furnace: IsTHCPresent(\"radical_feminist_agenda\")"];
+	  40 [label="IsTHCPresent(\"radical_feminist_agenda\")", shape=diamond];
+	  41 [label="!(IsTHCPresent(\"radical_feminist_agenda\"))", shape=diamond];
+	  42 [label="Central Furnace: SetVariableValue(\"doomed.furnace_warpainted_your_face\", true) --[[ Variable[ ]]"];
+	  43 [label="You: I'm getting carbon monoxide poisoning."];
+	  44 [label="Physical Instrument: Another pathetic yelp sounds off into the vast darkness of the chimney. You're a little embarrassed you produced it."];
+	  45 [label="Central Furnace: IsKimHere()"];
+	  46 [label="IsKimHere()", shape=diamond];
+	  47 [label="!(IsKimHere())", shape=diamond];
+	  48 [label="Jump to: [furnace hub]"];
+	  49 [label="redcheck hub"];
+	  50 [label="Physical Instrument: Something *breaks loose* in you. A mighty bellow echoes throughout the chimney's depths. The chatter of tiny voices above suddenly cease. Then..."];
+	  51 [label="Kim Kitsuragi: \"Wait, really?\" He looks up at the ceiling. \"Maybe it's coming from behind those safety curtains we saw upstairs?\""];
+	  52 [label="Kim Kitsuragi: \"Wait, really?\" He looks up at the ceiling. \"We should investigate, see if someone's upstairs.\""];
+	  53 [label="Half Light: And it's a woman! Of course! The malicious entities are *always* women."];
+	  54 [label="Central Furnace: IsKimHere()"];
+	  55 [label="IsKimHere()", shape=diamond];
+	  56 [label="!(IsKimHere())", shape=diamond];
+	  57 [label="Central Furnace: IsKimHere()"];
+	  58 [label="IsKimHere()", shape=diamond];
+	  59 [label="!(IsKimHere())", shape=diamond];
+	  60 [label="You: What's happening?!"];
+	  61 [label="You: I'm hallucinating..."];
+	  62 [label="Jump to: [furnace hub]"];
+	  63 [label="You: [Leave.]"];
+	  64 [label="Central Furnace: Variable[\"doomed.seen_safety_curtains\"]"];
+	  65 [label="Variable[\"doomed.seen_safety_curtains\"]", shape=diamond];
+	  66 [label="!(Variable[\"doomed.seen_safety_curtains\"])", shape=diamond];
+	  67 [label="Kim Kitsuragi: \"Wait, really?\" The lieutenant sounds concerned. \"Take your head out of the chimney, please. It's not safe.\""];
+	  68 [label="Volition: This sounded real, not imagined."];
+	  69 [label="You: Hadramut Karzai! Smear your cheeks black with coal."];
+	  70 [label="Kim Kitsuragi: \"Looks like it. Looks like an old central furnace used to heat the building. It's connected to the chimney...\" He opens the door and gingerly peeks inside."];
+	  71 [label="You: \"This is the police! Who's there?\""];
+	  72 [label="Authority: These three stripes give you strength in this dangerous realm. It would be foolish to remove them."];
+	  73 [label="Central Furnace: IsKimHere()"];
+	  74 [label="IsKimHere()", shape=diamond];
+	  75 [label="!(IsKimHere())", shape=diamond];
+	  76 [label="You: \"Those voices I heard... Maybe it's the malignant Entity? Plaisance said it lives in a chimney.\""];
+	  77 [label="Central Furnace: Maybe it's coming from behind those safety curtains you saw upstairs? You should investigate..."];
+	  78 [label="Kim Kitsuragi: The lieutenant seems relieved as well."];
+	  79 [label="Encyclopedia: Just pointing out -- this is *not* traditional Semenese war-paint. No idea where you got it."];
+	  80 [label="Jump to: [furnace hub]"];
+	  81 [label="Central Furnace: It's dark and grimy here. In the darkness, you can hear *chatter*. It's coming from above. A voice -- or several voices -- talking to each other, near the smoke chamber upstairs."];
+	  82 [label="Jump to: [furnace hub]"];
+	  83 [label="Half Light: Then what was the chatter you heard?"];
+	  84 [label="Inland Empire: Yes, how grown-up. The furnace agrees."];
+	  85 [label="Kim Kitsuragi: \"Yes. Yes, it was,\" the lieutenant nods, before turning back to the furnace."];
+	  86 [label="You: \"Hello! Are you there? Speak to me!\""];
+	  87 [label="Physical Instrument: You muster all your strength and yell..."];
+	  88 [label="Jump to: [furnace hub]"];
+	  89 [label="You: \"We're exploring this dark place and I need the protection my war-paint affords.\""];
+	  90 [label="You: \"*This* is traditional war-paint. It will grant me safe passage with the spirits that guard this place.\""];
+	  91 [label="Central Furnace: \"Hello! Did you say anything?\" There's a pause. \"I can't hear you, please come upstairs! There's a safety curtain on the second floor, I'll open it!\""];
+	  92 [label="Inland Empire: You've awakened the entity!"];
+	  93 [label="Central Furnace: Variable[\"doomed.furnace_yelling_failed_once\"]"];
+	  94 [label="Variable[\"doomed.furnace_yelling_failed_once\"]", shape=diamond];
+	  95 [label="!(Variable[\"doomed.furnace_yelling_failed_once\"])", shape=diamond];
+	  96 [label="You: \"I am the reincarnation of an ancient Iilmaraan warrior.\""];
+	  97 [label="You: \"I summon the ghost of this Doomed Commercial Area. Now begone, vile succubus!\""];
+	  98 [label="Esprit de Corps: It feels safe to know that the lieutenant's got your back, now and always."];
+	  99 [label="no Kim hub"];
+	  100 [label="Central Furnace: Maybe it's coming from somewhere upstairs? You should investigate..."];
+	  101 [label="Perception (Hearing): The echo is so prominent, it's impossible to discern what the voices are saying. Or what's producing them."];
+	  102 [label="furnace hub"];
+	  103 [label="You: Look inside the furnace."];
+	  104 [label="You: Kick it with your foot."];
+	  105 [label="Central Furnace: Variable[\"doomed.furnace_phys_in_whitecheck\"]"];
+	  106 [label="Variable[\"doomed.furnace_phys_in_whitecheck\"]", shape=diamond];
+	  107 [label="!(Variable[\"doomed.furnace_phys_in_whitecheck\"])", shape=diamond];
+	  108 [label="Rhetoric: Always has to be the sceptic, this man..."];
+	  109 [label="You: \"He... he... hekkhhhh...\""];
+	  110 [label="Jump to: [furnace hub]"];
+	  111 [label="Kim Kitsuragi: \"What... what are you doing?\""];
+	  112 [label="Kim Kitsuragi: \"No one has used it in ages... No signs of any recent fire, only dead rats.\""];
+	  113 [label="Central Furnace: Variable[\"tc.doomed_commercial_area\"]  or  Variable[\"plaza.annette_heard_of_doomed\"]"];
+	  114 [label="Variable[\"tc.doomed_commercial_area\"]  or  Variable[\"plaza.annette_heard_of_doomed\"]", shape=diamond];
+	  115 [label="!(Variable[\"tc.doomed_commercial_area\"]  or  Variable[\"plaza.annette_heard_of_doomed\"])", shape=diamond];
+	  116 [label="Conceptualization: No, you're a proud warrior, keep it."];
+	  117 [label="Jump to: [furnace hub]"];
+	  118 [label="Central Furnace: Variable[\"doomed.furnace_clicked_malicious_entity\"]"];
+	  119 [label="Variable[\"doomed.furnace_clicked_malicious_entity\"]", shape=diamond];
+	  120 [label="!(Variable[\"doomed.furnace_clicked_malicious_entity\"])", shape=diamond];
+	  121 [label="Central Furnace: Variable[\"doomed.furnace_said_traditional_warpaint\"]"];
+	  122 [label="Variable[\"doomed.furnace_said_traditional_warpaint\"]", shape=diamond];
+	  123 [label="!(Variable[\"doomed.furnace_said_traditional_warpaint\"])", shape=diamond];
+	  124 [label="Kim hub"];
+	  125 [label="You: \"I'm hallucinating.\""];
+	  126 [label="Jump to: [furnace hub]"];
+	  127 [label="Conceptualization: Maybe you could *paint* something with this coal? Leave a cave painting for future archaeologists... no, that would be stupid."];
+	  128 [label="Central Furnace: A thick layer of coal dust covers the furnace, colouring it pitch-black."];
+	  129 [label="Inland Empire: You feel the spirit of Ramout Karzai, ancient hero of Graad, pulsing through you. All that's left is to cover your face in war-paint."];
+	  130 [label="Untitled hub (02)"];
+	  131 [label="You: \"I hear the murderer of the hanged man talking.\""];
+	  132 [label="Volition: This sounded real, not imagined."];
+	  133 [label="Central Furnace: Then again -- maybe it's worth actually trying something *up there*?"];
+	  134 [label="Authority: What a proud warrior! This is how the hunted becomes the hunter in this dark dangerous place."];
+	  135 [label="Perception (Hearing): You hear a low rumble upstairs -- the sound of a curtain being pulled aside."];
+	  136 [label="Volition: A lifetime of smoking and drinking will do that to you."];
+	  137 [label="You: I hear the murderer of the hanged man talking."];
+	  138 [label="Central Furnace: Variable[\"TASK.find_the_witch\"]"];
+	  139 [label="Variable[\"TASK.find_the_witch\"]", shape=diamond];
+	  140 [label="!(Variable[\"TASK.find_the_witch\"])", shape=diamond];
+	  141 [label="You: \"Kim, what is this thing? Is it a furnace?!\""];
+	  142 [label="Central Furnace: Variable[\"doomed.furnace_concept_warpaint_your_face\"]"];
+	  143 [label="Variable[\"doomed.furnace_concept_warpaint_your_face\"]", shape=diamond];
+	  144 [label="!(Variable[\"doomed.furnace_concept_warpaint_your_face\"])", shape=diamond];
+	  145 [label="Physical Instrument: Still, it's good you have this dirt on you. Real men wear *coal* for make-up."];
+	  146 [label="Kim Kitsuragi: \"Okay, sure. Go ahead.\" He stubbornly looks away from you and the furnace."];
+	  147 [label="Jump to: [furnace hub]"];
+	  148 [label="You: \"I summon the ghost of this Doomed Commercial Area. Answer me, spirit!\""];
+	  149 [label="Kim Kitsuragi: \"You're right, the rooms do look like they're connected. But *malignant Entities* don't exist -- at least not the *supra-natural* kind.\""];
+	  150 [label="Physical Instrument: Your dehydrated, hungover throat can produce little more than a dry croak."];
+	  151 [label="Central Furnace: A lush layer of coal now covers your skin, sinking into the wrinkles. Your hands look ancient."];
+	  152 [label="You: \"Nothing!\" (Wipe your face clean.) \"Sorry, that was stupid.\""];
+	  153 [label="You: Don't wipe it."];
+	  154 [label="You: Variable[\"doomed.furnace_redcheck_authority\"]"];
+	  155 [label="Variable[\"doomed.furnace_redcheck_authority\"]", shape=diamond];
+	  156 [label="!(Variable[\"doomed.furnace_redcheck_authority\"])", shape=diamond];
+	  157 [label="Kim Kitsuragi: The lieutenant nods, then points upstairs. \"After you, officer.\""];
+	  158 [label="Jump to: [furnace hub]"];
+	  0 -> 1
+	  1 -> 28
+	  2 -> 103
+	  3 -> 46
+	  4 -> 103
+	  5 -> 6
+	  6 -> 8
+	  6 -> 7
+	  7 -> 106
+	  8 -> 106
+	  9 -> 91
+	  9 -> 38
+	  10 -> 23
+	  11 -> 89
+	  12 -> 134
+	  13 -> 65
+	  14 -> 22
+	  15 -> 152
+	  16 -> 85
+	  17 -> 117
+	  18 -> 19
+	  18 -> 20
+	  19 -> 79
+	  20 -> 49
+	  21 -> 125
+	  22 -> 133
+	  23 -> 49
+	  24 -> 114
+	  25 -> 103
+	  26 -> 10
+	  27 -> 72
+	  27 -> 98
+	  27 -> 149
+	  27 -> 87
+	  28 -> 29
+	  28 -> 30
+	  29 -> 2
+	  30 -> 129
+	  31 -> 32
+	  31 -> 33
+	  32 -> 78
+	  33 -> 101
+	  34 -> 83
+	  35 -> 36
+	  35 -> 37
+	  36 -> 73
+	  37 -> 26
+	  38 -> 147
+	  39 -> 40
+	  39 -> 41
+	  40 -> 27
+	  41 -> 54
+	  42 -> 135
+	  43 -> 31
+	  44 -> 111
+	  45 -> 48
+	  45 -> 47
+	  46 -> 112
+	  47 -> 42
+	  48 -> 103
+	  49 -> 154
+	  49 -> 10
+	  50 -> 24
+	  51 -> 139
+	  52 -> 83
+	  53 -> 27
+	  54 -> 56
+	  54 -> 57
+	  55 -> 11
+	  56 -> 81
+	  57 -> 59
+	  57 -> 60
+	  58 -> 21
+	  59 -> 100
+	  60 -> 31
+	  61 -> 31
+	  62 -> 103
+	  64 -> 66
+	  64 -> 67
+	  65 -> 52
+	  66 -> 53
+	  67 -> 99
+	  68 -> 83
+	  69 -> 3
+	  70 -> 113
+	  71 -> 92
+	  72 -> 90
+	  73 -> 75
+	  73 -> 76
+	  74 -> 158
+	  75 -> 118
+	  76 -> 150
+	  77 -> 14
+	  78 -> 49
+	  79 -> 148
+	  80 -> 103
+	  81 -> 102
+	  82 -> 103
+	  83 -> 127
+	  84 -> 18
+	  85 -> 49
+	  86 -> 92
+	  87 -> 110
+	  88 -> 103
+	  89 -> 9
+	  90 -> 147
+	  91 -> 136
+	  92 -> 119
+	  93 -> 96
+	  93 -> 95
+	  94 -> 44
+	  95 -> 88
+	  96 -> 17
+	  97 -> 92
+	  98 -> 69
+	  99 -> 138
+	  99 -> 43
+	  99 -> 61
+	  99 -> 62
+	  100 -> 14
+	  101 -> 58
+	  102 -> 64
+	  102 -> 5
+	  102 -> 104
+	  102 -> 105
+	  102 -> 77
+	  102 -> 142
+	  102 -> 15
+	  103 -> 82
+	  104 -> 4
+	  105 -> 107
+	  105 -> 108
+	  106 -> 51
+	  107 -> 94
+	  108 -> 84
+	  109 -> 151
+	  110 -> 103
+	  111 -> 97
+	  111 -> 153
+	  112 -> 159
+	  113 -> 115
+	  113 -> 116
+	  114 -> 93
+	  115 -> 119
+	  116 -> 50
+	  117 -> 103
+	  118 -> 120
+	  118 -> 121
+	  119 -> 39
+	  120 -> 27
+	  121 -> 123
+	  121 -> 124
+	  122 -> 80
+	  123 -> 148
+	  124 -> 132
+	  124 -> 13
+	  124 -> 126
+	  125 -> 68
+	  126 -> 103
+	  127 -> 146
+	  128 -> 25
+	  129 -> 143
+	  130 -> 16
+	  130 -> 70
+	  131 -> 65
+	  132 -> 63
+	  133 -> 55
+	  134 -> 49
+	  135 -> 74
+	  136 -> 12
+	  137 -> 31
+	  138 -> 140
+	  138 -> 141
+	  139 -> 83
+	  140 -> 34
+	  141 -> 71
+	  142 -> 144
+	  142 -> 145
+	  143 -> 131
+	  144 -> 128
+	  145 -> 49
+	  146 -> 122
+	  147 -> 103
+	  148 -> 92
+	  149 -> 109
+	  150 -> 137
+	  151 -> 130
+	  152 -> 86
+	  153 -> 155
+	  154 -> 156
+	  154 -> 157
+	  155 -> 35
+	  156 -> 35
+	  157 -> 118
+	  158 -> 103
+}
+

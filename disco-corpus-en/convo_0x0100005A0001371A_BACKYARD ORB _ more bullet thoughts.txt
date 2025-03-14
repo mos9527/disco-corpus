@@ -1,0 +1,107 @@
+# BACKYARD ORB / more bullet thoughts
+# quick comments with kim or not about the other bullet holes in this wall.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: Examine closer."];
+	  3 [label="Visual Calculus: More old bullet holes, half a century at least, from the Revolution."];
+	  4 [label="Kim Kitsuragi: \"Bullet holes generally look the same, so... probably.\" He leans in to inspect the wall. \"But you are right, more old bullet holes from the Revolution.\""];
+	  5 [label="You: \"Okay. But what can you tell me about the Revolution?\""];
+	  6 [label="You: \"So, no crime has happened here?\""];
+	  7 [label="Kim Kitsuragi: \"Might be the after-effects of your... past escapades. What are you looking at?\""];
+	  8 [label="Kim Kitsuragi: \"No, we're not constructors and renovators. And these bullet holes do not warrant an investigation.\""];
+	  9 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  10 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  11 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  12 [label="Kim Kitsuragi: The lieutenant nods."];
+	  13 [label="Variable[\"plaza.rene_asked_wardamage\"] == true  or  Variable[\"plaza.rene_mentioned_revolution_and_couron\"] == true  or  Variable[\"tc.revolution\"] == true"];
+	  14 [label="Variable[\"plaza.rene_asked_wardamage\"] == true  or  Variable[\"plaza.rene_mentioned_revolution_and_couron\"] == true  or  Variable[\"tc.revolution\"] == true", shape=diamond];
+	  15 [label="!(Variable[\"plaza.rene_asked_wardamage\"] == true  or  Variable[\"plaza.rene_mentioned_revolution_and_couron\"] == true  or  Variable[\"tc.revolution\"] == true)", shape=diamond];
+	  16 [label="You: \"Is there something we should do about these?\""];
+	  17 [label="Pain Threshold: Your chest feels tight, looking at them. It's closing in... caving in, ever tighter. Your breathing grows even heavier."];
+	  18 [label="You: \"Man, I started feeling really bad for a second.\""];
+	  19 [label="Shivers: The streets ran red with blood. Dust swirled above the ruins. The pressure change from artillery fire ripped people apart in the top floors of the building above you..."];
+	  20 [label="Visual Calculus: More old bullet holes, at least half a century. A different era altogether."];
+	  21 [label="You: \"These bullet holes look like the bullet holes we saw before.\""];
+	  22 [label="You: (Breathe out sharply.) \"Huh, yeah-yeah, I'm fine.\""];
+	  23 [label="You: [Discard thought.]"];
+	  24 [label="You: \"Never mind, then. Let's go.\" [Discard thought.]"];
+	  25 [label="Kim Kitsuragi: \"You were looking pale there for a second. What are you looking at?\""];
+	  26 [label="Jump to: [morekimquestions]"];
+	  27 [label="You: \"Figured as much.\" [Discard thought.]"];
+	  28 [label="Kim Kitsuragi: \"Not much. I don't have a *fresh perspective* on it. Should we go?\""];
+	  29 [label="morekimquestions"];
+	  30 [label="Kim Kitsuragi: \"You okay there?\" The lieutenant's sudden voice cuts like a blade, bringing you out of the stupor."];
+	  31 [label="You: \"Man, how many people got shot during that Revolution?\""];
+	  32 [label="Kim Kitsuragi: \"Plenty.\""];
+	  33 [label="You: \"Kim, look... more bullet holes. Someone has been shot here.\""];
+	  34 [label="Visual Calculus: Another set of awfully old bullet holes."];
+	  35 [label="Kim Kitsuragi: \"Perhaps *a* crime of a sort, ages ago... but no, these do not warrant an investigation.\""];
+	  36 [label="Variable[\"plaza.sense_bulletholes_viscal_said_old\"]"];
+	  37 [label="Variable[\"plaza.sense_bulletholes_viscal_said_old\"]", shape=diamond];
+	  38 [label="!(Variable[\"plaza.sense_bulletholes_viscal_said_old\"])", shape=diamond];
+	  39 [label="Pain Threshold: The spread pattern of these bullet holes makes your chest ache. Your breath grows heavier."];
+	  40 [label="Kim Kitsuragi: The lieutenant inspects the wall, then nods. \"Another set of old bullet holes from the Revolution.\""];
+	  41 [label="You: \"What's with all these bullet holes? I've seen a lot of them around.\""];
+	  42 [label="Kim Kitsuragi: The lieutenant looks at the wall. \"Remnants from the Revolution. These are over half a century old.\""];
+	  43 [label="Horrific Necktie: This is bad mojo, man! Fuckin' horrible mojo. The end draws near!"];
+	  44 [label="Kim Kitsuragi: \"A history of violence streaking all across Revachol.\""];
+	  45 [label="Pain Threshold: You peer into the faded marks in the stone... they peer back like an endless row of tiny black holes. Sweat starts trickling down your brow."];
+	  0 -> 1
+	  1 -> 40
+	  2 -> 46
+	  3 -> 30
+	  4 -> 32
+	  4 -> 28
+	  5 -> 29
+	  6 -> 36
+	  7 -> 27
+	  8 -> 25
+	  8 -> 5
+	  9 -> 10
+	  9 -> 11
+	  10 -> 44
+	  11 -> 17
+	  13 -> 14
+	  13 -> 15
+	  14 -> 3
+	  15 -> 21
+	  16 -> 8
+	  17 -> 31
+	  18 -> 7
+	  20 -> 30
+	  21 -> 4
+	  22 -> 26
+	  24 -> 12
+	  25 -> 27
+	  26 -> 30
+	  27 -> 45
+	  29 -> 2
+	  29 -> 34
+	  29 -> 42
+	  29 -> 22
+	  29 -> 24
+	  30 -> 19
+	  30 -> 23
+	  31 -> 33
+	  32 -> 20
+	  33 -> 41
+	  34 -> 30
+	  35 -> 25
+	  35 -> 5
+	  36 -> 38
+	  36 -> 39
+	  37 -> 35
+	  38 -> 13
+	  39 -> 37
+	  40 -> 32
+	  40 -> 28
+	  41 -> 43
+	  42 -> 16
+	  42 -> 6
+	  43 -> 17
+	  44 -> 20
+	  45 -> 9
+}
+

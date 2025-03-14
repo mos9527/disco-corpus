@@ -1,0 +1,79 @@
+# BOOKSTORE / COCKATOO
+# From A to Zrieek! Guide to a Well-Behaved Cockatoo. (Helen)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="bookhub"];
+	  3 [label="From A to Zrieek! A Guide To a Well-Behaved Cockatoo: IsKimHere()"];
+	  4 [label="IsKimHere()", shape=diamond];
+	  5 [label="!(IsKimHere())", shape=diamond];
+	  6 [label="From A to Zrieek! A Guide To a Well-Behaved Cockatoo: Turns out that there are so many different cockatoo species, and they all have behavioural problems."];
+	  7 [label="You: \"I want to buy the guide to cockatoos.\""];
+	  8 [label="You: Flip through the pages."];
+	  9 [label="Kim Kitsuragi: The lieutenant coughs sharply, then whispers: \"Do we really need to do this? I think not.\""];
+	  10 [label="Jump to: [bookhub]"];
+	  11 [label="Interfacing: Slowly, you move your hand toward the tome of cockatoos. Before you reach the book, you're interrupted:"];
+	  12 [label="Composure: You don't have behavioural problems. That's garbage. You're cool."];
+	  13 [label="You: \"What about this guide to cockatoos, storekeeper?\""];
+	  14 [label="Tutorial Agent: You've acquired an interactable item. Investigate this item further by going to the INTERACT tab in your INVENTORY."];
+	  15 [label="You: Steal the guide to cockatoos."];
+	  16 [label="You: Variable[\"doomed.book_cockatoo_wc_stealing\"]"];
+	  17 [label="Variable[\"doomed.book_cockatoo_wc_stealing\"]", shape=diamond];
+	  18 [label="!(Variable[\"doomed.book_cockatoo_wc_stealing\"])", shape=diamond];
+	  19 [label="Plaisance: \"Oh, a nature enthusiast! Good choice. I *knew* it was a good idea to keep that around...\""];
+	  20 [label="Plaisance: \"Sir, no touching the merchandise. People like their books pristine, not handled by god knows who.\""];
+	  21 [label="From A to Zrieek! A Guide To a Well-Behaved Cockatoo: Variable[\"doomed.book_cockatoo_wc_stealing\"]"];
+	  22 [label="Variable[\"doomed.book_cockatoo_wc_stealing\"]", shape=diamond];
+	  23 [label="!(Variable[\"doomed.book_cockatoo_wc_stealing\"])", shape=diamond];
+	  24 [label="Jump to: [bookhub]"];
+	  25 [label="Interfacing: It's quite a challenge, but eventually the guide to cockatoos is yours. Splendid effort!"];
+	  26 [label="Plaisance: \"It's a must-have if you own a cockatoo. I've heard they're quite capricious.\""];
+	  27 [label="From A to Zrieek! A Guide To a Well-Behaved Cockatoo: A sulphur-crested cockatoo sits on the cover, its beak slightly open. It looks as if the bird is calling out the book title: \"From A to Zrieek! A Guide To A Well-Behaved Cockatoo.\""];
+	  28 [label="From A to Zrieek! A Guide To a Well-Behaved Cockatoo: Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"]"];
+	  29 [label="Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"]", shape=diamond];
+	  30 [label="!(Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"])", shape=diamond];
+	  31 [label="Jump to: [bookhub]"];
+	  32 [label="You: [Leave.]"];
+	  33 [label="Interfacing: You wait for the storekeeper to be distracted. When she's not looking, you haul the tome of cockatoos into your pocket."];
+	  0 -> 1
+	  1 -> 28
+	  2 -> 33
+	  2 -> 7
+	  2 -> 8
+	  2 -> 13
+	  2 -> 16
+	  3 -> 4
+	  3 -> 5
+	  4 -> 9
+	  5 -> 21
+	  6 -> 12
+	  7 -> 20
+	  8 -> 6
+	  9 -> 25
+	  10 -> 2
+	  11 -> 3
+	  12 -> 32
+	  13 -> 27
+	  15 -> 17
+	  16 -> 18
+	  16 -> 19
+	  17 -> 22
+	  18 -> 22
+	  19 -> 29
+	  20 -> 25
+	  21 -> 24
+	  21 -> 23
+	  22 -> 34
+	  23 -> 11
+	  24 -> 2
+	  25 -> 29
+	  26 -> 10
+	  27 -> 2
+	  28 -> 30
+	  28 -> 31
+	  30 -> 15
+	  31 -> 2
+	  33 -> 26
+}
+

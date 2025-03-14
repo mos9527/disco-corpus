@@ -1,0 +1,368 @@
+# GARYS APARTMENT / DOOR
+# You can open this door when you get the key from Manana.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: Variable[\"coast.reeds_checked_counter\"] >=1"];
+	  3 [label="Variable[\"coast.reeds_checked_counter\"] >=1", shape=diamond];
+	  4 [label="!(Variable[\"coast.reeds_checked_counter\"] >=1)", shape=diamond];
+	  5 [label="Door, Basement Apartment: Someone is moving around in the apartment. You hear the water being turned off and the sound of dishes clinking together."];
+	  6 [label="Kim Kitsuragi: Variable[\"TASK.open_gary_door_cancelled\"]"];
+	  7 [label="Variable[\"TASK.open_gary_door_cancelled\"]", shape=diamond];
+	  8 [label="!(Variable[\"TASK.open_gary_door_cancelled\"])", shape=diamond];
+	  9 [label="Jump to: [garydoormainhub]"];
+	  10 [label="Logic: There *might* be important information in the apartment... I mean... there *might*..."];
+	  11 [label="Kim Kitsuragi: CheckItem(\"key_basement_apartment\")"];
+	  12 [label="CheckItem(\"key_basement_apartment\")", shape=diamond];
+	  13 [label="!(CheckItem(\"key_basement_apartment\"))", shape=diamond];
+	  14 [label="Kim Kitsuragi: Variable[\"coast.gary_apartment\"]"];
+	  15 [label="Variable[\"coast.gary_apartment\"]", shape=diamond];
+	  16 [label="!(Variable[\"coast.gary_apartment\"])", shape=diamond];
+	  17 [label="Physical Instrument: Good job. Let's go now. I'm sure there's *nothing* interesting in there."];
+	  18 [label="Kim Kitsuragi: \"It is,\" the lieutenant remarks. \"However, we should definitely get the key from this 'Mañana' Evrart mentioned. That would drastically increase our credibility.\""];
+	  19 [label="You: Press your ear against the door."];
+	  20 [label="You: Use Mañana's key to unlock the door."];
+	  21 [label="Kim Kitsuragi: IsKimHere()"];
+	  22 [label="IsKimHere()", shape=diamond];
+	  23 [label="!(IsKimHere())", shape=diamond];
+	  24 [label="Inland Empire: Only *curiosity* could account for stepping over that threshold. Maybe there's treasure in there? A white alligator? A fountain of quicksilver?"];
+	  25 [label="Kim Kitsuragi: The lieutenant merely nods in response."];
+	  26 [label="Kim Kitsuragi: Variable[\"TASK.get_the_weasel_key_from_manana_done\"]"];
+	  27 [label="Variable[\"TASK.get_the_weasel_key_from_manana_done\"]", shape=diamond];
+	  28 [label="!(Variable[\"TASK.get_the_weasel_key_from_manana_done\"])", shape=diamond];
+	  29 [label="Door, Basement Apartment: The door has braved the elements for decades. The copper nails holding the upholstery in place have turned green from sea air and so is the knocker, shaped like a lion's head."];
+	  30 [label="Door, Basement Apartment: The key stops mid-way in the lock. Something's blocking its path. You hear a dish smashing and shattering inside the apartment, then everything falls very silent."];
+	  31 [label="Kim Kitsuragi: IsKimHere()"];
+	  32 [label="IsKimHere()", shape=diamond];
+	  33 [label="!(IsKimHere())", shape=diamond];
+	  34 [label="Kim Kitsuragi: IsKimHere()"];
+	  35 [label="IsKimHere()", shape=diamond];
+	  36 [label="!(IsKimHere())", shape=diamond];
+	  37 [label="Perception (Hearing): You hear someone inside, walking from room to room... whoever lives here must be back home."];
+	  38 [label="Kim Kitsuragi: \"That's probably the door Evrart mentioned. We still need to get the key from this Mañana first though.\""];
+	  39 [label="Interfacing: There's *nothing* else to do than leave and tell Evrart. No *conceivable* reason for you to intrude on the premises."];
+	  40 [label="Jump to: [garydoormainhub]"];
+	  41 [label="Kim Kitsuragi: IsKimHere()"];
+	  42 [label="IsKimHere()", shape=diamond];
+	  43 [label="!(IsKimHere())", shape=diamond];
+	  44 [label="You: Carefully knock."];
+	  45 [label="Kim Kitsuragi: Variable[\"pier.joyce_said_there_will_be_a_tribunal\"]"];
+	  46 [label="Variable[\"pier.joyce_said_there_will_be_a_tribunal\"]", shape=diamond];
+	  47 [label="!(Variable[\"pier.joyce_said_there_will_be_a_tribunal\"])", shape=diamond];
+	  48 [label="Kim Kitsuragi: CheckItem(\"key_basement_apartment\")"];
+	  49 [label="CheckItem(\"key_basement_apartment\")", shape=diamond];
+	  50 [label="!(CheckItem(\"key_basement_apartment\"))", shape=diamond];
+	  51 [label="Door, Basement Apartment: This must be the door Evrart mentioned. You still need to get the key from Mañana first though."];
+	  52 [label="Jump to: [garydoormainhub]"];
+	  53 [label="Shivers: As you hold the opened door you can feel the air moving. A little draft. A whistle..."];
+	  54 [label="Perception (Hearing): In fact, it's oddly silent in the yard around you. No birds chirp."];
+	  55 [label="Interfacing: The door is right here. You can just open it and be done with this."];
+	  56 [label="Door, Basement Apartment: The door to the 'Weasel's' Den', guarded by the lionhead-knocker. Both have seen better days."];
+	  57 [label="You: Use Mañana's key to unlock the door."];
+	  58 [label="Jump to: [garry is home]"];
+	  59 [label="Jump to: [garry is home]"];
+	  60 [label="Door, Basement Apartment: The door to cryptofascist's shabby apartment. It has been locked again."];
+	  61 [label="Kim Kitsuragi: \"Let's be honest, this isn't what I joined the RCM for. But -- every day tells you something new about yourself...\" the lieutenant replies, still inspecting the padded door."];
+	  62 [label="Perception (Hearing): A plate, glass or a mug."];
+	  63 [label="Interfacing: The tenant's key is in the lock."];
+	  64 [label="Door, Basement Apartment: No answer."];
+	  65 [label="Door, Basement Apartment: Finally, the door unlocks with a small clack. Thoughts race through your head..."];
+	  66 [label="Endurance: The Royal Lion. Guillaume's Kitten. This knocker will last a lifetime and then some."];
+	  67 [label="Door, Basement Apartment: Not a sound. The silence is eerie."];
+	  68 [label="Jump to: [garry is home]"];
+	  69 [label="Kim Kitsuragi: Variable[\"cargo.evrart_kim_expresses_understanding_worknig_with_evrart_is_necessarry\"]"];
+	  70 [label="Variable[\"cargo.evrart_kim_expresses_understanding_worknig_with_evrart_is_necessarry\"]", shape=diamond];
+	  71 [label="!(Variable[\"cargo.evrart_kim_expresses_understanding_worknig_with_evrart_is_necessarry\"])", shape=diamond];
+	  72 [label="Suggestion: Well buddy, you opened it. No need to go inside. It would be *rude*."];
+	  73 [label="Kim Kitsuragi: \"Yes, presenting a fabrication is known to get results here and there.\" He crosses his arms. \"You took this task. You make the call.\""];
+	  74 [label="Kim Kitsuragi: Variable[\"TASK.get_the_weasel_key_from_manana\"]"];
+	  75 [label="Variable[\"TASK.get_the_weasel_key_from_manana\"]", shape=diamond];
+	  76 [label="!(Variable[\"TASK.get_the_weasel_key_from_manana\"])", shape=diamond];
+	  77 [label="Kim Kitsuragi: Variable[\"cargo.garrydoor_hub_reached\"]"];
+	  78 [label="Variable[\"cargo.garrydoor_hub_reached\"]", shape=diamond];
+	  79 [label="!(Variable[\"cargo.garrydoor_hub_reached\"])", shape=diamond];
+	  80 [label="Door, Basement Apartment: The door is closed again. Nothing to do here anymore."];
+	  81 [label="Kim Kitsuragi: Variable[\"apt.master_investigator_doors_opened\"] >=3"];
+	  82 [label="Variable[\"apt.master_investigator_doors_opened\"] >=3", shape=diamond];
+	  83 [label="!(Variable[\"apt.master_investigator_doors_opened\"] >=3)", shape=diamond];
+	  84 [label="Kim Kitsuragi: \"Apparently, working with the local Union boss to get info on an investigation is not something I'm squeamish about.\""];
+	  85 [label="Savoir Faire: You're *pretty* sure the owner of the apartment isn't here. It's safe-ish."];
+	  86 [label="Jump to: [garydoormainhub]"];
+	  87 [label="Kim Kitsuragi: Variable[\"yard.garrydoor_knocked_or_tried_key\"]"];
+	  88 [label="Variable[\"yard.garrydoor_knocked_or_tried_key\"]", shape=diamond];
+	  89 [label="!(Variable[\"yard.garrydoor_knocked_or_tried_key\"])", shape=diamond];
+	  90 [label="Door, Basement Apartment: The door is slick with rain. You don't hear any movement inside."];
+	  91 [label="Jump to: [garydoormainhub]"];
+	  92 [label="Drama: I don't know... you're a *pretty* good liar. Are you as good an *infiltrator* as you are a liar?"];
+	  93 [label="Inland Empire: Besides, if you never open it, you're never gonna find out, what's *behind* the door."];
+	  94 [label="Kim Kitsuragi: Variable[\"TASK.get_the_weasel_key_from_manana_done\"]"];
+	  95 [label="Variable[\"TASK.get_the_weasel_key_from_manana_done\"]", shape=diamond];
+	  96 [label="!(Variable[\"TASK.get_the_weasel_key_from_manana_done\"])", shape=diamond];
+	  97 [label="Jump to: [garry is home]"];
+	  98 [label="Door, Basement Apartment: This must be the door Evrart mentioned. You still need to get the key from Mañana first though."];
+	  99 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  100 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  101 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  102 [label="You: [Leave.]"];
+	  103 [label="You: \"I know you're in there!\""];
+	  104 [label="Kim Kitsuragi: \"That already defeats the point, doesn't it?\" The lieutenant glances at the surrounding windows. \"Let's get out of here.\""];
+	  105 [label="Kim Kitsuragi: The lieutenant looks first at the door, then back at you, then signals you to back off from the door."];
+	  106 [label="Kim Kitsuragi: Variable[\"cargo.garrydoor_broke_into\"]"];
+	  107 [label="Variable[\"cargo.garrydoor_broke_into\"]", shape=diamond];
+	  108 [label="!(Variable[\"cargo.garrydoor_broke_into\"])", shape=diamond];
+	  109 [label="Kim Kitsuragi: \"That's probably the door Evrart mentioned. We still need to get the key from this Mañana first though.\""];
+	  110 [label="You: \"So you don't mind if I unlock the door?\""];
+	  111 [label="garry is home"];
+	  112 [label="Door, Basement Apartment: The key stops mid-way in the lock. Something's blocking its path. Not a sound is coming from the apartment."];
+	  113 [label="Kim Kitsuragi: \"We should leave,\" the lieutenant whispers, \"and go talk with Evrart, tell him what happened -- that we couldn't open the door. Maybe there's a workaround.\""];
+	  114 [label="You: Press your ear against the door."];
+	  115 [label="Door, Basement Apartment: The leather upholstery is worn and rough against your jaw. You don't hear any movement."];
+	  116 [label="Endurance: The Royal Lion. Guillaume's Kitten. This knocker will last a lifetime and then some."];
+	  117 [label="Inland Empire: You feel eyes on you, watching you from the windows overlooking the yard."];
+	  118 [label="Jump to: [garydoormainhub]"];
+	  119 [label="Kim Kitsuragi: Variable[\"yard.garrydoor_knocked_or_tried_key\"]"];
+	  120 [label="Variable[\"yard.garrydoor_knocked_or_tried_key\"]", shape=diamond];
+	  121 [label="!(Variable[\"yard.garrydoor_knocked_or_tried_key\"])", shape=diamond];
+	  122 [label="Kim Kitsuragi: IsKimHere()"];
+	  123 [label="IsKimHere()", shape=diamond];
+	  124 [label="!(IsKimHere())", shape=diamond];
+	  125 [label="Kim Kitsuragi: IsKimHere()"];
+	  126 [label="IsKimHere()", shape=diamond];
+	  127 [label="!(IsKimHere())", shape=diamond];
+	  128 [label="You: \"Lieutenant, what is your opinion of this task we're undertaking?\""];
+	  129 [label="Untitled hub"];
+	  130 [label="Kim Kitsuragi: \"On the other hand...\" He looks at the surrounding windows uncomfortably. \"We *could* just leave and tell Evrart we opened the door. No one seems to be tailing us to see if we actually did it.\""];
+	  131 [label="Jump to: [garry is home]"];
+	  132 [label="Kim Kitsuragi: SetVariableValue(\"character.trigger_master_investigator_thought\", true) --[[ Variable[ ]]"];
+	  133 [label="Door, Basement Apartment: You knock silently. The upholstery muffles the sound. No response comes from the apartment."];
+	  134 [label="You: \"Got it!\""];
+	  135 [label="Kim Kitsuragi: Variable[\"backyard.gary_apartment_entered\"]"];
+	  136 [label="Variable[\"backyard.gary_apartment_entered\"]", shape=diamond];
+	  137 [label="!(Variable[\"backyard.gary_apartment_entered\"])", shape=diamond];
+	  138 [label="Kim Kitsuragi: \"I mind that a local thug is using the RCM for his busywork, but if this gets us to the bottom of this hanging then I'm willing to look over it.\""];
+	  139 [label="Jump to: [garydoormainhub]"];
+	  140 [label="Door, Basement Apartment: You try to be as silent as you can. It takes a bit of rattling of the handle to loosen the bolt."];
+	  141 [label="Logic: The tenant must be cleaning up. That means you're too late. Nothing more to do here, better report back to Evrart."];
+	  142 [label="Door, Basement Apartment: Something hits the ground and shatters inside the apartment."];
+	  143 [label="Logic: You're too late -- the weasel's already back in its den. Let's see what Evrart thinks about it."];
+	  144 [label="Door, Basement Apartment: As you turn to leave, you hear footsteps on the other side -- yes, someone's definitely home."];
+	  145 [label="Door, Basement Apartment: This must be it. The basement door is weather-worn. The copper nails holding the upholstery in place have turned green from sea air and there's a knocker, shaped like a lion's head."];
+	  146 [label="Kim Kitsuragi: \"As I already said,\" the lieutenant replies, adjusting his glasses. \"I understand this can't be avoided.\""];
+	  147 [label="Kim Kitsuragi: \"If the merc tribunal happens before we solve this...\" His eyes meet yours. \"We're looking at casualties. What's one unlocked door compared to that?\""];
+	  148 [label="You: \"Lie to Evrart? That's also an option?\""];
+	  149 [label="Kim Kitsuragi: \"But we do need to get the key from this 'Mañana' Evrart mentioned.\" The lieutenant glances at the door. \"Cause we are *not* gonna break the lock.\""];
+	  150 [label="Kim Kitsuragi: Variable[\"TASK.get_the_weasel_key_from_manana\"]"];
+	  151 [label="Variable[\"TASK.get_the_weasel_key_from_manana\"]", shape=diamond];
+	  152 [label="!(Variable[\"TASK.get_the_weasel_key_from_manana\"])", shape=diamond];
+	  153 [label="You: Knock on the door."];
+	  154 [label="Inland Empire: Even the darkness is holding it's breath inside the apartment."];
+	  155 [label="Kim Kitsuragi: Variable[\"yard.garrydoor_knocked_or_tried_key\"]"];
+	  156 [label="Variable[\"yard.garrydoor_knocked_or_tried_key\"]", shape=diamond];
+	  157 [label="!(Variable[\"yard.garrydoor_knocked_or_tried_key\"])", shape=diamond];
+	  158 [label="Logic: Maybe it's a good thing you didn't get to open this stranger's door? Go talk with Evrart, tell him what happened."];
+	  159 [label="Half Light: You should leave. Leave! Before anything happens..."];
+	  160 [label="You: [Leave.]"];
+	  161 [label="Perception (Hearing): The sound of the key turning still echoes in the yard. Hopefully no one heard."];
+	  162 [label="Kim Kitsuragi: \"I guess no one is in.\" The lieutenant looks uncomfortable."];
+	  163 [label="Kim Kitsuragi: Variable[\"cargo.evrart_interfacing_open_and_be_done\"]"];
+	  164 [label="Variable[\"cargo.evrart_interfacing_open_and_be_done\"]", shape=diamond];
+	  165 [label="!(Variable[\"cargo.evrart_interfacing_open_and_be_done\"])", shape=diamond];
+	  166 [label="Door, Basement Apartment: Then a running tap is turned off and the complete absence of sounds feels... tense."];
+	  167 [label="Door, Basement Apartment: No answer."];
+	  168 [label="garydoormainhub"];
+	  0 -> 1
+	  1 -> 2
+	  2 -> 3
+	  2 -> 4
+	  3 -> 107
+	  4 -> 78
+	  5 -> 142
+	  6 -> 8
+	  6 -> 7
+	  8 -> 145
+	  9 -> 169
+	  10 -> 54
+	  11 -> 12
+	  11 -> 13
+	  12 -> 169
+	  13 -> 41
+	  14 -> 16
+	  14 -> 15
+	  15 -> 136
+	  16 -> 146
+	  17 -> 39
+	  18 -> 87
+	  19 -> 120
+	  20 -> 141
+	  21 -> 22
+	  21 -> 23
+	  22 -> 163
+	  23 -> 118
+	  24 -> 10
+	  25 -> 119
+	  26 -> 27
+	  26 -> 28
+	  27 -> 74
+	  28 -> 18
+	  29 -> 67
+	  30 -> 64
+	  31 -> 32
+	  31 -> 33
+	  32 -> 105
+	  33 -> 65
+	  34 -> 35
+	  34 -> 36
+	  35 -> 106
+	  36 -> 160
+	  39 -> 24
+	  40 -> 169
+	  41 -> 42
+	  41 -> 43
+	  42 -> 38
+	  43 -> 99
+	  44 -> 134
+	  45 -> 46
+	  45 -> 47
+	  46 -> 148
+	  47 -> 139
+	  48 -> 49
+	  48 -> 50
+	  49 -> 112
+	  50 -> 126
+	  52 -> 169
+	  54 -> 53
+	  55 -> 164
+	  56 -> 169
+	  57 -> 156
+	  58 -> 112
+	  59 -> 112
+	  60 -> 169
+	  61 -> 85
+	  62 -> 167
+	  63 -> 34
+	  64 -> 69
+	  65 -> 162
+	  66 -> 48
+	  67 -> 155
+	  68 -> 112
+	  69 -> 72
+	  69 -> 71
+	  70 -> 147
+	  71 -> 62
+	  72 -> 17
+	  73 -> 56
+	  74 -> 76
+	  74 -> 77
+	  75 -> 95
+	  76 -> 140
+	  77 -> 80
+	  77 -> 79
+	  78 -> 57
+	  79 -> 14
+	  80 -> 37
+	  81 -> 83
+	  81 -> 84
+	  82 -> 133
+	  83 -> 66
+	  84 -> 130
+	  85 -> 9
+	  86 -> 169
+	  87 -> 89
+	  87 -> 90
+	  88 -> 168
+	  89 -> 143
+	  90 -> 55
+	  91 -> 169
+	  92 -> 92
+	  93 -> 93
+	  94 -> 96
+	  94 -> 97
+	  95 -> 25
+	  96 -> 150
+	  97 -> 112
+	  99 -> 101
+	  99 -> 102
+	  100 -> 91
+	  101 -> 116
+	  102 -> 6
+	  103 -> 31
+	  104 -> 69
+	  105 -> 59
+	  106 -> 108
+	  106 -> 109
+	  107 -> 81
+	  108 -> 29
+	  110 -> 45
+	  111 -> 58
+	  111 -> 103
+	  111 -> 104
+	  111 -> 19
+	  111 -> 154
+	  112 -> 64
+	  114 -> 100
+	  115 -> 55
+	  116 -> 11
+	  117 -> 86
+	  118 -> 169
+	  119 -> 121
+	  119 -> 122
+	  120 -> 68
+	  121 -> 5
+	  122 -> 124
+	  122 -> 125
+	  123 -> 114
+	  124 -> 159
+	  125 -> 128
+	  125 -> 127
+	  126 -> 110
+	  127 -> 51
+	  128 -> 70
+	  129 -> 135
+	  129 -> 111
+	  130 -> 149
+	  131 -> 112
+	  132 -> 66
+	  133 -> 21
+	  134 -> 75
+	  135 -> 137
+	  135 -> 138
+	  136 -> 61
+	  137 -> 146
+	  138 -> 131
+	  139 -> 169
+	  140 -> 82
+	  141 -> 132
+	  142 -> 63
+	  143 -> 98
+	  144 -> 123
+	  145 -> 117
+	  146 -> 130
+	  147 -> 131
+	  148 -> 26
+	  149 -> 119
+	  150 -> 152
+	  150 -> 153
+	  152 -> 40
+	  153 -> 88
+	  154 -> 132
+	  155 -> 157
+	  155 -> 158
+	  156 -> 113
+	  157 -> 30
+	  159 -> 59
+	  161 -> 73
+	  162 -> 118
+	  163 -> 165
+	  163 -> 166
+	  164 -> 94
+	  165 -> 93
+	  166 -> 144
+	  167 -> 60
+	  168 -> 161
+	  168 -> 129
+	  168 -> 44
+	  168 -> 115
+	  168 -> 20
+}
+

@@ -1,0 +1,410 @@
+# WHIRLING F2 / MEDICINE CABINET
+# Klaasje's medicine cabinet.
+1) Find speed (Saint-Batiste goodstuff)
+2) Find barbiturates, benzos, SOS and narcan
+3) check to steal speed if kim there
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Suggestion: Be honest. He's not grilling you, he just wants to know. Ask if he's ever wanted to take it too."];
+	  3 [label="You: Look at the medications."];
+	  4 [label="medicinas"];
+	  5 [label="You: Search the bottles."];
+	  6 [label="Jump to: [preptide_ahoy]"];
+	  7 [label="Medicine Cabinet: Variable[\"whirling.medicine_interface_red_success\"]"];
+	  8 [label="Variable[\"whirling.medicine_interface_red_success\"]", shape=diamond];
+	  9 [label="!(Variable[\"whirling.medicine_interface_red_success\"])", shape=diamond];
+	  10 [label="Kim Kitsuragi: The lieutenant does not pursue the subject further, looking out the bathroom window instead."];
+	  11 [label="Kim Kitsuragi: \"Right. Thank you for this information.\" He seems satisfied. \"Should we go?\""];
+	  12 [label="Jump to: [medicinas_again]"];
+	  13 [label="You: Search for the Preptide again."];
+	  14 [label="Kim Kitsuragi: \"Interesting. That's used for diamorphine overdoses...\" The lieutenant nods -- then looks at the door."];
+	  15 [label="preptide_ahoy"];
+	  16 [label="Jump to: [medicinas]"];
+	  17 [label="You: \"Honesty, it makes me the detective I am. Have you thought of taking it too?\""];
+	  18 [label="You: \"It has no effect on my performance, I just take it to feel good.\""];
+	  19 [label="Jump to: [medicinas]"];
+	  20 [label="Electrochemistry: Pity."];
+	  21 [label="Jump to: [medicinas_again]"];
+	  22 [label="Kim Kitsuragi: \"There's always a price...\" He looks out the window."];
+	  23 [label="Cuno: \"Nah, pig...\" the kid says looking around like a young wolf. \"That'd been too easy. Let's keep looking.\""];
+	  24 [label="You: Just take it in plain sight."];
+	  25 [label="You: Keep it to yourself."];
+	  26 [label="Medicine Cabinet: Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  27 [label="Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  28 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  29 [label="Kim Kitsuragi: \"Right.\" He seems satisfied with your answer. \"I can see how that can be useful.\""];
+	  30 [label="Medicine Cabinet: Variable[\"TASK.arrest_klaasje_done\"]"];
+	  31 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  32 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  33 [label="You: Search the pill sheets."];
+	  34 [label="Kim Kitsuragi: \"Mhm,\" the lieutenant nods. \"She certainly had her priorities straight when she was packing.\""];
+	  35 [label="You: \"It keeps me going -- in the short run.\""];
+	  36 [label="Kim Kitsuragi: \"Hmh.\" He lets out a little pensive hum... \"That's what I thought. Let's go?\""];
+	  37 [label="Reaction Speed: You could say he's on the *lookout*."];
+	  38 [label="Medicine Cabinet: IsHardcoreModeActive()  and  WasGameBeatenInHardcoreMode()"];
+	  39 [label="IsHardcoreModeActive()  and  WasGameBeatenInHardcoreMode()", shape=diamond];
+	  40 [label="!(IsHardcoreModeActive()  and  WasGameBeatenInHardcoreMode())", shape=diamond];
+	  41 [label="Jump to: [medicinas_again]"];
+	  42 [label="Authority: Yes, take it... and then dispose of it! This den of narcomania cannot be allowed stand!"];
+	  43 [label="Encyclopedia: NACRA? This is used to treat opioid overdoses. Always handy to have around."];
+	  44 [label="Kim Kitsuragi: \"I was just curious. Anyway let's go.\""];
+	  45 [label="Reaction Speed: So... the good lieutenant was looking for an edge, was he?"];
+	  46 [label="Electrochemistry: Who cares, man? Who cares what the stiff thinks? You got it. Here comes the afterburner! Just put it in your sweaty little hand now..."];
+	  47 [label="Electrochemistry: A bright orange bottle with PREPTIDE stamped on it. In sunny, happy letters! Jackpot, baby! That's the stuff you're looking for! Your palms begin to sweat just holding that little plastic container."];
+	  48 [label="You: (Whisper.) \"NACRA, opioid antagonist.\""];
+	  49 [label="You: Take it -- in secret."];
+	  50 [label="You: Variable[\"whirling.medicine_interface_red_success\"]"];
+	  51 [label="Variable[\"whirling.medicine_interface_red_success\"]", shape=diamond];
+	  52 [label="!(Variable[\"whirling.medicine_interface_red_success\"])", shape=diamond];
+	  53 [label="Medicine Cabinet: Feels like gold in your hands. Light and precious."];
+	  54 [label="Perception (Sight): Wow. That's unbelievably orange. *Anyone* can see that. It's practically *effervescent*!"];
+	  55 [label="Medicine Cabinet: The medicine cabinet has been cleaned out. Nothing remains, not one pill or bottle."];
+	  56 [label="You: \"She's really cleaned this out.\""];
+	  57 [label="You: [Close the cabinet.]"];
+	  58 [label="Medicine Cabinet: IsCunoInParty()"];
+	  59 [label="IsCunoInParty()", shape=diamond];
+	  60 [label="!(IsCunoInParty())", shape=diamond];
+	  61 [label="Medicine Cabinet: IsTHCPresent(\"narcomania\")"];
+	  62 [label="IsTHCPresent(\"narcomania\")", shape=diamond];
+	  63 [label="!(IsTHCPresent(\"narcomania\"))", shape=diamond];
+	  64 [label="Perception (Smell): It's clean of chemical odours too. Just some dried toothpaste on the handle."];
+	  65 [label="Medicine Cabinet: Among some foreign -- probably Messinian, or Gottwaldian -- marked red blister packs you find... what *do* you find? This is going to take a little know-how."];
+	  66 [label="You: (Whisper.) \"What's NACRA?\""];
+	  67 [label="Kim Kitsuragi: The lieutenant glances at the rows of pills -- then at the door."];
+	  68 [label="You: Is there something more interesting here?"];
+	  69 [label="You: Variable[\"whirling.medicine_echem_preptide\"]"];
+	  70 [label="Variable[\"whirling.medicine_echem_preptide\"]", shape=diamond];
+	  71 [label="!(Variable[\"whirling.medicine_echem_preptide\"])", shape=diamond];
+	  72 [label="medicinas_again"];
+	  73 [label="You: \"I understand it's unbecoming but if I don't perform this job well I am nothing. It's the price I pay.\""];
+	  74 [label="Medicine Cabinet: You're just talking to your reflection in the cabinet doors now... Things are not good with you."];
+	  75 [label="Medicine Cabinet: Pill bottles rattle like bones as you search the cabinet: paracetamol, histaperidol, something in a foreign language you can't read... Behind them: an unusually shaped nasal spray. Its label reads 'NACRA'."];
+	  76 [label="Jump to: [medicinas]"];
+	  77 [label="Kim Kitsuragi: The lieutenant looks toward the door as if he didn't see you pilfer that sweet Preptide."];
+	  78 [label="Medicine Cabinet: IsKimHere()"];
+	  79 [label="IsKimHere()", shape=diamond];
+	  80 [label="!(IsKimHere())", shape=diamond];
+	  81 [label="Kim Kitsuragi: \"Of course you were.\" He nods. \"How does that work anyway?\""];
+	  82 [label="You: \"Narcomania is a disease, lieutenant.\""];
+	  83 [label="Rhetoric: There is little condescension in his phrasing, more measured curiosity."];
+	  84 [label="Jump to: [medicinas_again]"];
+	  85 [label="Cuno: \"Smart chick.\" The kid nods. \"Cuno never leaves shit behind either. Cuno's a pro.\""];
+	  86 [label="Electrochemistry: There it is, the orange sun wearing blister pack. You feel almost *nostalgic* for it."];
+	  87 [label="Logic: Probably Garte's work. After she was arrested."];
+	  88 [label="Perception (Sight): But not for scrubbing blood off tiles -- or anything else interesting, it seems."];
+	  89 [label="Jump to: [medicinas]"];
+	  90 [label="Medicine Cabinet: IsTHCPresent(\"revacholian_nationhood\")"];
+	  91 [label="IsTHCPresent(\"revacholian_nationhood\")", shape=diamond];
+	  92 [label="!(IsTHCPresent(\"revacholian_nationhood\"))", shape=diamond];
+	  93 [label="You: What's so exciting about this orange bottle?"];
+	  94 [label="Medicine Cabinet: IsKimHere()"];
+	  95 [label="IsKimHere()", shape=diamond];
+	  96 [label="!(IsKimHere())", shape=diamond];
+	  97 [label="Jump to: [medicinas]"];
+	  98 [label="You: \"What are you talking about? I don't take amphetamine, don't be *ludicrous*!\""];
+	  99 [label="Kim Kitsuragi: \"Hmh.\" He lets out a little pensive hum. \"Thought so. Let's go?\""];
+	  100 [label="You: \"Looking like a beast in heat is a serious downside, yes.\""];
+	  101 [label="Kim Kitsuragi: \"I thought so.\" He seems satisfied with the answer. \"Should we go?\""];
+	  102 [label="Jump to: [preptide_ahoy]"];
+	  103 [label="You: \"There's quite the collection in here.\""];
+	  104 [label="Kim Kitsuragi: \"An opioid receptor antagonist. It's used for diamorphine overdoses.\""];
+	  105 [label="Interfacing: You dropped it. Smack dab in the middle of the floor! There it is -- orange as the midsummer evening's sun, or the lieutenant's bomber jacket."];
+	  106 [label="Electrochemistry: ...nothing of note. The further you look the more arcane it gets. You don't know what the rest of this stuff does."];
+	  107 [label="Pain Threshold: The beating he took must be more serious than he lets on."];
+	  108 [label="Kim Kitsuragi: \"Yes, but... did you know you don't *have* radiation sickness?\""];
+	  109 [label="Jump to: [medicinas_again]"];
+	  110 [label="Medicine Cabinet: This medicine cabinet is full of wares -- sheets of pills haphazardly stacked one on top of the other. There's also a toothbrush somewhere in there."];
+	  111 [label="Medicine Cabinet: It's been used. Quite a lot."];
+	  112 [label="Kim Kitsuragi: \"Preptide -- a euphemism for pharmaceutical amphetamine. Prescription speed.\""];
+	  113 [label="Jump to: [medicinas]"];
+	  114 [label="You: Pick it up -- but secretly."];
+	  115 [label="Kim Kitsuragi: \"I always took you for more of a drunk than a chemical abuser,\" he says as though it's self-evident. \"Anyway.\""];
+	  116 [label="Jump to: [medicinas_again]"];
+	  117 [label="Empathy: This toothbrush belongs to someone who doesn't give a damn about her teeth."];
+	  118 [label="You: \"Lieutenant, I also see a brand called 'Preptide.'\""];
+	  119 [label="Medicine Cabinet: Variable[\"whirling.medicine_echem_preptide\"]"];
+	  120 [label="Variable[\"whirling.medicine_echem_preptide\"]", shape=diamond];
+	  121 [label="!(Variable[\"whirling.medicine_echem_preptide\"])", shape=diamond];
+	  122 [label="Medicine Cabinet: Variable[\"character.habit_speed\"]"];
+	  123 [label="Variable[\"character.habit_speed\"]", shape=diamond];
+	  124 [label="!(Variable[\"character.habit_speed\"])", shape=diamond];
+	  125 [label="Kim Kitsuragi: \"Maybe I should?\" He lets out a little pensive hum, rubbing his shoulder..."];
+	  126 [label="Drama: It's not insincere. He's actually giving it thought."];
+	  127 [label="Medicine Cabinet: IsKimHere()"];
+	  128 [label="IsKimHere()", shape=diamond];
+	  129 [label="!(IsKimHere())", shape=diamond];
+	  130 [label="Electrochemistry: It's speed, man! Just what you were looking for. They call it *dextroamphetamine* and talk about psychological disorders, but what we're seeing here is some scientifically advanced trucker speed!"];
+	  131 [label="Medicine Cabinet: This medicine cabinet is stocked with drugs, plus an old toothbrush, and..."];
+	  132 [label="Interfacing: You dropped it. Smack dab in the middle of the floor! There it is -- orange as the midsummer evening's sun."];
+	  133 [label="You: Look at the toothbrush."];
+	  134 [label="Inland Empire: And your chest swells with pride -- look! It's made right here in Revachol, by Saint-Batiste, a proud Revacholian pharmaceutical company with great *traditions*!"];
+	  135 [label="Interfacing: He did, though. He totally did and now he thinks less of you. Should have kept it *sub rosa*."];
+	  136 [label="Jump to: [preptide_ahoy]"];
+	  137 [label="Jump to: [medicinas]"];
+	  138 [label="You: \"Nah, man, the jaw grinding and the sweating -- that's the best part. Shows the medicine is working.\""];
+	  139 [label="You: \"Yes, that does sound dangerous now that I think about it.\""];
+	  140 [label="Electrochemistry: Feels so sleek and beautiful -- you got it! Here comes the afterburner! Time to become a super-detective again, Harry! Just put it in your sweaty little hand now..."];
+	  141 [label="Authority: Filthy narco! And look -- it's made right here in Revachol, by Saint-Batiste. A disgraceful pharmaceutical company attempting to lure people into the gutter. You should destroy it!"];
+	  142 [label="Medicine Cabinet: IsTHCPresent(\"narcomania\")"];
+	  143 [label="IsTHCPresent(\"narcomania\")", shape=diamond];
+	  144 [label="!(IsTHCPresent(\"narcomania\"))", shape=diamond];
+	  145 [label="You: [Close the cabinet.]"];
+	  146 [label="You: \"I was kinda hoping the *gift* would be in here.\""];
+	  147 [label="You: \"How does what work?\""];
+	  148 [label="You: Say nothing."];
+	  149 [label="Kim Kitsuragi: \"Amphetamine -- does it make you a better detective?\""];
+	  150 [label="Kim Kitsuragi: \"Anything of note?\" he asks in a lowered voice."];
+	  151 [label="Electrochemistry: The fuck are you waiting for, let's get super fucking PREPPIE!!!"];
+	  152 [label="Jump to: [medicinas]"];
+	  153 [label="You: [Close the cabinet.]"];
+	  154 [label="Medicine Cabinet: Variable[\"whirling.medicine_steal_hub_reached\"]"];
+	  155 [label="Variable[\"whirling.medicine_steal_hub_reached\"]", shape=diamond];
+	  156 [label="!(Variable[\"whirling.medicine_steal_hub_reached\"])", shape=diamond];
+	  157 [label="Medicine Cabinet: IsKimHere()"];
+	  158 [label="IsKimHere()", shape=diamond];
+	  159 [label="!(IsKimHere())", shape=diamond];
+	  160 [label="You: \"I'm too high on pyrholidon to notice. Before you ask -- pyrholidon is used for radiation sickness.\""];
+	  161 [label="Jump to: [medicinas_again]"];
+	  162 [label="Medicine Cabinet: The cabinet is cleaned out, emptied."];
+	  163 [label="Medicine Cabinet: Pharmaceuticals line the shelves. Sheet upon sheet and pill bottle next to pill bottle: acetylic acid, APAP, eye drops, blood thinners..."];
+	  164 [label="Kim Kitsuragi: The lieutenant *tries* to keep his eyes on the door, but the Preptide bottle sounds like a rattlesnake -- it's basically a percussion instrument that you're stuffing into your pocket."];
+	  165 [label="Kim Kitsuragi: \"It may be -- but I asked if it makes you better at your work?\""];
+	  166 [label="Kim Kitsuragi: \"Doesn't the... pupils and the gurning jaw, the sweating... doesn't it become tiring after a while?\""];
+	  167 [label="You: \"It gives me fiery visions. A window into the heart of things.\""];
+	  168 [label="Kim Kitsuragi: \"Right. I'll give it some thought.\" He seems satisfied with your answer. \"Should we go?\""];
+	  169 [label="Jump to: [medicinas_again]"];
+	  170 [label="Electrochemistry: Who cares, man? Who cares what the stiff thinks? Here comes the afterburner! Just put it in your sweaty little hand now..."];
+	  171 [label="drogs_with_kim"];
+	  172 [label="Interfacing: Silently the bottle slides into your palm, then -- as you turn -- into your pocket."];
+	  173 [label="You: Pick it up."];
+	  174 [label="Medicine Cabinet: IsCunoInParty()"];
+	  175 [label="IsCunoInParty()", shape=diamond];
+	  176 [label="!(IsCunoInParty())", shape=diamond];
+	  177 [label="You: \"Better? No. It makes me worse.\""];
+	  178 [label="Kim Kitsuragi: \"Hmh.\" He lets out a little pensive hum. \"Thought so. Let's go?\""];
+	  0 -> 1
+	  1 -> 27
+	  2 -> 99
+	  2 -> 36
+	  2 -> 18
+	  2 -> 19
+	  2 -> 83
+	  2 -> 178
+	  3 -> 164
+	  4 -> 34
+	  4 -> 3
+	  4 -> 5
+	  4 -> 134
+	  4 -> 69
+	  4 -> 104
+	  4 -> 13
+	  4 -> 146
+	  5 -> 76
+	  6 -> 16
+	  7 -> 8
+	  7 -> 9
+	  8 -> 173
+	  9 -> 39
+	  10 -> 117
+	  11 -> 85
+	  12 -> 73
+	  13 -> 87
+	  14 -> 38
+	  15 -> 50
+	  15 -> 119
+	  15 -> 25
+	  15 -> 154
+	  15 -> 94
+	  16 -> 4
+	  17 -> 126
+	  18 -> 100
+	  19 -> 4
+	  20 -> 73
+	  21 -> 73
+	  22 -> 170
+	  23 -> 110
+	  24 -> 95
+	  25 -> 68
+	  26 -> 28
+	  26 -> 29
+	  27 -> 31
+	  28 -> 155
+	  29 -> 170
+	  30 -> 32
+	  30 -> 33
+	  31 -> 163
+	  32 -> 56
+	  33 -> 66
+	  34 -> 22
+	  35 -> 37
+	  36 -> 42
+	  37 -> 77
+	  38 -> 40
+	  38 -> 41
+	  39 -> 133
+	  40 -> 106
+	  41 -> 73
+	  42 -> 103
+	  43 -> 128
+	  44 -> 42
+	  45 -> 42
+	  46 -> 98
+	  47 -> 62
+	  48 -> 15
+	  49 -> 51
+	  50 -> 52
+	  50 -> 53
+	  51 -> 7
+	  52 -> 7
+	  53 -> 114
+	  54 -> 115
+	  54 -> 174
+	  55 -> 21
+	  56 -> 158
+	  58 -> 60
+	  58 -> 61
+	  59 -> 24
+	  60 -> 75
+	  61 -> 64
+	  61 -> 63
+	  62 -> 142
+	  63 -> 91
+	  64 -> 118
+	  65 -> 138
+	  66 -> 105
+	  67 -> 38
+	  68 -> 70
+	  69 -> 72
+	  69 -> 71
+	  70 -> 120
+	  71 -> 120
+	  72 -> 57
+	  72 -> 58
+	  72 -> 147
+	  73 -> 169
+	  74 -> 12
+	  75 -> 44
+	  76 -> 4
+	  77 -> 136
+	  78 -> 80
+	  78 -> 81
+	  79 -> 123
+	  80 -> 59
+	  81 -> 148
+	  81 -> 149
+	  82 -> 166
+	  83 -> 2
+	  84 -> 73
+	  85 -> 12
+	  86 -> 16
+	  88 -> 65
+	  89 -> 4
+	  90 -> 92
+	  90 -> 93
+	  91 -> 135
+	  92 -> 16
+	  93 -> 131
+	  94 -> 96
+	  94 -> 97
+	  95 -> 78
+	  96 -> 54
+	  97 -> 4
+	  98 -> 45
+	  99 -> 46
+	  100 -> 102
+	  101 -> 85
+	  102 -> 16
+	  103 -> 151
+	  104 -> 38
+	  105 -> 55
+	  106 -> 153
+	  107 -> 167
+	  108 -> 168
+	  108 -> 140
+	  109 -> 73
+	  110 -> 4
+	  111 -> 89
+	  112 -> 152
+	  113 -> 4
+	  114 -> 165
+	  115 -> 117
+	  116 -> 73
+	  117 -> 20
+	  118 -> 113
+	  119 -> 121
+	  119 -> 122
+	  120 -> 48
+	  121 -> 107
+	  122 -> 124
+	  122 -> 125
+	  123 -> 82
+	  124 -> 116
+	  125 -> 127
+	  126 -> 108
+	  127 -> 129
+	  127 -> 130
+	  128 -> 172
+	  129 -> 17
+	  130 -> 143
+	  131 -> 4
+	  132 -> 55
+	  133 -> 112
+	  134 -> 16
+	  135 -> 171
+	  136 -> 16
+	  137 -> 4
+	  138 -> 11
+	  139 -> 23
+	  140 -> 98
+	  141 -> 16
+	  142 -> 144
+	  142 -> 145
+	  143 -> 43
+	  144 -> 103
+	  146 -> 79
+	  147 -> 150
+	  148 -> 10
+	  149 -> 84
+	  150 -> 90
+	  151 -> 6
+	  152 -> 4
+	  154 -> 156
+	  154 -> 157
+	  155 -> 132
+	  156 -> 111
+	  157 -> 160
+	  157 -> 159
+	  158 -> 35
+	  159 -> 175
+	  160 -> 109
+	  161 -> 73
+	  162 -> 88
+	  163 -> 90
+	  164 -> 47
+	  165 -> 19
+	  165 -> 178
+	  165 -> 99
+	  165 -> 36
+	  166 -> 161
+	  166 -> 74
+	  166 -> 139
+	  166 -> 101
+	  167 -> 30
+	  168 -> 85
+	  169 -> 73
+	  170 -> 137
+	  171 -> 49
+	  171 -> 26
+	  171 -> 67
+	  172 -> 141
+	  173 -> 165
+	  174 -> 176
+	  174 -> 177
+	  175 -> 86
+	  176 -> 75
+	  177 -> 179
+	  178 -> 162
+}
+

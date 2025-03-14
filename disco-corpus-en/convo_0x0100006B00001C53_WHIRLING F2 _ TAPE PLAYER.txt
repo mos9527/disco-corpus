@@ -1,0 +1,86 @@
+# WHIRLING F2 / TAPE PLAYER
+# You can click on tape player -- it has broken down while you were gone. Can't listen to any tapes now, best you find a new one from Roy.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: \"This would have been *very* helpful with the 'Megamix'.\" He stares at the tape player. \"But it isn't anymore.\""];
+	  3 [label="Variable[\"canal.roy_intro_done\"]"];
+	  4 [label="Variable[\"canal.roy_intro_done\"]", shape=diamond];
+	  5 [label="!(Variable[\"canal.roy_intro_done\"])", shape=diamond];
+	  6 [label="Kim Kitsuragi: The lieutenant doesn't even flinch. \"Anyway, let's try to find a new tape player. Perhaps we should talk to Roy at the pawnshop.\""];
+	  7 [label="Variable[\"canal.roy_intro_done\"]"];
+	  8 [label="Variable[\"canal.roy_intro_done\"]", shape=diamond];
+	  9 [label="!(Variable[\"canal.roy_intro_done\"])", shape=diamond];
+	  10 [label="Half Light: Fuck is that going to achieve? Being a smart-ass... making your nostrils flare."];
+	  11 [label="Interfacing: There is no fixing this one."];
+	  12 [label="IsKimHere()"];
+	  13 [label="IsKimHere()", shape=diamond];
+	  14 [label="!(IsKimHere())", shape=diamond];
+	  15 [label="Variable[\"whirling.stereo_interfacing_player_broken\"]"];
+	  16 [label="Variable[\"whirling.stereo_interfacing_player_broken\"]", shape=diamond];
+	  17 [label="!(Variable[\"whirling.stereo_interfacing_player_broken\"])", shape=diamond];
+	  18 [label="You: Great. What now?"];
+	  19 [label="Variable[\"canal.roy_intro_done\"]"];
+	  20 [label="Variable[\"canal.roy_intro_done\"]", shape=diamond];
+	  21 [label="!(Variable[\"canal.roy_intro_done\"])", shape=diamond];
+	  22 [label="You: Well shit."];
+	  23 [label="Kim Kitsuragi: \"Of course,\" he notes. \"Anyway, we should try to find a new tape player. There's a pawnshop near the water lock, south of here. Maybe they have a spare.\""];
+	  24 [label="Kim Kitsuragi: The lieutenant doesn't even flinch. \"Anyway, let's try to find a new tape player. There's a pawnshop near the water lock, maybe they have a spare.\""];
+	  25 [label="You: What should I do now, Stereo 8 Player?"];
+	  26 [label="You: \"It's not *my* fault.\""];
+	  27 [label="You: \"Fuck off, Kim.\""];
+	  28 [label="Kim Kitsuragi: \"My Kineema only comes with a radio,\" he ponders. \"Let's try to find a new tape player. Perhaps we should talk to Roy at the pawnshop -- he has stuff.\""];
+	  29 [label="Stereo 8 Player: The compact tape player is still and silent. Seems it has completely broken down now."];
+	  30 [label="You: \"Yeah... any ideas?\""];
+	  31 [label="Kim Kitsuragi: \"My Kineema only comes with a radio,\" he ponders. \"We should try to find a new tape player. There's a pawnshop near the water lock, south of here. Maybe they have a spare.\""];
+	  32 [label="Stereo 8 Player: The broken tape player doesn't have the ability to respond. But Kim would."];
+	  33 [label="Interfacing: Best find a new player. A boombox, funky style? Maybe the guy at the pawnshop can help out?"];
+	  34 [label="Variable[\"canal.roy_intro_done\"]"];
+	  35 [label="Variable[\"canal.roy_intro_done\"]", shape=diamond];
+	  36 [label="!(Variable[\"canal.roy_intro_done\"])", shape=diamond];
+	  37 [label="Kim Kitsuragi: \"Of course,\" he notes. \"We should try to find a new tape player. Perhaps we can talk to Roy at the pawnshop south of here -- he had stuff.\""];
+	  38 [label="Encyclopedia: The machine was made in Revachol by a company called Lemercier -- their logo depicts the triple-towered Delta skyline. It was supposedly built to last."];
+	  39 [label="Interfacing: I guess the only thing to do is to find a new player. Might be one waiting for you out there somewhere."];
+	  0 -> 1
+	  1 -> 30
+	  2 -> 10
+	  3 -> 4
+	  3 -> 5
+	  4 -> 34
+	  5 -> 40
+	  7 -> 8
+	  7 -> 9
+	  8 -> 29
+	  9 -> 32
+	  10 -> 27
+	  10 -> 28
+	  10 -> 31
+	  11 -> 13
+	  12 -> 14
+	  12 -> 15
+	  13 -> 2
+	  14 -> 16
+	  15 -> 17
+	  15 -> 18
+	  16 -> 19
+	  16 -> 23
+	  17 -> 26
+	  18 -> 3
+	  19 -> 21
+	  19 -> 22
+	  20 -> 6
+	  21 -> 25
+	  22 -> 3
+	  25 -> 33
+	  26 -> 35
+	  27 -> 20
+	  29 -> 39
+	  30 -> 7
+	  34 -> 36
+	  34 -> 37
+	  35 -> 38
+	  36 -> 24
+	  38 -> 11
+}
+

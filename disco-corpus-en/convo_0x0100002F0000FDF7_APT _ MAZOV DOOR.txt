@@ -1,0 +1,178 @@
+# APT / MAZOV DOOR
+# DOOR, APARTMENT #11 (turns into door. can lockpick and get into?)
+
+1. Use the wirecutters to cut the chain.
+If you don't have them, the door suggests it. The chain is very flimsy. 
+Exactly the same structure as other doors. 
+
+1. Observe the padlock. - the weakness here is in chain.
+
+Option to get a task if you do not have the chaincutters.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: \"Why would we want to break into some random citizen's apartment?\""];
+	  3 [label="Rhetoric: There's so much he could say right now, but he knows it wouldn't make much of a difference."];
+	  4 [label="Padlocked Door: SetVariableValue(\"character.trigger_master_investigator_thought\", true) --[[ Variable[ ]]"];
+	  5 [label="You: \"Why *wouldn't* we want to?\""];
+	  6 [label="Padlocked Door: Variable[\"apt.master_investigator_doors_opened\"] >=3"];
+	  7 [label="Variable[\"apt.master_investigator_doors_opened\"] >=3", shape=diamond];
+	  8 [label="!(Variable[\"apt.master_investigator_doors_opened\"] >=3)", shape=diamond];
+	  9 [label="Kim Kitsuragi: \"I believe it's the *shackle* you mean to cut, detective.\" The lieutenant points to the corroded loop with a gloved finger."];
+	  10 [label="Empathy: He's just trying to help, don't take it... bad. Relax."];
+	  11 [label="You: Use the chaincutters to cut through the padlock."];
+	  12 [label="You: Variable[\"apt.padlock_interfacing_wc\"]"];
+	  13 [label="Variable[\"apt.padlock_interfacing_wc\"]", shape=diamond];
+	  14 [label="!(Variable[\"apt.padlock_interfacing_wc\"])", shape=diamond];
+	  15 [label="You: \"Time for a little snip-snip!\" (Do hand-scissors.)"];
+	  16 [label="Interfacing: A lock blocks your path! You might have use for one of those standard police devices for cutting chains. Something that may be found in an RCM motor carriage..."];
+	  17 [label="You: \"I don't know, just seems like something we could do.\""];
+	  18 [label="Padlocked Door: Variable[\"apt.padlock_interfacing_wc\"]"];
+	  19 [label="Variable[\"apt.padlock_interfacing_wc\"]", shape=diamond];
+	  20 [label="!(Variable[\"apt.padlock_interfacing_wc\"])", shape=diamond];
+	  21 [label="Kim Kitsuragi: \"You seem committed to it, so go on.\""];
+	  22 [label="Jump to: [padlock hub]"];
+	  23 [label="Padlocked Door: CheckEquipped(\"chaincutters\") == false"];
+	  24 [label="CheckEquipped(\"chaincutters\") == false", shape=diamond];
+	  25 [label="!(CheckEquipped(\"chaincutters\") == false)", shape=diamond];
+	  26 [label="You: \"We could use some chaincutters here to cut the shackle.\""];
+	  27 [label="Kim Kitsuragi: The lieutenant doesn't say a word, his face wiped clear of any emotion."];
+	  28 [label="Interfacing: The shackle snaps like a twig and the lock falls to the floor with a little thud. It should be possible to enter now..."];
+	  29 [label="Jump to: [padlock hub]"];
+	  30 [label="Kim Kitsuragi: \"Perhaps you should give it another go?\""];
+	  31 [label="Padlocked Door: This door has been closed with a padlock. A chalk-drawn number on the board says #11."];
+	  32 [label="Padlocked Door: CheckItem(\"chaincutters\")"];
+	  33 [label="CheckItem(\"chaincutters\")", shape=diamond];
+	  34 [label="!(CheckItem(\"chaincutters\"))", shape=diamond];
+	  35 [label="Padlocked Door: No reply."];
+	  36 [label="cutter_cuttery"];
+	  37 [label="Padlocked Door: CheckItem(\"chaincutters\")"];
+	  38 [label="CheckItem(\"chaincutters\")", shape=diamond];
+	  39 [label="!(CheckItem(\"chaincutters\"))", shape=diamond];
+	  40 [label="Kim Kitsuragi: The lieutenant looks at you for a long moment, then blinks once..."];
+	  41 [label="You: [Leave.]"];
+	  42 [label="Jump to: [padlock hub]"];
+	  43 [label="Kim Kitsuragi: \"After you, detective.\""];
+	  44 [label="You: \"Snip-snip, my friend!\" (Do hand-scissors.)"];
+	  45 [label="Kim Kitsuragi: He takes a closer look at the lock. \"I supposed if one were *committed* to it, there's a pair of chaincutters in the Kineema.\""];
+	  46 [label="Padlocked Door: CheckEquipped(\"chaincutters\")"];
+	  47 [label="CheckEquipped(\"chaincutters\")", shape=diamond];
+	  48 [label="!(CheckEquipped(\"chaincutters\"))", shape=diamond];
+	  49 [label="Padlocked Door: IsKimHere()"];
+	  50 [label="IsKimHere()", shape=diamond];
+	  51 [label="!(IsKimHere())", shape=diamond];
+	  52 [label="padlock hub"];
+	  53 [label="You: Examine the padlock."];
+	  54 [label="You: \"Don't you think that's what I'm *trying* to do?\""];
+	  55 [label="Interfacing: What are you doing? You need to get your tools out, man."];
+	  56 [label="You: Knock."];
+	  57 [label="Interfacing: Yes! Get those cutters in there and *snip* away. This weak chain is no match for your might."];
+	  58 [label="Padlocked Door: It's a solid lump of metal, but the shackle is deeply corroded -- a solid pair of chaincutters would make short work of it."];
+	  59 [label="Padlocked Door: IsKimHere()"];
+	  60 [label="IsKimHere()", shape=diamond];
+	  61 [label="!(IsKimHere())", shape=diamond];
+	  62 [label="Padlocked Door: IsKimHere()"];
+	  63 [label="IsKimHere()", shape=diamond];
+	  64 [label="!(IsKimHere())", shape=diamond];
+	  65 [label="Interfacing: What are you doing? You're trying to cut the body of the lock with the chaincutters and it's really not working."];
+	  66 [label="You: Refrain from commenting."];
+	  67 [label="Padlocked Door: CheckEquipped(\"chaincutters\")"];
+	  68 [label="CheckEquipped(\"chaincutters\")", shape=diamond];
+	  69 [label="!(CheckEquipped(\"chaincutters\"))", shape=diamond];
+	  70 [label="Jump to: [padlock hub]"];
+	  71 [label="Kim Kitsuragi: The lieutenant is concentrated on the hallway, scanning both ways for any approachers."];
+	  72 [label="You: \"These chaincutters are broken, Kim.\""];
+	  73 [label="Interfacing: Better whip out those cutters... you won't get very far otherwise."];
+	  0 -> 1
+	  1 -> 32
+	  2 -> 18
+	  2 -> 45
+	  2 -> 6
+	  3 -> 46
+	  4 -> 63
+	  5 -> 41
+	  6 -> 8
+	  6 -> 9
+	  7 -> 5
+	  8 -> 63
+	  9 -> 11
+	  10 -> 73
+	  10 -> 55
+	  11 -> 13
+	  12 -> 14
+	  12 -> 15
+	  13 -> 19
+	  14 -> 19
+	  15 -> 22
+	  16 -> 43
+	  17 -> 41
+	  18 -> 20
+	  18 -> 21
+	  19 -> 29
+	  20 -> 24
+	  21 -> 23
+	  22 -> 53
+	  23 -> 25
+	  23 -> 26
+	  24 -> 56
+	  25 -> 66
+	  26 -> 3
+	  27 -> 4
+	  28 -> 7
+	  29 -> 53
+	  30 -> 53
+	  31 -> 53
+	  32 -> 34
+	  32 -> 35
+	  33 -> 74
+	  34 -> 17
+	  35 -> 30
+	  36 -> 16
+	  36 -> 67
+	  37 -> 40
+	  37 -> 39
+	  38 -> 74
+	  39 -> 71
+	  40 -> 4
+	  42 -> 53
+	  44 -> 28
+	  45 -> 43
+	  46 -> 48
+	  46 -> 49
+	  47 -> 37
+	  48 -> 38
+	  49 -> 51
+	  49 -> 52
+	  50 -> 10
+	  51 -> 53
+	  52 -> 42
+	  52 -> 12
+	  52 -> 54
+	  52 -> 57
+	  52 -> 27
+	  53 -> 59
+	  54 -> 31
+	  55 -> 43
+	  56 -> 36
+	  57 -> 43
+	  58 -> 60
+	  59 -> 61
+	  59 -> 62
+	  60 -> 47
+	  61 -> 68
+	  62 -> 64
+	  62 -> 65
+	  63 -> 44
+	  65 -> 50
+	  66 -> 72
+	  67 -> 69
+	  67 -> 70
+	  68 -> 58
+	  69 -> 33
+	  70 -> 53
+	  71 -> 23
+	  72 -> 31
+	  73 -> 71
+}
+

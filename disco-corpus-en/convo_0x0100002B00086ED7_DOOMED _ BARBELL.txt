@@ -1,0 +1,161 @@
+# DOOMED / BARBELL
+# You can lift the barbell.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Logic: Maybe it wasn't such a good idea to smash through that back door..."];
+	  3 [label="You: Say nothing."];
+	  4 [label="Barbell: IsKimHere()"];
+	  5 [label="IsKimHere()", shape=diamond];
+	  6 [label="!(IsKimHere())", shape=diamond];
+	  7 [label="You: \"What kind of a bastard would just remove the collars? It should be a felony.\""];
+	  8 [label="Jump to: [barbell hub]"];
+	  9 [label="reaction with kim"];
+	  10 [label="Kim Kitsuragi: \"Wearing gloves would definitely make it easier,\" the lieutenant agrees."];
+	  11 [label="You: Is this familiar because I'm a weightlifter?"];
+	  12 [label="Barbell: A barbell lies on the floor. The colour has worn off its weight plates."];
+	  13 [label="Physical Instrument: Conjuring up an inhuman amount of strength, you raise the barbell up in the air. Your biceps tremble, but you're a savage. This is a children's game!"];
+	  14 [label="You: [Leave.]"];
+	  15 [label="Barbell: Variable[\"doomed.bookstore_backdoor_forced\"]"];
+	  16 [label="Variable[\"doomed.bookstore_backdoor_forced\"]", shape=diamond];
+	  17 [label="!(Variable[\"doomed.bookstore_backdoor_forced\"])", shape=diamond];
+	  18 [label="You: \"Actually, I don't really care about safety hazards.\""];
+	  19 [label="Kim Kitsuragi: \"No one does, until they get smashed under the barbell.\""];
+	  20 [label="You: \"Oh yeah.\""];
+	  21 [label="Jump to: [barbell hub]"];
+	  22 [label="Physical Instrument: A warm wave of accomplishment washes over your head, as you drop the barbell to the floor. For a moment it feels like you're strong enough to succeed at anything you ever set your mind to."];
+	  23 [label="Visual Calculus: There are no collars on the barbell. This is a safety hazard."];
+	  24 [label="Kim Kitsuragi: \"Proper weightlifting gloves would definitely afford a better grip,\" the lieutenant agrees."];
+	  25 [label="You: \"I'm a true champion!\""];
+	  26 [label="Logic: It's just a memory."];
+	  27 [label="Barbell: The barbell waits patiently on the floor, like a dog for its master."];
+	  28 [label="Barbell: Variable[\"doomed.gym_doing_reps\"]"];
+	  29 [label="Variable[\"doomed.gym_doing_reps\"]", shape=diamond];
+	  30 [label="!(Variable[\"doomed.gym_doing_reps\"])", shape=diamond];
+	  31 [label="Kim Kitsuragi: \"At the station gym, I mean. I prefer running. It clears your head...\" The lieutenant steps away from the barbell, letting your recover in peace."];
+	  32 [label="Jump to: [barbell hub]"];
+	  33 [label="Barbell: Variable[\"tc.doomed_commercial_area\"]"];
+	  34 [label="Variable[\"tc.doomed_commercial_area\"]", shape=diamond];
+	  35 [label="!(Variable[\"tc.doomed_commercial_area\"])", shape=diamond];
+	  36 [label="Kim Kitsuragi: \"Good technique.\" The lieutenant nods with approval."];
+	  37 [label="Kim Kitsuragi: \"It would be a violation of EPIS safety regulations if the gym was still operating. But it isn't. No one's supposed to come here anymore.\""];
+	  38 [label="You: \"Fuck you, you stupid barbell!\""];
+	  39 [label="Kim Kitsuragi: \"Weightlifting was never my favourite, either.\" The lieutenant is obviously *handling* you."];
+	  40 [label="Inland Empire: Why does it feel so familiar?"];
+	  41 [label="Endurance: A memory from another life -- when you were young and fit."];
+	  42 [label="Kim Kitsuragi: \"You're right, the weights may fall off. Better not touch it then.\""];
+	  43 [label="Physical Instrument: It's 60 kg. Your triceps hum at the sight of these weights. Show the world what kind of beast it's dealing with. Lift them."];
+	  44 [label="You: \"Whatever, weightlifting is for the intellectually impaired anyway.\""];
+	  45 [label="You: \"Seems like I'm a little out of shape. Or maybe my palms were just slippery...\""];
+	  46 [label="Physical Instrument: You manage to hoist it off the ground, but the barbell feels wobbly and dangerous, your hands slick with sweat. Turns out you're no beast, just an old man with bad form."];
+	  47 [label="Physical Instrument: A warm wave of accomplishment washes over your head, as you drop the barbell to the floor. For a moment it feels like you're strong enough to succeed at anything you ever set your mind to."];
+	  48 [label="Barbell: CheckEquippedGroup(\"gloves\")"];
+	  49 [label="CheckEquippedGroup(\"gloves\")", shape=diamond];
+	  50 [label="!(CheckEquippedGroup(\"gloves\"))", shape=diamond];
+	  51 [label="You: \"Look, Kim, it's a trap. There are no collars on the barbell.\""];
+	  52 [label="Barbell: IsKimHere()"];
+	  53 [label="IsKimHere()", shape=diamond];
+	  54 [label="!(IsKimHere())", shape=diamond];
+	  55 [label="Kim Kitsuragi: \"It was never my favourite, either.\" The lieutenant is obviously handling you."];
+	  56 [label="You: Lift the barbell."];
+	  57 [label="You: Variable[\"doomed.gym_doing_reps\"]"];
+	  58 [label="Variable[\"doomed.gym_doing_reps\"]", shape=diamond];
+	  59 [label="!(Variable[\"doomed.gym_doing_reps\"])", shape=diamond];
+	  60 [label="Endurance: Even your body has failed you. It's a miracle you didn't injure yourself."];
+	  61 [label="Inland Empire: No, it's not that... It's the stale smell of rubber, the squeaky sound of sneakers, your bruised knee against the mat. And a whistle... then the feeling is gone."];
+	  62 [label="Inland Empire: See, see! This place is cursed!"];
+	  63 [label="Inland Empire: Hey, but you're still in a ghost house... What if someone heard this? What if they know you're here?!"];
+	  64 [label="Barbell: Variable[\"doomed.barbell_main_hub_reached\"]"];
+	  65 [label="Variable[\"doomed.barbell_main_hub_reached\"]", shape=diamond];
+	  66 [label="!(Variable[\"doomed.barbell_main_hub_reached\"])", shape=diamond];
+	  67 [label="barbell hub"];
+	  68 [label="Jump to: [barbell hub]"];
+	  69 [label="You: (Say nothing, revel in the feeling.)"];
+	  0 -> 1
+	  1 -> 65
+	  2 -> 53
+	  3 -> 40
+	  4 -> 5
+	  4 -> 6
+	  5 -> 37
+	  6 -> 33
+	  7 -> 38
+	  8 -> 68
+	  9 -> 3
+	  9 -> 45
+	  9 -> 46
+	  9 -> 39
+	  10 -> 8
+	  11 -> 62
+	  12 -> 44
+	  13 -> 26
+	  13 -> 21
+	  13 -> 70
+	  15 -> 17
+	  15 -> 18
+	  16 -> 2
+	  17 -> 53
+	  18 -> 20
+	  19 -> 69
+	  20 -> 48
+	  21 -> 68
+	  23 -> 41
+	  24 -> 8
+	  25 -> 48
+	  26 -> 42
+	  27 -> 68
+	  28 -> 30
+	  28 -> 31
+	  29 -> 14
+	  30 -> 47
+	  31 -> 8
+	  32 -> 68
+	  33 -> 35
+	  33 -> 36
+	  34 -> 63
+	  35 -> 61
+	  36 -> 33
+	  37 -> 69
+	  38 -> 40
+	  39 -> 32
+	  40 -> 68
+	  41 -> 22
+	  42 -> 19
+	  42 -> 7
+	  43 -> 24
+	  44 -> 56
+	  45 -> 49
+	  46 -> 34
+	  47 -> 64
+	  48 -> 50
+	  48 -> 51
+	  49 -> 25
+	  50 -> 11
+	  51 -> 43
+	  52 -> 54
+	  52 -> 55
+	  53 -> 9
+	  54 -> 8
+	  55 -> 32
+	  56 -> 58
+	  57 -> 59
+	  57 -> 60
+	  58 -> 29
+	  59 -> 29
+	  60 -> 16
+	  61 -> 27
+	  62 -> 61
+	  63 -> 4
+	  64 -> 66
+	  64 -> 67
+	  65 -> 28
+	  66 -> 13
+	  67 -> 57
+	  67 -> 12
+	  67 -> 52
+	  67 -> 15
+	  68 -> 68
+	  69 -> 48
+}
+

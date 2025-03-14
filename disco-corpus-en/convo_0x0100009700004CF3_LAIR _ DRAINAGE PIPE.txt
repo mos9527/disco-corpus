@@ -1,0 +1,149 @@
+# LAIR / DRAINAGE PIPE
+# Alternate path into Feld building.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: Try to pull the door apart."];
+	  3 [label="You: Variable[\"boardwalk.drainage_wc\"]"];
+	  4 [label="Variable[\"boardwalk.drainage_wc\"]", shape=diamond];
+	  5 [label="!(Variable[\"boardwalk.drainage_wc\"])", shape=diamond];
+	  6 [label="Inland Empire: This isn't gonna work without the lieutenant here. What if you *do* find a way in and it's a *trap*? Kitsuragi needs to be here, covering you."];
+	  7 [label="You: Okay. What *else*?"];
+	  8 [label="Visual Calculus: He means: the pipe must be coming from *somewhere* in the building."];
+	  9 [label="Untitled hub"];
+	  10 [label="Physical Instrument: You can't seem to pry the doors apart for long enough to slip through. A second pair of hands would be really useful here."];
+	  11 [label="Drainage Pipe: IsKimHere()"];
+	  12 [label="IsKimHere()", shape=diamond];
+	  13 [label="!(IsKimHere())", shape=diamond];
+	  14 [label="Drainage Pipe: IsKimHere()"];
+	  15 [label="IsKimHere()", shape=diamond];
+	  16 [label="!(IsKimHere())", shape=diamond];
+	  17 [label="You: What's in there?"];
+	  18 [label="Drainage Pipe: And? And nothing. Broken glass from bottles thrown against the walls of the pipe. A syringe..."];
+	  19 [label="Perception (Smell): A very, very faint smell of stale liquor still lingers -- or is it just your imagination?"];
+	  20 [label="Physical Instrument: It looks too exhausting to even try. You'd only bloody your fingers on the rust."];
+	  21 [label="Drainage Pipe: Variable[\"boardwalk.drainage_hub_reached\"]"];
+	  22 [label="Variable[\"boardwalk.drainage_hub_reached\"]", shape=diamond];
+	  23 [label="!(Variable[\"boardwalk.drainage_hub_reached\"])", shape=diamond];
+	  24 [label="Drainage Pipe: Behind the pipe -- the maintenance door, rusted shut and half-sunken in sand."];
+	  25 [label="Jump to: [Untitled hub]"];
+	  26 [label="Kim Kitsuragi: The lieutenant looks over your shoulder."];
+	  27 [label="Jump to: [Untitled hub]"];
+	  28 [label="You: And?"];
+	  29 [label="Kim Kitsuragi: \"I see. Another stop on your crusade against narcomania. I *was* hoping we were in pursuit of a murder suspect...\""];
+	  30 [label="Drainage Pipe: An old pipe peeks out from beneath the rotting boards of the boardwalk. Could this be an alternative path into the Feld building?"];
+	  31 [label="Kim Kitsuragi: The lieutenant leans back against the door, panting. \"Let's take a breather and try this again later? It's... very tough.\""];
+	  32 [label="Logic: Oh, duh, why didn't you think of that?"];
+	  33 [label="Physical Instrument: The metal doors are heavy, and very awkward to open on your own, but you just manage to slide them open wide enough for you to slide yourself between them..."];
+	  34 [label="Interfacing: It's jammed shut. The subtle approach isn't going to work on this one."];
+	  35 [label="Physical Instrument: You and the lieutenant lean all your weight into pushing the doors apart, but you're not quite synchronized in your efforts. They slam shut again before you can enter."];
+	  36 [label="You: [Leave.]"];
+	  37 [label="You: Come closer and look in."];
+	  38 [label="Jump to: [Untitled hub]"];
+	  39 [label="You: Could I get into the Feld building through this pipe?"];
+	  40 [label="Drainage Pipe: Variable[\"boardwalk.drainage_wc\"]"];
+	  41 [label="Variable[\"boardwalk.drainage_wc\"]", shape=diamond];
+	  42 [label="!(Variable[\"boardwalk.drainage_wc\"])", shape=diamond];
+	  43 [label="You: [Leave.]"];
+	  44 [label="Suggestion: The lieutenant's face lights up. He doesn't usually notice these little things."];
+	  45 [label="Drainage Pipe: IsKimHere()"];
+	  46 [label="IsKimHere()", shape=diamond];
+	  47 [label="!(IsKimHere())", shape=diamond];
+	  48 [label="Visual Calculus: A building like this must have multiple doors serving various functions. Perhaps a basement access?"];
+	  49 [label="Kim Kitsuragi: \"Given that this isn't a martial arts thriller,\" a grin flickers across his face, \"it's highly unlikely -- and not without risk to our health either.\""];
+	  50 [label="Jump to: [Untitled hub]"];
+	  51 [label="Drainage Pipe: Variable[\"boardwalk.drainage_tried_once\"]"];
+	  52 [label="Variable[\"boardwalk.drainage_tried_once\"]", shape=diamond];
+	  53 [label="!(Variable[\"boardwalk.drainage_tried_once\"])", shape=diamond];
+	  54 [label="You: [Go in.]"];
+	  55 [label="Jump to: [Untitled hub]"];
+	  56 [label="Drainage Pipe: Your eyes slowly begin to adjust to the darkness inside the drainage pipe."];
+	  57 [label="Drainage Pipe: An ordinary drainage pipe. Darkness."];
+	  58 [label="You: \"This looks like a great place to stash narcotics. I want to make sure there's nothing hidden in there that children might pick up.\""];
+	  59 [label="Jump to: [Untitled hub]"];
+	  60 [label="Kim Kitsuragi: \"However, the pipe suggests there may be an entrance to the basement around...\" The lieutenant pushes aside the reeds and looks around."];
+	  61 [label="Drainage Pipe: As your eyes adjust, you see some trash -- crumpled up newspapers, cigarette butts. Someone has half-heartedly spray-painted 'SKULLS' on the right side."];
+	  62 [label="Kim Kitsuragi: \"...and it's right here! A maintenance door.\" He points to a rusted metal double door to the right of the pipe, obscured by the reeds."];
+	  63 [label="Endurance: Oh yeah... *big boy time*. This needs you to put your BACK into it."];
+	  64 [label="Inland Empire: This isn't gonna work without the lieutenant here. What if you *do* find a way in and it's a *trap*? Kitsuragi needs to be here, covering you."];
+	  65 [label="Untitled hub (02)"];
+	  66 [label="Kim Kitsuragi: \"Good work.\" The lieutenant nods toward the impenetrable darkness inside. \"Shall we?\""];
+	  0 -> 1
+	  1 -> 22
+	  2 -> 3
+	  3 -> 4
+	  3 -> 5
+	  4 -> 41
+	  5 -> 41
+	  6 -> 9
+	  7 -> 62
+	  8 -> 33
+	  9 -> 2
+	  9 -> 37
+	  9 -> 40
+	  9 -> 18
+	  9 -> 59
+	  10 -> 28
+	  11 -> 12
+	  11 -> 13
+	  12 -> 27
+	  13 -> 6
+	  14 -> 16
+	  14 -> 17
+	  15 -> 36
+	  16 -> 10
+	  17 -> 58
+	  18 -> 20
+	  19 -> 60
+	  20 -> 56
+	  21 -> 24
+	  21 -> 23
+	  22 -> 25
+	  23 -> 31
+	  24 -> 46
+	  25 -> 9
+	  26 -> 9
+	  27 -> 9
+	  28 -> 19
+	  29 -> 39
+	  30 -> 49
+	  31 -> 28
+	  32 -> 45
+	  33 -> 67
+	  34 -> 64
+	  35 -> 32
+	  37 -> 57
+	  38 -> 9
+	  39 -> 50
+	  40 -> 42
+	  40 -> 43
+	  41 -> 34
+	  42 -> 52
+	  44 -> 63
+	  45 -> 48
+	  45 -> 47
+	  46 -> 26
+	  47 -> 65
+	  48 -> 66
+	  49 -> 61
+	  50 -> 9
+	  51 -> 53
+	  51 -> 54
+	  52 -> 21
+	  53 -> 15
+	  55 -> 9
+	  56 -> 11
+	  57 -> 7
+	  58 -> 30
+	  59 -> 9
+	  60 -> 8
+	  61 -> 29
+	  62 -> 35
+	  63 -> 51
+	  64 -> 26
+	  65 -> 44
+	  65 -> 38
+	  66 -> 55
+}
+

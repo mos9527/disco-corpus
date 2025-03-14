@@ -1,0 +1,105 @@
+# INVENTORY / LIBRARY CARD
+# dead working class husband library card
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="A Folded Library Card: The library card is folded into two and still slightly wet to the touch. The front side reads: \"Central Jamrock Public Library Card. Issued to Billie Méjean, expires July '53.\""];
+	  3 [label="Variable[\"TASK.identify_corpse_boardwalk\"]"];
+	  4 [label="Variable[\"TASK.identify_corpse_boardwalk\"]", shape=diamond];
+	  5 [label="!(Variable[\"TASK.identify_corpse_boardwalk\"])", shape=diamond];
+	  6 [label="IsKimHere()"];
+	  7 [label="IsKimHere()", shape=diamond];
+	  8 [label="!(IsKimHere())", shape=diamond];
+	  9 [label="library card hub"];
+	  10 [label="A Folded Library Card: Something tells you you should give them a call."];
+	  11 [label="Jump to: [library card hub]"];
+	  12 [label="A Folded Library Card: You put the library card away."];
+	  13 [label="Variable[\"TASK.report_corpse_wo_taking_main_task\"]"];
+	  14 [label="Variable[\"TASK.report_corpse_wo_taking_main_task\"]", shape=diamond];
+	  15 [label="!(Variable[\"TASK.report_corpse_wo_taking_main_task\"])", shape=diamond];
+	  16 [label="Kim Kitsuragi: \"We should first decide what to do with the body, before taking any other actions. Let's take another look at the body and talk things through.\""];
+	  17 [label="You: [Put it away.]"];
+	  18 [label="Logic: Billie is a unisex name. Could be the deceased *or* his family member?"];
+	  19 [label="IsTaskActive(\"TASK.examine_libray_card_wo_taking_main_task\")--[[ Variable[ ]]"];
+	  20 [label="IsTaskActive(\"TASK.examine_libray_card_wo_taking_main_task\")--[[ Variable[ ]]", shape=diamond];
+	  21 [label="!(IsTaskActive(\"TASK.examine_libray_card_wo_taking_main_task\")--[[ Variable[ ]])", shape=diamond];
+	  22 [label="You: Look at the backside."];
+	  23 [label="A Folded Library Card: Whoever owns this card is an avid reader: you find a list of books written in blue pencil: 'Radiothriller', 'Stand a Little Less Between Me and the Sun'. The last one in the list is 'The Glinting Curve', by M. Thibault. A library stamp indicates that the book has been returned."];
+	  24 [label="IsKimHere()"];
+	  25 [label="IsKimHere()", shape=diamond];
+	  26 [label="!(IsKimHere())", shape=diamond];
+	  27 [label="Jump to: [library card hub]"];
+	  28 [label="Logic: You should first decide what to do with the corpse, before taking any further actions. Talk to the lieutenant about it."];
+	  29 [label="Kim Kitsuragi: \"Good, we've examined the library card -- that should be enough for our colleagues. Now we can call the station from my Kineema and hand over the case.\""];
+	  30 [label="A Folded Library Card: \"If lost, please return the card to the library. Dial 005-02-55-211 or visit us at Meroe Street 78, Jamrock. Business hours: 09.00 to 18.00.\""];
+	  31 [label="Reaction Speed: Good idea. There was plenty of information here to go by."];
+	  32 [label="IsKimHere()"];
+	  33 [label="IsKimHere()", shape=diamond];
+	  34 [label="!(IsKimHere())", shape=diamond];
+	  35 [label="Kim Kitsuragi: \"Good.\" He takes a note. \"We should give them a call from my Kineema, see if we can learn anything about Billie Méjean.\""];
+	  36 [label="Conceptualization: Most of these titles seem to be in the sci-fi genre. Some thrillers too."];
+	  37 [label="Kim Kitsuragi: \"We already decided to let the station handle this case, so there's no need for us to call the library.\""];
+	  38 [label="Logic: You already decided to let the station handle the case, so there's no need to call the library."];
+	  39 [label="IsKimHere()"];
+	  40 [label="IsKimHere()", shape=diamond];
+	  41 [label="!(IsKimHere())", shape=diamond];
+	  42 [label="IsTaskActive(\"TASK.examine_library_card_with_main_task\")--[[ Variable[ ]]"];
+	  43 [label="IsTaskActive(\"TASK.examine_library_card_with_main_task\")--[[ Variable[ ]]", shape=diamond];
+	  44 [label="!(IsTaskActive(\"TASK.examine_library_card_with_main_task\")--[[ Variable[ ]])", shape=diamond];
+	  45 [label="You: Look inside."];
+	  0 -> 1
+	  1 -> 2
+	  2 -> 19
+	  3 -> 4
+	  3 -> 5
+	  4 -> 43
+	  5 -> 13
+	  6 -> 8
+	  6 -> 7
+	  7 -> 16
+	  8 -> 29
+	  9 -> 17
+	  9 -> 46
+	  9 -> 23
+	  10 -> 11
+	  11 -> 9
+	  13 -> 14
+	  13 -> 15
+	  14 -> 33
+	  15 -> 6
+	  16 -> 11
+	  17 -> 20
+	  18 -> 9
+	  19 -> 21
+	  19 -> 22
+	  20 -> 40
+	  22 -> 31
+	  23 -> 37
+	  24 -> 26
+	  24 -> 27
+	  25 -> 36
+	  26 -> 10
+	  27 -> 9
+	  28 -> 11
+	  30 -> 3
+	  31 -> 11
+	  32 -> 34
+	  32 -> 35
+	  33 -> 38
+	  34 -> 39
+	  35 -> 32
+	  36 -> 28
+	  37 -> 11
+	  38 -> 11
+	  39 -> 41
+	  39 -> 42
+	  40 -> 30
+	  41 -> 12
+	  42 -> 44
+	  42 -> 45
+	  43 -> 25
+	  44 -> 11
+	  45 -> 24
+}
+

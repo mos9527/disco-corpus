@@ -1,0 +1,1993 @@
+# WHIRLING / LENA MAIN
+# 1. Learn Morell is missing.
+2. Report on looking for Morell.
+3. Cryptids white check.
+4. Ask about Gary.
+5. Finish Cryptozoologists case.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Jump to: [endhub]"];
+	  3 [label="You: \"We're in the Whirling-in-Rags cafeteria.\""];
+	  4 [label="Conceptualization: That tape you picked up said '43. You seem to be a hip modern man who listens to hip modern records, so it must be '43."];
+	  5 [label="Lena, the Cryptozoologist's wife: \"I can tell that this is taxing for you, so I'll just ask *one* more question. What regime are we living under? What mode of government?\""];
+	  6 [label="You: \"In... Revachol?\""];
+	  7 [label="Composure: Her relief is palpable. She was getting pretty worried about you there, but now she relaxes her shoulders..."];
+	  8 [label="Lena, the Cryptozoologist's wife: \"That's right, dear! How splendid! Here, take this pen. Knowledge should always be rewarded.\""];
+	  9 [label="Lena, the Cryptozoologist's wife: \"Well, in that case sweetie, let me give you a small token of my gratitude.\" She hands you a ribbon-tie held together by a silver bird skull. \"It's a tie, Mesque in origin. The pin is an antique... quite special to the cryptozoological community.\""];
+	  10 [label="Untitled hub"];
+	  11 [label="Kim Kitsuragi: \"I thought it was a wonderful story, ma'am.\" He closes his notes and gives her a simple smile."];
+	  12 [label="Lena, the Cryptozoologist's wife: \"So how did I know what to imagine? It was only when I started telling my story as a teenager that boys would tell me: Lena...\" She lowers her voice, imitating a boy."];
+	  13 [label="Suggestion: So that's how they met. This is *beyond* significant for them."];
+	  14 [label="Lena, the Cryptozoologist's wife: \"That I'm some Queen of the Cryptozoologists... That... And for years his belief made *me* believe too.\""];
+	  15 [label="You: \"No, I want to hear about the insect.\""];
+	  16 [label="Lena, the Cryptozoologist's wife: \"Of course, dear.\""];
+	  17 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_phasmid_seen_hub_reached\"]"];
+	  18 [label="Variable[\"whirling.lena_phasmid_seen_hub_reached\"]", shape=diamond];
+	  19 [label="!(Variable[\"whirling.lena_phasmid_seen_hub_reached\"])", shape=diamond];
+	  20 [label="Drama: Her voice is shaky. What is going on here?"];
+	  21 [label="Volition: Very strange... why is she not letting you do this? It's like she's given up."];
+	  22 [label="You: \"You're not telling me the whole story.\""];
+	  23 [label="Lena, the Cryptozoologist's wife: Variable[\"TASK.report_to_cryptozoologists_1\"]"];
+	  24 [label="Variable[\"TASK.report_to_cryptozoologists_1\"]", shape=diamond];
+	  25 [label="!(Variable[\"TASK.report_to_cryptozoologists_1\"])", shape=diamond];
+	  26 [label="Jump to: [Lena, the Cryptozoologist's wife: \"\"And if you see him, let him know L...\"]"];
+	  27 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_intro_done\"]"];
+	  28 [label="Variable[\"whirling.lena_intro_done\"]", shape=diamond];
+	  29 [label="!(Variable[\"whirling.lena_intro_done\"])", shape=diamond];
+	  30 [label="You: \"Why did you need to use the phone, anyway?\""];
+	  31 [label="Lena, the Cryptozoologist's wife: \"It's really just a *sub-field* of zoology, one specializing in animal species that are so exceedingly rare that many assume them to be *extinct* or even *fictitious*...\""];
+	  32 [label="Encyclopedia: The quality of research at Revacholian universities *has* been on the decline, but you doubt there was ever a time when *cryptozoology* was embraced by the academic elite."];
+	  33 [label="Lena, the Cryptozoologist's wife: IsKimHere()"];
+	  34 [label="IsKimHere()", shape=diamond];
+	  35 [label="!(IsKimHere())", shape=diamond];
+	  36 [label="Lena, the Cryptozoologist's wife: \"I was also hoping she'd heard from Morell...\" She looks down."];
+	  37 [label="Kim Kitsuragi: \"Well, the man's already been dead more than a week...\" He concludes. \"I suppose a *small* diversion won't hurt too much.\""];
+	  38 [label="Lena, the Cryptozoologist's wife: \"Morell will eventually. Or we'll talk Gary into going back out, perhaps...\""];
+	  39 [label="Lena, the Cryptozoologist's wife: \"That *really* is too much, sweetie. Thank you for your dedication, but I can see you're coming down with a cough yourself.\""];
+	  40 [label="You: \"About your pin...\""];
+	  41 [label="Lena, the Cryptozoologist's wife: \"Here, I want to give you a small token of my gratitude.\" She hands you a thin ribbon held together by a silver bird skull. \"It's a tie, Mesque in origin. The pin is an antique... quite special.\""];
+	  42 [label="You: \"I ran into your husband on the coast.\""];
+	  43 [label="You: \"You seem busy. I'll come back later.\" [Leave.]"];
+	  44 [label="endhub"];
+	  45 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_main_introgreet_left\"]  or  Variable[\"whirling.lena_main_midgreet_left\"]"];
+	  46 [label="Variable[\"whirling.lena_main_introgreet_left\"]  or  Variable[\"whirling.lena_main_midgreet_left\"]", shape=diamond];
+	  47 [label="!(Variable[\"whirling.lena_main_introgreet_left\"]  or  Variable[\"whirling.lena_main_midgreet_left\"])", shape=diamond];
+	  48 [label="You: \"I'm sorry, I don't want to get involved in your affairs.\" (Refuse the task)"];
+	  49 [label="Shivers: Outside, spring rain seeps into the cracks in the walls and the cobblestone streets, and into grated storm drains. All the way down into the sewers... Above ground, the first May bells blossom."];
+	  50 [label="Rhetoric: She's trying to avoid the foreigners part. This is because she's a woman. She may be *lying* to you..."];
+	  51 [label="You: \"I hope you're right. I hope it's not too bad...\""];
+	  52 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_quiz_wrong_counter\"] < 4"];
+	  53 [label="Variable[\"whirling.lena_quiz_wrong_counter\"] < 4", shape=diamond];
+	  54 [label="!(Variable[\"whirling.lena_quiz_wrong_counter\"] < 4)", shape=diamond];
+	  55 [label="noyearhub"];
+	  56 [label="You: \"No -- I really want to know.\""];
+	  57 [label="Lena, the Cryptozoologist's wife: IsKimHere()"];
+	  58 [label="IsKimHere()", shape=diamond];
+	  59 [label="!(IsKimHere())", shape=diamond];
+	  60 [label="Lena, the Cryptozoologist's wife: \"It's not easy...\" She sighs. \"I've wasted enough of your time with this drama. I really must stop talking about it, lest I start crying and waste *more* of your time.\""];
+	  61 [label="Lena, the Cryptozoologist's wife: \"Listen, sweetie. I hate to ask, but if your investigation happens to take you to the other side of the coast, please do keep an eye out for my husband...\""];
+	  62 [label="Lena, the Cryptozoologist's wife: IsKimHere()"];
+	  63 [label="IsKimHere()", shape=diamond];
+	  64 [label="!(IsKimHere())", shape=diamond];
+	  65 [label="Lena, the Cryptozoologist's wife: \"Oh, I doubt it. No one gets into cryptozoology for the *money*, sweetie.\""];
+	  66 [label="Lena, the Cryptozoologist's wife: She chuckles to herself. \"Not at all. Why else would it hide itself so carefully?\""];
+	  67 [label="Lena, the Cryptozoologist's wife: \"And if you see him, let him know Lena is waiting for him here at the Whirling. He gets so tangled up in his work that he may not know the water lock's been repaired. And it's *cold* out there...\""];
+	  68 [label="Jump to: [IsKimHere()]"];
+	  69 [label="Composure: Enthusiasm has wiped the worry from her face. Her eyes sparkle behind her glasses."];
+	  70 [label="Lena, the Cryptozoologist's wife: \"Yes.\" She smiles a cautious smile. \"Field work is a young person's game, as they say...\""];
+	  71 [label="Lena, the Cryptozoologist's wife: IsKimHere()"];
+	  72 [label="IsKimHere()", shape=diamond];
+	  73 [label="!(IsKimHere())", shape=diamond];
+	  74 [label="Kim Kitsuragi: Reflexively, the lieutenant readies his familiar notebook."];
+	  75 [label="Lena, the Cryptozoologist's wife: \"That's true, yes. I'm almost certain neither my mother nor my grandmother knew of it. It was only when I started telling my story as a teenager that boys would tell me: Lena...\" She lowers her voice, imitating a boy."];
+	  76 [label="Lena, the Cryptozoologist's wife: \"For years it was a story I told at parties, when I wanted to impress *boys*, that sort of thing.\" She brushes her hair back. \"Of course, most people just took it as a strange, amusing anecdote. So did I, honestly. But then I met Morell...\""];
+	  77 [label="Jump to: [IsKimHere() && coast.morell_before_l ...]"];
+	  78 [label="Kim Kitsuragi: \"Yes, but a junior officer could...\" He takes off his glasses and thinks. Then puts them back on without wiping."];
+	  79 [label="Jump to: [lenamainhub]"];
+	  80 [label="You: \"You do that. I'll check the traps one more time.\""];
+	  81 [label="Jump to: [Untitled hub]"];
+	  82 [label="Lena, the Cryptozoologist's wife: Like that, she drives off. The gas engine putters quietly, as she gets to the doors -- then pushes them open. Outside the cold coastal wind blows."];
+	  83 [label="Kim Kitsuragi: \"We should go too.\""];
+	  84 [label="You: \"That's all for now, ma'am.\" [Leave.]"];
+	  85 [label="You: \"Are they in a *rough neighbourhood*?\""];
+	  86 [label="Lena, the Cryptozoologist's wife: \"Searching for such species -- called *cryptids* -- is difficult and often thankless, and frankly, many scientists are too lazy to do it. Universities these days are rarely interested in supporting *real* research.\""];
+	  87 [label="You: \"The water lock on the canal is broken, so your husband is probably just stuck on the other side of the coast.\""];
+	  88 [label="You: \"What did you need the phone for anyway?\""];
+	  89 [label="Lena, the Cryptozoologist's wife: \"Goodness! How is he? Did he say why he hasn't returned yet?\" The old woman clasps her hands together over her blanket."];
+	  90 [label="You: \"Good day, ma'am. Everything alright?\""];
+	  91 [label="Jump to: [TASK.inspect_traps_2_done]"];
+	  92 [label="Lena, the Cryptozoologist's wife: Variable[\"TASK.get_morell_back_to_lena\"]"];
+	  93 [label="Variable[\"TASK.get_morell_back_to_lena\"]", shape=diamond];
+	  94 [label="!(Variable[\"TASK.get_morell_back_to_lena\"])", shape=diamond];
+	  95 [label="Half Light: She's scared now. She's realized you really are brain damaged."];
+	  96 [label="Kim Kitsuragi: A sigh. The lieutenant buries his nose in his notebook."];
+	  97 [label="You: \"We're in Martinaise.\""];
+	  98 [label="Lena, the Cryptozoologist's wife: \"Revachol is a Zone of Control, led by an alliance of foreign powers called the Coalition. We have almost no government of our own. And *certainly* no dictatorship of the proletariat.\""];
+	  99 [label="Lena, the Cryptozoologist's wife: \"That's right, dear! How splendid!\""];
+	  100 [label="You: \"I'm basically also a cryptozoologist now.\""];
+	  101 [label="You: \"Maybe you imagined it, Lena?\""];
+	  102 [label="Lena, the Cryptozoologist's wife: Variable[\"TASK.report_to_cryptozoologists_1\"]"];
+	  103 [label="Variable[\"TASK.report_to_cryptozoologists_1\"]", shape=diamond];
+	  104 [label="!(Variable[\"TASK.report_to_cryptozoologists_1\"])", shape=diamond];
+	  105 [label="Authority: Of course. You're a cop, you were *born* to do this stuff."];
+	  106 [label="Empathy: A sigh. She doesn't think you'll need it."];
+	  107 [label="You: \"The story is real to you and him. That's what matters.\""];
+	  108 [label="Lena, the Cryptozoologist's wife: Variable[\"canal.lever_greeting_done\"]  or  Variable[\"canal.water_lock_greeting_done\"]"];
+	  109 [label="Variable[\"canal.lever_greeting_done\"]  or  Variable[\"canal.water_lock_greeting_done\"]", shape=diamond];
+	  110 [label="!(Variable[\"canal.lever_greeting_done\"]  or  Variable[\"canal.water_lock_greeting_done\"])", shape=diamond];
+	  111 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_percept_excited_phasmid\"]  and  Variable[\"tc.lena_saw_phasmid\"] == false"];
+	  112 [label="Variable[\"whirling.lena_percept_excited_phasmid\"]  and  Variable[\"tc.lena_saw_phasmid\"] == false", shape=diamond];
+	  113 [label="!(Variable[\"whirling.lena_percept_excited_phasmid\"]  and  Variable[\"tc.lena_saw_phasmid\"] == false)", shape=diamond];
+	  114 [label="Lena, the Cryptozoologist's wife: \"I suppose I have something of a *personal* connection to the Insulindian phasmid... All scientists have their little hobby-horses.\""];
+	  115 [label="Lena, the Cryptozoologist's wife: She laughs. \"I doubt it. It's not like teenagers need much encouragement in *that* regard.\""];
+	  116 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_refused_to_restock_trap\"]  and  Variable[\"whirling.lena_refused_to_restock_trap_leave\"] == false"];
+	  117 [label="Variable[\"whirling.lena_refused_to_restock_trap\"]  and  Variable[\"whirling.lena_refused_to_restock_trap_leave\"] == false", shape=diamond];
+	  118 [label="!(Variable[\"whirling.lena_refused_to_restock_trap\"]  and  Variable[\"whirling.lena_refused_to_restock_trap_leave\"] == false)", shape=diamond];
+	  119 [label="Rhetoric: Answering a question with a question, for example -- defensive isn't her usual style."];
+	  120 [label="Empathy: A terrible sting in the heart. Regret."];
+	  121 [label="Untitled hub (02)"];
+	  122 [label="Lena, the Cryptozoologist's wife: She sighs. \"I've wasted enough of your time with this drama. I really must go before I start crying and waste *more* of it.\""];
+	  123 [label="Lena, the Cryptozoologist's wife: \"A true believer,\" she looks out the window. \"Sometimes I still see it, too. The real memory of it. How it was there... Not the memory *of* the memory. But it's so hard to tell the two apart...\""];
+	  124 [label="You: \"The rest of it is pretty grim. Thanks for bringing some light.\" (Conclude.)"];
+	  125 [label="Lena, the Cryptozoologist's wife: \"You're welcome, sweetie.\" She flicks a switch on her chair and the engine turns on with a whir. \"I'm glad it helped you, even though it turned out to be a...\" The sentence remains unfinished."];
+	  126 [label="You: \"What is this *expedition* your husband was on?\""];
+	  127 [label="Composure: She's used to playing off such insults casually, but they still affect her."];
+	  128 [label="Lena, the Cryptozoologist's wife: Her eyes light up. \"What wonderful news!\""];
+	  129 [label="Lena, the Cryptozoologist's wife: \"The manager was vague about it.\" She frowns."];
+	  130 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_authority_missing\"]"];
+	  131 [label="Variable[\"whirling.lena_authority_missing\"]", shape=diamond];
+	  132 [label="!(Variable[\"whirling.lena_authority_missing\"])", shape=diamond];
+	  133 [label="Lena, the Cryptozoologist's wife: \"Oh, thank you officers, truly. I'll be right here if you come across any sign of Morell.\""];
+	  134 [label="You: \"So... who's going to check the traps?\""];
+	  135 [label="Jump to: [lenamainhub]"];
+	  136 [label="Jump to: [lenamainhub]"];
+	  137 [label="Jump to: [whirling.lena_white_check_cryptids]"];
+	  138 [label="Interfacing: Why would he be vague? This is something to look into later. Ask Garte maybe."];
+	  139 [label="Lena, the Cryptozoologist's wife: \"Perhaps, dear, perhaps. But for now it's just the spring of '51.\""];
+	  140 [label="You: \"Cop. We are living under the cop-regime.\""];
+	  141 [label="Lena, the Cryptozoologist's wife: \"Yes, indeed. We are in the fine city of Revachol.\""];
+	  142 [label="Lena, the Cryptozoologist's wife: \"Someone more educated in *sweeping* matters? Maybe you should ask...\" She turns to the lieutenant."];
+	  143 [label="Inland Empire: She is perturbed by your not knowing what year it is -- but not by your mention of the apocalypse. It *must* be the end times."];
+	  144 [label="Lena, the Cryptozoologist's wife: \"Yes, but, more specifically -- on the coast of the city of Revachol, in the district of Martinaise.\""];
+	  145 [label="Lena, the Cryptozoologist's wife: \"Oh... no, nothing like that, dear. Revachol is a Zone of Control, led by an alliance of foreign powers called the Coalition. We have almost no government of our own -- certainly no machines.\""];
+	  146 [label="Lena, the Cryptozoologist's wife: \"Oh... no, nothing like that, dear. Revachol is a Zone of Control, led by an alliance of foreign powers called the Coalition. We have almost no government of our own. And certainly not one who's horseback.\""];
+	  147 [label="Lena, the Cryptozoologist's wife: She nods, but still looks worried."];
+	  148 [label="Lena, the Cryptozoologist's wife: \"Oh... no, nothing like that, dear. Revachol is a Zone of Control, led by an alliance of foreign powers called the Coalition. We have almost no government of our own. And certainly no matriarchy...\""];
+	  149 [label="Jump to: [cryptidintrohub]"];
+	  150 [label="Interfacing: The little silvery knob holding the tie together feels warm in your hand. It's in the shape of an avian skull. With *eight* eyes."];
+	  151 [label="You: \"Did you follow it?\""];
+	  152 [label="You: \"Then what?\""];
+	  153 [label="Visual Calculus: What if it *is* the case?"];
+	  154 [label="Lena, the Cryptozoologist's wife: Variable[\"TASK.report_to_cryptozoologists_1\"]"];
+	  155 [label="Variable[\"TASK.report_to_cryptozoologists_1\"]", shape=diamond];
+	  156 [label="!(Variable[\"TASK.report_to_cryptozoologists_1\"])", shape=diamond];
+	  157 [label="Esprit de Corps: I smell pseudoscience, he's thinking. Not a big fan of that."];
+	  158 [label="Lena, the Cryptozoologist's wife: \"Okay, it's 1113 Tabernacle Road. Jamrock, but...\""];
+	  159 [label="Logic: The water lock! That was broken. Could this be it?"];
+	  160 [label="Lena, the Cryptozoologist's wife: \"... where other phasmids imitate sticks or leaves, this one's a living *reed*. It disguises itself among the reeds here on the Insulindian coast.\""];
+	  161 [label="Jump to: [phasmohub]"];
+	  162 [label="Jump to: [phasmohub]"];
+	  163 [label="Lena, the Cryptozoologist's wife: IsKimHere()"];
+	  164 [label="IsKimHere()", shape=diamond];
+	  165 [label="!(IsKimHere())", shape=diamond];
+	  166 [label="Jump to: [Untitled hub]"];
+	  167 [label="You: \"Lena, what's wrong? You seem different.\""];
+	  168 [label="Lena, the Cryptozoologist's wife: \"He's so proud of it. He always tells everyone...\""];
+	  169 [label="Encyclopedia: You know, this reminds you of the Perikarnassian Theory of Love. In essence, love is a relay -- out of death. Generation by generation, our love remains in our progeny. Lay some of *that* on her!"];
+	  170 [label="Lena, the Cryptozoologist's wife: \"My point is, the Insulindian phasmid *probably* does not exist. And you were right to put your bug-chasing days behind you.\""];
+	  171 [label="Lena, the Cryptozoologist's wife: \"I'm not sure of anything.\" She looks out the window. \"Sometimes I still see it, you know. The real memory. Not the memory of the memory, but it's so hard to tell the two apart...\""];
+	  172 [label="You: \"How did the two of you meet?\""];
+	  173 [label="Lena, the Cryptozoologist's wife: \"That's just it! This isn't like him at all. He always plans his expeditions so carefully...\""];
+	  174 [label="Authority: You don't have a *style*, you have a *duty*. Now start asking questions, like a real law enforcement official."];
+	  175 [label="Kim Kitsuragi: He sighs. \"If you say so.\""];
+	  176 [label="Lena, the Cryptozoologist's wife: \"Oh sweetie,\" she says, beaming. \"I don't even know how to thank you for finding my husband and helping him out. I hope we haven't been too much trouble for you...\""];
+	  177 [label="You: \"It's probably for the best. It's awfully cold out there in those reeds.\""];
+	  178 [label="Lena, the Cryptozoologist's wife: \"Of course, sweetie. I'm probably working myself up over nothing anyway. I'll be right here.\" She glances out the window toward the bay."];
+	  179 [label="You: \"It was a truly epic long distance trek.\""];
+	  180 [label="You: \"So, about your husband... Does he often go missing?\""];
+	  181 [label="Untitled hub (03)"];
+	  182 [label="Kim Kitsuragi: \"Truly -- a lot of legwork. My partner *adores* these kinds of things...\" The lieutenant is still catching his breath."];
+	  183 [label="Jump to: [Lena, the Cryptozoologist's wife: \"\"To let the young woman who's house...\"]"];
+	  184 [label="Lena, the Cryptozoologist's wife: \"Oh! Well, he's a bit shorter than you but with a larger frame. And he has longish white hair -- usually a bit uncombed, you might say *wild* even...\""];
+	  185 [label="Lena, the Cryptozoologist's wife: \"But -- maybe a *fresh set of eyes* is what the world needs? And -- while I'm no doctor -- such bouts of amnesia are often temporary. So I wouldn't worry *too* much.\""];
+	  186 [label="You: \"It's a bad year in my late forties, or fifties? I don't even know how *old* I am.\""];
+	  187 [label="Lena, the Cryptozoologist's wife: \"We are alive -- in a hostel called the Whirling-in-Rags. And the Whirling itself is in the city of Revachol.\""];
+	  188 [label="Lena, the Cryptozoologist's wife: IsKimHere()"];
+	  189 [label="IsKimHere()", shape=diamond];
+	  190 [label="!(IsKimHere())", shape=diamond];
+	  191 [label="Lena, the Cryptozoologist's wife: \"Of course.\" She turns to you. \"Then I don't know. Someone rich maybe? Wealthy people are educated. Though I don't know where you would find a wealthy person in Martinaise...\""];
+	  192 [label="revacholhub"];
+	  193 [label="Lena, the Cryptozoologist's wife: \"Nope. Sadly not. Revachol is what's called a Zone of Control. Under an alliance of foreign powers called the Coalition. We have no government of our own and what democracy we have is...\" She thinks. \"Market driven.\""];
+	  194 [label="Kim Kitsuragi: The lieutenant tries to pretend he's not hearing it and is out of the conversation."];
+	  195 [label="Lena, the Cryptozoologist's wife: \"Ah, I'm getting ahead of myself. I was five and a half. In Betancourt, in the suburbs. My grandmother had a summer home there.\""];
+	  196 [label="Morell, the Cryptozoologist: \"Not all of them.\" He answers for her. \"There is some white colouration reported, along with beige, where the camouflage ends.\""];
+	  197 [label="You: \"You were on a date?\""];
+	  198 [label="Lena, the Cryptozoologist's wife: \"I'm sorry, dear -- you've had to drudge through them so many times. Such is field work -- a young person's game as they say.\""];
+	  199 [label="Kim Kitsuragi: \"I knew it...\" you hear Kim say quietly to himself."];
+	  200 [label="Inland Empire: Rising, unfolding from the reeds on a hot summer's day... like a benevolent god."];
+	  201 [label="You: \"Can I have your address? Just in case there's news.\""];
+	  202 [label="You: \"Are you saying you *made it up*?\""];
+	  203 [label="Lena, the Cryptozoologist's wife: \"No, sweetie,\" she shakes her head, \"there's more to it than that. Morell was so eager to believe my story was *evidence* of the phasmid's existence...\""];
+	  204 [label="Lena, the Cryptozoologist's wife: \"Oh, sweetie, I wish it were that simple. But it's not. Morell was so eager to believe my story was *evidence* of the phasmid's existence...\""];
+	  205 [label="Lena, the Cryptozoologist's wife: IsKimHere()"];
+	  206 [label="IsKimHere()", shape=diamond];
+	  207 [label="!(IsKimHere())", shape=diamond];
+	  208 [label="Lena, the Cryptozoologist's wife: \"Oh, thank you sweetie, truly. I'll be right here if you come across any sign of Morell.\""];
+	  209 [label="phasmohub"];
+	  210 [label="You: \"Is it valuable?\""];
+	  211 [label="You: \"Let's try again. If I were trying to meet him on the street, what would I look for?\""];
+	  212 [label="Kim Kitsuragi: The lieutenant stares at his shoe, caked in mud. He doesn't say anything."];
+	  213 [label="Morell, the Cryptozoologist: \"You were a *child*, my dear. Really, it's extraordinary what you were able to describe. Now go on, tell our friend about it. He's proven his interest in the field.\""];
+	  214 [label="Lena, the Cryptozoologist's wife: \"That's kind of you, but I've got to demur. It's hard to tell a story you don't really believe in anymore...\""];
+	  215 [label="You: \"You know, the Perikarnassians theorized that *love* was the key to immortality...\""];
+	  216 [label="You: \"It's just police-work.\""];
+	  217 [label="Untitled hub"];
+	  218 [label="Suggestion: All qualities these two seem to share in abundance."];
+	  219 [label="Lena, the Cryptozoologist's wife: Variable[\"village.lena_offered_to_recheck_traps\"]"];
+	  220 [label="Variable[\"village.lena_offered_to_recheck_traps\"]", shape=diamond];
+	  221 [label="!(Variable[\"village.lena_offered_to_recheck_traps\"])", shape=diamond];
+	  222 [label="Kim Kitsuragi: \"Really?\""];
+	  223 [label="You: \"It's been a pleasure, ma'am.\" (Conclude.)"];
+	  224 [label="Lena, the Cryptozoologist's wife: \"Just a moment, officer.\""];
+	  225 [label="Lena, the Cryptozoologist's wife: \"Please don't trouble yourself about me, sweetie. I was just hoping to make a call, but the Whirling's phone line isn't working.\""];
+	  226 [label="Composure: She's agitated, judging from the way she keeps pulling at the frayed edge of her blanket."];
+	  227 [label="Kim Kitsuragi: \"Lieutenant Kitsuragi.\" He shakes her hand brusquely. \"May I ask what you needed to use the phone for, ma'am?\""];
+	  228 [label="You: \"That's too bad. I hope your husband comes back soon.\" (Decline task.)"];
+	  229 [label="Lena, the Cryptozoologist's wife: Variable[\"coast.morell_greeting_done\"]"];
+	  230 [label="Variable[\"coast.morell_greeting_done\"]", shape=diamond];
+	  231 [label="!(Variable[\"coast.morell_greeting_done\"])", shape=diamond];
+	  232 [label="You: \"What does your husband look like?\""];
+	  233 [label="Lena, the Cryptozoologist's wife: \"Of course, sweetie. Good luck with your investigation.\""];
+	  234 [label="You: \"It's totally '43.\""];
+	  235 [label="Lena, the Cryptozoologist's wife: \"There, there. The year is '51, and spring has only just started. I'm sure there are better days ahead.\""];
+	  236 [label="Lena, the Cryptozoologist's wife: \"Now, now.\" She tilts her head as she looks up at you with maternal solicitude."];
+	  237 [label="Lena, the Cryptozoologist's wife: \"I haven't seen very many other cities personally, but everyone says so. Revachol is a rare jewel. This city used to rule the world... Though it has seen better days.\" There's a pause as she studies your expression. You must look quite lost."];
+	  238 [label="Rhetoric: But they still have cops..."];
+	  239 [label="You: \"What is the *Revolution* you mentioned?\""];
+	  240 [label="Lena, the Cryptozoologist's wife: \"Oh dear, this *is* troubling. You really ought to know that -- being one yourself. There aren't *really* any cops in Revachol, not in the traditional sense. The status of law enforcement has been a complicated matter since the Revolution...\""];
+	  241 [label="Suggestion: That is a way, *way* bigger compliment than it sounds like."];
+	  242 [label="Lena, the Cryptozoologist's wife: \"Our first, yes.\" The old woman looks at her husband tenderly..."];
+	  243 [label="Esprit de Corps: But I don't believe it. A child, left unattended, on a warm day. Children make up stories and then end up believing them."];
+	  244 [label="Empathy: And she could get up and walk -- right into the reeds on her own. Into the mud. Anywhere."];
+	  245 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_intro_done\"]  and  Variable[\"whirling.lena_main_main_hub_reached\"]"];
+	  246 [label="Variable[\"whirling.lena_intro_done\"]  and  Variable[\"whirling.lena_main_main_hub_reached\"]", shape=diamond];
+	  247 [label="!(Variable[\"whirling.lena_intro_done\"]  and  Variable[\"whirling.lena_main_main_hub_reached\"])", shape=diamond];
+	  248 [label="Lena, the Cryptozoologist's wife: \"We were on our first date when I told him my story. You should have seen his face...\" She smiles. \"He said my descriptions match the phasmid down to a tee: its white marble limbs, the way it moved...\""];
+	  249 [label="Lena, the Cryptozoologist's wife: \"Of course -- I've thought about it. But Morell says my report matches with the others. And I'm sure I hadn't heard of the phasmid as a child. Nor had my mother -- or my grandmother.\""];
+	  250 [label="Inland Empire: Do it. Who knows what cryptozoological mysteries will be uncovered?"];
+	  251 [label="Lena, the Cryptozoologist's wife: \"But now we're both getting old, and he's still working himself sick out in those reeds, looking for it...\" She shakes her head, still unable to meet your eyes. \"But what if I was just *wrong*? I think I was...\""];
+	  252 [label="Lena, the Cryptozoologist's wife: \"Morell can explain it all much better. I wish you could hear him describe it. Then you'd understand, I'm sure.\""];
+	  253 [label="Reaction Speed: She's skipping over some important parts... perhaps you'll find out more later."];
+	  254 [label="You: \"Let's change the subject for now.\""];
+	  255 [label="Jump to: [lenamainhub]"];
+	  256 [label="Suggestion: It has a taste *you're* quite familiar with."];
+	  257 [label="You: \"Never mind.\""];
+	  258 [label="Lena, the Cryptozoologist's wife: \"I'm... in doubt, sweetie. That's all. Everyone is, now and then.\""];
+	  259 [label="Authority: And when a police officer asks -- you must answer."];
+	  260 [label="Composure: She has to swallow to relax her throat. It's keeping her from talking."];
+	  261 [label="You: \"Be careful out there, Lena.\" (Conclude.)"];
+	  262 [label="Volition: No one can STOP you from finding the phasmid."];
+	  263 [label="Lena, the Cryptozoologist's wife: IsKimHere()"];
+	  264 [label="IsKimHere()", shape=diamond];
+	  265 [label="!(IsKimHere())", shape=diamond];
+	  266 [label="Shivers: Somewhere out there -- a kilometre to the southeast -- a gust of wind shakes the Feld building, rattling dusty windows, beckoning with strange coldness. To ask the wind once more."];
+	  267 [label="Lena, the Cryptozoologist's wife: \"But they should have returned by now. They were just going down the coast, across the water lock, to set a few traps. He said they'd be back on Monday...\" She sighs. \"What could be keeping them?\""];
+	  268 [label="Lena, the Cryptozoologist's wife: \"Yes, sweetie?\""];
+	  269 [label="You: \"I've changed my mind. I'll help you find your husband after all.\""];
+	  270 [label="Garte, the Cafeteria Manager: \"The closest phone booth is down the coast. Sorry for the inconvenience, ma'am.\" He appears to be genuinely apologetic."];
+	  271 [label="Lena, the Cryptozoologist's wife: \"Of course, officers.\" She smiles politely. \"Is there a particular cryptid you two are interested in learning about?\""];
+	  272 [label="You: \"I've really spent too much time on this side-case as it is.\" (Reject task.)"];
+	  273 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_husband_back\"]"];
+	  274 [label="Variable[\"whirling.lena_husband_back\"]", shape=diamond];
+	  275 [label="!(Variable[\"whirling.lena_husband_back\"])", shape=diamond];
+	  276 [label="Untitled hub"];
+	  277 [label="Lena, the Cryptozoologist's wife: \"I hope so! He's going to catch a cold, staying out there for so long...\""];
+	  278 [label="Lena, the Cryptozoologist's wife: \"I was also hoping she'd heard from Morell...\" She looks down."];
+	  279 [label="Jump to: [Lena, the Cryptozoologist's wife: \"\"Oh, forgive me for not introducing...\"]"];
+	  280 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.klaasje_call_open_trouble\"]"];
+	  281 [label="Variable[\"whirling.klaasje_call_open_trouble\"]", shape=diamond];
+	  282 [label="!(Variable[\"whirling.klaasje_call_open_trouble\"])", shape=diamond];
+	  283 [label="Empathy: It's always a challenge to describe the person you know best in the world."];
+	  284 [label="Logic: It must have been the Whirling landline that Klaasje \"nicked.\""];
+	  285 [label="Lena, the Cryptozoologist's wife: \"Yes -- and Revachol...?\" She examines you."];
+	  286 [label="Kim Kitsuragi: \"No.\" He looks away. \"I'm not an encyclopedia. I won't be a guide either. I'm a police officer.\""];
+	  287 [label="Lena, the Cryptozoologist's wife: \"It is quite disappointing, yes. A lot of people would like some form of representation. There's *talk*, but... for now, the RCM is all we've got.\""];
+	  288 [label="You: \"Who could tell me more?\" (Conclude.)"];
+	  289 [label="Logic: Be real -- Gary is not going to help with this."];
+	  290 [label="Lena, the Cryptozoologist's wife: \"Not all of them, as far as I remember. But some of them -- on the inside. Like stalks of marble if that makes sense...\""];
+	  291 [label="You: \"It's just a little side-thing, we'll do it down the line.\""];
+	  292 [label="Suggestion: So that's how they met. This is *beyond* significant for them."];
+	  293 [label="You: \"Wow, love is *hard*.\""];
+	  294 [label="Rhetoric: A waste of time?"];
+	  295 [label="Perception (Hearing): A *fool's hope* -- say her lips moving in silence."];
+	  296 [label="Conceptualization: More important than a missing *expedition?* I don't know... expeditions often lead to something interesting."];
+	  297 [label="Kim Kitsuragi: \"*Establishment...*\" His suspicion is confirmed. \"I thought so.\""];
+	  298 [label="You: \"So... is it dangerous?\""];
+	  299 [label="Lena, the Cryptozoologist's wife: Variable[\"coast.payphone_dolores_call_done\"]  or  IsTHCPresent(\"caustic_echo\")  or  IsTHCPresent(\"white_mourning\")  or  Variable[\"inventory.ledger_caustic_echo\"]  or  Variable[\"inventory.ledger_white_mourning\"]"];
+	  300 [label="Variable[\"coast.payphone_dolores_call_done\"]  or  IsTHCPresent(\"caustic_echo\")  or  IsTHCPresent(\"white_mourning\")  or  Variable[\"inventory.ledger_caustic_echo\"]  or  Variable[\"inventory.ledger_white_mourning\"]", shape=diamond];
+	  301 [label="!(Variable[\"coast.payphone_dolores_call_done\"]  or  IsTHCPresent(\"caustic_echo\")  or  IsTHCPresent(\"white_mourning\")  or  Variable[\"inventory.ledger_caustic_echo\"]  or  Variable[\"inventory.ledger_white_mourning\"])", shape=diamond];
+	  302 [label="Lena, the Cryptozoologist's wife: \"I was a paraplegic before we met. He didn't know before I came in, on our first date. If I weren't the Queen of the Cryptozoologists... If I didn't tell him that story...\""];
+	  303 [label="Lena, the Cryptozoologist's wife: \"You too, sweetie.\" She flicks a switch and the engine on her chair turns on with a whir. \"Thank you for everything. Truly.  Even though it turned out to be a...\" The sentence remains unfinished."];
+	  304 [label="Lena, the Cryptozoologist's wife: \"Of course not -- I didn't mean to say my situation discredits the field. There have been *some* confirmed discoveries. And a lot of hoaxes too, but still...\" She looks to the door."];
+	  305 [label="Lena, the Cryptozoologist's wife: \"The Union office probably has a phone, but I can't really get there, or to the phone booth down the coast... And Gary's phone is dead, too...\" She sighs."];
+	  306 [label="Empathy: A faint smile tells you she appreciates the effort, but at the moment her mind is on more serious matters..."];
+	  307 [label="You: \"You may not believe it, but it looks like some maniac crashed his motor carriage into it.\""];
+	  308 [label="authoritymissinghub"];
+	  309 [label="Lena, the Cryptozoologist's wife: \"Of course, dear. Is there a particular cryptid that you're interested in learning about?\""];
+	  310 [label="Kim Kitsuragi: \"We ran into your husband on the coast, madam. He was just going to finish up some work and then come back.\""];
+	  311 [label="Lena, the Cryptozoologist's wife: Variable[\"TASK.inspect_traps_2_done\"]"];
+	  312 [label="Variable[\"TASK.inspect_traps_2_done\"]", shape=diamond];
+	  313 [label="!(Variable[\"TASK.inspect_traps_2_done\"])", shape=diamond];
+	  314 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_main_main_hub_reached\"]"];
+	  315 [label="Variable[\"whirling.lena_main_main_hub_reached\"]", shape=diamond];
+	  316 [label="!(Variable[\"whirling.lena_main_main_hub_reached\"])", shape=diamond];
+	  317 [label="Lena, the Cryptozoologist's wife: \"But I am so relieved to hear that he's okay. Thank you for putting an old woman's heart at ease, if even a little.\""];
+	  318 [label="Untitled hub (02)"];
+	  319 [label="You: \"Is everything alright, ma'am?\""];
+	  320 [label="Jump to: [Lena, the Cryptozoologist's wife: \"\"To let the young woman who's house...\"]"];
+	  321 [label="Lena, the Cryptozoologist's wife: \"One other thing -- he'll likely have all kinds of *field gear* on him, even if he's not out in the reeds. You know, just in case.\""];
+	  322 [label="Lena, the Cryptozoologist's wife: \"We are in a hostel called the Whirling-in-Rags, dear. And the Whirling itself is in the city of Revachol.\""];
+	  323 [label="You: \"If there's no government, how come there are cops?\""];
+	  324 [label="You: \"What does that have to do with there not being any cops?\""];
+	  325 [label="Lena, the Cryptozoologist's wife: IsKimHere()"];
+	  326 [label="IsKimHere()", shape=diamond];
+	  327 [label="!(IsKimHere())", shape=diamond];
+	  328 [label="Esprit de Corps: I'm beginning to suspect that you might indeed be completely adrift in this reality, thinks the lieutenant. How can it be *that* bad? Never mind -- we're in this now."];
+	  329 [label="Lena, the Cryptozoologist's wife: IsKimHere()"];
+	  330 [label="IsKimHere()", shape=diamond];
+	  331 [label="!(IsKimHere())", shape=diamond];
+	  332 [label="You: \"Our leaders are fierce warriors who traverse the plains on steeds.\""];
+	  333 [label="Untitled hub (02)"];
+	  334 [label="Lena, the Cryptozoologist's wife: \"Oh dear...\" She shakes her head, suddenly very worried. \"And you were doing so well. There aren't *really* any cops in Revachol, not in the traditional sense. The status of law enforcement has been a complicated matter since the Revolution...\""];
+	  335 [label="Visual Calculus: Measuring things is important. How did she get the size?"];
+	  336 [label="Lena, the Cryptozoologist's wife: Variable[\"TASK.report_to_cryptozoologists_1\"]"];
+	  337 [label="Variable[\"TASK.report_to_cryptozoologists_1\"]", shape=diamond];
+	  338 [label="!(Variable[\"TASK.report_to_cryptozoologists_1\"])", shape=diamond];
+	  339 [label="You: \"I really don't know.\""];
+	  340 [label="Inland Empire: This will *surely* lead to a cryptozoological mystery with that *extremely rare insect*..."];
+	  341 [label="Lena, the Cryptozoologist's wife: IsKimHere()"];
+	  342 [label="IsKimHere()", shape=diamond];
+	  343 [label="!(IsKimHere())", shape=diamond];
+	  344 [label="You: \"So you haven't seen it? I should arrest you for lying.\""];
+	  345 [label="Lena, the Cryptozoologist's wife: \"Oh, sweetie, it's *fascinating*...\" She catches herself. \"But I shouldn't bore you with entomological minutiae.\""];
+	  346 [label="Rhetoric: There's a touch of *awe* in the way she enunciates the creature's name."];
+	  347 [label="You: \"Does it have cool powers?\""];
+	  348 [label="Untitled hub (03)"];
+	  349 [label="Lena, the Cryptozoologist's wife: \"Well, it was summer,\" she starts. \"I was building a racing track out of sand on the beach near a tall stand of reeds. Quite a tall one, many times my height, I remember. When all of a sudden...\""];
+	  350 [label="Untitled hub"];
+	  351 [label="Lena, the Cryptozoologist's wife: \"Oh, thank you so much. And don't catch a cold out there!\" She smiles up at you brightly."];
+	  352 [label="Lena, the Cryptozoologist's wife: \"I hope I've been useful.\""];
+	  353 [label="You: \"You're in doubt? About what?\""];
+	  354 [label="You: \"You're right about all of it. And I need to get back to my work.\""];
+	  355 [label="You: \"Howdy, Lena! What's kicking?\""];
+	  356 [label="Lena, the Cryptozoologist's wife: \"We'll be celebrating our *sixteenth anniversary* this autumn.\" Her smile is soft. \"Not the most numerically satisfying anniversary, but I like the less obvious milestones even more, somehow...\""];
+	  357 [label="Lena, the Cryptozoologist's wife: \"Via a dating agency, I'm ashamed to say. I was looking to get back into the scene after recovering from my accident, and he'd just divorced...\""];
+	  358 [label="Lena, the Cryptozoologist's wife: \"We hit it off and, well, here we are.\" She smiles wistfully."];
+	  359 [label="You: \"I've already given my word. I'm honour-bound to uphold it.\""];
+	  360 [label="Kim Kitsuragi: \"You know... to hell with it, let's have more cryptids.\""];
+	  361 [label="You: \"He's fine, ma'am. He couldn't get back earlier because the water lock on the canal was broken. Now he's just finishing up some work...\""];
+	  362 [label="You: \"You seem busy. I'll come back later.\" [Leave.]"];
+	  363 [label="You: \"It was just on my way while I was working the case.\""];
+	  364 [label="Lena, the Cryptozoologist's wife: \"Oh, hello, dear. I didn't notice you at first.\" She smiles up at you distractedly."];
+	  365 [label="You: \"Hello again, ma'am. So why did you need to make that call?\""];
+	  366 [label="Interfacing: Why would he be *vague* about phone problems? This is something to look into later -- ask Garte maybe."];
+	  367 [label="Lena, the Cryptozoologist's wife: She frowns, looking you over. \"Surely things can't be *that* bad?\""];
+	  368 [label="Lena, the Cryptozoologist's wife: \"Precisely, sweetie! Revachol is what's called a Zone of Control, led by an alliance of foreign powers. We have almost no government of our own, sadly...\""];
+	  369 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.mirror_expression_source_located\"]"];
+	  370 [label="Variable[\"whirling.mirror_expression_source_located\"]", shape=diamond];
+	  371 [label="!(Variable[\"whirling.mirror_expression_source_located\"])", shape=diamond];
+	  372 [label="Composure: She looks flustered, her hands smoothing out the creases in her blanket even as she attempts to reassure you."];
+	  373 [label="Kim Kitsuragi: The lieutenant studies you, rubbing his chin."];
+	  374 [label="Half Light: She had no fear. Just surprise."];
+	  375 [label="Morell, the Cryptozoologist: \"How could she? Who imagines this? She didn't *know* about the phasmid. This is the main thing here, what makes it a confirmed sighting -- she had no previous knowledge of the insect.\""];
+	  376 [label="You: \"How big was it?\""];
+	  377 [label="You: \"Normally when I think about stuff like *women* and *marriage*, I feel *bad*. When I think about you and Morell I feel okay. That counts for something, no?\""];
+	  378 [label="You: \"Probably just some technical problem.\""];
+	  379 [label="Lena, the Cryptozoologist's wife: \"Hmmm. Well, his expression is slightly grumpy, but his eyes are always bright and curious, like a small boy's. And his palms are quite coarse from all the field work, but he's quite gentle...\""];
+	  380 [label="Logic: You can't go around Revachol feeling grown men's hands. If you want to find her husband, you'll need more *concrete* information."];
+	  381 [label="Inland Empire: You've come so far. You can't leave those locusts there, waiting on the ghost reed with no one to witness when it appears..."];
+	  382 [label="Jump to: [IsKimHere() && coast.morell_before_l ...]"];
+	  383 [label="Half Light: There's a touch of *awe* in the way she enunciated the creature's name."];
+	  384 [label="Jump to: [lenamainhub]"];
+	  385 [label="You: \"To hell with this. *I* still believe you saw the phasmid.\""];
+	  386 [label="Lena, the Cryptozoologist's wife: \"I was a paraplegic before we met. He didn't know before I arrived... on our first date. If I weren't the Queen of the Cryptozoologists... If I didn't tell him that story...\""];
+	  387 [label="You: \"So your husband is some kind of scientist?\""];
+	  388 [label="expeditionhub"];
+	  389 [label="Lena, the Cryptozoologist's wife: \"Goodness, no! Well, we did get separated once before, during that *monsoon* in South Safre. But we were younger then, and Morell always takes the appropriate precautions...\""];
+	  390 [label="Jump to: [lenamainhub]"];
+	  391 [label="Lena, the Cryptozoologist's wife: “But you have more important things to worry about.” She glances out the window toward the bay."];
+	  392 [label="midgreet"];
+	  393 [label="Kim Kitsuragi: A sigh. He takes off his glasses and wipes the lenses on his jacket before replacing them."];
+	  394 [label="Lena, the Cryptozoologist's wife: \"No.\" She says -- insisting now. \"You don't have to do that. Enough of this fool's errand, Morell will do it. Or Gary. You have work to do, I've wasted enough of everyone's time.\""];
+	  395 [label="Lena, the Cryptozoologist's wife: \"I knew what I was getting into when I married a *cryptozoologist*, of course. It's just... Waiting for him to come back from field work is always nerve-racking...\""];
+	  396 [label="Lena, the Cryptozoologist's wife: \"Oh, hello, sweetie. So nice to see you again.\""];
+	  397 [label="Jump to: [lenamainhub]"];
+	  398 [label="You: \"He's fine. He couldn't get back before because the water lock on the canal was broken. I'm sure he'll be back soon.\""];
+	  399 [label="Authority: To redeem yourself before the hoods of Law. Now start asking questions, like a real law enforcement official."];
+	  400 [label="Suggestion: The lady is distressed. Perhaps something more up-beat might cheer her up?"];
+	  401 [label="You: \"Is everything alright?\""];
+	  402 [label="Jump to: [Lena, the Cryptozoologist's wife: \"\"That's just it! This isn't like hi...\"]"];
+	  403 [label="Jump to: [Lena, the Cryptozoologist's wife: \"\"I hope you were able to pawn that...\"]"];
+	  404 [label="You: \"A war zone. At the edge of the world.\""];
+	  405 [label="Lena, the Cryptozoologist's wife: CheckItem(\"music_whirling_smallest_church\")"];
+	  406 [label="CheckItem(\"music_whirling_smallest_church\")", shape=diamond];
+	  407 [label="!(CheckItem(\"music_whirling_smallest_church\"))", shape=diamond];
+	  408 [label="You: \"I'd *like* to think it's the dictatorship of the proletariat, but something tells me it's not.\""];
+	  409 [label="You: \"In hell. We're all in hell.\""];
+	  410 [label="You: \"I believe Revachol is being managed by something called... the Coalition?\""];
+	  411 [label="Lena, the Cryptozoologist's wife: \"Oh sweetie...\" she smiles a sad smile. \"It's really not. There used to be people who thought that way -- other people, who wanted those things -- but... they all went extinct.\""];
+	  412 [label="Lena, the Cryptozoologist's wife: \"A defeat, I'm afraid. The people of this archipelago tried to build something new, something *different*. The rest of the world didn't like it, so they came and ended it. This was forty two years ago.\""];
+	  413 [label="Lena, the Cryptozoologist's wife: CheckItem(\"kind_green_ape_pen\")"];
+	  414 [label="CheckItem(\"kind_green_ape_pen\")", shape=diamond];
+	  415 [label="!(CheckItem(\"kind_green_ape_pen\"))", shape=diamond];
+	  416 [label="Inland Empire: You sense that she won't judge you, no matter what you say."];
+	  417 [label="Lena, the Cryptozoologist's wife: \"The strangest moment of my life: I looked up and one of the reeds *moved*. Not like a plant, but like a living thing -- it stood up and looked at me. Its body unfolded like some antique toy... I've never seen anything like it.\""];
+	  418 [label="Lena, the Cryptozoologist's wife: \"I didn't know this can happen, so I reached my arm and touched the thing. It felt just like a stalk of reed, but it moved. Swaying, towering above me...\" She looks at you. \"After a while -- 20 seconds? a minute, maybe? -- it left. Went into the reeds.\""];
+	  419 [label="Lena, the Cryptozoologist's wife: \"You're welcome, sweetie. I do appreciate the chance to relive it, whenever I get one. It was just...\" she sighs. \"Such an impossibly sunshiny day. So warm.\""];
+	  420 [label="You: \"He gives up and *I'm* running around?\""];
+	  421 [label="Conceptualization: Some fringe-science is *exactly* what's needed right now. Spice up that *vanilla* murder investigation."];
+	  422 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_questtaking_passives_shown\"]"];
+	  423 [label="Variable[\"whirling.lena_questtaking_passives_shown\"]", shape=diamond];
+	  424 [label="!(Variable[\"whirling.lena_questtaking_passives_shown\"])", shape=diamond];
+	  425 [label="Jump to: [lenamainhub]"];
+	  426 [label="You: \"Maybe the phasmid *made* them make out?\""];
+	  427 [label="Inland Empire: Oh yeah. Here comes the *interesting*."];
+	  428 [label="You: \"Sorry, I have too many other things on my plate. Wish you the best of luck.\" (Reject task.)"];
+	  429 [label="You: \"Good day, ma'am. Everything alright?\""];
+	  430 [label="Lena, the Cryptozoologist's wife: \"Gary's as loyal as they come. I'd trust him with my husband's life any day.\""];
+	  431 [label="Suggestion: The lieutenant doesn't want to agitate the woman."];
+	  432 [label="Lena, the Cryptozoologist's wife: \"Thank you, dear. You've already done so much, but if your investigation happens to take you to the other side of the coast, please do keep an eye out for my husband...\""];
+	  433 [label="Lena, the Cryptozoologist's wife: \"Oh, forgive me for not introducing myself. My name is Lena. My husband and I are staying with our friend Gary just down the street, but I come here for tea when they're away.\""];
+	  434 [label="You: \"What did you need the phone for anyway?\""];
+	  435 [label="Jump to: [lenamainhub]"];
+	  436 [label="Lena, the Cryptozoologist's wife: \"Yes, well, thank you for your time, officer. I'm probably just worrying for no reason. I'm sure they'll return before long...\""];
+	  437 [label="You: \"Turns out the water lock was broken, so your husband is probably just stuck further down the coast. He should return now that it's fixed.\""];
+	  438 [label="You: \"I think I ran into your husband on the coast. He seemed to be busy, so I didn't talk to him much.\""];
+	  439 [label="Conceptualization: Now maybe she'll open up about those *fascinating cryptids*. Take her mind off all this..."];
+	  440 [label="You: \"Sorry, ma'am, I didn't mean to eavesdrop on your conversation. Tell me how I might make it up to you?\""];
+	  441 [label="You: \"I don't really know... some seedy hotel?\""];
+	  442 [label="You: \"I don't even know what to say. I'm so disappointed.\""];
+	  443 [label="Jump to: [Untitled hub (02)]"];
+	  444 [label="Lena, the Cryptozoologist's wife: \"You were doing quite well up until the end there. It *does* look like you're having trouble remembering things. History and places. Remembering *Reality*, in a word. It's very odd...\""];
+	  445 [label="Jump to: [intro_mainhub]"];
+	  446 [label="Jump to: [lenamainhub]"];
+	  447 [label="You: \"Kim, what do you think of this?\""];
+	  448 [label="Lena, the Cryptozoologist's wife: \"I'm sorry, dear. It was me -- I made him go home. He gets *so* stubborn about these things -- luckily his cough kept him from arguing with me.\""];
+	  449 [label="Lena, the Cryptozoologist's wife: Variable[\"TASK.report_to_cryptozoologists_1\"]"];
+	  450 [label="Variable[\"TASK.report_to_cryptozoologists_1\"]", shape=diamond];
+	  451 [label="!(Variable[\"TASK.report_to_cryptozoologists_1\"])", shape=diamond];
+	  452 [label="Lena, the Cryptozoologist's wife: Variable[\"TASK.report_to_cryptozoologists_1\"]"];
+	  453 [label="Variable[\"TASK.report_to_cryptozoologists_1\"]", shape=diamond];
+	  454 [label="!(Variable[\"TASK.report_to_cryptozoologists_1\"])", shape=diamond];
+	  455 [label="Volition: Doing some *good* will alleviate the hangover. At least you're of use to *someone*."];
+	  456 [label="Encyclopedia: The quest for knowledge is never over!"];
+	  457 [label="Logic: So she couldn't have made it up. Or imagined it."];
+	  458 [label="Suggestion: An acorn is not the same as the tree. That requires time, diligence, and care..."];
+	  459 [label="You: \"Morell hated lecturing. You convinced him to do something real in this world.\""];
+	  460 [label="Lena, the Cryptozoologist's wife: \"Oh dear, I'm afraid I'm not explaining this very well. It *is* very special...\" The woman's face flushes with embarrassment."];
+	  461 [label="You: \"You've given up on the phasmid.\""];
+	  462 [label="You: \"He'd still be into you. That's not how these things work.\""];
+	  463 [label="Lena, the Cryptozoologist's wife: \"Our first, yes.\" The old woman sighs tenderly..."];
+	  464 [label="lenaday2introhub"];
+	  465 [label="lenawhycallhub"];
+	  466 [label="You: \"I think I have all the information I need. Let's move on.\" (Conclude.)"];
+	  467 [label="Lena, the Cryptozoologist's wife: \"Oh, sweetie, if it weren't for you I'd be looking forward to another sleepless night. Thank you, from the bottom of my heart!\""];
+	  468 [label="Lena, the Cryptozoologist's wife: \"It's fine, I understand. Thank you anyway.\" She turns back to you with a weary smile. \"I'm glad to see you again, dear.\""];
+	  469 [label="Lena, the Cryptozoologist's wife: She turns back to the cafeteria manager. \"And there's no public phones nearby?\""];
+	  470 [label="Lena, the Cryptozoologist's wife: Variable[\"TASK.locate_morell\"]"];
+	  471 [label="Variable[\"TASK.locate_morell\"]", shape=diamond];
+	  472 [label="!(Variable[\"TASK.locate_morell\"])", shape=diamond];
+	  473 [label="You: \"I restocked the empty trap... Where's Morell?\""];
+	  474 [label="Empathy: Her smile is weary. Her earlier ebullience has left her."];
+	  475 [label="You: \"I'll take care of it.\" (Take it on.)"];
+	  476 [label="Lena, the Cryptozoologist's wife: \"Oh, hello, dear. There you are again.\" She sounds glad to see you."];
+	  477 [label="Jump to: [endhub]"];
+	  478 [label="Lena, the Cryptozoologist's wife: (Variable[\"whirling.klaasje_whirling_landline\"]  or  Variable[\"whirling.klaasje_rape_phone_logic\"])  and  Variable[\"whirling.garte_main_logic_phone\"] == false"];
+	  479 [label="(Variable[\"whirling.klaasje_whirling_landline\"]  or  Variable[\"whirling.klaasje_rape_phone_logic\"])  and  Variable[\"whirling.garte_main_logic_phone\"] == false", shape=diamond];
+	  480 [label="!((Variable[\"whirling.klaasje_whirling_landline\"]  or  Variable[\"whirling.klaasje_rape_phone_logic\"])  and  Variable[\"whirling.garte_main_logic_phone\"] == false)", shape=diamond];
+	  481 [label="Lena, the Cryptozoologist's wife: \"Just a moment, officer...\" She smiles up at you nervously. \"If you run into my husband again... do tell him I'm worried, and to hurry back.\""];
+	  482 [label="regimehub"];
+	  483 [label="Lena, the Cryptozoologist's wife: \"You're joking. Try again, one more time. What year is it?\""];
+	  484 [label="You: \"On something called *the urban coast*.\""];
+	  485 [label="Lena, the Cryptozoologist's wife: \"Someone more educated in these things than me? Someone rich, maybe? Wealthy people are educated. Though I don't know where you would find a wealthy person in Martinaise...\""];
+	  486 [label="Lena, the Cryptozoologist's wife: \"Actually...\" She raises her finger. \"We are *not*. You could say that about almost any other nation, but not Revachol. Try *one* more time, officer -- what mode of government?\""];
+	  487 [label="Rhetoric: Meaning: buying is voting."];
+	  488 [label="You: \"Radios are being used to control people's minds and distort our perception of reality, concealing our true masters: foreigners and *women*.\""];
+	  489 [label="Lena, the Cryptozoologist's wife: \"But thank you, sweetie. You did make me forget about my worries for a while.\" She smiles up at you, but concern is creeping back into her expression."];
+	  490 [label="You: \"What happened?\""];
+	  491 [label="Empathy: She'd just started forming memories. Real memories, not the billowy haze of infanthood."];
+	  492 [label="Untitled hub"];
+	  493 [label="Conceptualization: Yes! Some left-field scientific research is exactly what you need right now. Funk up that *vanilla* murder investigation."];
+	  494 [label="Kim Kitsuragi: \"You're welcome, ma'am.\""];
+	  495 [label="Empathy: You haven't, however. There are dangers out there, our ageing bodies fail... her heart won't rest until Morell is safely back with her."];
+	  496 [label="Logic: A little missing person's puzzle might be just the thing to take your mind off the hangover."];
+	  497 [label="Kim Kitsuragi: \"To be honest, this animal sounds like a *cryptid* -- you wouldn't happen to be searching for some kind of... Gnome of Geroma would you?\""];
+	  498 [label="Lena, the Cryptozoologist's wife: \"Well, whatever the cause, I'm thankful. You've spared me another sleepless night.\""];
+	  499 [label="You: \"Tell me more about this *rare insect* your husband is looking for.\""];
+	  500 [label="Reaction Speed: She was about to launch into an impassioned description, but stoppered herself. Why's that?"];
+	  501 [label="Lena, the Cryptozoologist's wife: \"It's not made-up, officer, I can *assure* you.\""];
+	  502 [label="Kim Kitsuragi: The lieutenant pulls out his notebook and begins jotting down the woman's description."];
+	  503 [label="Lena, the Cryptozoologist's wife: Variable[\"TASK.report_to_cryptozoologists_3_done\"] == false"];
+	  504 [label="Variable[\"TASK.report_to_cryptozoologists_3_done\"] == false", shape=diamond];
+	  505 [label="!(Variable[\"TASK.report_to_cryptozoologists_3_done\"] == false)", shape=diamond];
+	  506 [label="Lena, the Cryptozoologist's wife: \"But darling, I didn't even get the *size* of it right.\""];
+	  507 [label="Drama: The glance is tender, yes, but tempered by something else, a thought she can't express even to him... Interesting."];
+	  508 [label="Jump to: [Lena, the Cryptozoologist's wife: \"\"That's just it! This isn't like hi...\"]"];
+	  509 [label="Lena, the Cryptozoologist's wife: \"Oh, sweetie. I don't think the Perikarnassians were thinking of people in *my* situation.\" She looks down at her legs..."];
+	  510 [label="Kim Kitsuragi: \"Fine, our victim's already been dead more than a week. One more diversion won't change anything.\""];
+	  511 [label="Lena, the Cryptozoologist's wife: \"Different -- how?\" The half-moons of her glasses reflect you as she looks up at you."];
+	  512 [label="Lena, the Cryptozoologist's wife: \"It's... a strange feeling.\" She looks down, biting her lower lip. \"I haven't really told this to anyone, but... you *are* a police officer.\""];
+	  513 [label="Lena, the Cryptozoologist's wife: IsKimHere()"];
+	  514 [label="IsKimHere()", shape=diamond];
+	  515 [label="!(IsKimHere())", shape=diamond];
+	  516 [label="Kim Kitsuragi: \"I can't say it's the best part of town, but I wouldn't worry *too much* about a pair of grown men travelling together.\""];
+	  517 [label="You: \"Wait, who's this 'Gary' person? Do you trust him?\""];
+	  518 [label="Jump to: [morellhub]"];
+	  519 [label="Lena, the Cryptozoologist's wife: \"Oh, my! What happened to the water lock?\""];
+	  520 [label="You: \"I'd really like to hear about more cryptids.\""];
+	  521 [label="You: \"I've got a *premonition* that this missing scientist is connected to our main case.\""];
+	  522 [label="Lena, the Cryptozoologist's wife: Variable[\"coast.morell_before_lena_day_2_wokim\"]"];
+	  523 [label="Variable[\"coast.morell_before_lena_day_2_wokim\"]", shape=diamond];
+	  524 [label="!(Variable[\"coast.morell_before_lena_day_2_wokim\"])", shape=diamond];
+	  525 [label="Lena, the Cryptozoologist's wife: Variable[\"TASK.restock_trap_done\"]"];
+	  526 [label="Variable[\"TASK.restock_trap_done\"]", shape=diamond];
+	  527 [label="!(Variable[\"TASK.restock_trap_done\"])", shape=diamond];
+	  528 [label="Lena, the Cryptozoologist's wife: \"Oh, hello, dear. I didn't notice you at first.\" She smiles up at you distractedly."];
+	  529 [label="You: \"This sounds more like a side thing. I need to take care of my *main thing* -- then I'll get back to this.\" [Leave.]"];
+	  530 [label="Lena, the Cryptozoologist's wife: \"The Union office probably has a phone, but I can't really get there, or to the phone booth down the coast... And Gary's phone is dead, too...\" She sighs."];
+	  531 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_intro_done\"]"];
+	  532 [label="Variable[\"whirling.lena_intro_done\"]", shape=diamond];
+	  533 [label="!(Variable[\"whirling.lena_intro_done\"])", shape=diamond];
+	  534 [label="You: \"So, about your husband... Does he often go missing?\""];
+	  535 [label="Untitled hub"];
+	  536 [label="Lena, the Cryptozoologist's wife: \"That's right! In a hostel called the Whirling-in-Rags, to be precise.\""];
+	  537 [label="You: \"It's the spring of '51.\""];
+	  538 [label="You: \"Some kind of democracy maybe?\""];
+	  539 [label="Lena, the Cryptozoologist's wife: \"Good, dear, you got the decade right! It's the spring of '51.\""];
+	  540 [label="Authority: Damn it, I was really hoping it would be a Cop World. Okay, well, let's see..."];
+	  541 [label="Lena, the Cryptozoologist's wife: Variable[\"tc.date_fifty_one\"]"];
+	  542 [label="Variable[\"tc.date_fifty_one\"]", shape=diamond];
+	  543 [label="!(Variable[\"tc.date_fifty_one\"])", shape=diamond];
+	  544 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_kim_to_hell_cryptids\"]"];
+	  545 [label="Variable[\"whirling.lena_kim_to_hell_cryptids\"]", shape=diamond];
+	  546 [label="!(Variable[\"whirling.lena_kim_to_hell_cryptids\"])", shape=diamond];
+	  547 [label="Empathy: She's completely internalized her husband's struggles. They are her own."];
+	  548 [label="Lena, the Cryptozoologist's wife: \"No! At least... I don't think I did. But Morell was so eager to believe my story was *evidence* of the phasmid's existence...\""];
+	  549 [label="You: \"Wrong or not, your relationship with Morell isn't just about the phasmid.\""];
+	  550 [label="Lena, the Cryptozoologist's wife: \"But it *is*. We've spent years searching for the phasmid, hunting it together. Without it, what are we? Just another pathetic old couple...\""];
+	  551 [label="Kim Kitsuragi: \"I knew it. \"The lieutenant sighs. \"We're gonna be chasing made-up insects with *cryptozoologists*.\""];
+	  552 [label="You: \"What makes you think the phasmid is around here?\""];
+	  553 [label="Lena, the Cryptozoologist's wife: \"Of course, most phasmid sightings turn out to be *false alarms*, but their description matched the Insulindian phasmid *perfectly*, and they didn't even know what they were looking at!\""];
+	  554 [label="Lena, the Cryptozoologist's wife: \"Oh... you don't want to hear about some old woman's ramblings...\""];
+	  555 [label="Lena, the Cryptozoologist's wife: \"I ran back home to my grandmother and asked her if *reeds* could *walk* and told her they were looking at me.\" She chuckles. \"Of course, she just laughed at me, but I knew what I'd seen...\""];
+	  556 [label="Savoir Faire: That's not special at all. Of course it blends in, most insects do. You don't even have to be a stick insect for that..."];
+	  557 [label="Lena, the Cryptozoologist's wife: \"Officer... I hate to ask, but perhaps you could check those traps one more time? Only if you're in the area... In truth, I know Gary won't be up to it, and I'm concerned about my husband's health...\""];
+	  558 [label="You: \"Don't worry. You've asked me to look into it and I will.\""];
+	  559 [label="Jump to: [lenamainhub]"];
+	  560 [label="You: \"*Now* I understand why you haven't told him about your doubts.\""];
+	  561 [label="You: \"Are you sure you don't need help getting to Gary's?\""];
+	  562 [label="Lena, the Cryptozoologist's wife: Variable[\"TASK.return_to_whirling_done\"] == false  and  Variable[\"TASK.solve_the_strike_deadlock_done\"] == false"];
+	  563 [label="Variable[\"TASK.return_to_whirling_done\"] == false  and  Variable[\"TASK.solve_the_strike_deadlock_done\"] == false", shape=diamond];
+	  564 [label="!(Variable[\"TASK.return_to_whirling_done\"] == false  and  Variable[\"TASK.solve_the_strike_deadlock_done\"] == false)", shape=diamond];
+	  565 [label="You: \"Sorry, ma'am, I didn't mean to eavesdrop on your conversation. Tell me how I might make it up to you?\""];
+	  566 [label="You: \"Wait, what's wrong with the phone line?\""];
+	  567 [label="You: \"Tell me more about Morell. Looks, character, your relationship...\""];
+	  568 [label="Shivers: A cold breeze hisses through dense thickets of reeds.... Something sweet in it, somnolent. A damp chill goes down your spine. When you look around, you're still in the Whirling-in-Rags."];
+	  569 [label="Authority: You hear that? Someone's *missing*. There could be *foul play* afoot!"];
+	  570 [label="Authority: That's right. Now skip the foreplay. Time to dive into the dark alleys, start shaking down the usual suspects -- you know, *legwork*."];
+	  571 [label="Lena, the Cryptozoologist's wife: \"And there's no public phones nearby?\""];
+	  572 [label="Empathy: There's a note of disappointment in her voice that she can't quite suppress."];
+	  573 [label="Lena, the Cryptozoologist's wife: \"Hello, dear. It's good to see a familiar face.\" The elderly woman smiles up at you hopefully."];
+	  574 [label="Lena, the Cryptozoologist's wife: Variable[\"coast.morell_greeting_done\"]"];
+	  575 [label="Variable[\"coast.morell_greeting_done\"]", shape=diamond];
+	  576 [label="!(Variable[\"coast.morell_greeting_done\"])", shape=diamond];
+	  577 [label="Lena, the Cryptozoologist's wife: Variable[\"coast.morell_kim_there_no_task_greet\"]  and  IsKimHere()"];
+	  578 [label="Variable[\"coast.morell_kim_there_no_task_greet\"]  and  IsKimHere()", shape=diamond];
+	  579 [label="!(Variable[\"coast.morell_kim_there_no_task_greet\"]  and  IsKimHere())", shape=diamond];
+	  580 [label="You: \"So why did you need to make that call?\""];
+	  581 [label="Lena, the Cryptozoologist's wife: \"You see, Morell, my husband, and Gary were supposed to get back Monday night, but they're still missing and I haven't heard from them...\""];
+	  582 [label="You: \"You never told me you've *seen* the phasmid!\""];
+	  583 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.klaasje_call_open_trouble\"]"];
+	  584 [label="Variable[\"whirling.klaasje_call_open_trouble\"]", shape=diamond];
+	  585 [label="!(Variable[\"whirling.klaasje_call_open_trouble\"])", shape=diamond];
+	  586 [label="Logic: No mystery here -- this is Klaasje's handiwork."];
+	  587 [label="Lena, the Cryptozoologist's wife: FinishTask(\"TASK.tell_lena_about_water_lock_done\")--[[ Variable[ ]]"];
+	  588 [label="You: \"We're in Revachol.\""];
+	  589 [label="Empathy: I'm just a poor woman, she thinks. What do I know of these things. And how can I help you?"];
+	  590 [label="whenhub"];
+	  591 [label="You: \"We're dead. Haunting each other. We're ghosts.\""];
+	  592 [label="Lena, the Cryptozoologist's wife: \"The New! Disco dancing! It seems like a lifetime ago...\" Her eyes are filled with light reflected off those gilded years, when the city seemed full of possibility."];
+	  593 [label="Jump to: [regimehub]"];
+	  594 [label="You: \"We are governed by intelligent machines that perform calculations to determine the *freest* market. Everyone hustles and grinds like a bad ass visionary.\""];
+	  595 [label="Lena, the Cryptozoologist's wife: \"You didn't do very well, dear. It does look like you're having trouble remembering things. History and places. Remembering *Reality*, in a word. It's very odd...\""];
+	  596 [label="Inland Empire: Where did you go? Don't go..."];
+	  597 [label="Morell, the Cryptozoologist: \"...the way it moved, the colour, how some of its limbs were white like marble...\" He breathes excitedly. \"It matched *perfectly* with what I know from other accounts! It was amazing.\""];
+	  598 [label="Inland Empire: Do it. Find him. This will *surely* lead to a mystery with that *extremely rare insect*..."];
+	  599 [label="Lena, the Cryptozoologist's wife: \"Morell's so proud of it. He always tells everyone...\""];
+	  600 [label="You: \"But... Morell told me you'd seen it. *You* also told me...\""];
+	  601 [label="You: \"What is cryptozoology?\""];
+	  602 [label="You: \"Word around the canal is some weird new cryptid destroyed it.\""];
+	  603 [label="You: \"The water lock to the other side of the coast is broken. They're probably just stuck over there.\" (Proceed.)"];
+	  604 [label="You: \"You're right. I don't have time for insect facts right now. Let's talk about something else.\""];
+	  605 [label="Kim Kitsuragi: The lieutenant gives you a sideways glance."];
+	  606 [label="Encyclopedia: Ah, yes, *phasmatodea* -- a diverse group of insects whose bodies resemble twigs, leaves, that sort of thing. \"Ghost insects,\" colloquially."];
+	  607 [label="Lena, the Cryptozoologist's wife: IsKimHere()"];
+	  608 [label="IsKimHere()", shape=diamond];
+	  609 [label="!(IsKimHere())", shape=diamond];
+	  610 [label="Morell, the Cryptozoologist: \"'Ramblings'? Nonsense! Your description of the phasmid is the most precise I've ever heard!\""];
+	  611 [label="You: \"What is it?\""];
+	  612 [label="Lena, the Cryptozoologist's wife: \"Do you ever wonder if some lovely story from your childhood is just that... a story? Or a dream?\""];
+	  613 [label="You: Say nothing."];
+	  614 [label="Lena, the Cryptozoologist's wife: \"Maybe. But then why do I not dare tell him?\" She sighs. \"I've wasted enough of your time with this drama. I really must stop talking about it, lest I start crying and waste *more* of your time.\""];
+	  615 [label="Lena, the Cryptozoologist's wife: \"Either way, I should go. Poor Morell is running a fever and I need to get him home to Jamrock. Before we overstay our welcome with Gary.\""];
+	  616 [label="Lena, the Cryptozoologist's wife: \"Please don't trouble yourself about me, sweetie. I was just hoping to make a call, but the Whirling's phone line isn't working.\""];
+	  617 [label="Kim Kitsuragi: \"It's a pseudo-science that attempts to legitimize *research* into mythological beasts and urban legends.\" The lieutenant sounds unimpressed."];
+	  618 [label="Lena, the Cryptozoologist's wife: \"That's one opinion, yes. And people are entitled to their opinions...\""];
+	  619 [label="You: \"How long have you been married?\""];
+	  620 [label="Lena, the Cryptozoologist's wife: IsKimHere()"];
+	  621 [label="IsKimHere()", shape=diamond];
+	  622 [label="!(IsKimHere())", shape=diamond];
+	  623 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_kim_dont_worry\"]"];
+	  624 [label="Variable[\"whirling.lena_kim_dont_worry\"]", shape=diamond];
+	  625 [label="!(Variable[\"whirling.lena_kim_dont_worry\"])", shape=diamond];
+	  626 [label="2ndsay1stgreetinghub"];
+	  627 [label="You: I love missing persons cases."];
+	  628 [label="You: \"Okay, I'll bite. Has your husband gone missing before?\""];
+	  629 [label="You: \"Good luck with that. My bug-chasing days are done.\""];
+	  630 [label="Lena, the Cryptozoologist's wife: \"I absolutely understand, sweetie. It's for the best, believe me. And thank you for everything you've done for us, truly.\" She nods with a sad little smile."];
+	  631 [label="Jump to: [lenamainhub]"];
+	  632 [label="Kim Kitsuragi: \"I believe we ran into your husband on the coast, madam. He seemed to be busy setting up some trap, so we didn't talk to him much.\""];
+	  633 [label="Lena, the Cryptozoologist's wife: \"Are you sure it was him? Oh, thank heavens! Silly me.\" She smiles, though there's still concern in her features."];
+	  634 [label="Jump to: [endhub]"];
+	  635 [label="Untitled hub (03)"];
+	  636 [label="Lena, the Cryptozoologist's wife: \"Yes, we're in Martinaise, on the coast of Revachol.\""];
+	  637 [label="You: \"I know it's the '50s, but I'm not sure about the year.\""];
+	  638 [label="Lena, the Cryptozoologist's wife: IsKimHere()"];
+	  639 [label="IsKimHere()", shape=diamond];
+	  640 [label="!(IsKimHere())", shape=diamond];
+	  641 [label="Physical Instrument: Oh no. We've arrived at some sort of *weak* world, where everyone's a nansy pansy..."];
+	  642 [label="Drama: Though she praises you, it is clear that she was taken aback by your response."];
+	  643 [label="You: \"So -- how did I do?\""];
+	  644 [label="You: \"You don't notice this about me, but actually -- I have lost all memory of the world and myself and I have no idea what I'm doing.\""];
+	  645 [label="You: \"On second thought, things *are* bad. I don't even know enough to know what I *don't* know about this world.\""];
+	  646 [label="Lena, the Cryptozoologist's wife: \"I looked up and one of the reeds moved. Not like a plant, but like a living thing. It stood up and looked at me. Its body unfolded, like some antique toy...\" She shakes her head. \"I'd never seen anything like it. The reeds turned into a creature.\""];
+	  647 [label="Endurance: Fuck that cough. It's not happening. The insides of your lungs are lined with *tobacco*, a powerful antibacterial agent. You are unstoppable."];
+	  648 [label="You: \"I've changed my mind. I'll tell Morell you're worried.\""];
+	  649 [label="Lena, the Cryptozoologist's wife: \"It's simply *elusive*, so much so that most *establishment* zoologists doubt it exists at all.\""];
+	  650 [label="Suggestion: But it *has*, hasn't it? A seed can only bear what's inside it. The seed of love is black and oily."];
+	  651 [label="Jump to: [Lena, the Cryptozoologist's wife: \"\"Oh, my! What happened to the water...\"]"];
+	  652 [label="Authority: There's a hint of defensiveness to her retort, but also confidence. She seems to sit up a little straighter in her chair."];
+	  653 [label="You: \"So a newspaper clipping is all the evidence you have?\""];
+	  654 [label="You: \"I broke it. Drove my motor carriage into a billboard above the lock, blocking the gates.\""];
+	  655 [label="Lena, the Cryptozoologist's wife: \"I'm... not. It's not that...\" She doesn't know how to end the sentence."];
+	  656 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_main_phasmid_large\"]"];
+	  657 [label="Variable[\"whirling.lena_main_phasmid_large\"]", shape=diamond];
+	  658 [label="!(Variable[\"whirling.lena_main_phasmid_large\"])", shape=diamond];
+	  659 [label="Suggestion: That I'm a queen. An extraordinary witness to grace."];
+	  660 [label="Lena, the Cryptozoologist's wife: \"What you have to know is, the Insulindian phasmid probably does not exist. Let us fools chase our ghosts. There are a million better things to do with your life.\""];
+	  661 [label="Conceptualization: *Are* there? Some of the other things are pretty bad."];
+	  662 [label="Lena, the Cryptozoologist's wife: \"Yes, I should go now. Poor Morell is running a fever. I need to get him home to Jamrock, before we overstay our welcome with Gary.\""];
+	  663 [label="Untitled hub"];
+	  664 [label="Lena, the Cryptozoologist's wife: \"Oh sweetie...\" She looks at you, worried. \"Please don't get stuck on a dream. Take it from me and Morell.\""];
+	  665 [label="Lena, the Cryptozoologist's wife: \"Likewise, sweetie.\" She flicks a switch on her chair and the engine turns on with a whir. \"Thank you for everything. Truly. Even though it turned out to be a...\" The sentence remains unfinished."];
+	  666 [label="Lena, the Cryptozoologist's wife: \"Well... I'm not sure, detective. I'm sorry. Wealthy people tend to be educated, but you're not likely to find one of those in Martinaise...\""];
+	  667 [label="Drama: The sigh is tender, yes, but tempered by something else, a thought she can't express... Interesting."];
+	  668 [label="Lena, the Cryptozoologist's wife: \"Oh, sweetie, if it weren't for you I'd be looking forward to another sleepless night. Thank you, from the bottom of my heart!\""];
+	  669 [label="You: Maybe you could convince her to tell you about some *cool* cryptids?"];
+	  670 [label="You: Variable[\"whirling.lena_white_check_cryptids\"]"];
+	  671 [label="Variable[\"whirling.lena_white_check_cryptids\"]", shape=diamond];
+	  672 [label="!(Variable[\"whirling.lena_white_check_cryptids\"])", shape=diamond];
+	  673 [label="You: \"Maybe your husband went off on an adventure?\""];
+	  674 [label="You: \"If I see him, I'll let him know you're here -- when or *if* I get there.\" (Accept task.)"];
+	  675 [label="You: \"Wait, what's wrong with the phone line?\""];
+	  676 [label="Lena, the Cryptozoologist's wife: \"To let the young woman who's house-sitting for us know that we may be delayed. Morell -- my husband -- and our friend Gary were supposed to get back by Monday night, but they're still missing and I haven't heard from them...\""];
+	  677 [label="Garte, the Cafeteria Manager: \"The closest phone booth is down the coast. Sorry for the inconvenience, ma'am.\" The cafeteria manager appears genuinely apologetic."];
+	  678 [label="Composure: She's agitated and keeps pulling at the frayed edge of her blanket."];
+	  679 [label="Lena, the Cryptozoologist's wife: Variable[\"coast.morell_kim_there_no_task_greet\"]  and  IsKimHere()"];
+	  680 [label="Variable[\"coast.morell_kim_there_no_task_greet\"]  and  IsKimHere()", shape=diamond];
+	  681 [label="!(Variable[\"coast.morell_kim_there_no_task_greet\"]  and  IsKimHere())", shape=diamond];
+	  682 [label="Jump to: [endhub]"];
+	  683 [label="Lena, the Cryptozoologist's wife: \"Speaking of history -- you know what *year* it is, yes?\""];
+	  684 [label="You: \"Sure. It's the year 973.\""];
+	  685 [label="You: \"All I know is that Revachol used to be really cool in the Thirties.\""];
+	  686 [label="Lena, the Cryptozoologist's wife: \"Much has changed, but it is still the most beautiful city in the world, a rare jewel set in the sand between the pines. Everyone says so, even foreigners.\" There's a pause as she studies your expression. You must look quite lost."];
+	  687 [label="Rhetoric: I don't know... still looks like there's a lot of hustling going on. Maybe she's wrong. Also..."];
+	  688 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_quiz_wrong_counter\"] < 4"];
+	  689 [label="Variable[\"whirling.lena_quiz_wrong_counter\"] < 4", shape=diamond];
+	  690 [label="!(Variable[\"whirling.lena_quiz_wrong_counter\"] < 4)", shape=diamond];
+	  691 [label="Lena, the Cryptozoologist's wife: Variable[\"TASK.inspect_traps_done\"]"];
+	  692 [label="Variable[\"TASK.inspect_traps_done\"]", shape=diamond];
+	  693 [label="!(Variable[\"TASK.inspect_traps_done\"])", shape=diamond];
+	  694 [label="Morell, the Cryptozoologist: \"We were on a date, can you imagine? She tells me a story and it's the most detailed report of the Insulindian phasmid I've ever heard. The sounds -- she told me it hissed...\""];
+	  695 [label="You: \"Its limbs are white?\""];
+	  696 [label="You: \"Thank you for sharing this with me.\" (Conclude.)"];
+	  697 [label="Lena, the Cryptozoologist's wife: Variable[\"tc.cryptozoology\"]"];
+	  698 [label="Variable[\"tc.cryptozoology\"]", shape=diamond];
+	  699 [label="!(Variable[\"tc.cryptozoology\"])", shape=diamond];
+	  700 [label="Inland Empire: Of course. Do it. Who knows what mysteries await?"];
+	  701 [label="Lena, the Cryptozoologist's wife: \"Yes! It can blend in almost *perfectly* among the reeds.\" Her face lights up at the thought of it. \"It's how it's stayed hidden all these years. Centuries even.\""];
+	  702 [label="You: \"That's good enough. Let me ask you something else.\""];
+	  703 [label="Lena, the Cryptozoologist's wife: The woman's face flushes with embarrassment. \"I'm sorry, sweetie. I'm afraid I'm not very good at this sort of thing.\""];
+	  704 [label="Lena, the Cryptozoologist's wife: \"Well, some teenagers making out in the reeds saw one. They didn't know what it was, of course, but there was a brief article in a local newspaper. About their encounter with a *ghost insect* that looks like the reeds. Gary sent us the clipping.\""];
+	  705 [label="Jump to: [Lena, the Cryptozoologist's wife: \"\"Yes, sweetie?\"\"]"];
+	  706 [label="Jump to: [Untitled hub]"];
+	  707 [label="Lena, the Cryptozoologist's wife: \"Oh, sweetie... Well, I'm glad you survived that. And I'm grateful for the information -- it will spare me another sleepless night.\""];
+	  708 [label="Kim Kitsuragi: \"My apologies, ma'am. I did not mean to undermine your hobby.\""];
+	  709 [label="Lena, the Cryptozoologist's wife: \"It's not a hobby, dear. It's a *sub-field* of zoology, one specializing in animal species that are so exceedingly rare that many assume them to be *extinct* or even *fictitious*...\""];
+	  710 [label="You: \"Thing is, you're not sure you made it up either.\""];
+	  711 [label="You: \"Okay, it's a false memory. Doesn't mean all cryptids aren't real. Chase another one.\""];
+	  712 [label="Composure: She has to swallow to relax her throat. It's keeping her from talking."];
+	  713 [label="Lena, the Cryptozoologist's wife: \"You might be right, detective...\" She looks down at her legs..."];
+	  714 [label="Lena, the Cryptozoologist's wife: \"Oh dear... I'm not sure where to begin...\""];
+	  715 [label="morellhub"];
+	  716 [label="You: \"You mentioned traps. Could there be some problem with them?\""];
+	  717 [label="Lena, the Cryptozoologist's wife: \"Just some field work, sweetie. Morell is a highly trained scientist. He and his assistant, Gary, are studying an *extremely rare* species of insect...\""];
+	  718 [label="Jump to: [lenamainhub]"];
+	  719 [label="Lena, the Cryptozoologist's wife: \"Thank you for doing that, dear.\" She manages a smile for you."];
+	  720 [label="You: \"This sounds like police business. I'll help you find your husband.\" (Accept task.)"];
+	  721 [label="Jump to: [lenamainhub]"];
+	  722 [label="Kim Kitsuragi: \"He's fine, ma'am. He couldn't get back earlier because the water lock on the canal was broken. Now he's just finishing up some work.\""];
+	  723 [label="You: \"All I know is: we are approaching the *end times*.\""];
+	  724 [label="Volition: She means this sincerely. Worrying won't do you any good."];
+	  725 [label="You: \"The edge of civilization.\""];
+	  726 [label="You: \"Honestly, I don't really know anything about Revachol.\""];
+	  727 [label="Lena, the Cryptozoologist's wife: IsKimHere()"];
+	  728 [label="IsKimHere()", shape=diamond];
+	  729 [label="!(IsKimHere())", shape=diamond];
+	  730 [label="Lena, the Cryptozoologist's wife: \"'You tryna' tell us you saw the Insulindian phasmid out there in those reeds? Get outta here!'\" She smiles. \"They'd just give me a cider and ruffle my hair and tell me to stop dreaming -- but I saw it.\""];
+	  731 [label="Jump to: [lenamainhub]"];
+	  732 [label="Untitled hub (02)"];
+	  733 [label="You: \"Once more onto the breach, then!\" (Take it on with undue optimism.)"];
+	  734 [label="Inland Empire: Do it. Find her husband. This will *surely* lead to a cryptozoological mystery with that *extremely rare insect*..."];
+	  735 [label="You: \"But... Morell told me you'd seen it.\""];
+	  736 [label="Kim Kitsuragi: The lieutenant opens his notebook but doesn't write anything."];
+	  737 [label="You: \"Okay. What's so *special* about this stick-bug then?\" (Move on.)"];
+	  738 [label="You: \"You seem really excited about this cryptid.\""];
+	  739 [label="Electrochemistry: Interesting. Maybe the phasmid *made* the teenagers make out?"];
+	  740 [label="Jump to: [phasmohub]"];
+	  741 [label="You: \"Lying has gotten you this far, why stop now?\""];
+	  742 [label="Lena, the Cryptozoologist's wife: \"Oh, of course it counts for something. But we've had our hard times too...\" She looks down at her legs..."];
+	  743 [label="You: \"Alright, when you put it that way -- I'll help.\" (Accept task.)"];
+	  744 [label="Inland Empire: Very strange... you get the sense she wouldn't have let you do this even if you did volunteer. Why?"];
+	  745 [label="Untitled hub"];
+	  746 [label="You: \"You're... on the back foot.\""];
+	  747 [label="Untitled hub (03)"];
+	  748 [label="Lena, the Cryptozoologist's wife: \"Oh no. Thank you, but I can get there on my own, this old thing is gas-powered.\" She taps her chair. \"And then a taxi home. It's not so bad.\""];
+	  749 [label="You: \"Wouldn't you know, it's blocked by a big butter billboard -- it fell right into the water!\""];
+	  750 [label="Lena, the Cryptozoologist's wife: \"Just a moment.\" The old woman turns back to the cafeteria manager."];
+	  751 [label="unrealphasmidhub"];
+	  752 [label="Lena, the Cryptozoologist's wife: \"To let the young woman who's house-sitting for us know that we may be delayed. Morell, my husband, and Gary were supposed to get back by Monday night, but they're still missing and I haven't heard from them...\""];
+	  753 [label="Kim Kitsuragi: He sighs. \"I sincerely doubt it. Still, I suppose it won't hurt to keep an eye out.\""];
+	  754 [label="Kim Kitsuragi: \"Are you sure we have time to go chasing after bug-hunters just now?\" The lieutenant taps his foot impatiently."];
+	  755 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_cryptid_kim_1st\"] == 0  and  IsKimHere()"];
+	  756 [label="Variable[\"whirling.lena_cryptid_kim_1st\"] == 0  and  IsKimHere()", shape=diamond];
+	  757 [label="!(Variable[\"whirling.lena_cryptid_kim_1st\"] == 0  and  IsKimHere())", shape=diamond];
+	  758 [label="Lena, the Cryptozoologist's wife: IsKimHere()  and  Variable[\"coast.morell_before_lena_day_2\"]"];
+	  759 [label="IsKimHere()  and  Variable[\"coast.morell_before_lena_day_2\"]", shape=diamond];
+	  760 [label="!(IsKimHere()  and  Variable[\"coast.morell_before_lena_day_2\"])", shape=diamond];
+	  761 [label="Jump to: [lenamainhub]"];
+	  762 [label="Lena, the Cryptozoologist's wife: \"Oh, yes, that's my Morell -- he's bound to catch a cold, staying out there for so long... \""];
+	  763 [label="Kim Kitsuragi: \"He's fine, ma'am. He couldn't get back earlier because the water lock on the canal was broken. He should be back soon.\""];
+	  764 [label="You: Why do *I* have to play Rescueman?"];
+	  765 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_tell_water_lock\"]  or  Variable[\"whirling.lena_said_met_morell\"]"];
+	  766 [label="Variable[\"whirling.lena_tell_water_lock\"]  or  Variable[\"whirling.lena_said_met_morell\"]", shape=diamond];
+	  767 [label="!(Variable[\"whirling.lena_tell_water_lock\"]  or  Variable[\"whirling.lena_said_met_morell\"])", shape=diamond];
+	  768 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_roll_with_me\"]"];
+	  769 [label="Variable[\"whirling.lena_roll_with_me\"]", shape=diamond];
+	  770 [label="!(Variable[\"whirling.lena_roll_with_me\"])", shape=diamond];
+	  771 [label="Lena, the Cryptozoologist's wife: (Variable[\"whirling.klaasje_whirling_landline\"]  or  Variable[\"whirling.klaasje_rape_phone_logic\"])  and  Variable[\"whirling.garte_main_logic_phone\"] == false"];
+	  772 [label="(Variable[\"whirling.klaasje_whirling_landline\"]  or  Variable[\"whirling.klaasje_rape_phone_logic\"])  and  Variable[\"whirling.garte_main_logic_phone\"] == false", shape=diamond];
+	  773 [label="!((Variable[\"whirling.klaasje_whirling_landline\"]  or  Variable[\"whirling.klaasje_rape_phone_logic\"])  and  Variable[\"whirling.garte_main_logic_phone\"] == false)", shape=diamond];
+	  774 [label="Lena, the Cryptozoologist's wife: \"Oh, thank you so much sweetie. Good luck with your investigation now.\""];
+	  775 [label="Lena, the Cryptozoologist's wife: \"We're in the city of *Revachol*, dear.\" She flashes you a worried look."];
+	  776 [label="Lena, the Cryptozoologist's wife: \"It does still look like that in some parts of the city, doesn't it...\""];
+	  777 [label="Lena, the Cryptozoologist's wife: \"Oh no, dear! It's the early spring of '51.\""];
+	  778 [label="You: \"Mhm, okay.\""];
+	  779 [label="Lena, the Cryptozoologist's wife: Her grey eyes widen. \"Oh my. How would I even begin to tell you? Revachol is the most beautiful city in the world. We're fortunate to be here, you and I.\""];
+	  780 [label="You: \"Things aren't *bad*. They're catastrophic.\""];
+	  781 [label="You: \"Wait. Where was this and how old were you?\""];
+	  782 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_saw_phasmid_how_old_asked\"]"];
+	  783 [label="Variable[\"whirling.lena_saw_phasmid_how_old_asked\"]", shape=diamond];
+	  784 [label="!(Variable[\"whirling.lena_saw_phasmid_how_old_asked\"])", shape=diamond];
+	  785 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_logic_said_good_against_hangover\"]"];
+	  786 [label="Variable[\"whirling.lena_logic_said_good_against_hangover\"]", shape=diamond];
+	  787 [label="!(Variable[\"whirling.lena_logic_said_good_against_hangover\"])", shape=diamond];
+	  788 [label="Lena, the Cryptozoologist's wife: \"Oh yes,\" she says with a pinch of pride. \"A zoologist -- a *crypto*zoologist to be more precise.\""];
+	  789 [label="Encyclopedia: The quest for knowledge is never over!"];
+	  790 [label="Lena, the Cryptozoologist's wife: IsKimHere()"];
+	  791 [label="IsKimHere()", shape=diamond];
+	  792 [label="!(IsKimHere())", shape=diamond];
+	  793 [label="Lena, the Cryptozoologist's wife: \"I understand. Best of luck with your work as well.\" She smiles up at you, doing her best not to look disappointed."];
+	  794 [label="Lena, the Cryptozoologist's wife: \"Thank you, sweetie. I'm awfully sorry to impose on you like this -- maybe there's something *I* can help *you* with in the meanwhile?\""];
+	  795 [label="Lena, the Cryptozoologist's wife: \"Right...\" She looks around. \"It's almost time for me to go too. I can't see what use I can be here...\""];
+	  796 [label="You: And? I need something *good* here."];
+	  797 [label="Lena, the Cryptozoologist's wife: \"I doubt it, sweetie. The traps aren't big enough for humans to get caught in them. They're for the insect. Anyway...\" She looks around."];
+	  798 [label="Lena, the Cryptozoologist's wife: \"Oh, sweetie. It's nothing like that...\" She smiles."];
+	  799 [label="Lena, the Cryptozoologist's wife: \"Oh, you're such a dear! Thank you, sweetie.\""];
+	  800 [label="Lena, the Cryptozoologist's wife: IsKimHere()"];
+	  801 [label="IsKimHere()", shape=diamond];
+	  802 [label="!(IsKimHere())", shape=diamond];
+	  803 [label="You: \"Only the hard core players left, huh?\""];
+	  804 [label="Lena, the Cryptozoologist's wife: \"Still, I should have *known* he'd be returning late this time around. Finding the Insulindian phasmid -- it's *very* important to him.\" She glances out the window toward the bay."];
+	  805 [label="Lena, the Cryptozoologist's wife: Variable[\"TASK.report_to_cryptozoologists_1\"]"];
+	  806 [label="Variable[\"TASK.report_to_cryptozoologists_1\"]", shape=diamond];
+	  807 [label="!(Variable[\"TASK.report_to_cryptozoologists_1\"])", shape=diamond];
+	  808 [label="You: \"Just doing my job, ma'am.\""];
+	  809 [label="Jump to: [Lena, the Cryptozoologist's wife: \"\"That's just it! This isn't like hi...\"]"];
+	  810 [label="Lena, the Cryptozoologist's wife: \"That's right, and where is the Whirling itself located?\""];
+	  811 [label="Logic: The New was in the Thirties, and two decades have elapsed since The New, so it must be the Fifties now."];
+	  812 [label="Jump to: [Untitled hub (02)]"];
+	  813 [label="You: \"Revachol is the disgraced capital of the world. Something like that?\""];
+	  814 [label="Lena, the Cryptozoologist's wife: \"It has something to do with everything. I really don't know how to explain it better...\""];
+	  815 [label="You: \"On Insulinde?\""];
+	  816 [label="Lena, the Cryptozoologist's wife: \"That's right! We're on the coast of the city of Revachol, in the district of Martinaise.\""];
+	  817 [label="Lena, the Cryptozoologist's wife: \"But we should stop for today, sweetie. You look like you need a break. Besides, I'm not the best person to explain the *big* things to anyone...\""];
+	  818 [label="Encyclopedia: Betancourt got bombed in the war. It used to be quite near. Circa 20 kilometres from here."];
+	  819 [label="Lena, the Cryptozoologist's wife: \"I tried, but I was only a child. There was mud and high water, I couldn't see it anymore. I was just standing there, knee deep in mud, looking around me...\""];
+	  820 [label="Lena, the Cryptozoologist's wife: \"It did, yes -- like reeds in a gust of wind.\""];
+	  821 [label="Morell, the Cryptozoologist: \"If it weren't for Lena, I might've given up hope years ago. It's no exaggeration to say that she restored my faith in my profession.\" He looks at her with admiration, forgetting a wide smile on his face."];
+	  822 [label="Lena, the Cryptozoologist's wife: \"It's hard to say how big things are when you're quite *small* yourself. To me, it seemed to be taller than I was then... but that's probably not the case.\""];
+	  823 [label="Conceptualization: Yes, please. Some science fiction is *exactly* what's needed right now. Spice up that *vanilla* murder investigation."];
+	  824 [label="Esprit de Corps: I'm not surprised it's already getting out of hand."];
+	  825 [label="Inland Empire: A dream?"];
+	  826 [label="Drama: A lie?"];
+	  827 [label="You: First, tell her that her marriage hasn't been a lie."];
+	  828 [label="You: Variable[\"whirling.lena_sugg_convince_rc\"]"];
+	  829 [label="Variable[\"whirling.lena_sugg_convince_rc\"]", shape=diamond];
+	  830 [label="!(Variable[\"whirling.lena_sugg_convince_rc\"])", shape=diamond];
+	  831 [label="Lena, the Cryptozoologist's wife: \"Well,\" she hesitates. \"It's a *phasmid* technically, but...\""];
+	  832 [label="Lena, the Cryptozoologist's wife: \"Hence its name: The *Insulindian phasmid* -- perhaps you'll end up co-discovering it with us, officer?\" She looks you in the eye and nods thoughtfully."];
+	  833 [label="Lena, the Cryptozoologist's wife: \"It's simply *elusive*, so much so that most *establishment* zoologists doubt it exists at all.\""];
+	  834 [label="Jump to: [lenamainhub]"];
+	  835 [label="Lena, the Cryptozoologist's wife: \"But if the dream comes to naught, what good is it? No, the thing is...\" She looks down at her legs..."];
+	  836 [label="Composure: Hunching her shoulders now, she seems even smaller than she is. Like a sad young girl."];
+	  837 [label="Volition: He's hiding. These things are tough on him. Matters of love, not violence or deceit."];
+	  838 [label="Lena, the Cryptozoologist's wife: She sighs. \"I've wasted enough of your time with this drama. I really must stop talking about it, lest I start crying and waste *more* of your time.\""];
+	  839 [label="Lena, the Cryptozoologist's wife: Variable[\"TASK.ask_about_ruby_in_village\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false"];
+	  840 [label="Variable[\"TASK.ask_about_ruby_in_village\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false", shape=diamond];
+	  841 [label="!(Variable[\"TASK.ask_about_ruby_in_village\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false)", shape=diamond];
+	  842 [label="lenamainhub"];
+	  843 [label="Empathy: She asked about you because she's afraid to hear about the traps. But that's what she really wants news of."];
+	  844 [label="Lena, the Cryptozoologist's wife: \"It's fine, I understand. Thank you anyway.\" She turns back to you with a weary smile. \"Now, then.\""];
+	  845 [label="Lena, the Cryptozoologist's wife: \"Oh, of course, sweetie. I understand.\" She smiles brightly to mask her disappointment."];
+	  846 [label="Lena, the Cryptozoologist's wife: \"Morell still isn't feeling well. I convinced him to stay at Gary's to get some rest.\" She looks down at her hands. \"I'm afraid the cold has really gotten to him.\""];
+	  847 [label="Jump to: [lenamainhub]"];
+	  848 [label="Lena, the Cryptozoologist's wife: Variable[\"tc.cryptozoology\"]  and  Variable[\"whirling.lena_white_check_cryptids\"] == false"];
+	  849 [label="Variable[\"tc.cryptozoology\"]  and  Variable[\"whirling.lena_white_check_cryptids\"] == false", shape=diamond];
+	  850 [label="!(Variable[\"tc.cryptozoology\"]  and  Variable[\"whirling.lena_white_check_cryptids\"] == false)", shape=diamond];
+	  851 [label="Jump to: [lenamainhub]"];
+	  852 [label="Lena, the Cryptozoologist's wife: (Variable[\"coast.morell_before_lena_day_2\"]  or  Variable[\"coast.morell_before_lena_day_2_wokim\"])  and  Variable[\"whirling.lena_worried_special_goodbye_done\"] == false"];
+	  853 [label="(Variable[\"coast.morell_before_lena_day_2\"]  or  Variable[\"coast.morell_before_lena_day_2_wokim\"])  and  Variable[\"whirling.lena_worried_special_goodbye_done\"] == false", shape=diamond];
+	  854 [label="!((Variable[\"coast.morell_before_lena_day_2\"]  or  Variable[\"coast.morell_before_lena_day_2_wokim\"])  and  Variable[\"whirling.lena_worried_special_goodbye_done\"] == false)", shape=diamond];
+	  855 [label="You: \"Sure thing, ma'am.\" (Accept the task)"];
+	  856 [label="Lena, the Cryptozoologist's wife: \"A seaside hostel called the Whirling-in-Rags, to be precise. And the Whirling itself is in Revachol.\""];
+	  857 [label="Jump to: [noyearhub]"];
+	  858 [label="Lena, the Cryptozoologist's wife: \"Yes, great, see -- we're getting somewhere. What else do you know about our city of splendour? Tattered as she may be...\""];
+	  859 [label="Composure: She leans back in her chair, alarmed by your answer."];
+	  860 [label="You: \"See -- I have no idea.\""];
+	  861 [label="You: \"Yeah, I'm blowing this whole thing out of proportion. Forget I said anything.\""];
+	  862 [label="Lena, the Cryptozoologist's wife: \"You know where we *are*, right?\""];
+	  863 [label="Encyclopedia: You could ask her about this, when you get the time -- it's probably a cryptid. But the phasmid, of course, is more important..."];
+	  864 [label="Lena, the Cryptozoologist's wife: Variable[\"whirling.lena_sugg_convince_rc\"]"];
+	  865 [label="Variable[\"whirling.lena_sugg_convince_rc\"]", shape=diamond];
+	  866 [label="!(Variable[\"whirling.lena_sugg_convince_rc\"])", shape=diamond];
+	  867 [label="Lena, the Cryptozoologist's wife: \"If I hadn't led him down this path he could have a steady job lecturing at a university.\""];
+	  868 [label="Lena, the Cryptozoologist's wife: \"Oh, now you're just having fun at an old woman's expense! In any case, thank you for looking into this. It takes a weight off my shoulders.\""];
+	  869 [label="Jump to: [phasmohub]"];
+	  870 [label="You: \"You must be mistaken. I'm a connoisseur of delusional ramblings.\""];
+	  871 [label="Lena, the Cryptozoologist's wife: \"Seeing the Insulindian phasmid was just a story I used to tell people. I didn't really think about whether it was *real* or not.\""];
+	  872 [label="Jump to: [unrealphasmidhub]"];
+	  873 [label="Jump to: [Untitled hub]"];
+	  874 [label="Lena, the Cryptozoologist's wife: IsKimHere()"];
+	  875 [label="IsKimHere()", shape=diamond];
+	  876 [label="!(IsKimHere())", shape=diamond];
+	  877 [label="Lena, the Cryptozoologist's wife: \"The manager was vague about it.\" She frowns."];
+	  878 [label="Lena, the Cryptozoologist's wife: \"There's a nameless old fishing village nearby, but we've never had any trouble there before...\" She stops, then continues, worried. \"There is a lot of crime around here, isn't there?\""];
+	  879 [label="Lena, the Cryptozoologist's wife: \"Hello, sweetie. How are you?\" She sounds tired."];
+	  880 [label="Jump to: [lenamainhub]"];
+	  881 [label="You: Missing persons aren't really my style."];
+	  882 [label="Perception (Sight): Dark circles around her eyes. She's absolutely exhausted."];
+	  883 [label="You: \"I think it would be good to take a break from the hanged-man for a little while.\""];
+	  884 [label="Lena, the Cryptozoologist's wife: \"Thank you so much for helping us out with our research, sweetie,\" she says, beaming. \"I hope all of this hasn't been too much of a distraction for you...\""];
+	  885 [label="You: \"Something tells me it's up to me again.\""];
+	  886 [label="Jump to: [lenamainhub]"];
+	  887 [label="Lena, the Cryptozoologist's wife: \"Please don't trouble yourself about me, sweetie. I was just hoping to make a call, but the Whirling's phone line isn't working.\""];
+	  888 [label="Lena, the Cryptozoologist's wife: \"You see, Morell, my husband, and Gary were supposed to get back Monday night, but they're still missing and I haven't heard from them...\""];
+	  889 [label="Logic: No mystery here -- this is Klaasje's handiwork. She cut the line."];
+	  890 [label="Logic: It must have been the Whirling landline that Klaasje \"nicked.\""];
+	  0 -> 1
+	  1 -> 312
+	  2 -> 44
+	  3 -> 811
+	  4 -> 55
+	  5 -> 483
+	  6 -> 142
+	  7 -> 49
+	  8 -> 7
+	  9 -> 151
+	  10 -> 448
+	  10 -> 101
+	  10 -> 198
+	  10 -> 697
+	  10 -> 696
+	  10 -> 377
+	  11 -> 244
+	  12 -> 731
+	  13 -> 10
+	  14 -> 660
+	  15 -> 832
+	  16 -> 426
+	  17 -> 18
+	  17 -> 19
+	  18 -> 167
+	  19 -> 504
+	  20 -> 493
+	  21 -> 632
+	  22 -> 656
+	  23 -> 24
+	  23 -> 25
+	  24 -> 243
+	  25 -> 464
+	  26 -> 67
+	  27 -> 28
+	  27 -> 29
+	  28 -> 751
+	  29 -> 225
+	  30 -> 753
+	  31 -> 86
+	  32 -> 548
+	  33 -> 34
+	  33 -> 35
+	  34 -> 228
+	  35 -> 88
+	  36 -> 759
+	  37 -> 133
+	  38 -> 791
+	  39 -> 648
+	  40 -> 404
+	  41 -> 151
+	  42 -> 89
+	  43 -> 478
+	  45 -> 46
+	  45 -> 47
+	  46 -> 365
+	  47 -> 27
+	  48 -> 234
+	  49 -> 5
+	  50 -> 536
+	  51 -> 863
+	  52 -> 53
+	  52 -> 54
+	  53 -> 335
+	  54 -> 241
+	  55 -> 235
+	  55 -> 685
+	  55 -> 724
+	  55 -> 538
+	  55 -> 187
+	  55 -> 638
+	  56 -> 71
+	  57 -> 58
+	  57 -> 59
+	  58 -> 200
+	  59 -> 9
+	  60 -> 220
+	  61 -> 423
+	  62 -> 64
+	  62 -> 63
+	  63 -> 606
+	  64 -> 501
+	  65 -> 163
+	  66 -> 162
+	  67 -> 273
+	  67 -> 675
+	  68 -> 801
+	  69 -> 111
+	  70 -> 20
+	  71 -> 72
+	  71 -> 73
+	  72 -> 74
+	  73 -> 350
+	  74 -> 350
+	  75 -> 731
+	  76 -> 337
+	  77 -> 759
+	  78 -> 511
+	  79 -> 843
+	  80 -> 875
+	  81 -> 664
+	  82 -> 264
+	  83 -> 840
+	  84 -> 116
+	  85 -> 879
+	  86 -> 32
+	  87 -> 520
+	  88 -> 677
+	  89 -> 575
+	  90 -> 888
+	  91 -> 312
+	  92 -> 93
+	  92 -> 94
+	  93 -> 588
+	  94 -> 342
+	  95 -> 334
+	  96 -> 186
+	  97 -> 817
+	  98 -> 239
+	  99 -> 7
+	  100 -> 57
+	  101 -> 450
+	  102 -> 104
+	  102 -> 103
+	  103 -> 611
+	  104 -> 56
+	  104 -> 255
+	  105 -> 457
+	  106 -> 81
+	  107 -> 204
+	  108 -> 109
+	  108 -> 110
+	  109 -> 160
+	  110 -> 389
+	  111 -> 112
+	  111 -> 113
+	  112 -> 739
+	  113 -> 741
+	  114 -> 741
+	  115 -> 654
+	  116 -> 117
+	  116 -> 118
+	  117 -> 558
+	  118 -> 853
+	  119 -> 746
+	  120 -> 107
+	  120 -> 345
+	  120 -> 203
+	  121 -> 216
+	  121 -> 378
+	  121 -> 460
+	  122 -> 220
+	  123 -> 201
+	  124 -> 125
+	  125 -> 295
+	  126 -> 718
+	  127 -> 709
+	  128 -> 433
+	  129 -> 584
+	  130 -> 131
+	  130 -> 132
+	  131 -> 309
+	  132 -> 393
+	  133 -> 436
+	  134 -> 38
+	  135 -> 843
+	  136 -> 843
+	  138 -> 33
+	  139 -> 144
+	  140 -> 487
+	  141 -> 193
+	  142 -> 287
+	  143 -> 326
+	  144 -> 193
+	  145 -> 688
+	  146 -> 642
+	  147 -> 446
+	  148 -> 50
+	  150 -> 864
+	  151 -> 820
+	  152 -> 556
+	  153 -> 707
+	  154 -> 156
+	  154 -> 157
+	  155 -> 197
+	  156 -> 291
+	  157 -> 650
+	  158 -> 106
+	  159 -> 389
+	  160 -> 833
+	  161 -> 210
+	  162 -> 210
+	  163 -> 165
+	  163 -> 166
+	  164 -> 503
+	  165 -> 322
+	  166 -> 10
+	  167 -> 512
+	  168 -> 120
+	  169 -> 121
+	  170 -> 873
+	  171 -> 201
+	  172 -> 358
+	  173 -> 569
+	  174 -> 786
+	  175 -> 133
+	  176 -> 319
+	  177 -> 199
+	  178 -> 635
+	  179 -> 728
+	  180 -> 403
+	  181 -> 402
+	  181 -> 581
+	  181 -> 181
+	  182 -> 41
+	  183 -> 677
+	  184 -> 164
+	  185 -> 725
+	  186 -> 236
+	  187 -> 193
+	  188 -> 190
+	  188 -> 191
+	  189 -> 195
+	  190 -> 49
+	  191 -> 692
+	  192 -> 814
+	  192 -> 779
+	  192 -> 686
+	  192 -> 727
+	  193 -> 488
+	  194 -> 49
+	  195 -> 492
+	  196 -> 707
+	  197 -> 23
+	  198 -> 20
+	  199 -> 825
+	  200 -> 616
+	  201 -> 159
+	  202 -> 549
+	  203 -> 14
+	  204 -> 14
+	  205 -> 208
+	  205 -> 207
+	  206 -> 737
+	  207 -> 752
+	  208 -> 436
+	  209 -> 738
+	  209 -> 553
+	  209 -> 299
+	  209 -> 211
+	  209 -> 348
+	  210 -> 65
+	  211 -> 185
+	  212 -> 733
+	  213 -> 242
+	  214 -> 256
+	  215 -> 510
+	  216 -> 78
+	  217 -> 744
+	  217 -> 429
+	  218 -> 550
+	  219 -> 221
+	  219 -> 222
+	  220 -> 661
+	  221 -> 171
+	  222 -> 665
+	  223 -> 666
+	  224 -> 470
+	  225 -> 307
+	  226 -> 572
+	  227 -> 677
+	  228 -> 437
+	  229 -> 232
+	  229 -> 231
+	  230 -> 311
+	  231 -> 633
+	  232 -> 380
+	  233 -> 2
+	  234 -> 778
+	  235 -> 373
+	  236 -> 188
+	  237 -> 684
+	  238 -> 536
+	  239 -> 413
+	  240 -> 818
+	  241 -> 71
+	  242 -> 508
+	  243 -> 707
+	  244 -> 732
+	  245 -> 248
+	  245 -> 247
+	  248 -> 13
+	  249 -> 12
+	  250 -> 856
+	  250 -> 48
+	  251 -> 206
+	  252 -> 835
+	  253 -> 519
+	  254 -> 706
+	  255 -> 843
+	  256 -> 742
+	  257 -> 796
+	  258 -> 354
+	  259 -> 613
+	  260 -> 748
+	  261 -> 304
+	  262 -> 81
+	  263 -> 265
+	  263 -> 266
+	  264 -> 83
+	  265 -> 840
+	  267 -> 108
+	  268 -> 843
+	  269 -> 68
+	  270 -> 845
+	  271 -> 150
+	  272 -> 846
+	  273 -> 275
+	  273 -> 276
+	  274 -> 397
+	  275 -> 806
+	  276 -> 435
+	  276 -> 676
+	  277 -> 318
+	  278 -> 434
+	  279 -> 434
+	  280 -> 282
+	  280 -> 283
+	  281 -> 891
+	  282 -> 367
+	  283 -> 212
+	  283 -> 703
+	  284 -> 33
+	  285 -> 814
+	  285 -> 686
+	  285 -> 727
+	  286 -> 192
+	  287 -> 324
+	  288 -> 563
+	  289 -> 630
+	  289 -> 476
+	  289 -> 734
+	  290 -> 707
+	  291 -> 176
+	  292 -> 821
+	  293 -> 60
+	  294 -> 826
+	  295 -> 82
+	  296 -> 843
+	  297 -> 210
+	  298 -> 66
+	  299 -> 301
+	  299 -> 302
+	  300 -> 257
+	  301 -> 742
+	  302 -> 261
+	  303 -> 295
+	  304 -> 201
+	  305 -> 772
+	  306 -> 306
+	  307 -> 468
+	  308 -> 882
+	  308 -> 628
+	  308 -> 765
+	  309 -> 150
+	  310 -> 634
+	  311 -> 313
+	  311 -> 314
+	  312 -> 880
+	  313 -> 526
+	  314 -> 316
+	  314 -> 317
+	  315 -> 529
+	  316 -> 45
+	  317 -> 453
+	  318 -> 364
+	  318 -> 809
+	  318 -> 180
+	  318 -> 100
+	  319 -> 889
+	  320 -> 753
+	  321 -> 519
+	  322 -> 193
+	  323 -> 52
+	  324 -> 815
+	  325 -> 328
+	  325 -> 327
+	  326 -> 374
+	  327 -> 49
+	  328 -> 49
+	  329 -> 331
+	  329 -> 332
+	  330 -> 96
+	  331 -> 444
+	  332 -> 147
+	  333 -> 240
+	  333 -> 289
+	  333 -> 644
+	  334 -> 818
+	  335 -> 214
+	  336 -> 338
+	  336 -> 339
+	  337 -> 695
+	  338 -> 249
+	  339 -> 499
+	  340 -> 494
+	  341 -> 344
+	  341 -> 343
+	  342 -> 495
+	  343 -> 61
+	  344 -> 205
+	  345 -> 62
+	  346 -> 210
+	  347 -> 702
+	  348 -> 427
+	  348 -> 654
+	  349 -> 491
+	  349 -> 782
+	  350 -> 721
+	  350 -> 229
+	  350 -> 559
+	  351 -> 2
+	  352 -> 79
+	  353 -> 513
+	  354 -> 663
+	  355 -> 226
+	  356 -> 519
+	  357 -> 359
+	  358 -> 254
+	  359 -> 176
+	  360 -> 272
+	  361 -> 763
+	  362 -> 683
+	  363 -> 41
+	  364 -> 532
+	  365 -> 184
+	  366 -> 30
+	  367 -> 417
+	  368 -> 536
+	  369 -> 371
+	  369 -> 372
+	  370 -> 812
+	  371 -> 406
+	  372 -> 326
+	  373 -> 329
+	  374 -> 419
+	  375 -> 458
+	  376 -> 823
+	  377 -> 743
+	  378 -> 499
+	  379 -> 381
+	  380 -> 284
+	  381 -> 733
+	  382 -> 759
+	  383 -> 698
+	  384 -> 843
+	  385 -> 123
+	  386 -> 713
+	  387 -> 789
+	  388 -> 674
+	  388 -> 518
+	  388 -> 717
+	  388 -> 85
+	  388 -> 604
+	  389 -> 599
+	  390 -> 843
+	  391 -> 297
+	  392 -> 530
+	  392 -> 629
+	  393 -> 37
+	  394 -> 290
+	  395 -> 805
+	  396 -> 398
+	  397 -> 843
+	  398 -> 278
+	  399 -> 786
+	  400 -> 465
+	  401 -> 582
+	  402 -> 174
+	  404 -> 777
+	  405 -> 408
+	  405 -> 407
+	  406 -> 4
+	  407 -> 55
+	  408 -> 412
+	  409 -> 776
+	  410 -> 369
+	  411 -> 98
+	  412 -> 325
+	  413 -> 416
+	  413 -> 415
+	  414 -> 99
+	  415 -> 8
+	  416 -> 51
+	  416 -> 781
+	  416 -> 862
+	  417 -> 375
+	  418 -> 152
+	  419 -> 245
+	  420 -> 449
+	  421 -> 351
+	  422 -> 424
+	  422 -> 425
+	  423 -> 105
+	  424 -> 341
+	  425 -> 843
+	  426 -> 115
+	  427 -> 161
+	  428 -> 794
+	  429 -> 617
+	  430 -> 717
+	  430 -> 674
+	  430 -> 604
+	  430 -> 85
+	  431 -> 735
+	  432 -> 701
+	  433 -> 759
+	  434 -> 677
+	  435 -> 843
+	  436 -> 573
+	  437 -> 128
+	  438 -> 634
+	  439 -> 887
+	  440 -> 888
+	  441 -> 857
+	  442 -> 288
+	  443 -> 334
+	  444 -> 330
+	  446 -> 843
+	  447 -> 11
+	  448 -> 20
+	  449 -> 451
+	  449 -> 452
+	  450 -> 376
+	  451 -> 250
+	  452 -> 454
+	  452 -> 455
+	  453 -> 849
+	  454 -> 496
+	  455 -> 393
+	  456 -> 26
+	  457 -> 75
+	  458 -> 797
+	  458 -> 550
+	  459 -> 836
+	  460 -> 253
+	  461 -> 259
+	  462 -> 615
+	  463 -> 668
+	  464 -> 566
+	  464 -> 363
+	  464 -> 356
+	  464 -> 430
+	  465 -> 30
+	  465 -> 567
+	  466 -> 353
+	  467 -> 92
+	  468 -> 769
+	  469 -> 679
+	  470 -> 472
+	  470 -> 473
+	  471 -> 177
+	  472 -> 885
+	  473 -> 720
+	  474 -> 847
+	  475 -> 39
+	  476 -> 136
+	  477 -> 44
+	  478 -> 480
+	  478 -> 481
+	  479 -> 587
+	  480 -> 277
+	  481 -> 251
+	  482 -> 489
+	  482 -> 333
+	  482 -> 141
+	  482 -> 595
+	  482 -> 411
+	  482 -> 409
+	  482 -> 539
+	  483 -> 858
+	  484 -> 637
+	  485 -> 692
+	  486 -> 541
+	  487 -> 536
+	  488 -> 149
+	  489 -> 447
+	  490 -> 783
+	  491 -> 819
+	  492 -> 134
+	  493 -> 26
+	  494 -> 61
+	  495 -> 849
+	  496 -> 570
+	  497 -> 158
+	  498 -> 92
+	  499 -> 346
+	  500 -> 605
+	  500 -> 15
+	  501 -> 653
+	  502 -> 322
+	  503 -> 505
+	  503 -> 506
+	  504 -> 102
+	  505 -> 255
+	  505 -> 871
+	  506 -> 336
+	  507 -> 707
+	  508 -> 174
+	  509 -> 387
+	  510 -> 133
+	  511 -> 119
+	  512 -> 260
+	  513 -> 515
+	  513 -> 516
+	  514 -> 618
+	  515 -> 31
+	  516 -> 432
+	  517 -> 799
+	  518 -> 716
+	  519 -> 750
+	  519 -> 655
+	  519 -> 379
+	  519 -> 308
+	  519 -> 340
+	  519 -> 603
+	  520 -> 756
+	  521 -> 754
+	  522 -> 524
+	  522 -> 525
+	  523 -> 439
+	  524 -> 497
+	  525 -> 528
+	  525 -> 527
+	  526 -> 574
+	  527 -> 274
+	  528 -> 722
+	  529 -> 179
+	  530 -> 479
+	  531 -> 533
+	  531 -> 534
+	  532 -> 182
+	  533 -> 636
+	  534 -> 810
+	  535 -> 443
+	  535 -> 324
+	  536 -> 193
+	  537 -> 414
+	  538 -> 194
+	  539 -> 643
+	  540 -> 594
+	  541 -> 544
+	  541 -> 543
+	  542 -> 55
+	  543 -> 370
+	  544 -> 546
+	  544 -> 547
+	  545 -> 150
+	  546 -> 361
+	  547 -> 391
+	  548 -> 14
+	  549 -> 551
+	  550 -> 868
+	  551 -> 502
+	  552 -> 705
+	  553 -> 69
+	  554 -> 17
+	  555 -> 76
+	  556 -> 870
+	  557 -> 218
+	  558 -> 795
+	  559 -> 843
+	  560 -> 839
+	  561 -> 749
+	  562 -> 564
+	  562 -> 565
+	  563 -> 639
+	  564 -> 667
+	  565 -> 617
+	  566 -> 878
+	  567 -> 715
+	  568 -> 392
+	  569 -> 130
+	  570 -> 786
+	  571 -> 678
+	  572 -> 436
+	  573 -> 762
+	  574 -> 576
+	  574 -> 577
+	  575 -> 578
+	  576 -> 680
+	  577 -> 579
+	  577 -> 580
+	  578 -> 723
+	  579 -> 362
+	  580 -> 321
+	  581 -> 77
+	  582 -> 555
+	  583 -> 585
+	  583 -> 586
+	  584 -> 285
+	  585 -> 139
+	  586 -> 277
+	  587 -> 342
+	  588 -> 537
+	  589 -> 813
+	  590 -> 542
+	  591 -> 237
+	  592 -> 687
+	  593 -> 483
+	  594 -> 146
+	  595 -> 330
+	  596 -> 153
+	  597 -> 822
+	  598 -> 824
+	  599 -> 120
+	  600 -> 600
+	  601 -> 514
+	  602 -> 869
+	  603 -> 652
+	  604 -> 16
+	  605 -> 605
+	  605 -> 15
+	  606 -> 428
+	  607 -> 609
+	  607 -> 610
+	  608 -> 384
+	  609 -> 347
+	  610 -> 507
+	  611 -> 513
+	  612 -> 837
+	  613 -> 122
+	  614 -> 220
+	  615 -> 664
+	  616 -> 306
+	  617 -> 619
+	  618 -> 127
+	  619 -> 357
+	  620 -> 622
+	  620 -> 623
+	  621 -> 624
+	  622 -> 599
+	  623 -> 625
+	  623 -> 626
+	  624 -> 351
+	  625 -> 517
+	  626 -> 441
+	  626 -> 90
+	  626 -> 43
+	  627 -> 571
+	  628 -> 174
+	  629 -> 631
+	  630 -> 745
+	  631 -> 843
+	  632 -> 634
+	  633 -> 396
+	  634 -> 44
+	  635 -> 320
+	  635 -> 366
+	  635 -> 535
+	  636 -> 193
+	  637 -> 540
+	  638 -> 640
+	  638 -> 641
+	  639 -> 143
+	  640 -> 486
+	  641 -> 536
+	  642 -> 49
+	  643 -> 689
+	  644 -> 368
+	  645 -> 863
+	  646 -> 375
+	  647 -> 21
+	  648 -> 800
+	  649 -> 298
+	  650 -> 300
+	  651 -> 520
+	  652 -> 834
+	  653 -> 554
+	  654 -> 708
+	  655 -> 612
+	  656 -> 658
+	  656 -> 659
+	  657 -> 601
+	  658 -> 736
+	  659 -> 252
+	  660 -> 662
+	  661 -> 873
+	  662 -> 664
+	  663 -> 224
+	  663 -> 262
+	  663 -> 202
+	  663 -> 80
+	  663 -> 562
+	  663 -> 124
+	  664 -> 263
+	  665 -> 295
+	  666 -> 692
+	  667 -> 707
+	  668 -> 92
+	  669 -> 671
+	  670 -> 672
+	  670 -> 673
+	  671 -> 138
+	  672 -> 138
+	  673 -> 390
+	  674 -> 800
+	  675 -> 129
+	  676 -> 279
+	  677 -> 469
+	  678 -> 271
+	  679 -> 681
+	  679 -> 682
+	  680 -> 764
+	  681 -> 399
+	  682 -> 44
+	  683 -> 591
+	  684 -> 484
+	  685 -> 593
+	  686 -> 684
+	  687 -> 536
+	  688 -> 690
+	  688 -> 691
+	  689 -> 445
+	  690 -> 596
+	  691 -> 693
+	  691 -> 694
+	  692 -> 447
+	  693 -> 490
+	  694 -> 293
+	  695 -> 155
+	  696 -> 420
+	  697 -> 699
+	  697 -> 700
+	  698 -> 552
+	  699 -> 498
+	  700 -> 790
+	  701 -> 557
+	  702 -> 704
+	  703 -> 519
+	  704 -> 740
+	  705 -> 269
+	  706 -> 10
+	  707 -> 92
+	  708 -> 710
+	  709 -> 86
+	  710 -> 172
+	  711 -> 305
+	  712 -> 748
+	  713 -> 303
+	  714 -> 716
+	  715 -> 233
+	  715 -> 467
+	  715 -> 620
+	  715 -> 173
+	  716 -> 798
+	  717 -> 268
+	  718 -> 843
+	  719 -> 475
+	  720 -> 801
+	  721 -> 843
+	  722 -> 763
+	  723 -> 140
+	  724 -> 444
+	  725 -> 776
+	  726 -> 780
+	  727 -> 729
+	  727 -> 730
+	  728 -> 183
+	  729 -> 41
+	  730 -> 707
+	  731 -> 843
+	  732 -> 630
+	  732 -> 476
+	  732 -> 734
+	  732 -> 886
+	  733 -> 39
+	  734 -> 422
+	  735 -> 169
+	  736 -> 838
+	  737 -> 461
+	  738 -> 114
+	  739 -> 349
+	  740 -> 210
+	  741 -> 714
+	  742 -> 387
+	  743 -> 352
+	  744 -> 632
+	  745 -> 258
+	  745 -> 747
+	  745 -> 462
+	  745 -> 22
+	  746 -> 259
+	  747 -> 561
+	  747 -> 614
+	  747 -> 294
+	  747 -> 463
+	  748 -> 874
+	  749 -> 669
+	  750 -> 227
+	  751 -> 386
+	  751 -> 355
+	  751 -> 711
+	  751 -> 712
+	  751 -> 828
+	  752 -> 36
+	  753 -> 133
+	  754 -> 292
+	  754 -> 360
+	  754 -> 522
+	  754 -> 884
+	  754 -> 217
+	  755 -> 757
+	  755 -> 758
+	  756 -> 545
+	  757 -> 310
+	  758 -> 760
+	  758 -> 761
+	  759 -> 230
+	  760 -> 523
+	  761 -> 843
+	  762 -> 318
+	  763 -> 278
+	  764 -> 400
+	  765 -> 768
+	  765 -> 767
+	  766 -> 477
+	  767 -> 315
+	  768 -> 770
+	  768 -> 771
+	  769 -> 401
+	  770 -> 465
+	  771 -> 773
+	  771 -> 774
+	  772 -> 890
+	  773 -> 466
+	  774 -> 2
+	  775 -> 193
+	  776 -> 323
+	  777 -> 860
+	  778 -> 286
+	  779 -> 238
+	  780 -> 863
+	  781 -> 196
+	  782 -> 784
+	  782 -> 785
+	  783 -> 418
+	  784 -> 647
+	  785 -> 787
+	  785 -> 788
+	  786 -> 393
+	  787 -> 456
+	  788 -> 602
+	  789 -> 67
+	  790 -> 792
+	  790 -> 793
+	  791 -> 213
+	  792 -> 382
+	  793 -> 2
+	  794 -> 385
+	  795 -> 560
+	  796 -> 219
+	  797 -> 599
+	  798 -> 431
+	  799 -> 881
+	  800 -> 802
+	  800 -> 803
+	  801 -> 755
+	  802 -> 209
+	  803 -> 70
+	  804 -> 135
+	  805 -> 808
+	  805 -> 807
+	  806 -> 471
+	  807 -> 766
+	  808 -> 41
+	  809 -> 174
+	  810 -> 485
+	  810 -> 6
+	  810 -> 726
+	  810 -> 410
+	  810 -> 861
+	  811 -> 406
+	  812 -> 334
+	  813 -> 859
+	  814 -> 590
+	  815 -> 145
+	  816 -> 193
+	  817 -> 95
+	  818 -> 491
+	  819 -> 597
+	  820 -> 598
+	  821 -> 10
+	  822 -> 154
+	  823 -> 351
+	  824 -> 9
+	  825 -> 827
+	  826 -> 296
+	  827 -> 829
+	  828 -> 830
+	  828 -> 831
+	  829 -> 865
+	  830 -> 865
+	  831 -> 607
+	  832 -> 608
+	  833 -> 210
+	  834 -> 843
+	  835 -> 387
+	  836 -> 872
+	  837 -> 752
+	  838 -> 220
+	  839 -> 841
+	  839 -> 842
+	  840 -> 267
+	  842 -> 388
+	  842 -> 645
+	  842 -> 646
+	  842 -> 583
+	  842 -> 168
+	  842 -> 649
+	  842 -> 42
+	  842 -> 40
+	  842 -> 670
+	  842 -> 521
+	  842 -> 270
+	  842 -> 500
+	  842 -> 84
+	  842 -> 438
+	  842 -> 87
+	  842 -> 568
+	  842 -> 474
+	  842 -> 126
+	  843 -> 848
+	  844 -> 627
+	  845 -> 881
+	  846 -> 178
+	  846 -> 804
+	  846 -> 421
+	  847 -> 843
+	  848 -> 850
+	  848 -> 851
+	  849 -> 440
+	  850 -> 887
+	  851 -> 843
+	  852 -> 854
+	  852 -> 855
+	  853 -> 482
+	  854 -> 2
+	  855 -> 775
+	  856 -> 193
+	  858 -> 686
+	  858 -> 727
+	  859 -> 189
+	  860 -> 776
+	  861 -> 148
+	  862 -> 97
+	  862 -> 3
+	  862 -> 589
+	  862 -> 816
+	  862 -> 592
+	  862 -> 405
+	  862 -> 442
+	  863 -> 719
+	  864 -> 866
+	  864 -> 867
+	  865 -> 459
+	  866 -> 651
+	  867 -> 170
+	  868 -> 92
+	  869 -> 210
+	  870 -> 215
+	  871 -> 657
+	  872 -> 752
+	  873 -> 664
+	  874 -> 876
+	  874 -> 877
+	  875 -> 223
+	  876 -> 665
+	  877 -> 281
+	  878 -> 621
+	  879 -> 883
+	  880 -> 843
+	  881 -> 175
+	  882 -> 844
+	  883 -> 394
+	  884 -> 319
+	  885 -> 395
+	  886 -> 843
+	  887 -> 531
+	  888 -> 280
+	  889 -> 466
+	  890 -> 30
+}
+

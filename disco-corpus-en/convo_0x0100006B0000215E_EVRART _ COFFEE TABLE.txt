@@ -1,0 +1,90 @@
+# EVRART / COFFEE TABLE
+# a quick table interaction where you find a different key card to get out of the harbour at night.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="itsatable"];
+	  3 [label="You: Uh-huh, great. I somehow doubt old coffee is how the police solve investigations."];
+	  4 [label="Inland Empire: A clue about the person behind all the murders."];
+	  5 [label="Inland Empire: If you can't trust your own eyes, who can you trust..."];
+	  6 [label="Jump to: [itsatable]"];
+	  7 [label="Coffee Table: If you squint your eyes enough the coffee grounds almost seem to make up two letters: F... and K."];
+	  8 [label="Coffee Table: You snatch up the red plastic card. It features a black contour of a crane lifting a container. The name 'Etienne Hogarth' is written in the middle, below it in smaller text: 'Member of the board'. It comes with a magnetic strip -- meant to open electronic doors."];
+	  9 [label="You: A clue of what?"];
+	  10 [label="Jump to: [itsatable]"];
+	  11 [label="You: Pick up the card."];
+	  12 [label="Variable[\"cargo.orb_coffee_logic_pareidolia\"]"];
+	  13 [label="Variable[\"cargo.orb_coffee_logic_pareidolia\"]", shape=diamond];
+	  14 [label="!(Variable[\"cargo.orb_coffee_logic_pareidolia\"])", shape=diamond];
+	  15 [label="You: [Leave.]"];
+	  16 [label="You: Look into one of the old coffee cups."];
+	  17 [label="Inland Empire: It's a clue!"];
+	  18 [label="You: What am I supposed to see here?"];
+	  19 [label="Inland Empire: It's meaningful, I *swear*! You just wait... I've got the case nearly busted wide open."];
+	  20 [label="Jump to: [itsatable]"];
+	  21 [label="Inland Empire: Look closer!"];
+	  22 [label="You: Huh, okay. Thanks, this certainly wasn't a waste of time."];
+	  23 [label="Coffee Table: You throw the cup back into the trash bin."];
+	  24 [label="Logic: You would be correct."];
+	  25 [label="Inland Empire: If you can't trust your own eyes, who can you trust? Certainly not Kim. He's so... suspicious."];
+	  26 [label="Coffee Table: A large table with two huge vacuum-insulated thermal coffee dispensers. Someone has forgotten a small plastic card next to the stacks of cups."];
+	  27 [label="You: It *is* a sign! Just like a remote viewer would operate. Signs hidden inside the mundane..."];
+	  28 [label="Coffee Table: You see nothing exceptional. It's a dirty cup, smudged brown, with old ground coffee stuck to the bottom... slowly getting mouldy."];
+	  29 [label="Logic: Yeah. Of course. It's certainly not just an example of *paréidolie*, noticing patterns in noise. Worth it."];
+	  30 [label="Inland Empire: You got it, pal. I would *never* make such a thing up."];
+	  31 [label="IsKimHere()"];
+	  32 [label="IsKimHere()", shape=diamond];
+	  33 [label="!(IsKimHere())", shape=diamond];
+	  34 [label="Inland Empire: Peer into a discarded coffee cup!"];
+	  35 [label="Variable[\"cargo.orb_coffee_logic_pareidolia\"]"];
+	  36 [label="Variable[\"cargo.orb_coffee_logic_pareidolia\"]", shape=diamond];
+	  37 [label="!(Variable[\"cargo.orb_coffee_logic_pareidolia\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 27
+	  2 -> 16
+	  2 -> 17
+	  2 -> 12
+	  3 -> 36
+	  4 -> 30
+	  5 -> 11
+	  6 -> 2
+	  7 -> 18
+	  8 -> 6
+	  9 -> 4
+	  10 -> 2
+	  11 -> 8
+	  12 -> 14
+	  12 -> 15
+	  13 -> 20
+	  14 -> 3
+	  14 -> 28
+	  16 -> 29
+	  17 -> 10
+	  17 -> 23
+	  18 -> 22
+	  19 -> 3
+	  19 -> 28
+	  20 -> 2
+	  21 -> 7
+	  22 -> 24
+	  23 -> 21
+	  24 -> 11
+	  25 -> 11
+	  26 -> 35
+	  27 -> 31
+	  28 -> 19
+	  28 -> 23
+	  29 -> 13
+	  30 -> 11
+	  31 -> 33
+	  31 -> 34
+	  32 -> 26
+	  33 -> 5
+	  34 -> 2
+	  35 -> 37
+	  35 -> 38
+	  36 -> 25
+	  37 -> 32
+}
+

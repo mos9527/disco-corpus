@@ -1,0 +1,1859 @@
+# VILLAGE / WASHERWOMAN
+# The Washing Woman who gives you access to the alternate sleeping location -- the shack. Includes fishing village mood and Evrart quest stuff.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Washerwoman: Variable[\"cargo.evrartdocument_failed_forge_one_signature\"]"];
+	  3 [label="Variable[\"cargo.evrartdocument_failed_forge_one_signature\"]", shape=diamond];
+	  4 [label="!(Variable[\"cargo.evrartdocument_failed_forge_one_signature\"])", shape=diamond];
+	  5 [label="Jump to: [vilagehubsing]"];
+	  6 [label="Logic: Around here it's probably even more common."];
+	  7 [label="Washerwoman: Variable[\"village.ww_blackc_halflight_suicide\"]"];
+	  8 [label="Variable[\"village.ww_blackc_halflight_suicide\"]", shape=diamond];
+	  9 [label="!(Variable[\"village.ww_blackc_halflight_suicide\"])", shape=diamond];
+	  10 [label="Logic: She probably heard the lieutenant's Kineema drive by."];
+	  11 [label="Washerwoman: \"Are you sure you wouldn't rather stay here, get a nice, cozy fire going in the heater?\" She drops the rag into the bucket -- it's clean now. \"Seems like a better idea to me...\""];
+	  12 [label="Jump to: [MAINHUB]"];
+	  13 [label="Washerwoman: \"No, it's *not* like that man. With him, we called you. Right now, you just arrived by yourself. Like a raven, plucking at the window glass.\""];
+	  14 [label="You: \"Have you heard a radio on the coast in the last week or so?\""];
+	  15 [label="Washerwoman: \"Anything else?\" A cold breeze rushes by. The old woman smiles."];
+	  16 [label="You: \"We're cops. We're hellraisers. Click, click. Bang, bang!\" (Point your finger pistols at her.)"];
+	  17 [label="You: \"What else is on down coast?"];
+	  18 [label="Washerwoman: \"Of note? The old fishmarket up on the boardwalk. But it's closed.\""];
+	  19 [label="You: \"Later.\" [Leave.]"];
+	  20 [label="Washerwoman: \"Welcome to the fishing village.\" She opens her eyes. \"Please lean in closer. I have cataracts.\""];
+	  21 [label="Washerwoman: \"Don't make this old women regret giving the police the key to her house.\" She takes out a key from under her apron and hands it to you. \"Here.\""];
+	  22 [label="Washerwoman: \"After the war it was turned into a goodwill hospital for shell-shocked veterans and folks looking for some quiet in the old sanatorium gardens.\""];
+	  23 [label="Jump to: [Washerwoman: \"She nods, rinsing another piece of...\"]"];
+	  24 [label="Washerwoman: \"Maybe,\" she says with unnerving calm. \"It would be easy. But right now you want something from me, right?\""];
+	  25 [label="Jump to: [vilagehubsing]"];
+	  26 [label="Washerwoman: \"What, you're one of those real-estate people with big plans? If you want a development opportunity, you can check out the abandoned building over at Land's End.\""];
+	  27 [label="You: \"I have a possible explanation in my mind.\""];
+	  28 [label="Washerwoman: \"That bad, is it?\""];
+	  29 [label="Washerwoman: Variable[\"village.ww_talked_about_bullet_exit\"]"];
+	  30 [label="Variable[\"village.ww_talked_about_bullet_exit\"]", shape=diamond];
+	  31 [label="!(Variable[\"village.ww_talked_about_bullet_exit\"])", shape=diamond];
+	  32 [label="Kim Kitsuragi: The lieutenant stops writing for a moment. He looks at you, then at the old woman."];
+	  33 [label="You: \"Harrier Du Bois, but call me Harry.\""];
+	  34 [label="You: \"Wait, I've been here before?\""];
+	  35 [label="Washerwoman: Variable[\"village.ww_ency_blackcheck_ask_about_song\"]"];
+	  36 [label="Variable[\"village.ww_ency_blackcheck_ask_about_song\"]", shape=diamond];
+	  37 [label="!(Variable[\"village.ww_ency_blackcheck_ask_about_song\"])", shape=diamond];
+	  38 [label="Jump to: [MAINHUB]"];
+	  39 [label="You: \"Evrart wants to turn part of the village into a little youth centre.\""];
+	  40 [label="Washerwoman: \"Thought so.\" The old woman inhales sharply. \"So what do the Claire brothers want this time?\""];
+	  41 [label="Washerwoman: \"Aye. Lilienne's not the only one who's too trusting.\""];
+	  42 [label="Washerwoman: \"Do you know who takes the cream off these deals? Real estate developers, construction companies, restaurant owners, Claire's accountants in La Delta...\""];
+	  43 [label="You: \"Sounds nice.\""];
+	  44 [label="Composure: The question must be prompted by your sloppy posture. Straighten you back, man."];
+	  45 [label="You: \"Do you know anything about a lost jacket?\""];
+	  46 [label="You: \"One of the drunks lost his and I agreed to look for it.\""];
+	  47 [label="You: \"I found this jacket, but it's filthy. Could you wash it for me?\""];
+	  48 [label="You: \"I'm sorry I couldn't warn him in time.\""];
+	  49 [label="Reaction Speed: The grandmother card *will* do the trick. Last chance to turn back."];
+	  50 [label="Drama: Test the waters here. Say that there's nothing to be worried about."];
+	  51 [label="You: \"Evrart gave me five reál, he could easily give you fifteen. Or even fifty?\""];
+	  52 [label="Empathy: He's a little relieved you're no longer in that room."];
+	  53 [label="Jump to: [MAINHUB]"];
+	  54 [label="Washerwoman: Variable[\"TASK.find_idiot_doom_spiral_jacket\"]"];
+	  55 [label="Variable[\"TASK.find_idiot_doom_spiral_jacket\"]", shape=diamond];
+	  56 [label="!(Variable[\"TASK.find_idiot_doom_spiral_jacket\"])", shape=diamond];
+	  57 [label="Drama: She really believes that."];
+	  58 [label="CRHUB"];
+	  59 [label="You: \"I'm guessing you didn't put it there -- Ruby did.\""];
+	  60 [label="Logic: She probably heard the lieutenant's Kineema drive by and it woke her up, just like it did you."];
+	  61 [label="Untitled hub"];
+	  62 [label="Washerwoman: \"Aye? What's this about?\" She takes out the documents and squints her eyes. \"Come now, I can't read all this scribble. Tell me what it says.\""];
+	  63 [label="Jump to: [Untitled hub (03)]"];
+	  64 [label="You: \"Which is it then? Apartments or electrical plant?\""];
+	  65 [label="Washerwoman: \"I won't be going anywhere.\" She side-eyes the bucket full of clothes."];
+	  66 [label="Washerwoman: \"Now it's your turn, mister...?\""];
+	  67 [label="You: \"You got yourself a tenant!\" (Get keys to your new home.)"];
+	  68 [label="You: \"Okay, but I'll be back later if I find anything *suspicious*.\""];
+	  69 [label="Washerwoman: IsKimHere()"];
+	  70 [label="IsKimHere()", shape=diamond];
+	  71 [label="!(IsKimHere())", shape=diamond];
+	  72 [label="Washerwoman: \"It's okay,\" she calms you. \"What matters is we are still around. Still living our lives. Even in 'pornographic' poverty we make do...\""];
+	  73 [label="You: \"The Pox? What's that?\""];
+	  74 [label="Washerwoman: \"The good will ran out.\" She tightens the scarf around her neck. \"The staff left and the place was shut down. It's long gone by now.\""];
+	  75 [label="Washerwoman: \"At least those who remain...\" She falls silent and turns to look over her shoulder, as though looking for someone."];
+	  76 [label="Jump to: [vilagehubsing]"];
+	  77 [label="Kim Kitsuragi: \"That's for the police to find out.\" The lieutenant takes out his familiar blue notebook. \"Right then, please answer each question to the best of your ability. I'm sure we have a few.\""];
+	  78 [label="Washerwoman: \"I cleaned it, like I always do.\""];
+	  79 [label="Half Light: She planned on fuckin' shooting herself in the goddamned head."];
+	  80 [label="Washerwoman: \"No...\" She tilts her head to the side, looking up at you, deep in thought. \"She's a fighter.\""];
+	  81 [label="Jump to: [MAINHUB]"];
+	  82 [label="Washerwoman: Variable[\"village.has_shack\"]"];
+	  83 [label="Variable[\"village.has_shack\"]", shape=diamond];
+	  84 [label="!(Variable[\"village.has_shack\"])", shape=diamond];
+	  85 [label="Washerwoman: \"Have you asked Lilienne about this? I won't even consider signing till I know she's on board.\" She hands the envelope back."];
+	  86 [label="You: \"I changed my mind, I want you to sign the documents.\" (Give her the envelope.)"];
+	  87 [label="Washerwoman: Variable[\"village.ww_wcheck_failure_counter\"] >= 1"];
+	  88 [label="Variable[\"village.ww_wcheck_failure_counter\"] >= 1", shape=diamond];
+	  89 [label="!(Variable[\"village.ww_wcheck_failure_counter\"] >= 1)", shape=diamond];
+	  90 [label="Washerwoman: \"Wouldn't *dance* with you? Is that what you look for in a partner?\""];
+	  91 [label="Washerwoman: \"You watch your tongue, boy. This village has held up much better than *some* people.\" Even with her cataracts she can pierce right through you."];
+	  92 [label="You: \"I just need to be needed.\""];
+	  93 [label="Kim Kitsuragi: \"You're still not saying it right.\""];
+	  94 [label="Untitled hub (03)"];
+	  95 [label="Washerwoman: Variable[\"village.netpicker_signature_for_washerwoman\"]"];
+	  96 [label="Variable[\"village.netpicker_signature_for_washerwoman\"]", shape=diamond];
+	  97 [label="!(Variable[\"village.netpicker_signature_for_washerwoman\"])", shape=diamond];
+	  98 [label="Inland Empire: That's you alright. A black hound licking your own heels."];
+	  99 [label="Drama: The truth, sire."];
+	  100 [label="You: \"This...\" (Spread your hands.)"];
+	  101 [label="Washerwoman: Variable[\"village.ww_greeting_done\"]"];
+	  102 [label="Variable[\"village.ww_greeting_done\"]", shape=diamond];
+	  103 [label="!(Variable[\"village.ww_greeting_done\"])", shape=diamond];
+	  104 [label="Inland Empire: Relax, you're not a 'new face'. She doesn't mean you. You are an outsider. And a cop, remember?"];
+	  105 [label="Washerwoman: \"And what do you think I'm doing right now, Mr. RCM?!\" The scrub brush flies into the bucket so furiously some splashes hit your face."];
+	  106 [label="You: I'm not forging anything. It's dishonourable. And illegal."];
+	  107 [label="You: \"Are you sure she didn't go somewhere more pleasant... and less wet?\""];
+	  108 [label="Washerwoman: \"Yes, early, with the dogs -- around 8 o'clock, I think.\""];
+	  109 [label="Jump to: [rubythequestions]"];
+	  110 [label="Kim Kitsuragi: \"Hm...\" The lieutenant furrows his brow. He looks back to the children and sighs."];
+	  111 [label="Kim Kitsuragi: \"I'm ready when you are.\" He turns his face away, toward nothing in particular."];
+	  112 [label="You: \"I don't need much. This sounds just fine.\""];
+	  113 [label="You: \"Who, what drunks?\""];
+	  114 [label="Washerwoman: \"Sooner or later you'll see for yourself.\" She slowly shakes her head. \"Don't have to look long to find these guys.\""];
+	  115 [label="You: \"I heard she was a heavy drinker with anger issues. You ever witness that kind of behaviour?\""];
+	  116 [label="Washerwoman: \"Not that I know of, though she was into nice music. She once showed me a few mixtape-milieus she'd made.\" She brushes her forehead with the back of her hand. Water drips to the ground."];
+	  117 [label="Washerwoman: \"Why would I do that? That's a fool's name. Are you a fool?\" Her bony finger raises before you can speak. \"Don't ridicule yourself before an old woman, officer. It's undignified.\""];
+	  118 [label="You: \"No, I don't want a free room, it's not proper.\" (Stay at Whirling-in-Rags.)"];
+	  119 [label="You: \"Actually, is that free room still available?\""];
+	  120 [label="You: \"Oh, because you're blind, right.\""];
+	  121 [label="You: \"That's what I thought.\""];
+	  122 [label="Jump to: [rubythequestions]"];
+	  123 [label="Washerwoman: \"What more do you want to know about that poor girl?\""];
+	  124 [label="Washerwoman: CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  125 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  126 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  127 [label="Washerwoman: Variable[\"village.has_shack\"]"];
+	  128 [label="Variable[\"village.has_shack\"]", shape=diamond];
+	  129 [label="!(Variable[\"village.has_shack\"])", shape=diamond];
+	  130 [label="Washerwoman: \"What do you expect? Police officers get put into dangerous situations all the time. Sometimes they get shot. It's a rough trade you're in.\""];
+	  131 [label="Jump to: [MAINHUB]"];
+	  132 [label="Washerwoman: \"A lullaby my mother used to sing. I sang it to my kids too. It's an old Samaran children's song.\""];
+	  133 [label="Interfacing: You know, there could be another way. You'll need to go some place *private* and *discreet*, though... like your shack."];
+	  134 [label="Composure: She is headstrong, but there's a *slight* hesitation in there... You may be able to convince her."];
+	  135 [label="You: \"You can start by signing these papers. I've got a pen right here.\" (Hand her the documents.)"];
+	  136 [label="You: \"It's just a real estate deal. Nothing ominous.\""];
+	  137 [label="Washerwoman: Variable[\"TASK.forge_liliennes_and_isobels_signatures\"]  or  Variable[\"village.documents_refused_to_forge\"]"];
+	  138 [label="Variable[\"TASK.forge_liliennes_and_isobels_signatures\"]  or  Variable[\"village.documents_refused_to_forge\"]", shape=diamond];
+	  139 [label="!(Variable[\"TASK.forge_liliennes_and_isobels_signatures\"]  or  Variable[\"village.documents_refused_to_forge\"])", shape=diamond];
+	  140 [label="failureoptioz"];
+	  141 [label="Suggestion: It's okay. She's emotional right now. Keep at it, wear her out."];
+	  142 [label="You: \"You've got to put the kids first.\""];
+	  143 [label="Washerwoman: Variable[\"village.ww_sugg_expression\"]"];
+	  144 [label="Variable[\"village.ww_sugg_expression\"]", shape=diamond];
+	  145 [label="!(Variable[\"village.ww_sugg_expression\"])", shape=diamond];
+	  146 [label="Washerwoman: \"Are you getting a reward for it at least?\""];
+	  147 [label="Kim Kitsuragi: \"That's an *excellent* question, ma'am.\""];
+	  148 [label="Interfacing: Forging the signatures, of course. Was that not obvious?"];
+	  149 [label="Washerwoman: \"You need to check your facts, officer.\" Her bony finger is pointing at you, soapy water dripping on the skirt. \"I said no such thing.\""];
+	  150 [label="Untitled hub"];
+	  151 [label="Kim Kitsuragi: \"I could use a breather, it's been another *track and field day*,\" the lieutenant says, rubbing his thigh."];
+	  152 [label="Inland Empire: You could ask her about your hunch. That it was a *desperate* measure. See if she thinks Ruby fits the bill."];
+	  153 [label="Kim Kitsuragi: \"Yes. That is a downside of having a 130 kilowatt engine.\" His voice is tinged with pride. \"It lets the bad guys know when you're coming.\""];
+	  154 [label="Washerwoman: \"No, she was mostly silent this time. Kept to herself...\""];
+	  155 [label="Washerwoman: \"She tried not to let it show, but I could tell she hadn't come to fish -- usually she likes to cast a few lines, but this time she mostly stayed in her room.\""];
+	  156 [label="You: \"Isobel, you must understand, this place *needs* that construction project.\""];
+	  157 [label="Washerwoman: \"I won't charge you for it. Take it as a gesture of goodwill, from the village to the RCM.\""];
+	  158 [label="You: Don't bother her. [Leave.]"];
+	  159 [label="Washerwoman: \"Would you now?\" She turns to him. \"I know how this world works, and it doesn't work when people tell on each other.\""];
+	  160 [label="Washerwoman: \"There's not much *to* tell. People come and go. Now, was there something else?\""];
+	  161 [label="Washerwoman: \"The lack of wealth is the one thing we've got in abundance.\" The woman smiles cryptically."];
+	  162 [label="Jump to: [vilagehubsing]"];
+	  163 [label="You: \"I'm a cop, I don't cause trouble, I take care of trouble.\""];
+	  164 [label="Washerwoman: "];
+	  165 [label="", shape=diamond];
+	  166 [label="!()", shape=diamond];
+	  167 [label="Jump to: [MAINHUB]"];
+	  168 [label="Jump to: [MAINHUB]"];
+	  169 [label="Washerwoman: Variable[\"village.ww_wcheck_failure_counter\"] >= 2"];
+	  170 [label="Variable[\"village.ww_wcheck_failure_counter\"] >= 2", shape=diamond];
+	  171 [label="!(Variable[\"village.ww_wcheck_failure_counter\"] >= 2)", shape=diamond];
+	  172 [label="You: \"He was a prig who wouldn't dance with me.\""];
+	  173 [label="You: \"What's going to happen to the children?\""];
+	  174 [label="You: \"And *then* what?\""];
+	  175 [label="Washerwoman: \"Then...\" the old woman exhales. She stares at the ground, unable to finish the thought."];
+	  176 [label="Washerwoman: \"Aye, officer. I certainly will.\""];
+	  177 [label="You: \"There's honour in retrieving lost things.\""];
+	  178 [label="Washerwoman: The old woman shakes her head slowly. She drops the rag into the bucket -- it's clean now."];
+	  179 [label="Interfacing: Your call, chief."];
+	  180 [label="Washerwoman: Variable[\"village.abigail_greeting_done\"]  or  Variable[\"village.idiot_greeting_done\"]  or  Variable[\"village.rosemary_made_it_to_main_hub\"]"];
+	  181 [label="Variable[\"village.abigail_greeting_done\"]  or  Variable[\"village.idiot_greeting_done\"]  or  Variable[\"village.rosemary_made_it_to_main_hub\"]", shape=diamond];
+	  182 [label="!(Variable[\"village.abigail_greeting_done\"]  or  Variable[\"village.idiot_greeting_done\"]  or  Variable[\"village.rosemary_made_it_to_main_hub\"])", shape=diamond];
+	  183 [label="Washerwoman: \"Nothing good ever comes from paperwork, in my experience.\" She nods."];
+	  184 [label="Washerwoman: \"So be careful. And don't be a hero.\""];
+	  185 [label="Washerwoman: \"Aye? What's this about?\" She takes out the documents and squints her eyes. \"Come now, I can't read all this scribble. Tell me what it says.\""];
+	  186 [label="Logic: That doesn't make a whole lot of sense."];
+	  187 [label="Washerwoman: \"She came last Friday. Left on Monday, in a hurry...\" Her wrinkled hand kneads a blue rag in the water. \"What has she gotten herself into, that girl?\""];
+	  188 [label="Washerwoman: \"Yes, it's going to be too much work for you to find her.\" She drops the rag into the bucket -- it's clean now. \"Better for you to stay here, get a nice, cosy fire going in the heater...\""];
+	  189 [label="Empathy: She seems genuinely worried about her previous tenant. She's seen her hiding out from trouble before, but this seems different."];
+	  190 [label="Inland Empire: Olden days were golden days. Life's lustre is lost on those who speed."];
+	  191 [label="Kim Kitsuragi: \"Let's just get it out of the way as fast as we can. Contact dispatch from my Kineema and ask them to connect you to the station. Maybe they can shed some light on this.\""];
+	  192 [label="Washerwoman: \"As you please.\""];
+	  193 [label="You: \"Don't get me wrong, but 'bare-bones' isn't usually my style.\" (Point at yourself.)"];
+	  194 [label="You: \"Who else lives in this... village?\""];
+	  195 [label="Washerwoman: \"Well, there's that music. Music from across the sea.\" She scoffs. \"It started a few days ago and now it's blasting, even through the nights.\""];
+	  196 [label="You: \"You're still up?\""];
+	  197 [label="Washerwoman: She nods, rinsing another piece of cloth."];
+	  198 [label="Washerwoman: \"My suggestion is -- don't. Don't grow any older than you already are. That's old enough.\" She smiles. \"What's troubling your mind?\""];
+	  199 [label="Washerwoman: \"An uncomplicated man,\" she nods approvingly. \"I take it that means you're interested?\""];
+	  200 [label="Jump to: [Washerwoman: \"She nods, rinsing another piece of...\"]"];
+	  201 [label="Interfacing: You know, there could be another way. You'll need to go some place *private* and *discreet*, though. Your room in the Whirling would do..."];
+	  202 [label="Washerwoman: CheckItem(\"kind_green_ape_pen\")  or  CheckItem(\"blue_oblong_pen\")"];
+	  203 [label="CheckItem(\"kind_green_ape_pen\")  or  CheckItem(\"blue_oblong_pen\")", shape=diamond];
+	  204 [label="!(CheckItem(\"kind_green_ape_pen\")  or  CheckItem(\"blue_oblong_pen\"))", shape=diamond];
+	  205 [label="Washerwoman: \"Nothing good ever comes from paperwork, in my experience.\" She nods."];
+	  206 [label="You: \"I could try to ask Evrart to pay you some money...\""];
+	  207 [label="Washerwoman: \"Have some integrity. You're an officer of the law, not some fat slug's corrupt little crony.\""];
+	  208 [label="Empathy: You could follow up on that, but suspect you're not going to pry much out of her."];
+	  209 [label="Jump to: [MAINHUB]"];
+	  210 [label="Perception (Sight): There's nobody there."];
+	  211 [label="Suggestion: Wait -- Let her come to it herself."];
+	  212 [label="Pain Threshold: Damn, that's cold."];
+	  213 [label="You: \"I think I also met the drunks...\""];
+	  214 [label="Kim Kitsuragi: \"So they don't hold services there anymore? The Ecclesiastes?\""];
+	  215 [label="Suggestion: Damn, you almost had it. What was this -- a pang of conscience?"];
+	  216 [label="Endurance: No. You can do it. You still have plenty of juice in you before you drop."];
+	  217 [label="Perception (Sight): Behind the cinderblock houses, old pre-war ruins rise to the sky like dark palaces. The wind calls."];
+	  218 [label="Washerwoman: \"Get out of here, trying to ruin my day!\" She raises her bony finger. \"And that youth centre better be a good one or you'll have trouble from me.\""];
+	  219 [label="Jump to: [MAINHUB]"];
+	  220 [label="Washerwoman: IsKimHere()"];
+	  221 [label="IsKimHere()", shape=diamond];
+	  222 [label="!(IsKimHere())", shape=diamond];
+	  223 [label="Logic: Those would be the dance music enthusiasts in their tent."];
+	  224 [label="You: \"Alright. Got it.\""];
+	  225 [label="Washerwoman: \"As I said. It's a peninsula. There's no one there. Just ghosts and vagrants. And teenagers making out.\""];
+	  226 [label="Washerwoman: \"Is there anything else I can help you with?\""];
+	  227 [label="Untitled hub (03)"];
+	  228 [label="Reaction Speed: Because she's blind, which you seem to have forgotten."];
+	  229 [label="Washerwoman: \"Some things just don't *fly*, officer.\" She smiles a gap-toothed smile and smells the air. \"Look around. Who'd go to church here? They built it three hundred years ago, must have been nicer then...\""];
+	  230 [label="Kim Kitsuragi: \"There was a murder in Martinaise.\" He points east. \"She might be a suspect. We would appreciate your help.\""];
+	  231 [label="Rhetoric: She's being evasive. She knows something."];
+	  232 [label="Washerwoman: IsHourBetween(21,  2)"];
+	  233 [label="IsHourBetween(21,  2)", shape=diamond];
+	  234 [label="!(IsHourBetween(21,  2))", shape=diamond];
+	  235 [label="Washerwoman: \"Yes. I can't really sleep anymore. Only a few hours a night. It happens when you grow older...\" She sloshes the water in the bucket around for a bit."];
+	  236 [label="Washerwoman: \"How would I know? She's a gruff one, but not violent. She doesn't go around toting a gun.\" She looks back toward her shack, thinking."];
+	  237 [label="You: \"It feels like I've heard the name somewhere, but tell me more.\""];
+	  238 [label="Washerwoman: \"Not much...\" She replies and wipes her forehead. \"There's the abandoned church -- the Dolorian Church of Humanity. It's been there since before my time even.\""];
+	  239 [label="Jump to: [rubythequestions]"];
+	  240 [label="Washerwoman: IsKimHere()"];
+	  241 [label="IsKimHere()", shape=diamond];
+	  242 [label="!(IsKimHere())", shape=diamond];
+	  243 [label="Washerwoman: \"Oh, of course. Last time we saw you around here was... twelve years ago. You also came to take care of trouble then. Which you *did*... but, still, in Martinaise you're considered an ill omen.\""];
+	  244 [label="Washerwoman: \"No, not you personally. I meant the RCM. Some of the men got into a fight, one of them killed another. Locked himself in that woodshed over there,\" she points to the building behind her."];
+	  245 [label="You: \"Why?\""];
+	  246 [label="You: \"What kind of an ill omen are we talking about?\""];
+	  247 [label="Suggestion: Should you try *THE EXPRESSION* on her?"];
+	  248 [label="Jump to: [MAINHUB]"];
+	  249 [label="Authority: She acknowledges you as her equal."];
+	  250 [label="Washerwoman: \"No! They're good kids. I brought them up the right way.\" There's a note of defiance in her voice."];
+	  251 [label="Washerwoman: \"Well, I imagine they'll grow up and leave, too.\""];
+	  252 [label="Savoir Faire: This is a cool moment. It needs a cool thing to be said."];
+	  253 [label="Washerwoman: IsKimHere()"];
+	  254 [label="IsKimHere()", shape=diamond];
+	  255 [label="!(IsKimHere())", shape=diamond];
+	  256 [label="Inland Empire: Perhaps the mysterious music is somehow connected to the case? A rusálka, or a half-demonic *apsara*, singing..."];
+	  257 [label="you"];
+	  258 [label="Washerwoman: CheckItem(\"key_coast_home\")"];
+	  259 [label="CheckItem(\"key_coast_home\")", shape=diamond];
+	  260 [label="!(CheckItem(\"key_coast_home\"))", shape=diamond];
+	  261 [label="Suggestion: Ask her about lodgings..."];
+	  262 [label="You: \"When was this?\""];
+	  263 [label="Kim Kitsuragi: \"A bullet?\" The lieutenant turns to you and gives you a little nod, then turns to the washerwoman:"];
+	  264 [label="Logic: Interesting. You could look into this *ruckus*, if you have the time."];
+	  265 [label="Washerwoman: \"Aye, that you are, dark Omen -- help yourselves and your organization. Help the storm clouds gather on the horizon...\" She shakes her head."];
+	  266 [label="Jump to: [Washerwoman: \"\"Don't make an old woman regret ope...\"]"];
+	  267 [label="Washerwoman: Variable[\"village.ww_greeting_done\"]"];
+	  268 [label="Variable[\"village.ww_greeting_done\"]", shape=diamond];
+	  269 [label="!(Variable[\"village.ww_greeting_done\"])", shape=diamond];
+	  270 [label="Jump to: [Untitled hub]"];
+	  271 [label="Washerwoman: \"Me? No one. Just an old washerwoman. Mother called me Isobel, if that's what you're asking. And my married name is Sadie.\""];
+	  272 [label="You: \"I'm not sure it's appropriate for the RCM to accept free accommodations.\""];
+	  273 [label="Washerwoman: The old woman shrugs. \"Or don't. It's your choice. No skin off my teeth.\""];
+	  274 [label="Washerwoman: \"You best not be plotting another revolution under my roof,\" she mumbles. \"We barely got through the last one... But the room -- do you want it?\""];
+	  275 [label="Washerwoman: \"Any day now.\" Her eyes turn to the sky. \"I'm sure of it. Are you interested or not?\""];
+	  276 [label="Washerwoman: \"Although I guess she was pretty handy with the mechanical and technical stuff. Even fixed the heater in the shack. You should be thankful for that.\""];
+	  277 [label="stufftosay"];
+	  278 [label="You: \"I *am* an ill omen, alright.\" (Proceed.)"];
+	  279 [label="Washerwoman: \"Your mind just flips back and forth, doesn't it... what are they about *exactly*?\""];
+	  280 [label="Washerwoman: \"That the best you can say about your *partner*? Sounds like it wasn't working out.\""];
+	  281 [label="You: \"Guy was cramping my style. Every superstar goes solo in the end.\""];
+	  282 [label="Washerwoman: \"Aye, they're good kids. I brought them up the right way.\" There's a touch of pride in her voice."];
+	  283 [label="You: \"It's not for me. I'm on a *philosophical* journey to fetch it for someone.\""];
+	  284 [label="Washerwoman: IsKimHere()"];
+	  285 [label="IsKimHere()", shape=diamond];
+	  286 [label="!(IsKimHere())", shape=diamond];
+	  287 [label="You: (Say the cool thing.) \"Let's rock with our cock.\""];
+	  288 [label="Interfacing: It will be good, I promise."];
+	  289 [label="You: No, I don't wanna resort to forgery."];
+	  290 [label="Untitled hub (02)"];
+	  291 [label="You: \"Will you sign the papers? Right where the squiggly line is. For the children?\" (Hand her the documents.)"];
+	  292 [label="Jump to: [Washerwoman: \"The woman next to a bucket of cloth...\"]"];
+	  293 [label="Empathy: He's not dissatisfied with you, but with himself."];
+	  294 [label="Washerwoman: Variable[\"village.washerwoman_asked_about_lilienne\"]  or  Variable[\"village.netpicker_greeting_done\"]"];
+	  295 [label="Variable[\"village.washerwoman_asked_about_lilienne\"]  or  Variable[\"village.netpicker_greeting_done\"]", shape=diamond];
+	  296 [label="!(Variable[\"village.washerwoman_asked_about_lilienne\"]  or  Variable[\"village.netpicker_greeting_done\"])", shape=diamond];
+	  297 [label="Washerwoman: \"She's right over there.\" She points towards the jetty. \"The dark-haired woman, leaning over the railing.\""];
+	  298 [label="Washerwoman: \"Here? For you?\" She lets out a dry chortle. \"No, officer. The only money we have here is some coins the drunks tried hiding from their women -- and then forgot about.\""];
+	  299 [label="Rhetoric: She is not impressed by a cop running errands for a local big wig. Not at all."];
+	  300 [label="Interfacing: Oh yes... of course. And illegal too! Forget it!"];
+	  301 [label="Washerwoman: \"Must say, I'm proud of this one,\" she nods, handing the jacket back to you. \"It's pretty nice underneath all that filth. I hope it'll have an easier life in your hands.\""];
+	  302 [label="You: \"The world.\""];
+	  303 [label="You: \"You're right, this place is huge. She's a needle in a haystack.\""];
+	  304 [label="Washerwoman: Variable[\"plaza.kineema_found_out_what_tore_you_from_slumber\"]"];
+	  305 [label="Variable[\"plaza.kineema_found_out_what_tore_you_from_slumber\"]", shape=diamond];
+	  306 [label="!(Variable[\"plaza.kineema_found_out_what_tore_you_from_slumber\"])", shape=diamond];
+	  307 [label="You: \"Enough about Ruby, I had other questions...\""];
+	  308 [label="Washerwoman: The old woman still hums her unknown song. She opens her eyes to acknowledge your presence."];
+	  309 [label="You: \"Are you *sure* you didn't hear any radio playing?\""];
+	  310 [label="Jump to: [MAINHUB]"];
+	  311 [label="You: \"What is in this fishing village?\""];
+	  312 [label="Washerwoman: \"This is my little cinderblock town.\" She nods with a wrinkled smile. \"I know what goes on around here.\""];
+	  313 [label="You: \"Anything else of note?\""];
+	  314 [label="You: \"Why do you think she left the bullet there?\""];
+	  315 [label="You: \"Did she have any technical equipment with her, like radio stuff?\""];
+	  316 [label="Visual Calculus: It's a peninsula. She might be *trapped*."];
+	  317 [label="Washerwoman: \"No one is using it and god knows it's not much anyway.\" She tilts her head on the side, pondering over something. \"You can stay there.\""];
+	  318 [label="Washerwoman: \"He's a sharp one,\" she says to herself and runs her hand across the washboard."];
+	  319 [label="You: \"'I see. You know something, but you've decided not to tell us.\""];
+	  320 [label="Washerwoman: \"An old military hospital and its surroundings.\" She looks toward the buildings to the south. \"Or it used to be, during the time of the Suzerain.\""];
+	  321 [label="You: \"I think I'm in the process of finding myself again.\""];
+	  322 [label="Washerwoman: \"I'm sure you did,\" she says with a peculiar smile and nods. \"Nature keeps them in rotation. A new face pops up every now and then and an old one disappears and is forgotten. This is who we are.\""];
+	  323 [label="You: \"Okay, thanks, I've heard enough.\""];
+	  324 [label="Hand/Eye Coordination: Your hand twitches. A single bullet hidden from sight. Remember the way it slides into the barrel. The muzzle of the loaded weapon pointed at your heart -- it feels familiar, doesn't it?"];
+	  325 [label="Washerwoman: \"She's a good girl, whatever she's gotten herself mixed up in.\""];
+	  326 [label="Washerwoman: Variable[\"village.ww_ruby_exit_seen\"]"];
+	  327 [label="Variable[\"village.ww_ruby_exit_seen\"]", shape=diamond];
+	  328 [label="!(Variable[\"village.ww_ruby_exit_seen\"])", shape=diamond];
+	  329 [label="You: \"What he said. We're cops: We don't cause trouble, we take care of trouble.\""];
+	  330 [label="Washerwoman: \"I'm sorry there's not a lot of room to park your motor carriage. And not a lot of houses. Or a lot of people. My kids are long gone... searching for treasure. So are others'.\""];
+	  331 [label="Washerwoman: Variable[\"village.ww_ency_southsamaran\"]"];
+	  332 [label="Variable[\"village.ww_ency_southsamaran\"]", shape=diamond];
+	  333 [label="!(Variable[\"village.ww_ency_southsamaran\"])", shape=diamond];
+	  334 [label="Washerwoman: \"I see Lilienne's name is already here. Tsk, tsk. The girl is too trusting. Either way, I won't sign Union papers.\" She hands the envelope back to you."];
+	  335 [label="Washerwoman: \"'Surrender to the Night',\" she replies, slowly rocking back and forth."];
+	  336 [label="Washerwoman: Variable[\"whirling.klaasje_tried_the_expression\"] == true  and  Variable[\"whirling.mirror_stopped_expression\"] == false"];
+	  337 [label="Variable[\"whirling.klaasje_tried_the_expression\"] == true  and  Variable[\"whirling.mirror_stopped_expression\"] == false", shape=diamond];
+	  338 [label="!(Variable[\"whirling.klaasje_tried_the_expression\"] == true  and  Variable[\"whirling.mirror_stopped_expression\"] == false)", shape=diamond];
+	  339 [label="Washerwoman: \"What do you mean, 'what's going to happen'? They're gonna grow up, of course...\""];
+	  340 [label="You: \"They didn't end up like the moribund alcoholics?\" (Point to the drunks.)"];
+	  341 [label="Washerwoman: \"Good for you. Can't expect to receive help if you're not helpful in return. A fine arrangement, that.\""];
+	  342 [label="You: \"You rented the room to her?\""];
+	  343 [label="Reaction Speed: Then how does she know you're here?"];
+	  344 [label="Composure: She doesn't seem surprised by this sudden twist."];
+	  345 [label="Jump to: [MAINHUB]"];
+	  346 [label="Perception (Taste): Tastes like soap. Unsurprisingly."];
+	  347 [label="You: \"No, not right now.\""];
+	  348 [label="Washerwoman: \"As I've done before when she's been in trouble, or just looking for solitude. I've made it clear -- we welcome all kinds of people here.\""];
+	  349 [label="Washerwoman: \"Yes, let's hear those other questions.\" She looks around as spring snow starts falling -- lightly on the fishing village."];
+	  350 [label="You: \"This is like when that man locked himself in the woodshed. We just need to help her come out.\""];
+	  351 [label="Washerwoman: \"A radio? Hah -- no, we play no radio here. There is one in the shack, but it's never used.\""];
+	  352 [label="You: \"We good, Kim?\""];
+	  353 [label="Washerwoman: \"These ears know every sound that belongs to this coast. I would know if I heard anything different.\""];
+	  354 [label="You: \"I get the feeling you're leaving stuff out. What else is going on?\""];
+	  355 [label="Authority: No one? There's something about her... She's definitely not a 'no one'."];
+	  356 [label="You: \"Uh, what if I don't want to?\""];
+	  357 [label="Washerwoman: \"I still have a golden ear. Come-come.\" She beckons you toward her."];
+	  358 [label="Washerwoman: \"Why, I guess I will, Harry. Aye, it just rolls off the tongue. I used to know a Harry. Strong lad, but dumb as a rock.\""];
+	  359 [label="You: \"What happened to the hospital?\""];
+	  360 [label="Kim Kitsuragi: \"I wouldn't worry about that, ma'am. We're persistent.\""];
+	  361 [label="You: \"Lieutenant double-yefreitor Harrier Du Bois.\""];
+	  362 [label="Washerwoman: \"No, you're not. I've seen you around here before. Twelve years ago. You didn't raise any hell -- you were quite helpful, actually. But, still, in Martinaise you're considered an ill omen.\""];
+	  363 [label="Washerwoman: \"Ah, look at me ramble on.\" She waves her hand. \"What brings you to us?\""];
+	  364 [label="Washerwoman: \"I don't believe that. Police showing up here, collecting signatures -- this has Union written all over it.\""];
+	  365 [label="Washerwoman: \"Still, I'm sorry to hear about your partner. He seemed to be a decent enough sort.\""];
+	  366 [label="Authority: She's got a couple of ranks herself. Honoured chief and so on."];
+	  367 [label="Washerwoman: \"Oh, aye, must be *real* important from the sound of it...\""];
+	  368 [label="You: (Lie.) \"Yes.\""];
+	  369 [label="You: \"Nothing. What did you say?\""];
+	  370 [label="You: Okay, forgery it is."];
+	  371 [label="Untitled hub"];
+	  372 [label="Kim Kitsuragi: \"You didn't put it there, did you? *She* did.\""];
+	  373 [label="Washerwoman: \"Like I said,\" her tone sharpens, \"it's an old *children's* song. You don't have to like it.\""];
+	  374 [label="Washerwoman: CheckItem(\"white_envelope_lilienne_signed\")"];
+	  375 [label="CheckItem(\"white_envelope_lilienne_signed\")", shape=diamond];
+	  376 [label="!(CheckItem(\"white_envelope_lilienne_signed\"))", shape=diamond];
+	  377 [label="Washerwoman: \"Yes,\" she replies, slowly nodding. \"You do that. Can't let fat Mr. Claire down now, can you?\""];
+	  378 [label="Encyclopedia: True. She only said she wouldn't even *consider* signing before Lilienne."];
+	  379 [label="Washerwoman: Variable[\"village.ww_empathy_kim_doesnt_like_shack\"] == true"];
+	  380 [label="Variable[\"village.ww_empathy_kim_doesnt_like_shack\"] == true", shape=diamond];
+	  381 [label="!(Variable[\"village.ww_empathy_kim_doesnt_like_shack\"] == true)", shape=diamond];
+	  382 [label="Volition: Should he? This environment encourages one thing and one thing only -- drinking."];
+	  383 [label="Jump to: [MAINHUB]"];
+	  384 [label="Jump to: [Washerwoman: \"\"Well, hand it over then and I'll s...\"]"];
+	  385 [label="You: \"I was asked to get your signature.\" (Hand her the envelope.)"];
+	  386 [label="You: \"That's useful information. Thanks.\""];
+	  387 [label="You: \"Must be exciting for you, Kim. Calling the station you're *accidentally* tuned into.\""];
+	  388 [label="shackingithub"];
+	  389 [label="Empathy: She's not telling you all she knows. Keep her talking."];
+	  390 [label="Washerwoman: \"Quite a handle you got there.\" The old woman nods, with evident respect. \"So many titles. One of them *double*.\""];
+	  391 [label="Washerwoman: \"Then all's not lost,\" she replies, smoothing a wrinkle in her skirt. \"As you can see, even in 'pornographic' poverty people make do...\""];
+	  392 [label="Washerwoman: Variable[\"village.ww_blackc_handeye_suicide\"]"];
+	  393 [label="Variable[\"village.ww_blackc_handeye_suicide\"]", shape=diamond];
+	  394 [label="!(Variable[\"village.ww_blackc_handeye_suicide\"])", shape=diamond];
+	  395 [label="You: \"I had a few more questions about Ruby...\""];
+	  396 [label="Washerwoman: IsKimHere()"];
+	  397 [label="IsKimHere()", shape=diamond];
+	  398 [label="!(IsKimHere())", shape=diamond];
+	  399 [label="Washerwoman: Variable[\"village.ww_altgreet_singing_reaction\"]"];
+	  400 [label="Variable[\"village.ww_altgreet_singing_reaction\"]", shape=diamond];
+	  401 [label="!(Variable[\"village.ww_altgreet_singing_reaction\"])", shape=diamond];
+	  402 [label="You: \"This is no time for jokes. Can't you see I'm in pain?\""];
+	  403 [label="Washerwoman: Variable[\"village.ww_whitecheck_rhetoric_convince\"]"];
+	  404 [label="Variable[\"village.ww_whitecheck_rhetoric_convince\"]", shape=diamond];
+	  405 [label="!(Variable[\"village.ww_whitecheck_rhetoric_convince\"])", shape=diamond];
+	  406 [label="Suggestion: It's really in her best interest to listen to you. You *know* how the world works."];
+	  407 [label="Suggestion: Maybe just look at her with big pleading eyes?"];
+	  408 [label="Washerwoman: \"I won't be around much longer, anyway. Not with the dampness in my bones.\" She looks at her knees. \"If they want to take a chance, who am I to stop them?\""];
+	  409 [label="signitsingit"];
+	  410 [label="Electrochemistry: And risk fleshly contact with this old crone? Spare yourself!"];
+	  411 [label="You: \"Are they here now?\""];
+	  412 [label="Half Light: You have her! Now twist the knife..."];
+	  413 [label="missing_jacketing"];
+	  414 [label="Conceptualization: She makes it sound like losing one's name was as common as a mid-life crisis."];
+	  415 [label="Shivers: Between here and Jamrock, a dusty sea of old trees, all covered in industrial soot. Small houses under them, an overgrown park..."];
+	  416 [label="Logic: Ruby was here. You know it."];
+	  417 [label="Washerwoman: \"Lilienne is tough.\" She nods. \"Tougher than the men here at least. If it wasn't for her and the kids, this place wouldn't have a spark of life left.\""];
+	  418 [label="Washerwoman: \"Your mind just flips back and forth, doesn't it... what are they about *exactly*?\""];
+	  419 [label="Jump to: [MAINHUB]"];
+	  420 [label="Washerwoman: IsKimHere()"];
+	  421 [label="IsKimHere()", shape=diamond];
+	  422 [label="!(IsKimHere())", shape=diamond];
+	  423 [label="Empathy: He did not like that."];
+	  424 [label="Washerwoman: IsMorning()"];
+	  425 [label="IsMorning()", shape=diamond];
+	  426 [label="!(IsMorning())", shape=diamond];
+	  427 [label="Savoir Faire: You need to look into these shacks. Especially hers."];
+	  428 [label="You: \"You said she left on Monday?\""];
+	  429 [label="You: \"Did she talk to you much this time?\""];
+	  430 [label="Jump to: [MAINHUB]"];
+	  431 [label="Encyclopedia: When Vaasan communist revolutionary Ignus Nilsen was in hiding, he stayed in a hut on the boreal plateau for ten months."];
+	  432 [label="You: \"Goodbye, I'm off.\" [Leave.]"];
+	  433 [label="You: \"Have you seen a woman named Ruby around here?\""];
+	  434 [label="You: \"Why was there a bullet under the floorboards of your shack?\""];
+	  435 [label="Washerwoman: \"'This *shit*?\" Her eyes with their cataracts look at you. \"I'm not going to do your work for you, just because you've got a potty mouth.\""];
+	  436 [label="Kim Kitsuragi: \"Well, if you're not in the hostel in the morning, I'll know where to find you.\" He looks around and adds: \"Here. In a shack.\""];
+	  437 [label="You: \"That doesn't make any sense.\""];
+	  438 [label="You: \"Maybe I should stay lost. Just move here and... disappear completely.\""];
+	  439 [label="Washerwoman: She nods and raises her unseeing eyes. \"What are you interested in then?\""];
+	  440 [label="Washerwoman: \"And now *suspicious*-looking people are sneaking around the church. I don't like that.\""];
+	  441 [label="You: \"Who'd want to come to a fishmarket here?\""];
+	  442 [label="Jump to: [MAINHUB]"];
+	  443 [label="You: \"What is she like, Ruby?\""];
+	  444 [label="You: \"It's an exit plan.\""];
+	  445 [label="Jump to: [rubythequestions]"];
+	  446 [label="makehubsprettier"];
+	  447 [label="Washerwoman: \"Oh, the usual. Dark tidings. Black hound.\""];
+	  448 [label="Encyclopedia: There's a gap where the name of that song should be. You should ask her about it, right now!"];
+	  449 [label="You: \"Uh, no. It's... someone else altogether.\""];
+	  450 [label="You: \"So it was a test?\""];
+	  451 [label="You: \"You got to be smart, read the fine print, think ahead, look for opportunities...\""];
+	  452 [label="You: \"Oh. Well, let me know if that changes. Let's talk about something else.\""];
+	  453 [label="Kim Kitsuragi: \"I see, ma'am.\" The lieutenant turns to you. \"I hope you don't mind if we look around anyway.\""];
+	  454 [label="You: \"No.\""];
+	  456 [label="Physical Instrument: Not a quitter. Like you sometimes get, son."];
+	  457 [label="Washerwoman: \"Heh...\" Not a muscle moves in the wrinkled face. \"I'd like to see him try. If anything, *I* am gonna muscle *him* out with construction noise.\""];
+	  458 [label="Washerwoman: Variable[\"village.washerwoman_conze_loosing_your_name_is_common_here\"]"];
+	  459 [label="Variable[\"village.washerwoman_conze_loosing_your_name_is_common_here\"]", shape=diamond];
+	  460 [label="!(Variable[\"village.washerwoman_conze_loosing_your_name_is_common_here\"])", shape=diamond];
+	  461 [label="Drama: Sire, she doesn't believe things will ever improve around here."];
+	  462 [label="Jump to: [MAINHUB]"];
+	  463 [label="Washerwoman: IsKimHere()"];
+	  464 [label="IsKimHere()", shape=diamond];
+	  465 [label="!(IsKimHere())", shape=diamond];
+	  466 [label="Jump to: [MAINHUB]"];
+	  467 [label="Washerwoman: \"No.\""];
+	  468 [label="Kim Kitsuragi: \"Did she talk to you much during her last stay?\""];
+	  469 [label="Washerwoman: IsTHCPresent(\"communist\")"];
+	  470 [label="IsTHCPresent(\"communist\")", shape=diamond];
+	  471 [label="!(IsTHCPresent(\"communist\"))", shape=diamond];
+	  472 [label="Washerwoman: The woman next to a bucket of clothes hums an odd melody. Her eyes are closed."];
+	  473 [label="Conceptualization: The place is so pornographically poor it's not even funny."];
+	  474 [label="You: \"Wait, hold on, you're just *giving* it to me?\""];
+	  475 [label="You: \"One more time: I can just *have* the room?\""];
+	  476 [label="Washerwoman: \"And now you know everything there is to know about this coast.\" She drops a bar of soap into the bucket with a splash."];
+	  477 [label="Washerwoman: \"Nothing of the sort.\" She shakes her head. \"Sure, she was no stranger to the bottle... she fit in, that way. But I only knew her to have a beer on the beach while watching the sunset...\""];
+	  478 [label="Washerwoman: \"Your parents must have had big plans for you.\" She pauses, measuring you up and down. \"Wonder if you measured up?\""];
+	  479 [label="Jump to: [MAINHUB]"];
+	  480 [label="Washerwoman: \"Because you're an *ill omen*. But you're still welcome here as long as men with guns aren't chasing you. And maybe even then, because that's the kind of fishing village we've built.\""];
+	  481 [label="Washerwoman: IsKimHere()"];
+	  482 [label="IsKimHere()", shape=diamond];
+	  483 [label="!(IsKimHere())", shape=diamond];
+	  484 [label="Jump to: [stufftosay]"];
+	  485 [label="Washerwoman: \"Our tenant, the policeman. I hope the waves don't keep you up at night. What can I help you with?\""];
+	  486 [label="Jump to: [MAINHUB]"];
+	  487 [label="You: \"What is the song you're humming?\""];
+	  488 [label="You: \"I got Lilienne's signature. Will you sign the papers now?\""];
+	  489 [label="Washerwoman: \"Aye, even *I* can see that. I told you not to bring your trouble with you, policeman. We've got troubles of our own here...\""];
+	  490 [label="Washerwoman: Variable[\"tc.rank_known\"]"];
+	  491 [label="Variable[\"tc.rank_known\"]", shape=diamond];
+	  492 [label="!(Variable[\"tc.rank_known\"])", shape=diamond];
+	  493 [label="Washerwoman: \"What? You're fetching someone's missing laundry *free of charge*? Do you not have anything better to do?\""];
+	  494 [label="Variable[\"village.ww_said_savoir_faire_cool_thing\"]"];
+	  495 [label="Variable[\"village.ww_said_savoir_faire_cool_thing\"]", shape=diamond];
+	  496 [label="!(Variable[\"village.ww_said_savoir_faire_cool_thing\"])", shape=diamond];
+	  497 [label="You: \"Okay -- let's rock with our cock*s* out!\""];
+	  498 [label="You: \"You can start by signing these papers. Where the squiggly line is. I've got a pen right here.\" (Hand her the documents.)"];
+	  499 [label="Washerwoman: Variable[\"boardwalk.feld_mural_first_greet\"]"];
+	  500 [label="Variable[\"boardwalk.feld_mural_first_greet\"]", shape=diamond];
+	  501 [label="!(Variable[\"boardwalk.feld_mural_first_greet\"])", shape=diamond];
+	  502 [label="Savoir Faire: Under carts, boats, in little boxes. It's not hard to find."];
+	  503 [label="Inland Empire: Does this *feel* like a *good* thing though?"];
+	  504 [label="Jump to: [MAINHUB]"];
+	  505 [label="You: \"Wait, you promised!\""];
+	  506 [label="Jump to: [MAINHUB]"];
+	  507 [label="Washerwoman: \"Suit yourself,\" replies the old woman and shrugs. \"Patience obviously isn't your strong suit.\""];
+	  508 [label="Washerwoman: Variable[\"village.ruby_bullet_inland_suicide\"]  or  Variable[\"village.bullet_empathy\"]"];
+	  509 [label="Variable[\"village.ruby_bullet_inland_suicide\"]  or  Variable[\"village.bullet_empathy\"]", shape=diamond];
+	  510 [label="!(Variable[\"village.ruby_bullet_inland_suicide\"]  or  Variable[\"village.bullet_empathy\"])", shape=diamond];
+	  511 [label="You: \"Was there anything else there?\""];
+	  512 [label="Suggestion: This Ruby is an old-lady whisperer. She knows how to work the village elder -- unlike you."];
+	  513 [label="You: \"What do you mean?\""];
+	  514 [label="MAINHUB"];
+	  515 [label="Kim Kitsuragi: \"I'm ready when you are.\" He turns to the old woman. \"Thank you, ma'am.\""];
+	  516 [label="Jump to: [MAINHUB]"];
+	  517 [label="You: \"Where could someone stay around here?\""];
+	  518 [label="You: (Nod.) \"This could be the first chapter of my rags-to-riches memoir.\""];
+	  519 [label="Washerwoman: \"No one, that's why it's closed.\" After a long pause, she adds, \"It was once a bustling place, back when I was young and so was everyone else...\""];
+	  520 [label="You: \"God dammit, I know you know something. This shit is important!\""];
+	  521 [label="Washerwoman: \"I don't know... further up the coast. She tried to leave quietly but the hinges on that door screech like a cat in heat -- woke me up. I heard her rushing in those heavy boots, heading up north.\""];
+	  522 [label="Washerwoman: \"Tut, tut. Don't be shy now. It's going to be alright.\""];
+	  523 [label="Washerwoman: Variable[\"village.ww_carriage_exit_seen\"]"];
+	  524 [label="Variable[\"village.ww_carriage_exit_seen\"]", shape=diamond];
+	  525 [label="!(Variable[\"village.ww_carriage_exit_seen\"])", shape=diamond];
+	  526 [label="You: \"My name is... Raphaël Ambrosius Costeau.\" (Sigh.)"];
+	  527 [label="You: \"I lost my name.\""];
+	  528 [label="You: \"There's this guy -- Garte -- who makes me give him money *every night* just so I don't die out in the cold.\""];
+	  529 [label="Jump to: [MAINHUB]"];
+	  530 [label="Washerwoman: \"Aye.\" Her eyes grow wide with glee. \"Sometimes it's as though I've also gotten lost inside this nameless nothing.\""];
+	  531 [label="Washerwoman: \"Now the area is criss-crossed with nameless streets and makeshift cinderblock houses. Shacks as far as the eye can see.\""];
+	  532 [label="You: \"I'm not really interested in town drunks, but thanks.\""];
+	  533 [label="Jump to: [rubythequestions]"];
+	  534 [label="You: \"We're cops. We're hellraisers. Click, click. Bang, bang!\""];
+	  535 [label="Washerwoman: \"Cops bribing citizens? Doesn't it usually go the other way around?\" She doesn't wait for your reply."];
+	  536 [label="Washerwoman: \"What you'll find is poverty and abandon.\" She grins. \"Not much of a threat you've got there.\""];
+	  537 [label="Washerwoman: \"I've heard that pitch before plenty. 'Building this, building that, new jobs, new blood...'\" She shakes her head in disdain. \"Somehow the people here always end up holding the short end of the stick.\""];
+	  538 [label="You: \"He was alright.\""];
+	  539 [label="You: \"I met Lilienne already.\""];
+	  540 [label="Washerwoman: \"No...\" the old woman says, her cloudy eyes darting sideways. \"They moved to Faubourg for work.\""];
+	  541 [label="Washerwoman: IsKimHere()"];
+	  542 [label="IsKimHere()", shape=diamond];
+	  543 [label="!(IsKimHere())", shape=diamond];
+	  544 [label="Washerwoman: \"Gone and hid things in there...\" She shakes her head. \"She's usually a good tenant. And not a *stupid* one either.\""];
+	  545 [label="Kim Kitsuragi: \"What did you say.\" The lieutenant gives you a puzzled look."];
+	  546 [label="Kim Kitsuragi: \"What?\""];
+	  547 [label="Washerwoman: Variable[\"TASK.forge_liliennes_and_isobels_signatures\"]  and  Variable[\"TASK.forge_liliennes_and_isobels_signatures_done\"] == false"];
+	  548 [label="Variable[\"TASK.forge_liliennes_and_isobels_signatures\"]  and  Variable[\"TASK.forge_liliennes_and_isobels_signatures_done\"] == false", shape=diamond];
+	  549 [label="!(Variable[\"TASK.forge_liliennes_and_isobels_signatures\"]  and  Variable[\"TASK.forge_liliennes_and_isobels_signatures_done\"] == false)", shape=diamond];
+	  550 [label="Suggestion: She wanted to talk to her, as they usually do. But she was brooding."];
+	  551 [label="You: \"About the document you signed... Evrart plans to muscle you out with construction noise.\""];
+	  552 [label="Washerwoman: \"I wield an army of drunks.\" A clever smile passes her face. \"Do not underestimate the effect of such a force if it's pointed to the right direction.\""];
+	  553 [label="Jump to: [MAINHUB]"];
+	  554 [label="Electrochemistry: Yum yum. It's not a shack nor a room nor a lodging -- it's a spiral staircase disappearing into bliss. Empty bottles on the floor, maybe some baggies..."];
+	  555 [label="Kim Kitsuragi: You catch the lieutenant's side-glance, but he doesn't say anything."];
+	  556 [label="Volition: Hell yeah!"];
+	  557 [label="Physical Instrument: No, we must run around ceaselessly. It would be torture to stay put."];
+	  558 [label="You: \"Kim, she must have heard your Kineema.\""];
+	  559 [label="Jump to: [rubythequestions]"];
+	  560 [label="Untitled hub"];
+	  561 [label="Washerwoman: \"Nay, I haven't *seen* anyone lately.\""];
+	  562 [label="You: \"Now this is real Revacholian hospitality. That Garte must be half-kipt or something.\""];
+	  563 [label="Washerwoman: \"Before you get to the church, there's some ruins -- an apartment complex, or some kind of electrical plant... Run down bunch of houses, empty.\""];
+	  564 [label="You: \"This isn't about the Union, you know. You don't have to worry about retaliation.\""];
+	  565 [label="You: \"This place is pornographically poor.\""];
+	  566 [label="Perception (Hearing): The buzz of electric lights blends together with the slow rumble of ocean waves at night."];
+	  567 [label="Washerwoman: \"Don't make an old woman regret opening her house to the police.\" A key appears from under her apron. She hands it to you."];
+	  568 [label="Washerwoman: Variable[\"village.ww_blackc_reaction_ruby\"]"];
+	  569 [label="Variable[\"village.ww_blackc_reaction_ruby\"]", shape=diamond];
+	  570 [label="!(Variable[\"village.ww_blackc_reaction_ruby\"])", shape=diamond];
+	  571 [label="Washerwoman: \"Oh?\" Her expression betrays curiosity. \"It seems to be a common theme these days.\""];
+	  572 [label="Jump to: [vilagehubsing]"];
+	  573 [label="Washerwoman: \"And then there's the drunks...\" She sighs. \"Not a pretty sight, but there's little we can do about it. Home is home, even for them.\""];
+	  574 [label="Washerwoman: \"Aye? Do tell.\" A seagull flies overhead -- obviously a bad omen."];
+	  575 [label="You: \"On second thought, I'd rather not say. It's not something I want to think about.\""];
+	  576 [label="Washerwoman: \"You'll never find her, you know.\" Her tone is without malice. \"She knows the coast like the back of her hand. *You* only just arrived.\""];
+	  577 [label="Horrific Necktie: Trouble? Say the second thing, *bratan*! Shows you got style."];
+	  578 [label="Washerwoman: \"He was brooding, needed some help opening the door. You got it open for him and took him to think about what he'd done in a more secluded place. Somewhere more quiet.\""];
+	  579 [label="Washerwoman: \"The policeman.\" She squints at you. \"What can our village do for you?\""];
+	  580 [label="You: \"I guess you were right. The men with guns were coming for me after all.\""];
+	  581 [label="Washerwoman: \"I'm not sure those were the last of the men with guns, either.\" She nods. \"There are always more coming for your kind, officer.\""];
+	  582 [label="You: \"Yes, it's the Union.\""];
+	  583 [label="You: \"What do you have against the Union?\""];
+	  584 [label="You: \"Sign it or I'll have the RCM turn this place upside down. We're gonna find *something*...\""];
+	  585 [label="Suggestion: Like ocean waves shaping the coastline, you will wear her down. Pebble by pebble. Just be persistent."];
+	  586 [label="Washerwoman: \"Did you say something?\" She squints at you."];
+	  587 [label="Jump to: [MAINHUB]"];
+	  588 [label="Washerwoman: \"What do you expect? Police officers get put into dangerous situations all the time. Sometimes they get shot. It's a rough trade you're in.\""];
+	  589 [label="Washerwoman: \"Losing a family member's tough,\" she nods solemnly. \"But we've all lost someone we're close to, some more than once.\""];
+	  590 [label="Washerwoman: \"*Stay*? Most people here are trying to *leave*...\""];
+	  591 [label="Electrochemistry: Like the hag can tell the difference between fool and cool? C'mon... As far as names go, Tequila Sunset is *dangerously* cool."];
+	  592 [label="You: \"I just forgot to ask for a reward.\""];
+	  593 [label="Washerwoman: \"Aye, laundry fetchers are some of the most *honourable* people I know.\" Her smile gleams like a freshly honed knife."];
+	  594 [label="Logic: She wanted to see if you would do it and if she would."];
+	  595 [label="Washerwoman: IsKimHere()"];
+	  596 [label="IsKimHere()", shape=diamond];
+	  597 [label="!(IsKimHere())", shape=diamond];
+	  598 [label="Jump to: [MAINHUB]"];
+	  599 [label="Washerwoman: \"Well, hand it over then and I'll see what I can do...\""];
+	  600 [label="You: \"I have 30 minutes to spare, would you still wash the jacket for me?\""];
+	  601 [label="Washerwoman: IsKimHere()"];
+	  602 [label="IsKimHere()", shape=diamond];
+	  603 [label="!(IsKimHere())", shape=diamond];
+	  604 [label="Jump to: [You: \"\"No, I don't want a free room, it's...\"]"];
+	  605 [label="You: \"Any idea how the twins could have heard Speedfreaks FM?\""];
+	  606 [label="Kim Kitsuragi: \"Let's just get it out of the way as fast as we can. Contact dispatch from my Kineema and ask them to connect you to the station. Maybe they can shed some light on this.\""];
+	  607 [label="Washerwoman: \"That said, if lodgings is what you're looking for, I've got a free room in the shack.\" Her soapy thumb points to the building behind her."];
+	  608 [label="Washerwoman: \"Hah!\" She lifts the paper very close to her face and studies it intently. \"I might be half blind, but it looks like part of the village is gonna be a street. The best part. The part we need to get out of our houses.\""];
+	  609 [label="Washerwoman: \"Aye.\" She nods and looks at the shack. \"The room is pretty bare bones, but it's got a bed and roof over it. That's more than some folks have around here.\""];
+	  610 [label="Washerwoman: IsKimHere()"];
+	  611 [label="IsKimHere()", shape=diamond];
+	  612 [label="!(IsKimHere())", shape=diamond];
+	  613 [label="Washerwoman: \"Ah, I should have known...\" She shakes her head. \"This is yet another Union mess. I'm not afraid of them, you know. We're not in the habit of being afraid around here.\""];
+	  614 [label="Washerwoman: She keeps humming, nodding her head back and forth to her unknown melody."];
+	  615 [label="Jump to: [MAINHUB]"];
+	  616 [label="Washerwoman: \"This is pretty much a non-place.\" She grins. \"A gap. A blank spot on the map, just a cluster of nameless shacks on a nameless street.\""];
+	  617 [label="Jump to: [vilagehubsing]"];
+	  618 [label="Jump to: [vilagehubsing]"];
+	  619 [label="Washerwoman: \"Used to be a supply depot... we think. Sending goods and ammo across the bay. It's jammed shut, though. We tried to get in, see if there was anything to sell or scavenge, but it's impossible.\""];
+	  620 [label="Composure: And without anger. A long and harsh life has taught her not to buckle under pressure."];
+	  621 [label="Washerwoman: \"Exit from what?\""];
+	  622 [label="Washerwoman: IsKimHere()"];
+	  623 [label="IsKimHere()", shape=diamond];
+	  624 [label="!(IsKimHere())", shape=diamond];
+	  625 [label="Encyclopedia: You're not sure about the melody, but it might be South Samaran, possibly Siigayan (also known as the Apricot Suzerainty)."];
+	  626 [label="Kim Kitsuragi: \"We're not here to cause any trouble, madam.\""];
+	  627 [label="You: \"If I'm considered an ill omen, why hasn't anyone told me that?\" (Proceed.)"];
+	  628 [label="nighttimehub"];
+	  629 [label="Washerwoman: \"Fine,\" she mutters. Grabbing a pen from inside her apron pocket, she scribbles her name on the dotted line and hands the document back to you."];
+	  630 [label="Washerwoman: Reluctantly, she takes the pen from your hand, scribbles her name on the line, and hands everything back to you."];
+	  631 [label="You: Uh, I can't come up with anything else to say."];
+	  632 [label="Washerwoman: \"Save your breath, officer. This deal isn't going anywhere. Now if you'll excuse me, I've got this whole bucket-full of rags to finish. That's my job. Maybe you should do yours?\""];
+	  633 [label="You: Nod."];
+	  634 [label="You: \"My partner got shot, too. He's still in the hospital.\""];
+	  635 [label="You: \"He was my half-brother.\""];
+	  636 [label="You: \"What happened to him?\""];
+	  637 [label="Washerwoman: \"He did too many narcotics. So many he fell off his boat and split his skull on a buoy.\" She rubs soap off her hands. \"Folks who saw it, say his head cracked open like a melon. Nasty-nasty.\""];
+	  638 [label="Washerwoman: \"None of my business, either way. How you spend your hours is up to you...\""];
+	  639 [label="Kim Kitsuragi: \"It's too late now.\""];
+	  640 [label="Washerwoman: \"The Ecclesiastes have tried to get things going there, but things just keep happening. Crime. *Accidents*. Other things. The place never stays open.\" She frowns. \"It's a pity. It used to be such a nice church.\""];
+	  641 [label="Rhetoric: In her mind, the Union is right wing because Evrart is fat. It's that simple and there's no changing it."];
+	  642 [label="You: I'm gonna find another way. (Don't get her signature.)"];
+	  643 [label="Kim Kitsuragi: The lieutenant gives you a look and sighs. \"Let's go mail it.\""];
+	  644 [label="Jump to: [MAINHUB]"];
+	  645 [label="Jump to: [You: \"\"What do you have against the Union?\"\"]"];
+	  646 [label="You: \"It's weird. I don't like it.\""];
+	  647 [label="Composure: It's a cold, cynical smile."];
+	  648 [label="Kim Kitsuragi: \"I could use a breather before another *runny* day begins...\""];
+	  649 [label="Esprit de Corps: The lieutenant, elsewhere in Revachol, runs a finger over the rough mesh of a stereo. He is deep in thought. He needs to be here for this."];
+	  650 [label="You: \"Thank you, Kim.\""];
+	  651 [label="Washerwoman: \"Anything else, now?\" The old woman frowns. Her wrinkles frown with her."];
+	  652 [label="You: \"Okay, but do you know who I'm talking about?\""];
+	  653 [label="Washerwoman: \"Just us.\" She sounds tired. \"It's barely a village anymore. We... *almost* don't exist.\""];
+	  654 [label="Washerwoman: She waves her hand southwest. \"Over there you can find... more of the same. Shacks and trees growing wild. That's the Pox.\""];
+	  655 [label="You: \"Oh yeah, I met a couple of drunks here.\""];
+	  656 [label="vilagehubsing"];
+	  657 [label="You: Lean forward."];
+	  658 [label="You: \"If you can't see, then how did you know I was here?\""];
+	  659 [label="You: \"You can call me Tequila Sunset.\""];
+	  660 [label="Washerwoman: \"These things happen occasionally. Don't worry, you'll find yourself once more.\""];
+	  661 [label="You: \"Don't know if I can afford another place to stay.\""];
+	  662 [label="lastesthubbest"];
+	  663 [label="You: \"What do you mean?\""];
+	  664 [label="You: \"I'd really rather go back to talking about the village.\""];
+	  665 [label="You: \"Why is it abandoned?\""];
+	  666 [label="Washerwoman: \"One thing. Officer, if you do find her, please go easy on her...\" She looks around. The air is getting colder."];
+	  667 [label="You: \"Her life.\""];
+	  668 [label="You: \"Perhaps some... 'financial compensation' would change your mind?\" (Wink.)"];
+	  669 [label="You: Shake your head."];
+	  670 [label="Washerwoman: \"Yes.\" She nods. \"It does.\""];
+	  671 [label="Washerwoman: \"Though I suppose you took the worst of it. Turns out you were your *own* ill omen.\" The woman chuckles to herself."];
+	  672 [label="Inland Empire: The 'Feld Electric' mural... you feel like you should go look at it again. Step *closer* this time."];
+	  673 [label="Savoir Faire: She may simply have kept the equipment elsewhere."];
+	  674 [label="You: \"Further up the coast we go then.\""];
+	  675 [label="Washerwoman: \"I told you before! No, there has been no listening to the radio. Not last week, not in the weeks before.\""];
+	  676 [label="Washerwoman: \"No, I have no idea where they heard it. They've been in earshot all week, and no radio.\""];
+	  677 [label="You: \"What's further down the coast?\""];
+	  678 [label="You: \"Unfortunate that incremental development hasn't *elevated* this neighbourhood yet. I see potential here.\""];
+	  679 [label="You: \"Is there a way to make a little money around here?\""];
+	  680 [label="You: \"That's it? There's got to be more along the coast.\""];
+	  681 [label="You: \"Where did she go?\" (Move on.)"];
+	  682 [label="Washerwoman: \"She isn't what you'd call a *drunk*. Even offered me some, from time to time. Said it was part of the camionneur life. But I never saw her lose control of herself, the way some people do.\""];
+	  683 [label="Washerwoman: \"Oh.\" A shadow passes over her face. \"Welcome, police officer. We don't cause any trouble around here -- and we don't *want* any trouble either.\""];
+	  684 [label="Washerwoman: \"Surely not the first one...\" She looks you over, a clever smile on her lips. \"So are you interested or not?\""];
+	  685 [label="Kim Kitsuragi: \"Riddles,\" the lieutenant marks dryly and looks around. \"Fits with the general *ambience* here.\""];
+	  686 [label="You: \"I'm lost too.\""];
+	  687 [label="Washerwoman: \"I don't know exactly. A pre-war place. It used to be something.\" She shrugs. \"Before the war. I wasn't here then, you know. Was born in Samara.\""];
+	  688 [label="Washerwoman: “Yes, I let my room to that Ruby girl…” She speaks slowly, wringing out a rag, after a long silence. Her hands move into the water bucket. Some water sloshes over the edge."];
+	  689 [label="rubythequestions"];
+	  690 [label="Washerwoman: \"Maybe they're afraid.\""];
+	  691 [label="You: \"I got shot!\""];
+	  692 [label="Jump to: [MAINHUB]"];
+	  693 [label="Jump to: [MAINHUB]"];
+	  694 [label="You: \"Will you sign the papers? For the children?\" (Hand her the documents.)"];
+	  695 [label="Washerwoman: \"Aye, we do... we do...\" A hint of sadness passes through her face. \"But how do we do that?\""];
+	  696 [label="You: \"What's it called?\""];
+	  697 [label="Washerwoman: \"Change your mind, did you? I thought you might. Won't find a better deal than free.\""];
+	  698 [label="Washerwoman: \"I raised my own kids in this village and they're doing fine for themselves.\""];
+	  699 [label="You: \"And what do you think Lilienne's kids are going to do when they grow up?\""];
+	  700 [label="Suggestion: You've got her. Now just reel 'er in."];
+	  701 [label="You: \"I'm afraid I can't comment -- Official police business.\""];
+	  702 [label="Washerwoman: IsKimHere()"];
+	  703 [label="IsKimHere()", shape=diamond];
+	  704 [label="!(IsKimHere())", shape=diamond];
+	  705 [label="Kim Kitsuragi: \"In fact, he does.\" The lieutenant glances at his watch."];
+	  706 [label="You: \"That's for *me* to know, and *you* to find out.\" (Wink at her.)"];
+	  707 [label="You: \"What?\""];
+	  708 [label="Kim Kitsuragi: \"Nevermind,\" he says, shaking his head. \"Let's just continue.\""];
+	  709 [label="Jump to: [MAINHUB]"];
+	  710 [label="Empathy: She really means it. It's an honest plea."];
+	  711 [label="Conceptualization: That's kind of grim for a children's song. Even if it is a lullaby."];
+	  712 [label="Jump to: [vilagehubsing]"];
+	  713 [label="Washerwoman: CheckItem(\"white_envelope_lilienne_signed\")"];
+	  714 [label="CheckItem(\"white_envelope_lilienne_signed\")", shape=diamond];
+	  715 [label="!(CheckItem(\"white_envelope_lilienne_signed\"))", shape=diamond];
+	  716 [label="You: \"I'll go ask her first then.\""];
+	  717 [label="You: \"Yeah, I'll wait.\""];
+	  718 [label="Logic: You should look around your shack -- maybe she's rented it out to others too?"];
+	  719 [label="You: \"Okay, I'll take it.\"  (Get keys to your new home.)"];
+	  720 [label="Washerwoman: \"Was that the nonsense they were spouting? Pah!\" She shakes her head."];
+	  721 [label="Encyclopedia: There's a gap where the name of that song should be. You should ask her about it, right now!"];
+	  722 [label="Washerwoman: \"Mhm, that's exactly how they get ya. That's why we built our own cinder block houses on the seaside. So we don't have to give money to those crooks...\" She looks around. \"They might not look like much, but they're *ours*.\""];
+	  723 [label="Washerwoman: \"Well, there's Lilienne and her kids. A few new folks live in the house to the east.\" She nods her head across the courtyard. \"But they're away right now.\""];
+	  724 [label="Jump to: [MAINHUB]"];
+	  725 [label="Washerwoman: \"Suit yourself,\" she says, tucking some loose hair back under her shawl. \"But should you ever need shelter, remember old Isobel and her shack by the sea.\""];
+	  726 [label="Washerwoman: \"I can see that,\" she nods, a clever flicker in her eyes. \"Everyone can see you think well of yourself. Now are you interested or not?\""];
+	  727 [label="Washerwoman: IsKimHere()"];
+	  728 [label="IsKimHere()", shape=diamond];
+	  729 [label="!(IsKimHere())", shape=diamond];
+	  730 [label="Washerwoman: \"I'm not going anywhere.\" Her features soften. \"Perhaps there's something else the village can do for you, huh? Though we don't have much here -- just garbage. And a skiff or two...\""];
+	  731 [label="You: \"Alright, there's another topic I'd like to address.\""];
+	  732 [label="Washerwoman: \"Now what catch we *do* bring in goes straight into a lorry for the Delta or somewhere else.\""];
+	  733 [label="You: \"Is the room exactly as she left it?\""];
+	  734 [label="Washerwoman: IsKimHere()"];
+	  735 [label="IsKimHere()", shape=diamond];
+	  736 [label="!(IsKimHere())", shape=diamond];
+	  737 [label="Kim Kitsuragi: \"You're not. No one around here considers us an *ill omen*. People would have told us.\""];
+	  738 [label="Suggestion: Logic and reason won't work on this old bat. Better go for shameless emotional manipulation. What's a grandmother's deepest vulnerability?"];
+	  739 [label="Washerwoman: Variable[\"village.netpicker_got_her_signature\"]"];
+	  740 [label="Variable[\"village.netpicker_got_her_signature\"]", shape=diamond];
+	  741 [label="!(Variable[\"village.netpicker_got_her_signature\"])", shape=diamond];
+	  742 [label="Washerwoman: \"See that you didn't just get us all screwed. I might be half-blind, but I have a good memory for treachery.\""];
+	  743 [label="You: Say nothing."];
+	  744 [label="Washerwoman: \"He probably pawned it for booze and then forgot about it. You know how drunk men are...\""];
+	  745 [label="Washerwoman: \"Like a smart dog, yes?\""];
+	  746 [label="Empathy: Like a dog, yes! Loyal and dependable."];
+	  747 [label="Authority: More like a slave to any master who tosses a bone your way."];
+	  748 [label="Washerwoman: \"God damn that girl,\" she murmurs softly."];
+	  749 [label="Washerwoman: \"No. They've tried, but things just keep happening. Crime. *Accidents*. Other things. The place never stays open.\" She frowns. \"It's a pity. It used to be such a nice church.\""];
+	  750 [label="Hand/Eye Coordination: Then we'll be *ready* for them."];
+	  751 [label="Horrific Necktie: Finally you have those *lamos* of Martinaise off your back, bratan. This looks like a great place to bring chicks."];
+	  752 [label="You: \"Wait, where can I find her?\""];
+	  753 [label="You: (Wipe your brow.) \"Man, I was really hoping she'd be hiding in this village.\""];
+	  754 [label="Washerwoman: Variable[\"village.ww_ruby_logic_kineema\"]  and  IsKimHere()"];
+	  755 [label="Variable[\"village.ww_ruby_logic_kineema\"]  and  IsKimHere()", shape=diamond];
+	  756 [label="!(Variable[\"village.ww_ruby_logic_kineema\"]  and  IsKimHere())", shape=diamond];
+	  757 [label="Empathy: It's not that she misses the kids -- they've been gone too long for that -- but deep deep down the old woman is incurably lonely."];
+	  758 [label="Washerwoman: \"If you say it is,\" she says, shrugging."];
+	  759 [label="You: \"Wait, why isn't anyone using the room?\""];
+	  760 [label="Washerwoman: \"My kids grew up and left, like they do. The house is long empty now. I live in the small side attachment -- it's easier and cheaper to keep warm.\""];
+	  761 [label="You: \"It *would* help me stay in touch with the proletariat.\""];
+	  762 [label="Washerwoman: The old woman still sits in her chair, continuing with her chores. As she does so, she quietly hums to herself."];
+	  763 [label="Washerwoman: Variable[\"village.ww_altgreet_nighttime\"]"];
+	  764 [label="Variable[\"village.ww_altgreet_nighttime\"]", shape=diamond];
+	  765 [label="!(Variable[\"village.ww_altgreet_nighttime\"])", shape=diamond];
+	  766 [label="You: \"How much is it?\""];
+	  767 [label="Washerwoman: \"Go ahead,\" she remarks sharply, \"call people rude things. We've heard worse here. Now are you interested or not?\""];
+	  768 [label="Washerwoman: \"Isn't that what people always think when they're lost?\" A fleeting smirk runs across her lips. \"Something *I* can do to help you find your way, officer?\""];
+	  769 [label="Jump to: [rubythequestions]"];
+	  770 [label="Conceptualization: She says it as if he was on some kind of spiritual retreat."];
+	  771 [label="Jump to: [stufftosay]"];
+	  772 [label="Washerwoman: \"You're still welcome here.\" She nods. \"As long as men with guns aren't chasing you. And maybe even then, because that's the kind of fishing village we've built.\""];
+	  773 [label="Washerwoman: \"I've seen it all before. You think they've got *our* interests at heart? Rich men are always selling poor men promises they never plan to keep...\" She pulls a dark red rag out of the bucket and puts it back."];
+	  774 [label="Authority: She speaks with the authority of a leader. Hers is the final word around here."];
+	  775 [label="Washerwoman: \"Were you dropped on the head as a kid? You can't live off a pittance for long...\""];
+	  776 [label="Volition: You did call him a monkey fucker. That had something to do with it."];
+	  777 [label="Volition: Absolutely not."];
+	  778 [label="Washerwoman: \"I don't believe the fat man's *youth centre* is gonna change anything. But what other choice do we have? It's not like the Coalition Government is coming to save us...\""];
+	  779 [label="Washerwoman: \"Anyhow, you might ask Lilienne if she's seen anything lately -- that girl's got a way of attracting lost and broken things.\""];
+	  780 [label="Jump to: [MAINHUB]"];
+	  781 [label="You: \"I meant: let's rock with our cock out.\""];
+	  782 [label="Washerwoman: The old woman shakes her head slowly."];
+	  783 [label="You: Talk to me, Itchy Fingers? What's the plan?"];
+	  784 [label="You: \"I haven't seen any drunks yet, though...\""];
+	  785 [label="Washerwoman: \"I warned you,\" she nods solemnly. \"I warned you men with guns would be coming after you. They always are with your kind...\" Her features soften."];
+	  786 [label="Washerwoman: Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")"];
+	  787 [label="Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")", shape=diamond];
+	  788 [label="!(Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\"))", shape=diamond];
+	  789 [label="Interfacing: Nothing is *impossible*, surely."];
+	  790 [label="You: \"Trouble how?\""];
+	  791 [label="Washerwoman: IsKimHere()"];
+	  792 [label="IsKimHere()", shape=diamond];
+	  793 [label="!(IsKimHere())", shape=diamond];
+	  794 [label="Kim Kitsuragi: \"We really should focus on some actual leads...\" The lieutenant looks around uncomfortably. \"Negotiating real estate deals isn't our main thing.\""];
+	  795 [label="Authority: The virtue you exhibit in even the most difficult of moral dilemmas, speaks of the purest of heart and soul. Soon it will be time for another Arch."];
+	  796 [label="Washerwoman: \"Must say, I'm proud of this one,\" she nods, handing the jacket back to you. \"It's pretty nice underneath all that filth. I hope you take better care of it than its last owner.\""];
+	  797 [label="You: \"You know something. We're here to help.\""];
+	  798 [label="Washerwoman: Variable[\"ice.tentflap_greeting_done\"]"];
+	  799 [label="Variable[\"ice.tentflap_greeting_done\"]", shape=diamond];
+	  800 [label="!(Variable[\"ice.tentflap_greeting_done\"])", shape=diamond];
+	  801 [label="Jump to: [MAINHUB]"];
+	  802 [label="Jump to: [You: \"\"You got yourself a tenant!\" (Get k...\"]"];
+	  803 [label="Jump to: [MAINHUB]"];
+	  804 [label="You: \"Can you confirm for my partner Kim that no one listened to the radio recently?\""];
+	  805 [label="You: \"Tell me about yourself. Who exactly are you here?\""];
+	  806 [label="Half Light: Enough of this! She better start talking RIGHT NOW!"];
+	  807 [label="Washerwoman: \"She's good company. Knows how to talk to an old woman.\" She rubs her cold hands together. \"At my age, you don't get a lot of quality conversation, so I really appreciate that about her.\""];
+	  808 [label="You: \"Uh... call me Harry.\""];
+	  809 [label="You: \"There's got to be *something* here. Tell me.\""];
+	  810 [label="Inland Empire: The sun sets for everyone."];
+	  811 [label="You: Convince her to sign Evrart's document."];
+	  812 [label="You: Variable[\"village.ww_whitecheck_rhetoric_convince\"]"];
+	  813 [label="Variable[\"village.ww_whitecheck_rhetoric_convince\"]", shape=diamond];
+	  814 [label="!(Variable[\"village.ww_whitecheck_rhetoric_convince\"])", shape=diamond];
+	  815 [label="Washerwoman: \"A deal with who?\" She narrows her eyes, then scoffs. \"It's the Débardeurs Union, isn't it?\""];
+	  816 [label="You: \"Uh, actually, never mind. I won't bother you with this.\""];
+	  817 [label="Washerwoman: \"Lilienne should let her sword make her decisions. The girl just doesn't have the head for it.\" She lets out a chortle, coarse like a raven's caw. \"Either way, I won't sign.\""];
+	  818 [label="Washerwoman: \"Then the poor get pushed out of their homes and the rich get a little richer. That's the way it goes. So no, I don't trust the fat man, and neither should you.\""];
+	  819 [label="Washerwoman: \"What kind of foolishness is that? A cop's got to have a partner. That's in your nature, however you may deny it.\""];
+	  820 [label="You: \"You must be so proud.\""];
+	  821 [label="You: \"Look, this village isn't what it used to be. It's a dilapidated shit hole.\""];
+	  822 [label="Washerwoman: \"That doesn't mean you're wrong though,\" she sighs. \"This place ain't what it used to be, even I can see that...\""];
+	  823 [label="Washerwoman: \"What do you want with a lost jacket?\""];
+	  824 [label="Washerwoman: \"I *can* wash it for you,\" she says after looking the jacket over, \"but it's going to take about a half an hour. Think you can stay put for that long?\""];
+	  825 [label="Washerwoman: \"You're trying to wink at me, aren't you? I can't see, or did you forget that part?\""];
+	  0 -> 1
+	  1 -> 232
+	  2 -> 3
+	  2 -> 4
+	  3 -> 94
+	  4 -> 290
+	  5 -> 657
+	  6 -> 725
+	  7 -> 8
+	  7 -> 9
+	  8 -> 27
+	  9 -> 770
+	  10 -> 755
+	  11 -> 499
+	  12 -> 514
+	  13 -> 807
+	  14 -> 351
+	  15 -> 516
+	  16 -> 362
+	  17 -> 563
+	  18 -> 224
+	  18 -> 441
+	  18 -> 681
+	  19 -> 65
+	  20 -> 343
+	  21 -> 616
+	  22 -> 531
+	  23 -> 197
+	  24 -> 5
+	  25 -> 657
+	  26 -> 620
+	  27 -> 575
+	  28 -> 770
+	  29 -> 30
+	  29 -> 31
+	  30 -> 326
+	  31 -> 523
+	  32 -> 80
+	  33 -> 358
+	  34 -> 244
+	  35 -> 36
+	  35 -> 37
+	  36 -> 629
+	  37 -> 448
+	  38 -> 514
+	  39 -> 609
+	  40 -> 817
+	  40 -> 39
+	  41 -> 595
+	  42 -> 207
+	  43 -> 671
+	  44 -> 504
+	  45 -> 824
+	  46 -> 745
+	  47 -> 825
+	  48 -> 786
+	  49 -> 643
+	  49 -> 173
+	  50 -> 136
+	  50 -> 817
+	  50 -> 39
+	  51 -> 776
+	  52 -> 379
+	  53 -> 514
+	  54 -> 56
+	  54 -> 55
+	  55 -> 797
+	  56 -> 301
+	  57 -> 445
+	  58 -> 675
+	  58 -> 107
+	  58 -> 303
+	  58 -> 754
+	  58 -> 287
+	  59 -> 544
+	  60 -> 755
+	  61 -> 350
+	  61 -> 564
+	  61 -> 798
+	  62 -> 50
+	  63 -> 227
+	  64 -> 688
+	  66 -> 33
+	  66 -> 809
+	  66 -> 361
+	  66 -> 526
+	  66 -> 527
+	  66 -> 660
+	  67 -> 568
+	  68 -> 731
+	  69 -> 70
+	  69 -> 71
+	  70 -> 686
+	  71 -> 121
+	  71 -> 437
+	  72 -> 75
+	  73 -> 320
+	  74 -> 76
+	  75 -> 210
+	  76 -> 657
+	  77 -> 690
+	  78 -> 511
+	  79 -> 7
+	  80 -> 456
+	  81 -> 514
+	  82 -> 83
+	  82 -> 84
+	  83 -> 133
+	  84 -> 201
+	  85 -> 294
+	  86 -> 374
+	  87 -> 88
+	  87 -> 89
+	  88 -> 586
+	  89 -> 406
+	  90 -> 777
+	  91 -> 212
+	  92 -> 639
+	  93 -> 497
+	  94 -> 498
+	  94 -> 291
+	  95 -> 96
+	  95 -> 97
+	  96 -> 183
+	  97 -> 205
+	  98 -> 484
+	  99 -> 533
+	  100 -> 240
+	  101 -> 102
+	  101 -> 103
+	  102 -> 764
+	  103 -> 292
+	  104 -> 618
+	  105 -> 346
+	  106 -> 300
+	  107 -> 188
+	  108 -> 304
+	  109 -> 690
+	  110 -> 607
+	  111 -> 15
+	  112 -> 199
+	  113 -> 114
+	  114 -> 619
+	  115 -> 477
+	  116 -> 276
+	  117 -> 592
+	  118 -> 726
+	  119 -> 698
+	  120 -> 318
+	  121 -> 391
+	  122 -> 690
+	  123 -> 690
+	  124 -> 125
+	  124 -> 126
+	  125 -> 578
+	  126 -> 446
+	  127 -> 128
+	  127 -> 129
+	  128 -> 485
+	  129 -> 399
+	  130 -> 131
+	  131 -> 514
+	  132 -> 697
+	  132 -> 43
+	  132 -> 647
+	  133 -> 547
+	  134 -> 645
+	  135 -> 631
+	  136 -> 816
+	  137 -> 138
+	  137 -> 139
+	  138 -> 462
+	  139 -> 202
+	  140 -> 632
+	  140 -> 585
+	  140 -> 156
+	  140 -> 669
+	  141 -> 137
+	  142 -> 696
+	  143 -> 144
+	  143 -> 145
+	  144 -> 778
+	  145 -> 248
+	  146 -> 368
+	  146 -> 454
+	  147 -> 413
+	  148 -> 289
+	  148 -> 370
+	  148 -> 106
+	  149 -> 378
+	  150 -> 803
+	  150 -> 605
+	  151 -> 257
+	  152 -> 27
+	  153 -> 109
+	  154 -> 513
+	  155 -> 550
+	  156 -> 537
+	  157 -> 272
+	  157 -> 528
+	  157 -> 474
+	  157 -> 720
+	  158 -> 615
+	  159 -> 61
+	  160 -> 541
+	  161 -> 648
+	  162 -> 657
+	  163 -> 243
+	  164 -> 165
+	  164 -> 166
+	  167 -> 514
+	  168 -> 514
+	  169 -> 170
+	  169 -> 171
+	  170 -> 633
+	  171 -> 42
+	  172 -> 90
+	  173 -> 339
+	  174 -> 175
+	  175 -> 412
+	  176 -> 479
+	  177 -> 594
+	  178 -> 499
+	  179 -> 419
+	  180 -> 181
+	  180 -> 182
+	  181 -> 213
+	  182 -> 785
+	  183 -> 168
+	  184 -> 209
+	  185 -> 50
+	  186 -> 344
+	  187 -> 189
+	  188 -> 499
+	  189 -> 735
+	  190 -> 677
+	  191 -> 227
+	  192 -> 162
+	  193 -> 727
+	  194 -> 724
+	  195 -> 440
+	  196 -> 235
+	  197 -> 514
+	  198 -> 693
+	  199 -> 150
+	  200 -> 197
+	  201 -> 547
+	  202 -> 203
+	  202 -> 204
+	  203 -> 82
+	  204 -> 804
+	  205 -> 168
+	  206 -> 776
+	  207 -> 141
+	  208 -> 209
+	  209 -> 514
+	  210 -> 573
+	  211 -> 744
+	  211 -> 822
+	  212 -> 823
+	  213 -> 322
+	  214 -> 750
+	  215 -> 710
+	  216 -> 217
+	  217 -> 466
+	  218 -> 791
+	  219 -> 514
+	  220 -> 221
+	  220 -> 222
+	  221 -> 424
+	  222 -> 257
+	  223 -> 17
+	  223 -> 323
+	  224 -> 225
+	  225 -> 442
+	  226 -> 310
+	  227 -> 387
+	  227 -> 651
+	  228 -> 569
+	  229 -> 253
+	  230 -> 159
+	  231 -> 611
+	  232 -> 233
+	  232 -> 234
+	  233 -> 101
+	  234 -> 127
+	  235 -> 198
+	  236 -> 508
+	  237 -> 320
+	  238 -> 666
+	  239 -> 690
+	  240 -> 241
+	  240 -> 242
+	  241 -> 32
+	  242 -> 80
+	  243 -> 277
+	  244 -> 579
+	  245 -> 480
+	  246 -> 447
+	  247 -> 143
+	  248 -> 514
+	  249 -> 345
+	  250 -> 411
+	  251 -> 701
+	  252 -> 58
+	  253 -> 254
+	  253 -> 255
+	  254 -> 214
+	  255 -> 641
+	  256 -> 17
+	  256 -> 323
+	  257 -> 347
+	  257 -> 718
+	  258 -> 259
+	  258 -> 260
+	  259 -> 719
+	  260 -> 416
+	  261 -> 802
+	  262 -> 187
+	  263 -> 372
+	  264 -> 256
+	  265 -> 807
+	  266 -> 568
+	  267 -> 268
+	  267 -> 269
+	  268 -> 308
+	  269 -> 472
+	  270 -> 560
+	  271 -> 355
+	  272 -> 273
+	  273 -> 388
+	  274 -> 150
+	  275 -> 461
+	  276 -> 674
+	  277 -> 34
+	  277 -> 628
+	  277 -> 246
+	  277 -> 278
+	  278 -> 481
+	  279 -> 39
+	  280 -> 209
+	  281 -> 820
+	  282 -> 411
+	  283 -> 746
+	  284 -> 285
+	  284 -> 286
+	  285 -> 147
+	  286 -> 413
+	  287 -> 546
+	  288 -> 419
+	  289 -> 179
+	  290 -> 695
+	  290 -> 135
+	  291 -> 630
+	  292 -> 472
+	  293 -> 588
+	  294 -> 296
+	  294 -> 295
+	  295 -> 38
+	  296 -> 753
+	  296 -> 717
+	  297 -> 717
+	  298 -> 502
+	  299 -> 38
+	  300 -> 796
+	  301 -> 53
+	  302 -> 240
+	  303 -> 188
+	  304 -> 305
+	  304 -> 306
+	  305 -> 60
+	  306 -> 10
+	  307 -> 349
+	  308 -> 722
+	  309 -> 353
+	  310 -> 514
+	  311 -> 654
+	  312 -> 231
+	  313 -> 18
+	  314 -> 236
+	  315 -> 116
+	  316 -> 577
+	  317 -> 272
+	  317 -> 528
+	  317 -> 720
+	  318 -> 231
+	  319 -> 160
+	  320 -> 22
+	  321 -> 769
+	  322 -> 104
+	  323 -> 200
+	  324 -> 392
+	  326 -> 328
+	  326 -> 327
+	  327 -> 523
+	  328 -> 667
+	  329 -> 243
+	  330 -> 363
+	  331 -> 332
+	  331 -> 333
+	  332 -> 20
+	  333 -> 626
+	  334 -> 584
+	  335 -> 712
+	  336 -> 337
+	  336 -> 338
+	  337 -> 247
+	  338 -> 248
+	  339 -> 699
+	  340 -> 250
+	  341 -> 780
+	  342 -> 689
+	  343 -> 19
+	  343 -> 658
+	  343 -> 659
+	  343 -> 356
+	  344 -> 218
+	  345 -> 514
+	  346 -> 169
+	  347 -> 507
+	  348 -> 262
+	  349 -> 12
+	  350 -> 13
+	  351 -> 560
+	  352 -> 191
+	  353 -> 270
+	  354 -> 195
+	  355 -> 66
+	  356 -> 522
+	  357 -> 658
+	  357 -> 19
+	  357 -> 356
+	  358 -> 637
+	  359 -> 74
+	  360 -> 252
+	  361 -> 390
+	  362 -> 277
+	  363 -> 514
+	  364 -> 583
+	  365 -> 172
+	  365 -> 48
+	  365 -> 281
+	  365 -> 538
+	  365 -> 636
+	  366 -> 345
+	  367 -> 146
+	  368 -> 341
+	  369 -> 709
+	  370 -> 288
+	  371 -> 656
+	  371 -> 113
+	  371 -> 539
+	  371 -> 532
+	  372 -> 544
+	  373 -> 694
+	  374 -> 376
+	  374 -> 375
+	  375 -> 418
+	  376 -> 279
+	  377 -> 299
+	  378 -> 584
+	  378 -> 450
+	  379 -> 380
+	  379 -> 381
+	  380 -> 382
+	  381 -> 506
+	  382 -> 554
+	  383 -> 514
+	  384 -> 600
+	  385 -> 714
+	  386 -> 759
+	  387 -> 111
+	  388 -> 760
+	  388 -> 67
+	  388 -> 475
+	  388 -> 118
+	  389 -> 17
+	  389 -> 354
+	  389 -> 323
+	  390 -> 490
+	  391 -> 75
+	  392 -> 393
+	  392 -> 394
+	  393 -> 27
+	  394 -> 79
+	  395 -> 123
+	  396 -> 397
+	  396 -> 398
+	  397 -> 627
+	  398 -> 446
+	  399 -> 400
+	  399 -> 401
+	  400 -> 580
+	  401 -> 267
+	  402 -> 130
+	  403 -> 404
+	  403 -> 405
+	  404 -> 739
+	  405 -> 87
+	  406 -> 140
+	  407 -> 169
+	  408 -> 634
+	  408 -> 670
+	  408 -> 142
+	  409 -> 2
+	  410 -> 248
+	  411 -> 540
+	  412 -> 211
+	  413 -> 707
+	  413 -> 46
+	  413 -> 177
+	  413 -> 283
+	  413 -> 702
+	  414 -> 458
+	  415 -> 73
+	  415 -> 237
+	  416 -> 427
+	  417 -> 180
+	  418 -> 39
+	  419 -> 514
+	  420 -> 421
+	  420 -> 422
+	  421 -> 555
+	  422 -> 536
+	  423 -> 536
+	  424 -> 425
+	  424 -> 426
+	  425 -> 649
+	  426 -> 151
+	  427 -> 261
+	  428 -> 108
+	  429 -> 154
+	  430 -> 514
+	  431 -> 663
+	  432 -> 29
+	  433 -> 561
+	  434 -> 749
+	  435 -> 541
+	  436 -> 52
+	  437 -> 72
+	  438 -> 24
+	  439 -> 25
+	  440 -> 799
+	  441 -> 519
+	  442 -> 514
+	  443 -> 808
+	  444 -> 622
+	  445 -> 690
+	  446 -> 16
+	  446 -> 329
+	  446 -> 163
+	  446 -> 534
+	  447 -> 98
+	  448 -> 629
+	  449 -> 364
+	  450 -> 41
+	  451 -> 105
+	  452 -> 176
+	  453 -> 258
+	  454 -> 493
+	  456 -> 57
+	  457 -> 186
+	  458 -> 459
+	  458 -> 460
+	  459 -> 6
+	  460 -> 725
+	  461 -> 150
+	  462 -> 514
+	  463 -> 464
+	  463 -> 465
+	  464 -> 263
+	  465 -> 59
+	  466 -> 514
+	  467 -> 99
+	  468 -> 154
+	  469 -> 470
+	  469 -> 471
+	  470 -> 431
+	  471 -> 663
+	  472 -> 331
+	  473 -> 657
+	  474 -> 317
+	  475 -> 610
+	  476 -> 442
+	  477 -> 811
+	  478 -> 44
+	  479 -> 514
+	  480 -> 330
+	  481 -> 482
+	  481 -> 483
+	  482 -> 738
+	  483 -> 773
+	  484 -> 277
+	  485 -> 81
+	  486 -> 514
+	  487 -> 132
+	  488 -> 818
+	  489 -> 672
+	  490 -> 491
+	  490 -> 492
+	  491 -> 366
+	  492 -> 249
+	  493 -> 703
+	  494 -> 496
+	  494 -> 495
+	  495 -> 217
+	  496 -> 216
+	  497 -> 640
+	  498 -> 631
+	  499 -> 500
+	  499 -> 501
+	  500 -> 673
+	  501 -> 216
+	  501 -> 494
+	  502 -> 713
+	  503 -> 49
+	  504 -> 514
+	  505 -> 149
+	  506 -> 514
+	  507 -> 599
+	  508 -> 509
+	  508 -> 510
+	  509 -> 152
+	  510 -> 324
+	  511 -> 467
+	  512 -> 602
+	  513 -> 155
+	  514 -> 385
+	  514 -> 517
+	  514 -> 395
+	  514 -> 14
+	  514 -> 805
+	  514 -> 678
+	  514 -> 806
+	  514 -> 551
+	  514 -> 812
+	  514 -> 45
+	  514 -> 47
+	  514 -> 432
+	  514 -> 433
+	  514 -> 434
+	  514 -> 692
+	  514 -> 311
+	  514 -> 86
+	  514 -> 601
+	  514 -> 487
+	  514 -> 488
+	  514 -> 119
+	  515 -> 15
+	  516 -> 514
+	  517 -> 591
+	  518 -> 685
+	  519 -> 733
+	  520 -> 435
+	  521 -> 316
+	  522 -> 19
+	  522 -> 658
+	  522 -> 659
+	  523 -> 524
+	  523 -> 525
+	  526 -> 478
+	  527 -> 661
+	  528 -> 723
+	  529 -> 514
+	  530 -> 665
+	  530 -> 687
+	  531 -> 359
+	  532 -> 439
+	  533 -> 690
+	  534 -> 362
+	  535 -> 169
+	  536 -> 169
+	  537 -> 51
+	  537 -> 206
+	  537 -> 451
+	  538 -> 280
+	  539 -> 417
+	  540 -> 700
+	  541 -> 542
+	  541 -> 543
+	  542 -> 453
+	  543 -> 258
+	  544 -> 342
+	  545 -> 369
+	  545 -> 782
+	  546 -> 708
+	  546 -> 782
+	  547 -> 548
+	  547 -> 549
+	  548 -> 784
+	  549 -> 804
+	  550 -> 559
+	  551 -> 457
+	  552 -> 553
+	  553 -> 514
+	  554 -> 787
+	  555 -> 423
+	  556 -> 557
+	  557 -> 220
+	  558 -> 153
+	  559 -> 690
+	  560 -> 352
+	  560 -> 386
+	  560 -> 309
+	  560 -> 606
+	  561 -> 228
+	  562 -> 768
+	  563 -> 64
+	  563 -> 313
+	  564 -> 614
+	  565 -> 161
+	  566 -> 35
+	  567 -> 728
+	  568 -> 570
+	  568 -> 571
+	  569 -> 120
+	  569 -> 653
+	  570 -> 452
+	  570 -> 653
+	  571 -> 321
+	  571 -> 665
+	  571 -> 438
+	  572 -> 657
+	  573 -> 371
+	  574 -> 576
+	  574 -> 444
+	  575 -> 28
+	  576 -> 623
+	  577 -> 446
+	  578 -> 771
+	  579 -> 167
+	  580 -> 582
+	  581 -> 751
+	  582 -> 40
+	  583 -> 774
+	  584 -> 420
+	  585 -> 140
+	  586 -> 409
+	  587 -> 514
+	  588 -> 365
+	  589 -> 208
+	  590 -> 608
+	  591 -> 504
+	  592 -> 639
+	  593 -> 146
+	  594 -> 646
+	  595 -> 597
+	  595 -> 598
+	  596 -> 644
+	  597 -> 588
+	  598 -> 514
+	  599 -> 54
+	  600 -> 384
+	  601 -> 603
+	  601 -> 604
+	  602 -> 468
+	  603 -> 429
+	  604 -> 118
+	  605 -> 721
+	  606 -> 652
+	  607 -> 662
+	  607 -> 767
+	  608 -> 740
+	  609 -> 469
+	  610 -> 612
+	  610 -> 613
+	  611 -> 230
+	  612 -> 61
+	  613 -> 807
+	  615 -> 514
+	  616 -> 473
+	  617 -> 657
+	  618 -> 657
+	  619 -> 790
+	  620 -> 463
+	  621 -> 100
+	  621 -> 668
+	  621 -> 302
+	  622 -> 624
+	  622 -> 625
+	  623 -> 360
+	  624 -> 58
+	  625 -> 20
+	  626 -> 124
+	  627 -> 691
+	  628 -> 196
+	  628 -> 158
+	  629 -> 743
+	  630 -> 743
+	  631 -> 407
+	  632 -> 792
+	  633 -> 587
+	  634 -> 589
+	  635 -> 590
+	  636 -> 638
+	  637 -> 345
+	  638 -> 780
+	  639 -> 783
+	  640 -> 389
+	  641 -> 775
+	  642 -> 215
+	  643 -> 293
+	  644 -> 514
+	  645 -> 584
+	  646 -> 373
+	  647 -> 69
+	  648 -> 257
+	  649 -> 226
+	  650 -> 515
+	  651 -> 63
+	  652 -> 312
+	  653 -> 664
+	  654 -> 415
+	  655 -> 322
+	  656 -> 194
+	  656 -> 680
+	  656 -> 810
+	  656 -> 565
+	  656 -> 732
+	  657 -> 684
+	  658 -> 357
+	  659 -> 117
+	  660 -> 414
+	  661 -> 157
+	  662 -> 193
+	  662 -> 518
+	  662 -> 679
+	  662 -> 112
+	  662 -> 562
+	  662 -> 762
+	  663 -> 617
+	  664 -> 192
+	  665 -> 229
+	  666 -> 711
+	  667 -> 240
+	  668 -> 535
+	  669 -> 587
+	  670 -> 694
+	  671 -> 402
+	  671 -> 635
+	  671 -> 581
+	  672 -> 466
+	  673 -> 122
+	  674 -> 11
+	  675 -> 110
+	  676 -> 270
+	  677 -> 238
+	  678 -> 275
+	  679 -> 298
+	  680 -> 26
+	  681 -> 521
+	  682 -> 239
+	  683 -> 396
+	  684 -> 150
+	  685 -> 530
+	  686 -> 572
+	  687 -> 313
+	  687 -> 323
+	  688 -> 348
+	  689 -> 682
+	  689 -> 428
+	  689 -> 315
+	  689 -> 115
+	  689 -> 307
+	  689 -> 314
+	  689 -> 443
+	  689 -> 734
+	  690 -> 245
+	  691 -> 489
+	  692 -> 514
+	  693 -> 514
+	  694 -> 630
+	  695 -> 409
+	  696 -> 335
+	  697 -> 21
+	  698 -> 411
+	  698 -> 340
+	  698 -> 821
+	  699 -> 251
+	  700 -> 174
+	  701 -> 367
+	  702 -> 704
+	  702 -> 705
+	  703 -> 706
+	  704 -> 593
+	  704 -> 92
+	  705 -> 639
+	  706 -> 826
+	  707 -> 545
+	  708 -> 827
+	  709 -> 514
+	  710 -> 325
+	  711 -> 43
+	  711 -> 647
+	  712 -> 657
+	  713 -> 715
+	  713 -> 716
+	  714 -> 185
+	  715 -> 62
+	  716 -> 377
+	  717 -> 600
+	  718 -> 802
+	  719 -> 266
+	  720 -> 190
+	  721 -> 486
+	  722 -> 388
+	  723 -> 574
+	  724 -> 514
+	  725 -> 529
+	  726 -> 150
+	  727 -> 729
+	  727 -> 730
+	  728 -> 436
+	  729 -> 529
+	  730 -> 430
+	  731 -> 23
+	  732 -> 224
+	  732 -> 681
+	  733 -> 78
+	  734 -> 736
+	  734 -> 737
+	  735 -> 77
+	  736 -> 690
+	  737 -> 691
+	  738 -> 503
+	  739 -> 741
+	  739 -> 742
+	  740 -> 334
+	  741 -> 85
+	  742 -> 596
+	  743 -> 779
+	  744 -> 146
+	  745 -> 747
+	  746 -> 748
+	  747 -> 146
+	  748 -> 621
+	  749 -> 389
+	  750 -> 131
+	  751 -> 219
+	  752 -> 297
+	  753 -> 188
+	  754 -> 756
+	  754 -> 757
+	  755 -> 558
+	  756 -> 109
+	  757 -> 67
+	  757 -> 475
+	  757 -> 118
+	  758 -> 650
+	  759 -> 761
+	  760 -> 758
+	  761 -> 274
+	  762 -> 567
+	  763 -> 765
+	  763 -> 766
+	  764 -> 127
+	  765 -> 763
+	  766 -> 157
+	  767 -> 150
+	  768 -> 5
+	  769 -> 690
+	  770 -> 772
+	  771 -> 277
+	  772 -> 330
+	  773 -> 819
+	  774 -> 134
+	  775 -> 169
+	  776 -> 209
+	  777 -> 410
+	  778 -> 408
+	  779 -> 781
+	  780 -> 514
+	  781 -> 93
+	  782 -> 827
+	  783 -> 148
+	  784 -> 114
+	  785 -> 184
+	  786 -> 788
+	  786 -> 789
+	  787 -> 752
+	  788 -> 219
+	  789 -> 476
+	  790 -> 552
+	  791 -> 793
+	  791 -> 794
+	  792 -> 795
+	  793 -> 137
+	  794 -> 137
+	  795 -> 383
+	  796 -> 53
+	  797 -> 265
+	  798 -> 800
+	  798 -> 801
+	  799 -> 223
+	  800 -> 264
+	  801 -> 514
+	  802 -> 67
+	  803 -> 514
+	  804 -> 676
+	  805 -> 271
+	  806 -> 520
+	  806 -> 68
+	  806 -> 319
+	  807 -> 512
+	  808 -> 358
+	  809 -> 655
+	  810 -> 683
+	  811 -> 813
+	  812 -> 814
+	  812 -> 815
+	  813 -> 403
+	  814 -> 403
+	  815 -> 449
+	  815 -> 817
+	  815 -> 583
+	  816 -> 95
+	  817 -> 584
+	  817 -> 505
+	  817 -> 450
+	  818 -> 642
+	  819 -> 336
+	  820 -> 282
+	  821 -> 91
+	  822 -> 779
+	  823 -> 284
+	  824 -> 556
+	  825 -> 146
+	  826 -> 58
+}
+

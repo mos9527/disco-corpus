@@ -1,0 +1,567 @@
+# BOARDWALK / WCH
+# Dead working class husband who has fallen through the blanks and cut himself open and it's generally a very gruesome and sad death.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Savoir Faire: Be very, very careful where you step here."];
+	  3 [label="You: \"No, just this one at the back of his head.\""];
+	  4 [label="CheckEquipped(\"yellow_plastic_bag\")"];
+	  5 [label="CheckEquipped(\"yellow_plastic_bag\")", shape=diamond];
+	  6 [label="!(CheckEquipped(\"yellow_plastic_bag\"))", shape=diamond];
+	  7 [label="IsKimHere()"];
+	  8 [label="IsKimHere()", shape=diamond];
+	  9 [label="!(IsKimHere())", shape=diamond];
+	  10 [label="Kim Kitsuragi: \"Well, at least you're not married.\" The lieutenant points at the ring on the man's left hand, the flesh around it swollen and grey."];
+	  11 [label="Variable[\"TASK.get_a_drink_done\"] == true  and  Variable[\"boardwalk.corpse_inland_wonders_married\"] == true"];
+	  12 [label="Variable[\"TASK.get_a_drink_done\"] == true  and  Variable[\"boardwalk.corpse_inland_wonders_married\"] == true", shape=diamond];
+	  13 [label="!(Variable[\"TASK.get_a_drink_done\"] == true  and  Variable[\"boardwalk.corpse_inland_wonders_married\"] == true)", shape=diamond];
+	  14 [label="Working Class Corpse: A dried chunk of blood covers the hair at the back of his head -- an open wound. It's sticky and cold to your touch."];
+	  15 [label="You: \"It's hard to say.\""];
+	  16 [label="Kim Kitsuragi: \"Seems like the head wound was fatal. It's exactly the shape of the bench...\""];
+	  17 [label="Kim Kitsuragi: \"The next thing to do is call the station from my Kineema and hand over the case. Then we can return to the murder investigation and be done with it.\""];
+	  18 [label="Jump to: [drunk husband hub]"];
+	  19 [label="Kim Kitsuragi: \"Yes, yes,\" the lieutenant seems impatient, \"but what *actual* facts do you have that connect him with this woman you met at the bookstand?\""];
+	  20 [label="Jump to: [study surroundings]"];
+	  21 [label="You: \"Looks like just another old drunkard to me.\""];
+	  22 [label="Kim Kitsuragi: \"A *sequence killer*?\" The lieutenant narrows his eyes in the wind. \"There's nothing that connects those two bodies. This is a completely different case -- an accident.\""];
+	  23 [label="Jump to: [study surroundings]"];
+	  24 [label="Variable[\"boardwalk.corpse_hub_reached\"]"];
+	  25 [label="Variable[\"boardwalk.corpse_hub_reached\"]", shape=diamond];
+	  26 [label="!(Variable[\"boardwalk.corpse_hub_reached\"])", shape=diamond];
+	  27 [label="Kim Kitsuragi: \"Alright. We've already examined the library card -- let's call the Jamrock Library from my Kineema, see if we can learn anything about this Billie Méjean.\""];
+	  28 [label="You: \"What do you think happened here?\""];
+	  29 [label="Logic: Or maybe it was just dark."];
+	  30 [label="You: \"Could it be related to the lynching?\""];
+	  31 [label="Kim Kitsuragi: \"What about it? The deceased ate some kebab.\" He shrugs. \"It's probably from a nearby place, maybe in the Pox...\""];
+	  32 [label="Jump to: [what happened hub]"];
+	  33 [label="Jump to: [what happened hub]"];
+	  34 [label="Jump to: [study surroundings]"];
+	  35 [label="Kim Kitsuragi: \"Maybe, but we don't really have much time or resources to spare. The guys at Processing will take care of the rest.\""];
+	  36 [label="Kim Kitsuragi: \"A field autopsy isn't necessary if the cause of death doesn't appear to be criminal -- and this looks like a simple accident to me.\""];
+	  37 [label="Variable[\"boardwalk.library_card_main_hub\"]"];
+	  38 [label="Variable[\"boardwalk.library_card_main_hub\"]", shape=diamond];
+	  39 [label="!(Variable[\"boardwalk.library_card_main_hub\"])", shape=diamond];
+	  40 [label="Logic: A cool leather jacket with a bolt of blue? Oh no, this sounds terribly familiar..."];
+	  41 [label="Inland Empire: This is an omen, a sign from above -- that you need to stop drinking."];
+	  42 [label="Inland Empire: What if all of this is staged? He could have seen something that night in the yard..."];
+	  43 [label="Working Class Corpse: They screech under your feet, ominously. It's hard to say whether the dead man's weight was what caused the boardwalk to break... It definitely looks fragile."];
+	  44 [label="Electrochemistry: It's mid-market spirits. With a slight touch of menthol. The man meant to enjoy himself, have a good time."];
+	  45 [label="You: \"You're right, I don't see anything criminal here. Let's leave it at that.\""];
+	  46 [label="Working Class Corpse: The blackness of death. Stench. You think you see white chewing gum too."];
+	  47 [label="IsKimHere()"];
+	  48 [label="IsKimHere()", shape=diamond];
+	  49 [label="!(IsKimHere())", shape=diamond];
+	  50 [label="Jump to: [drunk husband hub]"];
+	  51 [label="Kim Kitsuragi: \"Oh yes,\" the lieutenant nods."];
+	  52 [label="You: \"Who is this man?\""];
+	  53 [label="Electrochemistry: Married to your drink, that's for sure."];
+	  54 [label="You: \"What we're witnessing here is a demise of a great party beast. That leather jacket, an empty vodka bottle...\" (Kiss your fingers.)"];
+	  55 [label="You: \"You're right, connecting it with the lynching is a stretch.\""];
+	  56 [label="You: Step back."];
+	  57 [label="Working Class Corpse: Careful. The wind blows hard, from the east."];
+	  58 [label="You: \"The library card! He was supposed to return a book.\""];
+	  59 [label="Inland Empire: The view from the lookout is beautiful..."];
+	  60 [label="Variable[\"TASK.ask_about_ruby_in_village\"]"];
+	  61 [label="Variable[\"TASK.ask_about_ruby_in_village\"]", shape=diamond];
+	  62 [label="!(Variable[\"TASK.ask_about_ruby_in_village\"])", shape=diamond];
+	  63 [label="Kim Kitsuragi: \"The woman you met at the bookstand?\" He looks at the bundle of flesh and rags lying on the ground. \"Why do you think it's her husband?\""];
+	  64 [label="You: \"The leather jacket.\" (Point at the man's clothes.) \"It matches her description perfectly.\""];
+	  65 [label="Jump to: [study surroundings]"];
+	  66 [label="Kim Kitsuragi: \"Death by misadventure. He slipped and fell through the boardwalk. A truly unfortunate accident... If it wouldn't have been for that bench, he'd be alive.\""];
+	  67 [label="You: \"Let's leave this case for the station, I don't want to spend time on it.\" (Don't take the case.)"];
+	  68 [label="Kim Kitsuragi: \"Alright. The station is going to want details, however. Let's examine that library card you found on the man's body, see if it has any clues. Then we can call the station from my Kineema and hand over the case.\""];
+	  69 [label="You: \"What if he *witnessed* something? All of this could be staged. We don't know the exact cause of death.\""];
+	  70 [label="You: Step on the floorboards."];
+	  71 [label="Working Class Corpse: A man lies on the boardwalk, his limbs bent and neck turned at an unnatural angle. Right next to him is an empty bottle of spirits. In his cramped hand: a chewing gum wrapper."];
+	  72 [label="Kim Kitsuragi: \"Looks like he's been dead for a while. I'm surprised no one found him before you came along.\" He stands up and shivers as a gust of wind blows through his bomber jacket."];
+	  73 [label="Esprit de Corps: In a ditch off a road below the 8/81, he thinks. A young father. Then he shakes his head, to make the memory stop."];
+	  74 [label="Composure: Calm now. Carefully. Just another day, just another dead body. Breathe."];
+	  75 [label="Jump to: [drunk husband hub]"];
+	  76 [label="Kim Kitsuragi: \"But you're right, let's not run ahead. For now all we know is that he's an unidentified middle-aged man found dead on the Martinaise boardwalk.\""];
+	  77 [label="Jump to: [what happened hub]"];
+	  78 [label="Perception (Smell): The smell is... not as bad as a two-week-old corpse, but it's definitely heading there."];
+	  79 [label="Kim Kitsuragi: \"Alright. The station is going to want details, however. We already examined the library card we found on the body -- good, that should be enough for the first lead.\""];
+	  80 [label="IsTaskActive(\"TASK.return_to_body_on_boardwalk_with_kim\")--[[ Variable[ ]]"];
+	  81 [label="IsTaskActive(\"TASK.return_to_body_on_boardwalk_with_kim\")--[[ Variable[ ]]", shape=diamond];
+	  82 [label="!(IsTaskActive(\"TASK.return_to_body_on_boardwalk_with_kim\")--[[ Variable[ ]])", shape=diamond];
+	  83 [label="Kim Kitsuragi: \"Looks like he's been dead for a while. I'm surprised no one found him before you came along.\" He stands up and shivers as a gust of wind blows through his bomber jacket."];
+	  84 [label="Jump to: [study surroundings]"];
+	  85 [label="Variable[\"boardwalk.wch_inland_head_home\"]"];
+	  86 [label="Variable[\"boardwalk.wch_inland_head_home\"]", shape=diamond];
+	  87 [label="!(Variable[\"boardwalk.wch_inland_head_home\"])", shape=diamond];
+	  88 [label="Kim Kitsuragi: \"Lividity is faintly pronounced. Whoever this is, he's been dead for two days, no longer.\" He stands up and shivers as a gust of wind blows through his bomber jacket. \"We need to investigate.\""];
+	  89 [label="Working Class Corpse: The man has fallen through a crack in the boardwalk and hit his head against the metal bench. Coagulated blood covers his black hair. One of his feet is still dangling through the hole."];
+	  90 [label="Kim Kitsuragi: \"Looks like one of the locals -- he'd have to know this spot to come here. You don't *just* walk over here.\" He looks south, the way you came."];
+	  91 [label="Jump to: [what happened hub]"];
+	  92 [label="Untitled hub (03)"];
+	  93 [label="Working Class Corpse: There's some dried blood on the metal bench, right where the corpse's head rests. The floorboards are rotten and slippery wet around the hole. An empty bottle lies nearby. A chewing gum wrapper is clutched in his fist."];
+	  94 [label="You: Examine the man's head."];
+	  95 [label="You: \"Yes, but... isn't that kind of sloppy?\""];
+	  96 [label="Logic: I'll have *one* drink before I get home."];
+	  97 [label="Kim Kitsuragi: \"I don't see any other major wounds. Do you?\""];
+	  98 [label="Kim Kitsuragi: \"I'd prefer if you didn't collect them this time. It's not... proper.\""];
+	  99 [label="Jump to: [drunk husband hub]"];
+	  100 [label="You: [Leave.]"];
+	  101 [label="Variable[\"boardwalk.corpse_electrochem_had_to_be_drunk\"]"];
+	  102 [label="Variable[\"boardwalk.corpse_electrochem_had_to_be_drunk\"]", shape=diamond];
+	  103 [label="!(Variable[\"boardwalk.corpse_electrochem_had_to_be_drunk\"])", shape=diamond];
+	  104 [label="Kim Kitsuragi: \"No, I don't see anything that points in that direction. For now let's treat this case as a simple -- albeit sad -- accident, unrelated to the murder case.\""];
+	  105 [label="Kim Kitsuragi: \"But let's try to not run ahead -- for now all we know is that he's an unidentified middle-aged man found dead on the Martinaise boardwalk.\""];
+	  106 [label="Kim Kitsuragi: \"They'll seal this place off after the news reaches the Coalition officials. I doubt that they have enough resources to actually repair the boardwalk.\""];
+	  107 [label="You: \"Right.\" (Conclude.)"];
+	  108 [label="Kim Kitsuragi: \"Without any further evidence -- yes.\""];
+	  109 [label="study surroundings"];
+	  110 [label="Kim Kitsuragi: \"Good call. The guys at Processing can take care of the rest.\""];
+	  111 [label="Variable[\"boardwalk.library_card_main_hub\"]"];
+	  112 [label="Variable[\"boardwalk.library_card_main_hub\"]", shape=diamond];
+	  113 [label="!(Variable[\"boardwalk.library_card_main_hub\"])", shape=diamond];
+	  114 [label="Kim Kitsuragi: \"Alright. We should first examine that library card you found. Then we can call the station from my Kineema, let them know we're taking the case.\""];
+	  115 [label="Kim Kitsuragi: \"Hold on...\" The lieutenant leans over the corpse and examines his face. Two glassy eyes stare back at him, void of any signs of life."];
+	  116 [label="Kim Kitsuragi: \"We should take another look at the library card you found on him,\" the lieutenant says, straightening his back."];
+	  117 [label="Variable[\"boardwalk.wch_found_the_library_card\"]"];
+	  118 [label="Variable[\"boardwalk.wch_found_the_library_card\"]", shape=diamond];
+	  119 [label="!(Variable[\"boardwalk.wch_found_the_library_card\"])", shape=diamond];
+	  120 [label="You: Search his pockets."];
+	  121 [label="Working Class Corpse: First you need to talk with the lieutenant, then report back to the station. This is too complicated to handle on your own."];
+	  122 [label="what do we do"];
+	  123 [label="Kim Kitsuragi: \"Well, he's definitely *someone's* husband.\" The lieutenant points at the golden ring on the man's left hand, the flesh around it swollen and pale."];
+	  124 [label="Kim Kitsuragi: \"And he was married.\" The lieutenant points at the ring on the man's left hand, the flesh around it swollen and grey."];
+	  125 [label="Variable[\"TASK.find_working_class_husband\"]"];
+	  126 [label="Variable[\"TASK.find_working_class_husband\"]", shape=diamond];
+	  127 [label="!(Variable[\"TASK.find_working_class_husband\"])", shape=diamond];
+	  128 [label="Kim Kitsuragi: \"It does seem to be a pretty straightforward misadventure, although there's still the question of identifying the body...\""];
+	  129 [label="You: \"We should consider the possibility that we're dealing with a sequence killer here.\""];
+	  130 [label="Jump to: [what happened hub]"];
+	  131 [label="Inland Empire: This is where he came out of himself. Drop by drop when he was unconscious. It took three, maybe four minutes."];
+	  132 [label="Working Class Corpse: The entire boardwalk creaks in the wind as you take a step back."];
+	  133 [label="Kim Kitsuragi: \"But I think that death arrived through head trauma, not liver failure.\""];
+	  134 [label="Inland Empire: True. It feels... disrespectful."];
+	  135 [label="You: Look in."];
+	  136 [label="Perception (Sight): Confirmed. Nearly the whole pack is there, solidified on his lower rear teeth."];
+	  137 [label="Kim Kitsuragi: \"Damn it... He's definitely *someone's* husband.\" The lieutenant points at the golden ring on the man's left hand, the flesh around it swollen and pale."];
+	  138 [label="Kim Kitsuragi: \"I'd say we should just write down 'head trauma' and leave it at that. Let's keep this detour as short as possible -- the sooner we get back to finding Ruby the better.\""];
+	  139 [label="IsKimHere()"];
+	  140 [label="IsKimHere()", shape=diamond];
+	  141 [label="!(IsKimHere())", shape=diamond];
+	  142 [label="Kim Kitsuragi: \"And while we're there we should also call the station, let them know that we're taking the case.\""];
+	  143 [label="Kim Kitsuragi: \"The bright blue lining?\" He nods, then points at the ring on the man's left hand: \"Well, he's definitely *someone's* husband.\""];
+	  144 [label="drunk husband hub"];
+	  145 [label="Kim Kitsuragi: \"Hold on...\" The lieutenant squats next to the corpse and examines his face. Two bulging eyes stare back at him, void of any signs of life."];
+	  146 [label="Working Class Corpse: He's wearing mud-caked boots, beige trousers and an old brown leather jacket with a bright blue lining. There are traces of kebab sauce on his chest."];
+	  147 [label="Electrochemistry: You have to be quite inebriated to fall that bad. Well over a litre of pure ethanol. Three bottles of wine or one and a half of spirits?"];
+	  148 [label="Kim Kitsuragi: \"No need to rush.\""];
+	  149 [label="You: \"We know who this is. It's the working class woman's missing husband -- dead on the boardwalk.\""];
+	  150 [label="Jump to: [drunk husband hub]"];
+	  151 [label="Jump to: [study surroundings]"];
+	  152 [label="Kim Kitsuragi: \"I'd say we should just write down 'head trauma' in the autopsy report and leave it at that. It would save us at least two hours of unnecessary work.\""];
+	  153 [label="Jump to: [what do we do]"];
+	  154 [label="Kim Kitsuragi: \"Tare, all around us...\" He looks at two other bottles forgotten near the coin-operated viewer."];
+	  155 [label="IsKimHere()"];
+	  156 [label="IsKimHere()", shape=diamond];
+	  157 [label="!(IsKimHere())", shape=diamond];
+	  158 [label="Composure: The leather jacket suits him well. It must be custom-made."];
+	  159 [label="You: \"I still need some time to decide how I want to solve this case.\" (Return to this later.)"];
+	  160 [label="Jump to: [drunk husband hub]"];
+	  161 [label="Logic: A dead working class man with a bottle in his hand? Don't deceive yourself, you know who this is."];
+	  162 [label="Jump to: [drunk husband hub]"];
+	  163 [label="Inland Empire: This is an omen, a sign from above -- don't start drinking again."];
+	  164 [label="Perception: You see waves churning below... Something cracks beneath your feet."];
+	  165 [label="You: \"What about alcohol poisoning and liver failure?\""];
+	  166 [label="Kim Kitsuragi: \"Tare, all around us...\" He looks at two other bottles near the coin-operated viewer, then at your yellow plastic bag."];
+	  167 [label="Variable[\"boardwalk.library_card_know_phone_number\"]"];
+	  168 [label="Variable[\"boardwalk.library_card_know_phone_number\"]", shape=diamond];
+	  169 [label="!(Variable[\"boardwalk.library_card_know_phone_number\"])", shape=diamond];
+	  170 [label="Working Class Corpse: You find some sunflower seeds and a rain-soaked library card, folded into two. His jacket feels sodden and heavy under your hand."];
+	  171 [label="Visual Calculus: Height: 170-175 cm, curly hair, stout build. Age: approximately 50-60 years."];
+	  172 [label="Kim Kitsuragi: \"From where I stand I can see two options. We either take the case and follow the leads to identify the body on our own -- or we report back to the station and leave this for our colleagues to handle.\""];
+	  173 [label="Kim Kitsuragi: \"Yes, but... I just wanted to make it clear it's not a sequence killer, okay?\""];
+	  174 [label="Working Class Corpse: 'Rubowski' spearmint chewing gum. Green leaves on the cover. The man's mouth is half-agape from the terror of the fall..."];
+	  175 [label="You: \"Bottles, all around him.\" (Point at the tare.) \"She said he was drinking somewhere in Martinaise.\""];
+	  176 [label="Variable[\"TASK.return_to_body_on_boardwalk_with_kim\"]"];
+	  177 [label="Variable[\"TASK.return_to_body_on_boardwalk_with_kim\"]", shape=diamond];
+	  178 [label="!(Variable[\"TASK.return_to_body_on_boardwalk_with_kim\"])", shape=diamond];
+	  179 [label="Working Class Corpse: Only some sunflower seeds remain in his soaked pockets. You already took the library card."];
+	  180 [label="Working Class Corpse: His expression is dull like the sea behind him, drops of water shining on his moustache. His eyes, empty and wide, look frightening in their frozen gaze."];
+	  181 [label="Inland Empire: Or what if you are...?"];
+	  182 [label="Half Light: Yes, but what if there's a killer on the loose? Two suspicious deaths in such a short time frame!"];
+	  183 [label="Kim Kitsuragi: \"It's possible, but let's take it step-by-step. We still haven't identified the man.\""];
+	  184 [label="You: \"I'm just saying that we should be open to all possibilities.\""];
+	  185 [label="Logic: This is what killed him."];
+	  186 [label="Logic: A bad fall. It might have been dark outside? This place is a mine field in the dark."];
+	  187 [label="Working Class Corpse: A man lies on the boardwalk, his limbs bent and neck turned at an unnatural angle. Right next to him is an empty bottle of spirits. In his cramped hand: a chewing gum wrapper."];
+	  188 [label="You: Study the man's clothes."];
+	  189 [label="Jump to: [drunk husband hub]"];
+	  190 [label="Jump to: [drunk husband hub]"];
+	  191 [label="You: \"I think labelling him as an alcoholic is a bit premature. We don't know anything yet.\""];
+	  192 [label="Variable[\"plaza.working_husband_leather_jacket_known\"]"];
+	  193 [label="Variable[\"plaza.working_husband_leather_jacket_known\"]", shape=diamond];
+	  194 [label="!(Variable[\"plaza.working_husband_leather_jacket_known\"])", shape=diamond];
+	  195 [label="Jump to: [what do we do]"];
+	  196 [label="You: \"Someone should be held responsible for this broken boardwalk. It's dangerous.\""];
+	  197 [label="sequence killer hub"];
+	  198 [label="Working Class Corpse: A 0.75 litre 'Touloula' vodka with its cap missing. There's hardly anything left inside."];
+	  199 [label="IsKimHere()"];
+	  200 [label="IsKimHere()", shape=diamond];
+	  201 [label="!(IsKimHere())", shape=diamond];
+	  202 [label="Kim Kitsuragi: The lieutenant shudders from the cold. \"I've seen it before: almost the same scenario. Even the chewing gum. It's always the same...\""];
+	  203 [label="Electrochemistry: Just one drink. I have my cool jacket on. I took the book to the library. I've earned it."];
+	  204 [label="Conceptualization: Because it's the most working class death you've ever seen."];
+	  205 [label="You: \"He looks like me. I could have ended up just like him -- dead on some empty boardwalk with a bottle next to my corpse.\""];
+	  206 [label="Kim Kitsuragi: \"Good, we should take a look at that library card after this is done.\""];
+	  207 [label="Physical Instrument: Half of his body has slipped between the cracked boardwalk, starting with the right leg. The fall has left him broken, contorted like a sad puppet."];
+	  208 [label="Kim Kitsuragi: \"I can't see a book...\" The lieutenant pats his pockets. \"So he took the book to the library, then came back and thought -- I'll have one.\""];
+	  209 [label="You: Study the man himself."];
+	  210 [label="You: \"What should we do with him?\""];
+	  211 [label="You: What should I do with the body?"];
+	  212 [label="You: \"Do you think he was drunk?\" (Point at the bottle.)"];
+	  213 [label="what happened hub"];
+	  214 [label="Visual Calculus: He could have easily disappeared into the sea through that hole. And you would have never found him."];
+	  215 [label="Inland Empire: He was *just* about to head home. The first step back home proved to be his last."];
+	  216 [label="You: Examine the chewing gum wrapper."];
+	  217 [label="Logic: That's what the chewing gum seems to point to as well."];
+	  218 [label="no wcw hub"];
+	  219 [label="Kim Kitsuragi: \"Not that sealing it off would keep anyone away. All it does is keep the city council's hands clean.\" He smiles sourly."];
+	  220 [label="You: \"Someone could have pushed him from behind with an intention to kill.\""];
+	  221 [label="Kim Kitsuragi: \"Some symptoms of acute alcohol poisoning could have definitely played a role here: severe confusion, respiratory depression, unpredictable behaviour...\""];
+	  222 [label="Kim Kitsuragi: \"He ate the whole pack, right? It's to cover the smell of alcohol before going home. The worst thing is...\""];
+	  223 [label="Jump to: [study surroundings]"];
+	  224 [label="Logic: Agreed. If this somehow converges later, why not. But keep it simple for now."];
+	  225 [label="Logic: Sometimes a kebab is just a kebab."];
+	  226 [label="You: \"This is the most working class way to go -- completely alienated and forgotten.\""];
+	  227 [label="Jump to: [drunk husband hub]"];
+	  228 [label="Savoir Faire: When damp these boards are really slippery, even a sober man could loose their balance here."];
+	  229 [label="Kim Kitsuragi: \"But that's just a lazy assumption. What do you think?\""];
+	  230 [label="Electrochemistry: At least this man knew how to party! Imagine the same scene without the bottle -- now that would be just sad."];
+	  231 [label="You: Study the surroundings."];
+	  232 [label="You: \"Hold on -- what about field autopsy?\""];
+	  233 [label="Variable[\"boardwalk.corpse_halflight_killer_on_the_loose\"]"];
+	  234 [label="Variable[\"boardwalk.corpse_halflight_killer_on_the_loose\"]", shape=diamond];
+	  235 [label="!(Variable[\"boardwalk.corpse_halflight_killer_on_the_loose\"])", shape=diamond];
+	  236 [label="You: Examine the bottle."];
+	  237 [label="Authority: Another dead body. This is your job. Steel yourself."];
+	  238 [label="You: \"We found him. We should finish this.\" (Take the case.)"];
+	  239 [label="IsKimHere()"];
+	  240 [label="IsKimHere()", shape=diamond];
+	  241 [label="!(IsKimHere())", shape=diamond];
+	  242 [label="You: Back off."];
+	  243 [label="Logic: To hide the stench of alcohol no doubt."];
+	  244 [label="You: Examine his face."];
+	  245 [label="Jump to: [drunk husband hub]"];
+	  246 [label="Kim Kitsuragi: \"We do know that he was married.\" The lieutenant points at the ring on the man's left hand, the flesh around it swollen and grey."];
+	  247 [label="Variable[\"TASK.get_a_drink_done\"]"];
+	  248 [label="Variable[\"TASK.get_a_drink_done\"]", shape=diamond];
+	  249 [label="!(Variable[\"TASK.get_a_drink_done\"])", shape=diamond];
+	  250 [label="Kim Kitsuragi: \"The wedding ring.\" The lieutenant points at the ring on the man's left hand, the flesh around it swollen and grey."];
+	  251 [label="You: \"What about the kebab?\""];
+	  252 [label="Jump to: [drunk husband hub]"];
+	  253 [label="Empathy: He was confused when he died. Confused and alone, most likely. Overcome with the awful surprise of it all."];
+	  0 -> 1
+	  1 -> 24
+	  2 -> 110
+	  3 -> 16
+	  4 -> 5
+	  4 -> 6
+	  5 -> 167
+	  6 -> 155
+	  7 -> 8
+	  7 -> 9
+	  8 -> 146
+	  9 -> 238
+	  10 -> 182
+	  11 -> 12
+	  11 -> 13
+	  12 -> 53
+	  13 -> 106
+	  14 -> 186
+	  15 -> 16
+	  16 -> 84
+	  17 -> 191
+	  18 -> 145
+	  19 -> 64
+	  19 -> 58
+	  19 -> 176
+	  20 -> 110
+	  21 -> 125
+	  22 -> 42
+	  23 -> 110
+	  24 -> 25
+	  24 -> 26
+	  25 -> 71
+	  26 -> 188
+	  27 -> 143
+	  28 -> 66
+	  29 -> 229
+	  30 -> 105
+	  31 -> 226
+	  32 -> 214
+	  33 -> 214
+	  34 -> 110
+	  35 -> 154
+	  36 -> 60
+	  37 -> 38
+	  37 -> 39
+	  38 -> 117
+	  39 -> 207
+	  40 -> 121
+	  41 -> 219
+	  42 -> 93
+	  43 -> 165
+	  44 -> 140
+	  45 -> 111
+	  46 -> 137
+	  47 -> 48
+	  47 -> 49
+	  48 -> 98
+	  49 -> 23
+	  50 -> 145
+	  51 -> 166
+	  52 -> 91
+	  53 -> 106
+	  54 -> 251
+	  55 -> 109
+	  56 -> 133
+	  57 -> 224
+	  58 -> 209
+	  59 -> 138
+	  60 -> 61
+	  60 -> 62
+	  61 -> 139
+	  62 -> 153
+	  63 -> 205
+	  64 -> 144
+	  65 -> 110
+	  66 -> 214
+	  67 -> 112
+	  68 -> 191
+	  69 -> 184
+	  70 -> 43
+	  71 -> 156
+	  72 -> 145
+	  73 -> 20
+	  74 -> 145
+	  75 -> 145
+	  76 -> 163
+	  77 -> 214
+	  78 -> 7
+	  79 -> 17
+	  80 -> 81
+	  80 -> 82
+	  81 -> 116
+	  82 -> 145
+	  84 -> 110
+	  85 -> 86
+	  85 -> 87
+	  86 -> 218
+	  87 -> 246
+	  88 -> 238
+	  89 -> 148
+	  90 -> 230
+	  91 -> 214
+	  92 -> 221
+	  92 -> 185
+	  92 -> 69
+	  93 -> 2
+	  94 -> 14
+	  95 -> 35
+	  96 -> 204
+	  97 -> 3
+	  97 -> 15
+	  98 -> 135
+	  99 -> 145
+	  101 -> 104
+	  101 -> 103
+	  102 -> 29
+	  103 -> 187
+	  104 -> 183
+	  105 -> 151
+	  106 -> 220
+	  107 -> 129
+	  108 -> 33
+	  109 -> 70
+	  109 -> 237
+	  109 -> 56
+	  109 -> 217
+	  109 -> 95
+	  110 -> 196
+	  111 -> 113
+	  111 -> 114
+	  112 -> 79
+	  113 -> 68
+	  114 -> 18
+	  115 -> 72
+	  116 -> 50
+	  117 -> 120
+	  117 -> 119
+	  118 -> 180
+	  119 -> 171
+	  120 -> 118
+	  121 -> 190
+	  122 -> 160
+	  122 -> 233
+	  122 -> 67
+	  122 -> 239
+	  123 -> 228
+	  124 -> 106
+	  125 -> 128
+	  125 -> 127
+	  126 -> 162
+	  127 -> 231
+	  128 -> 161
+	  129 -> 22
+	  130 -> 214
+	  131 -> 47
+	  132 -> 253
+	  133 -> 32
+	  134 -> 34
+	  135 -> 46
+	  136 -> 240
+	  137 -> 100
+	  138 -> 96
+	  138 -> 45
+	  139 -> 141
+	  139 -> 142
+	  140 -> 4
+	  141 -> 34
+	  142 -> 18
+	  143 -> 228
+	  144 -> 101
+	  144 -> 232
+	  144 -> 210
+	  144 -> 211
+	  144 -> 212
+	  144 -> 52
+	  144 -> 28
+	  144 -> 189
+	  145 -> 88
+	  146 -> 159
+	  147 -> 102
+	  148 -> 75
+	  149 -> 63
+	  150 -> 145
+	  151 -> 110
+	  152 -> 96
+	  152 -> 45
+	  153 -> 123
+	  154 -> 34
+	  155 -> 157
+	  155 -> 158
+	  156 -> 80
+	  157 -> 145
+	  158 -> 193
+	  159 -> 149
+	  160 -> 145
+	  161 -> 150
+	  162 -> 145
+	  163 -> 219
+	  164 -> 215
+	  165 -> 222
+	  166 -> 99
+	  167 -> 169
+	  167 -> 170
+	  168 -> 27
+	  169 -> 115
+	  170 -> 200
+	  171 -> 254
+	  172 -> 123
+	  173 -> 131
+	  174 -> 136
+	  174 -> 243
+	  175 -> 124
+	  176 -> 178
+	  176 -> 179
+	  177 -> 117
+	  178 -> 37
+	  179 -> 200
+	  180 -> 172
+	  181 -> 11
+	  182 -> 234
+	  183 -> 131
+	  184 -> 174
+	  185 -> 132
+	  186 -> 229
+	  187 -> 208
+	  188 -> 147
+	  189 -> 145
+	  190 -> 145
+	  191 -> 247
+	  192 -> 194
+	  192 -> 195
+	  193 -> 40
+	  194 -> 121
+	  195 -> 123
+	  196 -> 107
+	  197 -> 130
+	  197 -> 55
+	  198 -> 44
+	  199 -> 201
+	  199 -> 202
+	  200 -> 177
+	  201 -> 50
+	  202 -> 73
+	  203 -> 59
+	  204 -> 64
+	  204 -> 58
+	  204 -> 227
+	  204 -> 176
+	  205 -> 10
+	  206 -> 50
+	  207 -> 78
+	  208 -> 97
+	  209 -> 90
+	  210 -> 173
+	  211 -> 122
+	  212 -> 51
+	  213 -> 197
+	  213 -> 108
+	  213 -> 213
+	  213 -> 252
+	  213 -> 30
+	  214 -> 152
+	  215 -> 85
+	  216 -> 175
+	  217 -> 246
+	  218 -> 54
+	  218 -> 21
+	  218 -> 206
+	  218 -> 192
+	  219 -> 92
+	  220 -> 184
+	  221 -> 134
+	  222 -> 203
+	  223 -> 110
+	  224 -> 33
+	  225 -> 77
+	  226 -> 19
+	  227 -> 145
+	  228 -> 245
+	  229 -> 126
+	  230 -> 248
+	  231 -> 94
+	  232 -> 36
+	  233 -> 235
+	  233 -> 236
+	  234 -> 198
+	  235 -> 225
+	  236 -> 199
+	  237 -> 74
+	  238 -> 168
+	  239 -> 241
+	  239 -> 242
+	  240 -> 223
+	  241 -> 244
+	  242 -> 57
+	  243 -> 65
+	  244 -> 181
+	  245 -> 145
+	  246 -> 76
+	  247 -> 249
+	  247 -> 250
+	  248 -> 41
+	  249 -> 164
+	  250 -> 106
+	  251 -> 31
+	  252 -> 145
+	  253 -> 216
+}
+

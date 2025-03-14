@@ -1,0 +1,118 @@
+# LAIR ORB / shot viscal
+# You decide that the shot that killed the merc couldn't have come from this bunker.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Visual Calculus: The lights of Martinaise shine coolly in the clear night."];
+	  3 [label="Kim Kitsuragi: \"It's a great place to hide, certainly, but there hasn't been anyone in here for ages.\""];
+	  4 [label="Visual Calculus: Outside the window -- the day is clear, and as mild as can be in early spring."];
+	  5 [label="Hand/Eye Coordination: This does look like an *embrasure*, a slit made for shooting out of."];
+	  6 [label="Visual Calculus: No, it's not. No matter how you crane your neck, you can't see the whole of the Whirling-in-Rags, and certainly not the relevant segment of the top floor."];
+	  7 [label="Authority: The lieutenant's voice betrays a slight disappointment, which he glosses over by reasserting control."];
+	  8 [label="Variable[\"auto.is_raining\"]"];
+	  9 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  10 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  11 [label="Kim Kitsuragi: \"Indeed. No one could get a clear view. Well, at least we've been thorough. I like thorough.\""];
+	  12 [label="shotviscalhub"];
+	  13 [label="Variable[\"boardwalk.bunker_bed\"]"];
+	  14 [label="Variable[\"boardwalk.bunker_bed\"]", shape=diamond];
+	  15 [label="!(Variable[\"boardwalk.bunker_bed\"])", shape=diamond];
+	  16 [label="Kim Kitsuragi: \"It's a great place to hide, certainly, but there hasn't been anyone here in ages.\""];
+	  17 [label="Kim Kitsuragi: \"In fact -- I think we're done with this bunker.\" He looks to the exit. \"After you, officer.\""];
+	  18 [label="Untitled hub (03)"];
+	  19 [label="Visual Calculus: In the darkness, you can barely make out the falling snow. It settles, making the night still quieter."];
+	  20 [label="Variable[\"boardwalk.mazov_mainhub_reached\"]"];
+	  21 [label="Variable[\"boardwalk.mazov_mainhub_reached\"]", shape=diamond];
+	  22 [label="!(Variable[\"boardwalk.mazov_mainhub_reached\"])", shape=diamond];
+	  23 [label="IsDaytime()"];
+	  24 [label="IsDaytime()", shape=diamond];
+	  25 [label="!(IsDaytime())", shape=diamond];
+	  26 [label="Visual Calculus: Outside the window -- another day. The beach sand soaks up the drizzling rain, growing darker and darker."];
+	  27 [label="Jump to: [shotviscalhub]"];
+	  28 [label="Variable[\"auto.is_raining\"]"];
+	  29 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  30 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  31 [label="Visual Calculus: It's definitely a good place to hide. You barely found it yourself."];
+	  32 [label="Visual Calculus: Outside the window -- desolation. Snow falls softly onto the coastal sand, where it melts almost instantly. On rooftops, it lingers."];
+	  33 [label="Variable[\"auto.is_snowing\"]"];
+	  34 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  35 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  36 [label="You: Peek out."];
+	  37 [label="Visual Calculus: You hear the rain's susurration across the sea water. The night shudders."];
+	  38 [label="You: \"Kim, I can't see the Whirling-in-Rags... The shot didn't come from here.\" (Conclude.)"];
+	  39 [label="You: Would this have been a good hideout for a sniper?"];
+	  40 [label="Visual Calculus: It's a good place to hide, but doesn't look like anyone has stayed here in a while."];
+	  41 [label="IsKimHere()"];
+	  42 [label="IsKimHere()", shape=diamond];
+	  43 [label="!(IsKimHere())", shape=diamond];
+	  44 [label="You: Is it feasible to hit a target in the Whirling-in-Rags from this window? (Conclude.)"];
+	  45 [label="Visual Calculus: Could this have been the killer's hideout, and this narrow window -- the point of origin of the shot that killed the mercenary?"];
+	  46 [label="Variable[\"auto.is_snowing\"]"];
+	  47 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  48 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  49 [label="Variable[\"boardwalk.bunker_bed\"]"];
+	  50 [label="Variable[\"boardwalk.bunker_bed\"]", shape=diamond];
+	  51 [label="!(Variable[\"boardwalk.bunker_bed\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 46
+	  2 -> 12
+	  3 -> 27
+	  4 -> 12
+	  5 -> 18
+	  7 -> 20
+	  8 -> 9
+	  8 -> 10
+	  9 -> 37
+	  10 -> 33
+	  11 -> 7
+	  12 -> 45
+	  12 -> 38
+	  12 -> 39
+	  13 -> 14
+	  13 -> 15
+	  14 -> 16
+	  15 -> 3
+	  16 -> 27
+	  18 -> 36
+	  19 -> 12
+	  20 -> 21
+	  20 -> 22
+	  21 -> 17
+	  23 -> 24
+	  23 -> 25
+	  24 -> 28
+	  25 -> 8
+	  26 -> 12
+	  27 -> 12
+	  28 -> 29
+	  28 -> 30
+	  29 -> 26
+	  30 -> 47
+	  31 -> 27
+	  32 -> 12
+	  33 -> 34
+	  33 -> 35
+	  34 -> 19
+	  35 -> 2
+	  36 -> 23
+	  37 -> 12
+	  38 -> 11
+	  39 -> 42
+	  40 -> 27
+	  41 -> 43
+	  41 -> 44
+	  42 -> 13
+	  43 -> 50
+	  44 -> 6
+	  45 -> 5
+	  46 -> 48
+	  46 -> 49
+	  47 -> 32
+	  48 -> 4
+	  49 -> 51
+	  49 -> 52
+	  50 -> 41
+	  51 -> 31
+}
+

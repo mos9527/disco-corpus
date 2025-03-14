@@ -1,0 +1,1190 @@
+# YARD / HANGED MAN BULLET
+# This is the final phase of the hanged man:
+1. White check to find bullet
+2. Failure to find fridge
+3. Bagging him and taking it away
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Perception: You touch the dead man's body. His skin is cold, light blue and silvery in the light of the fridge. You *still* have no idea where to begin -- or what to even do with him..."];
+	  3 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"]"];
+	  4 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"]", shape=diamond];
+	  5 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"])", shape=diamond];
+	  6 [label="Authority: The word lingers in the air of the basement, far away ice cream makers are buzzing and the sea wind blows outside..."];
+	  7 [label="Authority: *Detective*."];
+	  8 [label="You: Crawl up his nostrils."];
+	  9 [label="Cuno: Cuno is silent."];
+	  10 [label="You: Push deeper."];
+	  11 [label="Empathy: Quivering with awe."];
+	  12 [label="You: \"Fucking shit.\""];
+	  13 [label="bullet_time"];
+	  14 [label="The Hanged Man: IsKimHere()"];
+	  15 [label="IsKimHere()", shape=diamond];
+	  16 [label="!(IsKimHere())", shape=diamond];
+	  17 [label="Kim Kitsuragi: \"Yes. And the belt around his neck; the hanging; even dragging him to the yard... *all* of it was done after this man was already dead.\""];
+	  18 [label="The Hanged Man: Variable[\"yard.hanged_result_probable_cause\"]"];
+	  19 [label="Variable[\"yard.hanged_result_probable_cause\"]", shape=diamond];
+	  20 [label="!(Variable[\"yard.hanged_result_probable_cause\"])", shape=diamond];
+	  21 [label="You: \"I think I need to wash myself.\""];
+	  22 [label="Kim Kitsuragi: \"To hide something. The real killer? The real motivation? What really happened here.\""];
+	  23 [label="Kim Kitsuragi: \"Oh.\" He nods. \"You *really, really* do. I am glad to hear you say that. Your room in the Whirling-in-Rags should come with a bathroom. Be sure to make use of it in the evening.\""];
+	  24 [label="Cunoesse: \"Fucking pig's probably thinking about touching it again...\""];
+	  25 [label="Kim Kitsuragi: \"There is no need. We have been thorough with the genitals...\" The lieutenant looks worried."];
+	  26 [label="The Hanged Man: His fingernails have turned dark. They're chipped and quite long. There is dirt under them. That's all."];
+	  27 [label="end hub 2 known bullet"];
+	  28 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]"];
+	  29 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]", shape=diamond];
+	  30 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"])", shape=diamond];
+	  31 [label="Authority: It seems he is leaving you no choice in the matter."];
+	  32 [label="Kim Kitsuragi: \"Klaasje told us the bullet hit him in the *mouth* -- try putting your hand there...\""];
+	  33 [label="Esprit de Corps: The lieutenant should *clearly* be here for this. You're lost."];
+	  34 [label="You: Bag the corpse and drag it to the motor carriage. [Leave.]"];
+	  35 [label="The Hanged Man: CancelTask(\"TASK.fridge_victims_body_cancelled\")--[[ Variable[ ]]"];
+	  36 [label="You: Feel around first."];
+	  37 [label="Interfacing: You're not far, it'll come to you, keep crawling..."];
+	  38 [label="You: \"I can't get it...\""];
+	  39 [label="You: \"Can I have it?\""];
+	  40 [label="You: \"Agreed.\""];
+	  41 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  42 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  43 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  44 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  45 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  46 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  47 [label="You: \"The ligament mark, the fractured hyoid bone, it was all treatment...\""];
+	  48 [label="You: \"What happens next?\" (Proceed.)"];
+	  49 [label="Cuno: \"I can't believe the pig is stroking him *again*...\""];
+	  50 [label="You: \"I've got a gut feeling that there's more to this corpse.\""];
+	  51 [label="You: \"Can't he just... hang out here for a while longer?\""];
+	  52 [label="The Hanged Man: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  53 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  54 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  55 [label="The Hanged Man: The inside of the head feels cold and smooth like a glove as you pull out, sweat dripping down your brow -- careful not to lose the prize between your fingers..."];
+	  56 [label="Untitled hub"];
+	  57 [label="Kim Kitsuragi: \"Only if *all else* fails,\" he stresses."];
+	  58 [label="Kim Kitsuragi: \"We bag the corpse and carry him to the holding pen of my Kineema. I can transport him to Processing myself, but I *will* be gone for the rest of the day.\""];
+	  59 [label="The Hanged Man: Variable[\"yard.hanged_authority_detective\"]"];
+	  60 [label="Variable[\"yard.hanged_authority_detective\"]", shape=diamond];
+	  61 [label="!(Variable[\"yard.hanged_authority_detective\"])", shape=diamond];
+	  62 [label="Interfacing: Oh well -- in another lifetime."];
+	  63 [label="Tutorial Agent: If you have nothing to do, read books or sit on the bench on the plaza."];
+	  64 [label="Esprit de Corps: We didn't fall for it, he thinks. There's pride in there."];
+	  65 [label="The Hanged Man: There go those beautiful enamel boots. You will never own the full set now. May they rest in Processing..."];
+	  66 [label="The Hanged Man: A vision of black and dark red death, pried open by your naked hands and studded with teeth. Looks like he's laughing, death fumes rising from the throat. And there, in the back of his mouth, above the bell of the uvula, right in the soft palate..."];
+	  67 [label="The Hanged Man: Your fingers are all the way in now, reaching toward the inside of his skull. The cavity goes further, but the entry wound isn't wide enough for the rest of your hand to follow..."];
+	  68 [label="Kim Kitsuragi: \"Can you... can you get to it?\" He searches his pockets for something."];
+	  69 [label="The Hanged Man: There's a tiny crack, a protrusion in the cranium, right in the back of his head. Your finger must be pointing straight at it. From the *inside*."];
+	  70 [label="Cuno: \"F****ts can't get enough of that dick...\""];
+	  71 [label="Jump to: [Perception: \"Your arm reaches out and your eyes...\"]"];
+	  72 [label="The Hanged Man: Variable[\"whirling.dreamtwo_open_case\"]"];
+	  73 [label="Variable[\"whirling.dreamtwo_open_case\"]", shape=diamond];
+	  74 [label="!(Variable[\"whirling.dreamtwo_open_case\"])", shape=diamond];
+	  75 [label="Kim Kitsuragi: He unrolls the plastic. \"I need a little help for carrying him to the holding pen of my Kineema. I'll take it from there.\""];
+	  76 [label="The Hanged Man: Variable[\"doomed.icebear_main_hub_reached\"]"];
+	  77 [label="Variable[\"doomed.icebear_main_hub_reached\"]", shape=diamond];
+	  78 [label="!(Variable[\"doomed.icebear_main_hub_reached\"])", shape=diamond];
+	  79 [label="Kim Kitsuragi: He closes his notebook and cracks his neck. \"Let's move. With every hour, whatever we're looking for in the deceased will become harder to find.\""];
+	  80 [label="Jump to: [ICE BEAR FRIDGE MAIN HUB]"];
+	  81 [label="Tutorial Agent: If you have nothing to do, read books or sit on the bench on the plaza."];
+	  82 [label="You: What is this?"];
+	  83 [label="You: Play with it -- this feels right."];
+	  84 [label="The Hanged Man: A black trickle of liquid runs into his throat from the wound..."];
+	  85 [label="You: Put your finger in."];
+	  86 [label="Perception: Sharp, serrated material. The edges cut right into your skin."];
+	  87 [label="The Hanged Man: The cartilage gives in with a crack, like some fruit. Just like that your hand is in his head. Strange fluid streams down your wrist -- and then you feel it, with the tip of your finger..."];
+	  88 [label="Suggestion: Her voice is absolutely sizzling with excitement."];
+	  89 [label="The Hanged Man: Variable[\"yard.hanged_interfacing_pulled_out_bullet\"]"];
+	  90 [label="Variable[\"yard.hanged_interfacing_pulled_out_bullet\"]", shape=diamond];
+	  91 [label="!(Variable[\"yard.hanged_interfacing_pulled_out_bullet\"])", shape=diamond];
+	  92 [label="You: Slowly pull your fingers out..."];
+	  93 [label="Kim Kitsuragi: With a *crack* he punches the knife in the skull. Then one more time -- and one more -- until the bone comes loose like eggshell. Inside you feel the jelly move from his poking. The object is still under your finger."];
+	  94 [label="Kim Kitsuragi: \"We need to add an item to the injury list.\" He turns to his notebook. \"Injury #4: Oval entry wound with an abrasion collar. Soft palate, back of mouth.\""];
+	  95 [label="Kim Kitsuragi: \"Good-good...\" The fridge in the background buzzes with excitement."];
+	  96 [label="Esprit de Corps: Suddenly, you recall: Two officers must be present for a field autopsy. You take your hand from the dead man's face and open your eyes. You will still need to come back with the lieutenant."];
+	  97 [label="Kim Kitsuragi: \"...*this* injury here.\" He points to the mark encircling the corpse's neck."];
+	  98 [label="Kim Kitsuragi: \"I have had this doubt since I inspected his hands, officer -- there were no signs of struggle. No claw marks on his neck. Why? Why didn't he fight for his life?\""];
+	  99 [label="Kim Kitsuragi: \"To put him out of his misery?\" He thinks. \"It's possible, but it does not explain all the other dubious things here -- lack of struggle primarily. I may be intellectually sloppy, but I prefer one theory at a time. And this just smacks of treatment to me.\""];
+	  100 [label="Jump to: [end hub]"];
+	  101 [label="Kim Kitsuragi: \"Hey...\" A wide smile appears on his face. \"Wasn't there a *giant ice bear sarcophagus* below that building?\" He points toward the commercial area."];
+	  102 [label="Endurance: Soon you'll be looking for clues in a pile of sludge and bones."];
+	  103 [label="The Hanged Man: IsKimHere()"];
+	  104 [label="IsKimHere()", shape=diamond];
+	  105 [label="!(IsKimHere())", shape=diamond];
+	  106 [label="Tutorial Agent: This means Lieutenant Kitsuragi will leave the party until tomorrow morning. You're free to do side-tasks and even the main case -- though it might be more difficult."];
+	  107 [label="You: Brain stem?"];
+	  108 [label="The Hanged Man: Variable[\"yard.hanged_logic_explain_bulelt_and_ligament\"]"];
+	  109 [label="Variable[\"yard.hanged_logic_explain_bulelt_and_ligament\"]", shape=diamond];
+	  110 [label="!(Variable[\"yard.hanged_logic_explain_bulelt_and_ligament\"])", shape=diamond];
+	  111 [label="The Hanged Man: Variable[\"whirling.dreamtwo_open_case\"]"];
+	  112 [label="Variable[\"whirling.dreamtwo_open_case\"]", shape=diamond];
+	  113 [label="!(Variable[\"whirling.dreamtwo_open_case\"])", shape=diamond];
+	  114 [label="The Hanged Man: Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false"];
+	  115 [label="Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false", shape=diamond];
+	  116 [label="!(Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false)", shape=diamond];
+	  117 [label="Kim Kitsuragi: \"Work on the case, tend to personal matters? Try not to do anything *too* dangerous. An officer needs backup in a neighbourhood like this.\""];
+	  118 [label="Jump to: [You: \"Touch it with your finger, gently....\"]"];
+	  119 [label="You: No, this is too much. (Pull your hand out.)"];
+	  120 [label="Pain Threshold: The pain is barely noticeable under the adrenaline rush."];
+	  121 [label="You: Inspect the skull first."];
+	  122 [label="Kim Kitsuragi: \"Unknown calibre. Rifled. Some kind of brittle alloy, fractured on impact...\""];
+	  123 [label="You: Say nothing, just nod."];
+	  124 [label="You: \"Dead, daba-doop-doop.\""];
+	  125 [label="The Hanged Man: You pull down his breeches. Marbling is present around the crotch. The penis has shrunk, crawling half way back inside him. There is nothing mysterious or noteworthy here."];
+	  126 [label="Kim Kitsuragi: \"Mhm.\" He gets up. \"This is one task we *cannot* sideline. With every hour, whatever we're looking for will become harder to find.\""];
+	  127 [label="The Hanged Man: Variable[\"yard.cuno_of_many_means\"]"];
+	  128 [label="Variable[\"yard.cuno_of_many_means\"]", shape=diamond];
+	  129 [label="!(Variable[\"yard.cuno_of_many_means\"])", shape=diamond];
+	  130 [label="The Hanged Man: Variable[\"doomed.doorbell_know_revachol_ice_city\"]"];
+	  131 [label="Variable[\"doomed.doorbell_know_revachol_ice_city\"]", shape=diamond];
+	  132 [label="!(Variable[\"doomed.doorbell_know_revachol_ice_city\"])", shape=diamond];
+	  133 [label="The Hanged Man: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  134 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  135 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  136 [label="Kim Kitsuragi: He frowns, thinking. \"Try putting your hand in his mouth and probing for the bullet in his *head*.\""];
+	  137 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  138 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  139 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  140 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  141 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  142 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  143 [label="You: Bag the corpse and drag it to the motor carriage. [Leave.]"];
+	  144 [label="The Hanged Man: Variable[\"whirling.dreamtwo_open_case\"]"];
+	  145 [label="Variable[\"whirling.dreamtwo_open_case\"]", shape=diamond];
+	  146 [label="!(Variable[\"whirling.dreamtwo_open_case\"])", shape=diamond];
+	  147 [label="You: Fish it out."];
+	  148 [label="You: Variable[\"yard.hanged_interfacing_pulled_out_bullet\"]"];
+	  149 [label="Variable[\"yard.hanged_interfacing_pulled_out_bullet\"]", shape=diamond];
+	  150 [label="!(Variable[\"yard.hanged_interfacing_pulled_out_bullet\"])", shape=diamond];
+	  151 [label="Perception: Your arm reaches out and your eyes close, as if by their own volition. It's dark all around. You feel cold, slippery flesh -- first with your fingertips, then under the palm of your hand."];
+	  152 [label="Perception: ...you see a hole, barely visible to the human eye. It is swollen shut, almost vanished, no larger than 0.4 cm in radius. The edges appear darkened."];
+	  153 [label="Cuno: Cuno nods too. He takes a step closer."];
+	  154 [label="Kim Kitsuragi: The lieutenant answers with the sound of his pen on paper."];
+	  155 [label="Jump to: [Interfacing: \"You're not far, it'll come to you,...\"]"];
+	  156 [label="You: \"Keep it, lieutenant. As a gift.\""];
+	  157 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  158 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  159 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  160 [label="You: Look in his pants again."];
+	  161 [label="You: Give up."];
+	  162 [label="The Hanged Man: Variable[\"yard.hanged_touched_genitals\"]"];
+	  163 [label="Variable[\"yard.hanged_touched_genitals\"]", shape=diamond];
+	  164 [label="!(Variable[\"yard.hanged_touched_genitals\"])", shape=diamond];
+	  165 [label="You: \"No, let's just leave it to the Processing guys.\""];
+	  166 [label="Authority: Not to mention the damage that would be dealt to the force's reputation by the corpse just rotting here like this..."];
+	  167 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  168 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  169 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  170 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"]"];
+	  171 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"]", shape=diamond];
+	  172 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"])", shape=diamond];
+	  173 [label="Electrochemistry: The *funk soul brother* at the back of his head has gone dark. Forever."];
+	  174 [label="Jump to: [autopsy hub]"];
+	  175 [label="The Hanged Man: Variable[\"yard.hanged_kim_leaving_not_tutorialized\"]  and  Variable[\"whirling.dreamtwo_open_case\"]"];
+	  176 [label="Variable[\"yard.hanged_kim_leaving_not_tutorialized\"]  and  Variable[\"whirling.dreamtwo_open_case\"]", shape=diamond];
+	  177 [label="!(Variable[\"yard.hanged_kim_leaving_not_tutorialized\"]  and  Variable[\"whirling.dreamtwo_open_case\"])", shape=diamond];
+	  178 [label="You: Pull your fingers back and nod."];
+	  179 [label="Kim Kitsuragi: \"A bullet.\" The lieutenant picks it up between his fingers. \"Unknown calibre. Rifled... you may remove your hand from the victim's head now, officer -- well done.\""];
+	  180 [label="Kim Kitsuragi: \"No-no, you deserve it. We can log it later.\" The lieutenant drops the bag in your bloody hand. It feels light."];
+	  181 [label="Kim Kitsuragi: \"That was then. This time we have extensive tissue destruction away from the wound track. This time we have a *bullet*.\""];
+	  182 [label="Cunoesse: \"Fucking *beautiful...*\""];
+	  183 [label="treatment_here"];
+	  184 [label="You: Don't touch it again."];
+	  185 [label="Kim Kitsuragi: \"If you think so, officer.\" He nods. \"I am not going to object.\""];
+	  186 [label="Kim Kitsuragi: \"Continue working here. The locals, the case, or tend to your own business? I will meet you downstairs in the Whirling-in-Rags, tomorrow morning -- 7:30 sharp.\""];
+	  187 [label="Kim Kitsuragi: \"All right.\" He takes out a shiny black body bag and starts pulling the plastic over the dead man's face."];
+	  188 [label="Jump to: [ICE BEAR FRIDGE MAIN HUB]"];
+	  189 [label="Kim Kitsuragi: \"Yes -- now. I've rarely been disappointed by the size of a *giant* ice bear fridge, but I think we should still take a look at it first. Make sure it's big *enough* before we carry him over.\""];
+	  190 [label="Perception: You really ought to wait until the cadaver is *refrigerated*. Digging around in this mess now is proving hopelessly difficult."];
+	  191 [label="Kim Kitsuragi: The lieutenant rubs his side for warmth. \"It'll come to you sooner or later. At least he's safe here until then.\""];
+	  192 [label="Kim Kitsuragi: \"Work on the case, tend to personal matters? Try not to do anything too dangerous. An officer needs backup in a neighbourhood like this.\""];
+	  193 [label="Kim Kitsuragi: \"As I said, treatment is an attempt to manipulate the body after death -- to hide the real cause with a *false* cause. In this case...\""];
+	  194 [label="Tutorial Agent: This means Lieutenant Kitsuragi will leave until tomorrow morning. Meanwhile, you're free to do side-tasks and even the main case -- though it might be more difficult."];
+	  195 [label="The Hanged Man: Variable[\"yard.hanged_perception_white_oval_wound\"]"];
+	  196 [label="Variable[\"yard.hanged_perception_white_oval_wound\"]", shape=diamond];
+	  197 [label="!(Variable[\"yard.hanged_perception_white_oval_wound\"])", shape=diamond];
+	  198 [label="You: Open your eyes and look."];
+	  199 [label="You: Fish it out."];
+	  200 [label="You: Variable[\"yard.hanged_interfacing_pulled_out_bullet\"]"];
+	  201 [label="Variable[\"yard.hanged_interfacing_pulled_out_bullet\"]", shape=diamond];
+	  202 [label="!(Variable[\"yard.hanged_interfacing_pulled_out_bullet\"])", shape=diamond];
+	  203 [label="You: No. Touch something else."];
+	  204 [label="Kim Kitsuragi: \"Okay, well... We're in livor mortis here. He's disintegrating. We need to *refrigerate* the body, if we want to conduct another examination -- and we need to do it fast.\""];
+	  205 [label="Kim Kitsuragi: \"Okay.\" He unrolls the plastic. \"I need a little help for carrying him to the holding pen of my Kineema. I can take care of the rest.\""];
+	  206 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]"];
+	  207 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]", shape=diamond];
+	  208 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"])", shape=diamond];
+	  209 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  210 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  211 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  212 [label="You: \"An absolutely colossal fridge -- still plugged in -- *literally* in the shape of an ice bear!\""];
+	  213 [label="Kim Kitsuragi: \"Now that's an overstatement. It's not actually *for* storing cadavers, or at least I hope so. I think we should take a look at it first. Make sure it's big *enough* before we carry him over.\""];
+	  214 [label="Jump to: [autopsy hub]"];
+	  215 [label="end"];
+	  216 [label="Authority: The word lingers in the air of the yard, far away dogs are barking, further yet the sound of motor traffic..."];
+	  217 [label="Cuno: \"The fuck is he doing?\" You hear a voice squeak. It sounds very far away."];
+	  218 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  219 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  220 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  221 [label="Cuno: \"Fuckin' *CAVITY* C...\" Cuno's voice is hushed."];
+	  222 [label="Cunoesse: \"Forget about the *fucking exit wound*, bino! THE PIG IS WEARING HIM LIKE A FUCK PUPPET!\""];
+	  223 [label="Authority: He's watching his old man get the big prize at the claw game."];
+	  224 [label="The Hanged Man: With a *plop*, your hand emerges from the mouth, covered in blood up to the wrist. Between your fingers -- a small flower, a blossom made of lead!"];
+	  225 [label="Kim Kitsuragi: Out comes his small folding knife -- the lieutenant moves its blade across the man's skull, searching for the exit wound..."];
+	  226 [label="Kim Kitsuragi: \"Can you push it out?\""];
+	  227 [label="Kim Kitsuragi: \"High velocity, temporary cavity in brain tissue. Small exit wound on the occiput.\" He underlines the injury, forcefully. \"How does that sound?\""];
+	  228 [label="You: \"Sounds like heaven.\""];
+	  229 [label="You: Maybe if I touch it again..."];
+	  230 [label="The Hanged Man: The corpse seems to yawn contentedly, as though its glad you've run out of steam."];
+	  231 [label="You: \"Okay -- where do we find a fridge for the body?\""];
+	  232 [label="Kim Kitsuragi: \"It would have to be *industrial* in size. Let's start by asking the proprietor of the Whirling-in-Rags, then the Frittte store down at the gates. And if neither has one...\" His voice trails off -- and his gaze settles on *Cuno*."];
+	  233 [label="Kim Kitsuragi: He unrolls the plastic. \"I need a little help for carrying him to the holding pen of my Kineema. I'll take it from there.\""];
+	  234 [label="Kim Kitsuragi: \"It's too late to take him into Processing today. I'll take him first thing tomorrow.\" He pulls the black plastic over the dead man's face."];
+	  235 [label="Cuno: \"Fuck are you looking at bino-man? You wanna piece of the Cuno? Wanna get *fucked*?\""];
+	  236 [label="The Hanged Man: Variable[\"yard.hanged_authority_detective\"]"];
+	  237 [label="Variable[\"yard.hanged_authority_detective\"]", shape=diamond];
+	  238 [label="!(Variable[\"yard.hanged_authority_detective\"])", shape=diamond];
+	  239 [label="The Hanged Man: There go those beautiful enamel boots. May they rest in Processing..."];
+	  240 [label="The Hanged Man: There go those beautiful enamel boots. May they rest in Processing..."];
+	  241 [label="Hand/Eye Coordination: This little thing could reveal much about the weapon that shot it."];
+	  242 [label="Kim Kitsuragi: \"All right.\" He takes out a shiny black body bag and starts pulling the plastic over the dead man's face."];
+	  243 [label="The Hanged Man: Only the little one fits. The flesh changes shape as you bore in, searching for something in the cartilage."];
+	  244 [label="You: Touch it with your finger, gently. (Proceed.)"];
+	  245 [label="Kim Kitsuragi: \"Mhm,\" he agrees. \"Keep going.\""];
+	  246 [label="You: Wriggle in..."];
+	  247 [label="no_bullet"];
+	  248 [label="Jump to: [Interfacing: \"You're not far, it'll come to you,...\"]"];
+	  249 [label="Cunoesse: \"What?! WHAT is it?\""];
+	  250 [label="Kim Kitsuragi: \"A bullet...\" The lieutenant puts a small bag marked *evidence* under it."];
+	  251 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  252 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  253 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  254 [label="Kim Kitsuragi: \"There have been other signs too, small things. We were right not to assign hanging as cause of death. As the perpetrators *expected* we would -- no such luck for them.\""];
+	  255 [label="Inland Empire: You can't shake the feeling that there are more secrets concealed in the flesh before you."];
+	  256 [label="know_bullet"];
+	  257 [label="You: \"Correct.\""];
+	  258 [label="Esprit de Corps: His brow furrows while his eyes glaze over. The lieutenant looks regretful for not figuring this out before."];
+	  259 [label="Jump to: [end hub 2 known bullet]"];
+	  260 [label="fail_missing"];
+	  261 [label="You: What about that giant ice bear fridge in the Doomed Commercial Area?"];
+	  262 [label="Jump to: [ICE BEAR FRIDGE MAIN HUB]"];
+	  263 [label="Kim Kitsuragi: \"All right.\" He takes out a shiny black body bag and starts pulling the plastic over the dead man's face."];
+	  264 [label="Esprit de Corps: We almost fell for it, he thinks. *Almost*."];
+	  265 [label="Kim Kitsuragi: \"I can drive him to Processing today, no problem. Since we stalled with this... But this *does* mean I will be gone for the rest of the day.\""];
+	  266 [label="You: Push your fingers in his nose."];
+	  267 [label="You: Touch something else."];
+	  268 [label="Perception: The thing you're looking for -- it's not there. Crawl out, spider..."];
+	  269 [label="Cuno: \"My pig's fucking *got* it!\""];
+	  270 [label="Kim Kitsuragi: \"Wait, detective!\" Just as you start to slide your fingers out..."];
+	  271 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  272 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  273 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  274 [label="Cunoesse: \"Beautiful...\""];
+	  275 [label="You: Squeeze his nose."];
+	  276 [label="Interfacing: This is the *irregularity* you felt before. The one that was too tiny to register consciously."];
+	  277 [label="Logic: There is of course the very real possibility he was both shot *and* hanged."];
+	  278 [label="Logic: Hmm... Cuno looks like he gets around. *Knows* Martinaise. And its fridges too probably..."];
+	  279 [label="You: \"What should I do in the meanwhile?\""];
+	  280 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  281 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  282 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  283 [label="whatelse"];
+	  284 [label="Kim Kitsuragi: \"Now, detective... I've rarely been disappointed by the size of a *giant* ice bear fridge, but I think we should still take a look at it first. Make sure it's big *enough* before we carry him over.\""];
+	  285 [label="The Hanged Man: Variable[\"whirling.klaasje_open_downstairs_branch\"]"];
+	  286 [label="Variable[\"whirling.klaasje_open_downstairs_branch\"]", shape=diamond];
+	  287 [label="!(Variable[\"whirling.klaasje_open_downstairs_branch\"])", shape=diamond];
+	  288 [label="You: \"So that's what the *ice bear shaped* refrigerator is for!\""];
+	  289 [label="The Hanged Man: Variable[\"yard.hanged_authority_detective\"]"];
+	  290 [label="Variable[\"yard.hanged_authority_detective\"]", shape=diamond];
+	  291 [label="!(Variable[\"yard.hanged_authority_detective\"])", shape=diamond];
+	  292 [label="Interfacing: Oh well -- in another lifetime."];
+	  293 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  294 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  295 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  296 [label="Kim Kitsuragi: \"I see it...\" The lieutenant looks in. There's a pen in his hand. His notebook is open at the red pages."];
+	  297 [label="Jump to: [search_for_it]"];
+	  298 [label="Kim Kitsuragi: \"Don't be silly.\" A smile comes across his face. \"You've earned it. Consider the binoclard episode forgotten.\" The lieutenant drops the bag in your bloody hand. It feels light."];
+	  299 [label="You: \"God damn right.\""];
+	  300 [label="You: \"Treatment?\""];
+	  301 [label="You: \"Aren't we jumping to conclusions?\""];
+	  302 [label="Kim Kitsuragi: \"Deadady-dead-dead.\""];
+	  303 [label="Kim Kitsuragi: \"I did not *just* come up with this. I've had my doubts since we found no signs of struggle on his wrists. No claw marks on his neck -- why? Why didn't he fight for his life?\""];
+	  304 [label="You: \"Who would do this?\""];
+	  305 [label="You: Look under his fingernails, like Kim already did."];
+	  306 [label="You: \"Yes. There's something we're not seeing.\""];
+	  307 [label="Kim Kitsuragi: He shakes his head. \"I worked as one of these *Processing guys* for a year. They are butchers and clowns. I once saw twenty CODs go misidentified in one week. Chances are slim to none that they'll find anything useful in processing.\""];
+	  308 [label="The Hanged Man: Variable[\"yard.hanged_perc_failed_once\"]"];
+	  309 [label="Variable[\"yard.hanged_perc_failed_once\"]", shape=diamond];
+	  310 [label="!(Variable[\"yard.hanged_perc_failed_once\"])", shape=diamond];
+	  311 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  312 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  313 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  314 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  315 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  316 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  317 [label="You: \"Then what?\""];
+	  318 [label="The Hanged Man: You can almost see the body decomposing before your very eyes. You should drop everything else and look for a way to preserve it so you can conduct your examination better."];
+	  319 [label="You: \"I need to take another look at the body first.\""];
+	  320 [label="The Hanged Man: Variable[\"whirling.klaasje_open_downstairs_branch\"]"];
+	  321 [label="Variable[\"whirling.klaasje_open_downstairs_branch\"]", shape=diamond];
+	  322 [label="!(Variable[\"whirling.klaasje_open_downstairs_branch\"])", shape=diamond];
+	  323 [label="The Hanged Man: Variable[\"yard.hanged_autopsy_exited_cause_known_path\"]"];
+	  324 [label="Variable[\"yard.hanged_autopsy_exited_cause_known_path\"]", shape=diamond];
+	  325 [label="!(Variable[\"yard.hanged_autopsy_exited_cause_known_path\"])", shape=diamond];
+	  326 [label="The Hanged Man: Yes. That's what this part is called."];
+	  327 [label="Kim Kitsuragi: \"We put him in a bag and carry him to the holding pen of my Kineema. The bodybag should contain the odour for the duration of the transport...\""];
+	  328 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  329 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  330 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  331 [label="The Hanged Man: His face. His cheeks, his nose, his fat swollen lips. Like a spider, your hand crawls over his features. Everything is silent."];
+	  332 [label="The Hanged Man: They are swollen shut -- you need to really *push* to get in."];
+	  333 [label="Jump to: [You: \"Touch it with your finger, gently....\"]"];
+	  334 [label="You: Punch a hole through his mouth."];
+	  335 [label="Jump to: [no_bullet]"];
+	  336 [label="Interfacing: You push your hand further in. Whatever is in there keeps rolling between your fingers as you beckon it to come out."];
+	  337 [label="You: Drop it in."];
+	  338 [label="Kim Kitsuragi: \"Of course. You've *earned* it.\" The lieutenant drops the bag in your bloody hand. It feels light."];
+	  339 [label="You: \"Sounds about right.\""];
+	  340 [label="Kim Kitsuragi: \"There have been other signs too, small details. Everything is too neatly designed for us to assign probable cause here. As we did, foolhardily. Well -- no more.\""];
+	  341 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  342 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  343 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  344 [label="Logic: Or -- remember the buttons on that intercom over there, on the side of the building next to the Whirling? One was for \"Revachol *Ice* City\"? Perhaps it's a... clue?"];
+	  345 [label="The Hanged Man: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  346 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  347 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  348 [label="Kim Kitsuragi: \"All right.\" He takes out a shiny black body bag and starts pulling the plastic over the dead man's face."];
+	  349 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]"];
+	  350 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]", shape=diamond];
+	  351 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"])", shape=diamond];
+	  352 [label="Kim Kitsuragi: \"Hurry. This is one task we *cannot* sideline. With every hour, whatever we're looking for will become harder to find.\""];
+	  353 [label="Jump to: [Authority: \"It seems he is leaving you no choic...\"]"];
+	  354 [label="Inland Empire: You're on the right track."];
+	  355 [label="Encyclopedia: This is what he used to regulate his emotions with..."];
+	  356 [label="Kim Kitsuragi: \"One more thing -- this was *really* good work, detective.\""];
+	  357 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  358 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  359 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  360 [label="The Hanged Man: The tongue moves freely in the cavity. The mucous of the mouth is slippery, delicate to touch. From the soft meat -- teeth are budding; hard pearls of bone in the gums. And in the back of the mouth..."];
+	  361 [label="Visual Calculus: An *abrasion collar*! THIS is what we're after."];
+	  362 [label="Cuno: \"Oh shit, C...\""];
+	  363 [label="The Hanged Man: The basal ganglia feels clumpy -- what entered here has torn apart his reptilian complex."];
+	  364 [label="Physical Instrument: All the muscles in your body harden. Time to *enter* him."];
+	  365 [label="Perception: Can you feel it? You're so close! Rip his jaws open now, look in..."];
+	  366 [label="You: \"A little help, lieutenant?\""];
+	  367 [label="Visual Calculus: The object that is in there stopped just short of the skull, in the encephalus, knocking this tiny fracture into the cranium..."];
+	  368 [label="Kim Kitsuragi: \"Do you think we missed something?\""];
+	  369 [label="Jump to: [looking_again]"];
+	  370 [label="The Hanged Man: You can almost see the body decomposing before your very eyes. You should drop everything else and look for a way to preserve it so you can conduct your examination better."];
+	  371 [label="nuhconfront"];
+	  372 [label="Kim Kitsuragi: He nods. \"I had my doubts --  there were no signs of a struggle on his hands. No claw marks on his neck. But still...\""];
+	  373 [label="Kim Kitsuragi: \"Yes. We should take a closer look at it. I am certain it has more to tell us.\""];
+	  374 [label="The Hanged Man: The corpse looks *enormous* with its bloated belly. Was the ice bear fridge really that giant? You should go and measure it, just to be sure."];
+	  375 [label="Authority: *Detective*."];
+	  376 [label="Authority: The word lingers in the air of the yard, as far away dogs are barking, further yet the sound of motor traffic..."];
+	  377 [label="Authority: The word lingers in the air of basement, far away ice cream makers are buzzing and the sea wind blows outside..."];
+	  378 [label="The Hanged Man: CancelTask(\"TASK.fridge_victims_body_cancelled\")--[[ Variable[ ]]"];
+	  379 [label="The Hanged Man: The oral cavity is cold and moist. A ball-like tongue attaches itself to the base of the mouth, lolling around like a scallop..."];
+	  380 [label="Cunoesse: \"The fuck is happening?!\""];
+	  381 [label="Kim Kitsuragi: \"We have the makings of a... very small exit wound here.\" The lieutenant leans closer."];
+	  382 [label="You: Whisper: \"I got it.\""];
+	  383 [label="The Hanged Man: A small flower of metal blossoms from the man's head, followed by your finger."];
+	  384 [label="The Hanged Man: You pick it between your fingers. The mass feels large, very porous somehow. Keep crawling, lest you break it..."];
+	  385 [label="Kim Kitsuragi: \"That's for us to find out. But *this* -- it will make finding them just a little easier.\""];
+	  386 [label="Jump to: [end hub]"];
+	  387 [label="Jump to: [Kim Kitsuragi: \"\"Do you think we missed something?\"\"]"];
+	  388 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]"];
+	  389 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]", shape=diamond];
+	  390 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"])", shape=diamond];
+	  391 [label="You: \"We should have known.\""];
+	  392 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"tc.hanged_man_was_shot_known_from_klaasje\"]"];
+	  393 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"tc.hanged_man_was_shot_known_from_klaasje\"]", shape=diamond];
+	  394 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"tc.hanged_man_was_shot_known_from_klaasje\"])", shape=diamond];
+	  395 [label="Esprit de Corps: Meanwhile, the lieutenant is sitting behind his desk, hunched over a stack of paperwork. His help would be invaluable right now."];
+	  396 [label="gain task hub"];
+	  397 [label="Jump to: [ICE BEAR FRIDGE MAIN HUB]"];
+	  398 [label="The Hanged Man: IsKimHere()"];
+	  399 [label="IsKimHere()", shape=diamond];
+	  400 [label="!(IsKimHere())", shape=diamond];
+	  401 [label="Inland Empire: The ululations of the limbic system have ended. All is quiet."];
+	  402 [label="Authority: *Detective*."];
+	  403 [label="The Hanged Man: IsTaskActive(\"TASK.fridge_victims_body\")--[[ Variable[ ]]"];
+	  404 [label="IsTaskActive(\"TASK.fridge_victims_body\")--[[ Variable[ ]]", shape=diamond];
+	  405 [label="!(IsTaskActive(\"TASK.fridge_victims_body\")--[[ Variable[ ]])", shape=diamond];
+	  406 [label="The Hanged Man: Variable[\"whirling.dreamtwo_open_case\"]"];
+	  407 [label="Variable[\"whirling.dreamtwo_open_case\"]", shape=diamond];
+	  408 [label="!(Variable[\"whirling.dreamtwo_open_case\"])", shape=diamond];
+	  409 [label="The Hanged Man: Variable[\"XP.discover_the_bullet\"]"];
+	  410 [label="Variable[\"XP.discover_the_bullet\"]", shape=diamond];
+	  411 [label="!(Variable[\"XP.discover_the_bullet\"])", shape=diamond];
+	  412 [label="The Hanged Man: Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false"];
+	  413 [label="Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false", shape=diamond];
+	  414 [label="!(Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false)", shape=diamond];
+	  415 [label="Perception: You run your hands over the victim's cold body: his limbs, his torso with its swollen organs... maybe you should be more *thorough*?"];
+	  416 [label="The Hanged Man: Your index fits right in there. A tight tunnel of flesh opens up -- tissue damage -- wide enough for two fingers. As you push both in, you reach through his mouth, right into his brain stem."];
+	  417 [label="You: Push deeper."];
+	  418 [label="You: \"I feel a solid object, right under the skull.\""];
+	  419 [label="Kim Kitsuragi: \"Here's your prize.\" He drops the bullet in an evidence bag and puts it in your hand -- your other hand, the one *not* covered in blood and cerebral cortex."];
+	  420 [label="You: \"Keep it, lieutenant. Also, I'm sorry for calling you a binoclard.\""];
+	  421 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  422 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  423 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  424 [label="You: \"I'm *still* not sure.\" (Look at your hand, quizzically.)"];
+	  425 [label="Kim Kitsuragi: \"Treatment, officer, is an attempt to manipulate the body after death -- to hide the real cause with a *false* cause. In this case...\""];
+	  426 [label="end hub"];
+	  427 [label="You: \"Maybe the bullet holds more answers?\""];
+	  428 [label="Kim Kitsuragi: \"If you want for this task to slowly become impossible, then yes. Otherwise -- no. He's been *hanging out* far too long already. We need to ice him.\""];
+	  429 [label="You: \"This concurs with the Hardie boys story.\""];
+	  430 [label="noconfront"];
+	  431 [label="yesconfront"];
+	  432 [label="yaconfront"];
+	  433 [label="The Hanged Man: IsKimHere()"];
+	  434 [label="IsKimHere()", shape=diamond];
+	  435 [label="!(IsKimHere())", shape=diamond];
+	  436 [label="Kim Kitsuragi: \"If the Hardies are to be trusted, there should be a bullet in there...\" The lieutenant looks at you. \"Try putting your hand in his mouth and probing for the bullet in his head.\""];
+	  437 [label="Jump to: [autopsy hub]"];
+	  438 [label="Untitled hub (02)"];
+	  439 [label="The Hanged Man: IsTaskActive(\"TASK.fridge_victims_body\")--[[ Variable[ ]]"];
+	  440 [label="IsTaskActive(\"TASK.fridge_victims_body\")--[[ Variable[ ]]", shape=diamond];
+	  441 [label="!(IsTaskActive(\"TASK.fridge_victims_body\")--[[ Variable[ ]])", shape=diamond];
+	  442 [label="Kim Kitsuragi: \"I will need a little help carrying him -- you take the hands, I'll take the legs.\""];
+	  443 [label="The Hanged Man: CheckEquipped(\"gloves_garden\")"];
+	  444 [label="CheckEquipped(\"gloves_garden\")", shape=diamond];
+	  445 [label="!(CheckEquipped(\"gloves_garden\"))", shape=diamond];
+	  446 [label="The Hanged Man: SetVariableValue(\"yard.hanged_man_used_gloves_for_bullet_digging\", true) --[[ Variable[ ]]"];
+	  447 [label="search_for_it"];
+	  448 [label="The Hanged Man: Your fingers slide into the remains of his limbic system. There is no resistance. It's gelatinous. The slug-like structures are damaged too, the tearing extends deep into both hemispheres."];
+	  449 [label="Kim Kitsuragi: \"Mhm. Withdraw your hand 4 centimetres please.\""];
+	  450 [label="You: \"There.\" (Nod toward the protrusion.)"];
+	  451 [label="You: Push."];
+	  452 [label="Jump to: [Kim Kitsuragi: \"Out comes his small folding knife -...\"]"];
+	  453 [label="Jump to: [autopsy hub]"];
+	  454 [label="You: \"You think so?\""];
+	  455 [label="Kim Kitsuragi: \"I have had my doubts for a while now. Since I saw there were no signs of struggle on his hands. And no claw marks on his neck...\""];
+	  456 [label="You: \"Maybe they just shot him *while* they hanged him?\""];
+	  457 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"tc.hanged_man_was_shot_known_from_klaasje\"]"];
+	  458 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"tc.hanged_man_was_shot_known_from_klaasje\"]", shape=diamond];
+	  459 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"tc.hanged_man_was_shot_known_from_klaasje\"])", shape=diamond];
+	  460 [label="Kim Kitsuragi: \"And, if we are to believe Hardie boys, it's somewhere in there...\""];
+	  461 [label="You: \"But where?\""];
+	  462 [label="Jump to: [ICE BEAR FRIDGE MAIN HUB]"];
+	  463 [label="Half Light: Why yes there was. It was massive. Red eyes glowing in the dark."];
+	  464 [label="The Hanged Man: Variable[\"TASK.fridge_victims_body\"]"];
+	  465 [label="Variable[\"TASK.fridge_victims_body\"]", shape=diamond];
+	  466 [label="!(Variable[\"TASK.fridge_victims_body\"])", shape=diamond];
+	  467 [label="You: \"You'll be gone? What should I do in the meanwhile?\""];
+	  468 [label="jump_here_to_finish"];
+	  469 [label="The Hanged Man: Variable[\"tc.treatment\"]  and  Variable[\"yard.hanged_logic_explain_bulelt_and_ligament\"] == false"];
+	  470 [label="Variable[\"tc.treatment\"]  and  Variable[\"yard.hanged_logic_explain_bulelt_and_ligament\"] == false", shape=diamond];
+	  471 [label="!(Variable[\"tc.treatment\"]  and  Variable[\"yard.hanged_logic_explain_bulelt_and_ligament\"] == false)", shape=diamond];
+	  472 [label="You: \"You'll be gone? What should I do in the meanwhile?\""];
+	  473 [label="The Hanged Man: There go those beautiful enamel boots. You will never own the full set now. May they rest in Processing..."];
+	  474 [label="You: Put your fingers in his mouth."];
+	  475 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  476 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  477 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  478 [label="Interfacing: You pick the object between your index and middle finger. It feels sharp, like metal. With your face twisting from pain and concentration, all you need to do is just..."];
+	  479 [label="Cuno: \"Oh yeah...\""];
+	  480 [label="Kim Kitsuragi: \"Opinion -- fatal injury.\""];
+	  481 [label="You: \"Wasn't that what we thought the last time?\" (Clean your hand in the snow.)"];
+	  482 [label="Kim Kitsuragi: \"We have *extensive* tissue destruction away from the wound track -- we have a *bullet*.\""];
+	  483 [label="Logic: He's proposing the bullet was the real cause of death -- and the hanging an attempt to *conceal* this fact."];
+	  484 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  485 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  486 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  487 [label="Kim Kitsuragi: \"In short, you and I are the *last* line of detection. If you're not sure we got everything, we need to look *again*. And for that -- we need to refrigerate the corpse.\""];
+	  488 [label="The Hanged Man: Variable[\"doomed.fridge_hub_reached\"]"];
+	  489 [label="Variable[\"doomed.fridge_hub_reached\"]", shape=diamond];
+	  490 [label="!(Variable[\"doomed.fridge_hub_reached\"])", shape=diamond];
+	  491 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]"];
+	  492 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]", shape=diamond];
+	  493 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"])", shape=diamond];
+	  494 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"tc.hanged_man_was_shot_known_from_klaasje\"]"];
+	  495 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"tc.hanged_man_was_shot_known_from_klaasje\"]", shape=diamond];
+	  496 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"tc.hanged_man_was_shot_known_from_klaasje\"])", shape=diamond];
+	  497 [label="You: \"We still haven't found the *bullet*.\""];
+	  498 [label="Jump to: [search_for_it]"];
+	  499 [label="Physical Instrument: You've seen the drawings. You've studied them."];
+	  500 [label="Reaction Speed: He's proposing the bullet was the real cause of death -- and the hanging an attempt to *conceal* this fact."];
+	  501 [label="Tutorial Agent: After you bag the corpse, Lieutenant Kitsuragi will leave the party until tomorrow morning. You can do side-tasks and even the main case, but it might be more difficult. Plan his exit accordingly."];
+	  502 [label="The Hanged Man: Variable[\"yard.hanged_authority_detective\"]"];
+	  503 [label="Variable[\"yard.hanged_authority_detective\"]", shape=diamond];
+	  504 [label="!(Variable[\"yard.hanged_authority_detective\"])", shape=diamond];
+	  505 [label="Kim Kitsuragi: \"I *would* drive him to Processing, but it's too late to do that today... I'll do it first thing tomorrow. No problem.\""];
+	  506 [label="You: Say: \"Fuck yeah.\""];
+	  507 [label="You: \"There's a cavity... cut right between the hemispheres.\""];
+	  508 [label="The Hanged Man: Your fingers reach toward his skull. His cerebral cortex feels like jelly -- cold jelly -- strange fluid streams down your wrist as you push deeper. Until you feel it, on the tip of your finger..."];
+	  509 [label="Kim Kitsuragi: The bullet falls in the bag leaving a smattering of blood on the plastic. He raises the bag under his eyes and says:"];
+	  510 [label="Kim Kitsuragi: \"And one last thing.\" *Click-click* goes the pen. \"We can now fill in injury #3: ligament mark. Opinion -- non-fatal, post-mortem: *treatment*.\""];
+	  511 [label="Conceptualization: This man will never sleep again. Never wake."];
+	  512 [label="The Hanged Man: Variable[\"yard.hanged_interfacing_felt_bump\"]"];
+	  513 [label="Variable[\"yard.hanged_interfacing_felt_bump\"]", shape=diamond];
+	  514 [label="!(Variable[\"yard.hanged_interfacing_felt_bump\"])", shape=diamond];
+	  515 [label="You: \"Why would anyone do this?\""];
+	  516 [label="looking_again"];
+	  517 [label="You: \"Why... yes there was.\""];
+	  518 [label="Kim Kitsuragi: \"Klaasje told us the bullet hit him in the mouth -- try putting your hand there...\""];
+	  519 [label="Kim Kitsuragi: \"I'll leave that choice to you. And one more thing...\" He looks you in the eye. \"Great work, detective.\""];
+	  520 [label="Authority: *Detective*."];
+	  521 [label="The Hanged Man: Variable[\"TASK.find_all_armour\"]"];
+	  522 [label="Variable[\"TASK.find_all_armour\"]", shape=diamond];
+	  523 [label="!(Variable[\"TASK.find_all_armour\"])", shape=diamond];
+	  524 [label="The Hanged Man: Variable[\"TASK.find_all_armour\"]"];
+	  525 [label="Variable[\"TASK.find_all_armour\"]", shape=diamond];
+	  526 [label="!(Variable[\"TASK.find_all_armour\"])", shape=diamond];
+	  527 [label="You: Say: \"Abrasion collar.\""];
+	  528 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  529 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  530 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  531 [label="You: \"Agreed.\""];
+	  532 [label="You: \"Let's hurry then.\" [Leave.]"];
+	  533 [label="Kim Kitsuragi: \"Okay.\" He unrolls the plastic. \"I need a little help for carrying him to the holding pen of my Kineema. I can take care of the rest.\""];
+	  534 [label="Jump to: [autopsy hub]"];
+	  0 -> 1
+	  1 -> 409
+	  1 -> 195
+	  2 -> 3
+	  3 -> 4
+	  3 -> 5
+	  4 -> 103
+	  5 -> 398
+	  6 -> 289
+	  7 -> 140
+	  8 -> 332
+	  9 -> 118
+	  10 -> 448
+	  11 -> 417
+	  12 -> 225
+	  13 -> 10
+	  13 -> 107
+	  13 -> 36
+	  14 -> 16
+	  14 -> 15
+	  15 -> 82
+	  16 -> 96
+	  17 -> 183
+	  18 -> 19
+	  18 -> 20
+	  19 -> 340
+	  20 -> 254
+	  21 -> 23
+	  22 -> 386
+	  23 -> 28
+	  24 -> 25
+	  25 -> 368
+	  26 -> 368
+	  27 -> 48
+	  27 -> 427
+	  27 -> 21
+	  28 -> 29
+	  28 -> 30
+	  29 -> 259
+	  30 -> 386
+	  31 -> 71
+	  32 -> 31
+	  33 -> 397
+	  35 -> 34
+	  36 -> 363
+	  37 -> 447
+	  38 -> 225
+	  39 -> 338
+	  40 -> 511
+	  41 -> 42
+	  41 -> 43
+	  42 -> 335
+	  43 -> 222
+	  44 -> 45
+	  44 -> 46
+	  45 -> 250
+	  46 -> 182
+	  47 -> 17
+	  48 -> 111
+	  49 -> 25
+	  50 -> 204
+	  51 -> 428
+	  52 -> 53
+	  52 -> 54
+	  53 -> 442
+	  54 -> 194
+	  55 -> 224
+	  56 -> 288
+	  56 -> 212
+	  56 -> 518
+	  57 -> 127
+	  58 -> 468
+	  59 -> 60
+	  59 -> 61
+	  60 -> 402
+	  61 -> 140
+	  62 -> 175
+	  63 -> 469
+	  64 -> 277
+	  65 -> 292
+	  66 -> 152
+	  67 -> 364
+	  68 -> 335
+	  69 -> 367
+	  70 -> 387
+	  71 -> 151
+	  72 -> 73
+	  72 -> 74
+	  73 -> 279
+	  74 -> 317
+	  75 -> 114
+	  76 -> 77
+	  76 -> 78
+	  77 -> 318
+	  78 -> 370
+	  81 -> 442
+	  82 -> 331
+	  83 -> 360
+	  84 -> 85
+	  85 -> 416
+	  86 -> 120
+	  87 -> 86
+	  88 -> 335
+	  89 -> 90
+	  89 -> 91
+	  90 -> 479
+	  91 -> 336
+	  92 -> 55
+	  93 -> 226
+	  94 -> 227
+	  95 -> 92
+	  96 -> 209
+	  97 -> 47
+	  98 -> 18
+	  99 -> 100
+	  100 -> 426
+	  101 -> 464
+	  102 -> 214
+	  103 -> 104
+	  103 -> 105
+	  104 -> 320
+	  105 -> 33
+	  106 -> 63
+	  107 -> 326
+	  108 -> 109
+	  108 -> 110
+	  109 -> 438
+	  110 -> 501
+	  111 -> 112
+	  111 -> 113
+	  112 -> 58
+	  113 -> 327
+	  114 -> 115
+	  114 -> 116
+	  115 -> 525
+	  116 -> 72
+	  117 -> 52
+	  118 -> 244
+	  119 -> 270
+	  120 -> 443
+	  121 -> 69
+	  122 -> 420
+	  122 -> 156
+	  122 -> 39
+	  123 -> 481
+	  124 -> 302
+	  125 -> 162
+	  127 -> 128
+	  127 -> 129
+	  128 -> 278
+	  129 -> 130
+	  130 -> 131
+	  130 -> 132
+	  131 -> 344
+	  132 -> 396
+	  133 -> 134
+	  133 -> 135
+	  134 -> 469
+	  135 -> 106
+	  136 -> 31
+	  137 -> 138
+	  137 -> 139
+	  138 -> 2
+	  139 -> 465
+	  140 -> 141
+	  140 -> 142
+	  141 -> 80
+	  142 -> 174
+	  144 -> 145
+	  144 -> 146
+	  145 -> 167
+	  146 -> 314
+	  147 -> 148
+	  148 -> 149
+	  148 -> 150
+	  151 -> 14
+	  152 -> 361
+	  153 -> 118
+	  154 -> 529
+	  155 -> 37
+	  156 -> 180
+	  157 -> 158
+	  157 -> 159
+	  158 -> 179
+	  159 -> 274
+	  160 -> 125
+	  161 -> 230
+	  162 -> 163
+	  162 -> 164
+	  163 -> 184
+	  163 -> 229
+	  164 -> 70
+	  165 -> 307
+	  166 -> 369
+	  167 -> 168
+	  167 -> 169
+	  168 -> 187
+	  169 -> 263
+	  170 -> 171
+	  170 -> 172
+	  171 -> 498
+	  172 -> 255
+	  173 -> 10
+	  175 -> 176
+	  175 -> 177
+	  176 -> 265
+	  177 -> 442
+	  178 -> 93
+	  179 -> 419
+	  180 -> 94
+	  181 -> 40
+	  181 -> 299
+	  182 -> 250
+	  183 -> 301
+	  183 -> 124
+	  183 -> 532
+	  183 -> 454
+	  184 -> 485
+	  185 -> 311
+	  186 -> 133
+	  187 -> 412
+	  189 -> 79
+	  190 -> 437
+	  191 -> 188
+	  192 -> 520
+	  193 -> 97
+	  194 -> 81
+	  195 -> 196
+	  195 -> 197
+	  196 -> 151
+	  197 -> 137
+	  198 -> 66
+	  199 -> 200
+	  200 -> 201
+	  200 -> 202
+	  201 -> 89
+	  202 -> 89
+	  203 -> 155
+	  204 -> 517
+	  205 -> 114
+	  206 -> 208
+	  206 -> 207
+	  207 -> 475
+	  208 -> 447
+	  209 -> 210
+	  209 -> 211
+	  210 -> 262
+	  211 -> 453
+	  212 -> 189
+	  213 -> 79
+	  216 -> 503
+	  217 -> 268
+	  218 -> 219
+	  218 -> 220
+	  219 -> 118
+	  220 -> 9
+	  221 -> 11
+	  222 -> 88
+	  223 -> 249
+	  224 -> 44
+	  225 -> 450
+	  226 -> 451
+	  227 -> 492
+	  228 -> 481
+	  229 -> 341
+	  230 -> 368
+	  231 -> 489
+	  232 -> 235
+	  233 -> 114
+	  234 -> 469
+	  235 -> 57
+	  236 -> 237
+	  236 -> 238
+	  237 -> 7
+	  238 -> 140
+	  239 -> 62
+	  240 -> 292
+	  241 -> 28
+	  242 -> 412
+	  243 -> 476
+	  244 -> 84
+	  245 -> 293
+	  246 -> 509
+	  247 -> 121
+	  247 -> 418
+	  247 -> 119
+	  247 -> 199
+	  248 -> 37
+	  249 -> 92
+	  250 -> 337
+	  251 -> 252
+	  251 -> 253
+	  252 -> 95
+	  253 -> 269
+	  254 -> 64
+	  255 -> 306
+	  255 -> 50
+	  255 -> 165
+	  256 -> 119
+	  256 -> 199
+	  257 -> 481
+	  258 -> 392
+	  259 -> 27
+	  260 -> 160
+	  260 -> 305
+	  260 -> 161
+	  261 -> 374
+	  263 -> 412
+	  264 -> 277
+	  265 -> 473
+	  266 -> 243
+	  267 -> 248
+	  268 -> 499
+	  269 -> 223
+	  270 -> 452
+	  271 -> 272
+	  271 -> 273
+	  272 -> 178
+	  273 -> 480
+	  274 -> 179
+	  275 -> 384
+	  276 -> 381
+	  277 -> 392
+	  278 -> 130
+	  279 -> 186
+	  280 -> 281
+	  280 -> 282
+	  281 -> 205
+	  282 -> 534
+	  283 -> 83
+	  283 -> 198
+	  283 -> 203
+	  284 -> 79
+	  285 -> 286
+	  285 -> 287
+	  286 -> 32
+	  287 -> 136
+	  288 -> 213
+	  289 -> 290
+	  289 -> 291
+	  290 -> 375
+	  291 -> 345
+	  292 -> 72
+	  293 -> 294
+	  293 -> 295
+	  294 -> 118
+	  295 -> 153
+	  296 -> 218
+	  297 -> 447
+	  298 -> 94
+	  299 -> 511
+	  300 -> 470
+	  301 -> 98
+	  302 -> 532
+	  302 -> 301
+	  302 -> 454
+	  303 -> 18
+	  304 -> 385
+	  305 -> 26
+	  306 -> 204
+	  307 -> 488
+	  308 -> 309
+	  308 -> 310
+	  309 -> 185
+	  310 -> 280
+	  311 -> 312
+	  311 -> 313
+	  312 -> 233
+	  313 -> 75
+	  314 -> 315
+	  314 -> 316
+	  315 -> 242
+	  316 -> 348
+	  317 -> 234
+	  318 -> 261
+	  319 -> 352
+	  320 -> 321
+	  320 -> 322
+	  321 -> 519
+	  322 -> 436
+	  323 -> 324
+	  323 -> 325
+	  324 -> 392
+	  325 -> 391
+	  326 -> 500
+	  327 -> 506
+	  328 -> 329
+	  328 -> 330
+	  329 -> 6
+	  330 -> 216
+	  331 -> 206
+	  332 -> 266
+	  332 -> 267
+	  333 -> 244
+	  334 -> 87
+	  335 -> 247
+	  336 -> 38
+	  336 -> 12
+	  336 -> 366
+	  337 -> 510
+	  338 -> 94
+	  339 -> 481
+	  340 -> 264
+	  341 -> 342
+	  341 -> 343
+	  342 -> 49
+	  343 -> 25
+	  344 -> 396
+	  345 -> 346
+	  345 -> 347
+	  346 -> 140
+	  347 -> 502
+	  348 -> 412
+	  349 -> 350
+	  349 -> 351
+	  350 -> 83
+	  350 -> 198
+	  351 -> 283
+	  352 -> 102
+	  353 -> 31
+	  354 -> 349
+	  355 -> 401
+	  356 -> 357
+	  357 -> 358
+	  357 -> 359
+	  358 -> 377
+	  359 -> 376
+	  360 -> 365
+	  361 -> 528
+	  361 -> 507
+	  361 -> 244
+	  362 -> 13
+	  363 -> 512
+	  364 -> 334
+	  364 -> 246
+	  365 -> 198
+	  366 -> 225
+	  367 -> 513
+	  368 -> 170
+	  369 -> 517
+	  370 -> 395
+	  371 -> 40
+	  371 -> 482
+	  371 -> 299
+	  371 -> 424
+	  372 -> 258
+	  373 -> 241
+	  374 -> 535
+	  375 -> 345
+	  376 -> 59
+	  377 -> 236
+	  378 -> 143
+	  379 -> 354
+	  380 -> 362
+	  381 -> 41
+	  382 -> 251
+	  383 -> 157
+	  384 -> 297
+	  385 -> 386
+	  386 -> 426
+	  387 -> 368
+	  388 -> 389
+	  388 -> 390
+	  389 -> 256
+	  390 -> 247
+	  391 -> 372
+	  392 -> 393
+	  392 -> 394
+	  393 -> 27
+	  394 -> 426
+	  395 -> 535
+	  396 -> 533
+	  396 -> 319
+	  398 -> 400
+	  398 -> 399
+	  399 -> 191
+	  400 -> 463
+	  401 -> 417
+	  401 -> 508
+	  402 -> 140
+	  403 -> 404
+	  403 -> 405
+	  404 -> 378
+	  405 -> 143
+	  406 -> 408
+	  406 -> 407
+	  407 -> 439
+	  408 -> 403
+	  409 -> 410
+	  409 -> 411
+	  410 -> 144
+	  411 -> 308
+	  412 -> 413
+	  412 -> 414
+	  413 -> 522
+	  414 -> 175
+	  415 -> 433
+	  416 -> 421
+	  417 -> 67
+	  418 -> 68
+	  419 -> 94
+	  420 -> 298
+	  421 -> 422
+	  421 -> 423
+	  422 -> 13
+	  423 -> 380
+	  424 -> 483
+	  425 -> 97
+	  426 -> 516
+	  426 -> 456
+	  426 -> 427
+	  426 -> 304
+	  426 -> 48
+	  426 -> 21
+	  427 -> 373
+	  428 -> 166
+	  429 -> 511
+	  430 -> 123
+	  430 -> 339
+	  430 -> 228
+	  431 -> 257
+	  431 -> 123
+	  431 -> 228
+	  432 -> 40
+	  432 -> 429
+	  433 -> 434
+	  433 -> 435
+	  434 -> 260
+	  435 -> 76
+	  436 -> 353
+	  438 -> 300
+	  438 -> 47
+	  439 -> 440
+	  439 -> 441
+	  440 -> 35
+	  441 -> 34
+	  442 -> 469
+	  443 -> 444
+	  443 -> 445
+	  444 -> 446
+	  445 -> 388
+	  446 -> 388
+	  447 -> 8
+	  447 -> 275
+	  447 -> 475
+	  448 -> 355
+	  449 -> 271
+	  450 -> 449
+	  451 -> 383
+	  452 -> 225
+	  454 -> 303
+	  455 -> 18
+	  456 -> 99
+	  457 -> 459
+	  457 -> 460
+	  458 -> 432
+	  459 -> 371
+	  460 -> 462
+	  461 -> 285
+	  463 -> 56
+	  464 -> 466
+	  464 -> 467
+	  465 -> 190
+	  466 -> 415
+	  467 -> 192
+	  468 -> 406
+	  469 -> 472
+	  469 -> 471
+	  470 -> 193
+	  471 -> 425
+	  472 -> 117
+	  473 -> 62
+	  474 -> 379
+	  475 -> 477
+	  475 -> 478
+	  476 -> 268
+	  477 -> 217
+	  478 -> 92
+	  478 -> 382
+	  479 -> 178
+	  480 -> 458
+	  481 -> 181
+	  482 -> 40
+	  482 -> 299
+	  483 -> 108
+	  484 -> 486
+	  484 -> 487
+	  485 -> 24
+	  486 -> 25
+	  487 -> 517
+	  488 -> 490
+	  488 -> 491
+	  489 -> 101
+	  490 -> 232
+	  491 -> 493
+	  491 -> 494
+	  492 -> 431
+	  493 -> 430
+	  494 -> 496
+	  494 -> 497
+	  495 -> 323
+	  496 -> 484
+	  497 -> 461
+	  498 -> 447
+	  499 -> 10
+	  499 -> 36
+	  500 -> 438
+	  501 -> 140
+	  502 -> 504
+	  502 -> 505
+	  503 -> 521
+	  504 -> 345
+	  505 -> 356
+	  506 -> 245
+	  507 -> 154
+	  508 -> 86
+	  509 -> 122
+	  510 -> 495
+	  511 -> 173
+	  512 -> 514
+	  512 -> 515
+	  513 -> 276
+	  514 -> 381
+	  515 -> 22
+	  516 -> 51
+	  516 -> 231
+	  517 -> 284
+	  518 -> 353
+	  519 -> 328
+	  520 -> 345
+	  521 -> 523
+	  521 -> 524
+	  522 -> 474
+	  523 -> 239
+	  524 -> 526
+	  524 -> 527
+	  525 -> 65
+	  526 -> 240
+	  527 -> 296
+	  528 -> 530
+	  528 -> 531
+	  529 -> 417
+	  530 -> 221
+	  531 -> 455
+	  532 -> 126
+	  533 -> 114
+}
+

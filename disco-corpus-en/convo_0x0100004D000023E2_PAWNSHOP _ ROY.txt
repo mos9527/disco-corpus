@@ -1,0 +1,1861 @@
+# PAWNSHOP / ROY
+# You talk to Roy, the pawnbroker, about items you'd like to sell, your missing side arm, his drug habit, the People's Pile, and/or the traffic menace.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Electrochemistry: Yeah... you gotta get in on those vortices, my man."];
+	  3 [label="You: \"Not very. I need to funk it up.\""];
+	  4 [label="Jump to: [finalizethething]"];
+	  5 [label="Kim Kitsuragi: The lieutenant whistles a long, quivering note..."];
+	  6 [label="Kim Kitsuragi: The lieutenant watches you take the transceiver with barely disguised envy."];
+	  7 [label="kim transceiver hub"];
+	  8 [label="Bird's Nest Roy: Variable[\"reputation.kim\"] > 1"];
+	  9 [label="Variable[\"reputation.kim\"] > 1", shape=diamond];
+	  10 [label="!(Variable[\"reputation.kim\"] > 1)", shape=diamond];
+	  11 [label="Bird's Nest Roy: \"We're glad to hear it.\" He smiles as the reflected light dances across his lenses."];
+	  12 [label="Composure: He hides his struggle well, just like he does the scarred walls of his shop -- concealed behind stacks of dusty merchandise."];
+	  13 [label="You: It's still a physical asset, though. Doesn't that count for anything?"];
+	  14 [label="Bird's Nest Roy: \"No... Being cooped up alone most of the day wasn't healthy for me -- just my own head to consort with. But a friend of mine knew of a way to deal with that.\""];
+	  15 [label="You: \"I think I've tried it once -- and liked it.\""];
+	  16 [label="You: \"Hey, those visuals you've got here would look great in the church.\" (Point at the lights in the pawnshop.)"];
+	  17 [label="You: \"That's all I wanted to know about the pin, thanks.\""];
+	  18 [label="Bird's Nest Roy: IsTaskActive(\"TASK.take_spinners_to_pawnshop_done\")  and  Variable[\"canal.roy_sold_spinners\"] == false  and  CheckItem(\"radiant_spinners\")  and  IsKimHere()"];
+	  19 [label="IsTaskActive(\"TASK.take_spinners_to_pawnshop_done\")  and  Variable[\"canal.roy_sold_spinners\"] == false  and  CheckItem(\"radiant_spinners\")  and  IsKimHere()", shape=diamond];
+	  20 [label="!(IsTaskActive(\"TASK.take_spinners_to_pawnshop_done\")  and  Variable[\"canal.roy_sold_spinners\"] == false  and  CheckItem(\"radiant_spinners\")  and  IsKimHere())", shape=diamond];
+	  21 [label="Bird's Nest Roy: \"Sure thing.\""];
+	  22 [label="Bird's Nest Roy: Variable[\"canal.electro_white_check_clicked\"] >= 2"];
+	  23 [label="Variable[\"canal.electro_white_check_clicked\"] >= 2", shape=diamond];
+	  24 [label="!(Variable[\"canal.electro_white_check_clicked\"] >= 2)", shape=diamond];
+	  25 [label="Electrochemistry: Okay, he definitely *is* high. Whatever it is you've probably done it -- and many other things besides. But you can't cut through the jumble of sensations to get to the answer."];
+	  26 [label="You: \"No judgement -- just curious. I probably did loads of Pyrholidon before I lost my memory.\""];
+	  27 [label="Bird's Nest Roy: \"No one's, everyone's...\" He sighs and shakes his head."];
+	  28 [label="gunhub"];
+	  29 [label="Bird's Nest Roy: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  30 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  31 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  32 [label="You: \"We can't assign *la responsabilité* if we don't go through the proper channels.\""];
+	  33 [label="Jump to: [pilehub]"];
+	  34 [label="Bird's Nest Roy: \"I felt within that thunderous crash a soul plunged into chaos.\""];
+	  35 [label="Perception (Sight): For a moment, his jaw tenses up, and his gaze is sharp and clear. Then he relaxes again."];
+	  36 [label="Bird's Nest Roy: He hesitates. \"I was... I was with the Emergency Relief Brigade. You know, after the People's Pile disaster.\" He coughs, as if to mark his words."];
+	  37 [label="Bird's Nest Roy: Variable[\"whirling.garte_debt_window_and_room_down\"]"];
+	  38 [label="Variable[\"whirling.garte_debt_window_and_room_down\"]", shape=diamond];
+	  39 [label="!(Variable[\"whirling.garte_debt_window_and_room_down\"])", shape=diamond];
+	  40 [label="Suggestion: Just explain why you need this so much. He's bound to understand."];
+	  41 [label="Jump to: [Bird's Nest Roy: \"\"Anything else you're thinking of s...\"]"];
+	  42 [label="Kim Kitsuragi: \"Who are your customers usually?\""];
+	  43 [label="Bird's Nest Roy: \"It keeps me entertained,\" he responds, unimpressed with your business-school snobbery."];
+	  44 [label="Bird's Nest Roy: Variable[\"canal.roy_sell_clothes_armour\"]"];
+	  45 [label="Variable[\"canal.roy_sell_clothes_armour\"]", shape=diamond];
+	  46 [label="!(Variable[\"canal.roy_sell_clothes_armour\"])", shape=diamond];
+	  47 [label="You: \"I've been thinking of quitting the RCM and becoming a cryptozoologist.\""];
+	  48 [label="Inland Empire: There's more to his animosity toward the Union Boss."];
+	  49 [label="You: \"I heard the forewoman before Evrart disappeared.\""];
+	  50 [label="You: [Leave.]"];
+	  51 [label="Rhetoric: The rest is for him -- to compensate for the pain of being separated from his radiant spinners."];
+	  52 [label="Bird's Nest Roy: \"You're quite invested in this.\" He looks at the bundle of tape in front of him. It shimmers under the shop's dazzling light show."];
+	  53 [label="Bird's Nest Roy: \"A Kristallsprach Model 9. Gottwaldian engineering at its finest. This is a specialist's model, ideal for picking up foreign signals...\""];
+	  54 [label="You: \"Thanks, Roy, this is just what I needed.\" (Conclude.)"];
+	  55 [label="Bird's Nest Roy: \"Something like that, officer.\""];
+	  56 [label="Conceptualization: Turn it into an art installation. Invite viewers to question what it means to bring an outside light, *inside*? We have so many barriers to break down and concepts to explore... for a price, of course."];
+	  57 [label="Suggestion: He seems down on himself. Offer a bit of positivity and you might put him in a more benevolent mood."];
+	  58 [label="Bird's Nest Roy: \"If you say so...\""];
+	  59 [label="You: \"3.30? But I sold it for 3.20...\""];
+	  60 [label="You: \"Actually, that's all I've got.\""];
+	  61 [label="Kim Kitsuragi: \"Maybe Claire really is tracking down your gun.\" The lieutenant's eyebrows rise slightly. \"Hm...\""];
+	  62 [label="Bird's Nest Roy: \"I was with the Emergency Relief Brigade. Had to take it for radiation sickness.\""];
+	  63 [label="Bird's Nest Roy: IsKimHere()"];
+	  64 [label="IsKimHere()", shape=diamond];
+	  65 [label="!(IsKimHere())", shape=diamond];
+	  66 [label="You: \"Maybe she's a vigilante. Wants to prove she can do our jobs better than we can.\""];
+	  67 [label="Bird's Nest Roy: \"Sure, man.\""];
+	  68 [label="Bird's Nest Roy: \"I just don't like it very much. Movement on the road never really gelled well with the movement of my thoughts.\""];
+	  69 [label="Bird's Nest Roy: \"I'm not purchasing any more clothing at the moment...\" He looks you up and down quickly."];
+	  70 [label="Bird's Nest Roy: Suddenly, his gaze fixes on your tie. He steps back from the glass. \"And *especially* that tie. It swallows photons around it. I have no need for *necrotic* objects.\""];
+	  71 [label="You: \"Think you could help me get a corpse out of a tree?\""];
+	  72 [label="Jump to: [salehub]"];
+	  73 [label="You: What is a particle decay generator?"];
+	  74 [label="Bird's Nest Roy: \"Another time, perhaps.\""];
+	  75 [label="Bird's Nest Roy: His loosens up. \"I'm not offended, officer.\""];
+	  76 [label="Encyclopedia: Needless to say: things didn't work out."];
+	  77 [label="Bird's Nest Roy: Roy takes the hubcaps from the lieutenant and inspects them. The spinners appear iridescent in the dancing light of his pawnshop."];
+	  78 [label="Kim Kitsuragi: \"No one was defrauded or *jumped*, I assure you,\" the lieutenant explains as the pawnbroker opens the register and counts the cash."];
+	  79 [label="Bird's Nest Roy: \"No, just -- people like that make everyone else see the world somewhat askew... at an angle that is convenient for them. Now -- you have more questions, or are we...\""];
+	  80 [label="You: \"You're calling this *politics*?\""];
+	  81 [label="Bird's Nest Roy: \"Perhaps.\" He shrugs. \"I just like being awake for the transition between night and morning -- bearing witness to the first hints of light on the horizon.\""];
+	  82 [label="Bird's Nest Roy: \"It's not often that I see officers from the RCM in my pawnshop.\" The man at the counter turns to you slowly."];
+	  83 [label="Bird's Nest Roy: \"I see you were wounded in the recent... altercation,\" he says with a grave nod. \"A speedy recovery to you, officer.\""];
+	  84 [label="Bird's Nest Roy: \"Hello hello! Let me know if I can help you with anything.\""];
+	  85 [label="You: \"I have hobbies. Just like all normal people. Because I'm a normal person.\""];
+	  86 [label="You: \"That sounds so cool.\""];
+	  87 [label="Untitled hub (10)"];
+	  88 [label="Kim Kitsuragi: \"Please...\" He throws you a long-suffering look. \"No more experimental listening while we're on this case.\""];
+	  89 [label="Logic: Sea birds, most likely. Gulls and such."];
+	  90 [label="flashlight hub"];
+	  91 [label="Untitled hub"];
+	  92 [label="You: \"Actually, no -- I don't have the money.\""];
+	  93 [label="Drama: He doesn't know anything."];
+	  94 [label="Half Light: No one likes to see what you have to see every day."];
+	  95 [label="Jump to: [investigationhub]"];
+	  96 [label="Tutorial Agent: You can sell things from your ITEMS tab for cash -- but be careful: You might wish you had them later."];
+	  97 [label="Perception (Sight): On the patch -- gamma radiation lines crossed with a red drop of blood."];
+	  98 [label="Bird's Nest Roy: \"Of course.\""];
+	  99 [label="Kim Kitsuragi: \"Of course, you need a certain level of *discernment* to really appreciate the difference in quality.\""];
+	  100 [label="Bird's Nest Roy: \"No... I soon started searching for other ways to cope with the mental trauma. Being cooped up alone most of the day was exacerbating it -- just my own head to consort with.\""];
+	  101 [label="answer hub"];
+	  102 [label="Kim Kitsuragi: He sighs. \"Yeah, it's not good. I do hope we manage to clean this mess up somehow -- while also keeping our focus on the murder investigation.\""];
+	  103 [label="You: \"I have other business to take care of now.\" [Leave.]"];
+	  104 [label="Jump to: [roymainhub]"];
+	  105 [label="Bird's Nest Roy: He hesitates. \"There's a reason why everyone's tried to forget any of it ever happened, and why no one has tried to repair or replace the Pile.\""];
+	  106 [label="Bird's Nest Roy: \"You were adamant about getting rid of it, officer.\" He hesitates. \"Said you were *undeserving* of a service weapon of the Revachol Citizens Militia.\""];
+	  107 [label="Bird's Nest Roy: \"And I don't like keeping guns around the shop for long. Off-the-charts photon emissions. The unhealthy kind.\""];
+	  108 [label="You: \"What if she intends to commit a crime and blame it on the Citizens Militia? On *me*?\""];
+	  109 [label="Composure: He steps further back behind the bullet-resistant glass, visibly perturbed. He doesn't want to be involved in any *incidents*."];
+	  110 [label="Bird's Nest Roy: \"So much disappointment -- and early deaths, cancer mostly. And we knew all that was coming even as we were *cleaning up* as best we could.\""];
+	  111 [label="Jump to: [roymainhub]"];
+	  112 [label="Bird's Nest Roy: \"Yeah, it was pretty wild. I didn't really know what to make of it, but I know it meant *something*.\""];
+	  113 [label="Jump to: [kim transceiver hub]"];
+	  114 [label="pilehub"];
+	  115 [label="Bird's Nest Roy: \"Here you go, man.\" He presents a large cap-shaped object on the palm of his hand. Very odd-looking..."];
+	  116 [label="You: \"Thanks, man.\" (Take the pyrholidon.)"];
+	  117 [label="You: \"I can understand how you would mistake Jacob Irw for a powerful electric vortex.\""];
+	  118 [label="Bird's Nest Roy: \"An *end* implies a stable state, whereas we can see from experience that everything is in fact always transforming. Thus, there can be no end.\""];
+	  119 [label="Bird's Nest Roy: \"They weren't the most... pleasant interactions. Small-town Big Wigs always want everyone to play a part in the play they're staging.\""];
+	  120 [label="Conceptualization: You know, these visuals would look *super cool* in the church."];
+	  121 [label="Jump to: [roymainhub]"];
+	  122 [label="Bird's Nest Roy: \"All kinds of people come through here... Locals, travellers. People looking for a deal. People looking for a keepsake. People who are terminally bored.\""];
+	  123 [label="Bird's Nest Roy: The light swirls in his face and glasses. He doesn't know what to say."];
+	  124 [label="Bird's Nest Roy: \"More than sure. What else have you got?\""];
+	  125 [label="You: \"Do you have any recordings of the Col Do Ma Ma Daqua?\""];
+	  126 [label="You: \"Well, I wouldn't have guessed that you know what the Col Do Ma Ma Daqua is.\""];
+	  127 [label="Bird's Nest Roy: He purses his lips. \"I'm not sure. I wasn't even sure about our old recordings, which I no longer have... But I do have a tape with some ultrasonic sounds that *might* be what you're looking for. Would you like to hear?\" He starts rummaging through some tapes behind the counter."];
+	  128 [label="You: \"You're not telling me everything about the current Big Wig.\""];
+	  129 [label="You: \"I haven't -- but don't worry, I can take it.\""];
+	  130 [label="Esprit de Corps: This has got to be the most.... wow..."];
+	  131 [label="You: \"I'm looking for a radio transceiver. You got anything?\""];
+	  132 [label="You: \"Sounds a bit like overkill.\""];
+	  133 [label="Savoir Faire: Expensive isn't everything. Bet this light doesn't even have a recognisable *brand*. And you can't exactly strut down the street and turn heads with it like you can a new Perseus Black number."];
+	  134 [label="Bird's Nest Roy: \"No can do. I need to make money -- this is a business first and foremost. Not a charity.\""];
+	  135 [label="Jump to: [stocks hub]"];
+	  136 [label="You: \"That doesn't explain how you got into *debt*...\""];
+	  137 [label="Bird's Nest Roy: \"For a little while. But I soon started searching for other ways to cope with the mental trauma. Being cooped up alone most of the day was exacerbating it... just my own head to consort with.\""];
+	  138 [label="You: \"Worthless? It's not worthless, Roy. This could be the next big thing for the local dance music scene.\""];
+	  139 [label="You: \"Do you know that old church down the coast?\""];
+	  140 [label="You: \"I'm sorry. I'm sorry I sold my gun.\""];
+	  141 [label="Bird's Nest Roy: \"You... uhh...\""];
+	  142 [label="roymainhub"];
+	  143 [label="You: \"It must have been tough -- radioactive clean-up.\""];
+	  144 [label="You: \"Whose fault was it that the generator failed?\""];
+	  145 [label="Jump to: [peoplespilehub]"];
+	  146 [label="Jump to: [gunhub]"];
+	  147 [label="fakecophub2"];
+	  148 [label="trafficsuspecthub"];
+	  149 [label="investigationhub"];
+	  150 [label="Kim Kitsuragi: \"I certainly understand the impulse, but this is our job, detective. Our whole *raison d'être*. At some point, we'll need to return to it.\""];
+	  151 [label="Bird's Nest Roy: IsKimHere()"];
+	  152 [label="IsKimHere()", shape=diamond];
+	  153 [label="!(IsKimHere())", shape=diamond];
+	  154 [label="Encyclopedia: Construction began during the Commune of Revachol. The *people* continued work on it after the Commune fell -- they wanted a cheap source of energy for Revachol West."];
+	  155 [label="Bird's Nest Roy: \"Of course. I meant no offense. 200 reál for you, officer. Delightful doing business with you. Do come again.\""];
+	  156 [label="Untitled hub (04)"];
+	  157 [label="Bird's Nest Roy: \"He tried. Wanted to come to some *mutually beneficial arrangement* around my dealings with the dockworkers... I politely declined to *hear him out*.\""];
+	  158 [label="Bird's Nest Roy: \"Had to take Pyrholidon for radiation sickness. That's what you were hinting at just now, wasn't it?\""];
+	  159 [label="Bird's Nest Roy: \"Is it any good? The music, I mean.\""];
+	  160 [label="Bird's Nest Roy: Variable[\"TASK.find_egg_beat_done\"]"];
+	  161 [label="Variable[\"TASK.find_egg_beat_done\"]", shape=diamond];
+	  162 [label="!(Variable[\"TASK.find_egg_beat_done\"])", shape=diamond];
+	  163 [label="Bird's Nest Roy: \"Yeah. My pleasure. I do what I can for true passion projects... Just try not to use this tape for negative photon emissions. Take responsibility, okay.\""];
+	  164 [label="Bird's Nest Roy: Variable[\"canal.roy_night_greeting_done\"]"];
+	  165 [label="Variable[\"canal.roy_night_greeting_done\"]", shape=diamond];
+	  166 [label="!(Variable[\"canal.roy_night_greeting_done\"])", shape=diamond];
+	  167 [label="You: \"Sorry, I feel like I'm interrupting you.\""];
+	  168 [label="Bird's Nest Roy: \"Now, what can I do for you?\""];
+	  169 [label="Jump to: [roymainhub]"];
+	  170 [label="Endurance: That's an illusion. Your breathing is just as it was and will remain that way unless you start panicking."];
+	  171 [label="Perception (Hearing): That's it! The signal in the noise! The \"thin whisper\"..."];
+	  172 [label="Jump to: [roymainhub]"];
+	  173 [label="Bird's Nest Roy: Variable[\"canal.roy_inland_evrart_perception\"]"];
+	  174 [label="Variable[\"canal.roy_inland_evrart_perception\"]", shape=diamond];
+	  175 [label="!(Variable[\"canal.roy_inland_evrart_perception\"])", shape=diamond];
+	  176 [label="CheckEquipped(\"flashlight\")"];
+	  177 [label="CheckEquipped(\"flashlight\")", shape=diamond];
+	  178 [label="!(CheckEquipped(\"flashlight\"))", shape=diamond];
+	  179 [label="You: \"Textbook narcomaniac behaviour.\""];
+	  180 [label="Electrochemistry: Entertained? He might be high -- if he is, on what?"];
+	  181 [label="Empathy: A guarded man like him wouldn't tell you if you asked out loud."];
+	  182 [label="Jump to: [roymainhub]"];
+	  183 [label="Pain Threshold: The pain written in the creases of his face... sheesh! This is a man who's been trying to catch falling knives for *years*."];
+	  184 [label="You: Good point. I won't bother with it then."];
+	  185 [label="Savoir Faire: Let's not *completely* write it off yet. Perhaps there's a business venture to be had here. Any ideas?"];
+	  186 [label="Bird's Nest Roy: \"Nothing else in here carries that much value, I'm afraid. Plus, I need to make sure I still earn *some* actual cash -- for food and such.\""];
+	  187 [label="Jump to: [stocks hub]"];
+	  188 [label="You: \"This debt -- is it the drugs?\""];
+	  189 [label="You: \"Sounds like you'll just get into debt again even if you do pay it off...\""];
+	  190 [label="Bird's Nest Roy: \"But that's enough of my sob story. Let's get back to business,\" he says, as if this conversation has changed nothing between you."];
+	  191 [label="You: \"Great! Could you do it, please? This is important, I need to be able to play this tape for someone.\""];
+	  192 [label="Bird's Nest Roy: \"Huh?\" He slowly taps his fingers on the counter. \"What do you mean?\""];
+	  193 [label="Bird's Nest Roy: \"So, what do you want to know? Price? I can give you 3.20 for it.\""];
+	  194 [label="Bird's Nest Roy: The pawnbroker's gaze is already fixed on the dancing colours."];
+	  195 [label="You: \"Thanks for the review. Let's talk about something else.\""];
+	  196 [label="Bird's Nest Roy: \"I've *had* to take it, you know, since the People's Pile clean-up,\" he responds carefully. \"I was with the Emergency Relief Brigade.\""];
+	  197 [label="peoplespilehub"];
+	  198 [label="You: \"Any idea where I can find this buyer?\""];
+	  199 [label="You: \"Wait, why don't you drive?\""];
+	  200 [label="Kim Kitsuragi: \"But now you've got what you came for, so I suppose we'll have to see this business through.\""];
+	  201 [label="Bird's Nest Roy: \"You were very distraught. You said the gun was a threat to your life, and... that you can't *trust* yourself with it tonight. And you need the money.\""];
+	  202 [label="Bird's Nest Roy: IsKimHere()"];
+	  203 [label="IsKimHere()", shape=diamond];
+	  204 [label="!(IsKimHere())", shape=diamond];
+	  205 [label="Kim Kitsuragi: \"Thank you.\" He takes the cash, then turns to you."];
+	  206 [label="hubhubuhub"];
+	  207 [label="You: \"Hey, do you know how to fix this?\" (Show him the bundle of magnetic tape.)"];
+	  208 [label="Bird's Nest Roy: He looks at the bronze-coloured bundle in your hand. \"You mean re-spool it? Yeah, I do, but...\""];
+	  209 [label="Bird's Nest Roy: \"A sanctuary filled with hand-picked positive photons... There would be no room for sadness in such a place. It's a brilliant vision...\""];
+	  210 [label="You: \"I'll check my pockets.\" (Access your pawn menu.)"];
+	  211 [label="You: \"It's cool that you're still open. Big city vibes.\""];
+	  212 [label="Bird's Nest Roy: \"Oh, no, not at all.\" He flashes a smile. \"I guess I haven't had many customers lately, RCM or otherwise.\""];
+	  213 [label="Bird's Nest Roy: \"As you can see... I have a wide selection of goods for everyone to choose from.\""];
+	  214 [label="You: \"I have some armour...\""];
+	  215 [label="Bird's Nest Roy: \"Oh, I didn't mean to imply otherwise... Well, it's been a while since I've gone hunting for the Col Do Ma Ma Daqua myself...\""];
+	  216 [label="Untitled hub (09)"];
+	  217 [label="You: \"Can I listen to it?\""];
+	  218 [label="Bird's Nest Roy: Variable[\"tc.claire_predecessor_disappeared\"]"];
+	  219 [label="Variable[\"tc.claire_predecessor_disappeared\"]", shape=diamond];
+	  220 [label="!(Variable[\"tc.claire_predecessor_disappeared\"])", shape=diamond];
+	  221 [label="Empathy: So much bitterness."];
+	  222 [label="Untitled hub (02)"];
+	  223 [label="Bird's Nest Roy: Variable[\"canal.roy_encyc_pile\"]"];
+	  224 [label="Variable[\"canal.roy_encyc_pile\"]", shape=diamond];
+	  225 [label="!(Variable[\"canal.roy_encyc_pile\"])", shape=diamond];
+	  226 [label="Jump to: [investigationhub]"];
+	  227 [label="You: \"Do you think we'll actually be able to reach the Coalition with this?\""];
+	  228 [label="Kim Kitsuragi: \"Who's to say what's possible and what's not?\""];
+	  229 [label="You: \"Do you recognise net worth in here? I have a *lot* of it.\" (Show him the certificate.)"];
+	  230 [label="Bird's Nest Roy: Variable[\"canal.roy_empathy_hiding_debt\"]"];
+	  231 [label="Variable[\"canal.roy_empathy_hiding_debt\"]", shape=diamond];
+	  232 [label="!(Variable[\"canal.roy_empathy_hiding_debt\"])", shape=diamond];
+	  233 [label="Electrochemistry: What *doesn't* he do?"];
+	  234 [label="You: \"You and me, we could make this all become true. Mankind *needs* this.\""];
+	  235 [label="Bird's Nest Roy: \"So I came to Martinaise. People told me don't go there, it's a *shit-hole*. I said: people, we just had a *nuclear pile meltdown*. I'm gonna get as far from Faubourg as I can. Still in the same city, but...\" He shrugs."];
+	  236 [label="You: \"But didn't you hear it when the traffic menace drove over your roof?\""];
+	  237 [label="You: \"Was the buyer a policeman too?\""];
+	  238 [label="fakecophub"];
+	  239 [label="You: \"I don't like it either. What if she intends to commit a crime and blame it on the Citizens Militia?\""];
+	  240 [label="You: \"Tell me more about this Emergency Relief Brigade you were part of.\""];
+	  241 [label="Bird's Nest Roy: \"The end... I don't know about that. Seemed more like a sign of a large-scale transformation. Shook the entire shack.\""];
+	  242 [label="You: \"I have a fascinating photo of a corpse here.\" (Show him the photo.)"];
+	  243 [label="Bird's Nest Roy: \"It's a logical explanation. I felt within that thunderous crash a soul plunged into chaos.\""];
+	  244 [label="Jump to: [investigationhub]"];
+	  245 [label="Jump to: [salehub]"];
+	  246 [label="Kim Kitsuragi: \"Here's the 70 reál you need for your bill. Do *not* waste it.\" The rest goes in his pocket."];
+	  247 [label="Kim Kitsuragi: \"Here's the 130 reál you need for your bill. Do *not* waste it.\" The rest goes in his pocket."];
+	  248 [label="Bird's Nest Roy: \"As I said, I refused to talk to him. That's why he came back a second time. That's *also* why he hasn't come back a third.\""];
+	  249 [label="You: \"What kind of *arrangement*?\""];
+	  250 [label="Bird's Nest Roy: His eyes move from you to the lights dancing on the walls."];
+	  251 [label="Bird's Nest Roy: \"It keeps me entertained,\" he responds, unimpressed with your snobbery."];
+	  252 [label="Bird's Nest Roy: Variable[\"canal.roy_pilehub_reached\"]"];
+	  253 [label="Variable[\"canal.roy_pilehub_reached\"]", shape=diamond];
+	  254 [label="!(Variable[\"canal.roy_pilehub_reached\"])", shape=diamond];
+	  255 [label="Bird's Nest Roy: He knits his eyebrows, thinking, then says, \"Alright, let's see it.\""];
+	  256 [label="Bird's Nest Roy: \"What an interesting development! Well, it's been a while since I've gone hunting for the Col Do Ma Ma Daqua...\""];
+	  257 [label="Kim Kitsuragi: \"Put the flashlight away, officer. Having it is a privilege, not a right.\""];
+	  258 [label="Bird's Nest Roy: \"There wasn't much the volunteer force could do, however. We wasted years in the river mud. Years getting sick...\" He looks at the spiralling light and stops."];
+	  259 [label="Empathy: There's *pity* there too. In case you didn't notice."];
+	  260 [label="Logic: A needle in a haystack. There is nothing you can do about it right now. You'll just have to hope Evrart wasn't lying and the Union can track her down in time."];
+	  261 [label="Bird's Nest Roy: \"Could be, if you're not concerned about quality of signal. But real audiophiles will pay good money for this. That's why we can't let it go for less than 120 reál.\""];
+	  262 [label="Jump to: [roymainhub]"];
+	  263 [label="Bird's Nest Roy: \"Owning shares -- that's where the proper trade is. Far beyond the pittance I deal with in here.\""];
+	  264 [label="Physical Instrument: Imagine swinging it at a ball -- the distance you'd get! That's the kind of feat that nets sportsmen a corporate sponsorship."];
+	  265 [label="You: \"And you won't give me anything else for these shares?\""];
+	  266 [label="Bird's Nest Roy: \"Of course. I'd be glad to trade for your shares. Let's stick to that.\""];
+	  267 [label="Bird's Nest Roy: Variable[\"canal.roy_pilehub_reached\"]"];
+	  268 [label="Variable[\"canal.roy_pilehub_reached\"]", shape=diamond];
+	  269 [label="!(Variable[\"canal.roy_pilehub_reached\"])", shape=diamond];
+	  270 [label="Bird's Nest Roy: \"Yes and no. It started when I had a bit of extra cash on me after acquiring the shop. Could do anything I wanted with it. So what *does* a young man do in that situation?\""];
+	  271 [label="You: \"Man, you've really been through the wringer.\""];
+	  272 [label="Bird's Nest Roy: \"Yeah.\" He nods. \"It was. Re-spooling isn't that difficult, although I had to mend the tape in a few places.\""];
+	  273 [label="Empathy: There's a 'but', isn't there? There's always a 'but'."];
+	  274 [label="Rhetoric: There's no way to turn this around, I'm afraid."];
+	  275 [label="Bird's Nest Roy: \"A pin from '31 ought to be priced at 3.10 -- but I added another ten cents, just to be nice.\""];
+	  276 [label="Bird's Nest Roy: IsKimHere()"];
+	  277 [label="IsKimHere()", shape=diamond];
+	  278 [label="!(IsKimHere())", shape=diamond];
+	  279 [label="You: \"How did you end up running a pawnshop?\""];
+	  280 [label="You: \"Chill out, man -- I'm a chill out cop who just wants some of what you're having.\" (Wink.)"];
+	  281 [label="Bird's Nest Roy: \"I lived by the river since I was a small boy. The Esperance... didn't have the heart to let it all go to shit without trying to *do* something, to help out.\""];
+	  282 [label="Kim Kitsuragi: \"That sure narrows down our list of suspects.\""];
+	  283 [label="You: \"I don't have anything to sell at the moment.\""];
+	  284 [label="Bird's Nest Roy: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  285 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  286 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  287 [label="Kim Kitsuragi: \"But here's the thing, detective. *We're* the proper channels. Doing our work, right here on the ground, is how we'll solve this case. There's no need to bring the Coalition into this.\""];
+	  288 [label="omissionhub"];
+	  289 [label="Bird's Nest Roy: The light swirls in his face and glasses. He doesn't know what to say either."];
+	  290 [label="Bird's Nest Roy: \"What should I have *for* it?\""];
+	  291 [label="Bird's Nest Roy: Variable[\"whirling.garte_debt_drinks_down\"]"];
+	  292 [label="Variable[\"whirling.garte_debt_drinks_down\"]", shape=diamond];
+	  293 [label="!(Variable[\"whirling.garte_debt_drinks_down\"])", shape=diamond];
+	  294 [label="Bird's Nest Roy: He slowly finishes his thought: \"...but I'm not some Mr. Fixit, I'm a pawnbroker. If you want to pawn the tape, sure. Although it looks pretty... worthless.\""];
+	  295 [label="You: \"Wait, but you tinker with film tapes all the time. Isn't that the same?\""];
+	  296 [label="Bird's Nest Roy: \"No, it's different... those film tapes actually *mean* something to me, but this is just a worthless bundle of old tape.\""];
+	  297 [label="Bird's Nest Roy: \"Sure...\" he mumbles as his eyes once again start following the light show around the pawnshop."];
+	  298 [label="dawnhub"];
+	  299 [label="You: \"Well, someone has to.\""];
+	  300 [label="Bird's Nest Roy: \"In its purest form. Now, what can I do for you?\""];
+	  301 [label="sellarmourhub"];
+	  302 [label="Bird's Nest Roy: Variable[\"canal.roy_sell_clothes_armour\"]"];
+	  303 [label="Variable[\"canal.roy_sell_clothes_armour\"]", shape=diamond];
+	  304 [label="!(Variable[\"canal.roy_sell_clothes_armour\"])", shape=diamond];
+	  305 [label="Jump to: [salehub]"];
+	  306 [label="You: \"Spin that bird song!\""];
+	  307 [label="Bird's Nest Roy: \"A tape? We have boomboxes for sale that will play it. Check the shelves.\""];
+	  308 [label="Bird's Nest Roy: Variable[\"canal.boombox_mainhub_reached\"] == false  and  Variable[\"TASK.listen_to_merc_tape_done\"] == false"];
+	  309 [label="Variable[\"canal.boombox_mainhub_reached\"] == false  and  Variable[\"TASK.listen_to_merc_tape_done\"] == false", shape=diamond];
+	  310 [label="!(Variable[\"canal.boombox_mainhub_reached\"] == false  and  Variable[\"TASK.listen_to_merc_tape_done\"] == false)", shape=diamond];
+	  312 [label="Rhetoric: He won't be your narc -- but he won't be thrilled about this either."];
+	  313 [label="radioreactionhub"];
+	  314 [label="stocks hub"];
+	  315 [label="Bird's Nest Roy: He studies the pin carefully, rolling it around in his palm. \"Saint-Batiste Summer Dinghy Races '31. What a pleasant time *that* was.\""];
+	  316 [label="Bird's Nest Roy: \"Have you tried it before?\""];
+	  317 [label="Bird's Nest Roy: \"Maybe. Shady looking guys came in here yesterday, looking like they'd just taken off their Wild Pines overalls. They asked if I have a police weapon to sell. I told them I already sold it.\""];
+	  318 [label="Bird's Nest Roy: He frowns. \"Pyrholidon is just something I... you know, since the People's Pile disaster.\" He coughs, as if to mark his words."];
+	  319 [label="salehub"];
+	  320 [label="Kim Kitsuragi: \"It's possible in these parts of town. We ought to find her and discourage her from taking justice into her own hands.\" He looks around, worried."];
+	  321 [label="You: \"The People's Pile? What's that?\""];
+	  322 [label="You: \"What was I like?\""];
+	  323 [label="Jump to: [gunhub]"];
+	  324 [label="Jump to: [peoplespilehub]"];
+	  325 [label="Suggestion: It's almost like he's worried for you."];
+	  326 [label="Electrochemistry: Yes, darling, that's the Coalition Government ordained Pyrholidon -- straight into your gut!"];
+	  327 [label="You: (Point at his clothes.) \"Say, what's with the triangles on your vest?\""];
+	  328 [label="You: \"I'd like to buy back the commemorative pin I sold.\""];
+	  329 [label="Half Light: Poor apes on a stupid ball, with never enough money to do anything remarkable."];
+	  330 [label="You: (Nod.) \"Quite the collection indeed.\""];
+	  331 [label="You: \"Get to the point. Do you have any recordings now?\""];
+	  332 [label="Bird's Nest Roy: \"This was before... you know. Lost touch with them after all of that.\""];
+	  333 [label="Bird's Nest Roy: \"Unfortunately, I don't have any recordings from my... old life. None at all! But I do have a tape with some ultrasonic sounds that *might* be what you're looking for.\" He starts rummaging through some tapes behind the counter."];
+	  334 [label="Bird's Nest Roy: He looks at you oddly. \"Alright,\" he says, putting the tapes back reluctantly."];
+	  335 [label="Bird's Nest Roy: \"Gulls and skuas. But shhhh.\" He raises a pointer finger and inclines his head toward the speakers. A new, very high-pitched, shivering sound emerges amidst the others."];
+	  336 [label="Bird's Nest Roy: \"And skuas. But shhhh.\" He raises a pointer finger and inclines his head toward the speakers. A new, high-pitched, shivering sound."];
+	  337 [label="Bird's Nest Roy: \"I do appreciate it.\""];
+	  338 [label="You: \"No, this is my thing.\" (Keep holding the flashlight.)"];
+	  339 [label="Jump to: [peoplespilehub]"];
+	  340 [label="postreactionhub"];
+	  341 [label="Electrochemistry: Shades here is certainly junked up enough to fit in with the big dicks swinging wild and free across the river."];
+	  342 [label="Interfacing: There's much to be learned in this kind of rewiring job. You could steal its secrets and make a whole line of modified street tech to sell to the public."];
+	  343 [label="Suggestion: That didn't work? He must have sunk pretty low."];
+	  344 [label="You: \"How did you get into debt?\""];
+	  345 [label="Bird's Nest Roy: \"Yeah. It's surprising how haggard years and years of stress can make you. But that's why it's one of the biggest killers in the world, I guess.\""];
+	  346 [label="Empathy: And now he needs it just to exist..."];
+	  347 [label="Bird's Nest Roy: Variable[\"TASK.visit_nightclub\"]"];
+	  348 [label="Variable[\"TASK.visit_nightclub\"]", shape=diamond];
+	  349 [label="!(Variable[\"TASK.visit_nightclub\"])", shape=diamond];
+	  350 [label="Bird's Nest Roy: \"Here you go, officer.\" He hands you the pin. \"Anything else I can do for you today?\""];
+	  351 [label="Bird's Nest Roy: Variable[\"canal.roy_intro_done\"]"];
+	  352 [label="Variable[\"canal.roy_intro_done\"]", shape=diamond];
+	  353 [label="!(Variable[\"canal.roy_intro_done\"])", shape=diamond];
+	  354 [label="You: \"Thank you for telling me.\" (Conclude.)"];
+	  355 [label="Kim Kitsuragi: \"You've surprised me more than once during the course of our investigation, but I have to say it still seems like a *remote* scenario.\" He shrugs."];
+	  356 [label="You: \"I think I just need a break from our main case for a bit.\""];
+	  357 [label="Bird's Nest Roy: \"Fifteen reál.\""];
+	  358 [label="Bird's Nest Roy: He marvels at the cobalt shimmer, and nods: \"Yes, these are very, very good. Did you defraud some foreign prince for them? Jump a Mesque banger? No matter... I'll give you 200 reál.\""];
+	  359 [label="You: \"Well, thanks for the help.\" (Proceed; take the repaired tape.)"];
+	  360 [label="Bird's Nest Roy: Variable[\"canal.roy_comp_intro1\"]"];
+	  361 [label="Variable[\"canal.roy_comp_intro1\"]", shape=diamond];
+	  362 [label="!(Variable[\"canal.roy_comp_intro1\"])", shape=diamond];
+	  363 [label="Kim Kitsuragi: \"Do we really have time for this?\" the lieutenant whispers to you."];
+	  364 [label="Inland Empire: There's a growing sense of dread: the sound is coming from inside you but also surrounding you. It feels as though someone is standing just outside your range of vision and watching you, doing this to you..."];
+	  365 [label="Half Light: Not good, not good, you're about to start suffocating, you have to stop this..."];
+	  366 [label="You: \"I'm looking for something that plays a tape. For police business.\""];
+	  367 [label="Bird's Nest Roy: \"Officer, the flashlight please.\""];
+	  368 [label="Bird's Nest Roy: \"If you don't mind, please put the flashlight away. Some of us have photonic sensitivities.\""];
+	  369 [label="You: \"I'm gonna shop around a bit. I might be back later.\""];
+	  370 [label="Bird's Nest Roy: \"Right.\" He nods."];
+	  371 [label="Bird's Nest Roy: Variable[\"canal.roy_debt_known\"]"];
+	  372 [label="Variable[\"canal.roy_debt_known\"]", shape=diamond];
+	  373 [label="!(Variable[\"canal.roy_debt_known\"])", shape=diamond];
+	  374 [label="Savoir Faire: It's up to you. If you think it's got ROI potential then go ahead. Just bear in mind that these shares are developing into a fortune without you having to do anything."];
+	  375 [label="You: \"That must have taken its toll on you.\""];
+	  376 [label="Bird's Nest Roy: Variable[\"canal.roy_pilehub_reached\"]"];
+	  377 [label="Variable[\"canal.roy_pilehub_reached\"]", shape=diamond];
+	  378 [label="!(Variable[\"canal.roy_pilehub_reached\"])", shape=diamond];
+	  379 [label="Bird's Nest Roy: \"It helped but it was another monthly outgoing... still is. It would have been fine but I was naive back then. Didn't think I'd ever run out of money...\""];
+	  380 [label="Bird's Nest Roy: \"A friend of mine knew of a way to deal with that. That's when I started riding the pyro, as they say. It helped -- a lot, actually. But it was another monthly outgoing... still is.\""];
+	  381 [label="Jump to: [stocks hub]"];
+	  382 [label="Bird's Nest Roy: He thinks for a moment, then nods. \"Sure, I can keep it behind the counter for a week -- but only if you pawn it right now.\""];
+	  383 [label="pin hub"];
+	  384 [label="Bird's Nest Roy: \"Someone else came here earlier today asking the same question -- I promptly sold her the gun you pawned a couple days back.\""];
+	  385 [label="Bird's Nest Roy: \"They went their way. It was a trip, but you know. All sorts of people come here, asking for all sorts of things.\""];
+	  386 [label="You: \"Is it just me, or is it really warm in here?\" (Look around.)"];
+	  387 [label="You: (Get straight to the point.) \"So, where does a man get Pyrholidon these days?\""];
+	  388 [label="Bird's Nest Roy: He takes a step back, studying you. \"How would I know?\""];
+	  389 [label="You: \"It's pretty obvious that you're under the influence, sir.\""];
+	  390 [label="Bird's Nest Roy: He shrugs. \"I like theory more than story. Outward movement, not vortices.\""];
+	  391 [label="You: \"At least now I know how I lost my sidearm. Let's talk about something else.\" (Conclude.)"];
+	  392 [label="You: \"She must be one of my adoring fans. Just wanted to feel closer to me, you know.\""];
+	  393 [label="Kim Kitsuragi: \"Let me make a prediction, detective. You are not going to see the inside of a Coalition warship anytime soon.\""];
+	  394 [label="Kim Kitsuragi: The lieutenant looks from you to Roy and then back to you. It's clear that he hopes this tableau might still turn out to be a bad dream -- it's not, though."];
+	  395 [label="You: \"I didn't mean to offend you.\" (Drop the subject -- you don't want drugs.)"];
+	  396 [label="Bird's Nest Roy: \"Every day?\" He tilts his head, studying you, then nods. \"You look the part.\""];
+	  397 [label="Empathy: 'This mess' -- he means *your* mess."];
+	  398 [label="Bird's Nest Roy: \"But I bowed out at some point. I prefer to watch from afar while the Big Wigs come and go.\""];
+	  399 [label="You: Buy the pin."];
+	  400 [label="You: \"You do know that it's not really a 'fine night'? The weather is terrible.\""];
+	  401 [label="You: \"Early bird gets the worm, huh?\""];
+	  402 [label="You: \"Who are your customers usually?\""];
+	  403 [label="Bird's Nest Roy: Variable[\"plaza.tribunal_shoulder_wound_suffered\"]"];
+	  404 [label="Variable[\"plaza.tribunal_shoulder_wound_suffered\"]", shape=diamond];
+	  405 [label="!(Variable[\"plaza.tribunal_shoulder_wound_suffered\"])", shape=diamond];
+	  406 [label="Bird's Nest Roy: \"Besides, this gear costs a fortune -- there's no one in Martinaise with that kind of money.\""];
+	  407 [label="Bird's Nest Roy: He nods to you reassuringly just as more diverse, higher-pitched sounds, some random, some appearing to form patterns, hit your eardrums."];
+	  408 [label="Bird's Nest Roy: \"Yeah, we still have those boomboxes on the shelves.\""];
+	  409 [label="Jump to: [peoplespilehub]"];
+	  410 [label="Rhetoric: You have absolutely no idea what *aphotic paths* are, but the tattoos on the man are not that."];
+	  411 [label="Logic: A needle in a haystack. There is nothing you can do it about it now. You'll just have to hope you luck upon her somehow."];
+	  412 [label="Bird's Nest Roy: \"A transceiver, is it? Yeah, we should have something to do the trick...\""];
+	  413 [label="Interfacing: In other words, it'll put even the lieutenant's beloved DynaWave to shame."];
+	  414 [label="You: \"Sounds perfect!\""];
+	  415 [label="You: \"What's wrong with your shop? I like it in here.\""];
+	  416 [label="Bird's Nest Roy: Variable[\"canal.roy_electro_white_check\"]"];
+	  417 [label="Variable[\"canal.roy_electro_white_check\"]", shape=diamond];
+	  418 [label="!(Variable[\"canal.roy_electro_white_check\"])", shape=diamond];
+	  419 [label="Savoir Faire: Sure it does. Not saying you should definitely *not* get it. But let's think about what to do with it first. Any ideas?"];
+	  420 [label="You: \"I met some young enthusiasts down the coast. And they play this weird neo-disco music...\""];
+	  421 [label="You: (Look at the clock.) \"Wait, this took more than just 'a few moments'. That was at least fifteen minutes!\""];
+	  422 [label="You: \"3.20? Hey, that's a rip-off!\""];
+	  423 [label="You: \"Have people from Evrart Claire's Union come here to track that gun?\""];
+	  424 [label="Bird's Nest Roy: \"Sure, man.\""];
+	  425 [label="Bird's Nest Roy: \"Here you go, man.\" He presents a large cap-shaped object on the palm of his hand. Very odd-looking..."];
+	  426 [label="Electrochemistry: Nope, still no clue. You obviously haven't been doing enough drugs lately."];
+	  427 [label="Bird's Nest Roy: \"The clean-up happened fifteen years ago. I was young then. Later my second aunt died, left me this shack and the assorted junk in it.\""];
+	  428 [label="Kim Kitsuragi: \"In that case, she'll be happy to get a visit from us. *If* we can find her...\" He looks around, worried."];
+	  429 [label="Jump to: [gunhub]"];
+	  430 [label="Bird's Nest Roy: \"My apologies, officer, but I have no idea where she was coming from or where she went.\""];
+	  431 [label="You: \"A vortex? Sounds fascinating.\""];
+	  432 [label="You: \"I'd like to sell my clothes.\""];
+	  433 [label="Bird's Nest Roy: \"I doubt it, but I can try to answer any questions you may have.\""];
+	  434 [label="Kim Kitsuragi: \"To be perfectly frank, I have my reservations about this whole antenna scheme. But who knows? We may yet be surprised.\""];
+	  435 [label="Bird's Nest Roy: He looks away. \"You weren't quite yourself, officer.\""];
+	  436 [label="Bird's Nest Roy: \"No apologies necessary, officer.\""];
+	  437 [label="Volition: With Kim here too?! That just sounded really, really bad."];
+	  438 [label="Bird's Nest Roy: IsKimHere()"];
+	  439 [label="IsKimHere()", shape=diamond];
+	  440 [label="!(IsKimHere())", shape=diamond];
+	  441 [label="You: \"I ride the *pyrho* every day.\""];
+	  442 [label="Kim Kitsuragi: His forehead creases. \"Do you think it may have been... Jacob Irw who drove over your roof?\""];
+	  443 [label="Bird's Nest Roy: \"The corpse behind the hostel, I assume...\" He looks into the swirling lights, then to you: \"I don't have a truck with a mounted platform or anything of that sort myself...\""];
+	  444 [label="Kim Kitsuragi: \"Here's the 60 reál you need for your bill. Do *not* waste it.\" The rest goes in his pocket."];
+	  445 [label="You: \"Wait... what do you have against Wild Pines?\""];
+	  446 [label="lets_try_to_hub"];
+	  447 [label="Bird's Nest Roy: \"I haven't had any problems myself... though some of my customers have complained about inconsistent law enforcement.\""];
+	  448 [label="Bird's Nest Roy: \"The Col Do Ma Ma Daqua?\" He looks at you with astonishment. \"Sorry, I would never have guessed that you were that interested in ultrasonic sounds... or *birds*, for that matter.\""];
+	  449 [label="Bird's Nest Roy: Variable[\"canal.roy_pilehub_reached\"]"];
+	  450 [label="Variable[\"canal.roy_pilehub_reached\"]", shape=diamond];
+	  451 [label="!(Variable[\"canal.roy_pilehub_reached\"])", shape=diamond];
+	  452 [label="Bird's Nest Roy: Variable[\"TASK.locate_ruby_on_the_coast_done\"]  and  IsKimHere()"];
+	  453 [label="Variable[\"TASK.locate_ruby_on_the_coast_done\"]  and  IsKimHere()", shape=diamond];
+	  454 [label="!(Variable[\"TASK.locate_ruby_on_the_coast_done\"]  and  IsKimHere())", shape=diamond];
+	  455 [label="You: \"What's that?\""];
+	  456 [label="Bird's Nest Roy: Variable[\"canal.roy_investigation_evrart_comp\"] == true"];
+	  457 [label="Variable[\"canal.roy_investigation_evrart_comp\"] == true", shape=diamond];
+	  458 [label="!(Variable[\"canal.roy_investigation_evrart_comp\"] == true)", shape=diamond];
+	  459 [label="Bird's Nest Roy: \"Of course. It's in working order still, isn't it? Just pick your tape and set it spinning. It all starts with the tape.\""];
+	  460 [label="Bird's Nest Roy: Variable[\"canal.roy_investigation_evrart_inland\"]"];
+	  461 [label="Variable[\"canal.roy_investigation_evrart_inland\"]", shape=diamond];
+	  462 [label="!(Variable[\"canal.roy_investigation_evrart_inland\"])", shape=diamond];
+	  463 [label="Bird's Nest Roy: \"Yes, it was all very strange. That forewoman was... more pleasant than Evrart.\" He shrugs. \"But I guess it's all the same in the end...\""];
+	  464 [label="Logic: Looking at his wares, talking to him -- that might give you more clues."];
+	  465 [label="Esprit de Corps: ...go ahead then, he thinks. As long as you can walk straight, I don't care."];
+	  466 [label="Bird's Nest Roy: \"A bunch of poor people built themselves a primitive nuclear reactor, hoping for the best. What do you think is going to happen?\""];
+	  467 [label="You: \"I'm back for the transceiver. Is it still available?\""];
+	  468 [label="Bird's Nest Roy: He produces a machine encased in a blue bakelite shell, its black face covered in an assortment of pearl-topped knobs and dials."];
+	  469 [label="Bird's Nest Roy: Variable[\"ice.kim_challenge_accepted\"]"];
+	  470 [label="Variable[\"ice.kim_challenge_accepted\"]", shape=diamond];
+	  471 [label="!(Variable[\"ice.kim_challenge_accepted\"])", shape=diamond];
+	  472 [label="Jump to: [roymainhub]"];
+	  473 [label="Savoir Faire: Oh, he's *totally* jealous. He can barely hold it in!"];
+	  474 [label="Bird's Nest Roy: Variable[\"canal.roy_pilehub_reached\"]"];
+	  475 [label="Variable[\"canal.roy_pilehub_reached\"]", shape=diamond];
+	  476 [label="!(Variable[\"canal.roy_pilehub_reached\"])", shape=diamond];
+	  477 [label="You: \"No, that's the thing -- you can't believe how unbelievably thin the beat is. There's nothing to it, no bass! It just goes *bzoot-bzoot-bzoot*. But this tape could make it *hard core*."];
+	  478 [label="Bird's Nest Roy: \"Yes! Fortunately, I still have it. 3.30 and it's yours.\""];
+	  479 [label="Bird's Nest Roy: \"Yes, you did, but this is how pawnshops make profit...\" He tilts his head, waiting. \"So, do you want it or not?\""];
+	  480 [label="You: \"I wanted to ask about my, uh... missing gun. Again.\""];
+	  481 [label="You: \"Do you know anything about the traffic menace on the loose?\""];
+	  482 [label="You: Is Roy high -- and if yes, then what is he on?"];
+	  483 [label="You: Variable[\"canal.roy_electro_white_check\"]"];
+	  484 [label="Variable[\"canal.roy_electro_white_check\"]", shape=diamond];
+	  485 [label="!(Variable[\"canal.roy_electro_white_check\"])", shape=diamond];
+	  486 [label="You: \"There is only one explanation. She must be one of my rabid fans.\""];
+	  487 [label="Bird's Nest Roy: He points at the white triangle on his orange safety jacket. \"We were an all-volunteer force, self-organized. Tried to help fire brigades contain the spill.\""];
+	  488 [label="You: \"Know anything about the recent hanging?\""];
+	  489 [label="Bird's Nest Roy: \"Oh... no, I don't like those kinds of objects. No sale.\" He barely even looks at it."];
+	  490 [label="Empathy: He's not telling you the whole story. It seems he's trying to spare you."];
+	  491 [label="You: \"Do you know what the tattoos mean?\""];
+	  492 [label="Jump to: [roymainhub]"];
+	  493 [label="Jump to: [roymainhub]"];
+	  494 [label="Bird's Nest Roy: \"Jacob Irw? The great TipTop champion? Yes, yes...\""];
+	  495 [label="Bird's Nest Roy: \"Hello again. How can I help you?\""];
+	  496 [label="Bird's Nest Roy: You take some time to look around the store... The play of visuals all around the pawnshop is mesmerizing. Suddenly, Roy turns back to you with a reel of tape in his hand and coughs."];
+	  497 [label="Bird's Nest Roy: \"It keeps me entertained,\" he responds, unimpressed with your critique."];
+	  498 [label="You: \"Isn't being forced to get up for work at dawn a little inhumane?\""];
+	  499 [label="Bird's Nest Roy: \"Once knew a group of young musicians who decided they didn't want to play music anymore and started looking for all kinds of interesting sounds instead...\""];
+	  500 [label="You: \"Nah, that's okay. It's just that I heard the Col Do Ma Ma Daqua outside the Whirling, and I wanted to make sure I wasn't the only one... Let's talk about something else now.\""];
+	  501 [label="Bird's Nest Roy: He sighs. \"Tiphaine Holly, the previous head of the Union, was rather *more* pleasant. Some of us around here... well, we've never understood why she didn't run for a second term. Or where she went after withdrawing from politics. It was all very strange.\""];
+	  502 [label="Variable[\"canal.roy_flashlight_hub_seen\"]"];
+	  503 [label="Variable[\"canal.roy_flashlight_hub_seen\"]", shape=diamond];
+	  504 [label="!(Variable[\"canal.roy_flashlight_hub_seen\"])", shape=diamond];
+	  505 [label="Bird's Nest Roy: \"A bad idea. Some poor leftists built a particle decay generator in hopes of bringing affordable electricity to under-served communities. It malfunctioned. Radioactive waste everywhere, probably some of it in *you*, too.\""];
+	  506 [label="Interfacing: Gone forever..."];
+	  507 [label="Composure: Very *normal* behaviour. You must've been in a great shape."];
+	  508 [label="Bird's Nest Roy: IsKimHere()"];
+	  509 [label="IsKimHere()", shape=diamond];
+	  510 [label="!(IsKimHere())", shape=diamond];
+	  511 [label="Jump to: [kim transceiver hub]"];
+	  512 [label="Bird's Nest Roy: The bric-à-brac man looks at you from behind two layers of polished glass. It is nearly impossible to read any emotion. He sways slightly and itches his cheek."];
+	  513 [label="Bird's Nest Roy: \"I'd be glad to trade for your shares. Let's stick to that.\""];
+	  514 [label="Bird's Nest Roy: \"I sure as hell didn't know. So I pumped it into charities to help the less fortunate. I had to do something... for them, but also for myself.\""];
+	  515 [label="Bird's Nest Roy: \"A friend of mine knew of a way to deal with that. That's when I started riding the pyro, as they say. That did help -- a lot, actually. But it was another monthly outgoing... still is.\""];
+	  516 [label="You: \"Sounds like you've had it hard.\""];
+	  517 [label="You: \"I met some young ravers near the place. They want to turn the church into a nightclub and play some weird neo-disco beats there. I promised to help them with that.\""];
+	  518 [label="You: \"But?\""];
+	  519 [label="Bird's Nest Roy: \"Sure thing. So, do you want to sell anything?\""];
+	  520 [label="Jump to: [salehub]"];
+	  521 [label="Empathy: Miraculously, his face does not reveal what's happening inside."];
+	  522 [label="Kim Kitsuragi: \"Yes, we'd like to sell these hubcaps,\" the lieutenant steps in and hands him the spinners."];
+	  523 [label="Bird's Nest Roy: Variable[\"canal.roy_pilehub_reached\"]"];
+	  524 [label="Variable[\"canal.roy_pilehub_reached\"]", shape=diamond];
+	  525 [label="!(Variable[\"canal.roy_pilehub_reached\"])", shape=diamond];
+	  526 [label="Bird's Nest Roy: \"Truth be told, she was terrifying.\""];
+	  527 [label="Kim Kitsuragi: \"Right, so let me get this right,\" the lieutenant turns to you, \"you sold your sidearm, issued by the Citizens Militia, and now a civilian is running around the streets of Martinaise with it.\""];
+	  528 [label="Bird's Nest Roy: \"Oh... I certainly hope not.\""];
+	  529 [label="Drama: He considered it, but his priority was to get rid of the gun as quickly as possible -- albeit for a price."];
+	  530 [label="Suggestion: He's trying to ingratiate himself with you by anticipating your questions. He knows he shouldn't have sold the gun."];
+	  531 [label="Bird's Nest Roy: \"Anything else you're thinking of selling?\""];
+	  532 [label="You: He probably has a good reason for that. (Drop the matter.)"];
+	  533 [label="Bird's Nest Roy: \"When I said that I don't normally buy firearms, you put the gun barrel in your mouth and sort of... sucked on it. Then I agreed to take it.\""];
+	  534 [label="Encyclopedia: A primitive nuclear reactor, also called a *pile*."];
+	  535 [label="Untitled hub (05)"];
+	  536 [label="finalizethething"];
+	  537 [label="Bird's Nest Roy: \"So it goes.\" The pawnbroker nods gravely, then shrugs. \"Now, what can I do for you?\" he asks."];
+	  538 [label="Bird's Nest Roy: \"Greetings on this fine night. What brings you here?\""];
+	  539 [label="Bird's Nest Roy: \"The pawnshop is always open.\""];
+	  540 [label="Bird's Nest Roy: IsHourBetween(5,  9)"];
+	  541 [label="IsHourBetween(5,  9)", shape=diamond];
+	  542 [label="!(IsHourBetween(5,  9))", shape=diamond];
+	  543 [label="Bird's Nest Roy: \"Top of the morning to you. How may I be of service?\""];
+	  544 [label="You: \"I really should have killed myself. Maybe I still will one of these days.\""];
+	  545 [label="You: \"Well, there are these gauntlets...\" (Show him.)"];
+	  546 [label="Bird's Nest Roy: \"Cool or not... One of them was obsessed with recording the Col Do Ma Ma Daqua -- and he was one of those passionate people who know a lot about all kinds of strange things, so he got the rest of us to join in his search...\""];
+	  547 [label="You: \"The boombox I bought... it should play this tape, right?"];
+	  548 [label="Bird's Nest Roy: Variable[\"canal.roy_pawn_menu_tutorial\"]"];
+	  549 [label="Variable[\"canal.roy_pawn_menu_tutorial\"]", shape=diamond];
+	  550 [label="!(Variable[\"canal.roy_pawn_menu_tutorial\"])", shape=diamond];
+	  551 [label="Bird's Nest Roy: Variable[\"TASK.find_your_sidearm_done\"]"];
+	  552 [label="Variable[\"TASK.find_your_sidearm_done\"]", shape=diamond];
+	  553 [label="!(Variable[\"TASK.find_your_sidearm_done\"])", shape=diamond];
+	  554 [label="You: \"Sounds expensive.\""];
+	  555 [label="Bird's Nest Roy: \"What I can do is trade that modified street light over there for some of your shares. It's the most expensive item in here -- the finest in interior lighting.\""];
+	  556 [label="You: \"Onwards and upwards.\" (Give him a thumbs up.)"];
+	  557 [label="You: \"Is there something you're not telling me?\""];
+	  558 [label="You: Let him hide."];
+	  559 [label="Bird's Nest Roy: Variable[\"TASK.establish_church_dance_club\"]"];
+	  560 [label="Variable[\"TASK.establish_church_dance_club\"]", shape=diamond];
+	  561 [label="!(Variable[\"TASK.establish_church_dance_club\"])", shape=diamond];
+	  562 [label="Composure: He's well composed, but underneath it you sense *psychedelic* processes, bubbling. Some kind of drug maybe?"];
+	  563 [label="Empathy: There's a note of indignation in his voice. Interesting."];
+	  564 [label="You: \"There's something I'd like to sell.\""];
+	  565 [label="Bird's Nest Roy: \"Now that I think about it, I do remember hearing a thunderous noise the other night -- some kind of powerful electric vortex hitting the shop and then moving on...\""];
+	  566 [label="Kim Kitsuragi: \"You're right that she could cast aspersions on the force. We have to find her.\" He looks around, worried."];
+	  567 [label="Bird's Nest Roy: \"I wish I could help with that, officer, but I don't know where she was from or where she was going.\""];
+	  568 [label="You: \"Does that mean you don't have any idea who the driver was?\""];
+	  569 [label="You: \"Happens to the best of us, I guess.\""];
+	  570 [label="You: Why did it fail? (Conclude.)"];
+	  571 [label="Bird's Nest Roy: He frowns. \"Aphotic paths? Counter-radiance networks? Antimagnetism? It's darkness. That's all I know. Sell me something *lighter*.\""];
+	  572 [label="You: Wait, why wouldn't I be sure?"];
+	  573 [label="Bird's Nest Roy: He looks down. \"Of course.\""];
+	  574 [label="Kim Kitsuragi: \"Here's the 100 reál you need for your bill. Do *not* waste it.\" The rest goes in his pocket."];
+	  575 [label="You: \"Ever had any dealings with the Union Boss?\""];
+	  576 [label="You: \"I helped them up the bass beat. It's getting pretty *hard core*, but there's something missing. A melody line to complement the beat. I'm feeling this tape might be it.\""];
+	  577 [label="Bird's Nest Roy: \"Yeah, man, no.\" He shakes his head. \"I rather like this place happy too. You know -- where I work. This tape is all I can do for you and your friends' nightclub project.\" He nods at the fixed tape on the counter top."];
+	  578 [label="Bird's Nest Roy: IsKimHere()"];
+	  579 [label="IsKimHere()", shape=diamond];
+	  580 [label="!(IsKimHere())", shape=diamond];
+	  581 [label="Bird's Nest Roy: Variable[\"canal.roy_altgreet_tribunal\"]"];
+	  582 [label="Variable[\"canal.roy_altgreet_tribunal\"]", shape=diamond];
+	  583 [label="!(Variable[\"canal.roy_altgreet_tribunal\"])", shape=diamond];
+	  584 [label="Bird's Nest Roy: IsHourBetween(5,  9)"];
+	  585 [label="IsHourBetween(5,  9)", shape=diamond];
+	  586 [label="!(IsHourBetween(5,  9))", shape=diamond];
+	  587 [label="You: \"Now that the RCM is here -- tell me, have you had any trouble lately?\""];
+	  588 [label="You: \"Yeah, I shouldn't have either.\""];
+	  589 [label="Bird's Nest Roy: \"I'm not purchasing any more clothing at the moment.\" He looks you up and down quickly. \"And certainly not expensive armour that's liable to bring mercenaries to my doorstep.\""];
+	  590 [label="Bird's Nest Roy: He steps back, away from the glass. \"Oh, no, no, no, no. I don't need blood-thirsty mercenaries knocking on my door looking for their missing toys.\""];
+	  591 [label="Bird's Nest Roy: He switches off the tape player. \"You know, now that I've listened to it on these new speakers -- it's *not* the Col Do Ma Ma Daqua. Wrong patterns, wrong... photons. Probably some insect trying to sing higher than its predators can hear. Still -- fascinating, aren't they, early morning sounds?\""];
+	  592 [label="IsKimHere()"];
+	  593 [label="IsKimHere()", shape=diamond];
+	  594 [label="!(IsKimHere())", shape=diamond];
+	  595 [label="You: \"That's the pyrho talking -- there is no flashlight.\""];
+	  596 [label="Horrific Necktie: Your *mother* is a necrotic object. I'm fun. Look at me sparkle in the light of the projector!"];
+	  597 [label="Endurance: Tough son of a gun, this one. Respect."];
+	  598 [label="Kim Kitsuragi: \"A genuine Kristallsprach. This is a connoisseur's model. Good for picking up foreign milieus.\""];
+	  599 [label="Bird's Nest Roy: IsKimHere()"];
+	  600 [label="IsKimHere()", shape=diamond];
+	  601 [label="!(IsKimHere())", shape=diamond];
+	  602 [label="Bird's Nest Roy: He scans the document in your hand. \"This is--\" He's interrupted by a sudden cough. \"I certainly wouldn't pass up the opportunity to acquire something that can make princes out of peons.\""];
+	  603 [label="You: \"What if I endorse your store? Put my official stamp of approval on it?\""];
+	  604 [label="You: \"I understand. It was worth a shot.\""];
+	  605 [label="Savoir Faire: He's right. His customers are desperates, lowlifes, and bored browsers. They don't understand *high culture*. They don't want their purchases to elevate them. They just want some old junk at a bargain price."];
+	  606 [label="Reaction Speed: Something just shuddered up his spine."];
+	  607 [label="Bird's Nest Roy: \"No chance. I've got a better grip on my finances these days. This is a mistake from my younger days that just won't go away.\""];
+	  608 [label="Kim Kitsuragi: The lieutenant steps away, pretending to admire some of the knick-knacks on display. Looks like he doesn't want to get involved..."];
+	  609 [label="Bird's Nest Roy: \"Anyhow, it's yours now...\" He slides the tape closer to you on the counter top."];
+	  610 [label="Bird's Nest Roy: Variable[\"TASK.find_any_info_on_gun\"] == true  and  Variable[\"TASK.find_any_info_on_gun_done\"] == false  and  Variable[\"TASK.find_your_sidearm_done\"] == false"];
+	  611 [label="Variable[\"TASK.find_any_info_on_gun\"] == true  and  Variable[\"TASK.find_any_info_on_gun_done\"] == false  and  Variable[\"TASK.find_your_sidearm_done\"] == false", shape=diamond];
+	  612 [label="!(Variable[\"TASK.find_any_info_on_gun\"] == true  and  Variable[\"TASK.find_any_info_on_gun_done\"] == false  and  Variable[\"TASK.find_your_sidearm_done\"] == false)", shape=diamond];
+	  613 [label="You: \"You gotta help me find her, man.\""];
+	  614 [label="Kim Kitsuragi: \"I'm more interested in *why* you're so fixated on this idea in the first place.\""];
+	  615 [label="Bird's Nest Roy: The pawnbroker turns from you to the lieutenant and back again, a distant look on his face."];
+	  616 [label="Bird's Nest Roy: Variable[\"canal.roy_empathy_omission\"]"];
+	  617 [label="Variable[\"canal.roy_empathy_omission\"]", shape=diamond];
+	  618 [label="!(Variable[\"canal.roy_empathy_omission\"])", shape=diamond];
+	  619 [label="You: \"I feel like there's something you're not telling me.\""];
+	  620 [label="Pain Threshold: You sucked on a gun? Good. Good. Very normal."];
+	  621 [label="You: \"Wait... how much did I sell the gun for?\""];
+	  622 [label="Bird's Nest Roy: \"He's been by the shop a couple of times.\" He gives a lazy half-shrug."];
+	  623 [label="Composure: There was something awfully deliberate about that laziness."];
+	  624 [label="Bird's Nest Roy: He nods reluctantly."];
+	  625 [label="Jump to: [roymainhub]"];
+	  626 [label="You: (Step closer.) \"Sir, could you take off your sunglasses? I'd like to check your eyes.\""];
+	  627 [label="You: \"And did you ever find it?\""];
+	  628 [label="You: \"Hm, that's not very scientific.\""];
+	  629 [label="Bird's Nest Roy: IsKimHere()"];
+	  630 [label="IsKimHere()", shape=diamond];
+	  631 [label="!(IsKimHere())", shape=diamond];
+	  632 [label="Bird's Nest Roy: \"Keep in mind, I have to slow this one down enough to make sounds well over 200 kHz  audible to the human ear... It will be... strange.\" He switches on the tape player. The speakers begin to emit a low hum...."];
+	  633 [label="Bird's Nest Roy: Variable[\"canal.roy_col_do_endurance\"]"];
+	  634 [label="Variable[\"canal.roy_col_do_endurance\"]", shape=diamond];
+	  635 [label="!(Variable[\"canal.roy_col_do_endurance\"])", shape=diamond];
+	  636 [label="Jump to: [salehub]"];
+	  637 [label="You: Buy the highly expensive transceiver."];
+	  638 [label="Interfacing: He's reaching for naked snobbery because he knows you've got him *beat* from a technical angle."];
+	  639 [label="You: \"What can I trade for these shares then? *Everything*?\" (Proceed.)"];
+	  640 [label="Bird's Nest Roy: \"In theory, yes, you probably have enough to afford it all. However, I don't plan on selling up and joining the mastodons of La Delta just yet.\""];
+	  641 [label="You: \"Yeah, okay, that seems like it has potential.\""];
+	  642 [label="Bird's Nest Roy: \"Take a closer look. You'll see the quality of the craftsmanship then. Any other questions in the meantime?\""];
+	  643 [label="Jump to: [stocks hub]"];
+	  644 [label="You: \"You're selling it for 700 reál, right?\""];
+	  645 [label="Composure: If there is any struggle in him, he hides it well, just like he does the scarred walls of his shop -- concealed behind stacks of dusty merchandise."];
+	  646 [label="Bird's Nest Roy: \"No offence but I don't think it would do me much good. Nothing to do with you -- it's just my customers tend to be, well... they wouldn't know who you are.\""];
+	  647 [label="Empathy: He was already scarred..."];
+	  648 [label="Bird's Nest Roy: \"Yeah. But that's enough of my sob story. Let's get back to business,\" he says, as if this conversation has changed nothing between you."];
+	  649 [label="Bird's Nest Roy: IsKimHere()"];
+	  650 [label="IsKimHere()", shape=diamond];
+	  651 [label="!(IsKimHere())", shape=diamond];
+	  652 [label="Tutorial Agent: You can sell things from your ITEMS tab for cash -- but be careful: You might wish you had them later."];
+	  653 [label="Bird's Nest Roy: Variable[\"canal.roy_electro_white_check\"]"];
+	  654 [label="Variable[\"canal.roy_electro_white_check\"]", shape=diamond];
+	  655 [label="!(Variable[\"canal.roy_electro_white_check\"])", shape=diamond];
+	  656 [label="You: \"Wait, I *sold* you my gun?\""];
+	  657 [label="Bird's Nest Roy: IsKimHere()"];
+	  658 [label="IsKimHere()", shape=diamond];
+	  659 [label="!(IsKimHere())", shape=diamond];
+	  660 [label="Bird's Nest Roy: Variable[\"reputation.kim\"] > 5"];
+	  661 [label="Variable[\"reputation.kim\"] > 5", shape=diamond];
+	  662 [label="!(Variable[\"reputation.kim\"] > 5)", shape=diamond];
+	  663 [label="You: \"By the way... do you, um, happen to have any *guns*? Like the ones carried by cops?\""];
+	  664 [label="You: Say nothing."];
+	  665 [label="You: Why is it called the *People's* Pile?"];
+	  666 [label="Encyclopedia: An emergency valve defect resulted in steam pressure blowing the turbine, taking the fuel containment vessel up in the explosion. Both the faulty design and lack of finances contributed to the catastrophe."];
+	  667 [label="Jump to: [roymainhub]"];
+	  668 [label="Volition: Because it's an anti-radiation drug and you're a cop, not a post-apocalyptic scavenger?"];
+	  669 [label="You: \"But that is merely our meagre sense experience. There are dark forces at work now that we cannot even envision, much less see.\""];
+	  670 [label="Bird's Nest Roy: \"The dark always has its counterbalance in light. Neither will prevail. The cycle will continue.\" He folds his arms with finality and turns away from you, concentrating once more on his light show."];
+	  671 [label="Bird's Nest Roy: \"I do my best to keep my distance from all manner of butchery. Bad for business, bad for everyone.\""];
+	  672 [label="You: \"Did he buy anything?\""];
+	  673 [label="Bird's Nest Roy: Variable[\"whirling.garte_debt_window_and_drinks_down\"]"];
+	  674 [label="Variable[\"whirling.garte_debt_window_and_drinks_down\"]", shape=diamond];
+	  675 [label="!(Variable[\"whirling.garte_debt_window_and_drinks_down\"])", shape=diamond];
+	  676 [label="You: \"Hmh, maybe you can help me some other way, then.\""];
+	  677 [label="You: \"I'm so glad you're already awake. It's so lonely in this city at this hour!\""];
+	  678 [label="Bird's Nest Roy: \"I see you were wounded in the recent... altercation.\" He nods gravely at your leg. \"A speedy recovery to you, officer.\""];
+	  679 [label="You: \"I've got a helmet.\" (Show him.)"];
+	  680 [label="Untitled hub (05)"];
+	  681 [label="Bird's Nest Roy: \"How interesting! Well, it's been a while since I've gone hunting for the Col Do Ma Ma Daqua...\""];
+	  682 [label="Bird's Nest Roy: The low range of sounds is easier to handle with a focal point, but still troubling. You are mesmerized by the sounds, but also feel nausea welling up as the motif continues, then begins to recede, dissolving in what must be the sound of water lapping at the bank..."];
+	  684 [label="Logic: 'Photonic sensitivity' is not generally acknowledged by the medical establishment."];
+	  685 [label="Kim Kitsuragi: \"I wouldn't like to guess. Your performance so far doesn't exactly inspire confidence, but all sorts of things are possible...\""];
+	  686 [label="You: \"Did it help?\""];
+	  687 [label="Jump to: [gunhub]"];
+	  688 [label="Jump to: [Volition: \"Not so sure about this.\"]"];
+	  689 [label="Empathy: His courtesy is not insincere, but he prefers being alone with his projector, just watching the movement of light across the walls of the shop."];
+	  690 [label="Bird's Nest Roy: \"Let me have a look.\""];
+	  691 [label="Bird's Nest Roy: He tilts his head. \"I try to keep the shop at a comfortable temperature.\""];
+	  692 [label="Bird's Nest Roy: \"Traffic... I'm sorry, officer, but I don't drive.\""];
+	  693 [label="Jump to: [roymainhub]"];
+	  694 [label="You: \"Maybe she's a vigilante. Wants to prove she can patrol the streets more effectively than the Citizens Militia.\""];
+	  695 [label="Empathy: He's doubtful, but doesn't see the point in contradicting a notion that is so dear to you."];
+	  696 [label="Jump to: [gunhub]"];
+	  697 [label="Bird's Nest Roy: He shakes his head slowly."];
+	  698 [label="You: \"To be honest, I mostly just want to ride on Coalition Warship Archer.\""];
+	  699 [label="Jump to: [gunhub]"];
+	  700 [label="Volition: Not so sure about this."];
+	  701 [label="You: \"Actually, I changed my mind. I don't need any Pyrholidon.\" (Refuse to take the pyrholidon for now.)"];
+	  702 [label="Bird's Nest Roy: \"Ask around the harbour. There might be some workers there who'd be willing to help.\""];
+	  703 [label="Kim Kitsuragi: \"Here's the 30 reál you need for your bill. Do *not* waste it.\" The rest goes in his pocket."];
+	  704 [label="You: \"I have other questions about this.\""];
+	  705 [label="Bird's Nest Roy: IsKimHere()"];
+	  706 [label="IsKimHere()", shape=diamond];
+	  707 [label="!(IsKimHere())", shape=diamond];
+	  708 [label="Encyclopedia: The People's Pile was a Type U particle decay generator that failed immediately after entering service, releasing radioactive waste into River Esperance."];
+	  709 [label="Esprit de Corps: Those triangle patches on his vest... you have a feeling they *mean* something. Like they're similar to the halogen rectangle on your jacket."];
+	  710 [label="Bird's Nest Roy: \"What can I do for you?\" he asks."];
+	  711 [label="Bird's Nest Roy: IsHourBetween(22,  5)"];
+	  712 [label="IsHourBetween(22,  5)", shape=diamond];
+	  713 [label="!(IsHourBetween(22,  5))", shape=diamond];
+	  714 [label="You: \"I've got these sabatons.\" (Show him.)"];
+	  715 [label="Bird's Nest Roy: CheckEquipped(\"shoes_t500\")  or  CheckEquipped(\"shirt_t500\")  or  CheckEquipped(\"hat_t500\")  or  CheckEquipped(\"gloves_t500\")"];
+	  716 [label="CheckEquipped(\"shoes_t500\")  or  CheckEquipped(\"shirt_t500\")  or  CheckEquipped(\"hat_t500\")  or  CheckEquipped(\"gloves_t500\")", shape=diamond];
+	  717 [label="!(CheckEquipped(\"shoes_t500\")  or  CheckEquipped(\"shirt_t500\")  or  CheckEquipped(\"hat_t500\")  or  CheckEquipped(\"gloves_t500\"))", shape=diamond];
+	  718 [label="You: \"I've been really into all kinds of art lately. Experimental things, you know.\""];
+	  719 [label="Bird's Nest Roy: \"That's fair. I just... It's been a long time since my Col Do Ma Ma Daqua hunting days,\" he responds with a thin smile. \"Once knew a group of young musicians who decided they didn't want to play music anymore and started looking for all kinds of interesting sounds instead...\""];
+	  720 [label="Jump to: [roymainhub]"];
+	  721 [label="Jump to: [postreactionhub]"];
+	  722 [label="Bird's Nest Roy: \"Well it's not that Iilmaraan surplus junk, that's for sure. We think 120 reál is more than reasonable.\""];
+	  723 [label="Bird's Nest Roy: \"You won't regret it, officer. Whatever you need, the Model 9 can handle.\""];
+	  724 [label="Bird's Nest Roy: \"Suit yourself. Can't promise this beauty'll be here when you come back, though.\" He gently returns the transceiver to its shelf behind the counter."];
+	  725 [label="You: \"Can't wait to take this baby for a spin.\""];
+	  726 [label="Kim Kitsuragi: \"*You* could reach the Coalition and have your talk about *la responsabilité*... *I* could grow 10 centimetres and become a flanker for the Stormers.\""];
+	  727 [label="You: \"I'm not sure. I'll certainly think about it.\""];
+	  728 [label="Empathy: He's hiding something."];
+	  729 [label="Bird's Nest Roy: He lets out a long sigh. \"I'm in debt, officer. I've felt *stuck* for a long time.\" He looks at the paper in your hand. \"Those stocks -- they could be my way out.\""];
+	  730 [label="Bird's Nest Roy: The bric-à-brac man looks at you from behind two layers of polished glass. It is nearly impossible to read any emotion. He sways slightly and itches his cheek."];
+	  731 [label="Bird's Nest Roy: \"After I acquired the shop I had a bit of extra cash on my hands. Could do anything I wanted with it. So what *does* a young man do in that situation?\""];
+	  732 [label="Bird's Nest Roy: \"For a little while. Being cooped up alone most of the day wasn't healthy for me... just my own head to consort with. But a friend of mine knew of a way to deal with that.\""];
+	  733 [label="Bird's Nest Roy: \"Yes. What about it?\""];
+	  734 [label="You: \"I have this commemorative pin, but before I sell it I have some questions.\" (Show him Lena's pin.)"];
+	  735 [label="You: \"Okay, but can you hold onto it for a few days before putting it up for sale? I promised to give the pin back...\""];
+	  736 [label="Jump to: [roymainhub]"];
+	  737 [label="Bird's Nest Roy: Variable[\"canal.roy_refused_pyrholidon\"]"];
+	  738 [label="Variable[\"canal.roy_refused_pyrholidon\"]", shape=diamond];
+	  739 [label="!(Variable[\"canal.roy_refused_pyrholidon\"])", shape=diamond];
+	  740 [label="Electrochemistry: Feeling warm and enthralled by the movement of light, while the mind continues to race forward? Lucky bastard -- he's probably on Pyrholidon. It's tough to come by on the street."];
+	  741 [label="Bird's Nest Roy: He tenses. \"I hadn't considered that... This is why I don't like to deal with guns.\""];
+	  742 [label="Jump to: [gunhub]"];
+	  743 [label="You: \"The vortex is going to become much bigger -- it is an integral part of how it all ends.\""];
+	  744 [label="Bird's Nest Roy: He looks off to the side, then down at his hands. \"Can't say I'm a huge admirer of Wild Pines, and I certainly wouldn't trust any silver-tongued spokesperson of theirs. Fortunately, I have no reason to get involved.\""];
+	  745 [label="You: \"Have you *met* the Wild Pines rep?\""];
+	  746 [label="Bird's Nest Roy: \"Yeah, I bet they would... all those lights in a massive church hall...\" He stares at the intricate interplay of light and shadow all around him, suddenly moved by the idea."];
+	  747 [label="Bird's Nest Roy: \"I rather like it *here* too, so yeah -- I'm not giving you my projector. This tape is all I can do for you and your friends' nightclub project.\" He nods at the fixed tape on the counter top."];
+	  748 [label="Bird's Nest Roy: \"Is it?\" He turns his head to the right and then to the left, as if looking for non-existent windows. \"Spring is capricious, yes.\""];
+	  749 [label="Bird's Nest Roy: Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  750 [label="Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  751 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  752 [label="You: \"Just look at this awesome cuirass.\" (Show him.)"];
+	  753 [label="Bird's Nest Roy: \"We thought we did! We got together all these recordings of unusual sound patterns, compared them...\" He chuckles. \"Cut them up and combined them into the 'Simfonia Col Do Ma Ma Daqua.'\""];
+	  754 [label="Bird's Nest Roy: As the hum grows louder, modulating, but always unnaturally, uncomfortably low, like it's coming not from the speakers, but also from inside your chest. Breathing is becoming difficult..."];
+	  755 [label="You: \"Seagulls?\""];
+	  756 [label="You: \"Oh right, sorry about that.\""];
+	  757 [label="You: Pyrholidon? What is that?"];
+	  758 [label="Empathy: The windfall is a small consolation."];
+	  759 [label="Bird's Nest Roy: \"Your choice, officer. I can't promise I can hold on to it for much longer, however.\""];
+	  760 [label="Logic: This is a pawn shop... And it *did* feel as if you've met before. Oh god..."];
+	  761 [label="Bird's Nest Roy: \"The Model 9 also comes equipped with a signal purifier to suppress crosstalk, especially good around here with our funky reception.\""];
+	  762 [label="Kim Kitsuragi: \"Not at all, detective. A Kristallsprach is a fine piece of equipment, but I'm quite satisfied with my DynaWave.\""];
+	  763 [label="Jump to: [stocks hub]"];
+	  764 [label="You: \"You want shares off me? I was hoping to get a discount or some freebies.\""];
+	  765 [label="Endurance: Mauled by a nightmare. Bite marks in his bones."];
+	  766 [label="Bird's Nest Roy: \"It helped but it was another monthly outgoing... still is. It would have been fine but I was naive back then. Didn't think I'd ever run out of money...\""];
+	  767 [label="Bird's Nest Roy: Variable[\"TASK.establish_church_dance_club\"]"];
+	  768 [label="Variable[\"TASK.establish_church_dance_club\"]", shape=diamond];
+	  769 [label="!(Variable[\"TASK.establish_church_dance_club\"])", shape=diamond];
+	  770 [label="Bird's Nest Roy: Variable[\"canal.roy_pawn_menu_tutorial\"]"];
+	  771 [label="Variable[\"canal.roy_pawn_menu_tutorial\"]", shape=diamond];
+	  772 [label="!(Variable[\"canal.roy_pawn_menu_tutorial\"])", shape=diamond];
+	  773 [label="Reaction Speed: Wait, then it might be true – Evrart's claims."];
+	  774 [label="Drama: People as oleaginous as Evrart seem like they're lying even when they're really being truthful."];
+	  775 [label="Bird's Nest Roy: \"Someone else came here earlier today asking the same question -- I promptly sold her the gun you pawned a couple days back.\""];
+	  776 [label="You: \"Yet another sign that the end is nigh... It must be destiny that brought me here. Tell me more about this vortex?\""];
+	  777 [label="You: \"You might be able to aid my investigation.\""];
+	  778 [label="You: \"I'm so sorry you had to see me in that state. We don't have to talk about it any further.\""];
+	  779 [label="Bird's Nest Roy: \"It certainly does, especially in Revachol.\""];
+	  780 [label="Jump to: [roymainhub]"];
+	  781 [label="You: \"Care to share your Pyrholidon with me?\""];
+	  782 [label="Bird's Nest Roy: \"I respect your decision, officer. What else can I help you with?\""];
+	  783 [label="Bird's Nest Roy: IsKimHere()"];
+	  784 [label="IsKimHere()", shape=diamond];
+	  785 [label="!(IsKimHere())", shape=diamond];
+	  786 [label="Jump to: [pilehub]"];
+	  787 [label="You: \"Did he discuss union business with you?\""];
+	  788 [label="Bird's Nest Roy: \"He purchased a remarkably garish paperweight the first time he was here... Nothing the second.\""];
+	  789 [label="Kim Kitsuragi: \"So you don't know what kind of arrangement he was talking about?\" The lieutenant studies the pawnbroker suspiciously."];
+	  790 [label="Pain Threshold: He's taking it for mental and emotional, not physical pain these days."];
+	  791 [label="Bird's Nest Roy: Variable[\"whirling.garte_debt_room_down\"]"];
+	  792 [label="Variable[\"whirling.garte_debt_room_down\"]", shape=diamond];
+	  793 [label="!(Variable[\"whirling.garte_debt_room_down\"])", shape=diamond];
+	  794 [label="Bird's Nest Roy: \"Okay, I'll help you out. It's going to take a moment though, so just sit back and relax...\""];
+	  795 [label="Bird's Nest Roy: \"Between you and me,\" he looks you up and down, \"this is why I don't get involved in local politics.\""];
+	  796 [label="nighthub"];
+	  797 [label="You: \"How come you're still open?\""];
+	  798 [label="You: \"This business plan is all over the place. You should specialize, zoom in, recapitalize.\""];
+	  799 [label="You: (Look around.) \"Typical vacuous consumerist objects.\""];
+	  800 [label="You: \"Honestly, I think some of your selections are...\" (Press your finger to your lips) \"...more tasteful than others.\""];
+	  801 [label="Electrochemistry: It feels like he would have accepted the risk if he hoped to profit from it. It's not greed, though. Deep down, he's a gambler -- provided the stakes are sufficiently interesting."];
+	  802 [label="Bird's Nest Roy: \"That really wasn't the point. After the 'Simfonia' we moved onto the sounds of office supplies or something like that... and I doubt any of us would have been any good at pushing papers.\""];
+	  803 [label="Bird's Nest Roy: \"Officer please, I'm serious.\""];
+	  804 [label="Electrochemistry: A drug developed by the military to treat and prevent radiation sickness. It has psychedelic side-effects. *And* it makes your eyes turn yellow!"];
+	  805 [label="Jump to: [roymainhub]"];
+	  806 [label="Half Light: WHAT? *Sold*?!"];
+	  807 [label="Bird's Nest Roy: \"For the moment, yes.\""];
+	  808 [label="Bird's Nest Roy: \"It's about as close to perfection as a transceiver gets. And we're only asking 120 reál for it.\""];
+	  809 [label="You: \"You jealous, Kim?\""];
+	  810 [label="Bird's Nest Roy: \"Nothing's *wrong* with it. The shop suits me fine. It's just...\" He changes tack. \"We all need a bit of luck in our lives, you know? A lottery win.\""];
+	  811 [label="Inland Empire: It's been through a whole *transformation*. There are so many insights to share -- it just needs a medium. Wouldn't the wake-walkers pay to hear the somniloquy of the spirit light?"];
+	  812 [label="Bird's Nest Roy: \"I sure as hell didn't know. All I could think to do was pump it into the relief effort. I had to do *something* after I left the frontlines... for them, but also for myself.\""];
+	  813 [label="Bird's Nest Roy: \"Man, you're really invested in this.\" He looks at the bundle of tape in front of him. It shimmers under the shop's dazzling light show."];
+	  814 [label="You: \"I helped some young ravers turn this place into a nightclub. And they play these weird neo-disco beats there...\""];
+	  815 [label="Empathy: Looks like he really means it."];
+	  816 [label="Kim Kitsuragi: The lieutenant shifts from one foot to another, alert."];
+	  817 [label="Bird's Nest Roy: \"Anything else you're thinking of selling?\" Both the lieutenant and the pawnbroker turn to you."];
+	  818 [label="Bird's Nest Roy: \"She didn't seem like a policeman, although she kept referring to herself as a *Pig*. Which was odd. I found her interest in the gun a bit... obsessive. But I was just happy to get rid of it. And of her.\""];
+	  819 [label="Bird's Nest Roy: CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  820 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  821 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  822 [label="askpyrholidonhub"];
+	  823 [label="You: \"Know anything about the Wild Pines representative that's in town?\""];
+	  824 [label="You: \"Why do I feel like you don't want to talk about him? Are you hiding something?\""];
+	  825 [label="Bird's Nest Roy: IsHourBetween(22,  5)"];
+	  826 [label="IsHourBetween(22,  5)", shape=diamond];
+	  827 [label="!(IsHourBetween(22,  5))", shape=diamond];
+	  828 [label="You: (Shake your head.) \"It's shameful, how insufficient the police presence is in these parts!\""];
+	  829 [label="Bird's Nest Roy: \"It keeps me entertained.\" His attention is drawn once more to the play of light and shadow on the walls behind you."];
+	  830 [label="Bird's Nest Roy: \"Why on earth?\" He staggers away from the glass, but quickly recomposes himself. \"These are prescription. I can't really see without them.\""];
+	  831 [label="You: \"Yes, it's absolutely necessary for my research.\""];
+	  832 [label="Bird's Nest Roy: He dusts off a case, then takes out the tape and places it on the tape player. \"This recording comes from down the coast... Wasn't looking to record anything specific -- just left a recording device there one morning.\""];
+	  0 -> 1
+	  1 -> 176
+	  1 -> 351
+	  2 -> 694
+	  3 -> 52
+	  4 -> 536
+	  5 -> 598
+	  6 -> 7
+	  7 -> 54
+	  7 -> 810
+	  7 -> 227
+	  7 -> 726
+	  8 -> 9
+	  8 -> 10
+	  9 -> 660
+	  10 -> 685
+	  11 -> 262
+	  12 -> 643
+	  13 -> 419
+	  14 -> 379
+	  15 -> 115
+	  16 -> 747
+	  17 -> 519
+	  18 -> 19
+	  18 -> 20
+	  19 -> 522
+	  20 -> 691
+	  21 -> 28
+	  22 -> 24
+	  22 -> 23
+	  23 -> 426
+	  24 -> 25
+	  25 -> 464
+	  26 -> 196
+	  27 -> 221
+	  28 -> 195
+	  28 -> 198
+	  28 -> 391
+	  28 -> 423
+	  28 -> 237
+	  28 -> 656
+	  29 -> 30
+	  29 -> 31
+	  30 -> 319
+	  31 -> 96
+	  32 -> 287
+	  33 -> 114
+	  34 -> 104
+	  35 -> 218
+	  36 -> 158
+	  37 -> 38
+	  37 -> 39
+	  38 -> 704
+	  39 -> 673
+	  40 -> 138
+	  40 -> 676
+	  40 -> 295
+	  41 -> 531
+	  42 -> 122
+	  43 -> 562
+	  44 -> 45
+	  44 -> 46
+	  45 -> 69
+	  46 -> 716
+	  47 -> 681
+	  48 -> 460
+	  49 -> 463
+	  51 -> 759
+	  52 -> 795
+	  53 -> 762
+	  54 -> 11
+	  55 -> 343
+	  56 -> 264
+	  57 -> 314
+	  58 -> 115
+	  59 -> 479
+	  60 -> 194
+	  61 -> 775
+	  62 -> 791
+	  63 -> 64
+	  63 -> 65
+	  64 -> 527
+	  65 -> 147
+	  66 -> 320
+	  67 -> 696
+	  68 -> 236
+	  69 -> 820
+	  70 -> 596
+	  71 -> 443
+	  72 -> 319
+	  73 -> 534
+	  74 -> 492
+	  75 -> 781
+	  76 -> 33
+	  77 -> 506
+	  78 -> 155
+	  79 -> 226
+	  80 -> 300
+	  81 -> 360
+	  82 -> 711
+	  83 -> 168
+	  84 -> 142
+	  85 -> 215
+	  86 -> 546
+	  87 -> 832
+	  87 -> 306
+	  87 -> 500
+	  88 -> 721
+	  89 -> 756
+	  89 -> 455
+	  90 -> 338
+	  90 -> 595
+	  90 -> 179
+	  90 -> 50
+	  90 -> 757
+	  91 -> 544
+	  91 -> 779
+	  91 -> 621
+	  91 -> 664
+	  91 -> 569
+	  92 -> 760
+	  93 -> 94
+	  94 -> 95
+	  95 -> 149
+	  96 -> 319
+	  97 -> 597
+	  98 -> 111
+	  99 -> 638
+	  100 -> 515
+	  101 -> 129
+	  101 -> 441
+	  101 -> 15
+	  102 -> 397
+	  104 -> 142
+	  105 -> 110
+	  106 -> 107
+	  107 -> 490
+	  108 -> 742
+	  109 -> 743
+	  110 -> 144
+	  111 -> 142
+	  112 -> 104
+	  113 -> 7
+	  114 -> 73
+	  114 -> 665
+	  114 -> 570
+	  115 -> 326
+	  116 -> 573
+	  117 -> 494
+	  118 -> 669
+	  119 -> 398
+	  120 -> 536
+	  121 -> 142
+	  122 -> 213
+	  123 -> 323
+	  124 -> 305
+	  125 -> 448
+	  126 -> 720
+	  127 -> 629
+	  128 -> 501
+	  129 -> 58
+	  130 -> 259
+	  131 -> 412
+	  132 -> 261
+	  133 -> 184
+	  133 -> 13
+	  134 -> 603
+	  134 -> 604
+	  135 -> 314
+	  136 -> 267
+	  137 -> 380
+	  138 -> 192
+	  139 -> 734
+	  140 -> 102
+	  141 -> 202
+	  142 -> 480
+	  142 -> 481
+	  142 -> 482
+	  142 -> 131
+	  142 -> 547
+	  142 -> 229
+	  142 -> 103
+	  142 -> 328
+	  142 -> 778
+	  142 -> 782
+	  142 -> 207
+	  142 -> 366
+	  142 -> 467
+	  142 -> 564
+	  142 -> 663
+	  142 -> 125
+	  143 -> 105
+	  144 -> 27
+	  145 -> 197
+	  146 -> 28
+	  147 -> 392
+	  147 -> 108
+	  147 -> 613
+	  147 -> 695
+	  148 -> 568
+	  148 -> 777
+	  148 -> 117
+	  148 -> 431
+	  149 -> 71
+	  149 -> 488
+	  149 -> 824
+	  149 -> 60
+	  149 -> 575
+	  151 -> 152
+	  151 -> 153
+	  152 -> 394
+	  153 -> 544
+	  153 -> 569
+	  153 -> 779
+	  153 -> 664
+	  154 -> 76
+	  155 -> 205
+	  156 -> 672
+	  156 -> 825
+	  156 -> 788
+	  156 -> 705
+	  157 -> 706
+	  158 -> 791
+	  159 -> 160
+	  160 -> 161
+	  160 -> 162
+	  161 -> 576
+	  162 -> 3
+	  162 -> 477
+	  163 -> 121
+	  164 -> 165
+	  164 -> 166
+	  165 -> 360
+	  166 -> 712
+	  167 -> 212
+	  168 -> 142
+	  169 -> 142
+	  170 -> 633
+	  171 -> 682
+	  172 -> 142
+	  173 -> 174
+	  173 -> 175
+	  174 -> 48
+	  175 -> 156
+	  176 -> 177
+	  176 -> 178
+	  177 -> 502
+	  178 -> 351
+	  179 -> 592
+	  180 -> 142
+	  181 -> 667
+	  182 -> 142
+	  183 -> 344
+	  183 -> 188
+	  183 -> 375
+	  184 -> 185
+	  185 -> 56
+	  186 -> 206
+	  187 -> 314
+	  188 -> 270
+	  189 -> 607
+	  190 -> 381
+	  191 -> 294
+	  192 -> 559
+	  193 -> 383
+	  194 -> 737
+	  195 -> 424
+	  196 -> 791
+	  197 -> 321
+	  197 -> 354
+	  197 -> 143
+	  197 -> 240
+	  197 -> 279
+	  198 -> 430
+	  199 -> 68
+	  201 -> 533
+	  202 -> 203
+	  202 -> 204
+	  203 -> 437
+	  204 -> 106
+	  205 -> 37
+	  206 -> 728
+	  206 -> 265
+	  206 -> 641
+	  206 -> 644
+	  207 -> 208
+	  208 -> 191
+	  209 -> 273
+	  210 -> 41
+	  211 -> 539
+	  212 -> 578
+	  213 -> 800
+	  213 -> 801
+	  213 -> 330
+	  213 -> 799
+	  214 -> 302
+	  215 -> 499
+	  216 -> 331
+	  216 -> 86
+	  217 -> 333
+	  218 -> 219
+	  218 -> 220
+	  219 -> 49
+	  220 -> 173
+	  221 -> 466
+	  222 -> 59
+	  222 -> 92
+	  222 -> 399
+	  223 -> 224
+	  223 -> 225
+	  224 -> 114
+	  225 -> 339
+	  226 -> 149
+	  227 -> 8
+	  229 -> 602
+	  230 -> 232
+	  230 -> 231
+	  231 -> 557
+	  231 -> 558
+	  232 -> 764
+	  233 -> 376
+	  234 -> 577
+	  235 -> 145
+	  236 -> 565
+	  237 -> 819
+	  238 -> 66
+	  238 -> 140
+	  238 -> 486
+	  238 -> 239
+	  239 -> 566
+	  240 -> 487
+	  241 -> 744
+	  242 -> 489
+	  243 -> 104
+	  244 -> 149
+	  245 -> 319
+	  246 -> 51
+	  247 -> 51
+	  248 -> 156
+	  249 -> 248
+	  250 -> 142
+	  251 -> 562
+	  252 -> 253
+	  252 -> 254
+	  253 -> 796
+	  254 -> 403
+	  255 -> 301
+	  256 -> 499
+	  257 -> 50
+	  258 -> 409
+	  259 -> 544
+	  259 -> 569
+	  259 -> 779
+	  259 -> 664
+	  260 -> 697
+	  261 -> 340
+	  262 -> 142
+	  263 -> 57
+	  264 -> 342
+	  265 -> 186
+	  266 -> 135
+	  267 -> 268
+	  267 -> 269
+	  268 -> 100
+	  269 -> 14
+	  270 -> 233
+	  271 -> 648
+	  272 -> 609
+	  273 -> 234
+	  273 -> 518
+	  274 -> 329
+	  275 -> 383
+	  276 -> 277
+	  276 -> 278
+	  277 -> 61
+	  278 -> 775
+	  279 -> 427
+	  280 -> 318
+	  281 -> 258
+	  282 -> 148
+	  283 -> 74
+	  284 -> 285
+	  284 -> 286
+	  285 -> 319
+	  286 -> 652
+	  288 -> 619
+	  288 -> 532
+	  289 -> 323
+	  290 -> 746
+	  291 -> 292
+	  291 -> 293
+	  292 -> 574
+	  293 -> 247
+	  294 -> 40
+	  295 -> 296
+	  296 -> 138
+	  296 -> 676
+	  297 -> 625
+	  298 -> 401
+	  298 -> 498
+	  298 -> 677
+	  299 -> 537
+	  300 -> 360
+	  301 -> 753
+	  301 -> 715
+	  301 -> 545
+	  301 -> 679
+	  302 -> 304
+	  302 -> 303
+	  303 -> 124
+	  304 -> 255
+	  305 -> 319
+	  306 -> 833
+	  307 -> 172
+	  308 -> 309
+	  308 -> 310
+	  309 -> 307
+	  310 -> 408
+	  312 -> 101
+	  313 -> 554
+	  313 -> 132
+	  313 -> 414
+	  314 -> 639
+	  314 -> 556
+	  314 -> 765
+	  314 -> 415
+	  315 -> 193
+	  316 -> 325
+	  317 -> 385
+	  318 -> 62
+	  319 -> 432
+	  319 -> 210
+	  319 -> 242
+	  319 -> 214
+	  319 -> 283
+	  319 -> 735
+	  320 -> 429
+	  321 -> 505
+	  322 -> 201
+	  323 -> 28
+	  324 -> 197
+	  325 -> 438
+	  326 -> 701
+	  327 -> 36
+	  328 -> 478
+	  329 -> 4
+	  330 -> 830
+	  331 -> 127
+	  332 -> 216
+	  333 -> 629
+	  334 -> 169
+	  335 -> 171
+	  336 -> 171
+	  338 -> 592
+	  339 -> 197
+	  340 -> 369
+	  340 -> 637
+	  341 -> 555
+	  342 -> 812
+	  343 -> 371
+	  344 -> 732
+	  345 -> 344
+	  345 -> 188
+	  346 -> 516
+	  346 -> 189
+	  346 -> 271
+	  347 -> 348
+	  347 -> 349
+	  348 -> 815
+	  349 -> 517
+	  350 -> 806
+	  351 -> 352
+	  351 -> 353
+	  352 -> 750
+	  353 -> 82
+	  354 -> 390
+	  355 -> 615
+	  356 -> 150
+	  357 -> 151
+	  358 -> 78
+	  359 -> 163
+	  360 -> 361
+	  360 -> 362
+	  361 -> 142
+	  362 -> 142
+	  363 -> 87
+	  364 -> 407
+	  365 -> 364
+	  366 -> 308
+	  368 -> 684
+	  369 -> 725
+	  370 -> 206
+	  371 -> 372
+	  371 -> 373
+	  372 -> 731
+	  373 -> 512
+	  374 -> 206
+	  375 -> 345
+	  376 -> 377
+	  376 -> 378
+	  377 -> 813
+	  378 -> 514
+	  379 -> 346
+	  380 -> 346
+	  381 -> 314
+	  382 -> 383
+	  383 -> 736
+	  383 -> 17
+	  383 -> 422
+	  384 -> 807
+	  385 -> 774
+	  386 -> 692
+	  387 -> 388
+	  388 -> 563
+	  389 -> 318
+	  390 -> 2
+	  391 -> 98
+	  392 -> 67
+	  394 -> 130
+	  395 -> 75
+	  396 -> 115
+	  397 -> 429
+	  398 -> 35
+	  399 -> 350
+	  400 -> 749
+	  401 -> 81
+	  402 -> 122
+	  403 -> 404
+	  403 -> 405
+	  404 -> 83
+	  405 -> 678
+	  406 -> 802
+	  407 -> 89
+	  408 -> 172
+	  409 -> 197
+	  410 -> 72
+	  411 -> 697
+	  412 -> 468
+	  413 -> 313
+	  414 -> 809
+	  415 -> 811
+	  416 -> 417
+	  416 -> 418
+	  417 -> 341
+	  418 -> 555
+	  419 -> 56
+	  420 -> 159
+	  421 -> 272
+	  422 -> 275
+	  423 -> 317
+	  424 -> 111
+	  425 -> 688
+	  426 -> 667
+	  427 -> 235
+	  428 -> 429
+	  429 -> 28
+	  430 -> 551
+	  431 -> 112
+	  432 -> 44
+	  433 -> 149
+	  434 -> 615
+	  435 -> 322
+	  436 -> 323
+	  437 -> 106
+	  438 -> 440
+	  438 -> 439
+	  439 -> 608
+	  440 -> 101
+	  441 -> 396
+	  442 -> 243
+	  443 -> 703
+	  444 -> 51
+	  445 -> 290
+	  446 -> 389
+	  446 -> 327
+	  446 -> 395
+	  446 -> 280
+	  446 -> 26
+	  447 -> 578
+	  448 -> 680
+	  449 -> 450
+	  449 -> 451
+	  450 -> 332
+	  451 -> 216
+	  452 -> 453
+	  452 -> 454
+	  453 -> 88
+	  454 -> 721
+	  455 -> 335
+	  456 -> 457
+	  456 -> 458
+	  457 -> 156
+	  458 -> 149
+	  459 -> 172
+	  460 -> 461
+	  460 -> 462
+	  461 -> 128
+	  462 -> 156
+	  463 -> 156
+	  464 -> 181
+	  465 -> 312
+	  466 -> 145
+	  467 -> 808
+	  468 -> 508
+	  469 -> 470
+	  469 -> 471
+	  470 -> 413
+	  471 -> 313
+	  472 -> 142
+	  473 -> 113
+	  474 -> 475
+	  474 -> 476
+	  475 -> 137
+	  476 -> 733
+	  477 -> 814
+	  478 -> 222
+	  479 -> 222
+	  480 -> 21
+	  481 -> 693
+	  482 -> 483
+	  483 -> 484
+	  483 -> 485
+	  484 -> 653
+	  485 -> 653
+	  486 -> 428
+	  487 -> 97
+	  488 -> 671
+	  489 -> 491
+	  490 -> 616
+	  491 -> 571
+	  492 -> 142
+	  493 -> 142
+	  494 -> 784
+	  495 -> 360
+	  496 -> 768
+	  497 -> 562
+	  498 -> 81
+	  499 -> 449
+	  500 -> 334
+	  501 -> 156
+	  502 -> 504
+	  502 -> 503
+	  503 -> 367
+	  504 -> 368
+	  505 -> 709
+	  506 -> 358
+	  507 -> 91
+	  508 -> 509
+	  508 -> 510
+	  509 -> 5
+	  510 -> 53
+	  511 -> 7
+	  512 -> 645
+	  513 -> 187
+	  514 -> 647
+	  515 -> 346
+	  516 -> 648
+	  517 -> 159
+	  518 -> 748
+	  519 -> 520
+	  520 -> 319
+	  521 -> 238
+	  522 -> 77
+	  523 -> 524
+	  523 -> 525
+	  524 -> 84
+	  525 -> 826
+	  526 -> 63
+	  527 -> 521
+	  528 -> 109
+	  529 -> 743
+	  530 -> 743
+	  531 -> 319
+	  532 -> 146
+	  533 -> 620
+	  534 -> 787
+	  535 -> 746
+	  535 -> 445
+	  536 -> 16
+	  536 -> 421
+	  536 -> 359
+	  537 -> 360
+	  538 -> 164
+	  539 -> 360
+	  540 -> 541
+	  540 -> 542
+	  541 -> 298
+	  542 -> 360
+	  543 -> 164
+	  544 -> 123
+	  545 -> 590
+	  546 -> 627
+	  547 -> 459
+	  548 -> 549
+	  548 -> 550
+	  549 -> 29
+	  550 -> 319
+	  551 -> 552
+	  551 -> 553
+	  552 -> 260
+	  553 -> 411
+	  554 -> 723
+	  555 -> 133
+	  556 -> 55
+	  557 -> 730
+	  558 -> 764
+	  559 -> 560
+	  559 -> 561
+	  560 -> 139
+	  561 -> 420
+	  562 -> 180
+	  563 -> 710
+	  564 -> 18
+	  565 -> 657
+	  566 -> 429
+	  567 -> 530
+	  568 -> 698
+	  569 -> 780
+	  570 -> 666
+	  571 -> 410
+	  572 -> 668
+	  573 -> 493
+	  574 -> 51
+	  575 -> 622
+	  576 -> 814
+	  577 -> 816
+	  578 -> 579
+	  578 -> 580
+	  579 -> 42
+	  580 -> 402
+	  581 -> 582
+	  581 -> 583
+	  582 -> 523
+	  583 -> 252
+	  584 -> 585
+	  584 -> 586
+	  585 -> 543
+	  586 -> 495
+	  587 -> 447
+	  588 -> 537
+	  589 -> 820
+	  590 -> 406
+	  591 -> 452
+	  592 -> 593
+	  592 -> 594
+	  593 -> 257
+	  594 -> 804
+	  595 -> 592
+	  596 -> 636
+	  597 -> 281
+	  598 -> 762
+	  599 -> 600
+	  599 -> 601
+	  600 -> 6
+	  601 -> 472
+	  602 -> 263
+	  603 -> 646
+	  604 -> 266
+	  605 -> 513
+	  606 -> 766
+	  607 -> 190
+	  608 -> 465
+	  609 -> 4
+	  610 -> 611
+	  610 -> 612
+	  611 -> 384
+	  612 -> 776
+	  613 -> 567
+	  614 -> 32
+	  614 -> 699
+	  614 -> 356
+	  615 -> 511
+	  616 -> 617
+	  616 -> 618
+	  617 -> 288
+	  618 -> 700
+	  619 -> 435
+	  620 -> 507
+	  621 -> 357
+	  622 -> 623
+	  623 -> 456
+	  624 -> 244
+	  625 -> 142
+	  626 -> 831
+	  627 -> 754
+	  628 -> 803
+	  629 -> 630
+	  629 -> 631
+	  630 -> 363
+	  631 -> 87
+	  632 -> 755
+	  633 -> 634
+	  633 -> 635
+	  634 -> 364
+	  635 -> 365
+	  636 -> 319
+	  637 -> 724
+	  638 -> 113
+	  639 -> 640
+	  640 -> 416
+	  641 -> 642
+	  642 -> 182
+	  643 -> 314
+	  644 -> 370
+	  645 -> 643
+	  646 -> 605
+	  647 -> 606
+	  648 -> 381
+	  649 -> 650
+	  649 -> 651
+	  650 -> 817
+	  651 -> 28
+	  652 -> 319
+	  653 -> 654
+	  653 -> 655
+	  654 -> 741
+	  655 -> 22
+	  656 -> 141
+	  657 -> 658
+	  657 -> 659
+	  658 -> 282
+	  659 -> 148
+	  660 -> 661
+	  660 -> 662
+	  661 -> 355
+	  662 -> 434
+	  663 -> 610
+	  664 -> 289
+	  665 -> 154
+	  666 -> 324
+	  667 -> 142
+	  668 -> 116
+	  668 -> 702
+	  669 -> 670
+	  670 -> 104
+	  671 -> 93
+	  672 -> 789
+	  673 -> 674
+	  673 -> 675
+	  674 -> 444
+	  675 -> 792
+	  676 -> 297
+	  677 -> 81
+	  678 -> 168
+	  679 -> 590
+	  680 -> 85
+	  680 -> 47
+	  680 -> 126
+	  680 -> 719
+	  681 -> 499
+	  682 -> 591
+	  684 -> 90
+	  685 -> 727
+	  686 -> 474
+	  687 -> 28
+	  688 -> 701
+	  689 -> 587
+	  689 -> 829
+	  689 -> 167
+	  690 -> 548
+	  691 -> 563
+	  692 -> 236
+	  692 -> 199
+	  693 -> 142
+	  694 -> 528
+	  695 -> 743
+	  696 -> 28
+	  697 -> 104
+	  698 -> 393
+	  699 -> 28
+	  700 -> 116
+	  700 -> 572
+	  700 -> 702
+	  701 -> 783
+	  702 -> 244
+	  703 -> 51
+	  704 -> 624
+	  705 -> 707
+	  705 -> 708
+	  706 -> 790
+	  707 -> 249
+	  708 -> 223
+	  709 -> 446
+	  710 -> 689
+	  711 -> 713
+	  711 -> 714
+	  712 -> 797
+	  713 -> 540
+	  714 -> 590
+	  715 -> 717
+	  715 -> 718
+	  716 -> 589
+	  717 -> 69
+	  718 -> 256
+	  719 -> 449
+	  720 -> 142
+	  721 -> 340
+	  722 -> 340
+	  723 -> 599
+	  724 -> 472
+	  725 -> 99
+	  726 -> 615
+	  727 -> 642
+	  728 -> 230
+	  729 -> 183
+	  730 -> 12
+	  731 -> 233
+	  732 -> 767
+	  733 -> 347
+	  734 -> 315
+	  735 -> 382
+	  736 -> 142
+	  737 -> 739
+	  737 -> 740
+	  738 -> 425
+	  739 -> 316
+	  740 -> 758
+	  741 -> 529
+	  742 -> 28
+	  743 -> 118
+	  744 -> 535
+	  745 -> 79
+	  746 -> 209
+	  747 -> 816
+	  748 -> 797
+	  749 -> 752
+	  749 -> 751
+	  750 -> 581
+	  751 -> 523
+	  752 -> 590
+	  753 -> 217
+	  753 -> 628
+	  754 -> 170
+	  755 -> 336
+	  756 -> 337
+	  757 -> 805
+	  758 -> 818
+	  759 -> 806
+	  760 -> 649
+	  761 -> 469
+	  762 -> 473
+	  763 -> 314
+	  764 -> 134
+	  765 -> 136
+	  765 -> 686
+	  766 -> 346
+	  767 -> 769
+	  767 -> 770
+	  768 -> 120
+	  769 -> 536
+	  770 -> 772
+	  770 -> 773
+	  771 -> 284
+	  772 -> 319
+	  773 -> 276
+	  774 -> 687
+	  775 -> 807
+	  776 -> 241
+	  777 -> 433
+	  778 -> 436
+	  779 -> 323
+	  780 -> 142
+	  781 -> 738
+	  782 -> 493
+	  783 -> 785
+	  783 -> 786
+	  784 -> 442
+	  785 -> 34
+	  786 -> 114
+	  787 -> 157
+	  788 -> 156
+	  789 -> 248
+	  790 -> 197
+	  791 -> 793
+	  791 -> 794
+	  792 -> 246
+	  793 -> 291
+	  794 -> 496
+	  795 -> 80
+	  795 -> 299
+	  795 -> 588
+	  796 -> 400
+	  796 -> 211
+	  796 -> 798
+	  797 -> 539
+	  798 -> 43
+	  799 -> 497
+	  800 -> 251
+	  801 -> 305
+	  802 -> 217
+	  803 -> 50
+	  804 -> 823
+	  805 -> 142
+	  806 -> 761
+	  807 -> 722
+	  808 -> 340
+	  809 -> 763
+	  810 -> 729
+	  811 -> 374
+	  812 -> 647
+	  813 -> 795
+	  814 -> 159
+	  815 -> 274
+	  816 -> 28
+	  817 -> 771
+	  818 -> 526
+	  819 -> 821
+	  819 -> 822
+	  820 -> 70
+	  821 -> 245
+	  822 -> 386
+	  822 -> 387
+	  822 -> 626
+	  823 -> 745
+	  824 -> 119
+	  825 -> 827
+	  825 -> 828
+	  826 -> 538
+	  827 -> 584
+	  828 -> 447
+	  829 -> 562
+	  830 -> 563
+	  831 -> 833
+	  832 -> 632
+}
+

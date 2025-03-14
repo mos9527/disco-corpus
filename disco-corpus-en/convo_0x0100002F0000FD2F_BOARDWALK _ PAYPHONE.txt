@@ -1,0 +1,1262 @@
+# BOARDWALK / PAYPHONE
+# Payphone, for calling folk. Call everyone.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"Yes, it's me -- Pierre.\""];
+	  3 [label="You: \"Yes, Pierre is dead.\""];
+	  4 [label="Payphone: \"But who are you then? A salesman of some sort? Modern goods are rubbish. And I can't afford them anyhow. It's a shame what you did to our country...\" The woman moans and the phone lines howl in unison with her."];
+	  5 [label="Payphone: Her voice is drowned in white noise. Sounds like waves washing a beach, growing in volume until the call suddenly disconnects."];
+	  6 [label="Jump to: [phonemainhub]"];
+	  7 [label="You: Keep dialling..."];
+	  8 [label="Payphone: \"You shouldn't mess with people like this...\" His voice is very calm. \"You go have a nice day now.\""];
+	  9 [label="You: \"Guillaume. Guillaume le Million.\""];
+	  10 [label="Payphone: \"Harry, please...\" A sad voice answers, dressed in distortion."];
+	  11 [label="Jump to: [phonemainhub]"];
+	  12 [label="Kim Kitsuragi: \"You were making *prank calls*.\" Not a muscle moves in the lieutenant's face."];
+	  13 [label="Payphone: \"My *debt?* I don't fucking owe you, it's...\" The young man realises something. \"Who is... ah never mind, I don't have time for this...\""];
+	  14 [label="Inland Empire: Life is garbage."];
+	  15 [label="You: \"Kim...\""];
+	  16 [label="Empathy: He accepts your apology."];
+	  17 [label="Empathy: The saddest sound in the world."];
+	  18 [label="Payphone: Variable[\"coast.payphone_volition_red_stop\"]"];
+	  19 [label="Variable[\"coast.payphone_volition_red_stop\"]", shape=diamond];
+	  20 [label="!(Variable[\"coast.payphone_volition_red_stop\"])", shape=diamond];
+	  21 [label="Payphone: Variable[\"coast.payphone_kim_said_stop\"]"];
+	  22 [label="Variable[\"coast.payphone_kim_said_stop\"]", shape=diamond];
+	  23 [label="!(Variable[\"coast.payphone_kim_said_stop\"])", shape=diamond];
+	  24 [label="You: \"I'm not drunk.\""];
+	  25 [label="You: \"I want to talk about me. Who am I? You sound like you know me.\""];
+	  26 [label="Volition: Right now. I'm gonna give you *one* chance."];
+	  27 [label="Payphone: Variable[\"TASK.ask_about_ruby_in_village\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false"];
+	  28 [label="Variable[\"TASK.ask_about_ruby_in_village\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false", shape=diamond];
+	  29 [label="!(Variable[\"TASK.ask_about_ruby_in_village\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false)", shape=diamond];
+	  30 [label="Payphone: Variable[\"coast.payphone_kim_one_time_grump\"]"];
+	  31 [label="Variable[\"coast.payphone_kim_one_time_grump\"]", shape=diamond];
+	  32 [label="!(Variable[\"coast.payphone_kim_one_time_grump\"])", shape=diamond];
+	  33 [label="Perception (Hearing): In the distorted distance you hear someone turning next to her. Bedsprings rattle."];
+	  34 [label="Payphone: \"So nice of you to find the time to call me! It gets so lonely. Even the animals have died.\""];
+	  35 [label="Payphone: \"He's my sister's grandson. He used to visit me as a lad... Fine young man...\""];
+	  36 [label="Payphone: \"This is because we are bred to be leaders. I can hear the common or mixed background from your voice.\""];
+	  37 [label="Payphone: \"You're either a salesman or a statistician of some kind. I am not interested in cooperating.\""];
+	  38 [label="Authority: Again? Seriously?"];
+	  39 [label="You: \"I don't know why I said that.\""];
+	  40 [label="Payphone: \"What are you, like five?\" A woman's voice shouts something in the background and when Girard speaks again his voice is hushed..."];
+	  41 [label="You: Finish it."];
+	  42 [label="Volition: Now walk away. Forget about this. Walk away and do police work. *BURY* this in yourself and move on."];
+	  43 [label="Payphone: IsKimHere()"];
+	  44 [label="IsKimHere()", shape=diamond];
+	  45 [label="!(IsKimHere())", shape=diamond];
+	  46 [label="Authority: Before it's too late, please."];
+	  47 [label="Payphone: Variable[\"coast.payphone_white_failed_once\"]"];
+	  48 [label="Variable[\"coast.payphone_white_failed_once\"]", shape=diamond];
+	  49 [label="!(Variable[\"coast.payphone_white_failed_once\"])", shape=diamond];
+	  50 [label="Jump to: [phonemainhub]"];
+	  51 [label="Interfacing: What were you trying to achieve by closing your eyes? Did you want your muscle memory to take over and call somewhere? Where?"];
+	  52 [label="Half Light: Pitiful and terrifying. You feel your pulse rise with each ring..."];
+	  53 [label="Payphone: Calling..."];
+	  54 [label="Interfacing: You dialled 001. This is not the area code of Revachol. It is another destination -- on another isola. Some far-off nation state."];
+	  55 [label="Pain Threshold: Fuck it, it doesn't hurt."];
+	  56 [label="Payphone: IsKimHere()"];
+	  57 [label="IsKimHere()", shape=diamond];
+	  58 [label="!(IsKimHere())", shape=diamond];
+	  59 [label="Payphone: A metal payphone under a yellow plastic dome. There's a bitter, caustic taste on the tip of your tongue as you look at the handset."];
+	  60 [label="Jump to: [THEEND]"];
+	  61 [label="Drama: What *you* are is a *surprise*, get his wife on the phone..."];
+	  62 [label="Payphone: \"Writing. I hate writing so much... But I have to get back to it.\""];
+	  63 [label="Payphone: \"Is that you?\""];
+	  64 [label="Payphone: \"Yes, I'm in Mirova. Sleeping.\""];
+	  65 [label="You: \"My heart hurts. I'm gonna have a heart attack.\""];
+	  66 [label="Jump to: [secondcallhub]"];
+	  67 [label="You: Pick up the handset."];
+	  68 [label="Payphone: You hear the tone -- the machine is operable."];
+	  69 [label="Payphone: Calling..."];
+	  70 [label="Payphone: \"You ruined it and you sold it to foreigners. You don't own anything if everything is for sale.\""];
+	  71 [label="Payphone: Variable[\"coast.payphone_punchtwo_painth_resist\"]"];
+	  72 [label="Variable[\"coast.payphone_punchtwo_painth_resist\"]", shape=diamond];
+	  73 [label="!(Variable[\"coast.payphone_punchtwo_painth_resist\"])", shape=diamond];
+	  74 [label="You: \"Get away from her, I'm a cop!\""];
+	  75 [label="Payphone: You can't make out a single word, just vague voices. One more, a child, has joined. Something breaks -- or falls over? Footsteps approaching!"];
+	  76 [label="Kim Kitsuragi: \"What the hell are you doing?\" The lieutenant has been keeping a distance, but steps closer now."];
+	  77 [label="You: \"You seem to be in some sort of trouble. Maybe I can help you, I'm a police officer.\""];
+	  78 [label="somesmallhub"];
+	  79 [label="Pain Threshold: You just do. And you know it is going to hurt."];
+	  80 [label="Horrific Necktie: Yeah, *bratan*. We've had all the fun there was to have here. And it wasn't much."];
+	  81 [label="Payphone: It didn't give you *any* fun for that money."];
+	  82 [label="Volition: You can't. Some strange force is keeping the headset glued to your hand, your ear listening to the ring in the speaker..."];
+	  83 [label="Payphone: \"You're not an amnesiac, Harry... You're drunk.\""];
+	  84 [label="You: \"I'm not drunk -- I'm *high*.\""];
+	  85 [label="Payphone: \"I don't understand what you're saying.\""];
+	  86 [label="Encyclopedia: Twenty-two million people live in Mirova, the capital city of Graad. It is the capital of the world after Revachol was destroyed."];
+	  87 [label="Payphone: End of tone. Someone picks up."];
+	  88 [label="You: Put 10 cents in and dial a random number: 005-24-03-155."];
+	  89 [label="You: \"You're naked, aren't you?\" (Beat the handset against the phone.)"];
+	  90 [label="Payphone: \"Wh-who is this?\" The man does not understand."];
+	  91 [label="Payphone: More shouting. You're pretty sure you hear a man saying *fuck* several times. Then the crackle in the phone line gets violently loud, like the surf breaking."];
+	  92 [label="You: Keep dialling..."];
+	  93 [label="Jump to: [phonemainhub]"];
+	  94 [label="Jump to: [Kim Kitsuragi: \"\"Big deal?!\" Not a muscle moves in...\"]"];
+	  95 [label="Jump to: [afinalehub]"];
+	  96 [label="Jump to: [afinalehub]"];
+	  97 [label="You: (Hang up.)"];
+	  98 [label="Payphone: She does not answer anymore."];
+	  99 [label="You: \"It gets lonely even when you're with people.\""];
+	  100 [label="Payphone: You dial the number again -- as you've done many times. You remember it well now: 001 -- 41 -- 44 -- 47 -- 11 -- 17 -- 361 -- 451 -- 67 -- 451 -- 451."];
+	  101 [label="Payphone: \"Are you sure you're Pierre? Your voice, it's different... I... there... chrysanthemum...\""];
+	  102 [label="Jump to: [theimportanthub]"];
+	  103 [label="You: Hang up. [Leave.]"];
+	  104 [label="Empathy: It looks like she does not want to pick it up, Harry. Stop scaring her."];
+	  105 [label="You: \"I am the last faithful kingsman. I will free the city of Revachol. I will turn back the sea. I will reverse time.\" (Proceed.)"];
+	  106 [label="Payphone: In the middle of it -- a familiar ring. Small. Distorted."];
+	  107 [label="Payphone: And calling -- for two minutes now. You're out of luck. No one's home there either. But the payphone still has your ten cents in there..."];
+	  108 [label="Payphone: You pick up the handset. There's a tone -- the machine is operable."];
+	  109 [label="Payphone: Then the ocean breaks. Out of the depths, a woman's voice emerges. Small. The dearest thing you've ever heard."];
+	  110 [label="Jump to: [THEEND]"];
+	  111 [label="You: \"I'm not drunk or high, I'm just... hurt... why does it hurt to talk to you?\""];
+	  112 [label="Jump to: [phonemainhub]"];
+	  113 [label="simpleholdupspaghetti"];
+	  114 [label="Payphone: Static sings inside the phone glued to your ear. Ancient, sticky..."];
+	  115 [label="Payphone: She does not answer. All you hear is hiss."];
+	  116 [label="Inland Empire: Dora. The name feels like a *gift*. A gift that was meant for you -- to make it possible to live."];
+	  117 [label="Payphone: Variable[\"coast.payphone_perc_someone_there\"]"];
+	  118 [label="Variable[\"coast.payphone_perc_someone_there\"]", shape=diamond];
+	  119 [label="!(Variable[\"coast.payphone_perc_someone_there\"])", shape=diamond];
+	  120 [label="You: \"No, I'm a police officer.\""];
+	  121 [label="You: \"Good bye.\""];
+	  122 [label="Jump to: [Payphone: \"The headset lands in the cradle wit...\"]"];
+	  123 [label="You: Just let it ring."];
+	  124 [label="Payphone: Calling..."];
+	  125 [label="Kim Kitsuragi: \"You're right, you shouldn't have.\""];
+	  126 [label="You: \"We could all be a bit kinder to each other, don't you think? Consider your debt paid, my friend.\""];
+	  127 [label="Payphone: The phone gets hanged up fast as lightning, all you hear is a little shuffle of nylon as the hand moves on the other end."];
+	  128 [label="Endurance: The handset starts slipping from your sweaty palm... your breathing is heavy."];
+	  129 [label="Payphone: Variable[\"coast.payphone_endurance_passive_heart\"]"];
+	  130 [label="Variable[\"coast.payphone_endurance_passive_heart\"]", shape=diamond];
+	  131 [label="!(Variable[\"coast.payphone_endurance_passive_heart\"])", shape=diamond];
+	  132 [label="You: Stop!"];
+	  133 [label="Jump to: [THEEND]"];
+	  134 [label="You: \"You want my MONEY?!\" (Punch the phone.)"];
+	  135 [label="Kim Kitsuragi: The lieutenant is too far away to hear your yelp. The sea wind blows..."];
+	  136 [label="Untitled hub"];
+	  137 [label="You: Let it call more."];
+	  138 [label="Payphone: Variable[\"coast.payphone_inland_dora\"]"];
+	  139 [label="Variable[\"coast.payphone_inland_dora\"]", shape=diamond];
+	  140 [label="!(Variable[\"coast.payphone_inland_dora\"])", shape=diamond];
+	  141 [label="You: \"Okay I'm drunk, what does it matter? I'm still *me*!\""];
+	  142 [label="Volition: You need to stop, Harry. You'll die."];
+	  143 [label="You: \"I'm gonna solve it.\""];
+	  144 [label="Jump to: [phonemainhub]"];
+	  145 [label="Payphone: \"You're not a revolutionary, Harry... You're drunk.\""];
+	  146 [label="Payphone: \"What a pity... I'm afraid I won't be coming to the funeral. I.... there... chrysanthemum...\""];
+	  147 [label="You: \"A creature is a creature. I wish I was the wind.\""];
+	  148 [label="You: \"Your voice makes me want to turn into dust.\""];
+	  149 [label="You: \"I am an ultra-high-net-worth individual. I understand how reality works. I have *seen* into it. My mind is clear.\" (Proceed.)"];
+	  150 [label="Payphone: Calling..."];
+	  151 [label="Payphone: The headset lands in the cradle with a clank."];
+	  152 [label="You: Hang up."];
+	  153 [label="You: \"Who is this?\""];
+	  154 [label="Payphone: Calling..."];
+	  155 [label="Payphone: \"You're not a kingsman, Harry... You're drunk.\""];
+	  156 [label="Payphone: \"You're not ominous, Harry... You're drunk.\""];
+	  157 [label="Interfacing: 41 -- 44 -- 47 -- the rotary dial feels cold from the sea air."];
+	  158 [label="You: Long windows... how do I know that?"];
+	  159 [label="Payphone: Variable[\"coast.payphone_kim_said_stop\"]"];
+	  160 [label="Variable[\"coast.payphone_kim_said_stop\"]", shape=diamond];
+	  161 [label="!(Variable[\"coast.payphone_kim_said_stop\"])", shape=diamond];
+	  162 [label="Inland Empire: Who cares. Run. Go. Don't think about this. Do police work, it's all there is."];
+	  163 [label="Kim Kitsuragi: \"Khm...\" A single *khm* lets you know the lieutenant is ready to move now."];
+	  164 [label="Payphone: IsKimHere()"];
+	  165 [label="IsKimHere()", shape=diamond];
+	  166 [label="!(IsKimHere())", shape=diamond];
+	  167 [label="Payphone: Variable[\"coast.payphone_concept_electricity\"]"];
+	  168 [label="Variable[\"coast.payphone_concept_electricity\"]", shape=diamond];
+	  169 [label="!(Variable[\"coast.payphone_concept_electricity\"])", shape=diamond];
+	  170 [label="Payphone: \"I'm tired...\" A man answers, fast this time. His voice is hoarse from cigarettes. You hear typing in the background."];
+	  171 [label="You: \"I'm tired too.\""];
+	  172 [label="callingcallinghub"];
+	  173 [label="Inland Empire: He doesn't have a home. His home is under a boat."];
+	  174 [label="Payphone: \"The Academy. Where I work.\""];
+	  175 [label="You: I'm making a funny prank call."];
+	  176 [label="Physical Instrument: Push the headset in the cradle with all the strength you have!"];
+	  177 [label="You: \"None of it matters -- not anymore.\""];
+	  178 [label="Payphone: Variable[\"coast.payphone_volition_put_it_down_before_badness\"]"];
+	  179 [label="Variable[\"coast.payphone_volition_put_it_down_before_badness\"]", shape=diamond];
+	  180 [label="!(Variable[\"coast.payphone_volition_put_it_down_before_badness\"])", shape=diamond];
+	  181 [label="Jump to: [phonemainhub]"];
+	  182 [label="Payphone: The cord dangles in the wind like a sickening worm."];
+	  183 [label="You: \"I'm not a salesman, I was just calling a random number and you somehow ran with it.\""];
+	  184 [label="Payphone: Calling..."];
+	  185 [label="Volition: Don't react. Whatever you do, don't react to that last thing."];
+	  186 [label="Inland Empire: You get a sinking feeling. It makes you look if Lieutenant Kitsuragi overheard you. To your relief, he did not."];
+	  187 [label="You: \"You're warm.\""];
+	  188 [label="Payphone: \"Hello, Girard speaking!\""];
+	  189 [label="Payphone: \"Thanks for calling, asshole!\""];
+	  190 [label="Payphone: \"Mhm,\" she hums, her voice warm from sleep."];
+	  191 [label="You: \"You're right, Kim -- it went wrong. Horribly wrong. I shouldn't have done this...\" (Hang up.)"];
+	  192 [label="Interfacing: Strange. This is not how you started before."];
+	  193 [label="Jump to: [Payphone: \"Calling...\"]"];
+	  194 [label="Volition: What in the name of god did you just do?"];
+	  195 [label="Interfacing: 451 -- you have dialled god knows how many numbers. The headset has been waiting silently to relay a signal -- surely nothing can come of this, you think. But it does. A connection."];
+	  196 [label="Jump to: [theimportanthub]"];
+	  197 [label="Payphone: Calling..."];
+	  198 [label="Payphone: There's a moment of silence before the voice speaks again, more calmly: \"You got the wrong number, don't call here again.\""];
+	  199 [label="Payphone: Time keeps passing. In the distance, seagulls squawk -- no one is home at this number. But the coin... it's still in there... you find yourself thinking:"];
+	  200 [label="Interfacing: Again you close your eyes -- and again your fingers move on the rotary dial. Ten metallic rings as the dial returns to zero after each number."];
+	  201 [label="THEEND"];
+	  202 [label="Drama: No, what *you* are is a *surprise*, get his wife on the phone..."];
+	  203 [label="You: \"I don't know who I am. I am an amnesiac.\" (Proceed.)"];
+	  204 [label="Payphone: Still..."];
+	  205 [label="pierrehub"];
+	  206 [label="You: \"Harry? How do you know my name?\""];
+	  207 [label="Payphone: Variable[\"coast.payphone_volition_stop_doing\"]"];
+	  208 [label="Variable[\"coast.payphone_volition_stop_doing\"]", shape=diamond];
+	  209 [label="!(Variable[\"coast.payphone_volition_stop_doing\"])", shape=diamond];
+	  210 [label="Payphone: \"Oh no... please stop. Please let's just hang up...\""];
+	  211 [label="Jump to: [afinalehub]"];
+	  212 [label="Payphone: She sighs. \"Look, I don't understand what you're saying, or why you're calling me. You seem drunk.\""];
+	  213 [label="You: [Leave.]"];
+	  214 [label="Payphone: \"Do you have any news about Pierre?\""];
+	  215 [label="Payphone: You can't hear her reply."];
+	  216 [label="Interfacing: Yes. 451 -- 67 -- 451 -- you are going deeper now, into some unknown place. Far away from this island of matter and its telecommunication networks...."];
+	  217 [label="Perception (Hearing): No answer. You're not sure but you think you hear a *man's* voice in the background. It's covered in pain and white noise..."];
+	  218 [label="Payphone: Phone hanging up."];
+	  219 [label="You: Put 10 cents in and dial a random number: 005-99-77-313."];
+	  220 [label="You: \"Hey, Girard, get your wife for me, will you?\""];
+	  221 [label="You: \"Girard... what a douche name... Change it -- change your name!\""];
+	  222 [label="Payphone: Calling..."];
+	  223 [label="Jump to: [theimportanthub]"];
+	  224 [label="Payphone: The sounds are muffled. You can make out two people: a man and a woman called *Bian*. They are talking to each other in agitated voices. There's a shuffle of feet, children maybe?"];
+	  225 [label="Payphone: Something hits the phone with a loud crack of plastic and microphone hiss -- after that you are left with the disconnect tone."];
+	  226 [label="Payphone: Calling..."];
+	  227 [label="Conceptualization: Home?"];
+	  228 [label="Jump to: [phonemainhub]"];
+	  229 [label="You: Put 10 cents in and dial the long phone number again."];
+	  230 [label="Volition: That's right. You *can*. Whatever you're doing here, you can just stop it and go on with your life."];
+	  231 [label="Jump to: [Payphone: \"No response, only a sigh. The conne...\"]"];
+	  232 [label="Payphone: \"To work.\""];
+	  233 [label="You: \"I am the law. I'm a detective. I'm doing a case. There's a hanged man.\""];
+	  234 [label="Payphone: Calling..."];
+	  235 [label="Payphone: \"Give it a thought. Goodbye.\""];
+	  236 [label="Jump to: [theimportanthub]"];
+	  237 [label="You: \"I need answers to my *mystery*.\""];
+	  238 [label="Jump to: [Payphone: \"Calling...\"]"];
+	  239 [label="2nd prank hub"];
+	  240 [label="You: \"I'm sorry it was a stupid joke, I shouldn't have called, it's stupid -- I'm so sorry.\""];
+	  241 [label="You: \"Pick it up!\""];
+	  242 [label="Empathy: C'mon, you know why."];
+	  243 [label="You: \"I'm the guy who's fucking your wife, Girard. Now put her on before I lose my patience.\""];
+	  244 [label="You: \"I'm Mazov. Kraz Mazov.\""];
+	  245 [label="Payphone: Calling..."];
+	  246 [label="Payphone: \"Who is this?\""];
+	  247 [label="You: Let it call!"];
+	  248 [label="Payphone: *Still* calling..."];
+	  249 [label="Payphone: \"Hello.\" She sounds sleepy."];
+	  250 [label="Payphone: Calling..."];
+	  251 [label="Payphone: There's still some unused change in there -- the machine waits for a number to be dialled."];
+	  252 [label="Jump to: [phonemainhub]"];
+	  253 [label="Pain Threshold: Punch it again, the pain is good."];
+	  254 [label="Payphone: Calling in the night...."];
+	  255 [label="Payphone: \"I'll get you your money, alright? I just need 'til tonight. Let me work.\""];
+	  256 [label="Payphone: Disconnect tone."];
+	  257 [label="You: \"Harry? Who's Harry -- are you sleeping with him? I'm also Harry!\""];
+	  258 [label="Payphone: \"Do you know what time it is? It's so late here...\" Sounds like she's looking for a clock on the night stand."];
+	  259 [label="You: \"Ooo... are you there?\""];
+	  260 [label="afinalehub"];
+	  261 [label="You: \"Where are you? You sound like you're in another world.\""];
+	  262 [label="Volition: You need to stop. Harry. You're killing yourself."];
+	  263 [label="Payphone: Variable[\"coast.payphone_endu_cramp_damage\"]"];
+	  264 [label="Variable[\"coast.payphone_endu_cramp_damage\"]", shape=diamond];
+	  265 [label="!(Variable[\"coast.payphone_endu_cramp_damage\"])", shape=diamond];
+	  266 [label="Jump to: [afinalehub]"];
+	  267 [label="You: \"Is someone there with you?\""];
+	  268 [label="Logic: It's over."];
+	  269 [label="Payphone: It didn't give you *any* fun for that money. Nothing. Your hand is turning blue now... blood drips to the ground."];
+	  270 [label="Electrochemistry: Underneath it she is naked and warm under a blanket."];
+	  271 [label="You: \"I'm no one, I'm sorry, I shouldn't have done this...\""];
+	  272 [label="Pain Threshold: That's it. You're caught in a trap. It'll take quite a while for the shit-circus to end now."];
+	  273 [label="You: \"I was just having a bit of fun, what's the big deal?\""];
+	  274 [label="Payphone: \"You're not a high-net-worth individual, Harry... You're drunk.\""];
+	  275 [label="Kim Kitsuragi: \"Are we about *done* with this now?\" The lieutenant has taken a few steps back."];
+	  276 [label="Jump to: [theimportanthub]"];
+	  277 [label="Payphone: Calling still..."];
+	  278 [label="Payphone: \"There is nothing.\""];
+	  279 [label="You: \"The Academy? That sounds better than my job. I'm happy.\""];
+	  280 [label="You: I don't know... I don't understand what's happening."];
+	  281 [label="Payphone: No response, only a sigh. The connection crackles, like burning paper."];
+	  282 [label="Jump to: [afinalehub]"];
+	  283 [label="Payphone: \"I just so wanted it to be Pierre... Have a pleasant evening, prankster.\""];
+	  284 [label="Payphone: Pause. There is silence on the other end."];
+	  285 [label="Payphone: \"You won't get me and you won't get my money!\""];
+	  286 [label="Payphone: There's a sigh."];
+	  287 [label="Jump to: [phonemainhub]"];
+	  288 [label="phonemainhub"];
+	  289 [label="You: Still, let it ring."];
+	  290 [label="Payphone: \"No, but I got a feeling Al Kickurass is gonna make an appearance if you ever call this number again. Have a good one, asshole!\""];
+	  291 [label="Kim Kitsuragi: \"Big deal?!\" Not a muscle moves in the lieutenant's face."];
+	  292 [label="Payphone: IsKimHere()"];
+	  293 [label="IsKimHere()", shape=diamond];
+	  294 [label="!(IsKimHere())", shape=diamond];
+	  295 [label="Payphone: The headset lands in the cradle with a clank. There it sits -- still warm from your hand. You have no idea what just happened."];
+	  296 [label="Payphone: Phone hanging up."];
+	  297 [label="You: \"Is there anything I can do to help you? I'm with the police.\""];
+	  298 [label="Jump to: [phonemainhub]"];
+	  299 [label="You: \"You're in Mirova, right?\""];
+	  300 [label="You: Say nothing."];
+	  301 [label="Shivers: Run. To the church. Home. Anywhere but here. Anything but calling her again."];
+	  302 [label="You: There's more?"];
+	  303 [label="Payphone: \"Sure you do. No one has anything nowadays.\""];
+	  304 [label="You: Dial a random number -- with your eyes closed."];
+	  305 [label="You: Variable[\"coast.payphone_interfacing_white_succeeded\"]"];
+	  306 [label="Variable[\"coast.payphone_interfacing_white_succeeded\"]", shape=diamond];
+	  307 [label="!(Variable[\"coast.payphone_interfacing_white_succeeded\"])", shape=diamond];
+	  308 [label="Payphone: Variable[\"coast.payphone_concept_recede\"]"];
+	  309 [label="Variable[\"coast.payphone_concept_recede\"]", shape=diamond];
+	  310 [label="!(Variable[\"coast.payphone_concept_recede\"])", shape=diamond];
+	  311 [label="Payphone: A metal payphone under a yellow plastic dome. You could use it to call someone, unless you're out of change..."];
+	  312 [label="Payphone: Phone hanging up."];
+	  313 [label="You: \"'Harry please?!' -- I am going to *end* this call, dammit.\""];
+	  314 [label="You: Put 10 cents in and dial a random number: 005-51-17-912."];
+	  315 [label="Payphone: Someone with a masculine voice picks up:"];
+	  316 [label="Payphone: Still calling..."];
+	  317 [label="You: \"Sorry, wrong number.\""];
+	  318 [label="Payphone: \"Oh no, not this... what time is it?\""];
+	  319 [label="Payphone: Calling..."];
+	  320 [label="Payphone: Calling..."];
+	  321 [label="You: \"Wait Girard! Let's just keep talking, buddy!\""];
+	  322 [label="optionsarehere"];
+	  323 [label="Jump to: [Kim Kitsuragi: \"\"You're right, you shouldn't have.\"\"]"];
+	  324 [label="Payphone: Still calling..."];
+	  325 [label="Jump to: [phonemainhub]"];
+	  326 [label="Jump to: [phonemainhub]"];
+	  327 [label="Encyclopedia: The area code for Revachol Zone of Control."];
+	  328 [label="Perception (Hearing): Sounds like he hasn't talked to anyone in quite a while."];
+	  329 [label="You: \"What are you tired of?\""];
+	  330 [label="Payphone: IsKimHere()"];
+	  331 [label="IsKimHere()", shape=diamond];
+	  332 [label="!(IsKimHere())", shape=diamond];
+	  333 [label="Half Light: Both pitiful and terrifying. You feel your pulse rising with each ring..."];
+	  334 [label="You: \"Harry? Who's Harry?\""];
+	  335 [label="Payphone: \"It's four o'clock, Harry! I need to wake up in two hours.\""];
+	  336 [label="Payphone: \"No, I want to go to sleep...\""];
+	  337 [label="Jump to: [afinalehub]"];
+	  338 [label="Volition: What are you doing to yourself right now?"];
+	  339 [label="Volition: Fun? You need to stop. Harry. You're killing yourself."];
+	  340 [label="Payphone: \"Harry...\""];
+	  341 [label="You: \"Who is Pierre?\""];
+	  342 [label="You: \"I don't know who I am... But who are you?\""];
+	  343 [label="You: \"What kind of pets did you have?\""];
+	  344 [label="Inland Empire: This feels wrong. Should you be doing this?"];
+	  345 [label="Interfacing: 11 -- 17 -- 361 -- your fingers keep moving like a spider, every time the ring rotates back with a little ring of metal, like a bell tolling."];
+	  346 [label="Payphone: Calling..."];
+	  347 [label="You: \"It's Harry, put her on, I don't like waiting.\""];
+	  348 [label="You: Why?"];
+	  349 [label="Payphone: \"Very funny, asshole.\""];
+	  350 [label="Physical Instrument: You hear a faint *thuck*. You could swear you're hearing furniture falling over."];
+	  351 [label="You: \"What? I'm just having a bit of fun, what's the big deal?\""];
+	  352 [label="Payphone: Variable[\"coast.payphone_interfacing_white_succeeded\"]"];
+	  353 [label="Variable[\"coast.payphone_interfacing_white_succeeded\"]", shape=diamond];
+	  354 [label="!(Variable[\"coast.payphone_interfacing_white_succeeded\"])", shape=diamond];
+	  355 [label="Payphone: Still calling..."];
+	  356 [label="Encyclopedia: 005 is Revachol ZoC -- 001 is Graad, on the Graadian isola, where the telephone was invented. The next two digits you dial are the area code for the city of Mirova..."];
+	  357 [label="Kim Kitsuragi: \"Officer -- that's enough. Let's return to work...\""];
+	  358 [label="Payphone: The cold metal is hard and hurts your knuckles. You look at them turning purple."];
+	  359 [label="Suggestion: He does not seem to be overly thankful of your kindness as he hangs up."];
+	  360 [label="Payphone: \"Because it's me... Look, I don't understand what you're saying or why you're calling me. You seem drunk.\""];
+	  361 [label="You: \"Hey.\""];
+	  362 [label="You: Say nothing."];
+	  363 [label="Payphone: \"What do you want to talk about? That we haven't talked about already...\""];
+	  364 [label="Jump to: [afinalehub]"];
+	  365 [label="Payphone: Disconnect tone -- the machine ran out of money."];
+	  366 [label="You: \"Can you help me solve it? I need to solve it. They won't take me back if I don't.\""];
+	  367 [label="You: \"No, this is not Pierre.\""];
+	  368 [label="You: \"Is someone *there*?\""];
+	  369 [label="Payphone: Calling..."];
+	  370 [label="Jump to: [theimportanthub]"];
+	  371 [label="You: \"Stop it! I was just kidding, I'm not sleeping with your wife!\""];
+	  372 [label="Payphone: A sigh. She heard you, but she does not hang up. And neither do you. You can't."];
+	  373 [label="Jump to: [phonemainhub]"];
+	  374 [label="Interfacing: 41 -- 44 -- 47 --  it's too late now, the movement is almost mechanical."];
+	  375 [label="Endurance: His own *heart*."];
+	  376 [label="Payphone: IsTHCPresent(\"the_destroyer\")"];
+	  377 [label="IsTHCPresent(\"the_destroyer\")", shape=diamond];
+	  378 [label="!(IsTHCPresent(\"the_destroyer\"))", shape=diamond];
+	  379 [label="You: Hang up."];
+	  380 [label="Jump to: [phonemainhub]"];
+	  381 [label="Electrochemistry: Takes your mind away from that voice, for one second at least..."];
+	  382 [label="Jump to: [phonemainhub]"];
+	  383 [label="Payphone: Calling still..."];
+	  384 [label="Logic: Seems like it did not have time to swallow the coin. This sometimes happens."];
+	  385 [label="Inland Empire: He doesn't have a home. Not anymore."];
+	  386 [label="You: \"Harry? Who's Harry -- are you sleeping with him? Is *Harry* there?!\""];
+	  387 [label="You: \"Do you want to party?\""];
+	  388 [label="Payphone: Your hand isn't moving. The headset hisses in your ear with *evil* sadness."];
+	  389 [label="Volition: That's right. Walk away."];
+	  390 [label="You: Smash the headset into the cradle."];
+	  391 [label="Jump to: [afinalehub]"];
+	  392 [label="You: \"There was someone there before. I heard someone. Who's there with you?\""];
+	  393 [label="Payphone: \"Dora.\" She's still confused. \"Who is this? The connection is bad...\""];
+	  394 [label="You: Don't react."];
+	  395 [label="Payphone: Still calling..."];
+	  396 [label="Payphone: Disconnect tone."];
+	  397 [label="You: \"I need to know who you are. WHO ARE YOU?!\""];
+	  398 [label="Payphone: \"Please. I am going to hang up now, okay?\""];
+	  399 [label="You: Hang up."];
+	  400 [label="Payphone: \"Who the fuck do you think you are talking to me like that?\" The voice on the phone is suddenly very agitated."];
+	  401 [label="You: Just let it ring."];
+	  402 [label="Payphone: Variable[\"coast.payphone_empathy_stop_being_an_idiot\"]"];
+	  403 [label="Variable[\"coast.payphone_empathy_stop_being_an_idiot\"]", shape=diamond];
+	  404 [label="!(Variable[\"coast.payphone_empathy_stop_being_an_idiot\"])", shape=diamond];
+	  405 [label="You: \"I'm a revolutionary servant of humanity. I will free mankind and abolish the classes. I will raise the dead.\" (Proceed.)"];
+	  406 [label="Payphone: Calling..."];
+	  407 [label="You: \"I want to die.\""];
+	  408 [label="Payphone: You dial the number again -- twenty six pulls of the rotary dial. The machine eats the coin and a terrifying ocean of distance rustles in your ear..."];
+	  409 [label="You: \"Yes, but a slight change of plans -- I want this delivered to the Whirling-in-Rags in Martinaise.\""];
+	  410 [label="Kim Kitsuragi: \"That's enough now, officer...\" The lieutenant stands at a distance."];
+	  411 [label="Payphone: \"No-no...\" She's waking up now. \"It's *you*, isn't it? It's you...\""];
+	  412 [label="Payphone: The cold metal is hard and your knuckles bleed a little..."];
+	  413 [label="Conceptualization: Hello, Girard. Technically speaking, you're electricity."];
+	  414 [label="Payphone: Calling..."];
+	  415 [label="Payphone: Calling..."];
+	  416 [label="Payphone: You do not hear the customary disconnect tone, just silence in the handset -- the machine is still waiting for you to dial a number."];
+	  417 [label="You: \"Where are you going in two hours?\""];
+	  418 [label="Endurance: This is bad, you feel your right hand on the handset cramping up with pain..."];
+	  419 [label="Payphone: Disconnect tone."];
+	  420 [label="Payphone: \"I was a baroness.\""];
+	  421 [label="You: \"That's... not good.\""];
+	  422 [label="You: \"I want to live -- with you...\""];
+	  423 [label="Payphone: Calling..."];
+	  424 [label="Payphone: \"Don't worry about it, buddy -- happens to all of us. You have a nice day now!\""];
+	  425 [label="You: \"Doesn't matter, put her on, I don't like waiting.\""];
+	  426 [label="Payphone: Calling..."];
+	  427 [label="Kim Kitsuragi: \"What the hell are you doing?\" The lieutenant has been keeping a distance, but steps closer now."];
+	  428 [label="You: \"You're right, Kim -- this went wrong, I shouldn't have done this...\""];
+	  429 [label="Payphone: Calling..."];
+	  430 [label="Interfacing: You close your eyes and put your index finger on the rotary dial, then pull down on the number, then move one up and repeat the motion, twice..."];
+	  431 [label="You: Wait -- what did I just do?"];
+	  432 [label="Pain Threshold: Ringing by the bedside of a dark but capacious apartment with long windows... you know this to be true."];
+	  433 [label="Payphone: Variable[\"coast.payphone_made_fourth_prank_call\"]"];
+	  434 [label="Variable[\"coast.payphone_made_fourth_prank_call\"]", shape=diamond];
+	  435 [label="!(Variable[\"coast.payphone_made_fourth_prank_call\"])", shape=diamond];
+	  436 [label="Payphone: Variable[\"coast.payphone_interfacing_white_succeeded\"]"];
+	  437 [label="Variable[\"coast.payphone_interfacing_white_succeeded\"]", shape=diamond];
+	  438 [label="!(Variable[\"coast.payphone_interfacing_white_succeeded\"])", shape=diamond];
+	  439 [label="Payphone: Variable[\"coast.payphone_punchone_painth_resist\"]"];
+	  440 [label="Variable[\"coast.payphone_punchone_painth_resist\"]", shape=diamond];
+	  441 [label="!(Variable[\"coast.payphone_punchone_painth_resist\"])", shape=diamond];
+	  442 [label="You: Hang it up."];
+	  443 [label="You: Variable[\"coast.payphone_volition_red_stop\"]"];
+	  444 [label="Variable[\"coast.payphone_volition_red_stop\"]", shape=diamond];
+	  445 [label="!(Variable[\"coast.payphone_volition_red_stop\"])", shape=diamond];
+	  446 [label="Payphone: Variable[\"coast.payphone_empathy_sound\"]"];
+	  447 [label="Variable[\"coast.payphone_empathy_sound\"]", shape=diamond];
+	  448 [label="!(Variable[\"coast.payphone_empathy_sound\"])", shape=diamond];
+	  449 [label="Payphone: \"I'm in Mirova. Sleeping.\""];
+	  450 [label="You: Catastrophic damage."];
+	  451 [label="You: \"My job is sad and terrible. It has dead bodies in it.\""];
+	  452 [label="Jump to: [phonemainhub]"];
+	  453 [label="Jump to: [THEEND]"];
+	  454 [label="Jump to: [afinalehub]"];
+	  455 [label="Payphone: \"Pierre? Is that you, Pierre?\" The voice is female and sounds about a hundred years old."];
+	  456 [label="You: \"No, I have nothing.\""];
+	  457 [label="You: \"Yes, I'm a salesman. What exactly did we do to your country?\""];
+	  458 [label="Payphone: \"To hell with the police! To hell with you...\""];
+	  459 [label="You: \"Hello.\""];
+	  460 [label="You: \"No.\""];
+	  461 [label="Perception (Hearing): It doesn't matter if you react or not. You still think you hear a *man's* voice in the background. It's covered in pain and white noise..."];
+	  462 [label="You: Hang up. [Leave.]"];
+	  463 [label="You: \"Is Alec Tricity there? I need to speak with Alec Tricity, please.\""];
+	  464 [label="Payphone: \"What?\" It takes a second for her to realize what you said."];
+	  465 [label="You: \"Your voice is so beautiful.\""];
+	  466 [label="You: No. Let it call. I *must*."];
+	  467 [label="Payphone: Variable[\"coast.payphone_volition_put_it_down_before_badness\"]"];
+	  468 [label="Variable[\"coast.payphone_volition_put_it_down_before_badness\"]", shape=diamond];
+	  469 [label="!(Variable[\"coast.payphone_volition_put_it_down_before_badness\"])", shape=diamond];
+	  470 [label="Payphone: Followed by seven digits at random. The last one makes the silence turn into a ring. It's calling..."];
+	  471 [label="Inland Empire: It's *really* time to stop this now."];
+	  472 [label="Payphone: An ultra-long-distance call. Your ear fills with a crackle, the wash of a strange ocean full of white noise. A little bird starts ringing in there, not like the local calling tone before. No, a small ring in a cage of distortion, far away, a distant network of phones..."];
+	  473 [label="Payphone: Disconnect tone."];
+	  474 [label="Payphone: IsTHCPresent(\"the_destroyer\")"];
+	  475 [label="IsTHCPresent(\"the_destroyer\")", shape=diamond];
+	  476 [label="!(IsTHCPresent(\"the_destroyer\"))", shape=diamond];
+	  477 [label="Reaction Speed: Say you're not Pierre... that seems like a better idea. (You don't know why.)"];
+	  478 [label="Payphone: Calling..."];
+	  479 [label="You: Put 10 cents in and dial a random number: 005-11-11-313."];
+	  480 [label="Payphone: Calling..."];
+	  481 [label="Interfacing: Lucky you. The call went too fast for the payphone to register. You can still make a new one without paying."];
+	  482 [label="Payphone: IsTHCPresent(\"the_way_home\")"];
+	  483 [label="IsTHCPresent(\"the_way_home\")", shape=diamond];
+	  484 [label="!(IsTHCPresent(\"the_way_home\"))", shape=diamond];
+	  485 [label="Payphone: \"Yes.\""];
+	  486 [label="You: \"It doesn't matter. This case doesn't matter.\""];
+	  487 [label="Payphone: Variable[\"coast.payphone_concept_home_home_home\"]"];
+	  488 [label="Variable[\"coast.payphone_concept_home_home_home\"]", shape=diamond];
+	  489 [label="!(Variable[\"coast.payphone_concept_home_home_home\"])", shape=diamond];
+	  490 [label="You: No. I can't. I need the pain."];
+	  491 [label="You: \"I might be? What's Pierre like?\""];
+	  492 [label="Payphone: And calling -- for who knows how long. But no one answers. You need to insert more money to call again."];
+	  493 [label="You: Put 10 cents in and dial the long phone number one more time."];
+	  494 [label="Payphone: Silence. The connection falters. You hear her last words repeated back to you in an echo:"];
+	  495 [label="Payphone: \"Please do. Just please do.\""];
+	  496 [label="Payphone: IsKimHere()"];
+	  497 [label="IsKimHere()", shape=diamond];
+	  498 [label="!(IsKimHere())", shape=diamond];
+	  499 [label="Payphone: Calling..."];
+	  500 [label="Payphone: \"Very funny, asshole. Why don't you grow up! Oh, and disco is dead!\""];
+	  501 [label="You: \"I can't *tell* you who I am. I have a secret plan to win mankind three thousand years of peace on this planet. I have to be ominously vague...\" (Proceed.)"];
+	  502 [label="You: \"I'm not going to stop. I'm going to keep fucking your wife, Girard.\""];
+	  503 [label="Payphone: IsKimHere()"];
+	  504 [label="IsKimHere()", shape=diamond];
+	  505 [label="!(IsKimHere())", shape=diamond];
+	  506 [label="Kim Kitsuragi: \"Let's just go, I've had enough of this phone booth.\""];
+	  507 [label="Volition: Put it down."];
+	  508 [label="theimportanthub"];
+	  509 [label="Perception (Hearing): Amid the howling in the wire you make out a woman's voice with a thick Samaran accent: \"Girard... Girard, this is a joke. Someone is making a joke...\""];
+	  510 [label="Interfacing: You close your eyes and feel your finger move on the rotary dial. You start with 005, as before..."];
+	  511 [label="Payphone: CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"]"];
+	  512 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"]", shape=diamond];
+	  513 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"])", shape=diamond];
+	  514 [label="Logic: You only have two, maybe three things left to say before the change runs out."];
+	  515 [label="Payphone: It didn't give you *any* fun for that money. Your hand is turning blue now... blood drips to the ground."];
+	  516 [label="Pain Threshold: Your hand is swelling up."];
+	  517 [label="Payphone: Variable[\"coast.payphone_hub_reached\"]"];
+	  518 [label="Variable[\"coast.payphone_hub_reached\"]", shape=diamond];
+	  519 [label="!(Variable[\"coast.payphone_hub_reached\"])", shape=diamond];
+	  520 [label="Kim Kitsuragi: The lieutenant shrugs apathetically, then walks a little distance away to concentrate on his notes. Looks like he'd rather not get into it again."];
+	  521 [label="Esprit de Corps: This has lowered his opinion of you -- but only a little."];
+	  522 [label="Jump to: [THEEND]"];
+	  523 [label="Physical Instrument: And fight."];
+	  524 [label="You: \"I'm gonna get even drunker.\" (Take a big sip.)"];
+	  525 [label="Payphone: \"Oh god...\" There's silence, it's heavy as tin. The white noise howls."];
+	  526 [label="You: \"Pfft, Academy... my job is *real*.\""];
+	  527 [label="Pain Threshold: No. We're not gonna do this. Your hand is *not* going to cramp up, not now."];
+	  528 [label="Payphone: Variable[\"coast.payphone_volition_hang_up_now\"]"];
+	  529 [label="Variable[\"coast.payphone_volition_hang_up_now\"]", shape=diamond];
+	  530 [label="!(Variable[\"coast.payphone_volition_hang_up_now\"])", shape=diamond];
+	  531 [label="You: [Leave.]"];
+	  532 [label="Plaseum HUB"];
+	  533 [label="Payphone: Calling..."];
+	  534 [label="Payphone: Calling..."];
+	  535 [label="Payphone: Calling..."];
+	  536 [label="Jump to: [secondcallhub]"];
+	  537 [label="secondcallhub"];
+	  538 [label="Conceptualization: This is too much... You need to recede..."];
+	  539 [label="Payphone: \"Oh no... is that you?\" Her voice sounds like she's waking up now. Still plaintive, tired..."];
+	  540 [label="You: \"It's Pierre, now put her on. I don't like waiting.\""];
+	  541 [label="Payphone: \"Just tell me what's going on here!\" Now you hear fear too. The voice gets further away from the microphone, then yells: \"Bian, come here!\""];
+	  542 [label="You: \"I don't understand what I did wrong.\""];
+	  543 [label="Payphone: \"Stop calling me, man!\" Someone picks up. The voice on the other end is slightly hysterical."];
+	  544 [label="Payphone: Calling..."];
+	  545 [label="You: \"Uh... who is this?\""];
+	  546 [label="Payphone: \"Tethys, I uh...\" The young man realises something. \"Hey, you're not Tethys! Screw you and don't ever call here again, you're fucking with some *serious* people!\""];
+	  547 [label="Payphone: The cold metal is hard and your knuckles bleed."];
+	  548 [label="You: \"You want more money now, huh?! YOU WANT FUCKING MONEY?!!!?\" (Punch the phone again.)"];
+	  549 [label="Payphone: Calling..."];
+	  550 [label="Payphone: The man disappears with a sigh."];
+	  551 [label="Payphone: \"If I could go just one month without writing. No, two months... I could regenerate my brain. Fucking liberalism...\""];
+	  552 [label="Payphone: IsTHCPresent(\"hobocop\")"];
+	  553 [label="IsTHCPresent(\"hobocop\")", shape=diamond];
+	  554 [label="!(IsTHCPresent(\"hobocop\"))", shape=diamond];
+	  555 [label="You: \"Where?\""];
+	  0 -> 1
+	  1 -> 437
+	  2 -> 34
+	  3 -> 146
+	  4 -> 120
+	  4 -> 458
+	  4 -> 342
+	  4 -> 183
+	  5 -> 497
+	  6 -> 288
+	  7 -> 345
+	  8 -> 296
+	  9 -> 501
+	  10 -> 270
+	  11 -> 288
+	  12 -> 522
+	  13 -> 359
+	  14 -> 288
+	  15 -> 135
+	  16 -> 507
+	  17 -> 447
+	  18 -> 19
+	  18 -> 20
+	  19 -> 230
+	  20 -> 82
+	  21 -> 22
+	  21 -> 23
+	  22 -> 521
+	  23 -> 288
+	  24 -> 526
+	  25 -> 363
+	  26 -> 529
+	  27 -> 28
+	  27 -> 29
+	  28 -> 301
+	  29 -> 112
+	  30 -> 32
+	  30 -> 31
+	  31 -> 288
+	  32 -> 330
+	  33 -> 117
+	  34 -> 99
+	  34 -> 422
+	  34 -> 343
+	  35 -> 4
+	  36 -> 283
+	  37 -> 120
+	  37 -> 458
+	  37 -> 342
+	  37 -> 183
+	  38 -> 315
+	  39 -> 540
+	  40 -> 189
+	  41 -> 195
+	  42 -> 11
+	  43 -> 44
+	  43 -> 45
+	  44 -> 428
+	  45 -> 194
+	  46 -> 322
+	  47 -> 48
+	  47 -> 49
+	  48 -> 200
+	  49 -> 511
+	  50 -> 288
+	  51 -> 227
+	  52 -> 383
+	  53 -> 406
+	  54 -> 356
+	  55 -> 71
+	  56 -> 57
+	  56 -> 58
+	  57 -> 410
+	  58 -> 373
+	  59 -> 14
+	  60 -> 201
+	  61 -> 239
+	  62 -> 551
+	  63 -> 236
+	  64 -> 266
+	  65 -> 210
+	  66 -> 538
+	  67 -> 68
+	  68 -> 288
+	  69 -> 395
+	  70 -> 235
+	  71 -> 72
+	  71 -> 73
+	  72 -> 269
+	  73 -> 516
+	  74 -> 75
+	  75 -> 225
+	  76 -> 191
+	  76 -> 351
+	  77 -> 127
+	  78 -> 257
+	  78 -> 386
+	  78 -> 141
+	  78 -> 334
+	  78 -> 206
+	  78 -> 525
+	  78 -> 111
+	  78 -> 84
+	  78 -> 24
+	  79 -> 172
+	  80 -> 50
+	  81 -> 517
+	  82 -> 416
+	  83 -> 515
+	  84 -> 526
+	  85 -> 113
+	  86 -> 266
+	  87 -> 456
+	  88 -> 69
+	  89 -> 215
+	  90 -> 103
+	  90 -> 426
+	  90 -> 240
+	  90 -> 347
+	  90 -> 541
+	  91 -> 350
+	  92 -> 157
+	  93 -> 288
+	  94 -> 291
+	  95 -> 260
+	  96 -> 260
+	  97 -> 388
+	  98 -> 177
+	  98 -> 487
+	  98 -> 366
+	  98 -> 143
+	  99 -> 101
+	  100 -> 535
+	  101 -> 5
+	  102 -> 509
+	  103 -> 454
+	  104 -> 402
+	  105 -> 155
+	  106 -> 226
+	  107 -> 228
+	  108 -> 30
+	  109 -> 249
+	  110 -> 201
+	  111 -> 526
+	  112 -> 288
+	  113 -> 525
+	  113 -> 141
+	  113 -> 111
+	  113 -> 84
+	  113 -> 24
+	  114 -> 391
+	  115 -> 537
+	  116 -> 138
+	  117 -> 118
+	  117 -> 119
+	  118 -> 185
+	  119 -> 223
+	  120 -> 459
+	  121 -> 372
+	  122 -> 151
+	  123 -> 424
+	  124 -> 319
+	  125 -> 16
+	  126 -> 13
+	  127 -> 256
+	  128 -> 172
+	  129 -> 130
+	  129 -> 131
+	  130 -> 472
+	  131 -> 50
+	  132 -> 374
+	  133 -> 201
+	  134 -> 475
+	  135 -> 172
+	  136 -> 329
+	  136 -> 171
+	  136 -> 297
+	  137 -> 416
+	  138 -> 139
+	  138 -> 140
+	  139 -> 524
+	  140 -> 33
+	  141 -> 526
+	  142 -> 95
+	  143 -> 340
+	  144 -> 288
+	  145 -> 515
+	  146 -> 5
+	  147 -> 318
+	  148 -> 540
+	  149 -> 274
+	  150 -> 427
+	  151 -> 178
+	  152 -> 151
+	  153 -> 393
+	  154 -> 430
+	  155 -> 515
+	  156 -> 515
+	  157 -> 7
+	  158 -> 79
+	  159 -> 160
+	  159 -> 161
+	  160 -> 275
+	  161 -> 163
+	  162 -> 325
+	  163 -> 382
+	  164 -> 165
+	  164 -> 166
+	  165 -> 159
+	  166 -> 382
+	  167 -> 168
+	  167 -> 169
+	  168 -> 202
+	  169 -> 61
+	  170 -> 328
+	  171 -> 552
+	  172 -> 137
+	  172 -> 443
+	  172 -> 158
+	  172 -> 15
+	  173 -> 375
+	  174 -> 452
+	  174 -> 527
+	  174 -> 279
+	  175 -> 339
+	  176 -> 491
+	  176 -> 390
+	  177 -> 340
+	  178 -> 179
+	  178 -> 180
+	  179 -> 42
+	  180 -> 11
+	  181 -> 288
+	  182 -> 144
+	  183 -> 36
+	  184 -> 493
+	  185 -> 368
+	  185 -> 394
+	  186 -> 380
+	  187 -> 286
+	  188 -> 414
+	  189 -> 296
+	  190 -> 246
+	  191 -> 323
+	  192 -> 432
+	  192 -> 132
+	  192 -> 92
+	  193 -> 416
+	  194 -> 326
+	  195 -> 473
+	  196 -> 509
+	  197 -> 154
+	  198 -> 256
+	  199 -> 51
+	  200 -> 53
+	  202 -> 239
+	  203 -> 83
+	  204 -> 199
+	  205 -> 2
+	  205 -> 463
+	  205 -> 492
+	  205 -> 367
+	  206 -> 360
+	  207 -> 208
+	  207 -> 209
+	  208 -> 280
+	  208 -> 451
+	  208 -> 175
+	  209 -> 337
+	  210 -> 211
+	  211 -> 260
+	  212 -> 113
+	  213 -> 110
+	  214 -> 457
+	  214 -> 3
+	  214 -> 341
+	  215 -> 66
+	  216 -> 41
+	  217 -> 102
+	  218 -> 396
+	  219 -> 197
+	  220 -> 90
+	  221 -> 40
+	  222 -> 10
+	  223 -> 509
+	  224 -> 510
+	  225 -> 43
+	  226 -> 545
+	  227 -> 488
+	  228 -> 288
+	  229 -> 408
+	  230 -> 379
+	  230 -> 467
+	  231 -> 281
+	  232 -> 556
+	  232 -> 300
+	  233 -> 98
+	  234 -> 184
+	  235 -> 420
+	  236 -> 509
+	  237 -> 398
+	  238 -> 245
+	  239 -> 103
+	  239 -> 464
+	  239 -> 221
+	  239 -> 220
+	  239 -> 317
+	  240 -> 8
+	  241 -> 346
+	  242 -> 289
+	  242 -> 399
+	  243 -> 542
+	  244 -> 349
+	  245 -> 222
+	  246 -> 370
+	  247 -> 150
+	  248 -> 544
+	  249 -> 509
+	  250 -> 254
+	  251 -> 288
+	  252 -> 288
+	  253 -> 440
+	  254 -> 17
+	  255 -> 533
+	  256 -> 164
+	  257 -> 85
+	  258 -> 335
+	  259 -> 258
+	  260 -> 65
+	  260 -> 418
+	  260 -> 387
+	  260 -> 97
+	  260 -> 261
+	  260 -> 233
+	  260 -> 299
+	  260 -> 267
+	  260 -> 25
+	  261 -> 450
+	  262 -> 95
+	  263 -> 264
+	  263 -> 265
+	  264 -> 96
+	  265 -> 528
+	  266 -> 260
+	  267 -> 486
+	  268 -> 93
+	  269 -> 292
+	  270 -> 538
+	  271 -> 542
+	  272 -> 196
+	  273 -> 291
+	  274 -> 515
+	  275 -> 382
+	  276 -> 509
+	  277 -> 109
+	  278 -> 551
+	  279 -> 231
+	  280 -> 262
+	  281 -> 338
+	  282 -> 260
+	  283 -> 420
+	  284 -> 285
+	  285 -> 312
+	  286 -> 66
+	  287 -> 288
+	  288 -> 480
+	  288 -> 549
+	  288 -> 134
+	  288 -> 229
+	  288 -> 494
+	  288 -> 304
+	  288 -> 213
+	  288 -> 88
+	  288 -> 314
+	  288 -> 219
+	  289 -> 238
+	  290 -> 296
+	  291 -> 522
+	  292 -> 293
+	  292 -> 294
+	  293 -> 357
+	  294 -> 93
+	  295 -> 162
+	  296 -> 474
+	  297 -> 278
+	  298 -> 288
+	  299 -> 64
+	  300 -> 281
+	  301 -> 112
+	  302 -> 216
+	  303 -> 37
+	  304 -> 305
+	  305 -> 306
+	  305 -> 307
+	  306 -> 352
+	  307 -> 352
+	  308 -> 309
+	  308 -> 310
+	  309 -> 147
+	  309 -> 461
+	  310 -> 236
+	  311 -> 67
+	  311 -> 532
+	  312 -> 420
+	  313 -> 496
+	  314 -> 500
+	  315 -> 188
+	  316 -> 38
+	  317 -> 425
+	  318 -> 236
+	  319 -> 104
+	  320 -> 124
+	  321 -> 75
+	  322 -> 152
+	  322 -> 247
+	  323 -> 125
+	  324 -> 248
+	  325 -> 288
+	  326 -> 288
+	  327 -> 471
+	  328 -> 136
+	  329 -> 62
+	  330 -> 331
+	  330 -> 332
+	  331 -> 21
+	  332 -> 288
+	  333 -> 383
+	  334 -> 212
+	  335 -> 260
+	  336 -> 282
+	  337 -> 260
+	  338 -> 207
+	  339 -> 95
+	  340 -> 365
+	  341 -> 35
+	  342 -> 421
+	  343 -> 101
+	  344 -> 87
+	  345 -> 302
+	  346 -> 222
+	  347 -> 400
+	  348 -> 242
+	  349 -> 296
+	  350 -> 321
+	  350 -> 103
+	  350 -> 74
+	  350 -> 371
+	  350 -> 503
+	  351 -> 94
+	  352 -> 353
+	  352 -> 354
+	  353 -> 431
+	  354 -> 47
+	  355 -> 204
+	  356 -> 92
+	  357 -> 389
+	  358 -> 373
+	  359 -> 256
+	  360 -> 113
+	  361 -> 258
+	  362 -> 258
+	  363 -> 419
+	  364 -> 260
+	  365 -> 27
+	  366 -> 340
+	  367 -> 214
+	  368 -> 217
+	  369 -> 234
+	  370 -> 509
+	  371 -> 75
+	  372 -> 272
+	  373 -> 288
+	  374 -> 7
+	  375 -> 129
+	  376 -> 377
+	  376 -> 378
+	  377 -> 81
+	  378 -> 55
+	  379 -> 295
+	  380 -> 288
+	  381 -> 56
+	  382 -> 288
+	  383 -> 433
+	  384 -> 482
+	  385 -> 375
+	  386 -> 85
+	  387 -> 336
+	  388 -> 26
+	  389 -> 268
+	  390 -> 182
+	  391 -> 260
+	  392 -> 115
+	  393 -> 116
+	  394 -> 462
+	  395 -> 344
+	  396 -> 6
+	  397 -> 398
+	  398 -> 218
+	  399 -> 122
+	  400 -> 103
+	  400 -> 9
+	  400 -> 271
+	  400 -> 243
+	  400 -> 244
+	  401 -> 245
+	  402 -> 403
+	  402 -> 404
+	  403 -> 401
+	  403 -> 348
+	  404 -> 241
+	  404 -> 123
+	  405 -> 145
+	  406 -> 107
+	  407 -> 465
+	  408 -> 106
+	  409 -> 547
+	  410 -> 373
+	  411 -> 276
+	  412 -> 56
+	  413 -> 167
+	  414 -> 277
+	  415 -> 479
+	  416 -> 384
+	  417 -> 232
+	  418 -> 263
+	  419 -> 287
+	  420 -> 284
+	  421 -> 101
+	  422 -> 540
+	  423 -> 222
+	  424 -> 296
+	  425 -> 400
+	  426 -> 320
+	  427 -> 273
+	  427 -> 429
+	  427 -> 543
+	  428 -> 125
+	  429 -> 324
+	  430 -> 192
+	  431 -> 54
+	  432 -> 128
+	  433 -> 435
+	  433 -> 436
+	  434 -> 251
+	  435 -> 518
+	  436 -> 438
+	  436 -> 439
+	  437 -> 59
+	  438 -> 434
+	  439 -> 441
+	  439 -> 442
+	  440 -> 412
+	  441 -> 358
+	  442 -> 444
+	  443 -> 445
+	  443 -> 446
+	  444 -> 18
+	  445 -> 18
+	  446 -> 448
+	  446 -> 449
+	  447 -> 333
+	  448 -> 52
+	  449 -> 86
+	  450 -> 142
+	  451 -> 231
+	  452 -> 288
+	  453 -> 201
+	  454 -> 260
+	  455 -> 478
+	  456 -> 303
+	  457 -> 70
+	  458 -> 5
+	  459 -> 190
+	  460 -> 495
+	  461 -> 102
+	  462 -> 133
+	  463 -> 290
+	  464 -> 423
+	  464 -> 148
+	  464 -> 39
+	  465 -> 411
+	  466 -> 193
+	  467 -> 469
+	  467 -> 470
+	  468 -> 46
+	  469 -> 322
+	  470 -> 355
+	  471 -> 512
+	  472 -> 250
+	  473 -> 252
+	  474 -> 476
+	  474 -> 477
+	  475 -> 548
+	  476 -> 253
+	  477 -> 205
+	  478 -> 550
+	  479 -> 481
+	  480 -> 170
+	  481 -> 298
+	  482 -> 484
+	  482 -> 485
+	  483 -> 385
+	  484 -> 375
+	  485 -> 364
+	  486 -> 340
+	  487 -> 489
+	  487 -> 490
+	  488 -> 553
+	  489 -> 375
+	  490 -> 114
+	  491 -> 34
+	  492 -> 453
+	  493 -> 100
+	  494 -> 63
+	  495 -> 537
+	  496 -> 498
+	  496 -> 499
+	  497 -> 186
+	  498 -> 380
+	  499 -> 316
+	  500 -> 296
+	  501 -> 156
+	  502 -> 504
+	  503 -> 505
+	  503 -> 506
+	  504 -> 76
+	  505 -> 75
+	  506 -> 523
+	  507 -> 468
+	  508 -> 121
+	  508 -> 105
+	  508 -> 203
+	  508 -> 460
+	  508 -> 466
+	  508 -> 405
+	  508 -> 149
+	  508 -> 407
+	  508 -> 502
+	  508 -> 153
+	  509 -> 91
+	  510 -> 327
+	  511 -> 513
+	  511 -> 514
+	  512 -> 80
+	  513 -> 50
+	  514 -> 78
+	  515 -> 93
+	  516 -> 292
+	  517 -> 520
+	  517 -> 519
+	  518 -> 108
+	  519 -> 311
+	  520 -> 288
+	  521 -> 507
+	  522 -> 201
+	  523 -> 33
+	  524 -> 526
+	  525 -> 361
+	  525 -> 362
+	  525 -> 259
+	  526 -> 231
+	  527 -> 96
+	  528 -> 530
+	  528 -> 531
+	  529 -> 176
+	  530 -> 455
+	  531 -> 60
+	  532 -> 409
+	  532 -> 546
+	  532 -> 77
+	  532 -> 126
+	  533 -> 369
+	  534 -> 536
+	  535 -> 534
+	  536 -> 538
+	  537 -> 313
+	  537 -> 392
+	  537 -> 237
+	  537 -> 397
+	  537 -> 89
+	  537 -> 187
+	  538 -> 308
+	  539 -> 539
+	  540 -> 400
+	  541 -> 224
+	  542 -> 12
+	  543 -> 255
+	  544 -> 508
+	  545 -> 198
+	  546 -> 256
+	  547 -> 381
+	  548 -> 376
+	  549 -> 415
+	  550 -> 417
+	  551 -> 551
+	  552 -> 554
+	  552 -> 555
+	  553 -> 173
+	  554 -> 483
+	  555 -> 174
+}
+

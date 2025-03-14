@@ -1,0 +1,497 @@
+# WHIRLING / KIM INTRO
+# Downstairs ltn Kim Kitsuragi - precinct 57th's finest - is waiting to solve THE HANGED MAN with you as an inter-district co-op. It would appear Precinct 41 sent you to investigate the lynching of a "Whitewater mercenary" in "Martinaise". And that you are indeed a police officer. Kim briefs you on the case and your relationship begins - likely on the wrong foot, but not necessarily.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"It wasn't on me when I woke up.\""];
+	  3 [label="You: Invent a name for yourself."];
+	  4 [label="You: Variable[\"whirling.kimintro_conceptualized_name\"]"];
+	  5 [label="Variable[\"whirling.kimintro_conceptualized_name\"]", shape=diamond];
+	  6 [label="!(Variable[\"whirling.kimintro_conceptualized_name\"])", shape=diamond];
+	  7 [label="Horrific Necktie: Even classier. You should take this opportunity to start your life anew as a *classier* person -- as Raphaël Ambrosius Costeau."];
+	  8 [label="You: \"Look man, you know, yeah.\""];
+	  9 [label="You: \"Completely.\""];
+	  10 [label="Logic: And then, soon after, dead bodies would be dangling from all the trees."];
+	  11 [label="Kim Kitsuragi: \"I suppose you could be impersonating him. You could have gotten the insignia from the black market or forged it. But for now I am going to set those possibilities aside. I'm not from the Inspectorate General.\""];
+	  12 [label="Kim Kitsuragi: \"No need for derogatory terms. They are only doing their job.\""];
+	  13 [label="You: \"Uh... Inspectorate General?\""];
+	  14 [label="Kim Kitsuragi: He nods."];
+	  15 [label="Kim Kitsuragi: He nods."];
+	  16 [label="Kim Kitsuragi: \"I was to meet a detective from Precinct 41 at the Whirling-in-Rags who arrived here three days ago. I am told that that is how long you have been here. Besides, you match his description.\" He looks you over."];
+	  17 [label="You: \"You mean internal affairs?\""];
+	  18 [label="You: It's very cool, but won't I come off like a douche if I call myself that?"];
+	  19 [label="You: Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")"];
+	  20 [label="Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")", shape=diamond];
+	  21 [label="!(Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\"))", shape=diamond];
+	  22 [label="Conceptualization: No, you won't. Raphaël Ambrosius Costeau sounds solemn and historical. This is an opportunity to start your life anew as a *classier* person."];
+	  23 [label="Kim Kitsuragi: \"Regardless, I would also suggest that you locate your blazer with your official insignia.\" He points to the white rectangle on his sleeve."];
+	  24 [label="You: Variable[\"whirling.kimintro_conceptualized_name\"]"];
+	  25 [label="Variable[\"whirling.kimintro_conceptualized_name\"]", shape=diamond];
+	  26 [label="!(Variable[\"whirling.kimintro_conceptualized_name\"])", shape=diamond];
+	  27 [label="Conceptualization: Raphaël Ambrosius Costeau."];
+	  28 [label="You: It's so cool."];
+	  29 [label="Jump to: [You: \"\"My name is Raphaël Ambrosius Coste...\"]"];
+	  30 [label="Jump to: [bodystillintree]"];
+	  31 [label="Kim Kitsuragi: \"...where it has been hanging for seven days straight. We should go there as soon as we're done talking to the owner.\""];
+	  32 [label="Kim case intro HUB"];
+	  33 [label="You: \"You said insignia. These white rectangles, you mean?\" (Point to your sleeve.)"];
+	  34 [label="You: \"Okay then.\""];
+	  35 [label="Kim Kitsuragi: \"Oh...\" There's a moment's pause, then he continues, carefully: \"If you didn't have your badge then that would be very *bad*. You would need to report it on my shortwave. But since you *do* have it, we can go straight to the task at hand.\""];
+	  36 [label="You: CheckEquipped(\"pants_bellbottom\") == true"];
+	  37 [label="CheckEquipped(\"pants_bellbottom\") == true", shape=diamond];
+	  38 [label="!(CheckEquipped(\"pants_bellbottom\") == true)", shape=diamond];
+	  39 [label="Jump to: [Kim case intro HUB]"];
+	  40 [label="You: \"Ah, you mean the rat squad!\""];
+	  41 [label="Kim Kitsuragi: A bespectacled man in an orange bomber jacket is tapping his foot on the floor. Looks like he's waiting for someone -- you."];
+	  42 [label="Kim Kitsuragi: \"Hello, I'm Kim Kitsuragi.\" His grip is firm. \"Lieutenant, Precinct 57. You must be from the 41st...\""];
+	  43 [label="You: \"Don't worry about the body. I'll rip it down.\""];
+	  44 [label="Pain Threshold: Yeah, a painkiller would be good about now. This thing is *pulsating* with discomfort."];
+	  45 [label="You: Shake his hand."];
+	  46 [label="You: Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")"];
+	  47 [label="Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")", shape=diamond];
+	  48 [label="!(Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\"))", shape=diamond];
+	  49 [label="Rhetoric: What he means is he has been trying to meet up with you for two days, but you have been *otherwise occupied*."];
+	  50 [label="bodystillintree"];
+	  51 [label="You: \"What were we supposed to do again?\""];
+	  52 [label="Jump to: [Kim case intro HUB]"];
+	  53 [label="You: \"Let's go.\" [Leave.]"];
+	  54 [label="You: Variable[\"whirling.kimintro_rat_squad\"]"];
+	  55 [label="Variable[\"whirling.kimintro_rat_squad\"]", shape=diamond];
+	  56 [label="!(Variable[\"whirling.kimintro_rat_squad\"])", shape=diamond];
+	  57 [label="You: CheckItem(\"jacket_suede\")"];
+	  58 [label="CheckItem(\"jacket_suede\")", shape=diamond];
+	  59 [label="!(CheckItem(\"jacket_suede\"))", shape=diamond];
+	  60 [label="You: Variable[\"TASK.report_badge\"]"];
+	  61 [label="Variable[\"TASK.report_badge\"]", shape=diamond];
+	  62 [label="!(Variable[\"TASK.report_badge\"])", shape=diamond];
+	  63 [label="You: \"There must be some kind of a misunderstanding. You're taking me for someone else.\""];
+	  64 [label="Kim Kitsuragi: \"Okay. We'll have time for that after we take a look at the coroner's case.\""];
+	  65 [label="Kim Kitsuragi: \"We all feel that way sometimes. There is no such thing as a *police officer*, I'm afraid. What remains is that there is a dead body in the tree -- someone has to figure out who put it there. If we don't, no one else will.\""];
+	  66 [label="You: \"Ah, you mean the rat squad!\""];
+	  67 [label="Kim Kitsuragi: \"Yes.\""];
+	  68 [label="Jump to: [Kim case intro HUB]"];
+	  69 [label="Kim Kitsuragi: \"Have you removed the dead body from the tree?\""];
+	  70 [label="You: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  71 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  72 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  73 [label="Kim Kitsuragi: You realize he is waiting for your name."];
+	  74 [label="Perception (Sight): On the sleeve of his bomber jacket -- as well as on its back -- are the same enigmatic white rectangles as on your blazer."];
+	  75 [label="You: \"I have. Yes.\""];
+	  76 [label="You: \"You mean internal affairs?\""];
+	  77 [label="Kim Kitsuragi: \"Yes. But I am not them. I'm from Criminal Investigation.\""];
+	  78 [label="You: CheckEquipped(\"jacket_suede\")"];
+	  79 [label="CheckEquipped(\"jacket_suede\")", shape=diamond];
+	  80 [label="!(CheckEquipped(\"jacket_suede\"))", shape=diamond];
+	  81 [label="You: Variable[\"whirling.kimintro_rat_squad\"]"];
+	  82 [label="Variable[\"whirling.kimintro_rat_squad\"]", shape=diamond];
+	  83 [label="!(Variable[\"whirling.kimintro_rat_squad\"])", shape=diamond];
+	  84 [label="Kim Kitsuragi: \"Yes. But I am not them. I'm from Criminal Investigation.\""];
+	  85 [label="You: (Pretend you found it.) \"I have my badge! I'm a policeman and I have my badge.\""];
+	  86 [label="Kim Kitsuragi: \"After it's been up in a tree for that long, any kind of ripping is inadvisable.\""];
+	  87 [label="You: Don't shake his hand."];
+	  88 [label="Horrific Necktie: Raphaël Ambrosius Costeau is not ostentatious, it's classy. This is an opportunity to start your life anew as a *classier* person."];
+	  89 [label="Kim Kitsuragi: \"Yes, well...\" He doesn't even process what you just said, just moves on."];
+	  90 [label="You: \"You mean him?\" (Nod toward the Cafeteria Manager.) \"Yeah, I just talked to him.\""];
+	  91 [label="You: \"Dead body?\""];
+	  92 [label="Kim Kitsuragi: \"So, the body is still in the tree...\""];
+	  93 [label="Volition: Alright, come on now. If *he* hasn't said anything about your lack of pants, no one will. You're only hurting yourself by not wearing them..."];
+	  94 [label="Volition: Alright, come on now. If *he* hasn't said anything about your lack of pants, no one will. You're only hurting yourself by not wearing them..."];
+	  95 [label="Interfacing: Delicate goods. Filled with stinking horrors..."];
+	  96 [label="Jump to: [You: \"\"My name is Raphaël Ambrosius Coste...\"]"];
+	  97 [label="Kim Kitsuragi: \"Mm-hmm.\""];
+	  98 [label="You: \"I don't like dead bodies.\""];
+	  99 [label="Kim Kitsuragi: \"Internal affairs. And I'm not them. I'm from Criminal Investigation.\""];
+	  100 [label="You: CheckEquipped(\"pants_bellbottom\") == true"];
+	  101 [label="CheckEquipped(\"pants_bellbottom\") == true", shape=diamond];
+	  102 [label="!(CheckEquipped(\"pants_bellbottom\") == true)", shape=diamond];
+	  103 [label="You: \"That's right! I'm a man for all seasons, baby!\""];
+	  104 [label="You: \"What if I have an uncanny doppelgänger?\""];
+	  105 [label="Kim Kitsuragi: \"You may have murdered the man I was supposed to meet and are now impersonating him. You may be his twin, stepping in for his even more incapacitated brother out of loyalty and love.\""];
+	  106 [label="Drama: Not for a moment does he believe that's your real name. He casts it aside as an intradepartmental joke or a peculiarity he doesn't understand."];
+	  107 [label="Kim Kitsuragi: \"No, I don't think so.\" He studies you briefly. \"We should ask him for a run-down of the area now that I'm here as well. I understand the scene is out back, right?\""];
+	  108 [label="Kim Kitsuragi: \"It also wouldn't hurt to assure him the police are finally here. In full force, I mean. Have you mapped out the initial interviews?\""];
+	  109 [label="You: \"I haven't.\""];
+	  110 [label="Kim Kitsuragi: \"I can see you drank last night, and the night before,\" he says after a moment of silence. \"And that you are still drunk now. But I have seen officers go through worse. Much worse.\""];
+	  111 [label="Kim Kitsuragi: \"Sure. But did you take it down from the tree?\""];
+	  112 [label="Jump to: [tre]"];
+	  113 [label="Kim Kitsuragi: \"They're not *just* white rectangles. They bear a halogen watermark with the letters RCM and a pattern resembling the street grid of Revachol West. I could step into the headlights of my Kineema and show you, but right now I just need you to do your job.\""];
+	  114 [label="tre"];
+	  115 [label="You: \"My name is Raphaël Ambrosius Costeau.\""];
+	  116 [label="Horrific Necktie: You instinctively run your hand over the multi-patterned silk of your tie. Its slickness gives you comfort and reassurance."];
+	  117 [label="Conceptualization: No, it's not. Raphaël Ambrosius Costeau sounds solemn and historical. This is an opportunity to start your life anew as a *classier* person."];
+	  118 [label="Kim Kitsuragi: \"You seem a little unsure, officer. Have you spent too much time undercover lately?\" He cracks an uneasy smile to let you know it's a joke."];
+	  119 [label="interviewhubbing"];
+	  120 [label="You: \"Yes, the police. I'm aware I'm a policeman.\""];
+	  121 [label="You: \"But I can't remember anything.\""];
+	  122 [label="Kimintro end jump HUB"];
+	  123 [label="Kim Kitsuragi: \"However, I would also suggest that you locate your blazer with your official insignia.\" He points to the white rectangle on his sleeve."];
+	  124 [label="Kim Kitsuragi: A bespectacled man in an orange bomber jacket is tapping his foot on the floor. Looks like he's waiting for someone -- you."];
+	  125 [label="You: \"Just call me *Officer*\"."];
+	  126 [label="You: It's very, very cool. But maybe just a bit too... ostentatious?"];
+	  127 [label="Horrific Necktie: You instinctively run your hand over the multi-patterned silk of your tie. Its slickness gives you comfort and reassurance."];
+	  128 [label="Kim Kitsuragi: \"Okay, then.\" He processes the information, then disregards it."];
+	  129 [label="Kim Kitsuragi: \"I was sent here to meet a detective from Precinct 41. You have the insignia of the Citizens Militia on your sleeve and on your back.\" He points to your jacket."];
+	  130 [label="Kim Kitsuragi: A bespectacled man in an orange bomber jacket has folded up his newspaper and is now tapping his foot on the floor. Looks like he's been waiting for quite some time."];
+	  131 [label="You: \"Uh... Inspectorate General?\""];
+	  132 [label="You: \"Wait, shouldn't I have a badge or something?\" (Check your pockets.)"];
+	  133 [label="Jump to: [You: \"\"My name is Raphaël Ambrosius Coste...\"]"];
+	  134 [label="Kim Kitsuragi: \"Very well. Officer...\" He's slightly confused."];
+	  135 [label="Kim Kitsuragi: You realize he is waiting for your name."];
+	  136 [label="Kim Kitsuragi: \"It looks like we had a little scheduling error on Sunday. Saturday too, actually... Have you had time to talk to the manager here?\""];
+	  137 [label="Kim Kitsuragi: \"Good. But even if you haven't, we'll have time for that after we take a look at the coroner's case.\""];
+	  138 [label="You: \"But shouldn't I have a badge or something?\" (Check your pockets.)"];
+	  139 [label="Encyclopedia: Inspectorate General means internal affairs. What he's saying is he's not from the *rat squad* and isn't supposed to suspect such things."];
+	  140 [label="Kim Kitsuragi: \"No need for derogatory terms. They are only doing their job.\""];
+	  141 [label="You: \"I don't really know my name.\""];
+	  142 [label="Kim Kitsuragi: As you approach, he narrows his eyes and extends his hand in greeting."];
+	  143 [label="Jump to: [Kim Kitsuragi: \"\"It looks like we had a little sche...\"]"];
+	  144 [label="Kim Kitsuragi: \"Then we should ask him for a run-down of the area, get me up to speed. I understand the scene is out back, right?\""];
+	  145 [label="Kim Kitsuragi: \"Yes, of course.\""];
+	  146 [label="Kim Kitsuragi: \"You mean you don't have a badge?\""];
+	  147 [label="Jump to: [Kim case intro HUB]"];
+	  148 [label="Jump to: [Kim case intro HUB]"];
+	  149 [label="You: (Pretend you found it.) \"I have my badge. I'm a police man and I have my badge.\""];
+	  150 [label="You: \"What description?\""];
+	  151 [label="Kim Kitsuragi: \"Internal affairs. And I'm not them. I'm from Criminal Investigation.\""];
+	  152 [label="Kim Kitsuragi: A bespectacled man in an orange bomber jacket has folded up his newspaper and is now tapping his foot on the floor. Looks like he's been waiting for quite some time."];
+	  153 [label="Electrochemistry: The best cure for a headache is, of course, morphine. They won't have that, so cigarettes will have to do."];
+	  154 [label="You: Hold on, who is he to me?"];
+	  155 [label="You: \"What interviews?\""];
+	  156 [label="Kim Kitsuragi: \"At the 57th, we like to prepare an initial list of persons of interest and then just... skim the surface.\" He gestures with his fingers. \"Prepare the field, get to know the players. You don't do that? Maybe it's not an inter-district practice...\""];
+	  157 [label="Kim Kitsuragi: \"If you need something for your headache, there is a general store nearby. But, as I said, the dead body should be our number one concern.\""];
+	  158 [label="Kim Kitsuragi: \"They're not *just* white rectangles. They bear a halogen watermark with the letters RCM and a pattern resembling the street grid of Revachol West.\""];
+	  159 [label="Kim Kitsuragi: \"After you, officer.\""];
+	  160 [label="You: \"You think I'm a cop? I can't be a police officer! Look at me!\""];
+	  161 [label="Kim Kitsuragi: After catching your attention, he narrows his eyes and extends his hand in greeting."];
+	  162 [label="Esprit de Corps: If an assault were launched on this building right now -- if the windows came crashing down and the whole world descended upon you -- this man would hurl himself in death's way to save you. You are sure of this -- but why?"];
+	  163 [label="Conceptualization: Concentration makes you squint your eyes. Your name should be deep gold and orange, like a forest fire looming on the horizon, but mixed with the stench of liquor rising from your breath. You're two steps closer to it, but there are still many to go..."];
+	  164 [label="Conceptualization: Yes, it is. Raphaël Ambrosius Costeau sounds solemn and historical. This is an opportunity to start your life anew as a *classier* person."];
+	  165 [label="Kim Kitsuragi: \"Hello, I'm Kim Kitsuragi.\" He looks unfazed. \"Lieutenant, Precinct 57. You must be from the 41st...\""];
+	  166 [label="You: Variable[\"whirling.garte_altgreeting_done\"]"];
+	  167 [label="Variable[\"whirling.garte_altgreeting_done\"]", shape=diamond];
+	  168 [label="!(Variable[\"whirling.garte_altgreeting_done\"])", shape=diamond];
+	  169 [label="Kim Kitsuragi: \"Right, and the interviews?\" He taps his foot -- more out of habit than impatience."];
+	  170 [label="You: \"But they're just white rectangles.\""];
+	  171 [label="Empathy: It's barely noticeable, but he might be *a bit* annoyed at your rudeness. Then he lets it go -- more important matters need tending to."];
+	  172 [label="cleanerhub"];
+	  173 [label="You: \"But they're just white rectangles.\""];
+	  174 [label="You: \"Uh, I'm... maybe I'm Harry?\""];
+	  175 [label="Tutorial Agent: Lieutenant Kitsuragi is now in your party. You can talk to him whenever, by interacting with him."];
+	  176 [label="Physical Instrument: What a shame. Get to it now. *Rip* that body down from the tree."];
+	  177 [label="Horrific Necktie: You instinctively run your hand over your multi-patterned orange tie. The sensation of wrinkled silk somehow makes the name sound even cooler."];
+	  178 [label="Horrific Necktie: Don't worry. Raphaël Ambrosius Costeau sounds solemn and historical. Take this opportunity to start your life anew as a *classier* person."];
+	  179 [label="You: \"Who? You? You're with the police?\""];
+	  180 [label="Kim Kitsuragi: \"Does that mean the body is no longer in the tree?\""];
+	  181 [label="Empathy: This is the first time you detect a weariness in the lieutenant's voice. It is obvious he would have preferred for the body to no longer be in the tree."];
+	  182 [label="Kim Kitsuragi: \"Completely? Does that mean you took the body down from the tree?\""];
+	  183 [label="Jump to: [Kim case intro HUB]"];
+	  184 [label="Kim Kitsuragi: \"Sure. Though I would also suggest that you locate your blazer with your official insignia.\" He points to the white rectangle on his sleeve."];
+	  185 [label="Kim Kitsuragi: \"Losing your identification card is a *serious* matter. My vehicle has a shortwave -- you can use it to report your badge missing. I advise you to try to locate it as quickly as possible. But getting the body down should still take precedence.\""];
+	  186 [label="Kim Kitsuragi: \"Oh...\" There's a moment's pause, then he continues, obviously relieved: \"If you didn't have your badge then that would be very *bad*. You would need to report it on my shortwave. But since you *do* have it, we can go straight to the task at hand.\""];
+	  187 [label="You: \"No, I haven't.\""];
+	  188 [label="You: \"No.\""];
+	  189 [label="Jump to: [interviewhubbing]"];
+	  190 [label="You: \"It was not on me when I woke up.\""];
+	  191 [label="Kim Kitsuragi: \"Losing your identification card is a *serious* matter. My vehicle has a shortwave -- you can use it to report your badge missing. I would advise you to locate it as quickly as possible. But getting the body down should still take precedence.\""];
+	  192 [label="Kim Kitsuragi: \"I would ask you to step into the headlights of my motor carriage, but, again, it's none of my concern. I just need you to do your job.\""];
+	  193 [label="You: \"It is not yet time.\""];
+	  194 [label="Kim Kitsuragi: \"But for now I am going to set those possibilities aside. I'm not from the Inspectorate General.\""];
+	  195 [label="You: \"You mean that guy?\" (Nod toward the man behind the counter.) \"I *totally* talked to him.\""];
+	  196 [label="Rhetoric: This man is doing you a professional courtesy. He knows you haven't talked to the proprietor about whatever it was you were supposed to talk to him about."];
+	  197 [label="You: \"What if I told you I'm not really a police officer?\""];
+	  198 [label="You: \"How can you be so sure I'm from the police?\""];
+	  199 [label="You: Say nothing."];
+	  200 [label="Perception (Sight): On the sleeve of his bomber jacket -- as well as on its back -- are enigmatic white rectangles."];
+	  201 [label="Kim Kitsuragi: \"But first we have to take it down,\" he concludes."];
+	  202 [label="You: \"Oh.\""];
+	  203 [label="Logic: If you're about to embark on an investigation, shouldn't you have a badge?"];
+	  204 [label="Kim Kitsuragi: \"If you don't mind, we should talk to him again. Ask him for a run-down of the area -- now that I'm here as well. I understand the scene is out back, right?\""];
+	  205 [label="Encyclopedia: Inspectorate General means internal affairs. What he's saying is he's not from the *rat squad* and isn't supposed to suspect such things."];
+	  206 [label="Kim Kitsuragi: \"You mean you don't have a badge?\""];
+	  207 [label="Jump to: [Kim case intro HUB]"];
+	  208 [label="Esprit de Corps: He is your half-brother."];
+	  209 [label="You: Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")"];
+	  210 [label="Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")", shape=diamond];
+	  211 [label="!(Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\"))", shape=diamond];
+	  212 [label="Kim Kitsuragi: \"Talk to the manager. Then we go out back and take the body down.\""];
+	  213 [label="You: Variable[\"whirling.lena_intro_greeting_kim_first\"]"];
+	  214 [label="Variable[\"whirling.lena_intro_greeting_kim_first\"]", shape=diamond];
+	  215 [label="!(Variable[\"whirling.lena_intro_greeting_kim_first\"])", shape=diamond];
+	  216 [label="Inland Empire: This is your chance to come up with a really good name for yourself. Get *creative* -- conceptualize!"];
+	  217 [label="You: \"Okay then.\""];
+	  218 [label="Kim Kitsuragi: \"Precinct 41 said they were sending their most seasoned detective. And you certainly look... seasoned.\""];
+	  0 -> 1
+	  1 -> 214
+	  2 -> 186
+	  3 -> 4
+	  4 -> 5
+	  4 -> 6
+	  5 -> 24
+	  6 -> 24
+	  7 -> 133
+	  8 -> 180
+	  9 -> 182
+	  10 -> 202
+	  11 -> 206
+	  12 -> 33
+	  12 -> 34
+	  13 -> 99
+	  14 -> 147
+	  15 -> 39
+	  16 -> 150
+	  17 -> 84
+	  18 -> 46
+	  19 -> 20
+	  19 -> 21
+	  20 -> 177
+	  21 -> 164
+	  22 -> 29
+	  23 -> 173
+	  24 -> 25
+	  24 -> 26
+	  25 -> 163
+	  26 -> 27
+	  27 -> 18
+	  27 -> 115
+	  27 -> 28
+	  27 -> 126
+	  28 -> 19
+	  29 -> 115
+	  30 -> 50
+	  31 -> 176
+	  32 -> 160
+	  32 -> 198
+	  32 -> 199
+	  32 -> 43
+	  32 -> 51
+	  32 -> 53
+	  32 -> 121
+	  33 -> 67
+	  34 -> 14
+	  35 -> 36
+	  36 -> 37
+	  36 -> 38
+	  37 -> 68
+	  38 -> 93
+	  39 -> 32
+	  40 -> 140
+	  42 -> 73
+	  43 -> 86
+	  44 -> 153
+	  45 -> 42
+	  46 -> 48
+	  46 -> 47
+	  47 -> 127
+	  48 -> 22
+	  49 -> 90
+	  49 -> 188
+	  49 -> 196
+	  49 -> 63
+	  50 -> 98
+	  50 -> 8
+	  50 -> 9
+	  50 -> 91
+	  50 -> 189
+	  51 -> 213
+	  52 -> 32
+	  53 -> 159
+	  54 -> 56
+	  54 -> 55
+	  55 -> 66
+	  55 -> 76
+	  56 -> 33
+	  56 -> 34
+	  56 -> 13
+	  57 -> 58
+	  57 -> 59
+	  58 -> 74
+	  59 -> 201
+	  60 -> 61
+	  60 -> 62
+	  61 -> 70
+	  62 -> 204
+	  63 -> 107
+	  64 -> 69
+	  65 -> 10
+	  66 -> 12
+	  67 -> 170
+	  68 -> 32
+	  69 -> 50
+	  70 -> 72
+	  70 -> 71
+	  72 -> 175
+	  73 -> 217
+	  74 -> 172
+	  75 -> 137
+	  76 -> 77
+	  77 -> 33
+	  77 -> 34
+	  78 -> 80
+	  78 -> 79
+	  79 -> 129
+	  80 -> 16
+	  81 -> 82
+	  81 -> 83
+	  82 -> 40
+	  82 -> 17
+	  83 -> 218
+	  83 -> 131
+	  84 -> 23
+	  85 -> 187
+	  86 -> 95
+	  87 -> 165
+	  88 -> 96
+	  89 -> 106
+	  90 -> 205
+	  91 -> 97
+	  92 -> 181
+	  93 -> 68
+	  94 -> 70
+	  95 -> 208
+	  96 -> 115
+	  97 -> 30
+	  98 -> 111
+	  99 -> 33
+	  99 -> 34
+	  100 -> 101
+	  100 -> 102
+	  101 -> 70
+	  102 -> 94
+	  103 -> 185
+	  104 -> 105
+	  105 -> 195
+	  106 -> 143
+	  107 -> 108
+	  108 -> 119
+	  109 -> 64
+	  110 -> 157
+	  111 -> 30
+	  112 -> 114
+	  113 -> 138
+	  114 -> 3
+	  114 -> 200
+	  114 -> 141
+	  114 -> 174
+	  114 -> 125
+	  115 -> 89
+	  116 -> 88
+	  117 -> 96
+	  118 -> 112
+	  119 -> 75
+	  119 -> 109
+	  119 -> 179
+	  119 -> 120
+	  119 -> 155
+	  120 -> 169
+	  121 -> 110
+	  123 -> 173
+	  124 -> 142
+	  125 -> 134
+	  126 -> 210
+	  127 -> 178
+	  128 -> 136
+	  129 -> 11
+	  131 -> 151
+	  132 -> 207
+	  133 -> 115
+	  134 -> 136
+	  135 -> 217
+	  136 -> 49
+	  137 -> 69
+	  138 -> 146
+	  139 -> 81
+	  140 -> 23
+	  141 -> 128
+	  142 -> 162
+	  143 -> 136
+	  144 -> 108
+	  145 -> 190
+	  146 -> 149
+	  146 -> 191
+	  147 -> 32
+	  148 -> 32
+	  149 -> 35
+	  150 -> 219
+	  151 -> 23
+	  152 -> 161
+	  153 -> 183
+	  154 -> 209
+	  155 -> 156
+	  156 -> 190
+	  157 -> 44
+	  158 -> 193
+	  159 -> 60
+	  160 -> 65
+	  161 -> 162
+	  162 -> 57
+	  163 -> 194
+	  163 -> 200
+	  163 -> 141
+	  163 -> 174
+	  163 -> 125
+	  164 -> 133
+	  165 -> 171
+	  166 -> 168
+	  166 -> 167
+	  167 -> 108
+	  168 -> 197
+	  169 -> 190
+	  170 -> 158
+	  171 -> 135
+	  172 -> 154
+	  172 -> 45
+	  172 -> 87
+	  173 -> 113
+	  174 -> 118
+	  176 -> 32
+	  177 -> 7
+	  178 -> 29
+	  179 -> 145
+	  180 -> 30
+	  181 -> 31
+	  182 -> 30
+	  183 -> 32
+	  184 -> 173
+	  185 -> 100
+	  186 -> 100
+	  187 -> 144
+	  188 -> 92
+	  189 -> 119
+	  190 -> 192
+	  191 -> 36
+	  192 -> 138
+	  193 -> 128
+	  194 -> 139
+	  195 -> 205
+	  196 -> 108
+	  197 -> 65
+	  198 -> 78
+	  199 -> 136
+	  200 -> 172
+	  201 -> 52
+	  202 -> 123
+	  203 -> 132
+	  204 -> 166
+	  205 -> 54
+	  206 -> 2
+	  206 -> 85
+	  207 -> 32
+	  208 -> 45
+	  208 -> 87
+	  209 -> 211
+	  209 -> 212
+	  210 -> 116
+	  211 -> 117
+	  212 -> 148
+	  213 -> 216
+	  213 -> 215
+	  214 -> 152
+	  215 -> 124
+	  216 -> 114
+	  217 -> 15
+	  218 -> 104
+	  218 -> 203
+	  218 -> 103
+}
+

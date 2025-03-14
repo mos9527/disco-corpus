@@ -1,0 +1,154 @@
+# CANAL / WATERLOCK LEVER
+# this is the button-switch-lever-thing that closes the waterlock once it's been fixed on day 3
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="lever main hub"];
+	  3 [label="You: So the coast is closed off. Is this why Lena's husband Morell the cryptozoologist hasn't returned?"];
+	  4 [label="Esprit de Corps: Focus on one thing, achieve it, then the next... he thinks. That's the task chain."];
+	  5 [label="Water Lock Control Panel: Nothing happens. A cold gust of wind blowing in from the sea interrupts the silence of the situation."];
+	  6 [label="Variable[\"TASK.ask_about_ruby_in_village\"]"];
+	  7 [label="Variable[\"TASK.ask_about_ruby_in_village\"]", shape=diamond];
+	  8 [label="!(Variable[\"TASK.ask_about_ruby_in_village\"])", shape=diamond];
+	  9 [label="Jump to: [lever main hub]"];
+	  10 [label="Water Lock Control Panel: The water lock starts moving..."];
+	  11 [label="Water Lock Control Panel: A couple of indicator lights are missing from this control panel. Loose wires dangle from the now-vacant holes. In the middle is a lever -- beneath it, a small metal plaque."];
+	  12 [label="Reaction Speed: Wait... Could this be why Morell hasn't returned to Lena?"];
+	  13 [label="Perception (Sight): Isn't there a sign over there saying functionality will be restored on Wednesday morning?"];
+	  14 [label="Kim Kitsuragi: \"All right.\" The lieutenant looks across the canal. \"We can go to the coast now. Expect rugged terrain -- and drunks.\""];
+	  15 [label="Kim Kitsuragi: \"Looks like it, yes. We should probably go tell Lena. Take a load off her mind.\""];
+	  16 [label="You: Release the lever."];
+	  17 [label="Perception (Sight): Wasn't there a sign over there saying functionality will be restored on Wednesday morning?"];
+	  18 [label="You: \"So the coast is closed off. This may be why Lena's husband Morell the cryptozoologist hasn't returned.\""];
+	  19 [label="Variable[\"canal.lever_greeting_done\"]"];
+	  20 [label="Variable[\"canal.lever_greeting_done\"]", shape=diamond];
+	  21 [label="!(Variable[\"canal.lever_greeting_done\"])", shape=diamond];
+	  22 [label="Logic: You should probably tell Lena. It'll take a load off her mind."];
+	  23 [label="IsKimHere()"];
+	  24 [label="IsKimHere()", shape=diamond];
+	  25 [label="!(IsKimHere())", shape=diamond];
+	  26 [label="You: [Leave.]"];
+	  27 [label="Water Lock Control Panel: You pull the lever all the way up until the metal clicks against the contact pins. You hear a soft *clunk*, then..."];
+	  28 [label="IsKimHere()"];
+	  29 [label="IsKimHere()", shape=diamond];
+	  30 [label="!(IsKimHere())", shape=diamond];
+	  31 [label="Variable[\"canal.know_water_lock_time\"]"];
+	  32 [label="Variable[\"canal.know_water_lock_time\"]", shape=diamond];
+	  33 [label="!(Variable[\"canal.know_water_lock_time\"])", shape=diamond];
+	  34 [label="Jump to: [lever main hub]"];
+	  35 [label="Kim Kitsuragi: \"Okay...\" The lieutenant looks across the canal. \"If we ever need to get to the coast, then this is the way. But please, contain your *wanderlust* for now. I don't want us to get sidetracked. Not with everything that's going on.\""];
+	  36 [label="Variable[\"canal.signature_doc_canal_closed\"]"];
+	  37 [label="Variable[\"canal.signature_doc_canal_closed\"]", shape=diamond];
+	  38 [label="!(Variable[\"canal.signature_doc_canal_closed\"])", shape=diamond];
+	  39 [label="Visual Calculus: This panel usually closes the water lock, turning it into a bridge that lets you cross the canal -- but there's a crashed \"Samaran butter\" sign in the way. Pulling the lever *probably* won't do anything."];
+	  40 [label="Man on water lock: The man watches you in silence, very slowly cutting off another slice of his salami and putting it in his mouth."];
+	  41 [label="Variable[\"canal.know_water_lock_time\"] == false  and  Variable[\"TASK.locate_morell\"]  and  Variable[\"TASK.locate_morell_done\"] == false  and  Variable[\"canal.lock_logic_wait\"] == false"];
+	  42 [label="Variable[\"canal.know_water_lock_time\"] == false  and  Variable[\"TASK.locate_morell\"]  and  Variable[\"TASK.locate_morell_done\"] == false  and  Variable[\"canal.lock_logic_wait\"] == false", shape=diamond];
+	  43 [label="!(Variable[\"canal.know_water_lock_time\"] == false  and  Variable[\"TASK.locate_morell\"]  and  Variable[\"TASK.locate_morell_done\"] == false  and  Variable[\"canal.lock_logic_wait\"] == false)", shape=diamond];
+	  44 [label="DayCount() >= 3  or  Variable[\"canal.know_water_lock_fixed\"]"];
+	  45 [label="DayCount() >= 3  or  Variable[\"canal.know_water_lock_fixed\"]", shape=diamond];
+	  46 [label="!(DayCount() >= 3  or  Variable[\"canal.know_water_lock_fixed\"])", shape=diamond];
+	  47 [label="Logic: Could this be why Morell hasn't returned to Lena?"];
+	  48 [label="IsHourBetween(9, 21)"];
+	  49 [label="IsHourBetween(9, 21)", shape=diamond];
+	  50 [label="!(IsHourBetween(9, 21))", shape=diamond];
+	  51 [label="Water Lock Control Panel: You grab the handle and pull the lever up. As soon as the metal connects against the contact pins you hear a loud *clunk*, then..."];
+	  52 [label="You: Push it HARDER."];
+	  53 [label="You: Pull the lever -- again."];
+	  54 [label="Empathy: She *was* quite worried..."];
+	  55 [label="Water Lock Control Panel: A rusting control panel with loose wires dangling out from the hole where an indicator light used to be, and a mechanical lever sitting in the middle."];
+	  56 [label="DayCount() >= 3  or  Variable[\"canal.know_water_lock_fixed\"]"];
+	  57 [label="DayCount() >= 3  or  Variable[\"canal.know_water_lock_fixed\"]", shape=diamond];
+	  58 [label="!(DayCount() >= 3  or  Variable[\"canal.know_water_lock_fixed\"])", shape=diamond];
+	  59 [label="Water Lock Control Panel: A spring brings the lever back to its original position. You still need to close the water lock to get across the canal -- some other way."];
+	  60 [label="Kim Kitsuragi: \"Mm-hmm.\" The lieutenant hums to himself while staring at your activities."];
+	  61 [label="Water Lock Control Panel: The Water Lock Control Panel doesn't make for much of a partner, but yeah -- why not."];
+	  62 [label="You: Pull the lever up."];
+	  63 [label="Water Lock Control Panel: Nothing happens."];
+	  64 [label="Variable[\"canal.lock_logic_wait\"]"];
+	  65 [label="Variable[\"canal.lock_logic_wait\"]", shape=diamond];
+	  66 [label="!(Variable[\"canal.lock_logic_wait\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 20
+	  2 -> 3
+	  2 -> 19
+	  2 -> 54
+	  2 -> 27
+	  2 -> 63
+	  3 -> 62
+	  5 -> 29
+	  6 -> 8
+	  6 -> 7
+	  7 -> 14
+	  8 -> 36
+	  9 -> 2
+	  10 -> 24
+	  11 -> 45
+	  12 -> 2
+	  13 -> 9
+	  15 -> 55
+	  16 -> 60
+	  17 -> 9
+	  18 -> 15
+	  19 -> 21
+	  19 -> 22
+	  20 -> 56
+	  21 -> 11
+	  22 -> 35
+	  23 -> 25
+	  23 -> 26
+	  24 -> 6
+	  27 -> 64
+	  28 -> 30
+	  28 -> 31
+	  29 -> 61
+	  30 -> 49
+	  31 -> 33
+	  31 -> 34
+	  32 -> 18
+	  33 -> 13
+	  34 -> 2
+	  35 -> 37
+	  36 -> 38
+	  36 -> 39
+	  38 -> 4
+	  39 -> 42
+	  40 -> 17
+	  40 -> 53
+	  41 -> 43
+	  41 -> 44
+	  42 -> 48
+	  43 -> 2
+	  44 -> 46
+	  44 -> 47
+	  45 -> 42
+	  46 -> 40
+	  47 -> 65
+	  48 -> 50
+	  48 -> 51
+	  49 -> 41
+	  50 -> 17
+	  50 -> 53
+	  51 -> 10
+	  52 -> 5
+	  53 -> 57
+	  54 -> 35
+	  55 -> 45
+	  56 -> 58
+	  56 -> 59
+	  57 -> 52
+	  58 -> 28
+	  59 -> 32
+	  60 -> 17
+	  60 -> 53
+	  61 -> 23
+	  62 -> 57
+	  63 -> 17
+	  63 -> 53
+	  64 -> 66
+	  64 -> 67
+	  65 -> 2
+	  66 -> 12
+}
+

@@ -1,0 +1,456 @@
+# WHIRLING / SLEEPING DOCKWORKER
+# Downstairs at the Whirling In Rags there's a sleeping dockworker. Interfacing people can steal his wallet and work pass, Phys inst can wake him up by yelling and then get some info on the Union and the strike.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Rhetoric: Meaning: you're not gonna get more out of me."];
+	  3 [label="Main hub"];
+	  4 [label="You: \"Lieutenant, who is this?\""];
+	  5 [label="You: \"I already had some. It's a fine rum.\""];
+	  6 [label="Sleeping Dockworker: The dockworker doesn't answer, his head is already back down on the table. In sweet sleep."];
+	  7 [label="Jump to: [Main hub]"];
+	  8 [label="You: \"Of course. It's a total *madhouse*.\""];
+	  9 [label="Sleeping Dockworker: \"Brilliant.\" The worker blinks, as if trying to scare away the sleep."];
+	  10 [label="Interfacing: Your fingers find their way into the shackle, flicking open its spring-loaded gate. The metal loop holds the plastic ID, and a leather-bound pocketbook..."];
+	  11 [label="You: Pick up the pills."];
+	  12 [label="Sleeping Dockworker: A man is sleeping at the table, wearing mud-caked boots and rolled down overalls. The back of his shirt reads \"WILD PINES\", encircled by a logo with a tree."];
+	  13 [label="You: \"I just wanted to see what would happen if I yelled.\""];
+	  14 [label="You: \"You seem cool with it. Do you have many of those hanging from the trees here?\""];
+	  15 [label="Sleeping Dockworker: The man emits a loud snore. Is he about to wake up? Doesn't look like it, but you never know. Better be quick!"];
+	  16 [label="Jump to: [Questions hub]"];
+	  17 [label="You: Steal the dockworker's ID."];
+	  18 [label="You: Variable[\"whirling.sleeper_redcheck_stealing_stuff\"]"];
+	  19 [label="Variable[\"whirling.sleeper_redcheck_stealing_stuff\"]", shape=diamond];
+	  20 [label="!(Variable[\"whirling.sleeper_redcheck_stealing_stuff\"])", shape=diamond];
+	  21 [label="Sleeping Dockworker: Variable[\"whirling.sleeper_felt_itch\"]"];
+	  22 [label="Variable[\"whirling.sleeper_felt_itch\"]", shape=diamond];
+	  23 [label="!(Variable[\"whirling.sleeper_felt_itch\"])", shape=diamond];
+	  24 [label="Sleeping Dockworker: IsKimHere()"];
+	  25 [label="IsKimHere()", shape=diamond];
+	  26 [label="!(IsKimHere())", shape=diamond];
+	  27 [label="Half Light: Like fucking sleigh bells! What are you doing, you're gonna get caught!"];
+	  28 [label="Logic: It was probably his colleagues from the Union."];
+	  29 [label="You: Swipe through the pocketbook and take what's inside."];
+	  30 [label="You: \"That's wonderful.\""];
+	  31 [label="Sleeping Dockworker: Variable[\"whirling.sense_rum_electrochem_licked_it\"]"];
+	  32 [label="Variable[\"whirling.sense_rum_electrochem_licked_it\"]", shape=diamond];
+	  33 [label="!(Variable[\"whirling.sense_rum_electrochem_licked_it\"])", shape=diamond];
+	  34 [label="You: \"I need you to answer some questions right now.\""];
+	  35 [label="You: And the man?"];
+	  36 [label="You: \"You're saying things might get violent around here?\""];
+	  37 [label="Sleeping Dockworker: Variable[\"whirling.sleeper_afraids_something\"] == true"];
+	  38 [label="Variable[\"whirling.sleeper_afraids_something\"] == true", shape=diamond];
+	  39 [label="!(Variable[\"whirling.sleeper_afraids_something\"] == true)", shape=diamond];
+	  40 [label="Kim Kitsuragi: \"Possibly because there's a strike going on in the harbour. There's not much to do -- aside from drinking and sleeping.\""];
+	  41 [label="You: \"Was it a fathomless darkness into which we ought to be deferred, like corpses to a mausoleum?\""];
+	  42 [label="Sleeping Dockworker: \"They got it. Measurehead's got it, he's guarding the gate. I'm just getting some sleep. Or *was*...\""];
+	  43 [label="Sleeping Dockworker: IsKimHere()"];
+	  44 [label="IsKimHere()", shape=diamond];
+	  45 [label="!(IsKimHere())", shape=diamond];
+	  46 [label="Kim Kitsuragi: \"To be honest, he is correct. Police officers generally don't go around *appropriating* possessions from people. Let's go.\""];
+	  47 [label="Sleeping Dockworker: \"If you get lucky, I might even have answers for them.\""];
+	  48 [label="Kim Kitsuragi: No. He's looking the other way -- perhaps purposefully."];
+	  49 [label="You: \"Wait -- *who* says that?\""];
+	  50 [label="Physical Instrument: The way he says \"Measurehead\" implies ultimate trust in this head-reckoner's physical prowess. He seems like a worthy rival. You should *slay* him."];
+	  51 [label="You: \"You're *alive*? You looked out for the long count there...\""];
+	  52 [label="You: \"Alright, I'll let you sleep.\" [Leave.]"];
+	  53 [label="Physical Instrument: He looks one with the table. It would take quite some effort to wake him up."];
+	  54 [label="Sleeping Dockworker: \"That's the name of my employer. I work in logistics.\""];
+	  55 [label="Sleeping Dockworker: \"If someone has decided to die on top of a tree, then how is it my concern?\""];
+	  56 [label="Sleeping Dockworker: \"Wait, what? I was just sleeping.\" He seems pissed off. \"What do you want, officer?\""];
+	  57 [label="You: Inspect the piece of plastic on his carabiner."];
+	  58 [label="Sleeping Dockworker: It's a dockworker's ID, doubling as a shift card and a job permit. A young, able-bodied man stares back at you from the photo: Santiago S. John."];
+	  59 [label="Sleeping Dockworker: \"I don't know what you're talking about, kind sir, but when I'm out, then I'm really *out*. No corpses. No mausoleums. Just *quality-time*.\""];
+	  60 [label="Sleeping Dockworker: Variable[\"whirling.sleeper_greeting_done\"]"];
+	  61 [label="Variable[\"whirling.sleeper_greeting_done\"]", shape=diamond];
+	  62 [label="!(Variable[\"whirling.sleeper_greeting_done\"])", shape=diamond];
+	  63 [label="Jump to: [Questions hub]"];
+	  64 [label="Jump to: [Main hub]"];
+	  65 [label="Sleeping Dockworker: \"I don't know what you're talking about, kind sir, but when I'm out, then I'm really *out*. No ex-anything. Just *quality time*.\""];
+	  66 [label="Interfacing: A colourful piece of plastic is dangling from his carabiner... hmm. Makes your fingers itch."];
+	  67 [label="You: Wake him up."];
+	  68 [label="You: Variable[\"whirling.sleeper_yell_him_out_of_sleep\"]"];
+	  69 [label="Variable[\"whirling.sleeper_yell_him_out_of_sleep\"]", shape=diamond];
+	  70 [label="!(Variable[\"whirling.sleeper_yell_him_out_of_sleep\"])", shape=diamond];
+	  71 [label="Jump to: [Main hub]"];
+	  72 [label="Sleeping Dockworker: \"For one -- I could get some god damn shut-eye.\" He rubs his eyes, then lets his head fall back on the table. \"Right to *sleep*, I say.\""];
+	  73 [label="Sleeping Dockworker: \"Logistics? No, it's a nightmare.\" He lets his head fall back on the table."];
+	  74 [label="You: \"I'm just trying to find out what you know about it.\""];
+	  75 [label="Jump to: [Questions hub]"];
+	  76 [label="You: \"Well... little point asking you about the body, then. I got other questions.\""];
+	  77 [label="Jump to: [Main hub]"];
+	  78 [label="Sleeping Dockworker: On the counter -- rolled out of his open hand -- you see a blister pack of headache medicine."];
+	  79 [label="Esprit de Corps: So Union people think he was a killer, he thinks -- even Sleepy here? This doesn't help a *lot*, but it's something. Good work, detective."];
+	  80 [label="You: \"I've almost never been outside of this building.\""];
+	  81 [label="Sleeping Dockworker: Variable[\"whirling.sleeper_yell_him_out_of_sleep\"]"];
+	  82 [label="Variable[\"whirling.sleeper_yell_him_out_of_sleep\"]", shape=diamond];
+	  83 [label="!(Variable[\"whirling.sleeper_yell_him_out_of_sleep\"])", shape=diamond];
+	  84 [label="Sleeping Dockworker: \"Why the yelling, man?\" The 30-something man slowly lifts his head and gives you a pensive look."];
+	  85 [label="You: \"Why are you sleeping here while the others are out striking?\""];
+	  86 [label="stealing"];
+	  87 [label="You: \"See anything interesting in your dreams?\""];
+	  88 [label="You: Say nothing."];
+	  89 [label="Interfacing: You fumble with the spring-loaded gate of the carabiner, but to no avail... the dangling items refuse to come loose, they just jingle in an ever louder manner."];
+	  90 [label="You: \"What, no, I wasn't.... I'm just checking if the man is feeling okay.\""];
+	  91 [label="You: \"You stay out of this, bartender!\""];
+	  92 [label="Sleeping Dockworker: \"I don't know what you're talking about, kind sir, but when I'm out, then I'm really *out*. No malt grains or whatever. No poetry-stuff. Just *quality-time*.\""];
+	  93 [label="You: Does the lieutenant see me?"];
+	  94 [label="Sleeping Dockworker: \"Indeed. Help yourself to some.\" He blinks. \"Wait, no, it's empty. Sorry about that, pal.\""];
+	  95 [label="Sleeping Dockworker: \"Congratulations, you have seen the future. Now if you excuse me again, officer...\" The worker sinks back onto the table, ready to continue his nap."];
+	  96 [label="You: \"But why is he sleeping during the day?\""];
+	  97 [label="You: (No words, just a primordial scream.)"];
+	  98 [label="Untitled hub"];
+	  99 [label="Garte, the Cafeteria Manager: \"Fine -- fine! Finger-bang him then, I don't care.\" He snorts angrily, then turns back to his activities."];
+	  100 [label="Tutorial Agent: You’ve just picked up some MAGNESIUM. This item is stored in the bottom left corner of the screen, above your character portrait. Use MAGNESIUM to heal your Morale, if you have Morale damage."];
+	  101 [label="You: \"Was it pure nothing, your consciousness no larger than a single grain of malt?\""];
+	  102 [label="Sleeping Dockworker: The worker stares at you, his eyes dry from sleep. A web of wrinkles covers his tanned forehead."];
+	  103 [label="Questions hub"];
+	  104 [label="You: \"What about the dead body in the yard?\""];
+	  105 [label="Jump to: [Questions hub]"];
+	  106 [label="Sleeping Dockworker: \"Thank god, no.\""];
+	  107 [label="Visual Calculus: Just for the record, you look nothing like the man on the document."];
+	  108 [label="You: \"You mean there's no leader?\""];
+	  109 [label="You: \"What trouble?\""];
+	  110 [label="Kim Kitsuragi: \"No idea. Looks like he works for Wild Pines, the logistics company who owns and operates the harbour.\""];
+	  111 [label="You: \"Someone has to look into it. Looks like I'm that someone. Tell me what you know.\""];
+	  112 [label="Sleeping Dockworker: \"I can tell you this -- trouble's ahead.\""];
+	  113 [label="You: \"The trouble is already here. Or how else would you call a dead man hanging from a tree?\""];
+	  114 [label="Sleeping Dockworker: \"They say your guy was a killer. Your tree-man. He has friends, same as him. Killers. There's only one thing they know well -- how to wreak havoc.\""];
+	  115 [label="Inland Empire: You don't really know what it's for, but you get the feeling notes like these are *super* important -- you should keep it."];
+	  116 [label="Interfacing: You slip the plastic ID card out of the loop and pocket it. The man continues to snore."];
+	  117 [label="Sleeping Dockworker: Variable[\"TASK.pay_for_the_damages\"]"];
+	  118 [label="Variable[\"TASK.pay_for_the_damages\"]", shape=diamond];
+	  119 [label="!(Variable[\"TASK.pay_for_the_damages\"])", shape=diamond];
+	  120 [label="Jump to: [Main hub]"];
+	  121 [label="Sleeping Dockworker: The worker stares at you, his eyes dry from sleep. A web of wrinkles covers his tanned forehead."];
+	  122 [label="You: \"We might be dealing with a *criminal* here. Let me work.\""];
+	  123 [label="Interfacing: It was just an *idea*, c'mon. Relax, everyone. It didn't turn out well -- doesn't mean it was a bad idea. Or that you shouldn't *appropriate* stuff..."];
+	  124 [label="Sleeping Dockworker: Variable[\"whirling.sleeper_physinstr_you_failed\"]"];
+	  125 [label="Variable[\"whirling.sleeper_physinstr_you_failed\"]", shape=diamond];
+	  126 [label="!(Variable[\"whirling.sleeper_physinstr_you_failed\"])", shape=diamond];
+	  127 [label="Sleeping Dockworker: \"Everyone. It's a local rumour.\" He yawns suddenly."];
+	  128 [label="Endurance: Fuck sleep. Despite the headache -- and the queasiness -- you feel like you've got at least a ten kilometre run in you."];
+	  129 [label="You: \"Yours?\" (Point at the bottle and the spilt rum.)"];
+	  130 [label="Volition: Are you positive that what you're doing here is proper police conduct? You can still leave and do *nothing*."];
+	  131 [label="Sleeping Dockworker: The worker is in a deep slumber."];
+	  132 [label="You: Close the carabiner."];
+	  133 [label="Sleeping Dockworker: \"For one -- I could use some more shut-eye in the mornings...\" He rubs his eyes and sighs. \"Right to work? Right to *sleep*, I say.\""];
+	  134 [label="Jump to: [Questions hub]"];
+	  135 [label="Garte, the Cafeteria Manager: \"Yeah, sure! I don't care. Just don't finger-bang his stuff, okay!\" He snorts angrily, then turns back to his activities."];
+	  136 [label="Kim Kitsuragi: The lieutenant gives you a little nod -- then makes a note in his blue notebook."];
+	  137 [label="Sleeping Dockworker: Variable[\"whirling.sleeper_picked_magnesium\"]"];
+	  138 [label="Variable[\"whirling.sleeper_picked_magnesium\"]", shape=diamond];
+	  139 [label="!(Variable[\"whirling.sleeper_picked_magnesium\"])", shape=diamond];
+	  140 [label="Interfacing: You find a black paper note with a woman's profile on it. Seems like this woman lived centuries ago. The note says *five* reál. It feels nice and greasy."];
+	  141 [label="Physical Instrument: There is only one way to awake this bone idle from his slumber. Roar like a hurricane, rip the buildings from the Earth!"];
+	  142 [label="Electrochemistry: Yum, yum. Money. Think of all the things you can buy with this. The synapses in your brain fire with glee."];
+	  143 [label="You: \"WAKE UP! THIS IS AN ORDER, I AM THE LAW.\""];
+	  144 [label="Sleeping Dockworker: The man does not mind. You probably need them more than he does."];
+	  145 [label="Sleeping Dockworker: The worker stares at you, his eyes dry from sleep. A web of wrinkles covers his tanned forehead."];
+	  146 [label="Physical Instrument: You gently shake his shoulder, but nothing happens. This man could probably sleep soundly in a ship's engine room."];
+	  147 [label="Sleeping Dockworker: \"Knocks you right out when you drown a bottle or two.\" He rubs his face, then buries it in his hands. You can hear a faint snore."];
+	  148 [label="Physical Instrument: You have a pretty solid feeling that the man's *not* just mouthing off. He's strong, but even he has reasons to be cautious here."];
+	  149 [label="Jump to: [Main hub]"];
+	  150 [label="You: \"Huh, alright. I guess that makes sense... somehow.\""];
+	  151 [label="Sleeping Dockworker: \"We're in the middle of a strike down at the harbour. Trying to force some sense into the executive board of Wild Pines.\""];
+	  152 [label="Sleeping Dockworker: \"Good, then you understand the gist of it. We would all be better off without the employers and their employment.\""];
+	  153 [label="Sleeping Dockworker: Variable[\"whirling.sleeper_redcheck_stealing_stuff\"]"];
+	  154 [label="Variable[\"whirling.sleeper_redcheck_stealing_stuff\"]", shape=diamond];
+	  155 [label="!(Variable[\"whirling.sleeper_redcheck_stealing_stuff\"])", shape=diamond];
+	  156 [label="quickchoicehow"];
+	  157 [label="You: \"Who's behind organizing the strike?\""];
+	  158 [label="Authority: Officer? Even after a rude awakening -- this dockworker respects the police. More than they usually do at least."];
+	  159 [label="Empathy: He doesn't sound too enthusiastic about this."];
+	  160 [label="Sleeping Dockworker: He rubs his face, before burying it in his hands. You can hear a faint snore."];
+	  161 [label="Sleeping Dockworker: \"Really? You woke me up for that?\" The worker gives you a vacant stare, then groans. \"Fine, what is it, officer?\""];
+	  162 [label="Sleeping Dockworker: Variable[\"whirling.sleeper_inland_about_oblivion\"]"];
+	  163 [label="Variable[\"whirling.sleeper_inland_about_oblivion\"]", shape=diamond];
+	  164 [label="!(Variable[\"whirling.sleeper_inland_about_oblivion\"])", shape=diamond];
+	  165 [label="Garte, the Cafeteria Manager: \"Yes. Sure. A *criminal*.\" He rolls his eyes, then turns back to his activities."];
+	  166 [label="You: \"Tell me -- was it a bliss free of ex-somethings?"];
+	  167 [label="Inland Empire: A little *me*-time in the abyssopelagic zone... you can never return to it now. Only detective-work remains. Wakefulness and detection."];
+	  168 [label="You: [Leave.]"];
+	  169 [label="Sleeping Dockworker: \"You know, people die here every day. Someone's found in a ditch, another one falls in a manhole, a third one gets eaten by stray dogs.\" He respites."];
+	  170 [label="Physical Instrument: The worker continues to nap, undisturbed despite you shaking him. This guy's a real juggernaut of sleep."];
+	  171 [label="Sleeping Dockworker: The sleeping dockworker has little to say about your actions. He remains silent."];
+	  172 [label="You: \"How's that going?\""];
+	  173 [label="Sleeping Dockworker: \"Haven't you noticed what's going on outside?\""];
+	  174 [label="You: \"I'm not sure what you mean.\""];
+	  175 [label="Sleeping Dockworker: \"Okay, I guess there's also Evrart, he's in charge of the Union. He's smart. Knows how to negotiate. He's got our back.\""];
+	  176 [label="Jump to: [Questions hub]"];
+	  177 [label="Encyclopedia: Looks like a Sao descendant. A lot of Sao dockworkers around."];
+	  178 [label="Physical Instrument: The way he says \"Measurehead\" implies ultimate trust in this head-reckoner's physical prowess."];
+	  179 [label="Sleeping Dockworker: Variable[\"gates.mhead_introhub_reached\"]"];
+	  180 [label="Variable[\"gates.mhead_introhub_reached\"]", shape=diamond];
+	  181 [label="!(Variable[\"gates.mhead_introhub_reached\"])", shape=diamond];
+	  182 [label="Inland Empire: Perhaps he's on his way to where you just came from -- into the primordial darkness?"];
+	  183 [label="You: Steal the document."];
+	  184 [label="Jump to: [stealing]"];
+	  185 [label="Sleeping Dockworker: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  186 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  187 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  188 [label="Volition: You're not 100% clear what you did here was *right*, but to hell with it..."];
+	  189 [label="You: \"Tell me about Wild Pines.\" (Point to the writing on his overalls.)"];
+	  190 [label="Jump to: [stealing]"];
+	  191 [label="You: \"You're right. Let's talk about something else.\""];
+	  192 [label="Garte, the Cafeteria Manager: \"Stop *finger-fucking* him, officer!\" The cafeteria manager shouts from behind the counter. \"I'm responsible for these oafs and their *stuff*. Even Sleepy there...\""];
+	  193 [label="Sleeping Dockworker: \"We are... the workers. The Union. We know what we need, what's right for us.\""];
+	  194 [label="Sleeping Dockworker: \"Good.\" He doesn't dwell on the particulars of your existence. \"We're in the middle of a strike down at the harbour. Trying to force some sense into the executive board of Wild Pines.\""];
+	  195 [label="Sleeping Dockworker: \"Yeah, what about it?\""];
+	  196 [label="Sleeping Dockworker: \"You heard what I said. Draw your own conclusions. That's all I know, and I prefer to keep it this way.\""];
+	  197 [label="Sleeping Dockworker: Variable[\"whirling.sleeper_stole_documents\"] == true  or  Variable[\"whirling.sleeper_stole_money\"] == true"];
+	  198 [label="Variable[\"whirling.sleeper_stole_documents\"] == true  or  Variable[\"whirling.sleeper_stole_money\"] == true", shape=diamond];
+	  199 [label="!(Variable[\"whirling.sleeper_stole_documents\"] == true  or  Variable[\"whirling.sleeper_stole_money\"] == true)", shape=diamond];
+	  200 [label="Sleeping Dockworker: \"How's it going?\" The dockworker lets out a big yawn, then stares at the cafeteria's terrace doors. Some fingerprints glisten on the glass."];
+	  201 [label="Jump to: [Questions hub]"];
+	  0 -> 1
+	  1 -> 60
+	  2 -> 28
+	  3 -> 67
+	  3 -> 4
+	  3 -> 169
+	  3 -> 11
+	  3 -> 17
+	  3 -> 57
+	  4 -> 110
+	  5 -> 148
+	  7 -> 3
+	  8 -> 153
+	  9 -> 134
+	  10 -> 35
+	  11 -> 145
+	  12 -> 53
+	  13 -> 95
+	  14 -> 170
+	  15 -> 130
+	  16 -> 103
+	  17 -> 18
+	  18 -> 19
+	  18 -> 20
+	  19 -> 154
+	  20 -> 154
+	  21 -> 22
+	  21 -> 23
+	  22 -> 3
+	  23 -> 66
+	  24 -> 25
+	  24 -> 26
+	  25 -> 136
+	  26 -> 63
+	  27 -> 193
+	  28 -> 36
+	  29 -> 141
+	  30 -> 73
+	  31 -> 32
+	  31 -> 33
+	  32 -> 98
+	  33 -> 105
+	  34 -> 162
+	  35 -> 15
+	  36 -> 197
+	  37 -> 38
+	  37 -> 39
+	  38 -> 113
+	  38 -> 109
+	  39 -> 109
+	  40 -> 150
+	  41 -> 121
+	  42 -> 180
+	  43 -> 44
+	  43 -> 45
+	  44 -> 46
+	  45 -> 120
+	  46 -> 123
+	  47 -> 177
+	  48 -> 185
+	  49 -> 127
+	  50 -> 16
+	  51 -> 56
+	  52 -> 6
+	  53 -> 66
+	  54 -> 160
+	  55 -> 76
+	  55 -> 111
+	  56 -> 159
+	  57 -> 58
+	  58 -> 71
+	  59 -> 168
+	  60 -> 61
+	  60 -> 62
+	  61 -> 131
+	  62 -> 12
+	  63 -> 103
+	  64 -> 3
+	  65 -> 168
+	  66 -> 138
+	  67 -> 68
+	  68 -> 69
+	  68 -> 70
+	  69 -> 81
+	  70 -> 81
+	  71 -> 3
+	  72 -> 202
+	  73 -> 202
+	  74 -> 170
+	  75 -> 103
+	  76 -> 47
+	  77 -> 3
+	  78 -> 3
+	  79 -> 63
+	  80 -> 195
+	  81 -> 82
+	  81 -> 83
+	  82 -> 142
+	  83 -> 124
+	  84 -> 178
+	  85 -> 42
+	  86 -> 184
+	  86 -> 29
+	  86 -> 132
+	  86 -> 93
+	  87 -> 106
+	  88 -> 161
+	  89 -> 27
+	  90 -> 135
+	  91 -> 99
+	  92 -> 168
+	  93 -> 48
+	  94 -> 31
+	  95 -> 159
+	  96 -> 40
+	  97 -> 84
+	  98 -> 88
+	  98 -> 5
+	  99 -> 43
+	  100 -> 64
+	  101 -> 102
+	  102 -> 92
+	  103 -> 129
+	  103 -> 104
+	  103 -> 52
+	  103 -> 85
+	  103 -> 87
+	  103 -> 190
+	  103 -> 158
+	  104 -> 196
+	  105 -> 103
+	  106 -> 192
+	  106 -> 41
+	  106 -> 101
+	  106 -> 167
+	  107 -> 185
+	  108 -> 176
+	  109 -> 197
+	  110 -> 96
+	  111 -> 112
+	  112 -> 149
+	  113 -> 114
+	  114 -> 49
+	  114 -> 36
+	  115 -> 191
+	  116 -> 107
+	  117 -> 118
+	  117 -> 119
+	  118 -> 143
+	  119 -> 115
+	  120 -> 3
+	  121 -> 59
+	  122 -> 166
+	  123 -> 120
+	  124 -> 125
+	  124 -> 126
+	  125 -> 171
+	  126 -> 147
+	  127 -> 2
+	  128 -> 134
+	  129 -> 94
+	  130 -> 86
+	  131 -> 163
+	  132 -> 172
+	  133 -> 202
+	  134 -> 103
+	  135 -> 43
+	  136 -> 79
+	  137 -> 139
+	  137 -> 140
+	  138 -> 3
+	  139 -> 78
+	  140 -> 117
+	  141 -> 144
+	  141 -> 97
+	  142 -> 191
+	  143 -> 84
+	  144 -> 186
+	  145 -> 65
+	  146 -> 77
+	  147 -> 105
+	  148 -> 37
+	  149 -> 3
+	  150 -> 176
+	  151 -> 133
+	  152 -> 72
+	  153 -> 155
+	  153 -> 156
+	  154 -> 10
+	  155 -> 89
+	  156 -> 34
+	  156 -> 51
+	  156 -> 13
+	  157 -> 194
+	  158 -> 103
+	  159 -> 173
+	  159 -> 30
+	  160 -> 105
+	  161 -> 159
+	  162 -> 164
+	  162 -> 165
+	  163 -> 21
+	  164 -> 183
+	  165 -> 43
+	  166 -> 146
+	  167 -> 128
+	  169 -> 55
+	  170 -> 77
+	  171 -> 198
+	  172 -> 201
+	  173 -> 8
+	  173 -> 80
+	  173 -> 175
+	  174 -> 152
+	  175 -> 75
+	  176 -> 103
+	  177 -> 157
+	  178 -> 16
+	  179 -> 181
+	  179 -> 182
+	  180 -> 179
+	  181 -> 50
+	  182 -> 21
+	  183 -> 116
+	  184 -> 86
+	  185 -> 187
+	  185 -> 188
+	  186 -> 64
+	  187 -> 100
+	  188 -> 7
+	  189 -> 54
+	  190 -> 86
+	  191 -> 9
+	  192 -> 90
+	  192 -> 91
+	  192 -> 122
+	  193 -> 108
+	  193 -> 151
+	  194 -> 133
+	  195 -> 74
+	  195 -> 14
+	  196 -> 24
+	  197 -> 200
+	  197 -> 199
+	  198 -> 189
+	  199 -> 7
+	  200 -> 174
+	  201 -> 103
+}
+

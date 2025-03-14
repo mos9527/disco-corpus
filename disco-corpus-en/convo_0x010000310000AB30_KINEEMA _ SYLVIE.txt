@@ -1,0 +1,988 @@
+# KINEEMA / SYLVIE
+# Your wildly successful phone call to Sylvie Malaiika.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Volition: Ouch.... That's like twenty points of pride-damage right there, buddy."];
+	  3 [label="Jump to: [suicide hub]"];
+	  4 [label="Sylvie: \"It almost looked like you pawned it, but believe me, I did *not* ask.\" She sighs."];
+	  5 [label="Volition: Relax. You'll find them sooner or later -- this will just take some time."];
+	  6 [label="Inland Empire: Interesting... you still have to find it, however."];
+	  7 [label="Sylvie: IsKimHere()"];
+	  8 [label="IsKimHere()", shape=diamond];
+	  9 [label="!(IsKimHere())", shape=diamond];
+	  10 [label="Empathy: Think you can do that, Lieutenant Love?"];
+	  11 [label="Empathy: You have to *act*, Lieutenant Love. You have to calm that hysteric down, tell it you've got everything under control -- then go and have a little boys' talk with Garte himself."];
+	  12 [label="Empathy: You can hear resentment in her tone -- she's not thrilled to be talking to you again."];
+	  13 [label="why_hub"];
+	  14 [label="called the police hub"];
+	  15 [label="You: \"Let me get this straight, you ignored the law to save your own skin?\""];
+	  16 [label="Sylvie: \"Yes... I know, it's just...\" She takes a deep breath before continuing. \"Was there anything else?\""];
+	  17 [label="You: \"I got a hunch your love life is about to take a *very* pleasant turn.\""];
+	  18 [label="You: Uh, okay... but I'm a guy. Sure it isn't about me?"];
+	  19 [label="You: \"And what? What did I do?\""];
+	  20 [label="Sylvie: \"Okay, officer...\" Her voice is withdrawing as if she's moving away from the speaker."];
+	  21 [label="Esprit de Corps: An angry cop refusing to face his demons and taking his frustration out on others -- just a badge and a gun away from those he's manhandling. A fast burning candle -- that's the side you just exposed to the lieutenant. He doesn't judge, has seen it too many times all ready -- you both have probably, but he takes a mental note."];
+	  22 [label="Authority: Yeah, I think she got it. Good job!"];
+	  23 [label="Jump to: [SYLVIE HUB]"];
+	  24 [label="You: \"But... when I spoke to Garte it seemed like he thought you left because of *him*.\""];
+	  25 [label="Sylvie: \"And *then* I had to deal with your toilet. The one you clogged with *police documents*, causing water damage downstairs in the kitchen.\""];
+	  26 [label="Sylvie: \"I... dammit, I don't remember what I did to your damn papers! I don't remember every little thing I do...\" Resentment gives way to concern in her voice."];
+	  27 [label="Perception (Hearing): \"God, why can't you just mind your own business...\" she mutters."];
+	  28 [label="Sylvie: \"To hell with that song...\""];
+	  29 [label="Reaction Speed: If she used to work in the Whirling-in-Rags, then you must have met her."];
+	  30 [label="Sylvie: \"Oh, all sorts of things. Some disco, rock too. So much disco and rock...\""];
+	  31 [label="failure talk hub"];
+	  32 [label="Sylvie: \"No. What?\""];
+	  33 [label="You: \"Was I singing... \"The Smallest Church In Saint-Saëns\"?\""];
+	  34 [label="You: \"But why *didn't* you call? Didn't a corpse behind your workplace bother you?\""];
+	  35 [label="Sylvie: \"No, sorry... I don't.\" She clears her throat. \"Not a lot of people have phones around here. Copper thieves take the wires...\""];
+	  36 [label="Empathy: Some poor sod was trying to eat his pudding, while you were screaming, spit flying, imitating the *mercy shot* right next to him... Spat some in his food, I don't think he touched it after..."];
+	  37 [label="Sylvie: Her voice reappears from the static: \"That's wonderful, really. Maybe you should keep pursuing that hobby. Maybe it would calm you down a little.\""];
+	  38 [label="Sylvie: \"No, I don't know. It wasn't me...\" She gulps. \"I haven't been out there since... I was terrified of the stench and the corpse.\" She falls silent."];
+	  39 [label="Esprit de Corps: Words are not necessary to feel the lieutenant's discontent for the situation."];
+	  40 [label="Sylvie: \"I've had sailors fighting, Union guys grabbing my ass, kids stealing booze. Once a guy was glued to the karaoke machine every night for two months. But *you*...\" She pauses."];
+	  41 [label="Sylvie: You hear a sigh of relief on the other end of the radio. Wordless, the call breaks. Then the already familiar voice:"];
+	  42 [label="Jump to: [SYLVIE HUB]"];
+	  43 [label="You: \"You mean me? You needed to get away from *me*?\""];
+	  44 [label="Sylvie: \"Especially when there's a hurricane loose. It's *your* fault for losing them -- not mine.\""];
+	  45 [label="You: Yeah. She's a woman. Probably just playing hardball with the goods. Women are just transactional."];
+	  46 [label="love failure hub"];
+	  47 [label="skua hub"];
+	  48 [label="You: \"This doesn't sound anything like me, I love birds!\""];
+	  49 [label="You: \"Go on. I want to know what I did.\""];
+	  50 [label="SYLVIE HUB"];
+	  51 [label="You: \"It's a little late for tears, isn't it? Should have used them to summon the police earlier.\""];
+	  52 [label="Sylvie: \"Oh... no, I haven't, sorry.\""];
+	  53 [label="Reaction Speed: That came so fast you can't but wonder what else would she be good at."];
+	  54 [label="Drama: Oh, those again? I have been trying to wean you off them."];
+	  55 [label="Sylvie: \"You don't live here, you *don't* understand. Squealing is frowned upon here -- everything is dealt with... well, by the Union. Internally.\""];
+	  56 [label="Sylvie: Variable[\"plaza.kineema_sylvie_composure_uniform\"]"];
+	  57 [label="Variable[\"plaza.kineema_sylvie_composure_uniform\"]", shape=diamond];
+	  58 [label="!(Variable[\"plaza.kineema_sylvie_composure_uniform\"])", shape=diamond];
+	  59 [label="You: Kim doesn't have a *uniform* and he seems real to me."];
+	  60 [label="Sylvie: Variable[\"plaza.kineema_sylvie_esprit_youruniform\"]"];
+	  61 [label="Variable[\"plaza.kineema_sylvie_esprit_youruniform\"]", shape=diamond];
+	  62 [label="!(Variable[\"plaza.kineema_sylvie_esprit_youruniform\"])", shape=diamond];
+	  63 [label="Sylvie: \"I... dammit, I don't remember what I did to your damn papers! I don't remember every little thing I do.\" Resentment gives way to concern in her voice."];
+	  64 [label="Sylvie: There's no reply from the other end of the line."];
+	  65 [label="Sylvie: \"I, ugh... the ones I had to wrench out of your toilet?\""];
+	  66 [label="Sylvie: Variable[\"tc.rank_known\"]"];
+	  67 [label="Variable[\"tc.rank_known\"]", shape=diamond];
+	  68 [label="!(Variable[\"tc.rank_known\"])", shape=diamond];
+	  69 [label="You: \"Sorry. Sorry about the song.\""];
+	  70 [label="Sylvie: CheckItem(\"music_smallest_church_tape\")"];
+	  71 [label="CheckItem(\"music_smallest_church_tape\")", shape=diamond];
+	  72 [label="!(CheckItem(\"music_smallest_church_tape\"))", shape=diamond];
+	  73 [label="Empathy: Of course. So much more love. But now -- react!"];
+	  74 [label="Sylvie: \"All sorts of things. The OO. Some disco, rock too. So much disco and rock...\""];
+	  75 [label="You: \"Hello, this is the police calling. I have some questions for you about your last days at work.\""];
+	  76 [label="You: \"It's okay, things happen. Not really your fault.\""];
+	  77 [label="Sylvie: \"Please, no. Not this again -- everyone saw your 'cool gun', detective...\" She sounds beyond exacerbated."];
+	  78 [label="You: \"Maybe you can help me identify this one particular song...\""];
+	  79 [label="Sylvie: Variable[\"plaza.kineema_sylvie_reaction\"]"];
+	  80 [label="Variable[\"plaza.kineema_sylvie_reaction\"]", shape=diamond];
+	  81 [label="!(Variable[\"plaza.kineema_sylvie_reaction\"])", shape=diamond];
+	  82 [label="You: \"Wait, how did you first learn I'm a police officer?\""];
+	  83 [label="Sylvie: \"Yes, well...\" The static on the radio suggests Sylvie doesn't have a comment."];
+	  84 [label="Sylvie: \"I am sorry about that.\" She doesn't sound like she's actually that sorry. \"Anything else, detective?\""];
+	  85 [label="You: \"Okay. Did you leave because of Garte?\""];
+	  86 [label="Sylvie: \"Maybe, I don't know...\" She seems to relax a little bit. \"I just know I have to take some time off right now.\""];
+	  87 [label="You: \"Sylvie? I believe we've met before. This is me, a detective from the Whirling-in-Rags!\""];
+	  88 [label="Sylvie: IsKimHere()"];
+	  89 [label="IsKimHere()", shape=diamond];
+	  90 [label="!(IsKimHere())", shape=diamond];
+	  91 [label="Sylvie: \"You have to ask someone else. There are thousands of people in Martinaise.\""];
+	  92 [label="Kim Kitsuragi: \"Seems like Klaasje wasn't lying when she said it was her.\" The lieutenant makes a note. \"This corroborates her story -- she made the call.\""];
+	  93 [label="Inland Empire: Something in you wants to immediately *forget* about this. As if there was a reason you threw them away."];
+	  94 [label="Sylvie: Variable[\"XP.sylvie_named_song\"]"];
+	  95 [label="Variable[\"XP.sylvie_named_song\"]", shape=diamond];
+	  96 [label="!(Variable[\"XP.sylvie_named_song\"])", shape=diamond];
+	  97 [label="You: \"This sounds like me alright.\""];
+	  98 [label="You: \"I am truly sorry for everything, Sylvie.\""];
+	  99 [label="You: \"Girl, just loosen up a little... Don't you ever party?\""];
+	  100 [label="Jump to: [called the police hub]"];
+	  101 [label="Sylvie: You can almost hear the girl getting smaller on the other end of the line, until she almost drowns in static."];
+	  102 [label="Sylvie: \"Mhmh.\""];
+	  103 [label="You: \"Actually, I don't want to know. I don't want to know what happened.\""];
+	  104 [label="You: Off of what?"];
+	  105 [label="You: \"I must have had some sort of official police documents on me. Do you know where they could be?\""];
+	  106 [label="You: \"Okay, I understand.\""];
+	  107 [label="You: \"Sorry, I don't know what came over me, I just lost it -- I might have an anger issue.\""];
+	  108 [label="Composure: Yes, you absolutely should. It's awful that you lost it."];
+	  109 [label="Empathy: There's genuine sadness in her voice."];
+	  110 [label="Sylvie: \"'We Go On' by the OO.\" She sighs. \"I can't listen to it anymore, you've turned it into a parody.\""];
+	  111 [label="Sylvie: \"You mean why did I leave the bar?\" You can hear her tense up on the other side. \"Honestly, I'm... not really comfortable discussing it with you, sir.\""];
+	  112 [label="Volition: Don't be paranoid, she's obviously talking about someone else, not you."];
+	  113 [label="Sylvie: \"Sorry about that.\" She doesn't sound like she's too sorry. \"Anything else, detective?\""];
+	  114 [label="Jump to: [SYLVIE HUB]"];
+	  115 [label="Sylvie: CheckItem(\"music_smallest_church_tape\")"];
+	  116 [label="CheckItem(\"music_smallest_church_tape\")", shape=diamond];
+	  117 [label="!(CheckItem(\"music_smallest_church_tape\"))", shape=diamond];
+	  118 [label="SYLVIE"];
+	  119 [label="You: \"So you're telling me that *I* was the one who made you want to quit?\""];
+	  120 [label="You: \"I meant us. You should have called *the police*.\""];
+	  121 [label="Sylvie: \"Yeah, go on.\""];
+	  122 [label="You: \"You quit your job at the Whirling -- why?\""];
+	  123 [label="Reaction Speed: Baseball? Ring-a-bell Quiz Shows? Catching keys in the air? Petting an angry cat?"];
+	  124 [label="You: \"Why would I threaten to kill myself?! I mean, look at this world, I would love to stay!\""];
+	  125 [label="You: Not my uniform too! God, I should really look into that."];
+	  126 [label="Sylvie: \"I didn't know *what* to say to him later. Then you came and destroyed the place. So I left without explaining. I should have told him maybe...\""];
+	  127 [label="You: \"I can tell him.\" (Accept.)"];
+	  128 [label="lasthub"];
+	  129 [label="Sylvie: \"I won't even *mention* you waving your gun around, harassing customers, *threatening* to sing karaoke, threatening to kill yourself...\""];
+	  130 [label="Volition: I wouldn't be so sure, detective."];
+	  131 [label="Jump to: [You: \"\"Okay, I get it. I wasn't a very go...\"]"];
+	  132 [label="You: I'm happy to help, but maybe I could do so without all this internalized misogyny?"];
+	  133 [label="Rhetoric: God -- what is happening in your HEAD?!"];
+	  134 [label="You: \"You said I was singing. What did I sing? I'm looking for a song...\""];
+	  135 [label="Sylvie: \"I do hope so. Please don't call me again. Bye.\" She's ready to hang up."];
+	  136 [label="Sylvie: \"The stuffed bird. The great skua. You threw it against the wall, while screaming 'fuck that bird' and laughing like a maniac.\""];
+	  137 [label="Sylvie: \"I bet.\""];
+	  138 [label="Sylvie: \"And then you screamed something incomprehensible about churches and the scent of apricots and aquariums.\" She takes a deep breath."];
+	  139 [label="Sylvie: \"Okay...\" She's calmer now. Probably because the focus has shifted elsewhere."];
+	  140 [label="Empathy: No, you're The Guy  -- you're Lieutenant Love, matchmaker extraordinaire! Help the poor girl out, lest she turns into a *spinster*!"];
+	  141 [label="Sylvie: \"The other people who live around here. Local people. I... I didn't want trouble... \""];
+	  142 [label="Jump to: [called the police hub]"];
+	  143 [label="Jump to: [SYLVIE HUB]"];
+	  144 [label="Sylvie: There is silence on the other end of the line."];
+	  145 [label="You: \"Right, thank you for talking with me. Take care.\" [Leave.]"];
+	  146 [label="You: \"Didn't he cross a line when he asked you out?\""];
+	  147 [label="Electrochemistry: There is *no* resentment in her tone. She wants you to ask her out. No question about it."];
+	  148 [label="Sylvie: \"Yes. You put *something* there. Causing bad water damage in the kitchen. I think it was that.\""];
+	  149 [label="Empathy: That's where *you* step in. You're Lieutenant Love, matchmaker extraordinaire! Help the poor girl out, lest she turns into a *spinster*."];
+	  150 [label="You: \"Daddy is going to take you on his lap, little darling.\""];
+	  151 [label="Empathy: You have to *act*, Lieutenant Love. You have to calm that hysteric girl down, tell her you've got everything under control -- and then go and have a little boys' talk with the man himself."];
+	  152 [label="Electrochemistry: Big Big Poppa is happening."];
+	  153 [label="Sylvie: Variable[\"whirling.kim_badge_lie\"] == true  and  IsKimHere()"];
+	  154 [label="Variable[\"whirling.kim_badge_lie\"] == true  and  IsKimHere()", shape=diamond];
+	  155 [label="!(Variable[\"whirling.kim_badge_lie\"] == true  and  IsKimHere())", shape=diamond];
+	  156 [label="Sylvie: \"Oh, right...\" She recognizes your voice almost immediately. \"Hello, officer, what can I do for you?\""];
+	  157 [label="You: \"Bitch bird got what was coming to her.\""];
+	  158 [label="You: \"I see. Don't worry about it, I understand.\" (Back off.)"];
+	  159 [label="Sylvie: Variable[\"plaza.kineema_made_sylvie_cry_like_a_boss\"]"];
+	  160 [label="Variable[\"plaza.kineema_made_sylvie_cry_like_a_boss\"]", shape=diamond];
+	  161 [label="!(Variable[\"plaza.kineema_made_sylvie_cry_like_a_boss\"])", shape=diamond];
+	  162 [label="Jump to: [SYLVIE HUB]"];
+	  163 [label="You: \"Hey, Sylvie, it's the police again.\""];
+	  164 [label="You: \"Actually, I think I might be a birdie. A birdwatching enthusiast, you know.\""];
+	  165 [label="Authority: Crackling static... more static and yes, more of that sweet static. The violence of your words is obviously scaring her."];
+	  166 [label="You: \"Do you know how my paperwork ended up in the trash container behind the Whirling?\""];
+	  167 [label="You: \"You got your methods, I got mine lieutenant. Now let me do my job.\""];
+	  168 [label="Sylvie: Breathing on the other end suggests that Sylvie is still on the line. She heard everything."];
+	  169 [label="Kim Kitsuragi: \"Fine.\" The lieutenant clenches his jaw. \"But know that I don't approve of such gratuitous volatility.\""];
+	  170 [label="You: \"Huh, I don't even know what to say...\""];
+	  171 [label="Sylvie: Variable[\"plaza.kineema_sylvie_already_know_paperwork\"] == false  and  Variable[\"TASK.find_your_paperwork_done\"] == false"];
+	  172 [label="Variable[\"plaza.kineema_sylvie_already_know_paperwork\"] == false  and  Variable[\"TASK.find_your_paperwork_done\"] == false", shape=diamond];
+	  173 [label="!(Variable[\"plaza.kineema_sylvie_already_know_paperwork\"] == false  and  Variable[\"TASK.find_your_paperwork_done\"] == false)", shape=diamond];
+	  174 [label="Sylvie: Variable[\"XP.detect_compromized_skillset\"]"];
+	  175 [label="Variable[\"XP.detect_compromized_skillset\"]", shape=diamond];
+	  176 [label="!(Variable[\"XP.detect_compromized_skillset\"])", shape=diamond];
+	  177 [label="You: \"Ah yes, *that* paperwork. I found it.\""];
+	  178 [label="Sylvie: \"Good. Then it's not lost.\" She seems a little relieved. \"Just don't throw it in the toilet again. Toilets don't work like that.\""];
+	  179 [label="Sylvie: \"Yes, I'm sure. Every time we talk about it I'm going to be *more* sure I don't know.\""];
+	  180 [label="You: Oh my god, not a spinster!"];
+	  181 [label="You: Stop! That's Lieutenant Double-Yefreitor Love for you."];
+	  182 [label="You: \"I think I got everything I need, thanks.\" [End call.]"];
+	  183 [label="You: \"Right. Was that all?\""];
+	  184 [label="Sylvie: Variable[\"plaza.kineema_made_sylvie_cry_like_a_boss\"]"];
+	  185 [label="Variable[\"plaza.kineema_made_sylvie_cry_like_a_boss\"]", shape=diamond];
+	  186 [label="!(Variable[\"plaza.kineema_made_sylvie_cry_like_a_boss\"])", shape=diamond];
+	  187 [label="You: \"Have you seen my badge?\""];
+	  188 [label="You: \"Have you seen my gun?\""];
+	  189 [label="You: Wait, why does she seem angry with you?"];
+	  190 [label="You: Variable[\"plaza.kineema_sylvie_empathy_redcheck\"]"];
+	  191 [label="Variable[\"plaza.kineema_sylvie_empathy_redcheck\"]", shape=diamond];
+	  192 [label="!(Variable[\"plaza.kineema_sylvie_empathy_redcheck\"])", shape=diamond];
+	  193 [label="Jump to: [Untitled hub]"];
+	  194 [label="Sylvie: Variable[\"plaza.kineema_sylvie_greeting_done\"]"];
+	  195 [label="Variable[\"plaza.kineema_sylvie_greeting_done\"]", shape=diamond];
+	  196 [label="!(Variable[\"plaza.kineema_sylvie_greeting_done\"])", shape=diamond];
+	  197 [label="Sylvie: \"You were waving it around in everyone's face, begging them to describe it. You said it 'calms you'. And then you started making suicide jokes. It got pretty *graphic*.\""];
+	  198 [label="Composure: Real policemen have uniforms too, by the way. Where's yours?"];
+	  199 [label="unionisthelaw"];
+	  200 [label="You: \"Wait, Kim,\" (Lower your microphone.) \"Is she speaking truth? The Union is the law around here?\""];
+	  201 [label="You: I'm going to let it slide. I don't need answers for every little thing."];
+	  202 [label="Esprit de Corps: There are officers who wear the signature Perseus Black uniforms to the highest ranks in the RCM and end up buried in them as well -- others do it more *casually*. Looks like you're one of them."];
+	  203 [label="Sylvie: \"I, ugh... the ones I had to wrench out of your toilet.\""];
+	  204 [label="Jump to: [The actual Radio HUB]"];
+	  205 [label="You: Am I, though?"];
+	  206 [label="Sylvie: Variable[\"whirling.klaasje_drama_white_success_volition_activated\"]"];
+	  207 [label="Variable[\"whirling.klaasje_drama_white_success_volition_activated\"]", shape=diamond];
+	  208 [label="!(Variable[\"whirling.klaasje_drama_white_success_volition_activated\"])", shape=diamond];
+	  209 [label="Volition: Are you *sure* lieutenant? For some reason, you have a little doubt about that..."];
+	  210 [label="Half Light: She's worried she might have accidentally done something bad. Then she remembers it's *you*."];
+	  211 [label="Empathy: What misogyny? I'm just telling things the way they are. Can't a man be honest in his *own head* anymore?"];
+	  212 [label="Sylvie: \"Yes. That's the one you liked to sing along to the *most*. The later it got the more *that one* came on.\""];
+	  213 [label="You: \"Wait, before you go... You're mad at me, right? Tell me, what did I do? I can't remember anything.\""];
+	  214 [label="Sylvie: \"Well... You were worse than all of them. Honestly, you were getting borderline aggressive.\""];
+	  215 [label="Sylvie: \"Even about little things, like not turning down the volume at 3 AM. I even *liked* one of those songs you kept listening to on repeat. No more. I hate it now.\""];
+	  216 [label="Sylvie: \"Then there was your room. Your *project*, an experiment to see how bad it can get in there.\""];
+	  217 [label="Sylvie: \"I tried to send the cleaner, but you wouldn't let me. Threatened to 'make me understand'. I had no idea what you meant -- and I *don't* want to know.\""];
+	  218 [label="Sylvie: \"No, not me.\""];
+	  219 [label="You: \"I showed you my gun? When did it happen?\""];
+	  220 [label="Empathy: Yes. You have obviously done something to upset her -- at the Whirling-in-Rags, when she was still working there."];
+	  221 [label="You: Yeah, it's definitely some other guy, a guy like *Garte*."];
+	  222 [label="Antics hub"];
+	  223 [label="Untitled hub"];
+	  224 [label="suicide hub"];
+	  225 [label="Sylvie: \"Okay.\" She obviously doesn't want to challenge your authority. You feel *much* better now."];
+	  226 [label="Jump to: [called the police hub]"];
+	  227 [label="Suggestion: You think you hear a sliver of accusation in her words."];
+	  228 [label="You: \"That's it? That's not so bad.\""];
+	  229 [label="Sylvie: \"Wait, really? No, this is absolutely not true. I like Garte, I really do.\""];
+	  230 [label="Sylvie: IsKimHere()"];
+	  231 [label="IsKimHere()", shape=diamond];
+	  232 [label="!(IsKimHere())", shape=diamond];
+	  233 [label="You: \"He told me he asked you out. Are you saying it didn't happen?\""];
+	  234 [label="Sylvie: CheckItem(\"jacket_rcm\")"];
+	  235 [label="CheckItem(\"jacket_rcm\")", shape=diamond];
+	  236 [label="!(CheckItem(\"jacket_rcm\"))", shape=diamond];
+	  237 [label="Sylvie: Variable[\"plaza.kineema_sylvie_birdwatching\"]"];
+	  238 [label="Variable[\"plaza.kineema_sylvie_birdwatching\"]", shape=diamond];
+	  239 [label="!(Variable[\"plaza.kineema_sylvie_birdwatching\"])", shape=diamond];
+	  240 [label="Inland Empire: Something in you wants to immediately *forget* about this. As if there was a reason you threw them away."];
+	  241 [label="Logic: Why not?"];
+	  242 [label="You: \"You and Garte, right? A little trouble under the sheets? Say no more, papa's got this. Big Poppa.\""];
+	  243 [label="You: \"What skua thing?\""];
+	  244 [label="You: \"Why do I always end up screwing everything up?\""];
+	  245 [label="You: \"Was it you who called the police?\""];
+	  246 [label="You: \"I see. Maybe there's something else you can tell me about?\" (Back off.)"];
+	  247 [label="Empathy: You know women and their constant *problems*. Yack yack nag nag. How's one supposed to get *the love* going like that?"];
+	  248 [label="Sylvie: \"You told me back in the Whirling... you told *everybody*. And showed us your badge... I don't need to hear about it anymore.\""];
+	  249 [label="Sylvie: \"It was a pretty bird, there since I started working in the Whirling. I really liked her. We called her Scotty...\""];
+	  250 [label="You: \"Wait, why aren't you comfortable discussing it with me?\""];
+	  251 [label="You: \"Alright, I won't push you on this. Are you ever coming back to work?\" (Conclude.)"];
+	  252 [label="Sylvie: \"*Please* don't bring Garte into this, it's none of your business!\""];
+	  253 [label="You: \"Sounds intense.\""];
+	  254 [label="hub_hub"];
+	  255 [label="Logic: Seems like Klaasje wasn't lying when she said she made the call. This corroborates."];
+	  256 [label="Jump to: [called the police hub]"];
+	  257 [label="Drama: She iseth the fairest of them all. The ugliness of lies wouldst never escape her lips!"];
+	  258 [label="Sylvie: IsTHCPresent(\"radical_feminist_agenda\")"];
+	  259 [label="IsTHCPresent(\"radical_feminist_agenda\")", shape=diamond];
+	  260 [label="!(IsTHCPresent(\"radical_feminist_agenda\"))", shape=diamond];
+	  261 [label="Sylvie: \"No, you really weren't. You were simply the worst.\""];
+	  262 [label="You: \"I was trying to show you the world of tomorrow. The Great Panic at The End.\""];
+	  263 [label="You: \"Tell me, why *exactly* did you let a corpse hang in your own backyard for weeks instead of calling us?\" (Push on.)"];
+	  264 [label="Esprit de Corps: It feels like you haven't worn yours in a long-long time."];
+	  265 [label="Sylvie: \"Sad? I think the one you mean is \"The Smallest Church in Saint-Saëns\". Butchered that right up...\" Her voice carries a tone of disappointment."];
+	  266 [label="Empathy: Her voice is resigned and weak."];
+	  267 [label="Drama: You know, when you put your gun, your *actual* gun, on your temple and pretend to shoot your brains out? Off of that. People don't like that."];
+	  268 [label="Rhetoric: Hm, I remember this. You were screaming things like \"My brains are all over the walls, painting them red. I won't be seeing it, cause these are my brains. I can't see without my brains!\" Very nice visuals there."];
+	  269 [label="Jump to: [suicide hub]"];
+	  270 [label="You: \"Sylvie, don't be afraid of that pig. You have to stand up for yourself!\""];
+	  271 [label="Sylvie: \"I already said I don't want to talk about this! You're messing everything up again!\""];
+	  272 [label="Sylvie: There's a pause. You can almost see her on the other side, the telephone cord coiled around her index."];
+	  273 [label="Authority: Garbage!"];
+	  274 [label="Jump to: [called the police hub]"];
+	  275 [label="You: \"I put them in my toilet?\""];
+	  276 [label="Empathy: Not a spinster, my god!"];
+	  277 [label="Empathy: What *deranged*? I'm just telling things the way they are. Can't a man even be honest in his *own head* anymore?"];
+	  278 [label="You: \"Khm...\" (To the microphone.) \"Are you still there, kiddo? Listen... I've got everything under control.\""];
+	  279 [label="Sylvie: \"Oh god.\" The static appears to breathe heavily. \"Please just stay out of my li...\""];
+	  280 [label="You: \"Hey, do you want to grab a cup of coffee with me some time?\""];
+	  281 [label="Jump to: [called the police hub]"];
+	  282 [label="Sylvie: \"No...\" You can hear her regaining control in the background. \"I honestly don't know.\""];
+	  283 [label="Sylvie: \"Uniform? I never saw you in any uniform, you had your... *things* on. The disco things.\""];
+	  284 [label="Sylvie: Variable[\"plaza.kineema_sylvie_empathy_redcheck\"]"];
+	  285 [label="Variable[\"plaza.kineema_sylvie_empathy_redcheck\"]", shape=diamond];
+	  286 [label="!(Variable[\"plaza.kineema_sylvie_empathy_redcheck\"])", shape=diamond];
+	  287 [label="Sylvie: IsKimHere()"];
+	  288 [label="IsKimHere()", shape=diamond];
+	  289 [label="!(IsKimHere())", shape=diamond];
+	  290 [label="Alice: \"Call was terminated by the other party. Anything else, officer?\""];
+	  291 [label="You: Yes, what would she be good at?"];
+	  292 [label="Half Light: The fucking nerves on her?! Trying to hide behind WEAKNESS. You're a GOD. An angry but JUST God."];
+	  293 [label="Sylvie: \"No, please, no more suicide threats! Thank *god* you don't have that stupid gun anymore...\""];
+	  294 [label="Kim Kitsuragi: \"Apparently so. Please do try to control yourself.\" The anger is gone from his eyes and it's almost as if his voice is softer than before."];
+	  295 [label="Half Light: She's worried she might have accidentally done something bad. Then she remembers it's *you*."];
+	  296 [label="Jump to: [The actual Radio HUB]"];
+	  297 [label="garte hub"];
+	  298 [label="Sylvie: \"Especially when there's a hurricane loose. It's your fault for losing them -- not mine.\""];
+	  299 [label="Jump to: [The actual Radio HUB]"];
+	  300 [label="You: \"I'm sorry.\""];
+	  301 [label="Sylvie: \"I think you said it had been *giving you shit ever since you got there*.\""];
+	  302 [label="Sylvie: \"Didn't seem like you had fun doing it though.\""];
+	  303 [label="You: \"I think I've heard enough.\" (Back off.)"];
+	  304 [label="Jump to: [Antics hub]"];
+	  305 [label="Sylvie: \"I... I didn't know I had to report it... I... I thought someone would take him down eventually...\" Her voice breaks."];
+	  306 [label="You: \"I've got a hunch your love life is about to take a *very* pleasant turn.\" (Give the lieutenant a knowing wink.)"];
+	  307 [label="Kim Kitsuragi: \"What?\" The lieutenant raises his shoulders. \"What is it?\""];
+	  308 [label="Empathy: No. She doesn't have a problem with you. It must be someone *else* she's angry about. Some other guy... like *Garte*."];
+	  309 [label="Sylvie: \"You know...\" She seems to be looking for words. \"What the Union says, goes. People listen to them and they take care of their own, which is, like, everyone here.\""];
+	  310 [label="Rhetoric: This exact conversation has happened before. Establishing authority before this young girl seems to have been important to you in the past. Don't go there again."];
+	  311 [label="Esprit de Corps: Cop with an anger issue, underpaid, overworked and on the verge of collapse in both personal and professional life -- that's more of a rule than an exception. And the lieutenant knows this. He understands."];
+	  312 [label="Alice: \"Anything else I can help you with, officer?\""];
+	  313 [label="Jump to: [SYLVIE HUB]"];
+	  314 [label="Jump to: [SYLVIE HUB]"];
+	  315 [label="You: \"Are you *sure* you don't remember where the paperwork I flushed is?\""];
+	  316 [label="Electrochemistry: Nothing's wrong, it's just *sssssexuality*."];
+	  317 [label="Authority: Khm... Correction: Lieutenant Double-Yefreitor Love."];
+	  318 [label="You: \"Okay, I get it. I wasn't a very good tenant.\""];
+	  319 [label="You: \"Well, you're the worst tavern wench I've ever seen!\""];
+	  320 [label="Empathy: No, don't push her. It sounds as if she's about to cry."];
+	  321 [label="Sylvie: \"You do?\" She sounds relieved. \"What else can I do for you?\""];
+	  322 [label="Sylvie: \"No idea. All I know is, next you were waving around money instead. Saying things like 'Big bucks cannot lie' and 'Guns can't buy money, but money can always buy guns'.\""];
+	  323 [label="You: \"Have you seen my police man uniform?\""];
+	  324 [label="Empathy: Trust me, you wouldn't want to be *the guy* here. You know how it is. Yack yack nag nag."];
+	  325 [label="Sylvie: \"Oh, great.\" She doesn't sound thrilled. \"What else do you need, detective?\""];
+	  326 [label="Composure: He's in plainclothes. Voluntarily. It's different from not knowing where your uniform is."];
+	  327 [label="Sylvie: \"Great.\" There's relief in her voice. \"Anything else?\""];
+	  328 [label="Sylvie: \"Well.\" There's an uncomfortable pause. \"You tried to jam it down the toilet, sir, clogging it completely. After I had *unclogged* the toilet and retrieved the paperwork I threw it out in the trash, thinking you didn't need it.\""];
+	  329 [label="Sylvie: \"No, I was actually flattered, I've always liked him. It was just bad timing... with the corpse and all that.\""];
+	  330 [label="Jump to: [Antics hub]"];
+	  331 [label="Sylvie: \"I *really* don't want to talk about this. Let's just forget about this, okay?\""];
+	  332 [label="Authority: Push her *further*. Show her the error of her ways."];
+	  333 [label="Encyclopedia: Or a cop with brain damage. One of the two."];
+	  334 [label="Rhetoric: Whatever this Empathy failure tells you -- *don't* take the quest. It's not wonderful, it's ugly."];
+	  335 [label="Alice: \"Anything else I can help you with, officer?\""];
+	  336 [label="You: \"Bye, Sylvie.\""];
+	  337 [label="Untitled hub"];
+	  338 [label="You: (Yell:) \"I'M A GOD. YOU REPORT TO ME, NOT TO THE UNION -- IS IT CLEAR?\""];
+	  339 [label="Sylvie: Variable[\"plaza.kineema_sylvie_drama_suicidejokes\"]"];
+	  340 [label="Variable[\"plaza.kineema_sylvie_drama_suicidejokes\"]", shape=diamond];
+	  341 [label="!(Variable[\"plaza.kineema_sylvie_drama_suicidejokes\"])", shape=diamond];
+	  342 [label="You: \"Do you know who put the victim's clothes in the trash?\""];
+	  343 [label="You: \"*I* am the authority around here.\""];
+	  344 [label="Sylvie: You hear static. Her chin rub against the receiver. Then: \"Please, I just didn't want any trouble.\""];
+	  345 [label="Sylvie: \"People don't have the money to have the cables put in again. They use the Union's phone or the one on the coast.\""];
+	  346 [label="Conceptualization: There are *way* more inventive ways than a gun to leave this world."];
+	  347 [label="Alice: \"Call was terminated by the other party. Anything else, officer?\""];
+	  348 [label="Jump to: [SYLVIE HUB]"];
+	  349 [label="You: \"What does this Union have to do with anything?\""];
+	  350 [label="You: \"Okay. I don't know what to say.\""];
+	  351 [label="Empathy: Oh yeah. My point exactly. You know how they are -- transactional and hysteric. Loony broads."];
+	  352 [label="Jump to: [Antics hub]"];
+	  353 [label="Sylvie: \"I don't know what to tell you, officer. I didn't call you, because I didn't want to get in trouble with the others, with the Union. I'm sorry about that.\""];
+	  354 [label="Sylvie: \"I... I didn't want to get in trouble with the others...\""];
+	  355 [label="Jump to: [called the police hub]"];
+	  356 [label="Sylvie: \"Yes, I know who you are. You're a police officer... *the law*.\""];
+	  357 [label="Sylvie: \"You were trying to *impress* some people with it. Everyone was eating and...\" She stops hesitantly, not sure if she should continue."];
+	  358 [label="Jump to: [Antics hub]"];
+	  359 [label="You: \"What do you mean by that?\""];
+	  360 [label="Kim Kitsuragi: \"Legally, no. In reality, yes.\" He looks around. \"Martinaise is *de facto* policed by the Dockworkers' Union.\""];
+	  361 [label="You: \"Wait -- police documents?\""];
+	  362 [label="Esprit de Corps: \"Goddamn...\" officer Michel 'Elfboy' Williams speaks to himself. His partner, Sundance Fischer, looks at the patrol uniform he's wearing -- then at an identical suit framed on the wall. It's blue and covered in dust. \"Let's get the fuck out of here,\" he turns to Williams, \"he hasn't been here in days.\""];
+	  363 [label="You: \"What happened to them?\""];
+	  364 [label="You: \"Understood.\" (Refuse task)"];
+	  365 [label="Sylvie: \"Okay, but... please don't mess it up. Please don't take out your gun or something.\""];
+	  366 [label="Half Light: Sounds like it's going to be bad. Do you really want to know?"];
+	  367 [label="Sylvie: Variable[\"plaza.sylvie_exited_once\"]"];
+	  368 [label="Variable[\"plaza.sylvie_exited_once\"]", shape=diamond];
+	  369 [label="!(Variable[\"plaza.sylvie_exited_once\"])", shape=diamond];
+	  370 [label="Sylvie: Variable[\"TASK.who_was_caller_done\"]"];
+	  371 [label="Variable[\"TASK.who_was_caller_done\"]", shape=diamond];
+	  372 [label="!(Variable[\"TASK.who_was_caller_done\"])", shape=diamond];
+	  373 [label="Jump to: [You: \"\"Okay, I get it. I wasn't a very go...\"]"];
+	  374 [label="Empathy: It's *on*. The Love Quest is on -- too late everyone! It's *on*. Take it to Garte now!"];
+	  375 [label="Sylvie: \"Me neither.\""];
+	  376 [label="You: Please no. I don't want to say any of those things. (Refuse the Love Quest -- although it's *wonderful*.)"];
+	  377 [label="Empathy: You're just a gimp. What, you want to be more *empathetic*?"];
+	  378 [label="Jump to: [Antics hub]"];
+	  379 [label="You: \"My badge is missing. Have you seen it anywhere?\""];
+	  380 [label="Jump to: [SYLVIE HUB]"];
+	  381 [label="Sylvie: \"...\""];
+	  382 [label="You: \"You'll see, lieutenant. You will see.\" (Wink again.)"];
+	  383 [label="Sylvie: \"Which one would that be?\""];
+	  384 [label="Half Light: People tried to back away from you or even slip out of the door, but you screamed: I AM THE GODDAMNED LAW AND YOU HAVE TO LISTEN TO ME, YOU ARE ALL SUSPECTS IN A MURDER INVESTIGATION!"];
+	  385 [label="You: \"Yes, but what happened to my gun?\" (Just conclude.)"];
+	  386 [label="You: \"What trouble?!\""];
+	  387 [label="Composure: Right. It's better to not ask too many questions, lest people start thinking you're a *cop* or something."];
+	  388 [label="Jump to: [The actual Radio HUB]"];
+	  389 [label="Sylvie: \"I, uh...\" The static wavers. \"Let's just say I left because I needed to get away from someone.\""];
+	  390 [label="Sylvie: Variable[\"plaza.sylvie_empathy_accusation_hint\"]"];
+	  391 [label="Variable[\"plaza.sylvie_empathy_accusation_hint\"]", shape=diamond];
+	  392 [label="!(Variable[\"plaza.sylvie_empathy_accusation_hint\"])", shape=diamond];
+	  393 [label="Jump to: [SYLVIE HUB]"];
+	  394 [label="Sylvie: \"Right. Well... Are we almost done now, officer?\""];
+	  395 [label="Logic: So the Union has a phone -- and there's one further down the coast. Got it."];
+	  396 [label="Inland Empire: Interesting... you still have to find a copy though. Before you can blast it."];
+	  397 [label="Sylvie: Variable[\"TASK.find_your_paperwork_done\"]"];
+	  398 [label="Variable[\"TASK.find_your_paperwork_done\"]", shape=diamond];
+	  399 [label="!(Variable[\"TASK.find_your_paperwork_done\"])", shape=diamond];
+	  400 [label="Empathy: You know what you've got to do. First you've got to calm her down, tell her you've got everything *under control* -- then go and have a little boys' talk with Garte himself."];
+	  401 [label="You: \"I know, baby, I know. It's just that you've got that sweet woman-child thing that makes men go *crazy*. Especially a man like Garte.\""];
+	  402 [label="Jump to: [SYLVIE HUB]"];
+	  403 [label="REACT"];
+	  404 [label="You: \"Okay, next question.\" (Back.)"];
+	  405 [label="Sylvie: \"What? Of course it bothered me! But I thought the Union already knew about the corpse.\""];
+	  406 [label="Sylvie: \"No one calls the police.\" You can hear her adjust the receiver in her hand. \"The Union would get angry.\""];
+	  407 [label="You: \"Looks like there's a limit to my authority then.\""];
+	  408 [label="You: \"One that was really *sad*.\""];
+	  409 [label="Esprit de Corps: Somewhere in a dank rental apartment, two police officers stand in the dark. Trash and liquor bottles cover the floor. Things are not good."];
+	  410 [label="Esprit de Corps: One of the men, trying not to slip on old newspapers, makes his way to the window and pulls the curtains apart. Roaches scatter as the light comes in."];
+	  411 [label="You: \"Hold on, which song?\""];
+	  412 [label="You: \"Get away from whom?\""];
+	  413 [label="Sylvie: \"What?\" She stops abruptly. \"No, why would you even think that?!\""];
+	  414 [label="Sylvie: \"Yes, obviously. You were the worst client I've ever seen. And I have seen *so many* assholes in this place...\""];
+	  415 [label="Jump to: [called the police hub]"];
+	  416 [label="You: \"So you do agree that quitting your job just because someone asked you out is an *overreaction*?\""];
+	  417 [label="Kim Kitsuragi: \"It was someone else.\" The lieutenant makes a note. \"We'll find them sooner or later, officer. It just might take a while.\""];
+	  418 [label="Encyclopedia: Rubbish! You're a green hat and feather totin' birdwatcher!"];
+	  419 [label="You: \"What happened to them?\""];
+	  420 [label="You: What am I, deranged? A woman doesn't have to be married. She doesn't even have to be in a relationship. Also, feminism."];
+	  421 [label="Empathy: You have to intervene on behalf of Love! First calm her down, tell her you've got everything *under control* -- and then go have a boys' talk with Garte himself."];
+	  422 [label="Sylvie: CheckItem(\"music_whirling_smallest_church\")  or  Variable[\"tc.sad_song_smallest_church\"]"];
+	  423 [label="CheckItem(\"music_whirling_smallest_church\")  or  Variable[\"tc.sad_song_smallest_church\"]", shape=diamond];
+	  424 [label="!(CheckItem(\"music_whirling_smallest_church\")  or  Variable[\"tc.sad_song_smallest_church\"])", shape=diamond];
+	  425 [label="Kim Kitsuragi: The lieutenant goes pale. 'Missing badge?' he mouths to himself, silently."];
+	  426 [label="Jump to: [You: \"\"Hey, Sylvie, it's the police again.\"\"]"];
+	  427 [label="Sylvie: \"No, absolutely not.\""];
+	  428 [label="Sylvie: \"I'm not mad, it's just...\" The static sighs again. \"You were so drunk and so emotional all the time, and then the *skua thing* happened. It just made me want to quit.\""];
+	  429 [label="Sylvie: \"God, I... I knew I shouldn't have brought it up. Just... try not to call me again and let's pretend it never happened.\""];
+	  430 [label="Sylvie: You hear the call breaking up on the other end of the radio and then the already familiar voice:"];
+	  431 [label="You: \"Do you know who made that call?\""];
+	  432 [label="Jump to: [SYLVIE HUB]"];
+	  433 [label="You: \"What *others*?\""];
+	  434 [label="You: \"I should have killed myself...\""];
+	  435 [label="Kim Kitsuragi: \"Hey!\" The lieutenant interrupts with a flicker of anger in his eyes. \"If you cannot restrain yourself then I'll be handling the interviews from now on and you can quietly take notes.\""];
+	  436 [label="Sylvie: Variable[\"plaza.kineema_made_sylvie_cry_like_a_boss\"]"];
+	  437 [label="Variable[\"plaza.kineema_made_sylvie_cry_like_a_boss\"]", shape=diamond];
+	  438 [label="!(Variable[\"plaza.kineema_made_sylvie_cry_like_a_boss\"])", shape=diamond];
+	  439 [label="Sylvie: \"You know whom.\""];
+	  0 -> 1
+	  1 -> 195
+	  2 -> 403
+	  3 -> 225
+	  4 -> 314
+	  5 -> 227
+	  6 -> 359
+	  7 -> 8
+	  7 -> 9
+	  8 -> 92
+	  9 -> 256
+	  10 -> 259
+	  11 -> 10
+	  12 -> 147
+	  13 -> 304
+	  13 -> 49
+	  14 -> 432
+	  14 -> 34
+	  14 -> 405
+	  15 -> 306
+	  16 -> 282
+	  17 -> 382
+	  18 -> 325
+	  19 -> 198
+	  20 -> 165
+	  21 -> 168
+	  22 -> 224
+	  23 -> 50
+	  24 -> 230
+	  25 -> 129
+	  26 -> 211
+	  27 -> 272
+	  28 -> 217
+	  29 -> 118
+	  30 -> 423
+	  31 -> 377
+	  31 -> 150
+	  31 -> 279
+	  32 -> 402
+	  32 -> 243
+	  33 -> 213
+	  34 -> 406
+	  35 -> 346
+	  36 -> 385
+	  37 -> 353
+	  38 -> 23
+	  39 -> 344
+	  39 -> 264
+	  39 -> 408
+	  39 -> 247
+	  40 -> 13
+	  41 -> 313
+	  42 -> 50
+	  43 -> 332
+	  44 -> 241
+	  45 -> 352
+	  46 -> 132
+	  46 -> 421
+	  46 -> 45
+	  46 -> 180
+	  46 -> 181
+	  47 -> 48
+	  47 -> 97
+	  47 -> 157
+	  47 -> 245
+	  48 -> 83
+	  49 -> 215
+	  50 -> 324
+	  50 -> 166
+	  50 -> 105
+	  50 -> 246
+	  50 -> 343
+	  50 -> 316
+	  50 -> 281
+	  50 -> 122
+	  50 -> 182
+	  50 -> 188
+	  50 -> 189
+	  51 -> 101
+	  52 -> 235
+	  53 -> 79
+	  54 -> 340
+	  55 -> 345
+	  56 -> 57
+	  56 -> 58
+	  57 -> 202
+	  57 -> 59
+	  57 -> 125
+	  58 -> 42
+	  59 -> 327
+	  60 -> 61
+	  60 -> 62
+	  61 -> 411
+	  62 -> 162
+	  63 -> 296
+	  64 -> 416
+	  65 -> 420
+	  65 -> 276
+	  66 -> 67
+	  66 -> 68
+	  67 -> 318
+	  68 -> 46
+	  69 -> 28
+	  70 -> 72
+	  70 -> 71
+	  71 -> 359
+	  72 -> 6
+	  73 -> 132
+	  73 -> 180
+	  73 -> 45
+	  73 -> 421
+	  74 -> 423
+	  75 -> 156
+	  76 -> 16
+	  77 -> 220
+	  78 -> 384
+	  79 -> 80
+	  79 -> 81
+	  80 -> 292
+	  81 -> 2
+	  82 -> 249
+	  83 -> 419
+	  84 -> 315
+	  85 -> 414
+	  86 -> 349
+	  87 -> 156
+	  88 -> 89
+	  88 -> 90
+	  89 -> 418
+	  90 -> 91
+	  91 -> 5
+	  92 -> 207
+	  93 -> 114
+	  94 -> 96
+	  94 -> 95
+	  95 -> 30
+	  96 -> 74
+	  97 -> 303
+	  98 -> 430
+	  99 -> 430
+	  100 -> 14
+	  101 -> 282
+	  102 -> 264
+	  102 -> 247
+	  103 -> 328
+	  104 -> 268
+	  105 -> 65
+	  106 -> 55
+	  107 -> 295
+	  108 -> 265
+	  109 -> 353
+	  110 -> 69
+	  110 -> 183
+	  111 -> 242
+	  112 -> 128
+	  113 -> 114
+	  114 -> 50
+	  115 -> 116
+	  115 -> 117
+	  116 -> 359
+	  117 -> 397
+	  118 -> 75
+	  118 -> 87
+	  119 -> 415
+	  120 -> 407
+	  121 -> 433
+	  122 -> 111
+	  123 -> 403
+	  124 -> 144
+	  125 -> 108
+	  126 -> 365
+	  126 -> 127
+	  127 -> 366
+	  128 -> 43
+	  128 -> 252
+	  128 -> 85
+	  129 -> 171
+	  130 -> 275
+	  131 -> 319
+	  132 -> 212
+	  133 -> 152
+	  134 -> 94
+	  135 -> 337
+	  135 -> 190
+	  136 -> 302
+	  137 -> 305
+	  138 -> 255
+	  139 -> 433
+	  140 -> 66
+	  141 -> 267
+	  142 -> 14
+	  143 -> 50
+	  144 -> 3
+	  145 -> 41
+	  146 -> 330
+	  147 -> 50
+	  148 -> 420
+	  149 -> 66
+	  150 -> 382
+	  151 -> 10
+	  152 -> 280
+	  153 -> 154
+	  153 -> 155
+	  154 -> 426
+	  155 -> 52
+	  156 -> 12
+	  157 -> 20
+	  158 -> 322
+	  159 -> 160
+	  159 -> 161
+	  160 -> 283
+	  161 -> 35
+	  162 -> 50
+	  163 -> 326
+	  164 -> 37
+	  165 -> 353
+	  166 -> 329
+	  167 -> 169
+	  168 -> 142
+	  169 -> 21
+	  170 -> 430
+	  171 -> 172
+	  171 -> 173
+	  172 -> 362
+	  173 -> 319
+	  174 -> 176
+	  174 -> 175
+	  175 -> 130
+	  176 -> 210
+	  177 -> 178
+	  178 -> 374
+	  179 -> 113
+	  180 -> 277
+	  181 -> 73
+	  182 -> 368
+	  183 -> 217
+	  184 -> 186
+	  184 -> 187
+	  185 -> 139
+	  186 -> 121
+	  187 -> 357
+	  188 -> 77
+	  189 -> 191
+	  190 -> 192
+	  190 -> 193
+	  191 -> 285
+	  192 -> 285
+	  193 -> 338
+	  194 -> 196
+	  194 -> 197
+	  195 -> 163
+	  196 -> 29
+	  197 -> 54
+	  198 -> 56
+	  199 -> 408
+	  199 -> 264
+	  199 -> 201
+	  199 -> 247
+	  199 -> 344
+	  200 -> 361
+	  201 -> 388
+	  202 -> 381
+	  203 -> 398
+	  205 -> 334
+	  206 -> 208
+	  206 -> 209
+	  207 -> 174
+	  208 -> 258
+	  209 -> 275
+	  210 -> 299
+	  211 -> 11
+	  212 -> 115
+	  213 -> 429
+	  214 -> 216
+	  215 -> 412
+	  215 -> 183
+	  216 -> 218
+	  217 -> 138
+	  218 -> 14
+	  219 -> 358
+	  220 -> 214
+	  221 -> 248
+	  222 -> 134
+	  222 -> 145
+	  222 -> 244
+	  222 -> 119
+	  222 -> 24
+	  223 -> 82
+	  223 -> 380
+	  224 -> 386
+	  224 -> 435
+	  224 -> 124
+	  224 -> 351
+	  225 -> 264
+	  225 -> 247
+	  226 -> 14
+	  227 -> 391
+	  228 -> 25
+	  229 -> 146
+	  230 -> 232
+	  230 -> 233
+	  231 -> 436
+	  232 -> 64
+	  233 -> 253
+	  234 -> 236
+	  234 -> 237
+	  235 -> 42
+	  236 -> 199
+	  237 -> 240
+	  237 -> 239
+	  238 -> 164
+	  238 -> 206
+	  239 -> 353
+	  240 -> 131
+	  241 -> 251
+	  241 -> 252
+	  241 -> 85
+	  242 -> 133
+	  243 -> 136
+	  244 -> 250
+	  245 -> 219
+	  246 -> 354
+	  247 -> 149
+	  248 -> 380
+	  249 -> 109
+	  250 -> 390
+	  251 -> 86
+	  252 -> 27
+	  253 -> 25
+	  254 -> 229
+	  254 -> 301
+	  254 -> 254
+	  255 -> 257
+	  256 -> 14
+	  257 -> 275
+	  258 -> 260
+	  258 -> 261
+	  259 -> 335
+	  260 -> 31
+	  261 -> 404
+	  262 -> 430
+	  263 -> 355
+	  264 -> 381
+	  265 -> 70
+	  266 -> 106
+	  266 -> 387
+	  267 -> 269
+	  268 -> 36
+	  269 -> 225
+	  270 -> 253
+	  271 -> 394
+	  272 -> 126
+	  273 -> 200
+	  274 -> 14
+	  275 -> 148
+	  276 -> 422
+	  277 -> 151
+	  278 -> 32
+	  279 -> 288
+	  280 -> 428
+	  281 -> 14
+	  282 -> 371
+	  283 -> 410
+	  284 -> 286
+	  284 -> 287
+	  285 -> 221
+	  286 -> 309
+	  287 -> 289
+	  287 -> 290
+	  288 -> 307
+	  289 -> 17
+	  290 -> 375
+	  291 -> 123
+	  292 -> 51
+	  292 -> 339
+	  292 -> 76
+	  293 -> 347
+	  294 -> 312
+	  295 -> 44
+	  297 -> 417
+	  297 -> 234
+	  297 -> 271
+	  298 -> 93
+	  300 -> 25
+	  301 -> 47
+	  302 -> 353
+	  303 -> 137
+	  304 -> 223
+	  305 -> 293
+	  306 -> 308
+	  307 -> 383
+	  308 -> 18
+	  308 -> 222
+	  309 -> 274
+	  310 -> 224
+	  311 -> 168
+	  312 -> 297
+	  313 -> 50
+	  314 -> 50
+	  315 -> 179
+	  316 -> 348
+	  317 -> 46
+	  318 -> 262
+	  319 -> 430
+	  320 -> 338
+	  321 -> 356
+	  322 -> 4
+	  323 -> 284
+	  324 -> 140
+	  325 -> 50
+	  326 -> 203
+	  327 -> 143
+	  328 -> 84
+	  329 -> 273
+	  330 -> 223
+	  331 -> 252
+	  331 -> 85
+	  332 -> 321
+	  333 -> 353
+	  334 -> 31
+	  335 -> 205
+	  336 -> 431
+	  337 -> 434
+	  337 -> 158
+	  337 -> 15
+	  338 -> 231
+	  339 -> 341
+	  339 -> 342
+	  340 -> 104
+	  341 -> 269
+	  342 -> 38
+	  343 -> 226
+	  344 -> 194
+	  345 -> 396
+	  346 -> 270
+	  347 -> 300
+	  348 -> 50
+	  349 -> 407
+	  350 -> 376
+	  351 -> 401
+	  352 -> 223
+	  353 -> 100
+	  354 -> 333
+	  355 -> 14
+	  356 -> 437
+	  357 -> 367
+	  358 -> 223
+	  359 -> 310
+	  360 -> 39
+	  361 -> 204
+	  362 -> 162
+	  363 -> 63
+	  364 -> 395
+	  365 -> 331
+	  366 -> 19
+	  366 -> 103
+	  367 -> 369
+	  367 -> 370
+	  368 -> 431
+	  369 -> 135
+	  370 -> 372
+	  370 -> 373
+	  371 -> 7
+	  372 -> 88
+	  373 -> 319
+	  374 -> 389
+	  375 -> 3
+	  376 -> 378
+	  377 -> 317
+	  378 -> 223
+	  379 -> 153
+	  380 -> 50
+	  381 -> 291
+	  382 -> 291
+	  383 -> 409
+	  384 -> 225
+	  385 -> 323
+	  386 -> 55
+	  387 -> 381
+	  389 -> 252
+	  389 -> 85
+	  389 -> 413
+	  390 -> 392
+	  390 -> 393
+	  391 -> 112
+	  392 -> 128
+	  393 -> 50
+	  394 -> 331
+	  395 -> 371
+	  396 -> 359
+	  397 -> 400
+	  397 -> 399
+	  398 -> 177
+	  399 -> 364
+	  400 -> 10
+	  401 -> 280
+	  402 -> 50
+	  403 -> 320
+	  403 -> 98
+	  403 -> 99
+	  403 -> 263
+	  403 -> 170
+	  404 -> 185
+	  405 -> 120
+	  405 -> 350
+	  406 -> 360
+	  407 -> 102
+	  408 -> 266
+	  409 -> 60
+	  410 -> 363
+	  411 -> 110
+	  412 -> 440
+	  413 -> 298
+	  414 -> 40
+	  415 -> 14
+	  416 -> 253
+	  417 -> 227
+	  418 -> 238
+	  419 -> 26
+	  420 -> 278
+	  421 -> 10
+	  422 -> 424
+	  422 -> 425
+	  423 -> 33
+	  424 -> 78
+	  425 -> 52
+	  426 -> 163
+	  427 -> 53
+	  428 -> 223
+	  429 -> 379
+	  430 -> 336
+	  431 -> 159
+	  432 -> 50
+	  433 -> 141
+	  434 -> 294
+	  435 -> 107
+	  435 -> 167
+	  436 -> 438
+	  436 -> 439
+	  437 -> 22
+	  438 -> 311
+	  439 -> 228
+}
+

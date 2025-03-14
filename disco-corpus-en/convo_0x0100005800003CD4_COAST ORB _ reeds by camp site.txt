@@ -1,0 +1,419 @@
+# COAST ORB / reeds by camp site
+# These reeds are by Morell and Gary's abandoned camp site. The interactable reeds you can search when Morell tells you to check the phasmid traps. There are traps in these reeds.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: \"Surely,\" he repeats and looks at the sea, then at you putting the trap back on the ground. \"Anyway, the air is nice and fresh here...\""];
+	  3 [label="Logic: No phasmid either -- but still..."];
+	  4 [label="Jump to: [remorse hub]"];
+	  5 [label="Variable[\"TASK.report_to_cryptozoologists_3_done\"]"];
+	  6 [label="Variable[\"TASK.report_to_cryptozoologists_3_done\"]", shape=diamond];
+	  7 [label="!(Variable[\"TASK.report_to_cryptozoologists_3_done\"])", shape=diamond];
+	  8 [label="SetVariableValue(\"coast.reeds_checked_counter\", Variable[\"coast.reeds_checked_counter\"] +once(1)) "];
+	  9 [label="Variable[\"coast.reeds_checked_counter\"] == 2"];
+	  10 [label="Variable[\"coast.reeds_checked_counter\"] == 2", shape=diamond];
+	  11 [label="!(Variable[\"coast.reeds_checked_counter\"] == 2)", shape=diamond];
+	  12 [label="IsKimHere()"];
+	  13 [label="IsKimHere()", shape=diamond];
+	  14 [label="!(IsKimHere())", shape=diamond];
+	  15 [label="You: \"Damn, I was hoping it would be in the *first* one.\""];
+	  16 [label="IsKimHere()"];
+	  17 [label="IsKimHere()", shape=diamond];
+	  18 [label="!(IsKimHere())", shape=diamond];
+	  19 [label="You: [Leave.]"];
+	  20 [label="Variable[\"coast.traps_empty_morell\"]"];
+	  21 [label="Variable[\"coast.traps_empty_morell\"]", shape=diamond];
+	  22 [label="!(Variable[\"coast.traps_empty_morell\"])", shape=diamond];
+	  23 [label="Variable[\"TASK.open_gary_door_done\"]"];
+	  24 [label="Variable[\"TASK.open_gary_door_done\"]", shape=diamond];
+	  25 [label="!(Variable[\"TASK.open_gary_door_done\"])", shape=diamond];
+	  26 [label="SetVariableValue(\"coast.reeds_checked_counter\", Variable[\"coast.reeds_checked_counter\"] +once(1)) "];
+	  27 [label="You: Look around."];
+	  28 [label="Variable[\"TASK.report_to_cryptozoologists_1\"]"];
+	  29 [label="Variable[\"TASK.report_to_cryptozoologists_1\"]", shape=diamond];
+	  30 [label="!(Variable[\"TASK.report_to_cryptozoologists_1\"])", shape=diamond];
+	  31 [label="Trap: Morell: Nothing has changed about this trap. You need to check the others."];
+	  32 [label="Trap: Morell: This trap is also full of panicked locusts. No sign of any cryptozoological beast inside."];
+	  33 [label="Kim Kitsuragi: He purses his lips. \"Perhaps our cryptozoologists have competition in the form of an actual entomologist? Or someone else is sabotaging them? I could present more theories, but then I would be taking this on as a case -- which I'm *not*.\""];
+	  34 [label="Trap: Morell: All the traps are stocked now -- and still no sight of the phasmid. Return to Morell and let him know."];
+	  35 [label="You: \"Actually -- I do get the feeling that someone or something may have messed with the trap...\""];
+	  36 [label="Kim Kitsuragi: \"Empty as all of them...\" he pants. \"*One* more of these and we're done...\" His face is red from the cold sea air. He crouches to catch his breath."];
+	  37 [label="SetVariableValue(\"backyard.gary_door_unlocked\", false) --[[ Variable[ ]]"];
+	  38 [label="You: Reach for the trap."];
+	  39 [label="IsKimHere()"];
+	  40 [label="IsKimHere()", shape=diamond];
+	  41 [label="!(IsKimHere())", shape=diamond];
+	  42 [label="You: \"How are you enjoying the cardio, lieutenant? I'm quite enjoying it myself.\""];
+	  43 [label="Kim Kitsuragi: Neither does the lieutenant. He just raises his collar -- it's cold out, as always."];
+	  44 [label="You: \"You getting tired?\""];
+	  45 [label="You: Say nothing, just put the trap down."];
+	  46 [label="You: (Immediately yell.) \"It's empty! Morell didn't leave it empty...\""];
+	  47 [label="Trap: Morell: The trap stands empty near the reeds. No insect sounds or movement around -- only the reeds' apprehensive hissing."];
+	  48 [label="You: \"You're right. This crypto-research has been stupid.\""];
+	  49 [label="You: \"No need to grin. I'm not *expecting* to find anything. I'm helping some citizens and getting some fresh air.\""];
+	  50 [label="Trap: Morell: Nothing but locusts in this trap as well. Definitely no cryptozoological monstrosity."];
+	  51 [label="Jump to: [morell hub]"];
+	  52 [label="Kim Kitsuragi: \"Of course. Noted.\" He looks at you, incredulously, as you place the trap back in the reeds."];
+	  53 [label="Kim Kitsuragi: \"Good. Now that's done. When do you think we will return to our impending apocalypse of a murder investigation?\""];
+	  54 [label="Trap: Morell: Nothing. No traces of the locusts *or* the Insulindian phasmid. What happened?"];
+	  55 [label="IsKimHere()"];
+	  56 [label="IsKimHere()", shape=diamond];
+	  57 [label="!(IsKimHere())", shape=diamond];
+	  58 [label="Jump to: [morell hub]"];
+	  59 [label="Trap: Morell: Your voice echoes on the coast, carried by a gust of cold wind."];
+	  60 [label="Shivers: A cold gust of air dries your sweaty face and you look to the dark shadow the Feld building in the distance, drawing you to it. What a strange sensation... Once this is done, should you try to ask again?"];
+	  61 [label="Variable[\"coast.reeds_checked_counter\"] == 1"];
+	  62 [label="Variable[\"coast.reeds_checked_counter\"] == 1", shape=diamond];
+	  63 [label="!(Variable[\"coast.reeds_checked_counter\"] == 1)", shape=diamond];
+	  64 [label="You: \"Maybe they will still attract something?\""];
+	  65 [label="Kim Kitsuragi: \"Okay. But after that we get back to our own assignments. We've done a thorough survey of the coast now -- just running around is no longer useful.\""];
+	  66 [label="Jump to: [morell hub]"];
+	  67 [label="Trap: Morell: The reeds continue to hiss around you as you put the empty trap back on the ground. Time to consult the professionals -- Morell and Lena."];
+	  68 [label="Kim Kitsuragi: \"No you weren't.\" He looks at the sea, then you -- laying the trap back down on the ground."];
+	  69 [label="remorse hub"];
+	  70 [label="Variable[\"coast.traps_dying_regret_done\"]"];
+	  71 [label="Variable[\"coast.traps_dying_regret_done\"]", shape=diamond];
+	  72 [label="!(Variable[\"coast.traps_dying_regret_done\"])", shape=diamond];
+	  73 [label="Empathy: Poor things..."];
+	  74 [label="SetVariableValue(\"backyard.gary_door_unlocked\", false) --[[ Variable[ ]]"];
+	  75 [label="Kim Kitsuragi: The lieutenant's gaze follows yours and lingers on the reeds, the sand, the water beyond. Then he turns back to you expectantly."];
+	  76 [label="Variable[\"coast.reeds_checked_counter\"] == 3"];
+	  77 [label="Variable[\"coast.reeds_checked_counter\"] == 3", shape=diamond];
+	  78 [label="!(Variable[\"coast.reeds_checked_counter\"] == 3)", shape=diamond];
+	  79 [label="You: \"I want to make it clear that I don't *actually* believe the phasmid exists, okay?\""];
+	  80 [label="You: \"Yeah, it probably *wasn't* the phasmid, but still. Morell needs to know.\""];
+	  81 [label="Untitled hub (08)"];
+	  82 [label="Trap: Morell: The reeds by the abandoned camp site hiss and shake."];
+	  83 [label="Kim Kitsuragi: \"I'm beginning to feel... somewhat sorry for them.\""];
+	  84 [label="SetVariableValue(\"backyard.gary_door_unlocked\", false) --[[ Variable[ ]]"];
+	  85 [label="morell hub"];
+	  86 [label="Variable[\"coast.reeds_checked_counter\"] == 3"];
+	  87 [label="Variable[\"coast.reeds_checked_counter\"] == 3", shape=diamond];
+	  88 [label="!(Variable[\"coast.reeds_checked_counter\"] == 3)", shape=diamond];
+	  89 [label="Kim Kitsuragi: \"We did *sort of* promise to tell them, didn't we...\" He seems to regret the fact."];
+	  90 [label="You: \"It'll be in the next one. *Surely*.\""];
+	  91 [label="You: Look closer still."];
+	  92 [label="You: [Leave.]"];
+	  93 [label="Kim Kitsuragi: \"I meant no offence, just...\" The lieutenant doesn't know how to finish the sentence. He looks at you, putting the trap back on the ground."];
+	  94 [label="Kim Kitsuragi: \"Big surprise.\" The lieutenant grins mirthlessly. \"Anyway -- one down, three to go.\""];
+	  95 [label="Variable[\"TASK.restock_trap\"]"];
+	  96 [label="Variable[\"TASK.restock_trap\"]", shape=diamond];
+	  97 [label="!(Variable[\"TASK.restock_trap\"])", shape=diamond];
+	  98 [label="SetVariableValue(\"backyard.gary_door_unlocked\", false) --[[ Variable[ ]]"];
+	  99 [label="Kim Kitsuragi: \"No-no. I'm fine. I didn't mean to complain, it's just...\" He's short-winded. The sentence ends there."];
+	  100 [label="Jump to: [morell hub]"];
+	  101 [label="Kim Kitsuragi: \"Another empty trap,\" the lieutenant takes a note -- more out of habit than duty."];
+	  102 [label="Kim Kitsuragi: \"Of course. Noted.\" He looks at you, incredulously, as you place the trap back in the reeds."];
+	  103 [label="You: \"But what if it *was* the phasmid? What if it ate them and got out?\""];
+	  104 [label="You: \"I *must* stress that I did not expect a cryptozoological monstrosity to be in this trap.\""];
+	  105 [label="IsKimHere()"];
+	  106 [label="IsKimHere()", shape=diamond];
+	  107 [label="!(IsKimHere())", shape=diamond];
+	  108 [label="Jump to: [morell hub]"];
+	  109 [label="see_it_to_believe_it"];
+	  110 [label="Trap: Morell: The locusts aren't doing all too well, but they're still in there. This isn't the empty trap. That must have been another one."];
+	  111 [label="Variable[\"TASK.restock_trap_done\"]"];
+	  112 [label="Variable[\"TASK.restock_trap_done\"]", shape=diamond];
+	  113 [label="!(Variable[\"TASK.restock_trap_done\"])", shape=diamond];
+	  114 [label="You: [Leave.]"];
+	  115 [label="Variable[\"TASK.ask_about_ruby_in_village\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false"];
+	  116 [label="Variable[\"TASK.ask_about_ruby_in_village\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false", shape=diamond];
+	  117 [label="!(Variable[\"TASK.ask_about_ruby_in_village\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false)", shape=diamond];
+	  118 [label="You: \"Let's keep going. The next one is the *lucky* one.\""];
+	  119 [label="You: Say nothing, just put the trap down."];
+	  120 [label="IsKimHere()"];
+	  121 [label="IsKimHere()", shape=diamond];
+	  122 [label="!(IsKimHere())", shape=diamond];
+	  123 [label="Shivers: The later it gets, the colder. Remnants of the camp can still be seen in the sand, the fire that's gone out... you feel strange, somehow."];
+	  124 [label="You: Pause and just stand there."];
+	  125 [label="Variable[\"TASK.report_to_cryptozoologists_1_done\"]"];
+	  126 [label="Variable[\"TASK.report_to_cryptozoologists_1_done\"]", shape=diamond];
+	  127 [label="!(Variable[\"TASK.report_to_cryptozoologists_1_done\"])", shape=diamond];
+	  128 [label="Kim Kitsuragi: He stops you. \"Don't answer that. It was a rhetorical question.\""];
+	  129 [label="Untitled hub (02)"];
+	  130 [label="Untitled hub"];
+	  131 [label="Trap: Morell: You set the apparatus back on the ground, among the reeds."];
+	  132 [label="Trap: Morell: This is the trap Morell just set. Checking it over, he said, is just a *technicality*, but..."];
+	  133 [label="Trap: Morell: There's nothing else to do with the traps at this time. They're all just lying around, gathering dust and rainwater."];
+	  134 [label="Kim Kitsuragi: The lieutenant stretches his back."];
+	  135 [label="You: Release the locusts into the empty trap."];
+	  136 [label="Trap: Morell: This is the last of the traps, the one Morell just set. Checking it over -- he said -- is just a technicality."];
+	  137 [label="Trap: Morell: No locusts!"];
+	  138 [label="You: Look closer."];
+	  139 [label="Kim Kitsuragi: \"Yup. The next one has a *crab* trapped in it.\" He raises his collar -- it's windy. \"These are just crab traps, you do realize?\""];
+	  140 [label="Untitled hub (02)"];
+	  141 [label="Jump to: [morell hub]"];
+	  142 [label="IsKimHere()"];
+	  143 [label="IsKimHere()", shape=diamond];
+	  144 [label="!(IsKimHere())", shape=diamond];
+	  145 [label="IsKimHere()"];
+	  146 [label="IsKimHere()", shape=diamond];
+	  147 [label="!(IsKimHere())", shape=diamond];
+	  148 [label="You: Say nothing, just put the trap down."];
+	  149 [label="You: \"Bummer it wasn't in here...\""];
+	  150 [label="You: [Leave.]"];
+	  151 [label="Jump to: [remorse hub]"];
+	  152 [label="Trap: Morell: The reeds whisper around the sepulchral trap, as though suddenly filled with fear."];
+	  153 [label="Trap: Morell: The trap feels light -- and silent -- as you pick it up. Something is different here..."];
+	  154 [label="Trap: Morell: The locusts, dazed from being transported, slowly begin to acclimate to their new surroundings."];
+	  155 [label="Variable[\"TASK.open_gary_door\"]"];
+	  156 [label="Variable[\"TASK.open_gary_door\"]", shape=diamond];
+	  157 [label="!(Variable[\"TASK.open_gary_door\"])", shape=diamond];
+	  158 [label="SetVariableValue(\"coast.reeds_checked_counter\", Variable[\"coast.reeds_checked_counter\"] +once(1)) "];
+	  159 [label="Kim Kitsuragi: The lieutenant studies the trap with you. \"Well, the bait worked on *something*. This doesn't mean it was a reed-monster, though. Unless you see one in there? I just see an empty trap...\""];
+	  160 [label="Kim Kitsuragi: \"Always up for a good jog -- otherwise, would I still be *on* this case with *you*?\" He smiles and raises his collar. It's windy."];
+	  161 [label="Inland Empire: Man, it's lonely doing this alone. The wind seems to howl in a strange manner..."];
+	  162 [label="Untitled hub"];
+	  163 [label="Trap: Morell: Locusts are crawling around in the trap, confused but uneaten. You see no carnivorous *reed-phasmid* gorging on them."];
+	  164 [label="Savoir Faire: It's good the cryptozoologists left -- this isn't a very cosy place to stay night after night."];
+	  165 [label="Trap: Morell: A few locusts trudge along the wall of the trap. The rest are piled in a heap in the corner, dead. No phasmid anywhere."];
+	  166 [label="Kim Kitsuragi: \"Yes. Like a cat, or another teenage psychopath.\""];
+	  167 [label="Jump to: [morell hub]"];
+	  168 [label="Trap: Morell: You've checked all the traps now. There's nothing else to do with them. The cryptozoologists await your report."];
+	  169 [label="You: \"You're right. But they still need to know.\""];
+	  170 [label="Perception (Sight): The netting is a little untidy, messier than the others. Like someone or something picked up the trap and shook it before dropping it back down on the ground."];
+	  171 [label="CancelTask(\"TASK.open_gary_door_cancelled\")--[[ Variable[ ]]"];
+	  172 [label="SetVariableValue(\"coast.reeds_checked_counter\", Variable[\"coast.reeds_checked_counter\"] +once(1)) "];
+	  173 [label="Kim Kitsuragi: \"Good, good. We should be courteous and tell the cryptozoologists that one of their traps was empty, but then we can get back to *our* assignment here.\""];
+	  174 [label="Kim Kitsuragi: \"I'm just...\" he breathes out. \"Glad we haven't found some poor cat trapped in one of these.\""];
+	  175 [label="IsKimHere()"];
+	  176 [label="IsKimHere()", shape=diamond];
+	  177 [label="!(IsKimHere())", shape=diamond];
+	  178 [label="Jump to: [morell hub]"];
+	  179 [label="Variable[\"TASK.unlock_the_weasle_door_done\"]"];
+	  180 [label="Variable[\"TASK.unlock_the_weasle_door_done\"]", shape=diamond];
+	  181 [label="!(Variable[\"TASK.unlock_the_weasle_door_done\"])", shape=diamond];
+	  182 [label="Variable[\"TASK.trap_morell_done\"]"];
+	  183 [label="Variable[\"TASK.trap_morell_done\"]", shape=diamond];
+	  184 [label="!(Variable[\"TASK.trap_morell_done\"])", shape=diamond];
+	  185 [label="Authority: He doesn't want to, but if there is one more cryptozoological run-around, he *must* force the investigation back on track. This better be it..."];
+	  186 [label="Kim Kitsuragi: \"Right.\" It does not look like he thinks you're right. \"Anyway, that's for the cryptozoologists to figure out now.\" He adds, for clarity: \"*We're* not cryptozoologists -- we're cops.\""];
+	  187 [label="Composure: They're not really going to get the chance to get comfortable here."];
+	  188 [label="You: [Leave.]"];
+	  0 -> 1
+	  1 -> 95
+	  2 -> 109
+	  3 -> 81
+	  5 -> 6
+	  5 -> 7
+	  6 -> 166
+	  7 -> 34
+	  8 -> 37
+	  9 -> 10
+	  9 -> 11
+	  10 -> 50
+	  11 -> 61
+	  12 -> 13
+	  12 -> 14
+	  13 -> 36
+	  14 -> 66
+	  15 -> 68
+	  16 -> 17
+	  16 -> 18
+	  17 -> 59
+	  18 -> 59
+	  20 -> 21
+	  20 -> 22
+	  21 -> 47
+	  22 -> 111
+	  23 -> 24
+	  23 -> 25
+	  25 -> 180
+	  26 -> 74
+	  27 -> 82
+	  28 -> 29
+	  28 -> 30
+	  29 -> 126
+	  30 -> 183
+	  31 -> 151
+	  32 -> 8
+	  33 -> 104
+	  33 -> 48
+	  33 -> 170
+	  33 -> 80
+	  34 -> 19
+	  35 -> 33
+	  36 -> 130
+	  37 -> 39
+	  38 -> 76
+	  39 -> 40
+	  39 -> 41
+	  40 -> 102
+	  41 -> 162
+	  42 -> 161
+	  43 -> 51
+	  44 -> 100
+	  45 -> 135
+	  46 -> 16
+	  47 -> 163
+	  48 -> 174
+	  49 -> 93
+	  50 -> 159
+	  51 -> 85
+	  52 -> 179
+	  53 -> 129
+	  54 -> 171
+	  55 -> 56
+	  55 -> 57
+	  56 -> 75
+	  57 -> 189
+	  58 -> 85
+	  59 -> 91
+	  60 -> 168
+	  61 -> 62
+	  61 -> 63
+	  62 -> 32
+	  63 -> 164
+	  64 -> 167
+	  65 -> 116
+	  66 -> 85
+	  67 -> 101
+	  68 -> 109
+	  69 -> 64
+	  69 -> 125
+	  69 -> 189
+	  70 -> 72
+	  70 -> 71
+	  71 -> 146
+	  72 -> 73
+	  74 -> 139
+	  75 -> 152
+	  76 -> 77
+	  76 -> 78
+	  77 -> 154
+	  78 -> 9
+	  79 -> 103
+	  80 -> 89
+	  81 -> 91
+	  81 -> 46
+	  82 -> 165
+	  83 -> 69
+	  84 -> 121
+	  85 -> 115
+	  85 -> 27
+	  85 -> 38
+	  86 -> 88
+	  86 -> 87
+	  87 -> 137
+	  88 -> 133
+	  89 -> 116
+	  90 -> 2
+	  91 -> 106
+	  93 -> 109
+	  94 -> 131
+	  95 -> 96
+	  95 -> 97
+	  96 -> 112
+	  97 -> 28
+	  98 -> 12
+	  99 -> 179
+	  100 -> 85
+	  101 -> 141
+	  102 -> 51
+	  103 -> 187
+	  104 -> 52
+	  105 -> 107
+	  105 -> 108
+	  106 -> 160
+	  107 -> 54
+	  108 -> 85
+	  109 -> 35
+	  109 -> 104
+	  109 -> 170
+	  109 -> 80
+	  109 -> 48
+	  110 -> 151
+	  111 -> 113
+	  111 -> 114
+	  112 -> 5
+	  113 -> 20
+	  115 -> 117
+	  115 -> 118
+	  116 -> 60
+	  117 -> 168
+	  118 -> 140
+	  119 -> 43
+	  120 -> 122
+	  120 -> 123
+	  121 -> 94
+	  122 -> 142
+	  123 -> 58
+	  124 -> 153
+	  125 -> 128
+	  125 -> 127
+	  126 -> 134
+	  127 -> 169
+	  128 -> 186
+	  129 -> 105
+	  129 -> 44
+	  129 -> 45
+	  129 -> 150
+	  130 -> 49
+	  130 -> 90
+	  130 -> 149
+	  130 -> 15
+	  131 -> 109
+	  132 -> 85
+	  133 -> 151
+	  134 -> 179
+	  135 -> 155
+	  136 -> 85
+	  137 -> 3
+	  138 -> 138
+	  139 -> 51
+	  140 -> 120
+	  140 -> 42
+	  140 -> 79
+	  140 -> 119
+	  141 -> 85
+	  142 -> 144
+	  142 -> 145
+	  143 -> 110
+	  144 -> 67
+	  145 -> 147
+	  145 -> 148
+	  146 -> 83
+	  147 -> 69
+	  148 -> 132
+	  149 -> 175
+	  152 -> 55
+	  153 -> 26
+	  154 -> 188
+	  155 -> 157
+	  155 -> 158
+	  156 -> 23
+	  158 -> 98
+	  159 -> 171
+	  160 -> 51
+	  161 -> 66
+	  162 -> 136
+	  162 -> 92
+	  163 -> 173
+	  164 -> 124
+	  165 -> 70
+	  166 -> 4
+	  167 -> 85
+	  168 -> 151
+	  169 -> 65
+	  170 -> 143
+	  172 -> 84
+	  173 -> 116
+	  174 -> 179
+	  175 -> 177
+	  175 -> 178
+	  176 -> 53
+	  177 -> 92
+	  178 -> 85
+	  179 -> 181
+	  179 -> 182
+	  181 -> 172
+	  182 -> 184
+	  182 -> 185
+	  183 -> 31
+	  184 -> 86
+	  185 -> 92
+	  186 -> 116
+	  187 -> 176
+}
+

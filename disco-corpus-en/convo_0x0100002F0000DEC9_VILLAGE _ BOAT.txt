@@ -1,0 +1,169 @@
+# VILLAGE / BOAT
+# This is the boat you can get from the Net picker. This boat takes you to the Sea Fortress island.VILLAGE ORB / ask boat from netpicker
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Cuno: \"Good. You made it.\" Cuno stands with his arms akimbo, looking at the shadow of the ruined flak tower looming overhead."];
+	  3 [label="ROO A72 Motor Skiff: It'll keep you company on this lonely voyage."];
+	  4 [label="Variable[\"plaza.tribunal_kim_shot\"] == false  and  IsKimHere() == false"];
+	  5 [label="Variable[\"plaza.tribunal_kim_shot\"] == false  and  IsKimHere() == false", shape=diamond];
+	  6 [label="!(Variable[\"plaza.tribunal_kim_shot\"] == false  and  IsKimHere() == false)", shape=diamond];
+	  7 [label="You: Cool."];
+	  8 [label="You: \"This isn't death island. Is it?\""];
+	  9 [label="ROO A72 Motor Skiff: There. This is now a *Rock and roll* skiff."];
+	  10 [label="Variable[\"village.skiff_inland_sad_fm\"]"];
+	  11 [label="Variable[\"village.skiff_inland_sad_fm\"]", shape=diamond];
+	  12 [label="!(Variable[\"village.skiff_inland_sad_fm\"])", shape=diamond];
+	  13 [label="Jump to: [boat_away_hub]"];
+	  14 [label="ROO A72 Motor Skiff: A skiff with a small steering engine in the back floats on the calm mirror of the sea. Its two seats are empty."];
+	  15 [label="Variable[\"village.skiff_perc_trigger_for_ency\"]"];
+	  16 [label="Variable[\"village.skiff_perc_trigger_for_ency\"]", shape=diamond];
+	  17 [label="!(Variable[\"village.skiff_perc_trigger_for_ency\"])", shape=diamond];
+	  18 [label="Encyclopedia: SRV-made, this machine represents humanitarian aid from a workers' state on the Samaran isola. The *ROO* logo on the engine gives it away -- that and the white five-pointed star."];
+	  19 [label="You: (I'm not ready yet.) [Leave.]"];
+	  20 [label="Kim Kitsuragi: \"What?\""];
+	  21 [label="You: \"What the hell are you talking about?"];
+	  22 [label="You: What did I just do? Why did I do that?"];
+	  23 [label="ROO A72 Motor Skiff: The boat comes to a slow stop. You turn the engine off -- then there's silence."];
+	  24 [label="Perception (Hearing): In the silence -- a sputter of wings. A flock of quails takes off in the distance..."];
+	  25 [label="Inland Empire: Yeah. *Sad* rock and roll. Tune it to Sad FM."];
+	  26 [label="Cuno: \"I mapped the place out and uh... it looks like both of us aren't gonna make it. This is death island. The hell maw.\" He wipes snot from his nose."];
+	  27 [label="Variable[\"TASK.return_to_mainland\"]"];
+	  28 [label="Variable[\"TASK.return_to_mainland\"]", shape=diamond];
+	  29 [label="!(Variable[\"TASK.return_to_mainland\"])", shape=diamond];
+	  30 [label="You: \"You heard me. Don't make me repeat myself.\""];
+	  31 [label="You: Say nothing."];
+	  32 [label="You: Get in and ride to the island."];
+	  33 [label="Variable[\"village.skiff_main_hub_reached\"]"];
+	  34 [label="Variable[\"village.skiff_main_hub_reached\"]", shape=diamond];
+	  35 [label="!(Variable[\"village.skiff_main_hub_reached\"])", shape=diamond];
+	  36 [label="You: \"Hell island? Finally.\""];
+	  37 [label="Logic: Remember what the Net Picker said: It's a small tank. You won't be going back and forth on this."];
+	  38 [label="Esprit de Corps: Nothing to do here without the lieutenant... You must return here with him."];
+	  39 [label="Perception (Sight): The boat's belly is a shiny yellow colour, industrial paint over fresh tar. You see it reflect off the water, along with the factory number: A72."];
+	  40 [label="Jump to: [boat_away_hub]"];
+	  41 [label="Inland Empire: Very cool. Now tune it to Sad FM. You know you want to."];
+	  42 [label="Cuno: \"Yes... finally.\" He says with some reservations."];
+	  43 [label="ROO A72 Motor Skiff: The skiff bobs in the calm waters. It has nothing more to do."];
+	  44 [label="ROO A72 Motor Skiff: Why? Because *Rock and Roll*."];
+	  45 [label="Inland Empire: Once you get in, that's it -- one pull of the starter handle and you're off into the bay. A strange trepidation comes over you: are you sure you want to go *now*?"];
+	  46 [label="You: [Climb out.]"];
+	  47 [label="You: \"What 'what'? How else do we blast *Sad FM* on our way to the island?\""];
+	  48 [label="Variable[\"whirling.cuno_accepted_to_party\"]"];
+	  49 [label="Variable[\"whirling.cuno_accepted_to_party\"]", shape=diamond];
+	  50 [label="!(Variable[\"whirling.cuno_accepted_to_party\"])", shape=diamond];
+	  51 [label="Encyclopedia: Sad FM is a radio station specializing in sad, slow rock songs. You seem to know its frequency by heart."];
+	  52 [label="You: \"You take the engine, Kim. I'll hold the boombox.\""];
+	  53 [label="HELLMAW"];
+	  54 [label="Kim Kitsuragi: \"It'll float.\""];
+	  55 [label="Jump to: [boat_away_hub]"];
+	  56 [label="Shivers: There is very little wind here today. The ghost is standing still. You look at your arms, then the cliffs above you..."];
+	  57 [label="Kim Kitsuragi: \"Let's go.\" He whispers."];
+	  58 [label="IsKimHere()"];
+	  59 [label="IsKimHere()", shape=diamond];
+	  60 [label="!(IsKimHere())", shape=diamond];
+	  61 [label="Savoir Faire: Have you made all the necessary preparations? Closed all your accounts?"];
+	  62 [label="boat_away_hub"];
+	  63 [label="You: \"This banged up old thing... it's a ROO A72.\""];
+	  64 [label="Kim Kitsuragi: \"Fine.\" He gives you resigned shrug. \"Let's *blast* Sad FM then.\""];
+	  65 [label="Cuno: \"Maybe Cuno's just pessimistic because of the massive speed hangover. I did scout the place out. I can fill you in.\""];
+	  66 [label="Cuno: The kid turns away from you, cautiously looking to his left and right. He's on the edge."];
+	  67 [label="Logic: He hasn't been here before either."];
+	  68 [label="You: First -- tie your porta-reel boombox to the breasthook to keep you company."];
+	  69 [label="You: [Climb out.]"];
+	  70 [label="ROO A72 Motor Skiff: The skiff floats on the calm mirror of the sea -- its two seats are empty."];
+	  71 [label="You: [Climb out.]"];
+	  72 [label="Endurance: He's too banged up himself -- to talk torque with you."];
+	  73 [label="Cuno: \"I don't know.\" He throws his hands in the air."];
+	  74 [label="ROO A72 Motor Skiff: The time has come."];
+	  75 [label="Kim Kitsuragi: \"Fine. Why not?\" He shrugs."];
+	  0 -> 1
+	  1 -> 27
+	  2 -> 46
+	  3 -> 41
+	  4 -> 5
+	  4 -> 6
+	  5 -> 38
+	  6 -> 63
+	  7 -> 3
+	  8 -> 74
+	  9 -> 22
+	  9 -> 7
+	  10 -> 11
+	  10 -> 12
+	  11 -> 51
+	  12 -> 13
+	  13 -> 63
+	  14 -> 39
+	  15 -> 16
+	  15 -> 17
+	  16 -> 18
+	  17 -> 45
+	  18 -> 45
+	  20 -> 31
+	  20 -> 30
+	  20 -> 47
+	  21 -> 74
+	  22 -> 44
+	  23 -> 24
+	  24 -> 57
+	  25 -> 10
+	  26 -> 54
+	  27 -> 28
+	  27 -> 29
+	  28 -> 43
+	  29 -> 33
+	  30 -> 76
+	  31 -> 76
+	  32 -> 23
+	  33 -> 34
+	  33 -> 35
+	  34 -> 71
+	  35 -> 14
+	  36 -> 42
+	  37 -> 4
+	  38 -> 63
+	  39 -> 15
+	  40 -> 63
+	  41 -> 10
+	  42 -> 66
+	  44 -> 25
+	  45 -> 62
+	  46 -> 26
+	  47 -> 65
+	  48 -> 49
+	  48 -> 50
+	  49 -> 2
+	  50 -> 75
+	  51 -> 40
+	  52 -> 20
+	  53 -> 8
+	  53 -> 36
+	  53 -> 21
+	  54 -> 73
+	  55 -> 63
+	  56 -> 59
+	  57 -> 70
+	  58 -> 60
+	  58 -> 61
+	  59 -> 58
+	  60 -> 48
+	  61 -> 37
+	  62 -> 64
+	  62 -> 32
+	  62 -> 69
+	  62 -> 19
+	  62 -> 52
+	  63 -> 55
+	  64 -> 51
+	  65 -> 67
+	  66 -> 68
+	  68 -> 9
+	  70 -> 45
+	  72 -> 56
+	  73 -> 66
+	  74 -> 72
+	  75 -> 41
+}
+

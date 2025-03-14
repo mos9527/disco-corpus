@@ -1,0 +1,46 @@
+# TRIBUNAL / WHERE IS KLAASJE?
+# "Where is Klaasje? Maybe she can calmly explain this and help diffuse the situation."
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: \"Klaasje -- the woman upstairs? Where is she?\""];
+	  3 [label="Untitled hub (06)"];
+	  4 [label="Kortenaer: \"Who the fuck is that?\""];
+	  5 [label="Empathy: You can *feel* how upset he is with himself. Just for a second. Then the fear takes over and he's back in the moment."];
+	  6 [label="Volition: She's gone. Forget about it now. Concentrate on this."];
+	  7 [label="Rhetoric: For god's sake, tell 'em the Hardies didn't *do* it, present a case!"];
+	  8 [label="Garte, the Cafeteria Manager: \"What am I doing?! My fucking establishment is UNDER FIRE!\" He points to the armoured figures. \"You know how much windows *cost?*\""];
+	  9 [label="Kim Kitsuragi: \"We should have arrested her...\" The lieutenant whispers, his eyes still on the armed mercenaries."];
+	  10 [label="Garte, the Cafeteria Manager: \"She left!\" The manager calls down from the balcony."];
+	  11 [label="Kortenaer: \"HEY, BUSHMEN!!!\" The veins on the man's neck expand as he yells. \"Your little CUNT isn't gonna help you out of this one!\""];
+	  12 [label="You: \"Garte, what the hell are you *doing* here?\""];
+	  13 [label="You: \"What do you mean she *left*?\""];
+	  14 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_said_they_didnt_do_it\"]"];
+	  15 [label="Variable[\"plaza.tribunal_said_they_didnt_do_it\"]", shape=diamond];
+	  16 [label="!(Variable[\"plaza.tribunal_said_they_didnt_do_it\"])", shape=diamond];
+	  17 [label="Composure: Unarmed, hunched, but keeping it together."];
+	  18 [label="Jump to: [tribunalHUB]"];
+	  19 [label="Garte, the Cafeteria Manager: \"She LEFT! Her room's cleaned out -- right before these assholes showed up!\""];
+	  0 -> 1
+	  2 -> 10
+	  3 -> 12
+	  3 -> 13
+	  4 -> 2
+	  5 -> 11
+	  6 -> 14
+	  7 -> 18
+	  8 -> 13
+	  9 -> 5
+	  10 -> 17
+	  11 -> 6
+	  12 -> 8
+	  13 -> 20
+	  14 -> 16
+	  14 -> 15
+	  15 -> 18
+	  16 -> 7
+	  17 -> 3
+	  19 -> 9
+}
+

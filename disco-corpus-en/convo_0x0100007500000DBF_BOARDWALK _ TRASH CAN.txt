@@ -1,0 +1,57 @@
+# BOARDWALK / TRASH CAN
+# A TRASH CAN OH BOY. Its an interaction.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: Examine the tare."];
+	  3 [label="You: Examine the kebab wrapper."];
+	  4 [label="IsKimHere()"];
+	  5 [label="IsKimHere()", shape=diamond];
+	  6 [label="!(IsKimHere())", shape=diamond];
+	  7 [label="Jump to: [trash can hub boardwalk]"];
+	  8 [label="Encyclopedia: 'Red Astra' is the black market version of 'Astra' cigarettes, known for their high tar content."];
+	  9 [label="trash can hub boardwalk"];
+	  10 [label="Electrochemistry: Now, this makes partying look *bad*. Still -- don't let it sway you. *You're* responsible."];
+	  11 [label="Perception (Sight): No. There's more in there. 'Livis' strawberry liquor, plus some pilsner bottles too. Better not pick them up, they seem unhygienic."];
+	  12 [label="Kim Kitsuragi: \"A tragedy...\" The lieutenant looks in the can, eyes watering from the smell."];
+	  13 [label="Jump to: [trash can hub boardwalk]"];
+	  14 [label="Perception (Smell): It's hard to concentrate in the smell. The sea air brings some relief."];
+	  15 [label="Empathy: He shakes his head with genuine sadness."];
+	  16 [label="You: Examine the cigarette package."];
+	  17 [label="Trash Can: Two empty bottles of 'Touloula' vodka and a can of black 'Potent Porter' is all you find."];
+	  18 [label="You: [Leave.]"];
+	  19 [label="Trash Can: Whoever tossed it here was a heavy smoker: the brand name reads 'Red Astra'."];
+	  20 [label="Jump to: [trash can hub boardwalk]"];
+	  21 [label="Visual Calculus: It's no older than a day, or two. No mould yet."];
+	  22 [label="Trash Can: There's some tare, an empty cigarette package, and a crumpled kebab wrapper in the trash bin."];
+	  23 [label="Trash Can: You see traces of mayonnaise and ketchup on it, as well as a tomato wedge. The wrapper reads: 'SHISH KEBAB REVACHOL'."];
+	  0 -> 1
+	  1 -> 23
+	  2 -> 18
+	  3 -> 24
+	  4 -> 6
+	  4 -> 7
+	  5 -> 13
+	  6 -> 14
+	  7 -> 10
+	  8 -> 11
+	  9 -> 17
+	  9 -> 2
+	  9 -> 19
+	  9 -> 4
+	  10 -> 21
+	  11 -> 5
+	  12 -> 16
+	  13 -> 10
+	  14 -> 8
+	  15 -> 14
+	  16 -> 20
+	  17 -> 12
+	  19 -> 9
+	  20 -> 10
+	  21 -> 15
+	  22 -> 10
+	  23 -> 22
+}
+

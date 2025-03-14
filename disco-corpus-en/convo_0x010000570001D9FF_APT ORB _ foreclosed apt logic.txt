@@ -1,0 +1,32 @@
+# APT ORB / foreclosed apt logic
+# Logic wonders what happened in this apartment.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Logic: What happened here?"];
+	  3 [label="You: You can't foreclose on an apartment with a hole in the wall."];
+	  4 [label="You: This looks so sad..."];
+	  5 [label="You: There's always a little something in the fridge."];
+	  6 [label="Logic: Put your emotions aside. Try to focus on abstract, impersonal things."];
+	  7 [label="Inland Empire: But this reeks of sadness!"];
+	  8 [label="You: Except the stuff in the fridge."];
+	  9 [label="Logic: Indeed!"];
+	  10 [label="You: [Discard thought.]"];
+	  11 [label="Logic: It will still be accessible through the apartment next to it. That one didn't have a door... Sadly, nothing of great value remains here."];
+	  0 -> 1
+	  1 -> 2
+	  2 -> 10
+	  2 -> 3
+	  2 -> 4
+	  3 -> 11
+	  4 -> 6
+	  5 -> 9
+	  6 -> 7
+	  7 -> 10
+	  7 -> 3
+	  8 -> 9
+	  11 -> 8
+	  11 -> 5
+}
+

@@ -1,0 +1,661 @@
+# WORLD / WAITING BENCH
+# a bench where you (and Kim) can sit and wait for an X amount of time so the player won't get softlocked-stuck in the game for lacking content until daychange!
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Variable[\"stats.plaza_bench_beta_counter\"] == 3"];
+	  3 [label="Variable[\"stats.plaza_bench_beta_counter\"] == 3", shape=diamond];
+	  4 [label="!(Variable[\"stats.plaza_bench_beta_counter\"] == 3)", shape=diamond];
+	  5 [label="Variable[\"auto.is_raining\"]"];
+	  6 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  7 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  8 [label="Bench: Time passes..."];
+	  9 [label="Bench: Every so often you catch a glimpse of the sun still shining, somewhere behind the clouds of rain..."];
+	  10 [label="Bench: Darkness ahead. You don't even know what you are waiting for anymore..."];
+	  11 [label="Variable[\"auto.smoke_plaza\"]"];
+	  12 [label="Variable[\"auto.smoke_plaza\"]", shape=diamond];
+	  13 [label="!(Variable[\"auto.smoke_plaza\"])", shape=diamond];
+	  14 [label="Variable[\"auto.smoke_plaza\"]"];
+	  15 [label="Variable[\"auto.smoke_plaza\"]", shape=diamond];
+	  16 [label="!(Variable[\"auto.smoke_plaza\"])", shape=diamond];
+	  17 [label="Jump to: [time_passing_hub]"];
+	  18 [label="Bench: You try to come up with something fresh and exciting, but the endeavour only gives you a slight headache."];
+	  19 [label="Variable[\"auto.is_raining\"]"];
+	  20 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  21 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  22 [label="Variable[\"stats.coast_bench_alpha_counter\"] == 7"];
+	  23 [label="Variable[\"stats.coast_bench_alpha_counter\"] == 7", shape=diamond];
+	  24 [label="!(Variable[\"stats.coast_bench_alpha_counter\"] == 7)", shape=diamond];
+	  25 [label="Bench: The cold stone slab of the bench looks rather uncomfortable. There are cigarette stubs all around."];
+	  26 [label="Variable[\"stats.plaza_bench_gamma_counter\"] >= 8"];
+	  27 [label="Variable[\"stats.plaza_bench_gamma_counter\"] >= 8", shape=diamond];
+	  28 [label="!(Variable[\"stats.plaza_bench_gamma_counter\"] >= 8)", shape=diamond];
+	  29 [label="Bench: It's both dark and cold... ultimately not the best time for sitting on a stone bench."];
+	  30 [label="Variable[\"auto.is_raining\"]"];
+	  31 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  32 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  33 [label="Bench: What events led you to sitting on a bench, completely drenched? The coast is bleak, the rain is bleak, your soul is bleak."];
+	  34 [label="Variable[\"auto.smoke_plaza\"]"];
+	  35 [label="Variable[\"auto.smoke_plaza\"]", shape=diamond];
+	  36 [label="!(Variable[\"auto.smoke_plaza\"])", shape=diamond];
+	  37 [label="Bench: The sun slowly setting behind the horizon only brings to mind the sadness of loss."];
+	  38 [label="Variable[\"stats.coast_bench_gamma_counter\"] == 7"];
+	  39 [label="Variable[\"stats.coast_bench_gamma_counter\"] == 7", shape=diamond];
+	  40 [label="!(Variable[\"stats.coast_bench_gamma_counter\"] == 7)", shape=diamond];
+	  41 [label="Bench: You try to twiddle your thumbs, but ever since you've become a grandmaster the old passion just isn't there. Instead, you put your hands in your lap and wait..."];
+	  42 [label="Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  43 [label="Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  44 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  45 [label="Variable[\"stats.coast_bench_beta_counter\"] == 3"];
+	  46 [label="Variable[\"stats.coast_bench_beta_counter\"] == 3", shape=diamond];
+	  47 [label="!(Variable[\"stats.coast_bench_beta_counter\"] == 3)", shape=diamond];
+	  48 [label="Variable[\"character.bench_expert_thumbs\"]"];
+	  49 [label="Variable[\"character.bench_expert_thumbs\"]", shape=diamond];
+	  50 [label="!(Variable[\"character.bench_expert_thumbs\"])", shape=diamond];
+	  51 [label="Bench: It's getting late... time to head off. The plaza is not for sleeping bums."];
+	  52 [label="Bench: The bright sun blazing overhead is making it difficult to concentrate on deep thoughts."];
+	  53 [label="Bench: After a while of staring ahead into nothingness, you decide it's better to just move on."];
+	  54 [label="Variable[\"character.bench_expert_thumbs\"]"];
+	  55 [label="Variable[\"character.bench_expert_thumbs\"]", shape=diamond];
+	  56 [label="!(Variable[\"character.bench_expert_thumbs\"])", shape=diamond];
+	  57 [label="Hand/Eye Coordination: You're so close! Almost there. Ultimate dexterity is within reach..."];
+	  58 [label="Bench: It is the dead of night. Now is not the time for sitting, but for sleeping. It is time to find a bed."];
+	  59 [label="Bench: Is Time flat and linear in nature... or is it cyclical? It feels as if you're *so close* to figuring out the answer."];
+	  60 [label="Inland Empire: It's because of all the money. Even the sky gets an aura of glistening lucre."];
+	  61 [label="You: Sit and rest."];
+	  62 [label="IsKimHere()"];
+	  63 [label="IsKimHere()", shape=diamond];
+	  64 [label="!(IsKimHere())", shape=diamond];
+	  65 [label="You: Think deep thoughts. [Wait 1 hour.]"];
+	  66 [label="IsEvening()"];
+	  67 [label="IsEvening()", shape=diamond];
+	  68 [label="!(IsEvening())", shape=diamond];
+	  69 [label="Variable[\"stats.coast_bench_gamma_counter\"] == 3"];
+	  70 [label="Variable[\"stats.coast_bench_gamma_counter\"] == 3", shape=diamond];
+	  71 [label="!(Variable[\"stats.coast_bench_gamma_counter\"] == 3)", shape=diamond];
+	  72 [label="Variable[\"auto.is_raining\"]"];
+	  73 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  74 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  75 [label="Variable[\"auto.is_raining\"]"];
+	  76 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  77 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  78 [label="Bench: The midday sun showers you with the warm rays of the spring. It does not give you many thoughts, but it feels peaceful..."];
+	  79 [label="Bench: You try to think of something substantial, but your mind keeps getting caught on all the paperwork you have to do... later... eventually..."];
+	  80 [label="Bench: But you know you do not have the luxury to wait... the clock ticks towards the final hour."];
+	  81 [label="Bench: Your fingers feel stuck. Your mind, uninspired. This place... this bench, it just lacks the right... atmosphere..."];
+	  82 [label="Variable[\"auto.smoke_plaza\"]"];
+	  83 [label="Variable[\"auto.smoke_plaza\"]", shape=diamond];
+	  84 [label="!(Variable[\"auto.smoke_plaza\"])", shape=diamond];
+	  85 [label="Bench: Twiddling is surprisingly difficult... your thumbs keep getting tangled. After a while, you give up."];
+	  86 [label="IsEvening()"];
+	  87 [label="IsEvening()", shape=diamond];
+	  88 [label="!(IsEvening())", shape=diamond];
+	  89 [label="Bench: You ponder upon an endless winter that covers everything in ice and snow. What a struggle it would be..."];
+	  90 [label="Bench: You churn through thoughts for a while, but nothing comes up..."];
+	  91 [label="HasVolitionDamage()"];
+	  92 [label="HasVolitionDamage()", shape=diamond];
+	  93 [label="!(HasVolitionDamage())", shape=diamond];
+	  94 [label="Bench: The cold stone slab of the bench does not look welcoming at all at all. Your shoulder aches."];
+	  95 [label="Bench: You squint your eyes, attempting to find something of interest... No, there is nothing up there except the sky."];
+	  96 [label="Variable[\"stats.coast_bench_beta_counter\"] == 5"];
+	  97 [label="Variable[\"stats.coast_bench_beta_counter\"] == 5", shape=diamond];
+	  98 [label="!(Variable[\"stats.coast_bench_beta_counter\"] == 5)", shape=diamond];
+	  99 [label="Variable[\"stats.coast_bench_gamma_counter\"] >= 8"];
+	  100 [label="Variable[\"stats.coast_bench_gamma_counter\"] >= 8", shape=diamond];
+	  101 [label="!(Variable[\"stats.coast_bench_gamma_counter\"] >= 8)", shape=diamond];
+	  102 [label="Bench: The twiddling barely keeps your hands warm against the frigid wind blowing from the coast... After a while you've had enough."];
+	  103 [label="Bench: You more hear than see the large drops of rain fall upon the slowly darkening mosaic..."];
+	  104 [label="Bench: You can barely look up into the sky, the sun is bright and powerful... it blinds..."];
+	  105 [label="IsEvening()"];
+	  106 [label="IsEvening()", shape=diamond];
+	  107 [label="!(IsEvening())", shape=diamond];
+	  108 [label="Bench: You gaze at the snowflakes falling from the sky, wondering about the intricate patterns their structures take."];
+	  109 [label="Bench: You sit on the cold stone slab of the bench. It feels rough, yet comforting."];
+	  110 [label="Variable[\"auto.smoke_plaza\"]"];
+	  111 [label="Variable[\"auto.smoke_plaza\"]", shape=diamond];
+	  112 [label="!(Variable[\"auto.smoke_plaza\"])", shape=diamond];
+	  113 [label="Variable[\"stats.plaza_bench_beta_counter\"] == 5"];
+	  114 [label="Variable[\"stats.plaza_bench_beta_counter\"] == 5", shape=diamond];
+	  115 [label="!(Variable[\"stats.plaza_bench_beta_counter\"] == 5)", shape=diamond];
+	  116 [label="Bench: You've mastered the art of thumb-twiddling. If there were such a thing as competitive thumb-twiddling, you'd be the undeniable champion."];
+	  117 [label="Bench: The snow tells of a winter that has not yet fully passed... was this your final winter?"];
+	  118 [label="Bench: The glacial gusts from the sea do not a pleasant rest make... you should probably move before you freeze."];
+	  119 [label="IsKimHere()"];
+	  120 [label="IsKimHere()", shape=diamond];
+	  121 [label="!(IsKimHere())", shape=diamond];
+	  122 [label="Kim Kitsuragi: \"Getting late. We should call it a day... no point in lingering here on the plaza.\""];
+	  123 [label="Jump to: [post_tribunal_hub]"];
+	  124 [label="Bench: It's getting there, but it's just not enough. Maybe you just need a change of venue."];
+	  125 [label="Kim Kitsuragi: \"A rather uninviting bench,\" the lieutenant notes. \"I'm not one for sitting on benches anyway -- before the murder investigation is solved.\""];
+	  126 [label="Bench: The sun draws ever closer to the horizon; the sky is a panorama of intense colours..."];
+	  127 [label="Kim Kitsuragi: \"Getting late. We should call it a day... best not sleep outside on the wind-stricken coast.\""];
+	  128 [label="IsEvening()"];
+	  129 [label="IsEvening()", shape=diamond];
+	  130 [label="!(IsEvening())", shape=diamond];
+	  131 [label="Variable[\"stats.plaza_bench_beta_counter\"] == 6"];
+	  132 [label="Variable[\"stats.plaza_bench_beta_counter\"] == 6", shape=diamond];
+	  133 [label="!(Variable[\"stats.plaza_bench_beta_counter\"] == 6)", shape=diamond];
+	  134 [label="Bench: The worn and beaten wooden planks of the bench do not look overly comforting."];
+	  135 [label="Bench: You sit on the wind-worn wooden planks of the bench. Your feet ache."];
+	  136 [label="IsHourBetween(1, 6)"];
+	  137 [label="IsHourBetween(1, 6)", shape=diamond];
+	  138 [label="!(IsHourBetween(1, 6))", shape=diamond];
+	  139 [label="Variable[\"auto.smoke_plaza\"]"];
+	  140 [label="Variable[\"auto.smoke_plaza\"]", shape=diamond];
+	  141 [label="!(Variable[\"auto.smoke_plaza\"])", shape=diamond];
+	  142 [label="Variable[\"stats.coast_bench_gamma_counter\"] >= 4"];
+	  143 [label="Variable[\"stats.coast_bench_gamma_counter\"] >= 4", shape=diamond];
+	  144 [label="!(Variable[\"stats.coast_bench_gamma_counter\"] >= 4)", shape=diamond];
+	  145 [label="Variable[\"stats.plaza_bench_gamma_counter\"] == 7"];
+	  146 [label="Variable[\"stats.plaza_bench_gamma_counter\"] == 7", shape=diamond];
+	  147 [label="!(Variable[\"stats.plaza_bench_gamma_counter\"] == 7)", shape=diamond];
+	  148 [label="Bench: You wonder what would happen if you tried to set foot on the sun... it would likely not be pleasant."];
+	  149 [label="Bench: As you gaze upon the rough stone of the bench, the plaza around you still covered with the bloodstains from the battle... you wish you could sit and alleviate the pain of your flesh."];
+	  150 [label="IsHourBetween(1,  6)"];
+	  151 [label="IsHourBetween(1,  6)", shape=diamond];
+	  152 [label="!(IsHourBetween(1,  6))", shape=diamond];
+	  153 [label="Bench: A flock of seagulls flies overhead, heading towards... who knows where. Soon enough they are out of sight..."];
+	  154 [label="Bench: You try to concentrate on the sky above, but this time around, the stone underneath you feels uncomfortable..."];
+	  155 [label="Variable[\"stats.plaza_bench_beta_counter\"] >= 7"];
+	  156 [label="Variable[\"stats.plaza_bench_beta_counter\"] >= 7", shape=diamond];
+	  157 [label="!(Variable[\"stats.plaza_bench_beta_counter\"] >= 7)", shape=diamond];
+	  158 [label="Bench: You're hoping the sky on the coast looks different, more interesting... but in truth, it doesn't..."];
+	  159 [label="Variable[\"stats.plaza_bench_alpha_counter\"] >= 4"];
+	  160 [label="Variable[\"stats.plaza_bench_alpha_counter\"] >= 4", shape=diamond];
+	  161 [label="!(Variable[\"stats.plaza_bench_alpha_counter\"] >= 4)", shape=diamond];
+	  162 [label="Variable[\"stats.coast_bench_alpha_counter\"] >= 3"];
+	  163 [label="Variable[\"stats.coast_bench_alpha_counter\"] >= 3", shape=diamond];
+	  164 [label="!(Variable[\"stats.coast_bench_alpha_counter\"] >= 3)", shape=diamond];
+	  165 [label="Bench: You try to make out some shapes in the clouds above. Through the rain, one looks a bit like a potato..."];
+	  166 [label="Bench: The sun slowly rises above the waves... each beam of light reflecting off the water into a million directions."];
+	  167 [label="Bench: Time passes..."];
+	  168 [label="Bench: The evening shade on the sand makes you think of a place which is all sand... nothing but the sand, as far as the eye can see."];
+	  169 [label="Bench: The worn and beaten wooden planks of the bench do not look comforting. Your shoulder aches."];
+	  170 [label="Bench: But realize now you do not have time to wait... the clock is ticking towards the final hour."];
+	  171 [label="Bench: You try to twiddle your thumbs, but ever since you've become a grandmaster the old passion just isn't there. Instead, you put your hands in your lap and wait..."];
+	  172 [label="Variable[\"stats.plaza_bench_alpha_counter\"] == 9"];
+	  173 [label="Variable[\"stats.plaza_bench_alpha_counter\"] == 9", shape=diamond];
+	  174 [label="!(Variable[\"stats.plaza_bench_alpha_counter\"] == 9)", shape=diamond];
+	  175 [label="Bench: What is that nigh-unnoticeable dot in the sky? Huh... odd."];
+	  176 [label="Variable[\"stats.coast_bench_beta_counter\"] >= 7"];
+	  177 [label="Variable[\"stats.coast_bench_beta_counter\"] >= 7", shape=diamond];
+	  178 [label="!(Variable[\"stats.coast_bench_beta_counter\"] >= 7)", shape=diamond];
+	  179 [label="IsMorning()"];
+	  180 [label="IsMorning()", shape=diamond];
+	  181 [label="!(IsMorning())", shape=diamond];
+	  182 [label="Bench: Your thumbs have started to hurt from the twiddling... after a while, you stop."];
+	  183 [label="Bench: Slowly and lazily, snow drifts down through the morning haze..."];
+	  184 [label="Variable[\"auto.is_snowing\"]"];
+	  185 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  186 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  187 [label="Bench: It's getting late... time to head to sleep. Best not stay outside on the wind-stricken coast."];
+	  188 [label="Variable[\"auto.is_raining\"]"];
+	  189 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  190 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  191 [label="Variable[\"stats.plaza_bench_gamma_counter\"] == 3"];
+	  192 [label="Variable[\"stats.plaza_bench_gamma_counter\"] == 3", shape=diamond];
+	  193 [label="!(Variable[\"stats.plaza_bench_gamma_counter\"] == 3)", shape=diamond];
+	  194 [label="Physical Instrument: Why are you sitting around on your fat ass?! Do some push-ups, for gods' sake!!"];
+	  195 [label="Kim Kitsuragi: \"Hmh...\" The lieutenant looks down the street. \"We can sit on benches after we've solved the murder. Let's go.\""];
+	  196 [label="Tutorial Agent: You can revisit the bench if you ever need to pass the time when Lieutenant Kitsuragi is gone."];
+	  197 [label="Bench: Could you twiddle your thumbs so hard that they come off your hands? You try... but nothing happens. You give up."];
+	  198 [label="Bench: It's getting so dark you can barely make out the snowflakes drifting down from the sky..."];
+	  199 [label="Variable[\"auto.is_snowing\"]"];
+	  200 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  201 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  202 [label="Variable[\"auto.smoke_plaza\"]"];
+	  203 [label="Variable[\"auto.smoke_plaza\"]", shape=diamond];
+	  204 [label="!(Variable[\"auto.smoke_plaza\"])", shape=diamond];
+	  205 [label="Bench: You try to come up with a few deep thoughts, but the rain beating against your face is extremely distracting."];
+	  206 [label="Perception (Sight): It looks like an aerostatic, very high above..."];
+	  207 [label="post_tribunal_hub"];
+	  208 [label="You: [Leave.]"];
+	  209 [label="Variable[\"auto.smoke_plaza\"]"];
+	  210 [label="Variable[\"auto.smoke_plaza\"]", shape=diamond];
+	  211 [label="!(Variable[\"auto.smoke_plaza\"])", shape=diamond];
+	  212 [label="Variable[\"auto.smoke_plaza\"]"];
+	  213 [label="Variable[\"auto.smoke_plaza\"]", shape=diamond];
+	  214 [label="!(Variable[\"auto.smoke_plaza\"])", shape=diamond];
+	  215 [label="Variable[\"stats.plaza_bench_alpha_counter\"] >= 7"];
+	  216 [label="Variable[\"stats.plaza_bench_alpha_counter\"] >= 7", shape=diamond];
+	  217 [label="!(Variable[\"stats.plaza_bench_alpha_counter\"] >= 7)", shape=diamond];
+	  218 [label="Variable[\"auto.is_snowing\"]"];
+	  219 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  220 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  221 [label="Variable[\"auto.is_snowing\"]"];
+	  222 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  223 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  224 [label="Variable[\"stats.coast_bench_beta_counter\"] == 6"];
+	  225 [label="Variable[\"stats.coast_bench_beta_counter\"] == 6", shape=diamond];
+	  226 [label="!(Variable[\"stats.coast_bench_beta_counter\"] == 6)", shape=diamond];
+	  227 [label="Variable[\"tc.turn_off_tutorial_node\"]"];
+	  228 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  229 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  230 [label="time_passing_hub"];
+	  231 [label="Variable[\"stats.coast_bench_gamma_counter\"] >= 1"];
+	  232 [label="Variable[\"stats.coast_bench_gamma_counter\"] >= 1", shape=diamond];
+	  233 [label="!(Variable[\"stats.coast_bench_gamma_counter\"] >= 1)", shape=diamond];
+	  234 [label="Bench: The sun does its best to ward off the chill of the coast... it barely helps. As if the world itself has turned against you..."];
+	  235 [label="IsTHCPresent(\"coach_physical_instrument\")"];
+	  236 [label="IsTHCPresent(\"coach_physical_instrument\")", shape=diamond];
+	  237 [label="!(IsTHCPresent(\"coach_physical_instrument\"))", shape=diamond];
+	  238 [label="You: Twiddle your thumbs. [Wait 15 minutes.]"];
+	  239 [label="Variable[\"auto.is_snowing\"]"];
+	  240 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  241 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  242 [label="Variable[\"stats.plaza_bench_gamma_counter\"] >= 1"];
+	  243 [label="Variable[\"stats.plaza_bench_gamma_counter\"] >= 1", shape=diamond];
+	  244 [label="!(Variable[\"stats.plaza_bench_gamma_counter\"] >= 1)", shape=diamond];
+	  245 [label="Variable[\"stats.plaza_bench_gamma_counter\"] >= 4"];
+	  246 [label="Variable[\"stats.plaza_bench_gamma_counter\"] >= 4", shape=diamond];
+	  247 [label="!(Variable[\"stats.plaza_bench_gamma_counter\"] >= 4)", shape=diamond];
+	  248 [label="Variable[\"auto.is_snowing\"]"];
+	  249 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  250 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  251 [label="Bench: Time passes..."];
+	  252 [label="Bench: As you gaze upon the wooden planks, the sea breeze blowing through your hair, you wish you could sit and alleviate the pain in your body..."];
+	  253 [label="Variable[\"stats.plaza_bench_alpha_counter\"] >= 10"];
+	  254 [label="Variable[\"stats.plaza_bench_alpha_counter\"] >= 10", shape=diamond];
+	  255 [label="!(Variable[\"stats.plaza_bench_alpha_counter\"] >= 10)", shape=diamond];
+	  256 [label="Bench: Your hands are getting more dexterous with every attempt. Still, after a while, you give up."];
+	  257 [label="Bench: Slowly, snowflakes fall on your mutton-chops... you try to catch a few on your tongue. They are cold."];
+	  258 [label="Variable[\"auto.is_snowing\"]"];
+	  259 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  260 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  261 [label="Variable[\"auto.is_snowing\"]"];
+	  262 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  263 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  264 [label="Hand/Eye Coordination: You're so close! Almost there. Ultimate dexterity is within reach..."];
+	  265 [label="HasVolitionDamage()"];
+	  266 [label="HasVolitionDamage()", shape=diamond];
+	  267 [label="!(HasVolitionDamage())", shape=diamond];
+	  268 [label="Bench: What if... Dick Mullen and Man from Hjelmdall existed in the same world... in like... a... crossover?"];
+	  269 [label="Bench: Time passes...."];
+	  270 [label="Bench: You gaze at the shadows deepening all around you... it's almost unnerving."];
+	  271 [label="Variable[\"auto.is_raining\"]"];
+	  272 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  273 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  274 [label="IsMorning()"];
+	  275 [label="IsMorning()", shape=diamond];
+	  276 [label="!(IsMorning())", shape=diamond];
+	  277 [label="IsMorning()"];
+	  278 [label="IsMorning()", shape=diamond];
+	  279 [label="!(IsMorning())", shape=diamond];
+	  280 [label="Bench: What if the sun just one day turned off... the world thrown into an eternal darkness. A grim future indeed."];
+	  281 [label="IsMorning()"];
+	  282 [label="IsMorning()", shape=diamond];
+	  283 [label="!(IsMorning())", shape=diamond];
+	  284 [label="Bench: Couldn't everyone just get along? If they really put their minds to it...?"];
+	  285 [label="Bench: You finally stop picking your nose..."];
+	  286 [label="Physical Instrument: Perseverance and success... feels so good. Feels *inspiring*."];
+	  287 [label="You: Stare into the sky. [Wait 30 minutes.]"];
+	  288 [label="You: [Get up.]"];
+	  289 [label="Bench: Your eyes are caught on the towers of La Delta across the bay... it sure makes a pretty skyline..."];
+	  290 [label="Bench: You wonder if it could rain so much that it drowns all of Martinaise... then everyone would have to go on about their day in diving suits."];
+	  291 [label="Bench: The sun slowly rises ever higher... the morning light makes the air feel glittery..."];
+	  292 [label="Variable[\"auto.is_raining\"]"];
+	  293 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  294 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  295 [label="Bench: The sky is overcast, rain pours onto the sand and the reeds..."];
+	  0 -> 1
+	  1 -> 62
+	  2 -> 3
+	  2 -> 4
+	  3 -> 95
+	  4 -> 252
+	  5 -> 6
+	  5 -> 7
+	  6 -> 165
+	  7 -> 240
+	  8 -> 188
+	  9 -> 136
+	  10 -> 136
+	  11 -> 12
+	  11 -> 13
+	  12 -> 94
+	  13 -> 169
+	  14 -> 16
+	  14 -> 15
+	  15 -> 25
+	  16 -> 134
+	  17 -> 231
+	  18 -> 136
+	  19 -> 20
+	  19 -> 21
+	  20 -> 206
+	  21 -> 222
+	  22 -> 24
+	  22 -> 23
+	  23 -> 116
+	  24 -> 162
+	  25 -> 125
+	  26 -> 27
+	  26 -> 28
+	  27 -> 59
+	  28 -> 145
+	  29 -> 136
+	  30 -> 32
+	  30 -> 31
+	  31 -> 10
+	  32 -> 200
+	  33 -> 136
+	  34 -> 35
+	  34 -> 36
+	  35 -> 51
+	  36 -> 187
+	  37 -> 136
+	  38 -> 40
+	  38 -> 39
+	  39 -> 285
+	  40 -> 142
+	  41 -> 136
+	  42 -> 43
+	  42 -> 44
+	  43 -> 11
+	  44 -> 110
+	  45 -> 46
+	  45 -> 47
+	  46 -> 158
+	  47 -> 167
+	  48 -> 49
+	  48 -> 50
+	  49 -> 41
+	  50 -> 22
+	  52 -> 136
+	  53 -> 136
+	  54 -> 56
+	  54 -> 55
+	  55 -> 171
+	  56 -> 254
+	  57 -> 136
+	  59 -> 136
+	  60 -> 136
+	  61 -> 210
+	  62 -> 64
+	  62 -> 63
+	  63 -> 14
+	  64 -> 150
+	  65 -> 139
+	  66 -> 67
+	  66 -> 68
+	  67 -> 72
+	  68 -> 293
+	  69 -> 70
+	  69 -> 71
+	  70 -> 269
+	  71 -> 232
+	  72 -> 73
+	  72 -> 74
+	  73 -> 103
+	  74 -> 249
+	  75 -> 76
+	  75 -> 77
+	  76 -> 33
+	  77 -> 184
+	  78 -> 136
+	  79 -> 136
+	  80 -> 123
+	  81 -> 136
+	  82 -> 83
+	  82 -> 84
+	  83 -> 54
+	  84 -> 48
+	  85 -> 136
+	  86 -> 88
+	  86 -> 87
+	  87 -> 30
+	  88 -> 75
+	  89 -> 136
+	  90 -> 136
+	  91 -> 92
+	  91 -> 93
+	  92 -> 287
+	  93 -> 136
+	  94 -> 208
+	  95 -> 136
+	  96 -> 97
+	  96 -> 98
+	  97 -> 175
+	  98 -> 45
+	  99 -> 100
+	  99 -> 101
+	  100 -> 18
+	  101 -> 38
+	  102 -> 136
+	  103 -> 136
+	  104 -> 136
+	  105 -> 106
+	  105 -> 107
+	  106 -> 168
+	  107 -> 52
+	  108 -> 136
+	  109 -> 231
+	  110 -> 112
+	  110 -> 111
+	  111 -> 109
+	  112 -> 135
+	  113 -> 114
+	  113 -> 115
+	  114 -> 153
+	  115 -> 2
+	  116 -> 91
+	  117 -> 136
+	  118 -> 136
+	  119 -> 120
+	  119 -> 121
+	  120 -> 203
+	  121 -> 34
+	  123 -> 208
+	  124 -> 266
+	  125 -> 228
+	  126 -> 136
+	  128 -> 129
+	  128 -> 130
+	  129 -> 37
+	  130 -> 78
+	  131 -> 132
+	  131 -> 133
+	  132 -> 154
+	  133 -> 113
+	  134 -> 195
+	  135 -> 231
+	  136 -> 137
+	  136 -> 138
+	  137 -> 119
+	  138 -> 17
+	  139 -> 140
+	  139 -> 141
+	  140 -> 26
+	  141 -> 99
+	  142 -> 144
+	  142 -> 143
+	  143 -> 8
+	  144 -> 69
+	  145 -> 146
+	  145 -> 147
+	  146 -> 53
+	  147 -> 246
+	  148 -> 136
+	  149 -> 80
+	  150 -> 152
+	  150 -> 151
+	  151 -> 58
+	  152 -> 42
+	  153 -> 136
+	  154 -> 236
+	  155 -> 156
+	  155 -> 157
+	  156 -> 252
+	  157 -> 131
+	  158 -> 136
+	  159 -> 160
+	  159 -> 161
+	  160 -> 257
+	  161 -> 85
+	  162 -> 163
+	  162 -> 164
+	  163 -> 198
+	  164 -> 102
+	  165 -> 136
+	  166 -> 136
+	  167 -> 275
+	  168 -> 136
+	  169 -> 208
+	  170 -> 123
+	  171 -> 136
+	  172 -> 173
+	  172 -> 174
+	  173 -> 124
+	  174 -> 216
+	  175 -> 207
+	  176 -> 177
+	  176 -> 178
+	  177 -> 167
+	  178 -> 225
+	  179 -> 180
+	  179 -> 181
+	  180 -> 5
+	  181 -> 66
+	  182 -> 136
+	  183 -> 136
+	  184 -> 185
+	  184 -> 186
+	  185 -> 118
+	  186 -> 235
+	  188 -> 189
+	  188 -> 190
+	  189 -> 291
+	  190 -> 219
+	  191 -> 192
+	  191 -> 193
+	  192 -> 79
+	  193 -> 243
+	  194 -> 136
+	  195 -> 228
+	  197 -> 136
+	  198 -> 136
+	  199 -> 201
+	  199 -> 202
+	  200 -> 199
+	  201 -> 126
+	  202 -> 204
+	  202 -> 205
+	  203 -> 122
+	  204 -> 127
+	  205 -> 136
+	  206 -> 136
+	  207 -> 209
+	  207 -> 61
+	  209 -> 211
+	  209 -> 212
+	  210 -> 149
+	  211 -> 253
+	  212 -> 214
+	  212 -> 215
+	  213 -> 155
+	  214 -> 176
+	  215 -> 217
+	  215 -> 218
+	  216 -> 182
+	  217 -> 159
+	  218 -> 220
+	  218 -> 221
+	  219 -> 89
+	  220 -> 278
+	  221 -> 224
+	  221 -> 223
+	  222 -> 108
+	  223 -> 282
+	  224 -> 226
+	  224 -> 227
+	  225 -> 290
+	  226 -> 96
+	  227 -> 229
+	  227 -> 230
+	  229 -> 196
+	  230 -> 288
+	  230 -> 65
+	  230 -> 289
+	  230 -> 239
+	  231 -> 233
+	  231 -> 234
+	  232 -> 8
+	  233 -> 286
+	  234 -> 136
+	  235 -> 237
+	  235 -> 238
+	  236 -> 194
+	  237 -> 136
+	  238 -> 82
+	  239 -> 241
+	  239 -> 242
+	  240 -> 183
+	  241 -> 292
+	  242 -> 244
+	  242 -> 245
+	  243 -> 270
+	  244 -> 90
+	  245 -> 248
+	  245 -> 247
+	  246 -> 270
+	  247 -> 191
+	  248 -> 250
+	  248 -> 251
+	  249 -> 29
+	  250 -> 271
+	  251 -> 179
+	  252 -> 170
+	  253 -> 256
+	  253 -> 255
+	  254 -> 81
+	  255 -> 172
+	  256 -> 136
+	  257 -> 136
+	  258 -> 260
+	  258 -> 261
+	  259 -> 258
+	  260 -> 104
+	  261 -> 264
+	  261 -> 263
+	  262 -> 117
+	  263 -> 166
+	  264 -> 136
+	  265 -> 267
+	  265 -> 268
+	  266 -> 265
+	  267 -> 57
+	  268 -> 136
+	  269 -> 19
+	  270 -> 136
+	  271 -> 273
+	  271 -> 274
+	  272 -> 296
+	  273 -> 262
+	  274 -> 276
+	  274 -> 277
+	  275 -> 272
+	  276 -> 86
+	  277 -> 280
+	  277 -> 279
+	  278 -> 281
+	  279 -> 105
+	  280 -> 136
+	  281 -> 283
+	  281 -> 284
+	  282 -> 148
+	  283 -> 128
+	  284 -> 136
+	  285 -> 136
+	  286 -> 136
+	  287 -> 213
+	  289 -> 60
+	  290 -> 136
+	  291 -> 136
+	  292 -> 294
+	  292 -> 295
+	  293 -> 9
+	  294 -> 259
+	  295 -> 136
+}
+

@@ -1,0 +1,189 @@
+# YARD / CUNOESSE
+# Talk to Cunoesse to find out she's a girl.
+
+"I have nothing interesting say, talk to Cuno!"
+
+Or approach her from the backyard to catch her off-guard and have something-resembling an actual dialogue with her.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: [Leave.]"];
+	  3 [label="Cunoesse: \"I come from the woods, *kyttä vittu*... You don't wanna go there with me... you don't wanna see what I've seen.\""];
+	  4 [label="Cunoesse: \"Pig wants to know who I am? I'm the biggest FUCK YOU of your entire life -- go on and get, piggy!\""];
+	  5 [label="Cunoesse HUB"];
+	  6 [label="Cunoesse: \"You don't wanna fuck with me -- I got my hands bloody.\" The hat drops even lower. \"I'm not here, pig. You're not seeing this.\""];
+	  7 [label="You: Take one step closer."];
+	  8 [label="Cunoesse: \"Trying to sneak up on me again? Trying to snuff me out? Get away, pig!\""];
+	  9 [label="Cunoesse: Variable[\"yard.hangedman_tried_to_shoot_cunoesse_and_missed\"]"];
+	  10 [label="Variable[\"yard.hangedman_tried_to_shoot_cunoesse_and_missed\"]", shape=diamond];
+	  11 [label="!(Variable[\"yard.hangedman_tried_to_shoot_cunoesse_and_missed\"])", shape=diamond];
+	  12 [label="Half Light: This kid is way, way worse than the other one."];
+	  13 [label="Cunoesse: \"Murder was the case, was the case, they gave me...\" She has almost vanished behind the fence. Only the top of her hat remains."];
+	  14 [label="Cunoesse: \"Can't believe you missed... We were so close, you and I... fucking noodle fingers! Can't you see I'm *IMMORTAL* now!\""];
+	  15 [label="Kim Kitsuragi: \"Come. We need to go now.\" The lieutenant puts his hand on your shoulder."];
+	  16 [label="Half Light: If anything, you're afraid she'll take *you* out one day..."];
+	  17 [label="Cunoesse: \"Pig's come to take me out?\" Her voice becomes almost inaudible. \"Trying to snuff me out?\""];
+	  18 [label="Cuno: \"What's going on there? Fuck are you trying to pull, pig?\""];
+	  19 [label="Cunoesse: Variable[\"TASK.find_children_of_the_big_sea\"] == true  and  Variable[\"yard.cunoesse_child_feld_mural\"] == false  and  Variable[\"village.twins_spoke_to_boys_about_swearing_done\"] == false  and  Variable[\"TASK.find_children_of_the_big_sea_cancelled\"] == false"];
+	  20 [label="Variable[\"TASK.find_children_of_the_big_sea\"] == true  and  Variable[\"yard.cunoesse_child_feld_mural\"] == false  and  Variable[\"village.twins_spoke_to_boys_about_swearing_done\"] == false  and  Variable[\"TASK.find_children_of_the_big_sea_cancelled\"] == false", shape=diamond];
+	  21 [label="!(Variable[\"TASK.find_children_of_the_big_sea\"] == true  and  Variable[\"yard.cunoesse_child_feld_mural\"] == false  and  Variable[\"village.twins_spoke_to_boys_about_swearing_done\"] == false  and  Variable[\"TASK.find_children_of_the_big_sea_cancelled\"] == false)", shape=diamond];
+	  22 [label="You: \"Child, converse with me.\""];
+	  23 [label="Cunoesse: Variable[\"auto.behind_cunoesse\"]"];
+	  24 [label="Variable[\"auto.behind_cunoesse\"]", shape=diamond];
+	  25 [label="!(Variable[\"auto.behind_cunoesse\"])", shape=diamond];
+	  26 [label="Perception (Sight): You can still see the top of her hat from behind the fence."];
+	  27 [label="Cunoesse: \"Looks like it's time for me to go, Cuno. Pig's come to take me in.\""];
+	  28 [label="Half Light: She means it. The fear is real."];
+	  29 [label="You: \"What are those strange words you use, girl?\""];
+	  30 [label="You: \"Okay, okay... I'm good. We're done here.\" [Leave.]"];
+	  31 [label="Cunoesse: \"Merrow...\""];
+	  32 [label="Cunoesse: The girl is ignoring you. It's like you don't exist at all as far as she's concerned."];
+	  33 [label="Cuno: \"Don't be traumatizing her. Get the fuck out of here!\""];
+	  34 [label="Cunoesse: Variable[\"yard.cunoesse_altgreet_gunwaving_done\"]"];
+	  35 [label="Variable[\"yard.cunoesse_altgreet_gunwaving_done\"]", shape=diamond];
+	  36 [label="!(Variable[\"yard.cunoesse_altgreet_gunwaving_done\"])", shape=diamond];
+	  37 [label="You: \"Is it you? Are you the Child of the Big Sea the wind told me to find?\""];
+	  38 [label="Cunoesse: Variable[\"yard.cunoesse_main_hub_reached\"]"];
+	  39 [label="Variable[\"yard.cunoesse_main_hub_reached\"]", shape=diamond];
+	  40 [label="!(Variable[\"yard.cunoesse_main_hub_reached\"])", shape=diamond];
+	  41 [label="You: \"What do you mean *fisher-people*?\""];
+	  42 [label="Cunoesse: IsCunoInParty()"];
+	  43 [label="IsCunoInParty()", shape=diamond];
+	  44 [label="!(IsCunoInParty())", shape=diamond];
+	  45 [label="Cunoesse: A breeze whistles slightly through the fence. \"Pig broke out of the pigpen. Fuck off before you shit on everything!\""];
+	  46 [label="You: Walk away. [Leave.]"];
+	  47 [label="You: \"No, why would you even say that?\""];
+	  48 [label="Cunoesse: \"I'm never getting out.\" She touches her face and then her body. \"I'm in it for life now. I'm doing life with you pigs! Fucking sweaty pigs. Fucking fisher-people.\""];
+	  49 [label="You: \"No, Kim! I wanna hear about the *näkki*!\""];
+	  50 [label="Perception (Sight): Her knuckles have turned white, holding on to that fence. She's been here for days, seething."];
+	  51 [label="Reaction Speed: So it's a girl... interesting."];
+	  52 [label="Cunoesse: Variable[\"yard.cuno_locked_yourself_out_of_cuno_in_his_post_cunoesse_gunpointing_greeting\"] == true  or  Variable[\"yard.cuno_befriend_lost_to_cunoesse\"] == true"];
+	  53 [label="Variable[\"yard.cuno_locked_yourself_out_of_cuno_in_his_post_cunoesse_gunpointing_greeting\"] == true  or  Variable[\"yard.cuno_befriend_lost_to_cunoesse\"] == true", shape=diamond];
+	  54 [label="!(Variable[\"yard.cuno_locked_yourself_out_of_cuno_in_his_post_cunoesse_gunpointing_greeting\"] == true  or  Variable[\"yard.cuno_befriend_lost_to_cunoesse\"] == true)", shape=diamond];
+	  55 [label="Cunoesse: \"Are you trying to sneak up on me?\" she whispers. \"Come to slit my throat? In my sleep?\""];
+	  56 [label="You: \"Are you sleeping right now?\""];
+	  57 [label="You: \"I just want to ask you some questions.\" (Take another step closer.)"];
+	  58 [label="Cunoesse: IsKimHere()"];
+	  59 [label="IsKimHere()", shape=diamond];
+	  60 [label="!(IsKimHere())", shape=diamond];
+	  61 [label="Cunoesse: \"Don't get fucking clever with me, pig... you think you're so clever...\" She hisses."];
+	  62 [label="You: \"What does *näkki* mean?\""];
+	  63 [label="Empathy: She continues to be *here* -- all due to you being a coward and not shooting her. The contempt is thick enough to cut through with a knife."];
+	  64 [label="Savoir Faire: Apparently, she doesn't like people standing behind her back."];
+	  65 [label="Cunoesse: \"I'll die before I squeal, pig.\" She hides behind the fence."];
+	  66 [label="You: \"Listen, child. The smell is so bad that I threw up, and I was wondering...\""];
+	  67 [label="You: \"Hey, kid!\""];
+	  68 [label="Cunoesse: \"Can't believe you didn't take the shot. Fucking coward... waved your gun like a clown. Next time you point that shit at me, you better take the shot.\""];
+	  69 [label="Cuno: \"Get the fuck out of her face! You got something, talk to me!\""];
+	  70 [label="Cunoesse: \"Fucking *näkki*...\""];
+	  71 [label="Cunoesse: Variable[\"yard.cunoesse_backyard_greeting_done\"]"];
+	  72 [label="Variable[\"yard.cunoesse_backyard_greeting_done\"]", shape=diamond];
+	  73 [label="!(Variable[\"yard.cunoesse_backyard_greeting_done\"])", shape=diamond];
+	  74 [label="You: \"I'm sorry for sneaking up on you.\" [Leave.]"];
+	  75 [label="You: \"Okay, okay... we're done here.\" [Leave.]"];
+	  76 [label="Logic: Logic error! She's not sleeping right now."];
+	  77 [label="Cunoesse: \"Stay away from me, pig -- you don't wanna see what happens when you corner me.\""];
+	  78 [label="You: \"You there, behind the fence!\""];
+	  79 [label="Cunoesse: \"Then why are you sneaking up on me like that? It's not a good idea to scare me, pig. Not a good idea *at all*.\""];
+	  80 [label="Cunoesse: \"Fägäri....\" she whispers as you're sneaking away. \"Look at the ass on that.\""];
+	  81 [label="Jump to: [seafort.deserter_cuno_fake_switch]"];
+	  82 [label="Cunoesse: \"Cuno, the pig's getting pretty close to me,\" she hisses. \"Come to snuff my shit out, I think.\""];
+	  83 [label="Cunoesse: \"What's this... kid shit? Fucking mind games...\" She puts her finger to her temple. \"I'd rather die than squeal!\""];
+	  84 [label="Cunoesse: Variable[\"yard.hanged_pointed_at_cunoesse\"]"];
+	  85 [label="Variable[\"yard.hanged_pointed_at_cunoesse\"]", shape=diamond];
+	  86 [label="!(Variable[\"yard.hanged_pointed_at_cunoesse\"])", shape=diamond];
+	  87 [label="Cunoesse: \"I'm going away for a long, long time, Cuno. Going away for life!\""];
+	  88 [label="Cunoesse: \"Merrow...\""];
+	  0 -> 1
+	  1 -> 53
+	  3 -> 34
+	  5 -> 67
+	  5 -> 68
+	  5 -> 79
+	  5 -> 47
+	  5 -> 23
+	  5 -> 30
+	  6 -> 27
+	  7 -> 28
+	  9 -> 10
+	  9 -> 11
+	  10 -> 14
+	  11 -> 69
+	  12 -> 51
+	  14 -> 49
+	  15 -> 50
+	  15 -> 31
+	  16 -> 48
+	  16 -> 57
+	  16 -> 75
+	  17 -> 16
+	  18 -> 5
+	  19 -> 21
+	  19 -> 22
+	  20 -> 46
+	  21 -> 24
+	  22 -> 13
+	  23 -> 25
+	  23 -> 26
+	  24 -> 72
+	  25 -> 39
+	  27 -> 29
+	  28 -> 58
+	  29 -> 3
+	  34 -> 36
+	  34 -> 37
+	  35 -> 24
+	  36 -> 85
+	  37 -> 4
+	  38 -> 40
+	  38 -> 41
+	  39 -> 66
+	  40 -> 83
+	  41 -> 71
+	  42 -> 44
+	  42 -> 45
+	  43 -> 82
+	  44 -> 35
+	  45 -> 38
+	  47 -> 80
+	  48 -> 42
+	  49 -> 89
+	  52 -> 54
+	  52 -> 55
+	  53 -> 33
+	  54 -> 43
+	  55 -> 65
+	  56 -> 62
+	  57 -> 88
+	  58 -> 60
+	  58 -> 61
+	  59 -> 15
+	  60 -> 76
+	  60 -> 63
+	  62 -> 32
+	  63 -> 12
+	  64 -> 77
+	  65 -> 5
+	  66 -> 78
+	  67 -> 84
+	  68 -> 64
+	  69 -> 52
+	  70 -> 59
+	  71 -> 73
+	  71 -> 74
+	  72 -> 8
+	  73 -> 56
+	  74 -> 81
+	  76 -> 18
+	  78 -> 6
+	  82 -> 2
+	  82 -> 7
+	  83 -> 70
+	  84 -> 86
+	  84 -> 87
+	  85 -> 9
+	  86 -> 20
+	  87 -> 19
+}
+

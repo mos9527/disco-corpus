@@ -1,0 +1,336 @@
+# SEAFORT INT / MICROGRID GENERATOR
+# (generator, rewired – insert fuel here (use controls to activate electricity and open door if fuel in). kim remarks on wiring.)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Variable[\"seafort.generator_logic_fireguy\"]"];
+	  3 [label="Variable[\"seafort.generator_logic_fireguy\"]", shape=diamond];
+	  4 [label="!(Variable[\"seafort.generator_logic_fireguy\"])", shape=diamond];
+	  5 [label="Cuno: \"All right.\" He claps his hands. \"We're on to something -- Cuno meant fire guy too.\""];
+	  6 [label="Microgrid Generator: There's a red starter switch on the side of the cylinder and a start rope on the other side -- Cuno flicks the switch."];
+	  7 [label="Logic: It's..."];
+	  8 [label="Variable[\"TASK.ask_twins_about_island_done\"]"];
+	  9 [label="Variable[\"TASK.ask_twins_about_island_done\"]", shape=diamond];
+	  10 [label="!(Variable[\"TASK.ask_twins_about_island_done\"])", shape=diamond];
+	  11 [label="Jump to: [generatorhub]"];
+	  12 [label="You: Put your hand on the machine."];
+	  13 [label="Variable[\"seafort.generator_switch_flicked\"]"];
+	  14 [label="Variable[\"seafort.generator_switch_flicked\"]", shape=diamond];
+	  15 [label="!(Variable[\"seafort.generator_switch_flicked\"])", shape=diamond];
+	  16 [label="Cuno: \"Yeah -- no.\" He quickly turns his attention back to the generator. \"Cuno doesn't come here, I told you.\""];
+	  17 [label="Inland Empire: 'It's cold now,' he was supposed to say. 'But someone has been maintaining it. The wiring has been repaired'..."];
+	  18 [label="Inland Empire: W-w-w-wait. Haven't you heard this before?"];
+	  19 [label="generatorhub"];
+	  20 [label="Microgrid Generator: It's cold. Rust flakes off and sticks to your palm."];
+	  21 [label="You: Pull the rope."];
+	  22 [label="Cuno: \"We're in. We're doing this,\" he says over the sputter."];
+	  23 [label="Cuno: \"Yeah, Cuno's fucking wise like that. Cuno's gonna be a real wise pig.\""];
+	  24 [label="You: \"You have taught me the meaning of wisdom, Cuno.\""];
+	  25 [label="Kim Kitsuragi: He nods approvingly. He even smiles."];
+	  26 [label="Variable[\"TASK.fuel_generator\"]"];
+	  27 [label="Variable[\"TASK.fuel_generator\"]", shape=diamond];
+	  28 [label="!(Variable[\"TASK.fuel_generator\"])", shape=diamond];
+	  29 [label="Kim Kitsuragi: \"I don't know. I am not a philosopher.\""];
+	  30 [label="Kim Kitsuragi: \"The kind that's favoured by vagrants and fuel thieves. It's been a long winter... Long and cold.\""];
+	  31 [label="Microgrid Generator: A hollow ring -- the canister is empty. Dust falls from the generator and down into the ammo lift."];
+	  32 [label="IsCunoInParty()"];
+	  33 [label="IsCunoInParty()", shape=diamond];
+	  34 [label="!(IsCunoInParty())", shape=diamond];
+	  35 [label="Microgrid Generator: A tiny red light glitters inside the burnt plastic."];
+	  36 [label="Jump to: [generatorhub]"];
+	  37 [label="FinishTask(\"TASK.fuel_generator_done\");
+XPMinorSetBool(\"XP.fuel_generator\")--[[ Variable[ ]]"];
+	  38 [label="Rhetoric: If anyone's stayed here, they'd need a generator."];
+	  39 [label="You: \"What does this mean? A generator here?\""];
+	  40 [label="Pain Threshold: A small agony -- minuscule bones may have fractured -- but it proves the point."];
+	  41 [label="Jump to: [generatorhub]"];
+	  42 [label="You: Where do these wires lead?"];
+	  43 [label="You: \"What does this mean? A generator here?\""];
+	  44 [label="You: \"I am. This generator proves the universe is material...\" (Kick the generator.)"];
+	  45 [label="Kim Kitsuragi: \"Someone with basic electrical skills has restored it in order to keep the room warm. Maybe it's the *fire guy*...\""];
+	  46 [label="Microgrid Generator: Nothing happens."];
+	  47 [label="Cuno: The boy helps you out, holding the canister up to the fuel tank as you tilt. Dark brown viscous fluid pours out and the room fills with a chemical smell."];
+	  48 [label="FinishTask(\"TASK.fuel_the_generator_done\")--[[ Variable[ ]]"];
+	  49 [label="You: What's the matter?"];
+	  50 [label="Variable[\"TASK.contact_warship_archer_done\"]"];
+	  51 [label="Variable[\"TASK.contact_warship_archer_done\"]", shape=diamond];
+	  52 [label="!(Variable[\"TASK.contact_warship_archer_done\"])", shape=diamond];
+	  53 [label="You: Tap on the side."];
+	  54 [label="Jump to: [flick_it_off]"];
+	  55 [label="Jump to: [generatorhub]"];
+	  56 [label="Microgrid Generator: The wind outside picks up suddenly with a faint howl. Inside it's warm."];
+	  57 [label="Variable[\"seafort.generator_painthresh_philosophy_kick\"]"];
+	  58 [label="Variable[\"seafort.generator_painthresh_philosophy_kick\"]", shape=diamond];
+	  59 [label="!(Variable[\"seafort.generator_painthresh_philosophy_kick\"])", shape=diamond];
+	  60 [label="Variable[\"TASK.contact_warship_archer_done\"]"];
+	  61 [label="Variable[\"TASK.contact_warship_archer_done\"]", shape=diamond];
+	  62 [label="!(Variable[\"TASK.contact_warship_archer_done\"])", shape=diamond];
+	  63 [label="You: \"The fire guy. Some kids told me about a *guy* here. A guy who made a fire.\""];
+	  64 [label="IsKimHere()"];
+	  65 [label="IsKimHere()", shape=diamond];
+	  66 [label="!(IsKimHere())", shape=diamond];
+	  67 [label="flick_it_off"];
+	  68 [label="You: Flick the switch."];
+	  69 [label="Kim Kitsuragi: The lieutenant puts his hand on the metal barrel, checking for warmth..."];
+	  70 [label="Jump to: [generatorhub]"];
+	  71 [label="Jump to: [generatorhub]"];
+	  72 [label="Kim Kitsuragi: \"It's cold now,\" he concludes. \"But someone has been maintaining it. The wiring has been repaired.\""];
+	  73 [label="Jump to: [generatorhub]"];
+	  74 [label="You: Pull the rope."];
+	  75 [label="Kim Kitsuragi: \"That should do it.\""];
+	  76 [label="Cuno: \"Smells like *mazut*.\" The kid taps on the open fuel cap on the side of the dynamo. \"Heavy fuel shit.\""];
+	  77 [label="Inland Empire: But he's not here to say it. Something *else* got in the way. Events *intervened*..."];
+	  78 [label="You: Pull the rope."];
+	  79 [label="You: \"I meant why is it here?\""];
+	  80 [label="Microgrid Generator: Downstairs somewhere -- or into the lighting perhaps? You can't tell."];
+	  81 [label="Kim Kitsuragi: The lieutenant assists you, holding the canister up to the fuel tank as you tilt. Dark brown viscous fluid pours out and the room fills with a chemical smell."];
+	  82 [label="Jump to: [flick_it_off]"];
+	  83 [label="Kim Kitsuragi: \"Someone with basic electrical skills has restored it in order to keep the room warm.\""];
+	  84 [label="Inland Empire: N-n-n-no. This isn't right..."];
+	  85 [label="Kim Kitsuragi: \"The kind that's favoured by vagrants and fuel thieves. It's been a long winter...\""];
+	  86 [label="IsKimHere()"];
+	  87 [label="IsKimHere()", shape=diamond];
+	  88 [label="!(IsKimHere())", shape=diamond];
+	  89 [label="You: [Leave.]"];
+	  90 [label="Kim Kitsuragi: He looks at the wall socket. \"Downstairs somewhere.\""];
+	  91 [label="Microgrid Generator: The industrial smell of *mazut* rises from the fuel cap. This generator uses heavy oil."];
+	  92 [label="Microgrid Generator: There's a red starter switch on the side of the cylinder and a start rope on the other side -- the lieutenant flicks the switch."];
+	  93 [label="Cuno: He looks at the wall socket. \"Dunno, looks like downstairs somewhere...\""];
+	  94 [label="Microgrid Generator: This old cylindrical generator waits with its fuel cap open. Makeshift electrical wiring runs out of its side and across the floor."];
+	  95 [label="You: Say nothing."];
+	  96 [label="You: \"I meant why is it here?\""];
+	  97 [label="You: \"...ouch.\" (Grab your wounded toe.)"];
+	  98 [label="Esprit de Corps: There's no time to dwell on this moment. You've got to keep moving..."];
+	  99 [label="Conceptualization: That is his idea of a joke."];
+	  100 [label="Microgrid Generator: The wind outside picks up suddenly with a faint howl. Inside it's warm."];
+	  101 [label="Variable[\"TASK.fuel_the_generator_done\"]"];
+	  102 [label="Variable[\"TASK.fuel_the_generator_done\"]", shape=diamond];
+	  103 [label="!(Variable[\"TASK.fuel_the_generator_done\"])", shape=diamond];
+	  104 [label="Cuno: \"Fuck does Cuno know?\""];
+	  105 [label="You: Ignore it."];
+	  106 [label="Kim Kitsuragi: \"... Long and cold.\""];
+	  107 [label="Cuno: Cuno puts his hand on the generator. \"This shit's cold.\""];
+	  108 [label="Microgrid Generator: You brush away the thought and turn back to the generator."];
+	  109 [label="Kim Kitsuragi: The lieutenant pauses. Something seems to be pecking at the edge of his concentration. He gives you a sideways look before adding..."];
+	  110 [label="Jump to: [generatorhub]"];
+	  111 [label="You: Pour fuel into the tank."];
+	  112 [label="Microgrid Generator: The recoil start wakes the old generator up. The machine sputters like an old war horse before settling down to a rattle."];
+	  113 [label="Microgrid Generator: The tank is far from full, but there should be enough inside to keep it going for a day."];
+	  114 [label="Conceptualization: Is it not the wisest man who knows he knows nothing?"];
+	  115 [label="Variable[\"TASK.ask_twins_about_island_done\"]"];
+	  116 [label="Variable[\"TASK.ask_twins_about_island_done\"]", shape=diamond];
+	  117 [label="!(Variable[\"TASK.ask_twins_about_island_done\"])", shape=diamond];
+	  118 [label="Microgrid Generator: An old cylindrical generator is nested above the ammo lift, with makeshift electrical wiring running out of its side and across the floor. The cables disappear into the wall to your right."];
+	  119 [label="You: What kind of generator am I looking at?"];
+	  120 [label="You: Say nothing."];
+	  121 [label="IsCunoInParty()"];
+	  122 [label="IsCunoInParty()", shape=diamond];
+	  123 [label="!(IsCunoInParty())", shape=diamond];
+	  124 [label="IsKimHere()"];
+	  125 [label="IsKimHere()", shape=diamond];
+	  126 [label="!(IsKimHere())", shape=diamond];
+	  127 [label="Microgrid Generator: The room fills with a pervasive chemical smell as dark brown liquid flows into the tank. There's a red starter switch on one side of the cylinder and a start rope on the other."];
+	  128 [label="Microgrid Generator: The recoil start wakes the old generator up. The machine sputters like an old war horse before settling down to a rattle."];
+	  129 [label="Microgrid Generator: The recoil start wakes the old generator up instantly. The machine sputters like an old war horse before settling down to a rattle."];
+	  130 [label="You: \"Do *you* know anything about a fire guy?\""];
+	  131 [label="Variable[\"TASK.contact_warship_archer_done\"]"];
+	  132 [label="Variable[\"TASK.contact_warship_archer_done\"]", shape=diamond];
+	  133 [label="!(Variable[\"TASK.contact_warship_archer_done\"])", shape=diamond];
+	  134 [label="Kim Kitsuragi: \"Liquid carbon, I would imagine it takes *mazut*.\" He points to the open fuel cap on the side of the dynamo."];
+	  135 [label="IsCunoInParty()"];
+	  136 [label="IsCunoInParty()", shape=diamond];
+	  137 [label="!(IsCunoInParty())", shape=diamond];
+	  138 [label="Variable[\"seafort.generator_hub_reached\"]"];
+	  139 [label="Variable[\"seafort.generator_hub_reached\"]", shape=diamond];
+	  140 [label="!(Variable[\"seafort.generator_hub_reached\"])", shape=diamond];
+	  141 [label="IsKimHere()"];
+	  142 [label="IsKimHere()", shape=diamond];
+	  143 [label="!(IsKimHere())", shape=diamond];
+	  144 [label="IsCunoInParty()"];
+	  145 [label="IsCunoInParty()", shape=diamond];
+	  146 [label="!(IsCunoInParty())", shape=diamond];
+	  147 [label="Cuno: \"Probably because it's winter. Some bums who camp here don't wanna freeze to death? Maybe? Probably. Cuno's probably right...\""];
+	  0 -> 1
+	  1 -> 139
+	  2 -> 3
+	  2 -> 4
+	  3 -> 63
+	  4 -> 36
+	  5 -> 131
+	  6 -> 21
+	  7 -> 2
+	  8 -> 9
+	  8 -> 10
+	  9 -> 7
+	  10 -> 36
+	  11 -> 19
+	  12 -> 20
+	  13 -> 14
+	  13 -> 15
+	  14 -> 129
+	  15 -> 46
+	  16 -> 41
+	  17 -> 78
+	  18 -> 19
+	  19 -> 39
+	  19 -> 42
+	  19 -> 43
+	  19 -> 112
+	  19 -> 53
+	  19 -> 120
+	  19 -> 90
+	  20 -> 19
+	  21 -> 130
+	  22 -> 26
+	  23 -> 96
+	  23 -> 97
+	  24 -> 23
+	  25 -> 80
+	  25 -> 121
+	  26 -> 27
+	  26 -> 28
+	  27 -> 37
+	  28 -> 48
+	  29 -> 100
+	  30 -> 38
+	  31 -> 11
+	  32 -> 33
+	  32 -> 34
+	  33 -> 47
+	  34 -> 128
+	  35 -> 54
+	  36 -> 19
+	  37 -> 72
+	  38 -> 55
+	  39 -> 105
+	  40 -> 57
+	  41 -> 19
+	  42 -> 142
+	  43 -> 29
+	  44 -> 40
+	  45 -> 101
+	  46 -> 83
+	  47 -> 6
+	  48 -> 72
+	  49 -> 17
+	  50 -> 51
+	  50 -> 52
+	  51 -> 18
+	  52 -> 19
+	  53 -> 102
+	  54 -> 68
+	  55 -> 19
+	  56 -> 36
+	  57 -> 58
+	  57 -> 59
+	  58 -> 98
+	  59 -> 25
+	  60 -> 61
+	  60 -> 62
+	  61 -> 86
+	  62 -> 30
+	  63 -> 5
+	  64 -> 66
+	  64 -> 67
+	  65 -> 135
+	  66 -> 122
+	  67 -> 69
+	  67 -> 79
+	  68 -> 35
+	  69 -> 73
+	  70 -> 19
+	  71 -> 19
+	  72 -> 50
+	  73 -> 19
+	  74 -> 113
+	  75 -> 26
+	  76 -> 74
+	  77 -> 19
+	  78 -> 13
+	  79 -> 116
+	  80 -> 71
+	  81 -> 93
+	  82 -> 68
+	  83 -> 101
+	  84 -> 132
+	  85 -> 110
+	  86 -> 88
+	  86 -> 89
+	  87 -> 70
+	  88 -> 136
+	  90 -> 71
+	  91 -> 74
+	  92 -> 75
+	  93 -> 71
+	  94 -> 19
+	  95 -> 56
+	  96 -> 148
+	  97 -> 25
+	  98 -> 55
+	  99 -> 80
+	  99 -> 121
+	  99 -> 44
+	  100 -> 111
+	  101 -> 104
+	  101 -> 103
+	  102 -> 114
+	  103 -> 31
+	  104 -> 115
+	  105 -> 109
+	  106 -> 99
+	  107 -> 85
+	  108 -> 19
+	  109 -> 107
+	  110 -> 19
+	  111 -> 125
+	  112 -> 76
+	  113 -> 11
+	  114 -> 24
+	  114 -> 97
+	  114 -> 96
+	  115 -> 117
+	  115 -> 118
+	  116 -> 45
+	  117 -> 84
+	  118 -> 87
+	  119 -> 65
+	  120 -> 101
+	  121 -> 123
+	  121 -> 124
+	  122 -> 77
+	  123 -> 92
+	  124 -> 126
+	  124 -> 127
+	  125 -> 82
+	  126 -> 32
+	  127 -> 68
+	  128 -> 26
+	  129 -> 22
+	  130 -> 16
+	  131 -> 133
+	  131 -> 134
+	  132 -> 49
+	  132 -> 106
+	  133 -> 19
+	  134 -> 60
+	  135 -> 137
+	  135 -> 138
+	  136 -> 108
+	  137 -> 90
+	  137 -> 12
+	  138 -> 140
+	  138 -> 141
+	  139 -> 95
+	  140 -> 119
+	  141 -> 144
+	  141 -> 143
+	  142 -> 91
+	  143 -> 145
+	  144 -> 146
+	  144 -> 147
+	  145 -> 94
+	  146 -> 81
+	  147 -> 8
+}
+
