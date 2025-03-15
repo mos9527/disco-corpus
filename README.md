@@ -4,13 +4,15 @@ Corpus in GraphViz format for the CRPG Disco Elysium.
 This project is NOT affiliated with ZA/UM, Robert Kurvitz, or any other party involved in the creation of Disco Elysium.
 
 # Structure
-Files are seperated in folders A-Z which represent the first letter of the conversation name. Each file contains a list of nodes and edges in GraphViz format.
+GraphViz files are stored in `graphviz` and are seperated in folders A-Z which represent the first letter of the conversation name. Each file contains a list of nodes and edges in GraphViz format.
 
 You can view the files using any text editor or a GraphViz viewer. You can do this online using [GraphVizOnline](https://dreampuf.github.io/GraphvizOnline/).
 
 Embedding a URL is also possible.
 
-https://dreampuf.github.io/GraphvizOnline/?url=https://raw.githubusercontent.com/mos9527/disco-corpus/refs/heads/main/disco-corpus-en/W/WHIRLING%20_%20BATHROOM%20MIRROR_0x010000040000032B.gv
+https://dreampuf.github.io/GraphvizOnline/?url=https://raw.githubusercontent.com/mos9527/disco-corpus/refs/heads/main/graphviz/disco-corpus-en/W/WHIRLING%20_%20BATHROOM%20MIRROR_0x010000040000032B.gv
+
+There's also a SVG version of the graph available [in the `svg` folder.](https://github.com/mos9527/disco-corpus/tree/main/svg	)
 
 # Example
 ```
