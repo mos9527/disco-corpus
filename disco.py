@@ -43,7 +43,7 @@ def escape_filename(s: str):
 lockit = dialog["DialoguesLockitChinese"]
 lang_def = defaultdict(dict)
 # TODO: Argparse?
-if False:
+if True:
     for data in lockit.mSource.mTerms:
         term, text = data.Term, data.Languages
         term = term.split("/")
@@ -53,7 +53,7 @@ if False:
             cat, aid = term
         lang_def[aid][cat] = text
 
-DEST = "disco-corpus-en"
+DEST = "disco-corpus-cn"
 os.makedirs(DEST, exist_ok=True)
 
 
@@ -84,7 +84,7 @@ def process_one(convo_id):
             for outlink in entry.outgoingLinks:
                 if convo_id + 1 == outlink.destinationConversationID:
                     entry_fields = from_fields(entry.fields)
-                    graph[entry_id].add(outlink.destinationDialogueID)
+                    graph[entry_id].add(outlink.destinationDialogueID - 1)
         writeline("digraph G {")
         for u, entry in enumerate(convo.dialogueEntries):
             entry_fields = from_fields(entry.fields)
@@ -131,5 +131,5 @@ from concurrent.futures import ThreadPoolExecutor
 
 with ThreadPoolExecutor() as executor:
     for convo_id, convo in tqdm(enumerate(disco.conversations)):
-        # executor.submit(process_one, convo_id)
-        process_one(convo_id)
+        executor.submit(process_one, convo_id)
+        # process_one(convo_id)
