@@ -22,6 +22,7 @@ class gvNode:
 
 @dataclass
 class graph:
+    comment: str = ""
     nodes: dict[int, gvNode] = field(default_factory=dict)
     edges: dict[int, List[int]] = field(default_factory=dict)
 
@@ -46,6 +47,7 @@ class graph:
                       3 -> 3
             """
             if line.startswith("#"):
+                g.comment += line
                 continue
             if line.startswith("digraph G {"):
                 continue
@@ -69,11 +71,13 @@ try:
 except Exception as e:
     print(e)
     print("Usage: python walk.py <file>.gv")
+    input()
     sys.exit(1)
 
 import inquirer
 
 u = 1
+print(g.comment)
 while True:
     print(g.nodes[u].label)
     choices = [f"{v}: {g.nodes[v].label}" for v in g.edges.get(u, [])]
