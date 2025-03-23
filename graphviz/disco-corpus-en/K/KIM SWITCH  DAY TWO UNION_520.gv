@@ -1,0 +1,194 @@
+# KIM SWITCH / DAY TWO UNION
+# Kim blinks red when he's joined your team near the stairs. He wants to tell you the vigilantes have showed up and that you should talk to them -- but be careful. (Final warning about RCM non-presence in Martinaise.)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: Variable[\"TASK.find_out_whos_in_the_union_box\"]"];
+	  3 [label="Variable[\"TASK.find_out_whos_in_the_union_box\"]", shape=diamond];
+	  4 [label="!(Variable[\"TASK.find_out_whos_in_the_union_box\"])", shape=diamond];
+	  5 [label="Authority: Good. A power move. *Purposefully* concentrate on something else first."];
+	  6 [label="Kim Kitsuragi: \"And one more thing...\" He pulls the black plastic over the dead man's face, then looks at you. \"This was *very* good work, detective.\""];
+	  7 [label="Interfacing: Oh well -- we'll get the armoured boots in another lifetime."];
+	  8 [label="Kim Kitsuragi: \"Looks like we can get to work at once. The Union muscle turned up.\" He points to the mess hall doors. \"They look rowdy. We should talk to them.\""];
+	  9 [label="Rhetoric: The lieutenant is downplaying his contribution -- he got up before sunrise to get this done. And now he's quite pleased with himself for taking care of the gruesome business so efficiently."];
+	  10 [label="Kim Kitsuragi: \"That would just escalate tensions. No captain would sign off on it. Solving one murder isn't worth a conflict between the RCM and the Débardeurs' Union.\""];
+	  11 [label="dialogueoptionhub"];
+	  12 [label="Kim Kitsuragi: \"I've got some good news.\" The lieutenant smiles. \"I took care of the body. The thought of him decomposing in my MC wouldn't let me sleep.\""];
+	  13 [label="Kim Kitsuragi: \"And the big one,\" he squints his eyes, studying the men in the mess hall, \"must be Hardie himself...\""];
+	  14 [label="Kim Kitsuragi: CheckEquipped(\"shoes_t500\") and  Variable[\"whirling.kim_stolen_boots_greet_done\"] == false"];
+	  15 [label="CheckEquipped(\"shoes_t500\") and  Variable[\"whirling.kim_stolen_boots_greet_done\"] == false", shape=diamond];
+	  16 [label="!(CheckEquipped(\"shoes_t500\") and  Variable[\"whirling.kim_stolen_boots_greet_done\"] == false)", shape=diamond];
+	  17 [label="Empathy: He kind of wishes you'd acknowledged his contribution, but you've missed your opportunity now."];
+	  18 [label="Kim Kitsuragi: \"Men who drink beer for breakfast. I have no doubt these are the Hardie boys Evrart told us about, the ones who *keep the peace* around here.\""];
+	  19 [label="Logic: But... aren't you *curious* to know what they have to say about the murder?"];
+	  21 [label="Kim Kitsuragi: \"Everything points to the Dockworkers' Union: the tracks in the mud, the circumstances in Martinaise, my preliminary information...\""];
+	  22 [label="Kim Kitsuragi: \"Which may, of course, all be wrong. But we still need to talk to them -- and it won't be easy.\""];
+	  23 [label="Kim Kitsuragi: Variable[\"yard.sense_viscal_greeting_done\"]"];
+	  24 [label="Variable[\"yard.sense_viscal_greeting_done\"]", shape=diamond];
+	  25 [label="!(Variable[\"yard.sense_viscal_greeting_done\"])", shape=diamond];
+	  26 [label="Kim Kitsuragi: \"I'm just glad he's gone. We have other matters to attend to.\""];
+	  27 [label="Kim Kitsuragi: \"One loose thread less to worry about -- and one big problem to replace it.\" He crosses something out."];
+	  28 [label="Kim Kitsuragi: \"Well, he's in processing now. We have other matters to attend to.\""];
+	  29 [label="Jump to: [dialogueoptionhub]"];
+	  30 [label="Kim Kitsuragi: Variable[\"TASK.find_out_whos_in_the_union_box\"]"];
+	  31 [label="Variable[\"TASK.find_out_whos_in_the_union_box\"]", shape=diamond];
+	  32 [label="!(Variable[\"TASK.find_out_whos_in_the_union_box\"])", shape=diamond];
+	  33 [label="Kim Kitsuragi: \"I'm just glad he's gone. We have other matters to attend to.\""];
+	  34 [label="Kim Kitsuragi: \"We can't be sure of course -- Evrart may have lied to us. He definitely has an agenda of his own. Either way, we need to interview them. And it won't be easy.\""];
+	  35 [label="You: \"Are these the men Garte told us about yesterday?\""];
+	  36 [label="Kim Kitsuragi: He points to the mess hall doors. \"The Union muscle finally turned up, and they look rowdy. We need to talk to them.\""];
+	  37 [label="Kim Kitsuragi: CancelTask(\"TASK.find_out_whos_in_the_union_box_cancelled\")--[[ Variable[ ]]"];
+	  38 [label="Kim Kitsuragi: Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false"];
+	  39 [label="Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false", shape=diamond];
+	  40 [label="!(Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false)", shape=diamond];
+	  41 [label="switchhub-secondday"];
+	  42 [label="Kim Kitsuragi: \"...that's not *a lot* of things. We should have dug up more yesterday. Still, we need to talk to them. And it won't be easy.\""];
+	  43 [label="Kim Kitsuragi: \"They're in no hurry to leave -- they think they own the place... Anyway, I leave that choice to you. Whatever you decide is fine by me.\""];
+	  44 [label="You: \"I don't know if I was ready to let him go...\""];
+	  45 [label="Kim Kitsuragi: \"I completely forgot.\" He looks at his notes. \"Sorry, I had a rough night's sleep. It's them, by the looks of it -- loud and nasty, just like the manager said.\""];
+	  46 [label="You: \"Good, thanks.\""];
+	  47 [label="Composure: He won't even *acknowledge* the stolen boots you're wearing. For him, they don't exist. You'll have to bring it up yourself, later -- *if* you dare."];
+	  48 [label="Kim Kitsuragi: \"In fact, even the *death* of two detectives might not warrant an all-out war. So let's keep a cool head, okay?\""];
+	  49 [label="Kim Kitsuragi: \"Looks like we can get to work at once. The Union muscle turned up.\" He points to the mess hall doors. \"They look rowdy. We should talk to them.\""];
+	  50 [label="Kim Kitsuragi: \"A lot of things point to the Dockworkers' Union: the circumstances in Martinaise, my preliminary information. Hmm, actually...\""];
+	  51 [label="Kim Kitsuragi: \"Well, he's in processing now. We have other matters to attend to.\""];
+	  52 [label="Kim Kitsuragi: \"I mean ungovernable. Martinaise isn't exactly enthusiastic about the RCM being here. They prefer to be *policed* by the Union -- these men here...\""];
+	  53 [label="Kim Kitsuragi: Variable[\"whirling.kim_took_away_body_day_2\"]"];
+	  54 [label="Variable[\"whirling.kim_took_away_body_day_2\"]", shape=diamond];
+	  55 [label="!(Variable[\"whirling.kim_took_away_body_day_2\"])", shape=diamond];
+	  56 [label="Kim Kitsuragi: \"This is clearly the Union's *peacekeeping* force Evrart told us about. The one he said hanged our victim.\""];
+	  57 [label="Interfacing: Oh well -- we'll get the armoured boots in another lifetime."];
+	  58 [label="You: \"Why do we need to talk to them?\""];
+	  59 [label="Kim Kitsuragi: Variable[\"cargo.evrart_hardieboys_did_the_merco_in\"]"];
+	  60 [label="Variable[\"cargo.evrart_hardieboys_did_the_merco_in\"]", shape=diamond];
+	  61 [label="!(Variable[\"cargo.evrart_hardieboys_did_the_merco_in\"])", shape=diamond];
+	  62 [label="Kim Kitsuragi: Variable[\"yard.hanged_autopsy_exited_cause_known_path\"]  or  Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"]"];
+	  63 [label="Variable[\"yard.hanged_autopsy_exited_cause_known_path\"]  or  Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"]", shape=diamond];
+	  64 [label="!(Variable[\"yard.hanged_autopsy_exited_cause_known_path\"]  or  Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"])", shape=diamond];
+	  65 [label="Kim Kitsuragi: Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false"];
+	  66 [label="Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false", shape=diamond];
+	  67 [label="!(Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false)", shape=diamond];
+	  68 [label="You: \"What do you mean 'rowdy'?\""];
+	  69 [label="You: \"There are so many of them. Maybe we should call in reinforcements?\""];
+	  70 [label="Kim Kitsuragi: \"One more thing before we do...\" He glances at the booth again. \"We don't have to talk to them immediately. We can walk right past them, continue with our business.\""];
+	  71 [label="Kim Kitsuragi: Variable[\"yard.hanged_rope_industrial_strength\"] == true  or  Variable[\"yard.hanged_rope_airlifting_carfo\"] == true"];
+	  72 [label="Variable[\"yard.hanged_rope_industrial_strength\"] == true  or  Variable[\"yard.hanged_rope_airlifting_carfo\"] == true", shape=diamond];
+	  73 [label="!(Variable[\"yard.hanged_rope_industrial_strength\"] == true  or  Variable[\"yard.hanged_rope_airlifting_carfo\"] == true)", shape=diamond];
+	  74 [label="Jump to: [dialogueoptionhub]"];
+	  75 [label="Half Light: He's not exaggerating about that mortal danger. Just calmly factoring it in. Your fists clench and your pulse rises uncomfortably."];
+	  76 [label="Reaction Speed: Yeah -- streetwise. Zoom right past, do it on your own terms."];
+	  77 [label="You: \"Let's roll.\" [Leave.]"];
+	  78 [label="Jump to: [dialogueoptionhub]"];
+	  79 [label="Kim Kitsuragi: \"Everything points to the Dockworkers' Union: the *belt* used for hanging him, the circumstances in Martinaise, my preliminary information...\"\n\"Everything points to the Dockworkers' Union: the belt used for hanging him, tracks in the mud, the circumstances in Martinaise, my preliminary information...\""];
+	  80 [label="Kim Kitsuragi: Variable[\"TASK.find_out_whos_in_the_union_box_done\"]"];
+	  81 [label="Variable[\"TASK.find_out_whos_in_the_union_box_done\"]", shape=diamond];
+	  82 [label="!(Variable[\"TASK.find_out_whos_in_the_union_box_done\"])", shape=diamond];
+	  83 [label="Kim Kitsuragi: Variable[\"cargo.evrart_hardieboys_did_the_merco_in\"]"];
+	  84 [label="Variable[\"cargo.evrart_hardieboys_did_the_merco_in\"]", shape=diamond];
+	  85 [label="!(Variable[\"cargo.evrart_hardieboys_did_the_merco_in\"])", shape=diamond];
+	  86 [label="Jump to: [dialogueoptionhub]"];
+	  87 [label="Kim Kitsuragi: \"Men who drink beer for breakfast? There's talk of an armed wing of the Union called *the Hardie boys*, who are responsible for said *policing*. I think it's them.\""];
+	  0 -> 1
+	  1 -> 41
+	  2 -> 3
+	  2 -> 4
+	  3 -> 80
+	  4 -> 70
+	  5 -> 76
+	  7 -> 17
+	  8 -> 14
+	  9 -> 36
+	  10 -> 48
+	  11 -> 35
+	  11 -> 68
+	  11 -> 69
+	  11 -> 77
+	  11 -> 58
+	  12 -> 44
+	  12 -> 46
+	  13 -> 74
+	  14 -> 16
+	  14 -> 15
+	  15 -> 47
+	  16 -> 11
+	  17 -> 36
+	  18 -> 13
+	  19 -> 43
+	  21 -> 22
+	  22 -> 86
+	  23 -> 24
+	  23 -> 25
+	  24 -> 21
+	  25 -> 50
+	  26 -> 9
+	  27 -> 29
+	  28 -> 7
+	  29 -> 11
+	  30 -> 32
+	  30 -> 31
+	  31 -> 49
+	  32 -> 8
+	  33 -> 57
+	  34 -> 86
+	  35 -> 45
+	  36 -> 14
+	  37 -> 70
+	  38 -> 40
+	  38 -> 39
+	  39 -> 33
+	  40 -> 26
+	  41 -> 53
+	  42 -> 86
+	  44 -> 65
+	  45 -> 27
+	  46 -> 38
+	  47 -> 11
+	  48 -> 75
+	  49 -> 14
+	  50 -> 42
+	  51 -> 17
+	  52 -> 59
+	  53 -> 54
+	  53 -> 55
+	  54 -> 12
+	  55 -> 30
+	  56 -> 34
+	  57 -> 9
+	  58 -> 83
+	  59 -> 60
+	  59 -> 61
+	  60 -> 18
+	  61 -> 87
+	  62 -> 64
+	  62 -> 63
+	  64 -> 6
+	  65 -> 66
+	  65 -> 67
+	  66 -> 28
+	  67 -> 51
+	  68 -> 52
+	  69 -> 10
+	  70 -> 5
+	  71 -> 72
+	  71 -> 73
+	  72 -> 79
+	  73 -> 23
+	  74 -> 11
+	  75 -> 78
+	  76 -> 19
+	  77 -> 2
+	  78 -> 11
+	  79 -> 22
+	  80 -> 81
+	  80 -> 82
+	  81 -> 70
+	  82 -> 37
+	  83 -> 84
+	  83 -> 85
+	  84 -> 56
+	  85 -> 71
+	  86 -> 11
+	  87 -> 74
+}
+

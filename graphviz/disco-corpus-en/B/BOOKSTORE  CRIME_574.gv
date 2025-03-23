@@ -1,0 +1,225 @@
+# BOOKSTORE / CRIME
+# Shelf of crime books.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: Are there any more?"];
+	  3 [label="Kim Kitsuragi: \"Something the matter, detective?\""];
+	  4 [label="You: \"Storekeep, what's all this crime fiction?\""];
+	  5 [label="You: [Leave.]"];
+	  6 [label="Shelf of Crime Novels: Variable[\"doomed.bookstore_mullen_crime_hub_reached\"]"];
+	  7 [label="Variable[\"doomed.bookstore_mullen_crime_hub_reached\"]", shape=diamond];
+	  8 [label="!(Variable[\"doomed.bookstore_mullen_crime_hub_reached\"])", shape=diamond];
+	  9 [label="Kim Kitsuragi: The lieutenant narrows his eyes and contemplates the book for a moment."];
+	  10 [label="Electrochemistry: Sex crimes *did* pique your interest, but still -- this Dick Mullen person only gets your pleasure centres *down*."];
+	  11 [label="Electrochemistry: Relax. It's not that bad. Also, this means your bloodflow is returning to normal. Good news, really."];
+	  12 [label="Shelf of Crime Novels: Perhaps you're drawn to the dark and *noirish* atmosphere?"];
+	  13 [label="Shelf of Crime Novels: Then this is the book for you."];
+	  14 [label="Kim Kitsuragi: \"I would certainly say she fits that description, providing that's your type.\""];
+	  15 [label="Jump to: [crimehub]"];
+	  16 [label="Shelf of Crime Novels: These books *greatly* overstate the excitement of police work, glossing over how long it takes to actually follow up on leads and eliminate dead-ends."];
+	  17 [label="Perception (Sight): A couple spook novels hide amidst all the detective books. Thrilling tales of spycraft and derring-do."];
+	  18 [label="Shelf of Crime Novels: Is it because the smoking dame in the slinky red dress on the cover is giving you a hard-on?"];
+	  19 [label="Volition: Quit staring -- You're in public! There's plenty of time for that later... in the privacy of your own room."];
+	  20 [label="Shelf of Crime Novels: IsKimHere()"];
+	  21 [label="IsKimHere()", shape=diamond];
+	  22 [label="!(IsKimHere())", shape=diamond];
+	  23 [label="Reaction Speed: Wait a minute, all this told us *nothing* about who Dick Mullen actually is..."];
+	  24 [label="Tutorial Agent: You've acquired an interactable item. Investigate this item further by going to the INTERACT tab in your INVENTORY."];
+	  25 [label="You: What? No. That's not what's happening."];
+	  26 [label="Mack Torson: \"A very fuckin' dangerous case, ain't that right, Chester? They almost got you that time.\""];
+	  27 [label="You: \"Kim, would you describe this woman as a *smoking dame*?\""];
+	  28 [label="Logic: NOTE! Reading about Dick Mullen will not actually make you a better detective."];
+	  29 [label="Shelf of Crime Novels: These shelves are overburdened with books from the same series. You see the name \"Dick Mullen\" over and over."];
+	  30 [label="You: Look through the display of books."];
+	  31 [label="Shelf of Crime Novels: You see: \"Dick Mullen on the Job\", \"Get Me Mullen!\", \"The Stalwart Adventures of Richard P. Mullen\", \"Dick Mullen and the Murder in the Orchard\", \"The Sordid Affair of Dick Mullen\"..."];
+	  32 [label="Shelf of Crime Novels: Crime fiction... is a disgrace. An asinine misrepresentation of the physical attributes and the arduous everyday work of actual police officers."];
+	  33 [label="You: Sure thing."];
+	  34 [label="Shelf of Crime Novels: \"Tragedy Calls for Dick Mullen\" (another one with fake death), and, of course, \"Dick Mullen: The Murderer\", in order to catch a murderer, Dick Mullen must *become* the murderer."];
+	  35 [label="Reaction Speed: Your quick eye notices a small caterpillar crawling across the spine of a book. The title reads: \"Dick Mullen and the Mistaken Identity.\""];
+	  36 [label="Jump to: [crimehub]"];
+	  37 [label="You: \"I want to buy this Dick Mullen novel.\""];
+	  38 [label="Shelf of Crime Novels: Yes it is. The bulge in your pants is embarrassingly obvious."];
+	  39 [label="Endurance: Furthermore -- they have NO IDEA how hard it is to simply remove a body from a tree."];
+	  40 [label="You: What do we have here? Mistaken identity..."];
+	  41 [label="Shelf of Crime Novels: \"A Killing Is Declared\", \"Dick Mullen in the Murderhouse\", \"The Final Case of Dick Mullen\" (an obvious lie), \"Dick Mullen in the Clock Tower\", \"The Ordeals of Dick Mullen\", \"Dauntless Dick\", \"Dick Mullen's Funeral Pyre\", \"The Murder of Dick Mullen\"..."];
+	  42 [label="Civilian: \"Gosh, why?\" One civilian looks on, amazed. The bald man bellows a reply:"];
+	  43 [label="You: Oh god, no."];
+	  44 [label="Inland Empire: After all this, you still haven't found the answer to the one question that matters: Who *is* Dick Mullen?"];
+	  45 [label="You: No, it's gotta be something *else*."];
+	  46 [label="You: Oh, right. That's definitely it."];
+	  47 [label="Shelf of Crime Novels: Variable[\"doomed.book_mullen_wc_trigger\"]"];
+	  48 [label="Variable[\"doomed.book_mullen_wc_trigger\"]", shape=diamond];
+	  49 [label="!(Variable[\"doomed.book_mullen_wc_trigger\"])", shape=diamond];
+	  51 [label="Shelf of Crime Novels: Oh no, turns out he faked it to solve a case."];
+	  52 [label="Jump to: [Shelf of Crime Novels: \"Shelves filled to the brim with cri...\"]"];
+	  53 [label="Chester McLaine: \"Again? Man, I tell that one at least once a month. It's not that interesting,\" Chester replies."];
+	  54 [label="You: Yeah, I'm pretty intense. I'm all about that dark stuff."];
+	  55 [label="Shelf of Crime Novels: Yeah, this is the book for you."];
+	  56 [label="Shelf of Crime Novels: Shelves filled to the brim with crime novels featuring the supposedly stalwart Vespertine detective, Dick Mullen."];
+	  57 [label="Shelf of Crime Novels: Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"]"];
+	  58 [label="Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"]", shape=diamond];
+	  59 [label="!(Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"])", shape=diamond];
+	  60 [label="Shelf of Crime Novels: Variable[\"doomed.book_whitec_who_is_mullen\"]"];
+	  61 [label="Variable[\"doomed.book_whitec_who_is_mullen\"]", shape=diamond];
+	  62 [label="!(Variable[\"doomed.book_whitec_who_is_mullen\"])", shape=diamond];
+	  63 [label="Shelf of Crime Novels: Not a single mention of all the stress this work creates upon the officer's *family*. Detective fiction just doesn't tell the truth at all. Now, would you like a list of the books found on the shelf?"];
+	  64 [label="Shelf of Crime Novels: What's more, they completely ignore the psychological hardships of, year after year, coming into contact with people during the worst days of their lives."];
+	  65 [label="You: Hmm. Why does this speak to me?"];
+	  66 [label="crimehub"];
+	  67 [label="You: Okay, let's stop now."];
+	  68 [label="Mack Torson: \"Come on, Chester, tell the story again.\" A bald man turns toward a lean man and pats him on the back."];
+	  69 [label="You: That's probably right, I'm a complicated guy, full of contradictions."];
+	  70 [label="Kim Kitsuragi: The lieutenant nods. You think you detect the faintest trace of a grin on his face, but you can't say for certain."];
+	  71 [label="Esprit de Corps: Come on, this is *not* the way real police solve crimes. The *real* police are some twenty kilometres away, sitting in an armoured motor carriage."];
+	  72 [label="Jump to: [crimehub]"];
+	  73 [label="Mack Torson: \"The *fuck* it is,\" the bald man replies. \"And these guys haven't heard it.\" He motions to the civilian sitting in the back seat. \"You see, Chester here,\" he pokes his finger at the lean man. \"Chester *faked his own death* once!\""];
+	  74 [label="Conceptualization: See the way she's suggestively holding that pistol? That's *symbolism*."];
+	  75 [label="Plaisance: \"Oh, crime, robberies, murders...\" She lowers her voice. \"Even *sexual* crimes. We're fortunate to have Dick Mullen and his stories to sort all that out.\""];
+	  76 [label="You: Dick Mullen *dies*?!"];
+	  77 [label="Shelf of Crime Novels: Variable[\"doomed.book_mullen_esprit_detective_operation\"]"];
+	  78 [label="Variable[\"doomed.book_mullen_esprit_detective_operation\"]", shape=diamond];
+	  79 [label="!(Variable[\"doomed.book_mullen_esprit_detective_operation\"])", shape=diamond];
+	  80 [label="You: \"Nope, all good here.\" (Casually adjust your pants.)"];
+	  81 [label="You: Who is Dick Mullen?"];
+	  82 [label="You: Variable[\"doomed.book_whitec_who_is_mullen\"]"];
+	  83 [label="Variable[\"doomed.book_whitec_who_is_mullen\"]", shape=diamond];
+	  84 [label="!(Variable[\"doomed.book_whitec_who_is_mullen\"])", shape=diamond];
+	  85 [label="Jump to: [Shelf of Crime Novels: \"Shelves filled to the brim with cri...\"]"];
+	  86 [label="Shelf of Crime Novels: Yes. There's also: \"The Dame Who Did It\", \"Farewell, My Mullen\" (faking death seems to be a common trope in the Mullen series), \"The Morbid Tales of Dick Mullen\", \"A Dark Tide Turns\"..."];
+	  87 [label="Reaction Speed: Your attempt to grasp at the answer fails... it seems very close by, pulsating just out of reach."];
+	  88 [label="Chester McLaine: \"Yeah, sure came close,\" Chester mutters in return, then turns to the rapt listener. \"Alright, so I was tailing this guy called 'Francis the Shoe'...\" The inside of the motor carriage is thick with cigarette smoke. Outside, it starts to rain..."];
+	  89 [label="Plaisance: \"Hrm, of course.\" She shudders. \"Such violence and immorality... uh, I mean, enjoy!\""];
+	  90 [label="Jump to: [crimehub]"];
+	  91 [label="Plaisance: \"You're a... a police officer... apparently. You should buy *all* of these. They really do teach a person how to be a proper detective.\""];
+	  92 [label="Jump to: [crimehub]"];
+	  93 [label="Shelf of Crime Novels: A worn paperback from Dick Mullen's classic *hard-boiled* phase. The premise seems to be that Dick Mullen is framed for the murder of his best friend, and has just a few days to prove his innocence."];
+	  94 [label="Shelf of Crime Novels: Could it be the motifs of unstable identities and shocking betrayals?"];
+	  95 [label="Shelf of Crime Novels: Variable[\"doomed.book_mullen_wc_trigger\"]"];
+	  96 [label="Variable[\"doomed.book_mullen_wc_trigger\"]", shape=diamond];
+	  97 [label="!(Variable[\"doomed.book_mullen_wc_trigger\"])", shape=diamond];
+	  98 [label="Jump to: [crimehub]"];
+	  99 [label="You: No, that's not it either."];
+	  100 [label="Drama: Sssssire, you could learn much from thisss Mullen, if you underssstood who he issss...."];
+	  0 -> 1
+	  1 -> 6
+	  2 -> 86
+	  3 -> 80
+	  3 -> 27
+	  4 -> 75
+	  6 -> 8
+	  6 -> 7
+	  7 -> 56
+	  8 -> 29
+	  9 -> 14
+	  10 -> 28
+	  11 -> 20
+	  12 -> 99
+	  12 -> 54
+	  13 -> 72
+	  14 -> 90
+	  15 -> 66
+	  16 -> 39
+	  17 -> 66
+	  18 -> 25
+	  18 -> 46
+	  19 -> 90
+	  20 -> 21
+	  20 -> 22
+	  21 -> 3
+	  22 -> 19
+	  23 -> 47
+	  24 -> 36
+	  25 -> 38
+	  26 -> 88
+	  27 -> 9
+	  28 -> 92
+	  29 -> 17
+	  30 -> 32
+	  31 -> 41
+	  32 -> 16
+	  33 -> 31
+	  34 -> 71
+	  35 -> 40
+	  36 -> 66
+	  37 -> 89
+	  38 -> 11
+	  39 -> 64
+	  40 -> 93
+	  41 -> 2
+	  41 -> 67
+	  41 -> 76
+	  42 -> 26
+	  43 -> 85
+	  44 -> 95
+	  45 -> 12
+	  46 -> 55
+	  47 -> 48
+	  47 -> 49
+	  48 -> 15
+	  49 -> 100
+	  51 -> 2
+	  51 -> 67
+	  52 -> 56
+	  53 -> 73
+	  54 -> 13
+	  55 -> 74
+	  56 -> 66
+	  57 -> 58
+	  57 -> 59
+	  58 -> 36
+	  59 -> 24
+	  60 -> 61
+	  60 -> 62
+	  61 -> 35
+	  62 -> 87
+	  63 -> 33
+	  63 -> 43
+	  64 -> 63
+	  65 -> 94
+	  66 -> 4
+	  66 -> 5
+	  66 -> 37
+	  66 -> 81
+	  66 -> 30
+	  67 -> 52
+	  68 -> 53
+	  69 -> 13
+	  70 -> 90
+	  71 -> 77
+	  72 -> 66
+	  73 -> 42
+	  74 -> 90
+	  75 -> 91
+	  76 -> 51
+	  77 -> 78
+	  77 -> 79
+	  78 -> 68
+	  79 -> 44
+	  80 -> 70
+	  81 -> 82
+	  82 -> 83
+	  82 -> 84
+	  83 -> 60
+	  84 -> 60
+	  85 -> 56
+	  86 -> 34
+	  87 -> 98
+	  88 -> 44
+	  89 -> 57
+	  90 -> 66
+	  91 -> 10
+	  92 -> 66
+	  93 -> 65
+	  94 -> 45
+	  94 -> 69
+	  95 -> 96
+	  95 -> 97
+	  96 -> 15
+	  97 -> 23
+	  98 -> 66
+	  99 -> 18
+	  100 -> 15
+}
+

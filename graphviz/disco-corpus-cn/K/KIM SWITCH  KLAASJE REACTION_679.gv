@@ -1,0 +1,226 @@
+# KIM SWITCH / KLAASJE REACTION
+# Kim reacts to you losing your shit (Composure fail) when the Hardie boys said the victim is a young woman called Klaasje in the Whirling-in-Rags.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: “说来听听。”"];
+	  3 [label="You: “没有。”"];
+	  4 [label="Variable[\"whirling.kim_klaasje_inland_interviewed\"]"];
+	  5 [label="Variable[\"whirling.kim_klaasje_inland_interviewed\"]", shape=diamond];
+	  6 [label="!(Variable[\"whirling.kim_klaasje_inland_interviewed\"])", shape=diamond];
+	  7 [label="Kim Kitsuragi: “嗯，”他点点头。“你还做了什么？”"];
+	  8 [label="know_klaasje"];
+	  9 [label="Horrific Necktie: 你会熬过去的，你这个狡猾的混蛋！对他爆粗口，把他扔出去。"];
+	  10 [label="interrogation"];
+	  11 [label="You: “最好不要继续深入这个话题了。”"];
+	  12 [label="Kim Kitsuragi: 他重复到：“警官，我们调查这个女人之前——有没有什么我应该知道的？”"];
+	  13 [label="You: “就这样吧。”[离开。]\n“没什么——我们继续吧。”[离开。]"];
+	  14 [label="Rhetoric: 不管做什么，第一条不能说。"];
+	  15 [label="Kim Kitsuragi: “我假设她偷听了你——还有别的吗？”"];
+	  16 [label="klaasjereactionswitch"];
+	  17 [label="Jump to: [know_klaasje]"];
+	  18 [label="You: “我没有强暴她。”"];
+	  19 [label="Kim Kitsuragi: 他耸耸肩。“那明显是你的审讯技巧。还有别的吗？”"];
+	  20 [label="Kim Kitsuragi: “在我们跟她交谈之前，有什么我应该知道的吗？”"];
+	  21 [label="You: “我问过她我们在哪，这座城市叫什么，也许甚至问过现在是*什么年代*。等等之类的事情吧。”"];
+	  22 [label="Inland Empire: 你会熬过去的。"];
+	  23 [label="CheckEquipped(\"neck_tie\")   and  Variable[\"whirling.necktie_personified\"] == true"];
+	  24 [label="CheckEquipped(\"neck_tie\")   and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  25 [label="!(CheckEquipped(\"neck_tie\")   and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  26 [label="Esprit de Corps: 他对你的看法大大降低了。"];
+	  27 [label="Jump to: [know_klaasje]"];
+	  28 [label="Drama: 是艺术。"];
+	  29 [label="Kim Kitsuragi: “被害人？在我们跟她交谈之前，有什么我应该知道的吗？”"];
+	  30 [label="You: “认识。”"];
+	  31 [label="Half Light: 你感觉自己的胸腔内部结起了坚冰，冷汗顺着你的脖子往下淌……"];
+	  32 [label="Kim Kitsuragi: “好吧，”他点点头。“还能应付。”"];
+	  33 [label="Kim Kitsuragi: “很好。我就假设她偷听了你——还有别的吗？”"];
+	  34 [label="You: “什么怎么了？”"];
+	  35 [label="You: “我觉得我认得那个女人。”"];
+	  36 [label="You: “她知道我在晕过去之前做了很疯狂的事情。狂欢的有点过头。而且还知道我精神状况不太好。”"];
+	  37 [label="Jump to: [know_klaasje]"];
+	  38 [label="Esprit de Corps: 他的担保让你感到坚强。一切都会没事的。"];
+	  39 [label="You: “她说我稍后肯定会审问她，对我来说一定会*很糟糕*。”"];
+	  40 [label="You: “而且……还有点……眼皮底抖得像果冻一样？”（指着你发炎的眼睛。）"];
+	  41 [label="You: 不是很有意思。"];
+	  43 [label="You: “这是艺术。你不会理解的。”"];
+	  44 [label="You: “我试过和她搭讪……”"];
+	  45 [label="Kim Kitsuragi: “明白。”他毫无表情。"];
+	  46 [label="You: “我猜应该挺好的吧。”"];
+	  47 [label="You: “你是说当他提到她名字的时候，那副汗流满面，坐立不安的样子？”"];
+	  48 [label="You: “我见过她。在我醒来之后，在走廊里见过。”"];
+	  49 [label="Inland Empire: 原来这就是被*走访*的感觉……"];
+	  50 [label="You: 有意思。"];
+	  51 [label="You: “我不会回答这个问题的，警督。”"];
+	  52 [label="Variable[\"whirling.hardies_said_you_know_klaasje\"] == true"];
+	  53 [label="Variable[\"whirling.hardies_said_you_know_klaasje\"] == true", shape=diamond];
+	  54 [label="!(Variable[\"whirling.hardies_said_you_know_klaasje\"] == true)", shape=diamond];
+	  55 [label="Kim Kitsuragi: “是的。”"];
+	  56 [label="Kim Kitsuragi: “那就*不要*再提这个了。”他停顿了一下。"];
+	  57 [label="Kim Kitsuragi: “还有别的吗？”"];
+	  58 [label="Kim Kitsuragi: “所以她是无意中听到你的？或者你们一起*派对*了？”"];
+	  59 [label="Kim Kitsuragi: “还有别的吗？”"];
+	  60 [label="Variable[\"whirling.kim_klaasje_said_one_thing\"]"];
+	  61 [label="Variable[\"whirling.kim_klaasje_said_one_thing\"]", shape=diamond];
+	  62 [label="!(Variable[\"whirling.kim_klaasje_said_one_thing\"])", shape=diamond];
+	  63 [label="You: 我没什么好隐瞒的。"];
+	  64 [label="Authority: 他没有给你留下退让的空间。"];
+	  65 [label="Horrific Necktie: 当然是了，你这个狡猾的混蛋！对他爆粗口，把他扔出去。"];
+	  66 [label="Jump to: [You: \"\"I think I know that woman.\"\"]"];
+	  67 [label="Kim Kitsuragi: “你的意思是……”他的声音变得低沉又镇静。“*你*强暴她了吗？”"];
+	  68 [label="You: “她偷听到我在听音乐，还有做些奇怪的事——从她的房间。就是你旁边那间。”"];
+	  69 [label="Variable[\"whirling.klaasje_i_wanna_have_fuck_with_you\"] == false"];
+	  70 [label="Variable[\"whirling.klaasje_i_wanna_have_fuck_with_you\"] == false", shape=diamond];
+	  71 [label="!(Variable[\"whirling.klaasje_i_wanna_have_fuck_with_you\"] == false)", shape=diamond];
+	  72 [label="Inland Empire: 我不这么认为。"];
+	  73 [label="Kim Kitsuragi: “是的。”"];
+	  74 [label="Kim Kitsuragi: “当你提到那个受害者名字的时候，看起来有些奇怪。”他看着你的眼睛：“你认识那个女人吗？”"];
+	  75 [label="Jump to: [You: \"\"It was nothing.\"\"]"];
+	  76 [label="Jump to: [know_klaasje]"];
+	  77 [label="Kim Kitsuragi: “这一点也不专业。”他重复到：“不跟我分享信息这一点很*不专业*。”"];
+	  78 [label="Kim Kitsuragi: “*进行*的怎么样一点也不重要——还有什么吗？”"];
+	  79 [label="You: “没什么。”"];
+	  80 [label="Kim Kitsuragi: “没什么，你差点崩溃了。”他看着你的眼睛：“你认识那个受害者吗？”"];
+	  81 [label="Inland Empire: 如果你确实做了——但你只是*不记得*了？"];
+	  82 [label="You: “不认识。”"];
+	  83 [label="Kim Kitsuragi: “明白——你周一状况不太好。”"];
+	  84 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  85 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  86 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  87 [label="You: “是啊，我们玩了一整晚。像野小子一样嗨到天亮。”"];
+	  88 [label="Rhetoric: 不过，真是这样吗？‘没什么大不了’？你还会遇到困难的，试着别搞砸了。"];
+	  89 [label="You: “她知道我不记得自己是警察了。”"];
+	  90 [label="Jump to: [know_klaasje]"];
+	  91 [label="Kim Kitsuragi: “*是的*，”他点头。如果能*早点*知道就好了”"];
+	  92 [label="You: “没找到机会。”"];
+	  93 [label="Kim Kitsuragi: “本来应该发生的。还有别的吗？”"];
+	  94 [label="Jump to: [know_klaasje]"];
+	  95 [label="Kim Kitsuragi: “还有什么吗？”"];
+	  96 [label="You: “好吧。”"];
+	  97 [label="Kim Kitsuragi: 他点点头。“我们会没事的，警官。这没什么大不了的。”\n“我们会没事的，警督。这不算什么。”"];
+	  0 -> 1
+	  1 -> 52
+	  2 -> 75
+	  2 -> 35
+	  3 -> 56
+	  4 -> 5
+	  4 -> 6
+	  5 -> 41
+	  5 -> 50
+	  5 -> 63
+	  6 -> 10
+	  7 -> 27
+	  8 -> 36
+	  8 -> 44
+	  8 -> 13
+	  8 -> 48
+	  8 -> 18
+	  8 -> 21
+	  8 -> 89
+	  9 -> 10
+	  10 -> 51
+	  10 -> 68
+	  10 -> 87
+	  11 -> 7
+	  12 -> 64
+	  13 -> 60
+	  14 -> 8
+	  15 -> 37
+	  16 -> 34
+	  16 -> 47
+	  16 -> 79
+	  17 -> 8
+	  18 -> 67
+	  19 -> 94
+	  20 -> 14
+	  21 -> 19
+	  22 -> 10
+	  23 -> 24
+	  23 -> 25
+	  24 -> 65
+	  25 -> 10
+	  27 -> 8
+	  28 -> 35
+	  28 -> 75
+	  28 -> 43
+	  29 -> 14
+	  30 -> 20
+	  31 -> 3
+	  32 -> 90
+	  33 -> 37
+	  34 -> 74
+	  35 -> 29
+	  36 -> 58
+	  37 -> 8
+	  38 -> 88
+	  39 -> 91
+	  40 -> 55
+	  41 -> 84
+	  43 -> 2
+	  44 -> 45
+	  45 -> 69
+	  46 -> 78
+	  47 -> 73
+	  48 -> 83
+	  49 -> 4
+	  50 -> 72
+	  51 -> 15
+	  52 -> 53
+	  52 -> 54
+	  53 -> 16
+	  54 -> 16
+	  55 -> 28
+	  56 -> 95
+	  57 -> 27
+	  58 -> 49
+	  59 -> 37
+	  60 -> 61
+	  60 -> 62
+	  61 -> 97
+	  62 -> 77
+	  63 -> 81
+	  64 -> 14
+	  65 -> 10
+	  66 -> 35
+	  67 -> 31
+	  68 -> 59
+	  69 -> 70
+	  69 -> 71
+	  70 -> 11
+	  70 -> 46
+	  71 -> 11
+	  71 -> 46
+	  71 -> 39
+	  72 -> 23
+	  73 -> 40
+	  73 -> 66
+	  74 -> 82
+	  74 -> 30
+	  75 -> 79
+	  76 -> 8
+	  77 -> 26
+	  78 -> 27
+	  79 -> 80
+	  80 -> 82
+	  80 -> 30
+	  81 -> 84
+	  82 -> 12
+	  83 -> 90
+	  84 -> 85
+	  84 -> 86
+	  85 -> 9
+	  86 -> 22
+	  87 -> 33
+	  89 -> 32
+	  90 -> 8
+	  91 -> 96
+	  91 -> 92
+	  92 -> 93
+	  93 -> 27
+	  94 -> 8
+	  95 -> 76
+	  96 -> 57
+	  97 -> 38
+}
+

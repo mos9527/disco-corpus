@@ -1,0 +1,80 @@
+# EVRART ORB / communistquest
+# You get to attempt to smell Evrart and ask him about underground communism
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Rhetoric: Yes, *of course*. Now we're on the right track..."];
+	  3 [label="You: Inhale."];
+	  4 [label="Rhetoric: But you can't just come out and *ask* him. You should make your introduction first. Pay homage. This is a man of *stature*."];
+	  5 [label="Evrart Claire: Meanwhile, the man of stature clatters away on his typewriter, wilfully indifferent to your presence."];
+	  6 [label="Untitled hub"];
+	  7 [label="You: Where am I?"];
+	  8 [label="Kim Kitsuragi: \"Well? Smelling much *communism* around the Union boss's office?\""];
+	  9 [label="Perception (Smell): We're getting crates and pallets calling to mind vast stands of winter pines, a swirl of ancient odours absorbed by heavy carpet fibres, but also a pervasive, treacly *sweetness* that somehow reminds you of kola nuts..."];
+	  10 [label="You: \"Hmmm.\""];
+	  11 [label="IsKimHere()"];
+	  12 [label="IsKimHere()", shape=diamond];
+	  13 [label="!(IsKimHere())", shape=diamond];
+	  15 [label="Kim Kitsuragi: The lieutenant gives you a sharp sideways look."];
+	  16 [label="Rhetoric: Now *this* place seems promising from an ideological angle..."];
+	  17 [label="Rhetoric: An important place. One of the last bastions of the left in Martinaise. Perhaps here you'll find the man who'll help you get organised?"];
+	  18 [label="Perception (Smell): ... an office? Something officious? Is that a word? There's a bit of dust in the air that may be triggering your allergies."];
+	  19 [label="Evrart Claire: Meanwhile, Evrart Claire clatters away on his typewriter, wilfully indifferent to your presence."];
+	  20 [label="Variable[\"cargo.orb_perc_communism\"]"];
+	  21 [label="Variable[\"cargo.orb_perc_communism\"]", shape=diamond];
+	  22 [label="!(Variable[\"cargo.orb_perc_communism\"])", shape=diamond];
+	  23 [label="You: \"Hush, Kim, I'm detecting.\""];
+	  24 [label="Variable[\"cargo.evrart_evrart_met\"]"];
+	  25 [label="Variable[\"cargo.evrart_evrart_met\"]", shape=diamond];
+	  26 [label="!(Variable[\"cargo.evrart_evrart_met\"])", shape=diamond];
+	  27 [label="Rhetoric: It smells like..."];
+	  28 [label="Variable[\"gates.manana_communist_quest_smelled_kim\"]  or  Variable[\"pier.cindy_communist_quest_smelled_kim\"]"];
+	  29 [label="Variable[\"gates.manana_communist_quest_smelled_kim\"]  or  Variable[\"pier.cindy_communist_quest_smelled_kim\"]", shape=diamond];
+	  30 [label="!(Variable[\"gates.manana_communist_quest_smelled_kim\"]  or  Variable[\"pier.cindy_communist_quest_smelled_kim\"])", shape=diamond];
+	  31 [label="Evrart Claire: Meanwhile, the man behind the desk clatters away on his typewriter, wilfully indifferent to your presence."];
+	  32 [label="Variable[\"cargo.evrart_evrart_met\"]"];
+	  33 [label="Variable[\"cargo.evrart_evrart_met\"]", shape=diamond];
+	  34 [label="!(Variable[\"cargo.evrart_evrart_met\"])", shape=diamond];
+	  35 [label="Perception (Smell): The whole place could probably use a good deep cleaning, you think."];
+	  0 -> 1
+	  1 -> 32
+	  2 -> 6
+	  3 -> 27
+	  4 -> 5
+	  6 -> 3
+	  6 -> 7
+	  7 -> 17
+	  8 -> 10
+	  8 -> 23
+	  9 -> 20
+	  10 -> 24
+	  11 -> 12
+	  11 -> 13
+	  12 -> 28
+	  13 -> 24
+	  15 -> 24
+	  16 -> 6
+	  17 -> 4
+	  18 -> 11
+	  20 -> 21
+	  20 -> 22
+	  21 -> 35
+	  22 -> 18
+	  23 -> 24
+	  24 -> 25
+	  24 -> 26
+	  25 -> 19
+	  26 -> 31
+	  27 -> 9
+	  28 -> 29
+	  28 -> 30
+	  29 -> 8
+	  30 -> 15
+	  32 -> 33
+	  32 -> 34
+	  33 -> 2
+	  34 -> 16
+	  35 -> 11
+}
+

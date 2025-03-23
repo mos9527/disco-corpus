@@ -1,0 +1,113 @@
+# WHIRLING F1 / ELEVATOR
+# 1. You experience the lovely elevator and wonder what it was used for.
+#2. You can go up and down.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Elevator: The elevator stands open, inviting you to step inside."];
+	  3 [label="Elevator: The elevator lurches and squeaks, like the belly of some ancient beast, as you descend...."];
+	  4 [label="You: Look in."];
+	  5 [label="Kim Kitsuragi: \"Look on the bright side: if it fails, we will only sustain minor injuries. I'm talking three, maybe four months in the hospital. Maximum five.\""];
+	  6 [label="Variable[\"whirling.elevator_main_reached\"]"];
+	  7 [label="Variable[\"whirling.elevator_main_reached\"]", shape=diamond];
+	  8 [label="!(Variable[\"whirling.elevator_main_reached\"])", shape=diamond];
+	  9 [label="Kim Kitsuragi: \"Seems like a small freight elevator for transporting machinery. For that -- it's pretty quaint.\" He taps the on the guttering light bulb -- it's golden in the dark."];
+	  10 [label="You: \"This elevator must have been needed to transport the pinball machines up and down.\"\n\"So it was mostly pinball machines riding this elevator.\""];
+	  11 [label="You: Go down."];
+	  12 [label="You: (Close the doors and go up.)"];
+	  13 [label="You: [Leave.]"];
+	  14 [label="You: \"So it's *not* a message from the future?\""];
+	  15 [label="Kim Kitsuragi: \"If some form of time travel becomes possible in the future, I doubt its inventors will use it to repair elevators in Martinaise,” the lieutenant responds with a grave voice."];
+	  16 [label="Elevator: The elevator screeches and rattles, like the belly of some ancient beast, as it carries you upward..."];
+	  18 [label="Kim Kitsuragi: \"No, I think the bureaucrats just forgot about this back-room elevator after the Revolution.\""];
+	  19 [label="Logic: This elevator must have been used to transport pinball machines to and from the upstairs workshop."];
+	  20 [label="elevatormainhub"];
+	  21 [label="You: Look at the elevator controls."];
+	  22 [label="You: \"This elevator was last maintained in the *future*?\""];
+	  23 [label="Elevator: This small elevator is dimly lit by a bulb that's been glowing for ages. The latticed cage is open, inviting you to step inside."];
+	  24 [label="You: \"That means it's not really that safe, is it.\""];
+	  25 [label="Elevator: The deep scratches on the floor suggest it was used as a freight elevator -- for transporting heavy machinery. And one man."];
+	  26 [label="Kim Kitsuragi: \"Seems so, although it's pretty... quaint for a freight elevator.\" He taps on the guttering light bulb -- it's golden in the dark."];
+	  27 [label="You: Could this have been for moving pinball machines up and down?\nWould a pinball machine really fit in here?"];
+	  28 [label="You: \"That's disappointing.\""];
+	  29 [label="You: \"I wonder what this elevator was used for.\""];
+	  30 [label="Jump to: [elevatormainhub]"];
+	  31 [label="Jump to: [elevatormainhub]"];
+	  32 [label="Elevator: Looks like one would fit in there, yes. Although it's also surprisingly human -- in the golden light of that ancient bulb.\nJust about. If tilted precisely. For a small elevator this one is surprisingly nice. The ancient golden bulb gutters in the dark."];
+	  33 [label="Elevator: Smells of nougat and sweat. Your head brushes up against the ceiling. There is a control panel to your right -- and just enough room for two people to fit in."];
+	  34 [label="Elevator: There are large rectangular buttons: 'Monter', 'Descendre', and an international: 'Call for Emergency Assistance'. That third one appears to be broken."];
+	  35 [label="Kim Kitsuragi: \"No, it was maintained in '88 of the *previous* century.\""];
+	  36 [label="Variable[\"auto.visited_pinball_workshop\"]  and  Variable[\"whirling.elevator_use\"] == false  and  Variable[\"whirling.elevator_logic_use\"] == false"];
+	  37 [label="Variable[\"auto.visited_pinball_workshop\"]  and  Variable[\"whirling.elevator_use\"] == false  and  Variable[\"whirling.elevator_logic_use\"] == false", shape=diamond];
+	  38 [label="!(Variable[\"auto.visited_pinball_workshop\"]  and  Variable[\"whirling.elevator_use\"] == false  and  Variable[\"whirling.elevator_logic_use\"] == false)", shape=diamond];
+	  39 [label="Jump to: [elevatormainhub]"];
+	  40 [label="Perception (Sight): The maintenance card under the control panel reads: 'Last Maintenance: 10 July '88'."];
+	  41 [label="You: What were you used for, elevator?"];
+	  42 [label="Kim Kitsuragi: \"At the end of the last century.\" He nods. \"Look on the bright side. If it fails, we will only sustain minor injuries -- I'm talking three, maybe four months in the hospital. maximum five.\""];
+	  43 [label="Kim Kitsuragi: \"That it does.\" The lieutenant peeks in. \"I say -- let's brave it.\""];
+	  44 [label="You: \"Eighty-eight... This elevator was maintained a long time ago.\""];
+	  45 [label="You: [Leave.]"];
+	  46 [label="Encyclopedia: A small steel plaque reads 'Halter 800'. Halter is a Königsteiner lift company who went out of business a long, long time ago."];
+	  47 [label="You: \"It says the last maintenance was in '88.\""];
+	  48 [label="Rhetoric: It appears his whole enthusiasm is sarcastic."];
+	  0 -> 1
+	  1 -> 6
+	  2 -> 36
+	  4 -> 33
+	  5 -> 48
+	  6 -> 8
+	  6 -> 7
+	  7 -> 2
+	  8 -> 23
+	  9 -> 31
+	  10 -> 26
+	  11 -> 3
+	  12 -> 16
+	  14 -> 18
+	  15 -> 39
+	  18 -> 39
+	  19 -> 20
+	  20 -> 41
+	  20 -> 10
+	  20 -> 11
+	  20 -> 12
+	  20 -> 13
+	  20 -> 47
+	  20 -> 21
+	  20 -> 27
+	  20 -> 29
+	  21 -> 34
+	  22 -> 35
+	  23 -> 4
+	  23 -> 45
+	  24 -> 5
+	  25 -> 31
+	  26 -> 31
+	  27 -> 32
+	  28 -> 15
+	  29 -> 9
+	  30 -> 20
+	  31 -> 20
+	  32 -> 31
+	  33 -> 40
+	  34 -> 46
+	  35 -> 24
+	  35 -> 28
+	  35 -> 14
+	  36 -> 37
+	  36 -> 38
+	  37 -> 19
+	  38 -> 20
+	  39 -> 20
+	  40 -> 36
+	  41 -> 25
+	  42 -> 48
+	  43 -> 44
+	  43 -> 22
+	  44 -> 42
+	  46 -> 30
+	  47 -> 43
+	  48 -> 39
+}
+

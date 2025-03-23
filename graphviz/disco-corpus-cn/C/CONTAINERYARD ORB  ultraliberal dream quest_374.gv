@@ -1,0 +1,90 @@
+# CONTAINERYARD ORB / ultraliberal dream quest
+# Savoir Faire hears wealth humming in the container -- whether it's raised or lowered. Also gives you instant access to MRLBG.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Savoir Faire: 看到那个巨大的集装箱了吗，就是那个巨大机械臂吊起来的那个？没错，就是它！我们得把那个宝贝集装箱弄下来。用那边的操纵杆试试吧。"];
+	  3 [label="You: 没错，可是……"];
+	  4 [label="Savoir Faire: 那儿！那个你移动过的集装箱。里面有*钱*的味道。我们得想办法进去。"];
+	  5 [label="You: 你有什么建议？"];
+	  6 [label="Savoir Faire: 似乎是超级大富豪发出的噪音……好像就在我们上面。"];
+	  7 [label="You: （往上看。）"];
+	  8 [label="Savoir Faire: 不，不是雨——是是超级大富豪发出的噪音……好像就在我们上面。"];
+	  9 [label="Savoir Faire: 不，不是雪——是是超级大富豪发出的噪音……好像就在我们上面。"];
+	  10 [label="Savoir Faire: 开门？得了，我本来不该告诉你的。带我去看看，让我来给你演示怎么开门。"];
+	  11 [label="You: 我什么也没听见。"];
+	  12 [label="You: 先等等。我们为什么要去集装箱里找富人呢？"];
+	  13 [label="Savoir Faire: 我不要‘可是’，我要‘可以’。动起来！"];
+	  14 [label="You: 等等，你是说避税天堂？"];
+	  15 [label="You: 可是我已经尝试过要打开它了，但是失败了。"];
+	  16 [label="You: 没问题，老大。我这就去把机械臂弄下来……[离开。]"];
+	  17 [label="Savoir Faire: *等等*？我们可没时间等等——已经*迫在眉睫*了！还不赶快去把那机械臂弄下来？我们要去做买卖了。"];
+	  18 [label="greetinghub"];
+	  19 [label="You: 等等，什么是OFC？"];
+	  20 [label="You: 下雪的时候一切都安静了下来。"];
+	  21 [label="You: 听见什么？"];
+	  22 [label="Variable[\"cargo.crane_container_moved\"]"];
+	  23 [label="Variable[\"cargo.crane_container_moved\"]", shape=diamond];
+	  24 [label="!(Variable[\"cargo.crane_container_moved\"])", shape=diamond];
+	  25 [label="Savoir Faire: 嘘，你听见了吗？"];
+	  26 [label="Savoir Faire: 是的，我确定。*有人*把财产装在这些OFC里。"];
+	  27 [label="Savoir Faire: 你的职业道德很*高*嘛，朋友。没有人会拒绝为了巨大*成功*而脏一脏手的。"];
+	  28 [label="Variable[\"cargo.container_rhetoric_wc\"]"];
+	  29 [label="Variable[\"cargo.container_rhetoric_wc\"]", shape=diamond];
+	  30 [label="!(Variable[\"cargo.container_rhetoric_wc\"])", shape=diamond];
+	  31 [label="Savoir Faire: 是时候展现*大师*风范了。在鬼鬼面前，没有任何门锁能够撑过一回合。带我去看看。"];
+	  32 [label="Perception (Hearing): 你听到码头上海水拍打已被海藻侵蚀的混凝土的声音，但绝对没有什么大富豪的噪音。"];
+	  34 [label="You: 你在说雨吗？"];
+	  35 [label="Logic: 等等……为什么超级大富豪要躲在集装箱里呢？"];
+	  36 [label="You: 我一个人也没看见。你确定吗？\n还是没有。你确定？"];
+	  37 [label="Encyclopedia: OFC就是离岸财务中心 —— 也就是避税天堂。EPIS已经启用了离岸网络来对抗这些OFC，但这个问题仍然很普遍。"];
+	  38 [label="Savoir Faire: 好了。无论那里面的人是谁，他肯定很有钱。那么就让我们来说服他们买下我们的*独家*艺术画作吧。"];
+	  39 [label="Savoir Faire: 避税天堂，OFC，洗涤池，导管，*天堂*……把这些术语记住了，骗子小哥。现在往上看！"];
+	  0 -> 1
+	  1 -> 22
+	  2 -> 35
+	  3 -> 13
+	  4 -> 5
+	  4 -> 15
+	  5 -> 10
+	  6 -> 32
+	  7 -> 2
+	  8 -> 32
+	  9 -> 32
+	  11 -> 6
+	  12 -> 17
+	  14 -> 39
+	  15 -> 31
+	  16 -> 27
+	  17 -> 16
+	  17 -> 3
+	  18 -> 34
+	  18 -> 11
+	  18 -> 20
+	  18 -> 21
+	  19 -> 39
+	  20 -> 9
+	  21 -> 6
+	  22 -> 24
+	  22 -> 23
+	  23 -> 28
+	  24 -> 25
+	  25 -> 18
+	  26 -> 37
+	  28 -> 29
+	  28 -> 30
+	  29 -> 38
+	  30 -> 4
+	  32 -> 36
+	  32 -> 7
+	  34 -> 8
+	  35 -> 16
+	  35 -> 12
+	  36 -> 26
+	  37 -> 19
+	  37 -> 14
+	  37 -> 7
+	  39 -> 7
+}
+

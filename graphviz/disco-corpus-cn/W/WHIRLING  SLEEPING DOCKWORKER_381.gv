@@ -1,0 +1,456 @@
+# WHIRLING / SLEEPING DOCKWORKER
+# Downstairs at the Whirling In Rags there's a sleeping dockworker. Interfacing people can steal his wallet and work pass, Phys inst can wake him up by yelling and then get some info on the Union and the strike.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Rhetoric: 意思是说：你不会再从我这里得到更多消息了。"];
+	  3 [label="Main hub"];
+	  4 [label="You: “警督，这是谁？”"];
+	  5 [label="You: “我已经尝过了。这瓶朗姆酒挺不错的。”"];
+	  6 [label="Sleeping Dockworker: 码头工人没有回答。他的脑袋已经靠在桌子上香甜地睡着了。"];
+	  7 [label="Jump to: [Main hub]"];
+	  8 [label="You: “当然注意到了，这里完全就是个*精神病院*。”"];
+	  9 [label="Sleeping Dockworker: “太好了。”工人眯起眼睛，似乎想要把睡魔吓跑。"];
+	  10 [label="Interfacing: 你的手指巧妙地伸进了钩环，轻轻打开了弹簧塞。金属圈上挂着一张塑料身份证，还有一个皮革包边的钱包……"];
+	  11 [label="You: 拿起药丸。"];
+	  12 [label="Sleeping Dockworker: 一个男人趴在桌子上睡着了，他穿着泥泞的靴子，工作服落在地上。衬衫背后印有一个树形的标志，以及“野松”的字样。"];
+	  13 [label="You: “我只想看看如果我大喊的话会发生什么。”"];
+	  14 [label="You: “你好像不太在意啊。你们这里的树上经常挂着那种玩意吗？”"];
+	  15 [label="Sleeping Dockworker: 男人发出一阵响亮的鼾声。他要醒了吗？看起来不像，不过你永远也不会知道。动作最好快一点！"];
+	  16 [label="Jump to: [Questions hub]"];
+	  17 [label="You: 偷走码头工人的身份证。"];
+	  18 [label="You: Variable[\"whirling.sleeper_redcheck_stealing_stuff\"]"];
+	  19 [label="Variable[\"whirling.sleeper_redcheck_stealing_stuff\"]", shape=diamond];
+	  20 [label="!(Variable[\"whirling.sleeper_redcheck_stealing_stuff\"])", shape=diamond];
+	  21 [label="Sleeping Dockworker: Variable[\"whirling.sleeper_felt_itch\"]"];
+	  22 [label="Variable[\"whirling.sleeper_felt_itch\"]", shape=diamond];
+	  23 [label="!(Variable[\"whirling.sleeper_felt_itch\"])", shape=diamond];
+	  24 [label="Sleeping Dockworker: IsKimHere()"];
+	  25 [label="IsKimHere()", shape=diamond];
+	  26 [label="!(IsKimHere())", shape=diamond];
+	  27 [label="Half Light: 动静就像摇一串铃铛一样！你在做什么，你会被抓住的！"];
+	  28 [label="Logic: 可能是他在工会的同事。"];
+	  29 [label="You: 翻一下钱包，把里面的东西拿出来。"];
+	  30 [label="You: “那很好啊。”"];
+	  31 [label="Sleeping Dockworker: Variable[\"whirling.sense_rum_electrochem_licked_it\"]"];
+	  32 [label="Variable[\"whirling.sense_rum_electrochem_licked_it\"]", shape=diamond];
+	  33 [label="!(Variable[\"whirling.sense_rum_electrochem_licked_it\"])", shape=diamond];
+	  34 [label="You: “现在我需要你回答几个问题。”"];
+	  35 [label="You: 而这个男人呢？"];
+	  36 [label="You: “你是说事情可能会朝暴力的方向发展？”"];
+	  37 [label="Sleeping Dockworker: Variable[\"whirling.sleeper_afraids_something\"] == true"];
+	  38 [label="Variable[\"whirling.sleeper_afraids_something\"] == true", shape=diamond];
+	  39 [label="!(Variable[\"whirling.sleeper_afraids_something\"] == true)", shape=diamond];
+	  40 [label="Kim Kitsuragi: “可能是因为港口正在罢工吧。他们没什么可做的——除了喝酒和睡觉。”"];
+	  41 [label="You: “你难道不是应该像陵墓里的尸体一样，置身于深不可测的黑暗之中吗？”"];
+	  42 [label="Sleeping Dockworker: “有他们就好。测颅先生能搞定，他正在看守大门，我只想睡觉。或者说，我*本来*只想睡觉 ……”"];
+	  43 [label="Sleeping Dockworker: IsKimHere()"];
+	  44 [label="IsKimHere()", shape=diamond];
+	  45 [label="!(IsKimHere())", shape=diamond];
+	  46 [label="Kim Kitsuragi: “老实说，他是对的。一般来说，警察不会到处*占用*别人的东西。我们走吧。”"];
+	  47 [label="Sleeping Dockworker: “如果你走运的话，我也许能有答案呢。”"];
+	  48 [label="Kim Kitsuragi: 不。他在看别的方向——也许是故意的。"];
+	  49 [label="You: “等等——*谁*说的？”"];
+	  50 [label="Physical Instrument: 他说出“测颅先生”的方式，暗示了他对这位‘碎颅者’身体力量的极端信任。对于你来说，他好像是个实力相称的对手。你应该*干掉*他。"];
+	  51 [label="You: “你还*活着*吗？你看起来一点反应都没有……”"];
+	  52 [label="You: “好吧，那你就继续睡吧。”[离开。]"];
+	  53 [label="Physical Instrument: 他看起来和桌子合为一体了。要想把他弄醒需要费不少力气。"];
+	  54 [label="Sleeping Dockworker: “那是我雇主的名字。我在物流公司上班。”"];
+	  55 [label="Sleeping Dockworker: “如果有人决定死在树上，那又关我什么事呢？”"];
+	  56 [label="Sleeping Dockworker: “等等，什么？我只是在睡觉。”他似乎有些生气。“你想干什么，警官？”"];
+	  57 [label="You: 检查他安全扣上的塑料卡。"];
+	  58 [label="Sleeping Dockworker: 这是一张码头工人的身份证，既是班次卡，又是工作许可。照片上的那个年轻力壮的小伙子正回望着你：圣地亚哥·S·约翰。"];
+	  59 [label="Sleeping Dockworker: “我不知道你在说什么，好好先生，但是我晕过去的时候，就是真的*晕过去*了。没什么尸体。没什么陵墓。只有*休闲时光*。”"];
+	  60 [label="Sleeping Dockworker: Variable[\"whirling.sleeper_greeting_done\"]"];
+	  61 [label="Variable[\"whirling.sleeper_greeting_done\"]", shape=diamond];
+	  62 [label="!(Variable[\"whirling.sleeper_greeting_done\"])", shape=diamond];
+	  63 [label="Jump to: [Questions hub]"];
+	  64 [label="Jump to: [Main hub]"];
+	  65 [label="Sleeping Dockworker: “我不知道你在说什么，好好先生，但是我晕过去的时候，就是真的*晕过去*了。没有前任什么的。只有*休闲时光*。”"];
+	  66 [label="Interfacing: 一片彩色的塑料在他的安全扣上悬挂着……嗯。让你的手指有些发痒。"];
+	  67 [label="You: 把他叫醒。"];
+	  68 [label="You: Variable[\"whirling.sleeper_yell_him_out_of_sleep\"]"];
+	  69 [label="Variable[\"whirling.sleeper_yell_him_out_of_sleep\"]", shape=diamond];
+	  70 [label="!(Variable[\"whirling.sleeper_yell_him_out_of_sleep\"])", shape=diamond];
+	  71 [label="Jump to: [Main hub]"];
+	  72 [label="Sleeping Dockworker: “举个例子——我可以好好多睡一会儿。”他揉了揉眼睛，然后又把脑袋埋在了桌子上。“要我说，*睡觉*权还差不多。”"];
+	  73 [label="Sleeping Dockworker: “物流公司好？不，那是个噩梦。”他把脑袋又埋在了桌子上。"];
+	  74 [label="You: “我只想知道你都知道些什么。”"];
+	  75 [label="Jump to: [Questions hub]"];
+	  76 [label="You: “呃……那问你尸体的事也没什么意义。我还有其他问题。”"];
+	  77 [label="Jump to: [Main hub]"];
+	  78 [label="Sleeping Dockworker: 你看见柜台上有一包头痛药，应该是从他张开的手里滚落出来的。"];
+	  79 [label="Esprit de Corps: 所以工会的人觉得他是个杀人犯，他这么想——哪怕已经睡得云里雾里？这个并没有*多大*的帮助，不过也算是个信息。做得好，警探。"];
+	  80 [label="You: “我几乎从没出过这栋楼。”"];
+	  81 [label="Sleeping Dockworker: Variable[\"whirling.sleeper_yell_him_out_of_sleep\"]"];
+	  82 [label="Variable[\"whirling.sleeper_yell_him_out_of_sleep\"]", shape=diamond];
+	  83 [label="!(Variable[\"whirling.sleeper_yell_him_out_of_sleep\"])", shape=diamond];
+	  84 [label="Sleeping Dockworker: 这个30多岁的男人慢慢抬起头，朝你露出一副哀怨的样子。“你喊什么，老兄？”"];
+	  85 [label="You: “你为什么在这里睡觉，其他人都在罢工呢？”"];
+	  86 [label="stealing"];
+	  87 [label="You: “梦里见到什么有趣的东西了吗？”"];
+	  88 [label="You: 什么也不说。"];
+	  89 [label="Interfacing: 你笨手笨脚地摆弄着安全扣的弹簧塞，但是完全不起作用……上面悬挂的东西拒绝放松，发出的叮当声更响了。"];
+	  90 [label="You: “什么，不，我没有……我只是想看看他是不是还好。”"];
+	  91 [label="You: “你少插手，酒保！”"];
+	  92 [label="Sleeping Dockworker: “我不知道你在说什么，好好先生，但是我晕过去的时候，就是真的*晕过去*了。没什么尸体，没什么陵墓。只有*休闲时光*。”"];
+	  93 [label="You: 警督看见我了吗？"];
+	  94 [label="Sleeping Dockworker: “没错，你请便吧。”他眨眨眼。“等一下，不对，这是空的。很抱歉，老兄。”"];
+	  95 [label="Sleeping Dockworker: “恭喜，你看见未来了。现在请让我再失陪一下，警官……”工人又把头埋向桌子，准备继续打盹。"];
+	  96 [label="You: “但是他为什么要白天睡大觉呢？”"];
+	  97 [label="You: （不说话，只是发出一声原始的尖叫。）"];
+	  98 [label="Untitled hub"];
+	  99 [label="Garte, the Cafeteria Manager: “好吧——好吧！那就乱动他吧，我不在乎。”他愤怒地哼了一声，然后继续手中的工作。"];
+	  100 [label="Tutorial Agent: 你刚刚捡到了一些镁。这个物品被存放在屏幕的左下角，位于你头像的上方。使用镁可以治疗你受损的士气。"];
+	  101 [label="You: “它是不是纯粹的无，你的意识比一粒麦芽大不了多少？”"];
+	  102 [label="Sleeping Dockworker: 工人盯着你，眼睛因为睡眠有些干涩。他棕褐色的前额上压出了好多皱纹。"];
+	  103 [label="Questions hub"];
+	  104 [label="You: “聊聊院子里的那具尸体吧？”"];
+	  105 [label="Jump to: [Questions hub]"];
+	  106 [label="Sleeping Dockworker: “谢天谢地，没有。”"];
+	  107 [label="Visual Calculus: 顺便提一句，你跟文件上的男人长的一点也不像。"];
+	  108 [label="You: “你的意思是没有领导吗？”"];
+	  109 [label="You: “什么麻烦？”"];
+	  110 [label="Kim Kitsuragi: “不知道。看起来他像是为野松公司工作的，那是一家物流公司，是港口的所有者和运营商。”"];
+	  111 [label="You: “必须有人调查一下，看起来我就是那个人。把你知道的都告诉我吧。”"];
+	  112 [label="Sleeping Dockworker: “我可以告诉你这个——你要有麻烦了。”"];
+	  113 [label="You: “麻烦不是已经来了吗？不然你把树上吊着个死人叫什么？”"];
+	  114 [label="Sleeping Dockworker: “他们说那个吊在树上的人是个杀人犯。他还有同伙，跟他一样，也都是杀人犯。他们只知道一件事——怎么搞破坏。”"];
+	  115 [label="Inland Empire: 你真不知道它是干什么的，但你直觉这种纸币*非常*重要——你应该留着它。"];
+	  116 [label="Interfacing: 你把塑料身份证从钥匙圈里取了出来，塞进口袋。男人还在打鼾。"];
+	  117 [label="Sleeping Dockworker: Variable[\"TASK.pay_for_the_damages\"]"];
+	  118 [label="Variable[\"TASK.pay_for_the_damages\"]", shape=diamond];
+	  119 [label="!(Variable[\"TASK.pay_for_the_damages\"])", shape=diamond];
+	  120 [label="Jump to: [Main hub]"];
+	  121 [label="Sleeping Dockworker: 工人盯着你，眼睛睡的有些干涩。他棕褐色的前额上压出了好多皱纹。"];
+	  122 [label="You: “我们可能在对付一个*罪犯*呢。别打扰我工作。”"];
+	  123 [label="Interfacing: 这只是一个*主意*，拜托。大家都放松点。结果并不是太好——也不代表这就是个坏主意吧。或者你不应该*占用*那玩意……"];
+	  124 [label="Sleeping Dockworker: Variable[\"whirling.sleeper_physinstr_you_failed\"]"];
+	  125 [label="Variable[\"whirling.sleeper_physinstr_you_failed\"]", shape=diamond];
+	  126 [label="!(Variable[\"whirling.sleeper_physinstr_you_failed\"])", shape=diamond];
+	  127 [label="Sleeping Dockworker: “所有人都这么说，这是本地的一个传闻。”他突然打了个哈欠。"];
+	  128 [label="Endurance: 睡他妈的鬼觉。尽管有头痛——还有恶心——你感觉自己至少跑了10公里。"];
+	  129 [label="You: “这是你的吗？”（指着酒瓶和洒出来的朗姆酒。）"];
+	  130 [label="Volition: 你确定你在这里做的是正当的警察行为吗？你还是可以离开，然后*什么也不做*。"];
+	  131 [label="Sleeping Dockworker: 工人正在酣睡。"];
+	  132 [label="You: 关上安全扣。"];
+	  133 [label="Sleeping Dockworker: “举个例说——早晨我可以多睡一会儿……”他揉了揉眼睛，叹了口气。“工作权？要我说，*睡觉*权还差不多。”"];
+	  134 [label="Jump to: [Questions hub]"];
+	  135 [label="Garte, the Cafeteria Manager: “是啊，当然了！我不在乎。只要别瞎碰他的东西，好吗！”他愤怒地哼了一声，然后继续手中的工作。"];
+	  136 [label="Kim Kitsuragi: 警督朝你微微点点头——然后在蓝色笔记本里做了点笔记。"];
+	  138 [label="Sleeping Dockworker: Variable[\"whirling.sleeper_picked_magnesium\"]"];
+	  139 [label="Variable[\"whirling.sleeper_picked_magnesium\"]", shape=diamond];
+	  140 [label="!(Variable[\"whirling.sleeper_picked_magnesium\"])", shape=diamond];
+	  141 [label="Interfacing: 你找到一张黑色纸币，上面印着一个女人的轮廓。女人看起来生活在几个世纪以前。纸条上写着*5*雷亚尔。感觉很好，很油腻。"];
+	  142 [label="Physical Instrument: 只有一种办法才能把这个懒骨头从沉睡中唤醒。像飓风一样咆哮，把整个建筑物从地上连根拔起！"];
+	  143 [label="Electrochemistry: 哎哟哟。钱。想想你能用它买多少东西。你的大脑突触兴奋地燃烧起来了。"];
+	  144 [label="You: “快醒醒！这是命令，我是执法人员。”"];
+	  145 [label="Sleeping Dockworker: 这个男人不会介意的。你可能比他更需要这东西。"];
+	  146 [label="Sleeping Dockworker: 工人盯着你，眼睛因为睡眠有些干涩。他棕褐色的前额上压出了好多皱纹。"];
+	  147 [label="Physical Instrument: 你轻轻摇了摇他的肩膀，但是什么也没发生。这个男人就算是在船舶机舱里也能睡的很香。"];
+	  148 [label="Sleeping Dockworker: “灌个一两瓶左右，你就会晕倒的。”他摸了摸脸，然后把脸埋进手掌。你可以听到一阵微弱的鼾声。"];
+	  149 [label="Physical Instrument: 你有一种很实际的感觉，这个男人*不是*在信口开河。他很强壮，不过即便是他，在这里也得小心行事。"];
+	  150 [label="Jump to: [Main hub]"];
+	  151 [label="You: “啊，好吧。我猜总是……有点道理吧。”"];
+	  152 [label="Sleeping Dockworker: “港口正在进行罢工呢。想让野松公司的执行董事会明白一些道理。”"];
+	  153 [label="Sleeping Dockworker: “很好，那你已经理解它的要旨了。如果没有那些雇主和雇佣关系的话，我们都会过得更好。”"];
+	  154 [label="Sleeping Dockworker: Variable[\"whirling.sleeper_redcheck_stealing_stuff\"]"];
+	  155 [label="Variable[\"whirling.sleeper_redcheck_stealing_stuff\"]", shape=diamond];
+	  156 [label="!(Variable[\"whirling.sleeper_redcheck_stealing_stuff\"])", shape=diamond];
+	  157 [label="quickchoicehow"];
+	  158 [label="You: “这次罢工背后的组织者是谁？”"];
+	  159 [label="Authority: 警官？就算被粗鲁地唤醒——这个码头工人还是很尊敬警察。至少比平常表现的要多。"];
+	  160 [label="Empathy: 他听起来并不是特别热情。"];
+	  161 [label="Sleeping Dockworker: 他摸了摸脸，然后一头埋进双手里。你可以听见一阵微弱的鼾声。"];
+	  162 [label="Sleeping Dockworker: “真的吗？你把我叫醒就为了这个？”工人茫然地注视着你，然后嘟囔到。“好吧，什么事，警官？”"];
+	  163 [label="Sleeping Dockworker: Variable[\"whirling.sleeper_inland_about_oblivion\"]"];
+	  164 [label="Variable[\"whirling.sleeper_inland_about_oblivion\"]", shape=diamond];
+	  165 [label="!(Variable[\"whirling.sleeper_inland_about_oblivion\"])", shape=diamond];
+	  166 [label="Garte, the Cafeteria Manager: “是啊，当然了。一个*罪犯*。”他翻了个白眼，然后继续手中的工作。"];
+	  167 [label="You: “告诉我——它是不是没有什么*旧日之物*的极乐之境呢？”"];
+	  168 [label="Inland Empire: 在深渊地带里一段小小的*自我*时间……现在你再也不可能回去了。只剩下警探的工作。清醒和侦察。"];
+	  169 [label="You: [离开。]"];
+	  170 [label="Sleeping Dockworker: “你知道的，这里每天都有人死。一个掉沟里了，另一个掉进了检修孔，第三个被野狗吃了。”他缓了一会儿。"];
+	  171 [label="Physical Instrument: 工人继续沉睡，没有被你摇醒。这家伙真是睡的有够沉的。"];
+	  172 [label="Sleeping Dockworker: 沉睡的码头工人对你的行为没什么好说的。他依然沉默。"];
+	  173 [label="You: “你的工作怎么样？”"];
+	  174 [label="Sleeping Dockworker: “你难道没注意到外面出什么事了吗？”"];
+	  175 [label="You: “我不确定你是什么意思。”"];
+	  176 [label="Sleeping Dockworker: “嗯，我想应该是艾弗拉特，他是工会的负责人。他很聪明，知道怎么谈判，他一直在背后支持我们。”"];
+	  177 [label="Jump to: [Questions hub]"];
+	  178 [label="Encyclopedia: 看起来像是圣艾尔人的后裔。这里有很多圣艾尔裔的码头工人。"];
+	  179 [label="Physical Instrument: 他说出“测颅先生”的方式，暗示了他对这位‘碎颅者’身体力量的极端信任。"];
+	  180 [label="Sleeping Dockworker: Variable[\"gates.mhead_introhub_reached\"]"];
+	  181 [label="Variable[\"gates.mhead_introhub_reached\"]", shape=diamond];
+	  182 [label="!(Variable[\"gates.mhead_introhub_reached\"])", shape=diamond];
+	  183 [label="Inland Empire: 他也许正走在你刚才来的那条路上——在那片最初的黑暗深处？"];
+	  184 [label="You: 偷走证件。"];
+	  185 [label="Jump to: [stealing]"];
+	  186 [label="Sleeping Dockworker: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  187 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  188 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  189 [label="Volition: 你并没有100%地弄清楚你的行为是不是*正确*的，不过管它的呢……"];
+	  190 [label="You: “跟我说说野松公司。”（指向他工作服上的字样。）"];
+	  191 [label="Jump to: [stealing]"];
+	  192 [label="You: “你说得对。我们说点别的吧。”"];
+	  193 [label="Garte, the Cafeteria Manager: “别再*乱动*他了，警官！”柜台后面的餐厅经理大叫起来。“我要为这些白痴和他们的*东西*负责。甚至是睡着的时候……”"];
+	  194 [label="Sleeping Dockworker: “是我们……工人。工会。我们知道自己需要什么，知道什么对我们来说是对的。”"];
+	  195 [label="Sleeping Dockworker: “很好。”根本不在意你的存在。“港口那边正在罢工。我们想让野松公司的执行董事会明白一些道理。”"];
+	  196 [label="Sleeping Dockworker: “可以啊，那玩意怎么了？”"];
+	  197 [label="Sleeping Dockworker: “我说的你都听到了。你自己下结论吧。我就知道这么多，而且我也不想知道更多了。”"];
+	  198 [label="Sleeping Dockworker: Variable[\"whirling.sleeper_stole_documents\"] == true  or  Variable[\"whirling.sleeper_stole_money\"] == true"];
+	  199 [label="Variable[\"whirling.sleeper_stole_documents\"] == true  or  Variable[\"whirling.sleeper_stole_money\"] == true", shape=diamond];
+	  200 [label="!(Variable[\"whirling.sleeper_stole_documents\"] == true  or  Variable[\"whirling.sleeper_stole_money\"] == true)", shape=diamond];
+	  201 [label="Sleeping Dockworker: “怎么样？”码头工人打了个大哈欠，然后盯着餐厅的露台大门。有些指纹在玻璃上闪闪发亮。"];
+	  202 [label="Jump to: [Questions hub]"];
+	  0 -> 1
+	  1 -> 60
+	  2 -> 28
+	  3 -> 67
+	  3 -> 4
+	  3 -> 169
+	  3 -> 11
+	  3 -> 17
+	  3 -> 57
+	  4 -> 110
+	  5 -> 148
+	  7 -> 3
+	  8 -> 153
+	  9 -> 134
+	  10 -> 35
+	  11 -> 145
+	  12 -> 53
+	  13 -> 95
+	  14 -> 170
+	  15 -> 130
+	  16 -> 103
+	  17 -> 18
+	  18 -> 19
+	  18 -> 20
+	  19 -> 154
+	  20 -> 154
+	  21 -> 22
+	  21 -> 23
+	  22 -> 3
+	  23 -> 66
+	  24 -> 25
+	  24 -> 26
+	  25 -> 136
+	  26 -> 63
+	  27 -> 193
+	  28 -> 36
+	  29 -> 141
+	  30 -> 73
+	  31 -> 32
+	  31 -> 33
+	  32 -> 98
+	  33 -> 105
+	  34 -> 162
+	  35 -> 15
+	  36 -> 197
+	  37 -> 38
+	  37 -> 39
+	  38 -> 113
+	  38 -> 109
+	  39 -> 109
+	  40 -> 150
+	  41 -> 121
+	  42 -> 180
+	  43 -> 44
+	  43 -> 45
+	  44 -> 46
+	  45 -> 120
+	  46 -> 123
+	  47 -> 177
+	  48 -> 185
+	  49 -> 127
+	  50 -> 16
+	  51 -> 56
+	  52 -> 6
+	  53 -> 66
+	  54 -> 160
+	  55 -> 76
+	  55 -> 111
+	  56 -> 159
+	  57 -> 58
+	  58 -> 71
+	  59 -> 168
+	  60 -> 61
+	  60 -> 62
+	  61 -> 131
+	  62 -> 12
+	  63 -> 103
+	  64 -> 3
+	  65 -> 168
+	  66 -> 138
+	  67 -> 68
+	  68 -> 69
+	  68 -> 70
+	  69 -> 81
+	  70 -> 81
+	  71 -> 3
+	  72 -> 202
+	  73 -> 202
+	  74 -> 170
+	  75 -> 103
+	  76 -> 47
+	  77 -> 3
+	  78 -> 3
+	  79 -> 63
+	  80 -> 195
+	  81 -> 82
+	  81 -> 83
+	  82 -> 142
+	  83 -> 124
+	  84 -> 178
+	  85 -> 42
+	  86 -> 184
+	  86 -> 29
+	  86 -> 132
+	  86 -> 93
+	  87 -> 106
+	  88 -> 161
+	  89 -> 27
+	  90 -> 135
+	  91 -> 99
+	  92 -> 168
+	  93 -> 48
+	  94 -> 31
+	  95 -> 159
+	  96 -> 40
+	  97 -> 84
+	  98 -> 88
+	  98 -> 5
+	  99 -> 43
+	  100 -> 64
+	  101 -> 102
+	  102 -> 92
+	  103 -> 129
+	  103 -> 104
+	  103 -> 52
+	  103 -> 85
+	  103 -> 87
+	  103 -> 190
+	  103 -> 158
+	  104 -> 196
+	  105 -> 103
+	  106 -> 192
+	  106 -> 41
+	  106 -> 101
+	  106 -> 167
+	  107 -> 185
+	  108 -> 176
+	  109 -> 197
+	  110 -> 96
+	  111 -> 112
+	  112 -> 149
+	  113 -> 114
+	  114 -> 49
+	  114 -> 36
+	  115 -> 191
+	  116 -> 107
+	  117 -> 118
+	  117 -> 119
+	  118 -> 143
+	  119 -> 115
+	  120 -> 3
+	  121 -> 59
+	  122 -> 166
+	  123 -> 120
+	  124 -> 125
+	  124 -> 126
+	  125 -> 171
+	  126 -> 147
+	  127 -> 2
+	  128 -> 134
+	  129 -> 94
+	  130 -> 86
+	  131 -> 163
+	  132 -> 172
+	  133 -> 202
+	  134 -> 103
+	  135 -> 43
+	  136 -> 79
+	  138 -> 139
+	  138 -> 140
+	  139 -> 3
+	  140 -> 78
+	  141 -> 117
+	  142 -> 144
+	  142 -> 97
+	  143 -> 191
+	  144 -> 84
+	  145 -> 186
+	  146 -> 65
+	  147 -> 77
+	  148 -> 105
+	  149 -> 37
+	  150 -> 3
+	  151 -> 176
+	  152 -> 133
+	  153 -> 72
+	  154 -> 155
+	  154 -> 156
+	  155 -> 10
+	  156 -> 89
+	  157 -> 34
+	  157 -> 51
+	  157 -> 13
+	  158 -> 194
+	  159 -> 103
+	  160 -> 173
+	  160 -> 30
+	  161 -> 105
+	  162 -> 159
+	  163 -> 164
+	  163 -> 165
+	  164 -> 21
+	  165 -> 183
+	  166 -> 43
+	  167 -> 146
+	  168 -> 128
+	  170 -> 55
+	  171 -> 77
+	  172 -> 198
+	  173 -> 201
+	  174 -> 8
+	  174 -> 80
+	  174 -> 175
+	  175 -> 152
+	  176 -> 75
+	  177 -> 103
+	  178 -> 157
+	  179 -> 16
+	  180 -> 181
+	  180 -> 182
+	  181 -> 179
+	  182 -> 50
+	  183 -> 21
+	  184 -> 116
+	  185 -> 86
+	  186 -> 187
+	  186 -> 188
+	  187 -> 64
+	  188 -> 100
+	  189 -> 7
+	  190 -> 54
+	  191 -> 86
+	  192 -> 9
+	  193 -> 90
+	  193 -> 91
+	  193 -> 122
+	  194 -> 108
+	  194 -> 151
+	  195 -> 133
+	  196 -> 74
+	  196 -> 14
+	  197 -> 24
+	  198 -> 200
+	  198 -> 199
+	  199 -> 189
+	  200 -> 7
+	  201 -> 174
+	  202 -> 103
+}
+

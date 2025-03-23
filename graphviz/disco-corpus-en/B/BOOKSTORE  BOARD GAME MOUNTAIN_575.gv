@@ -1,0 +1,125 @@
+# BOOKSTORE / BOARD GAME MOUNTAIN
+# A mountain of different board games.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="noie"];
+	  3 [label="Conceptualization: Books in a *board game* section? Who wants to read books!?"];
+	  4 [label="You: \"I want to buy the *Suzerainty* game.\""];
+	  5 [label="You: Hm, maybe I'm not into all this binoclard stuff."];
+	  6 [label="Inland Empire: Then don't."];
+	  7 [label="Jump to: [mountainhub]"];
+	  8 [label="You: \"Look at me, who'd want to have children with me?\""];
+	  9 [label="You: Anything that really catches my eye?"];
+	  10 [label="Variable[\"doomed.game_ie_family\"]"];
+	  11 [label="Variable[\"doomed.game_ie_family\"]", shape=diamond];
+	  12 [label="!(Variable[\"doomed.game_ie_family\"])", shape=diamond];
+	  13 [label="Plaisance: \"Friends are technically like family.\" She fiddles with her pendant, thinking."];
+	  14 [label="Mountain of Board Games: A towering mountain of colourful board game boxes and Wirrâl codices."];
+	  15 [label="You: \"Yes. Kids, friends, chicks. I have all those.\""];
+	  16 [label="mountainhub"];
+	  17 [label="Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"]"];
+	  18 [label="Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"]", shape=diamond];
+	  19 [label="!(Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"])", shape=diamond];
+	  20 [label="Plaisance: \"Lousy auras there!\" She shudders. \"No, *role-playing games* are popular among those types... you know, who're into those kinds of things. Personally, I don't like it. Not at all!\""];
+	  21 [label="Jump to: [mountainhub]"];
+	  22 [label="You: I don't want to think about this."];
+	  23 [label="Plaisance: \"Then you're a lucky man, officer. Children are the greatest of treasures...\" She fiddles with her pendant, thinking."];
+	  24 [label="You: \"So what about all these 'Wirrâl' things?\""];
+	  25 [label="Plaisance: \"If you say so.\" She gives you a curious glance. \"But you better stay away from those immoral occult rituals.\""];
+	  26 [label="You: \"I don't feel as if I have any kids.\""];
+	  27 [label="Plaisance: \"'Raubritter' is a fun game of economic competition, but can get quite intense after a while. We have games for the whole family. You can play with your children!\""];
+	  28 [label="Physical Instrument: Nonsense for anemic binoclards!"];
+	  29 [label="Jump to: [mountainhub]"];
+	  30 [label="Plaisance: \"Wonderful choice, sir.\" She smiles at you. \"A wholesome *family* game.\""];
+	  31 [label="Mountain of Board Games: There's also a large hardbound tome with intricate cover art: \"The Hunters of Katuak: Boreal Creature Compendium,\" and a pick-your-path adventure gamebook titled \"Tales of Wirrâl: Cavern of Velkraag.\""];
+	  32 [label="Logic: That price *is* steep, but then it's a Third Edition Mega-Setting Supplement, so it makes sense."];
+	  33 [label="Mountain of Board Games: A small mountain of colourful board game boxes. There are numerous types of games for all ages. A lot of shelf space seems to be taken up by Wirrâl-related merchandise."];
+	  34 [label="You: \"Storekeep, what board games do you have here?\""];
+	  35 [label="Jump to: [mountainhub]"];
+	  36 [label="Mountain of Board Games: An endless variety of sourcebooks, lorebooks, and codices litter the table. The top-most book is titled \"Welkin Compendium, Second Edition.\""];
+	  37 [label="You: \"I want to buy the *Wirrâl* game.\""];
+	  38 [label="Inland Empire: Who are you going to play board games with? Do you have friends or family?"];
+	  39 [label="Plaisance: \"Don't be so hard on yourself, sir. You just need to clean up a bit. And technically, friends are a bit like family.\" She fiddles her pendant."];
+	  40 [label="Mountain of Board Games: There's a box that says: \"Wirrâl. Third Edition Mega-Setting Supplements Module\". The side panel notes: \"A *fantastique* adventure board game. New maps and miniatures!\" A sticker on it displays -- 25 reál."];
+	  41 [label="Tutorial Agent: You've acquired an interactable item. Investigate this item further by going to the INTERACT tab in your INVENTORY."];
+	  42 [label="Plaisance: \"Wonderful board games, sir. 'The Viticulturist' is a classic for sure, or perhaps you'd like 'Archipelagos of Insulinde', a very educational game for those interested in geography.\""];
+	  43 [label="Inland Empire: It certainly feels like whatever you are will die with you."];
+	  44 [label="You: Look through the pile of Wirrâl-related items."];
+	  45 [label="You: [Leave.]"];
+	  46 [label="You: Wow, I have children? A family?"];
+	  47 [label="Plaisance: \"For playing with friends I'd recommend 'Suzerainty'. It's a civilization-building game where you build a civilization, then set off to brutally colonize and repress other civilizations. It'll cost 12 reál.\""];
+	  48 [label="You: Do I have friends? (Look at the lieutenant.)"];
+	  49 [label="Jump to: [mountainhub]"];
+	  50 [label="inlandfriendhub"];
+	  52 [label="Inland Empire: Are you actually friends? Or just colleagues thrown together by circumstance?"];
+	  53 [label="Plaisance: \"I've heard they turn people into occult-enthusiasts. That they have rituals, where they try to summon entities. Highly immoral stuff... You can still buy them, though.\" She looks at the table, crossing her arms."];
+	  54 [label="Jump to: [Mountain of Board Games: \"A towering mountain of colourful bo...\"]"];
+	  0 -> 1
+	  1 -> 33
+	  2 -> 8
+	  2 -> 26
+	  2 -> 15
+	  3 -> 9
+	  3 -> 5
+	  4 -> 30
+	  5 -> 54
+	  6 -> 2
+	  7 -> 16
+	  8 -> 39
+	  9 -> 40
+	  10 -> 11
+	  10 -> 12
+	  11 -> 50
+	  12 -> 2
+	  13 -> 47
+	  14 -> 16
+	  15 -> 23
+	  16 -> 34
+	  16 -> 4
+	  16 -> 37
+	  16 -> 44
+	  16 -> 45
+	  16 -> 24
+	  17 -> 18
+	  17 -> 19
+	  18 -> 35
+	  19 -> 41
+	  20 -> 53
+	  21 -> 16
+	  22 -> 6
+	  23 -> 47
+	  24 -> 20
+	  25 -> 17
+	  26 -> 13
+	  27 -> 38
+	  28 -> 29
+	  29 -> 16
+	  30 -> 17
+	  31 -> 3
+	  32 -> 28
+	  33 -> 16
+	  34 -> 42
+	  35 -> 16
+	  36 -> 31
+	  37 -> 25
+	  38 -> 10
+	  39 -> 47
+	  40 -> 32
+	  41 -> 35
+	  42 -> 27
+	  43 -> 2
+	  44 -> 36
+	  46 -> 43
+	  47 -> 21
+	  48 -> 52
+	  49 -> 16
+	  50 -> 48
+	  50 -> 46
+	  50 -> 22
+	  52 -> 2
+	  53 -> 7
+	  54 -> 14
+}
+

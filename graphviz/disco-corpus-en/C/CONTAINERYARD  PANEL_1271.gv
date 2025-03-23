@@ -1,0 +1,113 @@
+# CONTAINERYARD / PANEL
+# very likely we need this panel to make mega-rich-light-bendy-guy container move.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: [Leave.]"];
+	  3 [label="Encyclopedia: *Marche* -- On. *Arrêt* -- Off."];
+	  4 [label="IsKimHere()"];
+	  5 [label="IsKimHere()", shape=diamond];
+	  6 [label="!(IsKimHere())", shape=diamond];
+	  7 [label="Crane Control Panel: No screech of metal when you push the button this time. Only silence, as the crane remains in its state of dormancy."];
+	  8 [label="Crane Control Panel: The crane does not return to its original position. It does not move at all."];
+	  9 [label="Crane Control Panel: With a loud grind the crane shifts overhead, moving a massive metal container through the air..."];
+	  10 [label="You: Understood. Let's get back to the panel."];
+	  11 [label="Jump to: [crane_panel_hub]"];
+	  12 [label="Perception (Smell): A faint smell of burning rubber reaches your nostrils. A short-circuit."];
+	  13 [label="Variable[\"cargo.crane_container_moved\"]"];
+	  14 [label="Variable[\"cargo.crane_container_moved\"]", shape=diamond];
+	  15 [label="!(Variable[\"cargo.crane_container_moved\"])", shape=diamond];
+	  16 [label="Inland Empire: This crane was built with a purpose which has now been fulfilled -- to move *this* container."];
+	  17 [label="Jump to: [IsKimHere()]"];
+	  18 [label="You: Press *Arrêt*."];
+	  19 [label="Variable[\"cargo.crane_container_moved\"]"];
+	  20 [label="Variable[\"cargo.crane_container_moved\"]", shape=diamond];
+	  21 [label="!(Variable[\"cargo.crane_container_moved\"])", shape=diamond];
+	  22 [label="You: Understood. Let's get back to the panel."];
+	  23 [label="Kim Kitsuragi: \"I can't see how that was worth the ruckus...\" He looks at the crate. \"Except for seeing the crane in action. Which, I admit, was satisfying.\""];
+	  24 [label="Jump to: [crane_panel_hub]"];
+	  25 [label="Jump to: [crane_panel_hub]"];
+	  26 [label="You: Its purpose? What do you mean?"];
+	  27 [label="Interfacing: The harbour sleeps as the strike rages in the distance. The crane can rest again, now that its purpose has been fulfilled."];
+	  28 [label="Variable[\"cargo.panel_interf_the_crane\"]"];
+	  29 [label="Variable[\"cargo.panel_interf_the_crane\"]", shape=diamond];
+	  30 [label="!(Variable[\"cargo.panel_interf_the_crane\"])", shape=diamond];
+	  31 [label="Inland Empire: If only you knew..."];
+	  32 [label="You: What's inside the container?"];
+	  33 [label="You: Press *Marche*."];
+	  34 [label="Inland Empire: Who can say? All you know is -- it's special."];
+	  35 [label="Untitled hub (04)"];
+	  36 [label="crane_panel_hub"];
+	  37 [label="Crane Control Panel: A rusting control panel with several knobs. Two buttons, marked *Marche* and *Arrêt*, are faded with use. It seems to control the large crane above -- a container is attached to its hook block."];
+	  38 [label="Crane Control Panel: ... and with a surprisingly quiet thunk, the crane places the container down."];
+	  39 [label="Interfacing: The rusty control panel grows warm to the touch. Then grows cold. It is finished."];
+	  41 [label="Interfacing: Moving *this* container, of course. For this purpose it was built; for this purpose it has acted. And now it will rest."];
+	  42 [label="Variable[\"cargo.panel_inland_inside_the_container\"]"];
+	  43 [label="Variable[\"cargo.panel_inland_inside_the_container\"]", shape=diamond];
+	  44 [label="!(Variable[\"cargo.panel_inland_inside_the_container\"])", shape=diamond];
+	  45 [label="Variable[\"cargo.crane_container_moved\"]"];
+	  46 [label="Variable[\"cargo.crane_container_moved\"]", shape=diamond];
+	  47 [label="!(Variable[\"cargo.crane_container_moved\"])", shape=diamond];
+	  48 [label="Crane Control Panel: The crane stands tall: proud, erect and *still*."];
+	  49 [label="Crane Control Panel: A rusting control panel with several knobs. The words *Marche* and *Arrêt* are -- very, very slightly -- even more faded with use."];
+	  0 -> 1
+	  1 -> 45
+	  3 -> 36
+	  4 -> 5
+	  4 -> 6
+	  5 -> 23
+	  6 -> 11
+	  7 -> 25
+	  8 -> 24
+	  9 -> 38
+	  10 -> 39
+	  11 -> 36
+	  12 -> 4
+	  13 -> 14
+	  13 -> 15
+	  14 -> 8
+	  15 -> 48
+	  16 -> 42
+	  17 -> 4
+	  18 -> 13
+	  19 -> 20
+	  19 -> 21
+	  20 -> 7
+	  21 -> 9
+	  22 -> 31
+	  23 -> 11
+	  24 -> 36
+	  25 -> 36
+	  26 -> 41
+	  27 -> 28
+	  28 -> 29
+	  28 -> 30
+	  29 -> 26
+	  29 -> 10
+	  30 -> 17
+	  31 -> 4
+	  32 -> 34
+	  33 -> 19
+	  34 -> 4
+	  35 -> 32
+	  35 -> 22
+	  36 -> 33
+	  36 -> 18
+	  36 -> 2
+	  37 -> 3
+	  38 -> 16
+	  39 -> 12
+	  41 -> 4
+	  42 -> 43
+	  42 -> 44
+	  43 -> 35
+	  44 -> 27
+	  45 -> 46
+	  45 -> 47
+	  46 -> 49
+	  47 -> 37
+	  48 -> 24
+	  49 -> 36
+}
+

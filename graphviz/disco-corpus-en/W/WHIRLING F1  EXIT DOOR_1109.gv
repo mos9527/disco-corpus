@@ -1,0 +1,71 @@
+# WHIRLING F1 / EXIT DOOR
+# this is a crazy-ass exit-from-whirling door, god dammit.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Variable[\"whirling.cuno_exit_seen_once\"]"];
+	  3 [label="Variable[\"whirling.cuno_exit_seen_once\"]", shape=diamond];
+	  4 [label="!(Variable[\"whirling.cuno_exit_seen_once\"])", shape=diamond];
+	  5 [label="IsCunoInParty()"];
+	  6 [label="IsCunoInParty()", shape=diamond];
+	  7 [label="!(IsCunoInParty())", shape=diamond];
+	  8 [label="Cuno: \"Hold up, piggo. There's something you gotta understand about the Cuno first.\" He drags his sleeve across his nose. \"Cuno's gotta protect the Cuno name.\""];
+	  9 [label="Cuno: \"Listen up, pig! Cuno's gonna scram now.\" He rubs his hands together."];
+	  10 [label="Variable[\"TASK.investigate_sea_fortress\"]"];
+	  11 [label="Variable[\"TASK.investigate_sea_fortress\"]", shape=diamond];
+	  12 [label="!(Variable[\"TASK.investigate_sea_fortress\"])", shape=diamond];
+	  14 [label="Tutorial Agent: Cuno will rejoin your party later."];
+	  15 [label="Variable[\"whirling.cuno_exit_seen_once\"]"];
+	  16 [label="Variable[\"whirling.cuno_exit_seen_once\"]", shape=diamond];
+	  17 [label="!(Variable[\"whirling.cuno_exit_seen_once\"])", shape=diamond];
+	  18 [label="Kim Kitsuragi: As you approach the door leading out of the hostel, the bespectacled man in an orange bomber jacket turns to you:"];
+	  19 [label="Variable[\"tc.turn_off_tutorial_node\"]"];
+	  20 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  21 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  22 [label="Variable[\"whirling.kimintro_done\"]"];
+	  23 [label="Variable[\"whirling.kimintro_done\"]", shape=diamond];
+	  24 [label="!(Variable[\"whirling.kimintro_done\"])", shape=diamond];
+	  25 [label="Cuno: \"So yeah -- see you on the seafort island. Try not to get shot or drunk again. Cuno's counting on your ass.\""];
+	  26 [label="Cuno: \"See you on the seafort island -- try not to get shot again or drunk or shit. Cuno's counting on you.\""];
+	  27 [label="Cuno: \"The gimps out there ain't gonna think we a thing. Cuno will follow you, but don't expect anything *extra* okay, pig? Cuno's silent, like a fucking vegetable.\""];
+	  28 [label="Jump to: [Esprit de Corps: \"If an assault were launched on this...\"]"];
+	  29 [label="Kim Kitsuragi: As you approach the door leading out of the hostel, the bespectacled man in an orange bomber jacket turns to you:\nAs you approach the door leading out of the hostel, the bespectacled man in a black bomber jacket turns to you:"];
+	  30 [label="Cuno: \"And don't forget about that bitch's window. Scope that shit. Cop Cuno's telling you, that's the break in the case.\""];
+	  31 [label="Kim Kitsuragi: \"Excuse me... I think you may be the person I've been waiting for.\" He narrows his eyes and extends his hand in greeting."];
+	  32 [label="Cuno: \"Cuno's gonna scram now.\" He rubs his hands together. \"Can't be seen with pigs. Can't shit on Cuno's good name.\""];
+	  120162 [label="JUMP OUT to WHIRLING / KIM INTRO", shape=diamond];
+	  0 -> 1
+	  1 -> 5
+	  2 -> 3
+	  2 -> 4
+	  4 -> 8
+	  5 -> 6
+	  5 -> 7
+	  6 -> 10
+	  7 -> 22
+	  8 -> 27
+	  9 -> 26
+	  10 -> 11
+	  10 -> 12
+	  11 -> 15
+	  12 -> 2
+	  15 -> 16
+	  15 -> 17
+	  16 -> 9
+	  17 -> 32
+	  19 -> 20
+	  19 -> 21
+	  21 -> 14
+	  22 -> 24
+	  22 -> 23
+	  24 -> 29
+	  25 -> 19
+	  26 -> 19
+	  27 -> 30
+	  28 -> 120162
+	  29 -> 31
+	  31 -> 28
+	  32 -> 25
+}
+

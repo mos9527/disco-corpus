@@ -1,0 +1,265 @@
+# INVENTORY / WIRRAL MODULE
+# Super-popular binoclard fantasy board game (module), feat. faeries and welkin and pygmies and such fantasy folk. The non-grimdark pastoral-bucolic version with maps & miniatures. Basic Wirral info.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Wirrâl: The options are, in order of importance: the welkin, the dweorgr, the humans, the faerie folk, and the pygmies."];
+	  3 [label="Wirrâl: With fewer items inside, the box now rattles with less enthusiasm. Only the map and booklet shuffle around, hitting the sides of the box."];
+	  4 [label="You: Take the die."];
+	  5 [label="Kim Kitsuragi: \"Huh, interesting. A communard.\""];
+	  6 [label="You: Look at the map."];
+	  7 [label="Jump to: [inside_the_box]"];
+	  8 [label="Wirrâl: You hear the die rattling inside the box, bumping against the sides."];
+	  9 [label="inside_the_box"];
+	  10 [label="Wirrâl: The dweorgr also come in a few different sub-races: hill dweorgr, shield dweorgr, and dark dweorgr."];
+	  11 [label="Jump to: [inside_the_box]"];
+	  12 [label="You: Read about the dweorgr."];
+	  13 [label="Variable[\"doomed.game_wirral_took_dice\"]"];
+	  14 [label="Variable[\"doomed.game_wirral_took_dice\"]", shape=diamond];
+	  15 [label="!(Variable[\"doomed.game_wirral_took_dice\"])", shape=diamond];
+	  16 [label="Encyclopedia: You don't know much about dice, but this one looks pretty damn fancy."];
+	  17 [label="Jump to: [inside_the_box]"];
+	  18 [label="Wirrâl: A grand race of industrious mountain people. They're short, stout and muscular, and enjoy digging for gold and other precious minerals. They're also well-versed in the art of combat, where they prefer to use axes and hammers."];
+	  19 [label="Wirrâl: You stuff it back inside the box."];
+	  20 [label="You: Read about the faerie folk."];
+	  21 [label="Jump to: [bookhub]"];
+	  22 [label="Wirrâl: A blurb on the back reads: \"Tired of the tedium and toil of modern life? Escape to Wirrâl! Leave behind isolas and nations with their petty squabbles. Discard electricity, magnets, and boring technological widgets...\""];
+	  23 [label="You: Enough inspecting."];
+	  24 [label="You: Look at the die."];
+	  25 [label="Jump to: [examining_the_box]"];
+	  26 [label="Wirrâl: They're just humans... what else is there to tell? They're average in all stats and jacks-of-all-trades."];
+	  27 [label="Kim Kitsuragi: \"A communard. One of the leftist revolutionaries in the Antecentennial Revolution.\""];
+	  28 [label="Drama: And most importantly, never forget to rage-quit if the dice don't go your way!"];
+	  29 [label="Rhetoric: It's not. It's for pansies. Man from Hjelmdall is way more awesome."];
+	  30 [label="Wirrâl: You hear the figurine rattling inside the box, bumping against the sides."];
+	  31 [label="You: \"That doesn't sound very Wirrâl-like.\""];
+	  32 [label="Logic: An odd-looking fellow... he doesn't seem to fit the rest of the setting. He has more of a... *revolutionary* tinge."];
+	  33 [label="You: Shake the box."];
+	  34 [label="Wirrâl: \"Succumb to a world of high-Pasternal fantastique, unleash your imagination and create an adventure of endless possibilities. Discover the terrible secret threatening Wirrâl -- can your band of adventurers save the world?\""];
+	  35 [label="You: I'm not sure I can handle all this responsibility."];
+	  36 [label="You: \"What's so interesting about that?\""];
+	  37 [label="Jump to: [inside_the_box]"];
+	  38 [label="Jump to: [inside_the_box]"];
+	  39 [label="Wirrâl: You pry open the box. Inside you find a folded-up map, a small booklet, a 24-sided die, and a little plastic figurine."];
+	  40 [label="You: Read about the welkin."];
+	  41 [label="Variable[\"doomed.game_wirral_took_figurine\"]  and  Variable[\"doomed.game_wirral_took_dice\"]"];
+	  42 [label="Variable[\"doomed.game_wirral_took_figurine\"]  and  Variable[\"doomed.game_wirral_took_dice\"]", shape=diamond];
+	  43 [label="!(Variable[\"doomed.game_wirral_took_figurine\"]  and  Variable[\"doomed.game_wirral_took_dice\"])", shape=diamond];
+	  44 [label="Kim Kitsuragi: \"Hmm. Good luck finding people who'd want to play as communards.\""];
+	  45 [label="Wirrâl: A colourful box with the title \"Wirrâl\" in bold letters. It's a board game."];
+	  46 [label="Wirrâl: It's made from some sort of wood and has been decorated with peculiar plant motifs."];
+	  47 [label="Wirrâl: You pick the figurine up by the base to meet your gaze. The little plastic man stares back at you, his face contorted into a disturbing shout. Then you pocket it."];
+	  48 [label="Variable[\"doomed.game_wirral_took_figurine\"]"];
+	  49 [label="Variable[\"doomed.game_wirral_took_figurine\"]", shape=diamond];
+	  50 [label="!(Variable[\"doomed.game_wirral_took_figurine\"])", shape=diamond];
+	  51 [label="Variable[\"tc.revolution\"]"];
+	  52 [label="Variable[\"tc.revolution\"]", shape=diamond];
+	  53 [label="!(Variable[\"tc.revolution\"])", shape=diamond];
+	  54 [label="You: Read about the pygmies."];
+	  55 [label="You: \"Does this mean we can't play?\""];
+	  56 [label="Jump to: [Wirrâl: \"A colourful box with the title \"Wir...\"]"];
+	  57 [label="Variable[\"doomed.game_wirral_blackcheck_drama\"]"];
+	  58 [label="Variable[\"doomed.game_wirral_blackcheck_drama\"]", shape=diamond];
+	  59 [label="!(Variable[\"doomed.game_wirral_blackcheck_drama\"])", shape=diamond];
+	  60 [label="Jump to: [examining_the_box]"];
+	  61 [label="Kim Kitsuragi: \"It is not. The communards are not a part of the game setting... I guess someone misplaced it during the packaging process.\""];
+	  62 [label="You: \"A what?\""];
+	  63 [label="You: Look at the back."];
+	  64 [label="Electrochemistry: And beer. Lots of beer."];
+	  65 [label="Variable[\"tc.hjelmdall\"]"];
+	  66 [label="Variable[\"tc.hjelmdall\"]", shape=diamond];
+	  67 [label="!(Variable[\"tc.hjelmdall\"])", shape=diamond];
+	  68 [label="Jump to: [inside_the_box]"];
+	  69 [label="Wirrâl: The welkin come with a variety of exciting sub-races: high welkin, forest welkin, lake welkin, and snow welkin. But if you're not feeling experimental -- a basic welkin will always do."];
+	  70 [label="Wirrâl: A very small race of flying people, known for being mischievous, full of trickery. They often lure people into their maegical traps. There are no sub-races for the faeries."];
+	  71 [label="You: Definitely not, it sounds too dangerous."];
+	  72 [label="Wirrâl: It's not dangerous, it's fun, structured fun! All you have to do is read an intricate rulebook, study an assortment of maps, unfold the illustrated gameboard, and start rolling dice."];
+	  73 [label="You: Put the booklet away."];
+	  74 [label="You: Look at the figurine."];
+	  75 [label="IsKimHere()"];
+	  76 [label="IsKimHere()", shape=diamond];
+	  77 [label="!(IsKimHere())", shape=diamond];
+	  78 [label="examining_the_box"];
+	  79 [label="Kim Kitsuragi: \"The figurine is not a part of the Wirrâl game setting... I guess someone misplaced it during the packaging process.\""];
+	  80 [label="Kim Kitsuragi: The lieutenant shrugs. \"I have a feeling the figurines are more there to set the scene than anything else.\""];
+	  81 [label="Wirrâl: Large letters on the front form a title: \"Wirrâl.\" The colourful box is illustrated with bucolic vistas. The cover art also features odd-looking humanoids, some short, some taller, some with pointy ears, others with ephemeral wings."];
+	  82 [label="You: Put the box away."];
+	  83 [label="Wirrâl: In no time you could be romping through grasslands with low-level characters, hunted by iyskel riders... or battling unspeakable monsters in endless dungeons fraught with danger and despair, conjuring up forceful maegics to aid your quest."];
+	  84 [label="Wirrâl: It doesn't seem to correspond with anything you've seen thus far. It's not a very helpful map."];
+	  85 [label="You: Look at the booklet."];
+	  86 [label="You: Read about the humans."];
+	  88 [label="You: Yes, we're ready to take on this challenge."];
+	  89 [label="Rhetoric: Yes, the Wirrâl setting is known for its complicated system of political alignments. But if you're not into that you can just hack your way through dungeons in search of loot. That's what most people do."];
+	  90 [label="Wirrâl: You place the die into your pocket. It's always good to have luck on your side."];
+	  91 [label="You: \"Maybe someone should make a role-playing game set during the Revolution.\""];
+	  92 [label="You: Take the figurine."];
+	  93 [label="Wirrâl: You see a man in ragged clothes wearing a lopsided hat and wielding some sort of a firearm."];
+	  94 [label="Jump to: [Wirrâl: \"A colourful box with the title \"Wir...\"]"];
+	  95 [label="Jump to: [inside_the_box]"];
+	  96 [label="You: Examine the box."];
+	  97 [label="Wirrâl: Exactly, that's the spirit! All you have to do is read an intricate rulebook, study an assortment of maps, unfold the illustrated gameboard, and start rolling dice."];
+	  98 [label="Wirrâl: None of that witless Man from Hjelmdall fascist dross hidden behind faux-realistic allegory. Wirrâl is no cliché-ridden apologia for colonial violence. Wirrâl is pure *imagination*."];
+	  99 [label="You: Open the box."];
+	  100 [label="Wirrâl: A reprint of a crude hand-drawn map. The top left corner reads: 'Lands of Wirrâl.' The map features both small villages and mid-sized towns (with odd names), in addition to meadows, forests, hills, lakes and seas (also with odd names)."];
+	  101 [label="Wirrâl: The least popular of the Wirrâl races, the pygmies are short, rotund and dim-witted. Pygmies live in small villages made of shoddy wooden dwellings. They spend most their days tilling the earth and smoking their pipes. There are no sub-races for the pygmies."];
+	  102 [label="Wirrâl: Text underneath the title, in smaller typeface, reads: \"Third Edition, Mega-Setting Supplements Module.\" The side panel adds: \"A sword and sorcery adventure board game. With new maps and miniatures.\""];
+	  103 [label="Wirrâl: Mysterious things rattle inside. What could they be? Dice? Plastic miniatures? A fantastical alternate world full of magic and wonder?"];
+	  104 [label="Wirrâl: Man up, this is about having structured fun! All you have to do is read an intricate rulebook, study an assortment of maps, unfold the illustrated gameboard, and start rolling dice."];
+	  105 [label="Drama: Don't forget heated arguments escalating to physical confrontation with your friends."];
+	  106 [label="You: Close the box."];
+	  107 [label="Logic: A leftist revolutionary... a communard. He looks lost, a stranger in a strange land. Most likely, he was just stuck in the wrong box on accident."];
+	  108 [label="IsTHCPresent(\"revacholian_nationhood\")"];
+	  109 [label="IsTHCPresent(\"revacholian_nationhood\")", shape=diamond];
+	  110 [label="!(IsTHCPresent(\"revacholian_nationhood\"))", shape=diamond];
+	  111 [label="Wirrâl: A quick guide to the maegical races of Wirrâl. Create your own hero choosing from any of these completely unique and fantastical backgrounds."];
+	  112 [label="Wirrâl: The welkin -- tall, lithe and graceful, with long flowing hair and pointy ears. They're known for being powerful maegic users, but can also hold their own in a brawn-driven fight."];
+	  113 [label="bookhub"];
+	  114 [label="Jump to: [examining_the_box]"];
+	  115 [label="Jump to: [inside_the_box]"];
+	  0 -> 1
+	  1 -> 81
+	  2 -> 40
+	  2 -> 73
+	  3 -> 25
+	  4 -> 90
+	  5 -> 36
+	  5 -> 62
+	  5 -> 31
+	  6 -> 100
+	  7 -> 9
+	  8 -> 25
+	  9 -> 4
+	  9 -> 6
+	  9 -> 74
+	  9 -> 106
+	  9 -> 85
+	  9 -> 24
+	  9 -> 92
+	  10 -> 73
+	  10 -> 86
+	  11 -> 9
+	  12 -> 18
+	  13 -> 14
+	  13 -> 15
+	  14 -> 30
+	  15 -> 103
+	  16 -> 7
+	  17 -> 9
+	  18 -> 10
+	  19 -> 11
+	  20 -> 70
+	  21 -> 113
+	  22 -> 34
+	  23 -> 56
+	  24 -> 46
+	  25 -> 78
+	  26 -> 73
+	  26 -> 20
+	  27 -> 36
+	  27 -> 31
+	  28 -> 21
+	  29 -> 114
+	  30 -> 25
+	  31 -> 61
+	  32 -> 37
+	  33 -> 41
+	  34 -> 88
+	  34 -> 35
+	  34 -> 71
+	  35 -> 104
+	  36 -> 79
+	  37 -> 9
+	  38 -> 9
+	  39 -> 9
+	  40 -> 112
+	  41 -> 42
+	  41 -> 43
+	  42 -> 3
+	  43 -> 48
+	  44 -> 17
+	  45 -> 113
+	  46 -> 16
+	  47 -> 68
+	  48 -> 49
+	  48 -> 50
+	  49 -> 8
+	  50 -> 13
+	  51 -> 52
+	  51 -> 53
+	  52 -> 107
+	  53 -> 32
+	  54 -> 101
+	  55 -> 80
+	  56 -> 45
+	  57 -> 58
+	  57 -> 59
+	  58 -> 64
+	  59 -> 21
+	  60 -> 78
+	  61 -> 91
+	  61 -> 55
+	  62 -> 27
+	  63 -> 22
+	  64 -> 28
+	  65 -> 66
+	  65 -> 67
+	  66 -> 98
+	  67 -> 60
+	  68 -> 9
+	  69 -> 73
+	  69 -> 12
+	  70 -> 73
+	  70 -> 54
+	  71 -> 72
+	  72 -> 83
+	  73 -> 19
+	  74 -> 93
+	  75 -> 76
+	  75 -> 77
+	  76 -> 5
+	  77 -> 51
+	  78 -> 33
+	  78 -> 23
+	  78 -> 63
+	  79 -> 91
+	  79 -> 55
+	  80 -> 17
+	  81 -> 113
+	  83 -> 105
+	  84 -> 115
+	  85 -> 111
+	  86 -> 26
+	  88 -> 97
+	  89 -> 114
+	  90 -> 95
+	  91 -> 44
+	  92 -> 47
+	  93 -> 75
+	  94 -> 45
+	  95 -> 9
+	  96 -> 102
+	  97 -> 83
+	  98 -> 108
+	  99 -> 39
+	  100 -> 84
+	  101 -> 38
+	  102 -> 78
+	  103 -> 65
+	  104 -> 83
+	  105 -> 57
+	  106 -> 94
+	  107 -> 37
+	  108 -> 109
+	  108 -> 110
+	  109 -> 29
+	  110 -> 89
+	  111 -> 2
+	  112 -> 69
+	  113 -> 96
+	  113 -> 82
+	  113 -> 99
+	  114 -> 78
+	  115 -> 9
+}
+

@@ -1,0 +1,145 @@
+# THOUGHT / FAIRWEATHER T-500
+# Visual Calculus wants you to research Enemy Technology. Get it after equipping any piece of the dead man's armour.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Visual Calculus: The white ceramic cuirass hugs your torso, shielding your vitals without adding much bulk to your form..."];
+	  3 [label="Visual Calculus: Certainly, but you may want to hold on to the armour you have for long enough to properly analyse it, figure out its vulnerabilities."];
+	  4 [label="Visual Calculus: Remember, this is a highly specialized kinetic re-distributor meant to stop bullets. Wear it, observe its properties. See if there's a *weakness* in the design."];
+	  5 [label="Perception (Hearing): Your movements cause tiny little clicks, like dice rolling somewhere far away, as the plates reorient to your motions."];
+	  6 [label="Variable[\"TASK.find_one_armour_piece\"]"];
+	  7 [label="Variable[\"TASK.find_one_armour_piece\"]", shape=diamond];
+	  8 [label="!(Variable[\"TASK.find_one_armour_piece\"])", shape=diamond];
+	  9 [label="Visual Calculus: Two? Are you sure you're correct there? There was a helmet too. Three pieces more like. You were *ambitious*."];
+	  10 [label="Visual Calculus: Well, it's a bit late to think about all this now, isn't it?"];
+	  11 [label="Visual Calculus: As you fold your fingers into a fist, you realize you could knock anyone out with one punch... the white ceramic gloves wrap around your digits comfortably."];
+	  12 [label="You: I remember a feeling -- being worried about crossing paths with someone in this armour."];
+	  13 [label="You: This gear could line my pockets with cash. I could probably sell it to some other cops."];
+	  14 [label="You: [Discard thought.]"];
+	  15 [label="Variable[\"TASK.find_one_armour_piece\"] == true  and  Variable[\"TASK.find_one_armour_piece_done\"] == false"];
+	  16 [label="Variable[\"TASK.find_one_armour_piece\"] == true  and  Variable[\"TASK.find_one_armour_piece_done\"] == false", shape=diamond];
+	  17 [label="!(Variable[\"TASK.find_one_armour_piece\"] == true  and  Variable[\"TASK.find_one_armour_piece_done\"] == false)", shape=diamond];
+	  18 [label="Variable[\"yard.hanged_technologic_advanced\"]"];
+	  19 [label="Variable[\"yard.hanged_technologic_advanced\"]", shape=diamond];
+	  20 [label="!(Variable[\"yard.hanged_technologic_advanced\"])", shape=diamond];
+	  21 [label="You: Vulnerabilities?"];
+	  22 [label="Visual Calculus: I guess so."];
+	  23 [label="Visual Calculus: Remember, the vitreous enamel material acts as a kinetic re-distributor. It's meant to stop bullets. Wear it, observe its properties. See if there's a *weakness* in the design."];
+	  24 [label="Jump to: [yard.hanged_technologic_advanced]"];
+	  25 [label="armourthoughthub"];
+	  26 [label="Visual Calculus: It may be a while before you have all the pieces. In the meantime, you should analyse the armour, figure out its vulnerabilities."];
+	  27 [label="You: This is the long sought after *enemy technology*. I can't just enjoy it -- I must *study* it."];
+	  28 [label="CheckEquipped(\"shoes_t500\")"];
+	  29 [label="CheckEquipped(\"shoes_t500\")", shape=diamond];
+	  30 [label="!(CheckEquipped(\"shoes_t500\"))", shape=diamond];
+	  31 [label="Composure: You really do feel more confident. Invulnerability does that. Even partial invulnerability."];
+	  32 [label="Visual Calculus: Yes. You should analyse the armour, figure out its vulnerabilities."];
+	  33 [label="Visual Calculus: Well, you found that one piece you were after, anyway. Don't forget to enjoy it!"];
+	  34 [label="You: It is good to be an unstoppable ceramic man."];
+	  35 [label="CheckEquipped(\"shirt_t500\")"];
+	  36 [label="CheckEquipped(\"shirt_t500\")", shape=diamond];
+	  37 [label="!(CheckEquipped(\"shirt_t500\"))", shape=diamond];
+	  38 [label="Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  39 [label="Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  40 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  41 [label="You: Decked out in future-armour. Like a cop ought to be."];
+	  43 [label="Variable[\"gates.manana_armour_with_armour\"]"];
+	  44 [label="Variable[\"gates.manana_armour_with_armour\"]", shape=diamond];
+	  45 [label="!(Variable[\"gates.manana_armour_with_armour\"])", shape=diamond];
+	  46 [label="Visual Calculus: You look down at the white ceramic sabatons hugging your arches and calves, surprised at how well they fit."];
+	  47 [label="Visual Calculus: Then you should prepare -- analyse this armour, figure out its vulnerabilities."];
+	  48 [label="Composure: You really do feel more confident. Invulnerability does that. Even partial invulnerability."];
+	  49 [label="CheckEquipped(\"gloves_t500\")"];
+	  50 [label="CheckEquipped(\"gloves_t500\")", shape=diamond];
+	  51 [label="!(CheckEquipped(\"gloves_t500\"))", shape=diamond];
+	  52 [label="Visual Calculus: The hardened vitreous enamel, at once sleek and light, adds a glow to your cheeks and a spring to your step. Just imagine what a full suit of this stuff could do for you!"];
+	  53 [label="You: Yeah, I *want* the full suit!"];
+	  54 [label="You: One down -- two pieces to go. Here I come."];
+	  55 [label="Visual Calculus: As your head is ensconced in the ceramic helm, you realize --"];
+	  56 [label="You: Better late than never, huh?"];
+	  57 [label="Visual Calculus: The hardened vitreous enamel, at once sleek and voluptuous, adds a glow to your cheeks and a spring to your step. Just imagine what a full suit of this stuff could do for you!"];
+	  58 [label="Untitled hub"];
+	  59 [label="You: I will be responsible with this. This is just to protect me from harm, not to show off."];
+	  60 [label="You: This is the long sought after *enemy technology*. I can't just enjoy it -- I must *study* it."];
+	  61 [label="Half Light: For the day you have to *fight* someone covered in the same material."];
+	  0 -> 1
+	  1 -> 28
+	  2 -> 5
+	  3 -> 21
+	  4 -> 61
+	  5 -> 38
+	  6 -> 8
+	  6 -> 7
+	  7 -> 57
+	  8 -> 52
+	  9 -> 27
+	  9 -> 12
+	  9 -> 53
+	  10 -> 56
+	  10 -> 14
+	  11 -> 5
+	  12 -> 47
+	  13 -> 3
+	  14 -> 15
+	  15 -> 16
+	  15 -> 17
+	  16 -> 33
+	  18 -> 19
+	  18 -> 20
+	  19 -> 4
+	  20 -> 23
+	  21 -> 18
+	  22 -> 15
+	  23 -> 61
+	  24 -> 18
+	  25 -> 12
+	  25 -> 13
+	  25 -> 53
+	  25 -> 54
+	  25 -> 27
+	  25 -> 60
+	  26 -> 21
+	  27 -> 32
+	  28 -> 29
+	  28 -> 30
+	  29 -> 46
+	  30 -> 35
+	  31 -> 25
+	  32 -> 18
+	  34 -> 24
+	  35 -> 36
+	  35 -> 37
+	  36 -> 2
+	  37 -> 49
+	  38 -> 40
+	  38 -> 39
+	  39 -> 56
+	  39 -> 14
+	  40 -> 43
+	  41 -> 6
+	  43 -> 44
+	  43 -> 45
+	  44 -> 34
+	  44 -> 14
+	  45 -> 58
+	  46 -> 5
+	  47 -> 18
+	  48 -> 25
+	  49 -> 50
+	  49 -> 51
+	  50 -> 11
+	  51 -> 55
+	  52 -> 48
+	  53 -> 26
+	  54 -> 9
+	  55 -> 10
+	  56 -> 22
+	  57 -> 31
+	  58 -> 41
+	  58 -> 59
+	  58 -> 14
+	  59 -> 6
+	  60 -> 18
+}
+

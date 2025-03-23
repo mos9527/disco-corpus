@@ -1,0 +1,661 @@
+# WORLD / WAITING BENCH
+# a bench where you (and Kim) can sit and wait for an X amount of time so the player won't get softlocked-stuck in the game for lacking content until daychange!
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Variable[\"stats.plaza_bench_beta_counter\"] == 3"];
+	  3 [label="Variable[\"stats.plaza_bench_beta_counter\"] == 3", shape=diamond];
+	  4 [label="!(Variable[\"stats.plaza_bench_beta_counter\"] == 3)", shape=diamond];
+	  5 [label="Variable[\"auto.is_raining\"]"];
+	  6 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  7 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  8 [label="Bench: 时间一分一秒过去……"];
+	  9 [label="Bench: 你经常会在乌云背后的细雨线后，隐约瞥见一抹依然灿烂的阳光……"];
+	  10 [label="Bench: 前方一片黑暗。你甚至已经不明白自己在等待什么了……"];
+	  11 [label="Variable[\"auto.smoke_plaza\"]"];
+	  12 [label="Variable[\"auto.smoke_plaza\"]", shape=diamond];
+	  13 [label="!(Variable[\"auto.smoke_plaza\"])", shape=diamond];
+	  14 [label="Variable[\"auto.smoke_plaza\"]"];
+	  15 [label="Variable[\"auto.smoke_plaza\"]", shape=diamond];
+	  16 [label="!(Variable[\"auto.smoke_plaza\"])", shape=diamond];
+	  17 [label="Jump to: [time_passing_hub]"];
+	  18 [label="Bench: 你试着想些新鲜有趣的点子，但努力尝试结果只换来了轻微的头痛。\n坐在海岸边的长凳上……就像一场演出。不过，是什么样的演出呢？"];
+	  19 [label="Variable[\"auto.is_raining\"]"];
+	  20 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  21 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  22 [label="Variable[\"stats.coast_bench_alpha_counter\"] == 7"];
+	  23 [label="Variable[\"stats.coast_bench_alpha_counter\"] == 7", shape=diamond];
+	  24 [label="!(Variable[\"stats.coast_bench_alpha_counter\"] == 7)", shape=diamond];
+	  25 [label="Bench: 冰冷的石凳看起来一点也不舒适。烟头散落地到处都是。"];
+	  26 [label="Variable[\"stats.plaza_bench_gamma_counter\"] >= 8"];
+	  27 [label="Variable[\"stats.plaza_bench_gamma_counter\"] >= 8", shape=diamond];
+	  28 [label="!(Variable[\"stats.plaza_bench_gamma_counter\"] >= 8)", shape=diamond];
+	  29 [label="Bench: 这里黑暗又冰冷……根本不是坐在石凳上的最佳时间。"];
+	  30 [label="Variable[\"auto.is_raining\"]"];
+	  31 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  32 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  33 [label="Bench: 是什么让你坐在了完全湿透的长凳上？荒凉的海岸，阴冷的雨丝，还有你的灵魂——黯淡无光。"];
+	  34 [label="Variable[\"auto.smoke_plaza\"]"];
+	  35 [label="Variable[\"auto.smoke_plaza\"]", shape=diamond];
+	  36 [label="!(Variable[\"auto.smoke_plaza\"])", shape=diamond];
+	  37 [label="Bench: 太阳渐渐落到地平线之后，却只让人想起失去的痛楚。\n死后的世界真实存在吗？那会是什么样的？你可以亲自去寻找答案……而且你本就已经多次接近那个存在。还是让往事一笔勾销吧。\n看看你自己，卡拉斯・马佐夫。一定是你……一切都合情合理。所有一切都能说通。一颗革命的心脏还在你胸口跳动。\n嗯，甜蜜的焦油……沿着你的喉咙滚落……深入到肺里……完美的味道……"];
+	  38 [label="Variable[\"stats.coast_bench_gamma_counter\"] == 7"];
+	  39 [label="Variable[\"stats.coast_bench_gamma_counter\"] == 7", shape=diamond];
+	  40 [label="!(Variable[\"stats.coast_bench_gamma_counter\"] == 7)", shape=diamond];
+	  41 [label="Bench: 你试着捻弄自己的拇指，但在成为这方面的大师之后，往日的热情就不复存在了。相反，你把手放在了膝盖上，静静等待着……"];
+	  42 [label="Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  43 [label="Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  44 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  45 [label="Variable[\"stats.coast_bench_beta_counter\"] == 3"];
+	  46 [label="Variable[\"stats.coast_bench_beta_counter\"] == 3", shape=diamond];
+	  47 [label="!(Variable[\"stats.coast_bench_beta_counter\"] == 3)", shape=diamond];
+	  48 [label="Variable[\"character.bench_expert_thumbs\"]"];
+	  49 [label="Variable[\"character.bench_expert_thumbs\"]", shape=diamond];
+	  50 [label="!(Variable[\"character.bench_expert_thumbs\"])", shape=diamond];
+	  51 [label="Bench: 天色不早了……差不多还是离开吧。广场可不是流浪汉睡觉的地方。"];
+	  52 [label="Bench: 头顶耀眼的阳光让你很难集中精神思考。\n我是法律。我就是*法律*。*我*就是法律。\n一首旋律能在多大程度上填补爱凡客那咄咄逼人的节拍？难道他真的捣鼓出了什么特别有趣的新鲜玩意？\n一定有办法打开这扇该死的门。简直难以置信。难道还有警察进不去的门吗！真是够了。"];
+	  53 [label="Bench: 你凝视着眼前的虚无，过了好一会儿，你决定最好还是继续前进。\n感人的财政紧缩和放松市场管制能将瑞瓦肖从战后的绝境中拯救出来。它肯定不能失败。\n强大的工会和资产国有化能将瑞瓦肖从战后的绝境中拯救出来。也许我们应该吃掉有钱人。\n我们应该赶走所有偷走工作的外国人，既然说到这一点，那女人也一样。这样就能将瑞瓦肖从战后的绝境中拯救出来。\n在这种情况下，节制和平衡才是基本原则……一条笔直的中间不干涉路线有助于维持当下的现状。"];
+	  54 [label="Variable[\"character.bench_expert_thumbs\"]"];
+	  55 [label="Variable[\"character.bench_expert_thumbs\"]", shape=diamond];
+	  56 [label="!(Variable[\"character.bench_expert_thumbs\"])", shape=diamond];
+	  57 [label="Hand/Eye Coordination: 你很接近了！就快到了。极限的灵巧近在咫尺……"];
+	  58 [label="Bench: 夜深人静。现在应该睡觉，而不是坐下。该去找张床了。"];
+	  59 [label="Bench: 时间的本质到底是平面的，还是线性的……又或者是循环的？你觉得自己*很快*就要找出答案了。"];
+	  60 [label="Inland Empire: 全都是因为钱。就连天空都闪耀着财富的光环。"];
+	  61 [label="You: 坐下休息。"];
+	  62 [label="IsKimHere()"];
+	  63 [label="IsKimHere()", shape=diamond];
+	  64 [label="!(IsKimHere())", shape=diamond];
+	  65 [label="You: 深入思考。[等待1小时。]"];
+	  66 [label="IsEvening()"];
+	  67 [label="IsEvening()", shape=diamond];
+	  68 [label="!(IsEvening())", shape=diamond];
+	  69 [label="Variable[\"stats.coast_bench_gamma_counter\"] == 3"];
+	  70 [label="Variable[\"stats.coast_bench_gamma_counter\"] == 3", shape=diamond];
+	  71 [label="!(Variable[\"stats.coast_bench_gamma_counter\"] == 3)", shape=diamond];
+	  72 [label="Variable[\"auto.is_raining\"]"];
+	  73 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  74 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  75 [label="Variable[\"auto.is_raining\"]"];
+	  76 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  77 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  78 [label="Bench: 正午的太阳朝你洒下温暖的春日阳光。虽然没能给你带来太多想法，但却让你感到平和安宁……\n硬核！还有超越*亢奋*的限制吗？你还能变得多么的人世罕有，伙计？！超越障碍的极端硬核存在，狗杂种们！\n怎么可能让爱凡客的节拍变得更硬核？！肯定有更新、更有实验性的方法。\n麻醉药在这座镇子里泛滥……真得有人清理这一团乱麻。那个人——就是你。相信这一点吧，你这个麻醉药疯子！"];
+	  79 [label="Bench: 你试着去想一些更实质的事情，但你的思绪总是被手上的文书工作打断……之后再说吧……总有时间的……\n要是有可能将明星气质提升到一个崭新的层次呢？将那个表情还有那份神气活现的文雅再升一级……\n警察在工作的时候稍作休息是十分正常的。这样能帮助预防过度劳累，以防你需要追捕骗子或者什么之类的……\n怎么还有这种让人难以置信的智障？！每件事最后都以失败告终……你就是什么都做不好。\n撕裂的痛楚。它越来越靠近。你的血液因为期待沸腾起来……"];
+	  80 [label="Bench: 但是你知道，等待一种奢望……时钟正朝着最后的时刻嘀嗒前行。"];
+	  81 [label="Bench: 你的手指好像卡住了。你的脑子里毫无灵感。这个地方……这张长凳，就是少了一种正确的……氛围……"];
+	  82 [label="Variable[\"auto.smoke_plaza\"]"];
+	  83 [label="Variable[\"auto.smoke_plaza\"]", shape=diamond];
+	  84 [label="!(Variable[\"auto.smoke_plaza\"])", shape=diamond];
+	  85 [label="Bench: 捻拇指还真是惊人的困难……你的拇指老是缠绕在一起。过了一会儿，你放弃了。"];
+	  86 [label="IsEvening()"];
+	  87 [label="IsEvening()", shape=diamond];
+	  88 [label="!(IsEvening())", shape=diamond];
+	  89 [label="Bench: 你沉思着——一个永无止境的冬季，冰雪掩盖了一切。那将会是多么地艰难啊……"];
+	  90 [label="Bench: 你思考了一会儿，但是什么也没想到……"];
+	  91 [label="HasVolitionDamage()"];
+	  92 [label="HasVolitionDamage()", shape=diamond];
+	  93 [label="!(HasVolitionDamage())", shape=diamond];
+	  94 [label="Bench: 冰冷的石凳看起来一点也不舒适。你的肩膀开始隐隐作痛。"];
+	  95 [label="Bench: 你眯起双眼，试着寻找有趣的东西……没有，除了天空之外，这里什么也没有。"];
+	  96 [label="Variable[\"stats.coast_bench_beta_counter\"] == 5"];
+	  97 [label="Variable[\"stats.coast_bench_beta_counter\"] == 5", shape=diamond];
+	  98 [label="!(Variable[\"stats.coast_bench_beta_counter\"] == 5)", shape=diamond];
+	  99 [label="Variable[\"stats.coast_bench_gamma_counter\"] >= 8"];
+	  100 [label="Variable[\"stats.coast_bench_gamma_counter\"] >= 8", shape=diamond];
+	  101 [label="!(Variable[\"stats.coast_bench_gamma_counter\"] >= 8)", shape=diamond];
+	  102 [label="Bench: 捻拇指也无法为你的双手抵御海岸边吹来的寒风……不消一会儿，你就受不了了。"];
+	  103 [label="Bench: 相比看见的，你听到的更多，大滴大滴的雨降落在逐渐变暗的地砖上……"];
+	  104 [label="Bench: 你勉勉强强仰望天空，明亮耀眼的太阳挂在天上……几乎要刺瞎你的双眼……"];
+	  105 [label="IsEvening()"];
+	  106 [label="IsEvening()", shape=diamond];
+	  107 [label="!(IsEvening())", shape=diamond];
+	  108 [label="Bench: 你凝视着天空飘落的雪花，对它们错综复杂的结构模式感到十分疑惑。"];
+	  109 [label="Bench: 你坐在冰冷的石凳上。虽然有些粗糙，但还算舒适。"];
+	  110 [label="Variable[\"auto.smoke_plaza\"]"];
+	  111 [label="Variable[\"auto.smoke_plaza\"]", shape=diamond];
+	  112 [label="!(Variable[\"auto.smoke_plaza\"])", shape=diamond];
+	  113 [label="Variable[\"stats.plaza_bench_beta_counter\"] == 5"];
+	  114 [label="Variable[\"stats.plaza_bench_beta_counter\"] == 5", shape=diamond];
+	  115 [label="!(Variable[\"stats.plaza_bench_beta_counter\"] == 5)", shape=diamond];
+	  116 [label="Bench: 你已经精通了捻拇指的艺术。如果有捻拇指比赛，你一定会成为无可争辩的冠军。"];
+	  117 [label="Bench: 雪花述说着还未完全过去的冬季……这会是你的最后一个冬季吗？"];
+	  118 [label="Bench: 海面吹来一阵冰冷的狂风，在这里休息可算不上是愉快……在你被冻僵之前，也许应该离开。"];
+	  119 [label="IsKimHere()"];
+	  120 [label="IsKimHere()", shape=diamond];
+	  121 [label="!(IsKimHere())", shape=diamond];
+	  122 [label="Kim Kitsuragi: “天色不早了。今天就到这里吧……继续在广场磨蹭也无济于事。”"];
+	  123 [label="Jump to: [post_tribunal_hub]"];
+	  124 [label="Bench: 感觉很接近，但是这样还是不够。也许你只是需要换一个地方。"];
+	  125 [label="Kim Kitsuragi: “这个长凳确实不是很吸引人，”警督开口到。“再说了，反正我也不想坐在长凳上——在凶杀案调查结束之前不想。”"];
+	  126 [label="Bench: 太阳越来越接近地平线；天空就是一副五彩缤纷的全景图……"];
+	  127 [label="Kim Kitsuragi: “天色不早了。今天就到这里吧……最好别睡在岸边，风太大了。”"];
+	  128 [label="IsEvening()"];
+	  129 [label="IsEvening()", shape=diamond];
+	  130 [label="!(IsEvening())", shape=diamond];
+	  131 [label="Variable[\"stats.plaza_bench_beta_counter\"] == 6"];
+	  132 [label="Variable[\"stats.plaza_bench_beta_counter\"] == 6", shape=diamond];
+	  133 [label="!(Variable[\"stats.plaza_bench_beta_counter\"] == 6)", shape=diamond];
+	  134 [label="Bench: 长凳上破败的木板看起来一点也不舒适。"];
+	  135 [label="Bench: 你坐在被风腐蚀的长木凳上，脚感觉有些痛。"];
+	  136 [label="IsHourBetween(1, 6)"];
+	  137 [label="IsHourBetween(1, 6)", shape=diamond];
+	  138 [label="!(IsHourBetween(1, 6))", shape=diamond];
+	  139 [label="Variable[\"auto.smoke_plaza\"]"];
+	  140 [label="Variable[\"auto.smoke_plaza\"]", shape=diamond];
+	  141 [label="!(Variable[\"auto.smoke_plaza\"])", shape=diamond];
+	  142 [label="Variable[\"stats.coast_bench_gamma_counter\"] >= 4"];
+	  143 [label="Variable[\"stats.coast_bench_gamma_counter\"] >= 4", shape=diamond];
+	  144 [label="!(Variable[\"stats.coast_bench_gamma_counter\"] >= 4)", shape=diamond];
+	  145 [label="Variable[\"stats.plaza_bench_gamma_counter\"] == 7"];
+	  146 [label="Variable[\"stats.plaza_bench_gamma_counter\"] == 7", shape=diamond];
+	  147 [label="!(Variable[\"stats.plaza_bench_gamma_counter\"] == 7)", shape=diamond];
+	  148 [label="Bench: 你很好奇，如果自己登上太阳会怎么样……应该不会是什么愉快的经历。\n如果你是激进的地下同性恋组织的一员呢？你甚至从来没考虑过这个选项！\n嗯，种族之谜……如果你能回应测颅先生的挑衅就好了。\n啊，蜂鸣声逐渐消逝……你的大脑开始深入思考*多喝点甜酒*这个哲学理念。"];
+	  149 [label="Bench: 当你凝视着石凳那粗糙的表面，周围的广场上还残留着战争留下的血痕……你希望自己能坐下，减轻肉体的疼痛。"];
+	  150 [label="IsHourBetween(1,  6)"];
+	  151 [label="IsHourBetween(1,  6)", shape=diamond];
+	  152 [label="!(IsHourBetween(1,  6))", shape=diamond];
+	  153 [label="Bench: 一群海鸥掠过头顶，朝着……鬼知道什么地方飞去。很快，它们离开了你的视线……"];
+	  154 [label="Bench: 你试着集中精神看着头顶的天空，但是这次，脚下的石头变得不再舒适……"];
+	  155 [label="Variable[\"stats.plaza_bench_beta_counter\"] >= 7"];
+	  156 [label="Variable[\"stats.plaza_bench_beta_counter\"] >= 7", shape=diamond];
+	  157 [label="!(Variable[\"stats.plaza_bench_beta_counter\"] >= 7)", shape=diamond];
+	  158 [label="Bench: 你希望海岸上的天空看起来会有所不同，应该更有趣些……但事实是，并非如此……"];
+	  159 [label="Variable[\"stats.plaza_bench_alpha_counter\"] >= 4"];
+	  160 [label="Variable[\"stats.plaza_bench_alpha_counter\"] >= 4", shape=diamond];
+	  161 [label="!(Variable[\"stats.plaza_bench_alpha_counter\"] >= 4)", shape=diamond];
+	  162 [label="Variable[\"stats.coast_bench_alpha_counter\"] >= 3"];
+	  163 [label="Variable[\"stats.coast_bench_alpha_counter\"] >= 3", shape=diamond];
+	  164 [label="!(Variable[\"stats.coast_bench_alpha_counter\"] >= 3)", shape=diamond];
+	  165 [label="Bench: 你试着辨认头顶云朵的形状。透过雨水望去，有一朵看起来像土豆一样……"];
+	  166 [label="Bench: 太阳渐渐从浪尖升起……每一道光芒都将水花反射到百万个不同的方向。"];
+	  167 [label="Bench: 时间一分一秒过去……"];
+	  168 [label="Bench: 夜色在沙子上投下阴影，让你想到一个全部由沙子构成的地方……一眼望去——除了沙子之外，一无所有的地方。\n沙子让你想到了尘土飞扬的平原。天啦，要是你能向上漫游……野性在呼唤你的名字，牛仔。\n你想到你的枪……希望它一切安好。你真心开始后悔自己对待随身武器的糟糕方式。\n一击即溃·迈克确实是个无与伦比的冠军，他的体力和精神是绝对完美的典范，不仅如此，他还拥有你能所能想象到的、最鼓舞人心的故事。\n你知道……如果你的静脉中流淌着更多吡嚯浣酮，日落也会变得更让人印象深刻……"];
+	  169 [label="Bench: 长凳上破败的木板看起来一点也不舒适。你的肩膀开始隐隐作痛。"];
+	  170 [label="Bench: 但你意识到已经没时间等待了……时钟正朝着最后的时刻嘀嗒前行。"];
+	  171 [label="Bench: 你试着捻弄自己的拇指，但在成为这方面的大师之后，往日的热情就不复存在了。相反，你把手放在了膝盖上，静静等待着……"];
+	  172 [label="Variable[\"stats.plaza_bench_alpha_counter\"] == 9"];
+	  173 [label="Variable[\"stats.plaza_bench_alpha_counter\"] == 9", shape=diamond];
+	  174 [label="!(Variable[\"stats.plaza_bench_alpha_counter\"] == 9)", shape=diamond];
+	  175 [label="Bench: 空中那个极不起眼的小点是做什么的？嗯……有点奇怪。"];
+	  176 [label="Variable[\"stats.coast_bench_beta_counter\"] >= 7"];
+	  177 [label="Variable[\"stats.coast_bench_beta_counter\"] >= 7", shape=diamond];
+	  178 [label="!(Variable[\"stats.coast_bench_beta_counter\"] >= 7)", shape=diamond];
+	  179 [label="IsMorning()"];
+	  180 [label="IsMorning()", shape=diamond];
+	  181 [label="!(IsMorning())", shape=diamond];
+	  182 [label="Bench: 拇指被你捻的有些生疼……过了一会儿，你停下了手。"];
+	  183 [label="Bench: 雪花慢慢穿过清晨的薄雾，洋洋洒洒的飘落下来……"];
+	  184 [label="Variable[\"auto.is_snowing\"]"];
+	  185 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  186 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  187 [label="Bench: 天色已晚……该休息了。最好不要在岸边，这里风太大了。"];
+	  188 [label="Variable[\"auto.is_raining\"]"];
+	  189 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  190 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  191 [label="Variable[\"stats.plaza_bench_gamma_counter\"] == 3"];
+	  192 [label="Variable[\"stats.plaza_bench_gamma_counter\"] == 3", shape=diamond];
+	  193 [label="!(Variable[\"stats.plaza_bench_gamma_counter\"] == 3)", shape=diamond];
+	  194 [label="Physical Instrument: 为什么你那团大屁股又坐下了？！看在上帝的份上，做几个俯卧撑吧！"];
+	  195 [label="Kim Kitsuragi: “嗯……”警督望向街道。“解决这起凶杀案之后，也许我们可以坐下来。好了，走吧。”"];
+	  196 [label="Tutorial Agent: 等曷城警督不在的时候，如果你需要消遣时间，再回到长凳这里来也不迟。"];
+	  198 [label="Bench: 如果捻的足够用力，会不会把拇指从手上捻下来？你试了一下……但什么也没发生。你决定放弃。"];
+	  199 [label="Bench: 天越来越黑，黑到你几乎无法辨认空中飘落的雪花……"];
+	  200 [label="Variable[\"auto.is_snowing\"]"];
+	  201 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  202 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  203 [label="Variable[\"auto.smoke_plaza\"]"];
+	  204 [label="Variable[\"auto.smoke_plaza\"]", shape=diamond];
+	  205 [label="!(Variable[\"auto.smoke_plaza\"])", shape=diamond];
+	  206 [label="Bench: 你试着探寻出更深层次的想法，但拍打在脸上的雨滴实在是太让人分心了。"];
+	  207 [label="Perception (Sight): 看起来像是一艘静风舰，挂在高高的天上……"];
+	  208 [label="post_tribunal_hub"];
+	  209 [label="You: [离开。]"];
+	  210 [label="Variable[\"auto.smoke_plaza\"]"];
+	  211 [label="Variable[\"auto.smoke_plaza\"]", shape=diamond];
+	  212 [label="!(Variable[\"auto.smoke_plaza\"])", shape=diamond];
+	  213 [label="Variable[\"auto.smoke_plaza\"]"];
+	  214 [label="Variable[\"auto.smoke_plaza\"]", shape=diamond];
+	  215 [label="!(Variable[\"auto.smoke_plaza\"])", shape=diamond];
+	  216 [label="Variable[\"stats.plaza_bench_alpha_counter\"] >= 7"];
+	  217 [label="Variable[\"stats.plaza_bench_alpha_counter\"] >= 7", shape=diamond];
+	  218 [label="!(Variable[\"stats.plaza_bench_alpha_counter\"] >= 7)", shape=diamond];
+	  219 [label="Variable[\"auto.is_snowing\"]"];
+	  220 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  221 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  222 [label="Variable[\"auto.is_snowing\"]"];
+	  223 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  224 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  225 [label="Variable[\"stats.coast_bench_beta_counter\"] == 6"];
+	  226 [label="Variable[\"stats.coast_bench_beta_counter\"] == 6", shape=diamond];
+	  227 [label="!(Variable[\"stats.coast_bench_beta_counter\"] == 6)", shape=diamond];
+	  228 [label="Variable[\"tc.turn_off_tutorial_node\"]"];
+	  229 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  230 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  231 [label="time_passing_hub"];
+	  232 [label="Variable[\"stats.coast_bench_gamma_counter\"] >= 1"];
+	  233 [label="Variable[\"stats.coast_bench_gamma_counter\"] >= 1", shape=diamond];
+	  234 [label="!(Variable[\"stats.coast_bench_gamma_counter\"] >= 1)", shape=diamond];
+	  235 [label="Bench: 太阳拼尽全力，想要抵挡海岸的寒意……但效果微乎其微。就好像整个世界都在与你为敌……"];
+	  236 [label="IsTHCPresent(\"coach_physical_instrument\")"];
+	  237 [label="IsTHCPresent(\"coach_physical_instrument\")", shape=diamond];
+	  238 [label="!(IsTHCPresent(\"coach_physical_instrument\"))", shape=diamond];
+	  239 [label="You: 捻弄自己的拇指。[等待15分钟。]"];
+	  240 [label="Variable[\"auto.is_snowing\"]"];
+	  241 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  242 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  243 [label="Variable[\"stats.plaza_bench_gamma_counter\"] >= 1"];
+	  244 [label="Variable[\"stats.plaza_bench_gamma_counter\"] >= 1", shape=diamond];
+	  245 [label="!(Variable[\"stats.plaza_bench_gamma_counter\"] >= 1)", shape=diamond];
+	  246 [label="Variable[\"stats.plaza_bench_gamma_counter\"] >= 4"];
+	  247 [label="Variable[\"stats.plaza_bench_gamma_counter\"] >= 4", shape=diamond];
+	  248 [label="!(Variable[\"stats.plaza_bench_gamma_counter\"] >= 4)", shape=diamond];
+	  249 [label="Variable[\"auto.is_snowing\"]"];
+	  250 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  251 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  252 [label="Bench: 时间一分一秒过去……"];
+	  253 [label="Bench: 当你凝视着木板，海风吹拂过你的头发，你希望自己能坐下，减轻肉体的疼痛……"];
+	  254 [label="Variable[\"stats.plaza_bench_alpha_counter\"] >= 10"];
+	  255 [label="Variable[\"stats.plaza_bench_alpha_counter\"] >= 10", shape=diamond];
+	  256 [label="!(Variable[\"stats.plaza_bench_alpha_counter\"] >= 10)", shape=diamond];
+	  257 [label="Bench: 每次尝试都会让你的双手变得更加灵活。但是过了一会儿，你还是放弃了。"];
+	  258 [label="Bench: 雪花慢慢落在你的络腮胡上……你伸出舌头去迎接它们，感觉冰冰凉凉。\n雪花慢慢落在你的脸颊上……你伸出舌头去迎接它们，感觉冰冰凉凉。"];
+	  259 [label="Variable[\"auto.is_snowing\"]"];
+	  260 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  261 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  262 [label="Variable[\"auto.is_snowing\"]"];
+	  263 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  264 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  265 [label="Hand/Eye Coordination: 你很接近了！就快到了。极限的灵巧近在咫尺……"];
+	  266 [label="HasVolitionDamage()"];
+	  267 [label="HasVolitionDamage()", shape=diamond];
+	  268 [label="!(HasVolitionDamage())", shape=diamond];
+	  269 [label="Bench: 如果……迪克·马伦和来自赫姆达尔的男人存在于同一个世界……就像是……一个……交错的空间？\n我的天，如果能把纪尧姆・列米利翁邀请过来，我们就能举办一场规模空前、兴风作浪的海滩派对……我已经无法用言语来表达了！\n还有什么能比坐在海滩边的长凳上更激动人心的呢？绝对没有了，这就是你的结论。这就是极致的快乐。\n案子还没有解决……你应该现在放弃，然后向城里所有人道歉。\n来吧，亲爱的夜空，在这群软弱无能的野兽头顶降下净化之火！黄昏在召唤。"];
+	  270 [label="Bench: 时间一分一秒过去……"];
+	  271 [label="Bench: 你凝视着身边逐渐厚重的阴影……让你开始有些紧张。"];
+	  272 [label="Variable[\"auto.is_raining\"]"];
+	  273 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  274 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  275 [label="IsMorning()"];
+	  276 [label="IsMorning()", shape=diamond];
+	  277 [label="!(IsMorning())", shape=diamond];
+	  278 [label="IsMorning()"];
+	  279 [label="IsMorning()", shape=diamond];
+	  280 [label="!(IsMorning())", shape=diamond];
+	  281 [label="Bench: 如果有一天，太阳不再发光……整个世界陷入永恒的黑暗。未来一定会变得无比糟糕。\n一定有办法找到回家的路……感觉很遥远，但也不可能*那么*遥不可及。不会就这么消失不见的。\n一切都交给掷骰子来决定……这个世界摇摇欲坠，在边缘勉强地保持着平衡。一切似乎都倾向于失败的方向。\n你想念牙齿的研磨……想念奔搏的血液……想念那股冲动，还有思必得带来的快感！"];
+	  282 [label="IsMorning()"];
+	  283 [label="IsMorning()", shape=diamond];
+	  284 [label="!(IsMorning())", shape=diamond];
+	  285 [label="Bench: 难道大家就不能和谐相处吗？他们真的有放心思在里面吗……？\n有没有可能拿下整个海岸？这整片不动产……完全处在未开发状态。想想那些游客！\n点点沙粒让你想到被压迫的人们。许多人在资本严酷无情的践踏下受苦挣扎……\n沙子……你看看它们。同样的色调，同样的稳定……这就是瑞瓦肖的力量所在。团结一致的力量。\n为了维持瑞瓦肖的秩序，联盟国牢固的管控也许是必要的……拥有一支缓和力量总是好的。"];
+	  286 [label="Bench: 你终于不再挖鼻孔了……"];
+	  287 [label="Physical Instrument: 毅力和成功……感觉很不错。十分*鼓舞人心*。"];
+	  288 [label="You: 盯着天空发呆。[等待30分钟。]"];
+	  289 [label="You: [站起来。]"];
+	  290 [label="Bench: 你的眼睛落在海湾对面德尔塔的高楼上……确实算得上是一道美丽的天际线……"];
+	  291 [label="Bench: 你开始想，要是雨下的足够大，淹没整个马丁内斯……然后所有人都得穿着潜水服度日了。"];
+	  292 [label="Bench: 太阳缓缓升起……早晨的阳光让空气都变得闪闪发亮……"];
+	  293 [label="Variable[\"auto.is_raining\"]"];
+	  294 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  295 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  296 [label="Bench: 天空一片阴霾，雨滴倾落在沙子和芦苇上……"];
+	  0 -> 1
+	  1 -> 62
+	  2 -> 3
+	  2 -> 4
+	  3 -> 95
+	  4 -> 252
+	  5 -> 6
+	  5 -> 7
+	  6 -> 165
+	  7 -> 240
+	  8 -> 188
+	  9 -> 136
+	  10 -> 136
+	  11 -> 12
+	  11 -> 13
+	  12 -> 94
+	  13 -> 169
+	  14 -> 16
+	  14 -> 15
+	  15 -> 25
+	  16 -> 134
+	  17 -> 231
+	  18 -> 136
+	  19 -> 20
+	  19 -> 21
+	  20 -> 206
+	  21 -> 222
+	  22 -> 24
+	  22 -> 23
+	  23 -> 116
+	  24 -> 162
+	  25 -> 125
+	  26 -> 27
+	  26 -> 28
+	  27 -> 59
+	  28 -> 145
+	  29 -> 136
+	  30 -> 32
+	  30 -> 31
+	  31 -> 10
+	  32 -> 200
+	  33 -> 136
+	  34 -> 35
+	  34 -> 36
+	  35 -> 51
+	  36 -> 187
+	  37 -> 136
+	  38 -> 40
+	  38 -> 39
+	  39 -> 285
+	  40 -> 142
+	  41 -> 136
+	  42 -> 43
+	  42 -> 44
+	  43 -> 11
+	  44 -> 110
+	  45 -> 46
+	  45 -> 47
+	  46 -> 158
+	  47 -> 167
+	  48 -> 49
+	  48 -> 50
+	  49 -> 41
+	  50 -> 22
+	  52 -> 136
+	  53 -> 136
+	  54 -> 56
+	  54 -> 55
+	  55 -> 171
+	  56 -> 254
+	  57 -> 136
+	  59 -> 136
+	  60 -> 136
+	  61 -> 210
+	  62 -> 64
+	  62 -> 63
+	  63 -> 14
+	  64 -> 150
+	  65 -> 139
+	  66 -> 67
+	  66 -> 68
+	  67 -> 72
+	  68 -> 293
+	  69 -> 70
+	  69 -> 71
+	  70 -> 269
+	  71 -> 232
+	  72 -> 73
+	  72 -> 74
+	  73 -> 103
+	  74 -> 249
+	  75 -> 76
+	  75 -> 77
+	  76 -> 33
+	  77 -> 184
+	  78 -> 136
+	  79 -> 136
+	  80 -> 123
+	  81 -> 136
+	  82 -> 83
+	  82 -> 84
+	  83 -> 54
+	  84 -> 48
+	  85 -> 136
+	  86 -> 88
+	  86 -> 87
+	  87 -> 30
+	  88 -> 75
+	  89 -> 136
+	  90 -> 136
+	  91 -> 92
+	  91 -> 93
+	  92 -> 287
+	  93 -> 136
+	  94 -> 208
+	  95 -> 136
+	  96 -> 97
+	  96 -> 98
+	  97 -> 175
+	  98 -> 45
+	  99 -> 100
+	  99 -> 101
+	  100 -> 18
+	  101 -> 38
+	  102 -> 136
+	  103 -> 136
+	  104 -> 136
+	  105 -> 106
+	  105 -> 107
+	  106 -> 168
+	  107 -> 52
+	  108 -> 136
+	  109 -> 231
+	  110 -> 112
+	  110 -> 111
+	  111 -> 109
+	  112 -> 135
+	  113 -> 114
+	  113 -> 115
+	  114 -> 153
+	  115 -> 2
+	  116 -> 91
+	  117 -> 136
+	  118 -> 136
+	  119 -> 120
+	  119 -> 121
+	  120 -> 203
+	  121 -> 34
+	  123 -> 208
+	  124 -> 266
+	  125 -> 228
+	  126 -> 136
+	  128 -> 129
+	  128 -> 130
+	  129 -> 37
+	  130 -> 78
+	  131 -> 132
+	  131 -> 133
+	  132 -> 154
+	  133 -> 113
+	  134 -> 195
+	  135 -> 231
+	  136 -> 137
+	  136 -> 138
+	  137 -> 119
+	  138 -> 17
+	  139 -> 140
+	  139 -> 141
+	  140 -> 26
+	  141 -> 99
+	  142 -> 144
+	  142 -> 143
+	  143 -> 8
+	  144 -> 69
+	  145 -> 146
+	  145 -> 147
+	  146 -> 53
+	  147 -> 246
+	  148 -> 136
+	  149 -> 80
+	  150 -> 152
+	  150 -> 151
+	  151 -> 58
+	  152 -> 42
+	  153 -> 136
+	  154 -> 236
+	  155 -> 156
+	  155 -> 157
+	  156 -> 252
+	  157 -> 131
+	  158 -> 136
+	  159 -> 160
+	  159 -> 161
+	  160 -> 257
+	  161 -> 85
+	  162 -> 163
+	  162 -> 164
+	  163 -> 198
+	  164 -> 102
+	  165 -> 136
+	  166 -> 136
+	  167 -> 275
+	  168 -> 136
+	  169 -> 208
+	  170 -> 123
+	  171 -> 136
+	  172 -> 173
+	  172 -> 174
+	  173 -> 124
+	  174 -> 216
+	  175 -> 207
+	  176 -> 177
+	  176 -> 178
+	  177 -> 167
+	  178 -> 225
+	  179 -> 180
+	  179 -> 181
+	  180 -> 5
+	  181 -> 66
+	  182 -> 136
+	  183 -> 136
+	  184 -> 185
+	  184 -> 186
+	  185 -> 118
+	  186 -> 235
+	  188 -> 189
+	  188 -> 190
+	  189 -> 291
+	  190 -> 219
+	  191 -> 192
+	  191 -> 193
+	  192 -> 79
+	  193 -> 243
+	  194 -> 136
+	  195 -> 228
+	  198 -> 136
+	  199 -> 136
+	  200 -> 201
+	  200 -> 202
+	  201 -> 199
+	  202 -> 126
+	  203 -> 204
+	  203 -> 205
+	  204 -> 122
+	  205 -> 127
+	  206 -> 136
+	  207 -> 136
+	  208 -> 209
+	  208 -> 61
+	  210 -> 211
+	  210 -> 212
+	  211 -> 149
+	  212 -> 253
+	  213 -> 214
+	  213 -> 215
+	  214 -> 155
+	  215 -> 176
+	  216 -> 217
+	  216 -> 218
+	  217 -> 182
+	  218 -> 159
+	  219 -> 220
+	  219 -> 221
+	  220 -> 89
+	  221 -> 278
+	  222 -> 224
+	  222 -> 223
+	  223 -> 108
+	  224 -> 282
+	  225 -> 226
+	  225 -> 227
+	  226 -> 290
+	  227 -> 96
+	  228 -> 229
+	  228 -> 230
+	  230 -> 196
+	  231 -> 288
+	  231 -> 65
+	  231 -> 289
+	  231 -> 239
+	  232 -> 233
+	  232 -> 234
+	  233 -> 8
+	  234 -> 286
+	  235 -> 136
+	  236 -> 237
+	  236 -> 238
+	  237 -> 194
+	  238 -> 136
+	  239 -> 82
+	  240 -> 241
+	  240 -> 242
+	  241 -> 183
+	  242 -> 292
+	  243 -> 244
+	  243 -> 245
+	  244 -> 270
+	  245 -> 90
+	  246 -> 248
+	  246 -> 247
+	  247 -> 270
+	  248 -> 191
+	  249 -> 250
+	  249 -> 251
+	  250 -> 29
+	  251 -> 271
+	  252 -> 179
+	  253 -> 170
+	  254 -> 256
+	  254 -> 255
+	  255 -> 81
+	  256 -> 172
+	  257 -> 136
+	  258 -> 136
+	  259 -> 260
+	  259 -> 261
+	  260 -> 258
+	  261 -> 104
+	  262 -> 264
+	  262 -> 263
+	  263 -> 117
+	  264 -> 166
+	  265 -> 136
+	  266 -> 267
+	  266 -> 268
+	  267 -> 265
+	  268 -> 57
+	  269 -> 136
+	  270 -> 19
+	  271 -> 136
+	  272 -> 273
+	  272 -> 274
+	  273 -> 296
+	  274 -> 262
+	  275 -> 276
+	  275 -> 277
+	  276 -> 272
+	  277 -> 86
+	  278 -> 280
+	  278 -> 279
+	  279 -> 281
+	  280 -> 105
+	  281 -> 136
+	  282 -> 283
+	  282 -> 284
+	  283 -> 148
+	  284 -> 128
+	  285 -> 136
+	  286 -> 136
+	  287 -> 136
+	  288 -> 213
+	  290 -> 60
+	  291 -> 136
+	  292 -> 136
+	  293 -> 294
+	  293 -> 295
+	  294 -> 9
+	  295 -> 259
+	  296 -> 136
+}
+

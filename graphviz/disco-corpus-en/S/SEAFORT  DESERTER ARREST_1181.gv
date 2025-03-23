@@ -1,0 +1,1638 @@
+# SEAFORT / DESERTER ARREST
+# Arrest him finally
+#
+#PERCEPTION (HEARING) red check
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"Maybe I can just ask Lilienne to watch him?\"\n\"Maybe I can just ask that Net Picker woman to watch him?\""];
+	  3 [label="You: \"*But* what? There's something I'm not getting, right?\""];
+	  4 [label="IsTHCPresent(\"jamais_vu\")"];
+	  5 [label="IsTHCPresent(\"jamais_vu\")", shape=diamond];
+	  6 [label="!(IsTHCPresent(\"jamais_vu\"))", shape=diamond];
+	  7 [label="Cuno: \"Yeah, actually -- no.\" He scratches his head. \"It would go down.\""];
+	  8 [label="Cuno: \"This *is* a problem,\" the kid says. \"Cuno's literally had this problem. In a fuckin' textbook. When he went to *kiddie school*. This is that three piggies and a boat shit...\""];
+	  9 [label="Drama: You will have to be very convincing and very *sober* to make them believe, sire."];
+	  10 [label="You: \"Kim, he's afraid...\""];
+	  11 [label="Kim Kitsuragi: The lieutenant shakes his head, frustrated. \"Who watches over him there while I come back for you?\""];
+	  12 [label="You: \"*I* could come back for you. Once I've taken him to the Precinct.\""];
+	  13 [label="You: (Say:) \"You will be taken to the nearest precinct holding area for preliminary investigation.\""];
+	  14 [label="Shivers: The wind picks up. The silence on the water is broken, little shivers of waves appear..."];
+	  15 [label="You: (Say:) \"Your Wayfarer rights have been suspended. Information provided to the officer on the scene will be used against you by the prosecution.\""];
+	  16 [label="You: \"Do you understand?\""];
+	  17 [label="You: \"Shush, Kim! Do you hear that?\""];
+	  18 [label="Logic: But that means..."];
+	  19 [label="Variable[\"character.habit_alcohol\"]"];
+	  20 [label="Variable[\"character.habit_alcohol\"]", shape=diamond];
+	  21 [label="!(Variable[\"character.habit_alcohol\"])", shape=diamond];
+	  22 [label="Kim Kitsuragi: \"That could be part of the shock. But you're right -- something is off here. Mr. Dros...\" He touches the man's shoulder."];
+	  23 [label="Kim Kitsuragi: \"His pupils appeared to be dilated. They still are...\" He examines the catatonic man's eyes."];
+	  24 [label="You: \"He's been here for a long time. Who knows how much of it in its company?\" (Conclude.)"];
+	  25 [label="Kim Kitsuragi: \"This sight is a T-9, Mr. Dros. Was it attached to the rifle, when you made the shot?\""];
+	  26 [label="Variable[\"seafort.deserter_perc_sweat\"]"];
+	  27 [label="Variable[\"seafort.deserter_perc_sweat\"]", shape=diamond];
+	  28 [label="!(Variable[\"seafort.deserter_perc_sweat\"])", shape=diamond];
+	  29 [label="You: Wait..."];
+	  30 [label="You: Variable[\"seafort.deserter_rc_perchear_wait_listen\"]"];
+	  31 [label="Variable[\"seafort.deserter_rc_perchear_wait_listen\"]", shape=diamond];
+	  32 [label="!(Variable[\"seafort.deserter_rc_perchear_wait_listen\"])", shape=diamond];
+	  33 [label="The Deserter: \"What a farce! What are you *talking* about? Is this...\" The old man's voice drowns in a sudden gust of wind. \"... really us...\""];
+	  34 [label="Cuno: \"Yeah, I can fuckin' see it!\""];
+	  35 [label="IsCunoInParty()"];
+	  36 [label="IsCunoInParty()", shape=diamond];
+	  37 [label="!(IsCunoInParty())", shape=diamond];
+	  38 [label="You: \"Maybe. Anyway -- it's only trying to remain unseen. The degradation is a side effect.\""];
+	  39 [label="IsKimHere()"];
+	  40 [label="IsKimHere()", shape=diamond];
+	  41 [label="!(IsKimHere())", shape=diamond];
+	  42 [label="You: \"*You* could come back for me. Once you've taken him to the Precinct.\""];
+	  43 [label="Cuno: \"Yeah -- no.\" He shakes his head. \"Only two are gonna fit in that fucker. I guess *you* could take him back, but...\" He squints, realizing something."];
+	  44 [label="Logic: Wait! But then -- who watches over him while you're coming back?"];
+	  45 [label="Cuno: He squints harder. \"Fuck, it's the three piggies and a boat problem...\""];
+	  46 [label="Jump to: [You: \"\"No. Forget it.\" Inspect the man.\"]"];
+	  47 [label="The Deserter: He does *not* look hormonal anymore. Motionless. His plastic cape flaps in a sudden gust of wind."];
+	  48 [label="IsKimHere()"];
+	  49 [label="IsKimHere()", shape=diamond];
+	  50 [label="!(IsKimHere())", shape=diamond];
+	  51 [label="Kim Kitsuragi: He nods back and turns to the man sitting on the log. \"Iosef Lilianovich Dros, you are under arrest for the murder of the Krenel colonel. You will be taken to the nearest precinct holding area for preliminary investigation.\"\nHe nods back and turns to the man sitting on the log. \"Iosef Lilianovich Dros, you are under arrest for the murder of Ellis Kortenaer. You will be taken to the nearest precinct holding area for preliminary investigation.\"\nHe nods back and turns to the man sitting on the log. \"Iosef Lilianovich Dros, you are under arrest for the murder of the Krenel colonel, Lely. You will be taken to the nearest precinct holding area for preliminary investigation.\""];
+	  52 [label="Shivers: The wind picks up. The silence on the water is broken all around you, little shivers of waves appear. The lieutenant continues, like an incantation..."];
+	  53 [label="Kim Kitsuragi: \"Your confirmation is not required, sir.\" The lieutenant turns to you. \"Now -- on to the boat...\""];
+	  54 [label="You: \"This is not a problem.\""];
+	  55 [label="Shivers: Your skin is crawling suddenly."];
+	  56 [label="Inland Empire: The words feel heavy, like they're coming from the bottom of you. You've said them half a thousand times..."];
+	  57 [label="Composure: The sum of all the erratic, involuntary movements and mood swings he's been exhibiting..."];
+	  58 [label="You: What?"];
+	  59 [label="Kim Kitsuragi: \"What?\""];
+	  60 [label="You: \"My wife said I'm insane too. That's why we can't...\""];
+	  61 [label="Insulindian Phasmid: A delicate tangle of arms and legs unfolds from the reeds, limb by limb -- to then just stand there, moving its scythe-like arms in ghostly silence."];
+	  62 [label="Insulindian Phasmid: ...phasmid! You open your eyes and there still is, spinning slowly -- in absolute  silence -- its limbs long and slender..."];
+	  63 [label="Reaction Speed: No! It's the cryptid!"];
+	  64 [label="Volition: My god... maybe you *are*."];
+	  65 [label="The Deserter: \"See what exactly?! A bug?\" He does not understand."];
+	  66 [label="Electrochemistry: Delirium! It's delirium from the booze!"];
+	  67 [label="You: \"I found some things in the phasmid's nest, Mr. Dros.\"\n\"We found some things in the phasmid's nest, Mr. Dros.\""];
+	  68 [label="The Deserter: \"S-s-s-see...\" He stares at the reeds and falls silent."];
+	  69 [label="You: \"I'll leave you be for now.\" [Leave.]"];
+	  70 [label="The Deserter: A light shiver passes him -- followed by nothing. His hands are trembling and he breathes slowly."];
+	  71 [label="The Deserter: The plastic cape feels coarse. A light shiver passes the man -- other than that, no reaction. He feels small and frail."];
+	  72 [label="Kim Kitsuragi: \"The doctors will have to look at this. I hope your station has better medical personnel than 57. This is... a little advanced for a nurse.\""];
+	  73 [label="Jump to: [PHASMID QUESTIONS]"];
+	  74 [label="Variable[\"seafort.deserter_empathy_not_just_chemical\"]"];
+	  75 [label="Variable[\"seafort.deserter_empathy_not_just_chemical\"]", shape=diamond];
+	  76 [label="!(Variable[\"seafort.deserter_empathy_not_just_chemical\"])", shape=diamond];
+	  77 [label="Empathy: The man shudders lightly, his eyes swallowed up by their pupils."];
+	  78 [label="The Deserter: Nothing. Just dull staring -- not even rage left wherever he is."];
+	  79 [label="Variable[\"seafort.passport_main_hub_reached\"]"];
+	  80 [label="Variable[\"seafort.passport_main_hub_reached\"]", shape=diamond];
+	  81 [label="!(Variable[\"seafort.passport_main_hub_reached\"])", shape=diamond];
+	  82 [label="Cuno: \"Hey...\" The kid interrupts you at 'you're under', his voice subdued. \"You sure we got all this shit?\""];
+	  83 [label="The Deserter: \"I...\" He looks around, confused."];
+	  84 [label="Electrochemistry: Pupils are dilated too, eyes getting blacker and blacker..."];
+	  85 [label="IsCunoInParty()"];
+	  86 [label="IsCunoInParty()", shape=diamond];
+	  87 [label="!(IsCunoInParty())", shape=diamond];
+	  88 [label="IsKimHere()"];
+	  89 [label="IsKimHere()", shape=diamond];
+	  90 [label="!(IsKimHere())", shape=diamond];
+	  91 [label="Cuno: \"I mean, he was perving on that Klaasje party lady weirdly hard...\" He nods. \"Yeah... maybe?\""];
+	  92 [label="The Deserter: The trembling mouth appears to sigh. There's no other response."];
+	  93 [label="You: \"Maybe you're right...\""];
+	  94 [label="Variable[\"seafort.deserter_logic_who_watches_over\"]"];
+	  95 [label="Variable[\"seafort.deserter_logic_who_watches_over\"]", shape=diamond];
+	  96 [label="!(Variable[\"seafort.deserter_logic_who_watches_over\"])", shape=diamond];
+	  97 [label="Cuno: His eyes shoot wide open. \"Cuno understands what's wrong. Who watches this fuckin' killer in the village, while you come back for me?\""];
+	  98 [label="Logic: Lilienne. You could ask her."];
+	  99 [label="Inland Empire: Something is happening. Stop."];
+	  100 [label="Perception (Hearing): No, listen! Listen now!"];
+	  101 [label="Kim Kitsuragi: \"Officer -- are we sure?\" His voice is lowered. \"We could maybe get more.\""];
+	  102 [label="Kim Kitsuragi: \"Your Wayfarer rights have been suspended. Information provided to the officers on the scene will be used against you by the prosecution. You will be given legal counsel within one week, and must face court in 44 days -- do you understand?\""];
+	  103 [label="Variable[\"seafort.deserter_perc_sweat\"]"];
+	  104 [label="Variable[\"seafort.deserter_perc_sweat\"]", shape=diamond];
+	  105 [label="!(Variable[\"seafort.deserter_perc_sweat\"])", shape=diamond];
+	  106 [label="Kim Kitsuragi: \"This is no harmless old man.\" The lieutenant shakes his head."];
+	  107 [label="Inland Empire: ... is what you want to say. You can barely get to 'you're under...' when you suddenly get weary..."];
+	  108 [label="IsCunoInParty()"];
+	  109 [label="IsCunoInParty()", shape=diamond];
+	  110 [label="!(IsCunoInParty())", shape=diamond];
+	  111 [label="The Deserter: \"What if I don't want to? What if I want to stay here?\" He looks at you, eyes submerged in terror."];
+	  112 [label="Electrochemistry: Pupils are dilated too, eyes getting blacker and blacker..."];
+	  113 [label="Visual Calculus: The wind is cold. From the east."];
+	  114 [label="You: \"Mr. Dros, time to go.\""];
+	  115 [label="phasmid_appearance"];
+	  116 [label="Jump to: [Inland Empire: \"Beckoning you to come to it.\"]"];
+	  117 [label="The Deserter: \"Th-the...\" The old man stutters."];
+	  118 [label="Kim Kitsuragi: \"Which is why we should be very, very wary of approaching it again.\""];
+	  119 [label="You: (Nod.) \"We've been thorough.\""];
+	  120 [label="Cuno: \"Yeah, old man. Hang tight.\" He looks at you. \"Let's *slowly* start shufflin' off Death Island, okay? We're about done here...\" He looks to the flak tower."];
+	  121 [label="Cuno: \"Yeah? Just talking. Sure. You were *deep* in some trance shit.\""];
+	  122 [label="Cuno: \"I don't see how bugs help with that shit... Like? How? Anyway...\""];
+	  123 [label="Cuno: His eyes widen, as if to help him take the thought in. He prods the old man. \"Yo -- you ever *seen* a giant fucking insect?\""];
+	  124 [label="IsKimHere()"];
+	  125 [label="IsKimHere()", shape=diamond];
+	  126 [label="!(IsKimHere())", shape=diamond];
+	  127 [label="You: \"Yeah, actually, that will look bad.\""];
+	  128 [label="Logic: Lilienne. You could ask her maybe?"];
+	  129 [label="Jump to: [Untitled hub (04)]"];
+	  130 [label="IsCunoInParty()"];
+	  131 [label="IsCunoInParty()", shape=diamond];
+	  132 [label="!(IsCunoInParty())", shape=diamond];
+	  133 [label="Empathy: You've startled him... maybe it was the silence? He quickly gathers himself. Still -- what could he be afraid of?"];
+	  134 [label="Kim Kitsuragi: \"This is a problem,\" the lieutenant says. \"Who watches over him while I come back for you?\""];
+	  135 [label="Jump to: [TEAM hub]"];
+	  136 [label="Half Light: ... is what you want to say, but wait god damn it! With the words 'you're under...' still stuck in your throat you think: what if I *missed* something?"];
+	  137 [label="The Deserter: \"But...\" His eyes fill with sudden terror: \"You said I would be taken to the, uhm, the...\""];
+	  138 [label="Jump to: [TEAM hub]"];
+	  139 [label="You: \"First, you need to come with me to the boat.\""];
+	  140 [label="Jump to: [SOLO hub]"];
+	  141 [label="Composure: He's regressing, fast."];
+	  142 [label="Shivers: Your skin crawls."];
+	  143 [label="IsCunoInParty()"];
+	  144 [label="IsCunoInParty()", shape=diamond];
+	  145 [label="!(IsCunoInParty())", shape=diamond];
+	  146 [label="Volition: Four simple words -- thank god. If he can see, then you're not insane."];
+	  147 [label="tell_me_tell_me"];
+	  148 [label="You: \"What is THAT!?!\" (Point to it.)"];
+	  149 [label="Variable[\"seafort.deserter_volition_maybe_insane\"]"];
+	  150 [label="Variable[\"seafort.deserter_volition_maybe_insane\"]", shape=diamond];
+	  151 [label="!(Variable[\"seafort.deserter_volition_maybe_insane\"])", shape=diamond];
+	  152 [label="Untitled hub"];
+	  153 [label="You: Snap your fingers under his nose."];
+	  154 [label="IsKimHere()"];
+	  155 [label="IsKimHere()", shape=diamond];
+	  156 [label="!(IsKimHere())", shape=diamond];
+	  157 [label="IsCunoInParty()"];
+	  158 [label="IsCunoInParty()", shape=diamond];
+	  159 [label="!(IsCunoInParty())", shape=diamond];
+	  160 [label="Kim Kitsuragi: \"Old age and shock.\" He looks at him, then you."];
+	  161 [label="You: \"Perhaps this *animation* is induced by something in the phasmid?\""];
+	  162 [label="Inland Empire: There's *much* more. Remember what it said, when it spoke."];
+	  163 [label="The Deserter: He stares into the reeds. Your words don't stir anything in him. Perhaps you should..."];
+	  164 [label="You: Show him the Oranjese passport."];
+	  165 [label="Variable[\"yard.cuno_armour_sea_branch_finished\"] == true"];
+	  166 [label="Variable[\"yard.cuno_armour_sea_branch_finished\"] == true", shape=diamond];
+	  167 [label="!(Variable[\"yard.cuno_armour_sea_branch_finished\"] == true)", shape=diamond];
+	  168 [label="Kim Kitsuragi: \"Let's have a closer look at that, after. I think I'll be more useful than him...\" He nods toward the old man."];
+	  169 [label="Endurance: The strength has all gone out of him -- just frail old bones in a sack of tracksuit trousers and a wind breaker."];
+	  170 [label="Cuno: \"Why not?\""];
+	  171 [label="Jump to: [PHASMID QUESTIONS]"];
+	  172 [label="Cuno: \"You mean like *horny*?\""];
+	  173 [label="Cuno: \"Yeah-yeah. Because -- look at him now. Not so *sharp* is he? And it's gone, left. Perhaps it's, like, kept him going like the drink and the lightning keep my old man...\""];
+	  174 [label="Insulindian Phasmid: Spinning in silence -- limbs and antennae, like hair."];
+	  175 [label="Variable[\"coast.morell_phasmid_last_seen\"]"];
+	  176 [label="Variable[\"coast.morell_phasmid_last_seen\"]", shape=diamond];
+	  177 [label="!(Variable[\"coast.morell_phasmid_last_seen\"])", shape=diamond];
+	  178 [label="You: \"Maybe this is how the phasmid has stayed hidden all these years?\""];
+	  179 [label="Logic: There's something you're not getting here that he has just realized."];
+	  180 [label="Jump to: [CUNOTEAM hub]"];
+	  181 [label="Inland Empire: There is nothing. Only the reeds for him. The reeds and devastation."];
+	  182 [label="get_more"];
+	  183 [label="You: \"Do you understand, sir?\""];
+	  184 [label="Reaction Speed: ... is what you want to say. You get to 'you're under...' when a warning rings in the back of your head: did you get everything?"];
+	  185 [label="The Deserter: \"I...\" He looks around, confused."];
+	  186 [label="Volition: How is this brave man unravelling?"];
+	  187 [label="Half Light: He's not afraid of jail. He's afraid of something else..."];
+	  188 [label="Jump to: [TEAM hub]"];
+	  189 [label="You: \"Can you stay here while I go inland and find you transport?\""];
+	  190 [label="Shivers: Your skin crawls."];
+	  191 [label="Kim Kitsuragi: \"Be very, *very* careful,\" the lieutenant whispers, then takes a step toward the giant arthropod..."];
+	  192 [label="Inland Empire: Beckoning you to come to it."];
+	  193 [label="You: \"I don't know what this means...\""];
+	  194 [label="Insulindian Phasmid: Way too high. You open your eyes and it's still there -- a giant stick insect, spinning slowly -- its limbs long and slender. Silent as death..."];
+	  195 [label="Variable[\"seafort.deserter_volition_cannot_be\"]"];
+	  196 [label="Variable[\"seafort.deserter_volition_cannot_be\"]", shape=diamond];
+	  197 [label="!(Variable[\"seafort.deserter_volition_cannot_be\"])", shape=diamond];
+	  198 [label="Electrochemistry: Like an addict of some terrible substance."];
+	  199 [label="You: \"I think he's addicted to that thing.\""];
+	  200 [label="Kim Kitsuragi: He nods. \"He was energetic and articulate. After all these years alone, with little hygiene or medication I would expect worse.\""];
+	  201 [label="Kim Kitsuragi: \"If Cuno kicked it into the sea, as he said he did -- the ebb would pull it back here. This makes sense. Mr. Dros could have picked it up. Or... the phasmid, even? If it did, this is incredible...\""];
+	  202 [label="Cuno: \"Told you? When you were doing your *long* staring thing?\" He looks at the man, then you. \"You're one crazy cop, you know? Cuno digs it.\""];
+	  203 [label="Jump to: [Untitled hub (04)]"];
+	  204 [label="Cuno: \"Hey -- hey.\" He waves his hand under his nose. \"You took the shot -- bang! -- and got rid of the evidence. *Bug* brought it back. Sound about right?\""];
+	  205 [label="Jump to: [The Deserter: \"\"What?!\" The old man's eyes fill wi...\"]"];
+	  206 [label="Composure: The sum of all the erratic movements, fidgeting and mood swings he's been exhibiting..."];
+	  207 [label="Variable[\"seafort.deserter_halflight_not_afraid_of_jail\"]"];
+	  208 [label="Variable[\"seafort.deserter_halflight_not_afraid_of_jail\"]", shape=diamond];
+	  209 [label="!(Variable[\"seafort.deserter_halflight_not_afraid_of_jail\"])", shape=diamond];
+	  210 [label="Conceptualization: Below the confusion and rage -- a fit of jamais vu, like yours? The thought passes, more pressing matters take its place..."];
+	  211 [label="IsTHCPresent(\"jamais_vu\")"];
+	  212 [label="IsTHCPresent(\"jamais_vu\")", shape=diamond];
+	  213 [label="!(IsTHCPresent(\"jamais_vu\"))", shape=diamond];
+	  214 [label="Reaction Speed: It may be too late later, the circumstances change, are you sure we're done here?"];
+	  215 [label="Empathy: This terror, the sum of all the uncontrollable movements and mood swings he's been exhibiting..."];
+	  216 [label="You: \"Maybe you're right...\""];
+	  217 [label="The Deserter: \"This world...\" The old man interferes again. \"What are you *talking* about? Is this...\" His voice drowns out in a sudden gush of wind. \"Us...\"\n\"This world...\" The old man repeats. \"What are you *talking* about? Is this...\" His voice drowns out in a sudden gush of wind. \"Us...\" "];
+	  218 [label="Perception (Hearing): There it is again, to your north, as it has been since you came to the coast -- the reeds whisper, stalks rubbing against each other. But then, in the middle of it..."];
+	  219 [label="Visual Calculus: Cold. From the East."];
+	  220 [label="Variable[\"seafort.deserter_volition_he_can_see\"]"];
+	  221 [label="Variable[\"seafort.deserter_volition_he_can_see\"]", shape=diamond];
+	  222 [label="!(Variable[\"seafort.deserter_volition_he_can_see\"])", shape=diamond];
+	  223 [label="Insulindian Phasmid: It's really there. Spinning slowly -- in absolute silence -- its limbs long and slender."];
+	  224 [label="You: \"There IS! I see it!\"\n\"There IS! I see it!\""];
+	  225 [label="You: \"Mr. Dros?\""];
+	  226 [label="The Deserter: The trembling mouth appears to sigh. That's all. You've fried him."];
+	  227 [label="Kim Kitsuragi: \"The appearance of the phasmid, in conjunction with the stress of the arrest. He's spent his entire life here. For him to leave would be...\" He shakes his head."];
+	  228 [label="Jump to: [Untitled hub (04)]"];
+	  229 [label="You: \"It's definitely toxic -- the phasmid. It told me it is.\""];
+	  230 [label="You: \"You lost it, Mr. Dros?\""];
+	  231 [label="IsKimHere()"];
+	  232 [label="IsKimHere()", shape=diamond];
+	  233 [label="!(IsKimHere())", shape=diamond];
+	  234 [label="Cuno: \"You sure?\" He whispers. \"You sure we got it all?\""];
+	  235 [label="Volition: Thank god. If he can see, then you're not insane."];
+	  236 [label="IsKimHere()"];
+	  237 [label="IsKimHere()", shape=diamond];
+	  238 [label="!(IsKimHere())", shape=diamond];
+	  239 [label="You: \"No way. I was only talking to it.\""];
+	  240 [label="You: \"It's right there, can you see it?\" (Point.)"];
+	  241 [label="You: (Nod.) \"We've been thorough enough.\""];
+	  242 [label="Variable[\"seafort.deserter_wc_health_success\"]"];
+	  243 [label="Variable[\"seafort.deserter_wc_health_success\"]", shape=diamond];
+	  244 [label="!(Variable[\"seafort.deserter_wc_health_success\"])", shape=diamond];
+	  245 [label="The Deserter: \"But...\""];
+	  246 [label="Logic: But then -- who watches him, while you're coming back here?"];
+	  247 [label="Variable[\"seafort.deserter_inland_weary\"]"];
+	  248 [label="Variable[\"seafort.deserter_inland_weary\"]", shape=diamond];
+	  249 [label="!(Variable[\"seafort.deserter_inland_weary\"])", shape=diamond];
+	  250 [label="Shivers: Your skin crawls."];
+	  251 [label="You: \"Let's go. I don't have handcuffs, so you walk in front of me.\""];
+	  252 [label="You: \"Mr. Dros, do you hear that?\""];
+	  253 [label="The Deserter: \"What a farce. What are you *talking* about -- inland? Is this...\" The old man's voice drowns in a sudden gush of wind."];
+	  255 [label="IsKimHere()"];
+	  256 [label="IsKimHere()", shape=diamond];
+	  257 [label="!(IsKimHere())", shape=diamond];
+	  258 [label="Insulindian Phasmid: No one would. You open your eyes and it's still there -- a giant stick insect, spinning slowly -- its limbs long and slender. Silent as death..."];
+	  259 [label="Half Light: You feel your legs shaking under you and your gun hand rise instinctively..."];
+	  260 [label="IsKimHere()"];
+	  261 [label="IsKimHere()", shape=diamond];
+	  262 [label="!(IsKimHere())", shape=diamond];
+	  263 [label="Insulindian Phasmid: ...be together. You open your eyes and it's still there -- a giant stick insect, spinning slowly -- its limbs long and slender...."];
+	  264 [label="Kim Kitsuragi: \"Mr. Dros?\""];
+	  265 [label="You: \"Hang tight.\" [Leave.]"];
+	  266 [label="You: \"Yes. You *forget* it's there.\""];
+	  267 [label="Kim Kitsuragi: \"He does not seem to be *animated* now it's left...\" He looks to the sea. \"Honestly, I'm ready to believe anything at this point. Maybe it *is* psychoactive.\""];
+	  268 [label="Insulindian Phasmid: Spinning in silence -- limbs and antennae, like hair."];
+	  269 [label="You: \"He seemed... a little *off* for a man his age. Randy.\""];
+	  270 [label="Kim Kitsuragi: \"A valid hunch. Long term exposure to something like that could be neurodegenerative... Also, please be careful when approaching unknown species in the future, detective.\""];
+	  271 [label="Variable[\"seafort.phasmid_talking_hub_reached\"]"];
+	  272 [label="Variable[\"seafort.phasmid_talking_hub_reached\"]", shape=diamond];
+	  273 [label="!(Variable[\"seafort.phasmid_talking_hub_reached\"])", shape=diamond];
+	  274 [label="Composure: Quite a few things about that health check you did on him make sense now."];
+	  275 [label="Half Light: The last embers have gone out. The war is over."];
+	  276 [label="Kim Kitsuragi: \"He hears us... The spirit?\""];
+	  277 [label="Variable[\"seafort.deserter_phasmid_hub_left\"]"];
+	  278 [label="Variable[\"seafort.deserter_phasmid_hub_left\"]", shape=diamond];
+	  279 [label="!(Variable[\"seafort.deserter_phasmid_hub_left\"])", shape=diamond];
+	  280 [label="Cuno: \"Right.\" He turns to him. \"Give him his rights.\""];
+	  281 [label="Cuno: \"Do you understand?\""];
+	  282 [label="Variable[\"seafort.deserter_rc_perchear_wait_listen\"]"];
+	  283 [label="Variable[\"seafort.deserter_rc_perchear_wait_listen\"]", shape=diamond];
+	  284 [label="!(Variable[\"seafort.deserter_rc_perchear_wait_listen\"])", shape=diamond];
+	  285 [label="Jump to: [seafort.deserter_volition_he_can_see]"];
+	  286 [label="Volition: Thank god. If *he* can see, then *maybe* you're not insane."];
+	  287 [label="Insulindian Phasmid: It's really there. Spinning slowly -- in absolute silence -- its limbs long and slender..."];
+	  288 [label="Cuno: \"I mean, getting arrested as a fucking GIANT stick insect jumps up behind you...\" He shakes his head.  \"That shit would break *any* man. Even a Cuno Man.\""];
+	  289 [label="Jump to: [Untitled hub (04)]"];
+	  290 [label="Cuno: \"True...\" Cuno leans into the man's face, stares into his eyes. \"He's got those *gurn eyes* doesn't he?\""];
+	  291 [label="Jump to: [Untitled hub (04)]"];
+	  292 [label="Cuno: \"How? Like -- it's pretty fucking huge...\" He nudges the man, gently: \"How?\""];
+	  293 [label="Cuno: \"I can't *believe* that helmet, man. I kicked it into the fucking ocean and it washed up here. Or... do you -- do you think the *phasmid* brought it here?\" He squints, looking around."];
+	  294 [label="Jump to: [Untitled hub (04)]"];
+	  295 [label="You: \"Maybe you're right...\""];
+	  296 [label="You: \"This is not a problem.\""];
+	  297 [label="You: (Turn to the suspect.) \"One more thing, Mr. Dros...\""];
+	  298 [label="TEAM hub"];
+	  299 [label="Perception (Sight): Look, he's sweating. Beads are forming on his forehead."];
+	  300 [label="Pain Threshold: Like parting from a loved one."];
+	  301 [label="Kim Kitsuragi: \"Actually, no...\" He scratches his head."];
+	  302 [label="You: \"I've finally gone insane...\" (Put your head in your hands.)"];
+	  303 [label="Jump to: [Untitled hub (04)]"];
+	  304 [label="You: No, it's not that."];
+	  305 [label="Untitled hub (04)"];
+	  306 [label="The Deserter: He turns his eyes to the reeds again -- as he's done so many times. Beige and white stripes..."];
+	  307 [label="Kim Kitsuragi: \"I mean, why not? It's three metres tall...\" He takes off his glasses and cleans them -- when he puts them back on he's still staring at the sea."];
+	  308 [label="The Deserter: No reaction. His breathing is slow and he appears very old all of a sudden. Around eighty."];
+	  309 [label="Jump to: [PHASMID QUESTIONS]"];
+	  310 [label="You: (Turn to the suspect.) \"One more thing, Mr. Dros...\""];
+	  311 [label="You: \"Do you understand, sir?\""];
+	  312 [label="The Deserter: \"No... I don't want to. I have to stay *here*.\" He looks at the reeds, eyes full of terror."];
+	  313 [label="Half Light: He's not afraid of jail. He's afraid of something else..."];
+	  314 [label="You: What?"];
+	  315 [label="Cuno: \"Maybe we could all fit in there...\""];
+	  316 [label="Cuno: \"Yeah and then there's that shit...\" He looks at him with pity. \"Gramps couldn't take it. It was too much.\""];
+	  317 [label="Cuno: \"Uh...\" He looks at the creature."];
+	  318 [label="Cuno: \"Then how the *fuck* do we see it?\" He scratches his head. \"Or -- wait! The longer it's there. Like it needs time to sink in and if you spend time with it...\"\n\"Then how the *fuck* did we see it?\" He scratches his head. \"Or -- wait! The longer it's there. Like it needs time to sink in and if you spend time with it...\""];
+	  319 [label="Jump to: [Untitled hub (04)]"];
+	  320 [label="You: \"Your Wayfarer rights have been suspended. Information provided to the officer on the scene will be used against you by the prosecution.\""];
+	  321 [label="Kim Kitsuragi: \"Not really.\" He shakes his head. \"We could escort him to the pier, then either one of us can take him inland while the other stays here, but...\""];
+	  322 [label="The Deserter: \"...\""];
+	  323 [label="Variable[\"seafort.deserter_rc_perchear_wait_listen\"]"];
+	  324 [label="Variable[\"seafort.deserter_rc_perchear_wait_listen\"]", shape=diamond];
+	  325 [label="!(Variable[\"seafort.deserter_rc_perchear_wait_listen\"])", shape=diamond];
+	  326 [label="You: \"Okay, so you're saying we can all fit in there?\""];
+	  327 [label="Kim Kitsuragi: \"I can see it.\""];
+	  328 [label="Electrochemistry: *Or* you're high."];
+	  329 [label="stick_it"];
+	  330 [label="IsKimHere()"];
+	  331 [label="IsKimHere()", shape=diamond];
+	  332 [label="!(IsKimHere())", shape=diamond];
+	  333 [label="You: \"Old age and shock, yes.\""];
+	  334 [label="Empathy: It's not just chemical."];
+	  335 [label="Kim Kitsuragi: \"I have absolutely forgotten to take notes. I hope I remember all of this.\" He shakes his head in disbelief. \"This will be one hell of a report -- thank *god* we have the photo.\""];
+	  336 [label="Composure: This is an old man -- at last. No longer a tin soldier, but the broken down remains of a man."];
+	  337 [label="Volition: He is a brave man -- why is he unravelling?"];
+	  338 [label="Variable[\"seafort.deserter_halflight_not_afraid_of_jail\"]"];
+	  339 [label="Variable[\"seafort.deserter_halflight_not_afraid_of_jail\"]", shape=diamond];
+	  340 [label="!(Variable[\"seafort.deserter_halflight_not_afraid_of_jail\"])", shape=diamond];
+	  341 [label="CUNOTEAM hub"];
+	  342 [label="You: \"Shush, Cuno! Do you hear that?\""];
+	  343 [label="IsKimHere()"];
+	  344 [label="IsKimHere()", shape=diamond];
+	  345 [label="!(IsKimHere())", shape=diamond];
+	  346 [label="You: \"Yes. He seemed... a little *off* for a man his age.\""];
+	  347 [label="Jump to: [Untitled hub (04)]"];
+	  348 [label="Variable[\"yard.cuno_armour_sea_branch_finished\"] == true"];
+	  349 [label="Variable[\"yard.cuno_armour_sea_branch_finished\"] == true", shape=diamond];
+	  350 [label="!(Variable[\"yard.cuno_armour_sea_branch_finished\"] == true)", shape=diamond];
+	  351 [label="IsCunoInParty()"];
+	  352 [label="IsCunoInParty()", shape=diamond];
+	  353 [label="!(IsCunoInParty())", shape=diamond];
+	  354 [label="You: No. It's not that."];
+	  355 [label="Jump to: [The Deserter: \"\"What?!\" The old man's eyes fill wi...\"]"];
+	  356 [label="Jump to: [PHASMID HUB]"];
+	  357 [label="The Deserter: \"What?!\" The old man's eyes fill with sudden, unexpected terror at the words: \"But you said I would be taken to the...\""];
+	  358 [label="The Deserter: \"No, I don't want to! I have to stay here.\" He looks at the reeds, eyes submerged in growing terror."];
+	  359 [label="You: First say: \"Does it have room for *three*?\""];
+	  360 [label="The Deserter: \"This fucking world...\" He stares at something -- who knows what -- in the dust. \"This world... what is this?\""];
+	  361 [label="Logic: There's something you're not getting here that he's realizing."];
+	  362 [label="Logic: Did you get *everything*, detective?"];
+	  363 [label="Perception (Hearing): Something completely different. It sounds like a bow, very slowly being drawn against the strings of a violin. A very small violin made of reeds and rushes."];
+	  364 [label="Logic: He's been stuck on the island after the tyre broke..."];
+	  365 [label="Variable[\"seafort.orb_dinghy_clicked\"]"];
+	  366 [label="Variable[\"seafort.orb_dinghy_clicked\"]", shape=diamond];
+	  367 [label="!(Variable[\"seafort.orb_dinghy_clicked\"])", shape=diamond];
+	  368 [label="Kim Kitsuragi: \"I can see it.\""];
+	  369 [label="Kim Kitsuragi: \"Yes. The arrest and the appearance of the phasmid -- the combined stress...\" He looks at you. \"But you think it's something more than that, don't you?\""];
+	  370 [label="Kim Kitsuragi: \"Hmm...\" He looks at the creature..."];
+	  371 [label="Kim Kitsuragi: \"Some kind of oxytocin release mechanism? Would go with the pupils. But this is way above me, detective.\""];
+	  372 [label="Kim Kitsuragi: \"Told you? Yes. Good. During your *long* staring match. I understand.\" He looks at the man, then you."];
+	  373 [label="Kim Kitsuragi: \"We should think about getting back to the mainland. To get help. He'll be safe here. If we don't take too long...\""];
+	  374 [label="The Deserter: No reply. He's gone again."];
+	  375 [label="Variable[\"seafort.deserter_esprit_arrest\"]"];
+	  376 [label="Variable[\"seafort.deserter_esprit_arrest\"]", shape=diamond];
+	  377 [label="!(Variable[\"seafort.deserter_esprit_arrest\"])", shape=diamond];
+	  378 [label="The Deserter: \"...\""];
+	  379 [label="Cuno: \"Be *very* careful....\" the kid whispers, then takes a step toward the giant arthropod..."];
+	  380 [label="Variable[\"seafort.deserter_volition_he_can_see\"]"];
+	  381 [label="Variable[\"seafort.deserter_volition_he_can_see\"]", shape=diamond];
+	  382 [label="!(Variable[\"seafort.deserter_volition_he_can_see\"])", shape=diamond];
+	  383 [label="The Deserter: The old man holds himself for warmth. His gaze is vacantly directed toward the mainland."];
+	  384 [label="IsKimHere()"];
+	  385 [label="IsKimHere()", shape=diamond];
+	  386 [label="!(IsKimHere())", shape=diamond];
+	  387 [label="You: \"We could all fit in the little boat?\""];
+	  388 [label="You: \"No. Forget it.\" Inspect the man."];
+	  389 [label="Rhetoric: Nothing -- 'nothing' is what he tried to say."];
+	  390 [label="You: \"*You* could come back for me. Once you've taken him to the Precinct.\""];
+	  391 [label="The Deserter: \"What is this... farce?\" He looks around, with strange desperation. \"This a fucking farce, I can't...\""];
+	  392 [label="You: \"Maybe I can just ask Lilienne to watch him?\"\n\"Maybe I can just ask that Net Picker to watch him?\""];
+	  393 [label="Variable[\"seafort.deserter_reaction_everything\"]"];
+	  394 [label="Variable[\"seafort.deserter_reaction_everything\"]", shape=diamond];
+	  395 [label="!(Variable[\"seafort.deserter_reaction_everything\"])", shape=diamond];
+	  396 [label="Jump to: [CheckItem(\"deserter_gun\")]"];
+	  397 [label="Variable[\"seafort.deserter_wc_health_success\"]"];
+	  398 [label="Variable[\"seafort.deserter_wc_health_success\"]", shape=diamond];
+	  399 [label="!(Variable[\"seafort.deserter_wc_health_success\"])", shape=diamond];
+	  400 [label="Inland Empire: Now that you say them, the words feel like tin, heavy, they're coming from the bottom of you. You've said them half a thousand times..."];
+	  401 [label="Kim Kitsuragi: \"We should try first. There is a prisoner transfer protocol that requires two...\""];
+	  402 [label="SOLO hub"];
+	  403 [label="Half Light: You feel your legs shaking under you and your gun hand move to your holster -- to grab the gun..."];
+	  404 [label="CheckEquipped(\"gun_villiers\")  or  CheckEquipped(\"gun_ruby\")"];
+	  405 [label="CheckEquipped(\"gun_villiers\")  or  CheckEquipped(\"gun_ruby\")", shape=diamond];
+	  406 [label="!(CheckEquipped(\"gun_villiers\")  or  CheckEquipped(\"gun_ruby\"))", shape=diamond];
+	  407 [label="Insulindian Phasmid: There is only the old man -- and the giant stick insect spinning slowly -- in absolute silence -- it's long and thin limbs..."];
+	  408 [label="Insulindian Phasmid: It's still there -- an unfolding mechanism of reed-like chitin. Hovering in place."];
+	  409 [label="Electrochemistry: You're high. Breathe in, you're just high!"];
+	  410 [label="Volition: You're NOT insane."];
+	  411 [label="Kim Kitsuragi: \"He's going into some kind of... psycho-motor immobility.\" The lieutenant inspects him gently. \"The good news is -- this solves our transportation problem. Doesn't it Mr. Dros?\""];
+	  412 [label="The Deserter: The trembling mouth appears to sigh."];
+	  413 [label="You: \"Before -- when I evaluated his state -- he seemed strangely animated.\""];
+	  414 [label="Variable[\"seafort.phasmid_touching_hub\"]"];
+	  415 [label="Variable[\"seafort.phasmid_touching_hub\"]", shape=diamond];
+	  416 [label="!(Variable[\"seafort.phasmid_touching_hub\"])", shape=diamond];
+	  417 [label="Variable[\"seafort.deserter_wc_health_success\"]"];
+	  418 [label="Variable[\"seafort.deserter_wc_health_success\"]", shape=diamond];
+	  419 [label="!(Variable[\"seafort.deserter_wc_health_success\"])", shape=diamond];
+	  420 [label="Esprit de Corps: ... is what you plan to say. Before you can get past 'you're under', the kid interrupts you:"];
+	  421 [label="Empathy: This terror -- the sum of all the uncontrollable movements and mood swings he's been exhibiting..."];
+	  422 [label="Composure: The sum of all the erratic movements, fidgeting and mood swings he's been exhibiting..."];
+	  423 [label="Perception (Sight): He's sweating. Beads are forming on his forehead."];
+	  424 [label="Cuno: \"We don't need your permisson,\" the kid turns to you. \"We do need to talk about that *boat* though. How are we gonna take him?\""];
+	  425 [label="Cuno: \"What?\""];
+	  426 [label="Cuno: \"I can see it.\""];
+	  427 [label="IsKimHere()"];
+	  428 [label="IsKimHere()", shape=diamond];
+	  429 [label="!(IsKimHere())", shape=diamond];
+	  430 [label="The Deserter: \"What is this... farce?\" He looks around, with some desperation. \"This a fucking farce, I can't...\""];
+	  431 [label="Kim Kitsuragi: \"Try something else? We got him back for a moment.\""];
+	  432 [label="Variable[\"TASK.return_to_mainland\"]"];
+	  433 [label="Variable[\"TASK.return_to_mainland\"]", shape=diamond];
+	  434 [label="!(Variable[\"TASK.return_to_mainland\"])", shape=diamond];
+	  435 [label="Jump to: [The Deserter: \"\"Huh?\" He leans closer with a stran...\"]"];
+	  436 [label="The Deserter: \"N-n...\" He doesn't finish the sentence. One letter is all he can produce. His hands are numb and he stares at them."];
+	  437 [label="Variable[\"TASK.extract_a_motive_done\"]"];
+	  438 [label="Variable[\"TASK.extract_a_motive_done\"]", shape=diamond];
+	  439 [label="!(Variable[\"TASK.extract_a_motive_done\"])", shape=diamond];
+	  440 [label="You: Wait..."];
+	  441 [label="You: Variable[\"seafort.deserter_rc_perchear_wait_listen\"]"];
+	  442 [label="Variable[\"seafort.deserter_rc_perchear_wait_listen\"]", shape=diamond];
+	  443 [label="!(Variable[\"seafort.deserter_rc_perchear_wait_listen\"])", shape=diamond];
+	  444 [label="You: \"You will be provided legal counsel within one week, and must face court in 44 days -- do you understand?\""];
+	  445 [label="Variable[\"seafort.deserter_perc_sweat\"]"];
+	  446 [label="Variable[\"seafort.deserter_perc_sweat\"]", shape=diamond];
+	  447 [label="!(Variable[\"seafort.deserter_perc_sweat\"])", shape=diamond];
+	  448 [label="Kim Kitsuragi: \"Maybe we could all fit in there...\" the lieutenant says."];
+	  449 [label="Variable[\"TASK.find_phasmid\"]  or Variable[\"TASK.find_phasmid_done\"]"];
+	  450 [label="Variable[\"TASK.find_phasmid\"]  or Variable[\"TASK.find_phasmid_done\"]", shape=diamond];
+	  451 [label="!(Variable[\"TASK.find_phasmid\"]  or Variable[\"TASK.find_phasmid_done\"])", shape=diamond];
+	  452 [label="Jump to: [seafort.deserter_volition_he_can_see]"];
+	  453 [label="You: \"No, I can't be insane -- you're wrong.\""];
+	  454 [label="Insulindian Phasmid: But you *can*. You open your eyes and it's still there -- a giant stick insect, spinning slowly -- -- its limbs long and slender..."];
+	  455 [label="Variable[\"seafort.deserter_reaction_its_the_cryptid\"]"];
+	  456 [label="Variable[\"seafort.deserter_reaction_its_the_cryptid\"]", shape=diamond];
+	  457 [label="!(Variable[\"seafort.deserter_reaction_its_the_cryptid\"])", shape=diamond];
+	  458 [label="You: \"I don't know what the hell that is...\""];
+	  459 [label="You: \"Maybe. Anyway -- it's only trying to remain unseen. The degradation is a side effect.\""];
+	  460 [label="Jump to: [Untitled hub (04)]"];
+	  461 [label="The Deserter: The plastic cape flaps around his face, in a gust of wind. His back is slouched and his mouth open."];
+	  462 [label="Perception (Hearing): Something completely different. It sounds like a bow, very slowly being drawn against the strings of a violin. A very small violin made of reeds and rushes."];
+	  463 [label="IsKimHere()"];
+	  464 [label="IsKimHere()", shape=diamond];
+	  465 [label="!(IsKimHere())", shape=diamond];
+	  466 [label="Kim Kitsuragi: \"Do you understand?\""];
+	  467 [label="You: (No, I got everything I need, say:) \"Iosef Lilianovich Dros -- you are under arrest for the murder of the Krenel colonel.\"\n(No, I got everything I need, say:) \"Iosef Lilianovich Dros -- you are under arrest for the murder of Ellis Kortenaer.\"\n(No, I got everything I need, say:) \"Iosef Lilianovich Dros -- you are under arrest for the murder of Lely, the mercenary.\""];
+	  468 [label="Volition: He is a brave man -- why is he unravelling?"];
+	  469 [label="Conceptualization: It feels like a *spell*."];
+	  470 [label="The Deserter: \"What a farce. What are you *talking* about -- handcuffs? Is this...\" The old man's voice drowns in a sudden gush of wind."];
+	  471 [label="Reaction Speed: But that would mean..."];
+	  472 [label="You: \"Kim, can *you* see it?!\""];
+	  473 [label="Electrochemistry: It's too late, you quit drinking too late!"];
+	  474 [label="You: \"A giant bug, watch out!\""];
+	  475 [label="Variable[\"seafort.phasmid_and_nest_done\"] == false"];
+	  476 [label="Variable[\"seafort.phasmid_and_nest_done\"] == false", shape=diamond];
+	  477 [label="!(Variable[\"seafort.phasmid_and_nest_done\"] == false)", shape=diamond];
+	  478 [label="Jump to: [Untitled hub (04)]"];
+	  479 [label="Jump to: [Untitled hub (04)]"];
+	  480 [label="Kim Kitsuragi: \"He lost the scope. Then it somehow made its way over there. With the help of a magpie phasmid?\" The lieutenant observes the lens sparkle in your hand."];
+	  481 [label="The Deserter: Silence. Not even a sigh."];
+	  482 [label="Perception (Hearing): There it is again, to your north, as it has been since you came to the coast -- the reeds whisper, stalks rubbing against each other. But then, in the middle of it..."];
+	  483 [label="Cuno: ...and then it's gone. Drowned out by the kid's voice -- \"Maybe there is room for three on the boat...\"\n...and then it's gone. Drowned out by the kid's voice -- \"Maybe there *is* room for three on the boat...\""];
+	  484 [label="Insulindian Phasmid: It's really there. Spinning slowly -- in absolute silence -- its limbs long and slender..."];
+	  485 [label="Jump to: [Untitled hub (04)]"];
+	  486 [label="Rhetoric: The words come to you, clear as day."];
+	  487 [label="The Deserter: He seems oblivious to the question. The waves slowly lap against the seafort to the south..."];
+	  488 [label="The Deserter: The old man looks at his rifle in your hands -- a little startled for some reason..."];
+	  489 [label="Empathy: This terror is the sum of all the uncontrollable movements and mood swings he's been exhibiting."];
+	  490 [label="Variable[\"seafort.deserter_logic_who_watches_over\"]"];
+	  491 [label="Variable[\"seafort.deserter_logic_who_watches_over\"]", shape=diamond];
+	  492 [label="!(Variable[\"seafort.deserter_logic_who_watches_over\"])", shape=diamond];
+	  493 [label="Inland Empire: Something is happening. Stop."];
+	  494 [label="You: (Turn to the suspect.) \"One more thing, Mr. Dros...\""];
+	  495 [label="The Deserter: \"Huh?\" He leans closer with a strange expression on his face."];
+	  496 [label="Variable[\"seafort.deserter_one_more_thing\"]"];
+	  497 [label="Variable[\"seafort.deserter_one_more_thing\"]", shape=diamond];
+	  498 [label="!(Variable[\"seafort.deserter_one_more_thing\"])", shape=diamond];
+	  499 [label="Kim Kitsuragi: \"Okay,\" the lieutenant nods. \"How about *I* take him to the Precinct and you wait on the island?\""];
+	  500 [label="Perception (Hearing): There it is again, to your north, as it has been since you came to the coast -- the reeds whisper, stalks rubbing against each other. But then, in the middle of it..."];
+	  501 [label="Perception (Hearing): Something completely different. It sounds like a bow, very slowly being drawn against the strings of a violin. A very small violin made of reeds and rushes."];
+	  502 [label="Logic: If he can see it too, then you're not *totally* insane."];
+	  503 [label="You: \"Oh god, I'm too high...\""];
+	  504 [label="The Deserter: \"There's nothing there.\" He looks confused."];
+	  505 [label="You: Wave your hand in front of his eyes."];
+	  506 [label="PHASMID QUESTIONS"];
+	  507 [label="Kim Kitsuragi: \"Humans are humans. Do you need... neurological tampering for the *glands* to work? I don't know...\""];
+	  508 [label="Kim Kitsuragi: \"The scope, knowing of her bruises, his *disposition* toward Miss Oranje...\" He nods. \"I see what you mean.\""];
+	  509 [label="Jump to: [Untitled hub (04)]"];
+	  510 [label="You: \"I'm going to let you rest now Mr. Dros.\" (Conclude.)"];
+	  511 [label="IsKimHere()"];
+	  512 [label="IsKimHere()", shape=diamond];
+	  513 [label="!(IsKimHere())", shape=diamond];
+	  514 [label="Variable[\"seafort.deserter_wc_health_success\"]"];
+	  515 [label="Variable[\"seafort.deserter_wc_health_success\"]", shape=diamond];
+	  516 [label="!(Variable[\"seafort.deserter_wc_health_success\"])", shape=diamond];
+	  517 [label="Pain Threshold: Like parting from a loved one."];
+	  518 [label="You: \"You're saying we can all fit in there?\""];
+	  519 [label="Variable[\"seafort.deserter_logic_totally_not_insane\"]"];
+	  520 [label="Variable[\"seafort.deserter_logic_totally_not_insane\"]", shape=diamond];
+	  521 [label="!(Variable[\"seafort.deserter_logic_totally_not_insane\"])", shape=diamond];
+	  522 [label="Variable[\"seafort.deserter_eyes_covered\"]"];
+	  523 [label="Variable[\"seafort.deserter_eyes_covered\"]", shape=diamond];
+	  524 [label="!(Variable[\"seafort.deserter_eyes_covered\"])", shape=diamond];
+	  525 [label="IsKimHere()"];
+	  526 [label="IsKimHere()", shape=diamond];
+	  527 [label="!(IsKimHere())", shape=diamond];
+	  528 [label="Cuno: \"Fuck it, why not? A big ghost insect like that is probably going to fuck all your shit.\""];
+	  529 [label="Cuno: The boy waves his hand in front of the old man's face."];
+	  530 [label="You: \"Iosef Lilianovich Dros, you are under arrest for the murder of the mercenary leader, Kortenaer. You will be taken to the nearest precinct holding area for preliminary investigation.\""];
+	  531 [label="Shivers: Your skin is crawling suddenly."];
+	  532 [label="Jump to: [CUNOTEAM hub]"];
+	  533 [label="You: No. It's not that."];
+	  534 [label="Jump to: [themainhub]"];
+	  535 [label="Electrochemistry: Pupils are dilated too, eyes getting blacker and blacker."];
+	  536 [label="The Deserter: ...but Lieutenant Kitsuragi is not here. There is only the old straddler. He turns his black eyes to you and says: \"Kim who? There's no Kim here either.\""];
+	  537 [label="Half Light: You feel your legs shaking under you and your gun hand move to your holster -- but you don't have a gun..."];
+	  538 [label="Kim Kitsuragi: You feel the lieutenant's hand on your back. And then you hear him say four words:"];
+	  539 [label="The Deserter: \"What are you talking about?\" The old man looks at the reeds, then at you."];
+	  540 [label="You: \"No, it's the damn cryptid, the...\""];
+	  541 [label="Volition: No. It can't be!"];
+	  542 [label="Reaction Speed: It's the cryptid!"];
+	  543 [label="Variable[\"seafort.deserter_volition_not_insane\"]"];
+	  544 [label="Variable[\"seafort.deserter_volition_not_insane\"]", shape=diamond];
+	  545 [label="!(Variable[\"seafort.deserter_volition_not_insane\"])", shape=diamond];
+	  546 [label="Jump to: [Untitled hub (04)]"];
+	  547 [label="You: Show him the ceramic helmet.\nTap on the helmet on your head."];
+	  548 [label="Empathy: You've gotten all you will out of this poor being."];
+	  549 [label="Jump to: [Untitled hub (04)]"];
+	  550 [label="get_morest_cuno"];
+	  551 [label="The Deserter: \"What?!\" The old man's eyes fill with sudden, unexpected terror at the words: \"But you said I would be taken to the, uhm, the...\""];
+	  552 [label="Shivers: Your skin crawls."];
+	  553 [label="Reaction Speed: But that would mean..."];
+	  554 [label="Logic: If he can see it too, then you're not *totally* insane."];
+	  555 [label="IsKimHere()"];
+	  556 [label="IsKimHere()", shape=diamond];
+	  557 [label="!(IsKimHere())", shape=diamond];
+	  558 [label="Jump to: [PHASMID QUESTIONS]"];
+	  559 [label="IsKimHere()"];
+	  560 [label="IsKimHere()", shape=diamond];
+	  561 [label="!(IsKimHere())", shape=diamond];
+	  562 [label="Cuno: \"Yeah, this fried him. We gotta bring him to a doctor. Good news -- this solves our boat-and-piggies problem. He's not going anywhere. He's trapped here...\""];
+	  563 [label="You: \"I can't let a kid go and take a murder suspect to the station.\""];
+	  564 [label="The Deserter: \"Th-the...\" The old man stutters. Then another sigh."];
+	  565 [label="IsKimHere()"];
+	  566 [label="IsKimHere()", shape=diamond];
+	  567 [label="!(IsKimHere())", shape=diamond];
+	  568 [label="Kim Kitsuragi: \"Officer...\" The lieutenant interrupts you at *under*. His voice is hushed. \"Are we sure? We could maybe get more...\""];
+	  569 [label="You: \"Who watches him there while I come back for you?\""];
+	  570 [label="Kim Kitsuragi: \"You come back for me? How about I go and send a boat back for you.\""];
+	  571 [label="You: \"I'll do it, let's not get into this.\""];
+	  572 [label="Perception (Hearing): You thought you heard something but it's just the reeds..."];
+	  573 [label="The Deserter: \"I can't, my rubber dinghy...\" He points to the broken tyre. \"My tyre is broken, it won't inflate.\""];
+	  574 [label="Insulindian Phasmid: It's really there. Spinning slowly -- in absolute silence -- its limbs long and slender."];
+	  575 [label="You: Blink."];
+	  576 [label="You: \"The giant stick insect!\""];
+	  577 [label="PHASMID HUB"];
+	  578 [label="Variable[\"TASK.extract_a_motive_done\"] == true"];
+	  579 [label="Variable[\"TASK.extract_a_motive_done\"] == true", shape=diamond];
+	  580 [label="!(Variable[\"TASK.extract_a_motive_done\"] == true)", shape=diamond];
+	  581 [label="Kim Kitsuragi: \"Are you sure? You were looking at it for a *long* time. Almost as if you were hypnotized.\" He thinks. \"Were you hypnotized?\""];
+	  582 [label="Jump to: [PHASMID QUESTIONS]"];
+	  583 [label="Kim Kitsuragi: \"Did you take this passport and other papers from a buoy on the coast?\""];
+	  584 [label="Jump to: [CheckItem(\"deserter_gun\")]"];
+	  585 [label="Cuno: You feel the kid tug on your sleeve -- and in the darkness -- four words:"];
+	  586 [label="Logic: But that means..."];
+	  587 [label="IsKimHere()"];
+	  588 [label="IsKimHere()", shape=diamond];
+	  589 [label="!(IsKimHere())", shape=diamond];
+	  590 [label="Variable[\"TASK.extract_a_motive_done\"] == true"];
+	  591 [label="Variable[\"TASK.extract_a_motive_done\"] == true", shape=diamond];
+	  592 [label="!(Variable[\"TASK.extract_a_motive_done\"] == true)", shape=diamond];
+	  593 [label="IsKimHere()"];
+	  594 [label="IsKimHere()", shape=diamond];
+	  595 [label="!(IsKimHere())", shape=diamond];
+	  596 [label="You: \"He *has* displayed addict behaviour. And not just to painkillers.\"\n\"He has the symptoms of an addict. And not the normal symptoms.\""];
+	  597 [label="You: \"Does the boat have room for three?\""];
+	  598 [label="Visual Calculus: Cold. From the East."];
+	  599 [label="Cuno: \"Watch this *killer*?\" The kid shakes his head and points to him."];
+	  600 [label="The Deserter: \"This fucking world...\" He stares at something -- who knows what -- in the dust. \"This world... what is this?\""];
+	  601 [label="Conceptualization: Below the confusion and rage -- a fit of jamais vu, like yours? The thought passes, more pressing matters take its place..."];
+	  602 [label="Jump to: [CUNOTEAM hub]"];
+	  603 [label="Variable[\"seafort.deserter_esprit_arrest\"]"];
+	  604 [label="Variable[\"seafort.deserter_esprit_arrest\"]", shape=diamond];
+	  605 [label="!(Variable[\"seafort.deserter_esprit_arrest\"])", shape=diamond];
+	  606 [label="You: \"You're afraid...\""];
+	  607 [label="You: Wait..."];
+	  608 [label="You: Variable[\"seafort.deserter_rc_perchear_wait_listen\"]"];
+	  609 [label="Variable[\"seafort.deserter_rc_perchear_wait_listen\"]", shape=diamond];
+	  610 [label="!(Variable[\"seafort.deserter_rc_perchear_wait_listen\"])", shape=diamond];
+	  611 [label="You: What?"];
+	  612 [label="Reaction Speed: No, it's the cryptid!"];
+	  613 [label="You: Touch his shoulder gently."];
+	  614 [label="You: \"Mr. Dros?\""];
+	  615 [label="You: \"I think it's the *phasmid*.\""];
+	  616 [label="Untitled hub (04)"];
+	  617 [label="Variable[\"coast.morell_phasmid_last_seen\"]"];
+	  618 [label="Variable[\"coast.morell_phasmid_last_seen\"]", shape=diamond];
+	  619 [label="!(Variable[\"coast.morell_phasmid_last_seen\"])", shape=diamond];
+	  620 [label="Kim Kitsuragi: \"Mhm.\" The lieutenant inspects the man. \"Mr. Dros -- have you *ever* seen a stick insect, pretending to be the reeds?\""];
+	  621 [label="Kim Kitsuragi: \"It's *three metres* tall. An undiscovered species. I'm not ready to believe in *anything* -- but yes, I'm ready to believe it has psychoactive qualities.\""];
+	  622 [label="You: \"He *has* displayed addict behaviour. And not *just* to painkillers.\"\n\"He has the symptoms of an addict. And not the *normal* symptoms.\""];
+	  623 [label="Kim Kitsuragi: \"You should be more careful, detective. Are you sure it wasn't having an *effect* on you?\""];
+	  624 [label="You: \"No way. I was only talking to it.\""];
+	  625 [label="Kim Kitsuragi: \"I have absolutely forgotten to take notes -- I hope I remember all of this.\" He shakes his head. \"This will be one hell of a report -- they'll think we're insane.\""];
+	  626 [label="Jump to: [Untitled hub (04)]"];
+	  627 [label="Jump to: [CUNOTEAM hub]"];
+	  628 [label="Untitled hub"];
+	  629 [label="Cuno: \"Yeah-yeah, you see that too?\" He looks at the unresponsive man. \"Got a little jumpy there didn't you? I know that vibe. I'm off my lightning too...\""];
+	  630 [label="IsKimHere()"];
+	  631 [label="IsKimHere()", shape=diamond];
+	  632 [label="!(IsKimHere())", shape=diamond];
+	  633 [label="Cuno: \"Yeah, man -- I don't know. I don't know what *degradation* means. And I don't know about getting close to it like that -- and staring at it for five minutes... You're one crazy cop.\""];
+	  634 [label="Variable[\"seafort.phasmid_and_nest_done\"] == false"];
+	  635 [label="Variable[\"seafort.phasmid_and_nest_done\"] == false", shape=diamond];
+	  636 [label="!(Variable[\"seafort.phasmid_and_nest_done\"] == false)", shape=diamond];
+	  637 [label="Cuno: \"Yeah,\" the kid says, interested. \"Cuno knows hobos. And Cuno has never seen a hobo sharp like this, after so many years of hoboing.\""];
+	  638 [label="Cuno: \"About that...\" Cuno squints at the helmet. \"Me and C kicked that shit into the ocean. She took it off the corpse and kicked it, rugby style. How'd it wash up here...\" He pauses -- then squints. \"I don't know.\""];
+	  639 [label="You: \"But then who watches him -- there -- while I come back for you?\""];
+	  640 [label="Inland Empire: Stop. Something is happening."];
+	  641 [label="Drama: No one would believe you without it."];
+	  642 [label="The Deserter: The old man looks at his rifle in the sand, then up at you -- a little startled for some reason..."];
+	  643 [label="Esprit de Corps: ... is what you plan to say. Before you can get past 'you're under', the lieutenant interrupts you:"];
+	  644 [label="Variable[\"seafort.deserter_halflight_not_afraid_of_jail\"]"];
+	  645 [label="Variable[\"seafort.deserter_halflight_not_afraid_of_jail\"]", shape=diamond];
+	  646 [label="!(Variable[\"seafort.deserter_halflight_not_afraid_of_jail\"])", shape=diamond];
+	  647 [label="Kim Kitsuragi: \"No, no, it would take a whole day on this island. You go and transport the prisoner, I'll be here. I can escort him to the pier with you.\""];
+	  648 [label="You: \"Maybe you're right, okay...\""];
+	  649 [label="The Deserter: \"What are you *talking* about? Is this...\" The old man's voice drowns in a sudden gust of wind. \"...really us...\""];
+	  650 [label="Variable[\"seafort.deserter_rc_perchear_wait_listen\"]"];
+	  651 [label="Variable[\"seafort.deserter_rc_perchear_wait_listen\"]", shape=diamond];
+	  652 [label="!(Variable[\"seafort.deserter_rc_perchear_wait_listen\"])", shape=diamond];
+	  653 [label="Variable[\"seafort.deserter_eyes_covered\"]"];
+	  654 [label="Variable[\"seafort.deserter_eyes_covered\"]", shape=diamond];
+	  655 [label="!(Variable[\"seafort.deserter_eyes_covered\"])", shape=diamond];
+	  656 [label="Logic: He's right. You've lost your mind."];
+	  657 [label="Insulindian Phasmid: The stick insect is over three metres tall. It looks straight at you with its tiny pinprick eyes and its grotesquely small head."];
+	  658 [label="Variable[\"tc.insulindian_phasmid\"]"];
+	  659 [label="Variable[\"tc.insulindian_phasmid\"]", shape=diamond];
+	  660 [label="!(Variable[\"tc.insulindian_phasmid\"])", shape=diamond];
+	  661 [label="You: \"Sir, how could you not *see* the phasmid?\""];
+	  662 [label="The Deserter: The man does not respond -- he keeps staring, black eyes glazed over and bulging from their sockets, his gap toothed mouth shaking."];
+	  663 [label="Empathy: With fear and longing."];
+	  664 [label="You: \"What has happened to this man?\"\n\"What happened to you, Mr. Dros?\""];
+	  665 [label="You: \"Could it be there's something hormonal in his relationship to the phasmid.\""];
+	  666 [label="Kim Kitsuragi: \"Like a drug?\""];
+	  667 [label="Kim Kitsuragi: \"He did seem distressed when it finally came to arresting him. Like he didn't want to leave this place. And the insect maybe...\" He looks at his notebook."];
+	  668 [label="Cuno: \"Talked, huh? You sure it didn't have a strange effect on, *you*? You looked, like, hypnotized.\""];
+	  669 [label="Jump to: [Untitled hub (04)]"];
+	  670 [label="The Deserter: \"Th-the...\" The old man stutters. Then a sigh."];
+	  671 [label="IsCunoInParty()"];
+	  672 [label="IsCunoInParty()", shape=diamond];
+	  673 [label="!(IsCunoInParty())", shape=diamond];
+	  674 [label="You: \"You will be provided legal counsel within one week, and must face court in 44 days.\""];
+	  675 [label="You: \"*I* could come back for you. Once I've taken him to the Precinct.\""];
+	  676 [label="The Deserter: \"...\""];
+	  677 [label="Perception (Sight): He's sweating. Beads are forming on his forehead."];
+	  678 [label="Pain Threshold: Like parting from a loved one."];
+	  679 [label="You: \"But what?\""];
+	  680 [label="solo_decision"];
+	  681 [label="You: \"Do you understand, sir?\""];
+	  682 [label="You: \"No need to be polite, I'll do it.\""];
+	  683 [label="You: \"We could all fit in the little boat?\""];
+	  684 [label="Perception (Hearing): You thought you heard something, but it's just the reeds. Now -- how do we do this?"];
+	  685 [label="Variable[\"seafort.deserter_logic_totally_not_insane\"]"];
+	  686 [label="Variable[\"seafort.deserter_logic_totally_not_insane\"]", shape=diamond];
+	  687 [label="!(Variable[\"seafort.deserter_logic_totally_not_insane\"])", shape=diamond];
+	  688 [label="The Deserter: \"Guess you have, droite.\" You hear the old man's voice in the dark. \"I don't see anything there -- does this mean I'm not under arrest?\"\n\"Guess you have, comrade.\" You hear the old man's voice in the dark. \"I don't see anything there -- does this mean I'm not under arrest?\""];
+	  689 [label="CheckItem(\"gun_villiers\")  or  CheckItem(\"gun_ruby\")"];
+	  690 [label="CheckItem(\"gun_villiers\")  or  CheckItem(\"gun_ruby\")", shape=diamond];
+	  691 [label="!(CheckItem(\"gun_villiers\")  or  CheckItem(\"gun_ruby\"))", shape=diamond];
+	  692 [label="You: \"Cuno, can *you* see it?!\""];
+	  693 [label="The Deserter: \"Tell me what you see, dammit, I can't make out one small thing in the reeds...\""];
+	  694 [label="IsTHCPresent(\"the_waste_land_of_reality\")"];
+	  695 [label="IsTHCPresent(\"the_waste_land_of_reality\")", shape=diamond];
+	  696 [label="!(IsTHCPresent(\"the_waste_land_of_reality\"))", shape=diamond];
+	  697 [label="Variable[\"character.habit_pyrholidon\"]  or  Variable[\"character.habit_speed\"]"];
+	  698 [label="Variable[\"character.habit_pyrholidon\"]  or  Variable[\"character.habit_speed\"]", shape=diamond];
+	  699 [label="!(Variable[\"character.habit_pyrholidon\"]  or  Variable[\"character.habit_speed\"])", shape=diamond];
+	  700 [label="The Deserter: \"S-s-s-see...\" He stares at the reeds, where your finger is pointing."];
+	  701 [label="Kim Kitsuragi: \"Between this and the broken tyre he's used for a boat -- I think it's safe to leave him here, while we go and get help. It will need to be medical first, I'm afraid.\""];
+	  702 [label="You: \"He can't *see* it, Kim. It's just the reeds for him.\"\n\"He couldn't *see* it, Kim. It's just the reeds for him.\"\n\"He couldn't *see* it, Cuno. It's just the reeds for him.\"\n\"He couldn't *see* it, Cuno. It's just the reeds for him.\""];
+	  703 [label="The Deserter: No response."];
+	  704 [label="You: \"I *talked* to the phasmid. It said it's destroying him.\""];
+	  705 [label="The Deserter: \"I...\" He turns his eyes to it. \"I lost...\""];
+	  706 [label="Perception (Sight): The blacks of his eyes are receding, his pupils are returning to normal."];
+	  707 [label="The Deserter: He blinks and continues to stare at the reeds. \"The... spirit.\""];
+	  708 [label="Shivers: The wind picks up. The silence on the water is broken all around you, little shivers of waves appear..."];
+	  709 [label="Perception (Hearing): You thought you heard something but it's just the reeds."];
+	  710 [label="IsKimHere()"];
+	  711 [label="IsKimHere()", shape=diamond];
+	  712 [label="!(IsKimHere())", shape=diamond];
+	  713 [label="Jump to: [Untitled hub (04)]"];
+	  714 [label="Cuno: The kid looks at you blankly. Then at the old man. \"You fuckin' with me? Coz I can. I *can* take him.\""];
+	  715 [label="Cuno: \"Uhm -- how about the Cuno comes back for *you*?\""];
+	  716 [label="The Deserter: \"This fucking world...\" The old man interferes again. \"What are you *talking* about? Is this...\" His voice drowns out in a sudden gush of wind. \"Us...\"\n\"This fucking world...\" The old man repeats. \"What are you *talking* about? Is this...\" His voice drowns out in a sudden gush of wind. \"Us...\" "];
+	  717 [label="Jump to: [Untitled hub (04)]"];
+	  718 [label="The Deserter: \"Th-the...\" The old man stutters. Then another sigh."];
+	  719 [label="The Deserter: \"...\""];
+	  720 [label="CheckItem(\"deserter_gun\")"];
+	  721 [label="CheckItem(\"deserter_gun\")", shape=diamond];
+	  722 [label="!(CheckItem(\"deserter_gun\"))", shape=diamond];
+	  723 [label="Half Light: He's not afraid of jail. He's afraid of something else."];
+	  724 [label="Kim Kitsuragi: ... and then it's gone. Drowned out by the lieutenant's voice -- \"Maybe there is room for three on the boat...\"\n... and then it's gone. Drowned out by the lieutenant's voice -- \"Maybe there *is* room for three on the boat...\""];
+	  725 [label="Jump to: [TEAM hub]"];
+	  726 [label="The Deserter: \"A farce -- this world. Is this... is this us...\" His voice drowns out in a sudden gust of wind."];
+	  727 [label="Jump to: [SOLO hub]"];
+	  728 [label="Variable[\"character.habit_pyrholidon\"]  or  Variable[\"character.habit_speed\"]"];
+	  729 [label="Variable[\"character.habit_pyrholidon\"]  or  Variable[\"character.habit_speed\"]", shape=diamond];
+	  730 [label="!(Variable[\"character.habit_pyrholidon\"]  or  Variable[\"character.habit_speed\"])", shape=diamond];
+	  731 [label="Volition: Thank god. If he can see, then you're not insane."];
+	  732 [label="insane_or_booze"];
+	  733 [label="You: \"Can you see it *now*?\" (Point to the Phasmid)"];
+	  734 [label="You: \"Maybe this is how the phasmid has stayed hidden all these years?\""];
+	  735 [label="Kim Kitsuragi: \"Then how did *we* see it?\" He thinks. \"Oh, you mean whatever does this, does it over *time*? Teenagers, kids, drunks -- sightings are brief. And hence not credible. Anyone who spends a long time with it...\"\n\"Then how did we see it?\" He thinks. \"Oh, you mean whatever does this, does it over *time*? Teenagers, kids, drunks -- sightings are brief. And hence not credible. But anyone who spends a long time with it...\""];
+	  736 [label="You: \"It's... as if he's infatuated with it.\""];
+	  737 [label="Kim Kitsuragi: \"You mean pheromonal?\""];
+	  738 [label="You: Show him the detached scope."];
+	  739 [label="Cuno: \"He's old and fried. Cuno's seen this... like, after a massive bender. Cuno's dad...\" He stops mid sentence."];
+	  740 [label="Cuno: \"Like, hooked on the lightning?\""];
+	  741 [label="Cuno: \"Whoah, like love?\" The kid stares at you. Looks like he's trying to put together a puzzle -- one which he gives up on immediately. \"Yeah, no, I don't know...\""];
+	  742 [label="Jump to: [Untitled hub (04)]"];
+	  743 [label="You: \"You *forget* it's there.\""];
+	  7610857 [label="JUMP OUT to SEAFORT / THE DESERTER", shape=diamond];
+	  0 -> 1
+	  1 -> 437
+	  2 -> 599
+	  3 -> 97
+	  4 -> 5
+	  4 -> 6
+	  5 -> 601
+	  6 -> 602
+	  7 -> 180
+	  8 -> 430
+	  9 -> 582
+	  10 -> 358
+	  11 -> 493
+	  12 -> 499
+	  13 -> 137
+	  14 -> 15
+	  15 -> 719
+	  16 -> 322
+	  17 -> 59
+	  18 -> 653
+	  19 -> 20
+	  19 -> 21
+	  20 -> 66
+	  21 -> 732
+	  22 -> 703
+	  23 -> 334
+	  24 -> 88
+	  25 -> 481
+	  26 -> 27
+	  26 -> 28
+	  27 -> 84
+	  28 -> 313
+	  29 -> 30
+	  30 -> 32
+	  30 -> 31
+	  31 -> 282
+	  32 -> 282
+	  33 -> 552
+	  34 -> 286
+	  35 -> 36
+	  35 -> 37
+	  36 -> 739
+	  37 -> 487
+	  38 -> 633
+	  39 -> 40
+	  39 -> 41
+	  40 -> 200
+	  41 -> 637
+	  42 -> 714
+	  43 -> 44
+	  44 -> 94
+	  45 -> 430
+	  46 -> 388
+	  47 -> 228
+	  48 -> 49
+	  48 -> 50
+	  49 -> 643
+	  50 -> 108
+	  51 -> 357
+	  52 -> 102
+	  53 -> 298
+	  54 -> 134
+	  55 -> 61
+	  56 -> 469
+	  57 -> 14
+	  58 -> 363
+	  59 -> 649
+	  60 -> 263
+	  61 -> 115
+	  62 -> 116
+	  63 -> 455
+	  64 -> 149
+	  65 -> 147
+	  66 -> 732
+	  67 -> 163
+	  68 -> 330
+	  70 -> 154
+	  71 -> 154
+	  72 -> 303
+	  73 -> 506
+	  74 -> 75
+	  74 -> 76
+	  75 -> 736
+	  75 -> 304
+	  76 -> 713
+	  77 -> 478
+	  78 -> 275
+	  79 -> 80
+	  79 -> 81
+	  80 -> 583
+	  81 -> 168
+	  82 -> 550
+	  83 -> 674
+	  84 -> 424
+	  85 -> 86
+	  85 -> 87
+	  86 -> 120
+	  87 -> 383
+	  88 -> 89
+	  88 -> 90
+	  89 -> 667
+	  90 -> 629
+	  91 -> 289
+	  92 -> 562
+	  93 -> 716
+	  94 -> 96
+	  94 -> 95
+	  95 -> 296
+	  95 -> 639
+	  96 -> 179
+	  97 -> 99
+	  98 -> 532
+	  99 -> 98
+	  100 -> 188
+	  101 -> 182
+	  102 -> 676
+	  103 -> 104
+	  103 -> 105
+	  104 -> 535
+	  105 -> 723
+	  106 -> 360
+	  107 -> 247
+	  108 -> 109
+	  108 -> 110
+	  109 -> 420
+	  110 -> 107
+	  111 -> 186
+	  112 -> 402
+	  113 -> 55
+	  114 -> 726
+	  115 -> 148
+	  115 -> 575
+	  116 -> 192
+	  117 -> 72
+	  118 -> 546
+	  119 -> 280
+	  121 -> 38
+	  122 -> 289
+	  123 -> 670
+	  124 -> 125
+	  124 -> 126
+	  125 -> 22
+	  126 -> 292
+	  127 -> 716
+	  128 -> 135
+	  129 -> 616
+	  130 -> 131
+	  130 -> 132
+	  131 -> 205
+	  132 -> 435
+	  133 -> 534
+	  134 -> 391
+	  135 -> 298
+	  136 -> 680
+	  137 -> 397
+	  138 -> 298
+	  139 -> 573
+	  140 -> 402
+	  141 -> 365
+	  142 -> 61
+	  143 -> 144
+	  143 -> 145
+	  144 -> 585
+	  145 -> 688
+	  146 -> 220
+	  147 -> 472
+	  147 -> 692
+	  147 -> 302
+	  148 -> 539
+	  149 -> 150
+	  149 -> 151
+	  150 -> 63
+	  151 -> 612
+	  152 -> 153
+	  152 -> 613
+	  152 -> 505
+	  153 -> 70
+	  154 -> 155
+	  154 -> 156
+	  155 -> 411
+	  156 -> 157
+	  157 -> 158
+	  157 -> 159
+	  158 -> 529
+	  159 -> 225
+	  160 -> 628
+	  161 -> 525
+	  162 -> 417
+	  163 -> 305
+	  164 -> 308
+	  165 -> 166
+	  165 -> 167
+	  166 -> 201
+	  167 -> 549
+	  168 -> 460
+	  169 -> 309
+	  170 -> 33
+	  171 -> 506
+	  172 -> 346
+	  172 -> 46
+	  173 -> 347
+	  174 -> 528
+	  175 -> 176
+	  175 -> 177
+	  176 -> 178
+	  176 -> 354
+	  177 -> 742
+	  178 -> 318
+	  179 -> 3
+	  180 -> 341
+	  181 -> 356
+	  182 -> 241
+	  182 -> 297
+	  183 -> 358
+	  184 -> 393
+	  185 -> 16
+	  186 -> 299
+	  187 -> 644
+	  188 -> 298
+	  189 -> 253
+	  190 -> 61
+	  193 -> 258
+	  194 -> 116
+	  195 -> 196
+	  195 -> 197
+	  196 -> 449
+	  197 -> 64
+	  198 -> 152
+	  199 -> 559
+	  200 -> 161
+	  201 -> 549
+	  202 -> 509
+	  203 -> 616
+	  204 -> 481
+	  205 -> 551
+	  206 -> 52
+	  207 -> 208
+	  207 -> 209
+	  208 -> 678
+	  209 -> 53
+	  210 -> 100
+	  211 -> 212
+	  211 -> 213
+	  212 -> 210
+	  213 -> 100
+	  214 -> 680
+	  215 -> 14
+	  216 -> 217
+	  217 -> 113
+	  218 -> 611
+	  219 -> 142
+	  220 -> 221
+	  220 -> 222
+	  221 -> 18
+	  222 -> 502
+	  223 -> 191
+	  224 -> 658
+	  225 -> 226
+	  226 -> 506
+	  227 -> 73
+	  228 -> 616
+	  229 -> 630
+	  230 -> 306
+	  231 -> 232
+	  231 -> 233
+	  232 -> 480
+	  233 -> 351
+	  234 -> 550
+	  235 -> 285
+	  236 -> 237
+	  236 -> 238
+	  237 -> 227
+	  238 -> 288
+	  239 -> 121
+	  240 -> 436
+	  241 -> 51
+	  242 -> 243
+	  242 -> 244
+	  243 -> 489
+	  244 -> 206
+	  245 -> 10
+	  245 -> 183
+	  246 -> 490
+	  247 -> 248
+	  247 -> 249
+	  248 -> 362
+	  249 -> 184
+	  250 -> 61
+	  251 -> 470
+	  252 -> 726
+	  253 -> 219
+	  255 -> 256
+	  255 -> 257
+	  256 -> 368
+	  257 -> 536
+	  258 -> 116
+	  259 -> 329
+	  260 -> 261
+	  260 -> 262
+	  261 -> 538
+	  262 -> 143
+	  263 -> 116
+	  264 -> 662
+	  265 -> 432
+	  266 -> 620
+	  267 -> 307
+	  268 -> 621
+	  269 -> 578
+	  270 -> 479
+	  271 -> 272
+	  271 -> 273
+	  272 -> 162
+	  273 -> 417
+	  274 -> 616
+	  275 -> 593
+	  276 -> 374
+	  277 -> 278
+	  277 -> 279
+	  279 -> 587
+	  280 -> 486
+	  281 -> 378
+	  282 -> 283
+	  282 -> 284
+	  283 -> 482
+	  284 -> 709
+	  285 -> 380
+	  286 -> 380
+	  287 -> 379
+	  288 -> 73
+	  289 -> 616
+	  290 -> 334
+	  291 -> 616
+	  292 -> 703
+	  293 -> 485
+	  294 -> 305
+	  295 -> 716
+	  296 -> 8
+	  297 -> 720
+	  298 -> 390
+	  298 -> 359
+	  298 -> 392
+	  298 -> 683
+	  298 -> 12
+	  298 -> 440
+	  299 -> 445
+	  300 -> 402
+	  301 -> 138
+	  302 -> 260
+	  303 -> 616
+	  304 -> 77
+	  305 -> 738
+	  305 -> 547
+	  305 -> 164
+	  305 -> 510
+	  306 -> 231
+	  307 -> 546
+	  308 -> 336
+	  309 -> 506
+	  310 -> 584
+	  311 -> 312
+	  312 -> 337
+	  313 -> 338
+	  314 -> 462
+	  315 -> 627
+	  316 -> 271
+	  317 -> 174
+	  318 -> 743
+	  319 -> 305
+	  320 -> 83
+	  321 -> 246
+	  322 -> 681
+	  322 -> 606
+	  323 -> 324
+	  323 -> 325
+	  324 -> 500
+	  325 -> 572
+	  326 -> 401
+	  327 -> 731
+	  328 -> 732
+	  329 -> 224
+	  329 -> 302
+	  330 -> 331
+	  330 -> 332
+	  331 -> 264
+	  332 -> 614
+	  333 -> 236
+	  334 -> 74
+	  335 -> 641
+	  336 -> 511
+	  337 -> 423
+	  338 -> 339
+	  338 -> 340
+	  339 -> 517
+	  340 -> 424
+	  341 -> 2
+	  341 -> 675
+	  341 -> 387
+	  341 -> 42
+	  341 -> 597
+	  341 -> 29
+	  342 -> 425
+	  343 -> 344
+	  343 -> 345
+	  344 -> 623
+	  345 -> 668
+	  346 -> 590
+	  347 -> 616
+	  348 -> 349
+	  348 -> 350
+	  349 -> 293
+	  350 -> 638
+	  351 -> 352
+	  351 -> 353
+	  352 -> 204
+	  353 -> 294
+	  354 -> 718
+	  355 -> 357
+	  356 -> 577
+	  357 -> 242
+	  358 -> 468
+	  359 -> 321
+	  360 -> 211
+	  361 -> 679
+	  362 -> 214
+	  363 -> 724
+	  364 -> 640
+	  365 -> 366
+	  365 -> 367
+	  366 -> 364
+	  367 -> 640
+	  368 -> 146
+	  369 -> 271
+	  370 -> 268
+	  371 -> 478
+	  372 -> 509
+	  374 -> 431
+	  375 -> 376
+	  375 -> 377
+	  376 -> 234
+	  377 -> 82
+	  378 -> 311
+	  380 -> 381
+	  380 -> 382
+	  381 -> 586
+	  382 -> 554
+	  384 -> 385
+	  384 -> 386
+	  385 -> 160
+	  386 -> 35
+	  387 -> 7
+	  388 -> 47
+	  389 -> 181
+	  390 -> 647
+	  391 -> 493
+	  392 -> 106
+	  393 -> 394
+	  393 -> 395
+	  394 -> 680
+	  395 -> 136
+	  396 -> 720
+	  397 -> 398
+	  397 -> 399
+	  398 -> 215
+	  399 -> 57
+	  400 -> 13
+	  401 -> 649
+	  402 -> 139
+	  402 -> 189
+	  402 -> 607
+	  402 -> 251
+	  403 -> 329
+	  404 -> 405
+	  404 -> 406
+	  405 -> 259
+	  406 -> 689
+	  407 -> 192
+	  408 -> 148
+	  409 -> 732
+	  410 -> 543
+	  411 -> 412
+	  412 -> 701
+	  413 -> 39
+	  414 -> 416
+	  414 -> 415
+	  415 -> 335
+	  416 -> 625
+	  417 -> 418
+	  417 -> 419
+	  418 -> 274
+	  419 -> 616
+	  420 -> 375
+	  421 -> 708
+	  422 -> 708
+	  423 -> 26
+	  424 -> 341
+	  425 -> 33
+	  426 -> 235
+	  427 -> 428
+	  427 -> 429
+	  428 -> 371
+	  429 -> 741
+	  430 -> 99
+	  431 -> 460
+	  432 -> 433
+	  432 -> 434
+	  434 -> 277
+	  435 -> 495
+	  436 -> 389
+	  437 -> 438
+	  437 -> 439
+	  438 -> 565
+	  439 -> 48
+	  440 -> 441
+	  441 -> 442
+	  441 -> 443
+	  442 -> 323
+	  443 -> 323
+	  444 -> 185
+	  445 -> 446
+	  445 -> 447
+	  446 -> 112
+	  447 -> 187
+	  448 -> 725
+	  449 -> 450
+	  449 -> 451
+	  450 -> 542
+	  451 -> 63
+	  452 -> 220
+	  453 -> 454
+	  454 -> 116
+	  455 -> 456
+	  455 -> 457
+	  456 -> 697
+	  457 -> 728
+	  458 -> 504
+	  459 -> 270
+	  460 -> 305
+	  461 -> 706
+	  462 -> 483
+	  463 -> 464
+	  463 -> 465
+	  464 -> 617
+	  465 -> 175
+	  466 -> 245
+	  467 -> 495
+	  468 -> 677
+	  469 -> 13
+	  470 -> 219
+	  471 -> 653
+	  472 -> 255
+	  473 -> 732
+	  474 -> 504
+	  475 -> 476
+	  475 -> 477
+	  476 -> 370
+	  477 -> 267
+	  478 -> 616
+	  479 -> 616
+	  480 -> 25
+	  481 -> 548
+	  482 -> 314
+	  483 -> 342
+	  483 -> 518
+	  484 -> 379
+	  485 -> 305
+	  486 -> 530
+	  487 -> 171
+	  488 -> 133
+	  489 -> 52
+	  490 -> 491
+	  490 -> 492
+	  491 -> 569
+	  491 -> 54
+	  492 -> 361
+	  493 -> 128
+	  494 -> 396
+	  495 -> 496
+	  496 -> 497
+	  496 -> 498
+	  497 -> 400
+	  498 -> 56
+	  499 -> 648
+	  499 -> 571
+	  500 -> 58
+	  501 -> 114
+	  501 -> 252
+	  502 -> 685
+	  503 -> 194
+	  504 -> 657
+	  505 -> 70
+	  506 -> 664
+	  506 -> 265
+	  506 -> 67
+	  507 -> 228
+	  508 -> 228
+	  509 -> 616
+	  510 -> 461
+	  511 -> 512
+	  511 -> 513
+	  512 -> 79
+	  513 -> 460
+	  514 -> 515
+	  514 -> 516
+	  515 -> 421
+	  516 -> 422
+	  517 -> 424
+	  518 -> 170
+	  519 -> 520
+	  519 -> 521
+	  520 -> 553
+	  521 -> 522
+	  522 -> 523
+	  522 -> 524
+	  523 -> 484
+	  524 -> 287
+	  525 -> 526
+	  525 -> 527
+	  526 -> 475
+	  527 -> 634
+	  528 -> 347
+	  529 -> 92
+	  530 -> 551
+	  531 -> 61
+	  532 -> 341
+	  533 -> 564
+	  534 -> 7610857
+	  535 -> 53
+	  536 -> 656
+	  537 -> 329
+	  538 -> 327
+	  539 -> 576
+	  539 -> 474
+	  539 -> 458
+	  540 -> 62
+	  541 -> 195
+	  542 -> 455
+	  543 -> 544
+	  543 -> 545
+	  544 -> 449
+	  545 -> 541
+	  546 -> 616
+	  547 -> 78
+	  548 -> 626
+	  549 -> 305
+	  550 -> 310
+	  550 -> 119
+	  551 -> 514
+	  552 -> 61
+	  553 -> 522
+	  554 -> 519
+	  555 -> 556
+	  555 -> 557
+	  556 -> 369
+	  557 -> 316
+	  558 -> 506
+	  559 -> 560
+	  559 -> 561
+	  560 -> 666
+	  561 -> 740
+	  562 -> 506
+	  563 -> 716
+	  564 -> 717
+	  565 -> 566
+	  565 -> 567
+	  566 -> 355
+	  567 -> 130
+	  568 -> 182
+	  569 -> 570
+	  570 -> 391
+	  571 -> 217
+	  572 -> 448
+	  573 -> 141
+	  574 -> 191
+	  575 -> 408
+	  576 -> 504
+	  577 -> 240
+	  577 -> 69
+	  577 -> 733
+	  577 -> 661
+	  578 -> 579
+	  578 -> 580
+	  579 -> 508
+	  580 -> 507
+	  581 -> 459
+	  582 -> 506
+	  583 -> 707
+	  584 -> 720
+	  585 -> 426
+	  586 -> 522
+	  587 -> 588
+	  587 -> 589
+	  588 -> 373
+	  589 -> 85
+	  590 -> 592
+	  590 -> 591
+	  591 -> 91
+	  592 -> 122
+	  593 -> 594
+	  593 -> 595
+	  594 -> 165
+	  595 -> 671
+	  596 -> 290
+	  597 -> 43
+	  598 -> 531
+	  599 -> 600
+	  600 -> 4
+	  601 -> 602
+	  602 -> 341
+	  603 -> 604
+	  603 -> 605
+	  604 -> 101
+	  605 -> 568
+	  606 -> 111
+	  607 -> 608
+	  608 -> 609
+	  608 -> 610
+	  609 -> 650
+	  610 -> 650
+	  611 -> 501
+	  612 -> 455
+	  613 -> 71
+	  614 -> 662
+	  615 -> 555
+	  616 -> 704
+	  616 -> 229
+	  616 -> 199
+	  616 -> 24
+	  616 -> 665
+	  616 -> 413
+	  616 -> 702
+	  617 -> 618
+	  617 -> 619
+	  618 -> 533
+	  618 -> 734
+	  619 -> 669
+	  620 -> 117
+	  621 -> 118
+	  622 -> 23
+	  623 -> 624
+	  623 -> 459
+	  624 -> 581
+	  625 -> 9
+	  626 -> 305
+	  627 -> 341
+	  628 -> 333
+	  628 -> 615
+	  629 -> 558
+	  630 -> 632
+	  630 -> 631
+	  631 -> 372
+	  632 -> 202
+	  633 -> 203
+	  634 -> 635
+	  634 -> 636
+	  635 -> 317
+	  636 -> 173
+	  637 -> 161
+	  638 -> 485
+	  639 -> 45
+	  640 -> 727
+	  641 -> 582
+	  642 -> 133
+	  643 -> 603
+	  644 -> 645
+	  644 -> 646
+	  645 -> 300
+	  646 -> 402
+	  647 -> 216
+	  647 -> 682
+	  648 -> 217
+	  649 -> 250
+	  650 -> 651
+	  650 -> 652
+	  651 -> 218
+	  652 -> 684
+	  653 -> 654
+	  653 -> 655
+	  654 -> 223
+	  655 -> 574
+	  656 -> 407
+	  657 -> 404
+	  658 -> 659
+	  658 -> 660
+	  659 -> 693
+	  660 -> 65
+	  661 -> 68
+	  662 -> 663
+	  663 -> 198
+	  664 -> 384
+	  665 -> 710
+	  666 -> 622
+	  667 -> 414
+	  668 -> 38
+	  668 -> 239
+	  669 -> 616
+	  670 -> 291
+	  671 -> 672
+	  671 -> 673
+	  672 -> 348
+	  673 -> 319
+	  674 -> 281
+	  675 -> 715
+	  676 -> 466
+	  677 -> 103
+	  678 -> 53
+	  679 -> 11
+	  680 -> 467
+	  680 -> 494
+	  681 -> 111
+	  682 -> 217
+	  683 -> 301
+	  684 -> 140
+	  685 -> 686
+	  685 -> 687
+	  686 -> 471
+	  687 -> 653
+	  688 -> 410
+	  689 -> 690
+	  689 -> 691
+	  690 -> 403
+	  691 -> 537
+	  692 -> 34
+	  693 -> 147
+	  694 -> 696
+	  694 -> 695
+	  695 -> 473
+	  696 -> 19
+	  697 -> 698
+	  697 -> 699
+	  698 -> 328
+	  699 -> 694
+	  700 -> 330
+	  701 -> 506
+	  702 -> 124
+	  703 -> 463
+	  704 -> 343
+	  705 -> 230
+	  706 -> 169
+	  707 -> 276
+	  708 -> 320
+	  709 -> 315
+	  710 -> 712
+	  710 -> 711
+	  711 -> 737
+	  712 -> 172
+	  713 -> 616
+	  714 -> 93
+	  714 -> 127
+	  715 -> 563
+	  715 -> 295
+	  716 -> 598
+	  717 -> 616
+	  718 -> 129
+	  719 -> 444
+	  720 -> 721
+	  720 -> 722
+	  721 -> 488
+	  722 -> 642
+	  723 -> 207
+	  724 -> 17
+	  724 -> 326
+	  725 -> 298
+	  726 -> 190
+	  727 -> 402
+	  728 -> 729
+	  728 -> 730
+	  729 -> 409
+	  730 -> 732
+	  731 -> 452
+	  732 -> 193
+	  732 -> 453
+	  732 -> 60
+	  732 -> 503
+	  732 -> 540
+	  733 -> 700
+	  734 -> 735
+	  735 -> 266
+	  736 -> 427
+	  737 -> 388
+	  737 -> 269
+	  738 -> 705
+	  739 -> 628
+	  740 -> 596
+	  741 -> 478
+	  742 -> 616
+	  743 -> 123
+}
+

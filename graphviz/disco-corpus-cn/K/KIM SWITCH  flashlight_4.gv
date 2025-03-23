@@ -1,0 +1,58 @@
+# KIM SWITCH / flashlight
+# Fires when you remain in the dark with Kim
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  3 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  4 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  5 [label="Kim Kitsuragi: 警督皱皱眉。“我很抱歉，宇宙的基本律法好像不太赞同你的意见，警探。不过事实没有改变，这里太黑了，如果没有手电筒，什么也看不见。”"];
+	  7 [label="Kim Kitsuragi: CheckItem(\"flashlight\")"];
+	  8 [label="CheckItem(\"flashlight\")", shape=diamond];
+	  9 [label="!(CheckItem(\"flashlight\"))", shape=diamond];
+	  10 [label="Kim Kitsuragi: “好吧，现在让我们开始吧，”警督点点头。"];
+	  11 [label="Kim Kitsuragi: “我的锐影工具箱里应该有一只。我们应该先回去取，然后再继续前进。这样在黑暗里跌跌撞撞的毫无意义。”"];
+	  12 [label="Kim Kitsuragi: “是的，”警督回答到。“你甚至可以称之为宇宙的一种*特征*，你需要把工具*握在手里*才能*使用*它们。”"];
+	  13 [label="Kim Kitsuragi: “所以赶紧吧。我们还有工作要做。”"];
+	  14 [label="Tutorial Agent: 有些地方必须使用手电筒才可进入。你已经拿到手电筒了，可以在道具栏中装备它并继续探索。"];
+	  15 [label="You: “说得好。没错，是很明显。”"];
+	  16 [label="Kim Kitsuragi: “而且，如果你把手电筒*握在手里*的话，可能会好很多。”"];
+	  17 [label="You: “这样就合理多了。”"];
+	  18 [label="You: “这样一点都说不通。”"];
+	  19 [label="You: “明白了，金，没必要反复说个没完。”[离开。]"];
+	  20 [label="Tutorial Agent: 有些地方必须使用手电筒才可进入。你已经拿到手电筒了，可以在道具栏中装备它并继续探索。"];
+	  21 [label="Kim Kitsuragi: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  22 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  23 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  24 [label="You: “把手电筒握在*你手里*？”（不解地盯着你的手。）"];
+	  25 [label="kiminthedark"];
+	  26 [label="Kim Kitsuragi: “要是有个手电筒就容易多了……”"];
+	  0 -> 1
+	  2 -> 3
+	  2 -> 4
+	  4 -> 14
+	  5 -> 13
+	  7 -> 8
+	  7 -> 9
+	  8 -> 16
+	  9 -> 26
+	  10 -> 21
+	  11 -> 2
+	  12 -> 17
+	  12 -> 18
+	  13 -> 21
+	  15 -> 10
+	  16 -> 24
+	  16 -> 19
+	  16 -> 15
+	  17 -> 10
+	  18 -> 5
+	  21 -> 22
+	  21 -> 23
+	  23 -> 20
+	  24 -> 12
+	  25 -> 7
+	  26 -> 11
+}
+

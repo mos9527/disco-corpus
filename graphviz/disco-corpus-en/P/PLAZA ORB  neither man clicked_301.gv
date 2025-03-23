@@ -1,0 +1,104 @@
+# PLAZA ORB / neither man clicked
+# An orb to appear on the fifth day (or after triubnal) and address the disappearance of the pétanquista, if the player hasn't talked to either of them.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Jump to: [Untitled hub]"];
+	  3 [label="Inland Empire: No need to beat yourself down over it. It probably wasn't the definitive piece of the puzzle. Still, somehow it feels like May bells matter somehow."];
+	  4 [label="Untitled hub"];
+	  5 [label="Inland Empire: The pétanque players?"];
+	  6 [label="You: \"Wait, maybe they died during the mercenary tribunal?\"\nMaybe they too died during the mercenary tribunal?"];
+	  7 [label="Kim Kitsuragi: \"And, I mean... it would be one twist too many if it turned out these two old men were our killers. That's just unlikely. No...\" He seems pleased with himself. \"We would only have wasted our time here.\""];
+	  8 [label="Gaston Martin: IsKimHere()"];
+	  9 [label="IsKimHere()", shape=diamond];
+	  10 [label="!(IsKimHere())", shape=diamond];
+	  11 [label="You: \"Damn, I missed asking these guys about the dried May bells.\"\nDamn. Looks like I missed asking these guys about the dried May bells."];
+	  12 [label="Jump to: [Untitled hub]"];
+	  13 [label="You: \"But what if I wanted to talk to them?\""];
+	  14 [label="Empathy: The lieutenant is thinking of all the time you've spared. He likes it."];
+	  15 [label="Inland Empire: Awful lonely here. No ruckus. No old men playing their little ball game."];
+	  16 [label="Inland Empire: *Still* you can't shake the feeling that somehow these may bell do actually matter. If only a little bit."];
+	  17 [label="Jump to: [Untitled hub]"];
+	  18 [label="Logic: It was probably nothing anyway. Just a little thought you had."];
+	  19 [label="You: Yeah, where did they go?"];
+	  20 [label="Kim Kitsuragi: \"They didn't,\" the lieutenant calms you. \"Trust me. I saw the bodies.\""];
+	  21 [label="Logic: He's probably right."];
+	  22 [label="Kim Kitsuragi: \"Don't beat yourself up about it. I think I gave you a pretty exhaustive answer about those flowers and what they mean.\""];
+	  23 [label="Physical Instrument: Enough with the goddamn flowers already! Are you a cop or a florist?"];
+	  24 [label="Kim Kitsuragi: \"You mean the guys who were playing pétanque?\""];
+	  25 [label="Inland Empire: Home? To work? To get something from somewhere? Who knows what people are doing when we're not looking."];
+	  26 [label="You: \"Yeah, where did they go?\""];
+	  27 [label="Gaston Martin: IsKimHere()"];
+	  28 [label="IsKimHere()", shape=diamond];
+	  29 [label="!(IsKimHere())", shape=diamond];
+	  30 [label="Kim Kitsuragi: \"Have you noticed people sometimes appear and disappear in places? It's called *doing things*.\""];
+	  31 [label="Jump to: [Untitled hub]"];
+	  32 [label="Inland Empire: It's very unlikely. Everyone scattered once the tribunal started. They're probably fine."];
+	  33 [label="Gaston Martin: IsKimHere()"];
+	  34 [label="IsKimHere()", shape=diamond];
+	  35 [label="!(IsKimHere())", shape=diamond];
+	  36 [label="You: Yeah, where did the old guys go?\n\"Where did the old guys go?\""];
+	  38 [label="Gaston Martin: IsKimHere()"];
+	  39 [label="IsKimHere()", shape=diamond];
+	  40 [label="!(IsKimHere())", shape=diamond];
+	  41 [label="You: \"Right. Let's move.\" [Leave.]\nRight. Time to move. [Leave.]"];
+	  42 [label="You: That's just how craters are. [Discard thought.]"];
+	  43 [label="Kim Kitsuragi: \"You'll get them next time,\" the lieutenant replies, looking at the empty crater."];
+	  44 [label="Inland Empire: You'll get them next time. But let's be honest, they weren't even in the suspects list."];
+	  45 [label="Inland Empire: You would have wasted *so* much time talking to these two pensioners. Precious case-time."];
+	  0 -> 1
+	  1 -> 15
+	  2 -> 4
+	  3 -> 31
+	  4 -> 41
+	  4 -> 11
+	  4 -> 13
+	  4 -> 6
+	  5 -> 19
+	  6 -> 27
+	  7 -> 14
+	  8 -> 9
+	  8 -> 10
+	  9 -> 22
+	  10 -> 3
+	  11 -> 8
+	  12 -> 4
+	  13 -> 33
+	  14 -> 21
+	  15 -> 42
+	  15 -> 36
+	  16 -> 17
+	  17 -> 4
+	  18 -> 16
+	  19 -> 25
+	  20 -> 11
+	  20 -> 13
+	  21 -> 2
+	  22 -> 23
+	  23 -> 18
+	  24 -> 26
+	  25 -> 4
+	  26 -> 30
+	  27 -> 28
+	  27 -> 29
+	  28 -> 20
+	  29 -> 32
+	  30 -> 4
+	  31 -> 4
+	  32 -> 11
+	  32 -> 13
+	  33 -> 34
+	  33 -> 35
+	  34 -> 43
+	  35 -> 44
+	  36 -> 38
+	  38 -> 40
+	  38 -> 39
+	  39 -> 24
+	  40 -> 5
+	  43 -> 7
+	  44 -> 45
+	  45 -> 12
+}
+

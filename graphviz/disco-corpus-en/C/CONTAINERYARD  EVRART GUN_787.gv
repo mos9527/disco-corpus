@@ -1,0 +1,121 @@
+# CONTAINERYARD / EVRART GUN
+# "Let's talk about my lost gun."
+#&
+#"Can I have my lost gun now?"
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"Wait... the gun may have been bought from Roy's pawn shop. Have your men factored that in?\""];
+	  3 [label="Evrart Claire: \"'I don't care about my gun...'\" he repeats. \"I love it, Harry! Wish I could be like that. But I can't. I have a responsibility to this community. I can't have a loaded gun in the streets.\""];
+	  4 [label="Jump to: [EVRARTHUB]"];
+	  5 [label="You: Hold on, could he really hold my gun hostage?"];
+	  6 [label="Reaction Speed: It did not come as a surprise to him. He might actually not be bullshitting."];
+	  7 [label="Evrart Claire: \"Now please... let the professionals do their job. Kick back, Harry, relax! I have *great guys* on this. You focus on what's important – building our relationship for the good of Martinaise.\""];
+	  8 [label="Kim Kitsuragi: \"Of course,\" the lieutenant replies dryly. \"I understand. We help you -- you help us.\""];
+	  9 [label="IsKimHere()"];
+	  10 [label="IsKimHere()", shape=diamond];
+	  11 [label="!(IsKimHere())", shape=diamond];
+	  12 [label="Half Light: He is not."];
+	  13 [label="Rhetoric: Who knows? Only one thing is certain: If you work with him, you're going to get it back, and working with him might be the only way to do it."];
+	  15 [label="Variable[\"cargo.evrart_lost_gun_asked\"]"];
+	  16 [label="Variable[\"cargo.evrart_lost_gun_asked\"]", shape=diamond];
+	  17 [label="!(Variable[\"cargo.evrart_lost_gun_asked\"])", shape=diamond];
+	  18 [label="Evrart Claire: His tone is suddenly very serious. \"Kids could be playing gun-roulette with it as we speak. Teenage gangs could be arming themselves. Get a hold of yourself, Harry!\""];
+	  19 [label="You: \"I don't care about my gun. Keep it.\""];
+	  20 [label="Kim Kitsuragi: \"I assure you, we are working on locating the missing sidearm as well.\""];
+	  21 [label="Jump to: [EVRARTHUB]"];
+	  22 [label="Esprit de Corps: The lieutenant is concerned about the lost gun and feels that the fact you haven't prioritized looking for it is unfortunate, if inevitable, and doesn't put the RCM in a good light."];
+	  23 [label="Evrart Claire: \"Your gun *will* be found, Harry. Let me assure you of that.\" He winks at you. \"It's just a matter of time and... *effort*.\""];
+	  24 [label="Evrart Claire: \"Yes, yes, my best men are tracking it down. Some kids saw some other kids running away with it. Some folks said a paranoid schizophrenic might have it. Leads are being checked, Harry.\""];
+	  25 [label="Jump to: [Esprit de Corps: \"The lieutenant is concerned about t...\"]"];
+	  26 [label="IsKimHere()"];
+	  27 [label="IsKimHere()", shape=diamond];
+	  28 [label="!(IsKimHere())", shape=diamond];
+	  29 [label="Jump to: [EVRARTHUB]"];
+	  30 [label="Jump to: [EVRARTHUB]"];
+	  31 [label="You: \"Does this mean if I do things for you I will get my gun back?\""];
+	  32 [label="Evrart Claire: \"'I don't care about my gun'...\" he repeats. \"I love it, Harry! Wish I could be like that. But I can't. I have a responsibility to this community. I can't have a loaded gun out in the streets.\""];
+	  33 [label="Variable[\"cargo.evrart_gun_reaction_speed_did_not_fire\"] == true"];
+	  34 [label="Variable[\"cargo.evrart_gun_reaction_speed_did_not_fire\"] == true", shape=diamond];
+	  35 [label="!(Variable[\"cargo.evrart_gun_reaction_speed_did_not_fire\"] == true)", shape=diamond];
+	  36 [label="You: \"I will not be blackmailed with this gun business.\""];
+	  37 [label="Evrart Claire: \"Excellent, Mr. Kitsuragi. That's excellent news.\" He claps his hands together. \"Looks like we have a friendly gun-finding competition on our hands.\""];
+	  38 [label="Evrart Claire: \"Yes, thank you for the *hot tip* regarding your lost gun, Harry. My men have indeed\" -- he makes air quotes -- \"*factored in that you pawned it*.\""];
+	  39 [label="Evrart Claire: \"Yes. Your lost gun.\" His face turns serious. \"My best men are on it. They're turning every stone, searching every playground, asking kids, grandmas, everyone.\""];
+	  40 [label="Rhetoric: The only way to find it seems to be working with him. He might even be holding your gun hostage..."];
+	  41 [label="Kim Kitsuragi: \"The officer is exaggerating,\" says the lieutenant, leaning forward. \"Of course we care about the missing firearm, and we are *actively* looking for it as well.\""];
+	  42 [label="Inland Empire: It did not come as a surprise to him. He might actually not be bullshitting."];
+	  43 [label="Evrart Claire: \"What's that, Harry? You're getting a little pale. Is it the words *paranoid schizophrenic* and *lost gun* in one sentence? Don't worry, it's just a lead. It'll probably turn out to be nothing.\""];
+	  44 [label="IsKimHere()"];
+	  45 [label="IsKimHere()", shape=diamond];
+	  46 [label="!(IsKimHere())", shape=diamond];
+	  47 [label="Evrart Claire: \"Harry, Harry -- I was only trying to be tactful. A lost gun is a dangerous thing. I can't have it around in my neighbourhood.\""];
+	  48 [label="Evrart Claire: \"Damn it, Harry, that's exactly what it means!\"\n\"Damn it, Harry, that's exactly what it means!\" He turns to the lieutenant. \"I am only kidding of course.\""];
+	  6050606 [label="JUMP OUT to CONTAINERYARD / EVRART", shape=diamond];
+	  0 -> 1
+	  1 -> 15
+	  2 -> 38
+	  3 -> 4
+	  4 -> 6050606
+	  5 -> 13
+	  6 -> 33
+	  7 -> 6
+	  8 -> 30
+	  9 -> 10
+	  9 -> 11
+	  10 -> 20
+	  11 -> 21
+	  12 -> 8
+	  13 -> 2
+	  13 -> 19
+	  13 -> 36
+	  13 -> 31
+	  15 -> 16
+	  15 -> 17
+	  16 -> 24
+	  17 -> 39
+	  18 -> 9
+	  19 -> 44
+	  20 -> 22
+	  21 -> 6050606
+	  22 -> 37
+	  23 -> 40
+	  24 -> 43
+	  25 -> 22
+	  26 -> 27
+	  26 -> 28
+	  27 -> 12
+	  28 -> 30
+	  29 -> 6050606
+	  30 -> 6050606
+	  31 -> 48
+	  32 -> 41
+	  33 -> 34
+	  33 -> 35
+	  34 -> 19
+	  34 -> 36
+	  34 -> 31
+	  35 -> 42
+	  36 -> 47
+	  37 -> 21
+	  38 -> 7
+	  39 -> 23
+	  40 -> 2
+	  40 -> 36
+	  40 -> 5
+	  40 -> 19
+	  40 -> 31
+	  41 -> 25
+	  42 -> 19
+	  42 -> 36
+	  42 -> 31
+	  43 -> 29
+	  44 -> 45
+	  44 -> 46
+	  45 -> 32
+	  46 -> 3
+	  47 -> 18
+	  48 -> 26
+}
+

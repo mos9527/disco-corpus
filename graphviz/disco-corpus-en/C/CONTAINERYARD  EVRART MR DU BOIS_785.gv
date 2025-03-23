@@ -1,0 +1,69 @@
+# CONTAINERYARD / EVRART MR DU BOIS
+# "You called, me *Mr. Du Bois*, why?"
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Evrart Claire: \"Don't be too hard on yourself, officer. And if there's *anything* I can help you with, please don't hesitate to ask.\""];
+	  3 [label="Perception (Sight): The huge block letters on the folder read \"HARRIER DU BOIS\". There's something in small writing just above that..."];
+	  4 [label="Inland Empire: Do *not* trust him. For all you know, it might be *his* name by which he is addressing you. You need confirmation."];
+	  5 [label="Evrart Claire: \"Mr. Kitsuragi...\" He leaves the rest of this sentence hanging in the air and lets his smug smile deliver the rest of the message."];
+	  6 [label="Evrart Claire: \"I guess the stress of peace-keeping and order-maintaining can get even to the best of us.\" He scratches his earlobe."];
+	  7 [label="Jump to: [EVRARTHUB]"];
+	  8 [label="Rhetoric: It might be a good idea to hide your confusion, see what his game is first."];
+	  9 [label="Evrart Claire: \"Of course, let us dispatch with the formalities, you call me Evrart, I call you Harry!\""];
+	  10 [label="Evrart Claire: \"So Harry, what can I help you with today?\""];
+	  11 [label="Jump to: [EVRARTHUB]"];
+	  13 [label="You: \"To be honest, my memory is a bit hazy right now, yes.\""];
+	  14 [label="You: \"Is that my name?\""];
+	  15 [label="Evrart Claire: \"I'm very glad to hear it. Some of my associates here in Martinaise told me you had trouble remembering things -- I am relieved they were mistaken.\""];
+	  16 [label="IsKimHere()"];
+	  17 [label="IsKimHere()", shape=diamond];
+	  18 [label="!(IsKimHere())", shape=diamond];
+	  19 [label="You: \"Fine by me.\""];
+	  20 [label="Perception (Sight): \"Revachol Citizens Militia.\""];
+	  21 [label="Evrart Claire: \"I'm sure you had some concerns you thought I might be able to address.\" He pauses to look at a brown folder on his desk. \"And you were probably right.\""];
+	  22 [label="You: \"Nah, my memory is fine -- I'm just testing you.\""];
+	  23 [label="Kim Kitsuragi: \"I see you have gotten hold of some of our old documents.\" The lieutenant turns to Evrart. \"They should have been destroyed some time ago.\""];
+	  24 [label="Drama: \"Don't you worry, I've got plenty on you too, my rigid friend.\""];
+	  25 [label="Evrart Claire: For a fraction of a second the big man looks at you inquisitively. \"Experiencing partial amnesia, are we, Harry?\""];
+	  26 [label="Variable[\"cargo.evrart_perception_noticed_folder\"]"];
+	  27 [label="Variable[\"cargo.evrart_perception_noticed_folder\"]", shape=diamond];
+	  28 [label="!(Variable[\"cargo.evrart_perception_noticed_folder\"])", shape=diamond];
+	  29 [label="Jump to: [EVRARTHUB]"];
+	  6050606 [label="JUMP OUT to CONTAINERYARD / EVRART", shape=diamond];
+	  0 -> 1
+	  1 -> 9
+	  2 -> 4
+	  3 -> 26
+	  4 -> 21
+	  5 -> 24
+	  6 -> 2
+	  7 -> 6050606
+	  8 -> 13
+	  8 -> 22
+	  9 -> 19
+	  9 -> 14
+	  10 -> 7
+	  11 -> 6050606
+	  13 -> 6
+	  14 -> 25
+	  15 -> 21
+	  16 -> 17
+	  16 -> 18
+	  17 -> 23
+	  18 -> 29
+	  19 -> 10
+	  20 -> 16
+	  21 -> 3
+	  22 -> 15
+	  23 -> 5
+	  24 -> 11
+	  25 -> 8
+	  26 -> 27
+	  26 -> 28
+	  27 -> 20
+	  28 -> 16
+	  29 -> 6050606
+}
+

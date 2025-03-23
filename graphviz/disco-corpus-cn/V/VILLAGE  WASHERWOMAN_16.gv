@@ -1,0 +1,1859 @@
+# VILLAGE / WASHERWOMAN
+# The Washing Woman who gives you access to the alternate sleeping location -- the shack. Includes fishing village mood and Evrart quest stuff.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Washerwoman: Variable[\"cargo.evrartdocument_failed_forge_one_signature\"]"];
+	  3 [label="Variable[\"cargo.evrartdocument_failed_forge_one_signature\"]", shape=diamond];
+	  4 [label="!(Variable[\"cargo.evrartdocument_failed_forge_one_signature\"])", shape=diamond];
+	  5 [label="Jump to: [vilagehubsing]"];
+	  6 [label="Logic: 在这附近甚至可能更普遍。"];
+	  7 [label="Washerwoman: Variable[\"village.ww_blackc_halflight_suicide\"]"];
+	  8 [label="Variable[\"village.ww_blackc_halflight_suicide\"]", shape=diamond];
+	  9 [label="!(Variable[\"village.ww_blackc_halflight_suicide\"])", shape=diamond];
+	  10 [label="Logic: 她可能听见了警督的锐影驶过的声音。"];
+	  11 [label="Washerwoman: “你确定不要待在这里，享受加热器里温暖又舒适的火光吗？”她把破布扔进水桶——现在它已经变干净了。“在我看来，这似乎是个更好的主意……”"];
+	  12 [label="Jump to: [MAINHUB]"];
+	  13 [label="Washerwoman: “不，这跟那个男人*不一样*。如果是他，我们会找你。现在，你是一个人来的。就像一只乌鸦，啄着玻璃窗。”"];
+	  14 [label="You: “你上周在海岸听到过广播吗？”"];
+	  15 [label="Washerwoman: 一阵冷风刮过。老妇人在寒风中笑着。“还有什么事情吗？”"];
+	  16 [label="You: “我们是警察。我们是滋事天王。咔哒，咔哒，砰，砰！”（用你的手指手枪对准她。）\n“我是警察，*滋事天王*。咔哒，咔哒，砰，砰！”（用你的手指手枪对准她。）"];
+	  17 [label="You: “沿着海岸往下还有什么？”"];
+	  18 [label="Washerwoman: “值得注意？木板道上边有个旧鱼市。不过已经关门了。”"];
+	  19 [label="You: “回见。”[离开。]"];
+	  20 [label="Washerwoman: “欢迎来到渔村。”她睁开双眼。“请靠近一些。我有白内障。”"];
+	  21 [label="Washerwoman: “别让老太太我后悔把房间钥匙交给警察。”她从围裙下面拿出一把钥匙，递给了你。“给你。”"];
+	  22 [label="Washerwoman: “战争结束之后，它变成了一家慈善医院，专门收纳那些患上弹震症的老兵，还有那些想在旧疗养院的花园里寻找安宁的人。”"];
+	  23 [label="Jump to: [Washerwoman: \"She nods, rinsing another piece of...\"]"];
+	  24 [label="Washerwoman: “也许吧，”她的口气平静地让人焦躁。“那挺容易的。不过现在你想从我这里得到些什么，对吗？”"];
+	  25 [label="Jump to: [vilagehubsing]"];
+	  26 [label="Washerwoman: “怎么，你是那种到处宣扬大计划的房地产商吗？如果你想寻找开发机会，可以去看看地之角那栋废弃的建筑。”"];
+	  27 [label="You: “我脑子里有一种可能的解释。”"];
+	  28 [label="Washerwoman: “挺糟糕的，不是吗？”"];
+	  29 [label="Washerwoman: Variable[\"village.ww_talked_about_bullet_exit\"]"];
+	  30 [label="Variable[\"village.ww_talked_about_bullet_exit\"]", shape=diamond];
+	  31 [label="!(Variable[\"village.ww_talked_about_bullet_exit\"])", shape=diamond];
+	  32 [label="Kim Kitsuragi: 警督停下了手中的笔。他看了看你，又看了看那个老妇人。"];
+	  33 [label="You: “哈里尔·杜博阿，叫我哈里就行。”"];
+	  34 [label="You: “等等，我之前来过这里吗？”"];
+	  35 [label="Washerwoman: Variable[\"village.ww_ency_blackcheck_ask_about_song\"]"];
+	  36 [label="Variable[\"village.ww_ency_blackcheck_ask_about_song\"]", shape=diamond];
+	  37 [label="!(Variable[\"village.ww_ency_blackcheck_ask_about_song\"])", shape=diamond];
+	  38 [label="Jump to: [MAINHUB]"];
+	  39 [label="You: “艾弗拉特想把村子的一部分变成一家小型青少年活动中心。”"];
+	  40 [label="Washerwoman: “我也是这么想的。”老妇人深深地吸了一口气。“这次克莱尔兄弟想干什么？”"];
+	  41 [label="Washerwoman: “是的。莉莉恩不是唯一太容易轻信别人的人。”"];
+	  42 [label="Washerwoman: “你知道是谁从交易里拿走了最多利益吗？房地产开放商，建筑公司，餐厅老板，还有克莱尔在德尔塔的会计师……”"];
+	  43 [label="You: “听起来很不错。”"];
+	  44 [label="Composure: 这个问题肯定是因为你马虎的姿态引起的。把背挺直了，老兄。"];
+	  45 [label="You: “你听说过一件丢失的夹克吗？”"];
+	  46 [label="You: “有一个酒鬼弄丢了自己的夹克，我答应把他找回来。”"];
+	  47 [label="You: “我找到他的夹克了，不过很脏。你能帮我洗干净吗？”\n“我找到那件夹克了，不过很脏。你能帮我洗干净吗？”"];
+	  48 [label="You: “没能及时警告他，我很抱歉。”"];
+	  49 [label="Reaction Speed: 打出奶奶这张牌*就会*达到理想的效果。这是最后翻盘的机会。"];
+	  50 [label="Drama: 试探一下说。说没什么好担心的。"];
+	  51 [label="You: “艾弗拉特给了我5雷亚尔，他可以轻轻松松地给你15雷亚尔。或者甚至是50？”"];
+	  52 [label="Empathy: 你不在那个房间了，他稍微有些宽慰。"];
+	  53 [label="Jump to: [MAINHUB]"];
+	  54 [label="Washerwoman: Variable[\"TASK.find_idiot_doom_spiral_jacket\"]"];
+	  55 [label="Variable[\"TASK.find_idiot_doom_spiral_jacket\"]", shape=diamond];
+	  56 [label="!(Variable[\"TASK.find_idiot_doom_spiral_jacket\"])", shape=diamond];
+	  57 [label="Drama: 她真的信了。"];
+	  58 [label="CRHUB"];
+	  59 [label="You: “我猜这个不是你放的——是露比。”"];
+	  60 [label="Logic: 她可能听见了警督的锐影驶过的声音，把她吵醒了，就像把你吵醒一样。"];
+	  61 [label="Untitled hub"];
+	  62 [label="Washerwoman: “嗯？这是干什么？”她拿出文件，眯起眼睛。“过来，我看不懂这些乱七八糟的字。告诉我上面说的是什么。”"];
+	  63 [label="Jump to: [Untitled hub (03)]"];
+	  64 [label="You: “到底是什么？公寓还是电气厂？”"];
+	  65 [label="Washerwoman: “我哪里也不去。”她瞥了一眼那满满一桶衣服。"];
+	  66 [label="Washerwoman: “现在轮到你了，先生……？”"];
+	  67 [label="You: “你有新房客啦！”（拿到新家的钥匙。）"];
+	  68 [label="You: “好吧，如果之后我发现什么*可疑*的东西，还会再回来的。”\n“好吧，如果之后我们发现什么*可疑*的东西，还会再回来的。”"];
+	  69 [label="Washerwoman: IsKimHere()"];
+	  70 [label="IsKimHere()", shape=diamond];
+	  71 [label="!(IsKimHere())", shape=diamond];
+	  72 [label="Washerwoman: “没事的，”她安慰着你。“重要的是我们还活着。仍然过着自己的生活。就算在‘贫穷真人秀’里，大家该怎么做还是怎么做……”"];
+	  73 [label="You: “帕克斯？那是什么？”"];
+	  74 [label="Washerwoman: “善意终究会耗尽。”她拉紧了脖子上的围巾。“员工离开，那个地方也被关闭了。现在早就已经没了。”"];
+	  75 [label="Washerwoman: “至少那些留下来的人……”她陷入沉默，回过头去，似乎在寻找某人。"];
+	  76 [label="Jump to: [vilagehubsing]"];
+	  77 [label="Kim Kitsuragi: “那就要靠警察去发现了。”警督掏出熟悉的蓝色笔记本。“好吧，请尽你所能地回答每一个问题。我肯定我们有些问题要问。”"];
+	  78 [label="Washerwoman: “我清理过了，像往常一样。”"];
+	  79 [label="Half Light: 他妈的，她打算一枪打爆自己的脑袋。"];
+	  80 [label="Washerwoman: 她把头歪向一边，看着你，陷入深思。然后，她下定了决心。“不，她是个战士。”"];
+	  81 [label="Jump to: [MAINHUB]"];
+	  82 [label="Washerwoman: Variable[\"village.has_shack\"]"];
+	  83 [label="Variable[\"village.has_shack\"]", shape=diamond];
+	  84 [label="!(Variable[\"village.has_shack\"])", shape=diamond];
+	  85 [label="Washerwoman: “你问过莉莉恩了吗？在她同意之前，我根本不会考虑签名的事。”她把信封还了回来。"];
+	  86 [label="You: “我改变主意了，我想让你签署这些文件。”（把信封给她。）"];
+	  87 [label="Washerwoman: Variable[\"village.ww_wcheck_failure_counter\"] >= 1"];
+	  88 [label="Variable[\"village.ww_wcheck_failure_counter\"] >= 1", shape=diamond];
+	  89 [label="!(Variable[\"village.ww_wcheck_failure_counter\"] >= 1)", shape=diamond];
+	  90 [label="Washerwoman: “不肯跟你*共舞*？这就是你找搭档的标准吗？”"];
+	  91 [label="Washerwoman: “注意点你说话的口气，小子。这个村子比*某些人*要好很多。”即使有白内障，她的眼神还是能直接将你穿透。"];
+	  92 [label="You: “我只是需要被人需要的感觉。”"];
+	  93 [label="Kim Kitsuragi: 「你还是没说对。」"];
+	  94 [label="Untitled hub (03)"];
+	  95 [label="Washerwoman: Variable[\"village.netpicker_signature_for_washerwoman\"]"];
+	  96 [label="Variable[\"village.netpicker_signature_for_washerwoman\"]", shape=diamond];
+	  97 [label="!(Variable[\"village.netpicker_signature_for_washerwoman\"])", shape=diamond];
+	  98 [label="Inland Empire: 那是你好吧。一只黑色猎犬在舔舐你自己的脚踝。"];
+	  99 [label="Drama: 这是事实，大人。"];
+	  100 [label="You: “这个……”（摊开你的手。）"];
+	  101 [label="Washerwoman: Variable[\"village.ww_greeting_done\"]"];
+	  102 [label="Variable[\"village.ww_greeting_done\"]", shape=diamond];
+	  103 [label="!(Variable[\"village.ww_greeting_done\"])", shape=diamond];
+	  104 [label="Inland Empire: 放松，你不是个‘新面孔’了。她指的不是你。你是个局外人。一个警察，还记得吗？"];
+	  105 [label="Washerwoman: “你以为我现在在做什么，RCM的这位先生？！”硬毛刷猛地一下扎进水桶里，几滴水花飞溅到你脸上。"];
+	  106 [label="You: 我不会伪造任何东西。这样太可耻了。而且是违法的。"];
+	  107 [label="You: “你确定她没有去些更舒服……而且没那么潮湿的地方吗？”"];
+	  108 [label="Washerwoman: “是的，很早就离开了，还有狗叫声——我想大概8点左右。”"];
+	  109 [label="Jump to: [rubythequestions]"];
+	  110 [label="Kim Kitsuragi: 警督皱起眉头。“唔……”"];
+	  111 [label="Kim Kitsuragi: 他茫然地转过头去。“你准备好了就行。”"];
+	  112 [label="You: “我需要的不多。这听起来刚刚好。”"];
+	  113 [label="You: “谁，什么酒鬼？”"];
+	  114 [label="Washerwoman: “你迟早会见到的。”她慢慢摇摇头。“不用很长时间就能找到这些家伙。”"];
+	  115 [label="You: “我听说她是个没法控制愤怒的老酒鬼，你见过她那样吗？”"];
+	  116 [label="Washerwoman: “据我所知没有，不过她喜欢听音乐。曾经还给我听过她自己做的混音带。”她用手背擦了擦额头。水滴落在地面上。"];
+	  117 [label="Washerwoman: “我为什么要那么做？那是个傻瓜的名字。你是个傻瓜吗？”你还没来得及开口，她就举起了干瘦的手指。“不要在一个老太太面前嘲笑自己，警官。这样做很不体面。”"];
+	  118 [label="You: “不，我不想要免费的房间，这样不太合适。”（留在褴褛飞旋。）"];
+	  119 [label="You: “其实吧，那个免费的房间还在吗？”"];
+	  120 [label="You: “哦，因为你瞎了，好吧。”"];
+	  121 [label="You: “我也是这么想的。”"];
+	  122 [label="Jump to: [rubythequestions]"];
+	  123 [label="Washerwoman: “你还想知道那个可怜女孩的什么事？”"];
+	  124 [label="Washerwoman: CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  125 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  126 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  127 [label="Washerwoman: Variable[\"village.has_shack\"]"];
+	  128 [label="Variable[\"village.has_shack\"]", shape=diamond];
+	  129 [label="!(Variable[\"village.has_shack\"])", shape=diamond];
+	  130 [label="Washerwoman: “你在期待些什么呢？警察总是会陷入危险的境地。有时候也会中枪。你这一行可不容易。”"];
+	  131 [label="Jump to: [MAINHUB]"];
+	  132 [label="Washerwoman: “母亲曾经唱的一首摇篮曲。我也给自己的孩子唱过。这是一首古老的萨马拉儿童歌曲。”"];
+	  133 [label="Interfacing: 你知道的，可能还有别的办法。不过，你需要找一个比较*私密*和*谨慎*的地方……比如你的棚屋。"];
+	  134 [label="Composure: 她很顽固，不过你感觉到*一丝*犹豫……你还是有可能说服她的。"];
+	  135 [label="You: “你可以从签署这些文件开始。我这里有支笔。”（把文件递给她。）\n“我说过了，‘你可以从签署这些文件开始’。我这里有支笔。”（把文件递给她。）"];
+	  136 [label="You: “这只是个小房地产交易。没什么不吉利的。”"];
+	  137 [label="Washerwoman: Variable[\"TASK.forge_liliennes_and_isobels_signatures\"]  or  Variable[\"village.documents_refused_to_forge\"]"];
+	  138 [label="Variable[\"TASK.forge_liliennes_and_isobels_signatures\"]  or  Variable[\"village.documents_refused_to_forge\"]", shape=diamond];
+	  139 [label="!(Variable[\"TASK.forge_liliennes_and_isobels_signatures\"]  or  Variable[\"village.documents_refused_to_forge\"])", shape=diamond];
+	  140 [label="failureoptioz"];
+	  141 [label="Suggestion: 没关系的。她现在很情绪化。继续下去，让她精疲力尽。"];
+	  142 [label="You: “你应该把孩子放在第一位。”"];
+	  143 [label="Washerwoman: Variable[\"village.ww_sugg_expression\"]"];
+	  144 [label="Variable[\"village.ww_sugg_expression\"]", shape=diamond];
+	  145 [label="!(Variable[\"village.ww_sugg_expression\"])", shape=diamond];
+	  146 [label="Washerwoman: “至少你会得到一份回报吧？”"];
+	  147 [label="Kim Kitsuragi: “这是个*非常棒*的问题，夫人。”"];
+	  148 [label="Interfacing: 当然是伪造签名了。这还不明显吗？"];
+	  149 [label="Washerwoman: “你需要检查你的事实陈述，警官。”她用干瘪的手指指着你，肥皂水滴落在她的裙子上。“我没说过这种话。”"];
+	  150 [label="Untitled hub"];
+	  151 [label="Kim Kitsuragi: “我可以先喘口气，今天又会是个*田径赛日*，”警督一边说，一边搓了搓大腿。"];
+	  152 [label="Inland Empire: 你不是有种直觉吗，可以问问她。这是一种*孤注一掷*的手段。看看她会不会觉得露比刚好符合要求。"];
+	  153 [label="Kim Kitsuragi: “是的。这就是180千瓦发动机的一个缺点。”他的口气有点骄傲。“它能让那些坏人知道，你来了。”"];
+	  154 [label="Washerwoman: “没有，她大多数时候很沉默。话都憋在心里……”"];
+	  155 [label="Washerwoman: “她尽量不表现出来，不过我可以看出她不是来钓鱼的——通常她喜欢小钓那么几下，不过这次她基本只待在自己的房间里。”"];
+	  156 [label="You: “伊泽贝尔，你必须理解，这个地方*需要*那个建设项目。”"];
+	  157 [label="Washerwoman: “我不收你的钱。把这当作是村子向RCM表达的一种善意吧。”"];
+	  158 [label="You: 不要打扰她。[离开。]"];
+	  159 [label="Washerwoman: “那你呢？”她转向他。“我知道这个世界是怎么运转的，而且当人们互相告发的时候，它就不灵了。”"];
+	  160 [label="Washerwoman: “没什么*好说*的。这里只有匆匆过客。现在，你还有别的事吗？”"];
+	  161 [label="Washerwoman: “我们拥有最多的东西就是缺少财富。”她神秘的笑了。"];
+	  162 [label="Jump to: [vilagehubsing]"];
+	  163 [label="You: “我是个警察，我不会惹麻烦，我只会处理麻烦。”"];
+	  164 [label="Washerwoman: "];
+	  165 [label="", shape=diamond];
+	  166 [label="!()", shape=diamond];
+	  167 [label="Jump to: [MAINHUB]"];
+	  168 [label="Jump to: [MAINHUB]"];
+	  169 [label="Washerwoman: Variable[\"village.ww_wcheck_failure_counter\"] >= 2"];
+	  170 [label="Variable[\"village.ww_wcheck_failure_counter\"] >= 2", shape=diamond];
+	  171 [label="!(Variable[\"village.ww_wcheck_failure_counter\"] >= 2)", shape=diamond];
+	  172 [label="You: “他是个一本正经的家伙，不肯跟我一起共舞。”"];
+	  173 [label="You: “那孩子们会怎么样？”\n“那莉莉恩的孩子会怎么样？那对双胞胎，还有小莉莉？”\n“那小莉莉会怎么样？”\n“那莉莉恩的双胞胎会怎么样？”"];
+	  174 [label="You: “那*然后*呢？”"];
+	  175 [label="Washerwoman: “然后……”老妇人呼出一口气。她凝视着地面，无法完成这个想法。"];
+	  176 [label="Washerwoman: “好的，警官。我一定会的。”"];
+	  177 [label="You: “找回丢失的东西是一种荣耀。”"];
+	  178 [label="Washerwoman: 老妇人缓缓摇了摇头。她把破布扔进水桶——现在它已经变干净了。"];
+	  179 [label="Interfacing: 听你的，老大。"];
+	  180 [label="Washerwoman: Variable[\"village.abigail_greeting_done\"]  or  Variable[\"village.idiot_greeting_done\"]  or  Variable[\"village.rosemary_made_it_to_main_hub\"]"];
+	  181 [label="Variable[\"village.abigail_greeting_done\"]  or  Variable[\"village.idiot_greeting_done\"]  or  Variable[\"village.rosemary_made_it_to_main_hub\"]", shape=diamond];
+	  182 [label="!(Variable[\"village.abigail_greeting_done\"]  or  Variable[\"village.idiot_greeting_done\"]  or  Variable[\"village.rosemary_made_it_to_main_hub\"])", shape=diamond];
+	  183 [label="Washerwoman: 她点点头。“根据我的经验，文件从来都不会带来任何好处。”"];
+	  184 [label="Washerwoman: 她的表情柔和了许多。“所以要小心。别逞英雄。”"];
+	  185 [label="Washerwoman: “嗯？这是干什么？”她拿出文件，眯起眼睛。“过来，我看不懂这些乱七八糟的字。告诉我上面说的是什么。”"];
+	  186 [label="Logic: 这样根本说不通啊。"];
+	  187 [label="Washerwoman: “她上周五来的。周一走的，很匆忙……”她用皱巴巴的手揉搓着水里的一件蓝色破布。“她到底惹上什么麻烦了，那个姑娘？”"];
+	  188 [label="Washerwoman: “是的，要找到她，你肯定要费不少功夫。”她把破布扔进水桶——现在它已经变干净了。“你最好还是待在这里，在加热器里点上一把温暖又舒适的火……”"];
+	  189 [label="Empathy: 她似乎是真心为前任房客感到担忧。她之前也见过她躲避麻烦的时候，不过这次似乎不太一样。"];
+	  190 [label="Inland Empire: 往昔岁月便是黄金岁月。生命的光彩在那些匆匆赶路之人身上消失。"];
+	  191 [label="Kim Kitsuragi: 他转头看向孩子们，然后叹了口气。“我们尽快把案子解决掉吧。用我的锐影联络调度台，然后叫他们帮你连接到电台。没准他们能帮点忙。”"];
+	  192 [label="Washerwoman: “你请便吧。”"];
+	  193 [label="You: “别误解我的意思，不过‘简陋’一般不是我的风格。”（指向你自己。）"];
+	  194 [label="You: “还有谁住在这个……村子里？”"];
+	  195 [label="Washerwoman: “呃，还有音乐。从大海对面飘过来的音乐。”她嘲弄到。“几天前开始的，现在吵的不得了，就算晚上也是一样。”"];
+	  196 [label="You: “你还没睡？”"];
+	  197 [label="Washerwoman: 她点点头，又开始冲洗衣服。"];
+	  198 [label="Washerwoman: “我的建议是——不要。不要变得比你现在更老。已经够老的了。”她笑了。“你有什么烦心事吗？”"];
+	  199 [label="Washerwoman: “你是个很简单的男人，”她赞许地点点头。“我就当你是有兴趣了？”"];
+	  200 [label="Jump to: [Washerwoman: \"She nods, rinsing another piece of...\"]"];
+	  201 [label="Interfacing: 你知道的，可能还有别的办法。不过，你需要找一个比较*私密*和*谨慎*的地方。你在飞旋旅社的房间应该可以……"];
+	  202 [label="Washerwoman: CheckItem(\"kind_green_ape_pen\")  or  CheckItem(\"blue_oblong_pen\")"];
+	  203 [label="CheckItem(\"kind_green_ape_pen\")  or  CheckItem(\"blue_oblong_pen\")", shape=diamond];
+	  204 [label="!(CheckItem(\"kind_green_ape_pen\")  or  CheckItem(\"blue_oblong_pen\"))", shape=diamond];
+	  205 [label="Washerwoman: 她点点头。“根据我的经验，文件从来都不会带来任何好处。”"];
+	  206 [label="You: “我可以试试让艾弗拉特给你一点钱……”"];
+	  207 [label="Washerwoman: “正直一些吧。你是一名执法人员，不是什么胖鼻涕虫手下腐败的小亲信。”"];
+	  208 [label="Empathy: 你可以继续追问下去，不过我怀疑你不会从她那里打听到太多东西。"];
+	  209 [label="Jump to: [MAINHUB]"];
+	  210 [label="Perception (Sight): 那里没有人。"];
+	  211 [label="Suggestion: 等等——让她想明白吧。"];
+	  212 [label="Pain Threshold: 该死的，好冷。"];
+	  213 [label="You: “我想我也见到了那帮酒鬼……”"];
+	  214 [label="Kim Kitsuragi: “所以他们不再提供服务了吗？那传道书呢？”"];
+	  215 [label="Suggestion: 该死，你差点就成了。这算什么——良心的谴责吗？"];
+	  216 [label="Endurance: 不。你可以的。在你不行之前，身体的弹药库里还是有不少存货的。"];
+	  217 [label="Perception (Sight): 在煤渣砖房屋背后，破旧的战前废墟拔地而起，宛如黑暗宫殿。风在召唤。"];
+	  218 [label="Washerwoman: “滚出去，你想毁了我一天的心情！”她竖起瘦骨嶙峋的手指。“还有，那家青少年和活动中心最好是个好地方，不然我会找你麻烦的。”"];
+	  219 [label="Jump to: [MAINHUB]"];
+	  220 [label="Washerwoman: IsKimHere()"];
+	  221 [label="IsKimHere()", shape=diamond];
+	  222 [label="!(IsKimHere())", shape=diamond];
+	  223 [label="Logic: 那应该是帐篷里的那群舞曲爱好者。"];
+	  224 [label="You: “好吧。明白了。”"];
+	  225 [label="Washerwoman: “我说过了。那是个半岛。上面没有人。只有幽灵和流浪汉。还有亲热的年轻人。”"];
+	  226 [label="Washerwoman: “还有什么我能帮你的吗？”"];
+	  227 [label="Untitled hub (03)"];
+	  228 [label="Reaction Speed: 因为她是个瞎子，你似乎已经忘记了。"];
+	  229 [label="Washerwoman: “有些东西是不会*飞*的，警官。”她张嘴笑了笑，闻了闻空气里的味道。“看看周围。谁愿意来这里做礼拜？它是三百年前建成的，那时候肯定要好很多……”"];
+	  230 [label="Kim Kitsuragi: “马丁内斯发生了一起凶杀案。”他指向东边。“她可能是个嫌疑人。如果你能帮忙的话，我们会很感激的。”"];
+	  231 [label="Rhetoric: 她在闪烁其词。她知道一些事。"];
+	  232 [label="Washerwoman: IsHourBetween(21,  2)"];
+	  233 [label="IsHourBetween(21,  2)", shape=diamond];
+	  234 [label="!(IsHourBetween(21,  2))", shape=diamond];
+	  235 [label="Washerwoman: “是啊。我真不怎么睡觉了。一晚上大概只睡几小时。人老之后就会这样……”她稍微搅了搅桶里的水。"];
+	  236 [label="Washerwoman: “我怎么会知道？她脾气是很坏，但是并不暴力。她也没有带着枪到处跑。”她若有所思地回头看了看她的棚屋。"];
+	  237 [label="You: “我好像在什么地方听过这个名字，不过跟我多说一点吧。”"];
+	  238 [label="Washerwoman: “没什么……”她一边回复着，一边擦了擦额头。“有一座废弃的教堂，德洛莉丝人道主义教堂。甚至在我来这里之前，它就已经在那里了。”"];
+	  239 [label="Jump to: [rubythequestions]"];
+	  240 [label="Washerwoman: IsKimHere()"];
+	  241 [label="IsKimHere()", shape=diamond];
+	  242 [label="!(IsKimHere())", shape=diamond];
+	  243 [label="Washerwoman: “哦，当然了。我们上一次在附近见到你……是12年前。那时的你也是来处理麻烦的。而你也是这么*做*的……不过，你在马丁内斯依然被认为是个不祥之兆。”"];
+	  244 [label="Washerwoman: “不，我不是说你个人。而是RCM。有些人卷入了一场争斗，其中一个把另一个人杀了。然后把自己锁进了那边的柴房里，”她指向身后的建筑。"];
+	  245 [label="You: “为什么？”"];
+	  246 [label="You: “我们说的到底是哪种不祥之兆？”"];
+	  247 [label="Suggestion: 要不要对她试试那个*表情*？"];
+	  248 [label="Jump to: [MAINHUB]"];
+	  249 [label="Authority: 她承认你跟她是平等的。"];
+	  250 [label="Washerwoman: “没有！他们是好孩子。我引导他们走上了正确的道路。”她的声音里有一丝反抗的意味。"];
+	  251 [label="Washerwoman: “呃，我想她们会长大，然后也会离开这里吧。”"];
+	  252 [label="Savoir Faire: 真是一个很酷的时刻。需要说一点酷的话。"];
+	  253 [label="Washerwoman: IsKimHere()"];
+	  254 [label="IsKimHere()", shape=diamond];
+	  255 [label="!(IsKimHere())", shape=diamond];
+	  256 [label="Inland Empire: 也许这段神秘的音乐跟案子有关联呢？水仙女鲁沙卡，或者是半恶魔*阿普莎拉*，在歌唱……"];
+	  257 [label="you"];
+	  258 [label="Washerwoman: CheckItem(\"key_coast_home\")"];
+	  259 [label="CheckItem(\"key_coast_home\")", shape=diamond];
+	  260 [label="!(CheckItem(\"key_coast_home\"))", shape=diamond];
+	  261 [label="Suggestion: 问问她出租房屋的事……"];
+	  262 [label="You: “这是什么时候的事？”"];
+	  263 [label="Kim Kitsuragi: “一枚子弹？”警督转向你，朝你微微点点头……"];
+	  264 [label="Logic: 有意思。如果有时间的话，你可以调查一下这个*骚动*。"];
+	  265 [label="Washerwoman: “是啊，你是的，黑暗的预兆——只想帮你自己和你的组织。帮助暴风云聚集在地平线上……”她摇摇头。"];
+	  266 [label="Jump to: [Washerwoman: \"\"Don't make an old woman regret ope...\"]"];
+	  267 [label="Washerwoman: Variable[\"village.ww_greeting_done\"]"];
+	  268 [label="Variable[\"village.ww_greeting_done\"]", shape=diamond];
+	  269 [label="!(Variable[\"village.ww_greeting_done\"])", shape=diamond];
+	  270 [label="Jump to: [Untitled hub]"];
+	  271 [label="Washerwoman: “我？谁也不是。只是个老洗衣妇。母亲叫我伊泽贝尔，如果你想问这个的话。我的婚后姓是莎蒂。”"];
+	  272 [label="You: “我不确定RCM接受免费住宿合不合适。”"];
+	  273 [label="Washerwoman: 老妇人耸耸肩。“或者不要。选择权在你。跟我也没什么关系。”"];
+	  274 [label="Washerwoman: “你最好别在我家屋檐下密谋一场大革命，”她嘟囔着。“我们好不容易才挺过上一次……不过，那个房间——你想要吗？”"];
+	  275 [label="Washerwoman: “随便哪天吧。”她的眼睛望向天空。“我很肯定。你到底感不感兴趣？”"];
+	  276 [label="Washerwoman: “我猜她对机械和技术方面的东西很在行。甚至还修好了棚屋里的加热器，你该好好谢谢她。"];
+	  277 [label="stufftosay"];
+	  278 [label="You: “我*就是*不祥之兆，没错。”（继续。）\n“我就是*彻头彻尾*的不祥之兆。一直以来我都是这么跟大家说的。末日已经到来。”（继续。）"];
+	  279 [label="Washerwoman: “你的想法总是翻来覆去的，不是吗……*到底*是怎么一回事？”"];
+	  280 [label="Washerwoman: “这就是你对自己的*搭档*最好的评价吗？听起来你们的关系经营的并不成功。”"];
+	  281 [label="You: “他们都在限制我的风格。每一个超级明星最后都会单飞。”"];
+	  282 [label="Washerwoman: “是啊，他们是好孩子。我引导他们走上了正确的道路。”她的声音里有种骄傲的意味。"];
+	  283 [label="You: “不是给我的。我正在进行一场*哲学*之旅，要为某个人把它取回来。”"];
+	  284 [label="Washerwoman: IsKimHere()"];
+	  285 [label="IsKimHere()", shape=diamond];
+	  286 [label="!(IsKimHere())", shape=diamond];
+	  287 [label="You: （说酷的话。）「让我们一起摇摆，鸟枪甩起来。」"];
+	  288 [label="Interfacing: 我保证，肯定会很不错的。"];
+	  289 [label="You: 不，我不想依靠伪造。"];
+	  290 [label="Untitled hub (02)"];
+	  291 [label="You: “你可以在文件上签字吗？就在弯弯曲曲的这条线这里。为了孩子们着想？”（把文件递给她。）\n“我说‘你可以在文件上签字吗？’就在弯弯曲曲的这条线这里。为了孩子们着想？”（把文件递给她。）"];
+	  292 [label="Jump to: [Washerwoman: \"The woman next to a bucket of cloth...\"]"];
+	  293 [label="Empathy: 他没有对你不满，而是对他自己。"];
+	  294 [label="Washerwoman: Variable[\"village.washerwoman_asked_about_lilienne\"]  or  Variable[\"village.netpicker_greeting_done\"]"];
+	  295 [label="Variable[\"village.washerwoman_asked_about_lilienne\"]  or  Variable[\"village.netpicker_greeting_done\"]", shape=diamond];
+	  296 [label="!(Variable[\"village.washerwoman_asked_about_lilienne\"]  or  Variable[\"village.netpicker_greeting_done\"])", shape=diamond];
+	  297 [label="Washerwoman: “她就在那边。”她指向码头。“黑头发的女人，倚靠在栏杆上那个。”"];
+	  298 [label="Washerwoman: “这里？你吗？”她发出一阵干笑。“不，警官。我们这里只有一点硬币，还是那些醉鬼藏起来不想被他们的女人发现的——然后自己都忘记了。”"];
+	  299 [label="Rhetoric: 她并没有被一个给本地大人物跑腿的警察打动。完全没有。"];
+	  300 [label="Interfacing: 是啊……当然了。而且还违法呢！还是忘了吧！"];
+	  301 [label="Washerwoman: “必须说，我对这个很骄傲，”她点点头，把夹克交还给你。“洗掉那些污渍的话，它还挺不错的。希望它在你手里能活得轻松一些。”"];
+	  302 [label="You: “世界。”"];
+	  303 [label="You: “你说得对，这地方太大了。找她就像是大海捞针。”\n“但是那个地方太大了。找她就像是大海捞针。”"];
+	  304 [label="Washerwoman: Variable[\"plaza.kineema_found_out_what_tore_you_from_slumber\"]"];
+	  305 [label="Variable[\"plaza.kineema_found_out_what_tore_you_from_slumber\"]", shape=diamond];
+	  306 [label="!(Variable[\"plaza.kineema_found_out_what_tore_you_from_slumber\"])", shape=diamond];
+	  307 [label="You: “露比的事就说到这里吧，我还有别的问题……”"];
+	  308 [label="Washerwoman: 老妇人还在哼唱着那首未知的歌谣。她睁开眼睛，感觉到了你的存在。"];
+	  309 [label="You: “你*确定*没听到过广播的声音？”"];
+	  310 [label="Jump to: [MAINHUB]"];
+	  311 [label="You: “这个渔村里有什么？”"];
+	  312 [label="Washerwoman: “这是我的煤渣小镇。”她点点头，微笑的脸上满是皱纹。“我知道附近发生了什么事。”"];
+	  313 [label="You: “还有什么值得注意的吗？”"];
+	  314 [label="You: “你觉得她为什么会在那里留下一枚子弹？”"];
+	  315 [label="You: “她有带什么技术设备吗，比如无线电之类的？”"];
+	  316 [label="Visual Calculus: 那边是一个半岛。她可能是*陷入困境*了。"];
+	  317 [label="Washerwoman: “那里没人用，天知道里面也没太多东西。”她把头歪向一边，考虑着什么。“你可以待在那里。”"];
+	  318 [label="Washerwoman: “他是个尖锐的家伙，”她自言自语，用手拂过洗衣板。"];
+	  319 [label="You: “我明白了。你知道些什么，但是你决定不告诉我们。”"];
+	  320 [label="Washerwoman: “一间旧军事医院还有周围的东西。”她看向南边的建筑。“或者过去是的，在宗主国时期。”"];
+	  321 [label="You: “我想我正处在重新找回自我的过程中。”"];
+	  322 [label="Washerwoman: “我肯定你见过，”她点头说道，脸上还带着一种奇怪的笑容。“大自然保持着循环往复。新面孔时不时地出现，旧面孔会消失，被人遗忘。这就是我们。”"];
+	  323 [label="You: “好吧，谢谢，我已经听够了。”"];
+	  324 [label="Hand/Eye Coordination: 你的手在抽搐。一枚子弹隐藏在视野范围之外。还记得它滑入枪管的方式吗。上膛的枪口对准了你的心脏——这种感觉很熟悉，不是吗？"];
+	  325 [label="Washerwoman: “她是个好女孩，不管她到底卷入了什么样的麻烦。”"];
+	  326 [label="Washerwoman: Variable[\"village.ww_ruby_exit_seen\"]"];
+	  327 [label="Variable[\"village.ww_ruby_exit_seen\"]", shape=diamond];
+	  328 [label="!(Variable[\"village.ww_ruby_exit_seen\"])", shape=diamond];
+	  329 [label="You: “他说的没错。我们是警察：不会惹麻烦，只会处理麻烦。”"];
+	  330 [label="Washerwoman: “很抱歉，这里没太多地方给你停車。房子也不多。人也不多。我的孩子早就走了……赚钱去了，跟其他人一起。”"];
+	  331 [label="Washerwoman: Variable[\"village.ww_ency_southsamaran\"]"];
+	  332 [label="Variable[\"village.ww_ency_southsamaran\"]", shape=diamond];
+	  333 [label="!(Variable[\"village.ww_ency_southsamaran\"])", shape=diamond];
+	  334 [label="Washerwoman: “我看见上面已经有莉莉恩的名字了。啧啧啧。这个女孩太容易轻信别人。不管怎么说，我是不会在工会文件上签名的。”她把信封还给了你。"];
+	  335 [label="Washerwoman: “‘臣服黑夜’，”她一边回复，一边慢慢地前后摇晃。"];
+	  336 [label="Washerwoman: Variable[\"whirling.klaasje_tried_the_expression\"] == true  and  Variable[\"whirling.mirror_stopped_expression\"] == false"];
+	  337 [label="Variable[\"whirling.klaasje_tried_the_expression\"] == true  and  Variable[\"whirling.mirror_stopped_expression\"] == false", shape=diamond];
+	  338 [label="!(Variable[\"whirling.klaasje_tried_the_expression\"] == true  and  Variable[\"whirling.mirror_stopped_expression\"] == false)", shape=diamond];
+	  339 [label="Washerwoman: “你说‘会怎么样’是什么意思？当然了，她们会长大……”"];
+	  340 [label="You: “他们没有变得像那些垂死的酒鬼一样吗？”（指向那群酒鬼。）"];
+	  341 [label="Washerwoman: “对你有好处。如果不帮助别人的话，也别指望别人会帮助你作为回报。这是一个很好的安排。”"];
+	  342 [label="You: “你租了一个房间给她吗？”"];
+	  343 [label="Reaction Speed: 那她怎么会知道你在这里？"];
+	  344 [label="Composure: 她似乎对这种突然的转折并不惊讶。"];
+	  345 [label="Jump to: [MAINHUB]"];
+	  346 [label="Perception (Taste): 不出所料。肥皂的味道。"];
+	  347 [label="You: “不，现在不行。”"];
+	  348 [label="Washerwoman: “之前她遇到麻烦，或者只想独自清静一下的时候，我也是这么做的。我说的很清楚——我们这里欢迎各种各样的人。”"];
+	  349 [label="Washerwoman: “是的，那就听听别的问题吧。”她环顾四周，春雪缓缓飘落——轻轻地落在渔村上空。"];
+	  350 [label="You: “这就跟那人把自己锁进柴房的时候一样。我们只是想帮她走出来。”"];
+	  351 [label="Washerwoman: “广播？哈——没有，我们这儿从来不听广播。小棚屋里有个收音机，但是从来没用过。”"];
+	  352 [label="You: “就这样吧，金？”"];
+	  353 [label="Washerwoman: “我这对耳朵听到过所有海岸上的声音。如果有异响肯定会知道的。”"];
+	  354 [label="You: “我感觉你隐瞒了什么东西。这里还发生了什么事？”"];
+	  355 [label="Authority: 谁也不是？她有些不对劲……绝对不是什么‘无名小卒’。"];
+	  356 [label="You: “呃，如果我不想呢？”"];
+	  357 [label="Washerwoman: “我的耳朵很灵敏啊。过来吧。”她向你招手。"];
+	  358 [label="Washerwoman: “我想我会的，哈里。哎呀，就这么脱口而出了。我曾经认识一个叫哈里的人。他是个很强壮的小伙子，不过像块石头一样闷不做声。”"];
+	  359 [label="You: “医院怎么了？”"];
+	  360 [label="Kim Kitsuragi: “那我倒不担心，夫人。我们很执着。”"];
+	  361 [label="You: “双重荣誉警督哈里尔·杜博阿。”"];
+	  362 [label="Washerwoman: “不，你不是。我之前在附近见过你。12年前。你没惹什么麻烦——事实上你挺乐于助人的。不过，你在马丁内斯依然被认为是个不祥之兆。”"];
+	  363 [label="Washerwoman: “啊，看看我，一直喋喋不休的。”她挥了挥手。“是什么风把你给吹来了？”"];
+	  364 [label="Washerwoman: “我不相信。警察出现在这里，收集签名——绝对跟工会脱不了干系。”"];
+	  365 [label="Washerwoman: “不过，听到你搭档的消息，我很抱歉。他似乎是个很正派的人。”"];
+	  366 [label="Authority: 她自己也有几个头衔。荣誉领袖之类的。"];
+	  367 [label="Washerwoman: “哦，好吧，听起来好像*真的*很重要……”"];
+	  368 [label="You: （撒谎。）“会的。”"];
+	  369 [label="You: 「没什么。你说什么？」"];
+	  370 [label="You: 好吧，那就伪造吧。"];
+	  371 [label="Untitled hub"];
+	  372 [label="Kim Kitsuragi: ……然后转向洗衣女工。“不是你放在那里的，对吧。是*她*。”"];
+	  373 [label="Washerwoman: “我说过了，”她的口气变得尖锐起来，“这是一首古老的*儿歌*。你不用喜欢它。”"];
+	  374 [label="Washerwoman: CheckItem(\"white_envelope_lilienne_signed\")"];
+	  375 [label="CheckItem(\"white_envelope_lilienne_signed\")", shape=diamond];
+	  376 [label="!(CheckItem(\"white_envelope_lilienne_signed\"))", shape=diamond];
+	  377 [label="Washerwoman: “是的，”她慢慢点点头，回复到。“你去吧。不能让那个胖胖的克莱尔先生失望，不是吗？”"];
+	  378 [label="Encyclopedia: 这是真的。她只说过莉莉恩没签之前她是不会*考虑*的。"];
+	  379 [label="Washerwoman: Variable[\"village.ww_empathy_kim_doesnt_like_shack\"] == true"];
+	  380 [label="Variable[\"village.ww_empathy_kim_doesnt_like_shack\"] == true", shape=diamond];
+	  381 [label="!(Variable[\"village.ww_empathy_kim_doesnt_like_shack\"] == true)", shape=diamond];
+	  382 [label="Volition: 他会吗？这种环境只会激发一件事——喝酒。"];
+	  383 [label="Jump to: [MAINHUB]"];
+	  384 [label="Jump to: [Washerwoman: \"\"Well, hand it over then and I'll s...\"]"];
+	  385 [label="You: “有人要我来找你要签名。”（把信封递给她。）"];
+	  386 [label="You: “这条信息很有用，谢谢。”"];
+	  387 [label="You: “打电话给你*不小心*收听到的电台，你的心情一定很激动吧，金。”\n“准备好迎接你的英雄了吗，金？”"];
+	  388 [label="shackingithub"];
+	  389 [label="Empathy: 她没有把自己知道的一切都告诉你。让她继续说下去。"];
+	  390 [label="Washerwoman: “你挺厉害的。”老妇人点点头，能明显看出尊重的意味。“这么多头衔。其中有一个还挺*麻烦*的。”"];
+	  391 [label="Washerwoman: “那还不算失去一切，”她抚平了裙子上的褶皱，回复到。“你也看到了，就算是在‘贫穷真人秀’里，大家该怎么做还是怎么做……”"];
+	  392 [label="Washerwoman: Variable[\"village.ww_blackc_handeye_suicide\"]"];
+	  393 [label="Variable[\"village.ww_blackc_handeye_suicide\"]", shape=diamond];
+	  394 [label="!(Variable[\"village.ww_blackc_handeye_suicide\"])", shape=diamond];
+	  395 [label="You: “我还有一些关于露比的问题……”"];
+	  396 [label="Washerwoman: IsKimHere()"];
+	  397 [label="IsKimHere()", shape=diamond];
+	  398 [label="!(IsKimHere())", shape=diamond];
+	  399 [label="Washerwoman: Variable[\"village.ww_altgreet_singing_reaction\"]"];
+	  400 [label="Variable[\"village.ww_altgreet_singing_reaction\"]", shape=diamond];
+	  401 [label="!(Variable[\"village.ww_altgreet_singing_reaction\"])", shape=diamond];
+	  402 [label="You: “没时间开玩笑。你没看见我很痛吗？”"];
+	  403 [label="Washerwoman: Variable[\"village.ww_whitecheck_rhetoric_convince\"]"];
+	  404 [label="Variable[\"village.ww_whitecheck_rhetoric_convince\"]", shape=diamond];
+	  405 [label="!(Variable[\"village.ww_whitecheck_rhetoric_convince\"])", shape=diamond];
+	  406 [label="Suggestion: 听你说话对她来说才是最有力的。你*知道*这个世界是怎么运转的。"];
+	  407 [label="Suggestion: 也许只要用恳求的眼神看着她就好？"];
+	  408 [label="Washerwoman: “骨头里全是潮气，我也活不了太久。”她看着自己的膝盖。“如果他们想冒险一试，我又怎么能阻止得了他们呢？”"];
+	  409 [label="signitsingit"];
+	  410 [label="Electrochemistry: 冒着跟这个丑老太婆产生肉体接触的风险？饶了你自己吧。"];
+	  411 [label="You: “他们现在在这里吗？”"];
+	  412 [label="Half Light: 你说动她了！现在只要落井下石就好……"];
+	  413 [label="missing_jacketing"];
+	  414 [label="Conceptualization: 在她那里，失去自己的名字就像中年危机一样普通。"];
+	  415 [label="Shivers: 在这里和加姆洛克之间，是一片灰色的古树海洋，上面满是工业煤烟。下面有些小房子，一个杂草蔓生的公园……"];
+	  416 [label="Logic: 露比来过这里。你知道。"];
+	  417 [label="Washerwoman: “莉莉恩很坚强。”她点点头。“比这里的大多数男人坚强。如果不是因为她和她的孩子们，这地方不会剩下任何一丝生机。”"];
+	  418 [label="Washerwoman: “你的想法总是翻来覆去的，不是吗……*到底*是怎么一回事？”"];
+	  419 [label="Jump to: [MAINHUB]"];
+	  420 [label="Washerwoman: IsKimHere()"];
+	  421 [label="IsKimHere()", shape=diamond];
+	  422 [label="!(IsKimHere())", shape=diamond];
+	  423 [label="Empathy: 他不喜欢这样。"];
+	  424 [label="Washerwoman: IsMorning()"];
+	  425 [label="IsMorning()", shape=diamond];
+	  426 [label="!(IsMorning())", shape=diamond];
+	  427 [label="Savoir Faire: 你需要调查一下这些棚屋。特别是她的。"];
+	  428 [label="You: “你说她是周一离开的？”"];
+	  429 [label="You: “她这次有没有跟你说些什么？”"];
+	  430 [label="Jump to: [MAINHUB]"];
+	  431 [label="Encyclopedia: 当瓦萨裔康米主义者、革命家伊格纳斯·尼尔森藏匿的时候，他在北部高原的一间小屋里待了十个月。"];
+	  432 [label="You: “再见，我走了。”[离开。]"];
+	  433 [label="You: “你在附近见过一个叫露比的女人吗？”\n“你在附近见过一个叫露比的红发女人吗？”"];
+	  434 [label="You: “为什么你棚屋的地板下面有一枚子弹？”"];
+	  435 [label="Washerwoman: “‘这件屁事？’”她用那双有白内障的眼睛看着你，“那是你自己的事，我不会帮你的，因为那张嘴实在是太脏了。”"];
+	  436 [label="Kim Kitsuragi: “呃，如果早上你不在旅社的话，还能知道去哪里找你。”他看了看周围，补充了一句：“在这里。一间棚屋。”"];
+	  437 [label="You: “这样根本说不通啊。”"];
+	  438 [label="You: “也许我应该保持迷失的状态。搬到这里来……完全消失。”"];
+	  439 [label="Washerwoman: 她点点头，抬起朦胧的双眼。“那你对什么感兴趣呢？”"];
+	  440 [label="Washerwoman: “现在看起来很*可疑*的家伙会在教堂附近鬼鬼祟祟地走动。我不喜欢那样。”"];
+	  441 [label="You: “谁会想跑到这里的鱼市来呢？”"];
+	  442 [label="Jump to: [MAINHUB]"];
+	  443 [label="You: “她怎么样，那个露比？”"];
+	  444 [label="You: “这是一个逃离计划。”"];
+	  445 [label="Jump to: [rubythequestions]"];
+	  446 [label="makehubsprettier"];
+	  447 [label="Washerwoman: “哦，普通的那种。暗潮，黑色猎犬。”"];
+	  448 [label="Encyclopedia: 那首歌名字的地方有一个缺口。你应该问问她，就是现在！"];
+	  449 [label="You: “呃，不是。是……别人。”"];
+	  450 [label="You: “所以这是个测试？”"];
+	  451 [label="You: “你得聪明点，阅读细则，深谋远虑，寻找机会……”"];
+	  452 [label="You: “哦。好吧，如果改变主意的话，记得告诉我。我们先聊点别的吧。”\n“哦。好吧，如果改变主意的话，记得告诉我。我们在寻找一个逃犯。”"];
+	  453 [label="Kim Kitsuragi: “我明白了，夫人。”警督转向你。“我希望你不介意我们四处看看。”"];
+	  454 [label="You: “不会。”"];
+	  456 [label="Physical Instrument: 不是轻言放弃的人。你有时候也会这样，孩子。"];
+	  457 [label="Washerwoman: “呵……”那张满是皱纹的脸上没有任何动作。“我倒是想看他试试。如果有什么的话，*我*会用建筑噪音把*他*强行赶出去。”"];
+	  458 [label="Washerwoman: Variable[\"village.washerwoman_conze_loosing_your_name_is_common_here\"]"];
+	  459 [label="Variable[\"village.washerwoman_conze_loosing_your_name_is_common_here\"]", shape=diamond];
+	  460 [label="!(Variable[\"village.washerwoman_conze_loosing_your_name_is_common_here\"])", shape=diamond];
+	  461 [label="Drama: 大人，她不相信这里的情况还有好转的余地。"];
+	  462 [label="Jump to: [MAINHUB]"];
+	  463 [label="Washerwoman: IsKimHere()"];
+	  464 [label="IsKimHere()", shape=diamond];
+	  465 [label="!(IsKimHere())", shape=diamond];
+	  466 [label="Jump to: [MAINHUB]"];
+	  467 [label="Washerwoman: “没有。”"];
+	  468 [label="Kim Kitsuragi: “她最后一次待在这里的时候，有没有跟你说些什么？”"];
+	  469 [label="Washerwoman: IsTHCPresent(\"communist\")"];
+	  470 [label="IsTHCPresent(\"communist\")", shape=diamond];
+	  471 [label="!(IsTHCPresent(\"communist\"))", shape=diamond];
+	  472 [label="Washerwoman: 坐在一桶衣服旁边的女人哼唱着一段奇怪的旋律。她的眼睛是闭起来的。"];
+	  473 [label="Conceptualization: 这地方穷的太生动了，这一点也不好笑。"];
+	  474 [label="You: “等等，等一下，你就这么把它*给*我了吗？”"];
+	  475 [label="You: “再问一次：我能*直接住*这屋子吗？”"];
+	  476 [label="Washerwoman: 扑通一声，一块肥皂掉进了水桶里。“现在，这片海岸的一切你都知道了。”"];
+	  477 [label="Washerwoman: “完全没有。”她摇摇头。“当然了，她对那些瓶瓶罐罐很熟悉……她挺合群的，你懂的。不过，我只知道她会在海滩看日落的时候喝上一罐啤酒……”"];
+	  478 [label="Washerwoman: “你的父母肯定为你制定了很宏大的计划。”她停顿下来，上下打量着你。“不知道你合格了吗？”"];
+	  479 [label="Jump to: [MAINHUB]"];
+	  480 [label="Washerwoman: “因为你是个*不祥之兆*。但是只要没有带枪的人追你，你在这里还是受欢迎的。甚至在那种情况下也是一样，因为我们渔村从来就是如此。”"];
+	  481 [label="Washerwoman: IsKimHere()"];
+	  482 [label="IsKimHere()", shape=diamond];
+	  483 [label="!(IsKimHere())", shape=diamond];
+	  484 [label="Jump to: [stufftosay]"];
+	  485 [label="Washerwoman: “我们的房客，警察先生。希望海浪没有让你彻夜难眠。我有什么能帮你的吗？”"];
+	  486 [label="Jump to: [MAINHUB]"];
+	  487 [label="You: “你哼的是什么歌？”"];
+	  488 [label="You: “我拿到了莉莉恩的签名。现在你可以签字了吗？”"];
+	  489 [label="Washerwoman: “是啊，就连*我*也看得出来。我告诉过你不要自找麻烦，警察先生。我们这里也有自己的麻烦……”"];
+	  490 [label="Washerwoman: Variable[\"tc.rank_known\"]"];
+	  491 [label="Variable[\"tc.rank_known\"]", shape=diamond];
+	  492 [label="!(Variable[\"tc.rank_known\"])", shape=diamond];
+	  493 [label="Washerwoman: “什么？你*免费*帮人找回丢失的衣物吗？你没有更好的事可以做了吗？”"];
+	  494 [label="Variable[\"village.ww_said_savoir_faire_cool_thing\"]"];
+	  495 [label="Variable[\"village.ww_said_savoir_faire_cool_thing\"]", shape=diamond];
+	  496 [label="!(Variable[\"village.ww_said_savoir_faire_cool_thing\"])", shape=diamond];
+	  497 [label="You: 「好吧——让我们一起摇摆，鸟枪*们*甩起来！」"];
+	  498 [label="You: “你可以从签署这些文件开始。就在弯弯曲曲的这条线这里。我这里正好有支笔。”（把文件递给她。）\n“我说过了，‘你可以从签署这些文件开始’。就在弯弯曲曲的这条线这里。我这里正好有支笔。”（把文件递给她。）"];
+	  499 [label="Washerwoman: Variable[\"boardwalk.feld_mural_first_greet\"]"];
+	  500 [label="Variable[\"boardwalk.feld_mural_first_greet\"]", shape=diamond];
+	  501 [label="!(Variable[\"boardwalk.feld_mural_first_greet\"])", shape=diamond];
+	  502 [label="Savoir Faire: 在手推車下面，小船，在小盒子里。要找到不难。"];
+	  503 [label="Inland Empire: 不过，你*觉得*这是一件*好*事吗？"];
+	  504 [label="Jump to: [MAINHUB]"];
+	  505 [label="You: “等等，你答应过的！”"];
+	  506 [label="Jump to: [MAINHUB]"];
+	  507 [label="Washerwoman: “你请便吧，”老妇人耸耸肩，回复到。“耐性显然不是你的强项。”"];
+	  508 [label="Washerwoman: Variable[\"village.ruby_bullet_inland_suicide\"]  or  Variable[\"village.bullet_empathy\"]"];
+	  509 [label="Variable[\"village.ruby_bullet_inland_suicide\"]  or  Variable[\"village.bullet_empathy\"]", shape=diamond];
+	  510 [label="!(Variable[\"village.ruby_bullet_inland_suicide\"]  or  Variable[\"village.bullet_empathy\"])", shape=diamond];
+	  511 [label="You: “还有别的什么吗？”"];
+	  512 [label="Suggestion: 这位露比会跟老妇人闲聊。她知道怎么应付村子里的长者——不像你。"];
+	  513 [label="You: “你是什么意思？”"];
+	  514 [label="MAINHUB"];
+	  515 [label="Kim Kitsuragi: “你准备好了就行。”他扭过头看向那名老妇人。“谢谢你，夫人。”"];
+	  516 [label="Jump to: [MAINHUB]"];
+	  517 [label="You: “要是有人留在这里的话，会是哪里？”"];
+	  518 [label="You: （点点头。）“这可能会成为我白手起家自传的第一章。”"];
+	  519 [label="Washerwoman: “没有人，所以关门了。”停顿了很长一段时间之后，她补充了一句，“那里曾经是个热闹又繁忙的地方，那时的我还很年轻，其他人也一样……”"];
+	  520 [label="You: “该死，我就知道你在隐瞒什么。这件屁事很重要！”"];
+	  521 [label="Washerwoman: “我不知道……海岸上边吧。她想要安静地离开，不过门上铰链的声音很刺耳，像发情的猫一样——把我吵醒了。我听见她穿着那双重重的靴子匆匆跑了出去，往北边去了。”"];
+	  522 [label="Washerwoman: “啧啧。别害羞。一切都会好起来的。”"];
+	  523 [label="Washerwoman: Variable[\"village.ww_carriage_exit_seen\"]"];
+	  524 [label="Variable[\"village.ww_carriage_exit_seen\"]", shape=diamond];
+	  525 [label="!(Variable[\"village.ww_carriage_exit_seen\"])", shape=diamond];
+	  526 [label="You: “我的名字叫……拉斐尔·安普罗修斯·库斯托。”（叹气。）"];
+	  527 [label="You: “我忘了自己的名字。”"];
+	  528 [label="You: “有一个家伙——加尔特——让我*每晚*都要付钱给他，这样我就不会被冻死在外面。”"];
+	  529 [label="Jump to: [MAINHUB]"];
+	  530 [label="Washerwoman: “是啊，”她莞尔一笑。“有时候我好像也迷失在了这片虚无之中。”"];
+	  531 [label="Washerwoman: “现在这片区域里都是纵横交错的无名街道和临时的焦渣砖房。"];
+	  532 [label="You: “我对城里的那些酒鬼真的不感兴趣，不过还是谢谢你。”"];
+	  533 [label="Jump to: [rubythequestions]"];
+	  534 [label="You: “我们是警察，我们是来搞事情的。咔哒，咔哒，砰，砰！”\n“我们是警察。我们是滋事天王。咔哒，咔哒，砰，砰！”（用你的手指手枪对准她。）"];
+	  535 [label="Washerwoman: “警察贿赂民众？一般不都是反着来的吗？”她没有等待你的回应。"];
+	  536 [label="Washerwoman: “你只会找到贫穷和遗忘。”她咧嘴一笑。“你的威胁没什么用。”"];
+	  537 [label="Washerwoman: “这种论调我之前已经听过很多了。‘建这个，盖那个，新的工作机会，新鲜血液……’”她不屑地摇摇头。“不知道为什么，最后总是这里的人吃亏。”"];
+	  538 [label="You: “他没事。”"];
+	  539 [label="You: “我已经见过莉莉恩了。”\n“我已经见过莉莉恩和她的孩子们了。”\n“我已经见过莉莉恩和她的女儿了。”\n“我已经见过莉莉恩和那对双胞胎了。”\n“我已经见过莉莉恩和那对双胞胎了。”"];
+	  540 [label="Washerwoman: “没有……”老妇人说道，阴郁的眼睛朝旁边瞥了一眼。“他们搬到市郊工作去了。”"];
+	  541 [label="Washerwoman: IsKimHere()"];
+	  542 [label="IsKimHere()", shape=diamond];
+	  543 [label="!(IsKimHere())", shape=diamond];
+	  544 [label="Washerwoman: “走了，还在那里藏了点东西……”她摇摇头。“平时她是个好房客。而且也不是个*愚蠢*的家伙。”"];
+	  545 [label="Kim Kitsuragi: 「你说什么。」警佐疑惑地看着你。"];
+	  546 [label="Kim Kitsuragi: 「什么？」"];
+	  547 [label="Washerwoman: Variable[\"TASK.forge_liliennes_and_isobels_signatures\"]  and  Variable[\"TASK.forge_liliennes_and_isobels_signatures_done\"] == false"];
+	  548 [label="Variable[\"TASK.forge_liliennes_and_isobels_signatures\"]  and  Variable[\"TASK.forge_liliennes_and_isobels_signatures_done\"] == false", shape=diamond];
+	  549 [label="!(Variable[\"TASK.forge_liliennes_and_isobels_signatures\"]  and  Variable[\"TASK.forge_liliennes_and_isobels_signatures_done\"] == false)", shape=diamond];
+	  550 [label="Suggestion: 她想跟她说话，她们经常这样做。不过她在沉思。"];
+	  551 [label="You: “关于你签署的那份文件……艾弗拉特打算用建筑噪音把你们强行赶走。”"];
+	  552 [label="Washerwoman: “我指挥着一支酒鬼大军。”她的脸上闪过一丝狡黠的微笑。“如果能指引出正确方向的话，不要低估了这股力量的影响。”"];
+	  553 [label="Jump to: [MAINHUB]"];
+	  554 [label="Electrochemistry: 嗯嗯。这不是一间棚屋，也不是一个房间或者住所——它是一个螺旋形的楼梯，消失在极乐之中。地板上有些空瓶子，也许还有条喇叭裤……"];
+	  555 [label="Kim Kitsuragi: 你注意到警督瞥了你一眼，但他什么也没说。"];
+	  556 [label="Volition: 哦耶！"];
+	  557 [label="Physical Instrument: 不，我们必须不停地跑来跑去。待在原地简直就是一种折磨。"];
+	  558 [label="You: “金，她肯定是听见你那台锐影的声音了。”"];
+	  559 [label="Jump to: [rubythequestions]"];
+	  560 [label="Untitled hub"];
+	  561 [label="Washerwoman: “没有，我最近没有*见过*任何人。”"];
+	  562 [label="You: “这才叫真正好客的瑞瓦肖人。那个加尔特肯定有一半的吉皮特血统，或者别的之类的。”"];
+	  563 [label="Washerwoman: “去教堂的路上有一些废墟——一栋公寓大楼，或者是某种电气厂……有一堆倒塌的房子，都是空的。”"];
+	  564 [label="You: “你知道的，这跟工会无关。你不用担心报复问题。”"];
+	  565 [label="You: “这地方穷的太生动了。”"];
+	  567 [label="Perception (Hearing): 夜晚，电灯的嗡嗡声和海浪缓慢的隆隆声混杂在了一起。"];
+	  568 [label="Washerwoman: “不要让一个老妇人后悔为警察开了门。”她从围裙下面拿出一把钥匙，递给了你。"];
+	  569 [label="Washerwoman: Variable[\"village.ww_blackc_reaction_ruby\"]"];
+	  570 [label="Variable[\"village.ww_blackc_reaction_ruby\"]", shape=diamond];
+	  571 [label="!(Variable[\"village.ww_blackc_reaction_ruby\"])", shape=diamond];
+	  572 [label="Washerwoman: “哦？”她的表情有些好奇。“最近这似乎变成了一个常见的话题。”"];
+	  573 [label="Jump to: [vilagehubsing]"];
+	  574 [label="Washerwoman: “然后还有那些酒鬼……”她叹了口气。“不是什么美妙的风景，不过我们也没什么能做的。家就是家，即便对于他们来说也是。”"];
+	  575 [label="Washerwoman: “是吗？那就说吧。”一只海鸥飞过头顶——显然是个不祥之兆。"];
+	  576 [label="You: “重新考虑之后，我还是不说的好。这不是我想去考虑的事情。”"];
+	  577 [label="Washerwoman: 沉默了一阵子之后，她说，“你知道吗，你永远也找不到她的。”她的语气没有恶意。“她对这片海岸了如指掌。而*你*才刚刚来到这里。”"];
+	  578 [label="Horrific Necktie: 麻烦？说出第二件事，*兄弟*！展示一下你的风格。"];
+	  579 [label="Washerwoman: “他在沉思，需要人帮忙开门。你帮他打开门，带他去了一个更隐蔽的地方，让他想想自己到底做了什么。一个更安静的地方。”"];
+	  580 [label="Washerwoman: “警察。”她眯起眼睛看着你。“我们这个村子能为你做些什么？”"];
+	  581 [label="You: “我猜你是对的。毕竟那些带枪的人是冲着我来的。”"];
+	  582 [label="Washerwoman: 她点点头。“我不确定他们是不是最后一批带枪的人。总会有更多人找上你们的，警官。”"];
+	  583 [label="You: “没错，是工会。”"];
+	  584 [label="You: “你对工会有什么不满吗？”"];
+	  585 [label="You: “要么签，要么我就让RCM把这里搅个天翻地覆。我们总会找到些*什么*的……”"];
+	  586 [label="Suggestion: 就像雕塑着海岸线的海浪，你会说服她的。一点一滴。只要坚持不懈就好。"];
+	  587 [label="Washerwoman: “你说什么了吗？”她眯起眼睛看着你。"];
+	  588 [label="Jump to: [MAINHUB]"];
+	  589 [label="Washerwoman: “你在期待些什么呢？警察总是会陷入危险的境地。有时候也会中枪。你这一行可不容易。”"];
+	  590 [label="Washerwoman: “失去家人是很困难的，”她严肃地点点头。“不过我们都失去过很亲近的人，有些人还不止一次。”"];
+	  591 [label="Washerwoman: “*留下来*？这里大部分人都在想怎么*离开*……”"];
+	  592 [label="Electrochemistry: 说的好像这个丑老太婆懂得分辨什么是愚蠢，什么是酷吗？拜托……就名字而言，龙舌兰日落是那种很*危险*的酷。"];
+	  593 [label="You: “我只是忘记要奖励了。”"];
+	  594 [label="Washerwoman: “是啊，取衣服的人是我知道的最*光荣*的人。”她的笑容就像一把刚刚磨好的尖刀。"];
+	  595 [label="Logic: 她想看看，如果她愿意的话，你会不会这么做。"];
+	  596 [label="Washerwoman: IsKimHere()"];
+	  597 [label="IsKimHere()", shape=diamond];
+	  598 [label="!(IsKimHere())", shape=diamond];
+	  599 [label="Jump to: [MAINHUB]"];
+	  600 [label="Washerwoman: “好吧，那就交给我，我看看我能做些什么……”"];
+	  601 [label="You: “我可以抽出30分钟来，你能帮我清洗这件夹克吗？”"];
+	  602 [label="Washerwoman: IsKimHere()"];
+	  603 [label="IsKimHere()", shape=diamond];
+	  604 [label="!(IsKimHere())", shape=diamond];
+	  605 [label="Jump to: [You: \"\"No, I don't want a free room, it's...\"]"];
+	  606 [label="You: “那你知道那对双胞胎是怎么听到狂飙怪人.FM的吗？”"];
+	  607 [label="Kim Kitsuragi: 他转头看向孩子们，然后叹了口气。“我们尽快把案子解决掉吧。用我的锐影联络调度台，然后让他们帮你连接到电台。也许他们能帮上我们的忙。”"];
+	  608 [label="Washerwoman: “也就是说，如果你在找住处的话，我的棚屋里有一个免费的房间。”她用沾满肥皂泡沫的拇指指向身后的建筑。"];
+	  609 [label="Washerwoman: “哈！”她把纸举到离脸非常近的地方，一心一意地研究着。“我可能是个半瞎子，不过看起来村子的一部分要变成一条街道。最棒的是，我们需要离开自己的房子。”"];
+	  610 [label="Washerwoman: “是的。”她点点头，看着棚户。“房间很简陋，不过有一张床和一个屋顶。附近有些人连这个都没有呢。”"];
+	  611 [label="Washerwoman: IsKimHere()"];
+	  612 [label="IsKimHere()", shape=diamond];
+	  613 [label="!(IsKimHere())", shape=diamond];
+	  614 [label="Washerwoman: “啊，我早该知道的……”她摇摇头。“这又是工会惹出来的烂摊子。你知道吗，我不怕他们。我们这里可没有害怕的习惯。”"];
+	  615 [label="Washerwoman: 她继续哼唱着，伴随着那段未知的旋律前后点着头。"];
+	  616 [label="Jump to: [MAINHUB]"];
+	  617 [label="Washerwoman: “这里基本什么也算不上。”她咧嘴一笑。“一个缺口。地图上的一个空白点，只是一条无名街道上的一堆无名棚屋。”"];
+	  618 [label="Jump to: [vilagehubsing]"];
+	  619 [label="Jump to: [vilagehubsing]"];
+	  620 [label="Washerwoman: “那里曾经是个补给站……我们是这么认为的。把货物和弹药运过海湾。不过那里被卡死了。我们想进去看看，有没有什么可以卖或者是回收的东西，但是不可能。”"];
+	  621 [label="Composure: 没有愤怒。漫长而艰苦的生活已经教会她不要在压力下屈服。"];
+	  622 [label="Washerwoman: “逃离什么？”"];
+	  623 [label="Washerwoman: IsKimHere()"];
+	  624 [label="IsKimHere()", shape=diamond];
+	  625 [label="!(IsKimHere())", shape=diamond];
+	  626 [label="Encyclopedia: 你不确定那段旋律是什么，也许来源于萨马拉南部，可能是希依盖（也称为杏味附属国。）"];
+	  627 [label="Kim Kitsuragi: “我们不是来这里找麻烦的，夫人。”"];
+	  628 [label="You: “如果我是不祥之兆，为什么没人告诉我呢？”（继续。）"];
+	  629 [label="nighttimehub"];
+	  630 [label="Washerwoman: 老妇人默默煎熬着，然后低声说道：“好吧。”她从围裙口袋里掏出一支笔，在虚线上签下自己的名字，然后把文件交还给你。"];
+	  631 [label="Washerwoman: 她不情愿地从你手中接过钢笔，签下自己的名字，然后把东西都还给了你。"];
+	  632 [label="You: 呃，我想不出还能说什么。"];
+	  633 [label="Washerwoman: “省省吧，警官。这笔交易不会有结果的。现在，如果你不介意的话，我还有满满一桶衣服要洗。这是我的工作。也许你应该去做你的工作？”"];
+	  634 [label="You: 点头。"];
+	  635 [label="You: “我的搭档也中枪了。他还在医院里。”"];
+	  636 [label="You: “他是我的好哥们。”"];
+	  637 [label="You: “他怎么了？”"];
+	  638 [label="Washerwoman: “他服用了太多的麻醉剂。多到让他从船上掉了下去，脑袋被一个浮标给切开了。”她擦掉了手上的肥皂。“看见的人说，他的脑袋就像个开了瓢的西瓜。惨不忍睹。”"];
+	  639 [label="Washerwoman: “不管怎么说，都跟我无关。怎么分配你的时间是你自己的事……”"];
+	  640 [label="Kim Kitsuragi: 「已经太迟了。」"];
+	  641 [label="Washerwoman: “传道书试着让事情朝着那个方向发展，但总是会出事。犯罪。*意外事故*。其他事情。这个地方永远开不了。”她皱起眉头。“真可惜。它曾经是一座特别好的教堂。”"];
+	  642 [label="Rhetoric: 在她看来，工会是右翼组织，因为艾弗拉特很胖。就是这么简单，而且没办法改变。"];
+	  643 [label="You: 我会想个别的办法。（不用她的签名。）"];
+	  644 [label="Kim Kitsuragi: 警督看了你一眼，叹了口气。“我们把它寄出去吧。”"];
+	  645 [label="Jump to: [MAINHUB]"];
+	  646 [label="Jump to: [You: \"\"What do you have against the Union?\"\"]"];
+	  647 [label="You: “它很怪。我不喜欢。”"];
+	  648 [label="Composure: 这是一个冷冰冰的、愤世嫉俗的笑容。"];
+	  649 [label="Kim Kitsuragi: “在新的*跑步*日开始之前，我可以先喘口气……”"];
+	  650 [label="Esprit de Corps: 在瑞瓦肖的警督用手指抚摸着立体声音响的粗糙网布。他陷入了沉思。他应该待在这儿。"];
+	  651 [label="You: “谢谢你，金。”"];
+	  652 [label="Washerwoman: 老妇人皱起眉毛，他也一同皱了皱眉。“那现在还有别的事情吗？”"];
+	  653 [label="You: “好吧，不过你知道我在说谁吗？”"];
+	  654 [label="Washerwoman: “只有我们。”她听起来很疲惫。“这已经算不上村子了。我们……*几乎*是不存在的。”"];
+	  655 [label="Washerwoman: 她朝西南边挥挥手。“在那边，你可以找到……更多类似的东西。棚户和繁密茂盛的树木。那就是帕克斯。”"];
+	  656 [label="You: “哦，是的，我在这里见过几个酒鬼。”"];
+	  657 [label="vilagehubsing"];
+	  658 [label="You: 探身过去。"];
+	  659 [label="You: “如果你看不见的话，怎么会知道我来了呢？”"];
+	  660 [label="You: “你可以叫我龙舌兰日落。”"];
+	  661 [label="Washerwoman: “这种事偶尔是会发生的。别担心，你还会找回自己的。”"];
+	  662 [label="You: “不知道我能不能住得起。”"];
+	  663 [label="lastesthubbest"];
+	  664 [label="You: “你是什么意思？”"];
+	  665 [label="You: “我觉得还是说回村子的话题比较好。”"];
+	  666 [label="You: “它为什么会废弃呢？”"];
+	  667 [label="Washerwoman: “有一件事。警官，如果你找到她，请对她宽容一些……”她四下看了看。空气变得更加寒冷了。"];
+	  668 [label="You: “她的生活。”"];
+	  669 [label="You: “也许有些……‘经济补偿’可以改变你的主意？”（眨眨眼。）"];
+	  670 [label="You: 摇头。"];
+	  671 [label="Washerwoman: “是的。”她点点头。“的确如此。”"];
+	  672 [label="Washerwoman: “尽管我猜你已经做好了最坏的打算。原来你是*自己的*不祥之兆。”老妇人暗自发笑。"];
+	  673 [label="Inland Empire: ‘菲尔德电气’的壁画……你觉得自己应该再去看看。这次再靠*近*一点。"];
+	  674 [label="Savoir Faire: 她也许把设备保存在别的地方。"];
+	  675 [label="You: “那我们就沿着海岸往上走吧。”"];
+	  676 [label="Washerwoman: “我不是才和你说过吗！没人听过广播，上周没有，以前也没有。”"];
+	  677 [label="Washerwoman: “不，我怎么道他们是怎么听到的。在没有收音机的情况下，他们已经听了一周了。”"];
+	  678 [label="You: “沿着海岸再往前是什么地方？”"];
+	  679 [label="You: “不幸的是，增量开发还没有*提升*这片区域的地位。我在这里看到了潜力。”"];
+	  680 [label="You: “这附近有办法能赚点小钱吗？”"];
+	  681 [label="You: “就这些？海岸上肯定不止这些吧。”"];
+	  682 [label="You: “她去哪了？”（继续。）"];
+	  683 [label="Washerwoman: “她并不是你说的那种*老酒鬼*。有时候甚至还会分给我一些。说这是货車司机生活的一部分。不过我从没见过她失控的样子，就像某些人那样。”"];
+	  684 [label="Washerwoman: “哦。”一阵阴影掠过她的脸庞。“欢迎，警官。我们这里不会惹麻烦的——而且我们也*不想*要任何麻烦。”"];
+	  685 [label="Washerwoman: “肯定不是第一章了……”她看着你，嘴角带着一丝聪慧的微笑。“所以你到底感不感兴趣？”"];
+	  686 [label="Kim Kitsuragi: “谜语，”警督四下看了看，干巴巴地评论到。“很符合这里的*氛围*。”"];
+	  687 [label="You: “我也迷失了。”"];
+	  688 [label="Washerwoman: “我也不太清楚。那是战前的一个地方。曾经挺重要的。”她耸耸肩。“不过那是战前的事。你知道的，那时我还不在这里呢。我出生在萨马拉。”"];
+	  689 [label="Washerwoman: 老妇人沉默地坐着，把双手伸到水桶里。水滴从边缘溅了出来。她拧动一块破布，慢慢说道：“是啊，我把房间让给了那个叫露比的姑娘……”"];
+	  690 [label="rubythequestions"];
+	  691 [label="Washerwoman: “也许他们是害怕了。”"];
+	  692 [label="You: “我中枪了！”"];
+	  693 [label="Jump to: [MAINHUB]"];
+	  694 [label="Jump to: [MAINHUB]"];
+	  695 [label="You: “你可以在文件上签字吗？为了孩子们着想？”（把文件递给她。）\n“我说‘你可以在文件上签字吗？’为了孩子们着想？”（把文件递给她。）"];
+	  696 [label="Washerwoman: “啊，我们有……有的……”她的脸上掠过一阵忧伤。“但是，我们怎么能做得到呢？”"];
+	  697 [label="You: “它叫什么？”"];
+	  698 [label="Washerwoman: “改变主意了，是吗？我想你会的。没有比免费更好的交易了。”"];
+	  699 [label="Washerwoman: “我在这个村子里养大了自己的孩子，他们自己挺好的。”"];
+	  700 [label="You: “你觉得莉莉恩的孩子们长大以后会做什么呢？”"];
+	  701 [label="Suggestion: 你已经让她上钩了。现在收线吧。"];
+	  702 [label="You: “恐怕我不能发表任何评论——这是警察的官方事务。”"];
+	  703 [label="Washerwoman: IsKimHere()"];
+	  704 [label="IsKimHere()", shape=diamond];
+	  705 [label="!(IsKimHere())", shape=diamond];
+	  706 [label="Kim Kitsuragi: “其实吧，他有的。”警督瞥了一眼手表。"];
+	  707 [label="You: “那就是*我*知道，而*你*需要去搞明白了。”（朝她眨眨眼。）"];
+	  708 [label="You: 「什么？」"];
+	  709 [label="Kim Kitsuragi: 「没什么，」他摇着头说。「我们继续吧。」"];
+	  710 [label="Jump to: [MAINHUB]"];
+	  711 [label="Empathy: 她是认真的。这是一个诚恳的请求。"];
+	  712 [label="Conceptualization: 对于一首儿歌来说，它有点糟糕。即便它是一首摇篮曲。"];
+	  713 [label="Jump to: [vilagehubsing]"];
+	  714 [label="Washerwoman: CheckItem(\"white_envelope_lilienne_signed\")"];
+	  715 [label="CheckItem(\"white_envelope_lilienne_signed\")", shape=diamond];
+	  716 [label="!(CheckItem(\"white_envelope_lilienne_signed\"))", shape=diamond];
+	  717 [label="You: “那我先去问问她。”"];
+	  718 [label="You: “可以，我会等的。”"];
+	  719 [label="Logic: 你应该去她的棚户周围转转——也许她也租给过其他人？"];
+	  720 [label="You: “好吧，那我就收下了。”（收下新家的钥匙。）"];
+	  721 [label="Washerwoman: “他们就只会说这些废话吗？呸！”她摇着头说道。"];
+	  722 [label="Encyclopedia: 那首歌名字的地方有一个缺口。你应该问问她，就是现在！"];
+	  723 [label="Washerwoman: “嗯，他们就是这样抓到你的。所以我们才会把煤渣砖房子建在海边。这样就不用把钱交给那些恶棍了……”她四下看了看。“可能看起来不怎么样，不过至少是属于*我们*的。”"];
+	  724 [label="Washerwoman: “呃，莉莉恩和她的孩子们。几个新来的人住在东边的房子里。”她朝着院子对面的方向点点头。“不过他们现在不在。”"];
+	  725 [label="Jump to: [MAINHUB]"];
+	  726 [label="Washerwoman: “随你便吧，”她一边说，一边把散下来的头发塞到披肩下面，“不过如果你什么时候需要庇护，记得来找老伊泽贝尔和她的海边棚屋。”"];
+	  727 [label="Washerwoman: “我能看出来，”她点点头，眼睛里闪烁着聪慧的光芒。“大家都能看出来你自我感觉良好。所以你到底感不感兴趣呢？”"];
+	  728 [label="Washerwoman: IsKimHere()"];
+	  729 [label="IsKimHere()", shape=diamond];
+	  730 [label="!(IsKimHere())", shape=diamond];
+	  731 [label="Washerwoman: “我哪里也不去。”她的表情柔和了许多。“也许村子还能为你做点别的什么？不过我们这里的东西不多——只有垃圾。还有一两支小艇……”"];
+	  732 [label="You: “好吧，我还想谈谈另外一个话题。”"];
+	  733 [label="Washerwoman: “现在我们捕获的东西会*直接*送上开往德尔塔或者其它地方的货車。”"];
+	  734 [label="You: “房间跟她离开的时候一样吗？”"];
+	  735 [label="Washerwoman: IsKimHere()"];
+	  736 [label="IsKimHere()", shape=diamond];
+	  737 [label="!(IsKimHere())", shape=diamond];
+	  738 [label="Kim Kitsuragi: “你不是的。这里没人把我们当成是*不祥之兆*。不然大家会告诉我们的。”"];
+	  739 [label="Suggestion: 逻辑和理性对这个傻老帽没用。最好使用无耻的情感操纵。一个老奶奶最大的弱点会是什么呢？"];
+	  740 [label="Washerwoman: Variable[\"village.netpicker_got_her_signature\"]"];
+	  741 [label="Variable[\"village.netpicker_got_her_signature\"]", shape=diamond];
+	  742 [label="!(Variable[\"village.netpicker_got_her_signature\"])", shape=diamond];
+	  743 [label="Washerwoman: “千万不要欺骗我们。我可能是个半瞎子，不过在背叛这方面，我的记性很好。”"];
+	  744 [label="You: 什么也不说。"];
+	  745 [label="Washerwoman: “他可能把它拿去当掉换酒，然后忘记了。你知道酒鬼是怎么回事……”"];
+	  746 [label="Washerwoman: “就像一条聪明的狗，不是吗？”"];
+	  747 [label="Empathy: 就像一条狗，没错！忠诚又可靠。"];
+	  748 [label="Authority: 更像是一个奴隶，谁朝你扔骨头就跟谁跑。"];
+	  749 [label="Washerwoman: “该死，那姑娘真是的，”她轻声低语到。"];
+	  750 [label="Washerwoman: “不。他们试过了，不过还是状况频出。犯罪，*意外事故*，其他事情。这个地方永远开不了。”她皱起眉头。“真可惜。它曾经是一座特别好的教堂。”"];
+	  751 [label="Hand/Eye Coordination: 那时我们已经*准备*好了。"];
+	  752 [label="Horrific Necktie: 你终于把马丁内斯的那些*笑话*抛诸脑后了，兄弟。这地方很棒，很适合带些小妞过来。"];
+	  753 [label="You: “等等，我能在哪里找到她？”"];
+	  754 [label="You: （擦拭你的眉头。）“天啦，我真心希望她就藏在这个村子里。”"];
+	  755 [label="Washerwoman: Variable[\"village.ww_ruby_logic_kineema\"]  and  IsKimHere()"];
+	  756 [label="Variable[\"village.ww_ruby_logic_kineema\"]  and  IsKimHere()", shape=diamond];
+	  757 [label="!(Variable[\"village.ww_ruby_logic_kineema\"]  and  IsKimHere())", shape=diamond];
+	  758 [label="Empathy: 并不是说她在想念自己的孩子——他们已经离开太久了——不过在内心深处，这个老妇人孤独的无可救药。"];
+	  759 [label="Washerwoman: “你说是就是吧，”她耸耸肩说道。"];
+	  760 [label="You: “等等，为什么没人用那个房间呢？”"];
+	  761 [label="Washerwoman: “我的孩子长大了，离开了，像他们一样。现在房子空了很久。我住在一个小隔间里——这样更简单，保暖也更便宜。”"];
+	  762 [label="You: “它*能够*帮助我与工人阶级保持联系。”"];
+	  763 [label="Washerwoman: 老妇人依然坐在椅子里，继续做着杂务。她一边做，一边自己轻轻哼着歌。"];
+	  764 [label="Washerwoman: Variable[\"village.ww_altgreet_nighttime\"]"];
+	  765 [label="Variable[\"village.ww_altgreet_nighttime\"]", shape=diamond];
+	  766 [label="!(Variable[\"village.ww_altgreet_nighttime\"])", shape=diamond];
+	  767 [label="You: “多少钱？”"];
+	  768 [label="Washerwoman: “继续吧，”她厉声说道，“无礼的称呼别人。我们听过比这更糟糕的。你到底感不感兴趣？”"];
+	  769 [label="Washerwoman: “大家迷失的时候不都是这么想的吗？”她的唇边掠过一抹幸灾乐祸的笑容。“在你寻找自我的道路上，*我*有什么可以帮你的吗，警官？”"];
+	  770 [label="Jump to: [rubythequestions]"];
+	  771 [label="Conceptualization: 她说的好像他在进行某种心灵上的静修。"];
+	  772 [label="Jump to: [stufftosay]"];
+	  773 [label="Washerwoman: 她点点头。“只要没有带枪的人追你，你在这里还是受欢迎的。甚至在那种情况下也是一样，因为我们建造的就是这样一座渔村。”"];
+	  774 [label="Washerwoman: “我之前就见识过了。你以为他们会把*我们的*利益放在心上？有钱人总是在向穷人兜售那些永远没打算信守的诺言……”她从水桶中拉出一件深红色的破布，然后又放了回去。"];
+	  775 [label="Authority: 她拥有领导者的最高权利。在这里，她的话就能一锤定音。"];
+	  776 [label="Washerwoman: “你小时候摔过脑袋吗？靠着那么一点施舍是撑不了太久的……”"];
+	  777 [label="Volition: 你确实叫他混蛋。这里面肯定有些关系。"];
+	  778 [label="Volition: 绝对不要。"];
+	  779 [label="Washerwoman: “我不相信那个胖男人的*青少年活动中心*能改变什么。不过我们还有别的选择吗？又不是说联盟政府会来拯救我们……”"];
+	  780 [label="Washerwoman: “总之，你可以问问莉莉恩最近有没有看见什么——那个姑娘有办法吸引丢失和破损的东西。”"];
+	  781 [label="Jump to: [MAINHUB]"];
+	  782 [label="You: 「我是说：让我们一起摇摆，鸟枪甩出来。」"];
+	  783 [label="Washerwoman: 老妇人缓缓摇了摇头。"];
+	  784 [label="You: 跟我说说吧，发痒的手指？有什么计划？"];
+	  785 [label="You: “不过，我还没有见过任何酒鬼……”"];
+	  786 [label="Washerwoman: “我警告过你，”她严肃地点点头。“我警告说带枪的人会来追你。他们总是跟你的同类在一起……”"];
+	  787 [label="Washerwoman: Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")"];
+	  788 [label="Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")", shape=diamond];
+	  789 [label="!(Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\"))", shape=diamond];
+	  790 [label="Interfacing: 诚然，没有什么是*不可能*的。"];
+	  791 [label="You: “怎么个找麻烦？”"];
+	  792 [label="Washerwoman: IsKimHere()"];
+	  793 [label="IsKimHere()", shape=diamond];
+	  794 [label="!(IsKimHere())", shape=diamond];
+	  795 [label="Kim Kitsuragi: “我们真的应该关注一些更实际的线索……”警督不自在地四下看了看。“房地产交易谈判不是我们的主要工作。”"];
+	  796 [label="Authority: 即使面临最艰难的道德困境，你也展现出了自己的美德，这就是最纯粹的心灵和灵魂。很快就会轮到下一个荣耀之拱了。"];
+	  797 [label="Washerwoman: “必须说，我对这个很骄傲，”她点点头，把夹克交还给你。“洗掉那些污渍的话，它还挺不错的。相比它的前任主人，希望你能把它照顾地更好一些。”"];
+	  798 [label="You: “你知道些什么。我们是来帮忙的。”"];
+	  799 [label="Washerwoman: Variable[\"ice.tentflap_greeting_done\"]"];
+	  800 [label="Variable[\"ice.tentflap_greeting_done\"]", shape=diamond];
+	  801 [label="!(Variable[\"ice.tentflap_greeting_done\"])", shape=diamond];
+	  802 [label="Jump to: [MAINHUB]"];
+	  803 [label="Jump to: [You: \"\"You got yourself a tenant!\" (Get k...\"]"];
+	  804 [label="Jump to: [MAINHUB]"];
+	  805 [label="You: “你能和我的搭档金确认一下最近没有人听到过广播吗？”"];
+	  806 [label="You: “跟我说说你自己。你到底是谁？”"];
+	  807 [label="Half Light: 够了！她最好赶紧开口！"];
+	  808 [label="Washerwoman: “她是个很好的伙伴。知道该怎么跟一个老妇人说话。”她摩擦着冰凉的双手。“在我这个年纪看来，你谈话的水平实在不高，所以我真的很欣赏她这一点。”"];
+	  809 [label="You: “呃……叫我哈里吧。”"];
+	  810 [label="You: “肯定有些*什么*的吧。告诉我。”"];
+	  811 [label="Inland Empire: 太阳会为每一个人而落下。"];
+	  812 [label="You: 说服她签署艾弗拉特的文件。"];
+	  813 [label="You: Variable[\"village.ww_whitecheck_rhetoric_convince\"]"];
+	  814 [label="Variable[\"village.ww_whitecheck_rhetoric_convince\"]", shape=diamond];
+	  815 [label="!(Variable[\"village.ww_whitecheck_rhetoric_convince\"])", shape=diamond];
+	  816 [label="Washerwoman: “和谁交易？”她眯起眼睛，然后嘲笑到。“装卸工会，对吗？”"];
+	  817 [label="You: “呃，其实吧，没关系。我还是不打扰你了。”"];
+	  818 [label="Washerwoman: “莉莉恩应该让她的剑来做决定。那姑娘在这方面真的没什么头脑。”她大笑起来，粗哑地就像乌鸦在鸣叫。“不管怎么说，我是不会签的。”"];
+	  819 [label="Washerwoman: “然后穷人被赶出家园，富人变的越来越富有。现实就是这样。所以不行，我不相信那个胖男人，你也不该相信他。”"];
+	  820 [label="Washerwoman: “这说的是什么蠢话？每个警察都会有搭档。不论你怎么否认，这就是你的天性。”"];
+	  821 [label="You: “你肯定很骄傲吧。”"];
+	  822 [label="You: “看，这个村子已经不是之前的样子了。它就是个荒废的垃圾堆。”"];
+	  823 [label="Washerwoman: “不过，这并不代表你错了，”她叹了口气。“这个地方不是之前的样子了，就连我也看得出来……”"];
+	  824 [label="Washerwoman: “你要一件丢失的夹克做什么？”"];
+	  825 [label="Washerwoman: “我*可以*帮你洗干净，”看了一眼夹克之后，她回复到，“不过大概需要半个小时。你能等那么久吗？”"];
+	  826 [label="Washerwoman: “你是想朝我眨眼，不是吗？我看不见的，还是你忘记这码事了？”\n“你是想朝我眨眼，不是吗？你的记性是不是出了问题，最近我已经看不太清楚了。”"];
+	  0 -> 1
+	  1 -> 232
+	  2 -> 3
+	  2 -> 4
+	  3 -> 94
+	  4 -> 290
+	  5 -> 657
+	  6 -> 725
+	  7 -> 8
+	  7 -> 9
+	  8 -> 27
+	  9 -> 770
+	  10 -> 755
+	  11 -> 499
+	  12 -> 514
+	  13 -> 807
+	  14 -> 351
+	  15 -> 516
+	  16 -> 362
+	  17 -> 563
+	  18 -> 224
+	  18 -> 441
+	  18 -> 681
+	  19 -> 65
+	  20 -> 343
+	  21 -> 616
+	  22 -> 531
+	  23 -> 197
+	  24 -> 5
+	  25 -> 657
+	  26 -> 620
+	  27 -> 575
+	  28 -> 770
+	  29 -> 30
+	  29 -> 31
+	  30 -> 326
+	  31 -> 523
+	  32 -> 80
+	  33 -> 358
+	  34 -> 244
+	  35 -> 36
+	  35 -> 37
+	  36 -> 629
+	  37 -> 448
+	  38 -> 514
+	  39 -> 609
+	  40 -> 817
+	  40 -> 39
+	  41 -> 595
+	  42 -> 207
+	  43 -> 671
+	  44 -> 504
+	  45 -> 824
+	  46 -> 745
+	  47 -> 825
+	  48 -> 786
+	  49 -> 643
+	  49 -> 173
+	  50 -> 136
+	  50 -> 817
+	  50 -> 39
+	  51 -> 776
+	  52 -> 379
+	  53 -> 514
+	  54 -> 56
+	  54 -> 55
+	  55 -> 797
+	  56 -> 301
+	  57 -> 445
+	  58 -> 675
+	  58 -> 107
+	  58 -> 303
+	  58 -> 754
+	  58 -> 287
+	  59 -> 544
+	  60 -> 755
+	  61 -> 350
+	  61 -> 564
+	  61 -> 798
+	  62 -> 50
+	  63 -> 227
+	  64 -> 688
+	  66 -> 33
+	  66 -> 809
+	  66 -> 361
+	  66 -> 526
+	  66 -> 527
+	  66 -> 660
+	  67 -> 568
+	  68 -> 731
+	  69 -> 70
+	  69 -> 71
+	  70 -> 686
+	  71 -> 121
+	  71 -> 437
+	  72 -> 75
+	  73 -> 320
+	  74 -> 76
+	  75 -> 210
+	  76 -> 657
+	  77 -> 690
+	  78 -> 511
+	  79 -> 7
+	  80 -> 456
+	  81 -> 514
+	  82 -> 83
+	  82 -> 84
+	  83 -> 133
+	  84 -> 201
+	  85 -> 294
+	  86 -> 374
+	  87 -> 88
+	  87 -> 89
+	  88 -> 586
+	  89 -> 406
+	  90 -> 777
+	  91 -> 212
+	  92 -> 639
+	  93 -> 497
+	  94 -> 498
+	  94 -> 291
+	  95 -> 96
+	  95 -> 97
+	  96 -> 183
+	  97 -> 205
+	  98 -> 484
+	  99 -> 533
+	  100 -> 240
+	  101 -> 102
+	  101 -> 103
+	  102 -> 764
+	  103 -> 292
+	  104 -> 618
+	  105 -> 346
+	  106 -> 300
+	  107 -> 188
+	  108 -> 304
+	  109 -> 690
+	  110 -> 607
+	  111 -> 15
+	  112 -> 199
+	  113 -> 114
+	  114 -> 619
+	  115 -> 477
+	  116 -> 276
+	  117 -> 592
+	  118 -> 726
+	  119 -> 698
+	  120 -> 318
+	  121 -> 391
+	  122 -> 690
+	  123 -> 690
+	  124 -> 125
+	  124 -> 126
+	  125 -> 578
+	  126 -> 446
+	  127 -> 128
+	  127 -> 129
+	  128 -> 485
+	  129 -> 399
+	  130 -> 131
+	  131 -> 514
+	  132 -> 697
+	  132 -> 43
+	  132 -> 647
+	  133 -> 547
+	  134 -> 645
+	  135 -> 631
+	  136 -> 816
+	  137 -> 138
+	  137 -> 139
+	  138 -> 462
+	  139 -> 202
+	  140 -> 632
+	  140 -> 585
+	  140 -> 156
+	  140 -> 669
+	  141 -> 137
+	  142 -> 696
+	  143 -> 144
+	  143 -> 145
+	  144 -> 778
+	  145 -> 248
+	  146 -> 368
+	  146 -> 454
+	  147 -> 413
+	  148 -> 289
+	  148 -> 370
+	  148 -> 106
+	  149 -> 378
+	  150 -> 803
+	  150 -> 605
+	  151 -> 257
+	  152 -> 27
+	  153 -> 109
+	  154 -> 513
+	  155 -> 550
+	  156 -> 537
+	  157 -> 272
+	  157 -> 528
+	  157 -> 474
+	  157 -> 720
+	  158 -> 615
+	  159 -> 61
+	  160 -> 541
+	  161 -> 648
+	  162 -> 657
+	  163 -> 243
+	  164 -> 165
+	  164 -> 166
+	  167 -> 514
+	  168 -> 514
+	  169 -> 170
+	  169 -> 171
+	  170 -> 633
+	  171 -> 42
+	  172 -> 90
+	  173 -> 339
+	  174 -> 175
+	  175 -> 412
+	  176 -> 479
+	  177 -> 594
+	  178 -> 499
+	  179 -> 419
+	  180 -> 181
+	  180 -> 182
+	  181 -> 213
+	  182 -> 785
+	  183 -> 168
+	  184 -> 209
+	  185 -> 50
+	  186 -> 344
+	  187 -> 189
+	  188 -> 499
+	  189 -> 735
+	  190 -> 677
+	  191 -> 227
+	  192 -> 162
+	  193 -> 727
+	  194 -> 724
+	  195 -> 440
+	  196 -> 235
+	  197 -> 514
+	  198 -> 693
+	  199 -> 150
+	  200 -> 197
+	  201 -> 547
+	  202 -> 203
+	  202 -> 204
+	  203 -> 82
+	  204 -> 804
+	  205 -> 168
+	  206 -> 776
+	  207 -> 141
+	  208 -> 209
+	  209 -> 514
+	  210 -> 573
+	  211 -> 744
+	  211 -> 822
+	  212 -> 823
+	  213 -> 322
+	  214 -> 750
+	  215 -> 710
+	  216 -> 217
+	  217 -> 466
+	  218 -> 791
+	  219 -> 514
+	  220 -> 221
+	  220 -> 222
+	  221 -> 424
+	  222 -> 257
+	  223 -> 17
+	  223 -> 323
+	  224 -> 225
+	  225 -> 442
+	  226 -> 310
+	  227 -> 387
+	  227 -> 651
+	  228 -> 569
+	  229 -> 253
+	  230 -> 159
+	  231 -> 611
+	  232 -> 233
+	  232 -> 234
+	  233 -> 101
+	  234 -> 127
+	  235 -> 198
+	  236 -> 508
+	  237 -> 320
+	  238 -> 666
+	  239 -> 690
+	  240 -> 241
+	  240 -> 242
+	  241 -> 32
+	  242 -> 80
+	  243 -> 277
+	  244 -> 579
+	  245 -> 480
+	  246 -> 447
+	  247 -> 143
+	  248 -> 514
+	  249 -> 345
+	  250 -> 411
+	  251 -> 701
+	  252 -> 58
+	  253 -> 254
+	  253 -> 255
+	  254 -> 214
+	  255 -> 641
+	  256 -> 17
+	  256 -> 323
+	  257 -> 347
+	  257 -> 718
+	  258 -> 259
+	  258 -> 260
+	  259 -> 719
+	  260 -> 416
+	  261 -> 802
+	  262 -> 187
+	  263 -> 372
+	  264 -> 256
+	  265 -> 807
+	  266 -> 568
+	  267 -> 268
+	  267 -> 269
+	  268 -> 308
+	  269 -> 472
+	  270 -> 560
+	  271 -> 355
+	  272 -> 273
+	  273 -> 388
+	  274 -> 150
+	  275 -> 461
+	  276 -> 674
+	  277 -> 34
+	  277 -> 628
+	  277 -> 246
+	  277 -> 278
+	  278 -> 481
+	  279 -> 39
+	  280 -> 209
+	  281 -> 820
+	  282 -> 411
+	  283 -> 746
+	  284 -> 285
+	  284 -> 286
+	  285 -> 147
+	  286 -> 413
+	  287 -> 546
+	  288 -> 419
+	  289 -> 179
+	  290 -> 695
+	  290 -> 135
+	  291 -> 630
+	  292 -> 472
+	  293 -> 588
+	  294 -> 296
+	  294 -> 295
+	  295 -> 38
+	  296 -> 753
+	  296 -> 717
+	  297 -> 717
+	  298 -> 502
+	  299 -> 38
+	  300 -> 796
+	  301 -> 53
+	  302 -> 240
+	  303 -> 188
+	  304 -> 305
+	  304 -> 306
+	  305 -> 60
+	  306 -> 10
+	  307 -> 349
+	  308 -> 722
+	  309 -> 353
+	  310 -> 514
+	  311 -> 654
+	  312 -> 231
+	  313 -> 18
+	  314 -> 236
+	  315 -> 116
+	  316 -> 577
+	  317 -> 272
+	  317 -> 528
+	  317 -> 720
+	  318 -> 231
+	  319 -> 160
+	  320 -> 22
+	  321 -> 769
+	  322 -> 104
+	  323 -> 200
+	  324 -> 392
+	  326 -> 328
+	  326 -> 327
+	  327 -> 523
+	  328 -> 667
+	  329 -> 243
+	  330 -> 363
+	  331 -> 332
+	  331 -> 333
+	  332 -> 20
+	  333 -> 626
+	  334 -> 584
+	  335 -> 712
+	  336 -> 337
+	  336 -> 338
+	  337 -> 247
+	  338 -> 248
+	  339 -> 699
+	  340 -> 250
+	  341 -> 780
+	  342 -> 689
+	  343 -> 19
+	  343 -> 658
+	  343 -> 659
+	  343 -> 356
+	  344 -> 218
+	  345 -> 514
+	  346 -> 169
+	  347 -> 507
+	  348 -> 262
+	  349 -> 12
+	  350 -> 13
+	  351 -> 560
+	  352 -> 191
+	  353 -> 270
+	  354 -> 195
+	  355 -> 66
+	  356 -> 522
+	  357 -> 658
+	  357 -> 19
+	  357 -> 356
+	  358 -> 637
+	  359 -> 74
+	  360 -> 252
+	  361 -> 390
+	  362 -> 277
+	  363 -> 514
+	  364 -> 583
+	  365 -> 172
+	  365 -> 48
+	  365 -> 281
+	  365 -> 538
+	  365 -> 636
+	  366 -> 345
+	  367 -> 146
+	  368 -> 341
+	  369 -> 709
+	  370 -> 288
+	  371 -> 656
+	  371 -> 113
+	  371 -> 539
+	  371 -> 532
+	  372 -> 544
+	  373 -> 694
+	  374 -> 376
+	  374 -> 375
+	  375 -> 418
+	  376 -> 279
+	  377 -> 299
+	  378 -> 584
+	  378 -> 450
+	  379 -> 380
+	  379 -> 381
+	  380 -> 382
+	  381 -> 506
+	  382 -> 554
+	  383 -> 514
+	  384 -> 600
+	  385 -> 714
+	  386 -> 759
+	  387 -> 111
+	  388 -> 760
+	  388 -> 67
+	  388 -> 475
+	  388 -> 118
+	  389 -> 17
+	  389 -> 354
+	  389 -> 323
+	  390 -> 490
+	  391 -> 75
+	  392 -> 393
+	  392 -> 394
+	  393 -> 27
+	  394 -> 79
+	  395 -> 123
+	  396 -> 397
+	  396 -> 398
+	  397 -> 627
+	  398 -> 446
+	  399 -> 400
+	  399 -> 401
+	  400 -> 580
+	  401 -> 267
+	  402 -> 130
+	  403 -> 404
+	  403 -> 405
+	  404 -> 739
+	  405 -> 87
+	  406 -> 140
+	  407 -> 169
+	  408 -> 634
+	  408 -> 670
+	  408 -> 142
+	  409 -> 2
+	  410 -> 248
+	  411 -> 540
+	  412 -> 211
+	  413 -> 707
+	  413 -> 46
+	  413 -> 177
+	  413 -> 283
+	  413 -> 702
+	  414 -> 458
+	  415 -> 73
+	  415 -> 237
+	  416 -> 427
+	  417 -> 180
+	  418 -> 39
+	  419 -> 514
+	  420 -> 421
+	  420 -> 422
+	  421 -> 555
+	  422 -> 536
+	  423 -> 536
+	  424 -> 425
+	  424 -> 426
+	  425 -> 649
+	  426 -> 151
+	  427 -> 261
+	  428 -> 108
+	  429 -> 154
+	  430 -> 514
+	  431 -> 663
+	  432 -> 29
+	  433 -> 561
+	  434 -> 749
+	  435 -> 541
+	  436 -> 52
+	  437 -> 72
+	  438 -> 24
+	  439 -> 25
+	  440 -> 799
+	  441 -> 519
+	  442 -> 514
+	  443 -> 808
+	  444 -> 622
+	  445 -> 690
+	  446 -> 16
+	  446 -> 329
+	  446 -> 163
+	  446 -> 534
+	  447 -> 98
+	  448 -> 629
+	  449 -> 364
+	  450 -> 41
+	  451 -> 105
+	  452 -> 176
+	  453 -> 258
+	  454 -> 493
+	  456 -> 57
+	  457 -> 186
+	  458 -> 459
+	  458 -> 460
+	  459 -> 6
+	  460 -> 725
+	  461 -> 150
+	  462 -> 514
+	  463 -> 464
+	  463 -> 465
+	  464 -> 263
+	  465 -> 59
+	  466 -> 514
+	  467 -> 99
+	  468 -> 154
+	  469 -> 470
+	  469 -> 471
+	  470 -> 431
+	  471 -> 663
+	  472 -> 331
+	  473 -> 657
+	  474 -> 317
+	  475 -> 610
+	  476 -> 442
+	  477 -> 811
+	  478 -> 44
+	  479 -> 514
+	  480 -> 330
+	  481 -> 482
+	  481 -> 483
+	  482 -> 738
+	  483 -> 773
+	  484 -> 277
+	  485 -> 81
+	  486 -> 514
+	  487 -> 132
+	  488 -> 818
+	  489 -> 672
+	  490 -> 491
+	  490 -> 492
+	  491 -> 366
+	  492 -> 249
+	  493 -> 703
+	  494 -> 496
+	  494 -> 495
+	  495 -> 217
+	  496 -> 216
+	  497 -> 640
+	  498 -> 631
+	  499 -> 500
+	  499 -> 501
+	  500 -> 673
+	  501 -> 216
+	  501 -> 494
+	  502 -> 713
+	  503 -> 49
+	  504 -> 514
+	  505 -> 149
+	  506 -> 514
+	  507 -> 599
+	  508 -> 509
+	  508 -> 510
+	  509 -> 152
+	  510 -> 324
+	  511 -> 467
+	  512 -> 602
+	  513 -> 155
+	  514 -> 385
+	  514 -> 517
+	  514 -> 395
+	  514 -> 14
+	  514 -> 805
+	  514 -> 678
+	  514 -> 806
+	  514 -> 551
+	  514 -> 812
+	  514 -> 45
+	  514 -> 47
+	  514 -> 432
+	  514 -> 433
+	  514 -> 434
+	  514 -> 692
+	  514 -> 311
+	  514 -> 86
+	  514 -> 601
+	  514 -> 487
+	  514 -> 488
+	  514 -> 119
+	  515 -> 15
+	  516 -> 514
+	  517 -> 591
+	  518 -> 685
+	  519 -> 733
+	  520 -> 435
+	  521 -> 316
+	  522 -> 19
+	  522 -> 658
+	  522 -> 659
+	  523 -> 524
+	  523 -> 525
+	  526 -> 478
+	  527 -> 661
+	  528 -> 723
+	  529 -> 514
+	  530 -> 665
+	  530 -> 687
+	  531 -> 359
+	  532 -> 439
+	  533 -> 690
+	  534 -> 362
+	  535 -> 169
+	  536 -> 169
+	  537 -> 51
+	  537 -> 206
+	  537 -> 451
+	  538 -> 280
+	  539 -> 417
+	  540 -> 700
+	  541 -> 542
+	  541 -> 543
+	  542 -> 453
+	  543 -> 258
+	  544 -> 342
+	  545 -> 369
+	  545 -> 782
+	  546 -> 708
+	  546 -> 782
+	  547 -> 548
+	  547 -> 549
+	  548 -> 784
+	  549 -> 804
+	  550 -> 559
+	  551 -> 457
+	  552 -> 553
+	  553 -> 514
+	  554 -> 787
+	  555 -> 423
+	  556 -> 557
+	  557 -> 220
+	  558 -> 153
+	  559 -> 690
+	  560 -> 352
+	  560 -> 386
+	  560 -> 309
+	  560 -> 606
+	  561 -> 228
+	  562 -> 768
+	  563 -> 64
+	  563 -> 313
+	  564 -> 614
+	  565 -> 161
+	  567 -> 35
+	  568 -> 728
+	  569 -> 570
+	  569 -> 571
+	  570 -> 120
+	  570 -> 653
+	  571 -> 452
+	  571 -> 653
+	  572 -> 321
+	  572 -> 665
+	  572 -> 438
+	  573 -> 657
+	  574 -> 371
+	  575 -> 576
+	  575 -> 444
+	  576 -> 28
+	  577 -> 623
+	  578 -> 446
+	  579 -> 771
+	  580 -> 167
+	  581 -> 582
+	  582 -> 751
+	  583 -> 40
+	  584 -> 774
+	  585 -> 420
+	  586 -> 140
+	  587 -> 409
+	  588 -> 514
+	  589 -> 365
+	  590 -> 208
+	  591 -> 608
+	  592 -> 504
+	  593 -> 639
+	  594 -> 146
+	  595 -> 646
+	  596 -> 597
+	  596 -> 598
+	  597 -> 644
+	  598 -> 588
+	  599 -> 514
+	  600 -> 54
+	  601 -> 384
+	  602 -> 603
+	  602 -> 604
+	  603 -> 468
+	  604 -> 429
+	  605 -> 118
+	  606 -> 721
+	  607 -> 652
+	  608 -> 662
+	  608 -> 767
+	  609 -> 740
+	  610 -> 469
+	  611 -> 612
+	  611 -> 613
+	  612 -> 230
+	  613 -> 61
+	  614 -> 807
+	  616 -> 514
+	  617 -> 473
+	  618 -> 657
+	  619 -> 657
+	  620 -> 790
+	  621 -> 463
+	  622 -> 100
+	  622 -> 668
+	  622 -> 302
+	  623 -> 624
+	  623 -> 625
+	  624 -> 360
+	  625 -> 58
+	  626 -> 20
+	  627 -> 124
+	  628 -> 691
+	  629 -> 196
+	  629 -> 158
+	  630 -> 743
+	  631 -> 743
+	  632 -> 407
+	  633 -> 792
+	  634 -> 587
+	  635 -> 589
+	  636 -> 590
+	  637 -> 638
+	  638 -> 345
+	  639 -> 780
+	  640 -> 783
+	  641 -> 389
+	  642 -> 775
+	  643 -> 215
+	  644 -> 293
+	  645 -> 514
+	  646 -> 584
+	  647 -> 373
+	  648 -> 69
+	  649 -> 257
+	  650 -> 226
+	  651 -> 515
+	  652 -> 63
+	  653 -> 312
+	  654 -> 664
+	  655 -> 415
+	  656 -> 322
+	  657 -> 194
+	  657 -> 680
+	  657 -> 810
+	  657 -> 565
+	  657 -> 732
+	  658 -> 684
+	  659 -> 357
+	  660 -> 117
+	  661 -> 414
+	  662 -> 157
+	  663 -> 193
+	  663 -> 518
+	  663 -> 679
+	  663 -> 112
+	  663 -> 562
+	  663 -> 762
+	  664 -> 617
+	  665 -> 192
+	  666 -> 229
+	  667 -> 711
+	  668 -> 240
+	  669 -> 535
+	  670 -> 587
+	  671 -> 694
+	  672 -> 402
+	  672 -> 635
+	  672 -> 581
+	  673 -> 466
+	  674 -> 122
+	  675 -> 11
+	  676 -> 110
+	  677 -> 270
+	  678 -> 238
+	  679 -> 275
+	  680 -> 298
+	  681 -> 26
+	  682 -> 521
+	  683 -> 239
+	  684 -> 396
+	  685 -> 150
+	  686 -> 530
+	  687 -> 572
+	  688 -> 313
+	  688 -> 323
+	  689 -> 348
+	  690 -> 682
+	  690 -> 428
+	  690 -> 315
+	  690 -> 115
+	  690 -> 307
+	  690 -> 314
+	  690 -> 443
+	  690 -> 734
+	  691 -> 245
+	  692 -> 489
+	  693 -> 514
+	  694 -> 514
+	  695 -> 630
+	  696 -> 409
+	  697 -> 335
+	  698 -> 21
+	  699 -> 411
+	  699 -> 340
+	  699 -> 821
+	  700 -> 251
+	  701 -> 174
+	  702 -> 367
+	  703 -> 704
+	  703 -> 705
+	  704 -> 706
+	  705 -> 593
+	  705 -> 92
+	  706 -> 639
+	  707 -> 826
+	  708 -> 545
+	  709 -> 827
+	  710 -> 514
+	  711 -> 325
+	  712 -> 43
+	  712 -> 647
+	  713 -> 657
+	  714 -> 715
+	  714 -> 716
+	  715 -> 185
+	  716 -> 62
+	  717 -> 377
+	  718 -> 600
+	  719 -> 802
+	  720 -> 266
+	  721 -> 190
+	  722 -> 486
+	  723 -> 388
+	  724 -> 574
+	  725 -> 514
+	  726 -> 529
+	  727 -> 150
+	  728 -> 729
+	  728 -> 730
+	  729 -> 436
+	  730 -> 529
+	  731 -> 430
+	  732 -> 23
+	  733 -> 224
+	  733 -> 681
+	  734 -> 78
+	  735 -> 736
+	  735 -> 737
+	  736 -> 77
+	  737 -> 690
+	  738 -> 691
+	  739 -> 503
+	  740 -> 741
+	  740 -> 742
+	  741 -> 334
+	  742 -> 85
+	  743 -> 596
+	  744 -> 779
+	  745 -> 146
+	  746 -> 747
+	  747 -> 748
+	  748 -> 146
+	  749 -> 621
+	  750 -> 389
+	  751 -> 131
+	  752 -> 219
+	  753 -> 297
+	  754 -> 188
+	  755 -> 756
+	  755 -> 757
+	  756 -> 558
+	  757 -> 109
+	  758 -> 67
+	  758 -> 475
+	  758 -> 118
+	  759 -> 650
+	  760 -> 761
+	  761 -> 758
+	  762 -> 274
+	  763 -> 567
+	  764 -> 765
+	  764 -> 766
+	  765 -> 127
+	  766 -> 763
+	  767 -> 157
+	  768 -> 150
+	  769 -> 5
+	  770 -> 690
+	  771 -> 772
+	  772 -> 277
+	  773 -> 330
+	  774 -> 819
+	  775 -> 134
+	  776 -> 169
+	  777 -> 209
+	  778 -> 410
+	  779 -> 408
+	  780 -> 781
+	  781 -> 514
+	  782 -> 93
+	  783 -> 827
+	  784 -> 148
+	  785 -> 114
+	  786 -> 184
+	  787 -> 788
+	  787 -> 789
+	  788 -> 752
+	  789 -> 219
+	  790 -> 476
+	  791 -> 552
+	  792 -> 793
+	  792 -> 794
+	  793 -> 795
+	  794 -> 137
+	  795 -> 137
+	  796 -> 383
+	  797 -> 53
+	  798 -> 265
+	  799 -> 800
+	  799 -> 801
+	  800 -> 223
+	  801 -> 264
+	  802 -> 514
+	  803 -> 67
+	  804 -> 514
+	  805 -> 676
+	  806 -> 271
+	  807 -> 520
+	  807 -> 68
+	  807 -> 319
+	  808 -> 512
+	  809 -> 358
+	  810 -> 655
+	  811 -> 683
+	  812 -> 813
+	  813 -> 814
+	  813 -> 815
+	  814 -> 403
+	  815 -> 403
+	  816 -> 449
+	  816 -> 817
+	  816 -> 583
+	  817 -> 95
+	  818 -> 584
+	  818 -> 505
+	  818 -> 450
+	  819 -> 642
+	  820 -> 336
+	  821 -> 282
+	  822 -> 91
+	  823 -> 779
+	  824 -> 284
+	  825 -> 556
+	  826 -> 146
+	  827 -> 58
+}
+

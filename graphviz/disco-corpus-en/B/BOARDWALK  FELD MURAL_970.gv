@@ -1,0 +1,801 @@
+# BOARDWALK / FELD MURAL
+# 1. Observe the mural.
+#2. Shivers White Check to see stairs, which then allows you to use the ladder to get to the roof.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: \"Some sort of industrial ruin? I don't recognize the name of the company. R&D used to mean Research and Development... It looks long-abandoned.\""];
+	  3 [label="Shivers: Even though you're *sure* you succeeded, all is quiet. There is no cold hand brushing against your forehead, no rustle in the reeds -- the wind has died down. The ruin in front of you is silent as a tomb."];
+	  4 [label="first failure hub"];
+	  5 [label="Feld Mural: IsKimHere()"];
+	  6 [label="IsKimHere()", shape=diamond];
+	  7 [label="!(IsKimHere())", shape=diamond];
+	  8 [label="You: Say: \"I think she's down *there*. Below this building.\""];
+	  9 [label="Feld Mural: Variable[\"boardwalk.feld_mural_main_hub_reached\"]"];
+	  10 [label="Variable[\"boardwalk.feld_mural_main_hub_reached\"]", shape=diamond];
+	  11 [label="!(Variable[\"boardwalk.feld_mural_main_hub_reached\"])", shape=diamond];
+	  12 [label="Kim Kitsuragi: \"Okay...\" The lieutenant looks down the coast, toward the shacks. \"When you're ready, officer.\""];
+	  13 [label="Encyclopedia: Let's see, let's see... Just flicking through the index of your knowledge..."];
+	  14 [label="You: Does that mean she's *here*?"];
+	  15 [label="Jump to: [feldmuralmainhub]"];
+	  16 [label="Feld Mural: You see a once-bright mural towering above you. The signage has peeled off over the years, but you can still make out: 'FELD ELECTRICAL R&D'."];
+	  17 [label="Feld Mural: You try to peer in but there are no windows on this side. Only the disinterested whistle of the wind."];
+	  18 [label="You: She could be *anywhere*, how do I find her?"];
+	  19 [label="Jump to: [feldmuralmainhub]"];
+	  20 [label="Feld Mural: The once-bright mural towers above you, saying \"FELD ELECTRICAL R&D.\"\nThe once-bright mural towers above you, saying \"FELD ELECTRICAL R&D: Tomorrow is just a whisper away.\""];
+	  21 [label="Shivers: For what? A song carried on the breeze? Or children laughing, far away? You walk and walk these city streets and deserted coast, and all it ever tells you -- is cold."];
+	  22 [label="Kim Kitsuragi: \"Of course. Black magic. The most potent type of magic. If we're that desperate -- may I suggest getting shovels and digging?\" A quiver of a smile."];
+	  23 [label="Shivers: For what? God? God is very, very silent. Too silent. Even the wind seems tired...\nBe honest. You're praying. It's that bad."];
+	  24 [label="You: Yes, Comrade Zephyr. I shall find them. Girl Child Revolution and Girl Child Communism!"];
+	  25 [label="You: Cool. No rush."];
+	  26 [label="You: But?"];
+	  27 [label="Feld Mural: IsHourBetween(8, 19)"];
+	  28 [label="IsHourBetween(8, 19)", shape=diamond];
+	  29 [label="!(IsHourBetween(8, 19))", shape=diamond];
+	  30 [label="Feld Mural: Variable[\"church.soona_greeting_done\"]"];
+	  31 [label="Variable[\"church.soona_greeting_done\"]", shape=diamond];
+	  32 [label="!(Variable[\"church.soona_greeting_done\"])", shape=diamond];
+	  33 [label="Trant Heidelstam: \"Ask the wind or 'Aska i Vinden' is the name of a Vaasan lullaby,\" he remarks. \"Maybe that helps?\""];
+	  34 [label="Feld Mural: Variable[\"boardwalk.feld_mural_shivers_white_succeeded_two\"]"];
+	  35 [label="Variable[\"boardwalk.feld_mural_shivers_white_succeeded_two\"]", shape=diamond];
+	  36 [label="!(Variable[\"boardwalk.feld_mural_shivers_white_succeeded_two\"])", shape=diamond];
+	  37 [label="Kim Kitsuragi: He stops to consider your words. \"*Ask the wind* sounds like an expression. For when you have no idea. We should continue our search. Perhaps even get a little desperate...\""];
+	  38 [label="Untitled hub"];
+	  39 [label="Kim Kitsuragi: \"Right,\" he shrugs. \"How do we get in there? The doors were on the collapsed side of this building... they're gone, basically.\""];
+	  40 [label="Kim Kitsuragi: \"Good, good, yes. Cold spells...\" He seems incredulous. \"So basically your *hangover* is telling you she's down there?\""];
+	  41 [label="You: Why do I feel like I know this place?"];
+	  42 [label="Encyclopedia: We have, uh... Radio brands, radio crimes, radio comedies, radio dramas, radio physics, radio psychics, radio scandals, radio shows, and way more in-between, but, uh...."];
+	  43 [label="You: \"Is this all I am? A fount of useless radio trivia?\""];
+	  44 [label="Encyclopedia: Land's End? You took in the sights there with Lilienne. Ruby wasn't up the disused radio tower, among the reeds, or beneath the boardwalk."];
+	  45 [label="Jump to: [You: \"Where does it go?\"]"];
+	  46 [label="Jump to: [feldmuralmainhub]"];
+	  47 [label="You: \"The wind didn't tell me to wait.\""];
+	  48 [label="You: \"Who said that?\""];
+	  49 [label="You: \"I am performing *black magic*.\""];
+	  50 [label="Logic: Great idea!"];
+	  51 [label="You: What is happening..."];
+	  52 [label="Kim Kitsuragi: \"Doesn't look like it to me.\" He pauses to study you for a moment. \"Probably not, anyway.\""];
+	  53 [label="Encyclopedia: Still nothing. Your head is full of obscure facts, none of which are helpful here. Move on before you make another scene."];
+	  54 [label="Encyclopedia: Nothing that would be useful here. Sorry."];
+	  55 [label="Shivers: Suddenly there's a sigh, carried on the molecules around you, moving, flowing from high pressure to low pressure. Like that of a woman emptying her lungs. She wraps the collapsing stone box in front of you in her breath, flowing through it..."];
+	  56 [label="You: \"The twins did hear the radio from here, so *something* is happening...\""];
+	  57 [label="Feld Mural: CancelTask(\"TASK.find_children_of_the_big_sea_cancelled\");CancelTask(\"TASK.find_children_of_the_sea_first_step_cancelled\");CancelTask(\"TASK.talk_to_twins_with_kim_cancelled\");CancelTask(\"TASK.talk_to_speedfreaks_fm_cancelled\");CancelTask(\"TASK.return_to_ask_kids_where_cancelled\");CancelTask(\"TASK.return_to_mural_for_new_check_cancelled\");CancelTask(\"TASK.talk_to_washer_woman_about_radio_cancelled\");CancelTask(\"TASK.talk_to_washer_woman_again_with_kim_radio_cancelled\")--[[ Variable[ ]]"];
+	  58 [label="Kim Kitsuragi: \"Looks like tomorrow never came.\" The lieutenant raises the collar of his bomber jacket.\n\"Looks like tomorrow never came.\" The lieutenant raises the collar of his jacket."];
+	  59 [label="Feld Mural: Variable[\"church.soona_greeting_done\"]"];
+	  60 [label="Variable[\"church.soona_greeting_done\"]", shape=diamond];
+	  61 [label="!(Variable[\"church.soona_greeting_done\"])", shape=diamond];
+	  62 [label="Jump to: [first failure hub]"];
+	  63 [label="Feld Mural: Variable[\"coast.morell_greeting_done\"]"];
+	  64 [label="Variable[\"coast.morell_greeting_done\"]", shape=diamond];
+	  65 [label="!(Variable[\"coast.morell_greeting_done\"])", shape=diamond];
+	  66 [label="Kim Kitsuragi: The lieutenant looks at you shiver, worried suddenly. \"We should go. It gets cold if you stand in one place too long.\""];
+	  67 [label="Shivers: In through the collapsed roof, flowing down a concrete staircase -- to the basement, sweeping away footprints in the dust on the stairs. And then the beach below the boardwalk, its winding tunnels... a whisper away."];
+	  68 [label="Jump to: [feldmuralmainhub]"];
+	  69 [label="Shivers: A breeze, like a quiet sigh, moves over you. The cool air breaks across your body. It brings the salt of the sea into your lungs."];
+	  70 [label="Kim Kitsuragi: \"Officer?\" The lieutenant watches you attentively. \"Are you okay? It looked like we lost you for a second.\""];
+	  71 [label="You: Pull on your knowledge to understand what caused the twins to hear radio in their heads."];
+	  72 [label="You: Variable[\"boardwalk.mural_encycloedia_pass_check\"]"];
+	  73 [label="Variable[\"boardwalk.mural_encycloedia_pass_check\"]", shape=diamond];
+	  74 [label="!(Variable[\"boardwalk.mural_encycloedia_pass_check\"])", shape=diamond];
+	  75 [label="You: \"Can we look into that later?\""];
+	  76 [label="Jump to: [Untitled hub]"];
+	  77 [label="Conceptualization: Or spiritual? She could be looking for refuge..."];
+	  78 [label="Shivers: How hard can it be? You were told she's north of the village and this place is a peninsula. Look around. West of here there are people, talking. Who could it be, you cup your ear and think?\nHow hard can it be? You were told she's north of the village and this place is a peninsula. West of here there are the cryptozoologists -- helping them might give you a reason to map out the place.\nHow hard can it be? You were told she's north of the village and this place is a peninsula. You've already mapped it out while checking the traps. So you *know* the place."];
+	  79 [label="Feld Mural: IsKimHere()"];
+	  80 [label="IsKimHere()", shape=diamond];
+	  81 [label="!(IsKimHere())", shape=diamond];
+	  82 [label="Feld Mural: IsHourBetween(8, 19)"];
+	  83 [label="IsHourBetween(8, 19)", shape=diamond];
+	  84 [label="!(IsHourBetween(8, 19))", shape=diamond];
+	  85 [label="Kim Kitsuragi: He stops to consider your words. \"*Ask Revachol* sounds like an expression. For when you have no idea. We should continue our search. Perhaps even get a little desperate...\""];
+	  86 [label="Trant Heidelstam: \"Blood spatter reading, rooster sacrifice -- still quite common in Revachol,\" he remarks. \"Hope it helps.\""];
+	  87 [label="Kim Kitsuragi: \"Anyway -- we do it the old fashioned way: sector by sector. Go over the whole peninsula, ask the locals, enter the places where we *can* enter first. Like we did in the village.\""];
+	  88 [label="Kim Kitsuragi: \"How *do* we? I was really hoping she'd be in the village...\" The lieutenant sighs, then gets a hold of himself: \"Okay.\""];
+	  89 [label="Conceptualization: Or spiritual? She could be looking for refuge..."];
+	  90 [label="Shivers: Walk the coast, the old boardwalk, the reeds... You can always come back here and talk to the wind again. Look where it already got you."];
+	  91 [label="Shivers: The wind rushes away, leaving you where you were -- on the rotting boards of the Feld Building."];
+	  92 [label="Untitled hub (11)"];
+	  93 [label="Kim Kitsuragi: The lieutenant clears his throat. \"Let's move on. I don't think we need to stand around anymore.\""];
+	  94 [label="Feld Mural: Variable[\"boardwalk.mural_encyclopedia_ulan_said_in_fail\"]"];
+	  95 [label="Variable[\"boardwalk.mural_encyclopedia_ulan_said_in_fail\"]", shape=diamond];
+	  96 [label="!(Variable[\"boardwalk.mural_encyclopedia_ulan_said_in_fail\"])", shape=diamond];
+	  97 [label="Feld Mural: Variable[\"tc.feld_electrical\"]"];
+	  98 [label="Variable[\"tc.feld_electrical\"]", shape=diamond];
+	  99 [label="!(Variable[\"tc.feld_electrical\"])", shape=diamond];
+	  100 [label="Savoir Faire: An adventure awaits! An adventure on the windswept urban coast."];
+	  101 [label="Endurance: Buckle up and raise your collar -- this search is going to be wet and cold."];
+	  102 [label="Jump to: [feldmuralmainhub]"];
+	  103 [label="Feld Mural: It doesn't."];
+	  104 [label="You: \"Tomorrow is just a whisper away...\""];
+	  105 [label="Kim Kitsuragi: \"She's *probably* north of the village and this place is a peninsula. I think there's people west of here, we could ask them...\" He looks to his right and cups his ear.\n\"She's *probably* north of the village and this place is a peninsula. We've already talked to the cryptozoologists...\" He looks to his right. \"Working with them might give us a good excuse to run around -- give us some *structure*...\"\n\"She's *probably* north of the village and this place is a peninsula.\" He looks North. \"We already scanned most of the outdoor areas on our wild *cryptid hunt*, so we have an understanding of the geography, at least.\""];
+	  106 [label="Kim Kitsuragi: He shrugs. \"So how do we get in there? The doors were on the collapsed side of this building... they're gone, basically.\""];
+	  107 [label="You: \"I'm just thinking. This is me thinking. Nothing strange here.\""];
+	  108 [label="Kim Kitsuragi: He looks around. \"Like -- maybe we can get shovels and dig?\" A quiver of a smile. \"Don't mind that -- a bad attempt at humour.\""];
+	  109 [label="Esprit de Corps: Lieutenant Kitsuragi stands in front of a mirror, fixing his orange bomber jacket. You should be asking him that question."];
+	  110 [label="Feld Mural: IsKimHere()"];
+	  111 [label="IsKimHere()", shape=diamond];
+	  112 [label="!(IsKimHere())", shape=diamond];
+	  113 [label="Encyclopedia: You know little about ULAN frequencies other than that they exist. Maybe? It's impossible to say."];
+	  114 [label="Encyclopedia: You know where Ruby *isn't.*"];
+	  115 [label="Jump to: [feldmuralmainhub]"];
+	  116 [label="Feld Mural: IsHourBetween(8, 19)"];
+	  117 [label="IsHourBetween(8, 19)", shape=diamond];
+	  118 [label="!(IsHourBetween(8, 19))", shape=diamond];
+	  119 [label="You: \"I'm just thinking. This is me thinking. Nothing strange here.\""];
+	  120 [label="Feld Mural: IsKimHere()"];
+	  121 [label="IsKimHere()", shape=diamond];
+	  122 [label="!(IsKimHere())", shape=diamond];
+	  123 [label="Kim Kitsuragi: \"Because I *hope* you didn't mean to climb that ladder...\" He points to the ladder next to the sign and says: \"It's *not* safe.\""];
+	  124 [label="You: [Leave.]"];
+	  125 [label="Feld Mural: Variable[\"boardwalk.feld_mural_shivers_white_failed_once\"]"];
+	  126 [label="Variable[\"boardwalk.feld_mural_shivers_white_failed_once\"]", shape=diamond];
+	  127 [label="!(Variable[\"boardwalk.feld_mural_shivers_white_failed_once\"])", shape=diamond];
+	  128 [label="You: Just blow on your hands for warmth."];
+	  129 [label="You: \"Call it a gut feeling.\""];
+	  130 [label="Inland Empire: There's something in the wind. Sometimes the only way to go forward is to fail first."];
+	  131 [label="Jump to: [feldmuralmainhub]"];
+	  132 [label="Feld Mural: IsKimHere()"];
+	  133 [label="IsKimHere()", shape=diamond];
+	  134 [label="!(IsKimHere())", shape=diamond];
+	  135 [label="You: What's that?"];
+	  136 [label="Feld Mural: Variable[\"coast.idiot_teq_story_end_reach\"]"];
+	  137 [label="Variable[\"coast.idiot_teq_story_end_reach\"]", shape=diamond];
+	  138 [label="!(Variable[\"coast.idiot_teq_story_end_reach\"])", shape=diamond];
+	  139 [label="Feld Mural: Variable[\"church.church_open_door_w_key\"]"];
+	  140 [label="Variable[\"church.church_open_door_w_key\"]", shape=diamond];
+	  141 [label="!(Variable[\"church.church_open_door_w_key\"])", shape=diamond];
+	  142 [label="Encyclopedia: If she's here on the coast, she'll be *here.* And besides, something weird happened to the twins around here. It'd be nice to know what caused that. Another fact for your collection!"];
+	  143 [label="Feld Mural: The writing rises in front of you, its ancient carton wet from the coastal air."];
+	  144 [label="You: (Turn to the lieutenant.) \"She could be *anywhere*, how do we find her?\""];
+	  145 [label="You: \"There's a ladder next to the sign.\" (Point to it.) \"Perhaps we can climb it? Enter through the roof?\""];
+	  146 [label="Kim Kitsuragi: \"Maybe we could, you know...\" He points to the man who points at the building, telling his son something. \"Ask the man who's pointing at the building?\""];
+	  147 [label="You: \"I think I need to talk to some kids in the village.\""];
+	  148 [label="You: \"This is part of the investigation now.\""];
+	  149 [label="Feld Mural: Variable[\"boardwalk.mural_encycloedia_pass_check\"]"];
+	  150 [label="Variable[\"boardwalk.mural_encycloedia_pass_check\"]", shape=diamond];
+	  151 [label="!(Variable[\"boardwalk.mural_encycloedia_pass_check\"])", shape=diamond];
+	  152 [label="Encyclopedia: You know a lot about radio. Enough to know: You have no idea how or why those boys heard Speedfreaks FM in their heads."];
+	  153 [label="You: So I was right! ULAN -- she *is* here!"];
+	  154 [label="Esprit de Corps: Lieutenant Kitsuragi stands in front of a mirror, fixing his black bomber jacket. You should be asking him that question."];
+	  155 [label="Jump to: [first failure hub]"];
+	  156 [label="Jump to: [feldmuralmainhub]"];
+	  157 [label="Logic: Why single out this one building?"];
+	  158 [label="Perception (Sight): A slogan used to intertwine with the loops a long time ago. Now only a shadow of peeled letters remains. It says: 'Tomorrow is just a whisper away'."];
+	  159 [label="Perception (Hearing): Indeed. You hear what sounds like two men arguing where the lieutenant is pointing."];
+	  160 [label="Kim Kitsuragi: \"What? I didn't say anything.\" He looks at you. \"What are we doing here? We keep returning and you act strange.\""];
+	  161 [label="You: \"Yes. I can literally *talk* to my hangover. That's how bad it has gotten.\""];
+	  162 [label="You: \"Then I've got nothing. I'm a shit detective. I should be in the sewer.\""];
+	  163 [label="Mikael Heidelstam: \"What is he talking about?\" The young boy looks to his father, frowning."];
+	  164 [label="Encyclopedia: Knowledge like that isn't just obscure; it's unknowable. Dangerous theoretical facts like that are probably protected under the Coalition Government's Articles of Dominion, Title XIV, Article 7c. While an expert might be able to suss it out on their own, a layman like you has no hope."];
+	  165 [label="Untitled hub"];
+	  166 [label="Kim Kitsuragi: A shuffle of nylon as the lieutenant shrugs. \"I don't know... It's your call, detective. If you drop the radio lead now, just be prepared to live without having done it.\""];
+	  167 [label="Shivers: And then there's the church. You look at the bell tower rising into the clouds -- a prominent place to hide, but maybe she's reckless?\nAnd then there's the church. You look at the bell tower, rising into the sky -- you look East and remember you already searched it. And found no trace of Ruby."];
+	  168 [label="Untitled hub (03)"];
+	  169 [label="Kim Kitsuragi: \"Of course. We should continue our search.\""];
+	  170 [label="Feld Mural: Variable[\"boardwalk.feld_mural_shivers_white_failed_once\"]"];
+	  171 [label="Variable[\"boardwalk.feld_mural_shivers_white_failed_once\"]", shape=diamond];
+	  172 [label="!(Variable[\"boardwalk.feld_mural_shivers_white_failed_once\"])", shape=diamond];
+	  173 [label="Perception (Hearing): The ruin in front of you is silent as a tomb."];
+	  174 [label="You: Shake off the feeling."];
+	  175 [label="You: Where does it go?"];
+	  176 [label="You: \"The wind told me.\""];
+	  177 [label="Kim Kitsuragi: \"And then there's the church.\" He looks at the bell tower. \"If I were a murder suspect I would not hide in the most prominent building here, but who knows? Maybe she's reckless...\"\n\"And then there's the church.\" He looks at the bell tower. \"We've already searched that and can rule it out. I know it doesn't feel like progress, but exclusion is a step too.\""];
+	  178 [label="Inland Empire: As if said by someone else. Someone outside you. Around you. Not you."];
+	  179 [label="Feld Mural: The long abandoned industrial building towers above you in silence."];
+	  180 [label="Kim Kitsuragi: \"Right. Well, I'm sure that after...\" The lieutenant's words come to a slow halt. He pinches the bridge of his nose."];
+	  181 [label="You: \"You just want to dial your favourite radio station, don't you?\""];
+	  182 [label="IsHardcoreModeActive()  and  WasGameBeatenInHardcoreMode()"];
+	  183 [label="IsHardcoreModeActive()  and  WasGameBeatenInHardcoreMode()", shape=diamond];
+	  184 [label="!(IsHardcoreModeActive()  and  WasGameBeatenInHardcoreMode())", shape=diamond];
+	  185 [label="Kim Kitsuragi: \"In case she's underground? Don't mind that -- a bad attempt at humour.\""];
+	  186 [label="You: \"I am trying to ask Revachol.\""];
+	  187 [label="Jump to: [Shivers: \"Suddenly there's a sigh, carried on...\"]"];
+	  188 [label="Feld Mural: The wind whispers and whispers."];
+	  189 [label="Shivers: Listen to the wind -- but for *what*? Ruby whistling? The crackle of her bonfire? Some errant whisper, or a dog barking..."];
+	  190 [label="Feld Mural: Variable[\"boardwalk.feld_mural_shivers_white_failed_twice\"]"];
+	  191 [label="Variable[\"boardwalk.feld_mural_shivers_white_failed_twice\"]", shape=diamond];
+	  192 [label="!(Variable[\"boardwalk.feld_mural_shivers_white_failed_twice\"])", shape=diamond];
+	  193 [label="Untitled hub (02)"];
+	  194 [label="You: \"Could she be in there?\"\n\"Could Ruby be in there?\""];
+	  195 [label="Jump to: [feldmuralmainhub]"];
+	  196 [label="Shivers: BOY CHILD FREEDOM. BOY CHILD JUSTICE."];
+	  197 [label="You: \"The wind told me to talk to children. Let's roll.\""];
+	  198 [label="Feld Mural: Variable[\"TASK.meet_lilienne_for_a_date_done\"]"];
+	  199 [label="Variable[\"TASK.meet_lilienne_for_a_date_done\"]", shape=diamond];
+	  200 [label="!(Variable[\"TASK.meet_lilienne_for_a_date_done\"])", shape=diamond];
+	  201 [label="Kim Kitsuragi: \"True...  But how do we even get in there? The doors were on the collapsed side of this building... they're gone, basically.\"\n\"True. And Ruby does have radio experience, as evidenced by her lorry... But how do we even get in there? The doors were on the collapsed side of this building... they're gone, basically.\""];
+	  202 [label="Feld Mural: Variable[\"TASK.find_children_of_the_big_sea_done\"]"];
+	  203 [label="Variable[\"TASK.find_children_of_the_big_sea_done\"]", shape=diamond];
+	  204 [label="!(Variable[\"TASK.find_children_of_the_big_sea_done\"])", shape=diamond];
+	  205 [label="Encyclopedia: That isn't a fact *yet*. But it's a compelling suspicion."];
+	  206 [label="Trant Heidelstam: \"She?\" The man hears you. \"I don't know who you mean, but... the building seems long-abandoned to me.\""];
+	  207 [label="Jump to: [first failure hub]"];
+	  208 [label="Shivers: First you need to tune in to the coast, get to know its residents. Then you can search where you can't enter: bunkers, storm drainage, this building here. You can always come back and talk to the wind again -- look where it already got you."];
+	  209 [label="Untitled hub (03)"];
+	  210 [label="Shivers: You felt it, before, when it rained in Martinaise and you *felt* the cold of the rain. The feeling persists. It has been in you ever since."];
+	  211 [label="You: [Turn away.]"];
+	  212 [label="Kim Kitsuragi: \"Perhaps *you* can climb them. *We're* not climbing anything. I'm 43 years old -- and I plan to live to see 70.\""];
+	  213 [label="Feld Mural: Variable[\"boardwalk.feld_mural_shivers_white_failed_thrice\"]"];
+	  214 [label="Variable[\"boardwalk.feld_mural_shivers_white_failed_thrice\"]", shape=diamond];
+	  215 [label="!(Variable[\"boardwalk.feld_mural_shivers_white_failed_thrice\"])", shape=diamond];
+	  216 [label="Feld Mural: IsKimHere()"];
+	  217 [label="IsKimHere()", shape=diamond];
+	  218 [label="!(IsKimHere())", shape=diamond];
+	  219 [label="You: What the hell was that?"];
+	  220 [label="Rhetoric: The big sea... The Big C? That can only mean one thing: Communism."];
+	  221 [label="Feld Mural: Variable[\"boardwalk.mural_encyclopedia_fail_once\"]"];
+	  222 [label="Variable[\"boardwalk.mural_encyclopedia_fail_once\"]", shape=diamond];
+	  223 [label="!(Variable[\"boardwalk.mural_encyclopedia_fail_once\"])", shape=diamond];
+	  224 [label="Encyclopedia: Searching with all possible speed!"];
+	  225 [label="Feld Mural: Variable[\"tc.ulan_frequency\"]"];
+	  226 [label="Variable[\"tc.ulan_frequency\"]", shape=diamond];
+	  227 [label="!(Variable[\"tc.ulan_frequency\"])", shape=diamond];
+	  228 [label="You: I know about ULAN frequencies. Does that help?"];
+	  229 [label="Feld Mural: Variable[\"TASK.find_children_of_the_big_sea\"]"];
+	  230 [label="Variable[\"TASK.find_children_of_the_big_sea\"]", shape=diamond];
+	  231 [label="!(Variable[\"TASK.find_children_of_the_big_sea\"])", shape=diamond];
+	  232 [label="Feld Mural: Variable[\"tc.ulan_frequency\"]"];
+	  233 [label="Variable[\"tc.ulan_frequency\"]", shape=diamond];
+	  234 [label="!(Variable[\"tc.ulan_frequency\"])", shape=diamond];
+	  235 [label="Encyclopedia: And, while you might not have seen much of the coast, you were probably right: The ULAN frequency is likely connected to all this. Ruby dabbles in advanced radio theories. The Speedfreaks FM case is a radio mystery. That may not be coincidence.\nAnd you were probably right: The ULAN frequency is likely connected to all this. Ruby dabbles in advanced radio theories. The Speedfreaks FM case is a radio mystery. That may not be coincidence. "];
+	  236 [label="You: And if that fails? If I don't find her? (Conclude.)"];
+	  237 [label="You: \"I am trying to ask the wind.\""];
+	  238 [label="Trant Heidelstam: \"Ah, yes, their famous motto!\" You hear the man exclaim behind you. \"A fine example of technological optimism, from...\" He says something, but the wind blows and you can't hear him."];
+	  239 [label="Kim Kitsuragi: \"Then -- if we're desperate -- we can look where we *can't* enter. Bunkers, storm drainage, this place. I'm sure it won't come to that.\" He looks behind him, at the dark red box crumbling across the chasm."];
+	  240 [label="Shivers: Suddenly, all is quiet. There is no cold hand brushing against your forehead, no rustle in the reeds. The wind has died down, or gone behind a corner? You only hear distant waves washing the coast."];
+	  241 [label="You: \"I am trying to ask Revachol.\""];
+	  242 [label="Jump to: [feldmuralmainhub]"];
+	  243 [label="Feld Mural: Variable[\"boardwalk.mural_look_in\"] == false  and  IsKimHere() == false"];
+	  244 [label="Variable[\"boardwalk.mural_look_in\"] == false  and  IsKimHere() == false", shape=diamond];
+	  245 [label="!(Variable[\"boardwalk.mural_look_in\"] == false  and  IsKimHere() == false)", shape=diamond];
+	  246 [label="You: \"Did I have a seizure, Kim?\""];
+	  247 [label="Kim Kitsuragi: \"When you're ready.\" The lieutenant nods."];
+	  248 [label="Feld Mural: Variable[\"TASK.inspect_traps_done\"]"];
+	  249 [label="Variable[\"TASK.inspect_traps_done\"]", shape=diamond];
+	  250 [label="!(Variable[\"TASK.inspect_traps_done\"])", shape=diamond];
+	  251 [label="Half Light: Judging eyes, like he's a fucking brain doctor. What the hell does he know?"];
+	  252 [label="Feld Mural: Above the mural -- a collapsed roof, broken windows set in walls that are cracking and will soon also fall, and the coastal breeze rustling and sighing in the remains of the edifice."];
+	  253 [label="You: \"I am performing *black magic*.\""];
+	  254 [label="Untitled hub"];
+	  255 [label="You: \"I am trying to ask the wind.\""];
+	  256 [label="You: What am I *doing* here?"];
+	  257 [label="Shivers: *THERE IS NOTHING ELSE.* The thought makes your bones rattle, like the skeleton of some deserted building ready to collapse."];
+	  258 [label="Shivers: Trying to talk to the wind, or the city? Whatever you thought would happen did not, and now you're just standing there with your hands fallen to your side.\nTrying to talk to the wind, the city? Whatever you thought would happen did not, and now you're just standing there, in the dark. With your hands fallen to your side.\nTrying to talk to the wind? The city? Whatever you thought would happen did not, and now you're just standing there, in the pale of the morning. With your hands fallen to your side.\nTrying to talk to the wind? The city? Whatever you thought would happen did not, and now you're just standing there with your hands fallen to your side.\nTrying to talk to the wind? The city? Whatever you thought would happen did not, and now you're just standing there, in the dusk hour. With your hands fallen to your side."];
+	  259 [label="Savoir Faire: Finally, my time to shine!"];
+	  260 [label="Shivers: GO TO THE CHILDREN OF THE BIG SEA."];
+	  261 [label="You: \"Radio is killing the fucking cop star. Come on!\""];
+	  262 [label="Kim Kitsuragi: A shuffle of nylon as the lieutenant shrugs. \"I'm only observing that there's another lead you wanted to follow. And that if you drop the radio lead now, just be prepared to live without having done it.\""];
+	  263 [label="Conceptualization: Feld *Electrical*. How ironic -- all these dark rooms..."];
+	  264 [label="Perception (Hearing): Indeed. About 70 metres west from here."];
+	  265 [label="Jump to: [feldmuralmainhub]"];
+	  266 [label="Trant Heidelstam: \"Well...\" The man behind you hesitates for a moment. \"I was *trying* to explain to Mikael what it is the officer keeps returning here for -- then I realized I don't know.\""];
+	  267 [label="Jump to: [feldmuralmainhub]"];
+	  269 [label="Feld Mural: IsHourBetween(8, 19)"];
+	  270 [label="IsHourBetween(8, 19)", shape=diamond];
+	  271 [label="!(IsHourBetween(8, 19))", shape=diamond];
+	  272 [label="You: What was I even attempting to do here?"];
+	  273 [label="You: \"We've looked everywhere else.\""];
+	  274 [label="Kim Kitsuragi: \"In there? She could. Or...\" The lieutenant points behind you. \"She could be in the *identical* ruin over there, or in that boat shack. In that church tower, maybe...\""];
+	  275 [label="You: \"I need to go to the children, Kim. Girl Child Communism. Boy Child Freedom.\""];
+	  276 [label="Feld Mural: IsKimHere()"];
+	  277 [label="IsKimHere()", shape=diamond];
+	  278 [label="!(IsKimHere())", shape=diamond];
+	  279 [label="Logic: Is *trying to talk to the city* something you've done before? Is it in your secret repertoire -- a trick for when you're out of ideas?"];
+	  280 [label="Jump to: [feldmuralmainhub]"];
+	  281 [label="You: Step closer."];
+	  282 [label="Kim Kitsuragi: \"Looks like tomorrow never came.\" The lieutenant raises the collar of his bomber jacket."];
+	  283 [label="Shivers: *WHAT ARE YOU DOING HERE?* A terrible cold comes over you as you think the words. They echo in your skull, alien suddenly."];
+	  284 [label="Feld Mural: Variable[\"boardwalk.feld_mural_shivers_white_succeeded\"]"];
+	  285 [label="Variable[\"boardwalk.feld_mural_shivers_white_succeeded\"]", shape=diamond];
+	  286 [label="!(Variable[\"boardwalk.feld_mural_shivers_white_succeeded\"])", shape=diamond];
+	  287 [label="Feld Mural: Indeed. Somehow you knew it was here. An urban ruin gutted by looters that once used to consume money and dispense warmth and light."];
+	  288 [label="Jump to: [feldmuralmainhub]"];
+	  289 [label="You: Yes. I understand."];
+	  290 [label="Untitled hub"];
+	  291 [label="Encyclopedia: She isn't in the fishing village. She's not with her bullet under the floorboards in the shack. So where could she be?"];
+	  292 [label="Kim Kitsuragi: \"You mean we should do that *right now*, don't you?\" the lieutenant asks, his usually even tone wavering slightly. \"Can that be done *after* the murder investigation?\""];
+	  293 [label="Encyclopedia: ... Well, in fairness, you haven't seen much more of the coast. But you do know one last thing: ULAN. Ruby dabbles in advanced radio theories. ULAN, the Speedfreaks mystery -- it might just be related.\nAnd you do know one thing about radios: ULAN. Ruby dabbles in advanced radio theories. ULAN, the Speedfreaks mystery -- it might just be related."];
+	  294 [label="Kim Kitsuragi: The lieutenant glances down the coast, toward the fishing village. \"There's also still the question of how the twins tuned into Speedfreaks FM...\""];
+	  295 [label="Encyclopedia: Feld Electrical -- you only know them as a small company that makes ink cartridges. Looks like they used to be... big."];
+	  296 [label="feldmuralmainhub"];
+	  297 [label="Feld Mural: Variable[\"coast.morell_greeting_done\"]"];
+	  298 [label="Variable[\"coast.morell_greeting_done\"]", shape=diamond];
+	  299 [label="!(Variable[\"coast.morell_greeting_done\"])", shape=diamond];
+	  300 [label="Jump to: [feldmuralmainhub]"];
+	  301 [label="Jump to: [first failure hub]"];
+	  302 [label="You: Listen to the wind."];
+	  303 [label="You: Variable[\"boardwalk.feld_mural_shivers_white_succeeded\"]"];
+	  304 [label="Variable[\"boardwalk.feld_mural_shivers_white_succeeded\"]", shape=diamond];
+	  305 [label="!(Variable[\"boardwalk.feld_mural_shivers_white_succeeded\"])", shape=diamond];
+	  306 [label="Kim Kitsuragi: \"Okay -- why?\""];
+	  307 [label="Shivers: Suddenly there's a sigh, carried on the molecules around you, moving, flowing from high pressure to low pressure. Like that of a woman emptying her lungs. She wraps the collapsing stone box in front of you in her breath, flowing through it..."];
+	  308 [label="Jump to: [feldmuralmainhub]"];
+	  309 [label="You: Come on, hurry up, we're on a schedule here!"];
+	  310 [label="Encyclopedia: You don't know how it happened. But the stores of your knowledge are vast and there *is* something crucial in them."];
+	  311 [label="Encyclopedia: Nor is Ruby in the Church. Some criminals still seek sanctuary from sacred buildings, even though sanctuary laws were abolished decades ago. But Ruby wasn't such a one.\nNor is Ruby in the church. The crab-man, Tiago, is -- but not Ruby. Some criminals seek sanctuary from sacred buildings, though the sanctuary laws were abolished decades ago. But Ruby wasn't such a one.\nYou've even entered the Church, met Tiago, and Soona. Some criminals seek sanctuary from sacred buildings, though the sanctuary laws were abolished decades ago. But Ruby wasn't such a one.\nYou've even entered the Church, helped the ravers set up a night club, and overheard... well, we don't need to think about that. Point is: Some criminals seek sanctuary from sacred buildings, though the sanctuary laws were abolished decades ago. But Ruby wasn't such a one."];
+	  312 [label="You: \"We should look into that before we move on.\""];
+	  313 [label="Inland Empire: A prayer of sorts? To Revachol."];
+	  314 [label="Shivers: Anyway -- you do it sector by sector. Go over the whole peninsula, ask the locals, enter the places which you *can* enter first."];
+	  315 [label="Feld Mural: No one. You're just talking to yourself again -- the letters slowly peeling off the mural seem to form a malevolent smile."];
+	  316 [label="Trant Heidelstam: \"'Ask Revachol' is the name of a war time radio show the communists used to address civil issues,\" he remarks. \"Maybe that helps?\""];
+	  317 [label="Trant Heidelstam: \"Of course. Didn't mean to imply otherwise.\""];
+	  318 [label="Physical Instrument: There has to be a way to use brute force. Climbing sounds unsafe. Brute force is safe. Look around and find something to break if the ladder fails."];
+	  319 [label="You: \"Yeah, I don't know...\""];
+	  320 [label="You: \"Ever since I woke up -- maybe even before -- I've been getting these strange *cold spells*.\""];
+	  321 [label="Feld Mural: IsKimHere()"];
+	  322 [label="IsKimHere()", shape=diamond];
+	  323 [label="!(IsKimHere())", shape=diamond];
+	  324 [label="Shivers: SHE'S DOWN THERE."];
+	  325 [label="Kim Kitsuragi: \"Right. How do we get in, though? The doors were on the collapsed side of this building... they're gone, basically.\""];
+	  326 [label="Trant Heidelstam: \"I'm not sure, Mikael.\" He looks at you, as if making an appraisal."];
+	  327 [label="Encyclopedia: The alcoholics never mentioned seeing Ruby either. Idiot Doom Spiral gave an exhaustive account of recent events, but never mentioned seeing Ruby."];
+	  328 [label="Feld Mural: Variable[\"boardwalk.NewVariable_05\"]"];
+	  329 [label="Variable[\"boardwalk.NewVariable_05\"]", shape=diamond];
+	  330 [label="!(Variable[\"boardwalk.NewVariable_05\"])", shape=diamond];
+	  331 [label="Feld Mural: Variable[\"boardwalk.NewVariable_05\"]  and  Variable[\"TASK.find_children_of_the_big_sea_done\"] == false"];
+	  332 [label="Variable[\"boardwalk.NewVariable_05\"]  and  Variable[\"TASK.find_children_of_the_big_sea_done\"] == false", shape=diamond];
+	  333 [label="!(Variable[\"boardwalk.NewVariable_05\"]  and  Variable[\"TASK.find_children_of_the_big_sea_done\"] == false)", shape=diamond];
+	  334 [label="Kim Kitsuragi: A shuffle of nylon as the lieutenant shrugs. \"It's your call, detective. If you drop the radio lead now, just be prepared to live without having done it.\""];
+	  335 [label="Feld Mural: Probably a good idea. Blowing on your fingers doesn't make them much warmer though..."];
+	  336 [label="You: Listen to the wind again."];
+	  337 [label="You: Variable[\"boardwalk.feld_mural_shivers_white_succeeded_two\"]"];
+	  338 [label="Variable[\"boardwalk.feld_mural_shivers_white_succeeded_two\"]", shape=diamond];
+	  339 [label="!(Variable[\"boardwalk.feld_mural_shivers_white_succeeded_two\"])", shape=diamond];
+	  340 [label="You: \"And if that fails? If we don't find her?\" (Conclude.)"];
+	  341 [label="You: No. There is something else. In the wind."];
+	  342 [label="You: [Leave.]"];
+	  343 [label="You: \"What is this building?\""];
+	  344 [label="Feld Mural: Variable[\"boardwalk.mural_look_in\"]  and  IsKimHere() == false"];
+	  345 [label="Variable[\"boardwalk.mural_look_in\"]  and  IsKimHere() == false", shape=diamond];
+	  346 [label="!(Variable[\"boardwalk.mural_look_in\"]  and  IsKimHere() == false)", shape=diamond];
+	  347 [label="Esprit de Corps: Somewhere in Martinaise, Lieutenant Kitsuragi is consulting his notebook... A sudden draught turns a page between his hands. You're going to need him if you want to listen to the wind."];
+	  348 [label="Feld Mural: IsHighestPolitical(\"communist\")"];
+	  349 [label="IsHighestPolitical(\"communist\")", shape=diamond];
+	  350 [label="!(IsHighestPolitical(\"communist\"))", shape=diamond];
+	  351 [label="You: \"Communism is a murder investigation, Kim. It's about understanding whose bootheel killed the human spirit.\""];
+	  352 [label="Feld Mural: IsHourBetween(8, 19)"];
+	  353 [label="IsHourBetween(8, 19)", shape=diamond];
+	  354 [label="!(IsHourBetween(8, 19))", shape=diamond];
+	  355 [label="Encyclopedia: Apologies! You just need time to remember. There has to be something there. Go do other things around the coast. That might help."];
+	  356 [label="Encyclopedia: You've searched the whole coast for Morell's traps. Just as you didn't find the Insulindian phasmid, you did not find her."];
+	  357 [label="Kim Kitsuragi: \"I see. Political theory as detective work. Right.\" The lieutenant looks down the coast, toward the shacks. \"After you, officer.\""];
+	  0 -> 1
+	  1 -> 9
+	  2 -> 288
+	  3 -> 301
+	  4 -> 236
+	  4 -> 272
+	  4 -> 144
+	  4 -> 18
+	  4 -> 340
+	  5 -> 6
+	  5 -> 7
+	  6 -> 66
+	  7 -> 102
+	  8 -> 306
+	  9 -> 10
+	  9 -> 11
+	  10 -> 20
+	  11 -> 16
+	  12 -> 308
+	  13 -> 25
+	  13 -> 309
+	  14 -> 142
+	  15 -> 296
+	  16 -> 158
+	  17 -> 243
+	  18 -> 78
+	  19 -> 296
+	  20 -> 344
+	  21 -> 128
+	  21 -> 341
+	  22 -> 185
+	  23 -> 280
+	  24 -> 196
+	  25 -> 42
+	  26 -> 54
+	  27 -> 28
+	  27 -> 29
+	  28 -> 110
+	  29 -> 216
+	  30 -> 32
+	  30 -> 31
+	  31 -> 314
+	  32 -> 77
+	  33 -> 103
+	  34 -> 35
+	  34 -> 36
+	  35 -> 187
+	  36 -> 213
+	  37 -> 108
+	  38 -> 56
+	  38 -> 273
+	  38 -> 320
+	  38 -> 176
+	  39 -> 259
+	  40 -> 176
+	  40 -> 161
+	  40 -> 129
+	  40 -> 273
+	  41 -> 287
+	  42 -> 26
+	  43 -> 352
+	  44 -> 136
+	  45 -> 175
+	  46 -> 296
+	  47 -> 12
+	  48 -> 79
+	  49 -> 22
+	  50 -> 195
+	  51 -> 324
+	  52 -> 275
+	  52 -> 147
+	  52 -> 197
+	  53 -> 46
+	  54 -> 225
+	  55 -> 45
+	  56 -> 201
+	  57 -> 165
+	  58 -> 76
+	  59 -> 60
+	  59 -> 61
+	  60 -> 87
+	  61 -> 89
+	  62 -> 4
+	  63 -> 64
+	  63 -> 65
+	  64 -> 167
+	  65 -> 264
+	  66 -> 102
+	  67 -> 202
+	  68 -> 296
+	  69 -> 260
+	  70 -> 290
+	  71 -> 72
+	  72 -> 73
+	  72 -> 74
+	  73 -> 149
+	  74 -> 149
+	  75 -> 166
+	  76 -> 254
+	  77 -> 314
+	  78 -> 63
+	  79 -> 80
+	  79 -> 81
+	  80 -> 160
+	  81 -> 82
+	  82 -> 83
+	  82 -> 84
+	  83 -> 266
+	  84 -> 315
+	  85 -> 108
+	  86 -> 103
+	  87 -> 155
+	  88 -> 105
+	  89 -> 87
+	  90 -> 100
+	  91 -> 132
+	  92 -> 162
+	  92 -> 43
+	  92 -> 261
+	  93 -> 355
+	  94 -> 96
+	  94 -> 95
+	  95 -> 235
+	  96 -> 293
+	  97 -> 98
+	  97 -> 99
+	  98 -> 295
+	  99 -> 130
+	  100 -> 101
+	  101 -> 19
+	  102 -> 296
+	  103 -> 300
+	  104 -> 120
+	  105 -> 297
+	  106 -> 259
+	  107 -> 169
+	  108 -> 156
+	  109 -> 131
+	  110 -> 112
+	  110 -> 111
+	  111 -> 146
+	  112 -> 179
+	  113 -> 92
+	  114 -> 291
+	  115 -> 296
+	  116 -> 117
+	  116 -> 118
+	  117 -> 206
+	  118 -> 17
+	  119 -> 317
+	  120 -> 121
+	  120 -> 122
+	  121 -> 58
+	  122 -> 269
+	  123 -> 318
+	  125 -> 126
+	  125 -> 127
+	  126 -> 69
+	  127 -> 240
+	  128 -> 335
+	  129 -> 106
+	  130 -> 296
+	  131 -> 296
+	  132 -> 133
+	  132 -> 134
+	  133 -> 70
+	  134 -> 308
+	  135 -> 114
+	  136 -> 137
+	  136 -> 138
+	  137 -> 327
+	  138 -> 248
+	  139 -> 140
+	  139 -> 141
+	  140 -> 311
+	  141 -> 232
+	  142 -> 55
+	  143 -> 102
+	  144 -> 88
+	  145 -> 212
+	  146 -> 50
+	  147 -> 247
+	  148 -> 12
+	  149 -> 150
+	  149 -> 151
+	  150 -> 152
+	  151 -> 221
+	  152 -> 164
+	  153 -> 205
+	  154 -> 131
+	  155 -> 4
+	  156 -> 296
+	  157 -> 242
+	  158 -> 254
+	  159 -> 177
+	  160 -> 168
+	  161 -> 325
+	  162 -> 352
+	  163 -> 326
+	  164 -> 310
+	  165 -> 51
+	  167 -> 30
+	  168 -> 241
+	  168 -> 107
+	  168 -> 49
+	  168 -> 255
+	  169 -> 156
+	  170 -> 171
+	  170 -> 172
+	  171 -> 307
+	  172 -> 3
+	  173 -> 4
+	  174 -> 143
+	  175 -> 67
+	  176 -> 106
+	  177 -> 59
+	  178 -> 5
+	  179 -> 288
+	  180 -> 292
+	  181 -> 262
+	  182 -> 184
+	  182 -> 183
+	  183 -> 154
+	  184 -> 109
+	  185 -> 156
+	  186 -> 316
+	  187 -> 307
+	  188 -> 76
+	  189 -> 256
+	  189 -> 174
+	  190 -> 192
+	  190 -> 191
+	  191 -> 21
+	  192 -> 125
+	  193 -> 145
+	  193 -> 319
+	  194 -> 321
+	  195 -> 296
+	  196 -> 91
+	  197 -> 12
+	  198 -> 200
+	  198 -> 199
+	  199 -> 44
+	  200 -> 136
+	  201 -> 259
+	  202 -> 203
+	  202 -> 204
+	  203 -> 165
+	  204 -> 229
+	  205 -> 55
+	  206 -> 17
+	  207 -> 4
+	  208 -> 100
+	  209 -> 253
+	  209 -> 186
+	  209 -> 237
+	  209 -> 119
+	  210 -> 68
+	  212 -> 318
+	  213 -> 214
+	  213 -> 215
+	  214 -> 23
+	  215 -> 190
+	  216 -> 217
+	  216 -> 218
+	  217 -> 2
+	  218 -> 179
+	  219 -> 91
+	  220 -> 24
+	  220 -> 289
+	  220 -> 219
+	  221 -> 222
+	  221 -> 223
+	  222 -> 53
+	  223 -> 13
+	  224 -> 42
+	  225 -> 226
+	  225 -> 227
+	  226 -> 228
+	  227 -> 92
+	  228 -> 113
+	  229 -> 230
+	  229 -> 231
+	  230 -> 328
+	  231 -> 165
+	  232 -> 233
+	  232 -> 234
+	  233 -> 94
+	  234 -> 14
+	  235 -> 153
+	  236 -> 208
+	  237 -> 33
+	  238 -> 76
+	  239 -> 90
+	  240 -> 173
+	  241 -> 85
+	  242 -> 296
+	  243 -> 244
+	  243 -> 245
+	  244 -> 182
+	  245 -> 131
+	  246 -> 52
+	  247 -> 308
+	  248 -> 249
+	  248 -> 250
+	  249 -> 356
+	  250 -> 139
+	  251 -> 276
+	  252 -> 263
+	  253 -> 86
+	  254 -> 104
+	  254 -> 281
+	  254 -> 211
+	  255 -> 37
+	  256 -> 283
+	  257 -> 48
+	  257 -> 128
+	  258 -> 279
+	  259 -> 193
+	  260 -> 348
+	  261 -> 352
+	  263 -> 97
+	  264 -> 167
+	  265 -> 296
+	  266 -> 209
+	  267 -> 296
+	  269 -> 270
+	  269 -> 271
+	  270 -> 238
+	  271 -> 188
+	  272 -> 258
+	  273 -> 39
+	  274 -> 157
+	  275 -> 180
+	  276 -> 277
+	  276 -> 278
+	  277 -> 93
+	  278 -> 355
+	  279 -> 313
+	  280 -> 296
+	  281 -> 252
+	  283 -> 178
+	  284 -> 285
+	  284 -> 286
+	  285 -> 170
+	  286 -> 213
+	  287 -> 210
+	  288 -> 296
+	  289 -> 91
+	  290 -> 275
+	  290 -> 147
+	  290 -> 197
+	  290 -> 246
+	  291 -> 198
+	  292 -> 148
+	  292 -> 351
+	  292 -> 47
+	  293 -> 14
+	  294 -> 312
+	  294 -> 75
+	  294 -> 181
+	  295 -> 130
+	  296 -> 194
+	  296 -> 71
+	  296 -> 41
+	  296 -> 302
+	  296 -> 336
+	  296 -> 342
+	  296 -> 343
+	  297 -> 298
+	  297 -> 299
+	  298 -> 177
+	  299 -> 159
+	  300 -> 296
+	  301 -> 4
+	  302 -> 303
+	  303 -> 304
+	  303 -> 305
+	  304 -> 284
+	  305 -> 284
+	  306 -> 38
+	  307 -> 175
+	  308 -> 296
+	  309 -> 224
+	  310 -> 135
+	  311 -> 232
+	  312 -> 334
+	  313 -> 207
+	  314 -> 62
+	  315 -> 267
+	  316 -> 103
+	  317 -> 300
+	  318 -> 331
+	  319 -> 123
+	  320 -> 40
+	  321 -> 322
+	  321 -> 323
+	  322 -> 274
+	  323 -> 116
+	  324 -> 8
+	  325 -> 259
+	  326 -> 251
+	  327 -> 248
+	  328 -> 329
+	  328 -> 330
+	  329 -> 165
+	  330 -> 57
+	  331 -> 332
+	  331 -> 333
+	  332 -> 294
+	  335 -> 265
+	  336 -> 337
+	  337 -> 338
+	  337 -> 339
+	  338 -> 34
+	  339 -> 34
+	  340 -> 239
+	  341 -> 257
+	  343 -> 27
+	  344 -> 345
+	  344 -> 346
+	  345 -> 347
+	  346 -> 115
+	  347 -> 115
+	  348 -> 349
+	  348 -> 350
+	  349 -> 220
+	  350 -> 289
+	  350 -> 219
+	  351 -> 357
+	  352 -> 353
+	  352 -> 354
+	  353 -> 163
+	  354 -> 276
+	  355 -> 15
+	  356 -> 139
+	  357 -> 308
+}
+

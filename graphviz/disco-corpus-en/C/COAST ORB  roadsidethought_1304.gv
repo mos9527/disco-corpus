@@ -1,0 +1,51 @@
+# COAST ORB / roadsidethought
+# Dialogue that comes up as the player walks along the street. Fantasy of the other side of the pavement.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Suggestion: His boyfriend is on his way home. He brings tins of meat and vegetables with him. Their pockets are heavier with money; but only slightly."];
+	  3 [label="You: Let go of the moment. [Discard thought.]"];
+	  4 [label="Shivers: #312D. Young girls used to come here, huddled up, hoping for more warmth than their thin coats give them. The bus took them to school. It has not run for eight years; there were not enough girls to sustain its cost."];
+	  5 [label="You: What did the smoke smell like?"];
+	  6 [label="Jump to: [shiver_me_timbers]"];
+	  7 [label="You: What about the road?"];
+	  8 [label="Shivers: Tragedy came from the wheels of a fast RCM vehicle, hurrying to work. The cold washes over you. The sound of the sea has grown distant."];
+	  9 [label="Shivers: A drop in temperature. An easy flow of air: an empty street. Before you, a thoroughfare unjammed with lorries. No more drivers smoking on hitch steps. Just... silence."];
+	  10 [label="Shivers: A tub warm with water, white with soap. A man bathes while radio waves transmit the lottery numbers: 4, 18, 21, 4, 1... A modern washing machine rattles a drawer full of silverware."];
+	  11 [label="You: A dead dog?"];
+	  12 [label="You: Who are the people who live across the road?"];
+	  13 [label="Shivers: The wind moves the aerosol. A detective stands behind the boom barrier; a breeze moves a curl of his hair."];
+	  14 [label="You: What about the bus stop?"];
+	  15 [label="Perception (Sight): There's one bump on the road: a dead dog lies flat about two hundred paces away, right at the turn."];
+	  16 [label="shiver_me_timbers"];
+	  18 [label="Shivers: Craters pocked the surface. Children played in them, until heavy trucks full of black pitch rolled in. The landowners have filled the craters with money. It is a vital artery of flow of trade."];
+	  19 [label="You: That is enough. [Finish thought.]"];
+	  20 [label="Shivers: Chemically sweetened. Across the road, a forgotten bus stop; corrosion has opened a hole in its roof. An elm tree watches over the building. Its branches are dripping with rain and snow."];
+	  21 [label="Shivers: The road is smooth and motley. Craters filled with a black asphalt. The asphalt first laid is grey already. A row of tenements are under construction in the distance."];
+	  0 -> 1
+	  1 -> 9
+	  2 -> 6
+	  4 -> 6
+	  5 -> 20
+	  6 -> 16
+	  7 -> 18
+	  8 -> 6
+	  9 -> 3
+	  9 -> 5
+	  10 -> 2
+	  11 -> 8
+	  12 -> 10
+	  14 -> 4
+	  15 -> 6
+	  16 -> 7
+	  16 -> 11
+	  16 -> 12
+	  16 -> 14
+	  16 -> 19
+	  18 -> 15
+	  19 -> 13
+	  20 -> 21
+	  21 -> 16
+}
+

@@ -1,0 +1,234 @@
+# SEAFORT ORB / ICM logo questions
+# (afterthought on ICM)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Variable[\"tc.rcm\"]"];
+	  3 [label="Variable[\"tc.rcm\"]", shape=diamond];
+	  4 [label="!(Variable[\"tc.rcm\"])", shape=diamond];
+	  5 [label="You: \"Are those specks stars too?\""];
+	  6 [label="You: Just catch your breath."];
+	  7 [label="Encyclopedia: Forty four years is not enough time to hide what happened here, on these islands..."];
+	  8 [label="You: Looks old. What is it still doing here?"];
+	  9 [label="Encyclopedia: With its horns in the sky -- the symbol of the Commune."];
+	  10 [label="You: \"RCM... It sounds like RCM -- Revachol Citizens Militia.\""];
+	  11 [label="Jump to: [barrelencyclopedia]"];
+	  12 [label="Jump to: [barrelencyclopedia]"];
+	  13 [label="Variable[\"tc.rcm\"]"];
+	  14 [label="Variable[\"tc.rcm\"]", shape=diamond];
+	  15 [label="!(Variable[\"tc.rcm\"])", shape=diamond];
+	  16 [label="You: [Finish thought.]"];
+	  17 [label="Cuno: He leans in for a closer look. \"Dunno. Maybe. Sorta looks like stars to Cuno. Or, like, islands maybe? Fuck does Cuno know...\""];
+	  18 [label="You: Huh, what is the ICM?"];
+	  19 [label="Encyclopedia: Sounds an awful lot like..."];
+	  20 [label="You: \"Are those specks stars too?\""];
+	  21 [label="You: [Finish thought.]"];
+	  22 [label="Jump to: [barrelencyclopedia]"];
+	  23 [label="Kim Kitsuragi: \"That's just a coincidence, officer. The CoMil was founded in '32...\" He bows to inspect the barrel."];
+	  24 [label="Kim Kitsuragi: \"No one remembers the ICM, the connotation is less important each year...\" He bows to inspect the barrel."];
+	  25 [label="Kim Kitsuragi: \"There were all sorts of groups and *groupuscules* back then. It doesn't really matter...\" He bows to inspect the barrel."];
+	  26 [label="Encyclopedia: A Dolorian-era symbol of Insulinde. Known as The Face In The Sea."];
+	  27 [label="Encyclopedia: Sounds an awful lot like..."];
+	  28 [label="Endurance: A mediocre athlete would pant from dragging around his body on a busted crutch -- but not you, you're thinking about *politics* with blood dripping down your thigh..."];
+	  30 [label="You: \"What I'm hearing is -- we descend from the glorious revolutionary army.\""];
+	  31 [label="You: \"I just want to be in a normal, right wing police force. That's all I want.\""];
+	  32 [label="You: \"Cuno, what is the *ICM*?\""];
+	  33 [label="You: It sounds like RCM -- Revachol Citizens Militia."];
+	  34 [label="Kim Kitsuragi: \"It does.\""];
+	  35 [label="You: \"Looks old. What's it still doing here?\""];
+	  36 [label="Encyclopedia: With its horns in the sky -- the symbol of the Commune."];
+	  37 [label="You: \"ICM sounds like ICP. Very close to the International Collaboration Police. Nice and *normal* that way.\""];
+	  38 [label="Kim Kitsuragi: \"It's impossible to say.\" He looks toward the darkened doorway. \"It was chaos after the war. The name was good for getting people to join us -- Revachol West was mostly workers and criminals...\""];
+	  39 [label="Kim Kitsuragi: \"No.\" He looks at it. \"An *upside down* star.\""];
+	  40 [label="You: \"RCM... It sounds like RCM -- Revachol Citizens Militia.\""];
+	  41 [label="You: Are those specks stars too?"];
+	  42 [label="Jump to: [kim_ency_barrel]"];
+	  43 [label="Encyclopedia: Sounds an awful lot like..."];
+	  44 [label="barrelencyclopedia"];
+	  45 [label="Jump to: [barrelencyclopedia]"];
+	  46 [label="You: \"Looks old. What is it still doing here?\""];
+	  47 [label="Cuno: \"Shit looks upside down to Cuno.\" He leans to the side, tilting his head."];
+	  48 [label="Encyclopedia: One of the barrels from earlier was still leaking fuel. The city is full of such things."];
+	  49 [label="Kim Kitsuragi: \"No. That's the *uninhabited archipelago*.\""];
+	  50 [label="IsKimHere()"];
+	  51 [label="IsKimHere()", shape=diamond];
+	  52 [label="!(IsKimHere())", shape=diamond];
+	  53 [label="Cuno: \"Who the fuck's gonna move it? The island janitor?\""];
+	  54 [label="You: [Finish thought.]"];
+	  55 [label="You: \"Kim, what is the *ICM*?\""];
+	  56 [label="Kim Kitsuragi: \"The RCM *may* descend from the ICM.\""];
+	  57 [label="Rhetoric: ...nice *political* thoughts rush through your neocortex."];
+	  58 [label="Jump to: [barrelencyclopedia]"];
+	  59 [label="You: \"It's a little embarrassing in '51, no? Maybe we need a re-brand?\""];
+	  60 [label="Jump to: [barrelencyclopedia]"];
+	  61 [label="Cuno: \"Yeah, pig. That's letter shit for you. The *alphabet*.\""];
+	  62 [label="Encyclopedia: ICM? This feels familiar somehow..."];
+	  63 [label="You: \"A white star.\" (Point to the star on the label.)"];
+	  64 [label="Kim Kitsuragi: \"Insulindian Citizens Militia. It's the official name of the communards' army. The Black and White Army of the Revolution.\""];
+	  65 [label="Encyclopedia: With its horns in the sky -- the symbol of the Commune."];
+	  66 [label="IsCunoInParty()"];
+	  67 [label="IsCunoInParty()", shape=diamond];
+	  68 [label="!(IsCunoInParty())", shape=diamond];
+	  69 [label="Jump to: [kim_ency_barrel]"];
+	  70 [label="Kim Kitsuragi: \"You *are* in a right wing police force. Those times are long gone...\" He bows to inspect the barrel."];
+	  71 [label="You: \"A white star.\" (Point to it.)"];
+	  72 [label="You: A white star."];
+	  73 [label="Encyclopedia: Insulindian Citizens Militia, the official name of the communards' army. The army of the Revolution."];
+	  74 [label="Encyclopedia: The *uninhabited archipelago*. A Dolorian-era symbol of Insulinde -- the Face In The Sea, as they call it."];
+	  75 [label="Variable[\"seafort.sense_leaky_barell_clicked\"]"];
+	  76 [label="Variable[\"seafort.sense_leaky_barell_clicked\"]", shape=diamond];
+	  77 [label="!(Variable[\"seafort.sense_leaky_barell_clicked\"])", shape=diamond];
+	  78 [label="Variable[\"seafort.sense_icm_concept\"]"];
+	  79 [label="Variable[\"seafort.sense_icm_concept\"]", shape=diamond];
+	  80 [label="!(Variable[\"seafort.sense_icm_concept\"])", shape=diamond];
+	  81 [label="Endurance: It's gonna be hard to say them. Carrying around all that weight on a busted crutch is making you pant..."];
+	  82 [label="Encyclopedia: Thank you, Cuno. It's the Dolorian symbol of Insulinde -- the face in the sea."];
+	  83 [label="Variable[\"tc.rcm\"]"];
+	  84 [label="Variable[\"tc.rcm\"]", shape=diamond];
+	  85 [label="!(Variable[\"tc.rcm\"])", shape=diamond];
+	  86 [label="You: \"Why?\""];
+	  87 [label="endurance_it"];
+	  88 [label="Kim Kitsuragi: \"One of these barrels was still leaking fuel, as you saw. The city is full of things like this. Old bullets, guns, fuel...\""];
+	  89 [label="Variable[\"seafort.sense_cyclo_star_endurance_antipassive\"]"];
+	  90 [label="Variable[\"seafort.sense_cyclo_star_endurance_antipassive\"]", shape=diamond];
+	  91 [label="!(Variable[\"seafort.sense_cyclo_star_endurance_antipassive\"])", shape=diamond];
+	  92 [label="kim_ency_barrel"];
+	  93 [label="Cuno: \"Is this a case for Detective Cuno?\" He cracks his knuckles, ready. \"Idiot Cat Moon. Inside Car Motors. Is Cuno Magic? He is -- case solved.\""];
+	  94 [label="Jump to: [actual_ency]"];
+	  95 [label="You: \"*May*?\""];
+	  96 [label="Kim Kitsuragi: \"This is better preserved than the others. You can still read the sign...\" He bows to inspect the barrel."];
+	  97 [label="Kim Kitsuragi: \"After...\" He thinks. \"Forty four years? That's not nearly enough time to hide what happened here, officer.\"\n\"After...\" He thinks. \"Forty four years? That's not nearly enough to hide what happened here, lieutenant-yefreitor.\""];
+	  98 [label="Variable[\"seafort.sense_leaky_barell_clicked\"]"];
+	  99 [label="Variable[\"seafort.sense_leaky_barell_clicked\"]", shape=diamond];
+	  100 [label="!(Variable[\"seafort.sense_leaky_barell_clicked\"])", shape=diamond];
+	  101 [label="actual_ency"];
+	  102 [label="Encyclopedia: Although it's difficult to say for sure -- the RCM *may* descend from the ICM. At some, dark point in the past..."];
+	  0 -> 1
+	  1 -> 62
+	  2 -> 3
+	  2 -> 4
+	  3 -> 19
+	  4 -> 60
+	  5 -> 17
+	  6 -> 96
+	  7 -> 75
+	  8 -> 7
+	  9 -> 69
+	  10 -> 34
+	  11 -> 44
+	  12 -> 44
+	  13 -> 14
+	  13 -> 15
+	  14 -> 27
+	  17 -> 82
+	  18 -> 73
+	  19 -> 60
+	  20 -> 49
+	  22 -> 44
+	  23 -> 11
+	  24 -> 11
+	  25 -> 11
+	  26 -> 45
+	  27 -> 94
+	  28 -> 87
+	  30 -> 25
+	  31 -> 70
+	  32 -> 93
+	  33 -> 102
+	  34 -> 86
+	  35 -> 97
+	  36 -> 94
+	  37 -> 23
+	  38 -> 57
+	  39 -> 65
+	  40 -> 61
+	  41 -> 74
+	  42 -> 92
+	  43 -> 42
+	  44 -> 35
+	  44 -> 10
+	  44 -> 16
+	  44 -> 20
+	  44 -> 55
+	  44 -> 63
+	  45 -> 44
+	  46 -> 53
+	  47 -> 9
+	  48 -> 94
+	  49 -> 26
+	  50 -> 51
+	  50 -> 52
+	  51 -> 44
+	  52 -> 66
+	  53 -> 69
+	  55 -> 64
+	  56 -> 95
+	  57 -> 78
+	  58 -> 44
+	  59 -> 24
+	  60 -> 44
+	  61 -> 69
+	  62 -> 50
+	  63 -> 39
+	  64 -> 2
+	  65 -> 45
+	  66 -> 67
+	  66 -> 68
+	  67 -> 92
+	  68 -> 101
+	  69 -> 92
+	  70 -> 11
+	  71 -> 47
+	  72 -> 36
+	  73 -> 13
+	  74 -> 94
+	  75 -> 76
+	  75 -> 77
+	  76 -> 48
+	  77 -> 94
+	  78 -> 80
+	  78 -> 79
+	  79 -> 81
+	  80 -> 22
+	  81 -> 89
+	  82 -> 69
+	  83 -> 84
+	  83 -> 85
+	  84 -> 43
+	  85 -> 42
+	  86 -> 56
+	  87 -> 37
+	  87 -> 6
+	  87 -> 59
+	  87 -> 30
+	  87 -> 31
+	  88 -> 58
+	  89 -> 90
+	  89 -> 91
+	  90 -> 87
+	  91 -> 28
+	  92 -> 32
+	  92 -> 5
+	  92 -> 71
+	  92 -> 40
+	  92 -> 46
+	  92 -> 21
+	  93 -> 83
+	  94 -> 101
+	  95 -> 38
+	  96 -> 11
+	  97 -> 98
+	  98 -> 99
+	  98 -> 100
+	  99 -> 88
+	  100 -> 58
+	  101 -> 33
+	  101 -> 72
+	  101 -> 8
+	  101 -> 41
+	  101 -> 18
+	  101 -> 54
+	  102 -> 94
+}
+

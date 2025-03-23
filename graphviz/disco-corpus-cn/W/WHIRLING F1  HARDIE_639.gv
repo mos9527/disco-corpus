@@ -1,0 +1,987 @@
+# WHIRLING F1 / HARDIE
+# Titus Hardie, leader of the militant union wing Hardie Boys. Mass dialogue + Gardener and Boys:
+#
+#1) Admit they lynched the man because of a rape.
+#2) WHITE: Rhetoric to get them to tell you Klaasje was victim (Evrart makes easier -- leads to Klaasje, Klaasje betrays)
+#3) React to Klaasje's betrayal
+#4) WHITE: Suggestion to get them to counterbetray and reveal Assassination
+#5) something to get them to reveal Instigator (Ruby)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Suggestion: 那些*兄弟们*太过急于取悦他，以至于很难让他们闭上嘴巴。你很快就能点清人数的，等着吧……"];
+	  3 [label="You: “我跟你说实话吧，她就是调查杀害雇佣兵的凶手的下一个突破口。”\n“我跟你说实话吧，她就是调查杀害莱利的凶手的下一个突破口。”"];
+	  4 [label="Composure: 他和他的兄弟们表现得像是某种大人物，你得证明一下自己的勇气才能被认真对待。"];
+	  5 [label="You: “我见过她吸鸦片酊吸得神志不清的样子，超自然的预感也在我耳边说出了她的名字。”"];
+	  6 [label="You: “我怀疑是她杀了被害人——这就是为什么。”"];
+	  7 [label="You: *你*在做什么？"];
+	  8 [label="You: “我们得谈谈那个吊人。”"];
+	  9 [label="Titus Hardie: “我怎么都想不通你为什么要这么做。”他展开双臂。“我是说……我应该就会把他留在那里。你一定很喜欢清理别人的烂摊子吧。”"];
+	  10 [label="Glen: “是啊，给他们点厉害尝尝。”"];
+	  11 [label="Jump to: [Hardiehub1]"];
+	  12 [label="You: “是的，我确实这么认为——她是*有点*疯狂……”"];
+	  13 [label="Titus Hardie: “执法官……”他咬着牙说到。“……我对你已经*忍无可忍*了。我他妈的告诉过你不要逼她！”"];
+	  14 [label="Physical Instrument: 该死的*没有人*告诉你要放下拳头！"];
+	  15 [label="Titus Hardie: “你以为我们瞎吗？你们RCM不是唯一知道如何窃听别人的人——这可不需要大学学位。”"];
+	  16 [label="Conceptualization: 其实还是有一些需要的——密码分析、通信官……"];
+	  17 [label="Titus Hardie: “别这么说自己，安格斯。这是很重要的工作。”头领拿起他的啤酒——无声地向他致敬。"];
+	  18 [label="Titus Hardie: “别以为我会忘记我还特别提醒过，我对于她被逮捕的感受。”他摇着头说。“现在你想做什么？”"];
+	  19 [label="Titus Hardie: 他眼中的怒火——你眼看着它们燃烧*殆尽*了。“当然，执法官，做你该做的事吧。”他开了一罐啤酒倒进杯中，放下后说：“我就像往常一样，喝个酩酊大醉吧。”"];
+	  20 [label="Half Light: 他怒火中烧——来了……！一副*妈的我受够了*的极度冷漠。"];
+	  21 [label="Jump to: [Hardiehub1]"];
+	  22 [label="mini hub for serenity"];
+	  23 [label="Titus Hardie: “罪证……这才是成人的对话。”他放下了啤酒罐。"];
+	  24 [label="Inland Empire: 不，你继续留在这里如何？四处看看——找到公司代表，看看他们有什么要说的？也许公司会出面帮忙？然后再回来。"];
+	  25 [label="Shanky: “没错，滚蛋！”"];
+	  26 [label="Authority: 他已经习惯了发号施令，并看着自己的命令立刻执行下去。你不应该纵容他的。"];
+	  27 [label="Titus Hardie: “这远远不够。我不想太失礼，但我们现在正忙着呢。除非你有能证明露比有罪的*有力证据*，不然就滚开吧。”"];
+	  28 [label="Titus Hardie: IsKimHere()"];
+	  29 [label="IsKimHere()", shape=diamond];
+	  30 [label="!(IsKimHere())", shape=diamond];
+	  31 [label="Elizabeth: “先说一句……”她强行插了进来。“提图斯·哈迪并没有明确指出*被害人*是淫妇，也没有说过要相信她。”"];
+	  32 [label="Alain: “她只是不愿承认而已，混蛋，你根本不了解*创伤经历*。她封闭了自己，又他妈不信任你。”"];
+	  33 [label="You: “在听录音之前，还有几件事……”"];
+	  34 [label="Titus Hardie: “上面有什么？我们称之为门炮手经典串烧。听过之后你就知道为什么了。”"];
+	  35 [label="Elizabeth: “住手，这完全就是在浪费大家时间。”她听上去很激动。“我以为大家已经说好了，不会交出任何一个人。”"];
+	  36 [label="Titus Hardie: Variable[\"whirling.hardie_logic_wc_failed\"]"];
+	  37 [label="Variable[\"whirling.hardie_logic_wc_failed\"]", shape=diamond];
+	  38 [label="!(Variable[\"whirling.hardie_logic_wc_failed\"])", shape=diamond];
+	  39 [label="You: 把重心从一条腿移到另一条腿上。"];
+	  40 [label="You: 眼睛开始抽搐。"];
+	  41 [label="Titus Hardie: IsKimHere()  and  Variable[\"TASK.interrogate_klaasje\"]"];
+	  42 [label="IsKimHere()  and  Variable[\"TASK.interrogate_klaasje\"]", shape=diamond];
+	  43 [label="!(IsKimHere()  and  Variable[\"TASK.interrogate_klaasje\"])", shape=diamond];
+	  44 [label="Jump to: [Hardiehub1]"];
+	  45 [label="You: “我已经听过录音了，我准备找卡拉洁核实一下。”"];
+	  46 [label="You: “你监听他们的通讯系统多久了？”"];
+	  47 [label="You: “慢着，她的脸——什么表情？”"];
+	  48 [label="You: “这才是*正常*流程，她有逃跑的风险，而我是一个警察。”"];
+	  49 [label="Titus Hardie: Variable[\"whirling.hardies_empathy_titus_isnt_angry\"]"];
+	  50 [label="Variable[\"whirling.hardies_empathy_titus_isnt_angry\"]", shape=diamond];
+	  51 [label="!(Variable[\"whirling.hardies_empathy_titus_isnt_angry\"])", shape=diamond];
+	  52 [label="Jump to: [Hardiehub1]"];
+	  53 [label="You: “你猜怎么着：我发现了一些罪证。”"];
+	  54 [label="Jump to: [whirling.titus_big_dick_cop]"];
+	  55 [label="Jump to: [Titus Hardie: \"\"Oh, so you went and talked to my m...\"]"];
+	  56 [label="You: 树立权威。"];
+	  57 [label="You: Variable[\"whirling.hardie_authority_wc_to_get_klaasje\"]"];
+	  58 [label="Variable[\"whirling.hardie_authority_wc_to_get_klaasje\"]", shape=diamond];
+	  59 [label="!(Variable[\"whirling.hardie_authority_wc_to_get_klaasje\"])", shape=diamond];
+	  60 [label="Titus Hardie: “不-不-不，”他指着自己，“眼睛看这里！你跟我的兄弟们过不去，就是跟我过不去。”"];
+	  61 [label="Jump to: [Theo: \"Sitting on his right: standard work...\"]"];
+	  62 [label="You: “首先，我们得谈谈你的态度问题。”"];
+	  63 [label="Glen: “嘿，混蛋，看这里！我们跟你说话呢！”"];
+	  64 [label="Titus Hardie: “为什么？”他靠在椅背上，好奇地看着你。"];
+	  65 [label="Glen: “嘿，我不……哦，好吧……”格伦突然大笑起来。“好啊，带我去吧。”"];
+	  66 [label="You: “一场内战正在酝酿当中，阻止它的唯一方法就是解决这起谋杀案。这意味着要跟露比谈谈。”"];
+	  67 [label="Shanky: “是啊，她就是个疯子，知道吗，”老鼠脸的男人小心翼翼地说。“一个疯婆子——你知道那种人，乱七八糟的。”"];
+	  68 [label="Rhetoric: 当她生气的时候，她会加重*尾音*。这就赋予了她的声音一种奇怪的催眠效果。她说话的时候嘴唇几乎不动。"];
+	  69 [label="Titus Hardie: “好了，好了……冷静点，伙计们。放那家伙一马吧，他显然是神特殊的孩子。”"];
+	  70 [label="Untitled hub"];
+	  71 [label="Suggestion: 这些家伙大男子主义到足以承认一级谋杀了，问问是不是他们。"];
+	  72 [label="Physical Instrument: 他带着勉强的敬意向后靠了靠。房间周围一片寂静，是时候用语言交流了。"];
+	  73 [label="Logic: 或者……*先*别惹他。等等，你或许得在他面前*证明自己*。如果你失败了，这么做可能会给你第二次机会！"];
+	  74 [label="Suggestion: 房间里充斥着笑声，这次可不要再作死了。"];
+	  75 [label="Jump to: [tapehub]"];
+	  76 [label="Titus Hardie: “该死的，阳光男孩……”他平静地说。“我想现在已经无能为力了。只希望她能在体制内找到出路，然后从另一条路走出来。”"];
+	  77 [label="Titus Hardie: 他瞪着你，仿佛被你用最经典的脏话辱骂了。“抱歉？那他妈是什么意思？”"];
+	  78 [label="Jump to: [gaveuprubyhub]"];
+	  79 [label="You: “因为她是你真正的领导。”"];
+	  80 [label="Perception (Sight): 通过眼角的余光，你看见一只小鸟飞进了灌木丛——就在窗户后面；提图斯的背后。"];
+	  81 [label="Titus Hardie: IsKimHere()"];
+	  82 [label="IsKimHere()", shape=diamond];
+	  83 [label="!(IsKimHere())", shape=diamond];
+	  84 [label="Kim Kitsuragi: “我想我们会继续待在这儿的，提图斯。如果你继续追寻，你会很惊讶一个推论竟能出现得如此之快。”"];
+	  85 [label="Titus Hardie: IsTHCPresent(\"apocalypse_cop\")"];
+	  86 [label="IsTHCPresent(\"apocalypse_cop\")", shape=diamond];
+	  87 [label="!(IsTHCPresent(\"apocalypse_cop\"))", shape=diamond];
+	  88 [label="Physical Instrument: 再*深入*一点，逐步升级。"];
+	  89 [label="Titus Hardie: 他的眼睛眯了起来，右手开始在他的大腿上敲着一段紧凑的节奏：哒哒哒。"];
+	  90 [label="Shanky: “你还真是悠闲，等到他烂透了，变得这么漂亮了才来，嗯？”"];
+	  91 [label="Titus Hardie: Variable[\"TASK.interrogate_klaasje\"]  and  IsKimHere() == false"];
+	  92 [label="Variable[\"TASK.interrogate_klaasje\"]  and  IsKimHere() == false", shape=diamond];
+	  93 [label="!(Variable[\"TASK.interrogate_klaasje\"]  and  IsKimHere() == false)", shape=diamond];
+	  94 [label="Jump to: [Hardiehub1]"];
+	  95 [label="You: 到了我这个年纪，你注定会死去。你太冲动了，会卷入一场你赢不了的斗争。"];
+	  96 [label="Physical Instrument: 那一刻结束了，男人带着勉强的敬意向后靠了靠。是时候开口了。"];
+	  97 [label="Half Light: 不要解释或维护自己，进攻。"];
+	  98 [label="Titus Hardie: IsKimHere()"];
+	  99 [label="IsKimHere()", shape=diamond];
+	  100 [label="!(IsKimHere())", shape=diamond];
+	  101 [label="Logic: 这是他们最后一出戏——这盘磁带。他们的故事支离破碎，一片混乱。听起来不错——但到了这个份上，也没什么必要了。"];
+	  102 [label="Kim Kitsuragi: “明白了——你监听了他们通讯系统。”他记了几笔。“有多久了？”"];
+	  103 [label="Untitled hub (02)"];
+	  104 [label="Jump to: [LYNCHUBENDGAME]"];
+	  105 [label="Eugene: “或是德妮丝，那个餐厅的服务生！她的胸……”他几乎是哀伤地说着。"];
+	  106 [label="You: （留下磁带。）“不了，谢谢你提图斯。没有它，本案会办得更顺利。”"];
+	  107 [label="You: “所以我跟卡拉洁说了磁带的事。”"];
+	  108 [label="Titus Hardie: 他皱起眉头，但很快地点了点头。“好吧。”"];
+	  109 [label="Titus Hardie: CheckItem(\"key_workshop_spare\")"];
+	  110 [label="CheckItem(\"key_workshop_spare\")", shape=diamond];
+	  111 [label="!(CheckItem(\"key_workshop_spare\"))", shape=diamond];
+	  112 [label="You: “听着，我得把这件事归咎于某个人，而我已经决定就是她了。”"];
+	  113 [label="Titus Hardie: “你看什么呢，条子？”他扭扭脖子。"];
+	  114 [label="Jump to: [Hardiehub1]"];
+	  115 [label="Titus Hardie: IsKimHere()"];
+	  116 [label="IsKimHere()", shape=diamond];
+	  117 [label="!(IsKimHere())", shape=diamond];
+	  118 [label="Titus Hardie: Variable[\"whirling.hardie_went_through_ruby_info\"]"];
+	  119 [label="Variable[\"whirling.hardie_went_through_ruby_info\"]", shape=diamond];
+	  120 [label="!(Variable[\"whirling.hardie_went_through_ruby_info\"])", shape=diamond];
+	  121 [label="Jump to: [Hardiehub1]"];
+	  122 [label="Visual Calculus: 先清点人数——把这些人和你在院子里发现的脚印联系起来——很有可能会对上。"];
+	  123 [label="Titus Hardie: “但你还是去逼供她了。”他有点不对劲儿，他上前一步说：“我他妈的……要……”"];
+	  124 [label="Elizabeth: “提图斯·哈迪！”她的声音如同一声警示枪响彻了整个房间。"];
+	  125 [label="Titus Hardie: Variable[\"whirling.hardies_reactionspeed_gardener_stops_tituses_advance\"]"];
+	  126 [label="Variable[\"whirling.hardies_reactionspeed_gardener_stops_tituses_advance\"]", shape=diamond];
+	  127 [label="!(Variable[\"whirling.hardies_reactionspeed_gardener_stops_tituses_advance\"])", shape=diamond];
+	  128 [label="You: “哦天呐，她的表情很难过吗？我很抱歉让她伤心了。”"];
+	  129 [label="You: （拿走磁带。）“行吧，我会听的。”"];
+	  130 [label="You: “抱歉，是我口误了。我会带走磁带的。”（拿走。）"];
+	  131 [label="You: “我想再谈谈那起绞死事件。”"];
+	  132 [label="You: “我跟艾弗拉特谈过了，他向我保证你会配合的。”\n“我告诉过你，我跟艾弗拉特谈过了，他向我保证你会配合的。”"];
+	  133 [label="Titus Hardie: Variable[\"whirling.hardies_logic_understandig_taking_inventory\"]"];
+	  134 [label="Variable[\"whirling.hardies_logic_understandig_taking_inventory\"]", shape=diamond];
+	  135 [label="!(Variable[\"whirling.hardies_logic_understandig_taking_inventory\"])", shape=diamond];
+	  136 [label="Jump to: [whathappenedthatnighthub]"];
+	  137 [label="Empathy: 我们谁也不能完全摆脱此事。"];
+	  138 [label="You: 抱起你的胳膊。"];
+	  139 [label="Titus Hardie: Variable[\"whirling.gardener_main_hub_reached\"]"];
+	  140 [label="Variable[\"whirling.gardener_main_hub_reached\"]", shape=diamond];
+	  141 [label="!(Variable[\"whirling.gardener_main_hub_reached\"])", shape=diamond];
+	  142 [label="Shanky: “你还真是悠闲，嗯？”他朝提图斯求证。“等到他烂透了，变得这么漂亮了才来？”"];
+	  143 [label="Elizabeth: “或许你现在就可以开始提问了，情况不会变得更好了。”"];
+	  144 [label="Titus Hardie: “大概吧，”他手臂上的伤疤说。“我必须得像这样去领导他们——*你*会明白的。”"];
+	  145 [label="Titus Hardie: *好极了*，他眼中的抽动回复道。*我曾经把一个人打到无法动弹，或者我把他的头按到水里了？很难说是哪一个，但你可能感受到我体内的*丑恶*。*"];
+	  146 [label="Titus Hardie: “什么？”他不明白。"];
+	  147 [label="Titus Hardie: “现在已经无能为力了。”他缓缓点头。“只希望她能在体制内找到出路。”"];
+	  148 [label="You: “去他的阳光男孩。”（指着你自己）“去死吧。”"];
+	  149 [label="You: “我不用听录音就能调查清楚。”（不拿。）"];
+	  150 [label="Titus Hardie: “你疯了吧，条子。”他的微笑里隐藏着一丝怒火。“我是这个组织*唯一*的负责人——要么接受，要么滚蛋。”"];
+	  151 [label="Titus Hardie: “不。”他只说了这一句。他甚至一动不动。"];
+	  152 [label="Titus Hardie: “下一个问题。”"];
+	  153 [label="You: “我现在要走了。”[离开。]"];
+	  154 [label="You: “好吧，我跟卡拉洁谈过了。现在我需要和露比谈谈。”"];
+	  155 [label="Titus Hardie: “听起来你是准备把她*当做*嫌疑人了。在我的地盘上，休想。”"];
+	  156 [label="Rhetoric: 目前的问题有*很多*。如果你现在开口，他们只会一直提起那盘磁带。去听一次，他们就没有什么能隐瞒的了。"];
+	  157 [label="Titus Hardie: “死条子回来了……”他假笑起来。“你想干什么？”"];
+	  158 [label="Esprit de Corps: 57分局最好的警察扫视了一圈房间，把询问工作交给了你：他信任你——或许这违背于他做出的更好的判断，但他确实这么做了。"];
+	  159 [label="Titus Hardie: “你去吧，”他说着，调整了一下皮带扣。“哦，留着它吧——或许有一天你需要提醒一下自己人性的丑陋。”"];
+	  160 [label="Titus Hardie: “好极了，很高兴听到这个，”他说着，调整了一下皮带扣。“你也可以留下它——或许有一天你需要提醒一下自己人性的丑陋。”"];
+	  161 [label="Hardiehub1"];
+	  162 [label="You: 这段喋喋不休简直毫无意义：扬起下巴，像王子一样凝视远方。"];
+	  163 [label="You: “这盘带子上有什么？”"];
+	  164 [label="You: “我要去哪里听呢？”"];
+	  165 [label="Suggestion: 你说到点子上了。提图斯非常愤怒——不，不仅于此——忠诚的提图斯感觉被*背叛*了。"];
+	  166 [label="Jump to: [tapehub]"];
+	  167 [label="Jump to: [Titus Hardie: \"\"Ruby's one of us. We're not gonna...\"]"];
+	  168 [label="Jump to: [tapehub]"];
+	  169 [label="Titus Hardie: “是啊……咳，总之……”他住了嘴。"];
+	  170 [label="Titus Hardie: “又是你……”他粗鲁地向你打了个招呼。“怎么了？”"];
+	  171 [label="Titus Hardie: “是啊，你这个残忍的混蛋。”他赞许地点点头。“我肯定是不行的——我总是会放美人一马，就是如此心软。”"];
+	  172 [label="Titus Hardie: “而你做了什么？你过去把她逼走了！”他有点不对劲儿，他上前一步说：“我他妈的……要……”"];
+	  173 [label="You: “哈尔·米格多顿来了。一旦血雨落下，她最好乖乖待在收容所里。”"];
+	  174 [label="Jump to: [Hardiehub1]"];
+	  175 [label="Composure: 想向全世界宣告他是个肌肉男：嚼烟草和掰手指。我们这儿还有谁？"];
+	  176 [label="Kim Kitsuragi: “我想我们会继续待在这儿的，提图斯。我们甚至还没跟公司代表谈过话呢——这很有必要，”他转向你。“我想她应该在码头……西北方。”"];
+	  177 [label="Titus Hardie: IsKimHere()"];
+	  178 [label="IsKimHere()", shape=diamond];
+	  179 [label="!(IsKimHere())", shape=diamond];
+	  180 [label="Jump to: [TASK.investigate_mysterious_door_done]"];
+	  181 [label="Titus Hardie: “就在这儿，混球！”他把录音带砰的一声甩到桌子上。“听完这个再来告诉我*末日战士*是无辜的。”"];
+	  182 [label="Titus Hardie: IsKimHere()"];
+	  183 [label="IsKimHere()", shape=diamond];
+	  184 [label="!(IsKimHere())", shape=diamond];
+	  185 [label="Titus Hardie: IsKimHere()"];
+	  186 [label="IsKimHere()", shape=diamond];
+	  187 [label="!(IsKimHere())", shape=diamond];
+	  188 [label="Eugene: “别啊，兄弟，”尤金举起了手，“栽赃给我吧，好好地陷害我吧，法律先生！”"];
+	  189 [label="You: “关于露比的失踪，我想再确认一遍。”"];
+	  190 [label="Elizabeth: “在这里！”她打了个响指。"];
+	  191 [label="Titus Hardie: “看啊，那个疯子警官回来了。”他呷了一口啤酒。"];
+	  192 [label="Jump to: [Hardiehub1]"];
+	  193 [label="You: 尽管我遭受了那么多侮辱，但我仍能走路、说话并且随时可以投入这场战斗。"];
+	  194 [label="Conceptualization: *这*倒是很有趣了。你口中的那个门炮手。"];
+	  195 [label="You: “我想我明白了。”"];
+	  196 [label="Jump to: [Titus Hardie: \"\"A bullet, you say?\" He pats the ba...\"]"];
+	  197 [label="You: “你猜怎么着？我还把你和当地的毒品交易案联系起来了。”"];
+	  198 [label="You: “我跟乔伊斯谈过了。那个被你吊死的雇佣兵——他的朋友们来找你了。”"];
+	  199 [label="Jump to: [Titus Hardie: \"\"Yeah?\" He doesn't seem worried. \"B...\"]"];
+	  200 [label="Titus Hardie: Variable[\"pier.joyce_hub_reached\"]"];
+	  201 [label="Variable[\"pier.joyce_hub_reached\"]", shape=diamond];
+	  202 [label="!(Variable[\"pier.joyce_hub_reached\"])", shape=diamond];
+	  203 [label="Inland Empire: 城里又来了个末日传教的演员吗？"];
+	  204 [label="Titus Hardie: “看来马戏团离开了镇子，但小丑们还留在这里。”提图斯看到你不是很高兴的样子。"];
+	  205 [label="Titus Hardie: IsKimHere()"];
+	  206 [label="IsKimHere()", shape=diamond];
+	  207 [label="!(IsKimHere())", shape=diamond];
+	  208 [label="You: “卡拉洁说自己没有被强暴。”"];
+	  209 [label="Glen: “是啊，用你的屁股听吧，王八蛋！”他的声音在小房间里仿佛雷鸣般回响着。"];
+	  210 [label="Titus Hardie: *我没空跟你耗下去*，他握紧拳头说着，指关节都变白了。*我还年轻，你都有五万岁了*。"];
+	  211 [label="Titus Hardie: “哦，你们是因为他来的？”他看了一圈。“那家伙，长得挺帅哦……”"];
+	  212 [label="Glen: “哦，他现在可变成一个真正的美男子了，很性感呢！”格伦不断地点头。“散发着一股*美男的气味*。”"];
+	  213 [label="Jump to: [Elizabeth: \"\"You might want to start asking you...\"]"];
+	  214 [label="Jump to: [Hardiehub1]"];
+	  215 [label="You: 到了那个时候我一定已经开了杀戒，而且不止一次。我能感觉到那种*丑恶*在我体内。"];
+	  216 [label="Authority: 成功。提图斯让步了，大家都放下拳头。"];
+	  217 [label="Electrochemistry: 啤酒。"];
+	  218 [label="You: “我不知道那是什么意思，它突然就出现在我的脑海里了。我们继续吧。”"];
+	  219 [label="Titus Hardie: “别忘了你的磁带，执法官。”他用自己的大手把小小的磁带推向你。“提图斯·哈迪向你致敬。”"];
+	  220 [label="Jump to: [Titus Hardie: \"\"Oh, this is about him?\" He looks a...\"]"];
+	  221 [label="Jump to: [Titus Hardie: \"\"Oh, this is about him?\" He looks a...\"]"];
+	  222 [label="Jump to: [EVIDENCE HUB]"];
+	  223 [label="You: “我发现了八对脚印，但你们只有七个人。第八个哈迪兄弟在哪儿？”"];
+	  224 [label="Reaction Speed: ……撞上你——躲开！"];
+	  225 [label="Titus Hardie: “*轮不到你来告诉我怎么做*。”他模仿着你，众人又笑了起来……"];
+	  226 [label="You: 先不说话。"];
+	  227 [label="Titus Hardie: IsKimHere()"];
+	  228 [label="IsKimHere()", shape=diamond];
+	  229 [label="!(IsKimHere())", shape=diamond];
+	  230 [label="Jump to: [Hardiehub1]"];
+	  231 [label="Inland Empire: 坦白说，还是有点吓人的。"];
+	  232 [label="Kim Kitsuragi: “我们肯定能找到一台录音机的，这不是问题。”他平静地低声重复着。"];
+	  233 [label="Kim Kitsuragi: “你-你为什么要这么说？”他转向提图斯。“露比只是调查中的下一个逻辑链而已。如果我们能跟她谈谈，就可以*消除*她的嫌疑了。”"];
+	  234 [label="Titus Hardie: “是啊，怎么了？”"];
+	  235 [label="Titus Hardie: Variable[\"TASK.arrest_klaasje_done\"]"];
+	  236 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  237 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  238 [label="Jump to: [Hardiehub1]"];
+	  239 [label="Shanky: 这个小个子男人装模作样地朝自己的脑袋开了一枪。你看着他那老鼠脸因为假装绝望而扭曲着，手指还摸着自己的太阳穴。"];
+	  240 [label="You: “所以你窃听了他们？怎么做到的？”"];
+	  241 [label="You: “那么是你们中的哪一位在做这个高级的无线电工作呢？”"];
+	  242 [label="Eugene: “是啊，老兄。你就是个无线电天才。那些注释非常有深度，索引什么的。”"];
+	  243 [label="Jump to: [whirling.hardie_authority_wc_to_get_ ...]"];
+	  244 [label="Kim Kitsuragi: “我们在找提图斯·哈迪。”警督转向桌子尽头那个肩膀宽阔的男人。"];
+	  245 [label="Kim Kitsuragi: “警探。”警督高声喊了你一声，他把任务交给你了。"];
+	  246 [label="Titus Hardie: 房间里一片寂静，领头人并没有退步。"];
+	  247 [label="You: “她失踪了。如果你在谋杀案的调查过程中试图躲避警察，你就会成为嫌疑人。伙计们，你们很清楚这是怎么回事。”"];
+	  248 [label="Titus Hardie: “该死！”那个大个子的眼睛和血管都暴涨起来。“我就知道不能相信那个该死的婊子！”"];
+	  249 [label="Titus Hardie: “闭上嘴巴，别掺和进来，莉兹！”他转向你。“他强暴了她。你根本想象不到他有多疯狂。”"];
+	  250 [label="Kim Kitsuragi: “听着，她没有被强暴。”警督的声音开始流露出他的焦躁。“证人的陈述非常明了。”"];
+	  251 [label="tapehub"];
+	  252 [label="Shanky: “我要去哪里听呢？”他嘲笑着你。“不如试着把它塞进你的屁股里呢，天才？！”"];
+	  253 [label="You: 左右歪头，扭扭脖子。"];
+	  254 [label="Titus Hardie: *你以为自己在干什么呢？*你听到了这句话，但他的嘴并没有动，是他紧绷的肩膀说出了这句话。"];
+	  255 [label="Glen: “哦，他可真是好看极了，挂在那里……散发着一股*美男的气味*。”"];
+	  256 [label="Alain: “一定是加姆洛克的水里有什么东西，”他若有所思地说。"];
+	  257 [label="Titus Hardie: Variable[\"yard.sense_viscal_greeting_done\"]"];
+	  258 [label="Variable[\"yard.sense_viscal_greeting_done\"]", shape=diamond];
+	  259 [label="!(Variable[\"yard.sense_viscal_greeting_done\"])", shape=diamond];
+	  260 [label="You: “我为什么要关心什么磁带？你骗了我。”"];
+	  261 [label="Empathy: 他现在的语气很友好，最后一句话甚至还带了一丝笑意。"];
+	  262 [label="Shanky: 房间里爆发出一阵大笑，小个子笑得最大声。“说得好，提图斯！”他奉承到。"];
+	  263 [label="Authority: 我得告诉你多少次……"];
+	  264 [label="Suggestion: 必须有人过去打破这种紧张的气氛了，二把手。"];
+	  265 [label="Shanky: “什么，他是在开玩笑吗……？这家伙嗑嗨了还是怎么的？”小个子难以置信地看着他的同伴们。"];
+	  266 [label="Glen: “嘿……嘿，笨蛋！！！你听力不好还是怎么的？！老大在跟你说话呢！”"];
+	  267 [label="Titus Hardie: “那*没什么*，就是个法律术语。你甚至都没有*合理的推理*。”他抱起双臂。“我不想太失礼，但我们是来这里放松的。可以麻烦你滚蛋了吗？”"];
+	  268 [label="You: “她是我正在调查的另一起案件的嫌疑人，一起毒品走私案。”"];
+	  269 [label="Jump to: [tapehub]"];
+	  270 [label="Jump to: [Elizabeth: \"\"You might want to start asking you...\"]"];
+	  271 [label="Titus Hardie: Variable[\"whirling.hardies_just_put_the_gun_in_your_mouth\"]"];
+	  272 [label="Variable[\"whirling.hardies_just_put_the_gun_in_your_mouth\"]", shape=diamond];
+	  273 [label="!(Variable[\"whirling.hardies_just_put_the_gun_in_your_mouth\"])", shape=diamond];
+	  274 [label="Kim Kitsuragi: “她没有被强暴。”警督的声音开始流露出他的不安。“证人的陈述非常明了。”"];
+	  275 [label="Physical Instrument: 他的手握成了拳头。"];
+	  276 [label="Titus Hardie: “可恶……你他妈的去审问她了，是不是？我告诉过你不要逼她！我他妈告诉过你了！”"];
+	  277 [label="Titus Hardie: “可恶……”他紧握双拳。“我对你百般仁慈，允许你在我的城市里四处窥探——我只要求了你一件事……”"];
+	  278 [label="Physical Instrument: 他的手握成了拳头。"];
+	  279 [label="Titus Hardie: IsKimHere()"];
+	  280 [label="IsKimHere()", shape=diamond];
+	  281 [label="!(IsKimHere())", shape=diamond];
+	  282 [label="Shanky: “是啊，就像我们放过老克兰西的遗孀一样。”"];
+	  283 [label="Titus Hardie: “我没时间干这种破事。”他新开了一罐啤酒。“我只希望她能在体制内找到出路，然后从另一端出来。”"];
+	  284 [label="Elizabeth: “让他走吧，提图斯。”女人举起一只手，好像想将巨人的注意力从你身上移开。“我相信他不需要这个。”"];
+	  285 [label="You: “首先，我们得谈谈你的态度问题。”"];
+	  286 [label="Jump to: [whirling.hardie_rhetoric_wc]"];
+	  287 [label="Suggestion: 现在看看其他人是如何因为不守规矩而搞砸的。"];
+	  288 [label="Interfacing: 你房间里就有一个，但它或许太破了……"];
+	  289 [label="Titus Hardie: Variable[\"whirling.hardie_hub_reached\"]"];
+	  290 [label="Variable[\"whirling.hardie_hub_reached\"]", shape=diamond];
+	  291 [label="!(Variable[\"whirling.hardie_hub_reached\"])", shape=diamond];
+	  292 [label="You: 审视房间。"];
+	  293 [label="You: 向前逼近一步。"];
+	  294 [label="Titus Hardie: IsKimHere()"];
+	  295 [label="IsKimHere()", shape=diamond];
+	  296 [label="!(IsKimHere())", shape=diamond];
+	  297 [label="Physical Instrument: 这家伙很强硬……他的眼睛开始抽搐了。你得看起来*唬人*一些。"];
+	  298 [label="You: “我会去听磁带的。”"];
+	  299 [label="Titus Hardie: “要说什么就说吧。”一个肩膀宽阔的男人用啤酒瓶指着你。"];
+	  300 [label="Titus Hardie: “冷静点，兄弟们……这两个清洁工任务艰巨呢。我是说，我无论如何都不会靠近那里的……”他拍了拍前额。"];
+	  301 [label="Physical Instrument: 提问？见鬼去吧。站到那个混蛋的跟前——用肉体对抗他。"];
+	  302 [label="Titus Hardie: “是吗，那你有吗？白痴……”他看向左手边，那里有一瓶被他遗忘的啤酒。"];
+	  303 [label="Titus Hardie: “我们有设备。”他点点头。“我们在物流系统——你以为港口是如何运作的？都是高级货。”"];
+	  304 [label="Fat Angus: “并不高级，”胖男人气喘吁吁。“你只是成天缩在笼子里，把他们说的话记下来。这笼子里热的要命。”"];
+	  305 [label="Physical Instrument: 提图斯的姿态比你第一次见到他的时候更加放松。卡拉洁事件的结束着实让他松了一口气。"];
+	  306 [label="You: “我们得谈谈后面那个吊人。”"];
+	  307 [label="Jump to: [LYNCHINGHUB]"];
+	  308 [label="You: “我发现有人看到了他被吊起来的过程，一位目击者。”"];
+	  309 [label="Jump to: [Titus Hardie: \"\"A witness?\" The tall man crosses h...\"]"];
+	  310 [label="Titus Hardie: IsKimHere()"];
+	  311 [label="IsKimHere()", shape=diamond];
+	  312 [label="!(IsKimHere())", shape=diamond];
+	  313 [label="You: “我们得谈谈那个吊人。”"];
+	  314 [label="Titus Hardie: “把她拖走了，是吗？真是冷酷啊……”他看在看着前门。“没想到你还有这个本事……”"];
+	  315 [label="You: “你从哪里弄到的这盘带子？”"];
+	  316 [label="Shanky: “是啊，看看条子身上的狠劲儿。可不能对这种狠人瞎逼逼了。”"];
+	  317 [label="Jump to: [Hardiehub1]"];
+	  318 [label="Titus Hardie: 他隆起身子，右手开始在他的大腿上敲着一段紧凑的节奏：哒哒哒。"];
+	  319 [label="Physical Instrument: 你失败了——弱点就是弱点，不会变成优势。是时候用语言交流了。"];
+	  320 [label="Jump to: [tapehub]"];
+	  321 [label="Shanky: “从那以后，一切就平静下来了。”"];
+	  322 [label="You: “三分之一的人类都会被*屠杀*——而你还在担心一个马屁精？！”"];
+	  323 [label="Jump to: [Titus Hardie: \"\"Like hell you have.\" He leans back...\"]"];
+	  324 [label="Glen: 从右边开始：44码。一个三十多岁的金发男子，非常有男子气概。"];
+	  325 [label="Jump to: [Hardiehub1]"];
+	  326 [label="Kim Kitsuragi: “露比失踪了。如果你在谋杀案的调查过程中试图躲避警察，你就会成为嫌疑人。伙计们，你们很清楚这是怎么回事。”"];
+	  327 [label="Alain: “给他看看，提。”他转向提图斯，后者还在喘着粗气。“有什么害处呢，是吧？”"];
+	  328 [label="Titus Hardie: “不，你不会。你的身体枯竭、神经衰弱、旧日的悲伤使你日益消沉。”他拒绝让步。"];
+	  329 [label="Shanky: “该去破烂工厂上班了！！”"];
+	  330 [label="Alain: “*真正的*狠角色……看看他们吧！冒冒失失，身陷囹圄。”"];
+	  331 [label="Titus Hardie: “一个孤单的小丑……看着就悲哀。”他叹了口气。“你想干什么？”"];
+	  332 [label="You: “疯狂？你在说什么？她非常清醒。”"];
+	  333 [label="Alain: “死条子，提——他们不关心真相，只想要定罪。他们在自己该死的布告牌上记比分呢。”"];
+	  334 [label="Titus Hardie: “早在他们的老大学会挥杆前就开始了。”"];
+	  335 [label="Shanky: “是啊——话别说的太早。”"];
+	  336 [label="Titus Hardie: “不得不说她离开的时候我真的很难过——我们的卡拉洁——你朋友送她出去时她的表情。该死……”他摇了摇头。"];
+	  337 [label="You: “我们得谈谈后面那个吊人。”"];
+	  338 [label="Titus Hardie: “又来？去问那个死人要签名吧——既然你是他的头号粉丝。”"];
+	  339 [label="You: “后院那个吊人——是你干的吗？”"];
+	  340 [label="You: “我刚找到了一颗*子弹*——在吊人脑袋里。”\n“你还是没有解释我在那个吊人脑袋里找到的子弹。”"];
+	  341 [label="Titus Hardie: Variable[\"yard.sense_viscal_greeting_done\"]"];
+	  342 [label="Variable[\"yard.sense_viscal_greeting_done\"]", shape=diamond];
+	  343 [label="!(Variable[\"yard.sense_viscal_greeting_done\"])", shape=diamond];
+	  344 [label="Titus Hardie: Variable[\"TASK.investigate_mysterious_door_done\"]"];
+	  345 [label="Variable[\"TASK.investigate_mysterious_door_done\"]", shape=diamond];
+	  346 [label="!(Variable[\"TASK.investigate_mysterious_door_done\"])", shape=diamond];
+	  347 [label="Hand/Eye Coordination: 门枪是一种安装在运输飞艇舱门上的枪支。它们有射杀平民的习惯，主要是农民。"];
+	  348 [label="You: “旧鱼市里有个患有紧张性精神症的老太太，就在海湾的另一边。她需要帮助。”"];
+	  349 [label="You: 提出一个关于露比为什么能做到这一点的可靠理论。"];
+	  350 [label="You: Variable[\"whirling.hardie_logic_wc\"]"];
+	  351 [label="Variable[\"whirling.hardie_logic_wc\"]", shape=diamond];
+	  352 [label="!(Variable[\"whirling.hardie_logic_wc\"])", shape=diamond];
+	  353 [label="Titus Hardie: “露比是我们的人，我们是不会把她推到国际道德伦理委员会的車轮下的。去你的吧！”"];
+	  354 [label="Shanky: “也去你的吧，道德婊兵！”当他说出最后一个音节时，他瞥了提图斯一眼。那个大个子叹了一口气。"];
+	  355 [label="Titus Hardie: “哦，你要找个替罪羊吗？”提图斯的声音不再紧张。“你怎么不早说呢，伙计？来吧，把格伦带走吧！”"];
+	  356 [label="the indian scarcity hub"];
+	  357 [label="Titus Hardie: “小丑还在附近转悠呢……现在又怎么了？”"];
+	  358 [label="Jump to: [Elizabeth: \"\"You might want to start asking you...\"]"];
+	  359 [label="You: “没想到我还有什么本事？逮捕她？”"];
+	  360 [label="Titus Hardie: Variable[\"whirling.hardie_altgreet_klaasje_arrested\"]"];
+	  361 [label="Variable[\"whirling.hardie_altgreet_klaasje_arrested\"]", shape=diamond];
+	  362 [label="!(Variable[\"whirling.hardie_altgreet_klaasje_arrested\"])", shape=diamond];
+	  363 [label="Titus Hardie: Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story\"]"];
+	  364 [label="Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story\"]", shape=diamond];
+	  365 [label="!(Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story\"])", shape=diamond];
+	  366 [label="Titus Hardie: Variable[\"whirling.hardie_intro_half_light_step_closer\"]"];
+	  367 [label="Variable[\"whirling.hardie_intro_half_light_step_closer\"]", shape=diamond];
+	  368 [label="!(Variable[\"whirling.hardie_intro_half_light_step_closer\"])", shape=diamond];
+	  369 [label="You: “提图斯，我们再过一遍谋杀案发生的那一晚。”"];
+	  370 [label="Titus Hardie: Variable[\"whirling.klaasjedoor_whore_yelled\"]"];
+	  371 [label="Variable[\"whirling.klaasjedoor_whore_yelled\"]", shape=diamond];
+	  372 [label="!(Variable[\"whirling.klaasjedoor_whore_yelled\"])", shape=diamond];
+	  373 [label="Suggestion: 一个荡妇，哈？最近有很多这样的人。从*痛苦的*男人口中说出来。无论如何，我们说到点子上了。他很生气——不，不仅于此——他感觉被*背叛*了。"];
+	  374 [label="Elizabeth: “艾弗拉特*亲自*派我来处理这件事的。如果这事搞砸了，我们都要遭殃——但是你，提图斯·哈迪，很快就会待在墓里。听明白了吗？”"];
+	  375 [label="You: “其实，智能通讯方面还是有很多学位的。”"];
+	  376 [label="Titus Hardie: “还是一副小丑的样子……”他耸耸肩。“没关系。我只希望她能在体制内找到出路，然后从另一个条路走出来。”"];
+	  377 [label="Titus Hardie: “聪明人，你去吧。”"];
+	  378 [label="Kim Kitsuragi: “如果他们不愿意的话，或许野松公司能帮上忙？也许都不行。但无论如何——我们很快就能对你的露比提出诉讼了。”"];
+	  379 [label="Jump to: [Titus Hardie: \"The big man laughs, nearly spitting...\"]"];
+	  380 [label="You: “喂，关于露比的货車司机之外的*复杂业务*——我想它跟我调查的另外一起案件有关。”"];
+	  381 [label="You: “我们再回顾一下强暴受害人的事情。”"];
+	  382 [label="Drama: 不要让他们的噪音打扰到您的平静，那不过是些平民罢了，大人。"];
+	  383 [label="Alain: “听着，条子。”那个纹身男打个响指吸引了你的注意。“我们知道那个死掉的混蛋是个强奸杀人犯，我们录下了他的忏悔。”"];
+	  384 [label="Kim Kitsuragi: “我们肯定能找到一台录音机的。”警督低声说。"];
+	  385 [label="Titus Hardie: “是吗？怎么了？”"];
+	  386 [label="Jump to: [Hardiehub1]"];
+	  387 [label="Titus Hardie: “听起来你是想把这个烂摊子推给*任何人*——现在你选中了露比。在我的地盘上，休想。”"];
+	  388 [label="Titus Hardie: “去吧，执法官。”"];
+	  389 [label="You: “废话少说，她把真相都告诉我了。”"];
+	  390 [label="Titus Hardie: “我不会出现在你的布告牌上的。如果你不听录音，我们就*没什么*可谈的了。”"];
+	  391 [label="Jump to: [IsKimHere()]"];
+	  392 [label="You: 说服提图斯他被人玩弄了。"];
+	  393 [label="You: Variable[\"whirling.hardie_rhetoric_wc\"]"];
+	  394 [label="Variable[\"whirling.hardie_rhetoric_wc\"]", shape=diamond];
+	  395 [label="!(Variable[\"whirling.hardie_rhetoric_wc\"])", shape=diamond];
+	  396 [label="Jump to: [Titus Hardie: \"\"What are you talkin' about, madman...\"]"];
+	  397 [label="Titus Hardie: “听到了吗，兄弟们？”男人环视了一圈。“看来RCM派了个狠角色过来。”"];
+	  399 [label="Titus Hardie: “这他妈是什么意思？”他站到你跟前。“你想跟我对着干吗？！”"];
+	  400 [label="Jump to: [whirling.hardie_logic_wc]"];
+	  401 [label="Titus Hardie: “哦，你们是因为他来的？”他看了一圈。“那家伙，长得挺帅哦……”"];
+	  402 [label="Titus Hardie: “哇哦……RCM派了个*狠角色*过来。”"];
+	  403 [label="Inland Empire: 他避开了她的视线——你也会如此。"];
+	  404 [label="Titus Hardie: “是啊……正常。”他似乎在思索着什么。“我想现在已经无能为力了。只希望她能在体制内找到出路，然后从另一个条路走出来。”"];
+	  405 [label="You: “先就这样吧，我会继续调查的。”（总结。）"];
+	  406 [label="Jump to: [Titus Hardie: \"\"And?\"\"]"];
+	  407 [label="Jump to: [Shanky: \"\"Yeah, you fuck with the Hardie boy...\"]"];
+	  408 [label="Titus Hardie: “又来？拜托，老兄……”他摇摇头。“行，说吧。”"];
+	  409 [label="Titus Hardie: Variable[\"whirling.hardie_noticed_gardener_angry_s\"]"];
+	  410 [label="Variable[\"whirling.hardie_noticed_gardener_angry_s\"]", shape=diamond];
+	  411 [label="!(Variable[\"whirling.hardie_noticed_gardener_angry_s\"])", shape=diamond];
+	  412 [label="You: 逐步降级。"];
+	  413 [label="Titus Hardie: Variable[\"TASK.confront_hardie_about_drug_trade_done\"]"];
+	  414 [label="Variable[\"TASK.confront_hardie_about_drug_trade_done\"]", shape=diamond];
+	  415 [label="!(Variable[\"TASK.confront_hardie_about_drug_trade_done\"])", shape=diamond];
+	  416 [label="You: 张开又握紧拳头。"];
+	  417 [label="Titus Hardie: Variable[\"whirling.hardies_suicide_greeting_done_once\"]"];
+	  418 [label="Variable[\"whirling.hardies_suicide_greeting_done_once\"]", shape=diamond];
+	  419 [label="!(Variable[\"whirling.hardies_suicide_greeting_done_once\"])", shape=diamond];
+	  420 [label="Rhetoric: 这是在转移话题。保持住你的节奏。"];
+	  421 [label="Perception (Hearing): 房间里静得连针掉在地上的声音都能听进，餐厅其它地方也都安静了下来。"];
+	  422 [label="Titus Hardie: “你不关心*证据*吗？”他的眼睛抽动着。“那你他妈当什么条子？”"];
+	  423 [label="Titus Hardie: “就好像她在走向绞刑架一样。”"];
+	  424 [label="Jump to: [Hardiehub1]"];
+	  425 [label="Logic: 他明白你在做什么，清点人数。"];
+	  12190336 [label="JUMP OUT to WHIRLING F1 / HARDIE AUTHORITY WC", shape=diamond];
+	  12180226 [label="JUMP OUT to WHIRLING F1 /  HARDIE WC MODIFIERES", shape=diamond];
+	  12180227 [label="JUMP OUT to WHIRLING F1 /  HARDIE WC MODIFIERES", shape=diamond];
+	  8070023 [label="JUMP OUT to WHIRLING F1 / HARDIE SCAN THE ROOM", shape=diamond];
+	  12200089 [label="JUMP OUT to WHIRLING F1 /  MERC TRIBUNAL WARNING", shape=diamond];
+	  8090152 [label="JUMP OUT to WHIRLING F1 / HARDIE AFTER TALKING TO KLAASJE", shape=diamond];
+	  8100269 [label="JUMP OUT to WHIRLING F1 / RHETORIC WC", shape=diamond];
+	  8141103 [label="JUMP OUT to WHIRLING F1 / LOGIC WHITE CHECK", shape=diamond];
+	  8070063 [label="JUMP OUT to WHIRLING F1 / HARDIE SCAN THE ROOM", shape=diamond];
+	  12190258 [label="JUMP OUT to WHIRLING F1 / HARDIE AUTHORITY WC", shape=diamond];
+	  8110008 [label="JUMP OUT to WHIRLING F1 / ADDITIONAL CONTENT", shape=diamond];
+	  8060474 [label="JUMP OUT to WHIRLING F1 / HARDIE TELLS YOU ABOUT LYNCHING", shape=diamond];
+	  12180033 [label="JUMP OUT to WHIRLING F1 /  HARDIE WC MODIFIERES", shape=diamond];
+	  8060390 [label="JUMP OUT to WHIRLING F1 / HARDIE TELLS YOU ABOUT LYNCHING", shape=diamond];
+	  12180211 [label="JUMP OUT to WHIRLING F1 /  HARDIE WC MODIFIERES", shape=diamond];
+	  8070005 [label="JUMP OUT to WHIRLING F1 / HARDIE SCAN THE ROOM", shape=diamond];
+	  8060024 [label="JUMP OUT to WHIRLING F1 / HARDIE TELLS YOU ABOUT LYNCHING", shape=diamond];
+	  8100091 [label="JUMP OUT to WHIRLING F1 / RHETORIC WC", shape=diamond];
+	  8140415 [label="JUMP OUT to WHIRLING F1 / LOGIC WHITE CHECK", shape=diamond];
+	  0 -> 1
+	  1 -> 139
+	  2 -> 407
+	  3 -> 155
+	  4 -> 177
+	  5 -> 155
+	  6 -> 387
+	  7 -> 210
+	  8 -> 401
+	  9 -> 143
+	  10 -> 169
+	  11 -> 161
+	  12 -> 227
+	  13 -> 275
+	  14 -> 374
+	  15 -> 16
+	  16 -> 240
+	  16 -> 375
+	  17 -> 242
+	  18 -> 261
+	  19 -> 21
+	  20 -> 19
+	  21 -> 161
+	  22 -> 162
+	  22 -> 138
+	  22 -> 337
+	  22 -> 306
+	  22 -> 285
+	  23 -> 222
+	  24 -> 344
+	  25 -> 66
+	  25 -> 3
+	  25 -> 5
+	  25 -> 6
+	  25 -> 268
+	  25 -> 112
+	  26 -> 4
+	  27 -> 200
+	  28 -> 29
+	  28 -> 30
+	  29 -> 326
+	  30 -> 247
+	  31 -> 249
+	  32 -> 67
+	  33 -> 385
+	  34 -> 194
+	  35 -> 180
+	  36 -> 37
+	  36 -> 38
+	  37 -> 27
+	  38 -> 267
+	  39 -> 89
+	  40 -> 254
+	  41 -> 42
+	  41 -> 43
+	  42 -> 357
+	  43 -> 91
+	  44 -> 161
+	  45 -> 377
+	  46 -> 334
+	  47 -> 423
+	  48 -> 404
+	  49 -> 50
+	  49 -> 51
+	  50 -> 305
+	  51 -> 317
+	  52 -> 161
+	  53 -> 23
+	  54 -> 8060474
+	  55 -> 12180227
+	  56 -> 57
+	  57 -> 58
+	  57 -> 59
+	  58 -> 243
+	  59 -> 243
+	  60 -> 425
+	  61 -> 8070023
+	  62 -> 115
+	  63 -> 205
+	  64 -> 70
+	  65 -> 188
+	  66 -> 387
+	  67 -> 420
+	  68 -> 409
+	  69 -> 269
+	  70 -> 66
+	  70 -> 3
+	  70 -> 5
+	  70 -> 6
+	  70 -> 268
+	  70 -> 79
+	  70 -> 112
+	  71 -> 257
+	  72 -> 121
+	  73 -> 161
+	  74 -> 44
+	  75 -> 251
+	  76 -> 18
+	  77 -> 130
+	  77 -> 149
+	  78 -> 8141103
+	  79 -> 150
+	  80 -> 386
+	  81 -> 82
+	  81 -> 83
+	  82 -> 84
+	  83 -> 344
+	  84 -> 344
+	  85 -> 86
+	  85 -> 87
+	  86 -> 203
+	  87 -> 101
+	  88 -> 412
+	  88 -> 253
+	  89 -> 297
+	  90 -> 212
+	  91 -> 92
+	  91 -> 93
+	  92 -> 331
+	  93 -> 271
+	  94 -> 161
+	  95 -> 144
+	  96 -> 121
+	  97 -> 193
+	  97 -> 95
+	  97 -> 215
+	  98 -> 99
+	  98 -> 100
+	  99 -> 274
+	  100 -> 276
+	  101 -> 251
+	  102 -> 334
+	  103 -> 241
+	  103 -> 195
+	  104 -> 12190258
+	  105 -> 336
+	  106 -> 77
+	  107 -> 406
+	  108 -> 136
+	  109 -> 110
+	  109 -> 111
+	  110 -> 386
+	  111 -> 80
+	  112 -> 294
+	  113 -> 114
+	  114 -> 161
+	  115 -> 116
+	  115 -> 117
+	  116 -> 402
+	  117 -> 397
+	  118 -> 120
+	  118 -> 119
+	  119 -> 157
+	  120 -> 413
+	  121 -> 161
+	  122 -> 161
+	  123 -> 224
+	  124 -> 216
+	  125 -> 126
+	  125 -> 127
+	  126 -> 14
+	  127 -> 374
+	  128 -> 147
+	  129 -> 159
+	  130 -> 160
+	  131 -> 338
+	  132 -> 55
+	  133 -> 134
+	  133 -> 135
+	  134 -> 287
+	  135 -> 2
+	  136 -> 8100091
+	  137 -> 72
+	  138 -> 265
+	  139 -> 140
+	  139 -> 141
+	  140 -> 235
+	  141 -> 190
+	  142 -> 255
+	  143 -> 71
+	  144 -> 96
+	  145 -> 137
+	  146 -> 218
+	  146 -> 173
+	  147 -> 18
+	  148 -> 76
+	  149 -> 284
+	  150 -> 263
+	  151 -> 152
+	  152 -> 325
+	  154 -> 64
+	  155 -> 353
+	  156 -> 75
+	  157 -> 192
+	  158 -> 356
+	  159 -> 52
+	  160 -> 424
+	  161 -> 131
+	  161 -> 132
+	  161 -> 392
+	  161 -> 153
+	  161 -> 154
+	  161 -> 33
+	  161 -> 292
+	  161 -> 293
+	  161 -> 45
+	  161 -> 308
+	  161 -> 53
+	  161 -> 56
+	  161 -> 189
+	  161 -> 197
+	  161 -> 198
+	  161 -> 208
+	  161 -> 339
+	  161 -> 340
+	  161 -> 348
+	  161 -> 349
+	  161 -> 223
+	  161 -> 107
+	  161 -> 369
+	  161 -> 380
+	  161 -> 381
+	  162 -> 265
+	  163 -> 34
+	  164 -> 182
+	  165 -> 31
+	  166 -> 251
+	  167 -> 353
+	  168 -> 251
+	  169 -> 358
+	  170 -> 94
+	  171 -> 282
+	  172 -> 224
+	  173 -> 283
+	  174 -> 161
+	  175 -> 61
+	  176 -> 378
+	  177 -> 178
+	  177 -> 179
+	  178 -> 245
+	  179 -> 356
+	  180 -> 344
+	  181 -> 85
+	  182 -> 184
+	  182 -> 183
+	  183 -> 384
+	  184 -> 252
+	  185 -> 186
+	  185 -> 187
+	  186 -> 232
+	  187 -> 69
+	  188 -> 35
+	  189 -> 234
+	  191 -> 239
+	  192 -> 161
+	  193 -> 328
+	  194 -> 347
+	  195 -> 335
+	  196 -> 12180226
+	  197 -> 323
+	  198 -> 199
+	  199 -> 12200089
+	  200 -> 201
+	  200 -> 202
+	  201 -> 81
+	  202 -> 310
+	  203 -> 101
+	  204 -> 214
+	  205 -> 206
+	  205 -> 207
+	  206 -> 244
+	  207 -> 8
+	  207 -> 313
+	  207 -> 62
+	  208 -> 248
+	  209 -> 185
+	  210 -> 97
+	  211 -> 142
+	  212 -> 329
+	  213 -> 143
+	  214 -> 161
+	  215 -> 145
+	  216 -> 125
+	  217 -> 240
+	  218 -> 376
+	  219 -> 129
+	  219 -> 106
+	  220 -> 211
+	  221 -> 401
+	  222 -> 8060390
+	  223 -> 396
+	  224 -> 124
+	  225 -> 213
+	  226 -> 266
+	  227 -> 228
+	  227 -> 229
+	  228 -> 250
+	  229 -> 277
+	  230 -> 161
+	  231 -> 264
+	  232 -> 288
+	  233 -> 155
+	  234 -> 78
+	  235 -> 236
+	  235 -> 237
+	  236 -> 360
+	  237 -> 118
+	  238 -> 161
+	  239 -> 74
+	  240 -> 303
+	  241 -> 304
+	  242 -> 320
+	  243 -> 12190336
+	  244 -> 8
+	  244 -> 313
+	  244 -> 62
+	  245 -> 158
+	  246 -> 88
+	  247 -> 36
+	  248 -> 370
+	  249 -> 32
+	  250 -> 13
+	  251 -> 163
+	  251 -> 164
+	  251 -> 260
+	  251 -> 298
+	  251 -> 405
+	  251 -> 315
+	  252 -> 209
+	  253 -> 399
+	  254 -> 7
+	  255 -> 9
+	  256 -> 10
+	  257 -> 258
+	  257 -> 259
+	  258 -> 122
+	  259 -> 301
+	  260 -> 422
+	  261 -> 49
+	  262 -> 307
+	  263 -> 25
+	  264 -> 383
+	  265 -> 63
+	  266 -> 382
+	  267 -> 200
+	  268 -> 387
+	  269 -> 251
+	  270 -> 143
+	  271 -> 272
+	  271 -> 273
+	  272 -> 417
+	  273 -> 289
+	  274 -> 13
+	  275 -> 123
+	  276 -> 275
+	  277 -> 278
+	  278 -> 172
+	  279 -> 280
+	  279 -> 281
+	  280 -> 102
+	  281 -> 46
+	  282 -> 105
+	  283 -> 18
+	  284 -> 20
+	  285 -> 391
+	  286 -> 8100269
+	  287 -> 407
+	  288 -> 269
+	  289 -> 290
+	  289 -> 291
+	  290 -> 204
+	  291 -> 299
+	  292 -> 341
+	  293 -> 246
+	  294 -> 296
+	  294 -> 295
+	  295 -> 233
+	  296 -> 355
+	  297 -> 40
+	  298 -> 388
+	  299 -> 26
+	  300 -> 270
+	  301 -> 366
+	  302 -> 217
+	  303 -> 279
+	  304 -> 17
+	  305 -> 317
+	  306 -> 221
+	  307 -> 8060024
+	  308 -> 309
+	  309 -> 12180211
+	  310 -> 312
+	  310 -> 311
+	  311 -> 176
+	  312 -> 24
+	  313 -> 211
+	  314 -> 359
+	  315 -> 15
+	  316 -> 256
+	  317 -> 161
+	  318 -> 297
+	  319 -> 121
+	  320 -> 251
+	  321 -> 103
+	  322 -> 146
+	  323 -> 12180033
+	  324 -> 175
+	  325 -> 161
+	  326 -> 36
+	  327 -> 181
+	  328 -> 319
+	  329 -> 300
+	  330 -> 316
+	  331 -> 238
+	  332 -> 98
+	  333 -> 390
+	  334 -> 321
+	  335 -> 320
+	  336 -> 128
+	  336 -> 322
+	  336 -> 47
+	  336 -> 48
+	  336 -> 148
+	  337 -> 220
+	  338 -> 262
+	  339 -> 54
+	  340 -> 196
+	  341 -> 342
+	  341 -> 343
+	  342 -> 324
+	  343 -> 60
+	  344 -> 345
+	  344 -> 346
+	  345 -> 386
+	  346 -> 109
+	  347 -> 168
+	  348 -> 379
+	  349 -> 350
+	  350 -> 352
+	  350 -> 351
+	  351 -> 400
+	  352 -> 400
+	  353 -> 354
+	  354 -> 28
+	  355 -> 65
+	  356 -> 8
+	  356 -> 313
+	  356 -> 226
+	  356 -> 62
+	  357 -> 11
+	  358 -> 143
+	  359 -> 171
+	  360 -> 361
+	  360 -> 362
+	  361 -> 118
+	  362 -> 314
+	  363 -> 364
+	  363 -> 365
+	  364 -> 170
+	  365 -> 41
+	  366 -> 368
+	  366 -> 367
+	  367 -> 73
+	  368 -> 161
+	  369 -> 108
+	  370 -> 371
+	  370 -> 372
+	  371 -> 373
+	  372 -> 165
+	  373 -> 31
+	  374 -> 68
+	  375 -> 302
+	  376 -> 18
+	  377 -> 174
+	  378 -> 344
+	  379 -> 8110008
+	  380 -> 151
+	  381 -> 408
+	  382 -> 22
+	  383 -> 327
+	  384 -> 252
+	  385 -> 166
+	  386 -> 161
+	  387 -> 167
+	  388 -> 230
+	  389 -> 13
+	  390 -> 156
+	  391 -> 115
+	  392 -> 393
+	  393 -> 394
+	  393 -> 395
+	  394 -> 286
+	  395 -> 286
+	  396 -> 8070005
+	  397 -> 225
+	  399 -> 416
+	  399 -> 39
+	  400 -> 8140415
+	  401 -> 90
+	  402 -> 330
+	  403 -> 48
+	  403 -> 322
+	  403 -> 148
+	  403 -> 128
+	  404 -> 18
+	  405 -> 219
+	  406 -> 8090152
+	  407 -> 8070063
+	  408 -> 104
+	  409 -> 410
+	  409 -> 411
+	  410 -> 231
+	  411 -> 421
+	  412 -> 113
+	  413 -> 414
+	  413 -> 415
+	  414 -> 170
+	  415 -> 363
+	  416 -> 318
+	  417 -> 418
+	  417 -> 419
+	  418 -> 289
+	  419 -> 191
+	  420 -> 332
+	  420 -> 12
+	  420 -> 389
+	  421 -> 264
+	  422 -> 333
+	  423 -> 403
+	  424 -> 161
+	  425 -> 133
+}
+

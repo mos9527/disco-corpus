@@ -1,0 +1,95 @@
+# KIM SWITCH / DISCUSSING KLAASJE DOWNSTAIRS
+# this should blink ONLY DOWNSTAIRS and after Klaasje rape hub exit
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"You think this will make them cooperate?\""];
+	  3 [label="Volition: Like hell you would have -- remember?"];
+	  4 [label="Kim Kitsuragi: \"You think so?\" A shadow runs across his face. \"She seemed forthcoming... Unusually so. Being forthcoming about some things is a good way to obscure other things.\""];
+	  5 [label="You: \"I'm not sure she *had* to lie. I wouldn't have known.\""];
+	  6 [label="Kim Kitsuragi: \"You think so?\" A shadow runs across his face. \"Being candid is the best way to lie. The appearance of candour, with some facts thrown in, draws attention away from whatever one chooses to omit.\""];
+	  7 [label="You: \"Perhaps that's because you *are*?\""];
+	  8 [label="Kim Kitsuragi: \"She seemed forthcoming to me... Unusually so. Being forthcoming with some things is a good way to obscure other things. But I wouldn't call myself compromised...\""];
+	  10 [label="Kim Kitsuragi: \"Anyway, we should move. I suspect our investigation will bring us back soon enough.\""];
+	  11 [label="You: \"Got it. Let's go.\" [Leave.]"];
+	  12 [label="Drama: You would have caught it."];
+	  13 [label="You: (Nod.) \"I would have caught it.\""];
+	  14 [label="Kim Kitsuragi: \"So you said to her.... What did you *mean* by it?\""];
+	  15 [label="Kim Kitsuragi: \"What do you mean by that?\""];
+	  16 [label="Variable[\"whirling.klaasje_drama_would_have_caught_it\"]"];
+	  17 [label="Variable[\"whirling.klaasje_drama_would_have_caught_it\"]", shape=diamond];
+	  18 [label="!(Variable[\"whirling.klaasje_drama_would_have_caught_it\"])", shape=diamond];
+	  19 [label="Variable[\"XP.detect_compromized_skillset\"]"];
+	  20 [label="Variable[\"XP.detect_compromized_skillset\"]", shape=diamond];
+	  21 [label="!(Variable[\"XP.detect_compromized_skillset\"])", shape=diamond];
+	  22 [label="You: \"Something is off here.\""];
+	  23 [label="You: \"Well. I am, anyway.\""];
+	  24 [label="You: \"She seems candid.\""];
+	  25 [label="Kim Kitsuragi: \"What else could she have done? Lie? She saw there was no way to lie and get away with it.\""];
+	  26 [label="nomesshub"];
+	  27 [label="Kim Kitsuragi: \"The best liars are always forthcoming... Anyway, we should move. I suspect our investigation will bring us back here soon enough.\""];
+	  28 [label="lies_and_lies"];
+	  29 [label="Variable[\"whirling.klaasje_said_manipulation\"]"];
+	  30 [label="Variable[\"whirling.klaasje_said_manipulation\"]", shape=diamond];
+	  31 [label="!(Variable[\"whirling.klaasje_said_manipulation\"])", shape=diamond];
+	  32 [label="fixthehub"];
+	  33 [label="You: (Whisper.) \"She has half my skillset compromised, singing her tune. My assessments of her are untrustworthy.\""];
+	  34 [label="Kim Kitsuragi: \"I am not easily swayed by young women. But on the other hand... the best liars are candid. And she was candid.\""];
+	  35 [label="Kim Kitsuragi: \"Nothing will make them respect the RCM. But it will disrupt the game they prepared for us. We just stripped off one layer of whatever it is. Her decision to not corroborate their story was *definitely* not part of the plan.\""];
+	  36 [label="You: (Say in a hushed voice.) \"Why *did* she tell us all of that?\""];
+	  37 [label="Kim Kitsuragi: \"If not you, then me. It was a smart move from her.\""];
+	  38 [label="You: (Whisper) \"I know she's manipulative.\""];
+	  39 [label="Kim Kitsuragi: \"She may be trying to control the pace of the investigation. Anyway, we should move. I suspect our inquiries will bring us back here soon enough.\""];
+	  40 [label="You: \"I have reason to doubt my ability to see through her lies.\""];
+	  41 [label="Volition: The lieutenant seems oddly sure he is not compromised, not psychologically at least. Is it hubris?"];
+	  0 -> 1
+	  1 -> 2
+	  2 -> 35
+	  3 -> 32
+	  4 -> 27
+	  5 -> 37
+	  6 -> 39
+	  7 -> 34
+	  8 -> 23
+	  8 -> 7
+	  12 -> 16
+	  13 -> 37
+	  14 -> 33
+	  15 -> 33
+	  16 -> 17
+	  16 -> 18
+	  17 -> 19
+	  18 -> 26
+	  19 -> 20
+	  19 -> 21
+	  20 -> 3
+	  21 -> 26
+	  22 -> 4
+	  23 -> 34
+	  24 -> 6
+	  25 -> 12
+	  26 -> 40
+	  26 -> 5
+	  26 -> 13
+	  28 -> 24
+	  28 -> 38
+	  28 -> 22
+	  29 -> 30
+	  29 -> 31
+	  30 -> 14
+	  31 -> 15
+	  32 -> 40
+	  32 -> 5
+	  32 -> 13
+	  33 -> 8
+	  34 -> 41
+	  35 -> 11
+	  35 -> 36
+	  36 -> 25
+	  37 -> 28
+	  38 -> 29
+	  40 -> 37
+	  41 -> 10
+}
+

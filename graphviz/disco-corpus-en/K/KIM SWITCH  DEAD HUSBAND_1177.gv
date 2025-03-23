@@ -1,0 +1,144 @@
+# KIM SWITCH / DEAD HUSBAND
+# After you have failed the redcheck when telling WCW about her dead husband.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Conceptualization: Can't bring the dead back."];
+	  3 [label="Jump to: [Untitled hub]"];
+	  4 [label="Esprit de Corps: I really have, he thinks. She was strong. She made it easy for us."];
+	  5 [label="You: \"Right, this is closed then.\" [Leave.]"];
+	  6 [label="Kim Kitsuragi: \"That's it. We should get back to our case now that our duty here is done.\""];
+	  7 [label="Jump to: [kim wcw failure]"];
+	  8 [label="Kim Kitsuragi: \"But yes, that's on me. Let's get on with the murder investigation.\""];
+	  9 [label="Untitled hub"];
+	  10 [label="Kim Kitsuragi: \"I'll call the station tomorrow and let them know the name of the deceased.\""];
+	  11 [label="Kim Kitsuragi: \"*Well*? No, it didn't.\""];
+	  12 [label="You: \"Great, the case is closed then.\" [Leave.]"];
+	  13 [label="IsTaskActive(\"TASK.ask_the_wind\")--[[ Variable[ ]]"];
+	  14 [label="IsTaskActive(\"TASK.ask_the_wind\")--[[ Variable[ ]]", shape=diamond];
+	  15 [label="!(IsTaskActive(\"TASK.ask_the_wind\")--[[ Variable[ ]])", shape=diamond];
+	  16 [label="Kim Kitsuragi: \"Sure, I'll call the station when we're done with the day. Let's go.\""];
+	  17 [label="Kim Kitsuragi: \"It's alright, don't worry about it.\" His eyes wander over the sleeping district."];
+	  18 [label="You: \"What about Billie and her kids?\""];
+	  19 [label="IsNighttime()"];
+	  20 [label="IsNighttime()", shape=diamond];
+	  21 [label="!(IsNighttime())", shape=diamond];
+	  22 [label="Kim Kitsuragi: \"Anyway, I'll call the station when we're finished with the day and let them know the name of the deceased.\""];
+	  23 [label="Kim Kitsuragi: \"That's it. We should get back to our case. There's nothing more we can do here.\""];
+	  24 [label="You: Say nothing."];
+	  25 [label="Untitled hub"];
+	  26 [label="You: \"That's it?\""];
+	  27 [label="You: \"I'm sorry, I know I fucked up.\""];
+	  28 [label="Kim Kitsuragi: \"You did well,\" the lieutenant says as soon as you've left the apartment. The balcony feels cool and quiet, with a stunning view over the sleeping district."];
+	  29 [label="Kim Kitsuragi: \"It's alright, don't worry about it.\" His eyes wander over the streets."];
+	  30 [label="Volition: They have to. It's not your place to live their lives."];
+	  31 [label="Volition: They have to. It's not your place to live their lives."];
+	  32 [label="Shivers: You look south, over the crumbling balustrade. There -- 1.2 kilometres away -- a piece of broken stone cuts into the sky. A tomb. On it, a mural that used to say: tomorrow is just a whisper away. You cannot *really* see the Feld building from here, but somehow you feel like you should return to it."];
+	  33 [label="Kim Kitsuragi: \"I'll call the station tomorrow and let them know the name of the deceased.\""];
+	  34 [label="Kim Kitsuragi: \"Anyway, I'll call the station tomorrow and let them know the name of the deceased.\""];
+	  35 [label="Kim Kitsuragi: \"I'll call the station when we're finished with the day and let them know the name of the deceased.\""];
+	  36 [label="You: \"I could have done more.\""];
+	  37 [label="IsNighttime()"];
+	  38 [label="IsNighttime()", shape=diamond];
+	  39 [label="!(IsNighttime())", shape=diamond];
+	  40 [label="Kim Kitsuragi: \"So, the death notification...\" the lieutenant says as soon as you've left the apartment."];
+	  42 [label="You: (Nod.) \"What now?\""];
+	  43 [label="IsNighttime()"];
+	  44 [label="IsNighttime()", shape=diamond];
+	  45 [label="!(IsNighttime())", shape=diamond];
+	  46 [label="You: \"That's it?\""];
+	  47 [label="Jump to: [Untitled hub]"];
+	  48 [label="You: \"There's nothing to discuss, let's move on.\" [Leave.]"];
+	  49 [label="Kim Kitsuragi: \"There's not much we can do for them anymore, I'm afraid.\""];
+	  50 [label="Kim Kitsuragi: He looks at you. \"And... officer -- I've seen worse. This wasn't the worst I've seen, okay? Now, let's go.\""];
+	  51 [label="Kim Kitsuragi: \"Well, I'll call the station when we're done with the day and inform them about the identity of the deceased.\""];
+	  52 [label="You: \"That did not go...\""];
+	  53 [label="Kim Kitsuragi: \"Can't save the whole world, you know?\""];
+	  54 [label="Empathy: He's avoiding your gaze. This is the time to say how sorry you are about how things went."];
+	  55 [label="You: \"What about Billie and her kids?\""];
+	  56 [label="Jump to: [Empathy: \"He's avoiding your gaze. This is th...\"]"];
+	  57 [label="Kim Kitsuragi: \"You did enough.\" He pauses, rubbing his hands together to generate some heat."];
+	  58 [label="Kim Kitsuragi: \"I'll call the station when we're finished with the day and let them know the name of the deceased.\""];
+	  59 [label="Kim Kitsuragi: He nods. \"Let's go.\""];
+	  60 [label="Kim Kitsuragi: \"They'll manage.\""];
+	  61 [label="You: \"Right, lets try to get back to it then.\" [Leave.]"];
+	  62 [label="Jump to: [kim wcw success]"];
+	  63 [label="kim wcw failure"];
+	  64 [label="kim wcw success"];
+	  0 -> 1
+	  1 -> 40
+	  2 -> 24
+	  2 -> 42
+	  3 -> 25
+	  4 -> 13
+	  5 -> 59
+	  6 -> 3
+	  7 -> 63
+	  8 -> 13
+	  9 -> 18
+	  9 -> 61
+	  9 -> 46
+	  10 -> 9
+	  11 -> 63
+	  12 -> 16
+	  13 -> 14
+	  13 -> 15
+	  14 -> 32
+	  16 -> 13
+	  17 -> 10
+	  18 -> 49
+	  19 -> 20
+	  19 -> 21
+	  20 -> 34
+	  21 -> 22
+	  22 -> 25
+	  23 -> 47
+	  24 -> 19
+	  25 -> 26
+	  25 -> 5
+	  25 -> 55
+	  26 -> 6
+	  27 -> 43
+	  29 -> 58
+	  30 -> 3
+	  31 -> 47
+	  33 -> 25
+	  34 -> 25
+	  35 -> 25
+	  36 -> 57
+	  37 -> 38
+	  37 -> 39
+	  38 -> 33
+	  39 -> 35
+	  40 -> 54
+	  42 -> 37
+	  43 -> 44
+	  43 -> 45
+	  44 -> 17
+	  45 -> 29
+	  46 -> 23
+	  47 -> 9
+	  48 -> 51
+	  49 -> 31
+	  50 -> 4
+	  51 -> 8
+	  52 -> 11
+	  53 -> 2
+	  54 -> 63
+	  55 -> 60
+	  56 -> 54
+	  57 -> 53
+	  58 -> 9
+	  59 -> 13
+	  60 -> 30
+	  61 -> 50
+	  62 -> 64
+	  63 -> 48
+	  63 -> 27
+	  63 -> 52
+	  64 -> 42
+	  64 -> 36
+	  64 -> 12
+}
+

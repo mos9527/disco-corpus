@@ -1,0 +1,86 @@
+# VILLAGE / SHACK DOOR
+# The shack door dialogue, if you have gained access to the shack where you can sleep. It's locked until you get it from the Washerwoman.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Shack Door: Variable[\"village.hq_door_first_greeting_done\"]  and  IsHourBetween(21, 4)"];
+	  3 [label="Variable[\"village.hq_door_first_greeting_done\"]  and  IsHourBetween(21, 4)", shape=diamond];
+	  4 [label="!(Variable[\"village.hq_door_first_greeting_done\"]  and  IsHourBetween(21, 4))", shape=diamond];
+	  5 [label="Shack Door: It's getting cold this late in the night. Time to call it a day.\nIt's getting late and it's raining. Time to call it a day.\nIt's getting late and it's snowing. Time to call it a day."];
+	  6 [label="Shack Door: IsKimHere()"];
+	  7 [label="IsKimHere()", shape=diamond];
+	  8 [label="!(IsKimHere())", shape=diamond];
+	  9 [label="Kim Kitsuragi: \"I'll wait outside to give you some time and privacy to check out your new living arrangement. But just so you know...\"\n\"I'll wait outside to give you some time and privacy to check out your new living arrangement and look for any signs of Ruby. But just so you know...\""];
+	  10 [label="Kim Kitsuragi: \"After we're done with the day, I'll still be staying in the Whirling-in-Rags for the night. We'll meet in front of the shack in the morning.\""];
+	  11 [label="Kim Kitsuragi: \"I'll be sleeping in my room in the Whirling. We'll meet in front of the shack in the morning.\"\n\"It's getting late. I'll let you sweep this place on your own. I'm sure you can handle the washerwoman... I'll be sleeping in my room in the Whirling. We'll meet in front of the shack in the morning.\""];
+	  12 [label="Shack Door: IsHourBetween(21, 4)"];
+	  13 [label="IsHourBetween(21, 4)", shape=diamond];
+	  14 [label="!(IsHourBetween(21, 4))", shape=diamond];
+	  16 [label="You: \"Good night, Kim.\" (Send him away for the night.)"];
+	  17 [label="Shack Door: Variable[\"TASK.washerwoman_hiding_something\"]  and  Variable[\"TASK.washerwoman_hiding_something_done\"] == false"];
+	  18 [label="Variable[\"TASK.washerwoman_hiding_something\"]  and  Variable[\"TASK.washerwoman_hiding_something_done\"] == false", shape=diamond];
+	  19 [label="!(Variable[\"TASK.washerwoman_hiding_something\"]  and  Variable[\"TASK.washerwoman_hiding_something_done\"] == false)", shape=diamond];
+	  20 [label="You: Not yet. [Leave.]"];
+	  21 [label="Kim Kitsuragi: \"Good night, officer. We'll meet in front of the shack in the morning.\""];
+	  22 [label="You: Unlock the shack door with the key."];
+	  23 [label="Kim Kitsuragi: \"I'm afraid we don't have time for rest stops right now, officer. We should really get back to the Whirling.\""];
+	  24 [label="Shack Door: ..."];
+	  25 [label="Kim Kitsuragi: \"Good night.\" He smiles: \"And try not to break the case without me.\""];
+	  26 [label="You: Never mind. [Leave.]"];
+	  27 [label="You: \"Right.\" [Leave.]"];
+	  28 [label="You: Enter the shack."];
+	  29 [label="Shack Door: IsHourBetween(21, 4)"];
+	  30 [label="IsHourBetween(21, 4)", shape=diamond];
+	  31 [label="!(IsHourBetween(21, 4))", shape=diamond];
+	  32 [label="You: \"I'll sleep here then. See you in the morning.\" (Keep turning the key.)"];
+	  33 [label="Shack Door: Variable[\"TASK.locate_ruby_on_the_coast_done\"]  and  Variable[\"TASK.return_to_whirling_done\"] == false"];
+	  34 [label="Variable[\"TASK.locate_ruby_on_the_coast_done\"]  and  Variable[\"TASK.return_to_whirling_done\"] == false", shape=diamond];
+	  35 [label="!(Variable[\"TASK.locate_ruby_on_the_coast_done\"]  and  Variable[\"TASK.return_to_whirling_done\"] == false)", shape=diamond];
+	  36 [label="You: Enter the shack."];
+	  37 [label="Shack Door: The key turns with a satisfying click. You can enter the shack now."];
+	  38 [label="Shack Door: The door has seen better days -- the layer of paint has started to peel off due to the salt and wind from the sea. Even the lock looks slightly rusted."];
+	  0 -> 1
+	  1 -> 33
+	  2 -> 3
+	  2 -> 4
+	  3 -> 5
+	  4 -> 38
+	  5 -> 16
+	  5 -> 36
+	  5 -> 20
+	  6 -> 8
+	  6 -> 7
+	  7 -> 29
+	  8 -> 12
+	  9 -> 10
+	  10 -> 37
+	  11 -> 17
+	  12 -> 13
+	  12 -> 14
+	  13 -> 24
+	  14 -> 37
+	  16 -> 21
+	  17 -> 18
+	  17 -> 19
+	  18 -> 32
+	  19 -> 28
+	  21 -> 28
+	  22 -> 6
+	  23 -> 27
+	  25 -> 28
+	  28 -> 24
+	  29 -> 30
+	  29 -> 31
+	  30 -> 11
+	  31 -> 9
+	  32 -> 25
+	  33 -> 34
+	  33 -> 35
+	  34 -> 23
+	  35 -> 2
+	  36 -> 24
+	  38 -> 26
+	  38 -> 22
+}
+

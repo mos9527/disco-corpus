@@ -1,0 +1,211 @@
+# DOOMED / BREAKER BOX
+# Doomed cellar, breaker box. DONE. 
+#
+#Get task finished for locate a fridge if you need to plug the fridge back in.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Jump to: [breaker hub]"];
+	  3 [label="IsKimHere()"];
+	  4 [label="IsKimHere()", shape=diamond];
+	  5 [label="!(IsKimHere())", shape=diamond];
+	  6 [label="Variable[\"doomed.breakerbox_black_wire_plugged_out\"]"];
+	  7 [label="Variable[\"doomed.breakerbox_black_wire_plugged_out\"]", shape=diamond];
+	  8 [label="!(Variable[\"doomed.breakerbox_black_wire_plugged_out\"])", shape=diamond];
+	  9 [label="Kim Kitsuragi: \"Great. The owners of this building will just have to keep paying for the electricity sucked up by this monstrosity a little longer. Let's return to the fridge.\""];
+	  10 [label="IsTaskActive(\"TASK.help_revachol_ice_city_cut_losses\")--[[ Variable[ ]]"];
+	  11 [label="IsTaskActive(\"TASK.help_revachol_ice_city_cut_losses\")--[[ Variable[ ]]", shape=diamond];
+	  12 [label="!(IsTaskActive(\"TASK.help_revachol_ice_city_cut_losses\")--[[ Variable[ ]])", shape=diamond];
+	  14 [label="Half Light: Rip the red one out! Look how giant and red and inviting it is..."];
+	  15 [label="Breaker Box: Two cables are plugged into the breaker box. The red one leads off into the darkness, while the black one seems to be feeding a buzzing little fridge-like thing in the corner."];
+	  16 [label="Variable[\"doomed.icebear_main_hub_reached\"]"];
+	  17 [label="Variable[\"doomed.icebear_main_hub_reached\"]", shape=diamond];
+	  18 [label="!(Variable[\"doomed.icebear_main_hub_reached\"])", shape=diamond];
+	  19 [label="Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge\"]"];
+	  20 [label="Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge\"]", shape=diamond];
+	  21 [label="!(Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge\"])", shape=diamond];
+	  22 [label="Variable[\"TASK.get_frozen_ice_cream_maker_open\"]"];
+	  23 [label="Variable[\"TASK.get_frozen_ice_cream_maker_open\"]", shape=diamond];
+	  24 [label="!(Variable[\"TASK.get_frozen_ice_cream_maker_open\"])", shape=diamond];
+	  25 [label="Breaker Box: Two cables are plugged into the breaker box. The red one leads to the ice bear fridge and the black one to some kind of a buzzing fridge-like thing nearby."];
+	  26 [label="Kim Kitsuragi: The lieutenant raises his brows, but doesn't say anything. The electric distribution board now has one cable missing.\n\"Okay. That still doesn't mean you can open the ice cream maker, you know? I bet it's still pretty much impossible...\""];
+	  27 [label="Kim Kitsuragi: \"Great. The owners of this building will just have to keep paying for the electricity sucked up by this monstrosity a little longer.\""];
+	  28 [label="Breaker Box: Somewhere in the dark, a giant electric mammal stirs to life..."];
+	  29 [label="Variable[\"doomed.orb_noticed_frozen_ice_cream_maker\"]  or  Variable[\"doomed.orb_noticed_melting_ice_cream_maker\"]"];
+	  30 [label="Variable[\"doomed.orb_noticed_frozen_ice_cream_maker\"]  or  Variable[\"doomed.orb_noticed_melting_ice_cream_maker\"]", shape=diamond];
+	  31 [label="!(Variable[\"doomed.orb_noticed_frozen_ice_cream_maker\"]  or  Variable[\"doomed.orb_noticed_melting_ice_cream_maker\"])", shape=diamond];
+	  32 [label="Jump to: [breaker hub]"];
+	  33 [label="Kim Kitsuragi: \"Very smart. Opening the lid should be much easier after the ice cream maker has defrosted. But we're still going to need a proper prybar.\""];
+	  34 [label="IsTaskActive(\"TASK.plug_in_the_fridge\")--[[ Variable[ ]]"];
+	  35 [label="IsTaskActive(\"TASK.plug_in_the_fridge\")--[[ Variable[ ]]", shape=diamond];
+	  36 [label="!(IsTaskActive(\"TASK.plug_in_the_fridge\")--[[ Variable[ ]])", shape=diamond];
+	  37 [label="IsKimHere()"];
+	  38 [label="IsKimHere()", shape=diamond];
+	  39 [label="!(IsKimHere())", shape=diamond];
+	  40 [label="You: \"It's black, it's not like it's the red one.\""];
+	  41 [label="Variable[\"doomed.breakerbox_red_wire_plugged_out\"]"];
+	  42 [label="Variable[\"doomed.breakerbox_red_wire_plugged_out\"]", shape=diamond];
+	  43 [label="!(Variable[\"doomed.breakerbox_red_wire_plugged_out\"])", shape=diamond];
+	  44 [label="You: Unplug the giant red cable."];
+	  45 [label="Breaker Box: Two cables are plugged into the breaker box. The red one leads to the ice bear fridge and the black one to the ice cream maker nearby."];
+	  46 [label="Breaker Box: Only the black cable is plugged into the breaker box, while the red one lies neglected on the floor."];
+	  47 [label="Breaker Box: A giant electric mammal awakens. The dead body is going to be safe in the embrace of its cold innards."];
+	  48 [label="Variable[\"doomed.orb_noticed_frozen_ice_cream_maker\"]  or  Variable[\"doomed.orb_noticed_melting_ice_cream_maker\"]"];
+	  49 [label="Variable[\"doomed.orb_noticed_frozen_ice_cream_maker\"]  or  Variable[\"doomed.orb_noticed_melting_ice_cream_maker\"]", shape=diamond];
+	  50 [label="!(Variable[\"doomed.orb_noticed_frozen_ice_cream_maker\"]  or  Variable[\"doomed.orb_noticed_melting_ice_cream_maker\"])", shape=diamond];
+	  51 [label="Breaker Box: Only the red cable is plugged into the breaker box, while the black one lies neglected on the floor."];
+	  52 [label="Variable[\"doomed.kim_body_in_fridge_plug_in\"]"];
+	  53 [label="Variable[\"doomed.kim_body_in_fridge_plug_in\"]", shape=diamond];
+	  54 [label="!(Variable[\"doomed.kim_body_in_fridge_plug_in\"])", shape=diamond];
+	  55 [label="CheckItem(\"kvalsund_multitool\")"];
+	  56 [label="CheckItem(\"kvalsund_multitool\")", shape=diamond];
+	  57 [label="!(CheckItem(\"kvalsund_multitool\"))", shape=diamond];
+	  58 [label="You: Plug in the giant red cable."];
+	  59 [label="Breaker Box: Somewhere a machine hums along with the current, happy and contented."];
+	  60 [label="Kim Kitsuragi: \"Very smart. Opening the lid should be much easier after the ice cream maker has defrosted.\""];
+	  61 [label="Inland Empire: Don't rip the red one out -- you'll awaken the ghosts!"];
+	  62 [label="You: \"I don't know why I unplugged it, I do things without any reason.\""];
+	  63 [label="Variable[\"TASK.fridge_victims_body\"]  and  Variable[\"doomed.icebear_main_hub_reached\"]  and  Variable[\"TASK.send_corpse_to_processing_done\"] == false"];
+	  64 [label="Variable[\"TASK.fridge_victims_body\"]  and  Variable[\"doomed.icebear_main_hub_reached\"]  and  Variable[\"TASK.send_corpse_to_processing_done\"] == false", shape=diamond];
+	  65 [label="!(Variable[\"TASK.fridge_victims_body\"]  and  Variable[\"doomed.icebear_main_hub_reached\"]  and  Variable[\"TASK.send_corpse_to_processing_done\"] == false)", shape=diamond];
+	  66 [label="breaker hub"];
+	  67 [label="You: \"Because it's black, the colour of immeasurable cosmos.\""];
+	  68 [label="Breaker Box: Both cables are unplugged from the breaker box."];
+	  69 [label="You: Plug in the black cable."];
+	  70 [label="Breaker Box: Two cables are plugged into the breaker box. The red one leads off into the darkness and the black one to the ice cream maker nearby."];
+	  71 [label="Kim Kitsuragi: \"Why did you do that?\""];
+	  72 [label="IsKimHere()"];
+	  73 [label="IsKimHere()", shape=diamond];
+	  74 [label="!(IsKimHere())", shape=diamond];
+	  75 [label="Kim Kitsuragi: \"Uh, what are you doing? We need the fridge for the body, you can't just unplug it.\" He takes the cable and plugs it back in."];
+	  76 [label="You: Unplug the black cable."];
+	  77 [label="IsKimHere()"];
+	  78 [label="IsKimHere()", shape=diamond];
+	  79 [label="!(IsKimHere())", shape=diamond];
+	  80 [label="Breaker Box: A giant electric mammal awakens. The dead body is now safe in the embrace of its cold innards."];
+	  81 [label="You: [Leave.]"];
+	  82 [label="Breaker Box: Something close to you dies with a soft electric purr."];
+	  83 [label="Breaker Box: An electric sizzle! The room is slightly quieter now."];
+	  84 [label="Breaker Box: An electric sizzle! The room is slightly quieter now."];
+	  85 [label="IsKimHere()"];
+	  86 [label="IsKimHere()", shape=diamond];
+	  87 [label="!(IsKimHere())", shape=diamond];
+	  88 [label="Variable[\"doomed.breakerbox_red_wire_plugged_out\"]"];
+	  89 [label="Variable[\"doomed.breakerbox_red_wire_plugged_out\"]", shape=diamond];
+	  90 [label="!(Variable[\"doomed.breakerbox_red_wire_plugged_out\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 6
+	  2 -> 66
+	  3 -> 4
+	  3 -> 5
+	  4 -> 27
+	  5 -> 32
+	  6 -> 8
+	  6 -> 7
+	  7 -> 88
+	  8 -> 41
+	  9 -> 32
+	  10 -> 11
+	  10 -> 12
+	  11 -> 84
+	  12 -> 83
+	  14 -> 61
+	  15 -> 14
+	  16 -> 17
+	  16 -> 18
+	  17 -> 48
+	  18 -> 29
+	  19 -> 20
+	  19 -> 21
+	  20 -> 2
+	  21 -> 22
+	  22 -> 24
+	  22 -> 23
+	  23 -> 55
+	  24 -> 85
+	  25 -> 66
+	  26 -> 2
+	  27 -> 32
+	  28 -> 32
+	  29 -> 30
+	  29 -> 31
+	  30 -> 70
+	  31 -> 15
+	  32 -> 66
+	  33 -> 2
+	  34 -> 35
+	  34 -> 36
+	  35 -> 47
+	  36 -> 52
+	  37 -> 38
+	  37 -> 39
+	  38 -> 75
+	  39 -> 10
+	  40 -> 26
+	  41 -> 42
+	  41 -> 43
+	  42 -> 46
+	  43 -> 16
+	  44 -> 63
+	  45 -> 66
+	  46 -> 66
+	  47 -> 72
+	  48 -> 49
+	  48 -> 50
+	  49 -> 45
+	  50 -> 25
+	  51 -> 66
+	  52 -> 53
+	  52 -> 54
+	  53 -> 80
+	  54 -> 28
+	  55 -> 56
+	  55 -> 57
+	  56 -> 60
+	  57 -> 33
+	  58 -> 34
+	  59 -> 32
+	  60 -> 2
+	  61 -> 66
+	  62 -> 26
+	  63 -> 64
+	  63 -> 65
+	  64 -> 37
+	  65 -> 10
+	  66 -> 69
+	  66 -> 44
+	  66 -> 76
+	  66 -> 81
+	  66 -> 58
+	  67 -> 26
+	  68 -> 66
+	  69 -> 59
+	  70 -> 14
+	  71 -> 40
+	  71 -> 67
+	  71 -> 62
+	  72 -> 73
+	  72 -> 74
+	  73 -> 9
+	  74 -> 32
+	  75 -> 32
+	  76 -> 82
+	  77 -> 78
+	  77 -> 79
+	  78 -> 19
+	  79 -> 32
+	  80 -> 3
+	  82 -> 77
+	  83 -> 32
+	  84 -> 32
+	  85 -> 86
+	  85 -> 87
+	  86 -> 71
+	  87 -> 2
+	  88 -> 89
+	  88 -> 90
+	  89 -> 68
+	  90 -> 51
+}
+

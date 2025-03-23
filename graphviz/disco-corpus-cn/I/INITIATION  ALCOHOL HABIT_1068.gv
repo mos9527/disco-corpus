@@ -1,0 +1,172 @@
+# INITIATION / ALCOHOL HABIT
+# A thought for becoming an alcoholic.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 抿一小口。"];
+	  3 [label="Electrochemistry: 哦，当然啦。胸痛外加晕眩。你已经*饱受折磨*太久——现在该好好喝上一杯，享受生活了。"];
+	  4 [label="Electrochemistry: 打开的瓶盖发出了令人心满意足的砰声，背上的寒毛如同士兵立正一般竖起。你体验过这样的感觉。欢迎回来，警探。你到家了……"];
+	  5 [label="CheckEquipped(\"drug_alcohol_potent_pilsner\")"];
+	  6 [label="CheckEquipped(\"drug_alcohol_potent_pilsner\")", shape=diamond];
+	  7 [label="!(CheckEquipped(\"drug_alcohol_potent_pilsner\"))", shape=diamond];
+	  8 [label="Electrochemistry: 哦，别这样，你不能——不能再这么拒绝下去了。这一点也*不像你*。你……"];
+	  9 [label="Untitled hub"];
+	  10 [label="Electrochemistry: 虚无乃吾等之源头。亦为吾等之归宿！"];
+	  11 [label="CheckEquipped(\"drug_alcohol_pale_aged_vodka\")"];
+	  12 [label="CheckEquipped(\"drug_alcohol_pale_aged_vodka\")", shape=diamond];
+	  13 [label="!(CheckEquipped(\"drug_alcohol_pale_aged_vodka\"))", shape=diamond];
+	  14 [label="Electrochemistry: 红色海军准将的绿色玻璃瓶反射着光芒万丈。诸神真是对你无比慷慨。最好在它们改变主意之前打开酒瓶……"];
+	  15 [label="Variable[\"TASK.get_a_drink\"]"];
+	  16 [label="Variable[\"TASK.get_a_drink\"]", shape=diamond];
+	  17 [label="!(Variable[\"TASK.get_a_drink\"])", shape=diamond];
+	  18 [label="Tutorial Agent: 你刚刚错过了开始喝酒的机会。不过别担心，开始喝酒的选项会在2小时候再次开启。"];
+	  19 [label="You: 不，不行，我不能这么做。[忽略思维。]"];
+	  20 [label="CheckEquipped(\"drug_alcohol_potent_pilsner\")"];
+	  21 [label="CheckEquipped(\"drug_alcohol_potent_pilsner\")", shape=diamond];
+	  22 [label="!(CheckEquipped(\"drug_alcohol_potent_pilsner\"))", shape=diamond];
+	  23 [label="Electrochemistry: 打开的瓶盖发出了令人心满意足的咔嚓声，背上的寒毛如同士兵立正一般竖起。你体验过这样的感觉。欢迎回来，警探。你到家了……"];
+	  24 [label="Jump to: [TASK.get_a_drink]"];
+	  25 [label="You: 把瓶子打开。"];
+	  26 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  27 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  28 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  29 [label="Electrochemistry: 弹出的软木塞发出了令人心满意足的砰声，背上的寒毛如同士兵立正一般竖起。你体验过这样的感觉。欢迎回来，警探。你到家了……"];
+	  30 [label="Electrochemistry: 一瓶大规模生产的尿液，装得*满满当当*。这瓶所谓的*啤酒*的酒精含量远远超过了10%。最好在变温之前开瓶大吉……"];
+	  31 [label="You: [放弃思维。]"];
+	  33 [label="Electrochemistry: 随便。我们并不担心……你很快就会爬回这个酒瓶边上的。到时候我们会再给你一次机会。酒*总是*会给你*另一次*机会。"];
+	  34 [label="You: 不，不行，我不能这么做。[忽略思维。]"];
+	  35 [label="CheckEquipped(\"drug_alcohol_commodore_red\")"];
+	  36 [label="CheckEquipped(\"drug_alcohol_commodore_red\")", shape=diamond];
+	  37 [label="!(CheckEquipped(\"drug_alcohol_commodore_red\"))", shape=diamond];
+	  38 [label="drink_up!"];
+	  39 [label="Jump to: [drink_up!]"];
+	  40 [label="Tutorial Agent: 在屏幕右下角，你可以看到有一个喝酒的按钮！喝酒可以给予你所有体格技能+1加成，包括：强身健体、疑神疑鬼、钢筋铁骨、食髓知味、坚忍不拔以及强身健体。在进行白色检定前吸烟会很好用。不过，喝酒是有伤士气的。"];
+	  41 [label="Electrochemistry: 哎呀，真棒。某人这是找到了一瓶*酒*嘛。*魔力*就在瓶中酝酿。"];
+	  42 [label="Electrochemistry: 保温杯反射着耀眼的光芒。这种罗宋汤虽然看起来并不像酒，但肯定能满足你的酒瘾。最好在凉掉之前打开保温杯……"];
+	  43 [label="Electrochemistry: 在灰域中陈化的伏特加？这可真是罕见的做法。诸神对你慷慨无比。最好在它们改变主意之前打开酒瓶……"];
+	  44 [label="Electrochemistry: 随便。我们并不担心……你很快就会爬回这个酒瓶边上的。到时候我们会再给你一次机会。酒*总是*会给你*另一次*机会。"];
+	  45 [label="Variable[\"tc.turn_off_tutorial_node\"]"];
+	  46 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  47 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  48 [label="Electrochemistry: 打开的瓶盖发出了令人心满意足的砰声，背上的寒毛如同士兵立正一般竖起。你体验过这样的感觉。欢迎回来，警探。你到家了……"];
+	  49 [label="CheckEquipped(\"drug_alcohol_pale_aged_vodka\")"];
+	  50 [label="CheckEquipped(\"drug_alcohol_pale_aged_vodka\")", shape=diamond];
+	  51 [label="!(CheckEquipped(\"drug_alcohol_pale_aged_vodka\"))", shape=diamond];
+	  52 [label="Electrochemistry: 无所谓。不过是*精神上*的琐事罢了。完全不值得担心。你的肉体会变得强壮如牛！"];
+	  53 [label="CheckHeldRightGroup(\"alcohol\")"];
+	  54 [label="CheckHeldRightGroup(\"alcohol\")", shape=diamond];
+	  55 [label="!(CheckHeldRightGroup(\"alcohol\"))", shape=diamond];
+	  56 [label="Electrochemistry: 你的喉咙中融化了一轮金色的太阳，甜美的阳光充溢着你的鼻腔。太阳的温融化了你的肠胃——把那里变成了一团快活的黏浆！你的意识也随之融化，一切不悦都在酒中消融。你再度找回了自我。成为了*真正的*警察。名副其实的警探。这口酒真是*绝了*。"];
+	  57 [label="Volition: 不是*所有人*都意见一致……"];
+	  58 [label="You: 如果我抿一小口，会造成怎样的不良影响？"];
+	  59 [label="Electrochemistry: 你的喉咙中融化了一轮金色的太阳，甜美的阳光充溢着你的鼻腔。太阳的温融化了你的肠胃——把那里变成了一团快活的黏浆！你的意识也随之融化，一切不悦都在酒中消融。你再度找回了自我。成为了*真正的*警察。名副其实的警探。这口酒真是*绝了*。"];
+	  60 [label="You: 观察瓶子。"];
+	  61 [label="Inland Empire: 有人在对你露齿而笑——那是一位笑容满面的年轻女性，站在某座铁路立交桥附近，背景是你沉沦的过去。她是如此的美丽动人。而且她还是*你的人*。"];
+	  62 [label="Interfacing: 嚯，司掌大规模生产的诸神令这种酒瓶的开启方式简单得*可笑*。就连小孩都能做到。"];
+	  63 [label="Electrochemistry: 这瓶甘醇无比的酒反射着光芒万丈——可谓天赐之礼。诸神对你真是慷慨无比。最好在它们改变主意之前打开酒瓶……"];
+	  64 [label="Volition: 我不太确定……"];
+	  65 [label="Variable[\"tc.turn_off_tutorial_node\"]"];
+	  66 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  67 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  68 [label="Horrific Necktie: 为什么总是*你*怎么样？*你的*心脏问题？*你的*冠状动脉？想想*我们*吧。我们是一根绳上的蚂蚱。你和你那滥用药物的古怪领带！为*我们*而干杯吧！开瓶大吉。"];
+	  69 [label="CheckEquipped(\"drug_alcohol_goracy_brew\")"];
+	  70 [label="CheckEquipped(\"drug_alcohol_goracy_brew\")", shape=diamond];
+	  71 [label="!(CheckEquipped(\"drug_alcohol_goracy_brew\"))", shape=diamond];
+	  72 [label="Suggestion: 很好，这样就够*仁慈*了。它是你的朋友。回到它身边吧，我们都支持你。"];
+	  73 [label="You: 我真应该这样做吗？说不定我有点轻微的心脏病呢。"];
+	  74 [label="CheckEquipped(\"drug_alcohol_commodore_red\")"];
+	  75 [label="CheckEquipped(\"drug_alcohol_commodore_red\")", shape=diamond];
+	  76 [label="!(CheckEquipped(\"drug_alcohol_commodore_red\"))", shape=diamond];
+	  0 -> 1
+	  1 -> 41
+	  2 -> 53
+	  3 -> 26
+	  4 -> 61
+	  5 -> 6
+	  5 -> 7
+	  6 -> 30
+	  7 -> 63
+	  8 -> 60
+	  9 -> 58
+	  9 -> 2
+	  9 -> 34
+	  11 -> 12
+	  11 -> 13
+	  12 -> 23
+	  13 -> 4
+	  14 -> 62
+	  15 -> 16
+	  15 -> 17
+	  16 -> 33
+	  17 -> 44
+	  19 -> 15
+	  20 -> 21
+	  20 -> 22
+	  21 -> 48
+	  22 -> 35
+	  23 -> 61
+	  24 -> 15
+	  25 -> 20
+	  26 -> 27
+	  26 -> 28
+	  27 -> 68
+	  28 -> 39
+	  29 -> 61
+	  30 -> 62
+	  31 -> 8
+	  33 -> 72
+	  34 -> 24
+	  35 -> 36
+	  35 -> 37
+	  36 -> 29
+	  37 -> 11
+	  38 -> 73
+	  38 -> 25
+	  38 -> 19
+	  39 -> 38
+	  40 -> 10
+	  41 -> 60
+	  41 -> 31
+	  42 -> 62
+	  43 -> 62
+	  44 -> 72
+	  45 -> 46
+	  45 -> 47
+	  46 -> 10
+	  47 -> 40
+	  48 -> 61
+	  49 -> 50
+	  49 -> 51
+	  50 -> 43
+	  51 -> 5
+	  52 -> 9
+	  53 -> 54
+	  53 -> 55
+	  54 -> 56
+	  55 -> 59
+	  56 -> 45
+	  57 -> 65
+	  58 -> 52
+	  59 -> 45
+	  60 -> 74
+	  61 -> 9
+	  62 -> 64
+	  63 -> 62
+	  64 -> 38
+	  65 -> 66
+	  65 -> 67
+	  67 -> 18
+	  68 -> 39
+	  69 -> 70
+	  69 -> 71
+	  70 -> 42
+	  71 -> 49
+	  72 -> 57
+	  73 -> 3
+	  74 -> 75
+	  74 -> 76
+	  75 -> 14
+	  76 -> 69
+}
+

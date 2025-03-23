@@ -1,0 +1,154 @@
+# CANAL / WATERLOCK LEVER
+# this is the button-switch-lever-thing that closes the waterlock once it's been fixed on day 3
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="lever main hub"];
+	  3 [label="You: 所以海岸被隔绝了。大概这就是莉娜的丈夫，神秘动物学家莫雷尔没有回来的原因。"];
+	  4 [label="Esprit de Corps: 集中在一件事情上，完成它，然后再继续下一件……他想到。这才叫任务链。"];
+	  5 [label="Water Lock Control Panel: 什么也没发生。海面吹来一阵刺骨的寒风，打破了这个沉默的局面。"];
+	  6 [label="Variable[\"TASK.ask_about_ruby_in_village\"]"];
+	  7 [label="Variable[\"TASK.ask_about_ruby_in_village\"]", shape=diamond];
+	  8 [label="!(Variable[\"TASK.ask_about_ruby_in_village\"])", shape=diamond];
+	  9 [label="Jump to: [lever main hub]"];
+	  10 [label="Water Lock Control Panel: 水闸开始动了……"];
+	  11 [label="Water Lock Control Panel: 控制台上少了几对指示灯。松散的电线从空洞里伸了出来。中间有一个控制杆——在它下面，是一块小金属板。"];
+	  12 [label="Reaction Speed: 等等……难道这就是莫雷尔没有回去找莉娜的原因？"];
+	  13 [label="Perception (Sight): 那不是有个标志说星期三早上才会修好吗？"];
+	  14 [label="Kim Kitsuragi: “好吧，”警督看向运河对岸。“现在我们可以去海岸了。只不过，那边到处崎岖不平——还有不少醉汉。”\n“好吧，”警督看向运河对岸。“现在我们可以去海岸了。只不过，那边到处崎岖不平——还有不少醉汉。还有，如果你想伪造艾弗拉特的文件，现在可以动手了……”"];
+	  15 [label="Kim Kitsuragi: “应该是这样没错。我们应该告诉莉娜，帮她减轻精神负担。”"];
+	  17 [label="You: 松开控制杆。"];
+	  18 [label="Perception (Sight): 那不是有个标志说星期三早上才会修好吗？"];
+	  19 [label="You: “所以海岸被隔绝了。大概这就是莉娜的丈夫，神秘动物学家莫雷尔没有回来的原因。”"];
+	  20 [label="Variable[\"canal.lever_greeting_done\"]"];
+	  21 [label="Variable[\"canal.lever_greeting_done\"]", shape=diamond];
+	  22 [label="!(Variable[\"canal.lever_greeting_done\"])", shape=diamond];
+	  23 [label="Logic: 你应该告诉莉娜。这样会减轻她的精神负担。"];
+	  24 [label="IsKimHere()"];
+	  25 [label="IsKimHere()", shape=diamond];
+	  26 [label="!(IsKimHere())", shape=diamond];
+	  27 [label="You: [离开。]"];
+	  28 [label="Water Lock Control Panel: 你把控制杆一路推上去，直到金属碰撞到接片。你听到一阵轻微的*咔哒*声，然后……"];
+	  29 [label="IsKimHere()"];
+	  30 [label="IsKimHere()", shape=diamond];
+	  31 [label="!(IsKimHere())", shape=diamond];
+	  32 [label="Variable[\"canal.know_water_lock_time\"]"];
+	  33 [label="Variable[\"canal.know_water_lock_time\"]", shape=diamond];
+	  34 [label="!(Variable[\"canal.know_water_lock_time\"])", shape=diamond];
+	  35 [label="Jump to: [lever main hub]"];
+	  36 [label="Kim Kitsuragi: “好吧……”警督看向运河对岸。“如果我们需要到海岸去，就可以走这条路。不过拜托你，暂时收敛一下你的*流浪癖*。我可不想分心。遇到什么事都这样可不行。”\n“好吧，”警督看向运河对岸。“现在我们可以去海岸了。只不过，那边到处崎岖不平——还有不少醉汉。还有，如果你想伪造艾弗拉特的文件，现在可以动手了……”"];
+	  37 [label="Variable[\"canal.signature_doc_canal_closed\"]"];
+	  38 [label="Variable[\"canal.signature_doc_canal_closed\"]", shape=diamond];
+	  39 [label="!(Variable[\"canal.signature_doc_canal_closed\"])", shape=diamond];
+	  40 [label="Visual Calculus: 这个控制台经常用来关闭水闸，把它变成一座桥，让大家前往运河对岸——但是却被一块坏掉的“萨马拉黄油”招牌卡住了。拉动控制杆*也许*没什么用。"];
+	  41 [label="Man on water lock: 男人静静地看着你，慢慢切下又一片萨拉米香肠，放进自己口中。"];
+	  42 [label="Variable[\"canal.know_water_lock_time\"] == false  and  Variable[\"TASK.locate_morell\"]  and  Variable[\"TASK.locate_morell_done\"] == false  and  Variable[\"canal.lock_logic_wait\"] == false"];
+	  43 [label="Variable[\"canal.know_water_lock_time\"] == false  and  Variable[\"TASK.locate_morell\"]  and  Variable[\"TASK.locate_morell_done\"] == false  and  Variable[\"canal.lock_logic_wait\"] == false", shape=diamond];
+	  44 [label="!(Variable[\"canal.know_water_lock_time\"] == false  and  Variable[\"TASK.locate_morell\"]  and  Variable[\"TASK.locate_morell_done\"] == false  and  Variable[\"canal.lock_logic_wait\"] == false)", shape=diamond];
+	  45 [label="DayCount() >= 3  or  Variable[\"canal.know_water_lock_fixed\"]"];
+	  46 [label="DayCount() >= 3  or  Variable[\"canal.know_water_lock_fixed\"]", shape=diamond];
+	  47 [label="!(DayCount() >= 3  or  Variable[\"canal.know_water_lock_fixed\"])", shape=diamond];
+	  48 [label="Logic: 也许这就是莫雷尔没有回去找莉娜的原因？"];
+	  49 [label="IsHourBetween(9, 21)"];
+	  50 [label="IsHourBetween(9, 21)", shape=diamond];
+	  51 [label="!(IsHourBetween(9, 21))", shape=diamond];
+	  52 [label="Water Lock Control Panel: 你抓住把手，把控制杆推了上去。金属与接片碰触的瞬间，你听到一阵响亮的*咔哒*声，然后……"];
+	  53 [label="You: 用力点推。"];
+	  54 [label="You: 拉动控制杆——再来一次。"];
+	  55 [label="Empathy: 她*还是*挺担心的……"];
+	  56 [label="Water Lock Control Panel: 这是一个锈蚀的控制台，原来指示灯的位置变成了空洞，松散的电线从里面伸了出来。中央有一个机械控制杆。"];
+	  57 [label="DayCount() >= 3  or  Variable[\"canal.know_water_lock_fixed\"]"];
+	  58 [label="DayCount() >= 3  or  Variable[\"canal.know_water_lock_fixed\"]", shape=diamond];
+	  59 [label="!(DayCount() >= 3  or  Variable[\"canal.know_water_lock_fixed\"])", shape=diamond];
+	  60 [label="Water Lock Control Panel: 弹簧把控制杆推回到原来的位置上。不过你还是需要关闭水闸到运河对岸去——只是可能得换个别的方法。"];
+	  61 [label="Kim Kitsuragi: “嗯。”警督紧盯着你的动作，自顾自的哼哼着。"];
+	  62 [label="Water Lock Control Panel: 水闸控制台应该不会成为一个好搭档，不过管它呢——为什么不试试。"];
+	  63 [label="You: 拉动控制杆。"];
+	  64 [label="Water Lock Control Panel: 什么也没发生。"];
+	  65 [label="Variable[\"canal.lock_logic_wait\"]"];
+	  66 [label="Variable[\"canal.lock_logic_wait\"]", shape=diamond];
+	  67 [label="!(Variable[\"canal.lock_logic_wait\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 20
+	  2 -> 3
+	  2 -> 19
+	  2 -> 54
+	  2 -> 27
+	  2 -> 63
+	  3 -> 62
+	  5 -> 29
+	  6 -> 8
+	  6 -> 7
+	  7 -> 14
+	  8 -> 36
+	  9 -> 2
+	  10 -> 24
+	  11 -> 45
+	  12 -> 2
+	  13 -> 9
+	  15 -> 55
+	  17 -> 60
+	  18 -> 9
+	  19 -> 15
+	  20 -> 21
+	  20 -> 22
+	  21 -> 56
+	  22 -> 11
+	  23 -> 35
+	  24 -> 25
+	  24 -> 26
+	  25 -> 6
+	  28 -> 64
+	  29 -> 30
+	  29 -> 31
+	  30 -> 61
+	  31 -> 49
+	  32 -> 33
+	  32 -> 34
+	  33 -> 18
+	  34 -> 13
+	  35 -> 2
+	  36 -> 37
+	  37 -> 38
+	  37 -> 39
+	  39 -> 4
+	  40 -> 42
+	  41 -> 17
+	  41 -> 53
+	  42 -> 43
+	  42 -> 44
+	  43 -> 48
+	  44 -> 2
+	  45 -> 46
+	  45 -> 47
+	  46 -> 42
+	  47 -> 40
+	  48 -> 65
+	  49 -> 50
+	  49 -> 51
+	  50 -> 41
+	  51 -> 17
+	  51 -> 53
+	  52 -> 10
+	  53 -> 5
+	  54 -> 57
+	  55 -> 35
+	  56 -> 45
+	  57 -> 58
+	  57 -> 59
+	  58 -> 52
+	  59 -> 28
+	  60 -> 32
+	  61 -> 17
+	  61 -> 53
+	  62 -> 23
+	  63 -> 57
+	  64 -> 17
+	  64 -> 53
+	  65 -> 66
+	  65 -> 67
+	  66 -> 2
+	  67 -> 12
+}
+

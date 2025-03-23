@@ -1,0 +1,81 @@
+# BOOKSTORE / PRIMERBOOK
+# A primer-book (quest item for Arx)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"Madam, what's this book?\""];
+	  4 [label="Plaisance: \"A highly educational primer. It's exceptional for the young mind... and obviously, very popular.\""];
+	  5 [label="Plaisance: \"You're a grown man, though. It's a bit too late for that... this is a book for small children.\""];
+	  6 [label="Savoir Faire: You now proudly own a primer book for small children which, to be honest, barely cost anything."];
+	  7 [label="Primer Book: It's exactly like a primer -- a word on every page relating to a letter of the alphabet."];
+	  8 [label="You: \"Oh wow, that's cool. I want to become smarter.\""];
+	  9 [label="Primer Book: IsKimHere()"];
+	  10 [label="IsKimHere()", shape=diamond];
+	  11 [label="!(IsKimHere())", shape=diamond];
+	  12 [label="You: \"Okay. Cool.\""];
+	  13 [label="Plaisance: \"Uh... you have kids?\" She shudders uncomfortably. \"Okay, I guess. Enjoy it.\""];
+	  14 [label="Primer Book: I'm not sure what you're planning to get from this. It's meant for babies. Literal babies."];
+	  15 [label="Jump to: [primerhub]"];
+	  16 [label="Savoir Faire: Slowly, you move your hand towards the small book. Before you even can reach it, you're interrupted:"];
+	  17 [label="Jump to: [mainmapwallhub]"];
+	  18 [label="Primer Book: Variable[\"doomed.book_primer_wc_stealing\"]"];
+	  19 [label="Variable[\"doomed.book_primer_wc_stealing\"]", shape=diamond];
+	  20 [label="!(Variable[\"doomed.book_primer_wc_stealing\"])", shape=diamond];
+	  21 [label="Plaisance: \"Sir, please, no touching the merchandise.\""];
+	  22 [label="You: [Leave.]"];
+	  23 [label="primerhub"];
+	  24 [label="Savoir Faire: You peek at the storekeep, waiting for her to be distracted. When she's not looking, you deftly swipe the small booklet off the shelf and stuff it in your pocket."];
+	  25 [label="Primer Book: You see a colourful primer. The title reads: \"A Primer for Small Kids.\""];
+	  26 [label="You: Steal the Primer."];
+	  27 [label="You: Variable[\"doomed.book_primer_wc_stealing\"]"];
+	  28 [label="Variable[\"doomed.book_primer_wc_stealing\"]", shape=diamond];
+	  29 [label="!(Variable[\"doomed.book_primer_wc_stealing\"])", shape=diamond];
+	  30 [label="Kim Kitsuragi: The lieutenant coughs sharply, then whispers: \"Let's not. Defrauding small business owners is not our *thing*.\""];
+	  31 [label="You: Flip through the pages."];
+	  32 [label="You: I want to buy this Primer."];
+	  33 [label="Jump to: [primerhub]"];
+	  34 [label="Jump to: [mainmapwallhub]"];
+	  5720079 [label="JUMP OUT to BOOKSTORE / MAP WALL", shape=diamond];
+	  0 -> 1
+	  1 -> 25
+	  2 -> 4
+	  4 -> 8
+	  4 -> 12
+	  5 -> 15
+	  6 -> 17
+	  7 -> 14
+	  8 -> 5
+	  9 -> 10
+	  9 -> 11
+	  10 -> 30
+	  11 -> 21
+	  12 -> 5
+	  14 -> 33
+	  15 -> 23
+	  16 -> 9
+	  17 -> 5720079
+	  18 -> 19
+	  18 -> 20
+	  19 -> 24
+	  20 -> 16
+	  21 -> 34
+	  23 -> 32
+	  23 -> 2
+	  23 -> 22
+	  23 -> 26
+	  23 -> 31
+	  24 -> 6
+	  25 -> 23
+	  26 -> 27
+	  27 -> 28
+	  27 -> 29
+	  28 -> 18
+	  29 -> 18
+	  30 -> 34
+	  31 -> 7
+	  32 -> 13
+	  33 -> 23
+	  34 -> 5720079
+}
+

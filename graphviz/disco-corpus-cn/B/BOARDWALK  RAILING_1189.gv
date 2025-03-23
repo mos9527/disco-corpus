@@ -1,0 +1,88 @@
+# BOARDWALK / RAILING
+# You've discovered Idiot Doom Spiral's missing jacket.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Conceptualization: 一个诗人可以写下十几首诗篇，但还是无法捕捉到那声叹息里蕴藏的深厚烦恼。"];
+	  3 [label="You: “也许是很多只海鸥。”"];
+	  4 [label="Jump to: [railing]"];
+	  5 [label="You: “不是。”"];
+	  6 [label="Kim Kitsuragi: “我也不觉得。”"];
+	  7 [label="Variable[\"coast.orb_jacket_interf_jacket_for_idiot\"]"];
+	  8 [label="Variable[\"coast.orb_jacket_interf_jacket_for_idiot\"]", shape=diamond];
+	  9 [label="!(Variable[\"coast.orb_jacket_interf_jacket_for_idiot\"])", shape=diamond];
+	  11 [label="Logic: 看起来像是被留在了海浪里，直到有人把它捞出来，铺在石凳上晒干。可惜的是，这样似乎让它变成了一团僵硬又不成形的垃圾。"];
+	  12 [label="You: “这可能是条线索。”"];
+	  13 [label="Kim Kitsuragi: “一条线索？你觉得我们的嫌疑人是一只在毫无防范意识的夹克衫上面排便的海鸥吗？”"];
+	  14 [label="You: 靠近观察。"];
+	  15 [label="Railing: 有人在栏杆上留下一件无法辨认的衣服。闻起来真的很糟糕。"];
+	  16 [label="You: 触碰它。"];
+	  17 [label="Interfacing: 你应该把它拿走。"];
+	  18 [label="You: 之后再说吧。[离开。]"];
+	  19 [label="Variable[\"TASK.find_idiot_doom_spiral_jacket\"]"];
+	  20 [label="Variable[\"TASK.find_idiot_doom_spiral_jacket\"]", shape=diamond];
+	  21 [label="!(Variable[\"TASK.find_idiot_doom_spiral_jacket\"])", shape=diamond];
+	  22 [label="IsKimHere()"];
+	  23 [label="IsKimHere()", shape=diamond];
+	  24 [label="!(IsKimHere())", shape=diamond];
+	  25 [label="You: “为什么不可以？”"];
+	  26 [label="You: “是的。”"];
+	  27 [label="Railing: 当你用手指去戳这件衣服的时候——如果还能这么称呼它的话——它发出了一阵轻柔的嘎吱声。"];
+	  28 [label="Interfacing: 你还是可以拿走它。它很可能是厄运漩涡的。"];
+	  29 [label="You: “我觉得这件夹克，就是那个白痴厄运漩涡想让我找的东西。”"];
+	  30 [label="railing"];
+	  31 [label="Variable[\"TASK.find_idiot_doom_spiral_jacket\"]"];
+	  32 [label="Variable[\"TASK.find_idiot_doom_spiral_jacket\"]", shape=diamond];
+	  33 [label="!(Variable[\"TASK.find_idiot_doom_spiral_jacket\"])", shape=diamond];
+	  34 [label="Kim Kitsuragi: “请告诉我，你不会把它带走。”"];
+	  35 [label="Kim Kitsuragi: 警督叹了口气。"];
+	  36 [label="Interfacing: 尽管触碰它的想法会让你想要退缩，这也很可能是那个穿着彩色运动服的白痴在找的东西…"];
+	  37 [label="Kim Kitsuragi: 警督看着那块散发着恶臭的破布，稍微嗅了嗅。“我肯定他会很*高兴*找回这个东西的。”"];
+	  38 [label="Railing: 上面粘着海鸥粪便，还缠绕着一些海草。那只晃晃悠悠的袖子暗示着污秽的外壳下可能是一件夹克衫。"];
+	  39 [label="Kim Kitsuragi: “那件夹克外面结了一层硬硬的海鸟粪。而且你已经带着不少乱七八糟的东西了。”"];
+	  40 [label="Inland Empire: 这件夹克散发着失败的恶臭。它很可能是那个穿着彩色运动服的白痴在找的东西…"];
+	  0 -> 1
+	  1 -> 15
+	  2 -> 31
+	  3 -> 35
+	  4 -> 30
+	  5 -> 6
+	  6 -> 31
+	  7 -> 8
+	  7 -> 9
+	  9 -> 40
+	  11 -> 22
+	  12 -> 13
+	  13 -> 26
+	  13 -> 3
+	  13 -> 5
+	  14 -> 38
+	  15 -> 30
+	  16 -> 27
+	  19 -> 20
+	  19 -> 21
+	  20 -> 36
+	  22 -> 24
+	  22 -> 23
+	  23 -> 34
+	  24 -> 19
+	  25 -> 39
+	  26 -> 35
+	  27 -> 4
+	  29 -> 37
+	  30 -> 16
+	  30 -> 18
+	  30 -> 14
+	  31 -> 32
+	  31 -> 33
+	  32 -> 28
+	  33 -> 17
+	  34 -> 25
+	  34 -> 12
+	  34 -> 29
+	  35 -> 2
+	  36 -> 7
+	  38 -> 11
+}
+

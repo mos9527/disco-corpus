@@ -1,0 +1,970 @@
+# PLAZA / THE GARDENER
+# The Gardener stands on the corner of Whirling and is there to help you navigate the streets of Martinaise. Later it turns out she's a Union spy. You get to know from here that Joyce is in town.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Savoir Faire: 码头？建筑？公寓？你应该*探索*一下，也许还可以爬墙？"];
+	  3 [label="The Gardener: IsKimHere()"];
+	  4 [label="IsKimHere()", shape=diamond];
+	  5 [label="!(IsKimHere())", shape=diamond];
+	  6 [label="You: “尸体下来了。”"];
+	  7 [label="The Gardener: “哦……好吧。”她挠了挠面颊。“那你能告诉我，你打算什么时候把他带走呢？”"];
+	  8 [label="You: “尸体没了。”"];
+	  9 [label="You: “继续，没事的。”"];
+	  10 [label="You: “但是？”"];
+	  11 [label="The Gardener: Variable[\"whirling.mirror_first_greeting_done\"]"];
+	  12 [label="Variable[\"whirling.mirror_first_greeting_done\"]", shape=diamond];
+	  13 [label="!(Variable[\"whirling.mirror_first_greeting_done\"])", shape=diamond];
+	  14 [label="The Gardener: IsKimHere()"];
+	  15 [label="IsKimHere()", shape=diamond];
+	  16 [label="!(IsKimHere())", shape=diamond];
+	  17 [label="The Gardener: IsKimHere()"];
+	  18 [label="IsKimHere()", shape=diamond];
+	  19 [label="!(IsKimHere())", shape=diamond];
+	  20 [label="You: “是的。就是那个。”"];
+	  21 [label="You: “你不喜欢那条船？”"];
+	  22 [label="You: 随它去吧。"];
+	  23 [label="The Gardener: 女孩看着你摩擦身体寻求温暖：“还有别的事吗？”"];
+	  24 [label="You: “做什么工作？“"];
+	  25 [label="You: “挺酷的。那你在这里做什么？”"];
+	  26 [label="The Gardener: “当然了。你们要去哪里儿？”\n“既然路标都乱了……”她点点头。“好吧。你有什么需要？”"];
+	  27 [label="You: “谢谢，暂时先这些吧。”"];
+	  28 [label="You: 这里出什么事了？"];
+	  29 [label="You: 塞車？"];
+	  30 [label="You: 我想这个干什么，我说过我他妈的黑人。"];
+	  31 [label="music"];
+	  32 [label="You: “没什么，只是我的大脑这么告诉我的。”"];
+	  33 [label="The Gardener: CheckItem(\"ammonia_ampoule\")"];
+	  34 [label="CheckItem(\"ammonia_ampoule\")", shape=diamond];
+	  35 [label="!(CheckItem(\"ammonia_ampoule\"))", shape=diamond];
+	  36 [label="Inland Empire: 她的手套——你感觉自己需要它们。毕竟，还有一具尸体等着你处理。"];
+	  37 [label="Composure: 她非常镇定，背挺得笔直。"];
+	  38 [label="The Gardener: Variable[\"plaza.gardener_authority_clean_the_graffito\"]"];
+	  39 [label="Variable[\"plaza.gardener_authority_clean_the_graffito\"]", shape=diamond];
+	  40 [label="!(Variable[\"plaza.gardener_authority_clean_the_graffito\"])", shape=diamond];
+	  41 [label="Jump to: [MAIN HUB]"];
+	  42 [label="The Gardener: Variable[\"plaza.gardener_perc_black\"]"];
+	  43 [label="Variable[\"plaza.gardener_perc_black\"]", shape=diamond];
+	  44 [label="!(Variable[\"plaza.gardener_perc_black\"])", shape=diamond];
+	  45 [label="music"];
+	  46 [label="The Gardener: IsKimHere()"];
+	  47 [label="IsKimHere()", shape=diamond];
+	  48 [label="!(IsKimHere())", shape=diamond];
+	  49 [label="The Gardener: “我在院子里有个温室。”她回头看了看。“我在尝试完成自己的工作……”\n“我在院子里有个温室。”她回头看了看。"];
+	  50 [label="The Gardener: “就在那里。”她指向北边。“在院子里，穿过围栏上的洞就是了。”"];
+	  51 [label="You: “他被送到停尸房去处理了。”"];
+	  52 [label="Drama: 当然，大人，当然了。"];
+	  53 [label="Perception (Sight): 好吧。刺激结束。"];
+	  54 [label="You: “没事的，我不是有意要吓你一跳。”"];
+	  55 [label="Encyclopedia: *猪头*是一个广泛使用的术语，泛指警局的成员。这可不是个友善的称呼。"];
+	  56 [label="The Gardener: “好吧。”她挺直了后背。"];
+	  57 [label="You: “他不在*树上*了。”"];
+	  58 [label="Jump to: [MAIN HUB]"];
+	  59 [label="Rhetoric: 她意识到自己打算批评你的工作——或者说是工作的缺失。"];
+	  60 [label="You: “你是黑人。”"];
+	  61 [label="You: “所以，现在你们都听些什么样的音乐？”"];
+	  62 [label="The Gardener: “我们这里警察并不常见，就这样。”"];
+	  63 [label="The Gardener: “我？我只是个普通的园丁。”"];
+	  64 [label="Interfacing: 如果要尸检的话，那双手套肯定很好用。"];
+	  65 [label="The Gardener: CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"]"];
+	  66 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"]", shape=diamond];
+	  67 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"])", shape=diamond];
+	  68 [label="The Gardener: “当然——我已经用完了。”她从胸口的口袋里掏出一个小胶囊递给了你。"];
+	  69 [label="Drama: 当然是没什么事了，大人。只是妄想而已。"];
+	  70 [label="You: 是啊，我不会这么说的。"];
+	  71 [label="You: “我跟他聊过了，是的。”"];
+	  72 [label="The Gardener: Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"]"];
+	  73 [label="Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"]", shape=diamond];
+	  74 [label="!(Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"])", shape=diamond];
+	  75 [label="Jump to: [MAIN HUB]"];
+	  76 [label="The Gardener: IsKimHere()"];
+	  77 [label="IsKimHere()", shape=diamond];
+	  78 [label="!(IsKimHere())", shape=diamond];
+	  79 [label="Jump to: [directions hub]"];
+	  80 [label="Composure: 她隐藏地很好，不过在汗水和泥土背后，还有些……别的东西。在她僵硬的姿势里。"];
+	  81 [label="Authority: 这里没什么好看的。只是个普通的执法者对寻常的刺激做出了反应。没什么值得注意的。"];
+	  82 [label="Jump to: [directions hub]"];
+	  83 [label="The Gardener: “当然。我能帮你什么吗？”"];
+	  85 [label="The Gardener: “当然，我不会妨碍你的。”她用淡黄色的手套擦了擦眉头。"];
+	  86 [label="The Gardener: “那里是码头，岬岸公寓就在那边。还有一些房子……其实也没有很多，真的。”"];
+	  87 [label="You: “运河的另一边有什么？”"];
+	  88 [label="Conceptualization: 是啊，有消息随时*告诉*她。报告你每分钟的进展能带给你一种奇怪的乐趣。即使对陌生人说也一样。"];
+	  89 [label="The Gardener: IsKimHere()"];
+	  90 [label="IsKimHere()", shape=diamond];
+	  91 [label="!(IsKimHere())", shape=diamond];
+	  92 [label="The Gardener: “我是个夜猫子，我能说什么呢？”她露出一丝微笑。"];
+	  93 [label="Drama: 那个笑容隐含着一丝刻薄的味道。"];
+	  94 [label="Perception (Smell): 即使一路跑到这里，春风中还有一丝死亡的气息。"];
+	  95 [label="You: 不。我不想这么说。"];
+	  96 [label="Kim Kitsuragi: “不用担心，”警督上前一步，“我们没说是你做的。”"];
+	  97 [label="The Gardener: “哦。好吧。”她也不知道说什么好。“谢谢你告诉我这件事，先生。”"];
+	  98 [label="Jump to: [MAIN HUB]"];
+	  99 [label="You: 摆脱它，你似乎中了某种寒冷魔咒……"];
+	  100 [label="The Gardener: Variable[\"plaza.gardener_black_done\"]  or  Variable[\"plaza.gardener_viscal_rc_failed\"]"];
+	  101 [label="Variable[\"plaza.gardener_black_done\"]  or  Variable[\"plaza.gardener_viscal_rc_failed\"]", shape=diamond];
+	  102 [label="!(Variable[\"plaza.gardener_black_done\"]  or  Variable[\"plaza.gardener_viscal_rc_failed\"])", shape=diamond];
+	  103 [label="Jump to: [MAIN HUB]"];
+	  104 [label="You: “我有些问题要问你。”"];
+	  105 [label="The Gardener: “又开始下雨了……”坐在独轮手推車旁边休息的年轻女子叹了口气。\n“又开始下雨了……”年轻女子抬头仰望沉甸甸的天空。"];
+	  106 [label="gloves_are_here"];
+	  107 [label="You: “我的搭档跟我说你可能有氨——能给我一些吗？”"];
+	  108 [label="You: “东边有什么？”"];
+	  109 [label="The Gardener: “港口大门。我想，那里有些骚乱？我不太了解地方政治。”她耸耸肩。“还有一家弗利多商店。”"];
+	  110 [label="You: “西边有什么？”"];
+	  111 [label="Jump to: [directions hub]"];
+	  112 [label="Rhetoric: 你没说是她写的，你问的是那是干嘛的。"];
+	  113 [label="Authority: 不！*不要*把任何消息随意告诉这个普通民众。"];
+	  114 [label="The Gardener: “雪里面有营养素——帮助万物在春天变得绿意盎然。至少我的外婆总是这么说的。”她害羞地笑了。"];
+	  115 [label="The Gardener: “嗯。”她看着自己的独轮手推車，那里的雪正在慢慢溶化。"];
+	  116 [label="You: “你不会碰巧是在监视我们吧？”\n“你不会碰巧是在监视我吧？”"];
+	  117 [label="Kim Kitsuragi: “也许我们应该继续在马丁内斯的工作。”警督打断了她，转向你。“除非你还有更*官方*的问题？”"];
+	  118 [label="You: “你听迪斯科乐吗？”\n“你听迪斯科乐吗？我需要一些新鲜玩意来摆脱这种冲动。”"];
+	  119 [label="Jump to: [MAIN HUB]"];
+	  120 [label="Jump to: [MAIN HUB]"];
+	  121 [label="You: “那其他标志呢。*猪头滚回去*？谁是猪头？”"];
+	  122 [label="Authority: 就算不是她写的，她也应该清理干净。"];
+	  123 [label="The Gardener: “就像是，一去不复返的那种？”女孩重复到，脸上流露出喜悦的感激之情。"];
+	  124 [label="The Gardener: Variable[\"plaza.gardener_main_hub_reached\"]"];
+	  125 [label="Variable[\"plaza.gardener_main_hub_reached\"]", shape=diamond];
+	  126 [label="!(Variable[\"plaza.gardener_main_hub_reached\"])", shape=diamond];
+	  127 [label="The Gardener: “是的。”她看起来松了一口气。“味道真的很难闻，所以我必须休息一下。”"];
+	  128 [label="Kim Kitsuragi: “是的。港口的代表。她应该就在附近行动。”"];
+	  129 [label="You: “南边有什么？”"];
+	  130 [label="You: “也许吧。”（点点头。）“很高兴见到你，普通的园丁小姐。我还有个问题。”"];
+	  131 [label="You: 眯起眼睛，聚精会神地看着她。"];
+	  132 [label="You: Variable[\"plaza.gardener_viscal_rc\"]"];
+	  133 [label="Variable[\"plaza.gardener_viscal_rc\"]", shape=diamond];
+	  134 [label="!(Variable[\"plaza.gardener_viscal_rc\"])", shape=diamond];
+	  135 [label="The Gardener: Variable[\"plaza.gardener_viscal_rc\"]"];
+	  136 [label="Variable[\"plaza.gardener_viscal_rc\"]", shape=diamond];
+	  137 [label="!(Variable[\"plaza.gardener_viscal_rc\"])", shape=diamond];
+	  138 [label="Visual Calculus: 你完全完全确定自己*真他妈*是黑人吗？你真的应该找面镜子好好看看。眼下，就接受她是黑人的事实。这对案子很重要。"];
+	  139 [label="Jump to: [MAIN HUB]"];
+	  140 [label="The Gardener: Variable[\"TASK.perform_field_autopsy\"]"];
+	  141 [label="Variable[\"TASK.perform_field_autopsy\"]", shape=diamond];
+	  142 [label="!(Variable[\"TASK.perform_field_autopsy\"])", shape=diamond];
+	  143 [label="The Gardener: Variable[\"TASK.ask_gardner_why_is_she_gardening_in_march_done\"]"];
+	  144 [label="Variable[\"TASK.ask_gardner_why_is_she_gardening_in_march_done\"]", shape=diamond];
+	  145 [label="!(Variable[\"TASK.ask_gardner_why_is_she_gardening_in_march_done\"])", shape=diamond];
+	  146 [label="You: “我得走了。”[离开。]"];
+	  147 [label="The Gardener: “哦，那个啊……”她指向北边。“就在那边，院子里。”"];
+	  148 [label="Jump to: [MAIN HUB]"];
+	  149 [label="You: 那又怎么样？我也是黑人。"];
+	  150 [label="Perception (Sight): 我不知道——有什么问题吗？你只是*对刺激做出了反应*。"];
+	  151 [label="The Gardener: “我不知道……”她四下看了看。“收音机里播什么就听什么？”"];
+	  152 [label="Jump to: [directions hub]"];
+	  153 [label="intro_hub"];
+	  154 [label="You: “很高兴见到你，普通的园丁小姐。我还有个问题。”"];
+	  155 [label="The Gardener: Variable[\"plaza.gardener_first_ending_done\"]"];
+	  156 [label="Variable[\"plaza.gardener_first_ending_done\"]", shape=diamond];
+	  157 [label="!(Variable[\"plaza.gardener_first_ending_done\"])", shape=diamond];
+	  158 [label="The Gardener: “一些商店，还有一座桥。运河大桥可以通往海岸，不过我想好像是坏了？可能是发生事故了吧。”"];
+	  159 [label="Empathy: 她完全不觉得没问题。这是一种权利的展示，她感觉自己被威胁了。你不知道为什么。"];
+	  160 [label="Jump to: [MAIN HUB]"];
+	  161 [label="Perception (Sight): 这地方看起来就是如此。到处都是涂鸦，你背后的交通堵塞完全*没有管制*。"];
+	  162 [label="Jump to: [MAIN HUB]"];
+	  163 [label="The Gardener: Variable[\"TASK.inspect_body_parts\"]"];
+	  164 [label="Variable[\"TASK.inspect_body_parts\"]", shape=diamond];
+	  165 [label="!(Variable[\"TASK.inspect_body_parts\"])", shape=diamond];
+	  166 [label="You: “如果有机会的话，你应该把它清理干净。做一个好市民——做一个胜者。”"];
+	  167 [label="Empathy: 有种不安的情绪在里面。她话说道一半就停下来了。"];
+	  168 [label="Perception (Sight): 她是黑人。"];
+	  169 [label="Kim Kitsuragi: 警督转向你。“我们应该继续在马丁内斯的工作。”"];
+	  170 [label="The Gardener: “我不知道……废弃的那种？以前每到春天都人群聚集，不过现在那边已经没什么可以做的了。只有瘾君子。”"];
+	  171 [label="The Gardener: “呃……我的回答是否。”"];
+	  172 [label="The Gardener: “很高兴听到这个消息。”她笑了笑。“谢谢你，警官。看来四月份我就能种上薄荷了。”"];
+	  173 [label="You: 我不在乎，我只想享受这美好的时刻。"];
+	  174 [label="Empathy: 与其说她被逼入绝境，倒不如说是不知所措。"];
+	  175 [label="Composure: 她是个专家。除非和胖子本人当面对峙，她现在是不会承认的。"];
+	  176 [label="You: “这个*搞死警察*是怎么一回事？”"];
+	  177 [label="The Gardener: “你说什么？”她没有理解你的意思。"];
+	  178 [label="MAIN HUB"];
+	  179 [label="The Gardener: Variable[\"auto.is_raining\"]"];
+	  180 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  181 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  182 [label="The Gardener: Variable[\"auto.is_snowing\"]"];
+	  183 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  184 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  185 [label="the_girl_is"];
+	  186 [label="You: “没什么。”"];
+	  187 [label="The Gardener: “你回来了。”"];
+	  188 [label="The Gardener: “谢谢你。”她礼貌地笑了。“吸入这么多刺激物，我的脑袋都快爆炸了。”"];
+	  189 [label="The Gardener: Variable[\"TASK.perform_field_autopsy\"]"];
+	  190 [label="Variable[\"TASK.perform_field_autopsy\"]", shape=diamond];
+	  191 [label="!(Variable[\"TASK.perform_field_autopsy\"])", shape=diamond];
+	  192 [label="The Gardener: “用的时候一定要有节制。它让我头疼的厉害。”"];
+	  193 [label="You: “那好吧。就是雪了。”"];
+	  194 [label="Jump to: [SNOWHUB]"];
+	  195 [label="Visual Calculus: 没错。还有运河，书店，港口大门……这是个非常有利的地点——可以密切关注*你*。"];
+	  196 [label="The Gardener: “好吧。”"];
+	  197 [label="You: “这么晚了，你还在这里。”"];
+	  198 [label="Inland Empire: 奇怪……"];
+	  199 [label="Jump to: [MAIN HUB]"];
+	  200 [label="You: “艾弗拉特确认过了，他派你来监视我们的。”\n“艾弗拉特确认过了，他派你来监视我们的。”"];
+	  201 [label="The Gardener: “好吧，”她一边回复，一边放松了肩膀。"];
+	  202 [label="You: “我已经调查过尸体了。不久我们就会把他放下来。”"];
+	  203 [label="You: “不，尸体在地面上。”"];
+	  204 [label="You: “我在找一具尸体。”\n“尸体——到底在哪里？”"];
+	  205 [label="The Gardener: “哦，那肯定是大船上的那个女人。”她指向西北方。“码头停着一艘船。几周以前来的。不容易错过的。”"];
+	  206 [label="The Gardener: Variable[\"plaza.gardener_prehub_reached\"]"];
+	  207 [label="Variable[\"plaza.gardener_prehub_reached\"]", shape=diamond];
+	  208 [label="!(Variable[\"plaza.gardener_prehub_reached\"])", shape=diamond];
+	  209 [label="The Gardener: Variable[\"plaza.gardener_gloves_inland\"]"];
+	  210 [label="Variable[\"plaza.gardener_gloves_inland\"]", shape=diamond];
+	  211 [label="!(Variable[\"plaza.gardener_gloves_inland\"])", shape=diamond];
+	  212 [label="The Gardener: “哦？”她伸长了脖子。“呃，那不是我写的。我只是坐在这里。”"];
+	  213 [label="Drama: 看着那张笑脸，您产生了一种奇怪的感觉。它破坏了这个时刻。它是虚伪的。"];
+	  214 [label="The Gardener: “要么问我个正常点的问题，要么就别来烦我。”"];
+	  215 [label="You: 注意到了，不过我不会说出去。"];
+	  216 [label="The Gardener: Variable[\"plaza.gardener_asked_fuck_the_police\"]"];
+	  217 [label="Variable[\"plaza.gardener_asked_fuck_the_police\"]", shape=diamond];
+	  218 [label="!(Variable[\"plaza.gardener_asked_fuck_the_police\"])", shape=diamond];
+	  219 [label="Jump to: [MAIN HUB]"];
+	  220 [label="The Gardener: “如果你没有什么正经事要说的话，我有些事情需要考虑。”"];
+	  221 [label="Conceptualization: 你还在等什么，问问迪斯科的事啊。你需要一些新鲜玩意来摆脱这种冲动。"];
+	  222 [label="Inland Empire: 西边有个奇迹……"];
+	  223 [label="The Gardener: Variable[\"XP.got_gloves\"]"];
+	  224 [label="Variable[\"XP.got_gloves\"]", shape=diamond];
+	  225 [label="!(Variable[\"XP.got_gloves\"])", shape=diamond];
+	  226 [label="The Gardener: “是这样吗？”她耸耸肩，脸上还是毫无表情。“我毫不知情。肯定是个误会吧。”"];
+	  227 [label="Jump to: [MAIN HUB]"];
+	  228 [label="You: “没事了。”"];
+	  229 [label="The Gardener: “在天堂里？”她笑了笑。“谢谢你，警官。看来四月份我就能种上薄荷了。”"];
+	  230 [label="Jump to: [MAIN HUB]"];
+	  231 [label="The Gardener: “我也很高兴见到你，警官。”"];
+	  232 [label="The Gardener: “当然可以——我已经用完了。”她从胸前的口袋里拿出一个小胶囊递给你。"];
+	  233 [label="directions hub"];
+	  234 [label="You: “我没说是你写的。”"];
+	  235 [label="The Gardener: “先生，你的问题在*暗示*这一点。”"];
+	  236 [label="Rhetoric: 羞怯消失了一秒。别的什么东西占据了它的位置。一种准备就绪的感觉。"];
+	  237 [label="Visual Calculus: 你唯一能看见的，只有她的肤色跟你的不同这个事实。基本上这就是全部。你必须接受这一点。\n你唯一能看见的，只有她的肤色跟你的不同这个事实。基本上这就是全部。你必须接受这一点。\n你唯一能看见的，只有她的肤色跟你的不同这个事实。基本上这就是全部。你必须接受这一点。"];
+	  238 [label="Reaction Speed: 最好在开始之前就下来。这样什么也得不到的。"];
+	  239 [label="The Gardener: “是的，因为是他让你来骚扰我的，对吗？你不该听他的话。”她指向角落里那个损坏的标志。“那个可能就是他写的。”"];
+	  240 [label="The Gardener: 沉默无言。还有最浅的微笑。"];
+	  241 [label="Jump to: [MAIN HUB]"];
+	  242 [label="The Gardener: “那是什么意思？”她没有退缩。"];
+	  243 [label="The Gardener: Variable[\"plaza.gardener_interfacing_gloves\"]"];
+	  244 [label="Variable[\"plaza.gardener_interfacing_gloves\"]", shape=diamond];
+	  245 [label="!(Variable[\"plaza.gardener_interfacing_gloves\"])", shape=diamond];
+	  246 [label="Logic: 她还在这里，因为你也还在这里。"];
+	  247 [label="Jump to: [MAIN HUB]"];
+	  248 [label="You: “没事的，我只是问问。”"];
+	  249 [label="You: “能把你的手套借给我吗？我要做验尸。”"];
+	  250 [label="The Gardener: “一小时之前还是晴天的……”"];
+	  251 [label="The Gardener: “你是什么意思？”"];
+	  252 [label="You: “回见。”[离开。]"];
+	  253 [label="The Gardener: “回见，警官。”"];
+	  254 [label="The Gardener: “在马丁内斯，先生。瑞瓦肖城……”她四下看了看，想找点别的话说。“这个十字路口叫做环岛北路。”\n“是的，先生。马丁内斯区……”她四下看了看，想找点别的话说。“这个十字路口叫做环岛北路。”"];
+	  255 [label="The Gardener: “野松公司？你是说那个公司的女人？”"];
+	  256 [label="You: “告诉我，你究竟在温室里做什么——现在可是*三月*？”"];
+	  257 [label="The Gardener: 她眯起眼睛。“当然可以。”"];
+	  258 [label="The Gardener: “有点过了？你在说什么呢？外婆就是这么跟我说的，好吗？”"];
+	  259 [label="You: “什么营养素？”"];
+	  260 [label="Reaction Speed: 不，不可以。马上退出，取消。"];
+	  261 [label="The Gardener: IsKimHere()"];
+	  262 [label="IsKimHere()", shape=diamond];
+	  263 [label="!(IsKimHere())", shape=diamond];
+	  264 [label="The Gardener: “呃……我的回答是否。”"];
+	  265 [label="Inland Empire: 喂！她的手套——它们能帮你做尸检。"];
+	  266 [label="Visual Calculus: 她改变了话题，不会让你再谈这个了。"];
+	  267 [label="Jump to: [directions hub]"];
+	  268 [label="You: “这个路标说搞死警察。”（指向它。）"];
+	  269 [label="The Gardener: “那个我也不知道。我说过了，不是我写的。”"];
+	  270 [label="The Gardener: “下来……？”园丁挺直后背。“你的意思是尸体总算是不在了？”"];
+	  271 [label="You: “他已经不在院子里了。现在，他在……别的地方。”"];
+	  272 [label="The Gardener: “几天前感觉还像春天一样……”"];
+	  273 [label="optionsgohere"];
+	  274 [label="Kim Kitsuragi: “别担心，小姐。我们就是来清理的——你很快就能工作了。”"];
+	  275 [label="You: “你听起来很吃惊。”"];
+	  276 [label="The Gardener: “不敢相信，居然又下雪了……”坐在独轮手推車旁边休息的年轻女子叹了口气。\n“不敢相信，居然又下雪了……”年轻女子看着飘落的雪花，叹了口气。"];
+	  277 [label="You: “还有一件事……能把你的手套借给我吗？”"];
+	  278 [label="You: “你还有盐吗？我想我可能用得着。”"];
+	  279 [label="The Gardener: 她眯起眼睛，看着大海。“只是大海吧……不对，事实上，他们好像叫它马丁内斯海湾。海湾边有些小岛，不过很难过去。”"];
+	  280 [label="The Gardener: “我们在马丁内斯，先生。”她四下看了看。“这个十字路口……叫做环岛北路，我想是吧。”"];
+	  281 [label="Kim Kitsuragi: “他知道我们在哪。他只是需要些指引。”警督对你表现出来的迷失水平似乎有些不安。"];
+	  282 [label="The Gardener: Variable[\"TASK.perform_field_autopsy_done\"]  and  CheckItem(\"gloves_garden\") == false"];
+	  283 [label="Variable[\"TASK.perform_field_autopsy_done\"]  and  CheckItem(\"gloves_garden\") == false", shape=diamond];
+	  284 [label="!(Variable[\"TASK.perform_field_autopsy_done\"]  and  CheckItem(\"gloves_garden\") == false)", shape=diamond];
+	  285 [label="Rhetoric: 完全消失了。"];
+	  286 [label="The Gardener: Variable[\"plaza.gardener_conze_yes_keep_her_in_the_loop\"]"];
+	  287 [label="Variable[\"plaza.gardener_conze_yes_keep_her_in_the_loop\"]", shape=diamond];
+	  288 [label="!(Variable[\"plaza.gardener_conze_yes_keep_her_in_the_loop\"])", shape=diamond];
+	  289 [label="Drama: 是的，想想可爱的外婆，而不是这场诡异的雪。"];
+	  290 [label="The Gardener: IsKimHere()"];
+	  291 [label="IsKimHere()", shape=diamond];
+	  292 [label="!(IsKimHere())", shape=diamond];
+	  293 [label="The Gardener: IsKimHere()"];
+	  294 [label="IsKimHere()", shape=diamond];
+	  295 [label="!(IsKimHere())", shape=diamond];
+	  296 [label="Kim Kitsuragi: “你在这里休息*好一阵子*了，对吧？”警督插了进来，一心一意地看着她。"];
+	  297 [label="Visual Calculus: 很高兴为你服务。现在你知道了——本地人在监视你。"];
+	  298 [label="Suggestion: 他不觉得你是想破案。"];
+	  299 [label="Kim Kitsuragi: 警督转向你。“我们应该继续在马丁内斯的工作。”"];
+	  300 [label="The Gardener: “我喜欢晚上的城市。你不一样吗？”她望着眼前的一片漆黑，又笑了。"];
+	  301 [label="Jump to: [MAIN HUB]"];
+	  302 [label="Jump to: [MAIN HUB]"];
+	  303 [label="You: “不，就是没了。”"];
+	  304 [label="The Gardener: “你*可能*也知道，那边的树上挂着一具尸体。味道真的很难闻。所以我必须休息一下。”\n“你已经知道了，那边的树上挂着一具尸体。味道真的很难闻。所以我必须休息一下。”"];
+	  305 [label="The Gardener: IsKimHere()"];
+	  306 [label="IsKimHere()", shape=diamond];
+	  307 [label="!(IsKimHere())", shape=diamond];
+	  308 [label="The Gardener: “我正在工作。”"];
+	  309 [label="The Gardener: “当然，你留着吧，我还有一副。”她把橡胶手套递给你，没有表现出明显的为难。"];
+	  310 [label="The Gardener: “只有海岸。那里有座小渔村……还有个鱼市。不过几年前就关了。”"];
+	  311 [label="The Gardener: “你是什么意思？”"];
+	  312 [label="Reaction Speed: 盐？铵盐？也许以后有用。"];
+	  313 [label="You: 广场？"];
+	  314 [label="Jump to: [MAIN HUB]"];
+	  315 [label="Kim Kitsuragi: “我能理解——RCM在这里不受欢迎，本地人想要关注我们的举动。”"];
+	  316 [label="Kim Kitsuragi: “这是最后一次，小姐。”他看着你，表情很严肃。“这里的询问已经结束了。我们走吧。”"];
+	  317 [label="You: “没什么。”"];
+	  318 [label="You: “警察需要指引。”\n“我们需要指引。”"];
+	  319 [label="Perception (Sight): 呃……你确定？镜子里的你看起来是粉色的，灰色，还有一点点红。"];
+	  320 [label="Perception (Sight): 你*真的*需要去楼上的镜子里看一眼。"];
+	  321 [label="You: “你远远不止这么简单吧。”"];
+	  322 [label="You: “你到底是谁？”"];
+	  323 [label="The Gardener: “好吧。”"];
+	  324 [label="Authority: 她可能不会这么做。"];
+	  325 [label="You: 院子的入口？"];
+	  326 [label="The Gardener: Variable[\"plaza.gardener_you_are_black\"]"];
+	  327 [label="Variable[\"plaza.gardener_you_are_black\"]", shape=diamond];
+	  328 [label="!(Variable[\"plaza.gardener_you_are_black\"])", shape=diamond];
+	  329 [label="You: “所以，现在你们都听些什么样的音乐？”"];
+	  330 [label="Half Light: 真的*没有*吗？也许只有*一点点*困扰吧。"];
+	  331 [label="Jump to: [MAIN HUB]"];
+	  332 [label="The Gardener: “哦……好吧。”她挠了挠面颊。“但不是从院子里。我明白了。”"];
+	  333 [label="You: 我*应该*这么说吗？"];
+	  334 [label="The Gardener: Variable[\"whirling.mirror_saw_your_face\"]"];
+	  335 [label="Variable[\"whirling.mirror_saw_your_face\"]", shape=diamond];
+	  336 [label="!(Variable[\"whirling.mirror_saw_your_face\"])", shape=diamond];
+	  337 [label="Kim Kitsuragi: “也许我们应该继续在马丁内斯的工作。”警督打断了她，转向你。“除非你还有更*官方*的问题？”"];
+	  338 [label="Empathy: 她不喜欢那艘*大*船。也不喜欢船上的那个女人。"];
+	  339 [label="Jump to: [MAIN HUB]"];
+	  340 [label="The Gardener: “有吗？”"];
+	  341 [label="Composure: 她回答得这么迅速，说明你的判断肯定没错。"];
+	  342 [label="The Gardener: Variable[\"plaza.gardener_got_gloves_in_exit\"]"];
+	  343 [label="Variable[\"plaza.gardener_got_gloves_in_exit\"]", shape=diamond];
+	  344 [label="!(Variable[\"plaza.gardener_got_gloves_in_exit\"])", shape=diamond];
+	  345 [label="The Gardener: “又见面了，警官。最近怎么样？”"];
+	  346 [label="You: “我在哪？”"];
+	  347 [label="You: “你知道我能在哪里找到野松公司的代表吗？”"];
+	  348 [label="The Gardener: IsKimHere()"];
+	  349 [label="IsKimHere()", shape=diamond];
+	  350 [label="!(IsKimHere())", shape=diamond];
+	  351 [label="The Gardener: Variable[\"plaza.gardener_drama_catches_a_momentspoiling_smile\"]"];
+	  352 [label="Variable[\"plaza.gardener_drama_catches_a_momentspoiling_smile\"]", shape=diamond];
+	  353 [label="!(Variable[\"plaza.gardener_drama_catches_a_momentspoiling_smile\"])", shape=diamond];
+	  354 [label="Kim Kitsuragi: “放松点，小姐。这不是一场审讯。我们只是在核实一些事实。”"];
+	  355 [label="Jump to: [SNOWHUB]"];
+	  356 [label="The Gardener: IsKimHere()"];
+	  357 [label="IsKimHere()", shape=diamond];
+	  358 [label="!(IsKimHere())", shape=diamond];
+	  359 [label="Kim Kitsuragi: “你不用因为我们熬夜的。”"];
+	  360 [label="Jump to: [MAIN HUB]"];
+	  361 [label="The Gardener: “去天堂了？”她笑了笑。“谢谢你，警官。看来四月份我就能种上薄荷了。”"];
+	  362 [label="You: “那里有具尸体，妨碍你工作了。”"];
+	  363 [label="Jump to: [MAIN HUB]"];
+	  364 [label="The Gardener: Variable[\"plaza.gardener_empathy_dislike_boat\"]"];
+	  365 [label="Variable[\"plaza.gardener_empathy_dislike_boat\"]", shape=diamond];
+	  366 [label="!(Variable[\"plaza.gardener_empathy_dislike_boat\"])", shape=diamond];
+	  367 [label="The Gardener: Variable[\"plaza.gardener_shivers_fish_market\"]"];
+	  368 [label="Variable[\"plaza.gardener_shivers_fish_market\"]", shape=diamond];
+	  369 [label="!(Variable[\"plaza.gardener_shivers_fish_market\"])", shape=diamond];
+	  370 [label="You: “是什么样的鱼市？”"];
+	  371 [label="quicklyahub"];
+	  372 [label="Jump to: [MAIN HUB]"];
+	  373 [label="You: “北边有什么？”"];
+	  374 [label="Empathy: 与其说她受到了威胁，倒不如说是不知所措。"];
+	  375 [label="Horrific Necktie: 问她音乐的问题——这样能让对话流畅地进行下去，别担心！"];
+	  376 [label="The Gardener: “那你能告诉我，你什么时候能把他带走吗？因为我算是在等人*这么做*。”"];
+	  377 [label="The Gardener: “没有，当然不是！我不明白这是在干什么……”她看向院子，表情明朗了很多。"];
+	  378 [label="The Gardener: “也许你不应该这么做。我的意思是……你做好自己的工作就行，那孩子已经无药可救了。而且他肯定不会帮*你*的。”她摇摇头。"];
+	  379 [label="The Gardener: “是的。我累了。”"];
+	  380 [label="You: “好吧。”"];
+	  381 [label="The Gardener: “我不知道……”她四下看了看。“我猜收音机里播什么就听什么吧。但是这跟雪，或者在三月做园艺工作有什么关系吗？”"];
+	  382 [label="The Gardener: SetVariableValue(\"tc.that_in_revachol\", true) --[[ Variable[ ]]"];
+	  383 [label="Jump to: [MAIN HUB]"];
+	  384 [label="The Gardener: Variable[\"plaza.gardener_dead_body_discussed\"]"];
+	  385 [label="Variable[\"plaza.gardener_dead_body_discussed\"]", shape=diamond];
+	  386 [label="!(Variable[\"plaza.gardener_dead_body_discussed\"])", shape=diamond];
+	  387 [label="You: 不了，这些手套真的不符合我的风格。[离开。]"];
+	  388 [label="The Gardener: “没问题。”她点点头，拂去了脸颊上的一小撮泥土。\n“没问题。”"];
+	  389 [label="You: “我……迷失了方向。我不知道自己在哪。”\n“我有点搞不清楚方向。这里是瑞瓦肖，对吗？”"];
+	  390 [label="You: “只要告诉我这是哪里就好，行吗？”"];
+	  391 [label="endhub"];
+	  392 [label="Jump to: [MAIN HUB]"];
+	  393 [label="Visual Calculus: 别看她了，看看周围！你看见了什么？"];
+	  394 [label="You: “你是黑人。”"];
+	  395 [label="The Gardener: “是那个小孩做的，对吗？红头发那个？每句话里肯定带着*他妈的*或者*吉皮特*的字眼……他一直在给我惹麻烦。”"];
+	  396 [label="The Gardener: “是的，因为是他让你来骚扰我的？他在玩弄你。”她摇摇头。“他恨警察，好吗？这里很多人都一样。”"];
+	  397 [label="The Gardener: 她坐在椅子上，笨拙地挪了挪身体。"];
+	  398 [label="Jump to: [directions hub]"];
+	  399 [label="The Gardener: “验尸？哇哦。当然，给你吧。”她把橡胶手套递给你。“我还有一副。”"];
+	  400 [label="Empathy: 终于有人来处理这件事，让她感到很欣慰。"];
+	  401 [label="Perception (Sight): 她的手套用的肯定很勤，因为她的手干净又娇嫩。"];
+	  402 [label="Perception (Sight): 她的手套用的肯定很勤，因为她的手干净又娇嫩。"];
+	  403 [label="The Gardener: Variable[\"plaza.gardener_interfacing_gloves\"]"];
+	  404 [label="Variable[\"plaza.gardener_interfacing_gloves\"]", shape=diamond];
+	  405 [label="!(Variable[\"plaza.gardener_interfacing_gloves\"])", shape=diamond];
+	  406 [label="Authority: 不！*不要*把任何消息回报给这个普通民众。"];
+	  407 [label="You: “外婆说得有点过了。”"];
+	  408 [label="The Gardener: “主要是氮和硫磺。”她指向天空。“我猜，还有工厂和静风舰排放出来的东西吧。”"];
+	  409 [label="Kim Kitsuragi: “没事的，小姐——做你该做的事。”警督朝你点点头。“我想这里已经差不多了。我们走吧。”"];
+	  410 [label="The Gardener: “好吧。”"];
+	  411 [label="You: “谢谢你。”[离开]"];
+	  412 [label="Empathy: 她不舒服。也许你应该放弃这些问题。"];
+	  413 [label="Jump to: [MAIN HUB]"];
+	  414 [label="Jump to: [directions hub]"];
+	  415 [label="The Gardener: “好吧……你*可能*也知道，那边的树上挂着一具尸体。味道真的很难闻。所以我必须休息一下。”\n“好吧……你已经知道了，那边的树上挂着一具尸体。味道真的很难闻。所以我必须休息一下。”"];
+	  416 [label="Perception (Sight): 如果我告诉你，楼上你房间浴室的墙上挂着一面*镜子*呢？*也许*你想去看一眼。"];
+	  417 [label="The Gardener: “我没什么意见。还有别的事吗？”"];
+	  418 [label="Empathy: 她宁愿不去深究。而且捡起来也没那么容易……"];
+	  419 [label="Shivers: 宽阔的屋顶下是一排排的小摊子，报纸上堆满了银灿灿的鱼。海水，到处都是海水——在旧教堂的阴影里，从天堂倾斜而下。"];
+	  420 [label="Jump to: [MAIN HUB]"];
+	  421 [label="The Gardener: “RCM来马丁内斯了？”年轻女子抬头看着你。“有什么我能帮你的吗？”"];
+	  422 [label="Interfacing: 如果真有一具尸体的话，你会需要这些手套来验尸的。"];
+	  423 [label="You: “你听迪斯科乐吗？”"];
+	  424 [label="You: “好吧。”"];
+	  425 [label="You: “当然了。你在这里做什么？”"];
+	  426 [label="The Gardener: “好吧，呃，我没有，”她身体后仰，肩膀放松了下来。"];
+	  427 [label="The Gardener: “这个嘛……”她指向自己的独轮手推車，显然是被你的问题吓到了。“这可能是最后一场雪了。至少我希望如此……”"];
+	  428 [label="SNOWHUB"];
+	  429 [label="Drama: 现在她感觉自己被审问了。很难说她到底是不是在撒谎。"];
+	  430 [label="You: “现在这不重要。”"];
+	  431 [label="The Gardener: “是的，我是黑人，你到底还要说多少遍？”"];
+	  432 [label="The Gardener: 她眯起双眼。“当然。”"];
+	  433 [label="The Gardener: Variable[\"TASK.get_ammonium_done\"]"];
+	  434 [label="Variable[\"TASK.get_ammonium_done\"]", shape=diamond];
+	  435 [label="!(Variable[\"TASK.get_ammonium_done\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 124
+	  2 -> 398
+	  3 -> 4
+	  3 -> 5
+	  4 -> 359
+	  5 -> 301
+	  6 -> 270
+	  7 -> 88
+	  8 -> 123
+	  9 -> 304
+	  10 -> 415
+	  11 -> 12
+	  11 -> 13
+	  12 -> 320
+	  13 -> 416
+	  14 -> 16
+	  14 -> 15
+	  15 -> 337
+	  16 -> 413
+	  17 -> 18
+	  17 -> 19
+	  18 -> 169
+	  19 -> 257
+	  20 -> 205
+	  21 -> 417
+	  22 -> 418
+	  23 -> 79
+	  24 -> 49
+	  25 -> 308
+	  26 -> 233
+	  27 -> 388
+	  28 -> 69
+	  29 -> 195
+	  30 -> 138
+	  31 -> 329
+	  31 -> 317
+	  32 -> 196
+	  33 -> 34
+	  33 -> 35
+	  34 -> 363
+	  35 -> 433
+	  36 -> 209
+	  37 -> 119
+	  38 -> 40
+	  38 -> 39
+	  39 -> 248
+	  39 -> 166
+	  40 -> 76
+	  41 -> 178
+	  42 -> 43
+	  42 -> 44
+	  43 -> 185
+	  44 -> 148
+	  45 -> 186
+	  45 -> 61
+	  46 -> 48
+	  46 -> 47
+	  47 -> 128
+	  48 -> 20
+	  49 -> 72
+	  50 -> 94
+	  51 -> 172
+	  52 -> 392
+	  53 -> 81
+	  54 -> 201
+	  55 -> 122
+	  56 -> 324
+	  57 -> 332
+	  58 -> 178
+	  59 -> 273
+	  60 -> 251
+	  61 -> 151
+	  62 -> 161
+	  63 -> 80
+	  64 -> 243
+	  65 -> 66
+	  65 -> 67
+	  66 -> 375
+	  67 -> 45
+	  68 -> 192
+	  69 -> 392
+	  70 -> 238
+	  71 -> 378
+	  72 -> 73
+	  72 -> 74
+	  73 -> 75
+	  74 -> 167
+	  75 -> 178
+	  76 -> 77
+	  76 -> 78
+	  77 -> 96
+	  78 -> 302
+	  79 -> 233
+	  80 -> 371
+	  81 -> 420
+	  82 -> 233
+	  83 -> 178
+	  85 -> 282
+	  86 -> 2
+	  87 -> 310
+	  88 -> 286
+	  89 -> 90
+	  89 -> 91
+	  90 -> 299
+	  91 -> 432
+	  92 -> 143
+	  93 -> 120
+	  94 -> 82
+	  95 -> 53
+	  96 -> 426
+	  97 -> 98
+	  98 -> 178
+	  99 -> 23
+	  100 -> 101
+	  100 -> 102
+	  103 -> 178
+	  104 -> 83
+	  105 -> 250
+	  106 -> 387
+	  106 -> 277
+	  107 -> 232
+	  108 -> 109
+	  109 -> 398
+	  110 -> 279
+	  111 -> 233
+	  112 -> 121
+	  112 -> 234
+	  112 -> 54
+	  113 -> 41
+	  114 -> 289
+	  115 -> 247
+	  116 -> 377
+	  117 -> 219
+	  118 -> 264
+	  119 -> 178
+	  120 -> 178
+	  121 -> 269
+	  122 -> 38
+	  123 -> 51
+	  123 -> 271
+	  123 -> 303
+	  124 -> 125
+	  124 -> 126
+	  125 -> 182
+	  126 -> 206
+	  127 -> 305
+	  128 -> 205
+	  129 -> 158
+	  130 -> 231
+	  131 -> 132
+	  132 -> 133
+	  132 -> 134
+	  133 -> 135
+	  134 -> 135
+	  135 -> 136
+	  135 -> 137
+	  136 -> 393
+	  137 -> 237
+	  138 -> 394
+	  139 -> 178
+	  140 -> 141
+	  140 -> 142
+	  141 -> 265
+	  142 -> 36
+	  143 -> 144
+	  143 -> 145
+	  144 -> 246
+	  145 -> 198
+	  146 -> 155
+	  147 -> 400
+	  148 -> 178
+	  149 -> 11
+	  150 -> 60
+	  150 -> 95
+	  151 -> 374
+	  152 -> 233
+	  153 -> 104
+	  153 -> 275
+	  153 -> 252
+	  154 -> 231
+	  155 -> 156
+	  155 -> 157
+	  157 -> 403
+	  158 -> 87
+	  159 -> 152
+	  160 -> 178
+	  161 -> 104
+	  161 -> 252
+	  162 -> 178
+	  163 -> 164
+	  163 -> 165
+	  164 -> 363
+	  165 -> 312
+	  166 -> 56
+	  167 -> 59
+	  168 -> 42
+	  169 -> 331
+	  170 -> 79
+	  171 -> 14
+	  172 -> 213
+	  173 -> 52
+	  174 -> 32
+	  174 -> 380
+	  174 -> 118
+	  175 -> 227
+	  176 -> 177
+	  177 -> 412
+	  178 -> 256
+	  178 -> 322
+	  178 -> 197
+	  178 -> 6
+	  178 -> 200
+	  178 -> 8
+	  178 -> 202
+	  178 -> 107
+	  178 -> 176
+	  178 -> 146
+	  178 -> 278
+	  178 -> 249
+	  178 -> 318
+	  179 -> 180
+	  179 -> 181
+	  180 -> 105
+	  181 -> 345
+	  182 -> 184
+	  182 -> 183
+	  183 -> 276
+	  184 -> 179
+	  185 -> 60
+	  185 -> 333
+	  185 -> 149
+	  186 -> 17
+	  187 -> 153
+	  188 -> 33
+	  189 -> 190
+	  189 -> 191
+	  190 -> 64
+	  191 -> 422
+	  192 -> 58
+	  193 -> 115
+	  194 -> 428
+	  195 -> 116
+	  195 -> 215
+	  196 -> 221
+	  197 -> 92
+	  198 -> 93
+	  199 -> 178
+	  200 -> 226
+	  201 -> 302
+	  202 -> 97
+	  203 -> 7
+	  204 -> 384
+	  205 -> 338
+	  206 -> 208
+	  206 -> 207
+	  207 -> 187
+	  208 -> 421
+	  209 -> 210
+	  209 -> 211
+	  210 -> 106
+	  212 -> 112
+	  213 -> 351
+	  214 -> 241
+	  215 -> 297
+	  216 -> 217
+	  216 -> 218
+	  217 -> 239
+	  218 -> 396
+	  219 -> 178
+	  220 -> 219
+	  221 -> 380
+	  221 -> 118
+	  222 -> 267
+	  223 -> 224
+	  223 -> 225
+	  224 -> 253
+	  225 -> 85
+	  226 -> 175
+	  227 -> 178
+	  228 -> 397
+	  229 -> 213
+	  230 -> 178
+	  231 -> 372
+	  232 -> 192
+	  233 -> 129
+	  233 -> 27
+	  233 -> 108
+	  233 -> 204
+	  233 -> 110
+	  233 -> 373
+	  233 -> 346
+	  233 -> 347
+	  234 -> 235
+	  235 -> 236
+	  236 -> 121
+	  236 -> 54
+	  237 -> 260
+	  238 -> 160
+	  239 -> 293
+	  240 -> 409
+	  241 -> 178
+	  242 -> 31
+	  243 -> 244
+	  243 -> 245
+	  244 -> 106
+	  245 -> 140
+	  246 -> 3
+	  247 -> 178
+	  248 -> 201
+	  249 -> 399
+	  250 -> 178
+	  251 -> 65
+	  254 -> 382
+	  255 -> 46
+	  256 -> 427
+	  257 -> 331
+	  258 -> 429
+	  259 -> 408
+	  260 -> 70
+	  260 -> 394
+	  260 -> 30
+	  261 -> 262
+	  261 -> 263
+	  262 -> 316
+	  263 -> 214
+	  264 -> 356
+	  265 -> 209
+	  266 -> 314
+	  267 -> 233
+	  268 -> 212
+	  269 -> 55
+	  270 -> 285
+	  271 -> 229
+	  272 -> 178
+	  273 -> 9
+	  273 -> 10
+	  273 -> 362
+	  274 -> 188
+	  275 -> 62
+	  276 -> 272
+	  277 -> 309
+	  278 -> 68
+	  279 -> 222
+	  280 -> 414
+	  281 -> 111
+	  282 -> 283
+	  282 -> 284
+	  283 -> 253
+	  284 -> 189
+	  285 -> 57
+	  285 -> 203
+	  286 -> 288
+	  286 -> 287
+	  287 -> 113
+	  288 -> 406
+	  289 -> 428
+	  290 -> 291
+	  290 -> 292
+	  291 -> 354
+	  292 -> 355
+	  293 -> 294
+	  293 -> 295
+	  294 -> 296
+	  295 -> 266
+	  296 -> 379
+	  297 -> 139
+	  298 -> 241
+	  299 -> 360
+	  300 -> 301
+	  301 -> 178
+	  302 -> 178
+	  303 -> 361
+	  304 -> 305
+	  305 -> 306
+	  305 -> 307
+	  306 -> 274
+	  307 -> 363
+	  308 -> 24
+	  309 -> 330
+	  310 -> 419
+	  311 -> 389
+	  311 -> 390
+	  312 -> 363
+	  313 -> 195
+	  314 -> 178
+	  315 -> 240
+	  316 -> 298
+	  317 -> 89
+	  318 -> 26
+	  319 -> 339
+	  320 -> 339
+	  321 -> 340
+	  322 -> 63
+	  323 -> 103
+	  324 -> 302
+	  325 -> 195
+	  326 -> 328
+	  326 -> 327
+	  327 -> 431
+	  328 -> 242
+	  329 -> 381
+	  330 -> 402
+	  331 -> 178
+	  332 -> 376
+	  333 -> 150
+	  334 -> 336
+	  334 -> 335
+	  335 -> 319
+	  336 -> 11
+	  337 -> 413
+	  338 -> 364
+	  339 -> 178
+	  340 -> 341
+	  341 -> 425
+	  341 -> 130
+	  342 -> 344
+	  342 -> 343
+	  343 -> 253
+	  344 -> 223
+	  345 -> 178
+	  346 -> 311
+	  347 -> 255
+	  348 -> 349
+	  348 -> 350
+	  349 -> 281
+	  350 -> 111
+	  351 -> 352
+	  351 -> 353
+	  352 -> 28
+	  352 -> 173
+	  353 -> 383
+	  354 -> 355
+	  355 -> 428
+	  356 -> 357
+	  356 -> 358
+	  357 -> 117
+	  358 -> 220
+	  359 -> 300
+	  360 -> 178
+	  361 -> 213
+	  362 -> 127
+	  363 -> 178
+	  364 -> 365
+	  364 -> 366
+	  365 -> 21
+	  365 -> 22
+	  366 -> 152
+	  367 -> 368
+	  367 -> 369
+	  368 -> 370
+	  368 -> 99
+	  369 -> 79
+	  370 -> 170
+	  371 -> 321
+	  371 -> 154
+	  371 -> 25
+	  372 -> 178
+	  373 -> 86
+	  374 -> 424
+	  374 -> 423
+	  375 -> 45
+	  376 -> 88
+	  377 -> 395
+	  378 -> 293
+	  379 -> 315
+	  380 -> 410
+	  381 -> 174
+	  382 -> 348
+	  383 -> 178
+	  384 -> 385
+	  384 -> 386
+	  385 -> 50
+	  386 -> 147
+	  388 -> 37
+	  389 -> 254
+	  390 -> 280
+	  392 -> 178
+	  393 -> 313
+	  393 -> 325
+	  393 -> 29
+	  394 -> 326
+	  395 -> 430
+	  395 -> 71
+	  396 -> 293
+	  397 -> 199
+	  398 -> 233
+	  399 -> 401
+	  400 -> 94
+	  401 -> 230
+	  402 -> 411
+	  403 -> 404
+	  403 -> 405
+	  404 -> 253
+	  405 -> 342
+	  406 -> 41
+	  407 -> 258
+	  408 -> 194
+	  409 -> 314
+	  410 -> 162
+	  412 -> 268
+	  412 -> 228
+	  413 -> 178
+	  414 -> 233
+	  415 -> 305
+	  416 -> 339
+	  417 -> 159
+	  418 -> 152
+	  419 -> 367
+	  420 -> 178
+	  421 -> 153
+	  422 -> 243
+	  423 -> 171
+	  424 -> 323
+	  425 -> 308
+	  426 -> 302
+	  427 -> 114
+	  428 -> 193
+	  428 -> 259
+	  428 -> 131
+	  428 -> 407
+	  429 -> 290
+	  430 -> 216
+	  431 -> 261
+	  432 -> 360
+	  433 -> 434
+	  433 -> 435
+	  434 -> 363
+	  435 -> 163
+}
+

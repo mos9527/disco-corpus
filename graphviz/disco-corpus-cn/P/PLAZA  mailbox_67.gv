@@ -1,0 +1,271 @@
+# PLAZA / mailbox
+# A mailbox on the plaza.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: “我没有。我们走吧。”\n“我没有。把这封信寄出去，这件事就算结了。”"];
+	  3 [label="Jump to: [boxhub]"];
+	  4 [label="Pain Threshold: 你的脚趾头受伤了。疼得厉害！"];
+	  5 [label="You: 我能感觉到你，邮筒。"];
+	  6 [label="You: “哦，你是在讽刺我。我明白了。这其实是个很混账的举动。”"];
+	  7 [label="Empathy: 躲过了一劫……他肯定把邮筒看成了你们俩中的弱者，而你是霸凌者——他不支持这种事。"];
+	  8 [label="Empathy: 他肯定把邮筒看成了你们俩中的弱者，而你是霸凌者——他不支持这种事。"];
+	  9 [label="Mail Collection Box: 除了踢它吗？我们是对的！"];
+	  10 [label="Jump to: [boxhub]"];
+	  11 [label="Kim Kitsuragi: “不会那么容易的。我们需要用签名的事弄脏我们的手。”他四下看了看。“我认为这才是真正的目标。”"];
+	  12 [label="Mail Collection Box: 你把白信封扔进黑暗之中。随着轻柔地砰的一声，它似乎落在了一堆信件上。"];
+	  13 [label="Variable[\"plaza.mailbox_kicked_it\"]"];
+	  14 [label="Variable[\"plaza.mailbox_kicked_it\"]", shape=diamond];
+	  15 [label="!(Variable[\"plaza.mailbox_kicked_it\"])", shape=diamond];
+	  16 [label="Kim Kitsuragi: “好吧，我们回去见艾弗拉特。”警督转身面向工业港。“如果我们对他只字不提的话，在一切变得太迟之前，他是不会知道的。”"];
+	  17 [label="You: 把白信封扔进邮筒。"];
+	  19 [label="Kim Kitsuragi: 在离开之前，警督拍了拍邮筒的顶部，动作非常轻柔。"];
+	  20 [label="Jump to: [boxhub]"];
+	  21 [label="You: 把白信封扔进邮筒。"];
+	  22 [label="You: [离开。]"];
+	  23 [label="Variable[\"plaza.kicked_mailbox_on_day1\"]"];
+	  24 [label="Variable[\"plaza.kicked_mailbox_on_day1\"]", shape=diamond];
+	  25 [label="!(Variable[\"plaza.kicked_mailbox_on_day1\"])", shape=diamond];
+	  26 [label="Perception (Hearing): 这里大概积攒了一星期的邮件。很快他们就会把它清空。"];
+	  27 [label="Variable[\"village.ww_rhetoric_convince_success\"]"];
+	  28 [label="Variable[\"village.ww_rhetoric_convince_success\"]", shape=diamond];
+	  29 [label="!(Variable[\"village.ww_rhetoric_convince_success\"])", shape=diamond];
+	  30 [label="You: 把白信封扔进邮筒。"];
+	  31 [label="Variable[\"plaza.mailbox_kicked_it\"]"];
+	  32 [label="Variable[\"plaza.mailbox_kicked_it\"]", shape=diamond];
+	  33 [label="!(Variable[\"plaza.mailbox_kicked_it\"])", shape=diamond];
+	  34 [label="Jump to: [boxhub]"];
+	  35 [label="Inland Empire: 不管是好是坏，这件事结束了。"];
+	  36 [label="You: “真是个好邮筒。”（拍拍邮筒。）"];
+	  37 [label="You: 邮筒，你他妈应该爷们一点。"];
+	  38 [label="Mail Collection Box: 邮筒对你病态的操控全无信心。"];
+	  39 [label="IsKimHere()"];
+	  40 [label="IsKimHere()", shape=diamond];
+	  41 [label="!(IsKimHere())", shape=diamond];
+	  42 [label="Mail Collection Box: 凹陷的黄色邮筒用满身的涂鸦和前面的弹孔问候着你。"];
+	  43 [label="Mail Collection Box: 除了发展个人关系之外吗？看来你是对的。"];
+	  44 [label="You: “去你妈的，邮筒！”（踹它。）"];
+	  45 [label="Variable[\"plaza.mailbox_empathy\"]"];
+	  46 [label="Variable[\"plaza.mailbox_empathy\"]", shape=diamond];
+	  47 [label="!(Variable[\"plaza.mailbox_empathy\"])", shape=diamond];
+	  48 [label="You: 我也经历过，*冒险家邮局*的邮筒……我也经历过。"];
+	  49 [label="Kim Kitsuragi: 警督拍拍邮筒，动作非常轻柔。"];
+	  50 [label="Variable[\"plaza.mailbox_peception_rcm_emergent\"]"];
+	  51 [label="Variable[\"plaza.mailbox_peception_rcm_emergent\"]", shape=diamond];
+	  52 [label="!(Variable[\"plaza.mailbox_peception_rcm_emergent\"])", shape=diamond];
+	  53 [label="IsKimHere()"];
+	  54 [label="IsKimHere()", shape=diamond];
+	  55 [label="!(IsKimHere())", shape=diamond];
+	  56 [label="Mail Collection Box: 邮筒对你病态的操控全无信心。"];
+	  57 [label="DayCount() == 1"];
+	  58 [label="DayCount() == 1", shape=diamond];
+	  59 [label="!(DayCount() == 1)", shape=diamond];
+	  60 [label="IsKimHere()"];
+	  61 [label="IsKimHere()", shape=diamond];
+	  62 [label="!(IsKimHere())", shape=diamond];
+	  63 [label="Variable[\"plaza.kicked_mailbox_on_day1\"]"];
+	  64 [label="Variable[\"plaza.kicked_mailbox_on_day1\"]", shape=diamond];
+	  65 [label="!(Variable[\"plaza.kicked_mailbox_on_day1\"])", shape=diamond];
+	  66 [label="Perception (Sight): 侧面有一个模糊的贴纸，上面写着：“RCM紧急呼叫台8-100-2号”，还有一条标语：“人类，警惕一些！”"];
+	  67 [label="Jump to: [boxhub]"];
+	  68 [label="Jump to: [boxhub]"];
+	  69 [label="Perception (Sight): 上面涂画着“吃屎吧，猪头！”，“坤诺到此一搞”，还有戴着一顶皇冠的“圣徒”。除此之外，还有“珍妮是个婊子”和“搞死邮筒！”。"];
+	  70 [label="Variable[\"plaza.mailbox_got_volition\"]"];
+	  71 [label="Variable[\"plaza.mailbox_got_volition\"]", shape=diamond];
+	  72 [label="!(Variable[\"plaza.mailbox_got_volition\"])", shape=diamond];
+	  73 [label="You: 把白信封扔进邮筒。"];
+	  74 [label="Mail Collection Box: 这个“冒险家邮局”的邮筒被涂鸦严重破坏了。靠近仔细检查一下，会发现前面还有两个弹孔。"];
+	  75 [label="Rhetoric: 他其实根本不觉得酷。如果有什么的话，警督为这个可怜的邮筒感到抱歉——他靠过去查看丑化它的一层层涂鸦。"];
+	  76 [label="You: （按摩你的脚趾头。）“你真这么认为？你觉得这样很酷？”"];
+	  77 [label="Logic: 不会那么容易的。艾弗拉特想用签名的事弄脏你的手，如果你就这么寄出去的话，他很快就会发现的。"];
+	  78 [label="boxhub"];
+	  79 [label="empathyhub"];
+	  80 [label="Variable[\"plaza.mailbox_got_volition\"]"];
+	  81 [label="Variable[\"plaza.mailbox_got_volition\"]", shape=diamond];
+	  82 [label="!(Variable[\"plaza.mailbox_got_volition\"])", shape=diamond];
+	  83 [label="Jump to: [boxhub]"];
+	  84 [label="Jump to: [boxhub]"];
+	  85 [label="Mail Collection Box: 邮筒似乎很开心。"];
+	  86 [label="Jump to: [boxhub]"];
+	  87 [label="Kim Kitsuragi: “挺酷的，”警督赞同地点点头。“你真的给那个邮筒上了一课。”"];
+	  88 [label="Mail Collection Box: 凹陷的黄色邮筒用满身的涂鸦，弹孔和一张RCM的贴纸问候着你。"];
+	  89 [label="Kim Kitsuragi: “除了踢它吗？”"];
+	  90 [label="IsKimHere()"];
+	  91 [label="IsKimHere()", shape=diamond];
+	  92 [label="!(IsKimHere())", shape=diamond];
+	  93 [label="Mail Collection Box: 但是信封里面得文件还缺少必要的签名……"];
+	  94 [label="You: “我知道我们会用到这个邮筒的——因为某些事情。”\n我知道我会用到这个邮筒的——因为某些事情。"];
+	  95 [label="Mail Collection Box: 当你踢中冒险家邮筒时，传来一阵空洞的、悲伤的声音。听起来像是背叛，甚至是怀疑。"];
+	  96 [label="Mail Collection Box: 你踢中邮筒的时候，发出一阵空洞的声响。听起来它基本上是空的。现在你的脚趾头疼了起来。"];
+	  97 [label="Jump to: [boxhub]"];
+	  98 [label="Kim Kitsuragi: “是的。寄信。”"];
+	  99 [label="Mail Collection Box: 你踢中邮筒的时候，发出一阵空洞的声响。听起来它基本上是空的。现在你的脚趾头疼了起来。"];
+	  100 [label="Mail Collection Box: 邮筒似乎在宣泄，甚至是感激。你也一样。你打了个哆嗦。然后咽了下去。"];
+	  101 [label="Mail Collection Box: 邮筒不知道怎么爷们一点，它只是一个静物。"];
+	  102 [label="Variable[\"plaza.mailbox_got_volition\"]"];
+	  103 [label="Variable[\"plaza.mailbox_got_volition\"]", shape=diamond];
+	  104 [label="!(Variable[\"plaza.mailbox_got_volition\"])", shape=diamond];
+	  105 [label="Mail Collection Box: 当你踢中冒险家邮筒时，传来一阵空洞的、悲伤的声音。听起来像是背叛，甚至是怀疑。"];
+	  106 [label="Kim Kitsuragi: “我们回去见艾弗拉特吧。”警督转身面向工业港。“这一切最好是值得的——在我们做了这些事之后。”"];
+	  107 [label="Logic: 你可能做了一件正确的事。你不能相信那个懒惰的艾弗拉特——你*知道*他会耍你的。"];
+	  108 [label="You: 什么也不说。[离开。]"];
+	  109 [label="Variable[\"plaza.mailbox_saw_bulletholes\"]"];
+	  110 [label="Variable[\"plaza.mailbox_saw_bulletholes\"]", shape=diamond];
+	  111 [label="!(Variable[\"plaza.mailbox_saw_bulletholes\"])", shape=diamond];
+	  112 [label="DayCount() == 1"];
+	  113 [label="DayCount() == 1", shape=diamond];
+	  114 [label="!(DayCount() == 1)", shape=diamond];
+	  115 [label="Variable[\"plaza.mailbox_sent_fake_signatures\"]"];
+	  116 [label="Variable[\"plaza.mailbox_sent_fake_signatures\"]", shape=diamond];
+	  117 [label="!(Variable[\"plaza.mailbox_sent_fake_signatures\"])", shape=diamond];
+	  118 [label="Shivers: 接着，你突然看见了：在所有其他涂鸦中间，有一个人——用非常锋利的刀尖——刻下了一句话：瑞瓦肖万岁。"];
+	  119 [label="Mail Collection Box: 邮筒似乎很开心。"];
+	  0 -> 1
+	  1 -> 109
+	  2 -> 8
+	  3 -> 78
+	  4 -> 39
+	  5 -> 100
+	  6 -> 49
+	  7 -> 20
+	  8 -> 20
+	  9 -> 10
+	  10 -> 78
+	  11 -> 84
+	  12 -> 26
+	  13 -> 14
+	  13 -> 15
+	  14 -> 38
+	  15 -> 85
+	  16 -> 3
+	  17 -> 12
+	  20 -> 78
+	  21 -> 12
+	  23 -> 24
+	  23 -> 25
+	  24 -> 9
+	  25 -> 43
+	  26 -> 115
+	  27 -> 28
+	  27 -> 29
+	  28 -> 106
+	  29 -> 16
+	  30 -> 12
+	  31 -> 32
+	  31 -> 33
+	  32 -> 56
+	  33 -> 119
+	  34 -> 78
+	  35 -> 60
+	  36 -> 57
+	  37 -> 101
+	  38 -> 68
+	  39 -> 40
+	  39 -> 41
+	  40 -> 87
+	  41 -> 67
+	  42 -> 78
+	  43 -> 10
+	  44 -> 112
+	  45 -> 46
+	  45 -> 47
+	  46 -> 79
+	  47 -> 86
+	  48 -> 100
+	  49 -> 7
+	  50 -> 51
+	  50 -> 52
+	  51 -> 88
+	  52 -> 42
+	  53 -> 54
+	  53 -> 55
+	  54 -> 63
+	  55 -> 23
+	  56 -> 68
+	  57 -> 58
+	  57 -> 59
+	  58 -> 13
+	  59 -> 31
+	  60 -> 61
+	  60 -> 62
+	  61 -> 27
+	  62 -> 97
+	  63 -> 64
+	  63 -> 65
+	  64 -> 89
+	  65 -> 98
+	  66 -> 78
+	  67 -> 78
+	  68 -> 78
+	  69 -> 45
+	  70 -> 72
+	  70 -> 71
+	  71 -> 96
+	  72 -> 95
+	  73 -> 93
+	  74 -> 66
+	  75 -> 108
+	  75 -> 76
+	  75 -> 6
+	  76 -> 2
+	  77 -> 84
+	  78 -> 36
+	  78 -> 73
+	  78 -> 44
+	  78 -> 17
+	  78 -> 21
+	  78 -> 22
+	  78 -> 30
+	  78 -> 94
+	  79 -> 48
+	  79 -> 37
+	  79 -> 5
+	  80 -> 81
+	  80 -> 82
+	  81 -> 83
+	  82 -> 69
+	  83 -> 78
+	  84 -> 78
+	  85 -> 80
+	  86 -> 78
+	  87 -> 75
+	  88 -> 78
+	  89 -> 34
+	  90 -> 91
+	  90 -> 92
+	  91 -> 11
+	  92 -> 77
+	  93 -> 90
+	  94 -> 53
+	  95 -> 4
+	  96 -> 4
+	  97 -> 78
+	  98 -> 34
+	  99 -> 4
+	  100 -> 118
+	  101 -> 86
+	  102 -> 104
+	  102 -> 103
+	  103 -> 99
+	  104 -> 105
+	  105 -> 4
+	  106 -> 3
+	  107 -> 60
+	  108 -> 19
+	  109 -> 110
+	  109 -> 111
+	  110 -> 50
+	  111 -> 74
+	  112 -> 113
+	  112 -> 114
+	  113 -> 102
+	  114 -> 70
+	  115 -> 116
+	  115 -> 117
+	  116 -> 107
+	  117 -> 35
+	  118 -> 86
+	  119 -> 80
+}
+

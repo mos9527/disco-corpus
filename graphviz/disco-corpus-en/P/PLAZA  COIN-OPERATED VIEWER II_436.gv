@@ -1,0 +1,61 @@
+# PLAZA / COIN-OPERATED VIEWER II
+# A coin-operated viewer on the plaza. It offers a view to the church.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: [Leave.]"];
+	  3 [label="You: \"Vandalism.\" (Shake your head.)"];
+	  4 [label="Perception (Sight): Around the large wooden building you see chunks of sea ice, gathered on the beach. And a small tent set up on the ice."];
+	  5 [label="You: Shift your focus to the background."];
+	  7 [label="Coin-Operated Viewer: A thick layer of graffito covers the lenses -- you spell out the word \"ONUC\" written on the other side -- with N and C scribbled backwards."];
+	  8 [label="You: \"Poor little viewer...\" (Pat it.)"];
+	  9 [label="Jump to: [Viewer hub]"];
+	  10 [label="Kim Kitsuragi: \"Probably some kids...\" The lieutenant inspects the rigged slot."];
+	  11 [label="Jump to: [Viewer hub]"];
+	  12 [label="Inland Empire: The church looks old and weather-worn. There are no lights in the windows."];
+	  13 [label="Interfacing: But yes -- it was vandalism."];
+	  14 [label="Coin-Operated Viewer: This coin-operated viewer is facing southwest. Its coin-slot is full of fossilized bubblegum, rendering the machine permanently inaccessible."];
+	  15 [label="Logic: That's CUNO on the lens."];
+	  16 [label="Viewer hub"];
+	  17 [label="Coin-Operated Viewer: The metal feels cold and wet under your palm. It looks unhygienic."];
+	  18 [label="Encyclopedia: You know this to be the Star of Perikarnassis, or the Chi-Rho. The central symbol of the Perikarnassian church -- a star, a great moral height to be strived towards."];
+	  19 [label="IsKimHere()"];
+	  20 [label="IsKimHere()", shape=diamond];
+	  21 [label="!(IsKimHere())", shape=diamond];
+	  22 [label="Coin-Operated Viewer: Under the graffito a sea of blues and greys appears -- behind the water lies a coast studded with concrete and reeds. On it -- a church on stilts, lanky weather-worn wooden planks, an x-shaped cross topping its tower."];
+	  23 [label="You: Look inside."];
+	  24 [label="Coin-Operated Viewer: The mute machine is unable to confirm or deny your theory."];
+	  25 [label="Interfacing: A simple but clever solution to ruining a coin-operated viewer. It took ingenuity."];
+	  26 [label="Jump to: [Viewer hub]"];
+	  0 -> 1
+	  1 -> 14
+	  3 -> 19
+	  4 -> 26
+	  5 -> 22
+	  7 -> 15
+	  8 -> 17
+	  9 -> 16
+	  10 -> 25
+	  11 -> 16
+	  12 -> 4
+	  13 -> 11
+	  14 -> 16
+	  15 -> 5
+	  16 -> 8
+	  16 -> 2
+	  16 -> 3
+	  16 -> 23
+	  17 -> 9
+	  18 -> 12
+	  19 -> 20
+	  19 -> 21
+	  20 -> 10
+	  21 -> 24
+	  22 -> 18
+	  23 -> 7
+	  24 -> 13
+	  25 -> 11
+	  26 -> 16
+}
+

@@ -1,0 +1,71 @@
+# WHIRLING F1 / EXIT DOOR
+# this is a crazy-ass exit-from-whirling door, god dammit.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Variable[\"whirling.cuno_exit_seen_once\"]"];
+	  3 [label="Variable[\"whirling.cuno_exit_seen_once\"]", shape=diamond];
+	  4 [label="!(Variable[\"whirling.cuno_exit_seen_once\"])", shape=diamond];
+	  5 [label="IsCunoInParty()"];
+	  6 [label="IsCunoInParty()", shape=diamond];
+	  7 [label="!(IsCunoInParty())", shape=diamond];
+	  8 [label="Cuno: “慢着猪头，坤诺有件事得先让你知道。”他用袖子擦了擦鼻子。“坤诺得保护坤诺的名声才行。”"];
+	  9 [label="Cuno: “听好了猪头！坤诺现在得走了。”他搓着手。"];
+	  10 [label="Variable[\"TASK.investigate_sea_fortress\"]"];
+	  11 [label="Variable[\"TASK.investigate_sea_fortress\"]", shape=diamond];
+	  12 [label="!(Variable[\"TASK.investigate_sea_fortress\"])", shape=diamond];
+	  14 [label="Tutorial Agent: 坤诺稍后会重新加入你的队伍。"];
+	  15 [label="Variable[\"whirling.cuno_exit_seen_once\"]"];
+	  16 [label="Variable[\"whirling.cuno_exit_seen_once\"]", shape=diamond];
+	  17 [label="!(Variable[\"whirling.cuno_exit_seen_once\"])", shape=diamond];
+	  18 [label="Kim Kitsuragi: 正当你靠近通向旅馆外的大门时，那个戴着眼镜、穿着橙色短夹克的男人转向你："];
+	  19 [label="Variable[\"tc.turn_off_tutorial_node\"]"];
+	  20 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  21 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  22 [label="Variable[\"whirling.kimintro_done\"]"];
+	  23 [label="Variable[\"whirling.kimintro_done\"]", shape=diamond];
+	  24 [label="!(Variable[\"whirling.kimintro_done\"])", shape=diamond];
+	  25 [label="Cuno: “那就这样吧——海堡岛上见。尽量别再挨枪子儿或是喝醉了，坤诺还指望着你呢。”"];
+	  26 [label="Cuno: “海堡岛上见——尽量别再挨枪子儿或是喝醉了，坤诺还指望着你呢。”"];
+	  27 [label="Cuno: “不能被外面的人知道我们是一伙的。坤诺会跟着你，但别指望*更多*了，知道吗猪头？坤诺什么都不会说的，就像植物人那样。”"];
+	  28 [label="Jump to: [Esprit de Corps: \"If an assault were launched on this...\"]"];
+	  29 [label="Kim Kitsuragi: 正当你靠近通向旅馆外的大门时，那个戴着眼镜、穿着橙色短夹克的男人转向你：\n正当你靠近通向旅馆外的大门时，那个戴着眼镜、穿着黑色短夹克的男人转向你："];
+	  30 [label="Cuno: “而且别忘了那个贱人的窗户，盯着点儿。坤诺警官告诉你，那是破案的关键。”"];
+	  31 [label="Kim Kitsuragi: “打扰了……我想你可能就是我在等的人。”他眯起眼睛，伸出手来打招呼。"];
+	  32 [label="Cuno: “坤诺得走了。”他搓着手。“不能被人看到坤诺和猪头们在一起，不能破坏坤诺的好名声。”"];
+	  120162 [label="JUMP OUT to WHIRLING / KIM INTRO", shape=diamond];
+	  0 -> 1
+	  1 -> 5
+	  2 -> 3
+	  2 -> 4
+	  4 -> 8
+	  5 -> 6
+	  5 -> 7
+	  6 -> 10
+	  7 -> 22
+	  8 -> 27
+	  9 -> 26
+	  10 -> 11
+	  10 -> 12
+	  11 -> 15
+	  12 -> 2
+	  15 -> 16
+	  15 -> 17
+	  16 -> 9
+	  17 -> 32
+	  19 -> 20
+	  19 -> 21
+	  21 -> 14
+	  22 -> 24
+	  22 -> 23
+	  24 -> 29
+	  25 -> 19
+	  26 -> 19
+	  27 -> 30
+	  28 -> 120162
+	  29 -> 31
+	  31 -> 28
+	  32 -> 25
+}
+

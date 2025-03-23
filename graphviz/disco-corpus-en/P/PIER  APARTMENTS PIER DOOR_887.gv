@@ -1,0 +1,188 @@
+# PIER / APARTMENTS PIER DOOR
+# Approaching the door from outside.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Visual Calculus: Backyard door? There must be another entrance to the east."];
+	  3 [label="You: Am I?"];
+	  4 [label="Southwest Entrance to the Tenements: There is no reply. Just faint sweeping sounds inside."];
+	  5 [label="Authority: You already tried and all you got was *hurt*. Better not to try anymore. Then you won't get HURT."];
+	  6 [label="Authority: You're well versed in the kind of threatening legalese that implies criminal liability but in fact has no meaning whatsoever."];
+	  7 [label="Rhetoric: Ah! It's like a carrot to the stick, sort of."];
+	  8 [label="Southwest Entrance to the Tenements: No reply. You can hear faint sweeping inside; a gust of wind blows through your clothes."];
+	  9 [label="Southwest Entrance to the Tenements: The door rattles against your knuckles, but there's no response."];
+	  10 [label="Jump to: [door hub]"];
+	  11 [label="You: \"Hold on, who am I speaking to?\""];
+	  12 [label="Southwest Entrance to the Tenements: IsKimHere()"];
+	  13 [label="IsKimHere()", shape=diamond];
+	  14 [label="!(IsKimHere())", shape=diamond];
+	  15 [label="door hub"];
+	  16 [label="Kim Kitsuragi: \"No, you're not.\""];
+	  17 [label="Cleaning Lady: \"It doesn't matter who I am. Now go on, get out of here!\""];
+	  18 [label="Cleaning Lady: \"Hold your horses...\" You hear the click of a night latch, before the lady on the other side gets caught in a coughing spasm."];
+	  19 [label="Jump to: [door hub]"];
+	  20 [label="You: \"Ma'am, your non-compliance is hindering a police matter. I may be forced to refer you for potential prosecution.\""];
+	  21 [label="You: \"Okay, miss, would it help if I showed you my badge?\""];
+	  22 [label="Southwest Entrance to the Tenements: A sturdy metal door guards the southwest entrance to the apartment building. It's locked."];
+	  23 [label="You: \"But I'm not joking.\""];
+	  24 [label="Authority: Insufficiently deferential!"];
+	  25 [label="Kim Kitsuragi: \"Miss,\" the lieutenant jumps in, \"would it help if we offered to show you our badges?\""];
+	  26 [label="Cleaning Lady: \"I don't care about your stinkin' badge. Just come in,\" she manages to say with a wheeze."];
+	  27 [label="Jump to: [door hub]"];
+	  28 [label="You: \"Hey, are you there? I've checked the backyard, but couldn't get in that way.\""];
+	  29 [label="You: \"I need to talk to a young man in this building.\""];
+	  30 [label="Southwest Entrance to the Tenements: Variable[\"backyard.door_whitecheck_failed_once\"]"];
+	  31 [label="Variable[\"backyard.door_whitecheck_failed_once\"]", shape=diamond];
+	  32 [label="!(Variable[\"backyard.door_whitecheck_failed_once\"])", shape=diamond];
+	  33 [label="You: Knock again."];
+	  34 [label="Cleaning Lady: \"No, I already told you, I won't be responsible for any more strangers getting into the building...\""];
+	  35 [label="You: \"Open up or I'm gonna breach this motherfucker!\" (Kick the door.)"];
+	  36 [label="Southwest Entrance to the Tenements: CheckItem(\"badge\")"];
+	  37 [label="CheckItem(\"badge\")", shape=diamond];
+	  38 [label="!(CheckItem(\"badge\"))", shape=diamond];
+	  39 [label="Kim Kitsuragi: \"Madam, I assure you we're real police officers,\" the lieutenant repeats dutifully."];
+	  40 [label="Jump to: [door hub]"];
+	  42 [label="You: Convince her that you're a real policeman."];
+	  43 [label="You: Variable[\"pier.apartments_door_whitecheck_authority\"]"];
+	  44 [label="Variable[\"pier.apartments_door_whitecheck_authority\"]", shape=diamond];
+	  45 [label="!(Variable[\"pier.apartments_door_whitecheck_authority\"])", shape=diamond];
+	  46 [label="Authority: You can't think of anything convincing. Time for some police brutality!"];
+	  47 [label="Jump to: [door hub]"];
+	  48 [label="Southwest Entrance to the Tenements: IsKimHere()"];
+	  49 [label="IsKimHere()", shape=diamond];
+	  50 [label="!(IsKimHere())", shape=diamond];
+	  51 [label="Cleaning Lady: \"Stop banging on the door! I'm not letting any more strangers inside.\""];
+	  52 [label="You: \"Kim, tell her we're real policemen!\""];
+	  53 [label="Perception (Hearing): From within comes the faint sound of a broom sweeping across the concrete floor."];
+	  54 [label="Visual Calculus: This could be a way into the apartment building the smoking man vanished into."];
+	  55 [label="Jump to: [door hub]"];
+	  56 [label="Cleaning Lady: \"Go check the backyard door, maybe someone there will...\" She trails off, leaving the sentence unfinished."];
+	  57 [label="You: \"Ma'am, if you don't open this door, I'm gonna introduce you to a lateral vascular neck restraint -- and it's going to *hurt*.\""];
+	  58 [label="Cleaning Lady: \"I know my rights! And don't you 'ma'am' me, boy!\" the voice snaps back."];
+	  59 [label="Cleaning Lady: \"You don't scare me, punk! I may be an old woman but I can still take the likes of you!\""];
+	  60 [label="You: \"Please, let me inside. It's cold out here.\""];
+	  61 [label="Southwest Entrance to the Tenements: Variable[\"pier.apartments_door_whitecheck_authority\"]"];
+	  62 [label="Variable[\"pier.apartments_door_whitecheck_authority\"]", shape=diamond];
+	  63 [label="!(Variable[\"pier.apartments_door_whitecheck_authority\"])", shape=diamond];
+	  64 [label="Cleaning Lady: \"The police?! Everyone knows the police don't come around *here*.“ The hallways echoes with her cackle."];
+	  65 [label="You: (Lie.) \"I've got my badge right here, if you want to see it.\""];
+	  66 [label="You: \"Ma'am, we're looking for Billie Méjean's apartment. We have important news to deliver.\""];
+	  67 [label="Southwest Entrance to the Tenements: Variable[\"TASK.find_a_way_inside_apt_building\"]  and  Variable[\"TASK.find_a_way_inside_apt_building_done\"] == false"];
+	  68 [label="Variable[\"TASK.find_a_way_inside_apt_building\"]  and  Variable[\"TASK.find_a_way_inside_apt_building_done\"] == false", shape=diamond];
+	  69 [label="!(Variable[\"TASK.find_a_way_inside_apt_building\"]  and  Variable[\"TASK.find_a_way_inside_apt_building_done\"] == false)", shape=diamond];
+	  70 [label="Authority: Obviously. Look at that vague yet threatening stuff spewing forth from your mouth..."];
+	  71 [label="You: Knock."];
+	  72 [label="You: [Leave.]"];
+	  73 [label="Perception (Hearing): But the sweeping on the other side has stopped."];
+	  74 [label="Southwest Entrance to the Tenements: The door rattles again, but this time you hear an elderly woman's voice calling out from inside..."];
+	  75 [label="Jump to: [door hub]"];
+	  76 [label="Interfacing: Backyard door? With the smoker? You already were there. Didn't work."];
+	  77 [label="You: \"I'm gonna light this place up!\" (Roll up your sleeves.)"];
+	  78 [label="You: \"This is the police -- open the door.\""];
+	  79 [label="Southwest Entrance to the Tenements: IsTaskActive(\"TASK.find_a_way_inside_apt_building\")--[[ Variable[ ]]"];
+	  80 [label="IsTaskActive(\"TASK.find_a_way_inside_apt_building\")--[[ Variable[ ]]", shape=diamond];
+	  81 [label="!(IsTaskActive(\"TASK.find_a_way_inside_apt_building\")--[[ Variable[ ]])", shape=diamond];
+	  82 [label="Cleaning Lady: \"Good. We've had enough problems with bums and drunks and thieves loitering in the hallway... You have no business here.\""];
+	  0 -> 1
+	  1 -> 22
+	  2 -> 75
+	  3 -> 70
+	  4 -> 40
+	  5 -> 47
+	  6 -> 3
+	  6 -> 20
+	  7 -> 18
+	  8 -> 27
+	  9 -> 19
+	  10 -> 15
+	  11 -> 17
+	  12 -> 13
+	  12 -> 14
+	  13 -> 16
+	  14 -> 59
+	  15 -> 33
+	  15 -> 66
+	  15 -> 71
+	  15 -> 72
+	  15 -> 42
+	  15 -> 52
+	  15 -> 28
+	  16 -> 59
+	  17 -> 53
+	  18 -> 26
+	  19 -> 15
+	  20 -> 58
+	  21 -> 7
+	  22 -> 79
+	  23 -> 34
+	  24 -> 36
+	  25 -> 7
+	  27 -> 15
+	  28 -> 82
+	  29 -> 34
+	  30 -> 32
+	  30 -> 31
+	  31 -> 5
+	  32 -> 46
+	  33 -> 74
+	  34 -> 56
+	  35 -> 12
+	  36 -> 37
+	  36 -> 38
+	  37 -> 21
+	  38 -> 65
+	  39 -> 4
+	  40 -> 15
+	  42 -> 43
+	  43 -> 44
+	  43 -> 45
+	  44 -> 61
+	  45 -> 61
+	  46 -> 57
+	  46 -> 35
+	  46 -> 77
+	  47 -> 15
+	  48 -> 49
+	  48 -> 50
+	  49 -> 25
+	  50 -> 24
+	  51 -> 11
+	  51 -> 78
+	  52 -> 39
+	  53 -> 78
+	  54 -> 15
+	  55 -> 15
+	  56 -> 67
+	  57 -> 12
+	  58 -> 73
+	  59 -> 10
+	  60 -> 34
+	  61 -> 62
+	  61 -> 63
+	  62 -> 6
+	  63 -> 30
+	  64 -> 60
+	  64 -> 29
+	  64 -> 23
+	  65 -> 7
+	  66 -> 8
+	  67 -> 68
+	  67 -> 69
+	  68 -> 76
+	  69 -> 2
+	  70 -> 20
+	  71 -> 9
+	  73 -> 48
+	  74 -> 51
+	  75 -> 15
+	  76 -> 75
+	  77 -> 12
+	  78 -> 64
+	  79 -> 80
+	  79 -> 81
+	  80 -> 54
+	  81 -> 15
+	  82 -> 55
+}
+

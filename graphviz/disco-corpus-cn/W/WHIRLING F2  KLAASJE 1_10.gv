@@ -1,0 +1,683 @@
+# WHIRLING F2 / KLAASJE 1
+# A striking young woman in a silver body-suit smokes in the hostel hallway. She addresses you as if you were a police officer. You may use your finger pistols for a SUGGESTION red-check. Failure gives you some forewarning about what's going on.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Klaasje (Miss Oranje Disco Dancer): “呃……不是。”她似乎被你的问题难住了。"];
+	  3 [label="You: “我是末日警探。”"];
+	  4 [label="Klaasje (Miss Oranje Disco Dancer): “如果到了之后你必须审问我的时候，那就糟糕了。”"];
+	  5 [label="Klaasje (Miss Oranje Disco Dancer): “好吧，那挺酷的。或者……如果可能的话，我能请你再详细说一下你说的那个超级明星的身份吗？”"];
+	  6 [label="Klaasje (Miss Oranje Disco Dancer): “我真的很开心。谢谢你。不管你是谁，你都应该坚持下去。不然的话……”她掐灭手中的香烟。"];
+	  7 [label="Reaction Speed: 她打算离开，你心里有些躁动。一定又是那种*杀手的嗅觉*——想*问问题*的需求。好像之前你已经说过了千百万次……"];
+	  8 [label="Jump to: [Klaasje (Miss Oranje Disco Dancer): \"\"Okay, sir, I have to ask: do you r...\"]"];
+	  9 [label="You: “等等！你走之前，我有些问题要问你。”"];
+	  10 [label="Klaasje (Miss Oranje Disco Dancer): “你说得对。”她的表情变得严肃起来。“文明没有什么好笑的。”"];
+	  11 [label="Klaasje (Miss Oranje Disco Dancer): “很高兴能帮到你。”"];
+	  12 [label="You: “请告诉我，没有*其他事*了。”"];
+	  13 [label="You: “听你这么说我感到很骄傲。告诉我，还有其他的对不对。”"];
+	  14 [label="Endurance: 哇哦！有什么东西想从你嘴里跑出来——有点想吐？谢天谢地，你忍住了，因为你的身体无法控制你。"];
+	  15 [label="Klaasje (Miss Oranje Disco Dancer): “很不错的独角戏！”她笑着，露出珍珠一样白的牙齿。"];
+	  16 [label="Untitled hub"];
+	  17 [label="Klaasje (Miss Oranje Disco Dancer): “因为你是一名警官，先生。”她抽了一口烟。"];
+	  18 [label="Klaasje (Miss Oranje Disco Dancer): “难道是喝酒的原因？”她扬起眉头。香烟在嘶嘶作响。"];
+	  19 [label="Klaasje (Miss Oranje Disco Dancer): 她突然大笑起来，所有疲劳都从脸上一扫而空。“这是干什么！？你说的话我根本*听不懂*。你刚说什么了？拜托，再说一次！”"];
+	  20 [label="You: “我说我想和你上床。”"];
+	  21 [label="You: “我觉得差不多吧。我当警察就是个笑话，或者只是我开的一个玩笑，也许是我喝多了。而且，我还太老了。”"];
+	  22 [label="You: “我没事。你先回答问题吧。”"];
+	  23 [label="You: 最好随它去吧。什么也不说。"];
+	  24 [label="Klaasje (Miss Oranje Disco Dancer): “还是老一套，闹哄哄的。”她耸耸肩。“很大声的迪斯科音乐。”"];
+	  25 [label="Klaasje (Miss Oranje Disco Dancer): “是的。非常酷。”"];
+	  26 [label="Klaasje (Miss Oranje Disco Dancer): “不，听起来不像有打斗的声音。好像是有人在破坏房间。”"];
+	  27 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaaseone_logic_interrogated\"]"];
+	  28 [label="Variable[\"whirling.klaaseone_logic_interrogated\"]", shape=diamond];
+	  29 [label="!(Variable[\"whirling.klaaseone_logic_interrogated\"])", shape=diamond];
+	  30 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasjeone_rhetoric_quib_contra\"]"];
+	  31 [label="Variable[\"whirling.klaasjeone_rhetoric_quib_contra\"]", shape=diamond];
+	  32 [label="!(Variable[\"whirling.klaasjeone_rhetoric_quib_contra\"])", shape=diamond];
+	  33 [label="Klaasje (Miss Oranje Disco Dancer): “很抱歉。”她熄灭香烟。“我不是有意要伤害你的感情。”"];
+	  34 [label="Klaasje (Miss Oranje Disco Dancer): 她说的没错。有些东西想从你嘴里跑出来，就在她面前，就在这里……你把手放在腹部，把它咽了下去。"];
+	  35 [label="Klaasje (Miss Oranje Disco Dancer): “喜欢互相矛盾的供述？”"];
+	  36 [label="Authority: 真是口齿伶俐。别傻站着——表达自己的主张。"];
+	  37 [label="Klaasje (Miss Oranje Disco Dancer): “什么事？”"];
+	  38 [label="You: “这是什么地方？我在哪？”\n“*这里*到底是什么地方？我在哪？”"];
+	  39 [label="Jump to: [Klaasje stopped HUB]"];
+	  40 [label="Jump to: [Klaasje (Miss Oranje Disco Dancer): \"\"Yeah?\"\"]"];
+	  41 [label="Klaasje (Miss Oranje Disco Dancer): “码头工人很自大。他们觉得有自己负责治安就够了。至少在海岸这边是这样——城里的其他地方我就不好说了。”"];
+	  42 [label="Klaasje (Miss Oranje Disco Dancer): “开始播放一首很慢，很悲伤的歌。像是风琴音乐，不断重复，播了好一会儿。有时候，你会跟着音乐一起叫喊。”"];
+	  43 [label="Klaasje (Miss Oranje Disco Dancer): “是的！歌词里有一座教堂。一座真正的小教堂。好像是整个世界上最小，最悲伤的教堂。唱的就是关于它的事。而且……”"];
+	  44 [label="Klaasje (Miss Oranje Disco Dancer): “是的。”她看着你。“永远不会。”"];
+	  45 [label="Jump to: [Klaasje stopped HUB]"];
+	  46 [label="Electrochemistry: 不，她没这么想！通过*调情*，再次重复自己的主张。"];
+	  47 [label="Klaasje (Miss Oranje Disco Dancer): “什么事，先生？”"];
+	  48 [label="Klaasje (Miss Oranje Disco Dancer): “没你那么喜欢……”她吸了一口烟。“很抱歉，长官。我不是故意这么油嘴滑舌的。我确定你很擅长自己的本职工作。”"];
+	  49 [label="Klaasje (Miss Oranje Disco Dancer): “不……”她凝望你的双眼。“你是一名*警官*，先生。”"];
+	  50 [label="You: “不，我们还要度过好几个世纪呢。”"];
+	  51 [label="You: “我也许是不知道自己在哪。或者自己是谁。或者*库普瑞斯锐影*是什么；我怎么知道它的声音是什么样的……”"];
+	  52 [label="You: “告诉我，今年是哪一年。”\n“告诉我，现在是51年吗？”"];
+	  53 [label="You: “什么世纪？”"];
+	  54 [label="Klaasje (Miss Oranje Disco Dancer): “当前的世纪。”"];
+	  55 [label="Klaasje (Miss Oranje Disco Dancer): “你确实看起来像是瑞瓦肖人。瑞瓦肖的派头。”"];
+	  56 [label="Encyclopedia: 她的口音不像是本地人。她来自奥兰治，世界的另一边。"];
+	  57 [label="Klaasje (Miss Oranje Disco Dancer): “有扇窗户被砸碎了。可能是录音机——歌停下来了——还有家具。真正的破坏。还有尖叫声。然后，我猜，你应该是晕过去了。”"];
+	  58 [label="Rhetoric: 如果那样的话，难道生活不就是*因为*我们的*继续*而变得越来越难吗？"];
+	  59 [label="Klaasje (Miss Oranje Disco Dancer): “很抱歉。我有些油嘴滑舌。”她吸了一口烟。“我肯定你是个好警官。”"];
+	  60 [label="Encyclopedia: 不应该正好相反吗？酗酒会导致睾丸素下降……相信我，你会知道的。"];
+	  61 [label="klaasje_intro_hub"];
+	  62 [label="You: “那你为什么要叫我长官？”"];
+	  63 [label="You: “好吧……首席技术官？”\n“真奇怪啊。我就是首席技术官啊。”"];
+	  64 [label="You: “我说*我想和你来一发*。”"];
+	  65 [label="Klaasje (Miss Oranje Disco Dancer): “还有，郑重声明一下：不，不是我做的。”"];
+	  66 [label="Klaasje (Miss Oranje Disco Dancer): “好吧，先生，我想问：你真的不记得了吗？就像那个……”她想要想出一种可能的解释，但却以失败告终。“你喝了太多酒，然后失去记忆了？”"];
+	  67 [label="You: 对她试试那个*表情*——让她知道你想要她。肉体上的。"];
+	  68 [label="You: Variable[\"whirling.klaasje_tried_the_expression\"]"];
+	  69 [label="Variable[\"whirling.klaasje_tried_the_expression\"]", shape=diamond];
+	  70 [label="!(Variable[\"whirling.klaasje_tried_the_expression\"])", shape=diamond];
+	  71 [label="Jump to: [Klaasje intro MAIN]"];
+	  72 [label="You: “你怎么知道我是警官的？”"];
+	  73 [label="You: “我是纪尧姆·列米利翁的子孙。”"];
+	  74 [label="You: “很显然。有人狠狠伤害了我。我被搞得——乱七八糟。”"];
+	  75 [label="Encyclopedia: 瑞瓦肖城是失宠的前世界之都，现在被划分成了几个区域，由外国占领——事情就发生在半个世纪前那场失败的大革命之后。它是我们这个时代的中心。"];
+	  76 [label="You: “这对我来说有什么意义吗？”"];
+	  77 [label="You: “瑞瓦肖万岁。”"];
+	  78 [label="You: “还真的挺像*我*会做的事。我做了什么？”"];
+	  79 [label="Klaasje (Miss Oranje Disco Dancer): “后来我外出了。那时候一切都变得很安静。大概是4点或者5点的时候吧。”她点点头。“就这么多了。”"];
+	  80 [label="Suggestion: *尝试那个表情*？拜托，你为什么还要这么做？"];
+	  81 [label="You: “别担心，我不会吐出来的。”"];
+	  82 [label="Klaasje (Miss Oranje Disco Dancer): “我能看出来。”"];
+	  83 [label="Klaasje (Miss Oranje Disco Dancer): “不会的，它永远不会停止。”"];
+	  84 [label="Jump to: [Klaasje (Miss Oranje Disco Dancer): \"\"There's a mercenary out back. He's...\"]"];
+	  85 [label="You: “‘长官’是我的艺名，对吧？我可以把自己看作是一个名叫‘官员’的二流迪斯科舞者。”"];
+	  86 [label="You: “你确定吗？”"];
+	  87 [label="You: “很好。现在，你怎么知道我是一名警官的？”"];
+	  88 [label="You: “不用这么担惊受怕。你知道的，我只是进入了角色而已。”"];
+	  89 [label="Klaasje (Miss Oranje Disco Dancer): 她点点头。"];
+	  90 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaaseone_conva_prevented_vomit\"]"];
+	  91 [label="Variable[\"whirling.klaaseone_conva_prevented_vomit\"]", shape=diamond];
+	  92 [label="!(Variable[\"whirling.klaaseone_conva_prevented_vomit\"])", shape=diamond];
+	  93 [label="You: “其实，我能理解他们为什么让我做执法人员。我的性格正合适。”"];
+	  94 [label="You: “不。我知道你有所隐瞒。某种东西在我身体里点燃。这是一种杀手的嗅觉。”\n“不。我知道你有所隐瞒。某种东西在我身体里点燃。这是一种杀手的嗅觉。”"];
+	  95 [label="You: “不。从玻璃碎片的方向*推断*，我把自己的鞋子扔出窗外了。”\n“不。我把鞋子扔出窗外了。我是从玻璃碎片的方向*推理*出来的。”"];
+	  96 [label="You: 让这一刻过去。"];
+	  97 [label="Klaasje (Miss Oranje Disco Dancer): “你说？”"];
+	  98 [label="You: “发生什么了？”"];
+	  99 [label="Pain Threshold: 听起来你感受到了真正*根本*的痛楚，肌肉男。"];
+	  100 [label="You: “你怎么知道我是警官的？”"];
+	  101 [label="Klaasje (Miss Oranje Disco Dancer): “除非你一直都在用精心编造的谎言欺骗我们。你已经在这里待了3天。你自己说，是来处理*警方事务*的。”"];
+	  102 [label="You: 让你臃肿的脸远离她的美丽，继续向前走。[离开。]"];
+	  103 [label="You: “不，我不想这样。”"];
+	  104 [label="You: “我也许是不知道自己是谁，但是如果有人有事瞒着我，我还是能分辨出来的。我在这里*做什么*？”"];
+	  105 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaaseone_conva_prevented_vomit\"]"];
+	  106 [label="Variable[\"whirling.klaaseone_conva_prevented_vomit\"]", shape=diamond];
+	  107 [label="!(Variable[\"whirling.klaaseone_conva_prevented_vomit\"])", shape=diamond];
+	  108 [label="You: “不。我的脑子里总是浮现出一些零碎的信息——各种各样的事实，还有琐事。给我一种侦探的氛围。”\n“不，有时我会得到这些零碎的信息，各种琐碎的事实。给我一种侦探的氛围。”"];
+	  109 [label="You: 如果我不想问问题呢？"];
+	  110 [label="You: “不如你跟我讲点别的吧？”"];
+	  111 [label="You: “好吧，跟我讲点别的。”"];
+	  112 [label="You: “喧闹的迪斯科音乐？”"];
+	  113 [label="Jump to: [Klaasje (Miss Oranje Disco Dancer): \"\"Yeah?\"\"]"];
+	  114 [label="Klaasje (Miss Oranje Disco Dancer): “好吧。”"];
+	  115 [label="Klaasje (Miss Oranje Disco Dancer): “如果那样的话，我想我也许对你有一种*不祥的预感*……”她掐灭手中的香烟，沉默就像是一种预兆。"];
+	  116 [label="Klaasje (Miss Oranje Disco Dancer): 年轻女子把一支香烟举到嘴边。"];
+	  117 [label="You: “等等，我知道了！我是个商人。*首席执行官*，对吗？”"];
+	  118 [label="Klaaseone reaction to cop HUB"];
+	  119 [label="Jump to: [Klaasje (Miss Oranje Disco Dancer): \"\"It's gonna suck for you later when...\"]"];
+	  120 [label="Jump to: [Klaasje (Miss Oranje Disco Dancer): \"\"All right, then. Looks like I shou...\"]"];
+	  121 [label="Klaasje (Miss Oranje Disco Dancer): “世纪没有数字，它们只有名字，眼下就是当前这个。”"];
+	  122 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasjeone_remembered_tell_me_soemthing_else\"] == true"];
+	  123 [label="Variable[\"whirling.klaasjeone_remembered_tell_me_soemthing_else\"] == true", shape=diamond];
+	  124 [label="!(Variable[\"whirling.klaasjeone_remembered_tell_me_soemthing_else\"] == true)", shape=diamond];
+	  125 [label="You: “我已经听够了。”"];
+	  126 [label="Klaasje (Miss Oranje Disco Dancer): “我说不好——从这里不可能听到别人说话的声音。”她朝着3号房点了点头。"];
+	  127 [label="You: “跟我说点别的吧。”"];
+	  128 [label="Klaasje (Miss Oranje Disco Dancer): 她回望着你，眼里闪过一丝光亮。"];
+	  129 [label="Klaasje (Miss Oranje Disco Dancer): “你是个很紧张的警察。有人这么告诉过你吗？”"];
+	  130 [label="Klaasje (Miss Oranje Disco Dancer): “好吧。”她吸了一口银色的烟雾。"];
+	  131 [label="Klaasje intro MAIN"];
+	  132 [label="Klaasje (Miss Oranje Disco Dancer): “51年。”"];
+	  133 [label="You: “这里为什么反对警察呢？”"];
+	  134 [label="Klaasje (Miss Oranje Disco Dancer): “那个也不*重要*了。现在我们是*孤独的*。这很难讲——那首歌本身很安静，很轻柔，但是你的声音像是一头受伤的野猪，长官。很难理解你唱的到底是什么。”"];
+	  135 [label="You: “然后呢？”"];
+	  136 [label="You: “大多数情况下都会变得很难，不是吗？”"];
+	  137 [label="You: “那也许我们应该停下来？难道不是因为‘继续’导致‘越来越难’的吗？”"];
+	  138 [label="Klaasje (Miss Oranje Disco Dancer): “也许是吧。大概2点钟的时候，迪斯科音乐停下来了，然后换了种节奏。”"];
+	  139 [label="You: “哪种事务？”"];
+	  140 [label="You: “这是你早晨的第一支烟。我是从你没化妆的样子推断出来的。而且——你喜欢*派对*。很喜欢。”"];
+	  141 [label="You: “一直以来都这样吗？”"];
+	  142 [label="You: “没错，我是一名警官！你可别给我忘了！”"];
+	  143 [label="Klaasje (Miss Oranje Disco Dancer): “那如果你不能再行房事了怎么办？生命里还有其他东西——更有意义，更适合你这个年纪的人。这个……”身披银装的她，对自己比了个手势。“这只是*海市蜃楼*。不过，有一件事……”她掐灭了手中的香烟。"];
+	  144 [label="Jump to: [You: \"\"And what business is that?\"\"]"];
+	  145 [label="Klaasje (Miss Oranje Disco Dancer): “但是我不悲伤啊。”她歪起头。"];
+	  146 [label="You: “在你离开之前，我有些*问题*想问你。”"];
+	  147 [label="Jump to: [Klaasje stopped HUB]"];
+	  148 [label="You: “为什么我不记得自己是警官的事，还有别的事？”\n“我真的不记得自己是个警官，也不记得与此相关的任何事。”\n“我真的不记得自己是个警官，也不记得与此相关的任何事。”"];
+	  149 [label="Klaasje (Miss Oranje Disco Dancer): “当然。”她吸了一口烟。"];
+	  150 [label="You: “明星警探。我还是承认了吧。”\n“明星警探。已经人尽皆知了。”"];
+	  151 [label="You: “抱歉。我不知道为什么要这么说。你很漂亮……我很抱歉。我是抱歉警探。”"];
+	  152 [label="You: “我根本不确定自己到底是不是警察。我确实不记得自己是。我想我可能在撒谎。”"];
+	  153 [label="Empathy: 她是认真的。她不会公然挑战权威——不论权威看起来是如此多汗而臃肿。"];
+	  154 [label="Klaasje End REACTION HUB"];
+	  155 [label="Jump to: [Klaasje End REACTION HUB]"];
+	  156 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_tried_the_expression\"]"];
+	  157 [label="Variable[\"whirling.klaasje_tried_the_expression\"]", shape=diamond];
+	  158 [label="!(Variable[\"whirling.klaasje_tried_the_expression\"])", shape=diamond];
+	  159 [label="You: “就这些。”"];
+	  160 [label="Klaasje (Miss Oranje Disco Dancer): “警官。”女人朝你点点头，还在抽着烟。"];
+	  161 [label="You: “很好。”"];
+	  162 [label="Klaasje (Miss Oranje Disco Dancer): “我很抱歉……”她掐灭了手中的香烟。"];
+	  163 [label="Rhetoric: 她仍然没有被说服。"];
+	  165 [label="You: “那是什么事务？”"];
+	  166 [label="Klaasje (Miss Oranje Disco Dancer): “别对自己太苛刻。差不多什么样的人都能当警官。”"];
+	  167 [label="Klaasje (Miss Oranje Disco Dancer): “好吧，没问题。我不会的。”"];
+	  168 [label="You: “我不会知道的。我不记得有人告诉过我*任何事*。”"];
+	  169 [label="Perception (Sight): 她没时间化妆——这是她清晨的第一支烟。她看起来有些疲惫，按照她的年纪，她的美貌消退的快了一些。"];
+	  170 [label="You: “是的，还剩几分钟，现实就要彻底崩溃了。”"];
+	  171 [label="Reaction Speed: 你是个警官，哈里。如果你不想问问题的话，那才*不正常*呢。"];
+	  172 [label="Klaasje (Miss Oranje Disco Dancer): “万万岁。”"];
+	  173 [label="You: “还有别的吗？”"];
+	  174 [label="You: “你说*受伤*，是很*酷*的那种吗？比如说一只*野兽*？”"];
+	  175 [label="You: “还有其他事吗？”"];
+	  176 [label="Klaasje (Miss Oranje Disco Dancer): “有的。我想你好像在喊……不想再做‘这种动物’了。我可能是听错了，不过确实挺难忘的。”"];
+	  177 [label="You: “*长官*？我是军事人员吗？”"];
+	  178 [label="You: “你在骗我！”"];
+	  179 [label="Klaasje (Miss Oranje Disco Dancer): “我没有。除非*你*一直都在欺骗*我们*……”她又抽了一口。"];
+	  180 [label="Klaasje (Miss Oranje Disco Dancer): “我说不好。说实话……目前为止，你基本就是在喝酒。”"];
+	  181 [label="Klaasje (Miss Oranje Disco Dancer): “我并不想用这些信息打击你。你好像有些……迷惘，警官。”"];
+	  182 [label="You: “我想和你来一发。”"];
+	  183 [label="Klaasje (Miss Oranje Disco Dancer): “别这样，其实挺好玩的。再说了，谁他妈在乎？谁在乎这些屁事？”"];
+	  184 [label="You: “警察到处走来走去，根本不记得他们自己是谁，说着我刚才说过的话……还有最多两天，一切都会结束了。”"];
+	  185 [label="Empathy: 她好像很真诚地希望你明白——这其实不算什么。"];
+	  186 [label="Endurance: 她说的没错。有些东西想出来——从你的嘴里逃出来。但你可以压制住，因为你的身体无法控制你。"];
+	  187 [label="ffs"];
+	  188 [label="You: “不要紧。更有可能是什么人在其他什么地方犯了错……”\n“是的，就是你刚才说的。我什么也想不出来。”"];
+	  189 [label="Klaasje (Miss Oranje Disco Dancer): “我们在瑞瓦肖。”"];
+	  190 [label="You: “那已经过去多少世纪了？”"];
+	  191 [label="Klaasje (Miss Oranje Disco Dancer): “然后你开始尖叫，在屋里闹得天翻地覆。”"];
+	  192 [label="You: “你瞎编的吧。我绝对不会这么做的。”"];
+	  193 [label="Klaasje (Miss Oranje Disco Dancer): “在我的家乡，招摇乐团简直是*超级巨星*。不过那时候我还很小。大概7岁的样子。‘生活不易！’”她唱了起来，“‘但我们还要继续！’”"];
+	  194 [label="Suggestion: 话语已经从你嘴里蹦出来了……"];
+	  195 [label="Klaasje (Miss Oranje Disco Dancer): “很特别。”她吸了一口烟，点了点头。"];
+	  196 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_neverstops\"] == true"];
+	  197 [label="Variable[\"whirling.klaasje_neverstops\"] == true", shape=diamond];
+	  198 [label="!(Variable[\"whirling.klaasje_neverstops\"] == true)", shape=diamond];
+	  199 [label="Jump to: [Klaasje (Miss Oranje Disco Dancer): \"\"Could it be because of the drinkin...\"]"];
+	  200 [label="Authority: 那只有一种解答了。你是一个商人。"];
+	  201 [label="Klaasje (Miss Oranje Disco Dancer): 年轻女子慢慢摇摇头。"];
+	  202 [label="Klaasje (Miss Oranje Disco Dancer): “时间已经到了吗？”她扬起一边的眉头。"];
+	  203 [label="Conceptualization: *长官*可能是一种艺术陈述。你已经表现出这种倾向了。"];
+	  204 [label="Klaasje (Miss Oranje Disco Dancer): “长官，你已经在这里待了3天。你自己说，是来处理*警方事务*的。”"];
+	  205 [label="You: “我能明确表达出这种想法已经是个小奇迹了。不过我会没事的。你怎么知道我是警官的？”"];
+	  206 [label="You: “不。在我们的谈话过程中，我熟练地抑制了呕吐的冲动。这是专业精神的标志。”\n“不。在我们简短的谈话过程中，我熟练地抑制了呕吐的冲动。这是专业精神的标志。”"];
+	  207 [label="You: “不。你跟我提起吊人的时候，我好像在你身上看到了一种悲伤的情绪。要是其他人可能就错过了。”\n“你跟我提起吊人的时候，我好像在你身上看到了一种悲伤的情绪。要是其他人可能就错过了。”"];
+	  208 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaajseone_rhetoric_exaggerated_killerinstinct\"]"];
+	  209 [label="Variable[\"whirling.klaajseone_rhetoric_exaggerated_killerinstinct\"]", shape=diamond];
+	  210 [label="!(Variable[\"whirling.klaajseone_rhetoric_exaggerated_killerinstinct\"])", shape=diamond];
+	  211 [label="Klaasje stopped HUB"];
+	  212 [label="You: “那又是什么？数字是多少？”"];
+	  213 [label="You: “有什么好笑的吗？”"];
+	  214 [label="You: “那你为什么没有直接告诉我呢？”"];
+	  215 [label="Shivers: 万万岁岁……从眼角的余光中，你看见自己手背上的汗毛已经立了起来。感觉就像是一道低强度的闪电穿过了你的身体。你一定是对宿醉过敏了。"];
+	  216 [label="Klaasje (Miss Oranje Disco Dancer): “再见。”"];
+	  217 [label="Empathy: 她说话很实事求是，但是声音里略带一丝悲伤。"];
+	  218 [label="You: “……但是如果有人有事瞒着我，我还是能分辨出来的。我在这里做什么？现在手上有什么案子？”"];
+	  219 [label="Klaasje (Miss Oranje Disco Dancer): “谢谢你，先生。”她慵懒地笑到。“我是认真的。”"];
+	  220 [label="Jump to: [Klaasje intro MAIN]"];
+	  221 [label="Klaasje (Miss Oranje Disco Dancer): “拜托，老兄！再说一次！”"];
+	  222 [label="Jump to: [Klaasje stopped HUB]"];
+	  223 [label="You: “后来发生什么了？”"];
+	  224 [label="Klaasje (Miss Oranje Disco Dancer): “我想你可能昨晚也得出了相同的结论。大概2点钟的时候，迪斯科音乐停下来了，然后换了种节奏。”"];
+	  225 [label="Klaasje (Miss Oranje Disco Dancer): “我不知道……大概2点钟的时候，迪斯科音乐停下来了，然后换了种节奏。”"];
+	  226 [label="Encyclopedia: 哦，*那个*。是啊……关于招摇乐团的讨论，越少越好。"];
+	  227 [label="Klaasje (Miss Oranje Disco Dancer): “你已经在这里待了3天。你自己说，是来处理*警方事务*的。”"];
+	  228 [label="Klaasje (Miss Oranje Disco Dancer): “不，知道吗，你刚才不是这么说的。你说……”她还没说完就笑的合不拢嘴。"];
+	  229 [label="You: “我真心认为自己是个超级明星。这是我正在研究的一种理论。”"];
+	  230 [label="Perception (Sight): 她的眼睛是棕色的，脸上点缀着一些胎记。年纪应该不会超过28岁。"];
+	  231 [label="smallertime"];
+	  232 [label="Klaasje (Miss Oranje Disco Dancer): “几分钟？那我得走了，抓紧准备。谢谢你，跟你聊天挺开心的。希望它真的会崩溃。不然的话……”她掐灭了手中的香烟。"];
+	  233 [label="Klaasje (Miss Oranje Disco Dancer): “好吧。”"];
+	  234 [label="You: “我很抱歉。”"];
+	  235 [label="Klaasje (Miss Oranje Disco Dancer): “不用这样，反正我也会很晚外出。对我来说不算什么困扰。”"];
+	  236 [label="Volition: 你不用这样的。没人逼你当警察。"];
+	  237 [label="Untitled hub"];
+	  238 [label="You: “你知道为什么吗？”"];
+	  239 [label="Klaasje (Miss Oranje Disco Dancer): “是吗？”她扬起眉头。手中的香烟嘶嘶作响。"];
+	  240 [label="Jump to: [Klaasje intro MAIN]"];
+	  241 [label="Rhetoric: 她不是真心觉得很特别。"];
+	  242 [label="You: “不。有一个巨大的、超尘脱俗的秘密正在进行。而我正身处它的中央。”"];
+	  243 [label="Klaasje (Miss Oranje Disco Dancer): “酒精会提高睾丸激素水平，特别是男性的，”她说话实事求是。“在醉酒结束后，这个水平依然很高，接着痛苦就开始了。你在寻求安慰。这很自然。”"];
+	  244 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"reputation.superstar_cop\"] >=1"];
+	  245 [label="Variable[\"reputation.superstar_cop\"] >=1", shape=diamond];
+	  246 [label="!(Variable[\"reputation.superstar_cop\"] >=1)", shape=diamond];
+	  247 [label="You: “我感觉有些难受。告诉我，你怎么知道我是警官的？”"];
+	  248 [label="Klaasje (Miss Oranje Disco Dancer): “先生……”有那么一瞬间，你看起来像是要爆炸一样，但你还是控制住了。“你已经在这里待了3天。你自己说，是来处理*警方事务*的。”"];
+	  249 [label="Klaasje (Miss Oranje Disco Dancer): “先生，你已经在这里待了3天。你自己说，是来处理*警方事务*的。”"];
+	  250 [label="Authority: 退避不是胜利的策略。"];
+	  251 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasjeone_reaction_stopped_her\"]"];
+	  252 [label="Variable[\"whirling.klaasjeone_reaction_stopped_her\"]", shape=diamond];
+	  253 [label="!(Variable[\"whirling.klaasjeone_reaction_stopped_her\"])", shape=diamond];
+	  254 [label="You: “我确定自己不是经常这么紧张的。我不知道为什么*这种话*会从我嘴里说出来。”"];
+	  255 [label="You: “你的房间差不多就在我房间旁边。昨晚你听见什么了吗？”"];
+	  256 [label="You: “我在唱什么？”"];
+	  257 [label="Authority: 别现在就打退堂鼓。再说一遍刚才的话--*骄傲*一点。"];
+	  258 [label="Jump to: [Klaasje (Miss Oranje Disco Dancer): \"\"I couldn't say. In truth... so far...\"]"];
+	  259 [label="Jump to: [You: \"\"And what business is that?\"\"]"];
+	  260 [label="Jump to: [Rhetoric: \"She remains unconvinced...\"]"];
+	  261 [label="You: “我该走了。”[离开。]"];
+	  262 [label="Klaasje (Miss Oranje Disco Dancer): “那好吧。看来我应该准备好接下来要发生的事。还有，谢谢你，这次谈话真的挺开心的。我确实希望它发生地*更早一些*。不然的话……”她掐灭手中的香烟。"];
+	  263 [label="Conceptualization: *长官*可能是一种艺术陈述。是*官方*声誉的声明。"];
+	  264 [label="Jump to: [Klaasje End REACTION HUB]"];
+	  265 [label="Jump to: [Klaasje (Miss Oranje Disco Dancer): \"\"It's gonna suck for you later when...\"]"];
+	  266 [label="Klaasje (Miss Oranje Disco Dancer): “你在一间旅社，长官。”"];
+	  267 [label="Inland Empire: 那句话——“跟我讲点别的”——感觉你之前已经说过无数遍。甚至你的嘴唇都是那句话的形状。"];
+	  268 [label="You: “我是在唱这个吗？”（把圣桑小教堂的空盒子给她看。）"];
+	  269 [label="Authority: 感觉像是挨了一拳，不过老实说——这是你应得的。再说了，谴责她实在是太*粗鲁*了。"];
+	  270 [label="You: “有人来拜访过我吗？”"];
+	  271 [label="Conceptualization: 她身着一件柔顺的银色连身裤，像鳞甲一样闪闪发光，仿佛城市夜晚的点点灯火。"];
+	  272 [label="Klaasje (Miss Oranje Disco Dancer): 她猛吸了一口，接着开了口。“外面有一个雇佣兵。他被吊死了。尸体已经在那里挂了一个星期。本地人应该是厌倦了吧，所以打电话叫了警察。”"];
+	  273 [label="Klaasje (Miss Oranje Disco Dancer): 她掐灭手中的香烟。"];
+	  274 [label="Klaasje (Miss Oranje Disco Dancer): “当然了。”她吸了一口烟。"];
+	  275 [label="Jump to: [Klaasje intro MAIN]"];
+	  276 [label="You: “不是——我们在*哪里*？这个世界的什么地方？”"];
+	  277 [label="Klaasje (Miss Oranje Disco Dancer): “人类文明已经存在8000年了，长官。”她咧开嘴笑了。"];
+	  278 [label="something else HUB"];
+	  279 [label="Empathy: 她恨人类文明。她感觉被它背叛了。"];
+	  280 [label="You: “好吧。你可以走了。”[离开。]"];
+	  281 [label="Rhetoric: 很难说她是在讽刺，还是真心实意。"];
+	  282 [label="Klaasje (Miss Oranje Disco Dancer): “没错，群星合辑。里面还有招摇乐团精选。”她抬起眉头，等着那个名字与你产生联系。"];
+	  283 [label="Jump to: [Klaasje intro MAIN]"];
+	  284 [label="Klaasje (Miss Oranje Disco Dancer): Variable[\"whirling.klaasje_pretended_you_know_cop\"]  or  Variable[\"whirling.klaasje_cop_known_route\"]"];
+	  285 [label="Variable[\"whirling.klaasje_pretended_you_know_cop\"]  or  Variable[\"whirling.klaasje_cop_known_route\"]", shape=diamond];
+	  286 [label="!(Variable[\"whirling.klaasje_pretended_you_know_cop\"]  or  Variable[\"whirling.klaasje_cop_known_route\"])", shape=diamond];
+	  287 [label="You: “找个别的人嘲笑吧。”"];
+	  288 [label="You: “有哪个头脑正常的人会让*我*做执法人员呢？”\n“为什么会有人让*我*做执法人员呢？”"];
+	  289 [label="You: “我生命垂危，身体臃肿，已经无可救药。不过……”（叹气。）“这种渴望还会停止吗？”"];
+	  290 [label="Klaasje (Miss Oranje Disco Dancer): “该死的你确实这么说了，你这个疯子，混账！”她擦干眼里的泪水。“你到底算*哪门子*的警察啊？”"];
+	  291 [label="You: “意思是我是个膨胀的老酒鬼，留着连鬓胡子，穿着迪斯科风的裤子。如果我的段子不能张口就来的话——就算我输。”"];
+	  292 [label="Logic: 你在喝酒，这一点毋庸置疑，但你真的给人留下了一种寡言醉汉的形象？她肯定是从别处听到过*什么*。"];
+	  293 [label="Klaasje (Miss Oranje Disco Dancer): “是的，我确定。除非你一直都在用精心编造的谎言欺骗我们……”她又抽了一口。"];
+	  294 [label="Klaasje (Miss Oranje Disco Dancer): “首先我要问：你没事吧，长官？”突然间，她表现出真诚的担忧。“你看起来像是要吐出来了……要不要我帮你去拿点什么？”"];
+	  295 [label="Reaction Speed: 她打算离开，你心里有些躁动。就当这是一种直觉吧，一种需求——想*问问题*的需求。好像之前你已经说过了千百万次……"];
+	  296 [label="Klaasje (Miss Oranje Disco Dancer): “当然。”她吸了一口烟。“小心点，警官。这里的人可不是很喜欢警察。”"];
+	  297 [label="Klaasje (Miss Oranje Disco Dancer): “或者也许你*就是*纪尧姆·列米利翁呢？现在他已经跟你差不多年纪……想想看！不过，有一件事……”"];
+	  298 [label="Jump to: [Klaasje (Miss Oranje Disco Dancer): \"\"It's gonna suck for you later when...\"]"];
+	  299 [label="You: “是啊，我想我真的挺紧张的。”"];
+	  300 [label="Jump to: [Klaasje stopped HUB]"];
+	  301 [label="You: “你确定我不是被袭击了吗？”"];
+	  302 [label="You: “对，生活总得继续。”"];
+	  303 [label="You: “是啊，*警官*……那个啊。”"];
+	  304 [label="Jump to: [You: \"\"I've heard enough.\"\"]"];
+	  0 -> 1
+	  1 -> 160
+	  1 -> 116
+	  2 -> 200
+	  3 -> 202
+	  4 -> 65
+	  5 -> 73
+	  5 -> 291
+	  5 -> 229
+	  6 -> 298
+	  7 -> 128
+	  8 -> 66
+	  9 -> 37
+	  10 -> 279
+	  12 -> 176
+	  13 -> 176
+	  14 -> 72
+	  15 -> 283
+	  16 -> 76
+	  16 -> 77
+	  16 -> 110
+	  17 -> 118
+	  18 -> 169
+	  19 -> 20
+	  19 -> 103
+	  20 -> 228
+	  21 -> 162
+	  22 -> 105
+	  23 -> 250
+	  24 -> 270
+	  25 -> 281
+	  26 -> 57
+	  27 -> 28
+	  27 -> 29
+	  28 -> 240
+	  30 -> 32
+	  30 -> 31
+	  31 -> 237
+	  32 -> 269
+	  33 -> 155
+	  34 -> 187
+	  35 -> 108
+	  35 -> 140
+	  35 -> 206
+	  35 -> 207
+	  35 -> 188
+	  35 -> 94
+	  35 -> 95
+	  36 -> 30
+	  37 -> 211
+	  38 -> 266
+	  39 -> 211
+	  40 -> 97
+	  41 -> 147
+	  42 -> 256
+	  42 -> 268
+	  42 -> 125
+	  43 -> 125
+	  43 -> 173
+	  44 -> 304
+	  44 -> 223
+	  45 -> 211
+	  46 -> 275
+	  47 -> 100
+	  48 -> 275
+	  49 -> 118
+	  50 -> 129
+	  51 -> 89
+	  52 -> 132
+	  53 -> 54
+	  54 -> 212
+	  55 -> 56
+	  56 -> 222
+	  57 -> 304
+	  57 -> 12
+	  57 -> 13
+	  57 -> 175
+	  58 -> 136
+	  58 -> 137
+	  58 -> 302
+	  59 -> 46
+	  60 -> 273
+	  61 -> 177
+	  61 -> 102
+	  61 -> 303
+	  62 -> 17
+	  63 -> 49
+	  64 -> 290
+	  66 -> 242
+	  66 -> 74
+	  66 -> 21
+	  67 -> 68
+	  68 -> 69
+	  68 -> 70
+	  69 -> 156
+	  70 -> 156
+	  71 -> 131
+	  72 -> 204
+	  73 -> 297
+	  74 -> 162
+	  75 -> 16
+	  76 -> 55
+	  77 -> 172
+	  78 -> 57
+	  79 -> 45
+	  80 -> 289
+	  81 -> 114
+	  82 -> 161
+	  82 -> 238
+	  83 -> 216
+	  84 -> 272
+	  85 -> 49
+	  86 -> 293
+	  87 -> 294
+	  88 -> 130
+	  89 -> 218
+	  89 -> 159
+	  90 -> 91
+	  90 -> 92
+	  91 -> 187
+	  92 -> 34
+	  93 -> 35
+	  94 -> 274
+	  95 -> 195
+	  97 -> 278
+	  98 -> 42
+	  99 -> 79
+	  100 -> 101
+	  101 -> 259
+	  103 -> 221
+	  104 -> 272
+	  105 -> 106
+	  105 -> 107
+	  106 -> 249
+	  107 -> 248
+	  108 -> 149
+	  109 -> 171
+	  110 -> 97
+	  111 -> 40
+	  112 -> 282
+	  113 -> 97
+	  114 -> 139
+	  115 -> 119
+	  116 -> 230
+	  117 -> 201
+	  118 -> 178
+	  118 -> 142
+	  118 -> 86
+	  119 -> 4
+	  120 -> 262
+	  121 -> 190
+	  122 -> 123
+	  122 -> 124
+	  123 -> 222
+	  124 -> 267
+	  125 -> 233
+	  126 -> 112
+	  126 -> 127
+	  127 -> 113
+	  128 -> 251
+	  129 -> 168
+	  129 -> 299
+	  129 -> 254
+	  130 -> 14
+	  131 -> 288
+	  131 -> 67
+	  131 -> 261
+	  131 -> 104
+	  131 -> 51
+	  131 -> 148
+	  132 -> 53
+	  132 -> 111
+	  133 -> 41
+	  134 -> 234
+	  134 -> 125
+	  134 -> 174
+	  134 -> 135
+	  135 -> 191
+	  136 -> 138
+	  137 -> 224
+	  138 -> 98
+	  139 -> 258
+	  140 -> 48
+	  141 -> 227
+	  142 -> 167
+	  143 -> 4
+	  144 -> 165
+	  145 -> 275
+	  146 -> 37
+	  147 -> 211
+	  148 -> 284
+	  149 -> 163
+	  150 -> 5
+	  151 -> 183
+	  152 -> 66
+	  153 -> 88
+	  153 -> 87
+	  154 -> 208
+	  155 -> 154
+	  156 -> 157
+	  156 -> 158
+	  157 -> 80
+	  158 -> 194
+	  159 -> 15
+	  160 -> 61
+	  161 -> 239
+	  162 -> 119
+	  163 -> 275
+	  165 -> 180
+	  166 -> 36
+	  167 -> 153
+	  168 -> 8
+	  169 -> 71
+	  170 -> 232
+	  171 -> 236
+	  172 -> 215
+	  173 -> 134
+	  174 -> 25
+	  175 -> 176
+	  176 -> 99
+	  177 -> 2
+	  178 -> 179
+	  179 -> 141
+	  180 -> 292
+	  181 -> 283
+	  182 -> 19
+	  183 -> 185
+	  184 -> 129
+	  185 -> 143
+	  186 -> 90
+	  187 -> 205
+	  187 -> 22
+	  187 -> 247
+	  188 -> 59
+	  189 -> 75
+	  190 -> 277
+	  191 -> 192
+	  191 -> 301
+	  191 -> 78
+	  192 -> 44
+	  193 -> 58
+	  194 -> 182
+	  195 -> 241
+	  196 -> 197
+	  196 -> 198
+	  197 -> 83
+	  198 -> 216
+	  199 -> 18
+	  200 -> 117
+	  200 -> 62
+	  201 -> 244
+	  202 -> 184
+	  202 -> 170
+	  202 -> 50
+	  203 -> 231
+	  204 -> 144
+	  205 -> 105
+	  206 -> 219
+	  207 -> 145
+	  208 -> 209
+	  208 -> 210
+	  209 -> 7
+	  210 -> 295
+	  211 -> 133
+	  211 -> 38
+	  211 -> 52
+	  211 -> 280
+	  211 -> 255
+	  212 -> 121
+	  213 -> 10
+	  214 -> 181
+	  215 -> 222
+	  217 -> 214
+	  218 -> 84
+	  219 -> 260
+	  220 -> 131
+	  221 -> 257
+	  222 -> 211
+	  223 -> 57
+	  224 -> 98
+	  225 -> 98
+	  226 -> 193
+	  227 -> 165
+	  228 -> 221
+	  229 -> 6
+	  230 -> 271
+	  231 -> 85
+	  231 -> 63
+	  232 -> 265
+	  233 -> 300
+	  234 -> 235
+	  235 -> 135
+	  236 -> 96
+	  236 -> 9
+	  237 -> 93
+	  237 -> 23
+	  238 -> 199
+	  239 -> 169
+	  240 -> 131
+	  241 -> 275
+	  242 -> 115
+	  243 -> 60
+	  244 -> 245
+	  244 -> 246
+	  245 -> 203
+	  246 -> 263
+	  247 -> 105
+	  248 -> 81
+	  248 -> 139
+	  249 -> 139
+	  250 -> 220
+	  251 -> 252
+	  251 -> 253
+	  252 -> 146
+	  252 -> 109
+	  253 -> 196
+	  254 -> 120
+	  255 -> 24
+	  256 -> 134
+	  257 -> 64
+	  257 -> 287
+	  258 -> 180
+	  259 -> 165
+	  260 -> 163
+	  261 -> 296
+	  262 -> 265
+	  263 -> 231
+	  264 -> 154
+	  265 -> 4
+	  266 -> 276
+	  267 -> 222
+	  268 -> 43
+	  269 -> 220
+	  270 -> 126
+	  271 -> 61
+	  272 -> 217
+	  273 -> 154
+	  274 -> 163
+	  275 -> 131
+	  276 -> 189
+	  277 -> 213
+	  277 -> 111
+	  278 -> 122
+	  279 -> 39
+	  280 -> 11
+	  281 -> 135
+	  282 -> 226
+	  283 -> 131
+	  284 -> 285
+	  284 -> 286
+	  285 -> 82
+	  286 -> 18
+	  287 -> 33
+	  288 -> 166
+	  289 -> 243
+	  290 -> 152
+	  290 -> 3
+	  290 -> 150
+	  290 -> 151
+	  291 -> 6
+	  292 -> 131
+	  293 -> 141
+	  294 -> 186
+	  295 -> 128
+	  296 -> 264
+	  297 -> 298
+	  298 -> 4
+	  299 -> 120
+	  300 -> 211
+	  301 -> 26
+	  302 -> 225
+	  303 -> 47
+	  304 -> 125
+}
+

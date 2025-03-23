@@ -1,0 +1,78 @@
+# WHIRLING / BATHTUB
+# You can take a bath and wash that corpse stench off.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Bathtub: This is not the cleanest bathtub in the world, but it's cleaner than you are right now."];
+	  3 [label="Savoir Faire: Hold it right there! Keep your head above water, or you'll lose all those pheromones Morell sprayed on you."];
+	  4 [label="Variable[\"coast.morells_pheromone_spray\"]"];
+	  5 [label="Variable[\"coast.morells_pheromone_spray\"]", shape=diamond];
+	  6 [label="!(Variable[\"coast.morells_pheromone_spray\"])", shape=diamond];
+	  7 [label="You: Run yourself a bath."];
+	  8 [label="You: Leave the beer cans in."];
+	  9 [label="You: Take the beer cans out."];
+	  10 [label="Physical Instrument: What are you doing? You're not some fat fish in a fucking aquarium. Time to get moving."];
+	  11 [label="You: Get out. (Conclude.)"];
+	  12 [label="lingerhub"];
+	  13 [label="Bathtub: The water line recedes as you stand. You are cold now. Your clothes stick to your still moist skin."];
+	  14 [label="You: I want to live forever with the corpse smell. Memento mori and stuff. [Leave.]"];
+	  15 [label="Bathtub: Your fingers grow pale and are covered with tiny whorls as the water cools."];
+	  16 [label="Perception (Smell): Ah, that soap scum smell. It smells like life. At least compared to you."];
+	  18 [label="bathtubhub"];
+	  19 [label="You: I don't care. I just want to be engulfed."];
+	  20 [label="Conceptualization: Then -- houses along a narrow street. A video rental. Darkness on the planet's curvature."];
+	  21 [label="Untitled hub"];
+	  22 [label="Bathtub: Now you are alone with your thoughts in the tub. But it's easier than being alone with your thoughts outside the tub."];
+	  23 [label="You: Linger in the tub a little."];
+	  24 [label="Bathtub: The water doesn't feel particularly clean. A few beer cans are bobbing up and down along your flanks like sad duckies. You pause to think before letting your head go under."];
+	  25 [label="Bathtub: The lukewarm water is comforting, like amniotic fluid."];
+	  26 [label="Bathtub: The cans continue to bob, as do your thoughts, aimlessly splashing up against the sides of the tub."];
+	  27 [label="Inland Empire: You feel nice and lonely. And so, so tired."];
+	  28 [label="You: Imagine something."];
+	  29 [label="You: Undress, close your eyes, and submerge."];
+	  30 [label="Bathtub: The water is only lukewarm, but still comforting, like amniotic fluid. A few beer cans are bobbing up and down along your flanks like sad duckies."];
+	  31 [label="Bathtub: The bathtub slowly fills with water. The water beckons."];
+	  32 [label="Electrochemistry: They're not even really thoughts. Just assorted sensations, none of them acute enough to focus on."];
+	  33 [label="Bathtub: You see the corpse. You can still smell the cadaver on you. It's going to take more than one bath to get rid of that stench."];
+	  34 [label="You: Keep your head above water, just in case."];
+	  0 -> 1
+	  1 -> 2
+	  2 -> 16
+	  3 -> 21
+	  4 -> 5
+	  4 -> 6
+	  5 -> 24
+	  6 -> 30
+	  7 -> 31
+	  8 -> 26
+	  9 -> 22
+	  10 -> 12
+	  11 -> 13
+	  12 -> 11
+	  12 -> 28
+	  12 -> 23
+	  15 -> 10
+	  16 -> 18
+	  18 -> 14
+	  18 -> 7
+	  19 -> 25
+	  20 -> 12
+	  21 -> 34
+	  21 -> 19
+	  22 -> 32
+	  23 -> 15
+	  24 -> 3
+	  25 -> 27
+	  26 -> 32
+	  27 -> 8
+	  27 -> 9
+	  28 -> 33
+	  29 -> 4
+	  30 -> 27
+	  31 -> 29
+	  32 -> 12
+	  33 -> 20
+	  34 -> 25
+}
+

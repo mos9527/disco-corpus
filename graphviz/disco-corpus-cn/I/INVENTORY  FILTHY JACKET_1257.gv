@@ -1,0 +1,92 @@
+# INVENTORY / FILTHY JACKET
+# an inventory interaction so you can't sell the filthy garbage because clothing items cannot be sold, oiii.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 我为什么又开始摸这件脏夹克了？"];
+	  3 [label="Filthy Jacket: 当你把它拿在手里的时候，它发出了一阵不安的嘎吱声……"];
+	  4 [label="You: 转念一想，我们*还是*思考一下吧。"];
+	  5 [label="You: 有人把它放在栏杆上，之后怎么样了？"];
+	  6 [label="Shivers: *啪嗒*。一枚白色炸弹在男人的鞋子上爆炸。一阵咒骂声响起，但是鸟儿并没有听到。"];
+	  7 [label="Variable[\"inventory.filthy_shivers_seagulls\"]"];
+	  8 [label="Variable[\"inventory.filthy_shivers_seagulls\"]", shape=diamond];
+	  9 [label="!(Variable[\"inventory.filthy_shivers_seagulls\"])", shape=diamond];
+	  10 [label="Filthy Jacket: 那样可能更好吧。"];
+	  11 [label="Composure: 什么？不行！那不就粘在你的*裤子*上了吗。这是个灾难。你永远也没办法清除这股味道了。"];
+	  12 [label="Filthy Jacket: 明智的选择。你越不去想这件夹克，结果就越好。"];
+	  13 [label="Filthy Jacket: 你突然想到自己手里*拿*的甚至都不是夹克本身，而是一层厚厚的沉料和海鸥粪便结成的外壳。"];
+	  14 [label="You: 我感觉自己现在已经理解这件夹克了。[把夹克放在一边。]"];
+	  15 [label="You: 我为什么要花这么多时间思考海鸥粪便呢？"];
+	  16 [label="Filthy Jacket: 没有为什么。"];
+	  17 [label="Filthy Jacket: 不知怎么的，它被拖上了木板道，如果用的不是人手，那就有可能是晚上在海滩边游荡的野狗……"];
+	  18 [label="Composure: 有些秘密还是不被发现的好。说真的，甚至都别去尝试。"];
+	  19 [label="You: 别想了。"];
+	  20 [label="You: 也许我可以用裤子把手擦干净？"];
+	  21 [label="You: 好吧，但是这个外壳是什么*形成*的呢？"];
+	  22 [label="Composure: 现在你把那些脏东西甩的到处都是！这是个灾难。你永远也没办法清除这股味道了。"];
+	  23 [label="You: 天啦，这件夹克怎么会变成这么恶心的样子？"];
+	  24 [label="You: 想一想。"];
+	  25 [label="Shivers: 它们就像是静风舰队的投弹手，在*放眼全是目标的环境*里翱翔……"];
+	  26 [label="You: 恶心。"];
+	  27 [label="You: 呕！（甩动你的手。）"];
+	  28 [label="Filthy Jacket: 外壳很坚硬。这件夹克至少在太阳底下晒了一天。谁知道后来发生了什么事？"];
+	  29 [label="Shivers: 突然间，炸弹舱门打开了，闪烁着耀眼白光的炸弹直冲向大地……"];
+	  30 [label="Shivers: 城市上空的某个地方，一队海鸥在空中盘旋……"];
+	  31 [label="You: [把脏夹克放在一边。]"];
+	  32 [label="You: 现在还是别想了。[把脏夹克放在一边。]"];
+	  33 [label="You: 那我们就把它放在一边吧。"];
+	  34 [label="You: 好吧，确实挺恶心的。我已经受够了。"];
+	  36 [label="You: 我要假装自己没想过这些。"];
+	  37 [label="Composure: 太迟了！你已经开始想了。现在你的手上沾满了脏东西。"];
+	  38 [label="Filthy Jacket: 这是一个肮脏又污秽的传说，不适合那些弱鸡。你确定能够忍受吗？"];
+	  39 [label="Perception (Smell): 它闻起来像是死亡海洋生物的味道，纠缠在灰色的海藻之间。在海浪把它推到岸边之前，它肯定已经在水里待了好一阵子了。"];
+	  40 [label="Visual Calculus: 周围有很多模糊的脚印，虽然不太可能说清是什么种类，或者到底有多少。可以说，有人把这件夹克搁在栏杆上之前，它在地上躺过一段时间。"];
+	  41 [label="Composure: 为什么，你为什么要去想它？看看你的手——上面沾满了脏东西。"];
+	  0 -> 1
+	  1 -> 3
+	  2 -> 16
+	  3 -> 32
+	  3 -> 2
+	  3 -> 23
+	  4 -> 13
+	  5 -> 28
+	  6 -> 14
+	  6 -> 15
+	  7 -> 8
+	  7 -> 9
+	  8 -> 25
+	  9 -> 36
+	  12 -> 4
+	  12 -> 31
+	  13 -> 39
+	  15 -> 37
+	  16 -> 33
+	  17 -> 40
+	  18 -> 24
+	  18 -> 19
+	  19 -> 12
+	  20 -> 11
+	  21 -> 17
+	  23 -> 38
+	  24 -> 13
+	  25 -> 29
+	  26 -> 41
+	  27 -> 22
+	  28 -> 30
+	  29 -> 6
+	  30 -> 7
+	  32 -> 10
+	  34 -> 41
+	  36 -> 37
+	  37 -> 27
+	  37 -> 20
+	  38 -> 18
+	  39 -> 26
+	  39 -> 21
+	  40 -> 34
+	  40 -> 5
+	  41 -> 27
+	  41 -> 20
+}
+

@@ -1,0 +1,856 @@
+# PLAZA / GASTON
+# Florid and jolly, Gaston Martin is standing in a sunspot and loudly eating a giant ham sandwich.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Gaston Martin: Variable[\"plaza.rene_guardbooth_branc_said_its_do_or_die\"]"];
+	  3 [label="Variable[\"plaza.rene_guardbooth_branc_said_its_do_or_die\"]", shape=diamond];
+	  4 [label="!(Variable[\"plaza.rene_guardbooth_branc_said_its_do_or_die\"])", shape=diamond];
+	  5 [label="Gaston Martin: IsKimHere()"];
+	  6 [label="IsKimHere()", shape=diamond];
+	  7 [label="!(IsKimHere())", shape=diamond];
+	  8 [label="Gaston Martin: “事实就是这样，这真的就是生活的一部分，”他嘟囔着，你只听到了一半。“一个认识了整整79年的人，有一天他们突然就*走了*……”"];
+	  9 [label="You: “告诉我吧。”"];
+	  10 [label="Gaston Martin: Variable[\"yard.hanged_boots_soles_inspected\"]"];
+	  11 [label="Variable[\"yard.hanged_boots_soles_inspected\"]", shape=diamond];
+	  12 [label="!(Variable[\"yard.hanged_boots_soles_inspected\"])", shape=diamond];
+	  13 [label="Physical Instrument: 他当然没有，基佬才喜欢花呢。别再浪费时间了。"];
+	  14 [label="You: 再见。[离开。]"];
+	  15 [label="You: “破冰者，我将碾碎前进路途上的冰雪。”"];
+	  16 [label="Jump to: [Jeannie HUB]"];
+	  17 [label="René Arnoux: “你总是让她心烦意乱，不让我们开心……”他愤愤不平地说道。“用你的花言巧语和*点心*引诱她。”"];
+	  18 [label="Gaston Martin: 他看了你一会儿，然后低声说道。“我拿走了，为了记住那个老杂种。没人比我更了解他，我希望能够睹物思人。”"];
+	  19 [label="Jump to: [Gaston main HUB]"];
+	  20 [label="Empathy: 他从这个想法中得到了安慰。"];
+	  21 [label="Gaston Martin: 加斯顿闷闷不乐地盯着铅球。几秒钟过去了。他开口说道：“现在已经太迟了，警官……你回来的太迟了。雷内走了。”"];
+	  22 [label="Gaston Martin: “那个老家伙躲过了子弹，长剑和炸药，却被心脏病夺走了性命……”他重重地叹了一口气。“很讽刺，不是吗——就连他自己那颗充满仇恨的心脏都受不了他了。”"];
+	  23 [label="You: “喂，我说过我不会这么做，不过我还是帮你找了个新*大球*。”（把球拿出来。）"];
+	  24 [label="You: “其实真没那么糟糕。”"];
+	  25 [label="Gaston Martin: 他惊恐地盯着你。“真是浪费……”"];
+	  26 [label="René Arnoux: “我没有让加斯顿隐瞒你的意思，警官，不过你真有*警察*事务要找我们吗？”"];
+	  27 [label="Gaston Martin: “呃……谢谢你，警官。”他嫌恶地看着你。“请告诉我，没有别的事了吧？”"];
+	  28 [label="Gaston Martin: Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.rene_know_dead\"]"];
+	  29 [label="Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.rene_know_dead\"]", shape=diamond];
+	  30 [label="!(Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.rene_know_dead\"])", shape=diamond];
+	  31 [label="You: （低语到。）“金，在体育比赛中作弊是*无法接受的*。我可以的。”"];
+	  32 [label="Reaction Speed: 雷内的眼睛里流露出尊敬的光芒。"];
+	  33 [label="Jump to: [Gaston main HUB]"];
+	  34 [label="Gaston Martin: IsKimHere()"];
+	  35 [label="IsKimHere()", shape=diamond];
+	  36 [label="!(IsKimHere())", shape=diamond];
+	  37 [label="Inland Empire: 他永远也不会再玩地掷球了。"];
+	  38 [label="Gaston main HUB"];
+	  39 [label="Gaston Martin: “雷内和我都守在她的床边，当她……”他停顿了一下，搜索着正确的词汇。"];
+	  40 [label="René Arnoux: “死的时候，”他尖锐地填补了沉默，补充了一句：“没必要粉饰什么。这样她也不会回来了，不是吗？”"];
+	  41 [label="You: “你为什么会觉得她犹豫不决呢？”"];
+	  42 [label="You: “那有点奇怪吧。”"];
+	  43 [label="You: “我向你表示最诚挚的哀悼。”（总结。）"];
+	  44 [label="Jump to: [The Dead Renés]"];
+	  45 [label="Jump to: [Gaston main HUB]"];
+	  46 [label="You: “我建议给它命名为‘加斯顿的狗屁三明治’，这就是我的看法。”"];
+	  47 [label="Jump to: [Gaston main HUB]"];
+	  48 [label="Gaston Martin: “滚开，这是我的！”他猛地躲开了，瞬间把自己都吓了一跳。"];
+	  49 [label="Perception (Sight): 这个三明治看起来就像是一个烹饪奇迹，制作精妙，材料丰富。作者很了解烹饪这门手艺。"];
+	  50 [label="Reaction Speed: ……它不见了。"];
+	  51 [label="Gaston Martin: CancelTask(\"TASK.ask_rene_about_the_photograph_found_in_his_booth_canceled\")--[[ Variable[ ]]"];
+	  52 [label="Gaston Martin: “我们认识她，没错……”他友好的面孔一下子亮了起来。“这辈子都住在同一条街上，只隔了两栋房子。从四岁开始，我们三个就是最好的朋友了。”"];
+	  53 [label="René Arnoux: “那时我们只是小孩子。那不一样的。*你*……”高大的老兵看着你，点点头。"];
+	  54 [label="René Arnoux: “没必要再来一遍，已经一千零一次了。特别是有外人在的时候。”他转向你：“警官？”"];
+	  55 [label="Gaston Martin: “我猜他是打算回家吧，因为码头工人发现他的时候，他正穿着便服，而不是我一直看见的那套凤头鹦鹉制服。”"];
+	  56 [label="Gaston Martin: “好吧，你拿走了一件。”他摇摇头。“我还是不敢相信，他居然会把它给了你，不过他的确就是这么死板。一旦不小心开了这个口，就没有辩驳的余地……”"];
+	  57 [label="Gaston Martin: “也许是时候慢下来，稍微享受一下生活？”他充满歉意地笑了。“还有什么能帮你的吗？”"];
+	  58 [label="Gaston Martin: “我猜这已经不重要了。你做你自己该做的事，就像我们其他人一样……所以，我能怎么帮你呢？”"];
+	  59 [label="Gaston Martin: “哦，好吧……”他似乎离你远了一些。“完全没问题。没有造成什么伤害，反正真的不关我的事。”"];
+	  60 [label="Gaston Martin: Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.rene_know_dead\"]"];
+	  61 [label="Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.rene_know_dead\"]", shape=diamond];
+	  62 [label="!(Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.rene_know_dead\"])", shape=diamond];
+	  63 [label="Gaston Martin: “不，”他快速回复到。“雷内是瑞瓦肖最固执的男人。不管你或者我说了什么，都不会*逼迫*他做任何事的。那个男人完全不为所动。”"];
+	  64 [label="You: “你说得对，这不关我们的事。”"];
+	  65 [label="Kim Kitsuragi: “那就好，”警督笑了。“对我们来说是件小事，对他来说确实无价之宝。他可能都不知道雷内还有这张相片。”"];
+	  66 [label="Gaston Martin: “我真的不知道了……什么都不知道了。”他慢慢摇摇头，然后想起了你的存在。“但是你……你肯定需要什么吧？”"];
+	  67 [label="You: “等等，伊苏林迪百合？”"];
+	  68 [label="Jump to: [Gaston Martin: \"\"Life... *mnjam-mnjam*... doesn't n...\"]"];
+	  69 [label="Gaston Martin: “我真的超越了自己……”他咬了一口三明治。“这就叫神圣。”"];
+	  70 [label="Gaston Martin: “这……不太对。”老人连看都懒得看一眼。“雷内想穿着他的制服下葬。但是我猜，现在已经不重要了……”"];
+	  71 [label="Jump to: [Gaston main HUB]"];
+	  72 [label="Logic: 你不会从他身上找到答案。即使老兵知道些什么，那也已经和他一起长眠地下。"];
+	  73 [label="Jump to: [Gaston Martin: \"\"Let me think...\" He looks at the c...\"]"];
+	  74 [label="You: “所以你们俩都认识她？”"];
+	  75 [label="You: “抱歉，但是我*真的*只想再问些问题。”"];
+	  76 [label="Gaston Martin: “该死，”他笑着说道。“*从严格意义上讲*，我们俩跟她还处于订婚状态呢。”"];
+	  77 [label="Gaston Martin: “当然了，警官，”他笑着说道。“我们只剩下回忆了。”"];
+	  78 [label="You: “一些很刻薄的话？”"];
+	  79 [label="Inland Empire: 万能的神明啊，他现在完全就是个废人了！"];
+	  80 [label="Gaston Martin: Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  81 [label="Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  82 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  83 [label="Jump to: [Gaston main HUB]"];
+	  84 [label="You: “重油会危害环境。我必须想办法除掉它。”"];
+	  85 [label="You: “你觉得是不是我们那段关于工作的对话逼着他那样做的？”"];
+	  86 [label="Jump to: [Gaston main HUB]"];
+	  87 [label="Jump to: [Gaston main HUB]"];
+	  88 [label="Gaston Martin: “很抱歉，警官，我只是……”他擦干眼泪。“谢谢你，*谢谢*你的这个小纪念品。它对我来说真的太重要了。”"];
+	  89 [label="You: “我不怕死——我只害怕没有真正地活着。”"];
+	  90 [label="Gaston Martin: “什么事？”他抬起头。“关于谁的，雷内吗？”"];
+	  91 [label="Inland Empire: 但是不知道为什么，你觉得自己手中的干花还是*很*重要。尽管对这个悲伤的老人并不重要。"];
+	  92 [label="Gaston Martin: “又见到你真的很开心，警官。这么好的天气，我有什么能帮到公民武装的吗？"];
+	  93 [label="You: “告诉我，你对那个死者了解多少？”"];
+	  95 [label="Gaston Martin: “生活……*吧唧吧唧*……不需要如此挣扎。”他捂住嘴，想要掩饰打嗝。"];
+	  96 [label="Jump to: [The Dead Renés]"];
+	  97 [label="Jump to: [Gaston Martin: \"\"What do you mean, officer?\" He loo...\"]"];
+	  98 [label="Gaston Martin: “去世的时候，”他的同伴补完了句子，然后笑了起来：“直到最后，她都没能在我们俩当中做出选择。她是我见过的最犹豫不决的女人。”"];
+	  99 [label="Composure: 他试着维持自己那副快乐的模样，不过内在的悲伤在他布满皱纹的脸上投射下深深的阴影。"];
+	  100 [label="Gaston Martin: “我再重复一遍——他是个*不折不扣的*杂种。”他转而看向弹坑。“就连他的老战友都不想留在他身边。他就像条老毒蛇一样。”"];
+	  101 [label="Gaston Martin: “哦……抱歉，警官……你有什么需要？”"];
+	  102 [label="Jump to: [Gaston main HUB]"];
+	  103 [label="Gaston Martin: “哦……”他并没有抬头。“很好。对你很好啊，警官。我只是想知道雷内会不会……没关系。我能帮你什么吗？”"];
+	  104 [label="Reaction Speed: 等等……是你逼着他想要证明自己的能力，不需要他人施舍的吗？"];
+	  105 [label="Perception (Smell): *然后*你突然想到了——那个天才混球把整个三明治都浸在蜂蜜芥末里了。实在是太堕落了。而且很美味。"];
+	  106 [label="Gaston Martin: “最最亲爱的珍妮……”他点点头，笑了。“随便问吧，警官，我认识她一辈子了。”"];
+	  107 [label="You: “他为什么不喜欢？”"];
+	  108 [label="Gaston Martin: “两年前的冬天，她死于肺炎。那是一条安静的旅程。很平静。”他微微一笑。"];
+	  109 [label="Gaston Martin: “她总是在我们俩之间摇摆不定，不过这份时间还不够长，最后也没有成婚。”"];
+	  110 [label="You: “他真有那么糟糕吗？”"];
+	  111 [label="You: “他到底是怎么死的？”"];
+	  112 [label="Gaston Martin: Variable[\"plaza.ene_took_the_setting_sun_from_rene\"]"];
+	  113 [label="Variable[\"plaza.ene_took_the_setting_sun_from_rene\"]", shape=diamond];
+	  114 [label="!(Variable[\"plaza.ene_took_the_setting_sun_from_rene\"])", shape=diamond];
+	  115 [label="Jump to: [The Dead Renés]"];
+	  116 [label="Jump to: [Gaston main HUB]"];
+	  117 [label="Jump to: [Gaston main HUB]"];
+	  118 [label="You: “看起来很美味。”（指着三明治。）“我能尝一口吗？”"];
+	  119 [label="Electrochemistry: 你几乎听不见他的声音了。泡菜的香甜跟三明治散发出的大蒜黄油和腌渍洋葱的香味彼此协调，把你的思维引向了唯一的方向——你一定要拥有它。"];
+	  120 [label="You: “火行者。我能在火焰里行走。”"];
+	  121 [label="Jump to: [The Dead Renés]"];
+	  122 [label="You: “讽刺对我不起作用的，不过我想问你点别的事。”"];
+	  123 [label="Jump to: [Gaston Martin: \"\"What do you mean, officer?\" He loo...\"]"];
+	  124 [label="Gaston Martin: Variable[\"plaza.gaston_endurance_hunger_\"]"];
+	  125 [label="Variable[\"plaza.gaston_endurance_hunger_\"]", shape=diamond];
+	  126 [label="!(Variable[\"plaza.gaston_endurance_hunger_\"])", shape=diamond];
+	  127 [label="Jump to: [Empathy: \"Despite their differences these men...\"]"];
+	  128 [label="You: “首先权衡自己的选择完全没错。”"];
+	  129 [label="Gaston Martin: Variable[\"plaza.gaston_altgreet_tribunal\"]"];
+	  130 [label="Variable[\"plaza.gaston_altgreet_tribunal\"]", shape=diamond];
+	  131 [label="!(Variable[\"plaza.gaston_altgreet_tribunal\"])", shape=diamond];
+	  132 [label="You: “真遗憾。我还想问他怎么回到过去呢。”"];
+	  133 [label="Gaston Martin: “那个混蛋16岁的时候，她成了雷内的第一个女人。”他看着老兵，目光几近温柔。“他们一直相亲相爱，直到他决定为了某种伟大的*理想*而献身，而不愿只做一个快乐的男人……”"];
+	  134 [label="Gaston Martin: “哦，警官……”加斯顿没有因为他的爆发而不安。“80年前，当我们三个人刚刚学会走路和说话的时候，就已经很难看了。”"];
+	  135 [label="Pain Threshold: 雷内的脸上闪过一丝痛苦的痕迹，不过他很快又控制住了自己。现在他的脸又变得风平浪静了。"];
+	  136 [label="Gaston Martin: IsKimHere()"];
+	  137 [label="IsKimHere()", shape=diamond];
+	  138 [label="!(IsKimHere())", shape=diamond];
+	  139 [label="Gaston Martin: “总有一天我们都会离开的，警官。我爱的人都已经离开了。可能正在等我。”他微微一笑。“我不害怕死亡。这是一场美好的旅程，而且我真的很想念我的朋友们……”"];
+	  140 [label="Gaston Martin: Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.rene_know_dead\"]"];
+	  141 [label="Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.rene_know_dead\"]", shape=diamond];
+	  142 [label="!(Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.rene_know_dead\"])", shape=diamond];
+	  143 [label="Gaston Martin: Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.rene_know_dead\"]"];
+	  144 [label="Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.rene_know_dead\"]", shape=diamond];
+	  145 [label="!(Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.rene_know_dead\"])", shape=diamond];
+	  146 [label="Gaston Martin: “世界末日？”他向后靠了靠，显然很担心。“我……我不知道，这是什么意思，警官。我很抱歉。不过谢谢你！我会尽可能配合你的。”"];
+	  147 [label="Gaston Martin: Variable[\"plaza.gaston_perceptionsight_sandwich\"]"];
+	  148 [label="Variable[\"plaza.gaston_perceptionsight_sandwich\"]", shape=diamond];
+	  149 [label="!(Variable[\"plaza.gaston_perceptionsight_sandwich\"])", shape=diamond];
+	  150 [label="You: “拜托，老兄，就咬一口行吗？”"];
+	  151 [label="Logic: 他是不是觉得*必须*证明自己能做好分内的工作？不需要别人的施舍？"];
+	  152 [label="Gaston Martin: IsKimHere()"];
+	  153 [label="IsKimHere()", shape=diamond];
+	  154 [label="!(IsKimHere())", shape=diamond];
+	  155 [label="You: “如果可以的话，我想再重温一些雷内的情况？”"];
+	  156 [label="Kim Kitsuragi: 警督慢慢地，久久地对着你摇了摇头。"];
+	  157 [label="Gaston Martin: “她对任何事情都拿不定主意。早餐该吃什么，最喜欢的颜色是什么，还有到底该嫁给谁。”他的目光快乐而疏离。"];
+	  158 [label="You: “某种右翼的保皇派口号？”"];
+	  159 [label="Gaston Martin: “‘要是在纪尧姆的年代，不用审判就能把你枪毙。’他就是这么对我说的。”老人振作了一些，又擦了擦眼泪。“他活着的时候是个杂种，死了还是个杂种。那就随它去吧。”"];
+	  160 [label="Jump to: [Gaston main HUB]"];
+	  161 [label="Gaston Martin: “是的，是的……那味道呢？”他靠的更近了。“味道怎么样？”"];
+	  162 [label="You: “味道？我就只顾着吃，忘记品尝味道了。”"];
+	  163 [label="You: “*求你了*，朋友，跟我一起分享吧。”"];
+	  164 [label="Gaston Martin: Variable[\"XP.gaston_said_rene_guardjob_is_evrarts_charity\"]"];
+	  165 [label="Variable[\"XP.gaston_said_rene_guardjob_is_evrarts_charity\"]", shape=diamond];
+	  166 [label="!(Variable[\"XP.gaston_said_rene_guardjob_is_evrarts_charity\"])", shape=diamond];
+	  167 [label="Physical Instrument: 不重要？！保持体育比赛的诚信*不重要*？！快拉住我，孩子……该死，这*才是*最重要的吧！！！"];
+	  168 [label="Gaston Martin: 老人盯着花，然后叹了口气，说道：“雷内不是植物学家，警官。相信我，他不喜欢伊苏林迪百合。”"];
+	  169 [label="Gaston Martin: “我，呃……”他摸了摸下巴，不知道该说什么。“那很不错。呃……如果我挡了你的道，我会挪开的！或者我还有哪里能帮到你？”"];
+	  170 [label="Jump to: [Gaston Martin: \"\"Oh? The goal is to throw your *bou...\"]"];
+	  171 [label="René Arnoux: 他突然记起来*你*还在这里，于是一言不发地转过身去。"];
+	  172 [label="You: “走了？去哪里了？”"];
+	  173 [label="Gaston Martin: “是的。我……我爱那个爱发火的老家伙。他不值得，但我值得。”他用袖子擦了擦眼泪。“你知道他最后跟我说了什么吗？”"];
+	  174 [label="Kim Kitsuragi: “是的。”警督点点头。“我们为你的损失感到非常抱歉。”"];
+	  175 [label="Gaston Martin: Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.rene_know_dead\"]"];
+	  176 [label="Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.rene_know_dead\"]", shape=diamond];
+	  177 [label="!(Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.rene_know_dead\"])", shape=diamond];
+	  178 [label="You: “我想再问问你工会的事。”"];
+	  179 [label="You: “好吧……反正我也没那么饿。”"];
+	  180 [label="Reaction Speed: 那就意味着制服可能还在那个岗亭——如果你*真的*打算把自己献给瑞瓦肖的话，最好记住这一点。"];
+	  181 [label="Gaston Martin: “我猜他是打算回家吧，因为码头工人发现他的时候，他正穿着便服，而不是那套凤头鹦鹉制服，就是你……呃……没收的这套。”"];
+	  182 [label="Gaston Martin: IsKimHere()"];
+	  183 [label="IsKimHere()", shape=diamond];
+	  184 [label="!(IsKimHere())", shape=diamond];
+	  185 [label="You: “雷内在哪？”\n“等等，雷内死了？”\n“等等，雷内死了？”"];
+	  186 [label="You: “听起来这是你们俩之间的事。我还有其他事情要处理。”"];
+	  187 [label="You: 不要干预。"];
+	  188 [label="Jeannie HUB"];
+	  189 [label="Jump to: [The Dead Renés]"];
+	  190 [label="Gaston Martin: “过去的幽灵。”老人脱下帽子，海风吹乱了他灰色的头发。“这个故事里的每一个人都已经死了，警官。我不想再提他们。”"];
+	  191 [label="Gaston Martin: “呃……*一切*的一切，真的。我可能更了解他……”他突然意识到什么，停了下来。“你是说树上那个茶杯，对吗？我对他一无所知。”"];
+	  192 [label="You: “它真是（*嗝*）太棒了！营养丰富！它的优点我可以连续说上一整晚！”"];
+	  193 [label="Gaston Martin: “我猜干警察的应该不需要味蕾吧。”他看起来很失望。“还有别的事吗，警官？”"];
+	  194 [label="René Arnoux: “这是你唯一的原则。”"];
+	  195 [label="Gaston Martin: “哦……”他瞥了一眼焦灼的字迹。“当然。我没有想过这一点。做得好，警官！”"];
+	  196 [label="Gaston Martin: “我很高兴能帮到你，警官，”他回复到，声音疲惫而破碎。"];
+	  197 [label="Jump to: [Gaston main HUB]"];
+	  198 [label="Gaston Martin: “我看看……”加斯顿用颤抖的手接过相片。“这是60年前的相片！我们都去参加了那次游行。年轻的雷内看起来那么开心，珍妮……”泪水模糊了他的双眼，他不得不停了下来。"];
+	  199 [label="Empathy: 尽管两人天差地别，但他们还是在彼此的生命中扮演了相当重要的角色，现在其中一个走了，另一个只会感觉到……失落。"];
+	  200 [label="You: “我不想死。”"];
+	  201 [label="Gaston Martin: Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  202 [label="Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  203 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  204 [label="Gaston Martin: “你好，警官。”他转向你。“今天的天气真不错，我能帮你什么呢？”"];
+	  205 [label="You: “嗨，加斯顿。对我的行头没什么意见吗？”"];
+	  206 [label="You: “你提到了珍妮-玛丽·博利厄。那是谁？”"];
+	  207 [label="You: “她怎么了？”"];
+	  208 [label="The Dead Renés"];
+	  209 [label="Perception (Sight): 除了明显的火腿片之外——而且很肥厚——你还注意到下面露出西红柿的边缘。而且……那是蛋黄酱吗？"];
+	  210 [label="Gaston Martin: Variable[\"plaza.rene_reaction_rene_died_cause_he_wanted_to_prove_he_doesnt_need_charity\"]"];
+	  211 [label="Variable[\"plaza.rene_reaction_rene_died_cause_he_wanted_to_prove_he_doesnt_need_charity\"]", shape=diamond];
+	  212 [label="!(Variable[\"plaza.rene_reaction_rene_died_cause_he_wanted_to_prove_he_doesnt_need_charity\"])", shape=diamond];
+	  213 [label="Jump to: [The Dead Renés]"];
+	  214 [label="Conceptualization: 很久很久以前。可能在当你还是个孩子的时候。"];
+	  215 [label="Gaston Martin: “事实就是这样……这就是生活的一部分，”他嘟囔着，你只听到了一半。“一个认识了整整79年的人，有一天他们突然就*走了*……”"];
+	  216 [label="You: “我也不怕死。”"];
+	  217 [label="You: “这个游戏的规则是什么？”"];
+	  218 [label="Jump to: [Jeannie HUB]"];
+	  219 [label="Gaston Martin: “*我的天啦*，警官！”他看着你的伤口。“比我想象的还要糟糕！相信我，我非常了解那种痛苦，在过去的……一周里，我的臀部也遇到了一点问题。”"];
+	  220 [label="Gaston Martin: 他的声音在颤抖。“……而且她永远看在眼里。我想，如果这个世界上最美丽的人都能爱上他，那他身上肯定有什么值得她坚持的东西……”"];
+	  221 [label="Jump to: [Gaston main HUB]"];
+	  222 [label="Jump to: [Gaston main HUB]"];
+	  223 [label="Gaston Martin: Variable[\"plaza.rene_reaction_rene_died_cause_he_wanted_to_prove_he_doesnt_need_charity\"]  or  Variable[\"plaza.rene_logic_rene_died_cause_he_wanted_to_prove_he_doesnt_need_charity\"]"];
+	  224 [label="Variable[\"plaza.rene_reaction_rene_died_cause_he_wanted_to_prove_he_doesnt_need_charity\"]  or  Variable[\"plaza.rene_logic_rene_died_cause_he_wanted_to_prove_he_doesnt_need_charity\"]", shape=diamond];
+	  225 [label="!(Variable[\"plaza.rene_reaction_rene_died_cause_he_wanted_to_prove_he_doesnt_need_charity\"]  or  Variable[\"plaza.rene_logic_rene_died_cause_he_wanted_to_prove_he_doesnt_need_charity\"])", shape=diamond];
+	  226 [label="You: “一切结束的太快，我还没机会形成什么看法。”"];
+	  227 [label="Jump to: [The Dead Renés]"];
+	  228 [label="Gaston Martin: Variable[\"plaza.gaston_greeting_done\"]"];
+	  229 [label="Variable[\"plaza.gaston_greeting_done\"]", shape=diamond];
+	  230 [label="!(Variable[\"plaza.gaston_greeting_done\"])", shape=diamond];
+	  231 [label="Jump to: [Gaston main HUB]"];
+	  232 [label="Jump to: [Gaston main HUB]"];
+	  233 [label="Gaston Martin: “其实，没关系的……反正也不一样了……”"];
+	  234 [label="Jump to: [Gaston main HUB]"];
+	  235 [label="Gaston Martin: “好吧……准确来说，是*你*从*我*这里把她偷走的，你把墨水洒到她那条漂亮的黄裙子上之后，你们俩不是闹翻了吗，从那以后我们俩一直挺亲近的……”"];
+	  236 [label="Gaston Martin: “那个老家伙走了，”他回复到，努力想挤出一丝笑容。“我……我还是不敢相信，但他真的走了。”"];
+	  237 [label="Gaston Martin: “好吧，警官，你在想什么？”快乐的老人身体前倾，很想听听你的意见。"];
+	  238 [label="You: “你没听见我说话吗，老兄。我*需要*这个三明治！”"];
+	  239 [label="You: “依照法律规定，我必须告诉你这是违反*道德*的。”（指向那些球，眨眨眼。）"];
+	  240 [label="Gaston Martin: “哦，呃……谢谢你，警官。这样我的心情肯定就放松多了。”他紧张地笑了笑。“非常惬意，几乎像是个小市集。”"];
+	  241 [label="Jump to: [The Dead Renés]"];
+	  242 [label="Gaston Martin: “这是……好吧，其实没什么。”他露出一个机灵的微笑。“*有些事*我肯定是能帮你的，警官。”"];
+	  243 [label="Rhetoric: 茶杯？哦，因为那套陶瓷盔甲。真聪明。"];
+	  244 [label="Jump to: [Gaston main HUB]"];
+	  245 [label="René Arnoux: “不要*玷污*她的回忆，加斯顿。”他的声音里有一丝几乎难以察觉的颤抖。“让她安息吧。”"];
+	  246 [label="René Arnoux: “是你把她从我这里偷走的，”雷内回复到，试着稳定自己的呼吸，不过手依然紧握在胸口。"];
+	  247 [label="Gaston Martin: Variable[\"TASK.light_graffito_on_fire_done\"]"];
+	  248 [label="Variable[\"TASK.light_graffito_on_fire_done\"]", shape=diamond];
+	  249 [label="!(Variable[\"TASK.light_graffito_on_fire_done\"])", shape=diamond];
+	  250 [label="Gaston Martin: “警官……”他抬起满是皱纹的脸，整个人显得苍老又矮小。“我现在做不到。工会……已经不重要了。”"];
+	  251 [label="You: “它就是个三明治，我不知道能跟你说什么。当时我很饿，不过现在不饿了。”"];
+	  252 [label="Gaston Martin: Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.gaston_altgreet_rene_uniform\"]"];
+	  253 [label="Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.gaston_altgreet_rene_uniform\"]", shape=diamond];
+	  254 [label="!(Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.gaston_altgreet_rene_uniform\"])", shape=diamond];
+	  255 [label="firstsandwich"];
+	  256 [label="You: “他很抱歉？”"];
+	  257 [label="You: “其实我也在等待自己的那一天……已经等不及要死去了！”"];
+	  258 [label="Jump to: [Gaston Martin: \"\"Oh... sorry, officer... What do yo...\"]"];
+	  259 [label="Gaston Martin: “这……这样是不对的，警官。”他摇摇头。“雷内想穿着制服下葬，但是……”"];
+	  260 [label="Gaston Martin: “警官……”欢乐从加斯顿脸上消失了。“想不想跟一个孤独的老人玩一场游戏？”"];
+	  261 [label="Gaston Martin: “哦，亲爱的珍妮……”他的眼睛里闪烁着梦幻般的光芒。“她是整个瑞瓦肖最好的女人。也许是整个世界上最好的。”"];
+	  262 [label="Gaston Martin: “当然，警官。”他点点头。“这样对雷内颤动的心脏更好一些。并不是说他承认那里有什么需要修补的地方。”"];
+	  263 [label="You: “你知道他的奖章怎么样了吗？”"];
+	  264 [label="Gaston Martin: Variable[\"plaza.gaston_altgreet_third_day\"]"];
+	  265 [label="Variable[\"plaza.gaston_altgreet_third_day\"]", shape=diamond];
+	  266 [label="!(Variable[\"plaza.gaston_altgreet_third_day\"])", shape=diamond];
+	  267 [label="You: “即将到来的国家警察。”"];
+	  268 [label="You: “非常有营养。谢谢你！”"];
+	  269 [label="Reaction Speed: ‘非生即死——没有中间地带’——这是你告诉雷内的。也许他也不是*完全*不为所动的？"];
+	  270 [label="You: “某种难忘的话，比如说‘明天见’？”"];
+	  271 [label="You: “我们再多聊聊这位珍妮-玛丽吧。”"];
+	  272 [label="Jump to: [Jeannie HUB]"];
+	  273 [label="Gaston Martin: “当然可以，警官。”他笑了。“他们是好人。你有什么需要？”"];
+	  274 [label="You: “什么？他是在雇佣兵宣判的时候死去的吗？”"];
+	  275 [label="Gaston Martin: Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  276 [label="Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  277 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  278 [label="You: “雷内去世真是太糟糕了，我本来还想问问他铃兰的事……”（把花拿出来。）"];
+	  279 [label="Gaston Martin: “我猜到了最后，伊苏林迪百合不过是旧伊苏林迪的又一个碎片，保皇派不得不向马佐夫主义的叛乱分子投降。这真的已经不重要了。”"];
+	  280 [label="Gaston Martin: “警官！”他大喊到。“在马丁内斯一看到警察，我就已经感觉安全多了。有什么能帮你的吗？”"];
+	  281 [label="René Arnoux: “没错，你需要的就是这个，加斯顿。让你的大屁股再肥一点。希望你的心脏停止跳动。”"];
+	  282 [label="Endurance: 别担心，只是一点小挫折。“继续前进”，骑士。有志者事竟成。你不能停下脚步。"];
+	  283 [label="You: “你爱他吗？”"];
+	  284 [label="Gaston Martin: 加斯顿叹了口气，小声嘟囔着，更像是对他自己，而不是对你：“很可能是地狱吧。他是个十足的杂种……”"];
+	  285 [label="Gaston Martin: “*我的天啦*，你把它点着了！”他看着广场。“你到底是什么警察啊？”"];
+	  286 [label="Jump to: [Gaston main HUB]"];
+	  287 [label="You: “真是现代烹饪手法的杰作。或者我应该说……是*加斯顿烹饪手法*的杰作。”（朝男人赞许地眨眨眼。）"];
+	  288 [label="You: “的确*非常*有营养。”（揉揉你的肚子。）"];
+	  289 [label="Gaston Martin: DayCount() >= 5"];
+	  290 [label="DayCount() >= 5", shape=diamond];
+	  291 [label="!(DayCount() >= 5)", shape=diamond];
+	  292 [label="René Arnoux: “当异见分子来*强暴*我们的国家时，他躲了起来，但是想试着咬一口他亲爱的三明治，他的爪子就伸出来了？你还真是个了不得的寄生虫呢，加斯顿。”"];
+	  293 [label="Gaston Martin: “抱歉，警官，我很抱歉，我没有恶意的，”他小心翼翼地继续说道：“不过这个三明治是我的，我不会跟别人分享。”"];
+	  294 [label="Gaston Martin: “相信我，警官，我也想帮你，不过我需要这个三明治来保持血糖稳定。”他扭动着，回避着你的目光。“我这把年纪需要注意这种事情。”"];
+	  295 [label="secondsandwich"];
+	  296 [label="You: “别这么小气，加斯顿，这玩意够每个人分的。”"];
+	  297 [label="Gaston Martin: “哦，那很好啊，非常好。”他显然是松了一口气。“你肯定还有其他事情吧？”"];
+	  298 [label="Empathy: 他有些怀疑，不过现在他只想继续向前看，不去想这个问题。"];
+	  299 [label="Gaston Martin: Variable[\"plaza.rene_reaction_respect_flashing\"]"];
+	  300 [label="Variable[\"plaza.rene_reaction_respect_flashing\"]", shape=diamond];
+	  301 [label="!(Variable[\"plaza.rene_reaction_respect_flashing\"])", shape=diamond];
+	  302 [label="Kim Kitsuragi: “我们为你的损失感到非常抱歉……”警督低下头。“朋友的离去是一件可怕的事情。”"];
+	  303 [label="Gaston Martin: “哦，他倒是很想。”老人慢慢摇摇头。“暴力的生活终将以暴力结束……那就是他想要的结果。可悲的是结果并非如此。”"];
+	  304 [label="Jump to: [Gaston main HUB]"];
+	  305 [label="René Arnoux: “然后你就把她从我这里偷走了！”他猛地朝前挺身，不过很快就抓着胸口停了下来。"];
+	  306 [label="Gaston Martin: “我们这一生都憎恨着彼此。恨得那么深，事实上……”他陷入沉默，看着你，眼中饱含泪水。"];
+	  307 [label="You: “这就是女人，不是吗？”"];
+	  308 [label="Gaston Martin: “他那颗愤怒的小心脏最终还是停止了跳动。”他叹了口气。“今天早晨，码头工人在岗亭发现了他。他根本不该再工作一星期的，但他就是想证明自己到底有坚强……”"];
+	  309 [label="Jump to: [Gaston main HUB]"];
+	  310 [label="You: “喂，加斯顿，我给你找了一个新的*大球*。”（把球拿出来。）"];
+	  311 [label="Gaston Martin: “你留着吧，这根本算不上是一个真正的*大球*。”他挥手示意你离开。“再说，现在真的不重要了。我永远也不会在马丁内斯看到其他玩地掷球的人。”"];
+	  312 [label="Gaston Martin: Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.rene_know_dead\"]"];
+	  313 [label="Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.rene_know_dead\"]", shape=diamond];
+	  314 [label="!(Variable[\"plaza.gaston_altgreet_rene_dead\"]  or  Variable[\"plaza.rene_know_dead\"])", shape=diamond];
+	  315 [label="Gaston Martin: Variable[\"cargo.guardbooth_took_uniform\"]"];
+	  316 [label="Variable[\"cargo.guardbooth_took_uniform\"]", shape=diamond];
+	  317 [label="!(Variable[\"cargo.guardbooth_took_uniform\"])", shape=diamond];
+	  318 [label="Gaston Martin: Variable[\"TASK.ask_rene_about_the_photograph_found_in_his_booth\"]"];
+	  319 [label="Variable[\"TASK.ask_rene_about_the_photograph_found_in_his_booth\"]", shape=diamond];
+	  320 [label="!(Variable[\"TASK.ask_rene_about_the_photograph_found_in_his_booth\"])", shape=diamond];
+	  321 [label="Gaston Martin: “嗯，”他轻轻点点头，回复到。“那是它们的旧名字，可以追溯到国王的时代，纹章和其它他钟爱的东西的时代。”"];
+	  322 [label="Gaston Martin: DayCount() == 2"];
+	  323 [label="DayCount() == 2", shape=diamond];
+	  324 [label="!(DayCount() == 2)", shape=diamond];
+	  325 [label="Gaston Martin: “我马上就好，警官。让我先吃完这个三明治。”他朝自己的同伴点点头。“先跟那个愤怒的老雷内聊聊吧。”"];
+	  326 [label="Jump to: [plaza.gaston_rhetoric_sandwich]"];
+	  327 [label="Authority: 他的语气不像寻常那样强硬，似乎他觉得自己没有权利谈论这件事。"];
+	  328 [label="Gaston Martin: “没事的，警官。”他理了理自己的白胡子。“你可能刚刚把雷内从心脏病发作中解救出来了。”"];
+	  329 [label="Jump to: [Gaston main HUB]"];
+	  330 [label="Jump to: [Gaston main HUB]"];
+	  331 [label="You: “老人迟早会死，你最好也要做好准备。”（总结。）"];
+	  332 [label="Gaston Martin: “有时候，我觉得他穿那套制服只是为了气我。”加斯顿的笑容很悲伤。“现在上天跟他开了个玩笑，他没办法穿着它下葬了。”\n“有时候，我觉得他穿那套制服只是为了气我。”加斯顿盯着你的夹克。“我猜是上天跟他开了个玩笑，他没办法穿着它下葬了。”\n“有时候，我觉得他穿那套制服只是为了气我。”加斯顿盯着你的裤子。“我猜是上天跟他开了个玩笑，他没办法穿着它下葬了。”\n“有时候，我觉得他穿那套制服只是为了气我。”加斯顿盯着你身上的制服。“我猜是上天跟他开了个玩笑，他没办法穿着它下葬了。”"];
+	  333 [label="Jump to: [The Dead Renés]"];
+	  334 [label="You: “我，呃……不知道。这是个意外。我很抱歉。”"];
+	  335 [label="You: “世界末日的先驱者。”"];
+	  336 [label="Gaston Martin: CheckEquipped(\"jacket_carabineer\")"];
+	  337 [label="CheckEquipped(\"jacket_carabineer\")", shape=diamond];
+	  338 [label="!(CheckEquipped(\"jacket_carabineer\"))", shape=diamond];
+	  339 [label="Gaston Martin: Variable[\"plaza.reneandgaston_greeting_done\"]"];
+	  340 [label="Variable[\"plaza.reneandgaston_greeting_done\"]", shape=diamond];
+	  341 [label="!(Variable[\"plaza.reneandgaston_greeting_done\"])", shape=diamond];
+	  342 [label="Gaston Martin: “是的……”他满是皱纹的脸上闪过一丝奇怪的表情，然后消失地无影无踪。"];
+	  343 [label="Gaston Martin: “不过，你可能也有公务要办吧？”他一边问，一边戴上帽子。"];
+	  344 [label="Gaston Martin: “哦，好吧……”他似乎离你远了一些。“*我*对你的能力完全有信心。还有未来，”他飞快地补充了一句。"];
+	  345 [label="You: “它是一座灯塔的光，照在这个平庸又乏味的海滨上。不客气，马丁内斯。”"];
+	  346 [label="Kim Kitsuragi: “不，不要这样。在一场业余地掷球游戏中强行执行适当的引导不是RCM该做的事。”他笑了。“没关系的。”"];
+	  347 [label="You: “给你，留给你纪念你的朋友……”（把雷内和女孩的照片交给他。）\n“给你，留给你纪念你的朋友……”（把雷内和女孩的照片交给他。）"];
+	  348 [label="Gaston Martin: CheckEquipped(\"jacket_carabineer\")  or  CheckEquipped(\"pants_carabineer\")"];
+	  349 [label="CheckEquipped(\"jacket_carabineer\")  or  CheckEquipped(\"pants_carabineer\")", shape=diamond];
+	  350 [label="!(CheckEquipped(\"jacket_carabineer\")  or  CheckEquipped(\"pants_carabineer\"))", shape=diamond];
+	  351 [label="Gaston Martin: Variable[\"TASK.ask_rene_about_the_photograph_found_in_his_booth_done\"]"];
+	  352 [label="Variable[\"TASK.ask_rene_about_the_photograph_found_in_his_booth_done\"]", shape=diamond];
+	  353 [label="!(Variable[\"TASK.ask_rene_about_the_photograph_found_in_his_booth_done\"])", shape=diamond];
+	  354 [label="Gaston Martin: “有很多原因，不过主要是因为公社社员。他们称之为‘革命的钟声’。”他的脸上闪过一抹悲伤的笑容。"];
+	  355 [label="You: 说服加斯顿放弃他的三明治。"];
+	  356 [label="You: Variable[\"plaza.gaston_rhetoric_sandwich\"]"];
+	  357 [label="Variable[\"plaza.gaston_rhetoric_sandwich\"]", shape=diamond];
+	  358 [label="!(Variable[\"plaza.gaston_rhetoric_sandwich\"])", shape=diamond];
+	  359 [label="You: “愿雷内能够安息。”（总结。）"];
+	  360 [label="Gaston Martin: “太遗憾了……”老人点了点头，看着地面。他没有认真听你的话。"];
+	  361 [label="Jump to: [Jeannie HUB]"];
+	  362 [label="Gaston Martin: “另一件是我拿走的。”他挑衅地看着你。“没人比我更了解他，我需要点东西记住那个老杂种。”"];
+	  363 [label="Gaston Martin: “我，呃……”他摸了摸下巴，不知道说什么好。“那很好啊。呃……这样更好。我能怎么帮你呢？”"];
+	  364 [label="Endurance: 突然间，你意识到自己有多饿。距离上次吃东西肯定……天知道是什么时候的事了。"];
+	  365 [label="Jump to: [Untitled hub (02)]"];
+	  366 [label="Gaston Martin: “雷内，啧啧啧。这叫小小的快乐。生活不需要变成……*吧唧吧唧*……挣扎。”"];
+	  367 [label="Gaston Martin: “是的……”当他重复着‘安息’的时候，他那张满是皱纹的脸上闪过一丝奇怪的表情。"];
+	  368 [label="You: “放松点，伙计们，没必要搞得这么难看。”"];
+	  369 [label="You: “感谢你的分享。”（总结。）"];
+	  370 [label="Rhetoric: 奇怪的是，现在*老杂种*从他嘴里说出来的时候，几乎满满都是温柔。"];
+	  371 [label="Gaston Martin: “唯一留在他身边的只有珍妮和我……”他停顿了一下。“当我们还是孩子的时候，她在他身上看见了一些东西……”"];
+	  372 [label="You: “我吃了你的三明治，加斯顿。”"];
+	  373 [label="Drama: 让它……*活泼一点*！"];
+	  374 [label="Gaston Martin: “来自一个执法人员的评价，对我来说真的意义重大。”他微微鞠了一躬。“谢谢你。”"];
+	  375 [label="Jump to: [Gaston main HUB]"];
+	  376 [label="Gaston Martin: “我很抱歉，警官，但我真的不会跟别人分享食物的，”他话音刚落，又飞快地补了一句：“不是针对你，这是原则问题。”"];
+	  10900098 [label="JUMP OUT to PLAZA / GASTON CASE", shape=diamond];
+	  10910092 [label="JUMP OUT to PLAZA / GASTON SANDWICH WC", shape=diamond];
+	  10890029 [label="JUMP OUT to PLAZA / GASTON CHEATING", shape=diamond];
+	  10900083 [label="JUMP OUT to PLAZA / GASTON CASE", shape=diamond];
+	  10890046 [label="JUMP OUT to PLAZA / GASTON CHEATING", shape=diamond];
+	  0 -> 1
+	  1 -> 339
+	  2 -> 3
+	  2 -> 4
+	  3 -> 269
+	  4 -> 241
+	  5 -> 6
+	  5 -> 7
+	  6 -> 346
+	  7 -> 123
+	  8 -> 199
+	  9 -> 159
+	  10 -> 11
+	  10 -> 12
+	  11 -> 243
+	  12 -> 83
+	  13 -> 107
+	  13 -> 67
+	  15 -> 169
+	  16 -> 188
+	  17 -> 171
+	  18 -> 370
+	  19 -> 38
+	  20 -> 139
+	  21 -> 22
+	  22 -> 311
+	  23 -> 21
+	  24 -> 193
+	  25 -> 375
+	  26 -> 47
+	  27 -> 375
+	  28 -> 29
+	  28 -> 30
+	  29 -> 222
+	  30 -> 292
+	  31 -> 97
+	  32 -> 293
+	  33 -> 38
+	  34 -> 35
+	  34 -> 36
+	  35 -> 302
+	  36 -> 216
+	  36 -> 89
+	  36 -> 257
+	  36 -> 200
+	  37 -> 160
+	  38 -> 355
+	  38 -> 217
+	  38 -> 205
+	  38 -> 206
+	  38 -> 239
+	  38 -> 271
+	  38 -> 14
+	  38 -> 178
+	  38 -> 23
+	  38 -> 372
+	  38 -> 310
+	  38 -> 278
+	  38 -> 118
+	  38 -> 185
+	  38 -> 155
+	  38 -> 93
+	  39 -> 40
+	  40 -> 98
+	  41 -> 157
+	  42 -> 76
+	  43 -> 136
+	  44 -> 208
+	  45 -> 38
+	  46 -> 193
+	  47 -> 38
+	  48 -> 32
+	  49 -> 147
+	  50 -> 28
+	  51 -> 44
+	  52 -> 133
+	  53 -> 54
+	  54 -> 218
+	  55 -> 332
+	  56 -> 362
+	  57 -> 45
+	  58 -> 221
+	  59 -> 117
+	  60 -> 61
+	  60 -> 62
+	  61 -> 364
+	  62 -> 194
+	  63 -> 298
+	  64 -> 242
+	  65 -> 227
+	  66 -> 33
+	  67 -> 321
+	  68 -> 95
+	  69 -> 281
+	  70 -> 182
+	  71 -> 38
+	  72 -> 282
+	  73 -> 10900098
+	  74 -> 52
+	  75 -> 328
+	  76 -> 17
+	  77 -> 330
+	  78 -> 159
+	  79 -> 309
+	  80 -> 81
+	  80 -> 82
+	  81 -> 129
+	  82 -> 258
+	  83 -> 38
+	  84 -> 195
+	  85 -> 63
+	  86 -> 38
+	  87 -> 38
+	  88 -> 152
+	  89 -> 215
+	  90 -> 208
+	  91 -> 244
+	  92 -> 231
+	  93 -> 140
+	  95 -> 325
+	  96 -> 208
+	  97 -> 10890046
+	  98 -> 135
+	  99 -> 208
+	  100 -> 371
+	  101 -> 264
+	  102 -> 38
+	  103 -> 116
+	  104 -> 210
+	  105 -> 295
+	  106 -> 272
+	  107 -> 354
+	  108 -> 39
+	  109 -> 128
+	  109 -> 42
+	  109 -> 307
+	  110 -> 100
+	  111 -> 308
+	  112 -> 113
+	  112 -> 114
+	  113 -> 56
+	  114 -> 18
+	  115 -> 208
+	  116 -> 38
+	  117 -> 38
+	  118 -> 376
+	  119 -> 105
+	  120 -> 363
+	  121 -> 208
+	  122 -> 196
+	  123 -> 10890046
+	  124 -> 125
+	  124 -> 126
+	  125 -> 214
+	  126 -> 49
+	  127 -> 199
+	  128 -> 76
+	  129 -> 130
+	  129 -> 131
+	  130 -> 258
+	  131 -> 247
+	  132 -> 360
+	  133 -> 305
+	  134 -> 246
+	  135 -> 361
+	  136 -> 137
+	  136 -> 138
+	  137 -> 174
+	  138 -> 8
+	  139 -> 34
+	  140 -> 141
+	  140 -> 142
+	  141 -> 191
+	  142 -> 73
+	  143 -> 144
+	  143 -> 145
+	  144 -> 250
+	  145 -> 273
+	  146 -> 117
+	  147 -> 148
+	  147 -> 149
+	  148 -> 209
+	  149 -> 255
+	  150 -> 294
+	  151 -> 55
+	  152 -> 153
+	  152 -> 154
+	  153 -> 65
+	  154 -> 227
+	  155 -> 90
+	  156 -> 232
+	  157 -> 109
+	  158 -> 159
+	  159 -> 115
+	  160 -> 38
+	  161 -> 288
+	  161 -> 162
+	  161 -> 226
+	  162 -> 193
+	  163 -> 48
+	  164 -> 165
+	  164 -> 166
+	  165 -> 104
+	  166 -> 348
+	  167 -> 64
+	  167 -> 31
+	  168 -> 13
+	  169 -> 117
+	  170 -> 10890029
+	  171 -> 16
+	  172 -> 284
+	  173 -> 256
+	  173 -> 9
+	  173 -> 78
+	  173 -> 270
+	  173 -> 158
+	  174 -> 8
+	  175 -> 176
+	  175 -> 177
+	  176 -> 190
+	  177 -> 261
+	  178 -> 143
+	  179 -> 297
+	  180 -> 223
+	  181 -> 332
+	  182 -> 184
+	  182 -> 183
+	  183 -> 156
+	  184 -> 232
+	  185 -> 236
+	  186 -> 262
+	  187 -> 235
+	  188 -> 41
+	  188 -> 74
+	  188 -> 207
+	  188 -> 369
+	  188 -> 186
+	  189 -> 208
+	  190 -> 343
+	  191 -> 10
+	  192 -> 27
+	  193 -> 86
+	  194 -> 364
+	  195 -> 117
+	  196 -> 213
+	  197 -> 38
+	  198 -> 88
+	  199 -> 66
+	  200 -> 215
+	  201 -> 202
+	  201 -> 203
+	  202 -> 274
+	  203 -> 318
+	  204 -> 231
+	  205 -> 70
+	  206 -> 175
+	  207 -> 108
+	  208 -> 132
+	  208 -> 263
+	  208 -> 359
+	  208 -> 43
+	  208 -> 172
+	  208 -> 331
+	  208 -> 110
+	  208 -> 111
+	  208 -> 347
+	  208 -> 283
+	  209 -> 255
+	  210 -> 211
+	  210 -> 212
+	  211 -> 348
+	  212 -> 151
+	  213 -> 208
+	  214 -> 49
+	  215 -> 127
+	  216 -> 215
+	  217 -> 170
+	  218 -> 188
+	  219 -> 57
+	  220 -> 189
+	  221 -> 38
+	  222 -> 38
+	  223 -> 224
+	  223 -> 225
+	  224 -> 122
+	  224 -> 85
+	  225 -> 121
+	  226 -> 193
+	  227 -> 208
+	  228 -> 229
+	  228 -> 230
+	  229 -> 322
+	  230 -> 69
+	  231 -> 38
+	  232 -> 38
+	  233 -> 19
+	  234 -> 38
+	  235 -> 53
+	  236 -> 99
+	  237 -> 373
+	  238 -> 48
+	  239 -> 5
+	  240 -> 117
+	  241 -> 208
+	  242 -> 197
+	  243 -> 83
+	  244 -> 38
+	  245 -> 327
+	  246 -> 235
+	  247 -> 248
+	  247 -> 249
+	  248 -> 285
+	  249 -> 219
+	  250 -> 102
+	  251 -> 25
+	  252 -> 253
+	  252 -> 254
+	  253 -> 80
+	  254 -> 336
+	  255 -> 296
+	  255 -> 179
+	  255 -> 150
+	  256 -> 159
+	  257 -> 215
+	  258 -> 101
+	  259 -> 58
+	  260 -> 233
+	  261 -> 245
+	  262 -> 234
+	  263 -> 112
+	  264 -> 265
+	  264 -> 266
+	  265 -> 309
+	  266 -> 79
+	  267 -> 344
+	  268 -> 161
+	  269 -> 241
+	  270 -> 159
+	  271 -> 106
+	  272 -> 188
+	  273 -> 365
+	  274 -> 303
+	  275 -> 276
+	  275 -> 277
+	  276 -> 223
+	  277 -> 180
+	  278 -> 168
+	  279 -> 91
+	  280 -> 304
+	  281 -> 366
+	  282 -> 96
+	  283 -> 306
+	  284 -> 201
+	  285 -> 267
+	  285 -> 334
+	  285 -> 15
+	  285 -> 335
+	  285 -> 84
+	  285 -> 120
+	  285 -> 345
+	  286 -> 38
+	  287 -> 374
+	  288 -> 193
+	  289 -> 290
+	  289 -> 291
+	  290 -> 252
+	  291 -> 228
+	  292 -> 222
+	  293 -> 299
+	  294 -> 119
+	  295 -> 163
+	  295 -> 238
+	  296 -> 294
+	  297 -> 87
+	  298 -> 2
+	  299 -> 300
+	  299 -> 301
+	  300 -> 50
+	  301 -> 28
+	  302 -> 215
+	  303 -> 318
+	  304 -> 38
+	  305 -> 368
+	  305 -> 75
+	  305 -> 187
+	  306 -> 173
+	  307 -> 76
+	  308 -> 164
+	  309 -> 38
+	  310 -> 21
+	  311 -> 37
+	  312 -> 313
+	  312 -> 314
+	  313 -> 103
+	  314 -> 237
+	  315 -> 316
+	  315 -> 317
+	  316 -> 223
+	  317 -> 275
+	  318 -> 320
+	  318 -> 319
+	  319 -> 351
+	  320 -> 44
+	  321 -> 107
+	  322 -> 323
+	  322 -> 324
+	  323 -> 280
+	  324 -> 92
+	  326 -> 10910092
+	  327 -> 188
+	  328 -> 329
+	  329 -> 38
+	  330 -> 38
+	  331 -> 342
+	  332 -> 315
+	  333 -> 208
+	  334 -> 59
+	  335 -> 146
+	  336 -> 337
+	  336 -> 338
+	  337 -> 259
+	  338 -> 260
+	  339 -> 340
+	  339 -> 341
+	  340 -> 289
+	  341 -> 68
+	  342 -> 20
+	  343 -> 286
+	  344 -> 117
+	  345 -> 240
+	  346 -> 167
+	  347 -> 198
+	  348 -> 349
+	  348 -> 350
+	  349 -> 181
+	  350 -> 55
+	  351 -> 352
+	  351 -> 353
+	  352 -> 44
+	  353 -> 51
+	  354 -> 279
+	  355 -> 356
+	  356 -> 357
+	  356 -> 358
+	  357 -> 326
+	  358 -> 326
+	  359 -> 367
+	  360 -> 72
+	  361 -> 188
+	  362 -> 370
+	  363 -> 117
+	  364 -> 124
+	  365 -> 10900083
+	  366 -> 204
+	  367 -> 71
+	  368 -> 134
+	  369 -> 77
+	  370 -> 333
+	  371 -> 220
+	  372 -> 312
+	  373 -> 192
+	  373 -> 268
+	  373 -> 46
+	  373 -> 24
+	  373 -> 251
+	  373 -> 287
+	  374 -> 26
+	  375 -> 38
+	  376 -> 60
+}
+

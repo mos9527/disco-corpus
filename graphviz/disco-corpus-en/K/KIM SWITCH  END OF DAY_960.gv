@@ -1,0 +1,121 @@
+# KIM SWITCH / END OF DAY
+# Kim wants to call it a day.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"I haven't paid the cafeteria manager for damages yet.\""];
+	  3 [label="Variable[\"character.pay_garte_30\"]"];
+	  4 [label="Variable[\"character.pay_garte_30\"]", shape=diamond];
+	  5 [label="!(Variable[\"character.pay_garte_30\"])", shape=diamond];
+	  6 [label="Empathy: Though he finds this situation frustrating, he is doing his best to not make you feel any worse than you already do."];
+	  7 [label="You: \"Then I should check in with the cafeteria manager.\""];
+	  8 [label="Variable[\"character.pay_garte_70\"]"];
+	  9 [label="Variable[\"character.pay_garte_70\"]", shape=diamond];
+	  10 [label="!(Variable[\"character.pay_garte_70\"])", shape=diamond];
+	  11 [label="You: \"But I don't have the money...\""];
+	  12 [label="Empathy: He's proud of you for getting your act together and finding a way to pay back what you owe."];
+	  13 [label="MoneyAmount() >=10000"];
+	  14 [label="MoneyAmount() >=10000", shape=diamond];
+	  15 [label="!(MoneyAmount() >=10000)", shape=diamond];
+	  16 [label="Kim Kitsuragi: He nods. \"I'll also take a room at the Whirling. One cannot get much closer to the crime scene.\""];
+	  17 [label="MoneyAmount() >=13000"];
+	  18 [label="MoneyAmount() >=13000", shape=diamond];
+	  19 [label="!(MoneyAmount() >=13000)", shape=diamond];
+	  20 [label="MoneyAmount() >=6000"];
+	  21 [label="MoneyAmount() >=6000", shape=diamond];
+	  22 [label="!(MoneyAmount() >=6000)", shape=diamond];
+	  23 [label="Kim Kitsuragi: \"Let's talk to him anyway. An officer of the RCM shouldn't be sleeping in the streets. We'll figure something out.\""];
+	  24 [label="You: \"I think I have the money now. This is money, right?\" (Show him reál bills.)"];
+	  25 [label="DayCount() == 1"];
+	  26 [label="DayCount() == 1", shape=diamond];
+	  27 [label="!(DayCount() == 1)", shape=diamond];
+	  28 [label="Kim Kitsuragi: \"We can pick up where we left off tomorrow morning.\""];
+	  29 [label="MoneyAmount() >=7000"];
+	  30 [label="MoneyAmount() >=7000", shape=diamond];
+	  31 [label="!(MoneyAmount() >=7000)", shape=diamond];
+	  32 [label="You: \"I think I need to talk to the cafeteria manager about my room...\""];
+	  34 [label="Kim Kitsuragi: \"Good to know. I'll be wherever is necessary in the morning. Bright and early, 7:30 sharp.\""];
+	  35 [label="Variable[\"character.pay_garte_100\"]"];
+	  36 [label="Variable[\"character.pay_garte_100\"]", shape=diamond];
+	  37 [label="!(Variable[\"character.pay_garte_100\"])", shape=diamond];
+	  38 [label="Kim Kitsuragi: \"Let's continue tomorrow, bright and early -- 7:30 sharp. I'll be waiting downstairs.\""];
+	  39 [label="Kim Kitsuragi: \"You certainly have been avoiding it.\""];
+	  40 [label="Kim Kitsuragi: \"Do that. I'll be waiting for you downstairs tomorrow.\""];
+	  41 [label="You: \"Yes, my hostel room calls.\""];
+	  42 [label="Variable[\"whirling.kim_took_room\"]"];
+	  43 [label="Variable[\"whirling.kim_took_room\"]", shape=diamond];
+	  44 [label="!(Variable[\"whirling.kim_took_room\"])", shape=diamond];
+	  45 [label="MoneyAmount() >=3000"];
+	  46 [label="MoneyAmount() >=3000", shape=diamond];
+	  47 [label="!(MoneyAmount() >=3000)", shape=diamond];
+	  48 [label="endofdayswitch"];
+	  49 [label="Variable[\"character.pay_garte_60\"]"];
+	  50 [label="Variable[\"character.pay_garte_60\"]", shape=diamond];
+	  51 [label="!(Variable[\"character.pay_garte_60\"])", shape=diamond];
+	  52 [label="Kim Kitsuragi: \"I'll also take a room at the Whirling.\""];
+	  53 [label="You: \"I found lodgings in the village. I'll spend the night there.\""];
+	  54 [label="Kim Kitsuragi: \"You should take care of that, then.\""];
+	  0 -> 1
+	  1 -> 48
+	  2 -> 54
+	  3 -> 4
+	  3 -> 5
+	  4 -> 45
+	  5 -> 49
+	  7 -> 40
+	  8 -> 9
+	  8 -> 10
+	  9 -> 29
+	  10 -> 35
+	  11 -> 23
+	  13 -> 14
+	  13 -> 15
+	  14 -> 24
+	  15 -> 11
+	  16 -> 12
+	  17 -> 18
+	  17 -> 19
+	  18 -> 24
+	  19 -> 11
+	  20 -> 21
+	  20 -> 22
+	  21 -> 24
+	  22 -> 11
+	  23 -> 6
+	  24 -> 16
+	  25 -> 26
+	  25 -> 27
+	  26 -> 28
+	  27 -> 38
+	  29 -> 30
+	  29 -> 31
+	  30 -> 24
+	  31 -> 11
+	  32 -> 39
+	  35 -> 36
+	  35 -> 37
+	  36 -> 13
+	  37 -> 17
+	  41 -> 42
+	  42 -> 43
+	  42 -> 44
+	  43 -> 25
+	  44 -> 52
+	  45 -> 46
+	  45 -> 47
+	  46 -> 24
+	  47 -> 11
+	  48 -> 32
+	  48 -> 2
+	  48 -> 7
+	  48 -> 41
+	  48 -> 53
+	  49 -> 50
+	  49 -> 51
+	  50 -> 20
+	  51 -> 8
+	  53 -> 34
+	  54 -> 3
+}
+

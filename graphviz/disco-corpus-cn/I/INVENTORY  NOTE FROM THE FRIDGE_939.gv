@@ -1,0 +1,296 @@
+# INVENTORY / NOTE FROM THE FRIDGE
+# Read the note you found from the giant ice bear fridge in the doomed commercial area.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="CheckItem(\"filament_memory_production_schedule\")"];
+	  3 [label="CheckItem(\"filament_memory_production_schedule\")", shape=diamond];
+	  4 [label="!(CheckItem(\"filament_memory_production_schedule\"))", shape=diamond];
+	  5 [label="Kim Kitsuragi: “有没有什么有意思的内容？”警督靠近了一些，从你的肩头探出脑袋，想看看这份起皱的记录。”"];
+	  6 [label="A Note from the Fridge: 难道你没看见开关箱旁边就有一个吗？"];
+	  7 [label="You: “看来我们永远也不会知道的了。”"];
+	  8 [label="Logic: 是的，不过可能是谁呢？"];
+	  9 [label="Logic: 不客气。"];
+	  10 [label="Jump to: [note hub]"];
+	  11 [label="Jump to: [note hub]"];
+	  12 [label="Variable[\"TASK.help_soona_with_her_project\"]"];
+	  13 [label="Variable[\"TASK.help_soona_with_her_project\"]", shape=diamond];
+	  14 [label="!(Variable[\"TASK.help_soona_with_her_project\"])", shape=diamond];
+	  15 [label="A Note from the Fridge: 有人潦草地写着：“S，我真的不敢相信，场外拷贝还在这里！那个小盲流一直在从我们工作室里偷东西，所以我必须把它藏到一个更安全的地方。”"];
+	  16 [label="Jump to: [note hub]"];
+	  17 [label="Kim Kitsuragi: “也许是当地的无赖吧。这种人在马丁内斯多了去了，随时准备惹麻烦。我们一般会派初级警员去对付他们。”"];
+	  18 [label="You: “你的意思是坤诺？”"];
+	  19 [label="Jump to: [note hub]"];
+	  20 [label="Kim Kitsuragi: “看起来像是楼上无线游戏公司的某个人。我有点吃惊，他们把自己的资产就这么放着不管。”"];
+	  21 [label="Kim Kitsuragi: “那不太可能吧。”"];
+	  23 [label="Jump to: [note hub]"];
+	  24 [label="Variable[\"yard.cuno_greeting_done\"]"];
+	  25 [label="Variable[\"yard.cuno_greeting_done\"]", shape=diamond];
+	  26 [label="!(Variable[\"yard.cuno_greeting_done\"])", shape=diamond];
+	  27 [label="IsKimHere()"];
+	  28 [label="IsKimHere()", shape=diamond];
+	  29 [label="!(IsKimHere())", shape=diamond];
+	  30 [label="Kim Kitsuragi: “这是一种合理的假设。”"];
+	  31 [label="You: [把便条收起来。]"];
+	  32 [label="Encyclopedia: 它是无线电脑的一部分。没有使用的时候，纤维内存单元需要被储存在0度以下的环境中。"];
+	  33 [label="A Note from the Fridge: 这份记录是用蓝色铅笔在一张横格办公纸上写下的。厨房磁贴在表面留下了斑点。"];
+	  34 [label="Volition: 伤害真的非同一般。你没大便失禁真是个奇迹。"];
+	  35 [label="Variable[\"doomed.icebear_volition_cuno\"]"];
+	  36 [label="Variable[\"doomed.icebear_volition_cuno\"]", shape=diamond];
+	  37 [label="!(Variable[\"doomed.icebear_volition_cuno\"])", shape=diamond];
+	  38 [label="Jump to: [note hub]"];
+	  39 [label="A Note from the Fridge: 根据记录，是某个名叫‘苏里斯洛’的人。"];
+	  40 [label="You: 纤维内存单元是什么？\n“再提醒我一次——纤维内存单元是什么？”"];
+	  41 [label="Variable[\"doomed.icebear_read_the_note\"] == false  and  IsKimHere()"];
+	  42 [label="Variable[\"doomed.icebear_read_the_note\"] == false  and  IsKimHere()", shape=diamond];
+	  43 [label="!(Variable[\"doomed.icebear_read_the_note\"] == false  and  IsKimHere())", shape=diamond];
+	  44 [label="Volition: 真的吗？你确定不是某个喜欢用第三人称称呼自己的红发小鬼？"];
+	  45 [label="Variable[\"doomed.fortress_accident_kim_switch_done\"]  or Variable[\"doomed.dicemaker_fortress_explained\"]"];
+	  46 [label="Variable[\"doomed.fortress_accident_kim_switch_done\"]  or Variable[\"doomed.dicemaker_fortress_explained\"]", shape=diamond];
+	  47 [label="!(Variable[\"doomed.fortress_accident_kim_switch_done\"]  or Variable[\"doomed.dicemaker_fortress_explained\"])", shape=diamond];
+	  48 [label="Logic: 有人可能会推测是一个拥有无线电脑的人。"];
+	  49 [label="Interfacing: 它很像你发现的*生产计划*，只不过这个是*场外拷贝*。"];
+	  50 [label="IsKimHere()"];
+	  51 [label="IsKimHere()", shape=diamond];
+	  52 [label="!(IsKimHere())", shape=diamond];
+	  53 [label="You: 阅读记录。"];
+	  54 [label="You: “也许他们是匆忙间离开的。”"];
+	  55 [label="Interfacing: 要是能亲自试试那台无线电脑，那该*多么*有趣啊。"];
+	  56 [label="Esprit de Corps: 这充其量只能算是偏题，不过警督的*警探直觉*还是很活跃的。"];
+	  57 [label="Kim Kitsuragi: “真的吗？”警督望着你，嘴角露出一丝得意洋洋的微笑。“你都不知道该从何处猜起吗？”"];
+	  58 [label="Volition: 你是认真的吗？你确定不想大胆猜测一下吗，警探？"];
+	  59 [label="You: 谢了，机灵鬼。"];
+	  60 [label="Variable[\"yard.cuno_greeting_done\"]"];
+	  61 [label="Variable[\"yard.cuno_greeting_done\"]", shape=diamond];
+	  62 [label="!(Variable[\"yard.cuno_greeting_done\"])", shape=diamond];
+	  63 [label="Rhetoric: 也就是说——不是很好。"];
+	  64 [label="Variable[\"doomed.icebear_logic_note\"]"];
+	  65 [label="Variable[\"doomed.icebear_logic_note\"]", shape=diamond];
+	  66 [label="!(Variable[\"doomed.icebear_logic_note\"])", shape=diamond];
+	  67 [label="A Note from the Fridge: 有人潦草地写着：“S，我真的不敢相信，场外拷贝还在这里！那个小盲流一直在从我们工作室里偷东西，所以我必须把它藏到一个更安全的地方。”"];
+	  68 [label="Jump to: [note hub]"];
+	  69 [label="IsKimHere()"];
+	  70 [label="IsKimHere()", shape=diamond];
+	  71 [label="!(IsKimHere())", shape=diamond];
+	  72 [label="Kim Kitsuragi: “某个拥有无线电脑的人？我跟你猜测的差不多，警官。”"];
+	  73 [label="You: “也许是因为那个存在。”"];
+	  74 [label="You: 言之有理。"];
+	  75 [label="You: 那个结冰的冰淇淋制造机在哪？\n“你知不知道那台结冰的冰淇淋制造机在哪？”"];
+	  76 [label="A Note from the Fridge: 在地下室的阴影之中。"];
+	  77 [label="You: 没有。大脑一片空白。"];
+	  78 [label="Variable[\"doomed.fortress_accident_kim_switch_done\"]  or Variable[\"doomed.dicemaker_fortress_explained\"]"];
+	  79 [label="Variable[\"doomed.fortress_accident_kim_switch_done\"]  or Variable[\"doomed.dicemaker_fortress_explained\"]", shape=diamond];
+	  80 [label="!(Variable[\"doomed.fortress_accident_kim_switch_done\"]  or Variable[\"doomed.dicemaker_fortress_explained\"])", shape=diamond];
+	  81 [label="Variable[\"doomed.orb_noticed_melting_ice_cream_maker\"]"];
+	  82 [label="Variable[\"doomed.orb_noticed_melting_ice_cream_maker\"]", shape=diamond];
+	  83 [label="!(Variable[\"doomed.orb_noticed_melting_ice_cream_maker\"])", shape=diamond];
+	  84 [label="Jump to: [note hub]"];
+	  85 [label="Logic: 而且，你*确实*把上述开关箱里的黑色电线拔掉了。"];
+	  86 [label="Kim Kitsuragi: “这是无线电脑的内存。类似于磁带——你听过迪斯科的磁带吧？这和那些差不多，区别在于只能用在电脑上。”"];
+	  87 [label="You: “没有，完全不知道。”"];
+	  88 [label="You: 这张便条是谁写的？\n“不知道这张便条是谁写的？”\n“有人把内存取走了！是谁呢？”"];
+	  89 [label="Variable[\"TASK.help_soona_with_her_project\"]"];
+	  90 [label="Variable[\"TASK.help_soona_with_her_project\"]", shape=diamond];
+	  91 [label="!(Variable[\"TASK.help_soona_with_her_project\"])", shape=diamond];
+	  92 [label="A Note from the Fridge: 这份记录说的不是很详细。"];
+	  93 [label="Variable[\"doomed.orb_noticed_frozen_ice_cream_maker\"]"];
+	  94 [label="Variable[\"doomed.orb_noticed_frozen_ice_cream_maker\"]", shape=diamond];
+	  95 [label="!(Variable[\"doomed.orb_noticed_frozen_ice_cream_maker\"])", shape=diamond];
+	  96 [label="A Note from the Fridge: 这份记录说的不是很详细。"];
+	  97 [label="Jump to: [note hub]"];
+	  98 [label="Kim Kitsuragi: “苏里斯洛……他是不是卢凯伦-吉尔德小姐的同事？”警督歪着脑袋。“我记得咱们在她的个人日志里见过这个名字。”"];
+	  99 [label="Variable[\"TASK.help_soona_with_her_project\"]"];
+	  100 [label="Variable[\"TASK.help_soona_with_her_project\"]", shape=diamond];
+	  101 [label="!(Variable[\"TASK.help_soona_with_her_project\"])", shape=diamond];
+	  102 [label="Reaction Speed: 他不是苏娜的一个前同事吗？"];
+	  103 [label="You: 这个小盲流是谁？\n“这个小盲流是谁？”"];
+	  104 [label="A Note from the Fridge: “场外拷贝的纤维内存被我放在结冰的冰淇淋制造机里了。请尽快把它带回家，这很重要。如果我住在一个有冰箱的文明地方，我就自己带走了。要小心，苏里斯洛。”"];
+	  105 [label="IsKimHere()"];
+	  106 [label="IsKimHere()", shape=diamond];
+	  107 [label="!(IsKimHere())", shape=diamond];
+	  108 [label="IsKimHere()"];
+	  109 [label="IsKimHere()", shape=diamond];
+	  110 [label="!(IsKimHere())", shape=diamond];
+	  111 [label="Kim Kitsuragi: 警督点点头。"];
+	  112 [label="You: 但是他们为什么要把纤维内存放在冰箱里呢？"];
+	  113 [label="Kim Kitsuragi: “我不知道……我猜是在靠近冰熊冰箱的某个地方吧。”"];
+	  114 [label="A Note from the Fridge: 难道你没看见开关箱旁边有个*正在溶化*的冰淇淋制造机吗？"];
+	  115 [label="note hub"];
+	  116 [label="Kim Kitsuragi: “哦，我肯定那小子会*很愿意*把纤维内存搞到手的——即使他不知道该拿它怎么办。根据我们之前的邂逅推测，他可能想过把它当掉换思必得。”"];
+	  117 [label="You: 哦，你的意思是坤诺？"];
+	  118 [label="You: 有道理。"];
+	  119 [label="Jump to: [note hub]"];
+	  120 [label="A Note from the Fridge: “场外拷贝的纤维内存被我放在结冰的冰淇淋制造机里了。请尽快把它带回家，这很重要。如果我住在一个有冰箱的文明地方，我就自己带走了。要小心，苏里斯洛。”"];
+	  121 [label="Jump to: [note hub]"];
+	  122 [label="You: 你是在说坤诺吗？"];
+	  123 [label="Volition: 叮叮叮！获胜者诞生了！"];
+	  124 [label="Kim Kitsuragi: “我会把赌注押在之前我们见过的那个红发小无赖身上。根据我们之前的邂逅推测，他可能想过把它当掉换思必得。”"];
+	  125 [label="You: 不知道。"];
+	  126 [label="Interfacing: 也许是那个破产无线电脑游戏公司的人？"];
+	  127 [label="Variable[\"doomed.icebear_interfacing_note\"]"];
+	  128 [label="Variable[\"doomed.icebear_interfacing_note\"]", shape=diamond];
+	  129 [label="!(Variable[\"doomed.icebear_interfacing_note\"])", shape=diamond];
+	  130 [label="Interfacing: 听起来没毛病，是一个为警探准备的问题，警探。"];
+	  0 -> 1
+	  1 -> 33
+	  2 -> 3
+	  2 -> 4
+	  3 -> 49
+	  4 -> 84
+	  5 -> 56
+	  6 -> 23
+	  7 -> 111
+	  8 -> 11
+	  9 -> 11
+	  10 -> 115
+	  11 -> 115
+	  12 -> 13
+	  12 -> 14
+	  13 -> 98
+	  14 -> 45
+	  15 -> 104
+	  16 -> 115
+	  17 -> 19
+	  18 -> 116
+	  19 -> 115
+	  20 -> 73
+	  20 -> 54
+	  20 -> 7
+	  21 -> 119
+	  23 -> 115
+	  24 -> 25
+	  24 -> 26
+	  25 -> 57
+	  26 -> 17
+	  27 -> 28
+	  27 -> 29
+	  28 -> 24
+	  29 -> 96
+	  30 -> 119
+	  32 -> 2
+	  33 -> 41
+	  34 -> 38
+	  35 -> 36
+	  35 -> 37
+	  36 -> 125
+	  36 -> 117
+	  37 -> 16
+	  38 -> 115
+	  39 -> 99
+	  40 -> 50
+	  41 -> 42
+	  41 -> 43
+	  42 -> 5
+	  43 -> 115
+	  44 -> 122
+	  44 -> 77
+	  45 -> 46
+	  45 -> 47
+	  46 -> 20
+	  47 -> 72
+	  48 -> 64
+	  49 -> 84
+	  50 -> 51
+	  50 -> 52
+	  51 -> 86
+	  52 -> 92
+	  53 -> 89
+	  54 -> 30
+	  55 -> 11
+	  56 -> 115
+	  57 -> 18
+	  57 -> 87
+	  58 -> 35
+	  59 -> 9
+	  60 -> 61
+	  60 -> 62
+	  61 -> 58
+	  62 -> 97
+	  63 -> 10
+	  64 -> 65
+	  64 -> 66
+	  65 -> 59
+	  65 -> 118
+	  66 -> 11
+	  67 -> 120
+	  68 -> 115
+	  69 -> 70
+	  69 -> 71
+	  70 -> 23
+	  71 -> 76
+	  72 -> 63
+	  73 -> 21
+	  74 -> 55
+	  75 -> 105
+	  76 -> 23
+	  77 -> 34
+	  78 -> 80
+	  78 -> 79
+	  79 -> 126
+	  80 -> 48
+	  81 -> 82
+	  81 -> 83
+	  82 -> 114
+	  83 -> 93
+	  84 -> 115
+	  85 -> 23
+	  86 -> 2
+	  87 -> 124
+	  88 -> 108
+	  89 -> 90
+	  89 -> 91
+	  90 -> 15
+	  91 -> 67
+	  92 -> 32
+	  93 -> 94
+	  93 -> 95
+	  94 -> 6
+	  95 -> 69
+	  96 -> 60
+	  97 -> 115
+	  98 -> 68
+	  99 -> 100
+	  99 -> 101
+	  100 -> 102
+	  101 -> 78
+	  102 -> 11
+	  103 -> 27
+	  104 -> 121
+	  105 -> 106
+	  105 -> 107
+	  106 -> 113
+	  107 -> 81
+	  108 -> 109
+	  108 -> 110
+	  109 -> 12
+	  110 -> 39
+	  111 -> 119
+	  112 -> 130
+	  113 -> 81
+	  114 -> 85
+	  115 -> 103
+	  115 -> 40
+	  115 -> 75
+	  115 -> 53
+	  115 -> 88
+	  115 -> 31
+	  116 -> 19
+	  117 -> 123
+	  118 -> 8
+	  119 -> 115
+	  120 -> 121
+	  121 -> 115
+	  122 -> 123
+	  123 -> 38
+	  124 -> 19
+	  125 -> 44
+	  126 -> 127
+	  127 -> 128
+	  127 -> 129
+	  128 -> 112
+	  128 -> 74
+	  129 -> 11
+	  130 -> 11
+}
+

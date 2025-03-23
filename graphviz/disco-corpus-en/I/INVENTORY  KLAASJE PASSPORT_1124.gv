@@ -1,0 +1,357 @@
+# INVENTORY / KLAASJE PASSPORT
+# This is the inventory interaction folder for the readable item: Klaasje's Passport!
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Logic: Klaasje's hidden documents -- from the empty buoy."];
+	  3 [label="Oranjese Passport: The woman on the photo does not reply. She looks at you with mysterious eyes, disguised as someone else."];
+	  4 [label="Encyclopedia: A curious octopus sometimes collects things? Or a cuttlefish?"];
+	  5 [label="Cuno: \"Cuno's gonna say it's *not* any of the things you *think* it is. Cuno'd have to get deep into this shit, but whatever it is -- you got played here. That's for sure.\""];
+	  6 [label="Shivers: The winds are silent. The streets are empty of her. She is no longer in the city of Revachol."];
+	  7 [label="Encyclopedia: A curious octopus would do something similar. Or even a cuttlefish."];
+	  8 [label="Untitled hub (02)"];
+	  9 [label="Kim Kitsuragi: He opens his notes. \"She said it would be for *Annouk Meijer-Smit*. Annouk -- Meijer -- Smit.\""];
+	  10 [label="You: \"Perhaps it had a vendetta against our Miss Oranje?\""];
+	  11 [label="Kim Kitsuragi: \"No. She lied to us. Her so-called real name was not her real name. Somehow she's managed to lie to us about that too...\" He almost smiles."];
+	  12 [label="Variable[\"TASK.arrest_klaasje_done\"]"];
+	  13 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  14 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  15 [label="Jump to: [Cuno: \"\"Cool. Got lied to. Double-lied to....\"]"];
+	  16 [label="Variable[\"TASK.arrest_klaasje_done\"]"];
+	  17 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  18 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  19 [label="Empathy: Would it? Maybe it was simply curious."];
+	  20 [label="Variable[\"TASK.arrest_klaasje_done\"]"];
+	  21 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  22 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  23 [label="Variable[\"XP.klaasjes_real_name\"]"];
+	  24 [label="Variable[\"XP.klaasjes_real_name\"]", shape=diamond];
+	  25 [label="!(Variable[\"XP.klaasjes_real_name\"])", shape=diamond];
+	  26 [label="Kim Kitsuragi: \"Like a magpie?\" He looks around. \"What a coincidence. Then it would also have *collected* the other objects, which would be highly unusual...\""];
+	  27 [label="Oranjese Passport: It's Klaasje. With short, black hair and glasses. She looks boyish, younger somehow."];
+	  28 [label="Kim Kitsuragi: \"I don't know who Katarzine Alasije is, but it's safe to say it's not her either. In short: we got lied to, again. In a way she's *still* lying to us...\" The lieutenant can't help but smile."];
+	  29 [label="You: [Put the passport away.]"];
+	  30 [label="Drama: This Katarzine Alasije -- it's safe to say it's not her either. In short: you got lied to, sire. Maybe it's best we let her go -- at least we don't have to question her again."];
+	  31 [label="Variable[\"TASK.arrest_klaasje_done\"]"];
+	  32 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  33 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  34 [label="IsKimHere()"];
+	  35 [label="IsKimHere()", shape=diamond];
+	  36 [label="!(IsKimHere())", shape=diamond];
+	  37 [label="Jump to: [passport_main_hub]"];
+	  38 [label="Savoir Faire: Precinct 57 needs to double the security around her."];
+	  39 [label="Jump to: [passport_main_hub]"];
+	  40 [label="You: \"What was this doing in the phasmid's nest?\""];
+	  41 [label="Untitled hub"];
+	  42 [label="You: \"The phasmid took it -- and I *sensed* it do so. I saw something open up the buoy with spindly legs.\" (Point to your head.)"];
+	  43 [label="You: \"Katarzine Alasije was supposed to be her real name. She lied to us.\""];
+	  44 [label="Variable[\"TASK.arrest_klaasje_done\"]"];
+	  45 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  46 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  47 [label="Jump to: [passport_main_hub]"];
+	  48 [label="Variable[\"XP.detect_compromized_skillset\"]"];
+	  49 [label="Variable[\"XP.detect_compromized_skillset\"]", shape=diamond];
+	  50 [label="!(Variable[\"XP.detect_compromized_skillset\"])", shape=diamond];
+	  51 [label="You: \"What's her *real* name then?\""];
+	  52 [label="Jump to: [passport_main_hub]"];
+	  53 [label="Kim Kitsuragi: \"Klaasje's hidden documents...\" The lieutenant looks at it in your hands. \"From the empty buoy.\""];
+	  54 [label="passport_main_hub"];
+	  55 [label="You: Look at the photo."];
+	  56 [label="Kim Kitsuragi: \"Yes, somehow she managed to lie to us -- *one more time*. In a way she's still lying to us right now.\" The lieutenant smiles."];
+	  57 [label="Kim Kitsuragi: \"I don't know who Katarzine Alasije is, but it's safe to say it's not her either. In short: we got lied to, again. Good luck to whoever is questioning her in the 57th right now.\""];
+	  58 [label="Variable[\"TASK.inspect_the_buoy_done\"]"];
+	  59 [label="Variable[\"TASK.inspect_the_buoy_done\"]", shape=diamond];
+	  60 [label="!(Variable[\"TASK.inspect_the_buoy_done\"])", shape=diamond];
+	  61 [label="You: \"It's not the name she said would be on here. I got lied to.\""];
+	  62 [label="Reaction Speed: She said the false passport would be for *Annouk Meijer-Smit*..."];
+	  63 [label="Volition: I told you she kept on lying to you. She's probably lying to someone else right now -- another detective."];
+	  64 [label="Volition: I told you she kept lying to you. She's probably lying to someone else right now. In another city. She moves fast."];
+	  65 [label="Kim Kitsuragi: \"Like a magpie?\" He looks around. \"What a coincidence. Then it would also have *collected* the other objects, which would be highly unusual...\""];
+	  66 [label="CheckItem(\"deserter_scope\")  or  CheckItem(\"hat_t500\")"];
+	  67 [label="CheckItem(\"deserter_scope\")  or  CheckItem(\"hat_t500\")", shape=diamond];
+	  68 [label="!(CheckItem(\"deserter_scope\")  or  CheckItem(\"hat_t500\"))", shape=diamond];
+	  69 [label="Jump to: [passport_main_hub]"];
+	  70 [label="Kim Kitsuragi: \"I don't know. But it's not Katarzine Alasije. Or Klaasje. Or Annouk Meijer-Smit. We didn't even scratch the surface with her, detective.\""];
+	  71 [label="Kim Kitsuragi: \"Klaasje's hidden documents...\" The lieutenant looks at it in your hands. \"That she said would be in a buoy on the coast.\""];
+	  72 [label="Encyclopedia: A curious octopus would do something similar. Or even a cuttlefish."];
+	  73 [label="Oranjese Passport: And not *Annouk Meijer-Smit*. Like she told you. Annouk -- Meijer -- Smit. Remember? You got lied to. Again."];
+	  74 [label="Oranjese Passport: The girl on the passport looks at you with no answer. She is not Katarzine Alasije. Or Annouk Meijer-Smit. *Or* Klaasje. That much is sure."];
+	  75 [label="You: \"It says -- Katarzine Alasije.\""];
+	  76 [label="IsKimHere()"];
+	  77 [label="IsKimHere()", shape=diamond];
+	  78 [label="!(IsKimHere())", shape=diamond];
+	  79 [label="You: \"She told me it was her real name -- and it isn't this. It isn't even the name she said would be on here...\""];
+	  80 [label="Jump to: [passport_main_hub]"];
+	  81 [label="Empathy: An old photo. Before life came and did what it does."];
+	  82 [label="Kim Kitsuragi: \"An octopus belongs to a very different Class. It's not even an insect, it's a mollusc. But, yes -- I see your point.\""];
+	  83 [label="Kim Kitsuragi: \"Phasmids are not capable of holding grudges. Only humans and some tracking predators do that.\""];
+	  84 [label="Jump to: [passport_main_hub]"];
+	  85 [label="Variable[\"XP.klaasjes_real_name\"]"];
+	  86 [label="Variable[\"XP.klaasjes_real_name\"]", shape=diamond];
+	  87 [label="!(Variable[\"XP.klaasjes_real_name\"])", shape=diamond];
+	  88 [label="Jump to: [passport_main_hub]"];
+	  89 [label="Jump to: [You: \"\"Never mind.\"\"]"];
+	  90 [label="Logic: Even worse -- *Katarzine Alasije* was supposed to be her *real* name. Where *Klaasje* comes from, remember? God dammit!"];
+	  91 [label="Kim Kitsuragi: \"Perhaps... But that still doesn't explain how it got into the nest.\""];
+	  92 [label="You: \"Maybe this is her real passport? Not a fake? Because this is her real name.\""];
+	  93 [label="Jump to: [passport_main_hub]"];
+	  94 [label="Oranjese Passport: This passport, issued by the Sovereign Republic of Oranje -- is issued to a black haired woman called Katarzine Alasije."];
+	  95 [label="Volition: I told you she kept on lying to you. She's probably lying to someone else right now -- another detective."];
+	  96 [label="Logic: Katarzine Alasije was supposed to be her *real* name. Where *Klaasje* comes from, remember? God dammit!"];
+	  97 [label="Cuno: \"Yeah -- okay. *Don't* loop Cuno in. Leave the Cuno in the dark. Fine.\" He pretends he doesn't care."];
+	  98 [label="Variable[\"XP.klaasjes_real_name\"]"];
+	  99 [label="Variable[\"XP.klaasjes_real_name\"]", shape=diamond];
+	  100 [label="!(Variable[\"XP.klaasjes_real_name\"])", shape=diamond];
+	  101 [label="Rhetoric: By now, the lieutenant has accepted your unusual methods."];
+	  102 [label="Volition: I told you she kept lying to you. She's probably lying to someone else right now. In another city."];
+	  103 [label="Kim Kitsuragi: \"I don't know. But it was not Katarzine Alasije. Or Annouk Meijer-Smit. Or Klaasje. Whoever she is -- when we get back I need to warn our holding cells. We need to double the security around her.\""];
+	  104 [label="IsCunoInParty()"];
+	  105 [label="IsCunoInParty()", shape=diamond];
+	  106 [label="!(IsCunoInParty())", shape=diamond];
+	  107 [label="Drama: This Katarzine Alasije -- it's safe to say it's not her either. In short: you got lied to, sire. Good luck to whoever is questioning her in the 57th right now."];
+	  108 [label="Variable[\"inventory.passport_empathy_curious\"]  or  Variable[\"inventory.passport_encyclo_curious\"]"];
+	  109 [label="Variable[\"inventory.passport_empathy_curious\"]  or  Variable[\"inventory.passport_encyclo_curious\"]", shape=diamond];
+	  110 [label="!(Variable[\"inventory.passport_empathy_curious\"]  or  Variable[\"inventory.passport_encyclo_curious\"])", shape=diamond];
+	  112 [label="IsCunoInParty()"];
+	  113 [label="IsCunoInParty()", shape=diamond];
+	  114 [label="!(IsCunoInParty())", shape=diamond];
+	  115 [label="Variable[\"TASK.inspect_the_buoy_done\"]"];
+	  116 [label="Variable[\"TASK.inspect_the_buoy_done\"]", shape=diamond];
+	  117 [label="!(Variable[\"TASK.inspect_the_buoy_done\"])", shape=diamond];
+	  118 [label="Cuno: \"Fuck if I know... maybe it's collecting shit? Like an octopus can get, like, curious?\""];
+	  119 [label="IsKimHere()"];
+	  120 [label="IsKimHere()", shape=diamond];
+	  121 [label="!(IsKimHere())", shape=diamond];
+	  122 [label="Variable[\"XP.detect_compromized_skillset\"]"];
+	  123 [label="Variable[\"XP.detect_compromized_skillset\"]", shape=diamond];
+	  124 [label="!(Variable[\"XP.detect_compromized_skillset\"])", shape=diamond];
+	  125 [label="Cuno: \"Cool. Got lied to. Double-lied to. I get it. You cops need the Cuno on stuff like this. No one lies to the Cuno.\" He nods, with a stern and serious expression."];
+	  126 [label="Variable[\"XP.detect_compromized_skillset\"]"];
+	  127 [label="Variable[\"XP.detect_compromized_skillset\"]", shape=diamond];
+	  128 [label="!(Variable[\"XP.detect_compromized_skillset\"])", shape=diamond];
+	  129 [label="Kim Kitsuragi: \"I can see how the helmet could wash up on the island. And the scope -- maybe Mr. Dros lost it? But to seek this out would be *very* unusual behaviour for an arthropod.\""];
+	  130 [label="You: \"Perhaps it was curious? Like an octopus?\""];
+	  131 [label="Shivers: The winds are silent. The streets are empty of her. She is no longer in the city of Revachol."];
+	  132 [label="IsCunoInParty()"];
+	  133 [label="IsCunoInParty()", shape=diamond];
+	  134 [label="!(IsCunoInParty())", shape=diamond];
+	  135 [label="Untitled hub"];
+	  136 [label="You: \"Never mind.\""];
+	  137 [label="IsKimHere()"];
+	  138 [label="IsKimHere()", shape=diamond];
+	  139 [label="!(IsKimHere())", shape=diamond];
+	  140 [label="Variable[\"TASK.arrest_klaasje_done\"]"];
+	  141 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  142 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  143 [label="Jump to: [passport_main_hub]"];
+	  144 [label="Logic: Katarzine Alasije was supposed to be her *real* name. Where *Klaasje* comes from, remember? God dammit!"];
+	  145 [label="Volition: I told you she kept lying to you. She's probably lying to someone else right now. In another city. She moves fast."];
+	  146 [label="Variable[\"TASK.arrest_klaasje_done\"]"];
+	  147 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  148 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  149 [label="Kim Kitsuragi: \"Maybe our man, Mr. Dros, took it from Klaasje's -- or whatever her name was -- hiding place? Or...\""];
+	  150 [label="You: \"I think the *phasmid* took it.\""];
+	  151 [label="Volition: I told you she kept on lying to you. She's probably lying to someone else right now -- another detective."];
+	  152 [label="Logic: Klaasje's hidden documents. That she said would be in a buoy on the coast."];
+	  153 [label="Cuno: \"Okay. So what? Loop Cuno in on this.\""];
+	  154 [label="IsCunoInParty()"];
+	  155 [label="IsCunoInParty()", shape=diamond];
+	  156 [label="!(IsCunoInParty())", shape=diamond];
+	  157 [label="You: \"Perhaps -- for some blackmailing plan?\""];
+	  158 [label="Kim Kitsuragi: He looks east. \"Perhaps it's better that we didn't arrest her. Who knows what hell she'd be raising in my district by now...\""];
+	  0 -> 1
+	  1 -> 94
+	  2 -> 154
+	  3 -> 4
+	  4 -> 88
+	  5 -> 74
+	  6 -> 39
+	  7 -> 108
+	  8 -> 43
+	  8 -> 92
+	  9 -> 85
+	  10 -> 83
+	  11 -> 93
+	  12 -> 13
+	  12 -> 14
+	  13 -> 151
+	  14 -> 102
+	  15 -> 125
+	  16 -> 17
+	  16 -> 18
+	  17 -> 63
+	  18 -> 64
+	  19 -> 7
+	  20 -> 21
+	  20 -> 22
+	  21 -> 103
+	  22 -> 70
+	  23 -> 24
+	  23 -> 25
+	  24 -> 144
+	  25 -> 89
+	  25 -> 61
+	  26 -> 66
+	  27 -> 81
+	  28 -> 143
+	  30 -> 37
+	  31 -> 32
+	  31 -> 33
+	  32 -> 38
+	  33 -> 6
+	  34 -> 35
+	  34 -> 36
+	  35 -> 149
+	  36 -> 132
+	  37 -> 54
+	  38 -> 39
+	  39 -> 54
+	  40 -> 34
+	  41 -> 42
+	  41 -> 157
+	  41 -> 150
+	  42 -> 65
+	  43 -> 56
+	  44 -> 45
+	  44 -> 46
+	  45 -> 95
+	  46 -> 145
+	  47 -> 54
+	  48 -> 49
+	  48 -> 50
+	  49 -> 12
+	  50 -> 8
+	  51 -> 137
+	  52 -> 54
+	  53 -> 54
+	  54 -> 40
+	  54 -> 75
+	  54 -> 51
+	  54 -> 55
+	  54 -> 29
+	  55 -> 27
+	  56 -> 93
+	  57 -> 143
+	  58 -> 59
+	  58 -> 60
+	  59 -> 53
+	  60 -> 71
+	  61 -> 15
+	  62 -> 54
+	  63 -> 80
+	  64 -> 80
+	  65 -> 101
+	  66 -> 67
+	  66 -> 68
+	  67 -> 129
+	  68 -> 84
+	  69 -> 54
+	  70 -> 158
+	  71 -> 54
+	  72 -> 88
+	  73 -> 98
+	  74 -> 31
+	  75 -> 119
+	  76 -> 77
+	  76 -> 78
+	  77 -> 58
+	  78 -> 115
+	  79 -> 125
+	  80 -> 54
+	  81 -> 69
+	  82 -> 84
+	  83 -> 84
+	  84 -> 54
+	  85 -> 86
+	  85 -> 87
+	  86 -> 96
+	  87 -> 140
+	  88 -> 54
+	  89 -> 136
+	  90 -> 126
+	  91 -> 42
+	  91 -> 150
+	  92 -> 11
+	  93 -> 54
+	  94 -> 76
+	  95 -> 135
+	  96 -> 48
+	  97 -> 47
+	  98 -> 99
+	  98 -> 100
+	  99 -> 90
+	  100 -> 146
+	  101 -> 66
+	  102 -> 8
+	  103 -> 52
+	  104 -> 105
+	  104 -> 106
+	  105 -> 153
+	  106 -> 73
+	  107 -> 37
+	  108 -> 109
+	  108 -> 110
+	  109 -> 130
+	  109 -> 10
+	  110 -> 84
+	  112 -> 113
+	  112 -> 114
+	  113 -> 5
+	  114 -> 74
+	  115 -> 116
+	  115 -> 117
+	  116 -> 2
+	  117 -> 152
+	  118 -> 72
+	  119 -> 120
+	  119 -> 121
+	  120 -> 9
+	  121 -> 104
+	  122 -> 123
+	  122 -> 124
+	  123 -> 44
+	  124 -> 135
+	  125 -> 47
+	  126 -> 128
+	  126 -> 127
+	  127 -> 16
+	  128 -> 80
+	  129 -> 19
+	  130 -> 82
+	  131 -> 52
+	  132 -> 133
+	  132 -> 134
+	  133 -> 118
+	  134 -> 3
+	  135 -> 136
+	  135 -> 79
+	  136 -> 97
+	  137 -> 138
+	  137 -> 139
+	  138 -> 20
+	  139 -> 112
+	  140 -> 141
+	  140 -> 142
+	  141 -> 57
+	  142 -> 28
+	  143 -> 54
+	  144 -> 122
+	  145 -> 135
+	  146 -> 147
+	  146 -> 148
+	  147 -> 107
+	  148 -> 30
+	  149 -> 41
+	  150 -> 26
+	  151 -> 8
+	  152 -> 154
+	  153 -> 23
+	  154 -> 155
+	  154 -> 156
+	  155 -> 62
+	  156 -> 54
+	  157 -> 91
+	  158 -> 131
+}
+

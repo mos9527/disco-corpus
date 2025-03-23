@@ -1,0 +1,78 @@
+# LAIR / EXIT DOOR
+# Door interactable, open the door, let Kim in. Kim possibly hidden behind fog of war.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"You ready?\""];
+	  3 [label="Kim Kitsuragi: \"Officer? Are you okay in there?\""];
+	  4 [label="Kim Kitsuragi: \"What do you mean 'who's there'? It's me, Kim. Stop playing around and help me get this door open.\""];
+	  5 [label="Savoir Faire: Not *running* is a great way to do that."];
+	  6 [label="Kim Kitsuragi: \"After you *climbed* up to the roof, you mean? There's a maintenance entrance under the boardwalk. It's next to a drain pipe, possibly a storm drain -- it was easy to miss before.\""];
+	  7 [label="Variable[\"boardwalk.drainage_found_door\"]"];
+	  8 [label="Variable[\"boardwalk.drainage_found_door\"]", shape=diamond];
+	  9 [label="!(Variable[\"boardwalk.drainage_found_door\"])", shape=diamond];
+	  10 [label="You: \"Could have saved me the effort.\""];
+	  11 [label="Kim Kitsuragi: \"Yes, we have an exit. So, let's get going. Time to investigate these passages...\" He peers into the darkness."];
+	  12 [label="Door: It's *much* easier from this side -- the panels on the rails slide once you dust the sand off. With the help of your partner from the other side the doors open with a *creak*."];
+	  13 [label="You: \"Who's there?\""];
+	  14 [label="You: Ignore the door. [Leave.]"];
+	  15 [label="Kim Kitsuragi: \"Yes. Time to investigate these passages. Let's move quietly and not make more sound.\""];
+	  16 [label="You: Push the doors open."];
+	  17 [label="thedoor"];
+	  19 [label="Variable[\"boardwalk.drainage_tried_once\"]"];
+	  20 [label="Variable[\"boardwalk.drainage_tried_once\"]", shape=diamond];
+	  21 [label="!(Variable[\"boardwalk.drainage_tried_once\"])", shape=diamond];
+	  22 [label="Kim Kitsuragi: \"Yes, yes, it's *cool* to risk your life climbing rickety ladders. Anyway, let's investigate these passages...\""];
+	  23 [label="You: \"Maintenance entrance? So pedestrian.\""];
+	  24 [label="Kim Kitsuragi: \"Huh, I hope no one *dangerous* heard that.\""];
+	  25 [label="Variable[\"boardwalk.gate_is_open\"] == true"];
+	  26 [label="Variable[\"boardwalk.gate_is_open\"] == true", shape=diamond];
+	  27 [label="!(Variable[\"boardwalk.gate_is_open\"] == true)", shape=diamond];
+	  28 [label="Jump to: [thedoor]"];
+	  29 [label="Door: Two rusty metal plates that slide apart form a crude door. It's been here under the boardwalk for a while."];
+	  30 [label="Door: The doors seem to be on rails, but they've gotten jammed. You grab a side and put some strength into prying it open. With the help of your partner the two metal panels slide open with a *creak*."];
+	  31 [label="Esprit de Corps: You really ought to open this door. It's dangerous to go ahead alone."];
+	  32 [label="Empathy: He's quite proud of himself."];
+	  33 [label="Untitled hub"];
+	  34 [label="You: \"At least now we know a quick way in and out.\""];
+	  35 [label="Kim Kitsuragi: He shrugs. \"At least now we have an exit. So, let's get going. It's time to investigate these passages...\""];
+	  36 [label="You: \"How did you even get there?\""];
+	  0 -> 1
+	  1 -> 29
+	  2 -> 15
+	  3 -> 31
+	  4 -> 28
+	  6 -> 32
+	  7 -> 8
+	  7 -> 9
+	  8 -> 2
+	  9 -> 36
+	  10 -> 35
+	  12 -> 24
+	  13 -> 4
+	  14 -> 3
+	  15 -> 5
+	  16 -> 19
+	  17 -> 16
+	  17 -> 13
+	  17 -> 14
+	  19 -> 20
+	  19 -> 21
+	  20 -> 12
+	  21 -> 30
+	  23 -> 22
+	  24 -> 7
+	  25 -> 26
+	  25 -> 27
+	  28 -> 17
+	  29 -> 17
+	  30 -> 24
+	  32 -> 33
+	  33 -> 10
+	  33 -> 34
+	  33 -> 23
+	  34 -> 11
+	  36 -> 6
+}
+

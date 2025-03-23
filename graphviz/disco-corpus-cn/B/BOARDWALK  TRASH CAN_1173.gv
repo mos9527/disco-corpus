@@ -1,0 +1,57 @@
+# BOARDWALK / TRASH CAN
+# A TRASH CAN OH BOY. Its an interaction.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 检查回收品。"];
+	  4 [label="You: 检查烤肉包装纸。"];
+	  5 [label="IsKimHere()"];
+	  6 [label="IsKimHere()", shape=diamond];
+	  7 [label="!(IsKimHere())", shape=diamond];
+	  8 [label="Jump to: [trash can hub boardwalk]"];
+	  9 [label="Encyclopedia: “红阿斯特拉”是黑市版的“阿斯特拉”香烟，因为高焦油含量而闻名。"];
+	  10 [label="trash can hub boardwalk"];
+	  11 [label="Electrochemistry: 这就让派对看起来就有点*糟糕*了。不过——不要让它影响到你。*你*是很负责的。"];
+	  12 [label="Perception (Sight): 不。还不止这些。“利维斯”草莓酒，还有些比尔森啤酒。最好不要捡起来，它们似乎不太卫生。"];
+	  13 [label="Kim Kitsuragi: “一场悲剧…”警督看着罐子，眼睛被味道熏得有些湿润。"];
+	  14 [label="Jump to: [trash can hub boardwalk]"];
+	  15 [label="Perception (Smell): 在这种味道下，你很难集中精神。海风带来了一些安慰。"];
+	  16 [label="Empathy: 他摇摇头，流露出真实的悲伤。"];
+	  17 [label="You: 检查香烟盒。"];
+	  18 [label="Trash Can: 你只找到两支空的‘陶尔洛拉’伏特加酒瓶，还有一罐‘高度波特’啤酒。"];
+	  19 [label="You: [离开。]"];
+	  20 [label="Trash Can: 不管是谁把它丢在这里的，一定是个老烟枪：这个牌子的名字是“红阿斯特拉”。"];
+	  21 [label="Jump to: [trash can hub boardwalk]"];
+	  22 [label="Visual Calculus: 不超过一天，或者两天。还没有长霉。"];
+	  23 [label="Trash Can: 垃圾箱里有一些回收品，一个空香烟盒，还有一张皱巴巴的烤肉包装纸。"];
+	  24 [label="Trash Can: 上面还残留着蛋黄酱和番茄酱的痕迹，还有一点发霉的番茄角。包装纸上写着：“瑞瓦肖烤肉。”"];
+	  0 -> 1
+	  1 -> 23
+	  2 -> 18
+	  4 -> 24
+	  5 -> 6
+	  5 -> 7
+	  6 -> 13
+	  7 -> 14
+	  8 -> 10
+	  9 -> 11
+	  10 -> 17
+	  10 -> 2
+	  10 -> 19
+	  10 -> 4
+	  11 -> 21
+	  12 -> 5
+	  13 -> 16
+	  14 -> 10
+	  15 -> 8
+	  16 -> 14
+	  17 -> 20
+	  18 -> 12
+	  20 -> 9
+	  21 -> 10
+	  22 -> 15
+	  23 -> 10
+	  24 -> 22
+}
+

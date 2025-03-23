@@ -1,0 +1,151 @@
+# HQ / EXIT BULLET difficult
+# The bullet you find in the shack, hinting that someone else has been staying here. Secretly.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: This bullet isn't for a breechloader like the murder weapon?"];
+	  3 [label="You: \"What do you think it's doing here?\""];
+	  4 [label="Kim Kitsuragi: \"That's a big leap, but from what I've heard, this Ruby sounds pretty desperate. Either way,\" he looks at the bullet again, \"this is enough to confront the washerwoman.\""];
+	  5 [label="Loose Floorboard: You return the board to its original position."];
+	  6 [label="You: What is it?"];
+	  7 [label="Loose Floorboard: A small cylindrical object. You pull it out -- a bullet."];
+	  8 [label="You: \"Possibly.\""];
+	  9 [label="Empathy: Holding the bullet, you get the feeling -- this isn't ammunition against you. It's for herself."];
+	  10 [label="You: \"I think this is a last resort -- a bullet in case suicide becomes an option.\""];
+	  12 [label="Kim Kitsuragi: \"Either way,\" he looks at the bullet again, \"this is enough to confront her with.\""];
+	  13 [label="Loose Floorboard: As you look at the floorboards in this corner of the shack, it's clear one of them isn't quite level with the others."];
+	  14 [label="CheckItem(\"gun_villiers\")"];
+	  15 [label="CheckItem(\"gun_villiers\")", shape=diamond];
+	  16 [label="!(CheckItem(\"gun_villiers\"))", shape=diamond];
+	  17 [label="Empathy: Think what you want, but, in your gut, you know otherwise."];
+	  18 [label="Loose Floorboard: The floorboard isn't interested -- maybe the Washerwoman is? You have enough to confront her with."];
+	  19 [label="Encyclopedia: A 9mm bullet to be exact. Fit for all muzzleloaders of that calibre."];
+	  20 [label="IsKimHere()"];
+	  21 [label="IsKimHere()", shape=diamond];
+	  22 [label="!(IsKimHere())", shape=diamond];
+	  23 [label="Hand/Eye Coordination: It's extra ammunition. She's locked and loaded, ready to fight some cops."];
+	  24 [label="Empathy: Holding the bullet, you get the feeling -- this isn't ammunition against *you*. It's for herself."];
+	  25 [label="Loose Floorboard: The floorboard doesn't care -- but maybe the Washerwoman does? You have enough to confront her with."];
+	  26 [label="IsKimHere()"];
+	  27 [label="IsKimHere()", shape=diamond];
+	  28 [label="!(IsKimHere())", shape=diamond];
+	  29 [label="You: \"Kim, I think this is extra ammunition against us.\""];
+	  30 [label="You: Search through the sand and sawdust."];
+	  31 [label="Kim Kitsuragi: \"Yes, for muzzleloaders like the ones officers of the RCM carry. Interesting.\""];
+	  32 [label="You: Seems to me like someone is armed and waiting for us."];
+	  33 [label="Loose Floorboard: The hollow space underneath the floorboards is dark and damp. You can barely make out the mixture of sand and sawdust below."];
+	  34 [label="Variable[\"TASK.advanced_ballistics_analysis_done\"]  and  Variable[\"village.bullet_viscal_calibre\"]"];
+	  35 [label="Variable[\"TASK.advanced_ballistics_analysis_done\"]  and  Variable[\"village.bullet_viscal_calibre\"]", shape=diamond];
+	  36 [label="!(Variable[\"TASK.advanced_ballistics_analysis_done\"]  and  Variable[\"village.bullet_viscal_calibre\"])", shape=diamond];
+	  37 [label="Kim Kitsuragi: \"Someone hid it as extra ammunition?\""];
+	  38 [label="Variable[\"TASK.advanced_ballistics_analysis_done\"]  and  Variable[\"village.bullet_viscal_calibre\"]"];
+	  39 [label="Variable[\"TASK.advanced_ballistics_analysis_done\"]  and  Variable[\"village.bullet_viscal_calibre\"]", shape=diamond];
+	  40 [label="!(Variable[\"TASK.advanced_ballistics_analysis_done\"]  and  Variable[\"village.bullet_viscal_calibre\"])", shape=diamond];
+	  41 [label="Kim Kitsuragi: The lieutenant studies the bullet in your hand. \"Still, interesting.\""];
+	  42 [label="You: \"Ruby?\""];
+	  43 [label="You: Move the board aside."];
+	  44 [label="You: \"Look, a bullet! Not for a breechloader, though...\""];
+	  45 [label="You: \"Lieutenant, a bullet!\""];
+	  46 [label="Jump to: [Untitled hub (04)]"];
+	  47 [label="Untitled hub"];
+	  48 [label="You: Oh, I don't want to stick my hand in there. [Leave.]"];
+	  49 [label="Untitled hub (04)"];
+	  50 [label="Kim Kitsuragi: \"That's something of a leap -- but we should be on our guard. Either way,\" he looks at the bullet again, \"this is enough to confront the washerwoman.\""];
+	  51 [label="Kim Kitsuragi: \"See anything interesting?\""];
+	  52 [label="Visual Calculus: The edge of a floorboard next to it looks scratched."];
+	  53 [label="Untitled hub (02)"];
+	  54 [label="Loose Floorboard: You stick your hand in and start combing through the sand. Dry, not like outside. Fine dust... and then -- something hard, wrapped in paper."];
+	  55 [label="You: It's nothing. [Leave.]"];
+	  56 [label="You: A bullet, interesting."];
+	  57 [label="You: \"Let's go, then.\" [Leave.]"];
+	  58 [label="Encyclopedia: A 9mm bullet to be exact. Fit for all muzzleloaders of that calibre, like your own Villiers pistol, for example."];
+	  59 [label="Kim Kitsuragi: The lieutenant nods."];
+	  60 [label="Kim Kitsuragi: \"I don't know, could be. The washerwoman was clearly withholding something -- and she *does* rent this place out to people.\""];
+	  61 [label="Variable[\"village.bullet_empathy\"]"];
+	  62 [label="Variable[\"village.bullet_empathy\"]", shape=diamond];
+	  63 [label="!(Variable[\"village.bullet_empathy\"])", shape=diamond];
+	  64 [label="Loose Floorboard: Nothing particular catches your eye. Looks like more reeds. There might be something hidden inside the sand, though."];
+	  65 [label="Jump to: [Untitled hub (02)]"];
+	  66 [label="Loose Floorboard: In time, dust will settle upon the wooden boards, covering up all tracks."];
+	  67 [label="Inland Empire: Something bad. Someone's night thoughts. A last resort. A bad idea."];
+	  68 [label="You: What's in here?"];
+	  0 -> 1
+	  1 -> 13
+	  2 -> 18
+	  3 -> 37
+	  4 -> 57
+	  6 -> 7
+	  7 -> 14
+	  8 -> 59
+	  9 -> 61
+	  10 -> 4
+	  12 -> 57
+	  13 -> 52
+	  14 -> 16
+	  14 -> 15
+	  15 -> 58
+	  16 -> 19
+	  17 -> 46
+	  18 -> 23
+	  19 -> 20
+	  20 -> 21
+	  20 -> 22
+	  21 -> 38
+	  22 -> 34
+	  23 -> 24
+	  25 -> 23
+	  26 -> 27
+	  26 -> 28
+	  27 -> 51
+	  28 -> 53
+	  29 -> 50
+	  30 -> 54
+	  31 -> 3
+	  32 -> 17
+	  33 -> 47
+	  34 -> 35
+	  34 -> 36
+	  35 -> 2
+	  36 -> 56
+	  37 -> 42
+	  38 -> 40
+	  38 -> 39
+	  39 -> 44
+	  40 -> 45
+	  41 -> 3
+	  42 -> 60
+	  43 -> 33
+	  44 -> 41
+	  45 -> 31
+	  46 -> 49
+	  47 -> 48
+	  47 -> 68
+	  47 -> 30
+	  48 -> 5
+	  49 -> 32
+	  49 -> 10
+	  49 -> 29
+	  50 -> 57
+	  51 -> 53
+	  52 -> 26
+	  53 -> 8
+	  53 -> 43
+	  53 -> 55
+	  54 -> 6
+	  55 -> 66
+	  56 -> 25
+	  58 -> 20
+	  59 -> 65
+	  60 -> 9
+	  61 -> 62
+	  61 -> 63
+	  62 -> 49
+	  63 -> 12
+	  64 -> 67
+	  65 -> 53
+	  67 -> 48
+	  67 -> 30
+	  68 -> 64
+}
+

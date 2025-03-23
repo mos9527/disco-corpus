@@ -1,0 +1,48 @@
+# ICE / TENT FLAP
+# Entering the tent and leaving Kim behind.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Andre: \"C'mon! Get in and close the flap behind you! The warm stuff is getting out!\""];
+	  4 [label="Kim Kitsuragi: \"You go ahead, I'm too old for this...\""];
+	  5 [label="You: Squeeze in.\n[Squeeze in.]"];
+	  6 [label="Andre: \"Sorry.\" He points his thumb at the lieutenant. \"We barely have room for one.\""];
+	  7 [label="Tent Flap: The tent is just tarpaulin fabric covering a pile of stuff. The flap is open. Inside, three young men are listening to some new form of music. It's like nothing you've ever heard. One of them looks at you.\nThe tent is just tarpaulin fabric covering a pile of stuff. The flap is open. Inside, three young men -- all in forward-looking apparel reminiscent of the sticker on the padlock -- are listening to some new form of music. It's like nothing you've ever heard. One of them looks at you."];
+	  8 [label="Andre: IsKimHere()"];
+	  9 [label="IsKimHere()", shape=diamond];
+	  10 [label="!(IsKimHere())", shape=diamond];
+	  11 [label="mainhubs"];
+	  12 [label="You: \"No way.\" [Leave.]"];
+	  13 [label="Andre: SetVariableValue(\"ice.tentflap_transport_without_kim\", true) ;GoTo(\"Tent-int\")--[[ Variable[ ]]"];
+	  14 [label="Andre: Variable[\"ice.tentflap_greeting_done\"]"];
+	  15 [label="Variable[\"ice.tentflap_greeting_done\"]", shape=diamond];
+	  16 [label="!(Variable[\"ice.tentflap_greeting_done\"])", shape=diamond];
+	  17 [label="Esprit de Corps: I'm actually not, he thinks. I just dislike delinquents."];
+	  18 [label="Tent Flap: You leave the lieutenant outside and squeeze in."];
+	  19 [label="Kim Kitsuragi: \"I'm sure you will feel right at home. I'll keep watch.\" He gestures for you to squeeze in."];
+	  20 [label="Authority: It's safe to assume this is their leader. Or at least he thinks he is."];
+	  21 [label="Andre: \"C'mon! Get in, the warm stuff is getting out.\""];
+	  0 -> 1
+	  1 -> 14
+	  2 -> 20
+	  4 -> 17
+	  5 -> 8
+	  6 -> 4
+	  7 -> 2
+	  8 -> 9
+	  8 -> 10
+	  9 -> 6
+	  10 -> 13
+	  11 -> 12
+	  11 -> 5
+	  14 -> 16
+	  14 -> 15
+	  15 -> 21
+	  16 -> 7
+	  17 -> 19
+	  19 -> 18
+	  20 -> 11
+	  21 -> 11
+}
+

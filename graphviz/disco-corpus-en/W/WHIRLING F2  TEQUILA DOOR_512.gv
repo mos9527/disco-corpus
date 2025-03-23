@@ -1,0 +1,244 @@
+# WHIRLING F2 / TEQUILA DOOR
+# The dialogue between you and the door to your room. It is locked unless you've paid for damages.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  3 [label="You: \"Aaaaa! It huuurts!\""];
+	  4 [label="Pain Threshold: Nice try. The tears come streaming down your face as you crumble to the ground."];
+	  5 [label="Pain Threshold: The tears bring some relief, but not much."];
+	  6 [label="Door, Room #1: Variable[\"character.door1_pain_anti\"]"];
+	  7 [label="Variable[\"character.door1_pain_anti\"]", shape=diamond];
+	  8 [label="!(Variable[\"character.door1_pain_anti\"])", shape=diamond];
+	  9 [label="Kim Kitsuragi: He nods toward the staircase. \"Come on, let's go down.\""];
+	  10 [label="Kim Kitsuragi: \"It must be an electronic lock. You will have to get Garte, the cafeteria manager, to open it first -- after you've paid for the night.\""];
+	  11 [label="You: Blubber. And keep blubbering."];
+	  12 [label="Door, Room #1: Variable[\"character.door1_pain_pass\"]"];
+	  13 [label="Variable[\"character.door1_pain_pass\"]", shape=diamond];
+	  14 [label="!(Variable[\"character.door1_pain_pass\"])", shape=diamond];
+	  15 [label="Door, Room #1: IsKimHere()"];
+	  16 [label="IsKimHere()", shape=diamond];
+	  17 [label="!(IsKimHere())", shape=diamond];
+	  18 [label="Kim Kitsuragi: \"Just a moment. We should talk about our progress on the investigation. Let's go out to the balcony.\""];
+	  19 [label="inlandhub"];
+	  20 [label="Garte, the Cafeteria Manager: (His voice echoes from downstairs.) \"What the hell is going on up there?\""];
+	  21 [label="Door, Room #1: IsKimHere()"];
+	  22 [label="IsKimHere()", shape=diamond];
+	  23 [label="!(IsKimHere())", shape=diamond];
+	  24 [label="Door, Room #1: IsKimHere()"];
+	  25 [label="IsKimHere()", shape=diamond];
+	  26 [label="!(IsKimHere())", shape=diamond];
+	  27 [label="Savoir Faire: You could try climbing into that trash bin in the yard, hobocop style... after you've gotten open the lid."];
+	  28 [label="Door, Room #1: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  29 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  30 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  31 [label="You: Try to unlock the door."];
+	  32 [label="Kim Kitsuragi: \"I would advise against that. It's already late, and you won't find cheaper accommodation in the vicinity.\""];
+	  33 [label="Authority: He's asserting his leadership talents because he is concerned about you."];
+	  34 [label="Pain Threshold: Your angry voice carries through the Whirling, but you still can't stop the tears from welling up in your eyes..."];
+	  35 [label="You: \"This door will fall prostrate before The Law!\" (Punch the door again.)"];
+	  36 [label="Kim Kitsuragi: The lieutenant purses his lips. \"Admirable form. Now come on, let's go down.\""];
+	  37 [label="Door, Room #1: Variable[\"TASK.pay_for_the_damages_done\"]"];
+	  38 [label="Variable[\"TASK.pay_for_the_damages_done\"]", shape=diamond];
+	  39 [label="!(Variable[\"TASK.pay_for_the_damages_done\"])", shape=diamond];
+	  40 [label="Door, Room #1: The door rings from the impact, but does not budge."];
+	  41 [label="You: \"Nah, I'll get by somehow. Didn't like that room very much anyway.\""];
+	  42 [label="Door, Room #1: This is the door to your room.\nThis is the door to the room you *redecorated*."];
+	  43 [label="Garte, the Cafeteria Manager: (His voice echoes from downstairs.) \"What's going on up there?\""];
+	  44 [label="Physical Instrument: Pow-pow! That was impressive."];
+	  45 [label="Door, Room #1: The door shudders, but appears undamaged."];
+	  46 [label="Door, Room #1: IsKimHere()"];
+	  47 [label="IsKimHere()", shape=diamond];
+	  48 [label="!(IsKimHere())", shape=diamond];
+	  49 [label="Door, Room #1: Variable[\"whirling.kim_orientation\"]"];
+	  50 [label="Variable[\"whirling.kim_orientation\"]", shape=diamond];
+	  51 [label="!(Variable[\"whirling.kim_orientation\"])", shape=diamond];
+	  52 [label="Savoir Faire: You could try climbing into that trash bin in the yard, hobocop style..."];
+	  53 [label="Volition: You feel uncertain, like a child who's lost his mother in the crowd."];
+	  54 [label="Inland Empire: Because it's your last lifeline to being a police officer instead of a hobo."];
+	  55 [label="Jump to: [doordamageshub]"];
+	  56 [label="Composure: You've got this. Men like you don't cry unless it serves their purposes."];
+	  57 [label="You: \"Alright, let's go.\""];
+	  58 [label="Door, Room #1: Your key no longer turns in the lock."];
+	  59 [label="You: \"Actually, I don't need to pay -- I will brave the streets. Go undercover as a hobocop.\""];
+	  60 [label="You: [Leave.]"];
+	  61 [label="Kim Kitsuragi: The lieutenant looks on impassively. \"Even if you could break down the door, all you would get is another bill.\""];
+	  62 [label="Garte, the Cafeteria Manager: (His voice echoes from downstairs.) \"What's going on up there?\""];
+	  63 [label="Door, Room #1: The door appears undamaged, and even more impassive than the lieutenant."];
+	  64 [label="Inland Empire: Yes, and it's not just a matter of comfort, but also of principle. This may be your last lifeline to being a police officer instead of a hobo."];
+	  65 [label="You: \"Good night, lieutenant.\""];
+	  66 [label="Tutorial Agent: The door to your room locks every night at 21.00 if you haven't paid for the room. You can pay downstairs when speaking to Garte, the cafeteria manager."];
+	  67 [label="Kim Kitsuragi: He nods. \"Yes, we both need to get proper rest tonight.\""];
+	  68 [label="You: Observe the damage to your knuckles. Is this really worth it?"];
+	  69 [label="Kim Kitsuragi: \"Just a moment. You had some questions earlier, I believe, and, besides, we should discuss our progress on the investigation. Let's go out to the balcony.\""];
+	  70 [label="Savoir Faire: Hey, remember that trash bin idea...? Time to get climbing!"];
+	  71 [label="You: Still sounds better than sleeping outside."];
+	  72 [label="Half Light: Just punch the damned door. No *locks* are going to keep you out."];
+	  73 [label="Kim Kitsuragi: \"Our investigation does not at present require for anyone to go undercover. Let's drop this discussion and go settle your debt with the manager.\""];
+	  74 [label="You: Try to stay cool."];
+	  75 [label="Pain Threshold: It hurts, but keep your cool. You've got this."];
+	  76 [label="Door, Room #1: IsKimHere()"];
+	  77 [label="IsKimHere()", shape=diamond];
+	  78 [label="!(IsKimHere())", shape=diamond];
+	  79 [label="Garte, the Cafeteria Manager: (His voice echoes from downstairs.) \"What the hell is going on up there?\""];
+	  80 [label="Kim Kitsuragi: The lieutenant looks at you with a mixture of pity and weariness. \"Come on, let's go down.\""];
+	  81 [label="Door, Room #1: Variable[\"yard.trash_container_hub_reached\"]"];
+	  82 [label="Variable[\"yard.trash_container_hub_reached\"]", shape=diamond];
+	  83 [label="!(Variable[\"yard.trash_container_hub_reached\"])", shape=diamond];
+	  84 [label="You: Why would I want to stay in such a place?"];
+	  85 [label="You: \"Right, I should go pay my debts before I can go to sleep.\""];
+	  86 [label="doordamageshub"];
+	  87 [label="You: Punch the door."];
+	  88 [label="Door, Room #1: Variable[\"character.got_hobocop_climb_into_trashbin_idea\"]"];
+	  89 [label="Variable[\"character.got_hobocop_climb_into_trashbin_idea\"]", shape=diamond];
+	  90 [label="!(Variable[\"character.got_hobocop_climb_into_trashbin_idea\"])", shape=diamond];
+	  91 [label="Door, Room #1: Something about it has changed."];
+	  92 [label="Door, Room #1: IsKimHere()"];
+	  93 [label="IsKimHere()", shape=diamond];
+	  94 [label="!(IsKimHere())", shape=diamond];
+	  95 [label="Door, Room #1: Variable[\"character.door1_locked_inland\"]"];
+	  96 [label="Variable[\"character.door1_locked_inland\"]", shape=diamond];
+	  97 [label="!(Variable[\"character.door1_locked_inland\"])", shape=diamond];
+	  98 [label="Physical Instrument: *Even if you could*? Don't let him talk you down, son!"];
+	  99 [label="You: Try one more time. This time with both fists, one after the other."];
+	  100 [label="Kim Kitsuragi: The lieutenant looks at you with a mixture of pity and weariness. \"Come on, let's go down.\""];
+	  101 [label="You: Keep it in. Cradle your arm."];
+	  102 [label="painhub"];
+	  103 [label="Door, Room #1: Variable[\"yard.trash_container_open\"]"];
+	  104 [label="Variable[\"yard.trash_container_open\"]", shape=diamond];
+	  105 [label="!(Variable[\"yard.trash_container_open\"])", shape=diamond];
+	  106 [label="Pain Threshold: Your fist bounces off the door and comes back to you on a wave of agony that surges up your arm."];
+	  107 [label="You: Confront the door with a stoical expression. You are still The Law."];
+	  108 [label="Jump to: [Kim Kitsuragi: \"The air outside is brisk, the lieut...\"]"];
+	  5200111 [label="JUMP OUT to KIM SWITCH / DEBRIEF DAY ONE", shape=diamond];
+	  0 -> 1
+	  1 -> 42
+	  3 -> 34
+	  4 -> 11
+	  5 -> 20
+	  6 -> 8
+	  6 -> 7
+	  7 -> 102
+	  8 -> 75
+	  9 -> 55
+	  10 -> 72
+	  11 -> 20
+	  12 -> 13
+	  12 -> 14
+	  13 -> 99
+	  14 -> 24
+	  15 -> 16
+	  15 -> 17
+	  16 -> 10
+	  17 -> 28
+	  18 -> 57
+	  19 -> 84
+	  19 -> 71
+	  20 -> 76
+	  21 -> 22
+	  21 -> 23
+	  22 -> 9
+	  23 -> 55
+	  24 -> 25
+	  24 -> 26
+	  25 -> 61
+	  26 -> 21
+	  27 -> 86
+	  28 -> 29
+	  28 -> 30
+	  29 -> 72
+	  30 -> 66
+	  31 -> 58
+	  32 -> 86
+	  33 -> 88
+	  34 -> 20
+	  35 -> 43
+	  36 -> 55
+	  37 -> 38
+	  37 -> 39
+	  38 -> 65
+	  39 -> 91
+	  40 -> 79
+	  41 -> 32
+	  42 -> 37
+	  43 -> 21
+	  44 -> 62
+	  45 -> 44
+	  46 -> 48
+	  46 -> 47
+	  47 -> 36
+	  48 -> 55
+	  49 -> 50
+	  49 -> 51
+	  50 -> 69
+	  51 -> 18
+	  52 -> 86
+	  53 -> 15
+	  55 -> 86
+	  56 -> 107
+	  56 -> 4
+	  57 -> 108
+	  58 -> 53
+	  59 -> 73
+	  61 -> 63
+	  62 -> 46
+	  63 -> 98
+	  65 -> 49
+	  66 -> 72
+	  67 -> 86
+	  68 -> 43
+	  69 -> 57
+	  70 -> 86
+	  71 -> 64
+	  72 -> 86
+	  73 -> 33
+	  74 -> 56
+	  75 -> 12
+	  76 -> 77
+	  76 -> 78
+	  77 -> 100
+	  78 -> 55
+	  79 -> 92
+	  80 -> 106
+	  81 -> 82
+	  81 -> 83
+	  82 -> 103
+	  83 -> 86
+	  84 -> 54
+	  85 -> 67
+	  86 -> 41
+	  86 -> 85
+	  86 -> 87
+	  86 -> 59
+	  86 -> 60
+	  87 -> 40
+	  88 -> 89
+	  88 -> 90
+	  89 -> 70
+	  90 -> 81
+	  91 -> 60
+	  91 -> 31
+	  92 -> 93
+	  92 -> 94
+	  93 -> 80
+	  94 -> 106
+	  95 -> 96
+	  95 -> 97
+	  96 -> 19
+	  98 -> 35
+	  98 -> 68
+	  99 -> 45
+	  100 -> 55
+	  101 -> 5
+	  102 -> 74
+	  102 -> 3
+	  102 -> 101
+	  103 -> 104
+	  103 -> 105
+	  104 -> 52
+	  105 -> 27
+	  106 -> 6
+	  107 -> 43
+	  108 -> 5200111
+}
+

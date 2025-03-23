@@ -1,0 +1,274 @@
+# KIM SWITCH / VILLAGE AND JACKET
+# kim switch about wearing stuffz
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="(CheckEquipped(\"hat_rcm\")  or  CheckEquipped(\"pants_rcm\"))  and  (CheckEquipped(\"jacket_rcm\")  or  CheckEquipped(\"jacket_patrol_cloak\"))"];
+	  3 [label="(CheckEquipped(\"hat_rcm\")  or  CheckEquipped(\"pants_rcm\"))  and  (CheckEquipped(\"jacket_rcm\")  or  CheckEquipped(\"jacket_patrol_cloak\"))", shape=diamond];
+	  4 [label="!((CheckEquipped(\"hat_rcm\")  or  CheckEquipped(\"pants_rcm\"))  and  (CheckEquipped(\"jacket_rcm\")  or  CheckEquipped(\"jacket_patrol_cloak\")))", shape=diamond];
+	  5 [label="CheckEquipped(\"hat_bum\")  and  CheckEquipped(\"gloves_bum\")"];
+	  6 [label="CheckEquipped(\"hat_bum\")  and  CheckEquipped(\"gloves_bum\")", shape=diamond];
+	  7 [label="!(CheckEquipped(\"hat_bum\")  and  CheckEquipped(\"gloves_bum\"))", shape=diamond];
+	  8 [label="You: \"Hobo chic.\""];
+	  9 [label="You: \"Well, yeah. You never know when you're going to need to pitch a business proposal.\""];
+	  10 [label="Composure: The lieutenant's right. It gives you all the *panache* of a bicycle courier, daredevil and commander of the city streets!"];
+	  11 [label="CheckEquipped(\"jacket_carabineer\")  or  CheckEquipped(\"pants_carabineer\")"];
+	  12 [label="CheckEquipped(\"jacket_carabineer\")  or  CheckEquipped(\"pants_carabineer\")", shape=diamond];
+	  13 [label="!(CheckEquipped(\"jacket_carabineer\")  or  CheckEquipped(\"pants_carabineer\"))", shape=diamond];
+	  14 [label="Kim Kitsuragi: \"Still, you might try *branching out* a little. You know the expression 'The clothes make the man'? The right outfit, in the right situation, can make all the difference in the world.\""];
+	  15 [label="Kim Kitsuragi: \"For starters, you're wearing *the exact same* outfit I first met you in...\" He holds his nose."];
+	  16 [label="Kim Kitsuragi: \"Have you even *smelled* that jacket? It's like some wretched night-wandering creature died in it.\""];
+	  17 [label="You: \"Regular cop, regular clothes.\""];
+	  18 [label="You: \"You *like* this? I feel like it's really cramping my style.\""];
+	  19 [label="Kim Kitsuragi: The lieutenant regards you for a moment, unsure whether you're making a joke or not, and if so, whether he should acknowledge it..."];
+	  20 [label="Kim Kitsuragi: \"To be perfectly blunt, you're dressed like a blood-hungry mercenary.\""];
+	  21 [label="You: \"I'm not taking 'style' tips from someone who dresses like a mega-binoclard.\""];
+	  22 [label="Kim Kitsuragi: \"So if you want to wake up next to anyone other than *Commodore Red*, you might do well to take notes.\""];
+	  23 [label="Kim Kitsuragi: The lieutenant sighs. \"Is that really the impression you want to give people?\""];
+	  24 [label="Variable[\"kimswitch.jacket_authority_vestments\"]"];
+	  25 [label="Variable[\"kimswitch.jacket_authority_vestments\"]", shape=diamond];
+	  26 [label="!(Variable[\"kimswitch.jacket_authority_vestments\"])", shape=diamond];
+	  27 [label="Composure: That's right -- You're an entrepreneur of the peace, here to disrupt legacy law enforcement with buzzwords and privatization schemes."];
+	  28 [label="Composure: Somehow you thought you were *concealing* it, but now you know that *everybody* has noticed."];
+	  29 [label="You: \"Say, why aren't *you* wearing a pig suit?\""];
+	  30 [label="You: \"That's not quite what I was going for.\""];
+	  31 [label="Perception (Smell): You have developed a bit of a *rind* over the past few days."];
+	  32 [label="Kim Kitsuragi: \"To be perfectly blunt, you're dressed like a bum. And you smell like one, too.\""];
+	  33 [label="You: \"But the gloves keep my hands warm -- look.\" (Show him the gloves.)"];
+	  34 [label="You: \"Regular-core?\""];
+	  35 [label="You: \"Oh, I just thought that this was how professional people were supposed to dress.\""];
+	  36 [label="Kim Kitsuragi: \"Anyway, we should probably get back to the case. Let's go.\""];
+	  37 [label="You: \"It's disco, Kim.\""];
+	  38 [label="Kim Kitsuragi: \"Well, all that FALN gear makes you look like a bicycle courier. All you're missing is the shirt.\""];
+	  39 [label="Rhetoric: Except all the war crimes the people in those vestments perpetrated, but what's a few atrocities here and there if you *look cool* doing it?"];
+	  40 [label="CheckEquipped(\"shirt_interisolar\")  and  CheckEquipped(\"jacket_interisolar\")  or  CheckEquipped(\"pants_interisolar\")"];
+	  41 [label="CheckEquipped(\"shirt_interisolar\")  and  CheckEquipped(\"jacket_interisolar\")  or  CheckEquipped(\"pants_interisolar\")", shape=diamond];
+	  42 [label="!(CheckEquipped(\"shirt_interisolar\")  and  CheckEquipped(\"jacket_interisolar\")  or  CheckEquipped(\"pants_interisolar\"))", shape=diamond];
+	  43 [label="Kim Kitsuragi: \"Then maybe you should change your look...\""];
+	  44 [label="Kim Kitsuragi: The lieutenant sighs. \"It might feel good to play *super-merc*, but you might want to ask if it's actually helping you solve the case...\""];
+	  45 [label="Kim Kitsuragi: \"The idea is that civilians are more likely to open up to someone who's not dressed like a typical cop...\""];
+	  46 [label="You: \"They're just clothes, Kim. Who cares?\""];
+	  47 [label="Kim Kitsuragi: \"It's just, well, you look more like a high-flying businessman than a police officer.\""];
+	  48 [label="You: \"Superstar Casual.\" (Click your tongue.)"];
+	  49 [label="Kim Kitsuragi: \"This 'washed-up TipTop racer' knows how to sew a lapel and center a back vent.\" The lieutenant raises one eyebrow at you."];
+	  50 [label="You: \"My *style*? What about it?\""];
+	  51 [label="Kim Kitsuragi: Seeing you on the verge of tears, the lieutenant realizes he was maybe overly direct vis-a-vis your sartorial situation..."];
+	  52 [label="Kim Kitsuragi: \"Who knows?\" The lieutenant shrugs. \"Perhaps something *miraculous*.\""];
+	  53 [label="You: \"I'm wearing it in case we get into a firefight.\""];
+	  54 [label="Kim Kitsuragi: \"Then maybe you should change your look...\""];
+	  55 [label="Kim Kitsuragi: \"There's nothing *wrong* with it, per se. It's just... a little much...\""];
+	  57 [label="Kim Kitsuragi: \"I'm glad you've finally started dressing a little more like an officer of the RCM. Keep it up.\""];
+	  58 [label="Kim Kitsuragi: \"Now, now, no need to despair, detective. You know the expression 'The clothes make the man'? We just need to find you a *new style*. That jacket you just acquired is a decent start.\""];
+	  59 [label="Kim Kitsuragi: \"Yes. And this 'mega-binoclard' knows how to sew a lapel and center a back vent.\" The lieutenant raises one eyebrow at you."];
+	  60 [label="Esprit de Corps: Your half-brother is proud to stand beside you."];
+	  61 [label="Composure: The lieutenant's right. You're the acrid sweet smell of decay that makes respectable people wrinkle their noses, the room-evacuating fart..."];
+	  62 [label="Kim Kitsuragi: \"Let's not get ahead of ourselves, detective...\""];
+	  63 [label="Kim Kitsuragi: \"You know the expression 'The clothes make the man'? The right outfit, in the right situation, can make all the difference in the world.\""];
+	  64 [label="CheckEquipped(\"shoes_t500\")  and  CheckEquipped(\"shirt_t500\")  and  CheckEquipped(\"gloves_t500\")"];
+	  65 [label="CheckEquipped(\"shoes_t500\")  and  CheckEquipped(\"shirt_t500\")  and  CheckEquipped(\"gloves_t500\")", shape=diamond];
+	  66 [label="!(CheckEquipped(\"shoes_t500\")  and  CheckEquipped(\"shirt_t500\")  and  CheckEquipped(\"gloves_t500\"))", shape=diamond];
+	  67 [label="You: \"Really? You think so?\""];
+	  68 [label="Kim Kitsuragi: \"Then maybe you should change your look...\""];
+	  69 [label="You: \"That's not quite what I was going for.\""];
+	  70 [label="You: \"Yeah, maybe I should let these threads air out a little bit.\""];
+	  71 [label="CheckEquipped(\"shirt_dress_disco\")  and  CheckEquipped(\"jacket_suede\")  and  CheckEquipped(\"pants_bellbottom\")"];
+	  72 [label="CheckEquipped(\"shirt_dress_disco\")  and  CheckEquipped(\"jacket_suede\")  and  CheckEquipped(\"pants_bellbottom\")", shape=diamond];
+	  73 [label="!(CheckEquipped(\"shirt_dress_disco\")  and  CheckEquipped(\"jacket_suede\")  and  CheckEquipped(\"pants_bellbottom\"))", shape=diamond];
+	  74 [label="Kim Kitsuragi: \"If by 'disco' you mean 'ungainly and sad,' then yes, it's *extremely* disco.\""];
+	  75 [label="You: \"I don't care about their politics, it just *looks* cool.\""];
+	  76 [label="Kim Kitsuragi: \"Then maybe you should change your look...\""];
+	  77 [label="You: \"I'm the hobocop, Kim, what do you expect?\""];
+	  78 [label="Kim Kitsuragi: The lieutenant sighs."];
+	  79 [label="Kim Kitsuragi: \"Right, detective. You are one regular cop.\""];
+	  80 [label="Kim Kitsuragi: \"Then maybe you should change your look...\""];
+	  81 [label="Variable[\"kimswitch.jacket_composure_smell\"]"];
+	  82 [label="Variable[\"kimswitch.jacket_composure_smell\"]", shape=diamond];
+	  83 [label="!(Variable[\"kimswitch.jacket_composure_smell\"])", shape=diamond];
+	  84 [label="You: \"That's not quite what I was going for.\""];
+	  85 [label="You: \"What happens when I find the shirt?\""];
+	  86 [label="You: \"Office Harbinger.\""];
+	  87 [label="Kim Kitsuragi: \"Oh, god. Don't start *talking* like those people, too...\""];
+	  88 [label="Composure: Somehow you thought you were *concealing* it, but now you know that *everybody* has noticed."];
+	  89 [label="You: \"I'm not taking 'style' tips from someone who dresses like a washed-up TipTop racer.\""];
+	  90 [label="CheckEquipped(\"shoes_faln\")  and  CheckEquipped(\"jacket_faln\")  and  CheckEquipped(\"gloves_faln\")  and  CheckEquipped(\"pants_faln\")  and  CheckEquipped(\"hat_faln\")"];
+	  91 [label="CheckEquipped(\"shoes_faln\")  and  CheckEquipped(\"jacket_faln\")  and  CheckEquipped(\"gloves_faln\")  and  CheckEquipped(\"pants_faln\")  and  CheckEquipped(\"hat_faln\")", shape=diamond];
+	  92 [label="!(CheckEquipped(\"shoes_faln\")  and  CheckEquipped(\"jacket_faln\")  and  CheckEquipped(\"gloves_faln\")  and  CheckEquipped(\"pants_faln\")  and  CheckEquipped(\"hat_faln\"))", shape=diamond];
+	  93 [label="You: \"Formal apologetic.\""];
+	  94 [label="Kim Kitsuragi: \"Well, I can't say it doesn't *fit* you...\""];
+	  95 [label="Perception (Smell): You have developed a bit of a *rind* over the past few days."];
+	  96 [label="Kim Kitsuragi: \"It would be better if you let them air out in the trash, where they belong...\""];
+	  97 [label="You: \"That's not quite what I was going for.\""];
+	  98 [label="You: \"Well, yeah, I want everyone to know I'm here to defend traditional values and stomp communards.\""];
+	  99 [label="Untitled hub"];
+	  100 [label="Kim Kitsuragi: \"For starters, you're dressed like an old fascist. Is that really appropriate?\""];
+	  101 [label="You: \"Okay.\" (Nod.) \"You're a sharp dressed man. We could be style buddies.\""];
+	  102 [label="Kim Kitsuragi: Seeing you on the verge of tears, the lieutenant realizes he was maybe overly direct vis-a-vis your sartorial situation..."];
+	  103 [label="Composure: The lieutenant's right. You're the acrid sweet smell of decay that makes people evacuate the room."];
+	  104 [label="Kim Kitsuragi: \"It's good to see you looking like a proud officer of the RCM. It's important for the people of Martinaise to know we're here.\""];
+	  105 [label="Kim Kitsuragi: \"It's, well, a little *eclectic*, don't you think? How would you even describe what you're wearing?\""];
+	  106 [label="Kim Kitsuragi: \"Officers above the rank of sergeant are granted wide discretion when it comes to their uniforms...\""];
+	  107 [label="Authority: You're wearing the vestments of *order* and *hierarchy*. You have nothing to answer for."];
+	  108 [label="Variable[\"kimswitch.jacket_composure_smell\"]"];
+	  109 [label="Variable[\"kimswitch.jacket_composure_smell\"]", shape=diamond];
+	  110 [label="!(Variable[\"kimswitch.jacket_composure_smell\"])", shape=diamond];
+	  111 [label="You: \"That's not quite what I was going for.\""];
+	  112 [label="Empathy: A warm smile."];
+	  113 [label="Composure: That's why his clothes fit so well..."];
+	  114 [label="Conceptualization: 'Eclectic' is for pop music with 'indigenous' percussion. *You're* a sartorial maverick."];
+	  115 [label="CheckEquipped(\"hat_rcm\")  or  CheckEquipped(\"jacket_rcm\")  or  CheckEquipped(\"pants_rcm\")  or  CheckEquipped(\"jacket_patrol_cloak\")"];
+	  116 [label="CheckEquipped(\"hat_rcm\")  or  CheckEquipped(\"jacket_rcm\")  or  CheckEquipped(\"pants_rcm\")  or  CheckEquipped(\"jacket_patrol_cloak\")", shape=diamond];
+	  117 [label="!(CheckEquipped(\"hat_rcm\")  or  CheckEquipped(\"jacket_rcm\")  or  CheckEquipped(\"pants_rcm\")  or  CheckEquipped(\"jacket_patrol_cloak\"))", shape=diamond];
+	  118 [label="Kim Kitsuragi: \"You're an officer of the RCM, not some *bon vivant*...\""];
+	  119 [label="Endurance: That's right. You're protected in your ceramic carapace. Whatever harm you inflict on that world won't be visited on you."];
+	  120 [label="these_things"];
+	  0 -> 1
+	  1 -> 50
+	  2 -> 3
+	  2 -> 4
+	  3 -> 104
+	  4 -> 115
+	  5 -> 6
+	  5 -> 7
+	  6 -> 32
+	  7 -> 2
+	  8 -> 94
+	  9 -> 87
+	  10 -> 85
+	  10 -> 30
+	  11 -> 12
+	  11 -> 13
+	  12 -> 100
+	  13 -> 5
+	  14 -> 99
+	  15 -> 16
+	  16 -> 95
+	  17 -> 19
+	  18 -> 118
+	  19 -> 79
+	  20 -> 119
+	  21 -> 59
+	  22 -> 36
+	  23 -> 63
+	  24 -> 25
+	  24 -> 26
+	  25 -> 39
+	  26 -> 120
+	  27 -> 9
+	  27 -> 35
+	  27 -> 111
+	  28 -> 51
+	  29 -> 106
+	  30 -> 76
+	  31 -> 61
+	  32 -> 31
+	  33 -> 78
+	  34 -> 94
+	  35 -> 55
+	  37 -> 74
+	  38 -> 10
+	  39 -> 120
+	  40 -> 41
+	  40 -> 42
+	  41 -> 47
+	  42 -> 11
+	  43 -> 63
+	  44 -> 63
+	  45 -> 63
+	  46 -> 63
+	  47 -> 27
+	  48 -> 94
+	  49 -> 113
+	  50 -> 71
+	  51 -> 58
+	  52 -> 67
+	  53 -> 44
+	  54 -> 63
+	  55 -> 63
+	  57 -> 60
+	  58 -> 99
+	  59 -> 113
+	  60 -> 17
+	  60 -> 18
+	  60 -> 29
+	  61 -> 108
+	  62 -> 112
+	  63 -> 99
+	  64 -> 65
+	  64 -> 66
+	  65 -> 20
+	  66 -> 40
+	  67 -> 63
+	  68 -> 63
+	  69 -> 54
+	  70 -> 96
+	  71 -> 72
+	  71 -> 73
+	  72 -> 15
+	  73 -> 90
+	  74 -> 63
+	  75 -> 23
+	  76 -> 63
+	  77 -> 78
+	  78 -> 63
+	  79 -> 63
+	  80 -> 63
+	  81 -> 82
+	  81 -> 83
+	  82 -> 37
+	  82 -> 70
+	  83 -> 28
+	  84 -> 43
+	  85 -> 52
+	  86 -> 94
+	  87 -> 63
+	  88 -> 102
+	  89 -> 49
+	  90 -> 91
+	  90 -> 92
+	  91 -> 38
+	  92 -> 64
+	  93 -> 94
+	  94 -> 14
+	  95 -> 103
+	  96 -> 63
+	  97 -> 68
+	  98 -> 23
+	  99 -> 89
+	  99 -> 21
+	  99 -> 101
+	  100 -> 107
+	  101 -> 62
+	  102 -> 58
+	  103 -> 81
+	  104 -> 60
+	  105 -> 114
+	  106 -> 45
+	  107 -> 24
+	  108 -> 109
+	  108 -> 110
+	  109 -> 33
+	  109 -> 77
+	  109 -> 97
+	  110 -> 88
+	  111 -> 80
+	  112 -> 36
+	  113 -> 22
+	  114 -> 34
+	  114 -> 8
+	  114 -> 46
+	  114 -> 48
+	  114 -> 86
+	  114 -> 93
+	  115 -> 116
+	  115 -> 117
+	  116 -> 57
+	  117 -> 105
+	  118 -> 63
+	  119 -> 84
+	  119 -> 53
+	  120 -> 98
+	  120 -> 75
+	  120 -> 69
+}
+

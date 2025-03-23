@@ -1,0 +1,389 @@
+# PLAZA ORB / spirit bomb ready
+# A thought orb to pop up just before the Mercenary Tribunal
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Rhetoric: 不管是什么，我都可以说服你的。"];
+	  3 [label="Hand/Eye Coordination: 你准备好了。不要抛弃你的朋友。还有你的武器。"];
+	  4 [label="Variable[\"auto.is_snowing\"]"];
+	  5 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  6 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  7 [label="Interfacing: 雪花斑驳地飘落在你的纳克特威A80手枪的枪管上。"];
+	  8 [label="Inland Empire: 很好。那就准备承受伤害吧。"];
+	  9 [label="CheckEquipped(\"kvalsund_multitool\")"];
+	  10 [label="CheckEquipped(\"kvalsund_multitool\")", shape=diamond];
+	  11 [label="!(CheckEquipped(\"kvalsund_multitool\"))", shape=diamond];
+	  12 [label="Physical Instrument: 雪花附着在你的撬棍上。或者是铁撬。或者叫撬棒也行。随你怎么称呼——但它在军事级武器面前毫无胜算。"];
+	  13 [label="Inland Empire: 停。就是现在。时间到了。"];
+	  14 [label="CheckItem(\"spirit_bomb\")"];
+	  15 [label="CheckItem(\"spirit_bomb\")", shape=diamond];
+	  16 [label="!(CheckItem(\"spirit_bomb\"))", shape=diamond];
+	  17 [label="Inland Empire: 你准备好了。不要抛弃你的朋友。你的武器。它在你的手里闪闪发光，随时准备为你服务。"];
+	  18 [label="Composure: 你那条油腻领带引线末端在寒冷的春光中闪耀。"];
+	  19 [label="CheckItem(\"gun_villiers\")"];
+	  20 [label="CheckItem(\"gun_villiers\")", shape=diamond];
+	  21 [label="!(CheckItem(\"gun_villiers\"))", shape=diamond];
+	  22 [label="Physical Instrument: 雨水从你的撬棍上淌下。或者是铁撬。或者叫撬棒也行。随你怎么称呼——但它在军事级武器面前毫无胜算。"];
+	  23 [label="Physical Instrument: 你试着从手中撬棍的重量上寻求安慰。或者是铁撬。或者叫撬棒也行。随你怎么称呼——但它在军事级武器面前毫无胜算。"];
+	  24 [label="Kim Kitsuragi: 警督皱了皱眉。“那你最好做好准备，”他飞快地补充到。“不论发生什么，我都在你背后。”"];
+	  25 [label="Inland Empire: 你的老朋友已经为你准备好了——他付出了非常大的代价。等*情况变坏*的时候，记得手里一定要准备好酒精炸弹。"];
+	  26 [label="Suggestion: 你这么讨人喜欢，不会死的。别担心。"];
+	  27 [label="Inland Empire: 站住。前方等待你的是：危险。"];
+	  28 [label="Authority: 什么？！你不能拿RCM发给你个人的武器跟一个知名罪犯的手枪做比较吧？"];
+	  29 [label="CheckItem(\"spirit_bomb\")"];
+	  30 [label="CheckItem(\"spirit_bomb\")", shape=diamond];
+	  31 [label="!(CheckItem(\"spirit_bomb\"))", shape=diamond];
+	  32 [label="CheckItem(\"bullet\")"];
+	  33 [label="CheckItem(\"bullet\")", shape=diamond];
+	  34 [label="!(CheckItem(\"bullet\"))", shape=diamond];
+	  35 [label="Hand/Eye Coordination: 你已经准备好了。不要抛弃你的朋友。你的武器。"];
+	  36 [label="Inland Empire: 危机，死亡。你可以在自己蓝色的灵魂中感觉到它。"];
+	  37 [label="Composure: 雨滴降落在你那条油腻领带引线的末端。"];
+	  38 [label="You: 我已经准备好了。"];
+	  39 [label="CheckEquipped(\"kvalsund_multitool\")"];
+	  40 [label="CheckEquipped(\"kvalsund_multitool\")", shape=diamond];
+	  41 [label="!(CheckEquipped(\"kvalsund_multitool\"))", shape=diamond];
+	  42 [label="Interfacing: 你的库瓦桑德KR+2多用工具在寒冷的春光下闪闪发亮，给人留下了深刻的印象——但是它能怎么对抗军事级武器呢？"];
+	  43 [label="Inland Empire: 等等——你的老朋友帮你准备好了——本人还为此付出了极大的代价。等*情况变坏*的时候，记得手里一定要准备好酒精炸弹。"];
+	  44 [label="You: “金，我感觉到危险。就在前面。”"];
+	  45 [label="Interfacing: 雪花斑驳地飘落在你的维利耶9毫米手枪的枪管上。"];
+	  46 [label="CheckItem(\"gun_villiers\")"];
+	  47 [label="CheckItem(\"gun_villiers\")", shape=diamond];
+	  48 [label="!(CheckItem(\"gun_villiers\"))", shape=diamond];
+	  49 [label="Logic: 这两把枪真的没多大区别……"];
+	  50 [label="Variable[\"plaza.spirit_logic_rubys_gun\"]"];
+	  51 [label="Variable[\"plaza.spirit_logic_rubys_gun\"]", shape=diamond];
+	  52 [label="!(Variable[\"plaza.spirit_logic_rubys_gun\"])", shape=diamond];
+	  53 [label="Inland Empire: 没时间讨论什么偏好了。不仅仅是你一个人的生命危在旦夕。\n那你是想光荣的死去了？那依靠你的那些人呢，他们的性命怎么办？"];
+	  54 [label="You: 审判时间到了？"];
+	  55 [label="CheckEquipped(\"sabre\")"];
+	  56 [label="CheckEquipped(\"sabre\")", shape=diamond];
+	  57 [label="!(CheckEquipped(\"sabre\"))", shape=diamond];
+	  58 [label="Interfacing: 雨点从你的维利耶9毫米手枪的枪管上滑落。"];
+	  59 [label="You: [放弃思维。]"];
+	  60 [label="Variable[\"auto.is_raining\"]"];
+	  61 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  62 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  63 [label="Variable[\"auto.is_snowing\"]"];
+	  64 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  65 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  66 [label="Inland Empire: 如果不用这样会更好一些。不仅仅是你一个人的生命危在旦夕。"];
+	  67 [label="CheckItem(\"bullet\")"];
+	  68 [label="CheckItem(\"bullet\")", shape=diamond];
+	  69 [label="!(CheckItem(\"bullet\"))", shape=diamond];
+	  70 [label="CheckItem(\"gun_ruby\")"];
+	  71 [label="CheckItem(\"gun_ruby\")", shape=diamond];
+	  72 [label="!(CheckItem(\"gun_ruby\"))", shape=diamond];
+	  73 [label="Encyclopedia: 从统计学的角度来讲，军刀已经被证实完全无法有效对抗先进的军事技术。"];
+	  74 [label="CheckItem(\"spirit_bomb\")  or  CheckItem(\"gun_villiers\")  or  CheckItem(\"gun_ruby\")"];
+	  75 [label="CheckItem(\"spirit_bomb\")  or  CheckItem(\"gun_villiers\")  or  CheckItem(\"gun_ruby\")", shape=diamond];
+	  76 [label="!(CheckItem(\"spirit_bomb\")  or  CheckItem(\"gun_villiers\")  or  CheckItem(\"gun_ruby\"))", shape=diamond];
+	  77 [label="Variable[\"auto.is_raining\"]"];
+	  78 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  79 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  80 [label="Inland Empire: 做你需要做的事吧。然后继续朝着未来前进。"];
+	  81 [label="You: 我更喜欢徒手格斗。\n“我更喜欢徒手格斗。这样更光荣一些。”"];
+	  82 [label="Inland Empire: 现在没时间害怕。走吧。"];
+	  83 [label="party_nearing_hub"];
+	  84 [label="Electrochemistry: 你知道自己应该做什么吗？把酒精炸弹拿出来……"];
+	  85 [label="prepare to foight!"];
+	  86 [label="You: 派对时间到了？"];
+	  87 [label="Inland Empire: 做好准备。用上露比的双管手枪。"];
+	  88 [label="CheckEquipped(\"prybar\")"];
+	  89 [label="CheckEquipped(\"prybar\")", shape=diamond];
+	  90 [label="!(CheckEquipped(\"prybar\"))", shape=diamond];
+	  91 [label="Perception (Hearing): 你听见口袋里酒精炸弹的声音，它好像正在狂热的大笑。"];
+	  92 [label="Inland Empire: 不不。你不可能这么简单就动身。这很严肃。生命危在旦夕。"];
+	  93 [label="Kim Kitsuragi: “是的。我听见了骚乱的声音……”他竖起耳朵。“我们走吧。”"];
+	  94 [label="CheckEquipped(\"prybar\")"];
+	  95 [label="CheckEquipped(\"prybar\")", shape=diamond];
+	  96 [label="!(CheckEquipped(\"prybar\"))", shape=diamond];
+	  97 [label="You: 我害怕……"];
+	  98 [label="CheckEquipped(\"spirit_bomb\")"];
+	  99 [label="CheckEquipped(\"spirit_bomb\")", shape=diamond];
+	  100 [label="!(CheckEquipped(\"spirit_bomb\"))", shape=diamond];
+	  101 [label="Inland Empire: 站住。前方等待你的是：危险。"];
+	  102 [label="Authority: 这枪也太次了。不过总比没有的好。"];
+	  103 [label="Composure: 雨滴降落在你那条油腻领带引线的末端。"];
+	  105 [label="Hand/Eye Coordination: 看在老天爷的份上——继续前进之前先找点子弹吧。没上膛的枪也没什么大用啊！"];
+	  106 [label="Inland Empire: 想尽一切办法武装自己。除非你……什么也没有？因为你没找到丢失的枪？那你就准备踏入死亡之路吧。"];
+	  107 [label="Inland Empire: 嘘。他没有喝掉酒精炸弹。他把它放在手里，然后就准备好了。"];
+	  108 [label="Authority: 为什么不拿出你最信赖的维利耶呢？"];
+	  109 [label="You: 当我掏出真正的警枪时，就已经感觉准备好了。"];
+	  110 [label="CheckItem(\"bullet\")"];
+	  111 [label="CheckItem(\"bullet\")", shape=diamond];
+	  112 [label="!(CheckItem(\"bullet\"))", shape=diamond];
+	  113 [label="Hand/Eye Coordination: 看在老天爷的份上——继续前进之前先找点子弹吧。没上膛的枪也没什么大用啊！"];
+	  114 [label="Interfacing: 你的手指反射性地扣住了口袋里的维利耶9毫米手枪。"];
+	  115 [label="Interfacing: 雨滴降落在你的纳克特威A80手枪的枪管上。"];
+	  116 [label="ready_to_fight"];
+	  117 [label="CheckEquipped(\"gun_villiers\")"];
+	  118 [label="CheckEquipped(\"gun_villiers\")", shape=diamond];
+	  119 [label="!(CheckEquipped(\"gun_villiers\"))", shape=diamond];
+	  120 [label="Hand/Eye Coordination: 你现有的东西还不够。你需要更强的火力。一只远程武器。"];
+	  121 [label="CheckItem(\"spirit_bomb\")"];
+	  122 [label="CheckItem(\"spirit_bomb\")", shape=diamond];
+	  123 [label="!(CheckItem(\"spirit_bomb\"))", shape=diamond];
+	  124 [label="Inland Empire: 等等——你的老朋友帮你准备好了——本人还为此付出了极大的代价。当等*情况变坏*的时候，记得手里一定要准备好酒精炸弹。"];
+	  125 [label="Inland Empire: 是的。而且一点都不会好玩。"];
+	  126 [label="Inland Empire: 确实是。"];
+	  127 [label="Variable[\"auto.is_raining\"]"];
+	  128 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  129 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  130 [label="Variable[\"coast.orb_fight_ready_elchem\"]"];
+	  131 [label="Variable[\"coast.orb_fight_ready_elchem\"]", shape=diamond];
+	  132 [label="!(Variable[\"coast.orb_fight_ready_elchem\"])", shape=diamond];
+	  133 [label="Interfacing: 维利耶9毫米手枪的枪管在寒冷的春光中闪烁着威胁性的光芒。"];
+	  134 [label="Interfacing: 纳克特威A80手枪的枪管在寒冷的春光中闪烁着威胁性的光芒。"];
+	  135 [label="Inland Empire: 站住。前方等待你的是：危险。"];
+	  136 [label="Interfacing: 雪花附着在你的库瓦桑德KR+2多用工具上。它是让人印象深刻——但是怎么可能对抗军事级武器呢？"];
+	  137 [label="You: “我不确定有没有准备好面对前方的一切。”"];
+	  138 [label="You: 如果有必要的话，我就用两只手战斗。"];
+	  139 [label="CheckEquipped(\"kvalsund_multitool\")"];
+	  140 [label="CheckEquipped(\"kvalsund_multitool\")", shape=diamond];
+	  141 [label="!(CheckEquipped(\"kvalsund_multitool\"))", shape=diamond];
+	  142 [label="Inland Empire: 站住。前方等待你的是：危险。"];
+	  143 [label="Encyclopedia: 从统计学的角度来讲，军刀已经被证实完全无法有效对抗先进的军事技术。"];
+	  144 [label="Hand/Eye Coordination: 看在老天爷的份上——继续前进之前先找点子弹吧。没上膛的枪也没什么大用啊！"];
+	  145 [label="Inland Empire: 做好准备。保证手里握着你的转管手枪。"];
+	  146 [label="You: 听起来不太吉利啊。"];
+	  147 [label="You: 什么时间？"];
+	  148 [label="Inland Empire: 还包括你的。"];
+	  149 [label="CheckEquipped(\"prybar\")"];
+	  150 [label="CheckEquipped(\"prybar\")", shape=diamond];
+	  151 [label="!(CheckEquipped(\"prybar\"))", shape=diamond];
+	  152 [label="Interfacing: 雨水从你的库瓦桑德KR+2多用工具上淌下。它是让人印象深刻——但是怎么可能对抗军事级武器呢？"];
+	  153 [label="Inland Empire: 残酷、严肃、致命、危险的时间到了。而且一点都不会好玩。"];
+	  154 [label="You: 我应该做什么？"];
+	  155 [label="CheckEquipped(\"gun_ruby\")"];
+	  156 [label="CheckEquipped(\"gun_ruby\")", shape=diamond];
+	  157 [label="!(CheckEquipped(\"gun_ruby\"))", shape=diamond];
+	  158 [label="Variable[\"auto.is_snowing\"]"];
+	  159 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  160 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  161 [label="CheckEquipped(\"prybar\")"];
+	  162 [label="CheckEquipped(\"prybar\")", shape=diamond];
+	  163 [label="!(CheckEquipped(\"prybar\"))", shape=diamond];
+	  164 [label="Encyclopedia: 从统计学的角度来讲，军刀已经被证实完全无法有效对抗军事技术。"];
+	  165 [label="Variable[\"auto.is_snowing\"]"];
+	  166 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  167 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  168 [label="Variable[\"auto.is_raining\"]"];
+	  169 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  170 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  171 [label="CheckEquipped(\"kvalsund_multitool\")"];
+	  172 [label="CheckEquipped(\"kvalsund_multitool\")", shape=diamond];
+	  173 [label="!(CheckEquipped(\"kvalsund_multitool\"))", shape=diamond];
+	  0 -> 1
+	  1 -> 98
+	  2 -> 26
+	  3 -> 168
+	  4 -> 5
+	  4 -> 6
+	  5 -> 7
+	  6 -> 134
+	  7 -> 46
+	  9 -> 10
+	  9 -> 11
+	  10 -> 136
+	  11 -> 149
+	  12 -> 74
+	  13 -> 83
+	  14 -> 16
+	  14 -> 15
+	  15 -> 25
+	  16 -> 19
+	  17 -> 77
+	  18 -> 116
+	  19 -> 20
+	  19 -> 21
+	  20 -> 145
+	  21 -> 70
+	  22 -> 74
+	  23 -> 74
+	  25 -> 91
+	  26 -> 85
+	  27 -> 17
+	  28 -> 110
+	  29 -> 30
+	  29 -> 31
+	  30 -> 124
+	  31 -> 116
+	  32 -> 33
+	  32 -> 34
+	  33 -> 121
+	  34 -> 105
+	  35 -> 60
+	  36 -> 154
+	  37 -> 116
+	  38 -> 8
+	  39 -> 40
+	  39 -> 41
+	  40 -> 42
+	  41 -> 161
+	  42 -> 74
+	  43 -> 116
+	  44 -> 93
+	  45 -> 32
+	  46 -> 48
+	  46 -> 47
+	  47 -> 108
+	  48 -> 110
+	  49 -> 50
+	  50 -> 51
+	  50 -> 52
+	  51 -> 28
+	  52 -> 110
+	  54 -> 125
+	  55 -> 56
+	  55 -> 57
+	  56 -> 135
+	  57 -> 13
+	  58 -> 32
+	  59 -> 92
+	  60 -> 61
+	  60 -> 62
+	  61 -> 58
+	  62 -> 165
+	  63 -> 64
+	  63 -> 65
+	  64 -> 37
+	  65 -> 18
+	  67 -> 68
+	  67 -> 69
+	  68 -> 85
+	  69 -> 113
+	  70 -> 72
+	  70 -> 71
+	  71 -> 87
+	  72 -> 106
+	  73 -> 74
+	  74 -> 75
+	  74 -> 76
+	  75 -> 154
+	  76 -> 85
+	  77 -> 78
+	  77 -> 79
+	  78 -> 103
+	  79 -> 63
+	  81 -> 53
+	  83 -> 146
+	  83 -> 147
+	  83 -> 54
+	  83 -> 86
+	  83 -> 59
+	  84 -> 130
+	  85 -> 81
+	  85 -> 137
+	  85 -> 138
+	  86 -> 153
+	  87 -> 102
+	  88 -> 89
+	  88 -> 90
+	  89 -> 135
+	  90 -> 55
+	  91 -> 84
+	  92 -> 148
+	  93 -> 97
+	  93 -> 109
+	  93 -> 38
+	  94 -> 96
+	  94 -> 95
+	  95 -> 22
+	  96 -> 164
+	  97 -> 82
+	  98 -> 99
+	  98 -> 100
+	  99 -> 27
+	  100 -> 117
+	  101 -> 35
+	  102 -> 67
+	  103 -> 116
+	  105 -> 121
+	  106 -> 2
+	  107 -> 85
+	  108 -> 49
+	  109 -> 80
+	  110 -> 112
+	  110 -> 111
+	  111 -> 29
+	  112 -> 144
+	  113 -> 85
+	  114 -> 67
+	  115 -> 46
+	  116 -> 97
+	  116 -> 44
+	  116 -> 109
+	  116 -> 38
+	  117 -> 118
+	  117 -> 119
+	  118 -> 101
+	  119 -> 155
+	  120 -> 127
+	  121 -> 122
+	  121 -> 123
+	  122 -> 43
+	  123 -> 116
+	  124 -> 116
+	  125 -> 154
+	  126 -> 154
+	  127 -> 128
+	  127 -> 129
+	  128 -> 171
+	  129 -> 158
+	  130 -> 131
+	  130 -> 132
+	  131 -> 107
+	  132 -> 85
+	  133 -> 32
+	  134 -> 46
+	  135 -> 120
+	  136 -> 74
+	  137 -> 24
+	  138 -> 66
+	  139 -> 140
+	  139 -> 141
+	  140 -> 135
+	  141 -> 88
+	  142 -> 3
+	  143 -> 74
+	  144 -> 29
+	  145 -> 114
+	  146 -> 126
+	  147 -> 36
+	  148 -> 154
+	  149 -> 150
+	  149 -> 151
+	  150 -> 12
+	  151 -> 73
+	  152 -> 74
+	  153 -> 154
+	  154 -> 14
+	  155 -> 156
+	  155 -> 157
+	  156 -> 142
+	  157 -> 139
+	  158 -> 160
+	  158 -> 159
+	  159 -> 9
+	  160 -> 39
+	  161 -> 162
+	  161 -> 163
+	  162 -> 23
+	  163 -> 143
+	  164 -> 74
+	  165 -> 166
+	  165 -> 167
+	  166 -> 45
+	  167 -> 133
+	  168 -> 169
+	  168 -> 170
+	  169 -> 115
+	  170 -> 4
+	  171 -> 172
+	  171 -> 173
+	  172 -> 152
+	  173 -> 94
+}
+

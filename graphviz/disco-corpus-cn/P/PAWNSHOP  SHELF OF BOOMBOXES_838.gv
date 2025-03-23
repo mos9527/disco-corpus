@@ -1,0 +1,255 @@
+# PAWNSHOP / SHELF OF BOOMBOXES
+# You look at and ask Roy about the boombox.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Bird's Nest Roy: “你想在哪儿放都可以。我觉得既然你是个警察，应该没人会逮捕你吧。”"];
+	  3 [label="Kim Kitsuragi: “我不觉得‘门枪手精选集’很适合派对。那个名字感觉有点……”"];
+	  4 [label="Shelf of Boomboxes: 架子上的那些手提音箱看起来备受喜爱，而且去过很多地方。碎裂，凹陷，它们的带卷就像一双不会眨动的眼睛，死死地盯着你。"];
+	  5 [label="Bird's Nest Roy: “打折？我这里还要钱维持供电呢。12雷亚尔不改了。”"];
+	  6 [label="Kim Kitsuragi: Variable[\"canal.roy_concept_why_doesnt_he_like_music\"]"];
+	  7 [label="Variable[\"canal.roy_concept_why_doesnt_he_like_music\"]", shape=diamond];
+	  8 [label="!(Variable[\"canal.roy_concept_why_doesnt_he_like_music\"])", shape=diamond];
+	  9 [label="Kim Kitsuragi: Variable[\"canal.empathy_do_not_say_four\"]"];
+	  10 [label="Variable[\"canal.empathy_do_not_say_four\"]", shape=diamond];
+	  11 [label="!(Variable[\"canal.empathy_do_not_say_four\"])", shape=diamond];
+	  12 [label="Jump to: [boomhub]"];
+	  13 [label="Jump to: [boomhub]"];
+	  14 [label="Conceptualization: 嗯……也许你也应该放弃音乐，尝试他描述的那种更有*实验性*的声音？"];
+	  15 [label="Half Light: 在这样的街区，一个那样的男人？在一栋摇摇欲坠就快掉进海里的房子？他很害怕。你要好好利用这一点。"];
+	  16 [label="You: “你确定它真能正常工作吗？”"];
+	  17 [label="Jump to: [boomhub]"];
+	  18 [label="Suggestion: 只是不要问他最小的数目。这样对他是一种侮辱。其他的也许能行。"];
+	  19 [label="You: “难道你不害怕*戴面具的枪手*吗？屋顶塌下来？杀手浪潮？飞艇事故？搞砸了的外科手术？我出4雷亚尔。”"];
+	  20 [label="Conceptualization: 奇怪。为什么他不喜欢音乐呢？"];
+	  21 [label="Conceptualization: 记住——他不喜欢音乐。他喜欢*声音*。*门枪手精选集*就是他会喜欢的那种磁带！如果他知道你要播*实验性*的东西，肯定会给你打折的。"];
+	  22 [label="Conceptualization: 看来他已经听过献给所有生命的安魂曲了，而且也没有被打动。"];
+	  23 [label="Encyclopedia: 可悲的是，它不是。"];
+	  24 [label="Bird's Nest Roy: “……是哈蒙沃斯W02——西奥设计，维斯珀制造，”他回答到。“可以播放所有卷对卷格式：2毫米、8毫米、12毫米。里面甚至还有个小无线电。它会让你破费12雷亚尔。”"];
+	  25 [label="You: “不喜欢音乐？那你喜欢什么？”"];
+	  26 [label="Shelf of Boomboxes: 有一个特别抓你眼球。深金和琥珀色的塑料，顶上有一个巨大的旧把手。一款经典的手提音箱，上面写着：“立体声8认证。”"];
+	  27 [label="Inland Empire: 就像在海滩派对上。阳光，沙滩，还有海鸥在微风中舞蹈。"];
+	  28 [label="You: “你说的对，曷城。先工作，后派对。”"];
+	  29 [label="Reaction Speed: 小心。你只能做一次。"];
+	  30 [label="Bird's Nest Roy: “当然了。每一台我都用演讲录音、唱片、还有各个流派的音乐亲自测试过。不过，”他做了个鬼脸，“我不太喜欢音乐。”"];
+	  31 [label="Shelf of Boomboxes: 手提音箱在架子上等待着。而你的音箱——那台金色和琥珀色的哈蒙沃斯——用它的带卷眼热切地看着你。"];
+	  32 [label="You: [离开。]"];
+	  33 [label="Bird's Nest Roy: “那家伙挺不错的，能防风防雨。”"];
+	  34 [label="Kim Kitsuragi: Variable[\"canal.halflight_roy_is_afraid\"]"];
+	  35 [label="Variable[\"canal.halflight_roy_is_afraid\"]", shape=diamond];
+	  36 [label="!(Variable[\"canal.halflight_roy_is_afraid\"])", shape=diamond];
+	  37 [label="You: “我不只是在做什么*随便的*警察工作——我这里还有*门枪手精选集*！一件划时代的作品。要不就4雷亚尔吧。”"];
+	  38 [label="You: “这样吧：4雷亚尔。怎么样？你觉得呢？”"];
+	  39 [label="Inland Empire: 这就是你。金色和橙色。日落组曲。"];
+	  40 [label="You: “我能不能用手提音箱播一盘磁带，很快就好？”"];
+	  41 [label="Bird's Nest Roy: “抱歉，伙计。我这里不提供免费赠品。之前从来没有过，现在也不会有。”"];
+	  42 [label="Jump to: [boomhub]"];
+	  43 [label="Bird's Nest Roy: “我不喜欢海滩。那里会积攒太多的光子，总是一片混乱。但是好好活出你自己的人生吧，伙计。如果你想，就在海滩派对上用吧。”"];
+	  44 [label="Kim Kitsuragi: Variable[\"canal.checkfired_roy_digs_doorgunner\"]"];
+	  45 [label="Variable[\"canal.checkfired_roy_digs_doorgunner\"]", shape=diamond];
+	  46 [label="!(Variable[\"canal.checkfired_roy_digs_doorgunner\"])", shape=diamond];
+	  47 [label="Shelf of Boomboxes: 所有老旧的手提音箱都在那里，眨巴着眼睛，等待着旋转。只有一个除外：你的那台。"];
+	  48 [label="Suggestion: 我说什么了？看看你做了什么？见鬼了吧，伙计。我猜现在你要花12雷亚尔了。"];
+	  49 [label="Jump to: [boomhub]"];
+	  50 [label="Untitled hub"];
+	  51 [label="boomhub"];
+	  52 [label="Kim Kitsuragi: “那是非官方的RCM座右铭，没错。”"];
+	  53 [label="You: “好的，金。那我就跟罗伊一起摇滚吧。”\n“好的，金。那我就跟当铺老板一起摇滚吧。”"];
+	  54 [label="You: 踮起脚尖多看一点……"];
+	  55 [label="Bird's Nest Roy: “如果警察要播磁带的话，那当然了。你可以这么用。或者其他需要播磁带的时候。”"];
+	  56 [label="You: “明白了。说回这个家伙……”（拍拍手提音箱的扬声器。）"];
+	  57 [label="You: “感谢你的澄清，罗伊。”"];
+	  58 [label="Bird's Nest Roy: “听起来像是在盗窃，不过行吧。我可以降到10雷亚尔——不过不能再低了。”"];
+	  59 [label="Kim Kitsuragi: Variable[\"TASK.listen_to_merc_tape\"]"];
+	  60 [label="Variable[\"TASK.listen_to_merc_tape\"]", shape=diamond];
+	  61 [label="!(Variable[\"TASK.listen_to_merc_tape\"])", shape=diamond];
+	  62 [label="Kim Kitsuragi: IsKimHere()"];
+	  63 [label="IsKimHere()", shape=diamond];
+	  64 [label="!(IsKimHere())", shape=diamond];
+	  65 [label="Untitled hub (02)"];
+	  66 [label="Kim Kitsuragi: Variable[\"canal.boombox_mainhub_reached\"]"];
+	  67 [label="Variable[\"canal.boombox_mainhub_reached\"]", shape=diamond];
+	  68 [label="!(Variable[\"canal.boombox_mainhub_reached\"])", shape=diamond];
+	  69 [label="Bird's Nest Roy: “那个也能播的，”男人点点头。“所有安魂曲都行。挽歌也可以。情歌。儿歌。只要磁带上有就行。”"];
+	  70 [label="Bird's Nest Roy: “不，不算吧。我任何时候都在期待重要的变化……不过看起来这个变化是*你*。”他听起来几乎有些担心，好像在权衡你的价格。"];
+	  71 [label="Kim Kitsuragi: CheckItem(\"boombox\")"];
+	  72 [label="CheckItem(\"boombox\")", shape=diamond];
+	  73 [label="!(CheckItem(\"boombox\"))", shape=diamond];
+	  74 [label="You: 就这样。[离开。]"];
+	  75 [label="You: “要不就8雷亚尔吧。”"];
+	  76 [label="You: “感谢你的折扣，伙计。这是买音箱的钱。”"];
+	  77 [label="Jump to: [boomhub]"];
+	  78 [label="Rhetoric: 他看起来像是个*实验性*的男人。还有什么声音体验能比*门枪手精选集*更有实验性的呢？如果他知道你要播那个，肯定会给你打折的。"];
+	  79 [label="Kim Kitsuragi: Variable[\"canal.roy_not_like_music\"] == true"];
+	  80 [label="Variable[\"canal.roy_not_like_music\"] == true", shape=diamond];
+	  81 [label="!(Variable[\"canal.roy_not_like_music\"] == true)", shape=diamond];
+	  82 [label="Bird's Nest Roy: “给你。高质量放声。它什么都能播。不论在哪里都可以。可以把*任何*磁带变成声音和形状的对话。”"];
+	  83 [label="You: “感谢你的折扣，伙计。这是买音箱的钱。”"];
+	  84 [label="You: “其实，也不用非得是海滩。有了这种手提音箱，就算是街上也能开派对！”"];
+	  85 [label="Bird's Nest Roy: 他努起嘴唇。“4雷亚尔低的让人讨厌……但仅此一次吧。为了*具象音乐*警察。”"];
+	  86 [label="You: “老板，这台立体声8认证机器……”"];
+	  87 [label="Jump to: [boomhub]"];
+	  88 [label="not liking music"];
+	  89 [label="Bird's Nest Roy: “当然。这是一台消费设备，拥有专业的应用程序。”"];
+	  90 [label="Bird's Nest Roy: “我说了：12雷亚尔。4你完全就是盗窃吧，它根本就不算是个数字。”"];
+	  92 [label="You: “说的有道理，做生意嘛。那就12吧。”"];
+	  93 [label="Kim Kitsuragi: “从理论上说，是的。但我们现在没有时间。一般是这样的：先调查凶杀案，*然后*才是海滩派对。”"];
+	  94 [label="You: （转向金。）“从理论上讲：我能把它带去海滩派对吗？”"];
+	  95 [label="You: “10雷亚尔怎么样？”"];
+	  96 [label="Kim Kitsuragi: Variable[\"canal.inland_beach_party\"]"];
+	  97 [label="Variable[\"canal.inland_beach_party\"]", shape=diamond];
+	  98 [label="!(Variable[\"canal.inland_beach_party\"])", shape=diamond];
+	  99 [label="Half Light: 成功！！！算是吧。只要能完成任务，对吧？"];
+	  100 [label="You: “我想买那台手提音箱。”"];
+	  101 [label="Jump to: [boomhub]"];
+	  102 [label="Bird's Nest Roy: “我自己录的东西——汽車飞速驶过时，抽屉里银器摇晃的声音，爬上屋顶的夜行动物的声音，飞艇转子的声音，那一类的。”"];
+	  103 [label="You: “你说得对。只有在世界末日才需要它：为所有生命奉上一首安魂曲。”"];
+	  104 [label="Bird's Nest Roy: “其实，可以吧。就这样吧。8这个数字比12更好一些。内在甚至更加平衡了。”他观察着墙上的灯光，然后补充到：“完整性也更好。”"];
+	  105 [label="Interfacing: 在买之前，只要确认它能工作就行。"];
+	  106 [label="You: “其实我想知道的是……我的警察工作用得着这个设备吗？”"];
+	  107 [label="You: “这个手提音箱不能给我打个折吗？来个*警察*折扣。”"];
+	  108 [label="Bird's Nest Roy: “12是个好数字。很好的内在平衡。”他研究着墙上的灯光。“12有完整性。”"];
+	  109 [label="You: “感谢你的折扣，伙计。这是买音箱的钱。”"];
+	  110 [label="Bird's Nest Roy: “好吧。”他决然地点点头。“那就4雷亚尔了。”"];
+	  111 [label="You: “我需要买下那台手提音箱。”"];
+	  0 -> 1
+	  1 -> 66
+	  2 -> 17
+	  3 -> 50
+	  4 -> 32
+	  4 -> 54
+	  5 -> 15
+	  6 -> 8
+	  6 -> 7
+	  7 -> 88
+	  8 -> 87
+	  9 -> 10
+	  9 -> 11
+	  10 -> 48
+	  11 -> 42
+	  12 -> 51
+	  13 -> 51
+	  14 -> 12
+	  15 -> 34
+	  16 -> 30
+	  17 -> 51
+	  18 -> 29
+	  19 -> 70
+	  20 -> 6
+	  21 -> 44
+	  22 -> 17
+	  23 -> 17
+	  24 -> 101
+	  25 -> 102
+	  26 -> 39
+	  27 -> 96
+	  28 -> 52
+	  29 -> 65
+	  30 -> 20
+	  31 -> 51
+	  33 -> 87
+	  34 -> 35
+	  34 -> 36
+	  35 -> 29
+	  36 -> 79
+	  37 -> 85
+	  38 -> 90
+	  39 -> 105
+	  40 -> 41
+	  41 -> 13
+	  42 -> 51
+	  43 -> 17
+	  44 -> 45
+	  44 -> 46
+	  45 -> 29
+	  46 -> 18
+	  48 -> 42
+	  49 -> 51
+	  50 -> 28
+	  50 -> 84
+	  50 -> 53
+	  50 -> 103
+	  51 -> 100
+	  51 -> 40
+	  51 -> 106
+	  51 -> 107
+	  51 -> 76
+	  51 -> 109
+	  51 -> 74
+	  51 -> 111
+	  51 -> 16
+	  51 -> 83
+	  51 -> 86
+	  52 -> 23
+	  53 -> 43
+	  54 -> 26
+	  55 -> 62
+	  56 -> 33
+	  57 -> 89
+	  58 -> 42
+	  59 -> 60
+	  59 -> 61
+	  60 -> 3
+	  61 -> 93
+	  62 -> 64
+	  62 -> 63
+	  63 -> 27
+	  64 -> 49
+	  65 -> 37
+	  65 -> 38
+	  65 -> 75
+	  65 -> 19
+	  65 -> 92
+	  65 -> 95
+	  66 -> 67
+	  66 -> 68
+	  67 -> 71
+	  68 -> 4
+	  69 -> 22
+	  70 -> 110
+	  71 -> 72
+	  71 -> 73
+	  72 -> 47
+	  73 -> 31
+	  75 -> 104
+	  76 -> 82
+	  77 -> 51
+	  78 -> 44
+	  79 -> 80
+	  79 -> 81
+	  80 -> 21
+	  81 -> 78
+	  83 -> 82
+	  84 -> 2
+	  85 -> 42
+	  86 -> 24
+	  87 -> 51
+	  88 -> 56
+	  88 -> 25
+	  89 -> 77
+	  90 -> 9
+	  92 -> 108
+	  93 -> 50
+	  94 -> 59
+	  95 -> 58
+	  96 -> 97
+	  96 -> 98
+	  97 -> 57
+	  97 -> 94
+	  98 -> 77
+	  99 -> 42
+	  100 -> 82
+	  101 -> 51
+	  102 -> 14
+	  103 -> 69
+	  104 -> 42
+	  105 -> 51
+	  106 -> 55
+	  107 -> 5
+	  108 -> 42
+	  109 -> 82
+	  110 -> 99
+	  111 -> 82
+}
+

@@ -1,0 +1,817 @@
+# APT / WCW MAIN
+# Working Class Woman in her room, apartment #20.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Pain Threshold: Here it comes."];
+	  3 [label="Jump to: [MAIN HUB]"];
+	  4 [label="Working Class Woman: \"Is this about Victor, my husband? Is he in some kind of trouble again? I can come pick him up in the station if that's what...\" She stops, her eyes trying to read answers from your face."];
+	  5 [label="MAIN HUB"];
+	  6 [label="Working Class Woman: \"The girls are staying at their friend's place tonight, and Victor is... out.\""];
+	  7 [label="Jump to: [small questions hub]"];
+	  8 [label="You: \"How old are your daughters?\""];
+	  9 [label="IsKimHere()"];
+	  10 [label="IsKimHere()", shape=diamond];
+	  11 [label="!(IsKimHere())", shape=diamond];
+	  12 [label="Reaction Speed: You sense that the lieutenant is ready to say something -- don't let him. Fix this yourself, you did this."];
+	  13 [label="Working Class Woman: \"Oh,\" she says again, \"But he was just...\" She looks at the kitchen table, where two cigarette butts are still in the tray."];
+	  14 [label="Working Class Woman: \"And you just... found him there? Lying in the cold?\" She shakes her head."];
+	  15 [label="You: \"I don't want to do this.\""];
+	  16 [label="You: \"You know what, it doesn't matter. I'll just... leave.\""];
+	  17 [label="Perception (Hearing): You hear the clock ticking in the children's room."];
+	  18 [label="Working Class Woman: \"Oh,\" she says again, \"But he was just...\" She looks at the kitchen table, where two cigarette butts are still in the tray."];
+	  19 [label="Working Class Woman: \"Um, it's just your average brown leather jacket. But he bought it as a teenager, so...\""];
+	  20 [label="Working Class Woman: \"God, should I call them? Should I tell them to come home?\""];
+	  21 [label="Physical Instrument: These are her last reserves of strength. Her muscles will give in soon. Already she starts to shake."];
+	  22 [label="Working Class Woman: \"How have I been?\" she shakes her head. \"You're not here to discuss *me* -- what is this about, officer?\""];
+	  23 [label="You: [Set the library card by her. Leave the room.]"];
+	  24 [label="Working Class Woman: \"It's you. From the bookstand.\" For a moment she seems paralysed, just looking at you. Then she forces herself out of it.\n\"It's you. From the bookstand.\" For a moment she seems paralysed, just looking at you and the lieutenant. Then she snaps out of it."];
+	  25 [label="Working Class Woman: \"No, I'm Billie.\" She narrows her eyes. \"Is this about my husband, Victor? I can come pick him up in the station if that's what...\" She stops, her eyes trying to read answers from your face."];
+	  26 [label="Working Class Woman: \"Why, it's *that bad*?\""];
+	  27 [label="IsKimHere()"];
+	  28 [label="IsKimHere()", shape=diamond];
+	  29 [label="!(IsKimHere())", shape=diamond];
+	  30 [label="Working Class Woman: \"Just tell me, what do I need to do next? Where is he? Can I see him?\""];
+	  31 [label="Working Class Woman: \"What?\" She stares at you with hazy eyes."];
+	  32 [label="You: \"Ma'am, I'm very sorry to say, but your husband, Victor Méjean, was found dead on the Martinaise boardwalk.\""];
+	  33 [label="Working Class Woman: \"Thank you.\" She looks down. \"Thank you for telling me. I'll call, if...\" She runs out of breath."];
+	  34 [label="Working Class Woman: \"Mhmh, they came home later. They're good girls.\""];
+	  35 [label="Empathy: Yes. That's the most important thing. Use that word."];
+	  36 [label="You: \"Yes.\""];
+	  37 [label="Empathy: If you say 'Two days, maybe', it will be etched in her mind forever."];
+	  38 [label="Working Class Woman: \"Hello, I'm Billie. Would you like something to drink? Tea, lemonade?\" she asks nervously. \"We're out of coffee, I was supposed to get some tomorrow...\""];
+	  39 [label="You: \"Out where?\""];
+	  40 [label="You: \"He still hasn't come home?\""];
+	  41 [label="Empathy: I don't want to."];
+	  42 [label="IsKimHere()"];
+	  43 [label="IsKimHere()", shape=diamond];
+	  44 [label="!(IsKimHere())", shape=diamond];
+	  45 [label="Working Class Woman: \"Excuse me, what?\" She blinks. \"What-did-you-say?\""];
+	  46 [label="You: \"Your husband has expired.\""];
+	  47 [label="Working Class Woman: \"I'll take it from here. Thank you.\" She points at the front door, breathing fast now. Holding herself back."];
+	  48 [label="You: \"It was an accident -- he fell through a hole in the boardwalk and hit his head.\""];
+	  49 [label="You: \"We don't know yet, but we will let you know when the results arrive.\""];
+	  50 [label="Kim Kitsuragi: \"We've taken him to the city morgue. The local coroner will be contacting you shortly to arrange the funeral. Here's his number in case you want to contact him earlier.\" He hands her a leaflet with the morgue's contact information."];
+	  51 [label="Empathy: You know the answer to this. Oddly, you just do."];
+	  52 [label="Working Class Woman: \"Yes.\" She becomes unsettled as she says that, her forehead scrunching up into a worried expression."];
+	  53 [label="IsKimHere()"];
+	  54 [label="IsKimHere()", shape=diamond];
+	  55 [label="!(IsKimHere())", shape=diamond];
+	  56 [label="Composure: She swallows visibly."];
+	  57 [label="IsKimHere()"];
+	  58 [label="IsKimHere()", shape=diamond];
+	  59 [label="!(IsKimHere())", shape=diamond];
+	  60 [label="Kim Kitsuragi: \"Central Jamrock Public Library?\""];
+	  61 [label="Empathy: What are you still doing here?! She needs time to be alone now."];
+	  62 [label="small questions hub"];
+	  63 [label="You: \"There's something else I have to tell you...\""];
+	  64 [label="Jump to: [MAIN HUB]"];
+	  65 [label="Working Class Woman: \"Say what?\" She looks frightened."];
+	  66 [label="You: Look away."];
+	  67 [label="Working Class Woman: \"A brain condition?\""];
+	  68 [label="IsKimHere()"];
+	  69 [label="IsKimHere()", shape=diamond];
+	  70 [label="!(IsKimHere())", shape=diamond];
+	  71 [label="You: \"We've taken him to the city morgue. The local coroner will be contacting you shortly to arrange the funeral. In the meantime, you can always call the RCM if you have any questions.\""];
+	  72 [label="You: \"No distinctive features?\""];
+	  73 [label="Working Class Woman: \"Yes...\" She stops. \"The lining is hand-sewn. It's blue; I tried to make the thing more weatherproof since he's running around with it in the middle of winter.\""];
+	  74 [label="You: \"Two days, maybe.\""];
+	  75 [label="Working Class Woman: \"People gotta eat.\" She rubs her hands together, anxious. \"What is this about? Why are you suddenly asking me about my cooking?\""];
+	  76 [label="IsKimHere()"];
+	  77 [label="IsKimHere()", shape=diamond];
+	  78 [label="!(IsKimHere())", shape=diamond];
+	  80 [label="You: \"It's not about the cockatoo.\""];
+	  81 [label="You: \"To your knowledge, did he make it to the library?\""];
+	  82 [label="You: \"Just dead.\""];
+	  83 [label="Kim Kitsuragi: \"I understand that this comes as a huge shock. I want you to know that me and my partner,\" he points at you, \"are here for you if you have any questions. We're very sorry for your loss, ma'am.\""];
+	  84 [label="You: \"I don't know where they go...\""];
+	  85 [label="You: (No words. Just give her the lieutenant's handkerchief.)"];
+	  86 [label="Variable[\"apt.NewVariable\"]"];
+	  87 [label="Variable[\"apt.NewVariable\"]", shape=diamond];
+	  88 [label="!(Variable[\"apt.NewVariable\"])", shape=diamond];
+	  89 [label="Variable[\"plaza.working_asked_about_cockatoo\"]"];
+	  90 [label="Variable[\"plaza.working_asked_about_cockatoo\"]", shape=diamond];
+	  91 [label="!(Variable[\"plaza.working_asked_about_cockatoo\"])", shape=diamond];
+	  92 [label="You: \"Can you describe it?\""];
+	  93 [label="You: (Slap your cheek.) \"Stupid... stupid... just say it...\""];
+	  94 [label="You: (Turn to Billie.) \"It seems like there's a part of me that refuses to do this.\""];
+	  95 [label="Working Class Woman: \"No, no...\" She breathes in. \"I just need to tell my girls...\" The air gets sucked out of her lungs suddenly."];
+	  96 [label="Working Class Woman: \"Jolie is sixteen and Jennie is turning eighteen next month.\""];
+	  97 [label="Logic: It is."];
+	  98 [label="Physical Instrument: *Force* yourself. Slap yourself."];
+	  99 [label="Empathy: He was just here. Alive."];
+	  100 [label="Conceptualization: Unreal."];
+	  101 [label="Working Class Woman: \"No. I guess I'll find out when he decides to come back home.\" She looks at the front door."];
+	  102 [label="You: Wait, what?"];
+	  103 [label="kim fail hub"];
+	  104 [label="Variable[\"apt.wcw_reaction_dont_let_kim_cut_in\"]"];
+	  105 [label="Variable[\"apt.wcw_reaction_dont_let_kim_cut_in\"]", shape=diamond];
+	  106 [label="!(Variable[\"apt.wcw_reaction_dont_let_kim_cut_in\"])", shape=diamond];
+	  107 [label="Working Class Woman: \"Oh.\""];
+	  108 [label="Working Class Woman: \"You haven't even taken him away?!\" There's alarm in her voice."];
+	  109 [label="Working Class Woman: \"No, I meant -- where is *his body*?!\""];
+	  110 [label="You: \"Here, take this.\" (Give her the lieutenant's handkerchief.)"];
+	  111 [label="You: \"No, take a day to recover. You'll be better prepared when they come home tomorrow.\""];
+	  112 [label="Working Class Woman: \"Just tell me, what do I need to do next? Where is he? Can I see him?\""];
+	  113 [label="You: \"Yes, I remember, you mentioned them at the bookstand.\""];
+	  114 [label="Working Class Woman: She looks up, too anxious to say anything."];
+	  115 [label="Kim Kitsuragi: The lieutenant nods at the woman, then looks back at you, his voice lowered: \"We should step outside and talk.\""];
+	  116 [label="Untitled hub"];
+	  117 [label="IsKimHere()"];
+	  118 [label="IsKimHere()", shape=diamond];
+	  119 [label="!(IsKimHere())", shape=diamond];
+	  120 [label="You: [Set the library card by her. Leave the room.]"];
+	  121 [label="You: \"You live here with Victor, your husband, right?\""];
+	  122 [label="Working Class Woman: \"It's you from the bookstand...\" She just looks at you for a moment without knowing what to do."];
+	  123 [label="You: \"I really don't know.\""];
+	  124 [label="Working Class Woman: \"I see...\" She withdraws, trying to picture the scene. \"And you just... found him there? Lying in the cold?\""];
+	  125 [label="IsKimHere()"];
+	  126 [label="IsKimHere()", shape=diamond];
+	  127 [label="!(IsKimHere())", shape=diamond];
+	  128 [label="Working Class Woman: \"I see. Well, thank you for... telling me.\" She rubs her face, runs her fingers over cheeks that have become numb."];
+	  129 [label="Working Class Woman: \"I think it was Thibault's 'The Glinting Curve'.\" She tucks a strand of hair behind her ear. \"It was pretty good...\""];
+	  130 [label="Empathy: Do something? Break something? It's a fool's hope."];
+	  131 [label="Pain Threshold: A great and terrible spike. The blood freezes in her veins."];
+	  132 [label="Drama: A very good call."];
+	  133 [label="prehub"];
+	  134 [label="Variable[\"plaza.working_pre_greeting_done\"]"];
+	  135 [label="Variable[\"plaza.working_pre_greeting_done\"]", shape=diamond];
+	  136 [label="!(Variable[\"plaza.working_pre_greeting_done\"])", shape=diamond];
+	  137 [label="Working Class Woman: \"It's me, Victor, and the kids here,\" she nods. \"We have two daughters, Jennie and Jolie.\""];
+	  138 [label="Working Class Woman: \"Why, do you have any news?\""];
+	  139 [label="Working Class Woman: \"Oh, it's in Jamrock. The one at Meroe street. I don't know the official name.\""];
+	  140 [label="You: \"No, he's dead.\""];
+	  141 [label="You: \"It's in the morgue.\""];
+	  142 [label="You: \"I understand that this may come as a huge shock. I want you to know that I'm here for you if you have any questions. Take your time, ma'am, I'm not going anywhere.\""];
+	  143 [label="Working Class Woman: \"Was he drunk?\""];
+	  144 [label="Working Class Woman: \"How long had he been there?\""];
+	  145 [label="Working Class Woman: A small, terrified smile quivers on her face as she takes the handkerchief and wipes away the tears. She looks disoriented."];
+	  146 [label="You: \"Yes, they should know. Do you want us to call them and ask them here?\""];
+	  147 [label="Pain Threshold: It burns like acid."];
+	  148 [label="Physical Instrument: These are her last reserves of strength. Her muscles will give in soon. Already she starts to shake."];
+	  149 [label="Working Class Woman: \"God, should I call them? Should I tell them to come home?\""];
+	  150 [label="You: \"Yes.\""];
+	  151 [label="Drama: Can't write a scene without knowing the actors. Ask more, get comfortable around her."];
+	  152 [label="Pain Threshold: It's like ripping off a bandage. The least painful way is to do it straight away, without stalling."];
+	  153 [label="You: \"Do you remember what he was wearing when you last saw him?\"\n\"Remind me again, what was he wearing when you last saw him?\""];
+	  154 [label="You: \"Trust me, ma'am, you *don't* want to know.\""];
+	  155 [label="You: \"Your husband, Victor Méjean, is dead. I'm very sorry for your loss, ma'am.\""];
+	  156 [label="how did he die"];
+	  157 [label="You: \"It's hard to say at this point.\""];
+	  158 [label="Visual Calculus: Condensation -- from stepping inside."];
+	  159 [label="IsKimHere()"];
+	  160 [label="IsKimHere()", shape=diamond];
+	  161 [label="!(IsKimHere())", shape=diamond];
+	  162 [label="You: \"I'm not really here for the tea.\""];
+	  163 [label="You: [Leave.]"];
+	  164 [label="Logic: She must know you're here because of her husband."];
+	  165 [label="Variable[\"TASK.find_working_class_husband\"]"];
+	  166 [label="Variable[\"TASK.find_working_class_husband\"]", shape=diamond];
+	  167 [label="!(Variable[\"TASK.find_working_class_husband\"])", shape=diamond];
+	  168 [label="You: \"Hold on... *You're* Billie? I thought Billie was a man...\""];
+	  169 [label="Working Class Woman: \"What happened to him? Tell me.\" Her neck and cheeks are covered with red blotches, her double chin is shaking."];
+	  170 [label="IsKimHere()"];
+	  171 [label="IsKimHere()", shape=diamond];
+	  172 [label="!(IsKimHere())", shape=diamond];
+	  173 [label="Reaction Speed: The handkerchief!"];
+	  174 [label="Kim Kitsuragi: \"Is there anything else that the RCM could do for you?"];
+	  175 [label="Empathy: He must feel vulnerable without his glasses. Is this why he's letting you take the lead?"];
+	  176 [label="You: God, do I just say he's *dead* like that..."];
+	  177 [label="Empathy: There has been enough pain."];
+	  178 [label="Pain Threshold: She's in pain. She's in so much pain and so are you, your chest is burning."];
+	  179 [label="Working Class Woman: \"As I already told you, he has a problem with drinking. And so he... disappears every now and then.\""];
+	  180 [label="Variable[\"TASK.find_working_class_husband\"]"];
+	  181 [label="Variable[\"TASK.find_working_class_husband\"]", shape=diamond];
+	  182 [label="!(Variable[\"TASK.find_working_class_husband\"])", shape=diamond];
+	  183 [label="Working Class Woman: \"He's probably in the Pox, drinking with his friends. I sent him to the library a few days ago, but I guess something came up...\" She smiles sourly."];
+	  184 [label="You: \"Your husband's dead.\""];
+	  185 [label="Working Class Woman: \"Do what?\""];
+	  186 [label="IsKimHere()"];
+	  187 [label="IsKimHere()", shape=diamond];
+	  188 [label="!(IsKimHere())", shape=diamond];
+	  189 [label="Kim Kitsuragi: \"He was taken to the city morgue. The local coroner will be contacting you shortly to arrange the funeral. Here's his number in case you want to contact him earlier.\" He hands her a leaflet with the morgue's contact information."];
+	  190 [label="Kim Kitsuragi: \"Is there anything else that the RCM could do for you?\""];
+	  191 [label="Working Class Woman: \"And who should I contact...?\""];
+	  192 [label="You: \"I drank too much and now I can't do anything right anymore.\""];
+	  193 [label="Working Class Woman: She just nods, distant and inconsolable. The bed springs rattle beneath her as she begins to shake."];
+	  194 [label="Working Class Woman: She blinks, eyes welling up with tears, as her hands start searching for something from the pockets of her dress."];
+	  195 [label="You: \"What was he supposed to do in the library?\""];
+	  196 [label="Kim Kitsuragi: The lieutenant has taken off his foggy glasses and is busy cleaning them in his handkerchief for now. You're on your own here."];
+	  197 [label="Pain Threshold: It burns like acid."];
+	  198 [label="Working Class Woman: \"I'll take it from here. Thank you.\" She points at the front door, breathing fast now. Holding herself back."];
+	  199 [label="Jump to: [Working Class Woman: \"...\"]"];
+	  200 [label="Working Class Woman: She just nods."];
+	  201 [label="Working Class Woman: \"It shouldn't be long from now. He's never gone for more than a few days.\""];
+	  202 [label="You: (Turn to Kim.) \"I don't want to do this.\""];
+	  203 [label="You: \"What was the name of the library?\""];
+	  204 [label="You: But we *have to*."];
+	  205 [label="You: \"He drank himself to death.\""];
+	  206 [label="Working Class Woman: \"How long had he *been* there?\""];
+	  207 [label="You: Say nothing."];
+	  208 [label="Working Class Woman: \"I guess what I want to know is... how did he die?\""];
+	  209 [label="Kim Kitsuragi: \"It looks like he slipped on the boardwalk -- fatally, I'm afraid. It was just a very unfortunate accident, although alcohol may have played a role.\""];
+	  210 [label="IsKimHere()"];
+	  211 [label="IsKimHere()", shape=diamond];
+	  212 [label="!(IsKimHere())", shape=diamond];
+	  213 [label="Kim Kitsuragi: \"We understand this comes as a huge shock. I want you to know that me and my partner,\" he points at you, \"are here for you if you have any questions. Take your time, ma'am.\""];
+	  214 [label="Working Class Woman: She blinks. \"What-did-you-say?\""];
+	  215 [label="You: \"It couldn't have been long.\""];
+	  216 [label="Jump to: [small questions hub]"];
+	  217 [label="Variable[\"apt.wcw_reaction_handkerchief\"]"];
+	  218 [label="Variable[\"apt.wcw_reaction_handkerchief\"]", shape=diamond];
+	  219 [label="!(Variable[\"apt.wcw_reaction_handkerchief\"])", shape=diamond];
+	  220 [label="Rhetoric: No euphemisms, this is what you came here for."];
+	  221 [label="Empathy: No. A day."];
+	  222 [label="Kim Kitsuragi: The lieutenant steps in. \"We're very sorry to inform you, but your husband, Victor Méjean, was found dead this morning on the Martinaise boardwalk.\""];
+	  223 [label="Volition: No-no! Stop now."];
+	  224 [label="You: \"So... how have you been?\""];
+	  225 [label="Working Class Woman: Something changes in her expression. \"No, this is something much worse... Is he in a hospital? How bad is it?\""];
+	  226 [label="Working Class Woman: \"I don't think I introduced myself properly -- I'm Billie. Would you like something to drink?\" She looks around the kitchen. \"Tea, lemonade? We're out of coffee...\""];
+	  227 [label="Working Class Woman: She folds her hands across her chest."];
+	  228 [label="no kim fail hub"];
+	  229 [label="Empathy: Too late, you ruined it, just say it now."];
+	  230 [label="Kim Kitsuragi: \"We're very sorry to inform you, but your husband, Victor Méjean, was found dead this morning on the Martinaise boardwalk.\""];
+	  231 [label="You: Let him talk."];
+	  232 [label="You: \"He fell and smashed his head against the bench.\""];
+	  233 [label="You: \"For a few days at least.\""];
+	  234 [label="You: \"Sorry I couldn't do this, I have a brain condition...\" (Tap on your head.)"];
+	  235 [label="Kim Kitsuragi: \"Again, if there's anything we could do for you, then don't hesitate to call the RCM, ma'am.\""];
+	  236 [label="IsKimHere()"];
+	  237 [label="IsKimHere()", shape=diamond];
+	  238 [label="!(IsKimHere())", shape=diamond];
+	  239 [label="Kim Kitsuragi: \"Is there anyone we could call for you? A friend, a family member, someone who could be here for you?\""];
+	  240 [label="You: \"Is there anyone we could call for you? A friend, a family member, someone who could be here for you?\""];
+	  241 [label="Working Class Woman: \"Thank you for telling, me officer...\" She looks down."];
+	  242 [label="Empathy: It reminded him of his teenage years."];
+	  243 [label="Empathy: But he was just here. Alive."];
+	  244 [label="Endurance: She can't take much more. Her stomach is churning. Soon she will have to go to the bathroom and scream."];
+	  245 [label="Half Light: You stupid... *why* did you say that?!"];
+	  246 [label="Working Class Woman: \"No, no...\" She breathes in. \"I just need to tell my girls...\" The air gets sucked out of her lungs suddenly."];
+	  247 [label="IsKimHere()"];
+	  248 [label="IsKimHere()", shape=diamond];
+	  249 [label="!(IsKimHere())", shape=diamond];
+	  250 [label="Working Class Woman: \"He... has a problem with drinking. And so he... disappears every now and then.\""];
+	  251 [label="Kim Kitsuragi: The lieutenant closes his mouth, but he doesn't look pleased."];
+	  252 [label="Working Class Woman: \"Where? Did he run *away*?\""];
+	  253 [label="Working Class Woman: \"Yes, I...\" She chokes on something, clutching on to her neck."];
+	  254 [label="Working Class Woman: \"Oh.\" She touches her neck, eyes pale like pearls in seawater."];
+	  255 [label="how did he die"];
+	  256 [label="CheckItem(\"lieutenants_handkerchief\")"];
+	  257 [label="CheckItem(\"lieutenants_handkerchief\")", shape=diamond];
+	  258 [label="!(CheckItem(\"lieutenants_handkerchief\"))", shape=diamond];
+	  259 [label="Working Class Woman: \"No, well...\" She stops. \"The lining is hand-sewn. It's blue; I tried to make the thing more weatherproof since he's running around with it in the middle of winter.\""];
+	  260 [label="Jump to: [small questions hub]"];
+	  261 [label="You: \"Central Jamrock Public Library?\""];
+	  262 [label="Conceptualization: Unreal."];
+	  263 [label="Pain Threshold: Yes. You're a total fucking horror show."];
+	  264 [label="You: \"Again, I'm very sorry, ma'am.\""];
+	  265 [label="Jump to: [Kim Kitsuragi: \"The lieutenant nods at the woman, t...\"]"];
+	  266 [label="Working Class Woman: The woman wipes her face with a sleeve and manages to conjure up a small terrified smile. She looks disoriented."];
+	  267 [label="You: \"Thanks, but I'm alright.\""];
+	  268 [label="Variable[\"apt.wcw_empathy_redcheck\"]"];
+	  269 [label="Variable[\"apt.wcw_empathy_redcheck\"]", shape=diamond];
+	  270 [label="!(Variable[\"apt.wcw_empathy_redcheck\"])", shape=diamond];
+	  271 [label="You: (Turn to Kim.) \"It seems like there's a part of me that refuses to do this.\""];
+	  272 [label="You: (Turn to Billie.) \"I don't want to do this.\""];
+	  273 [label="Kim Kitsuragi: \"Officer...\" the lieutenant warns you."];
+	  274 [label="Working Class Woman: \"Say what?\" She looks frightened."];
+	  275 [label="You: \"Alright, that's it then.\""];
+	  276 [label="sorry hub"];
+	  277 [label="IsKimHere()"];
+	  278 [label="IsKimHere()", shape=diamond];
+	  279 [label="!(IsKimHere())", shape=diamond];
+	  280 [label="Kim Kitsuragi: \"Apologies, my partner,\" the lieutenant steps in, giving you a sideways glance, \"did *not* mean to make light of the situation.\""];
+	  281 [label="Empathy: You've done this before. Just keep your focus."];
+	  282 [label="Working Class Woman: \"Oh.\" She touches her neck, eyes pale like pearls in seawater."];
+	  283 [label="Working Class Woman: \"What happened to him?\" She turns to you. Her neck and cheeks are covered with red blotches, her double chin is shaking."];
+	  284 [label="Physical Instrument: These are her last reserves of strength. Her muscles will give in soon. To a scream."];
+	  285 [label="Jump to: [MAIN HUB]"];
+	  286 [label="IsKimHere()"];
+	  287 [label="IsKimHere()", shape=diamond];
+	  288 [label="!(IsKimHere())", shape=diamond];
+	  289 [label="Variable[\"apt.wcw_finished_dialogue_teleported_outside\"]"];
+	  290 [label="Variable[\"apt.wcw_finished_dialogue_teleported_outside\"]", shape=diamond];
+	  291 [label="!(Variable[\"apt.wcw_finished_dialogue_teleported_outside\"])", shape=diamond];
+	  292 [label="You: (Look around.) \"And where is everybody? I don't see anyone home.\""];
+	  293 [label="Empathy: I don't want to do this."];
+	  294 [label="Empathy: Too late, you ruined it, just say it now."];
+	  295 [label="You: \"He's in a better place now.\""];
+	  296 [label="Working Class Woman: \"Expired?\" She narrows her eyes. \"Like a *milk carton*?\""];
+	  297 [label="Working Class Woman: \"Just tell me, what happened to Victor?\" She looks first at the lieutenant, then back at you."];
+	  298 [label="Working Class Woman: \"I'm sorry, I just need a... I don't know what to say.\" She rests her hand on her forehead, eyes pale like pearls in seawater."];
+	  299 [label="Working Class Woman: \"Alright, I'll call them...\" She breathes in again, trying to steady herself."];
+	  300 [label="You: \"He's in the morgue.\""];
+	  301 [label="You: \"No, but we will. We will take him to the city morgue.\""];
+	  302 [label="Working Class Woman: \"No, I'll do it myself, I just...\" She breathes again, holding on to her left side like she's in pain."];
+	  303 [label="IsKimHere()"];
+	  304 [label="IsKimHere()", shape=diamond];
+	  305 [label="!(IsKimHere())", shape=diamond];
+	  306 [label="Drama: For god's sake. Lie."];
+	  307 [label="Rhetoric: How about some small talk before you break the news?"];
+	  308 [label="Jump to: [small questions hub]"];
+	  309 [label="You: Not now. [Leave.]"];
+	  310 [label="Working Class Woman: \"His old leather jacket.\""];
+	  311 [label="dead hub"];
+	  312 [label="Jump to: [dead hub]"];
+	  313 [label="Working Class Woman: \"No. I'll call you if something comes up, I'm still a bit...\" She rubs her face, blotchy and numb."];
+	  314 [label="You: (Mumble.) \"I don't want to do this...\""];
+	  315 [label="Empathy: RCM? I wish Kim was here..."];
+	  316 [label="You: \"RCM?\""];
+	  317 [label="You: \"It's still there, on the boardwalk.\""];
+	  318 [label="You: \"It's still early to say, but at first glance it seems like he slipped and hit his head.\""];
+	  319 [label="Kim Kitsuragi: \"Here.\" The lieutenant takes out his handkerchief and offers it to the woman. She nods and slowly wipes away her tears."];
+	  320 [label="Working Class Woman: \"My handkerchief...\" She tries to smile through the tears, as she rubs her face with hands like a child."];
+	  321 [label="Working Class Woman: \"No, I'll call you if something comes up, I'm still...\" She rubs her face, runs her fingers over cheeks that have become numb."];
+	  322 [label="You: \"What about the inner lining?\""];
+	  323 [label="You: \"I noticed you were cooking something.\""];
+	  324 [label="Kim Kitsuragi: \"No, we *have*.\""];
+	  325 [label="Suggestion: Definitely no small talk, this isn't the time or place."];
+	  326 [label="Working Class Woman: \"It's you from the bookstand... Did you come to bring my cockatoo back?\" She smiles nervously, before the smile vanishes from her face."];
+	  327 [label="Composure: Keep it together. You don't want your body language to tell her the news."];
+	  328 [label="Variable[\"apt.wcw_composure_keep_it_together\"]"];
+	  329 [label="Variable[\"apt.wcw_composure_keep_it_together\"]", shape=diamond];
+	  330 [label="!(Variable[\"apt.wcw_composure_keep_it_together\"])", shape=diamond];
+	  331 [label="Working Class Woman: \"Sorry, I'm rambling...\" She shakes her head and tries to laugh it off. \"It's just that Victor often gets into all kinds of trouble. So, how can I help you?\""];
+	  332 [label="Working Class Woman: \"No.\" She stops."];
+	  333 [label="You: Tell her about the dead body."];
+	  334 [label="You: Variable[\"apt.wcw_empathy_redcheck\"]"];
+	  335 [label="Variable[\"apt.wcw_empathy_redcheck\"]", shape=diamond];
+	  336 [label="!(Variable[\"apt.wcw_empathy_redcheck\"])", shape=diamond];
+	  337 [label="Kim Kitsuragi: \"Officer...\" the lieutenant warns you."];
+	  338 [label="You: \"It's hard to say.\""];
+	  339 [label="Kim Kitsuragi: \"Is there anyone we could call for you? A friend, a family member, someone who could be here for you?\""];
+	  340 [label="Working Class Woman: \"Alright, I'll call the RCM then,\" she nods to herself."];
+	  341 [label="Working Class Woman: \"Yes, thank you.\" She smiles a small, terrified smile, then wipes away her tears. She looks disoriented."];
+	  342 [label="You: \"Again, I'm very sorry, ma'am.\" [Set the library card by her. Leave the room.]"];
+	  343 [label="You: \"What was the name of the book?\""];
+	  344 [label="You: \"Was it 'The Glinting Curve' by M. Thibault?\""];
+	  345 [label="Working Class Woman: \"I think, yes. If that's the one on Meroe.\""];
+	  346 [label="Drama: A very good call. You must leave now, sire."];
+	  347 [label="Endurance: She can't take much more. Her stomach is churning. Soon she will have to go to the bathroom and scream."];
+	  348 [label="You: \"Very long, ma'am. I'm sorry.\""];
+	  349 [label="Half Light: She's afraid -- and so are you. Man up and cut to the point."];
+	  350 [label="Working Class Woman: ..."];
+	  351 [label="Working Class Woman: She's crying, too heartbroken to notice you standing next to her."];
+	  352 [label="You: Don't give her the lieutenant's handkerchief, it's too special."];
+	  353 [label="Composure: Keep it together. Your body language shouldn't give it away."];
+	  354 [label="You: (Slap your cheek.) \"Stupid... stupid... just say it...\""];
+	  355 [label="Working Class Woman: \"Do what?\""];
+	  356 [label="You: \"I said that he's dead.\""];
+	  357 [label="You: (Raise your palm.) \"Kim, I can handle this. Let me.\""];
+	  358 [label="Working Class Woman: She doesn't reply. Her eyes well up with tears, as she struggles to keep it together."];
+	  359 [label="You: \"Please don't cry.\""];
+	  360 [label="You: Smack your lips."];
+	  361 [label="You: \"He's still there, on the boardwalk.\""];
+	  362 [label="Working Class Woman: \"Yes,\" she says sharply, \"that's what happened to Victor too.\""];
+	  363 [label="Working Class Woman: \"I can't...\" She covers her mouth. \"I can't believe he's still *there*, this is *madness*.\""];
+	  364 [label="You: \"Alcohol may have played a role, yes.\""];
+	  365 [label="handkerchief"];
+	  366 [label="Working Class Woman: \"Good, that's probably the right thing, thank you...\" She nods, but with a wretched expression."];
+	  367 [label="Working Class Woman: \"Just to return a book of mine, why?\" She looks at you quizzically. \"Why all those questions, detective? Did he...\""];
+	  0 -> 1
+	  1 -> 289
+	  2 -> 64
+	  3 -> 5
+	  4 -> 327
+	  5 -> 224
+	  5 -> 163
+	  5 -> 323
+	  5 -> 333
+	  5 -> 121
+	  6 -> 56
+	  7 -> 62
+	  8 -> 96
+	  9 -> 10
+	  9 -> 11
+	  10 -> 12
+	  11 -> 311
+	  12 -> 104
+	  13 -> 99
+	  14 -> 206
+	  15 -> 31
+	  16 -> 277
+	  17 -> 27
+	  18 -> 243
+	  19 -> 242
+	  20 -> 221
+	  21 -> 342
+	  22 -> 151
+	  23 -> 199
+	  24 -> 164
+	  25 -> 327
+	  26 -> 245
+	  27 -> 28
+	  27 -> 29
+	  28 -> 339
+	  29 -> 314
+	  29 -> 359
+	  30 -> 306
+	  31 -> 207
+	  32 -> 214
+	  33 -> 148
+	  34 -> 292
+	  35 -> 220
+	  36 -> 124
+	  37 -> 74
+	  37 -> 157
+	  37 -> 215
+	  38 -> 53
+	  39 -> 180
+	  40 -> 332
+	  41 -> 204
+	  41 -> 102
+	  42 -> 43
+	  42 -> 44
+	  43 -> 103
+	  44 -> 228
+	  45 -> 178
+	  46 -> 296
+	  47 -> 286
+	  48 -> 143
+	  49 -> 124
+	  50 -> 132
+	  51 -> 71
+	  52 -> 216
+	  53 -> 54
+	  53 -> 55
+	  54 -> 196
+	  55 -> 133
+	  56 -> 40
+	  56 -> 39
+	  57 -> 58
+	  57 -> 59
+	  58 -> 60
+	  59 -> 261
+	  60 -> 345
+	  62 -> 195
+	  62 -> 203
+	  62 -> 81
+	  62 -> 153
+	  62 -> 63
+	  63 -> 227
+	  64 -> 5
+	  65 -> 229
+	  66 -> 299
+	  67 -> 263
+	  68 -> 69
+	  68 -> 70
+	  69 -> 319
+	  70 -> 320
+	  71 -> 128
+	  72 -> 259
+	  73 -> 260
+	  74 -> 194
+	  75 -> 349
+	  76 -> 77
+	  76 -> 78
+	  77 -> 189
+	  78 -> 317
+	  78 -> 141
+	  80 -> 200
+	  81 -> 101
+	  82 -> 253
+	  83 -> 169
+	  84 -> 109
+	  85 -> 145
+	  86 -> 88
+	  86 -> 87
+	  87 -> 114
+	  88 -> 134
+	  89 -> 90
+	  89 -> 91
+	  90 -> 326
+	  91 -> 165
+	  92 -> 19
+	  93 -> 65
+	  94 -> 185
+	  95 -> 147
+	  96 -> 292
+	  97 -> 308
+	  98 -> 42
+	  99 -> 186
+	  100 -> 149
+	  101 -> 201
+	  102 -> 177
+	  103 -> 202
+	  103 -> 354
+	  103 -> 271
+	  104 -> 105
+	  104 -> 106
+	  105 -> 357
+	  105 -> 231
+	  106 -> 222
+	  107 -> 82
+	  108 -> 247
+	  109 -> 76
+	  110 -> 341
+	  111 -> 366
+	  112 -> 303
+	  113 -> 34
+	  114 -> 5
+	  115 -> 120
+	  116 -> 361
+	  116 -> 84
+	  116 -> 300
+	  117 -> 118
+	  117 -> 119
+	  118 -> 189
+	  119 -> 315
+	  120 -> 350
+	  121 -> 137
+	  122 -> 226
+	  123 -> 340
+	  124 -> 144
+	  125 -> 126
+	  125 -> 127
+	  126 -> 239
+	  127 -> 240
+	  128 -> 346
+	  129 -> 216
+	  130 -> 344
+	  130 -> 343
+	  131 -> 155
+	  132 -> 174
+	  133 -> 162
+	  133 -> 168
+	  133 -> 267
+	  133 -> 80
+	  133 -> 309
+	  134 -> 136
+	  134 -> 135
+	  135 -> 89
+	  136 -> 38
+	  137 -> 8
+	  137 -> 113
+	  137 -> 292
+	  138 -> 62
+	  139 -> 57
+	  140 -> 107
+	  141 -> 191
+	  142 -> 283
+	  143 -> 49
+	  143 -> 364
+	  143 -> 36
+	  144 -> 37
+	  145 -> 125
+	  146 -> 302
+	  147 -> 262
+	  148 -> 264
+	  149 -> 360
+	  149 -> 66
+	  149 -> 150
+	  150 -> 299
+	  151 -> 285
+	  152 -> 5
+	  153 -> 310
+	  154 -> 26
+	  155 -> 282
+	  156 -> 48
+	  156 -> 318
+	  157 -> 194
+	  158 -> 175
+	  159 -> 160
+	  159 -> 161
+	  160 -> 198
+	  161 -> 47
+	  162 -> 4
+	  164 -> 226
+	  165 -> 166
+	  165 -> 167
+	  166 -> 24
+	  167 -> 122
+	  168 -> 25
+	  169 -> 255
+	  170 -> 171
+	  170 -> 172
+	  171 -> 209
+	  172 -> 232
+	  172 -> 205
+	  173 -> 217
+	  174 -> 321
+	  175 -> 133
+	  176 -> 35
+	  177 -> 204
+	  178 -> 9
+	  179 -> 183
+	  180 -> 181
+	  180 -> 182
+	  181 -> 179
+	  182 -> 250
+	  183 -> 62
+	  184 -> 45
+	  185 -> 229
+	  186 -> 187
+	  186 -> 188
+	  187 -> 83
+	  188 -> 207
+	  188 -> 15
+	  189 -> 190
+	  190 -> 313
+	  191 -> 117
+	  192 -> 362
+	  193 -> 284
+	  194 -> 256
+	  195 -> 367
+	  196 -> 158
+	  197 -> 100
+	  198 -> 286
+	  199 -> 350
+	  200 -> 353
+	  201 -> 7
+	  202 -> 355
+	  203 -> 139
+	  204 -> 293
+	  205 -> 14
+	  206 -> 233
+	  206 -> 338
+	  206 -> 348
+	  207 -> 208
+	  208 -> 255
+	  209 -> 14
+	  210 -> 211
+	  210 -> 212
+	  211 -> 280
+	  212 -> 16
+	  213 -> 283
+	  214 -> 131
+	  215 -> 194
+	  216 -> 62
+	  217 -> 218
+	  217 -> 219
+	  218 -> 365
+	  219 -> 68
+	  220 -> 32
+	  221 -> 146
+	  221 -> 111
+	  222 -> 254
+	  223 -> 192
+	  223 -> 16
+	  224 -> 22
+	  225 -> 307
+	  226 -> 53
+	  227 -> 2
+	  228 -> 272
+	  228 -> 93
+	  228 -> 94
+	  229 -> 184
+	  230 -> 254
+	  231 -> 230
+	  232 -> 14
+	  233 -> 358
+	  234 -> 67
+	  235 -> 193
+	  236 -> 237
+	  236 -> 238
+	  237 -> 213
+	  238 -> 142
+	  239 -> 95
+	  240 -> 95
+	  241 -> 21
+	  242 -> 72
+	  242 -> 322
+	  243 -> 236
+	  244 -> 112
+	  245 -> 170
+	  246 -> 197
+	  247 -> 248
+	  247 -> 249
+	  248 -> 324
+	  249 -> 301
+	  250 -> 183
+	  251 -> 297
+	  252 -> 140
+	  253 -> 298
+	  254 -> 13
+	  255 -> 232
+	  255 -> 154
+	  255 -> 205
+	  256 -> 257
+	  256 -> 258
+	  257 -> 173
+	  258 -> 68
+	  259 -> 260
+	  260 -> 62
+	  261 -> 345
+	  262 -> 20
+	  263 -> 223
+	  264 -> 115
+	  265 -> 115
+	  266 -> 125
+	  267 -> 4
+	  268 -> 269
+	  268 -> 270
+	  269 -> 281
+	  270 -> 41
+	  271 -> 355
+	  272 -> 185
+	  273 -> 294
+	  274 -> 337
+	  275 -> 277
+	  276 -> 234
+	  276 -> 275
+	  277 -> 278
+	  277 -> 279
+	  278 -> 235
+	  279 -> 193
+	  280 -> 16
+	  280 -> 275
+	  281 -> 176
+	  281 -> 32
+	  282 -> 18
+	  283 -> 156
+	  284 -> 159
+	  285 -> 5
+	  286 -> 288
+	  286 -> 287
+	  287 -> 265
+	  288 -> 23
+	  289 -> 290
+	  289 -> 291
+	  290 -> 351
+	  291 -> 86
+	  292 -> 6
+	  293 -> 98
+	  294 -> 184
+	  295 -> 252
+	  296 -> 140
+	  297 -> 312
+	  298 -> 207
+	  298 -> 15
+	  299 -> 347
+	  300 -> 191
+	  301 -> 363
+	  302 -> 244
+	  303 -> 304
+	  303 -> 305
+	  304 -> 50
+	  305 -> 51
+	  306 -> 116
+	  307 -> 325
+	  308 -> 62
+	  310 -> 92
+	  311 -> 356
+	  311 -> 46
+	  311 -> 295
+	  312 -> 311
+	  313 -> 276
+	  314 -> 246
+	  315 -> 123
+	  315 -> 316
+	  316 -> 340
+	  317 -> 108
+	  318 -> 143
+	  319 -> 240
+	  320 -> 240
+	  321 -> 33
+	  322 -> 73
+	  323 -> 75
+	  324 -> 189
+	  325 -> 152
+	  326 -> 226
+	  327 -> 328
+	  328 -> 329
+	  328 -> 330
+	  329 -> 331
+	  330 -> 225
+	  331 -> 307
+	  332 -> 138
+	  333 -> 334
+	  334 -> 336
+	  334 -> 335
+	  335 -> 268
+	  336 -> 268
+	  337 -> 294
+	  338 -> 358
+	  339 -> 246
+	  340 -> 276
+	  341 -> 125
+	  342 -> 350
+	  343 -> 129
+	  344 -> 52
+	  345 -> 97
+	  346 -> 241
+	  347 -> 30
+	  348 -> 358
+	  349 -> 3
+	  351 -> 61
+	  352 -> 266
+	  353 -> 328
+	  354 -> 274
+	  355 -> 273
+	  356 -> 107
+	  357 -> 251
+	  358 -> 17
+	  359 -> 246
+	  360 -> 299
+	  361 -> 108
+	  362 -> 210
+	  363 -> 191
+	  364 -> 124
+	  365 -> 352
+	  365 -> 85
+	  365 -> 110
+	  366 -> 244
+	  367 -> 130
+}
+

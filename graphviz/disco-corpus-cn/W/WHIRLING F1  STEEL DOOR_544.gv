@@ -1,0 +1,250 @@
+# WHIRLING F1 / STEEL DOOR
+# The steel door in the back of the kitchen. Leads to the storage area with the elevator.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Blue door: Variable[\"whirling.steel_door_inland_haunted_ages\"]"];
+	  3 [label="Variable[\"whirling.steel_door_inland_haunted_ages\"]", shape=diamond];
+	  4 [label="!(Variable[\"whirling.steel_door_inland_haunted_ages\"])", shape=diamond];
+	  5 [label="Kim Kitsuragi: “这附近一定有钥匙。”警督说。“大概就在飞旋旅社里？但也不是*很*重要，我们可以从屋顶的门进出。”"];
+	  6 [label="Blue door: 这扇门安静地伫立着，对你的话置若罔闻。你还是认为如果有机会的话，还是调查一下为好……"];
+	  8 [label="You: “外面有架起吊机，就在屋顶上。就像一台小型*电梯*。”"];
+	  9 [label="Jump to: [steeldoorhub]"];
+	  10 [label="Perception (Smell): 不对。闻起来像是机油和木头的味道，是一个工作间。"];
+	  11 [label="You: “这扇门跟楼上的那扇是相通的，但我们该怎么过去呢？”"];
+	  12 [label="Blue door: Variable[\"whirling.bluedoor_inland_blue\"]"];
+	  13 [label="Variable[\"whirling.bluedoor_inland_blue\"]", shape=diamond];
+	  14 [label="!(Variable[\"whirling.bluedoor_inland_blue\"])", shape=diamond];
+	  15 [label="Blue door: Variable[\"whirling.steel_door_physint_a_challenge\"]"];
+	  16 [label="Variable[\"whirling.steel_door_physint_a_challenge\"]", shape=diamond];
+	  17 [label="!(Variable[\"whirling.steel_door_physint_a_challenge\"])", shape=diamond];
+	  18 [label="Blue door: 铁门纹丝不动。"];
+	  19 [label="Kim Kitsuragi: “我也是。”警督摸了摸锁。“锁上了——而且很坚固。油漆看起来很旧了，在餐厅之前就漆上了。"];
+	  20 [label="You: 不，并不是。"];
+	  21 [label="You: “这扇门和主调查将会合并成为一个*联合*调查。”"];
+	  22 [label="Blue door: Variable[\"TASK.enter_the_mysterious_door_done\"] == true"];
+	  23 [label="Variable[\"TASK.enter_the_mysterious_door_done\"] == true", shape=diamond];
+	  24 [label="!(Variable[\"TASK.enter_the_mysterious_door_done\"] == true)", shape=diamond];
+	  25 [label="You: 试试‘工作间备用’钥匙。"];
+	  26 [label="Interfacing: 起吊机，外面，在后院。还记得吗？忘了吗？你的*手指*可没有！"];
+	  27 [label="Kim Kitsuragi: “它并不值得一个专门的*标题*……”他看了看门，又看向你。“总而言之，加尔特才是我们要去询问的人——那个餐厅经理。”"];
+	  28 [label="Jump to: [steeldoorhub]"];
+	  29 [label="Blue door: Variable[\"auto.visited_pinball_room\"]  or  Variable[\"auto.visited_pinball_workshop\"]"];
+	  30 [label="Variable[\"auto.visited_pinball_room\"]  or  Variable[\"auto.visited_pinball_workshop\"]", shape=diamond];
+	  31 [label="!(Variable[\"auto.visited_pinball_room\"]  or  Variable[\"auto.visited_pinball_workshop\"])", shape=diamond];
+	  32 [label="Kim Kitsuragi: “很难说。”他看了看门，又看向你。“总而言之，加尔特才是我们要去询问的人——那个餐厅经理。”"];
+	  33 [label="Perception (Smell): 你面前的黑暗闻起来像是机油和木头的味道……"];
+	  34 [label="Blue door: Variable[\"apt.master_investigator_doors_opened\"] >=3"];
+	  35 [label="Variable[\"apt.master_investigator_doors_opened\"] >=3", shape=diamond];
+	  36 [label="!(Variable[\"apt.master_investigator_doors_opened\"] >=3)", shape=diamond];
+	  37 [label="Empathy: 他并不介意你的反常行为。他也对此感到好奇。"];
+	  38 [label="You: “不，这扇门需要*超级调查*。”\n“不，这扇门需要*超级调查*。我给它命名为……蓝门之后。”"];
+	  39 [label="Kim Kitsuragi: “嗯……是的，如果我们能进去的话，的确可以去看看。周全一点也好。就当是个……分支调查。”"];
+	  40 [label="You: [离开。]"];
+	  41 [label="Blue door: 你的话语传到了这扇门上，那无法撼动的钢铁材质甚至湮灭了回声。"];
+	  42 [label="Blue door: 这把钥匙刚好能插进这把锁里。经过多年的闲置，拧动钥匙稍微费力了一些。不过——锁还是打开了。"];
+	  43 [label="You: 拉这扇门——使劲。"];
+	  44 [label="You: 利用体重再加把劲。"];
+	  45 [label="Physical Instrument: 一个挑战！"];
+	  46 [label="Blue door: Variable[\"whirling.barreddoor_kick_down_success\"] == true"];
+	  47 [label="Variable[\"whirling.barreddoor_kick_down_success\"] == true", shape=diamond];
+	  48 [label="!(Variable[\"whirling.barreddoor_kick_down_success\"] == true)", shape=diamond];
+	  49 [label="Blue door: CheckItem(\"key_workshop_spare\")"];
+	  50 [label="CheckItem(\"key_workshop_spare\")", shape=diamond];
+	  51 [label="!(CheckItem(\"key_workshop_spare\"))", shape=diamond];
+	  52 [label="Blue door: 这把钥匙与凹槽锁完全匹配。毕竟这么多年过去了，转动它还得费些功夫。然后——锁开了。"];
+	  53 [label="You: 摸一下门。"];
+	  54 [label="Kim Kitsuragi: “是吗？”警督向你投来充满耐心与怀疑的目光。“这不过是厨房的后门。你为什么要关心它通往哪里？”"];
+	  55 [label="You: “没错，一次小小的分支调查。”"];
+	  56 [label="steeldoorhub"];
+	  57 [label="You: “我想知道这扇门通往哪里。”"];
+	  58 [label="You: “责任使然。我们也许能发现与本案有关的东西。”"];
+	  59 [label="Jump to: [steeldoorhub]"];
+	  60 [label="Kim Kitsuragi: “有点怪。但行吧，我们的确可以调查一下。就当是个……分支调查。”"];
+	  61 [label="You: “你说得对，这不重要。我们走吧。”"];
+	  62 [label="Blue door: 这扇门安静地伫立着，对你的话置若罔闻。"];
+	  63 [label="Jump to: [steeldoorhub]"];
+	  64 [label="Visual Calculus: 这扇门可能通往楼上那扇被封住的门。"];
+	  65 [label="Blue door: 大门纹丝不动。"];
+	  66 [label="Jump to: [steeldoorhub]"];
+	  67 [label="Blue door: 钴蓝色的表面手感粗糙。这扇不锈钢门严丝合缝地嵌在门框之中。"];
+	  68 [label="You: 放弃。"];
+	  69 [label="Kim Kitsuragi: 他看着你，然后看着门口。“加尔特才是我们要去询问的人——那个餐厅经理。”"];
+	  70 [label="Kim Kitsuragi: “既然你都这么说了。”他看了看门，又看向你。“加尔特才是我们要去询问的人——那个餐厅经理。”"];
+	  71 [label="Blue door: 现在你整个人都挂在了门把手上，门还是纹丝不动。"];
+	  72 [label="You: “我被它的钴蓝色吸引了。”"];
+	  73 [label="Kim Kitsuragi: “嗯……好吧。如果真有一架*起吊机*，的确可以去调查一下。就当是个……分支调查。”"];
+	  74 [label="Kim Kitsuragi: “*它*很漂亮，我们的确可以调查一下。就当是个……支线调查。”"];
+	  75 [label="Conceptualization: 你已经有一个名字了。"];
+	  76 [label="Jump to: [steeldoorhub]"];
+	  77 [label="Untitled hub"];
+	  78 [label="You: “我还会回来的，门。记住我的话。”[离开。]"];
+	  79 [label="Blue door: 这把钥匙与凹槽锁完全匹配。毕竟这么多年过去了，转动它还得费些功夫。然后——锁开了。"];
+	  80 [label="Inland Empire: 你立刻就被它的颜色*吸引*了，蓝色代表着神秘。"];
+	  81 [label="You: 试着推门。"];
+	  82 [label="Blue door: Variable[\"whirling.barreddoor_greeting_done\"]"];
+	  83 [label="Variable[\"whirling.barreddoor_greeting_done\"]", shape=diamond];
+	  84 [label="!(Variable[\"whirling.barreddoor_greeting_done\"])", shape=diamond];
+	  85 [label="Visual Calculus: 它连着相邻的侧楼。就是旁边那栋老楼，塌了大半了。那后面一定是什么更有年头的东西。"];
+	  86 [label="Jump to: [steeldoorhub]"];
+	  87 [label="Blue door: Variable[\"whirling.steel_door_conceptualization_named_investigation\"] == false"];
+	  88 [label="Variable[\"whirling.steel_door_conceptualization_named_investigation\"] == false", shape=diamond];
+	  89 [label="!(Variable[\"whirling.steel_door_conceptualization_named_investigation\"] == false)", shape=diamond];
+	  90 [label="Blue door: 眼前是一扇厚重的蓝色铁门，上面挂着一把显眼的凹槽锁。"];
+	  91 [label="Blue door: SetVariableValue(\"character.trigger_master_investigator_thought\", true) --[[ Variable[ ]]"];
+	  92 [label="Interfacing: 老旧的钴蓝颜料，粗糙的触感，刷上去已经有四五十年了？"];
+	  93 [label="Kim Kitsuragi: “没有钥匙我们是进不去的，不如去问问酒保……”他又纠正了自己。“餐厅经理。”"];
+	  94 [label="Blue door: Variable[\"TASK.investigate_mysterious_door\"] == false"];
+	  95 [label="Variable[\"TASK.investigate_mysterious_door\"] == false", shape=diamond];
+	  96 [label="!(Variable[\"TASK.investigate_mysterious_door\"] == false)", shape=diamond];
+	  97 [label="Physical Instrument: 好吧——本次*挑战*你失败了。然后呢，失败者？"];
+	  98 [label="Blue door: Variable[\"whirling.barreddoor_not_unimportant\"]"];
+	  99 [label="Variable[\"whirling.barreddoor_not_unimportant\"]", shape=diamond];
+	  100 [label="!(Variable[\"whirling.barreddoor_not_unimportant\"])", shape=diamond];
+	  101 [label="Inland Empire: 尘埃在你眼前如同雾气般升腾，一个墓室？寄居着来自遥远时代的皇室魂灵……"];
+	  102 [label="Blue door: 你是对的，这扇门根本*无法撼动*，用武力是打不开它的。"];
+	  103 [label="Blue door: IsKimHere()"];
+	  104 [label="IsKimHere()", shape=diamond];
+	  105 [label="!(IsKimHere())", shape=diamond];
+	  106 [label="whyhub"];
+	  107 [label="You: “它是褴褛飞旋的一部分，这里的*某种*东西让我很好奇。”"];
+	  108 [label="Blue door: Variable[\"yard.orb_winch_seen\"]"];
+	  109 [label="Variable[\"yard.orb_winch_seen\"]", shape=diamond];
+	  110 [label="!(Variable[\"yard.orb_winch_seen\"])", shape=diamond];
+	  111 [label="Kim Kitsuragi: “你试过用钥匙吗？”警督冲着锁点点头。“我认为这样应该行得通。”"];
+	  0 -> 1
+	  1 -> 90
+	  2 -> 3
+	  2 -> 4
+	  3 -> 10
+	  4 -> 33
+	  5 -> 28
+	  8 -> 73
+	  9 -> 56
+	  11 -> 49
+	  12 -> 13
+	  12 -> 14
+	  13 -> 46
+	  14 -> 80
+	  15 -> 16
+	  15 -> 17
+	  16 -> 43
+	  16 -> 20
+	  17 -> 59
+	  18 -> 44
+	  18 -> 68
+	  19 -> 93
+	  20 -> 102
+	  21 -> 70
+	  22 -> 24
+	  22 -> 23
+	  23 -> 79
+	  24 -> 94
+	  25 -> 34
+	  26 -> 106
+	  27 -> 9
+	  28 -> 56
+	  29 -> 30
+	  29 -> 31
+	  31 -> 101
+	  32 -> 9
+	  34 -> 35
+	  34 -> 36
+	  35 -> 91
+	  36 -> 22
+	  37 -> 75
+	  38 -> 87
+	  39 -> 75
+	  41 -> 66
+	  42 -> 29
+	  43 -> 18
+	  44 -> 71
+	  45 -> 15
+	  46 -> 48
+	  46 -> 47
+	  47 -> 56
+	  48 -> 82
+	  49 -> 50
+	  49 -> 51
+	  50 -> 111
+	  51 -> 5
+	  52 -> 29
+	  53 -> 67
+	  54 -> 108
+	  55 -> 69
+	  56 -> 40
+	  56 -> 11
+	  56 -> 78
+	  56 -> 81
+	  56 -> 53
+	  56 -> 25
+	  56 -> 57
+	  57 -> 98
+	  58 -> 39
+	  59 -> 56
+	  60 -> 37
+	  61 -> 6
+	  63 -> 56
+	  64 -> 56
+	  65 -> 45
+	  66 -> 56
+	  67 -> 92
+	  68 -> 102
+	  69 -> 9
+	  70 -> 9
+	  71 -> 97
+	  72 -> 74
+	  73 -> 75
+	  74 -> 75
+	  75 -> 77
+	  76 -> 56
+	  77 -> 21
+	  77 -> 38
+	  77 -> 55
+	  78 -> 62
+	  79 -> 29
+	  80 -> 46
+	  81 -> 65
+	  82 -> 83
+	  82 -> 84
+	  83 -> 64
+	  84 -> 56
+	  85 -> 86
+	  86 -> 56
+	  87 -> 88
+	  87 -> 89
+	  88 -> 32
+	  89 -> 27
+	  90 -> 12
+	  91 -> 22
+	  92 -> 85
+	  93 -> 76
+	  94 -> 96
+	  94 -> 95
+	  95 -> 52
+	  96 -> 42
+	  97 -> 63
+	  98 -> 99
+	  98 -> 100
+	  99 -> 19
+	  100 -> 103
+	  101 -> 2
+	  102 -> 63
+	  103 -> 104
+	  103 -> 105
+	  104 -> 54
+	  105 -> 41
+	  106 -> 8
+	  106 -> 72
+	  106 -> 107
+	  106 -> 58
+	  106 -> 61
+	  107 -> 60
+	  108 -> 109
+	  108 -> 110
+	  109 -> 26
+	  110 -> 106
+	  111 -> 28
+}
+

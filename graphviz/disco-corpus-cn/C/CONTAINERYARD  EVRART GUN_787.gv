@@ -1,0 +1,121 @@
+# CONTAINERYARD / EVRART GUN
+# "Let's talk about my lost gun."
+#&
+#"Can I have my lost gun now?"
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: “等等……那把枪可能从罗伊的当铺里卖出去了。你的人考虑到这一点了吗？”"];
+	  3 [label="Evrart Claire: “‘我不在乎我的枪……’”他重复到。“我喜欢，哈里！要是我能像你这样就好了。不过我做不到。我要对这个社区负责。我不能让一支上了膛的枪流落到街上。”"];
+	  4 [label="Jump to: [EVRARTHUB]"];
+	  5 [label="You: 等等，难道他真的扣了我的枪当*人质*？"];
+	  6 [label="Reaction Speed: 他对此并没有感到惊讶。他也许真的没有在哄骗你。"];
+	  7 [label="Evrart Claire: “现在……请让专业人士去完成他们的工作吧。休息一下，哈里，放松！我安排了*很棒的手下*去处理这件事。你应该专注重要的事——为了整个马丁内斯的利益，构建我们之间的友谊。”"];
+	  8 [label="Kim Kitsuragi: “当然，”警督干巴巴地回复到。“我理解。我们帮你——你帮我们。”"];
+	  9 [label="IsKimHere()"];
+	  10 [label="IsKimHere()", shape=diamond];
+	  11 [label="!(IsKimHere())", shape=diamond];
+	  12 [label="Half Light: 他没有。"];
+	  13 [label="Rhetoric: 谁知道呢？只有一件事可以肯定：如果你跟他合作，你就能把枪找回来，而且跟他合作可能是唯一的办法。"];
+	  15 [label="Variable[\"cargo.evrart_lost_gun_asked\"]"];
+	  16 [label="Variable[\"cargo.evrart_lost_gun_asked\"]", shape=diamond];
+	  17 [label="!(Variable[\"cargo.evrart_lost_gun_asked\"])", shape=diamond];
+	  18 [label="Evrart Claire: 他的口吻突然变得严肃起来。“就在我们说话的时候，小孩子很可能正在用枪玩轮盘游戏。青少年犯罪团队可能会用来武装自己。你要理智一点，哈里！”"];
+	  19 [label="You: “我不在乎我的枪。你留着吧。”"];
+	  20 [label="Kim Kitsuragi: “我向你保证，我们也在寻找失枪的下落。”"];
+	  21 [label="Jump to: [EVRARTHUB]"];
+	  22 [label="Esprit de Corps: 警督很担心失枪，而且感觉到你并没有把寻枪放在最高优先级是一个不幸的事实，如果合作不可避免，那RCM的处境会变得不太有利。"];
+	  23 [label="Evrart Claire: “一定*会*找到你的枪的，哈里。我可以向你保证。”他朝你眨眨眼。“这只需要一些时间，还有……一些*努力*。”"];
+	  24 [label="Evrart Claire: “是的，是的，我最厉害的手下正在调查。有些小孩看见其他小孩拿着它跑了。有些家伙说可能在一个偏执型精神分裂症患者那里。我们正在调查这些线索，哈里。”"];
+	  25 [label="Jump to: [Esprit de Corps: \"The lieutenant is concerned about t...\"]"];
+	  26 [label="IsKimHere()"];
+	  27 [label="IsKimHere()", shape=diamond];
+	  28 [label="!(IsKimHere())", shape=diamond];
+	  29 [label="Jump to: [EVRARTHUB]"];
+	  30 [label="Jump to: [EVRARTHUB]"];
+	  31 [label="You: “这是不是意味着如果想拿回我的枪，我就必须要为你做事？”"];
+	  32 [label="Evrart Claire: “‘我不在乎我的枪……’”他重复到。“我喜欢，哈里！要是我能像你这样就好了。不过我做不到。我要对这个社区负责。我不能让一支上了膛的枪流落到街上。”"];
+	  33 [label="Variable[\"cargo.evrart_gun_reaction_speed_did_not_fire\"] == true"];
+	  34 [label="Variable[\"cargo.evrart_gun_reaction_speed_did_not_fire\"] == true", shape=diamond];
+	  35 [label="!(Variable[\"cargo.evrart_gun_reaction_speed_did_not_fire\"] == true)", shape=diamond];
+	  36 [label="You: “我不会被枪的事情敲诈的。”"];
+	  37 [label="Evrart Claire: “太棒了，曷城先生。这可是个好消息。”他拍了拍手。“看来我们正在进行一次寻枪的友谊赛。”"];
+	  38 [label="Evrart Claire: “是的，很感谢你为自己失枪提供的*最新情报*，哈里。我的人确实”——他比了个手势引号——“*已经考虑过你当掉它这一点了*。”"];
+	  39 [label="Evrart Claire: “是的。你的失枪。”他的表情变得严肃起来。“我最好的手下已经在调查了。他们翻遍了每一块石头，搜寻过每一处运动场，询问小孩，老奶奶，所有人。”"];
+	  40 [label="Rhetoric: 找到它的唯一办法好像就是跟他合作。他甚至可能会把你的枪当成*人质*……"];
+	  41 [label="Kim Kitsuragi: “警官有些夸大其词，”警督一边说着，一边向前探了探身子。“我们当然在乎失枪的事，而且我们也在*积极*寻找。”"];
+	  42 [label="Inland Empire: 他对此并没有感到惊讶。他也许真的没有在哄骗你。"];
+	  43 [label="Evrart Claire: “怎么回事，哈里？你的脸色有点苍白。难道是因为一句话里出现了*偏执型精神分裂症*和*失枪*这两个词？别担心，这只是一条线索。最后可能什么也不是。”"];
+	  44 [label="IsKimHere()"];
+	  45 [label="IsKimHere()", shape=diamond];
+	  46 [label="!(IsKimHere())", shape=diamond];
+	  47 [label="Evrart Claire: “哈里，哈里——我只不过是想说的圆滑些。失枪可是个很危险的东西。我不能让它出现在我的街区。”"];
+	  48 [label="Evrart Claire: “见鬼，哈里，就是这个意思！”\n“见鬼，哈里，就是这个意思！”他转向警督。“当然了，我只是在开玩笑。”"];
+	  6050606 [label="JUMP OUT to CONTAINERYARD / EVRART", shape=diamond];
+	  0 -> 1
+	  1 -> 15
+	  2 -> 38
+	  3 -> 4
+	  4 -> 6050606
+	  5 -> 13
+	  6 -> 33
+	  7 -> 6
+	  8 -> 30
+	  9 -> 10
+	  9 -> 11
+	  10 -> 20
+	  11 -> 21
+	  12 -> 8
+	  13 -> 2
+	  13 -> 19
+	  13 -> 36
+	  13 -> 31
+	  15 -> 16
+	  15 -> 17
+	  16 -> 24
+	  17 -> 39
+	  18 -> 9
+	  19 -> 44
+	  20 -> 22
+	  21 -> 6050606
+	  22 -> 37
+	  23 -> 40
+	  24 -> 43
+	  25 -> 22
+	  26 -> 27
+	  26 -> 28
+	  27 -> 12
+	  28 -> 30
+	  29 -> 6050606
+	  30 -> 6050606
+	  31 -> 48
+	  32 -> 41
+	  33 -> 34
+	  33 -> 35
+	  34 -> 19
+	  34 -> 36
+	  34 -> 31
+	  35 -> 42
+	  36 -> 47
+	  37 -> 21
+	  38 -> 7
+	  39 -> 23
+	  40 -> 2
+	  40 -> 36
+	  40 -> 5
+	  40 -> 19
+	  40 -> 31
+	  41 -> 25
+	  42 -> 19
+	  42 -> 36
+	  42 -> 31
+	  43 -> 29
+	  44 -> 45
+	  44 -> 46
+	  45 -> 32
+	  46 -> 3
+	  47 -> 18
+	  48 -> 26
+}
+

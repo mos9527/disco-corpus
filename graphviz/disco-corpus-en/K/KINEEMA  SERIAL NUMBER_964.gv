@@ -1,0 +1,454 @@
+# KINEEMA / SERIAL NUMBER
+# 1. Ask Alice to run the serial number you got from the boot.
+#2. Come back the next day to get results and ask for Alice to try to get more personal info on the mercenary (finish task to run serial number, gain task to get personal info from serial number).
+#3. Come back the next day to get personal info (finish task to get personal info from serial number).
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Alice: Variable[\"whirling.klaasje_talked_about_lely\"]"];
+	  3 [label="Variable[\"whirling.klaasje_talked_about_lely\"]", shape=diamond];
+	  4 [label="!(Variable[\"whirling.klaasje_talked_about_lely\"])", shape=diamond];
+	  5 [label="Alice: \"No problem, officer. Just glad we got it straightened out. I'll contact the ICP database immediately. Call back tomorrow. Hopefully they'll have dug up something useful to your investigation by then.\""];
+	  6 [label="Alice: \"Officer, as much as I appreciate your efforts to lighten the mood, we both have important work to get back to. Did you have any other *serious* questions?\"\n\"Officer, I suspect you're just trying to keep me on the line, and I just... don't have time for this. Do you have any other *serious* questions?\""];
+	  7 [label="You: \"This doesn't seem relevant to my investigation.\" (Conclude the conversation.)"];
+	  8 [label="Visual Calculus: A suit of armour like this would have been manufactured with a particular person's physique in mind. You should ask for whom this suit was fitted."];
+	  9 [label="Alice: \"Sure. Call back tomorrow. Hopefully I will have more information for you then.\""];
+	  10 [label="Esprit de Corps: This is a fun challenge for her, an opportunity to contribute beyond doing her job by rote. She'll gladly put in the extra effort for team RCM!"];
+	  11 [label="You: \"Lelystad is probably where he got the name *Lely*.\"\n\"Lelystad is probably where he got the name Lely.\""];
+	  12 [label="Encyclopedia: I don't know about you, but I really, really enjoyed it. Worked out really well in the end."];
+	  13 [label="Kim Kitsuragi: The lieutenant leans in to listen, notebook in hand."];
+	  14 [label="You: \"So all we have to connect him to Krenel is the armour.\""];
+	  15 [label="Alice: IsKimHere()"];
+	  16 [label="IsKimHere()", shape=diamond];
+	  17 [label="!(IsKimHere())", shape=diamond];
+	  18 [label="You: \"Well, we have his name and service record now.\" (Move on.)"];
+	  19 [label="Alice: Variable[\"plaza.kineema_serial_told_wrong_a\"]"];
+	  20 [label="Variable[\"plaza.kineema_serial_told_wrong_a\"]", shape=diamond];
+	  21 [label="!(Variable[\"plaza.kineema_serial_told_wrong_a\"])", shape=diamond];
+	  22 [label="Alice: Variable[\"tc.crenel\"]"];
+	  23 [label="Variable[\"tc.crenel\"]", shape=diamond];
+	  24 [label="!(Variable[\"tc.crenel\"])", shape=diamond];
+	  25 [label="Alice: \"The most recently registered firm that the ICP has been able to connect to the CdP is a military contractor called *Krenel*. And the one before it was Downwell. I think they might be the same contractor.\""];
+	  26 [label="Alice: \"He was found as a newborn, in a leaf compactor, near an abandoned farm. He spent four months in the neonatal unit -- survived, apparently -- and was assigned to a foster family at two.\""];
+	  27 [label="Kim Kitsuragi: The lieutenant nods -- then jots it down in his notes: \"Lelystad -- Lely. I like that.\""];
+	  28 [label="Jump to: [thehubwhereithappened]"];
+	  29 [label="Jump to: [thehubwhereithappened]"];
+	  30 [label="Alice: \"They couldn't find anything on the full code you gave me. However, the first eight characters were match for a series of paintings by Tobias Pren -- you know, that artist who recently hanged himself?\""];
+	  31 [label="Alice: \"Does that seem relevant to your investigation?\""];
+	  32 [label="Jump to: [The actual Radio HUB]"];
+	  33 [label="You: \"No, what were his paintings like?\"\n\"What were his paintings like?\""];
+	  34 [label="Alice: \"Celebrity problems.\""];
+	  35 [label="Kim Kitsuragi: \"Armour like this isn't mass-produced -- it would have probably been fitted. Perhaps there's a record of who signed for this particular suit of armour.\""];
+	  36 [label="Alice: Variable[\"whirling.klaasje_katarzine_lelystad\"]  and  Variable[\"tc.name_kortenaer\"]"];
+	  37 [label="Variable[\"whirling.klaasje_katarzine_lelystad\"]  and  Variable[\"tc.name_kortenaer\"]", shape=diamond];
+	  38 [label="!(Variable[\"whirling.klaasje_katarzine_lelystad\"]  and  Variable[\"tc.name_kortenaer\"])", shape=diamond];
+	  39 [label="Jump to: [thehubwhereithappened]"];
+	  40 [label="Inland Empire: This means something to him. To know that name. Like naming a case. It's important."];
+	  42 [label="ease_of_use_hub"];
+	  43 [label="You: \"Cool... and what's the Moralintern?\""];
+	  44 [label="Electrochemistry: She means pills and alcohol. See, pills and alcohol make you *a celebrity*. Hasn't it been a while since you've had any?"];
+	  45 [label="You: \"Do you know what it's called now?\""];
+	  46 [label="Alice: \"Sorry, sir. I still haven't heard back from the database people. Try calling again later. Is there anything else I can do for you?\""];
+	  47 [label="Authority: There's a slightly weary, condescending note in her voice. She doesn't trust your professionalism following your rather tasteless come-ons."];
+	  48 [label="Alice: \"Yes. The armour was produced by...\" She looks at her notes. \"Fairweather in their facilities in Betancourt, Sur-la-Clef, in '42.\""];
+	  49 [label="You: \"Art is extremely relevant to my investigation. Thank you.\" (Conclude the conversation.)"];
+	  50 [label="prenhub"];
+	  51 [label="Alice: \"That suit of armour was issued to an Oranjese citizen named Ellis Kortenaer -- that's E-L-L-I-S K-O-R-T-E-N-A-E-R. Exact date of birth unknown. He was signed into the Lelystad County Neonatal Care Unit on 28th of February, ’09.\""];
+	  52 [label="You: \"The world will end soon.\""];
+	  53 [label="Alice: IsKimHere()"];
+	  54 [label="IsKimHere()", shape=diamond];
+	  55 [label="!(IsKimHere())", shape=diamond];
+	  56 [label="Jump to: [The actual Radio HUB]"];
+	  57 [label="Jump to: [diearmorhubbe]"];
+	  58 [label="Alice: \"Got it. I'll contact the ICP database immediately. Call back tomorrow. Hopefully they'll have dug up something useful by then.\""];
+	  59 [label="Alice: \"Yes, but the ICP tends to be reluctant to share private sector records. I could try to talk them into it, though.\""];
+	  60 [label="Jump to: [The actual Radio HUB]"];
+	  61 [label="Alice: \"No problem, lieutenant.\" She sounds pleased."];
+	  62 [label="Jump to: [The actual Radio HUB]"];
+	  63 [label="You: \"I'm not sure how this relates to my investigation yet, but I'm sure it does.\" (Conclude the conversation.)"];
+	  64 [label="Alice: \"I hope so. Anything else I can do for you?\""];
+	  65 [label="Alice: \"This is what the ICP knows about him: He was raised by foster parents, entered the Ijsbrand Military Academy -- in Vredefort -- at 17, then served in the Oranjese forces till he was honourably discharged in '41, just a year before the Semenese conflict.\""];
+	  66 [label="thehubwhereithappened"];
+	  67 [label="Authority: A compliment from Lieutenant Kitsuragi! Not bad."];
+	  68 [label="Alice: \"I'm glad the inquiry was helpful to your investigation, officer. Did you have any other questions?\""];
+	  69 [label="Jump to: [The actual Radio HUB]"];
+	  70 [label="Alice: \"Sure, officer. What's the number? And the make of the armour, if you know it?\""];
+	  71 [label="You: \"No, but thank you for looking into it.\""];
+	  72 [label="Alice: \"Just doing my job, officer. Was there anything else?\""];
+	  73 [label="Alice: \"Yes!\" She seems glad you guessed it. \"That is the most recent name the ICP has been able to connect to the CdP. And the one before it was Downwell. I also have one called Sediment -- but I think that might be a different contractor...\""];
+	  74 [label="You: \"Yes, please do try. It's imperative that we learn whose armour this was.\""];
+	  75 [label="Alice: Variable[\"plaza.kineema_serial_told_right\"]"];
+	  76 [label="Variable[\"plaza.kineema_serial_told_right\"]", shape=diamond];
+	  77 [label="!(Variable[\"plaza.kineema_serial_told_right\"])", shape=diamond];
+	  78 [label="Kim Kitsuragi: \"It is! Thank you, Alice!\""];
+	  79 [label="Alice: \"It was part of a special order for Corps de Pharmacie, a security firm contracted to protect the interests of Oranjese pharmaceutical companies. In the Semenine conflict.\""];
+	  80 [label="You: \"Yes, absolutely! This is exactly what I wanted.\""];
+	  81 [label="Alice: Variable[\"plaza.kineema_serial_concept_particular\"]"];
+	  82 [label="Variable[\"plaza.kineema_serial_concept_particular\"]", shape=diamond];
+	  83 [label="!(Variable[\"plaza.kineema_serial_concept_particular\"])", shape=diamond];
+	  84 [label="You: \"Yes, thank you, officer. I really appreciate your efforts in this case.\""];
+	  85 [label="You: \"You are my beautiful conquering heroine.\""];
+	  86 [label="Untitled hub"];
+	  87 [label="Jump to: [The actual Radio HUB]"];
+	  88 [label="You: \"You're right. I meant to say E50.100.1000. Sorry for the confusion.\""];
+	  89 [label="Alice: Variable[\"tc.moralintern\"]"];
+	  90 [label="Variable[\"tc.moralintern\"]", shape=diamond];
+	  91 [label="!(Variable[\"tc.moralintern\"])", shape=diamond];
+	  92 [label="Alice: Variable[\"tc.icp\"]"];
+	  93 [label="Variable[\"tc.icp\"]", shape=diamond];
+	  94 [label="!(Variable[\"tc.icp\"])", shape=diamond];
+	  95 [label="You: \"No, why did he hang himself?\"\n\"Why did he hang himself?\""];
+	  96 [label="You: \"I'm guessing one of its names is Krenel.\""];
+	  97 [label="You: \"First, has the firm continued to work for pharmaceutical companies through all these name changes?\""];
+	  98 [label="Alice: You hear her fingers on a keyboard. \"No, they were called *Sediment*. And *Somatosensor*, it seems. All that during the last nine years.\""];
+	  99 [label="Jump to: [tc.icp]"];
+	  100 [label="You: \"E50.100.1000. The make and model of the armour is Fairweather T-500 / VE.\""];
+	  101 [label="Alice: \"They couldn't find anything on the full code you gave me. However, the first ten characters tracked to a custom-made baby stroller made in Vaasa City ten years ago.\""];
+	  102 [label="Alice: \"I'm glad the inquiry was helpful to your investigation, officer. Did you have any other questions?\""];
+	  103 [label="Alice: \"Even that took quite a bit of convincing to retrieve the information from the database, officer.\""];
+	  104 [label="You: \"Any information on his foster parents?\""];
+	  105 [label="Alice: IsKimHere()"];
+	  106 [label="IsKimHere()", shape=diamond];
+	  107 [label="!(IsKimHere())", shape=diamond];
+	  108 [label="You: \"Wait, what's ICP?\""];
+	  109 [label="Alice: \"Okay.\" She's not worried. \"Does that mean you're ready?\""];
+	  110 [label="Kim Kitsuragi: \"Hah! Yes -- what Klaasje said. Very good. That makes sense to me.\" He takes a quick note."];
+	  111 [label="Alice: Variable[\"plaza.serial_number_2\"]"];
+	  112 [label="Variable[\"plaza.serial_number_2\"]", shape=diamond];
+	  113 [label="!(Variable[\"plaza.serial_number_2\"])", shape=diamond];
+	  114 [label="Alice: TotalHourCount() >= Variable[\"plaza.alice_serial_next_meeting_time\"]"];
+	  115 [label="TotalHourCount() >= Variable[\"plaza.alice_serial_next_meeting_time\"]", shape=diamond];
+	  116 [label="!(TotalHourCount() >= Variable[\"plaza.alice_serial_next_meeting_time\"])", shape=diamond];
+	  117 [label="Alice: \"No, and I doubt they'll get back to me before tomorrow morning. Anything else?\""];
+	  118 [label="Alice: \"Are you sure that's the right number? Doesn't sound like a serial.\""];
+	  119 [label="Alice: \"Well, I'll contact the ICP database immediately. Call back tomorrow. Hopefully they'll have dug up something useful to your investigation by then.\""];
+	  120 [label="Alice: \"Yes. It took some convincing, but I got the mercenary's name and a few biographical details. Are you ready?\"\n\"Yes. I got the mercenary's name and a few biographical details. Are you ready?\""];
+	  121 [label="Kim Kitsuragi: \"A name -- this is very good. Ellis Kortenaer...\" he says to himself."];
+	  122 [label="Alice: IsKimHere()"];
+	  123 [label="IsKimHere()", shape=diamond];
+	  124 [label="!(IsKimHere())", shape=diamond];
+	  125 [label="Kim Kitsuragi: \"Even that is a small miracle -- these *organizations* usually double check their inventory.\" He leans closer and shouts: \"Thank you, Alice. Great work!\""];
+	  126 [label="Jump to: [The actual Radio HUB]"];
+	  127 [label="Alice: Variable[\"plaza.kineema_69_joke\"]"];
+	  128 [label="Variable[\"plaza.kineema_69_joke\"]", shape=diamond];
+	  129 [label="!(Variable[\"plaza.kineema_69_joke\"])", shape=diamond];
+	  130 [label="Empathy: There's just a hint of weariness in her voice. It's not that she doesn't trust you -- she just wants to be thorough so as not to create extra work for both of you."];
+	  131 [label="Alice: \"Very pretty pictures of assorted wildlife meant to inspire viewers and look good over couches in office building lobbies.\" She hesitates. \"I've always sort of thought they were trash.\""];
+	  132 [label="Alice: \"Great. Anything else I can do for you?\""];
+	  133 [label="Jump to: [The actual Radio HUB]"];
+	  134 [label="You: \"Okay.\""];
+	  135 [label="You: \"Neonatal Care Unit?\""];
+	  136 [label="Jump to: [thehubwhereithappened]"];
+	  137 [label="Alice: Variable[\"plaza.serial_number_1\"]"];
+	  138 [label="Variable[\"plaza.serial_number_1\"]", shape=diamond];
+	  139 [label="!(Variable[\"plaza.serial_number_1\"])", shape=diamond];
+	  140 [label="You: \"X54156745678222. The make and model of the armour is Fairweather T-500 / VE.\""];
+	  141 [label="Alice: Variable[\"tc.icp\"]"];
+	  142 [label="Variable[\"tc.icp\"]", shape=diamond];
+	  143 [label="!(Variable[\"tc.icp\"])", shape=diamond];
+	  144 [label="Encyclopedia: The International Collaboration Police (ICP) is an interisolary law enforcement service, the crown jewel in the Moralintern diadem alongside EPIS and the Coalition Government."];
+	  145 [label="You: \"I was born ready, baby!\""];
+	  146 [label="Inland Empire: According to Klaasje, Lely said his real name wasn't really *his* -- perhaps that's because he was fostered?"];
+	  147 [label="Alice: \"Was there anything else?\""];
+	  148 [label="Alice: \"Then the armour followed him to Semenine -- or at least I assume it did. And that's it. There are no records of his employment in Krenel. Or any of its other incarnations. Or him even entering Revachol."];
+	  149 [label="Jump to: [thehubwhereithappened]"];
+	  150 [label="Alice: Variable[\"plaza.alice_serial_number_stalled_once\"]"];
+	  151 [label="Variable[\"plaza.alice_serial_number_stalled_once\"]", shape=diamond];
+	  152 [label="!(Variable[\"plaza.alice_serial_number_stalled_once\"])", shape=diamond];
+	  153 [label="You: \"AO5577789RHG9999. The make and model of the armour is Fairweather T-500 / VE.\""];
+	  154 [label="Alice: She browses pages. \"So... it seems the armour went to Semenine. That's where the paper trail ends, though. Even the firm has proven difficult to track. Corps de Pharmacie has been renamed several times over in the years since the armour was issued.\""];
+	  155 [label="diearmorhubbe"];
+	  156 [label="Alice: IsKimHere()"];
+	  157 [label="IsKimHere()", shape=diamond];
+	  158 [label="!(IsKimHere())", shape=diamond];
+	  159 [label="Alice: \"Hard to say. Their client list is rather diverse. And... incomplete. The only constant seems to be that the mercenaries are always deployed in third- and fourth-world countries.\""];
+	  160 [label="Alice: \"Glad to help. Call back tomorrow. Hopefully I'll have more for you then.\""];
+	  161 [label="Alice: \"I... don't know what that means. But -- sure.\""];
+	  162 [label="Alice: \"Still no word I'm afraid, sir. I know it must be frustrating. Was there anything else you wanted to ask?\""];
+	  163 [label="Alice: TotalHourCount() >= Variable[\"plaza.kineema_serial_personal_aliiz_deadline\"]"];
+	  164 [label="TotalHourCount() >= Variable[\"plaza.kineema_serial_personal_aliiz_deadline\"]", shape=diamond];
+	  165 [label="!(TotalHourCount() >= Variable[\"plaza.kineema_serial_personal_aliiz_deadline\"])", shape=diamond];
+	  166 [label="Alice: \"Not yet -- but I was able to convince the database people to share private sector information. They promised to get back to me by tomorrow morning. Did you have any other questions?\""];
+	  167 [label="You: \"That's definitely the right number.\""];
+	  168 [label="Jump to: [The actual Radio HUB]"];
+	  169 [label="You: \"Is there any way to find out who got this particular suit of armour?\"\n\"A suit of armour like this would have been customized to fit the wearer. There must be a record of the person to whom it was issued.\""];
+	  170 [label="Logic: Joyce said the dead man went by Lely. He must have gotten that from *Lelystad* -- the name of the county."];
+	  171 [label="Alice: Variable[\"XP.encyc_serial_number\"]"];
+	  172 [label="Variable[\"XP.encyc_serial_number\"]", shape=diamond];
+	  173 [label="!(Variable[\"XP.encyc_serial_number\"])", shape=diamond];
+	  174 [label="Alice: IsKimHere()"];
+	  175 [label="IsKimHere()", shape=diamond];
+	  176 [label="!(IsKimHere())", shape=diamond];
+	  177 [label="Alice: \"I'm going to ignore that, officer. Call back tomorrow. Hopefully I will have more information for you then.\""];
+	  178 [label="You: \"Shoot.\""];
+	  179 [label="Alice: IsKimHere()"];
+	  180 [label="IsKimHere()", shape=diamond];
+	  181 [label="!(IsKimHere())", shape=diamond];
+	  182 [label="Drama: I knew this would lead to something good!"];
+	  183 [label="Alice: \"None, officer. Sorry.\""];
+	  184 [label="Alice: \"If you say so, officer -- of course.\""];
+	  185 [label="Esprit de Corps: Sometimes police work is about human dignity -- about giving back names to anonymous victims."];
+	  186 [label="Jump to: [The actual Radio HUB]"];
+	  187 [label="Alice: \"The International Collaboration Police? Uhm...\" She seems confused for a second. \"They keep detailed records of all military technology produced by licensed manufacturers. That's one of the reasons the Moralintern spearheaded the creation of the ICP in the first place.\""];
+	  188 [label="Alice: \"Great. Anything else I could do for you?\""];
+	  189 [label="Alice: Variable[\"tc.name_lely\"]  and  Variable[\"whirling.klaasje_katarzine_lelystad\"] == false"];
+	  190 [label="Variable[\"tc.name_lely\"]  and  Variable[\"whirling.klaasje_katarzine_lelystad\"] == false", shape=diamond];
+	  191 [label="!(Variable[\"tc.name_lely\"]  and  Variable[\"whirling.klaasje_katarzine_lelystad\"] == false)", shape=diamond];
+	  192 [label="Drama: We're still glad you did it, my liege. This was good training. For when you need to lie to save your life maybe?"];
+	  193 [label="You: \"Wait, he was found in a... leaf compactor?\""];
+	  194 [label="Alice: \"It's a garden tool used to press leaves into these... cubes. It's a detail the hospital had -- the only detail in these files. So I thought it would be good for you to know.\""];
+	  195 [label="Alice: \"It's all I could learn, I'm afraid. That's the serial number you gave me. Anything else I can do for you?\""];
+	  196 [label="Jump to: [The actual Radio HUB]"];
+	  197 [label="Jump to: [You: \"\"Okay.\"\"]"];
+	  198 [label="You: \"So his name wasn't *his* because he was fostered?\""];
+	  7760201 [label="JUMP OUT to PLAZA / COUPRIS KINEEMA", shape=diamond];
+	  0 -> 1
+	  1 -> 111
+	  2 -> 3
+	  2 -> 4
+	  3 -> 120
+	  4 -> 150
+	  5 -> 99
+	  6 -> 62
+	  7 -> 195
+	  8 -> 81
+	  9 -> 133
+	  10 -> 74
+	  10 -> 84
+	  10 -> 85
+	  11 -> 105
+	  12 -> 171
+	  13 -> 86
+	  14 -> 15
+	  15 -> 16
+	  15 -> 17
+	  16 -> 125
+	  17 -> 103
+	  18 -> 179
+	  19 -> 20
+	  19 -> 21
+	  20 -> 101
+	  21 -> 30
+	  22 -> 24
+	  22 -> 23
+	  23 -> 96
+	  24 -> 45
+	  25 -> 8
+	  26 -> 36
+	  27 -> 28
+	  28 -> 66
+	  29 -> 66
+	  30 -> 50
+	  31 -> 80
+	  31 -> 71
+	  32 -> 7760201
+	  33 -> 131
+	  34 -> 44
+	  35 -> 155
+	  36 -> 37
+	  36 -> 38
+	  37 -> 146
+	  38 -> 189
+	  39 -> 66
+	  40 -> 185
+	  42 -> 88
+	  42 -> 167
+	  43 -> 6
+	  44 -> 49
+	  44 -> 63
+	  44 -> 7
+	  45 -> 25
+	  46 -> 56
+	  47 -> 42
+	  48 -> 79
+	  49 -> 132
+	  50 -> 33
+	  50 -> 7
+	  50 -> 49
+	  50 -> 95
+	  50 -> 63
+	  51 -> 135
+	  52 -> 109
+	  53 -> 54
+	  53 -> 55
+	  54 -> 78
+	  55 -> 29
+	  56 -> 7760201
+	  57 -> 155
+	  58 -> 141
+	  59 -> 10
+	  60 -> 7760201
+	  61 -> 67
+	  62 -> 7760201
+	  63 -> 64
+	  64 -> 12
+	  65 -> 148
+	  66 -> 193
+	  66 -> 198
+	  66 -> 104
+	  66 -> 11
+	  66 -> 14
+	  66 -> 18
+	  67 -> 136
+	  68 -> 196
+	  69 -> 7760201
+	  70 -> 140
+	  70 -> 153
+	  70 -> 100
+	  71 -> 72
+	  72 -> 192
+	  73 -> 98
+	  74 -> 9
+	  75 -> 76
+	  75 -> 77
+	  76 -> 48
+	  77 -> 19
+	  78 -> 29
+	  79 -> 154
+	  80 -> 188
+	  81 -> 82
+	  81 -> 83
+	  82 -> 155
+	  83 -> 156
+	  84 -> 160
+	  85 -> 177
+	  86 -> 145
+	  86 -> 178
+	  86 -> 52
+	  87 -> 7760201
+	  88 -> 5
+	  89 -> 90
+	  89 -> 91
+	  90 -> 126
+	  91 -> 43
+	  91 -> 197
+	  92 -> 93
+	  92 -> 94
+	  93 -> 87
+	  94 -> 108
+	  94 -> 134
+	  95 -> 34
+	  96 -> 73
+	  97 -> 159
+	  98 -> 8
+	  99 -> 141
+	  100 -> 58
+	  101 -> 31
+	  102 -> 196
+	  103 -> 136
+	  104 -> 183
+	  105 -> 106
+	  105 -> 107
+	  106 -> 27
+	  107 -> 184
+	  108 -> 187
+	  109 -> 145
+	  109 -> 178
+	  110 -> 39
+	  111 -> 112
+	  111 -> 113
+	  112 -> 163
+	  113 -> 137
+	  114 -> 115
+	  114 -> 116
+	  115 -> 75
+	  116 -> 117
+	  117 -> 69
+	  118 -> 127
+	  119 -> 99
+	  120 -> 122
+	  121 -> 40
+	  122 -> 123
+	  122 -> 124
+	  123 -> 13
+	  124 -> 86
+	  125 -> 61
+	  126 -> 7760201
+	  127 -> 128
+	  127 -> 129
+	  128 -> 47
+	  129 -> 130
+	  130 -> 42
+	  131 -> 49
+	  131 -> 63
+	  131 -> 7
+	  132 -> 12
+	  133 -> 7760201
+	  134 -> 147
+	  135 -> 26
+	  136 -> 66
+	  137 -> 138
+	  137 -> 139
+	  138 -> 114
+	  139 -> 70
+	  140 -> 118
+	  141 -> 142
+	  141 -> 143
+	  142 -> 87
+	  143 -> 144
+	  144 -> 92
+	  145 -> 51
+	  146 -> 189
+	  147 -> 60
+	  148 -> 66
+	  149 -> 66
+	  150 -> 152
+	  150 -> 151
+	  151 -> 162
+	  152 -> 46
+	  153 -> 118
+	  154 -> 22
+	  155 -> 97
+	  155 -> 169
+	  156 -> 157
+	  156 -> 158
+	  157 -> 35
+	  158 -> 155
+	  159 -> 57
+	  160 -> 133
+	  161 -> 39
+	  162 -> 56
+	  163 -> 164
+	  163 -> 165
+	  164 -> 2
+	  165 -> 166
+	  166 -> 186
+	  167 -> 119
+	  168 -> 7760201
+	  169 -> 59
+	  170 -> 65
+	  171 -> 172
+	  171 -> 173
+	  172 -> 182
+	  173 -> 168
+	  174 -> 176
+	  174 -> 175
+	  175 -> 110
+	  176 -> 161
+	  177 -> 133
+	  178 -> 51
+	  179 -> 180
+	  179 -> 181
+	  180 -> 121
+	  181 -> 68
+	  182 -> 168
+	  183 -> 149
+	  184 -> 28
+	  185 -> 102
+	  186 -> 7760201
+	  187 -> 89
+	  188 -> 192
+	  189 -> 190
+	  189 -> 191
+	  190 -> 170
+	  191 -> 65
+	  192 -> 32
+	  193 -> 194
+	  194 -> 53
+	  195 -> 12
+	  196 -> 7760201
+	  197 -> 134
+	  198 -> 174
+}
+

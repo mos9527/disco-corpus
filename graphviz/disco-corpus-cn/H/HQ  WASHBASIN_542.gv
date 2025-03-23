@@ -1,0 +1,175 @@
+# HQ / WASHBASIN
+# A washbasin An interactable dialogue where you can shave your beard/muttonchops! This changes the portrait in the mirror dialogue, and the one on UI.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Washbasin: 桌上有一碗水，一块粗糙的肥皂，旁边还放着一支小手镜。洗手盆底部沉着一支刮胡刀。"];
+	  3 [label="Physical Instrument: 是啊，净化自己，一路回到婴儿时期。你看起来就像个婴儿！"];
+	  4 [label="You: [离开。]"];
+	  5 [label="Washbasin: 你怎么知道？你甚至都没看见过自己那张脸！去镜子里瞄一眼，然后自己决定。"];
+	  6 [label="mainhubbasin"];
+	  7 [label="Jump to: [mainhubbasin]"];
+	  8 [label="Suggestion: 你的脸，不过如此。一张普通人的脸。毫无表情。"];
+	  9 [label="Suggestion: 你那没了胡须遮掩的面庞变得越发像一张恐怖的鬼脸。"];
+	  10 [label="Washbasin: Variable[\"coast.morells_pheromone_spray\"]"];
+	  11 [label="Variable[\"coast.morells_pheromone_spray\"]", shape=diamond];
+	  12 [label="!(Variable[\"coast.morells_pheromone_spray\"])", shape=diamond];
+	  13 [label="You: 该刮胡子了。把这把络腮胡全剃掉吧。"];
+	  14 [label="You: Variable[\"village.hq_whitec_shave_it_off\"]"];
+	  15 [label="Variable[\"village.hq_whitec_shave_it_off\"]", shape=diamond];
+	  16 [label="!(Variable[\"village.hq_whitec_shave_it_off\"])", shape=diamond];
+	  17 [label="Composure: 一个新开始在你眼前隐隐若现。收拾好自己，重获新生。"];
+	  18 [label="Hand/Eye Coordination: 锋利的刀片划过你的皮肤，发出嘶啦的声响。胡须下面的皮肤摸起来很柔软，拂过面颊的空气略显冰凉。"];
+	  19 [label="Washbasin: 但是人类很能坚持，15分钟之后，你看起来可以见人了。差不多吧。突然没了病变坏死组织的味道，你的精神顿时振奋起来。"];
+	  20 [label="Washbasin: 你花了好长一会儿才洗掉了手上的坏死组织。手指甲的部分是最艰难的。死亡渗入了每一条缝隙，每一处角落……"];
+	  21 [label="Washbasin: 水面映照出你模糊的轮廓——鼻子红彤彤的，像个圆球；头发蓬乱，眼角和前额爬满皱纹。还有一把巨大的胡子。"];
+	  22 [label="You: 我*需要*把胡子刮干净！"];
+	  23 [label="Physical Instrument: 没胡子的话你跟那些基佬有什么区别！基佬懂吗！"];
+	  24 [label="Volition: 已经无法挽救了。"];
+	  25 [label="Washbasin: 但是人类很能坚持，最终你那双青肿的手变得整洁中看起来……勉强是吧。突然没了病变坏死组织的味道，让人感觉神清气爽。"];
+	  26 [label="Washbasin: Variable[\"whirling.mirror_saw_your_face\"] == false"];
+	  27 [label="Variable[\"whirling.mirror_saw_your_face\"] == false", shape=diamond];
+	  28 [label="!(Variable[\"whirling.mirror_saw_your_face\"] == false)", shape=diamond];
+	  29 [label="Jump to: [mainhubbasin]"];
+	  30 [label="Jump to: [mainhubbasin]"];
+	  31 [label="You: 这个不够锋利，下手再重点。"];
+	  32 [label="Hand/Eye Coordination: 拜托，快住手！你快把自己的脖子划开了。"];
+	  33 [label="Washbasin: 水面隐约映照出一张没有胡子的脸庞。虽然鼻子像圆球，头发乱蓬蓬，脸也一如既往的肿胀，你看起来……年轻了一些，也许吧？"];
+	  34 [label="Jump to: [mainhubbasin]"];
+	  35 [label="Washbasin: Variable[\"whirling.mirror_stopped_expression\"]"];
+	  36 [label="Variable[\"whirling.mirror_stopped_expression\"]", shape=diamond];
+	  37 [label="!(Variable[\"whirling.mirror_stopped_expression\"])", shape=diamond];
+	  38 [label="You: 暂时先不管。"];
+	  39 [label="Washbasin: 谢天谢地，你没有空手进去！众所周知，死亡的味道一旦沾上身，还有衣服，就要花很久才能清洗掉……"];
+	  40 [label="Hand/Eye Coordination: 刮到脸颊的时候，你的手微微颤抖……哦不，一个成年男人可不是这样刮胡子的。"];
+	  41 [label="Interfacing: 早知道应该用手套的。警探都会用手套，特别是在死人大脑里到处翻找的时候……"];
+	  42 [label="Hand/Eye Coordination: 出人意料的是，它们感觉特别光滑。你感觉一阵神清气爽，就好像刚洗了个冷水澡。"];
+	  43 [label="Volition: 那只蜈蚣太夸张了——谁会在刮胡子的时候把喉咙割破啊。至少不可能是意外。"];
+	  44 [label="Washbasin: Variable[\"village.washbasin_failed_shave_once\"]"];
+	  45 [label="Variable[\"village.washbasin_failed_shave_once\"]", shape=diamond];
+	  46 [label="!(Variable[\"village.washbasin_failed_shave_once\"])", shape=diamond];
+	  48 [label="Hand/Eye Coordination: 疑问之下，一股新的活力生根发芽，就像是抛弃了一些错误决定。你感觉自己好像经历了一场仪式。甚至是刚从冰水中浮了上来……"];
+	  49 [label="Esprit de Corps: 有空闲的时候，记得注意个人卫生。"];
+	  50 [label="Jump to: [mainhubbasin]"];
+	  51 [label="You: 摸摸没有胡子的面颊。"];
+	  52 [label="Washbasin: IsKimHere()"];
+	  53 [label="IsKimHere()", shape=diamond];
+	  54 [label="!(IsKimHere())", shape=diamond];
+	  55 [label="Hand/Eye Coordination: 剃须刀*叮当*一声落下了。一抹鲜红在水中扩散开来。"];
+	  56 [label="Washbasin: 桌上有一碗水，一块粗糙的肥皂，旁边还放着一支小手镜。洗手盆底部沉着一支刮胡刀。"];
+	  57 [label="Kim Kitsuragi: 当你考虑用洗手盆的时候，警督尴尬地看了你一眼。"];
+	  58 [label="Hand/Eye Coordination: 谢天谢地，我差点就割破你的喉咙了。"];
+	  59 [label="You: 刮胡子是正确的决定吗？"];
+	  60 [label="You: 把剃须刀扔进洗手盆。"];
+	  61 [label="Washbasin: Variable[\"village.hq_whitec_shave_it_off\"]"];
+	  62 [label="Variable[\"village.hq_whitec_shave_it_off\"]", shape=diamond];
+	  63 [label="!(Variable[\"village.hq_whitec_shave_it_off\"])", shape=diamond];
+	  64 [label="Jump to: [You: \"[Leave.]\"]"];
+	  65 [label="Washbasin: Variable[\"yard.hanged_man_used_gloves_for_bullet_digging\"]"];
+	  66 [label="Variable[\"yard.hanged_man_used_gloves_for_bullet_digging\"]", shape=diamond];
+	  67 [label="!(Variable[\"yard.hanged_man_used_gloves_for_bullet_digging\"])", shape=diamond];
+	  68 [label="Jump to: [mainhubbasin]"];
+	  69 [label="Hand/Eye Coordination: 你的手抖地厉害，甚至无法鼓足*尝试*的勇气。也许是因为你的内心太过*狂野*？"];
+	  70 [label="You: 刮胡子*是*正确的决定吗？"];
+	  71 [label="Hand/Eye Coordination: 像是手握画笔的艺术家，又或者是手握宝剑的剑神，你拿起小镜子和刮胡刀——沾了点肥皂——把鼻子下面那团乱七八糟的毛发刮了个干净。"];
+	  72 [label="You: 洗掉自己身上死亡的味道。\n先洗掉自己身上死亡的味道。"];
+	  73 [label="Physical Instrument: 你已经没有脸了，现在全是婴儿屁股一样。"];
+	  74 [label="Logic: 你差不多有点专业人士的样子了。"];
+	  75 [label="Hand/Eye Coordination: 你的手不愿再移动分毫。一滴血珠慢慢从你的脸颊滑落。"];
+	  76 [label="You: 希望这是正确的决定。"];
+	  77 [label="Hand/Eye Coordination: 锋利的刀片划破你的皮肤，发出嘶啦的声响。胡须下面的皮肤摸起来很柔软，拂过面颊的空气略显冰凉。"];
+	  0 -> 1
+	  1 -> 52
+	  2 -> 57
+	  3 -> 29
+	  5 -> 7
+	  6 -> 4
+	  6 -> 70
+	  6 -> 72
+	  6 -> 13
+	  6 -> 59
+	  7 -> 6
+	  8 -> 7
+	  9 -> 7
+	  10 -> 11
+	  10 -> 12
+	  11 -> 18
+	  12 -> 77
+	  13 -> 14
+	  14 -> 16
+	  14 -> 15
+	  15 -> 61
+	  16 -> 61
+	  17 -> 7
+	  18 -> 51
+	  18 -> 76
+	  19 -> 50
+	  20 -> 41
+	  21 -> 23
+	  22 -> 75
+	  23 -> 17
+	  24 -> 60
+	  24 -> 22
+	  25 -> 50
+	  26 -> 27
+	  26 -> 28
+	  27 -> 5
+	  28 -> 21
+	  29 -> 6
+	  30 -> 6
+	  31 -> 32
+	  32 -> 24
+	  33 -> 74
+	  34 -> 6
+	  35 -> 36
+	  35 -> 37
+	  36 -> 8
+	  37 -> 9
+	  38 -> 58
+	  39 -> 19
+	  40 -> 38
+	  40 -> 31
+	  41 -> 25
+	  42 -> 73
+	  43 -> 68
+	  44 -> 45
+	  44 -> 46
+	  45 -> 69
+	  46 -> 40
+	  48 -> 3
+	  49 -> 64
+	  50 -> 6
+	  51 -> 42
+	  52 -> 53
+	  52 -> 54
+	  53 -> 2
+	  54 -> 56
+	  55 -> 30
+	  56 -> 6
+	  57 -> 49
+	  58 -> 43
+	  59 -> 26
+	  60 -> 55
+	  61 -> 62
+	  61 -> 63
+	  62 -> 71
+	  63 -> 44
+	  64 -> 4
+	  65 -> 66
+	  65 -> 67
+	  66 -> 39
+	  67 -> 20
+	  68 -> 6
+	  69 -> 34
+	  70 -> 33
+	  71 -> 10
+	  72 -> 65
+	  73 -> 29
+	  74 -> 35
+	  75 -> 30
+	  76 -> 48
+	  77 -> 51
+	  77 -> 76
+}
+

@@ -1,0 +1,149 @@
+# SEAFORT ORB / chain afterthought
+# (afterthought about chain)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Jump to: [debot_chain_hub]"];
+	  3 [label="Rhetoric: Enemies of madness. Lunacy. Of the apocalypse taking place here."];
+	  4 [label="IsKimHere()"];
+	  5 [label="IsKimHere()", shape=diamond];
+	  6 [label="!(IsKimHere())", shape=diamond];
+	  7 [label="Kim Kitsuragi: \"Technically -- no. It doesn't.\""];
+	  8 [label="You: What kind of enemies?"];
+	  9 [label="IsHighestPolitical(\"moralist\")"];
+	  10 [label="IsHighestPolitical(\"moralist\")", shape=diamond];
+	  11 [label="!(IsHighestPolitical(\"moralist\"))", shape=diamond];
+	  12 [label="Kim Kitsuragi: \"From enemies.\" He looks up ahead. \"Enemies of the Commune of Revachol. This seafort was a revolutionary fortification, I believe...\""];
+	  13 [label="Jump to: [debot_chain_hub]"];
+	  14 [label="You: What for?\n(Point to it.) \"This leads to the depot in Land's End.\""];
+	  15 [label="IsHighestPolitical(\"revacholian_nationhood\")"];
+	  16 [label="IsHighestPolitical(\"revacholian_nationhood\")", shape=diamond];
+	  17 [label="!(IsHighestPolitical(\"revacholian_nationhood\"))", shape=diamond];
+	  18 [label="Jump to: [debot_chain_hub]"];
+	  19 [label="IsKimHere()"];
+	  20 [label="IsKimHere()", shape=diamond];
+	  21 [label="!(IsKimHere())", shape=diamond];
+	  23 [label="Interfacing: Enemies."];
+	  24 [label="IsHighestPolitical(\"communist\")"];
+	  25 [label="IsHighestPolitical(\"communist\")", shape=diamond];
+	  26 [label="!(IsHighestPolitical(\"communist\"))", shape=diamond];
+	  27 [label="Rhetoric: Of the future. Enemies of mankind."];
+	  28 [label="You: \"Lock it from whom?\""];
+	  29 [label="Cuno: \"Dunno, pig, doesn't look like we behind a door right now -- just Cuno's 2 cents of course.\""];
+	  30 [label="debot_chain_hub"];
+	  31 [label="Interfacing: For bringing supplies: munitions and fuel. You could also raise it, in order to lock the Western bay of Revachol."];
+	  32 [label="Kim Kitsuragi: \"For bringing munitions to the island, maybe? And supplies. You could also *lock* the bay, when you raise the chain.\""];
+	  33 [label="Interfacing: Enemies of the Commune of Revachol."];
+	  34 [label="Interfacing: He's right."];
+	  35 [label="Interfacing: Technically -- no. Sorry."];
+	  36 [label="You: [Finish thought.]"];
+	  37 [label="Jump to: [debot_chain_hub]"];
+	  38 [label="Rhetoric: Do not be too eager to greet these enemies, black hearted cavalier -- they were also the enemies of Revachol."];
+	  39 [label="Visual Calculus: As a defensive measure locking off that side of the bay."];
+	  40 [label="Kim Kitsuragi: The lieutenant looks at the mechanism overhead. \"Ah, yes... so it seems.\""];
+	  41 [label="You: This means I *sorta* got into the depot door."];
+	  42 [label="IsCunoInParty()"];
+	  43 [label="IsCunoInParty()", shape=diamond];
+	  44 [label="!(IsCunoInParty())", shape=diamond];
+	  45 [label="You: Lock it from whom?"];
+	  46 [label="Cuno: The boy stares at the mechanism. \"Cool fucking chain.\""];
+	  47 [label="Jump to: [debot_chain_hub]"];
+	  48 [label="IsCunoInParty()"];
+	  49 [label="IsCunoInParty()", shape=diamond];
+	  50 [label="!(IsCunoInParty())", shape=diamond];
+	  51 [label="IsKimHere()"];
+	  52 [label="IsKimHere()", shape=diamond];
+	  53 [label="!(IsKimHere())", shape=diamond];
+	  54 [label="Cuno: \"Fuck does Cuno know?\" He shrugs his shoulders. \"Cuno would use it to bring shit to the island.\""];
+	  55 [label="IsHighestPolitical(\"ultraliberal\")"];
+	  56 [label="IsHighestPolitical(\"ultraliberal\")", shape=diamond];
+	  57 [label="!(IsHighestPolitical(\"ultraliberal\"))", shape=diamond];
+	  58 [label="You: \"This means I *sorta* got into the depot door.\""];
+	  59 [label="Interfacing: The chain trails off into the ocean, connecting the island to the supply depot on the coast."];
+	  60 [label="You: \"What do you think it was used for?\""];
+	  61 [label="Jump to: [debot_chain_hub]"];
+	  62 [label="IsCunoInParty()"];
+	  63 [label="IsCunoInParty()", shape=diamond];
+	  64 [label="!(IsCunoInParty())", shape=diamond];
+	  0 -> 1
+	  1 -> 59
+	  2 -> 30
+	  3 -> 61
+	  4 -> 5
+	  4 -> 6
+	  5 -> 40
+	  6 -> 42
+	  7 -> 34
+	  8 -> 33
+	  9 -> 10
+	  9 -> 11
+	  10 -> 3
+	  11 -> 61
+	  12 -> 18
+	  13 -> 30
+	  14 -> 4
+	  15 -> 16
+	  15 -> 17
+	  16 -> 38
+	  17 -> 9
+	  18 -> 30
+	  19 -> 20
+	  19 -> 21
+	  20 -> 7
+	  21 -> 48
+	  23 -> 47
+	  24 -> 25
+	  24 -> 26
+	  25 -> 27
+	  26 -> 55
+	  27 -> 61
+	  28 -> 12
+	  29 -> 34
+	  30 -> 36
+	  30 -> 8
+	  30 -> 41
+	  30 -> 45
+	  30 -> 60
+	  30 -> 14
+	  30 -> 58
+	  30 -> 28
+	  31 -> 37
+	  32 -> 39
+	  33 -> 24
+	  34 -> 13
+	  35 -> 13
+	  37 -> 30
+	  38 -> 61
+	  39 -> 2
+	  40 -> 37
+	  41 -> 35
+	  42 -> 43
+	  42 -> 44
+	  43 -> 46
+	  44 -> 31
+	  45 -> 23
+	  46 -> 37
+	  47 -> 30
+	  48 -> 49
+	  48 -> 50
+	  49 -> 29
+	  51 -> 52
+	  51 -> 53
+	  52 -> 32
+	  53 -> 62
+	  54 -> 2
+	  55 -> 56
+	  55 -> 57
+	  56 -> 3
+	  57 -> 15
+	  58 -> 19
+	  59 -> 30
+	  60 -> 51
+	  61 -> 30
+	  62 -> 64
+	  62 -> 63
+	  63 -> 54
+	  64 -> 2
+}
+

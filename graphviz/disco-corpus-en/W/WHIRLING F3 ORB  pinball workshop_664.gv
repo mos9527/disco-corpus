@@ -1,0 +1,139 @@
+# WHIRLING F3 ORB / pinball workshop
+# 1. This was a pinball workshop.
+#2. Was the Whirling-in-Rags part of the doomed commercial area task gained.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Inland Empire: It's not a ghost story. It's a curse -- and Garte ought be made knowledgeable so he can perform counter-spells."];
+	  3 [label="Logic: This seems to be some kind of workshop. For fixing up pinball machines -- a long time ago. Everything is covered with dust now..."];
+	  4 [label="Kim Kitsuragi: \"Looks like it. I'm guessing Martinaise North 22 used to be a pinball arcade before it became a hostel. There are machines left over...\" He taps his foot."];
+	  5 [label="Variable[\"doomed.dicemaker_pinball_arcade\"]  or  Variable[\"doomed.dicemaker_whirling_part_of_complex\"]"];
+	  6 [label="Variable[\"doomed.dicemaker_pinball_arcade\"]  or  Variable[\"doomed.dicemaker_whirling_part_of_complex\"]", shape=diamond];
+	  7 [label="!(Variable[\"doomed.dicemaker_pinball_arcade\"]  or  Variable[\"doomed.dicemaker_whirling_part_of_complex\"])", shape=diamond];
+	  8 [label="IsKimHere()"];
+	  9 [label="IsKimHere()", shape=diamond];
+	  10 [label="!(IsKimHere())", shape=diamond];
+	  11 [label="IsKimHere()"];
+	  12 [label="IsKimHere()", shape=diamond];
+	  13 [label="!(IsKimHere())", shape=diamond];
+	  15 [label="You: \"Could this mean the Whirling-in-Rags really *is* part of the Doomed Commercial Area?\"\n\"Could this mean the Whirling-in-Rags really *is* part of the Doomed Commercial Area?\""];
+	  16 [label="workshophub"];
+	  17 [label="Jump to: [workshophub]"];
+	  18 [label="Logic: As the Dicemaker said, yes; it all fits. Not that it has anything to do with the case, but it is a nice connection!"];
+	  19 [label="You: \"Doesn't look like that pinball machine will ever get fixed.\"\nDoesn't look like that pinball machine will ever get fixed."];
+	  20 [label="Kim Kitsuragi: \"Ah, yes -- as the novelty dicemaker said.\" He makes a note in his notebook. \"This has absolutely nothing to do with the case, I'm sure. But I do like a nice little *connection*.\""];
+	  21 [label="IsKimHere()"];
+	  22 [label="IsKimHere()", shape=diamond];
+	  23 [label="!(IsKimHere())", shape=diamond];
+	  24 [label="Reaction Speed: Remember the *Dicemaker*?! Then that means..."];
+	  25 [label="You: \"Whirling-in-Rags was once the East Delta Pinball arcade. This is all left over from that.\""];
+	  26 [label="Logic: So this is where they brought faulty pinball machines to fix them up -- a long time ago. Everything is covered with dust now..."];
+	  27 [label="Jump to: [workshophub]"];
+	  28 [label="IsKimHere()"];
+	  29 [label="IsKimHere()", shape=diamond];
+	  30 [label="!(IsKimHere())", shape=diamond];
+	  31 [label="Kim Kitsuragi: The lieutenant looks around the dusty, crowded room, inspecting the tools on the shelf."];
+	  32 [label="Logic: Yes. Pinball hasn't enjoyed a heyday for fifteen or twenty years."];
+	  33 [label="Jump to: [workshophub]"];
+	  34 [label="Kim Kitsuragi: \"If that's true then our *cafeteria manager* is not going to like it.\" He looks around. \"We should tell him what we found up here -- *omitting* that suspicion.\""];
+	  35 [label="Kim Kitsuragi: \"He does not appear to be the kind of man who likes his establishment to be part of a neighbourhood ghost story. About *bankruptcy*.\""];
+	  36 [label="Logic: And Garte would not like that. He should probably be made aware that his establishment is part of the neighbourhood ghost story."];
+	  37 [label="Logic: Stupid superstition. But still -- it would be *interesting* to see what the cafeteria manager thinks of this..."];
+	  38 [label="Variable[\"tc.doomed_commercial_area\"]"];
+	  39 [label="Variable[\"tc.doomed_commercial_area\"]", shape=diamond];
+	  40 [label="!(Variable[\"tc.doomed_commercial_area\"])", shape=diamond];
+	  41 [label="You: Not interested. [Discard thought.]\n [Finish thought.]"];
+	  42 [label="Jump to: [workshophub]"];
+	  43 [label="You: \"This used to be a... pinball workshop.\"\nThis used to be a... pinball workshop."];
+	  44 [label="Logic: Yes. It would mean that."];
+	  45 [label="Perception (Hearing): A creak, some dust falls off a shelf."];
+	  46 [label="You: \"Looks like they gave up on fixing the pinball machines at some point.\"\nLooks like they gave up on fixing the pinball machines at some point."];
+	  47 [label="Logic: And it has been forgotten. Now, there is only one working machine in the main hall -- the rest is lost to dust."];
+	  48 [label="IsKimHere()"];
+	  49 [label="IsKimHere()", shape=diamond];
+	  50 [label="!(IsKimHere())", shape=diamond];
+	  51 [label="Inland Empire: But then it went bankrupt... your skin crawls from making the connection!"];
+	  52 [label="IsKimHere()"];
+	  53 [label="IsKimHere()", shape=diamond];
+	  54 [label="!(IsKimHere())", shape=diamond];
+	  55 [label="Kim Kitsuragi: \"At some point -- twenty years ago? Fifteen maybe. Before pinball went out of vogue.\""];
+	  56 [label="Logic: Yes. Martinaise North 22 used to be a pinball arcade."];
+	  57 [label="Variable[\"auto.visited_pinball_room\"]"];
+	  58 [label="Variable[\"auto.visited_pinball_room\"]", shape=diamond];
+	  59 [label="!(Variable[\"auto.visited_pinball_room\"])", shape=diamond];
+	  60 [label="Kim Kitsuragi: \"Downstairs in the hall -- next to the main door. One of them even works. I've seen one of the Hardies bang away at it.\""];
+	  0 -> 1
+	  1 -> 57
+	  2 -> 27
+	  3 -> 11
+	  4 -> 45
+	  5 -> 6
+	  5 -> 7
+	  6 -> 24
+	  7 -> 38
+	  8 -> 9
+	  8 -> 10
+	  9 -> 55
+	  10 -> 32
+	  11 -> 12
+	  11 -> 13
+	  12 -> 31
+	  13 -> 16
+	  15 -> 28
+	  16 -> 41
+	  16 -> 43
+	  16 -> 46
+	  16 -> 15
+	  16 -> 19
+	  17 -> 16
+	  18 -> 38
+	  19 -> 8
+	  20 -> 38
+	  21 -> 22
+	  21 -> 23
+	  22 -> 4
+	  23 -> 56
+	  24 -> 25
+	  25 -> 48
+	  26 -> 11
+	  27 -> 16
+	  28 -> 29
+	  28 -> 30
+	  29 -> 34
+	  30 -> 44
+	  31 -> 16
+	  32 -> 17
+	  33 -> 16
+	  34 -> 35
+	  35 -> 37
+	  36 -> 27
+	  37 -> 2
+	  38 -> 40
+	  38 -> 39
+	  39 -> 51
+	  40 -> 42
+	  42 -> 16
+	  43 -> 21
+	  44 -> 36
+	  45 -> 52
+	  46 -> 8
+	  47 -> 5
+	  48 -> 49
+	  48 -> 50
+	  49 -> 20
+	  50 -> 18
+	  51 -> 33
+	  52 -> 53
+	  52 -> 54
+	  53 -> 60
+	  54 -> 47
+	  55 -> 17
+	  56 -> 45
+	  57 -> 58
+	  57 -> 59
+	  58 -> 26
+	  59 -> 3
+	  60 -> 5
+}
+

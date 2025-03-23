@@ -1,0 +1,410 @@
+# APT / CLEANING LADY
+# Cleaning lady inside the apartment building. Part of her greeting is in PIER / APARTMENTS PIER DOOR dialogue.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Cleaning Lady: \"Oh, I do like wizards,\" she agrees wholeheartedly. \"And people like that in general. They have a lot to tell us about our fates...\""];
+	  3 [label="Cleaning Lady: \"He lives upstairs in room #28. Go to the balcony. It's one of those doors there,\" she points east. \"He's usually home in the evening.\""];
+	  4 [label="Jump to: [main hub]"];
+	  5 [label="Jump to: [main hub]"];
+	  6 [label="Cleaning Lady: \"She leaves an old lady to her business. More than I can say for others...\""];
+	  7 [label="Cleaning Lady: \"Think we'd all be better off if people kept their noses to themselves.\""];
+	  8 [label="Cleaning Lady: \"I'm no one, just an old woman who cleans these hallways.\""];
+	  9 [label="You: \"Who lives behind the padlocked door?\"\n\"Know anything about the young communist who lives behind the padlocked door?\""];
+	  10 [label="Cleaning Lady: \"Oh, you'll find plenty of Martins here, don't you worry!\" She smiles a gap toothed smile when she hears you mention the name."];
+	  11 [label="You: \"What do you mean? I wasn't joking.\""];
+	  12 [label="Cleaning Lady: \"The de Ruyters...\" She frowns. \"He's chained it and fallen into a stupor again.\""];
+	  13 [label="Cleaning Lady: \"I see...\" She takes out her handkerchief and wipes her nose. \"I hope some good people are finally going to move in. This place needs them.\""];
+	  14 [label="You: \"What can you tell me about Cindy?\""];
+	  15 [label="Cleaning Lady: \"I don't believe in equality. Never seen it work.\" She shakes her head and returns to sweeping."];
+	  16 [label="Empathy: You're still worried. It's very worrying."];
+	  17 [label="Cleaning Lady: \"What's he in trouble for?\""];
+	  18 [label="You: \"First, I'm the policeman that asked you to open the door. Are you sure you don't want to see my badge?\""];
+	  19 [label="Kim Kitsuragi: \"He's actually *not* wanted for murder. We just want to talk with him.\""];
+	  20 [label="Jump to: [main hub]"];
+	  21 [label="Rhetoric: She hasn't spoken to anyone for a while. Even her sentences feel rusty."];
+	  22 [label="Logic: They probably just moved -- or died, hopefully somewhere else."];
+	  23 [label="You: \"Do you know anything about a *secret meeting* that's happening tonight?\""];
+	  24 [label="You: \"Tell me about the man who lives at the end of the hallway -- Uuno de Ruyter.\""];
+	  25 [label="Jump to: [apts hub]"];
+	  26 [label="You: \"Are you alright? Should I call a doctor?\""];
+	  27 [label="You: \"I am looking for Martin Martinaise.\""];
+	  28 [label="Visual Calculus: It was dirtier there. After the janitor's closet. She avoids the end of the hallway."];
+	  29 [label="Jump to: [apts hub]"];
+	  30 [label="Jump to: [apts hub]"];
+	  31 [label="You: \"Who lives in apartment #12? I heard snoring.\""];
+	  32 [label="Cleaning Lady: \"The *artist*?\" She scoffs. \"Nothing I can do about her, I'm afraid. She ruins the walls faster than I can clean them. Still...\" She leans on her broom."];
+	  33 [label="Jump to: [apts hub]"];
+	  34 [label="You: \"It's for loons who have no idea how economy works.\""];
+	  35 [label="Cleaning Lady: \"I don't want to talk about de Ruyters,\" the cleaning lady mutters. She starts digging for something in her pockets."];
+	  36 [label="You: \"No, you don't understand. I'm looking for a real person named Martin Martinaise. He told me he's Martin Martinaise.\""];
+	  37 [label="Cleaning Lady: \"Pea-brain, someone played a trick on you. Martin Martinaise is a name for *anyone* from Martinaise. Like Jim Jamrock or Raoul Revachol.\""];
+	  38 [label="You: \"This won't take long, I only have a few questions.\""];
+	  39 [label="Cleaning Lady: \"I don't like talking about those people,\" she looks down the hallway."];
+	  40 [label="IsKimHere()"];
+	  41 [label="IsKimHere()", shape=diamond];
+	  42 [label="!(IsKimHere())", shape=diamond];
+	  43 [label="Half Light: She really doesn't like those *nut jobs*. Bad blood there."];
+	  44 [label="Cleaning Lady: \"The hell am I supposed to know?\" The cleaning lady shrugs, her mouth puckered like a dried fig. \"Another nut job, I assume.\""];
+	  45 [label="Cleaning Lady: \"People come and go, I don't keep an eye on everyone.\""];
+	  46 [label="You: \"Why not?\""];
+	  47 [label="Cleaning Lady: \"Now, what do you want from me, policeman?\""];
+	  48 [label="Kim Kitsuragi: The lieutenant shakes his head, as though to say 'let it go.'"];
+	  49 [label="IsKimHere()"];
+	  50 [label="IsKimHere()", shape=diamond];
+	  51 [label="!(IsKimHere())", shape=diamond];
+	  52 [label="Variable[\"apt.cleaning_halflight_that_one_time\"]"];
+	  53 [label="Variable[\"apt.cleaning_halflight_that_one_time\"]", shape=diamond];
+	  54 [label="!(Variable[\"apt.cleaning_halflight_that_one_time\"])", shape=diamond];
+	  55 [label="You: \"Sure, I'll go see what I can find.\" (Take it on.)"];
+	  56 [label="Jump to: [main hub]"];
+	  57 [label="You: \"I have a few questions about those apartments...\""];
+	  58 [label="Cleaning Lady: \"No one lives there, it's been empty for months.\""];
+	  59 [label="You: \"Communism. It's a political ideology.\""];
+	  60 [label="Cleaning Lady: \"Maybe it's those *counterculture people* again? Breaking into our house like it's a public space... You're a policeman, be good and take a look, will you?\""];
+	  61 [label="Kim Kitsuragi: \"Thank you.\" He turns to you. \"We should go check out his apartment on the balcony, see if he's home.\""];
+	  62 [label="Cleaning Lady: \"I know those types, yes. There have been some here, but they never make their rent. So they have to move out. I know their type...\" She coughs."];
+	  63 [label="You: \"The police has better things to do.\" (Nope.)"];
+	  64 [label="You: \"How about any unusual activity taking place after hours? Say after 22.00?\""];
+	  65 [label="main hub"];
+	  66 [label="You: \"Why is there a hole in the wall in the abandoned apartment?\""];
+	  67 [label="You: \"You know, the ones who support the working class against Capital.\""];
+	  68 [label="You: \"Are you sure you don't mean astronomy?\""];
+	  69 [label="IsKimHere()"];
+	  70 [label="IsKimHere()", shape=diamond];
+	  71 [label="!(IsKimHere())", shape=diamond];
+	  72 [label="Empathy: With how small these rooms are -- wouldn't you want to break the wall down?"];
+	  73 [label="Cleaning Lady: \"Talk!\" The cleaning lady starts laughing, but it turns into a violent coughing spasm. She squeezes her broom, trying to catch her breath."];
+	  74 [label="Cleaning Lady: \"De Ruyters are at the end of this hallway, right next to the communal bathroom.\""];
+	  75 [label="You: \"Who lives in apartment #10?\""];
+	  76 [label="You: \"But I talked to someone through the door.\""];
+	  77 [label="Cleaning Lady: \"I'm fine, fine, don't you worry about me!\" She starts coughing, red spots appearing on her cheeks."];
+	  78 [label="Variable[\"apt.cleaning_greeting_done\"]"];
+	  79 [label="Variable[\"apt.cleaning_greeting_done\"]", shape=diamond];
+	  80 [label="!(Variable[\"apt.cleaning_greeting_done\"])", shape=diamond];
+	  81 [label="Cleaning Lady: \"I'd wager you've got the wrong man. But even so, you're out of luck, policeman -- I saw him leave the building just before you came in.\""];
+	  82 [label="You: \"Communism. You know, like in the world revolution?\""];
+	  83 [label="Kim Kitsuragi: \"We saw unpaid utility bills -- aren't they going to be evicted?\""];
+	  84 [label="Shivers: And all she gets, too. The coastal wind beats down hard on the coal room door, outside. Splashes of waves make the balcony slippery..."];
+	  85 [label="Untitled hub"];
+	  86 [label="You: \"Do you live here?\""];
+	  87 [label="Cleaning Lady: \"Ask away, policeman.\""];
+	  88 [label="Jump to: [main hub]"];
+	  89 [label="You: Let's do it later... [Leave.]"];
+	  90 [label="You: \"Even so, I'd like to talk to him.\""];
+	  91 [label="Cleaning Lady: \"That's what I said, astrology.\""];
+	  92 [label="IsKimHere()"];
+	  93 [label="IsKimHere()", shape=diamond];
+	  94 [label="!(IsKimHere())", shape=diamond];
+	  95 [label="You: \"I didn't find any counterculture people in apartment #10 -- it was just a real estate agent setting up the room for new tenants.\""];
+	  96 [label="Cleaning Lady: \"It's barely bigger than a closet, but I don't complain, no...\" She juts out her chin, eyes shining. \"I have my bed and my aching bones to keep me company and that's all I need from this world.\""];
+	  97 [label="Rhetoric: What was so funny about that?"];
+	  98 [label="Cleaning Lady: \"*We* won't be killing anyone. And *you* shouldn't say things like that. You're a police officer... there's been enough killing. I've *seen* it...\" She coughs."];
+	  99 [label="Cleaning Lady: \"Economy? Why should anyone care about economy?!\" She shrugs and returns to sweeping."];
+	  100 [label="Cleaning Lady: \"Suit yourself, Mr. Important. No one cares about this building any way...\""];
+	  101 [label="You: \"Who are you?\""];
+	  102 [label="You: \"Do you know who lived in the foreclosed apartment?\""];
+	  103 [label="Cleaning Lady: \"Some lunatic lost his mind... All kinds of morons pass through these halls.\""];
+	  104 [label="Jump to: [main hub]"];
+	  105 [label="Cleaning Lady: \"The symbol of what now?\""];
+	  106 [label="You: \"Sounds like he has.\""];
+	  107 [label="Jump to: [apts hub]"];
+	  108 [label="Rhetoric: She means clairvoyants."];
+	  109 [label="You: \"It's a symbol for contributing to the demise of our noble state in the name of some made-up world of 'equality'.\""];
+	  110 [label="Logic: Would she understand if they did?"];
+	  111 [label="Cleaning Lady: \"It's about Victor, isn't it?\" She narrows her pale grey eyes. \"It's always about Victor with her... You'll find the Méjeans in apartment #20 upstairs. It's one of the doors on the balcony.\""];
+	  112 [label="Jump to: [apts hub]"];
+	  113 [label="Perception (Hearing): Somewhere in the building a child starts crying. You hear a radio tuned to a talk show and someone taking a shower."];
+	  114 [label="Endurance: This woman's health is failing her. There's not much to do, not in this damp."];
+	  115 [label="You: \"No one is coming. There will be nothing but squalor unless we start killing real estate agents.\""];
+	  116 [label="Rhetoric: Your statements are too vague to comment on."];
+	  117 [label="Cleaning Lady: \"Great. Young people, they're worse than rats, you know -- always littering the hallways with trinkets and empty beer cans...\""];
+	  118 [label="You: \"I'm looking for Billie Méjean's apartment. Could you direct me?\"\n\"I'm looking for Billie Méjean. Do you know where she lives?\""];
+	  119 [label="apts hub"];
+	  120 [label="You: \"No trouble, I just want to talk to him. Do you know where he lives?\""];
+	  121 [label="You: \"But I heard someone walking inside.\""];
+	  122 [label="greeting hub"];
+	  123 [label="Cleaning Lady: \"Murder!\" The cleaning lady starts laughing, but it turns into a violent coughing spasm. She squeezes her broom, trying to catch her breath."];
+	  124 [label="Cleaning Lady: \"Ah!\" the cleaning lady says, leaning on her broom. \"All I know about politics is that it has brought us more harm than good.\""];
+	  125 [label="Esprit de Corps: C'mon people, try to keep up *any* standards here. It's not about stars, it's... forget it."];
+	  126 [label="Empathy: She's seen it -- and known those who have been killed."];
+	  127 [label="You: \"I'm looking for a young male in his mid-twenties, dark hair, skinny build. A smoker on the balcony.\"\n\"How about a young male in his mid-twenties, dark hair, skinny build? A smoker on the balcony. Know where he lives?\""];
+	  128 [label="Cleaning Lady: \"If you can call it living...\" She spits on the floor, before wiping it off with a broom. \"I have a little room upstairs, right next to the coal room.\""];
+	  129 [label="You: \"That's all, thanks.\""];
+	  130 [label="You: \"I am looking for the parents of a kid named Cuno.\""];
+	  131 [label="Cleaning Lady: \"Something to do with all those stars around his door. He asked me to leave his drawings up on the wall.\""];
+	  132 [label="Jump to: [main hub]"];
+	  133 [label="You: \"It's an ideology. It has some noble aims, but it's also been used to justify terrible bloodshed.\""];
+	  134 [label="Cleaning Lady: \"No one likes them in this building.\" She shakes her head. \"It's only because of the kid they haven't been thrown out.\""];
+	  135 [label="Authority: She appreciates your effort to curb the deviantry and laxness."];
+	  137 [label="Cleaning Lady: \"Addicts, all of them... And sometimes I hear them screaming.\" She winces."];
+	  138 [label="Jump to: [main hub]"];
+	  139 [label="You: \"Lax women and sexual deviants. That's who'll come.\" (Spit.)"];
+	  140 [label="Cleaning Lady: \"The cold never does any good for my bronchitis...\" She sneezes into a dirty handkerchief."];
+	  141 [label="Cleaning Lady: \"I already told you I don't care about any badges.\""];
+	  142 [label="Cleaning Lady: \"Huh,\" the cleaning lady says, \"I thought Revachol *was* the capital.\""];
+	  143 [label="Empathy: It didn't get physical. She heard something she doesn't want to hear again."];
+	  144 [label="Cleaning Lady: \"I don't like talking about them,\" she says mostly to herself."];
+	  145 [label="Half Light: She's scared of room #12."];
+	  146 [label="IsKimHere()"];
+	  147 [label="IsKimHere()", shape=diamond];
+	  148 [label="!(IsKimHere())", shape=diamond];
+	  149 [label="Rhetoric: Oops... you really didn't get the joke there."];
+	  150 [label="You: \"Yes. Some highly technological wizards are going to save this place. It'll be an visionary innovation utopia.\""];
+	  151 [label="Cleaning Lady: \"Yes, well...\" She doesn't know what to say so she just coughs and repeats: \"I hope they're good people.\""];
+	  152 [label="Cleaning Lady: \"Yes-yes. I know who you mean. The scrawny boy who's always smoking like the devil, right?\" She looks at the other end of the hallway."];
+	  153 [label="Cleaning Lady: She mumbles some kind of a response, then hacks something into her handkerchief."];
+	  154 [label="Cleaning Lady: \"Give me a moment...\" The cleaning lady still seems to be having difficulty breathing."];
+	  155 [label="Cleaning Lady: \"Go ahead then. What do you want to know, policeman?\""];
+	  156 [label="Logic: She's the cleaning lady. She knows the floor plan and the residents."];
+	  157 [label="Kim Kitsuragi: \"I thought it was obvious...\" He stops before he offends you. \"Anyway, officer. We *don't* have the witness' name.\""];
+	  158 [label="Cleaning Lady: \"If it ain't my business I keep my nose out of it...\" She shakes her head and mutters to herself."];
+	  159 [label="Cleaning Lady: \"They don't like me cleaning behind their door, think I'm listening in on their fights.\""];
+	  160 [label="Cleaning Lady: \"Impossible,\" the cleaning lady says, shaking her head, \"I would know if someone had moved in there.\" She pauses, eyeing the hallway."];
+	  161 [label="Half Light: So she doesn't. Not after *that one time*. There's a *that one time* here."];
+	  162 [label="Jump to: [apts hub]"];
+	  163 [label="You: \"Okay.\""];
+	  164 [label="You: \"Yes. Radiocomputer wizards are coming. They're gonna save the place -- and the economy.\""];
+	  165 [label="You: \"I'm sure everything will be fine. This apartment building needs *slow* change. Imperceptibly slow.\""];
+	  166 [label="You: \"Is one of the residents on a vacation? Their mailbox is overflowing.\""];
+	  167 [label="Cleaning Lady: \"Oh, that one is a scientist, a future scholar!\" Suddenly the old lady's face is beaming."];
+	  168 [label="You: \"You mean the star-and-antlers? I think that's the symbol of communism.\""];
+	  169 [label="Variable[\"apt.apt_for_rent_wc_reveal\"]"];
+	  170 [label="Variable[\"apt.apt_for_rent_wc_reveal\"]", shape=diamond];
+	  171 [label="!(Variable[\"apt.apt_for_rent_wc_reveal\"])", shape=diamond];
+	  172 [label="Cleaning Lady: \"Give me a moment.\" An elderly woman is leaning on her broom, her knuckles white as bone. She seems to be having difficulty breathing."];
+	  173 [label="Cleaning Lady: \"I think he studies astrology at the community college. Education's good, I always tell them to study.\""];
+	  174 [label="You: \"He's wanted for murder. He's goin' away for life.\""];
+	  175 [label="Rhetoric: The clash of ideas and atrocities are as far from her world as fairies and wizards."];
+	  176 [label="Cleaning Lady: \"What?\" She frowns. \"No. Nobody tells me anything.\""];
+	  177 [label="You: \"Thanks, I'm off.\" [Leave.]"];
+	  178 [label="You: \"Astrology?\""];
+	  179 [label="Cleaning Lady: \"Never heard of it,\" the cleaning lady replies, before another coughing spell takes hold of her."];
+	  180 [label="Cleaning Lady: The cleaning lady shrugs and returns to sweeping."];
+	  181 [label="You: \"I saw unpaid utility bills -- aren't they going to be thrown out?\""];
+	  182 [label="Cleaning Lady: \"The less said about those people, the better.\""];
+	  0 -> 1
+	  1 -> 78
+	  2 -> 108
+	  3 -> 146
+	  4 -> 65
+	  5 -> 65
+	  6 -> 107
+	  7 -> 56
+	  8 -> 86
+	  9 -> 167
+	  10 -> 11
+	  10 -> 36
+	  11 -> 37
+	  12 -> 106
+	  13 -> 85
+	  14 -> 32
+	  15 -> 25
+	  16 -> 47
+	  17 -> 120
+	  17 -> 174
+	  18 -> 141
+	  19 -> 73
+	  20 -> 65
+	  21 -> 138
+	  22 -> 112
+	  23 -> 176
+	  24 -> 35
+	  25 -> 119
+	  26 -> 77
+	  27 -> 10
+	  28 -> 92
+	  29 -> 119
+	  30 -> 119
+	  31 -> 12
+	  32 -> 6
+	  33 -> 119
+	  34 -> 99
+	  35 -> 46
+	  36 -> 37
+	  37 -> 149
+	  38 -> 155
+	  39 -> 29
+	  40 -> 41
+	  40 -> 42
+	  41 -> 157
+	  42 -> 5
+	  43 -> 112
+	  44 -> 43
+	  45 -> 22
+	  46 -> 137
+	  47 -> 156
+	  48 -> 125
+	  49 -> 50
+	  49 -> 51
+	  50 -> 19
+	  51 -> 123
+	  52 -> 53
+	  52 -> 54
+	  53 -> 143
+	  54 -> 28
+	  55 -> 117
+	  56 -> 65
+	  57 -> 87
+	  58 -> 169
+	  59 -> 124
+	  60 -> 63
+	  60 -> 55
+	  61 -> 132
+	  62 -> 135
+	  63 -> 100
+	  64 -> 158
+	  65 -> 130
+	  65 -> 101
+	  65 -> 177
+	  65 -> 118
+	  65 -> 23
+	  65 -> 57
+	  65 -> 27
+	  65 -> 95
+	  65 -> 127
+	  66 -> 103
+	  67 -> 142
+	  68 -> 91
+	  69 -> 70
+	  69 -> 71
+	  70 -> 48
+	  71 -> 25
+	  72 -> 112
+	  73 -> 97
+	  74 -> 104
+	  75 -> 58
+	  76 -> 160
+	  77 -> 16
+	  78 -> 80
+	  78 -> 79
+	  79 -> 154
+	  80 -> 172
+	  81 -> 90
+	  82 -> 179
+	  83 -> 134
+	  84 -> 21
+	  85 -> 164
+	  85 -> 165
+	  85 -> 139
+	  85 -> 115
+	  85 -> 150
+	  86 -> 128
+	  87 -> 119
+	  88 -> 65
+	  90 -> 3
+	  91 -> 69
+	  92 -> 93
+	  92 -> 94
+	  93 -> 83
+	  94 -> 163
+	  94 -> 181
+	  95 -> 13
+	  96 -> 84
+	  97 -> 3
+	  98 -> 126
+	  99 -> 25
+	  100 -> 33
+	  101 -> 8
+	  102 -> 44
+	  103 -> 72
+	  104 -> 65
+	  105 -> 34
+	  105 -> 67
+	  105 -> 133
+	  105 -> 109
+	  105 -> 82
+	  105 -> 59
+	  106 -> 182
+	  107 -> 119
+	  108 -> 20
+	  109 -> 15
+	  110 -> 64
+	  111 -> 88
+	  112 -> 119
+	  113 -> 17
+	  114 -> 122
+	  115 -> 98
+	  116 -> 20
+	  117 -> 33
+	  118 -> 111
+	  119 -> 129
+	  119 -> 66
+	  119 -> 166
+	  119 -> 102
+	  119 -> 9
+	  119 -> 75
+	  119 -> 14
+	  119 -> 24
+	  119 -> 31
+	  120 -> 73
+	  121 -> 160
+	  122 -> 89
+	  122 -> 18
+	  122 -> 26
+	  122 -> 38
+	  123 -> 81
+	  124 -> 25
+	  125 -> 25
+	  126 -> 20
+	  127 -> 152
+	  128 -> 96
+	  129 -> 153
+	  130 -> 74
+	  131 -> 168
+	  131 -> 68
+	  132 -> 65
+	  133 -> 180
+	  134 -> 39
+	  135 -> 20
+	  137 -> 159
+	  138 -> 65
+	  139 -> 62
+	  140 -> 114
+	  141 -> 26
+	  141 -> 38
+	  142 -> 25
+	  143 -> 92
+	  144 -> 162
+	  145 -> 30
+	  146 -> 147
+	  146 -> 148
+	  147 -> 61
+	  148 -> 132
+	  149 -> 40
+	  150 -> 2
+	  151 -> 116
+	  152 -> 113
+	  153 -> 4
+	  154 -> 65
+	  155 -> 156
+	  156 -> 65
+	  157 -> 5
+	  158 -> 7
+	  159 -> 161
+	  160 -> 60
+	  161 -> 52
+	  162 -> 119
+	  163 -> 144
+	  164 -> 2
+	  165 -> 151
+	  166 -> 45
+	  167 -> 173
+	  168 -> 105
+	  169 -> 170
+	  169 -> 171
+	  170 -> 76
+	  171 -> 121
+	  172 -> 140
+	  173 -> 178
+	  174 -> 49
+	  175 -> 25
+	  176 -> 110
+	  178 -> 131
+	  179 -> 25
+	  180 -> 175
+	  181 -> 134
+	  182 -> 145
+}
+

@@ -1,0 +1,520 @@
+# VILLAGE / LITTLE LILY
+# One of Netpicker's kids not running around in the village, instead she sits on the sofa. You can exchange a few words with her.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Jump to: [Little Lily: \"\"Yes!\" She lights with recognition....\"]"];
+	  3 [label="IsKimHere()"];
+	  4 [label="IsKimHere()", shape=diamond];
+	  5 [label="!(IsKimHere())", shape=diamond];
+	  6 [label="Kim Kitsuragi: “我会看紧他的。”你还没来得及回答，警督就飞快地插话。“别担心。”"];
+	  7 [label="Little Lily: “那就好。”她又把羊羊搂紧了些。"];
+	  8 [label="You: ……"];
+	  9 [label="Jump to: [Untitled hub (04)]"];
+	  10 [label="Little Lily: “呃，呃，”她点点头。“我妈妈很厉害的！你知道妈妈哪里最厉害吗？”"];
+	  11 [label="Suggestion: 如果能换掉那个肯定是被你弄坏的贼鸥，也许就能获得加尔特的好感？"];
+	  12 [label="Jump to: [main-hub-lilykid]"];
+	  13 [label="You: “叛徒？”"];
+	  14 [label="You: “那现在手套在哪里呢？”"];
+	  15 [label="Empathy: 她不想你以为这是她偷来的。"];
+	  16 [label="You: “我需要那些手套。”"];
+	  17 [label="Variable[\"TASK.ask_little_lily_about_gloves\"]"];
+	  18 [label="Variable[\"TASK.ask_little_lily_about_gloves\"]", shape=diamond];
+	  19 [label="!(Variable[\"TASK.ask_little_lily_about_gloves\"])", shape=diamond];
+	  20 [label="Jump to: [main-hub-lilykid]"];
+	  21 [label="You: “你认识一个叫露比的人吗？“"];
+	  22 [label="Half Light: 滚蛋。"];
+	  23 [label="Jump to: [Untitled hub (02)]"];
+	  24 [label="You: “不可能。我到死都会骂脏话的。”"];
+	  25 [label="You: 我不会骂脏话！我不会！我就这样保持安静！"];
+	  26 [label="Little Lily: “拜拜！”女孩那双好奇的大眼睛还是停留在你身上。"];
+	  28 [label="You: “那是什么？”（指向挂在天花板上的鸟类标本。）"];
+	  29 [label="You: “什么事都厉害？”"];
+	  30 [label="Little Lily: “它是不是很软？”她说得对，羊羊非常柔软。她用白色皮毛摩擦着你的脸颊，然后把小羊放回自己腿上，紧紧抱住了它。"];
+	  31 [label="You: “等等，你的意思是可怕，对吧？”"];
+	  32 [label="Little Lily: “哦哦哦……”她似乎并没有理解，不过至少，你把*重要*的那部分传达给她了。"];
+	  33 [label="FinishTask(\"TASK.ask_little_lily_about_gloves_done\")--[[ Variable[ ]]"];
+	  34 [label="Jump to: [main-hub-lilykid]"];
+	  35 [label="Kim Kitsuragi: 警督叹着气蹲下身子，和女孩的视线齐平。“那你留意到最近有谁的行为不太正常吗？”"];
+	  36 [label="Little Lily: 她突然想起了什么。“对了！那对双胞胎因为说了*脏话*所以惹了麻烦。”"];
+	  37 [label="Untitled hub (04)"];
+	  38 [label="Volition: 你坚持了自己的立场。对自己诚实是件好事。"];
+	  39 [label="Untitled hub (05)"];
+	  40 [label="Jump to: [main-hub-lilykid]"];
+	  41 [label="You: “算不上吧，不过我很愿意。”"];
+	  42 [label="You: “革命者？”"];
+	  43 [label="You: “为什么会‘鬼鬼’呢？”"];
+	  44 [label="Kim Kitsuragi: “把你那张该死的脸靠在羊羊脸上，好吗？”警督听起来像是在发号施令——而且出乎意料地粗暴。"];
+	  45 [label="FinishTask(\"TASK.ask_little_girl_in_village_about_gloves_done\")--[[ Variable[ ]]"];
+	  46 [label="Variable[\"village.lily_greeting_done\"]"];
+	  47 [label="Variable[\"village.lily_greeting_done\"]", shape=diamond];
+	  48 [label="!(Variable[\"village.lily_greeting_done\"])", shape=diamond];
+	  49 [label="Little Lily: “是的。”她皱皱眉。“他们不想跟我玩。他们比较大，所以在外面玩！”"];
+	  50 [label="Little Lily: “那很好啊！我妈妈很厉害的，”她点点头。“她从来都不生气呢。”"];
+	  51 [label="Little Lily: “*什么*都厉害！”她高兴地大喊到。"];
+	  52 [label="IsKimHere()"];
+	  53 [label="IsKimHere()", shape=diamond];
+	  54 [label="!(IsKimHere())", shape=diamond];
+	  55 [label="You: “他们的确看起来很像。”"];
+	  56 [label="Variable[\"village.lily_sugg_take_bird\"]"];
+	  57 [label="Variable[\"village.lily_sugg_take_bird\"]", shape=diamond];
+	  58 [label="!(Variable[\"village.lily_sugg_take_bird\"])", shape=diamond];
+	  59 [label="GainTask(\"TASK.get_the_armoured_gloves_from_lillys_sandcastle\")--[[ Variable[ ]]"];
+	  60 [label="Jump to: [main-hub-lilykid]"];
+	  61 [label="You: “什么事都行。你见过或者听到过什么奇怪的东西吗？”"];
+	  62 [label="Little Lily: “什么？”她用小手盖住羊羊的头，想要遮住它的耳朵。"];
+	  63 [label="Little Lily: 她看着你，等着你的回答。"];
+	  64 [label="Volition: 对小孩撒谎真的好吗？大概没关系吧。毕竟这不是你的责任。"];
+	  65 [label="Volition: ……"];
+	  66 [label="Jump to: [Untitled hub (02)]"];
+	  67 [label="You: “呃，能给我吗？”"];
+	  68 [label="Little Lily: “非常鬼鬼哦！”她抱紧毛绒玩具，摇了摇头。“不要去那里。”"];
+	  69 [label="You: “这是什么？”（把你从天花板上取下来的鸟类标本拿给她看。）"];
+	  70 [label="Reaction Speed: 那个餐厅经理，加尔特，不是想替换一个动物标本吗？"];
+	  71 [label="Jump to: [main-hub-lilykid]"];
+	  72 [label="Little Lily: “妈妈说我是个大姑娘了，但是她不知道我发不好*拉*的音。或者是，有时候我可以，但是又……*拉*……*露*……*拉露*……”"];
+	  73 [label="Little Lily: “嗯！”小女孩坚定地点点头。“我不说脏话，羊羊也不说脏话。”"];
+	  74 [label="Little Lily: “是呀。”她打了个哈欠，躺回靠垫上。"];
+	  75 [label="Little Lily: “你好，先生！”一个小女孩，约莫4、5岁的模样，正坐在一张沙发上。她看着你，带着显而易见的好奇心。"];
+	  76 [label="Little Lily: “没有，先生！”她摇摇头，眼睛瞪的圆溜溜的。“就连羊羊都不喜欢它。她把毛绒玩具抱得更紧了。”"];
+	  77 [label="Little Lily: “是的，我是！小莉莉！”她用那双大眼睛看着你。“你认识我妈妈吗？”"];
+	  78 [label="You: “里面有一只竹节虫！我想抓住它。”"];
+	  79 [label="Jump to: [main-hub-lilykid]"];
+	  80 [label="You: “外面那对双胞胎是你的兄弟吗？”"];
+	  81 [label="Little Lily: “我不知道。”"];
+	  82 [label="Little Lily: “又老又破。”她点点头。“妈妈说，很险。我听妈妈的话。羊羊也听。哥哥们也听。他们想去那里，但是太吓人了，他们就跑了！”"];
+	  83 [label="CheckItem(\"ruffed_grouse_taxidermy\")"];
+	  84 [label="CheckItem(\"ruffed_grouse_taxidermy\")", shape=diamond];
+	  85 [label="!(CheckItem(\"ruffed_grouse_taxidermy\"))", shape=diamond];
+	  86 [label="You: “我不配。我是个人渣。”"];
+	  87 [label="Kim Kitsuragi: “你是从哪里弄到这些手套的？”"];
+	  88 [label="CheckItem(\"ruffed_grouse_taxidermy\")"];
+	  89 [label="CheckItem(\"ruffed_grouse_taxidermy\")", shape=diamond];
+	  90 [label="!(CheckItem(\"ruffed_grouse_taxidermy\"))", shape=diamond];
+	  91 [label="You: “你的爸爸妈妈在哪？”"];
+	  92 [label="Untitled hub (03)"];
+	  93 [label="Jump to: [Untitled hub (04)]"];
+	  94 [label="Little Lily: 时间只过去了三秒，女孩仍在等待你的回答。"];
+	  95 [label="You: “我听说你们好像进去过那栋菲尔德大厦？”"];
+	  96 [label="Little Lily: “这是羊羊！它是我的朋友！有点像……”她举起毛茸茸的动物给你看。"];
+	  97 [label="Little Lily: “羊羊一般是不喜欢陌生人的，不过你跟羊羊一样，也是毛绒绒的。”"];
+	  98 [label="Little Lily: “哦哦哦……”她似乎并没有理解，不过警督的口气把*重要*的那部分传达给她了。"];
+	  99 [label="Little Lily: “当然啦！我的意思是你都已经拿到了。反正我也不喜欢它……它看起来很生气。”"];
+	  100 [label="Little Lily: “羊羊不喜欢脏话。你要保证不说！”"];
+	  101 [label="You: “你拿着的是什么？”（指向她的玩具。）"];
+	  102 [label="You: “羊羊好像要坏了。”"];
+	  103 [label="Variable[\"TASK.sylvie_talk_to_garte_done\"]"];
+	  104 [label="Variable[\"TASK.sylvie_talk_to_garte_done\"]", shape=diamond];
+	  105 [label="!(Variable[\"TASK.sylvie_talk_to_garte_done\"])", shape=diamond];
+	  106 [label="Savoir Faire: 好吧。你只需要把它从天花板上拿下来，然后就可以啦！"];
+	  107 [label="You: “我听说这里有个戴着盔甲手套的小女孩。是你吗？”"];
+	  108 [label="Little Lily: “我和羊羊玩捉迷藏的时候发现的。在一个没人住的空房子里！我想是有人藏起来的……”"];
+	  109 [label="Little Lily: 她撅起小嘴。“我藏起来了。双胞胎会把东西拿走的。他们很蠢……”她举起毛绒玩具，看着剩下的那只眼睛，仿佛在寻求它的肯定。"];
+	  110 [label="Little Lily: “它们在我的沙堡里。”她指向外面的某个地方。“在我们的房子后面。沙子底下。你可以把沙堡弄坏，它不是很好。”"];
+	  111 [label="IsKimHere()"];
+	  112 [label="IsKimHere()", shape=diamond];
+	  113 [label="!(IsKimHere())", shape=diamond];
+	  114 [label="You: “可怜的纯真革命。那些资产阶级都对你做了些什么？”"];
+	  115 [label="Little Lily: 她气喘吁吁。“不！别说脏话！答应我好吗？”"];
+	  116 [label="You: “好的。”（撒谎。）"];
+	  117 [label="Volition: 是啊，你就是这样。\n是的，你就是这样。没事——你现在能放轻松了。这感觉也不是那么糟，对吧？你就是这样的人。"];
+	  118 [label="Little Lily: “那个，先生，你刚才在我的壁炉里干什么呢？”"];
+	  119 [label="Little Lily: “你好，先生！”拾网人的女儿朝你挥挥手。"];
+	  120 [label="Little Lily: “哈哈哈，是的！”她笑着抱住了自己的毛绒玩具。"];
+	  121 [label="Jump to: [main-hub-lilykid]"];
+	  122 [label="Little Lily: “他们看起来……模样！”她慢慢消化着这个词语，然后又吃吃地笑了起来。"];
+	  123 [label="Little Lily: “当然！你去拿吧。反正我不喜欢……它看起来很生气。”"];
+	  124 [label="Little Lily: “当然！你去拿吧。反正我不喜欢……它看起来很生气。”"];
+	  125 [label="You: “你是莉莉恩的女儿吗？”"];
+	  126 [label="Little Lily: “哦，好吧！”她严肃地点点头。"];
+	  127 [label="You: “能把它给我吗？我认识一个特别喜欢鸟类标本的人。”"];
+	  128 [label="You: 把脸靠在羊羊身上。"];
+	  129 [label="You: “你是从哪里弄到的？”"];
+	  130 [label="You: “你知道有什么可以帮助我废除资本主义的吗？这样你就能给康米主义接班，发起纯真革命了。”"];
+	  131 [label="Little Lily: “不，不是的。”她看着破烂的玩具，皱起眉头。“你知道你是谁，羊羊。”"];
+	  132 [label="IsKimHere()"];
+	  133 [label="IsKimHere()", shape=diamond];
+	  134 [label="!(IsKimHere())", shape=diamond];
+	  135 [label="Little Lily: “那好吧。对不起。”她把自己的脸贴在羊羊身上，难过的笑了。"];
+	  136 [label="CheckItem(\"ruffed_grouse_taxidermy\")"];
+	  137 [label="CheckItem(\"ruffed_grouse_taxidermy\")", shape=diamond];
+	  138 [label="!(CheckItem(\"ruffed_grouse_taxidermy\"))", shape=diamond];
+	  139 [label="Jump to: [Untitled hub (02)]"];
+	  140 [label="Little Lily: 羊羊一言不发。壁炉闪烁着火光，发出咯咯的声响。她把娃娃抱在胸前笑了起来。"];
+	  141 [label="You: 可如果我不想成为一个喜欢爆粗的人呢？如果我就是想成为一个爆粗的警察呢？"];
+	  142 [label="Jump to: [main-hub-lilykid]"];
+	  143 [label="IsKimHere()"];
+	  144 [label="IsKimHere()", shape=diamond];
+	  145 [label="!(IsKimHere())", shape=diamond];
+	  146 [label="Little Lily: “哎哟哟……”她费力地嘟囔着。然后摇了摇头。“没有。”"];
+	  147 [label="You: “就这样吗？”"];
+	  148 [label="You: “可是脏话也有好的一面！用脏话表达情绪有益身心健康。”"];
+	  149 [label="Volition: 你不能保证的原因很简单，因为你就是一个喜欢说脏话的人。"];
+	  150 [label="You: “修正主义者？”"];
+	  151 [label="You: “没什么。”"];
+	  152 [label="IsKimHere()"];
+	  153 [label="IsKimHere()", shape=diamond];
+	  154 [label="!(IsKimHere())", shape=diamond];
+	  155 [label="You: “这是大人的事。你不会明白的。只要告诉我东西在哪就好。”"];
+	  156 [label="Little Lily: “当然啦！我的意思是你都已经拿到了。反正我也不喜欢它……它看起来很生气。”"];
+	  157 [label="Little Lily: 她把毛绒玩具转过来对着自己。“他说的是什么意思呢，羊羊？”玩具并没有回答她。填塞物从玩具的背后露出来。"];
+	  158 [label="You: “再见。”[离开。]"];
+	  159 [label="Little Lily: “这是一只*松鸡*，”她大声尖叫，笑的很开心。"];
+	  160 [label="Little Lily: “是的，”她高兴地大叫起来。“羊羊是大-革……命。”"];
+	  161 [label="Little Lily: “我们没去过。妈妈和姑妈以为我们去过，不过它真的很鬼鬼。”"];
+	  162 [label="Variable[\"village.lily_altgreet_fireplace\"]"];
+	  163 [label="Variable[\"village.lily_altgreet_fireplace\"]", shape=diamond];
+	  164 [label="!(Variable[\"village.lily_altgreet_fireplace\"])", shape=diamond];
+	  165 [label="Little Lily: “啊……”她把布娃娃放在腿上。娃娃的破破烂烂的四肢伸向你，仿佛在寻求拥抱。“比如？”"];
+	  166 [label="You: “只有失败者才说脏话。你不说脏话就是个好孩子。”"];
+	  167 [label="You: 嘿，我怎么就不能假装发誓呢？"];
+	  168 [label="Jump to: [Untitled hub (02)]"];
+	  169 [label="Jump to: [main-hub-lilykid]"];
+	  170 [label="Little Lily: 她抱着一只小毛绒玩具。时不时地还会扭动几下。"];
+	  171 [label="Little Lily: 她在空中旋转着手中的毛绒玩具，笑的很开心。"];
+	  172 [label="Little Lily: “哦，好吧！”她在空中旋转着毛绒玩具。"];
+	  173 [label="Jump to: [main-hub-lilykid]"];
+	  174 [label="Little Lily: “是的。非常软。”突然间，她把毛绒玩具推到你面前。"];
+	  175 [label="Little Lily: “嗯，”她点头回复到。“它非常非常鬼鬼。”"];
+	  176 [label="Kim Kitsuragi: “小朋友啊。”警督摇摇头。"];
+	  177 [label="You: “我知道了。谢谢你的消息。我会跟他们谈谈的。”（继续。）\n“好吧……我会去和你的哥哥们谈谈脏话的事情。感谢提醒！”（继续。）"];
+	  178 [label="Variable[\"village.lily_volition_said_you_swear\"]"];
+	  179 [label="Variable[\"village.lily_volition_said_you_swear\"]", shape=diamond];
+	  180 [label="!(Variable[\"village.lily_volition_said_you_swear\"])", shape=diamond];
+	  181 [label="You: ……操。我觉得我就是个喜欢爆粗的人。"];
+	  182 [label="Volition: 抱歉啊，你不是一个人。"];
+	  183 [label="You: “我在和孩子们交流，想从他们那儿了解一些信息。最近发生过什么奇怪的事情吗？”"];
+	  184 [label="You: “瑞瓦肖？”"];
+	  185 [label="You: “遥视者？”"];
+	  186 [label="Kim Kitsuragi: “我想她的意思是‘革命者’。”"];
+	  187 [label="You: “羊羊看起来很柔软。”"];
+	  188 [label="You: “我需要它们来做一项非常重要的警方调查。”"];
+	  189 [label="Little Lily: “不客气！”"];
+	  190 [label="You: “说脏话怎么了？我喜欢脏话。”"];
+	  191 [label="You: 什么？你的脑子已经想不出更聪明的答案了吗？什么都想不出来？"];
+	  192 [label="Little Lily: 小女孩歪着脑袋。“你能保证以后再也不说脏话了吗？”"];
+	  193 [label="main-hub-lilykid"];
+	  194 [label="You: “是的，我们之前见过。”"];
+	  195 [label="You: “你能跟我讲讲那栋大厦吗？”"];
+	  196 [label="Suggestion: 如果你能把弄坏的贼鸥补上，也许就能获得加尔特的好感？"];
+	  197 [label="You: “复仇？”"];
+	  198 [label="Untitled hub"];
+	  199 [label="You: “没关系。那你最近有见过或者听到过什么奇怪的东西吗？”"];
+	  200 [label="Jump to: [main-hub-lilykid]"];
+	  201 [label="You: “不，请告诉我吧。”"];
+	  202 [label="Little Lily: 突然间，她吃吃地笑了起来。“他们看起来是一样的！哈哈哈哈！有时候我都没办法把他们分开。”"];
+	  203 [label="Kim Kitsuragi: “我们需要那双手套。这是很重要的警方事务。”最后两个词他的发音格外小心。"];
+	  204 [label="Little Lily: “为什么？”她怀疑地看着你。"];
+	  205 [label="Little Lily: 她皱紧眉头，迟迟不肯透露自己的秘密。“好，好吧，”最后，她不情愿地开了口。“我把它们藏在我的沙堡里了。在房子后面。”她指向外面的某个地方。“你可以拿走。”"];
+	  206 [label="Little Lily: “妈妈在外面，而且我真的不知道爸爸的事。”她朝你露出一个明朗的笑容，仿佛这是一件好事。"];
+	  207 [label="IsKimHere()"];
+	  208 [label="IsKimHere()", shape=diamond];
+	  209 [label="!(IsKimHere())", shape=diamond];
+	  210 [label="Little Lily: “不要！不要做坏人！”她的五官因为生气而皱成一团。"];
+	  211 [label="Volition: 行了，别难为自己了。说脏话没什么的，甚至还能有益身心。"];
+	  212 [label="Variable[\"village.orb_nethouse_tried_catching_phasmid\"]"];
+	  213 [label="Variable[\"village.orb_nethouse_tried_catching_phasmid\"]", shape=diamond];
+	  214 [label="!(Variable[\"village.orb_nethouse_tried_catching_phasmid\"])", shape=diamond];
+	  215 [label="Little Lily: 羊羊是一只毛绒玩具，老实说，它看起来状态不佳。其中一只纽扣眼睛已经不见，有好几个地方的毛皮也破了。"];
+	  216 [label="You: “哦，好吧。呃，很高兴见到你，羊羊。”"];
+	  217 [label="Little Lily: “是的，羊羊年纪很大了。”她在空中挥舞着玩具。“羊羊是个……革……那个……”她结巴了起来。"];
+	  218 [label="You: “他们看起来一模一样，不是吗？我也说过同样的话。”"];
+	  219 [label="Little Lily: “哈哈哈哈！”她还在笑。“羊羊能分开他们。”她在空中挥舞着玩具。"];
+	  220 [label="Jump to: [main-hub-lilykid]"];
+	  221 [label="Little Lily: “哦哦哦！”她看起来有些警觉。“我有手套，很大的手套！还很重。”"];
+	  222 [label="Little Lily: “拉……拉比……露……露比。”女孩突然变得严肃起来，她身体前倾，似乎打算告诉你一个秘密。"];
+	  223 [label="Untitled hub (02)"];
+	  224 [label="Reaction Speed: 只要他在这儿，就不会让你或是RCM在这个小女孩面前出洋相的。"];
+	  225 [label="You: “是的，不过它是*做什么*的？”"];
+	  226 [label="You: “呃，好吧，谢谢。”"];
+	  0 -> 1
+	  1 -> 212
+	  2 -> 36
+	  3 -> 4
+	  3 -> 5
+	  4 -> 35
+	  5 -> 114
+	  5 -> 199
+	  6 -> 224
+	  7 -> 64
+	  8 -> 65
+	  9 -> 37
+	  10 -> 201
+	  10 -> 29
+	  11 -> 56
+	  12 -> 193
+	  13 -> 131
+	  14 -> 109
+	  15 -> 14
+	  16 -> 204
+	  17 -> 18
+	  17 -> 19
+	  18 -> 33
+	  19 -> 45
+	  20 -> 193
+	  21 -> 222
+	  22 -> 140
+	  23 -> 223
+	  24 -> 210
+	  25 -> 211
+	  28 -> 159
+	  29 -> 120
+	  30 -> 12
+	  31 -> 175
+	  32 -> 110
+	  33 -> 59
+	  34 -> 193
+	  35 -> 36
+	  36 -> 223
+	  37 -> 24
+	  37 -> 116
+	  37 -> 167
+	  38 -> 168
+	  39 -> 141
+	  39 -> 181
+	  40 -> 193
+	  41 -> 10
+	  42 -> 160
+	  43 -> 68
+	  44 -> 128
+	  45 -> 59
+	  46 -> 48
+	  46 -> 47
+	  47 -> 119
+	  48 -> 75
+	  49 -> 202
+	  50 -> 71
+	  51 -> 40
+	  52 -> 53
+	  52 -> 54
+	  53 -> 186
+	  54 -> 121
+	  55 -> 219
+	  56 -> 57
+	  56 -> 58
+	  57 -> 198
+	  58 -> 70
+	  59 -> 60
+	  60 -> 193
+	  61 -> 2
+	  62 -> 100
+	  63 -> 149
+	  64 -> 168
+	  65 -> 8
+	  65 -> 181
+	  66 -> 223
+	  67 -> 136
+	  68 -> 195
+	  68 -> 31
+	  69 -> 159
+	  70 -> 198
+	  71 -> 193
+	  72 -> 111
+	  73 -> 22
+	  74 -> 139
+	  75 -> 170
+	  76 -> 161
+	  77 -> 41
+	  77 -> 194
+	  78 -> 126
+	  79 -> 193
+	  80 -> 49
+	  81 -> 226
+	  81 -> 67
+	  81 -> 127
+	  82 -> 79
+	  83 -> 84
+	  83 -> 85
+	  84 -> 169
+	  85 -> 106
+	  86 -> 132
+	  87 -> 108
+	  88 -> 89
+	  88 -> 90
+	  89 -> 99
+	  90 -> 124
+	  91 -> 206
+	  92 -> 24
+	  92 -> 116
+	  92 -> 148
+	  92 -> 167
+	  93 -> 37
+	  94 -> 9
+	  95 -> 76
+	  96 -> 215
+	  97 -> 142
+	  98 -> 110
+	  99 -> 83
+	  100 -> 37
+	  101 -> 96
+	  102 -> 217
+	  103 -> 104
+	  103 -> 105
+	  104 -> 196
+	  105 -> 11
+	  106 -> 169
+	  107 -> 221
+	  108 -> 15
+	  109 -> 143
+	  110 -> 17
+	  111 -> 112
+	  111 -> 113
+	  112 -> 176
+	  113 -> 34
+	  114 -> 157
+	  115 -> 207
+	  116 -> 7
+	  117 -> 94
+	  118 -> 78
+	  118 -> 151
+	  119 -> 193
+	  120 -> 40
+	  121 -> 193
+	  122 -> 220
+	  123 -> 83
+	  124 -> 83
+	  125 -> 77
+	  126 -> 173
+	  127 -> 88
+	  128 -> 30
+	  129 -> 108
+	  130 -> 146
+	  131 -> 52
+	  132 -> 133
+	  132 -> 134
+	  133 -> 44
+	  134 -> 135
+	  135 -> 142
+	  136 -> 137
+	  136 -> 138
+	  137 -> 156
+	  138 -> 123
+	  139 -> 223
+	  140 -> 23
+	  141 -> 182
+	  142 -> 193
+	  143 -> 144
+	  143 -> 145
+	  144 -> 203
+	  145 -> 16
+	  146 -> 3
+	  147 -> 74
+	  148 -> 62
+	  149 -> 178
+	  150 -> 131
+	  151 -> 172
+	  152 -> 153
+	  152 -> 154
+	  153 -> 87
+	  154 -> 129
+	  155 -> 205
+	  156 -> 83
+	  157 -> 199
+	  158 -> 26
+	  159 -> 103
+	  160 -> 121
+	  161 -> 43
+	  161 -> 195
+	  161 -> 31
+	  162 -> 163
+	  162 -> 164
+	  163 -> 46
+	  164 -> 118
+	  165 -> 130
+	  165 -> 61
+	  166 -> 73
+	  167 -> 63
+	  168 -> 223
+	  169 -> 193
+	  170 -> 193
+	  171 -> 83
+	  172 -> 173
+	  173 -> 193
+	  174 -> 128
+	  174 -> 86
+	  175 -> 43
+	  175 -> 195
+	  176 -> 34
+	  177 -> 189
+	  178 -> 179
+	  178 -> 180
+	  179 -> 39
+	  180 -> 191
+	  181 -> 117
+	  182 -> 25
+	  182 -> 181
+	  183 -> 165
+	  184 -> 131
+	  185 -> 131
+	  186 -> 160
+	  187 -> 174
+	  188 -> 32
+	  189 -> 200
+	  190 -> 115
+	  191 -> 192
+	  192 -> 93
+	  193 -> 69
+	  193 -> 101
+	  193 -> 107
+	  193 -> 80
+	  193 -> 21
+	  193 -> 183
+	  193 -> 91
+	  193 -> 28
+	  193 -> 125
+	  193 -> 158
+	  193 -> 95
+	  194 -> 50
+	  195 -> 82
+	  196 -> 56
+	  197 -> 131
+	  198 -> 225
+	  198 -> 226
+	  198 -> 67
+	  198 -> 127
+	  199 -> 36
+	  200 -> 193
+	  201 -> 51
+	  202 -> 218
+	  202 -> 55
+	  203 -> 98
+	  204 -> 155
+	  204 -> 188
+	  205 -> 17
+	  206 -> 20
+	  207 -> 208
+	  207 -> 209
+	  208 -> 6
+	  209 -> 92
+	  210 -> 38
+	  211 -> 8
+	  211 -> 181
+	  212 -> 213
+	  212 -> 214
+	  213 -> 162
+	  214 -> 46
+	  215 -> 216
+	  215 -> 187
+	  215 -> 102
+	  216 -> 97
+	  217 -> 197
+	  217 -> 42
+	  217 -> 13
+	  217 -> 150
+	  217 -> 184
+	  217 -> 185
+	  218 -> 122
+	  219 -> 220
+	  220 -> 193
+	  221 -> 152
+	  222 -> 72
+	  223 -> 177
+	  223 -> 147
+	  223 -> 166
+	  223 -> 190
+	  224 -> 66
+	  225 -> 81
+	  226 -> 171
+}
+

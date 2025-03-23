@@ -1,0 +1,145 @@
+# THOUGHT / FAIRWEATHER T-500
+# Visual Calculus wants you to research Enemy Technology. Get it after equipping any piece of the dead man's armour.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Visual Calculus: 白色的陶瓷胸甲环抱住你的躯干，保护你的命脉，同时也没有让你的体型变得过于臃肿……"];
+	  3 [label="Visual Calculus: 当然了，也许你想把这套盔甲尽可能久地留在身边，来争取足够的分析时间，找出它的弱点。"];
+	  4 [label="Visual Calculus: 记住，这是一个高度专业化的运动再分配器，专门用来挡子弹的。穿上它，观察它的性能。看看设计上有没有什么*弱点*。"];
+	  5 [label="Perception (Hearing): 盔甲跟随你的动作而晃动，他们轻轻互相摩擦，声音就像有个骰子在远处滚动一样。"];
+	  6 [label="Variable[\"TASK.find_one_armour_piece\"]"];
+	  7 [label="Variable[\"TASK.find_one_armour_piece\"]", shape=diamond];
+	  8 [label="!(Variable[\"TASK.find_one_armour_piece\"])", shape=diamond];
+	  9 [label="Visual Calculus: 两件？你确定没搞错吗？还有一个头盔呢。更像是三件套。你真是*野心勃勃*。"];
+	  10 [label="Visual Calculus: 呃，现在想这些有点迟了，对吧？"];
+	  11 [label="Visual Calculus: 当手指握拳，你意识到自己只需一拳就能击倒任何人……白色的陶瓷手套舒适地包裹着你的手指。"];
+	  12 [label="You: 我记得一种感觉——担心与穿着这套盔甲的人相遇。"];
+	  13 [label="You: 这个装备可以让我的口袋装满现金。也许我可以把它卖给其他警察。"];
+	  14 [label="You: [放弃思维。]"];
+	  15 [label="Variable[\"TASK.find_one_armour_piece\"] == true  and  Variable[\"TASK.find_one_armour_piece_done\"] == false"];
+	  16 [label="Variable[\"TASK.find_one_armour_piece\"] == true  and  Variable[\"TASK.find_one_armour_piece_done\"] == false", shape=diamond];
+	  17 [label="!(Variable[\"TASK.find_one_armour_piece\"] == true  and  Variable[\"TASK.find_one_armour_piece_done\"] == false)", shape=diamond];
+	  18 [label="Variable[\"yard.hanged_technologic_advanced\"]"];
+	  19 [label="Variable[\"yard.hanged_technologic_advanced\"]", shape=diamond];
+	  20 [label="!(Variable[\"yard.hanged_technologic_advanced\"])", shape=diamond];
+	  21 [label="You: 弱点？"];
+	  22 [label="Visual Calculus: 我猜也是。"];
+	  23 [label="Visual Calculus: 记住，这种珐琅材料充当着一种运动再分配器的角色。专门用来挡子弹的。穿上它，观察它的性能。看看设计上有没有什么*弱点*。"];
+	  24 [label="Jump to: [yard.hanged_technologic_advanced]"];
+	  25 [label="armourthoughthub"];
+	  26 [label="Visual Calculus: 你可能还需要一段时间才能集齐所有部件。与此同时，你应该分析这套盔甲，找出它的弱点。"];
+	  27 [label="You: 这是我长久以来追寻的*敌人的技术*。我不能只是享受它——我必须*学习*它。"];
+	  28 [label="CheckEquipped(\"shoes_t500\")"];
+	  29 [label="CheckEquipped(\"shoes_t500\")", shape=diamond];
+	  30 [label="!(CheckEquipped(\"shoes_t500\"))", shape=diamond];
+	  31 [label="Composure: 你真的感觉更加自信了。刀枪不入会产生这种效果。甚至局部的刀枪不入也可以。"];
+	  32 [label="Visual Calculus: 是的。你应该分析这套盔甲，找出它的弱点。"];
+	  33 [label="Visual Calculus: 不管怎么说，你已经发现一件自己要找的东西了。别忘了享受一下！"];
+	  34 [label="You: 当一个无人能挡的陶瓷人，挺好的。"];
+	  35 [label="CheckEquipped(\"shirt_t500\")"];
+	  36 [label="CheckEquipped(\"shirt_t500\")", shape=diamond];
+	  37 [label="!(CheckEquipped(\"shirt_t500\"))", shape=diamond];
+	  38 [label="Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  39 [label="Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  40 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  41 [label="You: 穿着未来盔甲。这才是警察应有的样子。"];
+	  43 [label="Variable[\"gates.manana_armour_with_armour\"]"];
+	  44 [label="Variable[\"gates.manana_armour_with_armour\"]", shape=diamond];
+	  45 [label="!(Variable[\"gates.manana_armour_with_armour\"])", shape=diamond];
+	  46 [label="Visual Calculus: 你低头看向包裹在后背和小腿的白色陶瓷盔甲，惊讶地发现它们是如此地贴合。"];
+	  47 [label="Visual Calculus: 然后你应该做好准备——分析这套盔甲，找出它的弱点。"];
+	  48 [label="Composure: 你真的感觉更加自信了。刀枪不入会产生这种效果。甚至局部的刀枪不入也可以。"];
+	  49 [label="CheckEquipped(\"gloves_t500\")"];
+	  50 [label="CheckEquipped(\"gloves_t500\")", shape=diamond];
+	  51 [label="!(CheckEquipped(\"gloves_t500\"))", shape=diamond];
+	  52 [label="Visual Calculus: 硬化珐琅，光滑又轻盈，为你的面颊增添了一丝光彩，为你的步伐增加了一分轻盈。想象一下，如果穿上一整套，对你能有多大的帮助！"];
+	  53 [label="You: 是啊，我*想要*一整套！"];
+	  54 [label="You: 找到一件——还有两件。我来了。"];
+	  55 [label="Visual Calculus: 当你的脑袋隐藏在陶瓷头盔之下时，你意识到——"];
+	  56 [label="You: 迟到总比不到好，对吧？"];
+	  57 [label="Visual Calculus: 硬化珐琅，光滑又轻盈，为你的面颊增添了一丝光彩，为你的步伐增加了一分轻盈。想象一下，如果穿上一整套，对你能有多大的帮助！"];
+	  58 [label="Untitled hub"];
+	  59 [label="You: 我会对这个负责的。这只是为了保护我不受伤害，不是用来炫耀的。"];
+	  60 [label="You: 这是我长久以来追寻的*敌人的技术*。我不能只是享受它——我必须*学习*它。"];
+	  61 [label="Half Light: 有一天，你不得不跟穿着相同材质的人*战斗*。"];
+	  0 -> 1
+	  1 -> 28
+	  2 -> 5
+	  3 -> 21
+	  4 -> 61
+	  5 -> 38
+	  6 -> 8
+	  6 -> 7
+	  7 -> 57
+	  8 -> 52
+	  9 -> 27
+	  9 -> 12
+	  9 -> 53
+	  10 -> 56
+	  10 -> 14
+	  11 -> 5
+	  12 -> 47
+	  13 -> 3
+	  14 -> 15
+	  15 -> 16
+	  15 -> 17
+	  16 -> 33
+	  18 -> 19
+	  18 -> 20
+	  19 -> 4
+	  20 -> 23
+	  21 -> 18
+	  22 -> 15
+	  23 -> 61
+	  24 -> 18
+	  25 -> 12
+	  25 -> 13
+	  25 -> 53
+	  25 -> 54
+	  25 -> 27
+	  25 -> 60
+	  26 -> 21
+	  27 -> 32
+	  28 -> 29
+	  28 -> 30
+	  29 -> 46
+	  30 -> 35
+	  31 -> 25
+	  32 -> 18
+	  34 -> 24
+	  35 -> 36
+	  35 -> 37
+	  36 -> 2
+	  37 -> 49
+	  38 -> 40
+	  38 -> 39
+	  39 -> 56
+	  39 -> 14
+	  40 -> 43
+	  41 -> 6
+	  43 -> 44
+	  43 -> 45
+	  44 -> 34
+	  44 -> 14
+	  45 -> 58
+	  46 -> 5
+	  47 -> 18
+	  48 -> 25
+	  49 -> 50
+	  49 -> 51
+	  50 -> 11
+	  51 -> 55
+	  52 -> 48
+	  53 -> 26
+	  54 -> 9
+	  55 -> 10
+	  56 -> 22
+	  57 -> 31
+	  58 -> 41
+	  58 -> 59
+	  58 -> 14
+	  59 -> 6
+	  60 -> 18
+}
+

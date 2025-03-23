@@ -1,0 +1,71 @@
+# WHIRLING ROOF ORB / handeye catch
+# hand eye coordination bubble to catch the wildflowers
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: The lieutenant gives you an acknowledging little nod."];
+	  3 [label="You: Move your hand, fast!"];
+	  4 [label="You: Variable[\"whirling.klaasje_flower_red_check_grab\"]"];
+	  5 [label="Variable[\"whirling.klaasje_flower_red_check_grab\"]", shape=diamond];
+	  6 [label="!(Variable[\"whirling.klaasje_flower_red_check_grab\"])", shape=diamond];
+	  7 [label="You: [Discard chance.]"];
+	  8 [label="Hand/Eye Coordination: You catch a single white flower between your fingers. The rest fly off into the wind. It's a may bell!"];
+	  9 [label="Hand/Eye Coordination: Your 9mm semiautomatic finger pistols produce a satisfying snap. (Strange for such a low calibre finger-gun to sound so chunky.) The flower in your hand is impressed. So is Kim."];
+	  10 [label="Hand/Eye Coordination: IsTHCPresent(\"finger_pistols\")"];
+	  11 [label="IsTHCPresent(\"finger_pistols\")", shape=diamond];
+	  12 [label="!(IsTHCPresent(\"finger_pistols\"))", shape=diamond];
+	  13 [label="Hand/Eye Coordination: Variable[\"whirling.klaasje_flower_red_check_grab\"] == true"];
+	  14 [label="Variable[\"whirling.klaasje_flower_red_check_grab\"] == true", shape=diamond];
+	  15 [label="!(Variable[\"whirling.klaasje_flower_red_check_grab\"] == true)", shape=diamond];
+	  16 [label="Hand/Eye Coordination: IsKimHere()"];
+	  17 [label="IsKimHere()", shape=diamond];
+	  18 [label="!(IsKimHere())", shape=diamond];
+	  19 [label="Hand/Eye Coordination: Probably for the best -- your 9mm semiautomatic finger pistols are not a toy to be waved around."];
+	  20 [label="Hand/Eye Coordination: Your 9mm semiautomatic finger pistols make two satisfying snaps. (Strange for such a small calibre of finger pistol to sound so chunky.) The flower in your hand is impressed. So is she."];
+	  21 [label="You: Don't snap finger pistols at all."];
+	  22 [label="Klaasje (Miss Oranje Disco Dancer): That's not actually true -- she's looking toward the yard and doesn't notice them. Which is probably for the best, because didn't someone mention she's a rape victim?"];
+	  23 [label="Kim Kitsuragi: That's not entirely true, the lieutenant is looking at the door to the east and mostly misses them."];
+	  24 [label="Hand/Eye Coordination: ...the wind brushes them off the roof. They're gone."];
+	  26 [label="You: Snap your finger pistols at the young woman."];
+	  27 [label="Hand/Eye Coordination: Just as you look at the flowers, a gust of wind raises them from the roof, picking them up in the air..."];
+	  28 [label="Klaasje (Miss Oranje Disco Dancer): The young woman looks at the may bell in your hand -- just a glance -- then takes a drag of her cigarette."];
+	  29 [label="You: Snap your finger pistols at him."];
+	  30 [label="Hand/Eye Coordination: Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  31 [label="Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  32 [label="!(Variable[\"TASK.arrest_klaasje_done\"]  or  Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 27
+	  2 -> 10
+	  3 -> 4
+	  4 -> 5
+	  4 -> 6
+	  5 -> 13
+	  6 -> 13
+	  8 -> 30
+	  9 -> 23
+	  10 -> 11
+	  10 -> 12
+	  11 -> 26
+	  11 -> 21
+	  11 -> 29
+	  13 -> 14
+	  13 -> 15
+	  14 -> 8
+	  15 -> 24
+	  16 -> 17
+	  16 -> 18
+	  17 -> 2
+	  20 -> 22
+	  21 -> 19
+	  26 -> 20
+	  27 -> 3
+	  27 -> 7
+	  28 -> 16
+	  29 -> 9
+	  30 -> 32
+	  30 -> 31
+	  31 -> 16
+	  32 -> 28
+}
+

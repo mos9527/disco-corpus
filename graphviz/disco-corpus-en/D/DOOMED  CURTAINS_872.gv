@@ -1,0 +1,157 @@
+# DOOMED / CURTAINS
+# Safety Curtains blocking entrance to Dicemaker. (p.s. they are made of metal not wood, apparently)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: Knock on it harder."];
+	  3 [label="Kim Kitsuragi: \"Thanks.\""];
+	  4 [label="Safety Curtains: An iron safety curtain curves before your eyes, folded like a bellows. It covers half the room -- blocking the way into a colossal industrial chimney."];
+	  5 [label="Variable[\"TASK.doomed_investigation\"] == true  and  Variable[\"TASK.doomed_investigation_done\"] == false"];
+	  6 [label="Variable[\"TASK.doomed_investigation\"] == true  and  Variable[\"TASK.doomed_investigation_done\"] == false", shape=diamond];
+	  7 [label="!(Variable[\"TASK.doomed_investigation\"] == true  and  Variable[\"TASK.doomed_investigation_done\"] == false)", shape=diamond];
+	  8 [label="Variable[\"TASK.find_the_witch\"]"];
+	  9 [label="Variable[\"TASK.find_the_witch\"]", shape=diamond];
+	  10 [label="!(Variable[\"TASK.find_the_witch\"])", shape=diamond];
+	  11 [label="curtains hub"];
+	  12 [label="Kim Kitsuragi: \"Why do you think there's something on the other side necessarily?\" the lieutenant asks, but you can see a spark of curiosity in his eyes."];
+	  13 [label="IsKimHere()"];
+	  14 [label="IsKimHere()", shape=diamond];
+	  15 [label="!(IsKimHere())", shape=diamond];
+	  16 [label="Safety Curtains: What an odd thing to do.... Nothing happens."];
+	  17 [label="Jump to: [curtains hub]"];
+	  18 [label="Variable[\"doomed.seen_safety_curtains\"]"];
+	  19 [label="Variable[\"doomed.seen_safety_curtains\"]", shape=diamond];
+	  20 [label="!(Variable[\"doomed.seen_safety_curtains\"])", shape=diamond];
+	  21 [label="Physical Instrument: There must be another way to wake up whoever is in there... Maybe you should try yelling into the furnace downstairs?"];
+	  22 [label="You: [Leave.]"];
+	  23 [label="You: \"This is not random, this is *significant*. I want to see what's on the other side.\""];
+	  24 [label="Kim Kitsuragi: \"In any case, there's no way we can get in right now. Let's investigate further.\""];
+	  25 [label="IsTaskActive(\"TASK.find_the_witch\")--[[ Variable[ ]]"];
+	  26 [label="IsTaskActive(\"TASK.find_the_witch\")--[[ Variable[ ]]", shape=diamond];
+	  27 [label="!(IsTaskActive(\"TASK.find_the_witch\")--[[ Variable[ ]])", shape=diamond];
+	  28 [label="Logic: If this is really an entrance to the chimney then there must be a furnace somewhere as well. Maybe there's another way to get in?"];
+	  29 [label="IsKimHere()"];
+	  30 [label="IsKimHere()", shape=diamond];
+	  31 [label="!(IsKimHere())", shape=diamond];
+	  32 [label="You: \"I can try...\" (Blow gently on your bruised knuckles.)"];
+	  33 [label="Jump to: [curtains hub]"];
+	  34 [label="Safety Curtains: Again your voice becomes a raspy croak, mid-sentence. It's silent in the abandoned office building -- no one answers you."];
+	  35 [label="Safety Curtains: Those curtains prove to be surprisingly sturdy... Your fist hurts now."];
+	  36 [label="Jump to: [curtains hub]"];
+	  37 [label="Kim Kitsuragi: \"There must be another way to wake up whoever is in there... Maybe we can try yelling into the furnace downstairs?\""];
+	  38 [label="Safety Curtains: Still nothing. No one's home."];
+	  39 [label="You: Knock *even* harder!"];
+	  40 [label="Drama: Sire, may we suggest something? Think of the yelling-into-the-furnace as a *grand performance*. Use your chest voice, not your head voice. Sing from the diaphragm."];
+	  41 [label="Empathy: A sudden bout of self pity comes over you."];
+	  42 [label="Variable[\"TASK.find_the_witch\"]"];
+	  43 [label="Variable[\"TASK.find_the_witch\"]", shape=diamond];
+	  44 [label="!(Variable[\"TASK.find_the_witch\"])", shape=diamond];
+	  45 [label="Logic: This is directly above the central furnace in the cellar. The voices probably came from here."];
+	  46 [label="Physical Instrument: You took your shot and still missed. Well, you did your best, champ. Shame it wasn't good enough."];
+	  48 [label="Jump to: [curtains hub]"];
+	  49 [label="Logic: There must be another way to wake up whoever is in there... Maybe you should talk to the lady in the bookstore, ask what's going on?"];
+	  50 [label="Kim Kitsuragi: The lieutenant sighs. \"Ghosts aren't real, didn't your parents tell you that? In any case, there's no way we can get in right now. Let's investigate further.\""];
+	  51 [label="Variable[\"doomed.curtains_drama_performance\"]"];
+	  52 [label="Variable[\"doomed.curtains_drama_performance\"]", shape=diamond];
+	  53 [label="!(Variable[\"doomed.curtains_drama_performance\"])", shape=diamond];
+	  54 [label="SetVariableValue(\"doomed.curtains_knocked_three_times\", true) --[[ Variable[ ]]"];
+	  55 [label="You: Knock on it."];
+	  56 [label="You: \"I need to find the *malignant entity*, Kim. This is the chimney.\""];
+	  57 [label="Variable[\"doomed.furnace_heard_voices\"]"];
+	  58 [label="Variable[\"doomed.furnace_heard_voices\"]", shape=diamond];
+	  59 [label="!(Variable[\"doomed.furnace_heard_voices\"])", shape=diamond];
+	  60 [label="Physical Instrument: Perhaps it's not such a bad idea? Try it again, son."];
+	  61 [label="You: \"Hello? I yelled, but it didn't work...\""];
+	  62 [label="Safety Curtains: As before, an iron safety curtain curves before your eyes. It covers half the room -- blocking the way into a colossal industrial chimney."];
+	  63 [label="Inland Empire: This must be where the *Entity* lives..."];
+	  64 [label="Kim Kitsuragi: \"There must be another way to wake up whoever is in there... Maybe we should ask the lady in the bookstore what's going on here?\""];
+	  65 [label="Kim Kitsuragi: \"Can you please try to refrain from attacking random things?\""];
+	  66 [label="Variable[\"doomed.furnace_heard_voices\"]"];
+	  67 [label="Variable[\"doomed.furnace_heard_voices\"]", shape=diamond];
+	  68 [label="!(Variable[\"doomed.furnace_heard_voices\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 18
+	  2 -> 38
+	  3 -> 24
+	  4 -> 25
+	  5 -> 6
+	  5 -> 7
+	  6 -> 28
+	  7 -> 29
+	  8 -> 9
+	  8 -> 10
+	  9 -> 21
+	  10 -> 49
+	  11 -> 2
+	  11 -> 39
+	  11 -> 22
+	  11 -> 55
+	  11 -> 61
+	  12 -> 24
+	  13 -> 14
+	  13 -> 15
+	  14 -> 42
+	  15 -> 8
+	  16 -> 17
+	  17 -> 11
+	  18 -> 19
+	  18 -> 20
+	  19 -> 62
+	  20 -> 4
+	  21 -> 33
+	  23 -> 12
+	  24 -> 36
+	  25 -> 26
+	  25 -> 27
+	  26 -> 63
+	  27 -> 66
+	  28 -> 29
+	  29 -> 30
+	  29 -> 31
+	  30 -> 65
+	  31 -> 17
+	  32 -> 3
+	  33 -> 11
+	  34 -> 41
+	  35 -> 57
+	  36 -> 11
+	  37 -> 33
+	  38 -> 17
+	  39 -> 35
+	  40 -> 51
+	  41 -> 40
+	  42 -> 43
+	  42 -> 44
+	  43 -> 37
+	  44 -> 64
+	  45 -> 11
+	  46 -> 48
+	  48 -> 11
+	  49 -> 33
+	  50 -> 36
+	  51 -> 52
+	  51 -> 53
+	  52 -> 60
+	  53 -> 46
+	  54 -> 5
+	  55 -> 16
+	  56 -> 50
+	  57 -> 58
+	  57 -> 59
+	  58 -> 13
+	  59 -> 54
+	  60 -> 48
+	  61 -> 34
+	  62 -> 66
+	  63 -> 66
+	  64 -> 33
+	  65 -> 56
+	  65 -> 32
+	  65 -> 23
+	  66 -> 67
+	  66 -> 68
+	  67 -> 45
+	  68 -> 11
+}
+

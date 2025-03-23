@@ -1,0 +1,70 @@
+# PLAZA ORB / bulletholes esprit
+# esprit the corps afterthought
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Esprit de Corps: 如果现在金在这里就好了！你可以问问他有没有在这里嗅到罪案的味道。这些弹孔激起了你内心深处的某种东西。"];
+	  3 [label="You: “好吧。那跟我说说这个大革命的事吧？”"];
+	  4 [label="Kim Kitsuragi: “我知道的不多，因为我也没有*亲眼见证*。可以走了吗？”"];
+	  5 [label="IsKimHere()"];
+	  6 [label="IsKimHere()", shape=diamond];
+	  7 [label="!(IsKimHere())", shape=diamond];
+	  8 [label="Visual Calculus: 它们看起来很古老……"];
+	  10 [label="Kim Kitsuragi: 他点点头。“我们应该专注于眼前的案子——本世纪的案子。”"];
+	  11 [label="You: “好吧。那跟我说说这个大革命的事吧？”"];
+	  12 [label="You: “那好吧。”[完成思维。]"];
+	  13 [label="Esprit de Corps: 看着弹孔似乎激起了你内心深处的某种东西，让你忘记了警督的姓氏。"];
+	  14 [label="Untitled hub (02)"];
+	  15 [label="You: “没什么，忘了吧。”[完成思维。]"];
+	  16 [label="You: “哦，你是说大革命时期的吗？”"];
+	  17 [label="IsKimHere()"];
+	  18 [label="IsKimHere()", shape=diamond];
+	  19 [label="!(IsKimHere())", shape=diamond];
+	  20 [label="Kim Kitsuragi: “那里的吗？”他看着墙壁。“那些*很旧*了。”"];
+	  21 [label="You: “你说旧是什么意思？”"];
+	  22 [label="You: “金，看，弹孔！”"];
+	  23 [label="You: （指着墙壁上的缺口。）“有人中枪了！我们是警察，必须解决这个案件。”"];
+	  24 [label="Kim Kitsuragi: “那些子弹是大革命时期射出的，已经过去半个多世纪了。所以没有调查的必要。”"];
+	  25 [label="Esprit de Corps: 痕迹已经深深褪去，从法医学角度来讲，很难得出任何结论。不过是砂岩上的一些缺口罢了。"];
+	  26 [label="Kim Kitsuragi: “是的，半个世纪之前发生的事。”他眨眨眼。“那些子弹是大革命时期射出的，所以并没有民法警官调查的必要。”"];
+	  27 [label="You: [放弃思维。]"];
+	  28 [label="You: 先靠近点看。"];
+	  29 [label="Kim Kitsuragi: “哪里？”他看了看四周。”"];
+	  30 [label="You: “哦，那好吧。”[完成思维。]"];
+	  0 -> 1
+	  1 -> 17
+	  2 -> 28
+	  3 -> 4
+	  5 -> 6
+	  5 -> 7
+	  6 -> 8
+	  8 -> 22
+	  11 -> 4
+	  12 -> 10
+	  13 -> 27
+	  13 -> 28
+	  13 -> 22
+	  14 -> 11
+	  14 -> 3
+	  14 -> 12
+	  16 -> 26
+	  17 -> 18
+	  17 -> 19
+	  18 -> 13
+	  19 -> 2
+	  20 -> 16
+	  20 -> 21
+	  20 -> 30
+	  21 -> 24
+	  22 -> 29
+	  23 -> 20
+	  24 -> 14
+	  25 -> 5
+	  26 -> 14
+	  28 -> 25
+	  29 -> 15
+	  29 -> 23
+	  30 -> 10
+}
+

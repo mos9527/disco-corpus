@@ -1,0 +1,111 @@
+# WHIRLING F2 / KLAASJE'S NOTE
+# She's left you a note on her table
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Interfacing: 但是并不恐慌。深思熟虑。十分专注。"];
+	  3 [label="Kim Kitsuragi: “一份礼物……”警督怀疑地转向楼梯，在上方的阴影中寻找其他存在的痕迹。"];
+	  4 [label="Interfacing: 你看着便条上参差不齐又潦草的字迹。她很匆忙，但是并不恐慌。深思熟虑。十分专注。"];
+	  6 [label="IsCunoInParty()"];
+	  7 [label="IsCunoInParty()", shape=diamond];
+	  8 [label="!(IsCunoInParty())", shape=diamond];
+	  9 [label="Jump to: [Untitled hub]"];
+	  10 [label="IsCunoInParty()"];
+	  11 [label="IsCunoInParty()", shape=diamond];
+	  12 [label="!(IsCunoInParty())", shape=diamond];
+	  13 [label="You: 看来她离开的很匆忙。\n“看来她离开的很匆忙。”"];
+	  14 [label="You: 这个*礼物*会是什么？\n“这个*礼物*会是什么？”"];
+	  15 [label="IsKimHere()"];
+	  16 [label="IsKimHere()", shape=diamond];
+	  17 [label="!(IsKimHere())", shape=diamond];
+	  18 [label="IsKimHere()"];
+	  19 [label="IsKimHere()", shape=diamond];
+	  20 [label="!(IsKimHere())", shape=diamond];
+	  21 [label="Klaasje's Note: “很抱歉，我骗了所有人。回见。另.我没杀他。又另.楼上有礼物。”\n“很抱歉，我骗了所有人。另.我没杀他。又另.楼上有礼物。”"];
+	  22 [label="Half Light: 只要千万别走进另一个无线电陷阱，好吗……"];
+	  23 [label="IsKimHere()"];
+	  24 [label="IsKimHere()", shape=diamond];
+	  25 [label="!(IsKimHere())", shape=diamond];
+	  26 [label="Klaasje's Note: 在成堆的账单旁边，你看见一份笔记——上面留下了几行字，字迹又大又潦草，好像笔者马上要冲出门去。"];
+	  27 [label="Untitled hub"];
+	  28 [label="Kim Kitsuragi: “我不会拔枪的……暂时不会。但我不喜欢*礼物*。”"];
+	  29 [label="Klaasje's Note: 便条没有回复。那些参差不齐又潦草的字迹看起来像是她在赶时间。"];
+	  30 [label="Volition: 放松。不是所有人都在给你设陷阱的。"];
+	  31 [label="IsCunoInParty()"];
+	  32 [label="IsCunoInParty()", shape=diamond];
+	  33 [label="!(IsCunoInParty())", shape=diamond];
+	  34 [label="Cuno: “一个陷阱，有可能。”他自信地点点头。“但是别担心，猪头。还有坤诺赏识你。我们进去吧。”"];
+	  35 [label="Klaasje's Note: “很抱歉，我骗了所有人。另.我没杀他。又另.楼上有礼物。”"];
+	  36 [label="You: [离开。]"];
+	  37 [label="Variable[\"whirling.klaasjesnote_hub_reached\"]"];
+	  38 [label="Variable[\"whirling.klaasjesnote_hub_reached\"]", shape=diamond];
+	  39 [label="!(Variable[\"whirling.klaasjesnote_hub_reached\"])", shape=diamond];
+	  40 [label="Cuno: “一个礼物，嗯……？”男孩转向楼梯。“在坤诺看来，这他妈也太可疑了。”"];
+	  41 [label="Klaasje's Note: “归来的时候再见。另.我没杀他。又另.楼上有礼物。”"];
+	  42 [label="Variable[\"tc.the_return\"]"];
+	  43 [label="Variable[\"tc.the_return\"]", shape=diamond];
+	  44 [label="!(Variable[\"tc.the_return\"])", shape=diamond];
+	  45 [label="Hand/Eye Coordination: 他说他不会，但看着字条的时候，却本能地把手伸向了枪套的方向。"];
+	  46 [label="Kim Kitsuragi: “这没什么好奇怪的。”"];
+	  47 [label="Klaasje's Note: 这个不透气的房间里没有响应，甚至没有一点回音。你注意到楼梯上有一件丝绸衬衫。"];
+	  48 [label="Cuno: “是啊是啊。”他环顾四周。“逍遥法外的逃犯什么的。坤诺之前见过这种破事。”"];
+	  0 -> 1
+	  1 -> 37
+	  2 -> 9
+	  3 -> 27
+	  4 -> 9
+	  6 -> 8
+	  6 -> 7
+	  7 -> 40
+	  8 -> 27
+	  9 -> 27
+	  10 -> 11
+	  10 -> 12
+	  11 -> 34
+	  12 -> 47
+	  13 -> 18
+	  14 -> 15
+	  15 -> 16
+	  15 -> 17
+	  16 -> 28
+	  17 -> 10
+	  18 -> 19
+	  18 -> 20
+	  19 -> 46
+	  20 -> 31
+	  21 -> 27
+	  22 -> 30
+	  23 -> 24
+	  23 -> 25
+	  24 -> 3
+	  25 -> 6
+	  26 -> 42
+	  27 -> 36
+	  27 -> 13
+	  27 -> 14
+	  28 -> 45
+	  29 -> 2
+	  30 -> 9
+	  31 -> 32
+	  31 -> 33
+	  32 -> 48
+	  33 -> 29
+	  34 -> 22
+	  35 -> 23
+	  37 -> 38
+	  37 -> 39
+	  38 -> 21
+	  39 -> 26
+	  40 -> 27
+	  41 -> 23
+	  42 -> 43
+	  42 -> 44
+	  43 -> 41
+	  44 -> 35
+	  45 -> 22
+	  46 -> 4
+	  47 -> 22
+	  48 -> 4
+}
+

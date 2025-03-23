@@ -1,0 +1,67 @@
+# INVENTORY / PHOTO OF TATTOOS
+# instant photo of the hanged man's tattoos by Kim Kitsuragi
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Suggestion: 与死者亲近的人或许知情。"];
+	  3 [label="Photo of Tattoos: 死者。"];
+	  4 [label="Photo of Tattoos: 等你去发现。在没有帮助的情况下，你已经走到这么远了。"];
+	  5 [label="Photo of Tattoos: 看起来几乎就像是无线电脑里的电子图案，或者是一个老旧的纤维内存单元，不过也不完全是。"];
+	  6 [label="interacthereyo"];
+	  7 [label="Variable[\"yard.hanged_tats_night_sky\"]"];
+	  8 [label="Variable[\"yard.hanged_tats_night_sky\"]", shape=diamond];
+	  9 [label="!(Variable[\"yard.hanged_tats_night_sky\"])", shape=diamond];
+	  10 [label="Photo of Tattoos: 一张错综复杂的蓝色线网覆盖了躯干。从右肩横跨至腹腔神经丛，每当它们相交时都会形成一颗白色的星星。他的皮肤上点缀着数百个褪了色的星号，尤其是心脏周围最为密集。"];
+	  12 [label="You: 你是谁？"];
+	  13 [label="Variable[\"yard.hanged_tats_national_pattern\"]"];
+	  14 [label="Variable[\"yard.hanged_tats_national_pattern\"]", shape=diamond];
+	  15 [label="!(Variable[\"yard.hanged_tats_national_pattern\"])", shape=diamond];
+	  16 [label="Jump to: [interacthereyo]"];
+	  17 [label="Encyclopedia: 某个了解历史的人也许能告诉你。"];
+	  18 [label="Photo of Tattoos: 它看起来还像是那种夜空中的星图，不过……有些不太对劲的地方。"];
+	  19 [label="You: 这个纹身是什么意思？"];
+	  20 [label="Variable[\"yard.hanged_tats_micro_electronic\"]"];
+	  21 [label="Variable[\"yard.hanged_tats_micro_electronic\"]", shape=diamond];
+	  22 [label="!(Variable[\"yard.hanged_tats_micro_electronic\"])", shape=diamond];
+	  23 [label="You: [把照片放在一边。]"];
+	  24 [label="Variable[\"yard.hanged_tats_insepcted\"]"];
+	  25 [label="Variable[\"yard.hanged_tats_insepcted\"]", shape=diamond];
+	  26 [label="!(Variable[\"yard.hanged_tats_insepcted\"])", shape=diamond];
+	  27 [label="Photo of Tattoos: 这个图案还有一种民族特有的感觉，不过一点也不熟悉……"];
+	  28 [label="Photo of Tattoos: 它可能是任何东西……宗教符号，一份公路路线图。甚至可能只是纯粹的装饰物。谁知道呢？"];
+	  0 -> 1
+	  1 -> 10
+	  2 -> 17
+	  3 -> 16
+	  4 -> 2
+	  5 -> 6
+	  6 -> 19
+	  6 -> 12
+	  6 -> 23
+	  7 -> 8
+	  7 -> 9
+	  8 -> 18
+	  9 -> 20
+	  10 -> 7
+	  12 -> 3
+	  13 -> 14
+	  13 -> 15
+	  14 -> 27
+	  15 -> 24
+	  16 -> 6
+	  17 -> 16
+	  18 -> 6
+	  19 -> 4
+	  20 -> 21
+	  20 -> 22
+	  21 -> 5
+	  22 -> 13
+	  24 -> 25
+	  24 -> 26
+	  25 -> 28
+	  26 -> 6
+	  27 -> 6
+	  28 -> 6
+}
+

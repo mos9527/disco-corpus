@@ -1,0 +1,118 @@
+# LAIR ORB / shot viscal
+# You decide that the shot that killed the merc couldn't have come from this bunker.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Visual Calculus: 马丁内斯的灯光在晴朗的夜空中静静闪烁着。"];
+	  3 [label="Kim Kitsuragi: “这里确实是个很好的藏身之处，不过已经很久没有人来过。”\n“这里是个很好的藏身之处，马佐夫主义和凶杀并不互相排斥。但是这里已经很久没有过人烟了。”"];
+	  4 [label="Visual Calculus: 窗户外面——是一片晴空，宛如早春一般温暖。"];
+	  5 [label="Hand/Eye Coordination: 这个看起来不像是*射击孔*，就是用来射击的裂缝。"];
+	  6 [label="Visual Calculus: 不，没有。不管你怎么伸长脖子，也没法看见整个褴褛飞旋，更不用说顶楼相关的部分。"];
+	  7 [label="Authority: 警督的声音暴露出一丝失望，他用断言来拼命掩饰着。"];
+	  8 [label="Variable[\"auto.is_raining\"]"];
+	  9 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  10 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  11 [label="Kim Kitsuragi: “的确。谁也看不清楚。不过，至少我们彻查过了。我喜欢这样。”"];
+	  12 [label="shotviscalhub"];
+	  13 [label="Variable[\"boardwalk.bunker_bed\"]"];
+	  14 [label="Variable[\"boardwalk.bunker_bed\"]", shape=diamond];
+	  15 [label="!(Variable[\"boardwalk.bunker_bed\"])", shape=diamond];
+	  16 [label="Kim Kitsuragi: “这里确实是个很好的藏身之处，不过已经很久没有人来过。”\n“这里是个很好的藏身之处，马佐夫主义和凶手并不互相排斥。但是这里已经很久没有过人烟了。”"];
+	  17 [label="Kim Kitsuragi: “事实上——我觉得这个煤仓已经调查的差不多了。”他看向出口。“你先走吧，警官。”"];
+	  18 [label="Untitled hub (03)"];
+	  19 [label="Visual Calculus: 在黑暗之中，你几乎无法看清飘落的雪花。它们缓缓落下，让夜晚变得更加寂静。"];
+	  20 [label="Variable[\"boardwalk.mazov_mainhub_reached\"]"];
+	  21 [label="Variable[\"boardwalk.mazov_mainhub_reached\"]", shape=diamond];
+	  22 [label="!(Variable[\"boardwalk.mazov_mainhub_reached\"])", shape=diamond];
+	  23 [label="IsDaytime()"];
+	  24 [label="IsDaytime()", shape=diamond];
+	  25 [label="!(IsDaytime())", shape=diamond];
+	  26 [label="Visual Calculus: 窗户外面——又是一天。海滩上的沙子吸足了毛毛细雨，变得越发黯淡。"];
+	  27 [label="Jump to: [shotviscalhub]"];
+	  28 [label="Variable[\"auto.is_raining\"]"];
+	  29 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  30 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  31 [label="Visual Calculus: 这里确实是个藏身的好地方。你几乎连自己都找不到了。\n这里确实是个藏身的好地方。马佐夫主义者知道如何隐姓埋名。"];
+	  32 [label="Visual Calculus: 窗户外面——是一片荒凉。雪花软软地落在海岸的沙滩上，几乎瞬间就消失不见。只是在高高的屋顶，它还在徘徊着。"];
+	  33 [label="Variable[\"auto.is_snowing\"]"];
+	  34 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  35 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  36 [label="You: 往外看。"];
+	  37 [label="Visual Calculus: 你听见沙沙的雨滴声跨过海面。夜晚也随之颤栗着。"];
+	  38 [label="You: “金，我看不见褴褛飞旋……子弹不是从这里射出的。”（总结。）"];
+	  39 [label="You: 这里对于狙击手来说，是个好的藏身之处吗？\n（转向金。）“凶手会不会把这里当成了藏身之处？”"];
+	  41 [label="Visual Calculus: 这里是个很好的藏身之处，不过看起来没人在这里待过。\n这里是个很好的藏身之处，但是看起来没有人——马佐夫主义者或者是凶手——在这里待过一段时间。"];
+	  42 [label="IsKimHere()"];
+	  43 [label="IsKimHere()", shape=diamond];
+	  44 [label="!(IsKimHere())", shape=diamond];
+	  45 [label="You: 从这扇窗户射击褴褛飞旋里的目标是可行的吗？（总结。）"];
+	  46 [label="Visual Calculus: 也许这里是凶手的藏身地点，还有这个狭窄的窗户——杀死雇佣兵的那枪就是从这里射出去的？"];
+	  47 [label="Variable[\"auto.is_snowing\"]"];
+	  48 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  49 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  50 [label="Variable[\"boardwalk.bunker_bed\"]"];
+	  51 [label="Variable[\"boardwalk.bunker_bed\"]", shape=diamond];
+	  52 [label="!(Variable[\"boardwalk.bunker_bed\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 46
+	  2 -> 12
+	  3 -> 27
+	  4 -> 12
+	  5 -> 18
+	  7 -> 20
+	  8 -> 9
+	  8 -> 10
+	  9 -> 37
+	  10 -> 33
+	  11 -> 7
+	  12 -> 45
+	  12 -> 38
+	  12 -> 39
+	  13 -> 14
+	  13 -> 15
+	  14 -> 16
+	  15 -> 3
+	  16 -> 27
+	  18 -> 36
+	  19 -> 12
+	  20 -> 21
+	  20 -> 22
+	  21 -> 17
+	  23 -> 24
+	  23 -> 25
+	  24 -> 28
+	  25 -> 8
+	  26 -> 12
+	  27 -> 12
+	  28 -> 29
+	  28 -> 30
+	  29 -> 26
+	  30 -> 47
+	  31 -> 27
+	  32 -> 12
+	  33 -> 34
+	  33 -> 35
+	  34 -> 19
+	  35 -> 2
+	  36 -> 23
+	  37 -> 12
+	  38 -> 11
+	  39 -> 42
+	  41 -> 27
+	  42 -> 43
+	  42 -> 44
+	  43 -> 13
+	  44 -> 50
+	  45 -> 6
+	  46 -> 5
+	  47 -> 48
+	  47 -> 49
+	  48 -> 32
+	  49 -> 4
+	  50 -> 51
+	  50 -> 52
+	  51 -> 41
+	  52 -> 31
+}
+

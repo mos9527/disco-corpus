@@ -1,0 +1,360 @@
+# DOOMED / CENTRAL FURNACE
+# This is an industrial oven on the first floor of Doomed. You can interact with it and contact Dicemaker.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Central Furnace: 壁炉上盖了一层厚厚的煤灰，把它染成了墨黑色。"];
+	  3 [label="Inland Empire: 三道危险的条纹出现在你脸上，诉说着你狂野灵魂的故事。"];
+	  4 [label="Central Furnace: 一阵空旷的响声在壁炉里回荡。你的脚趾头感到有点疼。"];
+	  5 [label="You: 对着壁炉里面大声“问候！”一下。"];
+	  6 [label="You: Variable[\"doomed.furnace_phys_in_whitecheck\"]"];
+	  7 [label="Variable[\"doomed.furnace_phys_in_whitecheck\"]", shape=diamond];
+	  8 [label="!(Variable[\"doomed.furnace_phys_in_whitecheck\"])", shape=diamond];
+	  9 [label="Kim Kitsuragi: “你说*这个*能保护你？”"];
+	  10 [label="You: 擦干净。"];
+	  11 [label="Kim Kitsuragi: “嗯，也许你应该让自己的嗓子稍微休息一下，警官。之后再试。”"];
+	  12 [label="Central Furnace: 烟囱里的吱吱声像之前一样继续着。不管*上面*有什么，你似乎没给它留下任何印象。"];
+	  13 [label="You: “我不确定，金……但我好像听到楼上有人说话。”"];
+	  14 [label="Electrochemistry: 又或者，你又是宿醉未醒。"];
+	  15 [label="You: 用煤灰把手弄脏。"];
+	  16 [label="You: 不，还是不要自我表达了。在裤子上把手擦干净吧。"];
+	  17 [label="Kim Kitsuragi: “请把脸擦干净，警官。”"];
+	  18 [label="Central Furnace: IsKimHere()"];
+	  19 [label="IsKimHere()", shape=diamond];
+	  20 [label="!(IsKimHere())", shape=diamond];
+	  21 [label="Kim Kitsuragi: “你在做什么？”警督看着已经爬到壁炉中间的你，开口问到。"];
+	  22 [label="Endurance: 也许是心理作用？因为你的身体健康没什么问题。"];
+	  23 [label="Kim Kitsuragi: “谢谢，”警督点点头。“所以，我们说到哪了？”他再次转回到壁炉前。"];
+	  24 [label="Central Furnace: “你好？”你听见一个女声回答到。"];
+	  25 [label="Inland Empire: 看起来这个壁炉像是有一张脸，一张痛苦的脸。"];
+	  26 [label="Authority: 在警督的凝视下，你感觉自己脸红了——你看起来像个小孩，而不是个警察。就连战争油彩都难以掩饰这种尴尬。"];
+	  27 [label="Untitled hub"];
+	  28 [label="Central Furnace: Variable[\"doomed.seen_furnace\"]"];
+	  29 [label="Variable[\"doomed.seen_furnace\"]", shape=diamond];
+	  30 [label="!(Variable[\"doomed.seen_furnace\"])", shape=diamond];
+	  31 [label="Central Furnace: Variable[\"doomed.seen_safety_curtains\"]"];
+	  32 [label="Variable[\"doomed.seen_safety_curtains\"]", shape=diamond];
+	  33 [label="!(Variable[\"doomed.seen_safety_curtains\"])", shape=diamond];
+	  34 [label="Kim Kitsuragi: “我们应该问问书店那位女士，这些窗帘到底是怎么回事。”"];
+	  35 [label="Central Furnace: Variable[\"doomed.furnace_redcheck_authority\"]"];
+	  36 [label="Variable[\"doomed.furnace_redcheck_authority\"]", shape=diamond];
+	  37 [label="!(Variable[\"doomed.furnace_redcheck_authority\"])", shape=diamond];
+	  38 [label="You: “它带给我信心，这才是最关键的，金。”"];
+	  39 [label="Central Furnace: IsTHCPresent(\"radical_feminist_agenda\")"];
+	  40 [label="IsTHCPresent(\"radical_feminist_agenda\")", shape=diamond];
+	  41 [label="!(IsTHCPresent(\"radical_feminist_agenda\"))", shape=diamond];
+	  42 [label="Central Furnace: SetVariableValue(\"doomed.furnace_warpainted_your_face\", true) --[[ Variable[ ]]"];
+	  43 [label="You: 我要一氧化碳中毒了。"];
+	  44 [label="Physical Instrument: 又一声凄惨的叫声在烟囱那无边无际的黑暗中响起。作为声音源头的你都觉得有点窘迫了。"];
+	  46 [label="Central Furnace: IsKimHere()"];
+	  47 [label="IsKimHere()", shape=diamond];
+	  48 [label="!(IsKimHere())", shape=diamond];
+	  49 [label="Jump to: [furnace hub]"];
+	  50 [label="redcheck hub"];
+	  51 [label="Physical Instrument: 有什么东西从你身体里*挣脱*了出来。一阵强而有力的吼叫声在烟囱深处回响。上方细微的声音颤动突然停了下来。然后……"];
+	  52 [label="Kim Kitsuragi: “等等，真的吗？”他抬头看着天花板。“还记得我们在楼上看见的那些防火幕吗，也许就是从那背后传出来的。”"];
+	  53 [label="Kim Kitsuragi: “等等，真的吗？”他抬头看着天花板。“我们应该调查一下，看看楼上有没有人。”"];
+	  54 [label="Half Light: 是个女人！当然了！那些邪恶的存在*一直*都是女人。"];
+	  55 [label="Central Furnace: IsKimHere()"];
+	  56 [label="IsKimHere()", shape=diamond];
+	  57 [label="!(IsKimHere())", shape=diamond];
+	  58 [label="Central Furnace: IsKimHere()"];
+	  59 [label="IsKimHere()", shape=diamond];
+	  60 [label="!(IsKimHere())", shape=diamond];
+	  61 [label="You: 发生什么了？！"];
+	  62 [label="You: 我产生幻觉了……"];
+	  63 [label="Jump to: [furnace hub]"];
+	  64 [label="You: [离开。]"];
+	  65 [label="Central Furnace: Variable[\"doomed.seen_safety_curtains\"]"];
+	  66 [label="Variable[\"doomed.seen_safety_curtains\"]", shape=diamond];
+	  67 [label="!(Variable[\"doomed.seen_safety_curtains\"])", shape=diamond];
+	  68 [label="Kim Kitsuragi: “等等，真的吗？”警督听起来有些担心。“请把你的头从烟囱里伸出来。这样不安全。”"];
+	  69 [label="Volition: 这个声音很真实，不是想象出来的。"];
+	  70 [label="You: 哈德拉姆特·卡赛尔！用煤灰把你的面颊抹黑。"];
+	  71 [label="Kim Kitsuragi: “看起来是。它像是给建筑供暖的旧中央壁炉。跟烟囱是连在一起的……”他打开门，小心地朝里面看了一眼。"];
+	  72 [label="You: “我是警察！你是谁？”\n“我来自遥视者部队！报上名来！”"];
+	  73 [label="Authority: 在这个危险的领域，脸上那三道条纹给了你力量。擦掉的话就太愚蠢了。"];
+	  74 [label="Central Furnace: IsKimHere()"];
+	  75 [label="IsKimHere()", shape=diamond];
+	  76 [label="!(IsKimHere())", shape=diamond];
+	  77 [label="You: “我听到的那些声音……也许就是那个邪恶的存在？普莱桑斯说它住在一个烟囱里。”"];
+	  78 [label="Central Furnace: 也许是之前在楼上看见的那些防火幕背后传出来的？你应该调查一下……"];
+	  79 [label="Kim Kitsuragi: 警督好像也松了一口气。"];
+	  80 [label="Encyclopedia: 在这里指明一点——这*不是*传统的塞美尼战争油彩。不知道你是从哪里学来的。"];
+	  81 [label="Jump to: [furnace hub]"];
+	  82 [label="Central Furnace: 这里又黑又脏。在黑暗中，你听到一阵*吱吱声*，是从上面传出来的。那个声音——或者说那些声音——就在楼上的烟室附近，彼此交谈着。"];
+	  83 [label="Jump to: [furnace hub]"];
+	  84 [label="Half Light: 那你听见的吱吱声是什么？"];
+	  85 [label="Inland Empire: 是啊，你可真是个成年人。壁炉表示赞同。"];
+	  86 [label="Kim Kitsuragi: “是的。是有点，”警督点点头，然后转回到壁炉前。"];
+	  87 [label="You: “喂！你在吗？跟我说话！”"];
+	  88 [label="Physical Instrument: 你鼓足全身的力量大喊……"];
+	  89 [label="Jump to: [furnace hub]"];
+	  90 [label="You: “我们正在黑暗的地方探索，我需要战争油彩的保护。”"];
+	  91 [label="You: “*这是*传统的战争油彩。它能让我和守卫在这里的灵魂一起安全通过。”"];
+	  92 [label="Central Furnace: “你好！你刚才说什么了吗？”稍微停顿了一下。“我听不见，请到楼上来！二楼有个防火幕，我这就把它打开！”"];
+	  93 [label="Inland Empire: 你唤醒那个存在了！"];
+	  94 [label="Central Furnace: Variable[\"doomed.furnace_yelling_failed_once\"]"];
+	  95 [label="Variable[\"doomed.furnace_yelling_failed_once\"]", shape=diamond];
+	  96 [label="!(Variable[\"doomed.furnace_yelling_failed_once\"])", shape=diamond];
+	  97 [label="You: “我是远古伊尔玛战士的化身。”"];
+	  98 [label="You: “这片诅咒商业区的幽灵，我在召唤你。快滚开，邪恶女妖！”"];
+	  99 [label="Esprit de Corps: 知道警督就在你的身后，让你感觉很安全，一如既往。"];
+	  100 [label="no Kim hub"];
+	  101 [label="Central Furnace: 也许是楼上的某个地方传出来的？你应该调查一下……"];
+	  102 [label="Perception (Hearing): 回音太过突出，很难分辨出那个声音在说什么。或者是怎么发出来的。"];
+	  103 [label="furnace hub"];
+	  104 [label="You: 看向壁炉内部。"];
+	  105 [label="You: 用脚踢它。"];
+	  106 [label="Central Furnace: Variable[\"doomed.furnace_phys_in_whitecheck\"]"];
+	  107 [label="Variable[\"doomed.furnace_phys_in_whitecheck\"]", shape=diamond];
+	  108 [label="!(Variable[\"doomed.furnace_phys_in_whitecheck\"])", shape=diamond];
+	  109 [label="Rhetoric: 这家伙一直都是个怀疑论者……"];
+	  110 [label="You: “咳……咳……咳咳咳……”"];
+	  111 [label="Jump to: [furnace hub]"];
+	  112 [label="Kim Kitsuragi: “你……你在干什么？”"];
+	  113 [label="Kim Kitsuragi: “已经好多年没人用过了……没有近期发生火灾的痕迹，只有死老鼠。”"];
+	  114 [label="Central Furnace: Variable[\"tc.doomed_commercial_area\"]  or  Variable[\"plaza.annette_heard_of_doomed\"]"];
+	  115 [label="Variable[\"tc.doomed_commercial_area\"]  or  Variable[\"plaza.annette_heard_of_doomed\"]", shape=diamond];
+	  116 [label="!(Variable[\"tc.doomed_commercial_area\"]  or  Variable[\"plaza.annette_heard_of_doomed\"])", shape=diamond];
+	  117 [label="Conceptualization: 不，你是一个骄傲的战士，留着它。"];
+	  118 [label="Jump to: [furnace hub]"];
+	  119 [label="Central Furnace: Variable[\"doomed.furnace_clicked_malicious_entity\"]"];
+	  120 [label="Variable[\"doomed.furnace_clicked_malicious_entity\"]", shape=diamond];
+	  121 [label="!(Variable[\"doomed.furnace_clicked_malicious_entity\"])", shape=diamond];
+	  122 [label="Central Furnace: Variable[\"doomed.furnace_said_traditional_warpaint\"]"];
+	  123 [label="Variable[\"doomed.furnace_said_traditional_warpaint\"]", shape=diamond];
+	  124 [label="!(Variable[\"doomed.furnace_said_traditional_warpaint\"])", shape=diamond];
+	  125 [label="Kim hub"];
+	  126 [label="You: “我产生幻觉了。”\n“我产生幻觉了。或许是那个存在……”"];
+	  127 [label="Jump to: [furnace hub]"];
+	  128 [label="Conceptualization: 也许你可以用这块煤*涂画*点什么？给未来的考古学家留下一副洞穴壁画……不，这样太蠢了。"];
+	  129 [label="Central Furnace: 壁炉上盖了一层厚厚的煤灰，把它染成了墨黑色。"];
+	  130 [label="Inland Empire: 你感觉到古代的格拉德英雄——哈德拉姆特·卡赛尔的鬼魂，在你的身体里脉动。剩下的就是在你的脸涂上战争油彩。"];
+	  131 [label="Untitled hub (02)"];
+	  132 [label="You: “我听见绞死那个男人的凶手在说话。”"];
+	  133 [label="Volition: 这个声音很真实，不是想象出来的。"];
+	  134 [label="Central Furnace: 还有——也许真值得去*上面*试试呢？"];
+	  135 [label="Authority: 多么骄傲又自豪的战士啊！这样一来，猎物才会在这个黑暗又危险的地方变成猎人。"];
+	  136 [label="Perception (Hearing): 你听见楼上传来一阵低沉的隆隆声——那是窗帘被拉开的声音。"];
+	  137 [label="Volition: 一辈子抽烟喝酒的话，你就会变成那个样子。"];
+	  138 [label="You: 我听见绞死那个男人的凶手在说话。"];
+	  139 [label="Central Furnace: Variable[\"TASK.find_the_witch\"]"];
+	  140 [label="Variable[\"TASK.find_the_witch\"]", shape=diamond];
+	  141 [label="!(Variable[\"TASK.find_the_witch\"])", shape=diamond];
+	  142 [label="You: “金，这是什么？是壁炉吗？！”"];
+	  143 [label="Central Furnace: Variable[\"doomed.furnace_concept_warpaint_your_face\"]"];
+	  144 [label="Variable[\"doomed.furnace_concept_warpaint_your_face\"]", shape=diamond];
+	  145 [label="!(Variable[\"doomed.furnace_concept_warpaint_your_face\"])", shape=diamond];
+	  146 [label="Physical Instrument: 不过，身上沾着这些煤灰挺好的。真男人是用*煤*来装扮自己的。"];
+	  147 [label="Kim Kitsuragi: “好吧，当然。那你随便吧。”他倔强的移开目光，不去看你和那个壁炉。"];
+	  148 [label="Jump to: [furnace hub]"];
+	  149 [label="You: “这片诅咒商业区的幽灵，我在召唤你。回应我吧，幽灵！”"];
+	  150 [label="Kim Kitsuragi: “你说得对，这些房间看起来确实是相连的。但是*邪恶的存在*并不存在——至少*超自然*那类不存在。”"];
+	  151 [label="Physical Instrument: 除了一阵干燥沙哑的声音，你那干涸又难受的喉咙几乎什么声音也发不出来。\n你的喉咙只能发出一些干涩的嘎嘎声。尴尬，因为你已经喝过一杯了……"];
+	  152 [label="Central Furnace: 现在你的皮肤上覆盖了一层厚厚的煤灰，一直陷入到皱纹里面。你的双手也变得古老起来。"];
+	  153 [label="You: “没什么！”（把脸擦干净。）“抱歉，刚才好像有点太蠢了。”"];
+	  154 [label="You: 别擦掉。"];
+	  155 [label="You: Variable[\"doomed.furnace_redcheck_authority\"]"];
+	  156 [label="Variable[\"doomed.furnace_redcheck_authority\"]", shape=diamond];
+	  157 [label="!(Variable[\"doomed.furnace_redcheck_authority\"])", shape=diamond];
+	  158 [label="Kim Kitsuragi: 警督点点头，然后指着楼上。“你先走，警官。”"];
+	  159 [label="Jump to: [furnace hub]"];
+	  0 -> 1
+	  1 -> 28
+	  2 -> 103
+	  3 -> 46
+	  4 -> 103
+	  5 -> 6
+	  6 -> 8
+	  6 -> 7
+	  7 -> 106
+	  8 -> 106
+	  9 -> 91
+	  9 -> 38
+	  10 -> 23
+	  11 -> 89
+	  12 -> 134
+	  13 -> 65
+	  14 -> 22
+	  15 -> 152
+	  16 -> 85
+	  17 -> 117
+	  18 -> 19
+	  18 -> 20
+	  19 -> 79
+	  20 -> 49
+	  21 -> 125
+	  22 -> 133
+	  23 -> 49
+	  24 -> 114
+	  25 -> 103
+	  26 -> 10
+	  27 -> 72
+	  27 -> 98
+	  27 -> 149
+	  27 -> 87
+	  28 -> 29
+	  28 -> 30
+	  29 -> 2
+	  30 -> 129
+	  31 -> 32
+	  31 -> 33
+	  32 -> 78
+	  33 -> 101
+	  34 -> 83
+	  35 -> 36
+	  35 -> 37
+	  36 -> 73
+	  37 -> 26
+	  38 -> 147
+	  39 -> 40
+	  39 -> 41
+	  40 -> 27
+	  41 -> 54
+	  42 -> 135
+	  43 -> 31
+	  44 -> 111
+	  46 -> 48
+	  46 -> 47
+	  47 -> 112
+	  48 -> 42
+	  49 -> 103
+	  50 -> 154
+	  50 -> 10
+	  51 -> 24
+	  52 -> 139
+	  53 -> 83
+	  54 -> 27
+	  55 -> 56
+	  55 -> 57
+	  56 -> 11
+	  57 -> 81
+	  58 -> 59
+	  58 -> 60
+	  59 -> 21
+	  60 -> 100
+	  61 -> 31
+	  62 -> 31
+	  63 -> 103
+	  65 -> 66
+	  65 -> 67
+	  66 -> 52
+	  67 -> 53
+	  68 -> 99
+	  69 -> 83
+	  70 -> 3
+	  71 -> 113
+	  72 -> 92
+	  73 -> 90
+	  74 -> 75
+	  74 -> 76
+	  75 -> 158
+	  76 -> 118
+	  77 -> 150
+	  78 -> 14
+	  79 -> 49
+	  80 -> 148
+	  81 -> 103
+	  82 -> 102
+	  83 -> 103
+	  84 -> 127
+	  85 -> 18
+	  86 -> 49
+	  87 -> 92
+	  88 -> 110
+	  89 -> 103
+	  90 -> 9
+	  91 -> 147
+	  92 -> 136
+	  93 -> 119
+	  94 -> 96
+	  94 -> 95
+	  95 -> 44
+	  96 -> 88
+	  97 -> 17
+	  98 -> 92
+	  99 -> 69
+	  100 -> 138
+	  100 -> 43
+	  100 -> 61
+	  100 -> 62
+	  101 -> 14
+	  102 -> 58
+	  103 -> 64
+	  103 -> 5
+	  103 -> 104
+	  103 -> 105
+	  103 -> 77
+	  103 -> 142
+	  103 -> 15
+	  104 -> 82
+	  105 -> 4
+	  106 -> 107
+	  106 -> 108
+	  107 -> 51
+	  108 -> 94
+	  109 -> 84
+	  110 -> 151
+	  111 -> 103
+	  112 -> 97
+	  112 -> 153
+	  113 -> 159
+	  114 -> 115
+	  114 -> 116
+	  115 -> 93
+	  116 -> 119
+	  117 -> 50
+	  118 -> 103
+	  119 -> 120
+	  119 -> 121
+	  120 -> 39
+	  121 -> 27
+	  122 -> 123
+	  122 -> 124
+	  123 -> 80
+	  124 -> 148
+	  125 -> 132
+	  125 -> 13
+	  125 -> 126
+	  126 -> 68
+	  127 -> 103
+	  128 -> 146
+	  129 -> 25
+	  130 -> 143
+	  131 -> 16
+	  131 -> 70
+	  132 -> 65
+	  133 -> 63
+	  134 -> 55
+	  135 -> 49
+	  136 -> 74
+	  137 -> 12
+	  138 -> 31
+	  139 -> 140
+	  139 -> 141
+	  140 -> 83
+	  141 -> 34
+	  142 -> 71
+	  143 -> 144
+	  143 -> 145
+	  144 -> 131
+	  145 -> 128
+	  146 -> 49
+	  147 -> 122
+	  148 -> 103
+	  149 -> 92
+	  150 -> 109
+	  151 -> 137
+	  152 -> 130
+	  153 -> 86
+	  154 -> 155
+	  155 -> 156
+	  155 -> 157
+	  156 -> 35
+	  157 -> 35
+	  158 -> 118
+	  159 -> 103
+}
+

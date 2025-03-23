@@ -1,0 +1,211 @@
+# DOOMED / BREAKER BOX
+# Doomed cellar, breaker box. DONE. 
+#
+#Get task finished for locate a fridge if you need to plug the fridge back in.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Jump to: [breaker hub]"];
+	  3 [label="IsKimHere()"];
+	  4 [label="IsKimHere()", shape=diamond];
+	  5 [label="!(IsKimHere())", shape=diamond];
+	  6 [label="Variable[\"doomed.breakerbox_black_wire_plugged_out\"]"];
+	  7 [label="Variable[\"doomed.breakerbox_black_wire_plugged_out\"]", shape=diamond];
+	  8 [label="!(Variable[\"doomed.breakerbox_black_wire_plugged_out\"])", shape=diamond];
+	  9 [label="Kim Kitsuragi: “很好。这栋建筑的业主只能为这个畸形再多付一些电费了。我们回冰箱那里去吧。”"];
+	  10 [label="IsTaskActive(\"TASK.help_revachol_ice_city_cut_losses\")--[[ Variable[ ]]"];
+	  11 [label="IsTaskActive(\"TASK.help_revachol_ice_city_cut_losses\")--[[ Variable[ ]]", shape=diamond];
+	  12 [label="!(IsTaskActive(\"TASK.help_revachol_ice_city_cut_losses\")--[[ Variable[ ]])", shape=diamond];
+	  14 [label="Half Light: 把红色那根扯掉！看看它，多么巨大，多么鲜红，多么诱人……"];
+	  15 [label="Breaker Box: 开关箱里插着两根电线。红色那根通向黑暗之中，黑色那根像是在为角落里那个像冰箱一样嗡嗡直响的东西提供能量。"];
+	  16 [label="Variable[\"doomed.icebear_main_hub_reached\"]"];
+	  17 [label="Variable[\"doomed.icebear_main_hub_reached\"]", shape=diamond];
+	  18 [label="!(Variable[\"doomed.icebear_main_hub_reached\"])", shape=diamond];
+	  19 [label="Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge\"]"];
+	  20 [label="Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge\"]", shape=diamond];
+	  21 [label="!(Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge\"])", shape=diamond];
+	  22 [label="Variable[\"TASK.get_frozen_ice_cream_maker_open\"]"];
+	  23 [label="Variable[\"TASK.get_frozen_ice_cream_maker_open\"]", shape=diamond];
+	  24 [label="!(Variable[\"TASK.get_frozen_ice_cream_maker_open\"])", shape=diamond];
+	  25 [label="Breaker Box: 开关箱里插着两根电线。红色那根通往冰熊冰箱，黑色那根像是在为角落里那个像冰箱一样嗡嗡直响的东西提供能量。"];
+	  26 [label="Kim Kitsuragi: 警督扬起眉头，但是一句话也没说。现在配电板上少了一根电线。\n“好吧。那也不代表你能打开那台冰淇淋制造机，你知道的吧。我打赌几乎不太可能……”"];
+	  27 [label="Kim Kitsuragi: “很好。这栋建筑的业主只能为这个畸形再多付一些电费了。”"];
+	  28 [label="Breaker Box: 在这片黑暗中的某个地方，一只巨型电动哺乳动物苏醒了……"];
+	  29 [label="Variable[\"doomed.orb_noticed_frozen_ice_cream_maker\"]  or  Variable[\"doomed.orb_noticed_melting_ice_cream_maker\"]"];
+	  30 [label="Variable[\"doomed.orb_noticed_frozen_ice_cream_maker\"]  or  Variable[\"doomed.orb_noticed_melting_ice_cream_maker\"]", shape=diamond];
+	  31 [label="!(Variable[\"doomed.orb_noticed_frozen_ice_cream_maker\"]  or  Variable[\"doomed.orb_noticed_melting_ice_cream_maker\"])", shape=diamond];
+	  32 [label="Jump to: [breaker hub]"];
+	  33 [label="Kim Kitsuragi: “很聪明。冰淇淋制造机解冻之后，打开盖子应该就容易多了。不过我们还是需要一根合适的撬棍。”"];
+	  34 [label="IsTaskActive(\"TASK.plug_in_the_fridge\")--[[ Variable[ ]]"];
+	  35 [label="IsTaskActive(\"TASK.plug_in_the_fridge\")--[[ Variable[ ]]", shape=diamond];
+	  36 [label="!(IsTaskActive(\"TASK.plug_in_the_fridge\")--[[ Variable[ ]])", shape=diamond];
+	  37 [label="IsKimHere()"];
+	  38 [label="IsKimHere()", shape=diamond];
+	  39 [label="!(IsKimHere())", shape=diamond];
+	  40 [label="You: “它是黑色的，感觉不太像红色那根。”"];
+	  41 [label="Variable[\"doomed.breakerbox_red_wire_plugged_out\"]"];
+	  42 [label="Variable[\"doomed.breakerbox_red_wire_plugged_out\"]", shape=diamond];
+	  43 [label="!(Variable[\"doomed.breakerbox_red_wire_plugged_out\"])", shape=diamond];
+	  44 [label="You: 拔掉那根巨大的红色电线。"];
+	  45 [label="Breaker Box: 开关箱里插着两根电线。红色那根通往冰熊冰箱，黑色那根通往附近的冰淇淋制造机。"];
+	  46 [label="Breaker Box: 只有黑色电线还插在开关箱上，红色那根被忽视地躺在地板上。"];
+	  47 [label="Breaker Box: 一只巨大的电动哺乳动物被唤醒了。在它冰冷内脏的环抱之下，这具尸体安全了。"];
+	  48 [label="Variable[\"doomed.orb_noticed_frozen_ice_cream_maker\"]  or  Variable[\"doomed.orb_noticed_melting_ice_cream_maker\"]"];
+	  49 [label="Variable[\"doomed.orb_noticed_frozen_ice_cream_maker\"]  or  Variable[\"doomed.orb_noticed_melting_ice_cream_maker\"]", shape=diamond];
+	  50 [label="!(Variable[\"doomed.orb_noticed_frozen_ice_cream_maker\"]  or  Variable[\"doomed.orb_noticed_melting_ice_cream_maker\"])", shape=diamond];
+	  51 [label="Breaker Box: 只有红色电线还插在开关箱上，黑色那根被忽视地躺在地板上。"];
+	  52 [label="Variable[\"doomed.kim_body_in_fridge_plug_in\"]"];
+	  53 [label="Variable[\"doomed.kim_body_in_fridge_plug_in\"]", shape=diamond];
+	  54 [label="!(Variable[\"doomed.kim_body_in_fridge_plug_in\"])", shape=diamond];
+	  55 [label="CheckItem(\"kvalsund_multitool\")"];
+	  56 [label="CheckItem(\"kvalsund_multitool\")", shape=diamond];
+	  57 [label="!(CheckItem(\"kvalsund_multitool\"))", shape=diamond];
+	  58 [label="You: 插上那根巨大的红色电线。"];
+	  59 [label="Breaker Box: 在某个地方，一台机器随着电流一起发出嗡嗡的声音，愉悦又满足。"];
+	  60 [label="Kim Kitsuragi: “很聪明。冰淇淋制造机解冻之后，打开盖子应该就容易多了。”"];
+	  61 [label="Inland Empire: 别把那根红色的电线拔掉——你会唤醒那些幽灵的！"];
+	  62 [label="You: “我不知道为什么要拔下来，我做事没有任何理由。”"];
+	  63 [label="Variable[\"TASK.fridge_victims_body\"]  and  Variable[\"doomed.icebear_main_hub_reached\"]  and  Variable[\"TASK.send_corpse_to_processing_done\"] == false"];
+	  64 [label="Variable[\"TASK.fridge_victims_body\"]  and  Variable[\"doomed.icebear_main_hub_reached\"]  and  Variable[\"TASK.send_corpse_to_processing_done\"] == false", shape=diamond];
+	  65 [label="!(Variable[\"TASK.fridge_victims_body\"]  and  Variable[\"doomed.icebear_main_hub_reached\"]  and  Variable[\"TASK.send_corpse_to_processing_done\"] == false)", shape=diamond];
+	  66 [label="breaker hub"];
+	  67 [label="You: “因为它是黑色的，那是无限宇宙的颜色。”"];
+	  68 [label="Breaker Box: 开关箱上的两根电线都被拔下来了。"];
+	  69 [label="You: 插入黑色电线。"];
+	  70 [label="Breaker Box: 开关箱里插着两根电线。红色那根通向黑暗之中，黑色那根通往附近的冰淇淋制造机。"];
+	  71 [label="Kim Kitsuragi: “你为什么要这么做？”"];
+	  72 [label="IsKimHere()"];
+	  73 [label="IsKimHere()", shape=diamond];
+	  74 [label="!(IsKimHere())", shape=diamond];
+	  75 [label="Kim Kitsuragi: “呃，你在做什么？我们需要冰箱冰冻尸体，你不能就这么电源拔出来。”他拿起电线，又重新插了回去。"];
+	  76 [label="You: 拔掉黑色电线。"];
+	  77 [label="IsKimHere()"];
+	  78 [label="IsKimHere()", shape=diamond];
+	  79 [label="!(IsKimHere())", shape=diamond];
+	  80 [label="Breaker Box: 一只巨大的电动哺乳动物被唤醒了。在它冰冷内脏的环抱之下，这具尸体安全了。"];
+	  81 [label="You: [离开。]"];
+	  82 [label="Breaker Box: 伴随着一阵轻柔的颤动声，离你很近的某个东西沉寂了下来。"];
+	  83 [label="Breaker Box: 一阵电流的嘶嘶声！现在房间变得稍微安静了一些。"];
+	  84 [label="Breaker Box: 一阵电流的嘶嘶声！现在房间变得稍微安静了一些。"];
+	  85 [label="IsKimHere()"];
+	  86 [label="IsKimHere()", shape=diamond];
+	  87 [label="!(IsKimHere())", shape=diamond];
+	  88 [label="Variable[\"doomed.breakerbox_red_wire_plugged_out\"]"];
+	  89 [label="Variable[\"doomed.breakerbox_red_wire_plugged_out\"]", shape=diamond];
+	  90 [label="!(Variable[\"doomed.breakerbox_red_wire_plugged_out\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 6
+	  2 -> 66
+	  3 -> 4
+	  3 -> 5
+	  4 -> 27
+	  5 -> 32
+	  6 -> 8
+	  6 -> 7
+	  7 -> 88
+	  8 -> 41
+	  9 -> 32
+	  10 -> 11
+	  10 -> 12
+	  11 -> 84
+	  12 -> 83
+	  14 -> 61
+	  15 -> 14
+	  16 -> 17
+	  16 -> 18
+	  17 -> 48
+	  18 -> 29
+	  19 -> 20
+	  19 -> 21
+	  20 -> 2
+	  21 -> 22
+	  22 -> 24
+	  22 -> 23
+	  23 -> 55
+	  24 -> 85
+	  25 -> 66
+	  26 -> 2
+	  27 -> 32
+	  28 -> 32
+	  29 -> 30
+	  29 -> 31
+	  30 -> 70
+	  31 -> 15
+	  32 -> 66
+	  33 -> 2
+	  34 -> 35
+	  34 -> 36
+	  35 -> 47
+	  36 -> 52
+	  37 -> 38
+	  37 -> 39
+	  38 -> 75
+	  39 -> 10
+	  40 -> 26
+	  41 -> 42
+	  41 -> 43
+	  42 -> 46
+	  43 -> 16
+	  44 -> 63
+	  45 -> 66
+	  46 -> 66
+	  47 -> 72
+	  48 -> 49
+	  48 -> 50
+	  49 -> 45
+	  50 -> 25
+	  51 -> 66
+	  52 -> 53
+	  52 -> 54
+	  53 -> 80
+	  54 -> 28
+	  55 -> 56
+	  55 -> 57
+	  56 -> 60
+	  57 -> 33
+	  58 -> 34
+	  59 -> 32
+	  60 -> 2
+	  61 -> 66
+	  62 -> 26
+	  63 -> 64
+	  63 -> 65
+	  64 -> 37
+	  65 -> 10
+	  66 -> 69
+	  66 -> 44
+	  66 -> 76
+	  66 -> 81
+	  66 -> 58
+	  67 -> 26
+	  68 -> 66
+	  69 -> 59
+	  70 -> 14
+	  71 -> 40
+	  71 -> 67
+	  71 -> 62
+	  72 -> 73
+	  72 -> 74
+	  73 -> 9
+	  74 -> 32
+	  75 -> 32
+	  76 -> 82
+	  77 -> 78
+	  77 -> 79
+	  78 -> 19
+	  79 -> 32
+	  80 -> 3
+	  82 -> 77
+	  83 -> 32
+	  84 -> 32
+	  85 -> 86
+	  85 -> 87
+	  86 -> 71
+	  87 -> 2
+	  88 -> 89
+	  88 -> 90
+	  89 -> 68
+	  90 -> 51
+}
+

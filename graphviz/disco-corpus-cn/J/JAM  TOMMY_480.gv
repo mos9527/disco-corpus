@@ -1,0 +1,1764 @@
+# JAM / TOMMY
+# At the plaza, near Kim's Kineema you may talk to an anxious truck driver. The man's come to stretch his legs. Here you will find information on: traffic jam, the closed gates, the other truck drivers, FALN. + Learn some background on the geography of Le Caillou. Possibly acquire one piece of the FALN clothing set. (Includes poetry white check.)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: “不要紧。”[离开。]"];
+	  3 [label="Jump to: [ACTUALMAINHUB]"];
+	  4 [label="Tommy Le Homme: “这个嘛……呃……”"];
+	  5 [label="Tommy Le Homme: “老兄，我还希望不会是她……”他咬紧嘴唇。“我只能说：她已经不在这里了。她不是什么邪恶的毒贩；而且我也不知道她在哪。”"];
+	  6 [label="Drama: 吾辈不能说他在撒谎，大人。"];
+	  7 [label="Empathy: 警督太累了，不想跟你发脾气，他只想继续调查。"];
+	  8 [label="Jump to: [ACTUALMAINHUB]"];
+	  9 [label="Tommy Le Homme: “刚刚*发生*的吗？”他双目圆睁，有些过度呼吸，“她*死*了吗？别告诉我她……”"];
+	  10 [label="Tommy Le Homme: Variable[\"jam.tommy_drama_not_lie\"]"];
+	  11 [label="Variable[\"jam.tommy_drama_not_lie\"]", shape=diamond];
+	  12 [label="!(Variable[\"jam.tommy_drama_not_lie\"])", shape=diamond];
+	  13 [label="Empathy: 所以这就是之前感受到的那种情绪。不过是*痴心妄想*。"];
+	  14 [label="Tommy Le Homme: IsKimHere()"];
+	  15 [label="IsKimHere()", shape=diamond];
+	  16 [label="!(IsKimHere())", shape=diamond];
+	  17 [label="Jump to: [rhymeshub]"];
+	  18 [label="Tommy Le Homme: “老兄，堵車了。”他朝着那堆杂乱无序的货車摆了摆手。"];
+	  19 [label="Tommy Le Homme: “又见面了，朋友。”他向你打了个召唤。“你在想什么呢？”"];
+	  20 [label="Tommy Le Homme: “你还可以去街上的报亭看看，弗利多。”他指着港口的方向。“招牌上有3个字体T的那个就是。瑞瓦肖真的很奇怪……”"];
+	  21 [label="You: “这是一个圣餐杯，在无声圣餐仪式的时候会递到你手上。”"];
+	  22 [label="Empathy: 慢慢来，别太过火。这好像是个人问题……"];
+	  23 [label="You: “想念一个人是什么感觉？”"];
+	  24 [label="Tommy Le Homme: Variable[\"auto.is_raining\"]"];
+	  25 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  26 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  27 [label="Tommy Le Homme: “老兄，感觉我还真是……卸下思想负担了。那些压力把我的诗歌韵律搞得乱七八糟。”"];
+	  28 [label="You: “那我走了。”[离开。]"];
+	  29 [label="Volition: 记住，你这样做是为了调查——这很重要。放松点。问吧。"];
+	  30 [label="You: “关于你那位女司机朋友，我改变主意了……”"];
+	  31 [label="Jump to: [decision hub]"];
+	  32 [label="You: “抱歉，老兄。我不能向你透露警方正在进行的调查。”"];
+	  33 [label="Kim Kitsuragi: “她跟你分享了这些？”"];
+	  34 [label="Tommy Le Homme: Variable[\"jam.tommy_who_is_she_to_you_discussed\"]"];
+	  35 [label="Variable[\"jam.tommy_who_is_she_to_you_discussed\"]", shape=diamond];
+	  36 [label="!(Variable[\"jam.tommy_who_is_she_to_you_discussed\"])", shape=diamond];
+	  37 [label="Jump to: [decision hub]"];
+	  38 [label="You: “还有别的吗？比如说她现在在哪？”"];
+	  39 [label="You: “还有一件别的事。”"];
+	  40 [label="Empathy: *死*了吗？他说不出口……"];
+	  41 [label="Tommy Le Homme: “不是她做的——相信我。如果发生了什么*不好*的事，那也不是她做的。虽然认识时间不长，但我很会看人。”"];
+	  42 [label="Physical Instrument: 不用否认——你的身体*需要*感受到一些好运动服的触碰。"];
+	  43 [label="Tommy Le Homme: “我猜，还是比我要好——我跟你说过，还有很多人会告发她。”他靠近了一些。“但是……她有麻烦吗？”"];
+	  44 [label="Encyclopedia: 一辆货車，在卡尤和临近岛屿也被称为*货車*。这一台有够破的，有可能是一台FALN老破車，也许是A-6？"];
+	  45 [label="You: “我不过是缪斯女神的容器。”"];
+	  46 [label="Tommy Le Homme: “感觉就像永远，就像我就出生在这个环岛，而堵車是我唯一知道的事情。只有我，金属，轮胎，油，还有重油排出的废气……”"];
+	  47 [label="Tommy Le Homme: “好吧。你确实给了*我*一些希望，我猜！”他朝你竖起大拇指。"];
+	  48 [label="Tommy Le Homme: “没有更多尸体挂在更多树上，有那么一点惊讶的感觉。”"];
+	  49 [label="Tommy Le Homme: IsKimHere()"];
+	  50 [label="IsKimHere()", shape=diamond];
+	  51 [label="!(IsKimHere())", shape=diamond];
+	  52 [label="Tommy Le Homme: “哦，高档麻醉剂，非法武器之类的东西。”"];
+	  53 [label="Tommy Le Homme: “除非我在路上的时候，他们把运动装备列为违禁品了。”"];
+	  54 [label="Tommy Le Homme: “前妻吗？”"];
+	  55 [label="You: 继续听。"];
+	  56 [label="Tommy Le Homme: Variable[\"auto.is_raining\"]"];
+	  57 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  58 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  59 [label="Tommy Le Homme: Variable[\"auto.is_snowing\"]"];
+	  60 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  61 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  62 [label="Tommy Le Homme: “我……呃……看见你在女司机的货車附近晃荡。她惹上麻烦了吗？”"];
+	  63 [label="You: “我不知道你觉得这些*老板*是什么人，不过听起来像是一个很好的安排——对于他们来说。”"];
+	  64 [label="You: “我不会做那种事的！”"];
+	  65 [label="Jump to: [ACTUALMAINHUB]"];
+	  66 [label="You: “是啊，我的事情跟婚姻没有*任何*关系。”"];
+	  67 [label="Tommy Le Homme: “谢谢你。和别人聊天真的挺好的。而且我知道开口并不容易。”他笑了。“希望你能找到解决问题的办法。”"];
+	  68 [label="You: （继续。）“我永远也回不到从前。她一直在那里。该死的案子。一切都他妈该死。都他妈被诅咒了。”"];
+	  69 [label="Kim Kitsuragi: “那这个暴力的生活包括贩毒吗？”"];
+	  70 [label="You: “很抱歉，我必须这么做。”"];
+	  71 [label="You: “谢谢，那我去找货車了。”[离开。]"];
+	  72 [label="Tommy Le Homme: “什么？”"];
+	  73 [label="Tommy Le Homme: Variable[\"jam.tommy_forced_him_to_out_instigator\"]"];
+	  74 [label="Variable[\"jam.tommy_forced_him_to_out_instigator\"]", shape=diamond];
+	  75 [label="!(Variable[\"jam.tommy_forced_him_to_out_instigator\"])", shape=diamond];
+	  76 [label="Tommy Le Homme: “听着，老兄，赶紧滚开，好吗？快滚，让我自己惊恐发作吧。我不想再知道这件破事了。我再也不会跟警察说话了……”"];
+	  77 [label="Tommy Le Homme: “我*告诉*过你不要去追她！我告诉过你的。”他有些过度呼吸。“出什么事了？她……她是不是……”"];
+	  78 [label="Suggestion: 不要在别人面前讲他们不喜欢的人，也许真是对的……"];
+	  79 [label="Conceptualization: 询问他的推论。"];
+	  80 [label="Tommy Le Homme: IsKimHere()  and  Variable[\"pier.joyce_met\"] == false"];
+	  81 [label="IsKimHere()  and  Variable[\"pier.joyce_met\"] == false", shape=diamond];
+	  82 [label="!(IsKimHere()  and  Variable[\"pier.joyce_met\"] == false)", shape=diamond];
+	  83 [label="Tommy Le Homme: Variable[\"jam.tommy_empathy_wishful_emotion\"]"];
+	  84 [label="Variable[\"jam.tommy_empathy_wishful_emotion\"]", shape=diamond];
+	  85 [label="!(Variable[\"jam.tommy_empathy_wishful_emotion\"])", shape=diamond];
+	  86 [label="Tommy Le Homme: “是啊——你也是。注意安全，警探。”"];
+	  87 [label="You: 他是一个诗人。用你最棒的诗篇打败他。"];
+	  88 [label="You: Variable[\"jam.tommy_came_up_with_good_poetry\"]"];
+	  89 [label="Variable[\"jam.tommy_came_up_with_good_poetry\"]", shape=diamond];
+	  90 [label="!(Variable[\"jam.tommy_came_up_with_good_poetry\"])", shape=diamond];
+	  91 [label="Tommy Le Homme: “指我们这些货車司机，也就是拉货的。有些人还在附近等着这些破事结束。大部分人都跑到别的地方去了。去喝酒，或者去嗑药。要不就是泡妞。”他尴尬地笑了。“倒不是说我在责备他们，真没有。”"];
+	  92 [label="Tommy Le Homme: “没有。我不抽。”他朝着身后的大货車点了点头……"];
+	  93 [label="Tommy Le Homme: “我没有，老兄，不可能的。我不想惹麻烦。情况本来就有够糟的了。这次交通堵塞引起了大家的激烈抗议，我担心形势会变得一发不可收拾。”"];
+	  94 [label="You: “也许*我*也应该罢工……”"];
+	  95 [label="Perception (Smell): 喂——他不是，正在抽烟吗？空气中都是那股味道。"];
+	  96 [label="Endurance: 你确定自己*没有*肺癌吗？"];
+	  97 [label="Tommy Le Homme: “别搞的这么生疏嘛。”他伸出两个手指向你致敬。"];
+	  98 [label="Tommy Le Homme: Variable[\"jam.tommy_whitec_empathy_family\"]"];
+	  99 [label="Variable[\"jam.tommy_whitec_empathy_family\"]", shape=diamond];
+	  100 [label="!(Variable[\"jam.tommy_whitec_empathy_family\"])", shape=diamond];
+	  101 [label="Tommy Le Homme: “也许会吧。我们尽力让彼此在一起。我*希望*不会，但是你永远不会知道……”他停顿了一下。“我猜要谢谢那些晦涩的话语。我会保证不让它们变成现实。”"];
+	  102 [label="You: “嗯啊——不对。它更像是一种声音。一种黑暗的回声，和我一起混入这个现实。”"];
+	  103 [label="Tommy Le Homme: Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  104 [label="Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  105 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  106 [label="Tommy Le Homme: Variable[\"jam.tommy_forced_him_to_out_instigator\"]"];
+	  107 [label="Variable[\"jam.tommy_forced_him_to_out_instigator\"]", shape=diamond];
+	  108 [label="!(Variable[\"jam.tommy_forced_him_to_out_instigator\"])", shape=diamond];
+	  109 [label="Jump to: [ACTUALMAINHUB]"];
+	  110 [label="Tommy Le Homme: “是啊，对我来说肯定不好——或者你也一样。我愿意分给一个倒霉的城市警察一两枚硬币。如果说，我自己有*四枚*的话。”"];
+	  111 [label="You: “所以你破产了。明白。我想想还有什么要问的……”"];
+	  112 [label="Tommy Le Homme: “好眼力，老兄。是的，她年纪不小了，不过很可靠。”他亲切地拍了拍货車的侧面。“我和她在一起度过了*很长*时间。”"];
+	  113 [label="Inland Empire: 想念一个人——就是这种感觉吗？"];
+	  114 [label="Tommy Le Homme: “见鬼，老兄……这种问题你找别人去问吧，好吗？这里有很多司机都受不了她。或者*害怕*她。他们绝对会很乐意出卖她的。”"];
+	  115 [label="Tommy Le Homme: “好吧。我不想当屠夫。而且也不想当骑士。我只想做一个晚上可以安心睡觉的普通人。稍微有点小名气也无妨。”"];
+	  116 [label="Jump to: [EXTHUBFOREVER]"];
+	  117 [label="You: “‘她毁了我。他妈的，她毁了我。’”"];
+	  118 [label="Tommy Le Homme: “是啊……”他不知道该说什么，所以他只是重复着：“是啊是啊，我明白。这些是*你的*韵脚，它们来源于你的生活。它们尽管粗野，但却诚实。所以……谢了，老兄。”"];
+	  119 [label="Jump to: [ACTUALMAINHUB]"];
+	  120 [label="You: “这人是谁。她叫什么名字？”"];
+	  121 [label="Tommy Le Homme: Variable[\"jam.tommy_who_is_culprit_opened\"]"];
+	  122 [label="Variable[\"jam.tommy_who_is_culprit_opened\"]", shape=diamond];
+	  123 [label="!(Variable[\"jam.tommy_who_is_culprit_opened\"])", shape=diamond];
+	  124 [label="Tommy Le Homme: IsKimHere()"];
+	  125 [label="IsKimHere()", shape=diamond];
+	  126 [label="!(IsKimHere())", shape=diamond];
+	  127 [label="Tommy Le Homme: “呃……”他叹了口气。“看来*现在*有了——不过我们没聊过。你知道的，我们只聊生活。她会说些自己的想法……”"];
+	  128 [label="Logic: 嗯……那个灰头发女人。也许她知道什么？"];
+	  129 [label="Tommy Le Homme: “哇。搞得我差点快犯心脏病了……”他松了口气。“是啊，我*真的*需要重新开始抽烟。”"];
+	  130 [label="You: “我们走吧，金。”[离开。]"];
+	  131 [label="Tommy Le Homme: IsKimHere()"];
+	  132 [label="IsKimHere()", shape=diamond];
+	  133 [label="!(IsKimHere())", shape=diamond];
+	  134 [label="Tommy Le Homme: “我真的不能，老兄。我没那么*天真*。”"];
+	  135 [label="Empathy: 他松了一口气。"];
+	  136 [label="Tommy Le Homme: “不是她做的。相信我，如果发生了什么*不好*的事，那也不是她做的。虽然认识时间不长，但我很会看人。”"];
+	  137 [label="Empathy: 他不敢相信。"];
+	  138 [label="You: “她心烦意乱。然后就……这么发生了。”"];
+	  139 [label="Tommy Le Homme: 他的呼吸无法平静。“老兄，我需要稍微喘口气，请原谅……”"];
+	  140 [label="Tommy Le Homme: Variable[\"jam.tommy_forced_him_to_out_instigator\"]"];
+	  141 [label="Variable[\"jam.tommy_forced_him_to_out_instigator\"]", shape=diamond];
+	  142 [label="!(Variable[\"jam.tommy_forced_him_to_out_instigator\"])", shape=diamond];
+	  143 [label="Empathy: 今天，明天，*永远*。"];
+	  144 [label="Tommy Le Homme: “呼……这样对她比较好。而且对*你*也好——最好还是集中精力去抓那些坏人吧。雇佣兵啊之类的。到处都有坏人……”"];
+	  145 [label="Kim Kitsuragi: “我真是的。如果不是，我就不会加入RCM。保重，先生。”"];
+	  146 [label="You: “工会有什么需求？”"];
+	  147 [label="Inland Empire: 你发现自己和这个男人有一些共同点。你甚至给他留下了深刻的印象。不过你下次照*镜子*的时候，记住这些话……"];
+	  148 [label="You: “不是开玩笑，老兄。让警察见鬼去吧。”"];
+	  149 [label="Tommy Le Homme: “好像是……码头那边出了点状况。工人们封了路。提出需求。进不去，也出不来。”"];
+	  150 [label="Tommy Le Homme: “我能理解你的感受，朋友。想念一个人的感觉挺好的。我喜欢。我知道除了这里的这些东西，我还拥有*更多*。”"];
+	  151 [label="You: “等等，那你为什么还在这儿瞎晃？”"];
+	  152 [label="Tommy Le Homme: “所以，你应该意识到如果事先宣布的话，那下套就不管用了，对吧？”"];
+	  153 [label="You: “我想念我的枪。我把它搞丢了。”"];
+	  154 [label="Tommy Le Homme: “淋着雨，堵在半路上，老兄。你在想什么呢？”"];
+	  155 [label="Tommy Le Homme: “那就祝你好运了，老兄。你也挺不容易的，不过看看，你还在呼吸，不是吗？”"];
+	  156 [label="Tommy Le Homme: “管他妈的呢，”他耸耸肩。“现在我是个坏人了。总有比怀恨在心更重要的事情。没事的——你也吃了不少苦头。”"];
+	  157 [label="You: “你知道那个死人吗？就是挂在旅社后院的那个？”（指向院子。）"];
+	  158 [label="You: “所以你觉得别人出卖她是可以接受的。你只是不想把*自己*的手弄脏？”"];
+	  159 [label="You: “她是个嫌疑人，我需要你告诉我她在哪。不然我没法完成调查。”（逼迫汤米。）"];
+	  160 [label="You: “好吧，那我暂时不谈这个问题。”（想个别的办法。）"];
+	  161 [label="You: “你说的有道理，不过现在还不是戒掉的时候。我还有一起凶杀案要破呢。”"];
+	  162 [label="Drama: 很容易看出来他说的是实话。他不愿意去窥探那些黑暗的东西。"];
+	  163 [label="Tommy Le Homme: “当然了，老兄，没问题……还有，谢谢你。和别人聊天真的挺好的。而且我知道开口并不容易。”他笑了。“希望你能找到解决问题的办法。”"];
+	  164 [label="Kim Kitsuragi: “看在*老天爷*的份上，你在做什么？”"];
+	  165 [label="Kim Kitsuragi: “是的。而且我也要谢谢你——因为你停下来了。”他看着你。“我们手上还有个毒品案要调查。不如现在就开始吧？”"];
+	  166 [label="Tommy Le Homme: “幸亏我*不知道*。大家都叫她‘女司机’。她的名字是个秘密。对于我来说也是。现在我知道原因了。”"];
+	  167 [label="Jump to: [Untitled hub]"];
+	  168 [label="You: “我不能就这么‘随它去’，这是警方调查的一部分。”"];
+	  169 [label="You: “她跟你分享了这些？”"];
+	  170 [label="Pain Threshold: 我就没那么肯定了，汤米。"];
+	  171 [label="Inland Empire: 想象一下。一场爆炸。*星爆*。再见了，这个人类，金钱和机器的世界……"];
+	  172 [label="Tommy Le Homme: “上周五。”他眨眨眼，现在眼睛是半空洞的状态。"];
+	  173 [label="You: “她什么时候离开的？”"];
+	  174 [label="You: “她还活着。她企图逃跑，但是却射中了自己的大腿。”（撒谎）"];
+	  175 [label="Kim Kitsuragi: “我们走吧。”"];
+	  176 [label="Tommy Le Homme: Variable[\"jam.tommy_told_him_ruby_dead\"]"];
+	  177 [label="Variable[\"jam.tommy_told_him_ruby_dead\"]", shape=diamond];
+	  178 [label="!(Variable[\"jam.tommy_told_him_ruby_dead\"])", shape=diamond];
+	  179 [label="You: “等等——所以你*确实*知道这里贩毒的事情？”"];
+	  180 [label="Tommy Le Homme: “也许吧。不过*其他*人的生活不是。”"];
+	  181 [label="Composure: 他努力做出一副若无其事的样子，但是里面却有些僵硬，似乎想把某种温暖的东西隐藏在冰冷的外表之下。"];
+	  182 [label="Tommy Le Homme: “只是逗你玩呢。没事的，对于一个警察来说，你挺不错的。”"];
+	  183 [label="You: “喂，老兄。警察也是人。”"];
+	  184 [label="Tommy Le Homme: “我懂。当词句绝妙*融合*的时候，这个世界就可控了。很高兴你我意见一致。”他朝你竖起大拇指。"];
+	  185 [label="Tommy Le Homme: Variable[\"jam.tommy_prejudice_modifier\"] == true"];
+	  186 [label="Variable[\"jam.tommy_prejudice_modifier\"] == true", shape=diamond];
+	  187 [label="!(Variable[\"jam.tommy_prejudice_modifier\"] == true)", shape=diamond];
+	  188 [label="You: “我喜欢你的风格，老兄。”"];
+	  189 [label="Tommy Le Homme: “还有什么？”他想了想。“哦，这真的不是我的专长。我只是乖乖干活，老实拿钱。我还有事要做，还有地方要去。大家都一样。”"];
+	  190 [label="lyingpoems"];
+	  191 [label="You: “话说，你这車拉的是什么？”"];
+	  192 [label="You: “我听说有个司机是女的，不过我没见过她。你知道这位*女司机*吗？”\n“我听说有个司机是女的，不过她好像不在这里。你知道这位*女司机*吗？”"];
+	  193 [label="Tommy Le Homme: IsKimHere()"];
+	  194 [label="IsKimHere()", shape=diamond];
+	  195 [label="!(IsKimHere())", shape=diamond];
+	  196 [label="You: “好吧。我还有别的问题。”（总结。）"];
+	  197 [label="Tommy Le Homme: “啊，老兄，我和麻醉剂有很深的交情了。”他双手枕在脑后，身体后仰。“在自己知觉的精神海浪上享受过一些好时光，你知道的吧？”"];
+	  198 [label="You: “什么？没有，当然没有。”"];
+	  199 [label="Tommy Le Homme: “哦，你知道的……”这个想法让他兴奋起来。“汤米·霍姆会成为一个音乐家。*道白式演唱法*。不过是跟节拍一起的。在路上我有很多时间可以磨练自己的技巧。”"];
+	  200 [label="You: 它通向哪里？"];
+	  201 [label="You: 摆脱茫然的状态。"];
+	  202 [label="You: “一个只有我知道的幽暗阴影，名为旧日之物。”"];
+	  203 [label="You: “前妻？不是。它是一个罪孽的存在，穿越了所有存在的位面来猎杀我。”"];
+	  204 [label="Tommy Le Homme: “现在它正在变成一个……某种……”他在寻找正确的表达方法。“白雪地狱，老兄。你在想什么呢？”"];
+	  205 [label="Tommy Le Homme: “老兄，那天真是糟透了……我错过了大部分战斗，但是我听说场面挺大的。”他若有所思地点点头。“而且还有一种强烈的*终结*感。”"];
+	  206 [label="Tommy Le Homme: “也许我应该保持低调，趁着还有机会多写写诗。”"];
+	  207 [label="rhymeshub"];
+	  208 [label="You: “简直疼的要命，老兄。”"];
+	  209 [label="Tommy Le Homme: “圣餐，挺好的……”他被这些话迷住了。"];
+	  210 [label="Reaction Speed: 罢工也许能帮你躲避一两颗子弹。"];
+	  211 [label="Tommy Le Homme: “好吧，老兄，我信你。”他脸上的表情有些滑稽。"];
+	  212 [label="Jump to: [Untitled hub]"];
+	  213 [label="Tommy Le Homme: “二维狩猎者？哇……听起来真挺糟糕的。希望我的婚姻别出现这种状况。”"];
+	  214 [label="Drama: 大人，出于某种原因，他并没有留意您的反对意见，还是认为它*就是*你的前妻。奇怪……"];
+	  215 [label="You: “我问你谁在指挥贩毒。你说你不*知道*。现在又说你知道。”"];
+	  216 [label="Volition: 这家伙拥有惊人的意志力。老实说，在那群*知识分子*中间，他是我唯一相信的一个。"];
+	  217 [label="Conceptualization: 不！住手！他已经很窘迫了。"];
+	  218 [label="Jump to: [Untitled hub]"];
+	  219 [label="Tommy Le Homme: “是怎么想的。给她带来的麻烦之类的。”"];
+	  220 [label="Tommy Le Homme: “不，我不知道。”"];
+	  221 [label="Tommy Le Homme: “抱歉，”他双目圆睁，有些过度呼吸，“她是*死*了吗？别告诉我她……”"];
+	  222 [label="Tommy Le Homme: “别告诉我。赶紧走开，不要再跟我说话了，好吗？我再也不会跟警察说话了。我不想再掺合这种破事。”"];
+	  223 [label="Physical Instrument: 研究这些‘韵律’显然会导致肌肉萎缩。你要保证自己不对诗歌上瘾。"];
+	  224 [label="Tommy Le Homme: Variable[\"tc.ruby_red\"]"];
+	  225 [label="Variable[\"tc.ruby_red\"]", shape=diamond];
+	  226 [label="!(Variable[\"tc.ruby_red\"])", shape=diamond];
+	  227 [label="Empathy: 这样更像*他*一些。"];
+	  228 [label="Tommy Le Homme: “你*其实*并不是这么想的。”"];
+	  229 [label="Tommy Le Homme: “不，老兄，我说的都是真话。我真的没想到会是她。她挺好的。有点混乱，不过——是个好人。”"];
+	  230 [label="Tommy Le Homme: “没什么了，老兄。我们只是稍微聊了一会儿——关于生活之类的事情……”他看着你。“所以，她遇上麻烦了，还是什么？”"];
+	  231 [label="Tommy Le Homme: “是啊，想象一下——已经整整一星期了。”他窃笑到。\n“是啊，想象一下——已经整整一星期了。”他窃笑到——很欣赏挖掘自己风格。"];
+	  232 [label="You: “这还真是……很奇怪的恭维呢。”"];
+	  233 [label="You: “我没明白你刚才说了些什么。”"];
+	  234 [label="Jump to: [ACTUALMAINHUB]"];
+	  235 [label="Tommy Le Homme: “我想念我的家人。他们是我的一切，我的妻子……我的第二个孩子也快出生了……他们就在德奥拉等我。而我却在这里，困在这个烂摊子里，离家十万八千里。”"];
+	  236 [label="You: “喂，汤米——说漏嘴了吧。你在烦恼什么呢？”"];
+	  237 [label="Tommy Le Homme: “也许吧。警察拿的也不多，工作时间又长。而且，还有可能中枪。所以为什么不呢？”"];
+	  238 [label="Jump to: [ACTUALMAINHUB]"];
+	  239 [label="Tommy Le Homme: “我听到传言说公司代表也来城里了。好像是……罢工谈判专家之类的。他们知道是怎么回事，有什么具体需求啊之类的。”"];
+	  240 [label="You: “你看起来像是个知道*毒品*的人。”"];
+	  241 [label="Empathy: 他的眼睛里？一种略显熟悉的渴望。散发着褐色和金色的光点。"];
+	  242 [label="Tommy Le Homme: 他摸了摸下巴。“那你来这里做什么？”"];
+	  243 [label="Kim Kitsuragi: 警督闭上双眼，发出一声响亮而悠长的叹息。"];
+	  244 [label="Shivers: 你可以忽略像迷宫一样复杂的小路，但你永远也无法摆脱它们——它们已经深深烙印在你的灵魂深处。"];
+	  245 [label="You: 边界上方是什么？"];
+	  246 [label="Tommy Le Homme: “七海德奥拉。在卡尤的另一端，基本上——是在另一座叫劳伦泰的岛上，远离大陆。那里有个属于我们的小地方。我几乎能听见孩子的笑声，每当下雪的时候……”"];
+	  247 [label="Tommy Le Homme: DayCount() > 1"];
+	  248 [label="DayCount() > 1", shape=diamond];
+	  249 [label="!(DayCount() > 1)", shape=diamond];
+	  250 [label="Jump to: [EXTHUBFOREVER]"];
+	  251 [label="Tommy Le Homme: “是啊，也许我应该保持低调……趁着还有机会多写写诗。”"];
+	  252 [label="Kim Kitsuragi: 警督插了进来。“我们收到一条可靠的线索，先生。这个环岛有人正在等待港口运来的大宗货物——为了搬上他们的货車，然后开到加姆洛克。”"];
+	  253 [label="Rhetoric: 放松，他只是在开玩笑。"];
+	  254 [label="Reaction Speed: 他说得对，还有其他选项——举个例子，那个种族主义者。"];
+	  255 [label="Tommy Le Homme: “你当然是了，老兄。”他用力地点点头。"];
+	  256 [label="Tommy Le Homme: “和别人聊天挺好的。我知道说出那些事并不容易，所以……”他笑了。“希望你能找到解决自己问题的办法。”"];
+	  257 [label="Tommy Le Homme: IsKimHere()"];
+	  258 [label="IsKimHere()", shape=diamond];
+	  259 [label="!(IsKimHere())", shape=diamond];
+	  260 [label="Rhetoric: 呸。情绪化的修辞。他知道些什么，而且他没有跟你分享。那才是*事实*。"];
+	  261 [label="You: “等等。她的想法？”"];
+	  262 [label="Tommy Le Homme: “给你。”他从口袋里拿出一个钥匙扣——看了看它，然后递给你。沉默不语……"];
+	  263 [label="keyinthehub"];
+	  264 [label="Suggestion: 告诉他这真的不是个好主意。"];
+	  265 [label="Tommy Le Homme: Variable[\"jam.tommy_greeting_done\"]"];
+	  266 [label="Variable[\"jam.tommy_greeting_done\"]", shape=diamond];
+	  267 [label="!(Variable[\"jam.tommy_greeting_done\"])", shape=diamond];
+	  268 [label="You: “那个种族主义者把她的货車位置告诉我们了。我们只是搜查了一下。”"];
+	  269 [label="Tommy Le Homme: “有一点。她挺好的。有点混乱，不过——是个好人。她上个星期离开的。把钥匙留给了我，如果交通疏散的话就帮她停車。”"];
+	  270 [label="Kim Kitsuragi: “关于她的事，你还知道什么？”"];
+	  271 [label="Untitled hub"];
+	  272 [label="Tommy Le Homme: “你说这个野性美人吗？”他用大拇指指向货車。“当然是了，它就像你的皮疹一样让你欲罢不能。你对重型货运机械感兴趣吗？”"];
+	  273 [label="Conceptualization: 你*最棒的*诗篇？你怕是连*糟糕*的诗篇都没有吧，只有风滚草和酒渍……等等，别！你在做什么？！"];
+	  274 [label="Electrochemistry: 你真的很需要抽烟。你需要它们！去弄点吧。你确定他没有骗你？你怎么能相信一个货車司机呢。"];
+	  275 [label="You: “我是个警察，我什么问题都能解决。”"];
+	  276 [label="You: “为什么要叫汤米·霍姆？”"];
+	  277 [label="You: “我*挺好*的，我没有想念*任何人*。”"];
+	  278 [label="You: “你的婚姻一定也会发生这种状况。”"];
+	  279 [label="Tommy Le Homme: “来自另一个……星球，”他说完之后转向了你，“你好啊。”"];
+	  280 [label="Tommy Le Homme: Variable[\"jam.tommy_tribunal_alt_greet\"]"];
+	  281 [label="Variable[\"jam.tommy_tribunal_alt_greet\"]", shape=diamond];
+	  282 [label="!(Variable[\"jam.tommy_tribunal_alt_greet\"])", shape=diamond];
+	  283 [label="You: “在那个地方，你会气喘吁吁地换个永远不是你本人的身份。”"];
+	  284 [label="You: “你被捕了。”"];
+	  285 [label="You: “那个女司机*在哪*？”"];
+	  286 [label="Tommy Le Homme: “我……我还觉得你跟别的警察不一样呢。”他凝视着你的眼睛，身体里有什么东西崩溃了。"];
+	  287 [label="Rhetoric: 等等。这家伙说他们是朋友，然后又说是*熟人*。然后他觉得别人出卖她就没问题吗？"];
+	  288 [label="Tommy Le Homme: “还有什么能帮你的吗？”"];
+	  289 [label="Tommy Le Homme: “是啊，果然如此——你的工作就是搞清楚所有*细小*的事情，不是吗？而我的工作……”他拍了拍货車背后，“就是运输运动裤。”"];
+	  290 [label="You: “不管是什么，有一件事很肯定——它*不是*我的前妻。”"];
+	  291 [label="Untitled hub (02)"];
+	  292 [label="Empathy: 也许，偶尔展现一下*你的*同理心是一个不错的主意？只是个建议。现在先继续吧。"];
+	  293 [label="Tommy Le Homme: “一个朋友？一个熟人。我不知道……这里堵的这么严重，她是唯一可以跟我聊天的人。她是我不想出卖给法律的人，好吗？”"];
+	  294 [label="Electrochemistry: 它就在这里。答案*就在*这里。你只需要开口问他。来吧——问吧！"];
+	  295 [label="Tommy Le Homme: “我能明白你的感觉，我的朋友。*知道*自己在想念谁已经很困难了……那种想念似乎并没有多大的好处。”"];
+	  296 [label="You: “这里出什么事了？”"];
+	  297 [label="Drama: 或者您是在学校学的？更重要的是：如果真是这样的话，谁能证明？顺其自然吧——您*值得*欢呼和喝彩。"];
+	  298 [label="Tommy Le Homme: “他不是我们的司机——这一点我能肯定。另外，还真没有人问过这个。我忙得很，不会一直耗在这里浪费时间的。”"];
+	  299 [label="Tommy Le Homme: “分析搁浅在一大片由货車和悲伤沮丧的货車司机汇成的海洋中央，它的基本结构和心理状态是怎样的。”"];
+	  300 [label="Tommy Le Homme: “老兄，放松点。我戒了，已经有一段时间了。有些承诺是必须遵守的。”他看着你，眼里满是怜悯。"];
+	  301 [label="Untitled hub"];
+	  302 [label="Tommy Le Homme: Variable[\"reputation.the_law\"] >=6"];
+	  303 [label="Variable[\"reputation.the_law\"] >=6", shape=diamond];
+	  304 [label="!(Variable[\"reputation.the_law\"] >=6)", shape=diamond];
+	  305 [label="Jump to: [strikehub]"];
+	  306 [label="Empathy: 你就知道这么点破玩意，汤米？该死。你知道什么叫难吗？男人跟男人*说话*，真是难上加难……"];
+	  307 [label="Encyclopedia: 下套是一种手法，指的是执法人员诱导一个人承认他们本不可能犯下的罪行。通常会通过权谋、劝导或者欺诈的手段。"];
+	  308 [label="Tommy Le Homme: “你说什么？”他从回忆中摆脱出来。"];
+	  309 [label="You: “德奥拉？”"];
+	  310 [label="You: “你什么也不用做，别担心。警方会调查的。”"];
+	  311 [label="Jump to: [EXTHUBFOREVER]"];
+	  312 [label="Tommy Le Homme: “我听过传言。我们说话的时候，其他司机看我的表情有些*奇怪*。而且她也告诉过我——说自己的生活很暴力。但是我不怕她。更像是*为*她担惊受怕。”"];
+	  313 [label="Logic: 有一个人你还没问过话呢。也许第三个司机知道些什么？"];
+	  314 [label="You: “你为什么有钥匙？”"];
+	  315 [label="Tommy Le Homme: “我们就是我们。而你是个警察。”"];
+	  316 [label="Drama: 话说……像这样分享案件信息真的*明智*吗，大人？"];
+	  317 [label="Jump to: [ACTUALMAINHUB]"];
+	  318 [label="Empathy: 因为*我*而死的吗？"];
+	  319 [label="Volition: 他不想再插手了。他承受不起。"];
+	  320 [label="Empathy: 他还是——抱有希望。这只是他的一厢情愿，不是欺骗。"];
+	  321 [label="Reaction Speed: 也许她把它染成*红色*了？提图斯说露比的头发是红色的……"];
+	  322 [label="Tommy Le Homme: IsKimHere()"];
+	  323 [label="IsKimHere()", shape=diamond];
+	  324 [label="!(IsKimHere())", shape=diamond];
+	  325 [label="You: “我想我可能是个真正的诗人。而且已经牢记于心。”"];
+	  326 [label="You: “还有什么是我应该知道的吗？”（总结。）"];
+	  327 [label="Jump to: [ACTUALMAINHUB]"];
+	  328 [label="Tommy Le Homme: IsKimHere()"];
+	  329 [label="IsKimHere()", shape=diamond];
+	  330 [label="!(IsKimHere())", shape=diamond];
+	  331 [label="Tommy Le Homme: “我得保护好这些东西——要是丢了东西，老板可不会开恩。而且这给了我写诗的时间。”"];
+	  332 [label="Tommy Le Homme: “讲个笑话都不行吗，老兄。”他咧开嘴笑了。“我拉的是FALN货物。大部分都是体育用品。运动服啊之类的。”"];
+	  333 [label="You: “你拉的FALN运动服，能送我一套吗？”"];
+	  334 [label="Jump to: [Untitled hub]"];
+	  335 [label="Tommy Le Homme: “但是……谢谢你。能和别人聊天真的挺好的。而且我知道开口并不容易。”他笑了。“希望你能找到解决问题的办法。”"];
+	  336 [label="Tommy Le Homme: “但是……”他停了下来，让记忆慢慢消散。“那些日子已经过去了。现在我的生活因为其他东西上瘾。你为什么要问呢，我的朋友？”"];
+	  337 [label="Tommy Le Homme: “老兄，那可是很严重的犯罪指控。你是打算……给我下套吗？”"];
+	  338 [label="Tommy Le Homme: “你把枪弄丢了？天啦，这可是个坏消息。特别是在这里，马丁内斯这种地方。希望你能赶在事情变得糟糕之前，尽快把它找到。”"];
+	  339 [label="Jump to: [pregreethub]"];
+	  340 [label="Tommy Le Homme: Variable[\"jam.tommy_forced_him_to_out_instigator\"]"];
+	  341 [label="Variable[\"jam.tommy_forced_him_to_out_instigator\"]", shape=diamond];
+	  342 [label="!(Variable[\"jam.tommy_forced_him_to_out_instigator\"])", shape=diamond];
+	  343 [label="Tommy Le Homme: “接下来呢？你打算回加姆洛克吗？有消息说本地的工会在幕后操纵一切，我觉得这案子已经结了……即使最后好像变成了一场大混乱。”\n“接下来呢？你打算回加姆洛克吗？有消息说本地的工会在幕后操纵一切，我觉得这案子已经结了……即使最后好像变成了一场大混乱。”"];
+	  344 [label="Tommy Le Homme: “哈，没有。我在开玩笑，老兄。”他咧开嘴笑了。“FALN的生意很好，也很干净。我这車拉的基本都是运动产品。你知道的，就是运动服啊之类的。”"];
+	  345 [label="Suggestion: 别装机灵了。最好还是直入主题。"];
+	  346 [label="Tommy Le Homme: “你看，老兄，我努力想躲开瑞瓦肖这个犯罪腹地。我在这里就是个过客。那些问题你还是找其他人调查的好。”"];
+	  347 [label="Kim Kitsuragi: “是的，大家都知道你是*法律*。你真不用一直挂在嘴边。”"];
+	  348 [label="You: “等等，什么？”"];
+	  349 [label="Empathy: 他见过你这种人。作为一个货車司机，他熟悉每一种已知的成瘾、冲动、还有自我毁灭的习惯。"];
+	  350 [label="Kim Kitsuragi: “是的——不过你继续吧。你刚问到罢工的事。”"];
+	  351 [label="Untitled hub"];
+	  352 [label="Tommy Le Homme: “我没事的，老兄，只是……堵車让我有些低落。这些废气，化学彩虹，框架上伸出来的柏油帆布，还有停下来的引擎……”男人迷失在了自己的话语里。\n“你真的是*法律*，对吧？我明白这么直白地观察和好打听是天经地义，但是确实对你的谈话技巧没多大帮助，是吧？”"];
+	  353 [label="Tommy Le Homme: “不过——幽暗的阴影。听起来真挺糟糕的。希望我的婚姻别出现这种状况……”"];
+	  354 [label="Tommy Le Homme: “当然，老兄，如果你这么说的话……”看起来他并没有相信。“但是你看，老兄……”"];
+	  355 [label="Tommy Le Homme: “我没有，老兄——我告诉过你，我*希望*不是她。希望她没有卷入其中。”"];
+	  356 [label="Tommy Le Homme: “蓝色和紫色的，染的。”他不情愿地回答着。“她到这里来的时候是紫色的。走之前是蓝色的。”"];
+	  357 [label="You: “我听说*每个人*都害怕她。你不怕吗？”"];
+	  358 [label="Tommy Le Homme: IsKimHere()"];
+	  359 [label="IsKimHere()", shape=diamond];
+	  360 [label="!(IsKimHere())", shape=diamond];
+	  361 [label="Tommy Le Homme: 然后他把东西递给你。“她的货車还在这里。就在下面，经过菲利普的雕像，”他朝着纪念碑挥了挥手。“車厢是绿色的。用钥匙就能打开进去。我只知道这么多。”"];
+	  362 [label="Tommy Le Homme: “我想一定是的。”"];
+	  363 [label="Tommy Le Homme: “*仁慈*。彻头彻尾的仁慈——你们警察继续锻炼*那块*肌肉的话，大家都会更愿意配合的，你知道的吧。”"];
+	  364 [label="Tommy Le Homme: IsKimHere()"];
+	  365 [label="IsKimHere()", shape=diamond];
+	  366 [label="!(IsKimHere())", shape=diamond];
+	  367 [label="Endurance: 你让他有些轻微的惊恐发作。他没有能力处理这种状况。"];
+	  368 [label="Kim Kitsuragi: “啊，是的。野松公司来的……”他做下笔记。“我很肯定，我们很快就会见到她。”"];
+	  369 [label="You: “我觉得这些词是我编的，没错。”"];
+	  370 [label="Perception (Smell): 东面吹来的风夹杂着一股浓厚的味道，原油、工业废液、重金属和其它现代副产品的味道。你几乎能*尝到*其中的滋味。"];
+	  371 [label="Tommy Le Homme: IsKimHere()"];
+	  372 [label="IsKimHere()", shape=diamond];
+	  373 [label="!(IsKimHere())", shape=diamond];
+	  374 [label="Jump to: [Tommy Le Homme: \"The man taps his fingers rhythmical...\"]"];
+	  375 [label="Tommy Le Homme: IsKimHere()"];
+	  376 [label="IsKimHere()", shape=diamond];
+	  377 [label="!(IsKimHere())", shape=diamond];
+	  378 [label="Shivers: 通往古老的旧南城，通往瑞瓦肖市郊最遥远的地方。穿过一块块方格农田，然后向上汇聚到埃斯佩兰斯河，一路经过蒙特马丁……边界正在靠近。"];
+	  379 [label="Tommy Le Homme: “老兄，你还活着！”他评估着眼下的情况。“差不多……算是……某种活着的状态吧。”"];
+	  380 [label="Jump to: [You: \"\"Let me be straight with you. I'm t...\"]"];
+	  381 [label="Tommy Le Homme: “什么？”他抬起头。“但是我*告诉*过你——她是我朋友！请不要让我出卖她，警探。去找别人吧。这里还有*很多*司机……”"];
+	  382 [label="Tommy Le Homme: “有那么糟糕吗？”他吹了声口哨，看起来突然老了十岁。“老兄，我应该怎么做……我怎么才能帮到她？”"];
+	  383 [label="You: “我有问过你的*意见*吗？”"];
+	  384 [label="Empathy: 就像这样——他溜到了你鞭长莫及的地方，大喊很可能也没有用。"];
+	  385 [label="Drama: 他没撒谎。他喜欢结局。"];
+	  386 [label="Tommy Le Homme: IsKimHere()"];
+	  387 [label="IsKimHere()", shape=diamond];
+	  388 [label="!(IsKimHere())", shape=diamond];
+	  389 [label="You: “那这个暴力的生活包括贩毒吗？”"];
+	  390 [label="Pain Threshold: 给她带来的痛苦。"];
+	  391 [label="Interfacing: 货車的钥匙。挺复杂的。看起来像一个链锁。"];
+	  392 [label="Tommy Le Homme: IsKimHere()"];
+	  393 [label="IsKimHere()", shape=diamond];
+	  394 [label="!(IsKimHere())", shape=diamond];
+	  395 [label="You: “顺便说一句，不是本地的工会打手。”"];
+	  396 [label="Suggestion: 跟他直说吧。"];
+	  397 [label="You: “好吧，其实我还有别的问题。”"];
+	  398 [label="You: “背后那个是你的車吗？”"];
+	  399 [label="You: “你身上有烟吗？”"];
+	  400 [label="You: “我……我也不知道。”"];
+	  401 [label="Perception: 是的。这种说法完全没错。你的感觉没什么要补充的。你还是去别处问问吧。"];
+	  402 [label="Tommy Le Homme: Variable[\"reputation.the_law\"] >=3"];
+	  403 [label="Variable[\"reputation.the_law\"] >=3", shape=diamond];
+	  404 [label="!(Variable[\"reputation.the_law\"] >=3)", shape=diamond];
+	  405 [label="You: “是啊，这些货車是挺整洁的。”"];
+	  406 [label="lorrieslorries"];
+	  407 [label="askhubs"];
+	  408 [label="Jump to: [ACTUALMAINHUB]"];
+	  409 [label="You: “还活着，不过跛了。”\n“还活着，跛了，而且肺还被刺破了。”"];
+	  410 [label="Tommy Le Homme: “说吧。”他停了一会儿，然后笑了起来。“抱歉，老兄，我不是故意的。你问吧。”"];
+	  411 [label="You: “你这辆是FALNA-6吗？”"];
+	  412 [label="You: “如果能产生效果呢？”（耸耸肩，竖起大拇指。）"];
+	  413 [label="Tommy Le Homme: 男人用手指有节奏地拍打着胳膊。\n他抱起双臂，转过头，眼里流露出失望的神情。"];
+	  414 [label="Tommy Le Homme: “没什么。”他笑了。“我只是在逗你玩呢，老兄。别在意我那些无聊的唠叨。”"];
+	  415 [label="Tommy Le Homme: “没错，老兄——*重新*开始。”他笑着点头补充到：“交通堵塞里的凤凰。”"];
+	  416 [label="Tommy Le Homme: “黑暗的回声？哇……听起来真挺糟糕的。希望我的婚姻别出现这种状况。”"];
+	  417 [label="Tommy Le Homme: “是啊，是啊，我明白的，其实挺酷的。不过……”"];
+	  418 [label="Kim Kitsuragi: “我们不能就这么‘随它去吧’，这是警方调查的一部分。”"];
+	  419 [label="You: “你说她*有麻烦*——怎么回事？”"];
+	  420 [label="Tommy Le Homme: IsKimHere()"];
+	  421 [label="IsKimHere()", shape=diamond];
+	  422 [label="!(IsKimHere())", shape=diamond];
+	  423 [label="Tommy Le Homme: Variable[\"jam.paledriver_greeting_hub_reached\"]"];
+	  424 [label="Variable[\"jam.paledriver_greeting_hub_reached\"]", shape=diamond];
+	  425 [label="!(Variable[\"jam.paledriver_greeting_hub_reached\"])", shape=diamond];
+	  426 [label="You: “这不叫*出卖*。我只是问一些*问题*。”"];
+	  427 [label="Tommy Le Homme: “这就是出卖，老兄。我知道是怎么回事。”"];
+	  428 [label="Jump to: [keyinthehub]"];
+	  429 [label="Kim Kitsuragi: 离开之前，他转向那个男人。“感谢你的配合，我知道这很难。但你做了件正确的事。”"];
+	  430 [label="Esprit de Corps: 你在做什么？"];
+	  431 [label="Tommy Le Homme: “呼……这样对她比较好。而且对*你*也好——最好还是集中精力去抓那些坏人吧。雇佣兵啊之类的。到处都有坏人……”"];
+	  432 [label="Tommy Le Homme: “这可能是最好的结果。你的工作还是自己知道就好——像你们这一行，你*必须*这么做。”"];
+	  433 [label="Endurance: 你让他有些轻微的惊恐发作。他需要处理这种情况。"];
+	  434 [label="Empathy: 警督太累了，不想跟你发脾气，他只想离开。"];
+	  435 [label="You: “我在想念一个自己也不知道是谁的人。”"];
+	  436 [label="You: “镜子的温度总是零。它就像是血管里的冰。它的照相机是X射线。”"];
+	  437 [label="Tommy Le Homme: “没关系，这是一段很好的诗节。看来你也没那么糟糕……对于一个警察来说。”"];
+	  439 [label="strikehub"];
+	  440 [label="Suggestion: 毫无疑问，这家伙认识露比。目前只是在装聋作哑。从他嘴里把一切信息撬出来。"];
+	  441 [label="Untitled hub"];
+	  442 [label="Tommy Le Homme: Variable[\"jam.tommy_shivers_across_revachol\"]"];
+	  443 [label="Variable[\"jam.tommy_shivers_across_revachol\"]", shape=diamond];
+	  444 [label="!(Variable[\"jam.tommy_shivers_across_revachol\"])", shape=diamond];
+	  445 [label="You: “西南方有什么？”"];
+	  446 [label="You: 快速眨眼。"];
+	  447 [label="Jump to: [ACTUALMAINHUB]"];
+	  448 [label="You: “不。我感觉有人*追杀*我。”"];
+	  449 [label="You: “别担心。我肯定你的婚姻不会遭遇不幸的。”"];
+	  450 [label="Tommy Le Homme: “每个人都是评论家，老兄。”他朝你摆摆手。“没事的。我已经在这里待了整整一星期了。”"];
+	  451 [label="You: “没麻烦。她会没事的。”"];
+	  452 [label="You: “我已经好多了。”"];
+	  453 [label="Tommy Le Homme: “不知道。你需要什么？”"];
+	  454 [label="Drama: 重油是重质可燃物的过时用法——这个男人有一种几乎难以抑制的表述行为倾向。或者他只是喜欢不同寻常的词语。或者两者都有！"];
+	  455 [label="Jump to: [strikehub]"];
+	  456 [label="You: “感兴趣？不觉得，我这么问是因为……我不知道，一定是警察的本能反应。”"];
+	  457 [label="Empathy: 又来了——沉静下面的那一抹悲伤。他觉得自己在货車里待得太久了。"];
+	  458 [label="Untitled hub"];
+	  459 [label="You: “我的朋友，我想探知你的灵魂！”"];
+	  460 [label="Tommy Le Homme: “很酷，很酷……我们都想了解彼此，了解彼此的不幸和一切——但是老兄，人类这种东西，拥有很*狡猾*的灵魂……”\n“你真的是*法律*，对吧？我明白这么直白地观察和好打听是天经地义，但是确实对你的谈话技巧没多大帮助，是吧？”"];
+	  461 [label="Tommy Le Homme: “一个巨大的白色幽灵？哇……听起来真挺糟糕的。希望我的婚姻别出现这种状况。”"];
+	  462 [label="Jump to: [ACTUALMAINHUB]"];
+	  463 [label="You: “不是真的，伙计。这不是我的真实想法。这是诗歌。”"];
+	  464 [label="Drama: 再次声明——就您而言，这不是一个谎言。"];
+	  465 [label="Tommy Le Homme: “她留给我的。因为她信任我……这样交通开始疏散的时候，我就能把車开出去。不然的话……”他的话没有说完。"];
+	  466 [label="Logic: 如果他们闯进去的话，会不会发现里面藏匿的东西？某些犯罪的东西？"];
+	  467 [label="Jump to: [keyinthehub]"];
+	  468 [label="Untitled hub"];
+	  469 [label="You: “她逃跑了。”"];
+	  470 [label="Tommy Le Homme: “呼……这样对她比较好。而且对*你*也好，老兄。真是……”他在组织语言……"];
+	  471 [label="Untitled hub (02)"];
+	  472 [label="Drama: 他不敢相信。"];
+	  473 [label="Jump to: [Untitled hub]"];
+	  474 [label="You: “拜托，老兄。生活只是个玩笑。”"];
+	  475 [label="Tommy Le Homme: “好吧。不过说真的——绝对不是胡话。真的挺不错的。我有点想知道这是不是你写的……”"];
+	  476 [label="ACTUALMAINHUB"];
+	  477 [label="You: “那我只好四下问问了。”"];
+	  478 [label="Tommy Le Homme: “哈？”突如其来的财务关税把他从恍惚中唤醒。“哦。没有，我没钱。工作没做完他们是不会给钱的。”"];
+	  479 [label="Kim Kitsuragi: “好吧。”警督的脸上没有任何表情。“不过你还是继续吧。你刚才在问罢工的事。”"];
+	  480 [label="You: “嗯。我猜你说的有道理。”"];
+	  481 [label="You: “不，汤米。这些是我写的小诗。听着！”（继续。）“她*搞*得我鲜血淋漓。”"];
+	  482 [label="Tommy Le Homme: 他换了个姿势，好像突然觉得不太舒服，接着他移开了目光。“我不想聊这个……”"];
+	  483 [label="Tommy Le Homme: IsKimHere()"];
+	  484 [label="IsKimHere()", shape=diamond];
+	  485 [label="!(IsKimHere())", shape=diamond];
+	  486 [label="You: “为什么，你知道些什么吗？是什么？”"];
+	  487 [label="You: “我不是有意刺探，不过我需要你的帮助——看来她可能卷入贩毒事件了。”"];
+	  488 [label="You: “首先——婚姻*是*什么？”"];
+	  489 [label="You: “不，它就像一个巨大的白色幽灵，蚕食着这个世界。”"];
+	  490 [label="Tommy Le Homme: “是啊……在婚姻关系里，你永远也不知道自己做的对不对。*希望*我们都在尽力维持这段关系，不过——任何事情都可能发生。你看，老兄……”"];
+	  491 [label="Tommy Le Homme: “是啊，是的——没错。”"];
+	  492 [label="Tommy Le Homme: Variable[\"jam.tommy_good_poetry_success\"]"];
+	  493 [label="Variable[\"jam.tommy_good_poetry_success\"]", shape=diamond];
+	  494 [label="!(Variable[\"jam.tommy_good_poetry_success\"])", shape=diamond];
+	  495 [label="Tommy Le Homme: “欢迎回来！”他会意地朝你点点头。“相信我，日子过得可没有那么快。”"];
+	  496 [label="You: “我还在到处寻找。还有些没解决的事要处理。”"];
+	  497 [label="You: “我们最不愿意看到的就是让更多市民卷入进来。”"];
+	  498 [label="Jump to: [Tommy Le Homme: \"The man taps his fingers rhythmical...\"]"];
+	  499 [label="You: “真调皮。我一直都想要个地下世界的朋友。”"];
+	  500 [label="Half Light: 不，要比这个更吓人。你被一个猎人*追杀*了，带着杏子和悲伤味道，还有过去的味道。"];
+	  501 [label="Authority: 是时候逮捕他了！"];
+	  502 [label="Jump to: [ACTUALMAINHUB]"];
+	  503 [label="Tommy Le Homme: “谢谢你。和别人聊天真的挺好的。而且我知道开口并不容易。”他笑了。“希望你能找到解决问题的办法。”"];
+	  504 [label="Conceptualization: 不是。真不是。我已经看出它失败了，现在我要*喊停*。在你真正想出*好*诗之前——你*没有*诗歌了。"];
+	  505 [label="Jump to: [ACTUALMAINHUB]"];
+	  506 [label="Kim Kitsuragi: “是的。而且我也要谢谢你——因为你*停下来*了。”他看着你。“我们手上还有个毒品案要调查。不如现在就开始吧？”"];
+	  507 [label="You: “我不是有意刺探，不过我需要你的帮助——看起来她可能卷入贩毒事件了。”"];
+	  508 [label="Tommy Le Homme: Variable[\"jam.tommy_who_is_culprit_opened\"]"];
+	  509 [label="Variable[\"jam.tommy_who_is_culprit_opened\"]", shape=diamond];
+	  510 [label="!(Variable[\"jam.tommy_who_is_culprit_opened\"])", shape=diamond];
+	  511 [label="Tommy Le Homme: “一个年轻女人。嗓音很粗，不过……是挺酷的那种。”"];
+	  512 [label="Tommy Le Homme: “该死，我不想……”他直视你的双眼。“随它去吧。不管她做了什么，也不可能那么糟糕吧。她不是个坏人，我只知道这么多。”"];
+	  513 [label="You: “她离开的时候，把自己的货車留下了吗？”"];
+	  514 [label="Kim Kitsuragi: “其他司机会拖走它，或者闯进去，把这台机器开动起来。”他点点头。"];
+	  515 [label="Tommy Le Homme: “上周五。”他眨眨眼，现在眼睛是半空洞的状态。"];
+	  516 [label="Tommy Le Homme: IsKimHere()"];
+	  517 [label="IsKimHere()", shape=diamond];
+	  518 [label="!(IsKimHere())", shape=diamond];
+	  519 [label="You: “是啊，就这些。不能再多说了。”"];
+	  520 [label="You: “她自杀了。”"];
+	  521 [label="You: “我放她走了。她什么也没做。”"];
+	  522 [label="You: “非常抱歉，是我的错。”"];
+	  523 [label="Conceptualization: 一段简单的小旋律。他似乎是一边想，一边编词。"];
+	  524 [label="Tommy Le Homme: “我不喜欢这些。现如今追逐这些短暂的快乐其实挺麻烦的。现在我更喜欢审慎的生活——思考，反省，观察。”他的目光沿着马路飘到地平线的远方，眼睛里有某种东西……在闪光。"];
+	  525 [label="Tommy Le Homme: “不过还有些其他司机。附近还有几个，等着交通疏散。或者是在等待甜蜜的死亡降临吧。”"];
+	  526 [label="You: “如果言辞*动听*的话，一切都会更容易一些。”"];
+	  527 [label="You: “你的措辞有些夸张了——但是我可以接受。”"];
+	  528 [label="Esprit de Corps: 在旧军事医院的一间小办公室里，汉斯·布劳警官在办公桌绿色的灯光下弓着背，浏览着一份打印文件——来自他的未来派杂志，名叫“未来主义者”。标题的字体有些太小了……"];
+	  529 [label="Composure: 他吓了一跳。这个问题触动了他的神经。"];
+	  530 [label="Tommy Le Homme: “哇啊。”他靠近了一些，眼睛因为专注而发亮。“还有什么？”"];
+	  531 [label="Jump to: [ACTUALMAINHUB]"];
+	  532 [label="You: 你从他的眼睛里看到了什么？"];
+	  533 [label="You: Variable[\"jam.tommy_whitec_empathy_family\"]"];
+	  534 [label="Variable[\"jam.tommy_whitec_empathy_family\"]", shape=diamond];
+	  535 [label="!(Variable[\"jam.tommy_whitec_empathy_family\"])", shape=diamond];
+	  536 [label="Tommy Le Homme: “我们是兄弟没错，但是我也不能把商品这么免费送出去吧。老板会不高兴的。”"];
+	  537 [label="Tommy Le Homme: Variable[\"auto.is_snowing\"]"];
+	  538 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  539 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  540 [label="Tommy Le Homme: Variable[\"TASK.search_through_the_locked_cabin_done\"]"];
+	  541 [label="Variable[\"TASK.search_through_the_locked_cabin_done\"]", shape=diamond];
+	  542 [label="!(Variable[\"TASK.search_through_the_locked_cabin_done\"])", shape=diamond];
+	  543 [label="Jump to: [Tommy Le Homme: \"The man taps his fingers rhythmical...\"]"];
+	  544 [label="Electrochemistry: 还有什么比追逐短暂的快乐更好的事情吗？越短暂越好！这样一个结束之后，马上可以开始*下一个*。"];
+	  545 [label="Jump to: [ACTUALMAINHUB]"];
+	  546 [label="Conceptualization: 这是官方的。他也同意。这是来世的接待室。"];
+	  547 [label="Kim Kitsuragi: “我觉得你没明白开玩笑是怎么一回事，不过——你继续吧。你刚问到罢工的事。”"];
+	  548 [label="You: “当我醒来的时候，它跟着我一起进入这个世界。我觉得它肯定是个二维狩猎者。”"];
+	  549 [label="Tommy Le Homme: “真是太残忍了，老兄。不过，你知道的……时间会……”"];
+	  550 [label="You: “这不是真的，老兄。这不是我的真实想法。这是诗歌。”"];
+	  551 [label="Tommy Le Homme: “她心底有一种*黑暗*。当你以为一切已经结束的时候，黑暗就会浮现。那是种年轻人特有的黑暗，而你要寻找一个*出路*。”"];
+	  552 [label="Tommy Le Homme: “是的，所以这就是我不想*出卖*她的原因。”"];
+	  553 [label="Tommy Le Homme: “如果你搞砸的话，不会从朝自己的脑子开一枪，对吧？因为她已经处在*边缘*了，老兄。”"];
+	  554 [label="Empathy: 他显然是松了一口气。"];
+	  555 [label="Tommy Le Homme: IsKimHere()"];
+	  556 [label="IsKimHere()", shape=diamond];
+	  557 [label="!(IsKimHere())", shape=diamond];
+	  558 [label="Tommy Le Homme: Variable[\"jam.tommy_forced_him_to_out_instigator\"]"];
+	  559 [label="Variable[\"jam.tommy_forced_him_to_out_instigator\"]", shape=diamond];
+	  560 [label="!(Variable[\"jam.tommy_forced_him_to_out_instigator\"])", shape=diamond];
+	  561 [label="Tommy Le Homme: 出于旧习惯，他还是会对你打响指——但是意识到自己做了什么之后，就会立即停下来。他不想再和你说话了。"];
+	  562 [label="Tommy Le Homme: Variable[\"whirling.mirror_stopped_expression\"]"];
+	  563 [label="Variable[\"whirling.mirror_stopped_expression\"]", shape=diamond];
+	  564 [label="!(Variable[\"whirling.mirror_stopped_expression\"])", shape=diamond];
+	  565 [label="You: “伙计，你看起来很伤心。出什么事了吗？”"];
+	  566 [label="Conceptualization: 等等，*这里*好像有些东西。藏在灰尘扑扑的角落里。开始像是……"];
+	  567 [label="You: “再跟我说说……*罢工*的事。”"];
+	  568 [label="You: “愿意分点零钱给我这个小职员吗？"];
+	  569 [label="You: “我不知道我妈是谁——不过为了保护我的权利，我也会反抗她的。”"];
+	  570 [label="You: “下套？那是什么？”"];
+	  571 [label="Jump to: [Tommy Le Homme: \"The man taps his fingers rhythmical...\"]"];
+	  572 [label="You: “*地狱*，是吗？所以这就是我所在的地方。”"];
+	  573 [label="Jump to: [ACTUALMAINHUB]"];
+	  574 [label="Tommy Le Homme: Variable[\"jam.tommy_forced_him_to_out_instigator\"]"];
+	  575 [label="Variable[\"jam.tommy_forced_him_to_out_instigator\"]", shape=diamond];
+	  576 [label="!(Variable[\"jam.tommy_forced_him_to_out_instigator\"])", shape=diamond];
+	  577 [label="You: “那就祝你好运，我该走了。”[离开。]\n“那就祝你好运，汤米。我该走了。”[离开。]"];
+	  578 [label="You: “我就跟你直说了吧。我想查清楚到底是谁在从B中转站走私毒品。”"];
+	  579 [label="Tommy Le Homme: “有道理？简直糟糕到不行好吗。”"];
+	  580 [label="not him drug hub"];
+	  581 [label="You: “看起来像是给这起无聊案件添点乐子的好方法。”"];
+	  582 [label="Physical Instrument: 现在不是感情用事的时候——你需要那些信息，小子。"];
+	  583 [label="Tommy Le Homme: “这是个坏习惯。你也应该戒掉。”"];
+	  584 [label="You: “是的，我随时都能戒。”"];
+	  585 [label="You: 熟悉——怎么个熟悉法？"];
+	  586 [label="You: “她什么时候离开的？”（继续。）"];
+	  587 [label="Tommy Le Homme: “你总是这样，对吗？都是调查的一部分……”他摇摇头。“那个姑娘*有麻烦*——如果你追踪她，她很可能活不下来。我的良心不允许这样。”"];
+	  588 [label="Tommy Le Homme: Variable[\"jam.paledriver_q_lady\"]"];
+	  589 [label="Variable[\"jam.paledriver_q_lady\"]", shape=diamond];
+	  590 [label="!(Variable[\"jam.paledriver_q_lady\"])", shape=diamond];
+	  591 [label="Kim Kitsuragi: “不会这样的。我们不会因此追究她的。只是收集一些信息。”"];
+	  592 [label="Tommy Le Homme: “不行。现在我需要自己好好思考一下。为自己的罪孽祈祷。你去检查货車吧……”他安静地补充了一句：“希望能让你找到些什么。帮到某个人。”"];
+	  593 [label="Kim Kitsuragi: 警督快速地瞥了你一眼。"];
+	  594 [label="Kim Kitsuragi: “好吧。今天分享调查细节就到这里。”"];
+	  595 [label="Inland Empire: *是这样*吗？"];
+	  596 [label="You: “等等——所以你*认识*那个女司机？”"];
+	  597 [label="Tommy Le Homme: “汤米·勒姆被占用了。”他耸耸肩，摆出一副*你还能怎么做*的样子。“我的真名叫杰里·拉菲特——不过汤米要好多了。”"];
+	  598 [label="Tommy Le Homme: Variable[\"jam.tommy_came_up_with_good_poetry\"] == true"];
+	  599 [label="Variable[\"jam.tommy_came_up_with_good_poetry\"] == true", shape=diamond];
+	  600 [label="!(Variable[\"jam.tommy_came_up_with_good_poetry\"] == true)", shape=diamond];
+	  601 [label="Tommy Le Homme: “该死，”他咕哝着，无法压抑自己的反应。“这他妈真是*太棒*了。你自己编的吗？”"];
+	  602 [label="Jump to: [ACTUALMAINHUB]"];
+	  603 [label="Tommy Le Homme: “已经堵了好长一段时间。港口大门死活不开，也没有谁出来解释为什么。工人在罢工，工贼在煽风点火。乱七八糟。”"];
+	  604 [label="You: “你在跟我*撒谎*吗？几支烟搞得这么小气？”"];
+	  605 [label="Authority: 他有什么毛病吗，刚才还告诫你不要有偏见，现在自己又这样，说警察一般都是死脑筋。你打算让这种伪君子逍遥法外吗？"];
+	  606 [label="Tommy Le Homme: “是啊。看来我要为不同看法而向你道歉了。不过还是想说——真的*很棒*。”他朝你竖起大拇指。"];
+	  607 [label="You: “对于警察来说？”"];
+	  608 [label="You: “任何组织里都会有各种各样的人。我相信我们都已经尽力了。”"];
+	  609 [label="You: “‘他们’是谁？”"];
+	  610 [label="You: “你能再说一次吗，稍微没那么无聊一些？”\n“还是简单一些吧。我来是问问题的。*犯罪*方面的问题。”\n“你能再说一次吗，稍微没那么无聊一些？”"];
+	  611 [label="Tommy Le Homme: Variable[\"whirling.hardie_went_through_ruby_info\"]"];
+	  612 [label="Variable[\"whirling.hardie_went_through_ruby_info\"]", shape=diamond];
+	  613 [label="!(Variable[\"whirling.hardie_went_through_ruby_info\"])", shape=diamond];
+	  614 [label="You: “那你觉得可能是谁在指挥贩毒呢？”"];
+	  615 [label="pregreethub"];
+	  616 [label="Tommy Le Homme: 很难说。他的目光在西南方向徘徊——穿过街道，一路向地平线之上延伸……"];
+	  617 [label="You: “话说，你的写诗计划呢？”"];
+	  618 [label="You: “说真的，你可以跟我讲讲的。”"];
+	  619 [label="Tommy Le Homme: “我是个呆子，是个猎人，是个拾荒客，还觉得自己是个旅者……”男人自言自语，一边说一边重读着节拍。"];
+	  620 [label="Jump to: [EXTHUBFOREVER]"];
+	  621 [label="Tommy Le Homme: “看啦……”看到你在靠近，他本能地移开了眼神。“这就是把我变成坏人的那个警察。”"];
+	  622 [label="You: “我真的不知道。”"];
+	  623 [label="You: “有道理。先工作，再收钱。”"];
+	  624 [label="Empathy: 推汤米一把，他的心理防线就会崩溃——还有他的精神。不要指望你们俩能成为兄弟。"];
+	  625 [label="Tommy Le Homme: “谢谢你，朋友。”他叹了口气，如释重负地长叹一声。“哇哦，我突然又想开始抽烟了……应该还能帮我写诗。”"];
+	  626 [label="Tommy Le Homme: Variable[\"jam.tommy_concept_white_failed_once\"]"];
+	  627 [label="Variable[\"jam.tommy_concept_white_failed_once\"]", shape=diamond];
+	  628 [label="!(Variable[\"jam.tommy_concept_white_failed_once\"])", shape=diamond];
+	  629 [label="Tommy Le Homme: “老兄，我还希望她能松口气。”他摇摇头。“我只能说：她已经不在这里了。她不是什么邪恶的幕后主脑。而且我也不知道她在哪。”"];
+	  630 [label="Empathy: 这不是谎话，这是……别的东西。目前还不能说是*什么*，不过他身上有某些东西。某些恐惧。"];
+	  631 [label="Kim Kitsuragi: “头发什么颜色？”"];
+	  632 [label="Tommy Le Homme: “真见鬼，这些破事对我来说太紧张了……”他低头看着双脚，稳定自己的呼吸。“我不想知道，老兄。我都不想知道她到底有没有逃跑……”"];
+	  633 [label="Rhetoric: 他没有责怪他们。但是可以肯定，他没有站在他们那边。"];
+	  634 [label="Pain Threshold: 你的胸中有一种疼痛在燃烧。一条冠动脉着火了。"];
+	  635 [label="Jump to: [Untitled hub]"];
+	  636 [label="Jump to: [Untitled hub]"];
+	  637 [label="Drama: 他选择相信对她来说最好的东西。"];
+	  638 [label="Kim Kitsuragi: “关于她的事，你还知道什么？”"];
+	  639 [label="Tommy Le Homme: “同时呢，我们全都被困在这个无尽的地狱里，一天接着一天……”他瞥了一眼南边的道路。“又一天。”"];
+	  640 [label="Tommy Le Homme: “一般来说，相比韵律他们更喜欢拳头，是吧。更不用说*诗文的真诚*了。”"];
+	  641 [label="Tommy Le Homme: “老兄。”他叹了一口气。“我不知道该说些什么。大家都做不了什么……你帮不了我，因为我根本不在那里，你知道吗？”"];
+	  642 [label="You: “你觉得公司想要什么？”"];
+	  643 [label="Tommy Le Homme: “他们想要源源不断的钱啊，老兄。”他发出一声收银机的‘哗啦’声。"];
+	  644 [label="Kim Kitsuragi: “RCM是一个自主管理组织，靠捐款来运行。我们会推选自己的领导。所以感觉就好像是在反抗你自己的……母亲。”"];
+	  645 [label="Tommy Le Homme: Variable[\"plaza.tommy_react_smoking\"]  and  Variable[\"jam.tommy_electrochem_blackcheck\"]"];
+	  646 [label="Variable[\"plaza.tommy_react_smoking\"]  and  Variable[\"jam.tommy_electrochem_blackcheck\"]", shape=diamond];
+	  647 [label="!(Variable[\"plaza.tommy_react_smoking\"]  and  Variable[\"jam.tommy_electrochem_blackcheck\"])", shape=diamond];
+	  648 [label="Tommy Le Homme: Variable[\"jam.tommy_midgreet_exit\"]"];
+	  649 [label="Variable[\"jam.tommy_midgreet_exit\"]", shape=diamond];
+	  650 [label="!(Variable[\"jam.tommy_midgreet_exit\"])", shape=diamond];
+	  651 [label="Tommy Le Homme: “还在这里，堵的水泄不通，老兄。”男人微笑着向你打招呼。“有什么事吗？”"];
+	  652 [label="You: “好吧。那你*到底*拉的是什么货呢？”"];
+	  653 [label="Tommy Le Homme: “一般都是运往格拉德和奥西登的。不过最近在伊尔玛市场也取得了一些进展。”"];
+	  654 [label="Tommy Le Homme: “整洁？我拉着一大堆货物大老远的过来，还得想办法把这些FALN运动服送到乌玛拉奥和艾兰伯德的孩子手里去……”"];
+	  655 [label="Tommy Le Homme: “是*什么*感觉？很好。也很糟糕。一种能给你带来欢乐的痛苦。”他的笑容很温暖。“我经常想起他们。我会梦到一些很愚蠢的画面，而且详细得不得了。跟他们生活在一起……让我感到很安慰。”"];
+	  656 [label="Tommy Le Homme: “嗯……你爱怎么说都行，警官。”他十分小心地朝你竖起大拇指。"];
+	  657 [label="You: 再远一些……"];
+	  658 [label="Shivers: 道路消失了，它只不过是一个幻象……站在你眼前的是一个高个子货車司机，眼睛十分悲伤。"];
+	  659 [label="You: “挺酷的。”[离开。]"];
+	  660 [label="Tommy Le Homme: Variable[\"jam.tommy_mid_mid_greet_exit\"]"];
+	  661 [label="Variable[\"jam.tommy_mid_mid_greet_exit\"]", shape=diamond];
+	  662 [label="!(Variable[\"jam.tommy_mid_mid_greet_exit\"])", shape=diamond];
+	  663 [label="Empathy: 他意识到你在利用他的友好和善意来达成自己的目的。"];
+	  664 [label="You: “暂时没事了，跟你聊天很愉快。”[离开。]"];
+	  665 [label="Tommy Le Homme: “没有，老兄，你找我要烟。”他的声音里有一丝悲伤的情绪；不过他好像并没有觉得被冒犯。"];
+	  666 [label="Tommy Le Homme: “就没有戒掉的好时候。”他摇摇头。“你就等着瞧吧，朋友。”"];
+	  667 [label="You: “你说得对。我应该把它当成是一次*重新*开始的机会。”"];
+	  668 [label="Conceptualization: 一个韵文匠人？那还挺可靠的——跟他的说话的节奏和方式很相配。"];
+	  669 [label="Empathy: 也许*完全*打直球不对？见鬼，看着别人的眼睛，还不能*犯错*，真的有点棘手。"];
+	  670 [label="You: “她看起来什么样？”"];
+	  671 [label="You: “你站在我的立场上考虑一下。还有一个调查也需要这个信息——它很重要，我不能搞砸。”"];
+	  672 [label="You: “好吧，我*再次*放下这件事吧。”（寻找其他选择）"];
+	  673 [label="Tommy Le Homme: IsKimHere()"];
+	  674 [label="IsKimHere()", shape=diamond];
+	  675 [label="!(IsKimHere())", shape=diamond];
+	  676 [label="Tommy Le Homme: “好吧……”他好像有一点忧虑。"];
+	  677 [label="You: “我在调查的过程中，见到了女司机——她叫露比。”"];
+	  678 [label="Tommy Le Homme: IsKimHere()"];
+	  679 [label="IsKimHere()", shape=diamond];
+	  680 [label="!(IsKimHere())", shape=diamond];
+	  681 [label="Kim Kitsuragi: “好吧。信息分享的已经差不多了。我们走吧。”"];
+	  682 [label="Tommy Le Homme: 他双目圆睁，有些过度呼吸，“她*死*了吗？别告诉我她……”"];
+	  683 [label="Tommy Le Homme: Variable[\"jam.tommy_drama_shot_in_leg\"]"];
+	  684 [label="Variable[\"jam.tommy_drama_shot_in_leg\"]", shape=diamond];
+	  685 [label="!(Variable[\"jam.tommy_drama_shot_in_leg\"])", shape=diamond];
+	  686 [label="Drama: 这是真的。吾辈会捕捉到谎言的。不过……一颗*仁慈*的心就比较棘手了。"];
+	  687 [label="Drama: 所以这就是之前感受到的那种情绪。不过是*痴心妄想*。"];
+	  688 [label="Rhetoric: 正确的语法应该是汤米·*勒姆*。（注：法语中是人类的意思）"];
+	  689 [label="Tommy Le Homme: “老兄，我没有在烦恼啊。只是货車司机惯例的修辞和期望：马路和韵律。再说现在堵車也帮不上什么忙……”他看了看周围。\n“你真的是*法律*，对吧？我明白这么直白地观察和好打听是天经地义，但是确实对你的谈话技巧没多大帮助，是吧？”"];
+	  690 [label="You: “那你在这里待多久了？”"];
+	  691 [label="Tommy Le Homme: “能见到一个诗人同伴真是太好了——懂得欣赏*真正的文字*的人。其他人，看见了吧，他们真的*不懂*。”"];
+	  692 [label="EXTHUBFOREVER"];
+	  693 [label="Jump to: [strikehub]"];
+	  694 [label="Kim Kitsuragi: “下套就是执法人员让一个人供认自己并未犯下的罪行，通常是需要通过某些诡计或者欺诈的手段。”"];
+	  695 [label="Tommy Le Homme: “是的，就好像……试着哄骗一个人承认自己从来没有犯下的罪行。”"];
+	  696 [label="You: “好吧，那我们就换个话题。”"];
+	  697 [label="Tommy Le Homme: “追杀？被什么追杀？”"];
+	  698 [label="You: “是啊，这个案子差不多算是结了吧。最后再确认一些事情。”"];
+	  699 [label="Tommy Le Homme: “是啊……”他不太热情地行了个礼。"];
+	  700 [label="Tommy Le Homme: “所以，告诉我……你有什么需要吗？”"];
+	  701 [label="You: “我们会进行一次调查。”"];
+	  702 [label="decision hub"];
+	  703 [label="You: “不——是*你的*母亲。”"];
+	  704 [label="You: “暂时就这些吧，再见。”[离开。]"];
+	  705 [label="Jump to: [ACTUALMAINHUB]"];
+	  706 [label="You: “嗯，其实不是。我们换个话题吧。”"];
+	  707 [label="You: “头发什么颜色？”"];
+	  708 [label="Logic: 那她很可能又染过了。"];
+	  709 [label="Logic: 其他司机必须闯进去——把这台机器发动。然后他们会发现里面隐藏的东西？某些*犯罪*的东西？"];
+	  710 [label="Jump to: [keyinthehub]"];
+	  711 [label="Empathy: 而且他很遗憾，他没变成自己希望的那种人——一个好人。这是他的最后一句话，他对这个世界的报复。"];
+	  712 [label="Tommy Le Homme: “我不信你。”"];
+	  713 [label="You: “相信我们。真是这样。”"];
+	  714 [label="Tommy Le Homme: “嘿，那可是我刚刚听到的。无稽之谈。所以——接下来呢？”"];
+	  715 [label="Tommy Le Homme: Variable[\"boardwalk.ruby_killed_herself\"]"];
+	  716 [label="Variable[\"boardwalk.ruby_killed_herself\"]", shape=diamond];
+	  717 [label="!(Variable[\"boardwalk.ruby_killed_herself\"])", shape=diamond];
+	  718 [label="Tommy Le Homme: IsKimHere()"];
+	  719 [label="IsKimHere()", shape=diamond];
+	  720 [label="!(IsKimHere())", shape=diamond];
+	  721 [label="Tommy Le Homme: “没什么了，老兄。我们只是稍微聊了一会儿——关于生活之类的事情……”他看着你。“所以，她遇上麻烦了，还是什么？”"];
+	  722 [label="Tommy Le Homme: “他妈的真不错！看来我完全看错你了。现在的警察可不是以艺术感知力出名的。”"];
+	  723 [label="You: “你不去吗？”"];
+	  724 [label="Tommy Le Homme: “没关系。有时候伟大的诗篇就是这样的——短暂。虽然看起来不太像，不过你确实有些文学天赋。也许我也还有希望！”"];
+	  725 [label="Kim Kitsuragi: 警督默默看着你，眼底有些惊讶，然后轻轻点了点头。"];
+	  726 [label="You: “那你的结论呢？”"];
+	  727 [label="You: “我正在尽我所能地帮助别人。”"];
+	  728 [label="Tommy Le Homme: “老板呗，老兄。”"];
+	  729 [label="Conceptualization: 杰里这个名字挺酷的。"];
+	  730 [label="You: “你当然会抽烟了。你现在就在抽烟。”"];
+	  731 [label="You: “所以，没有什么违禁物品咯？”"];
+	  732 [label="Shivers: 加姆洛克区上方，它变成了上升高速公路的形式，还有无边无垠的杂乱市郊。各色新老建筑的上方，轰隆的引擎声在空气中回荡。"];
+	  733 [label="You: “该死，我明白那种渴望。自从我醒过来之后也有类似的感觉。”"];
+	  734 [label="Tommy Le Homme: 一阵停顿，一声叹息。然后，他把目光转到你身上。“你呢，警官？你也在想念谁吗？”"];
+	  735 [label="Tommy Le Homme: 他轻声笑了。“有些事情就算是警察也解决不了的，兄弟。你帮不了我，因为我不在这里，你懂的吧？”"];
+	  736 [label="Tommy Le Homme: “快给大诗人开路！“他点头向你致意。"];
+	  737 [label="Tommy Le Homme: Variable[\"auto.is_snowing\"]"];
+	  738 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  739 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  740 [label="Tommy Le Homme: Variable[\"auto.is_raining\"]"];
+	  741 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  742 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  743 [label="Jump to: [ACTUALMAINHUB]"];
+	  744 [label="You: “话说，你已经不生我的气了吗？”"];
+	  745 [label="Tommy Le Homme: Variable[\"jam.tommy_altgreet_ladydriver_cabin\"]"];
+	  746 [label="Variable[\"jam.tommy_altgreet_ladydriver_cabin\"]", shape=diamond];
+	  747 [label="!(Variable[\"jam.tommy_altgreet_ladydriver_cabin\"])", shape=diamond];
+	  748 [label="Tommy Le Homme: “见鬼，我一直警告她要小心……老兄，我猜现在没什么能做的了。”"];
+	  749 [label="You: “没错。离开之前，我还有一些问题。”"];
+	  750 [label="You: “我就是法律。”"];
+	  751 [label="Jump to: [Untitled hub]"];
+	  752 [label="Tommy Le Homme: “凶险的存在？哇……听起来真挺糟糕的。希望我的婚姻别出现这种状况。”"];
+	  753 [label="Tommy Le Homme: Variable[\"TASK.probe_drivers_about_drugs\"]  and  Variable[\"TASK.probe_drivers_about_drugs_done\"] == false"];
+	  754 [label="Variable[\"TASK.probe_drivers_about_drugs\"]  and  Variable[\"TASK.probe_drivers_about_drugs_done\"] == false", shape=diamond];
+	  755 [label="!(Variable[\"TASK.probe_drivers_about_drugs\"]  and  Variable[\"TASK.probe_drivers_about_drugs_done\"] == false)", shape=diamond];
+	  756 [label="Untitled hub"];
+	  757 [label="You: “对于你来说，她是什么人？”"];
+	  758 [label="Jump to: [Untitled hub]"];
+	  759 [label="Kim Kitsuragi: “她什么时候离开的？”"];
+	  760 [label="You: “她逃跑了，别担心。”（撒谎）"];
+	  761 [label="You: “我完全搞砸了。我不应该去追她的。”"];
+	  762 [label="Volition: 他是认真的。这是他对你说的最后一句话。"];
+	  763 [label="Endurance: 你让他有些轻微的惊恐发作。他没有能力处理这种状况。"];
+	  764 [label="Physical Instrument: 绝不！他们永远不会让运动非法化的。运动是人类已知的最有益健康的东西。"];
+	  765 [label="You: “堵車是怎么回事？”"];
+	  766 [label="You: “大家是指谁？”"];
+	  767 [label="Tommy Le Homme: “我听说他们的要求很离谱，好像是一台大型新动力起重机，还有半个公司？我忘记具体是*什么*了。我猜，应该对他们挺好的吧……”"];
+	  768 [label="You: “忙——忙什么？”"];
+	  769 [label="Tommy Le Homme: “好吧……”他笑眯了眼睛。“不过这是我的最后一支了。这是个坏习惯，在咱俩都患上肺癌之前，你应该戒掉。”"];
+	  770 [label="You: “那你有没有用贩毒赚来的钱资助‘其他成瘾’呢？”"];
+	  771 [label="Kim Kitsuragi: “大家都明白你是*法律*。所以你的胳膊上才会有那个徽章。所以不要把它一直挂在嘴边了。”"];
+	  772 [label="Empathy: 然而在那串笑声的背后，是一抹悲伤。"];
+	  773 [label="Shivers: 这条路绵延数公里，随着其他道路一起流动，变成辅道或桥梁，然后突然陷入死胡同——或者跟着高速公路一起上下浮沉。它们在大地上形成一片十字形的图案……"];
+	  774 [label="Shivers: 你看不见。它出了城。在那前方，雾气挡住了所有视线。一阵狂风吹过你的脸颊……有点冷。站在你眼前的是一个高个子货車司机，眼神十分悲伤。"];
+	  775 [label="Tommy Le Homme: “老兄，谁又能知道呢？它有点像一份法律契约，又像是两个灵魂之间的纽带……每一个都是不同的，我只能这么说。”"];
+	  776 [label="Tommy Le Homme: “这就回来了？”他朝你咧嘴笑了。"];
+	  777 [label="Jump to: [ACTUALMAINHUB]"];
+	  778 [label="Jump to: [ACTUALMAINHUB]"];
+	  779 [label="You: “好吧，那就算了。”"];
+	  780 [label="Tommy Le Homme: IsKimHere()"];
+	  781 [label="IsKimHere()", shape=diamond];
+	  782 [label="!(IsKimHere())", shape=diamond];
+	  783 [label="You: “我想*爽*一下，正在找卖家。”"];
+	  784 [label="Tommy Le Homme: “那你到底想达到什么目的呢？”"];
+	  785 [label="Jump to: [decision hub]"];
+	  0 -> 1
+	  1 -> 176
+	  2 -> 116
+	  3 -> 476
+	  4 -> 257
+	  5 -> 756
+	  6 -> 630
+	  8 -> 476
+	  9 -> 318
+	  10 -> 11
+	  10 -> 12
+	  11 -> 687
+	  12 -> 14
+	  13 -> 10
+	  14 -> 16
+	  14 -> 15
+	  15 -> 638
+	  16 -> 271
+	  17 -> 207
+	  18 -> 370
+	  19 -> 476
+	  20 -> 234
+	  21 -> 209
+	  22 -> 459
+	  22 -> 236
+	  22 -> 565
+	  23 -> 655
+	  24 -> 25
+	  24 -> 26
+	  25 -> 154
+	  26 -> 59
+	  27 -> 637
+	  28 -> 311
+	  29 -> 285
+	  30 -> 381
+	  31 -> 702
+	  32 -> 382
+	  33 -> 552
+	  34 -> 35
+	  34 -> 36
+	  35 -> 287
+	  36 -> 624
+	  37 -> 702
+	  38 -> 220
+	  39 -> 592
+	  40 -> 763
+	  41 -> 135
+	  42 -> 334
+	  43 -> 473
+	  44 -> 406
+	  45 -> 475
+	  46 -> 454
+	  47 -> 562
+	  48 -> 3
+	  49 -> 50
+	  49 -> 51
+	  50 -> 725
+	  51 -> 47
+	  52 -> 501
+	  53 -> 764
+	  54 -> 634
+	  55 -> 279
+	  56 -> 57
+	  56 -> 58
+	  57 -> 154
+	  58 -> 737
+	  59 -> 60
+	  59 -> 61
+	  60 -> 204
+	  61 -> 651
+	  62 -> 32
+	  62 -> 451
+	  62 -> 268
+	  62 -> 179
+	  62 -> 596
+	  62 -> 701
+	  63 -> 110
+	  64 -> 784
+	  65 -> 476
+	  66 -> 354
+	  67 -> 531
+	  68 -> 118
+	  69 -> 127
+	  70 -> 362
+	  72 -> 472
+	  73 -> 74
+	  73 -> 75
+	  74 -> 221
+	  75 -> 77
+	  76 -> 762
+	  77 -> 40
+	  78 -> 238
+	  79 -> 348
+	  79 -> 726
+	  80 -> 81
+	  80 -> 82
+	  81 -> 368
+	  82 -> 693
+	  83 -> 84
+	  83 -> 85
+	  84 -> 13
+	  85 -> 10
+	  87 -> 88
+	  88 -> 89
+	  88 -> 90
+	  89 -> 598
+	  90 -> 598
+	  91 -> 723
+	  92 -> 525
+	  93 -> 580
+	  94 -> 237
+	  95 -> 645
+	  96 -> 234
+	  97 -> 620
+	  98 -> 99
+	  98 -> 100
+	  99 -> 241
+	  100 -> 22
+	  101 -> 256
+	  102 -> 416
+	  103 -> 104
+	  103 -> 105
+	  104 -> 379
+	  105 -> 106
+	  106 -> 107
+	  106 -> 108
+	  107 -> 621
+	  108 -> 540
+	  109 -> 476
+	  110 -> 238
+	  111 -> 453
+	  112 -> 457
+	  113 -> 500
+	  114 -> 254
+	  115 -> 31
+	  116 -> 692
+	  117 -> 549
+	  118 -> 385
+	  119 -> 476
+	  120 -> 166
+	  121 -> 122
+	  121 -> 123
+	  122 -> 218
+	  123 -> 464
+	  124 -> 125
+	  124 -> 126
+	  125 -> 418
+	  126 -> 168
+	  127 -> 513
+	  127 -> 261
+	  128 -> 34
+	  129 -> 65
+	  130 -> 429
+	  131 -> 132
+	  131 -> 133
+	  132 -> 591
+	  133 -> 419
+	  134 -> 419
+	  135 -> 678
+	  136 -> 135
+	  137 -> 471
+	  138 -> 558
+	  139 -> 433
+	  140 -> 141
+	  140 -> 142
+	  141 -> 682
+	  142 -> 77
+	  144 -> 41
+	  146 -> 767
+	  147 -> 602
+	  148 -> 483
+	  149 -> 210
+	  150 -> 335
+	  151 -> 331
+	  152 -> 345
+	  153 -> 338
+	  154 -> 777
+	  155 -> 574
+	  156 -> 315
+	  157 -> 298
+	  158 -> 115
+	  159 -> 286
+	  160 -> 625
+	  161 -> 666
+	  162 -> 768
+	  162 -> 779
+	  163 -> 292
+	  164 -> 68
+	  164 -> 463
+	  165 -> 119
+	  166 -> 121
+	  167 -> 756
+	  168 -> 587
+	  169 -> 552
+	  170 -> 171
+	  171 -> 37
+	  172 -> 263
+	  173 -> 515
+	  174 -> 632
+	  175 -> 434
+	  176 -> 177
+	  176 -> 178
+	  177 -> 561
+	  178 -> 280
+	  179 -> 229
+	  180 -> 357
+	  181 -> 327
+	  182 -> 607
+	  183 -> 606
+	  184 -> 562
+	  185 -> 186
+	  185 -> 187
+	  186 -> 605
+	  187 -> 190
+	  188 -> 231
+	  189 -> 766
+	  190 -> 526
+	  190 -> 183
+	  191 -> 52
+	  192 -> 482
+	  193 -> 194
+	  193 -> 195
+	  194 -> 771
+	  196 -> 374
+	  197 -> 336
+	  198 -> 242
+	  199 -> 688
+	  200 -> 732
+	  201 -> 244
+	  202 -> 54
+	  203 -> 752
+	  204 -> 408
+	  205 -> 343
+	  206 -> 207
+	  207 -> 577
+	  207 -> 617
+	  207 -> 276
+	  207 -> 397
+	  208 -> 205
+	  209 -> 283
+	  210 -> 439
+	  211 -> 288
+	  212 -> 351
+	  213 -> 291
+	  214 -> 291
+	  215 -> 355
+	  216 -> 505
+	  217 -> 481
+	  218 -> 756
+	  219 -> 390
+	  220 -> 710
+	  221 -> 318
+	  222 -> 319
+	  223 -> 614
+	  224 -> 225
+	  224 -> 226
+	  225 -> 321
+	  226 -> 167
+	  227 -> 729
+	  228 -> 145
+	  229 -> 83
+	  230 -> 271
+	  231 -> 772
+	  232 -> 182
+	  233 -> 231
+	  234 -> 476
+	  235 -> 309
+	  235 -> 23
+	  236 -> 689
+	  237 -> 328
+	  238 -> 476
+	  239 -> 80
+	  240 -> 197
+	  241 -> 585
+	  242 -> 345
+	  243 -> 656
+	  244 -> 407
+	  245 -> 774
+	  246 -> 23
+	  247 -> 248
+	  247 -> 249
+	  248 -> 24
+	  249 -> 56
+	  250 -> 692
+	  251 -> 207
+	  252 -> 93
+	  253 -> 458
+	  254 -> 423
+	  255 -> 402
+	  256 -> 531
+	  257 -> 258
+	  257 -> 259
+	  258 -> 164
+	  259 -> 68
+	  259 -> 550
+	  260 -> 636
+	  261 -> 219
+	  262 -> 391
+	  263 -> 130
+	  263 -> 70
+	  263 -> 38
+	  263 -> 39
+	  263 -> 71
+	  263 -> 173
+	  263 -> 314
+	  264 -> 516
+	  265 -> 266
+	  265 -> 267
+	  266 -> 247
+	  267 -> 660
+	  268 -> 43
+	  269 -> 718
+	  270 -> 230
+	  271 -> 32
+	  271 -> 451
+	  271 -> 701
+	  272 -> 44
+	  273 -> 117
+	  274 -> 95
+	  275 -> 735
+	  276 -> 597
+	  277 -> 150
+	  278 -> 101
+	  279 -> 296
+	  279 -> 2
+	  279 -> 750
+	  280 -> 281
+	  280 -> 282
+	  281 -> 492
+	  282 -> 103
+	  283 -> 601
+	  284 -> 344
+	  285 -> 262
+	  286 -> 663
+	  287 -> 624
+	  288 -> 545
+	  289 -> 457
+	  290 -> 353
+	  291 -> 488
+	  291 -> 449
+	  291 -> 66
+	  291 -> 278
+	  292 -> 462
+	  293 -> 758
+	  294 -> 702
+	  295 -> 335
+	  296 -> 18
+	  297 -> 400
+	  297 -> 369
+	  297 -> 45
+	  297 -> 325
+	  298 -> 162
+	  299 -> 79
+	  300 -> 583
+	  301 -> 696
+	  301 -> 507
+	  301 -> 486
+	  301 -> 487
+	  302 -> 304
+	  302 -> 303
+	  303 -> 193
+	  304 -> 371
+	  305 -> 439
+	  306 -> 705
+	  307 -> 570
+	  307 -> 578
+	  307 -> 198
+	  308 -> 529
+	  309 -> 246
+	  310 -> 251
+	  311 -> 692
+	  312 -> 358
+	  313 -> 34
+	  314 -> 465
+	  315 -> 28
+	  315 -> 749
+	  316 -> 715
+	  317 -> 476
+	  318 -> 367
+	  319 -> 555
+	  320 -> 686
+	  321 -> 167
+	  322 -> 323
+	  322 -> 324
+	  323 -> 753
+	  324 -> 119
+	  325 -> 437
+	  326 -> 189
+	  327 -> 476
+	  328 -> 329
+	  328 -> 330
+	  329 -> 644
+	  330 -> 305
+	  331 -> 668
+	  332 -> 653
+	  333 -> 536
+	  334 -> 351
+	  335 -> 447
+	  336 -> 396
+	  337 -> 307
+	  338 -> 335
+	  339 -> 615
+	  340 -> 341
+	  340 -> 342
+	  341 -> 699
+	  342 -> 97
+	  343 -> 496
+	  343 -> 698
+	  343 -> 395
+	  344 -> 653
+	  345 -> 380
+	  346 -> 6
+	  347 -> 339
+	  348 -> 414
+	  349 -> 584
+	  349 -> 161
+	  349 -> 667
+	  349 -> 383
+	  350 -> 455
+	  351 -> 731
+	  351 -> 196
+	  351 -> 333
+	  351 -> 398
+	  352 -> 669
+	  353 -> 214
+	  354 -> 503
+	  355 -> 320
+	  356 -> 708
+	  357 -> 312
+	  358 -> 360
+	  358 -> 359
+	  359 -> 69
+	  360 -> 389
+	  361 -> 673
+	  362 -> 711
+	  363 -> 554
+	  364 -> 365
+	  364 -> 366
+	  365 -> 681
+	  367 -> 76
+	  368 -> 693
+	  369 -> 722
+	  370 -> 765
+	  371 -> 372
+	  371 -> 373
+	  372 -> 347
+	  373 -> 339
+	  374 -> 413
+	  375 -> 376
+	  375 -> 377
+	  376 -> 694
+	  377 -> 695
+	  378 -> 245
+	  378 -> 446
+	  379 -> 208
+	  379 -> 409
+	  379 -> 452
+	  380 -> 578
+	  381 -> 785
+	  382 -> 497
+	  382 -> 622
+	  382 -> 310
+	  383 -> 665
+	  384 -> 705
+	  385 -> 322
+	  386 -> 387
+	  386 -> 388
+	  387 -> 631
+	  388 -> 707
+	  389 -> 127
+	  390 -> 513
+	  391 -> 361
+	  392 -> 393
+	  392 -> 394
+	  393 -> 514
+	  394 -> 709
+	  395 -> 714
+	  396 -> 770
+	  396 -> 578
+	  396 -> 783
+	  397 -> 498
+	  398 -> 272
+	  399 -> 92
+	  400 -> 724
+	  401 -> 441
+	  402 -> 403
+	  402 -> 404
+	  403 -> 302
+	  404 -> 339
+	  405 -> 654
+	  406 -> 456
+	  406 -> 411
+	  406 -> 405
+	  407 -> 445
+	  408 -> 476
+	  409 -> 205
+	  410 -> 778
+	  411 -> 112
+	  412 -> 152
+	  413 -> 476
+	  414 -> 3
+	  415 -> 545
+	  416 -> 291
+	  417 -> 68
+	  418 -> 587
+	  419 -> 551
+	  420 -> 421
+	  420 -> 422
+	  421 -> 33
+	  422 -> 169
+	  423 -> 424
+	  423 -> 425
+	  424 -> 588
+	  425 -> 313
+	  426 -> 427
+	  427 -> 357
+	  428 -> 263
+	  429 -> 228
+	  430 -> 468
+	  431 -> 136
+	  432 -> 317
+	  433 -> 364
+	  435 -> 295
+	  436 -> 530
+	  437 -> 607
+	  439 -> 326
+	  439 -> 146
+	  439 -> 94
+	  439 -> 642
+	  440 -> 301
+	  441 -> 730
+	  441 -> 604
+	  441 -> 477
+	  442 -> 443
+	  442 -> 444
+	  443 -> 200
+	  443 -> 201
+	  444 -> 407
+	  445 -> 308
+	  446 -> 658
+	  447 -> 476
+	  448 -> 697
+	  449 -> 490
+	  450 -> 700
+	  451 -> 27
+	  452 -> 205
+	  453 -> 238
+	  454 -> 233
+	  454 -> 610
+	  454 -> 188
+	  454 -> 527
+	  455 -> 439
+	  456 -> 289
+	  457 -> 212
+	  458 -> 652
+	  458 -> 499
+	  458 -> 284
+	  459 -> 460
+	  460 -> 384
+	  461 -> 291
+	  462 -> 476
+	  463 -> 417
+	  464 -> 635
+	  465 -> 392
+	  466 -> 467
+	  467 -> 263
+	  468 -> 519
+	  468 -> 520
+	  468 -> 521
+	  468 -> 469
+	  468 -> 760
+	  469 -> 144
+	  470 -> 363
+	  471 -> 761
+	  471 -> 522
+	  471 -> 174
+	  471 -> 138
+	  472 -> 683
+	  473 -> 271
+	  474 -> 180
+	  475 -> 400
+	  475 -> 369
+	  475 -> 325
+	  476 -> 192
+	  476 -> 704
+	  476 -> 677
+	  476 -> 664
+	  476 -> 399
+	  476 -> 240
+	  476 -> 532
+	  476 -> 87
+	  476 -> 567
+	  476 -> 568
+	  476 -> 157
+	  476 -> 30
+	  476 -> 191
+	  477 -> 20
+	  478 -> 609
+	  479 -> 693
+	  480 -> 350
+	  481 -> 4
+	  482 -> 611
+	  483 -> 484
+	  483 -> 485
+	  484 -> 243
+	  485 -> 656
+	  486 -> 508
+	  487 -> 629
+	  488 -> 775
+	  489 -> 461
+	  490 -> 67
+	  491 -> 546
+	  492 -> 493
+	  492 -> 494
+	  493 -> 740
+	  494 -> 265
+	  495 -> 690
+	  495 -> 659
+	  496 -> 155
+	  497 -> 251
+	  498 -> 413
+	  499 -> 344
+	  500 -> 448
+	  500 -> 153
+	  500 -> 435
+	  500 -> 277
+	  501 -> 253
+	  502 -> 476
+	  503 -> 531
+	  504 -> 216
+	  505 -> 476
+	  506 -> 119
+	  507 -> 508
+	  508 -> 509
+	  508 -> 510
+	  509 -> 5
+	  510 -> 629
+	  511 -> 386
+	  512 -> 124
+	  513 -> 114
+	  514 -> 466
+	  515 -> 710
+	  516 -> 517
+	  516 -> 518
+	  517 -> 593
+	  518 -> 468
+	  519 -> 432
+	  520 -> 72
+	  521 -> 470
+	  522 -> 73
+	  523 -> 615
+	  524 -> 544
+	  525 -> 274
+	  526 -> 184
+	  527 -> 231
+	  528 -> 608
+	  528 -> 148
+	  528 -> 727
+	  529 -> 618
+	  529 -> 275
+	  529 -> 733
+	  530 -> 21
+	  531 -> 476
+	  532 -> 533
+	  533 -> 534
+	  533 -> 535
+	  534 -> 98
+	  535 -> 98
+	  536 -> 42
+	  537 -> 538
+	  537 -> 539
+	  538 -> 204
+	  539 -> 736
+	  540 -> 541
+	  540 -> 542
+	  541 -> 745
+	  542 -> 492
+	  543 -> 413
+	  544 -> 181
+	  545 -> 476
+	  546 -> 690
+	  546 -> 659
+	  547 -> 455
+	  548 -> 213
+	  549 -> 217
+	  550 -> 417
+	  551 -> 420
+	  552 -> 474
+	  552 -> 426
+	  552 -> 357
+	  553 -> 170
+	  554 -> 678
+	  555 -> 556
+	  555 -> 557
+	  556 -> 175
+	  558 -> 560
+	  558 -> 559
+	  559 -> 9
+	  560 -> 77
+	  561 -> 143
+	  562 -> 563
+	  562 -> 564
+	  563 -> 602
+	  564 -> 147
+	  565 -> 352
+	  566 -> 436
+	  567 -> 149
+	  568 -> 478
+	  569 -> 479
+	  570 -> 375
+	  571 -> 413
+	  572 -> 491
+	  573 -> 476
+	  574 -> 576
+	  574 -> 575
+	  575 -> 744
+	  575 -> 28
+	  575 -> 749
+	  576 -> 778
+	  577 -> 86
+	  578 -> 780
+	  579 -> 78
+	  580 -> 614
+	  580 -> 151
+	  581 -> 152
+	  582 -> 294
+	  583 -> 349
+	  584 -> 211
+	  585 -> 616
+	  586 -> 512
+	  587 -> 131
+	  588 -> 589
+	  588 -> 590
+	  589 -> 34
+	  590 -> 128
+	  591 -> 712
+	  593 -> 430
+	  594 -> 8
+	  595 -> 297
+	  596 -> 269
+	  597 -> 227
+	  598 -> 600
+	  598 -> 599
+	  599 -> 566
+	  600 -> 626
+	  601 -> 595
+	  602 -> 476
+	  603 -> 639
+	  604 -> 300
+	  605 -> 190
+	  606 -> 562
+	  607 -> 640
+	  608 -> 49
+	  609 -> 728
+	  610 -> 450
+	  611 -> 612
+	  611 -> 613
+	  612 -> 440
+	  613 -> 301
+	  614 -> 346
+	  615 -> 296
+	  615 -> 2
+	  615 -> 750
+	  615 -> 55
+	  616 -> 773
+	  617 -> 199
+	  618 -> 641
+	  619 -> 523
+	  620 -> 692
+	  621 -> 109
+	  622 -> 748
+	  623 -> 579
+	  624 -> 582
+	  625 -> 65
+	  626 -> 627
+	  626 -> 628
+	  627 -> 504
+	  628 -> 273
+	  629 -> 756
+	  630 -> 502
+	  631 -> 356
+	  632 -> 139
+	  633 -> 693
+	  634 -> 290
+	  634 -> 548
+	  634 -> 102
+	  634 -> 489
+	  634 -> 203
+	  635 -> 756
+	  636 -> 756
+	  637 -> 207
+	  638 -> 721
+	  639 -> 690
+	  639 -> 659
+	  639 -> 572
+	  640 -> 528
+	  641 -> 235
+	  642 -> 643
+	  643 -> 633
+	  644 -> 480
+	  644 -> 569
+	  644 -> 703
+	  645 -> 646
+	  645 -> 647
+	  646 -> 441
+	  647 -> 401
+	  648 -> 649
+	  648 -> 650
+	  649 -> 776
+	  650 -> 619
+	  651 -> 743
+	  652 -> 332
+	  653 -> 351
+	  654 -> 457
+	  655 -> 734
+	  656 -> 562
+	  657 -> 378
+	  658 -> 407
+	  659 -> 250
+	  660 -> 661
+	  660 -> 662
+	  661 -> 495
+	  662 -> 648
+	  663 -> 29
+	  664 -> 340
+	  665 -> 288
+	  666 -> 288
+	  667 -> 415
+	  668 -> 223
+	  669 -> 705
+	  670 -> 511
+	  671 -> 553
+	  672 -> 129
+	  673 -> 674
+	  673 -> 675
+	  674 -> 759
+	  675 -> 263
+	  676 -> 316
+	  677 -> 676
+	  678 -> 680
+	  678 -> 679
+	  679 -> 594
+	  680 -> 8
+	  681 -> 7
+	  682 -> 318
+	  683 -> 684
+	  683 -> 685
+	  684 -> 471
+	  685 -> 137
+	  686 -> 260
+	  687 -> 14
+	  688 -> 17
+	  689 -> 306
+	  690 -> 46
+	  691 -> 185
+	  693 -> 439
+	  694 -> 695
+	  695 -> 64
+	  695 -> 412
+	  695 -> 581
+	  696 -> 571
+	  697 -> 706
+	  697 -> 202
+	  698 -> 155
+	  699 -> 620
+	  700 -> 476
+	  701 -> 382
+	  702 -> 160
+	  702 -> 672
+	  702 -> 671
+	  702 -> 158
+	  702 -> 159
+	  703 -> 547
+	  705 -> 476
+	  706 -> 163
+	  707 -> 356
+	  708 -> 224
+	  709 -> 467
+	  710 -> 263
+	  711 -> 428
+	  712 -> 713
+	  712 -> 419
+	  713 -> 134
+	  714 -> 496
+	  714 -> 698
+	  715 -> 716
+	  715 -> 717
+	  716 -> 264
+	  717 -> 516
+	  718 -> 720
+	  718 -> 719
+	  719 -> 270
+	  720 -> 271
+	  721 -> 271
+	  722 -> 691
+	  723 -> 524
+	  724 -> 232
+	  725 -> 47
+	  726 -> 48
+	  727 -> 47
+	  728 -> 111
+	  728 -> 63
+	  728 -> 623
+	  729 -> 17
+	  730 -> 769
+	  731 -> 53
+	  732 -> 657
+	  733 -> 641
+	  734 -> 113
+	  735 -> 235
+	  736 -> 573
+	  737 -> 738
+	  737 -> 739
+	  738 -> 204
+	  739 -> 19
+	  740 -> 741
+	  740 -> 742
+	  741 -> 154
+	  742 -> 537
+	  743 -> 476
+	  744 -> 156
+	  745 -> 746
+	  745 -> 747
+	  746 -> 492
+	  747 -> 62
+	  748 -> 206
+	  749 -> 410
+	  750 -> 255
+	  751 -> 351
+	  752 -> 291
+	  753 -> 754
+	  753 -> 755
+	  754 -> 506
+	  755 -> 165
+	  756 -> 586
+	  756 -> 757
+	  756 -> 215
+	  756 -> 120
+	  756 -> 670
+	  757 -> 293
+	  758 -> 756
+	  759 -> 172
+	  760 -> 431
+	  761 -> 140
+	  762 -> 555
+	  763 -> 222
+	  764 -> 751
+	  765 -> 603
+	  766 -> 91
+	  767 -> 239
+	  768 -> 299
+	  769 -> 96
+	  770 -> 337
+	  771 -> 339
+	  772 -> 700
+	  773 -> 442
+	  774 -> 407
+	  775 -> 449
+	  775 -> 66
+	  775 -> 278
+	  776 -> 296
+	  776 -> 2
+	  776 -> 750
+	  777 -> 476
+	  778 -> 476
+	  779 -> 543
+	  780 -> 781
+	  780 -> 782
+	  781 -> 252
+	  782 -> 93
+	  783 -> 337
+	  784 -> 345
+	  785 -> 702
+}
+

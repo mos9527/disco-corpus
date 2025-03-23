@@ -1,0 +1,538 @@
+# ICE / CHURCH DOOR
+# Initiating the Get Into The Church TO-DO
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: The lieutenant takes a step back and looks at the church looming overhead. \"Yes, there's a toolbox in the Kineema...\"\nHe takes a step back and looks at the church looming overhead. \"You really want us in there... I do have tools in the Kineema.\""];
+	  3 [label="Church Doors: IsKimHere()"];
+	  4 [label="IsKimHere()", shape=diamond];
+	  5 [label="!(IsKimHere())", shape=diamond];
+	  6 [label="Church Doors: Heavy wooden doors more than twice your height stand shut in front of you. The rectangular, sea-worn ornamentation appears in stark contrast to the padlock carelessly drilled into the wood."];
+	  7 [label="Kim Kitsuragi: \"How about we go and check out that tent again?\" He nods at the shabby piece of canvas set up on the ice next to the church."];
+	  8 [label="You: Put the sticker *in* your ledger -- after the last entry, where it belongs."];
+	  9 [label="Kim Kitsuragi: \"No.\""];
+	  10 [label="Interfacing: Feels exceptional. Three hundred tons of pine wood fit together seamlessly. It's old too, cut and carved many centuries ago."];
+	  11 [label="Conceptualization: You're part of the future-brigade now. And so is your formerly humdrum ledger. Neon, baby!"];
+	  12 [label="Church Doors: Variable[\"TASK.doomed_investigation_done\"]"];
+	  13 [label="Variable[\"TASK.doomed_investigation_done\"]", shape=diamond];
+	  14 [label="!(Variable[\"TASK.doomed_investigation_done\"])", shape=diamond];
+	  15 [label="Kim Kitsuragi: \"Let's go.\" The lieutenant nods at you."];
+	  16 [label="Physical Instrument: The broken edge of the snapped prybar is smooth. Took the tip right off..."];
+	  17 [label="You: Inspect the staple."];
+	  18 [label="Kim Kitsuragi: \"Can you hear the pulsing bass underneath the wind?\" He raises his hand to his ear. \"A sure sign of junior delinquency -- somewhere east of here.\"\n\"Yes. The pulsing bass...\" He raises his hand to his ear. \"A sure sign of junior delinquency -- somewhere east of here.\""];
+	  19 [label="Empathy: He feels sorry for you. For him as a lieutenant it would be demeaning to have someone recite terms from the officer's exam."];
+	  20 [label="Jump to: [Church Doors: \"This cheap-looking padlock is sturd...\"]"];
+	  21 [label="failpryhub"];
+	  22 [label="Shivers: THERE IS A HOLE IN MY HEART."];
+	  23 [label="Church Doors: Variable[\"church.churchdoor_open_crowbar\"] == true"];
+	  24 [label="Variable[\"church.churchdoor_open_crowbar\"] == true", shape=diamond];
+	  25 [label="!(Variable[\"church.churchdoor_open_crowbar\"] == true)", shape=diamond];
+	  26 [label="Kim Kitsuragi: \"Besides, we should really get to the island.\" He looks at the sea."];
+	  27 [label="Church Doors: ... in the heart of the city."];
+	  28 [label="Kim Kitsuragi: \"It does seem rather irrelevant to our case.\" The lieutenant nods."];
+	  29 [label="Inland Empire: As you do, you hear and the echo of the Doomed Commercial Area. Its black halls and dusty machines. Then the feeling passes."];
+	  30 [label="Church Doors: You see a yellow circle with two X's and a big curve below them that looks like a mouth. You're pretty sure you haven't seen it before, but what the symbol depicts is clear enough: a smiling dead guy. The curve makes it smile and the X's make it dead."];
+	  31 [label="Kim Kitsuragi: \"I don't know... you *don't*? Or maybe we'll find a new one. I don't carry more than one prybar with me...\" He looks up at the bell-tower."];
+	  32 [label="You: Try to peel off the sticker without ripping it."];
+	  33 [label="You: Variable[\"church.churchdoor_got_sticker\"]"];
+	  34 [label="Variable[\"church.churchdoor_got_sticker\"]", shape=diamond];
+	  35 [label="!(Variable[\"church.churchdoor_got_sticker\"])", shape=diamond];
+	  36 [label="Jump to: [churchdoormainhub]"];
+	  37 [label="You: Admit defeat and leave the lock alone."];
+	  38 [label="Church Doors: IsKimHere()"];
+	  39 [label="IsKimHere()", shape=diamond];
+	  40 [label="!(IsKimHere())", shape=diamond];
+	  41 [label="Church Doors: The padlock hits the wood like a knocker, with a resounding thud. Your cold hand hurts from the impact. Congratulations!"];
+	  42 [label="Church Doors: The church does not reply. The wood now seems less rotten, the screws (and one nail) almost shimmer with perseverance."];
+	  43 [label="Church Doors: You enter the church."];
+	  44 [label="You: Rattle the doors to see if they open."];
+	  45 [label="Church Doors: The lock turns easily. You hear a click as the shackle pops open."];
+	  46 [label="Kim Kitsuragi: \"But maybe we should look for another way in first... The building has seen enough mistreatment.\""];
+	  47 [label="You: \"The fuck? How is this even *possible*?\""];
+	  48 [label="Kim Kitsuragi: He takes a step back. \"Maybe we should circle the building first and look for another way. The building has seen enough mistreatment.\""];
+	  49 [label="Interfacing: Voilà! Looks very modern."];
+	  50 [label="Untitled hub"];
+	  51 [label="Shivers: High above, the wind wraps the church in its rush. Cold and wet from the ocean bay, it parts around the massive keel-shaped roof. Like a test tunnel washing both sides, the way it has done for three-hundred-and-forty years. The wind keeps its distance. So should you."];
+	  52 [label="You: Open the padlock with the key."];
+	  53 [label="Kim Kitsuragi: \"Can you hear the pulsing bass underneath the east wind?\" He raises his hand to his ear. \"A sure sign of junior delinquency.\"\n\"Yes. The pulsing bass...\" He raises his hand to his ear. \"An indication of junior delinquency.\""];
+	  54 [label="You: \"What does it look like to you?\""];
+	  55 [label="Jump to: [churchdoormainhub]"];
+	  56 [label="Jump to: [Church Doors: \"This cheap-looking padlock is sturd...\"]"];
+	  57 [label="You: \"Kim, do you happen to have a prybar?\""];
+	  58 [label="Church Doors: Variable[\"church.churchdoor_get_in_the_church_initiated\"]"];
+	  59 [label="Variable[\"church.churchdoor_get_in_the_church_initiated\"]", shape=diamond];
+	  60 [label="!(Variable[\"church.churchdoor_get_in_the_church_initiated\"])", shape=diamond];
+	  61 [label="Kim Kitsuragi: The lieutenant looks at the padlock. He didn't hear you asking, you were quiet enough."];
+	  62 [label="Church Doors: The padlock passes through a staple that's been hastily attached to the wood. Closer inspection reveals that one of the screws is not a screw at all, but a nail. The work has been done recently and is unprofessional, to say the least."];
+	  63 [label="Conceptualization: There is something blindingly *modern* about this symbol. Its modernness puts to shame everything you've seen before."];
+	  64 [label="Kim Kitsuragi: \"These acts aren't called *crimes* as they would be for adults. Crimes committed by minors are called 'delinquent acts'. This was part of your officer's exams.\" He puts the handkerchief in his coat pocket."];
+	  65 [label="Kim Kitsuragi: \"For Revachol ZoC, the Moralintern defines junior delinquents as minors between the ages of 10 and 16 who have committed an act in violation of the law...\""];
+	  66 [label="Church Doors: Variable[\"church.door_shivers_success\"]"];
+	  67 [label="Variable[\"church.door_shivers_success\"]", shape=diamond];
+	  68 [label="!(Variable[\"church.door_shivers_success\"])", shape=diamond];
+	  69 [label="You: \"Kim, could I have that handkerchief? My hands are wet.\""];
+	  70 [label="Jump to: [churchdoormainhub]"];
+	  71 [label="You: \"Have you seen this symbol before?\" (Point to it.)"];
+	  72 [label="Kim Kitsuragi: He takes off his glasses and uses a blue handkerchief to thoroughly wipe them clean before inspecting the sticker. Then he looks up, pauses, and replies..."];
+	  73 [label="You: \"I agree -- it's very modern. But does the cheery guy not know he's dead, or does the dead guy not care that he is? What is the source of the irony here?\""];
+	  74 [label="Logic: Should you want to get through, it might be easier to just pry the whole thing off."];
+	  75 [label="Conceptualization: It's the contrast between the cheery, chemical yellow and the rigor mortis. As if the cheery guy didn't know he was dead or the dead guy didn't care that he was. Either way, you get the sense the forces of *future* are at work here."];
+	  76 [label="Kim Kitsuragi: \"If you really think we should get in there, we need to find some other way...\""];
+	  77 [label="Jump to: [churchdoormainhub]"];
+	  78 [label="Interfacing: It'll be easier to break the staple than the lock. Also -- that sticker is interesting, somehow..."];
+	  79 [label="Kim Kitsuragi: \"I thought this was a lousy way to enter a place of worship that's already in disrepair. I guess the church agreed.\""];
+	  80 [label="You: \"No, I'm just curious.\""];
+	  81 [label="Church Doors: IsKimHere()"];
+	  82 [label="IsKimHere()", shape=diamond];
+	  83 [label="!(IsKimHere())", shape=diamond];
+	  84 [label="Jump to: [churchdoormainhub]"];
+	  85 [label="Church Doors: IsTaskActive(\"TASK.investigate_sea_fortress\")--[[ Variable[ ]]"];
+	  86 [label="IsTaskActive(\"TASK.investigate_sea_fortress\")--[[ Variable[ ]]", shape=diamond];
+	  87 [label="!(IsTaskActive(\"TASK.investigate_sea_fortress\")--[[ Variable[ ]])", shape=diamond];
+	  88 [label="You: \"Welcome to Revachol, lock!\""];
+	  89 [label="You: \"I'm actually not that interested in the church right now.\""];
+	  90 [label="Church Doors: CheckEquipped(\"prybar\") == false  and  CheckEquipped(\"kvalsund_multitool\") == false"];
+	  91 [label="CheckEquipped(\"prybar\") == false  and  CheckEquipped(\"kvalsund_multitool\") == false", shape=diamond];
+	  92 [label="!(CheckEquipped(\"prybar\") == false  and  CheckEquipped(\"kvalsund_multitool\") == false)", shape=diamond];
+	  93 [label="Kim Kitsuragi: \"I haven't seen that sticker before. And I am not a youth.\""];
+	  94 [label="You: \"Where do you think we should start?\"\n\"Should we start with that kick drum coming from the ice? I heard a sound, before.\""];
+	  95 [label="You: Shake it off your thumb and throw it in the wind."];
+	  96 [label="Kim Kitsuragi: \"Do you think our suspect is hiding inside?\" He raises his sight to the darkened windows overhead."];
+	  97 [label="Interfacing: Looks like today was a gold star day!"];
+	  98 [label="Church Doors: CheckItem(\"key_church_door\")"];
+	  99 [label="CheckItem(\"key_church_door\")", shape=diamond];
+	  100 [label="!(CheckItem(\"key_church_door\"))", shape=diamond];
+	  101 [label="Visual Calculus: There's something on the sea ice there."];
+	  102 [label="Church Doors: IsKimHere()"];
+	  103 [label="IsKimHere()", shape=diamond];
+	  104 [label="!(IsKimHere())", shape=diamond];
+	  105 [label="Church Doors: Variable[\"TASK.locate_ruby_on_the_coast_done\"]"];
+	  106 [label="Variable[\"TASK.locate_ruby_on_the_coast_done\"]", shape=diamond];
+	  107 [label="!(Variable[\"TASK.locate_ruby_on_the_coast_done\"])", shape=diamond];
+	  108 [label="Jump to: [churchdoormainhub]"];
+	  109 [label="Jump to: [churchdoormainhub]"];
+	  110 [label="Kim Kitsuragi: The lieutenant hands you a blue handkerchief. He looks a little dismayed when he gets it back crumpled. However, it should be easier to peel the sticker off now."];
+	  111 [label="Kim Kitsuragi: \"I'm not as *sturdy* as you are. I have even less leverage.\" He doesn't even try to sound convincing."];
+	  112 [label="Church Doors: IsKimHere()"];
+	  113 [label="IsKimHere()", shape=diamond];
+	  114 [label="!(IsKimHere())", shape=diamond];
+	  115 [label="Kim Kitsuragi: \"Looks like a dead man smiling. Suggests... junior delinquency.\""];
+	  116 [label="You: [Leave.]"];
+	  117 [label="You: Back up and look at the door."];
+	  118 [label="You: What makes it so modern?"];
+	  119 [label="Church Doors: CheckItem(\"prybar\")"];
+	  120 [label="CheckItem(\"prybar\")", shape=diamond];
+	  121 [label="!(CheckItem(\"prybar\"))", shape=diamond];
+	  122 [label="Inland Empire: These forces of future have chosen to depict something that reminds you of... you."];
+	  123 [label="You: Back off."];
+	  124 [label="Church Doors: Variable[\"ice.tentflap_greeting_done\"]"];
+	  125 [label="Variable[\"ice.tentflap_greeting_done\"]", shape=diamond];
+	  126 [label="!(Variable[\"ice.tentflap_greeting_done\"])", shape=diamond];
+	  127 [label="Jump to: [churchdoormainhub]"];
+	  128 [label="Kim Kitsuragi: He takes a step back. \"Maybe we should look for another way in first... The church has seen enough mistreatment.\""];
+	  129 [label="You: \"RAAARRRRRG!\""];
+	  130 [label="You: \"What is suggestive of junior delinquency here?\""];
+	  131 [label="You: \"Okay, what is *junior delinquency*?\""];
+	  132 [label="Church Doors: Variable[\"church.churchdoor_got_sticker\"]"];
+	  133 [label="Variable[\"church.churchdoor_got_sticker\"]", shape=diamond];
+	  134 [label="!(Variable[\"church.churchdoor_got_sticker\"])", shape=diamond];
+	  135 [label="Kim Kitsuragi: \"People do look to churches for shelter, but an abandoned thing like this... I'm not so sure.\""];
+	  136 [label="You: (Turn to the lieutenant.) \"This is where Mr. Prybar comes in handy.\""];
+	  137 [label="You: Padlock, padlock, padlock!"];
+	  138 [label="You: \"You could give me a hand, you know?\""];
+	  139 [label="Untitled hub"];
+	  140 [label="Esprit de Corps: For example, see how calm I am, although you broke my favourite prybar."];
+	  141 [label="Church Doors: The carving on the door is blocklike and angular, like the church itself. Two large beams shoot downwards, sinking into the wood before they reach the threshold."];
+	  142 [label="Jump to: [churchdoormainhub]"];
+	  143 [label="Physical Instrument: You jam the prybar between the lock and the staple and apply force -- your biceps bulge from the strain. The metal creaks and squeals..."];
+	  144 [label="Church Doors: IsKimHere()"];
+	  145 [label="IsKimHere()", shape=diamond];
+	  146 [label="!(IsKimHere())", shape=diamond];
+	  147 [label="You: Take a closer look at the padlock."];
+	  148 [label="You: Back up and look at the door."];
+	  149 [label="You: \"Where do you think we should start?\"\n\"Should we start with that kick drum coming from the ice?\""];
+	  150 [label="Physical Instrument: Nice try, son, but this is not something you should be attempting to do with your bare hands."];
+	  151 [label="You: Run your hand over a beam."];
+	  152 [label="Church Doors: The surface is smooth from the wind, but moist to the touch."];
+	  153 [label="You: \"I do.\""];
+	  154 [label="You: \"Fuck this!\" (Hit the lock.)"];
+	  155 [label="Church Doors: The lock clanks against the door, cold and heavy."];
+	  156 [label="modernityunderstood"];
+	  157 [label="You: \"She might be. It's worth checking out anyway.\""];
+	  158 [label="Kim Kitsuragi: The lieutenant nods silently."];
+	  159 [label="Physical Instrument: The pathetic old wood, rusty screws (and one nail) stand no chance against the forces of *leverage*. From deep within, a bellow rips..."];
+	  160 [label="Physical Instrument: A minute or so of mauling away at the lock has led to no success. The prybar in your hand has given you... zero mechanical advantage.\nA minute or so of mauling away at the lock has led to no success. The Kvalsund in your hand has given you... zero mechanical advantage."];
+	  161 [label="Physical Instrument: Suddenly, the prybar snaps. Metal shavings fly everywhere. The upper half, between the lock and the staple, falls to the ground with a *thunk*."];
+	  162 [label="You: Look at the broken tool in your hand."];
+	  163 [label="Inland Empire: A bad omen. Beware of this church."];
+	  164 [label="Jump to: [Church Doors: \"This cheap-looking padlock is sturd...\"]"];
+	  165 [label="Interfacing: There's nothing like the sound of a sticker unpeeling. Now it's stuck to your thumb."];
+	  166 [label="You: Put the sticker *on* your ledger -- right on the cover!"];
+	  167 [label="churchdoor_initiation_hub"];
+	  168 [label="churchdoormainhub"];
+	  169 [label="Church Doors: CheckItem(\"key_church_door\")"];
+	  170 [label="CheckItem(\"key_church_door\")", shape=diamond];
+	  171 [label="!(CheckItem(\"key_church_door\"))", shape=diamond];
+	  172 [label="Jump to: [Church Doors: \"The doors remain unchanged -- close...\"]"];
+	  173 [label="Logic: This was surely just a freak accident."];
+	  174 [label="Jump to: [churchdoormainhub]"];
+	  175 [label="You: Take another look at the padlock.\nTake another look at the boring padlock. For absurdity's sake. "];
+	  176 [label="Interfacing: Your hands are clammy from the sea air. The piece of sticker keeps slipping away..."];
+	  177 [label="You: Gracefully let the lock go."];
+	  178 [label="Kim Kitsuragi: That hurt. The lieutenant looks up at the roof of the church, ignoring your little tantrum."];
+	  179 [label="Logic: Thus, it must be made by youths."];
+	  180 [label="Jump to: [Untitled hub]"];
+	  181 [label="Kim Kitsuragi: \"Tools break, officer. Try to control yourself.\""];
+	  182 [label="You: Inspect the carpentry."];
+	  183 [label="You: \"What is this feeling?\""];
+	  184 [label="Church Doors: This cheap-looking padlock is sturdily built. It shackles together a hasp and a staple screwed into the wooden door. The lock is adorned with a yellow sticker.\nThis cheap-looking padlock is sturdily built. It shackles together a hasp and a staple screwed into the wooden door. "];
+	  185 [label="Church Doors: Nothing happens, only the sound of the padlock rattling against the door."];
+	  186 [label="Church Doors: IsTHCPresent(\"revacholian_nationhood\")"];
+	  187 [label="IsTHCPresent(\"revacholian_nationhood\")", shape=diamond];
+	  188 [label="!(IsTHCPresent(\"revacholian_nationhood\"))", shape=diamond];
+	  189 [label="Church Doors: Variable[\"church.churchdoor_have_crowbar_idea\"]"];
+	  190 [label="Variable[\"church.churchdoor_have_crowbar_idea\"]", shape=diamond];
+	  191 [label="!(Variable[\"church.churchdoor_have_crowbar_idea\"])", shape=diamond];
+	  192 [label="Kim Kitsuragi: \"But maybe we should circle the building and look for another way in first. The building has seen enough mistreatment.\""];
+	  193 [label="Church Doors: Variable[\"TASK.ask_about_ruby_in_village\"]"];
+	  194 [label="Variable[\"TASK.ask_about_ruby_in_village\"]", shape=diamond];
+	  195 [label="!(Variable[\"TASK.ask_about_ruby_in_village\"])", shape=diamond];
+	  196 [label="Physical Instrument: Your muscles do not know. This shouldn't happen. You're sure the wood looked weak."];
+	  197 [label="Kim Kitsuragi: \"I don't think that's going to work...\""];
+	  198 [label="Church Doors: IsKimHere()"];
+	  199 [label="IsKimHere()", shape=diamond];
+	  200 [label="!(IsKimHere())", shape=diamond];
+	  201 [label="Church Doors: Variable[\"ice.tentflap_greeting_done\"]"];
+	  202 [label="Variable[\"ice.tentflap_greeting_done\"]", shape=diamond];
+	  203 [label="!(Variable[\"ice.tentflap_greeting_done\"])", shape=diamond];
+	  204 [label="Jump to: [churchdoormainhub]"];
+	  205 [label="Church Doors: IsKimHere()"];
+	  206 [label="IsKimHere()", shape=diamond];
+	  207 [label="!(IsKimHere())", shape=diamond];
+	  208 [label="Church Doors: Variable[\"church.churchdoor_understood_modernity\"]"];
+	  209 [label="Variable[\"church.churchdoor_understood_modernity\"]", shape=diamond];
+	  210 [label="!(Variable[\"church.churchdoor_understood_modernity\"])", shape=diamond];
+	  211 [label="Jump to: [Church Doors: \"The doors remain unchanged -- close...\"]"];
+	  212 [label="Church Doors: Variable[\"church.churchdoor_get_in_the_church_initiated\"]"];
+	  213 [label="Variable[\"church.churchdoor_get_in_the_church_initiated\"]", shape=diamond];
+	  214 [label="!(Variable[\"church.churchdoor_get_in_the_church_initiated\"])", shape=diamond];
+	  215 [label="Jump to: [churchdoormainhub]"];
+	  216 [label="You: Pull on the doors..."];
+	  217 [label="Church Doors: Variable[\"ice.tentflap_greeting_done\"]"];
+	  218 [label="Variable[\"ice.tentflap_greeting_done\"]", shape=diamond];
+	  219 [label="!(Variable[\"ice.tentflap_greeting_done\"])", shape=diamond];
+	  220 [label="You: Look at the sticker."];
+	  221 [label="yeskimyesprybar"];
+	  222 [label="Church Doors: A great whoosh of air rushes into the dark innards of the church, as though rushing to fill a great vacuum..."];
+	  223 [label="Shivers: Feels like electricity and a very small piece of nothingness."];
+	  224 [label="Empathy: There is a touch of something in his voice. Hard to say what."];
+	  225 [label="Kim Kitsuragi: \"That level of conceptual thinking is not part of my skill set.\""];
+	  226 [label="Empathy: There is a touch of guilt in his voice."];
+	  227 [label="You: Apply some official force on the padlock."];
+	  228 [label="You: Variable[\"church.churchdoor_open_crowbar\"]"];
+	  229 [label="Variable[\"church.churchdoor_open_crowbar\"]", shape=diamond];
+	  230 [label="!(Variable[\"church.churchdoor_open_crowbar\"])", shape=diamond];
+	  231 [label="Jump to: [churchdoormainhub]"];
+	  232 [label="Interfacing: Au revoir, sticker!"];
+	  233 [label="yeskimnoprybar"];
+	  234 [label="Jump to: [churchdoormainhub]"];
+	  235 [label="Church Doors: The doors remain unchanged -- closed with a padlock."];
+	  236 [label="Church Doors: IsKimHere()"];
+	  237 [label="IsKimHere()", shape=diamond];
+	  238 [label="!(IsKimHere())", shape=diamond];
+	  239 [label="Jump to: [Church Doors: \"The doors remain unchanged -- close...\"]"];
+	  240 [label="You: \"I broke the prybar. Where do I get a new one?\" (Proceed.)"];
+	  0 -> 1
+	  1 -> 6
+	  2 -> 201
+	  3 -> 4
+	  3 -> 5
+	  4 -> 21
+	  5 -> 211
+	  6 -> 168
+	  7 -> 127
+	  8 -> 97
+	  9 -> 54
+	  10 -> 204
+	  11 -> 109
+	  12 -> 13
+	  12 -> 14
+	  13 -> 29
+	  14 -> 222
+	  15 -> 216
+	  16 -> 163
+	  17 -> 62
+	  18 -> 101
+	  19 -> 130
+	  20 -> 184
+	  21 -> 138
+	  21 -> 37
+	  22 -> 102
+	  23 -> 24
+	  23 -> 25
+	  24 -> 143
+	  25 -> 90
+	  26 -> 51
+	  27 -> 43
+	  29 -> 222
+	  30 -> 63
+	  31 -> 79
+	  32 -> 33
+	  33 -> 34
+	  33 -> 35
+	  34 -> 132
+	  35 -> 132
+	  36 -> 168
+	  37 -> 211
+	  38 -> 40
+	  38 -> 39
+	  39 -> 178
+	  40 -> 41
+	  41 -> 231
+	  42 -> 173
+	  44 -> 185
+	  45 -> 223
+	  46 -> 224
+	  47 -> 112
+	  48 -> 226
+	  49 -> 11
+	  50 -> 148
+	  50 -> 183
+	  51 -> 66
+	  52 -> 45
+	  54 -> 115
+	  55 -> 168
+	  56 -> 184
+	  57 -> 2
+	  58 -> 59
+	  58 -> 60
+	  59 -> 77
+	  60 -> 167
+	  61 -> 36
+	  62 -> 169
+	  63 -> 175
+	  63 -> 118
+	  63 -> 71
+	  64 -> 19
+	  65 -> 64
+	  66 -> 67
+	  66 -> 68
+	  67 -> 50
+	  68 -> 36
+	  69 -> 110
+	  70 -> 168
+	  71 -> 72
+	  72 -> 9
+	  73 -> 225
+	  74 -> 189
+	  75 -> 122
+	  76 -> 89
+	  76 -> 149
+	  77 -> 168
+	  78 -> 174
+	  79 -> 173
+	  80 -> 158
+	  81 -> 82
+	  81 -> 83
+	  82 -> 197
+	  83 -> 51
+	  84 -> 168
+	  85 -> 86
+	  85 -> 87
+	  86 -> 26
+	  87 -> 51
+	  88 -> 161
+	  89 -> 28
+	  90 -> 91
+	  90 -> 92
+	  91 -> 150
+	  92 -> 160
+	  93 -> 208
+	  94 -> 18
+	  95 -> 232
+	  96 -> 80
+	  96 -> 153
+	  96 -> 157
+	  97 -> 109
+	  98 -> 99
+	  98 -> 100
+	  100 -> 212
+	  101 -> 215
+	  102 -> 104
+	  102 -> 103
+	  103 -> 61
+	  104 -> 36
+	  105 -> 106
+	  105 -> 107
+	  106 -> 85
+	  107 -> 96
+	  108 -> 168
+	  109 -> 168
+	  110 -> 231
+	  111 -> 211
+	  112 -> 113
+	  112 -> 114
+	  113 -> 181
+	  114 -> 196
+	  115 -> 130
+	  115 -> 131
+	  116 -> 98
+	  117 -> 239
+	  118 -> 75
+	  119 -> 120
+	  119 -> 121
+	  120 -> 221
+	  121 -> 233
+	  122 -> 175
+	  122 -> 71
+	  123 -> 56
+	  124 -> 125
+	  124 -> 126
+	  125 -> 128
+	  126 -> 48
+	  127 -> 168
+	  128 -> 224
+	  129 -> 161
+	  130 -> 93
+	  131 -> 65
+	  132 -> 133
+	  132 -> 134
+	  133 -> 165
+	  134 -> 176
+	  135 -> 51
+	  136 -> 124
+	  137 -> 20
+	  138 -> 111
+	  139 -> 240
+	  139 -> 162
+	  139 -> 47
+	  140 -> 180
+	  141 -> 117
+	  141 -> 151
+	  142 -> 168
+	  143 -> 159
+	  144 -> 145
+	  144 -> 146
+	  145 -> 217
+	  147 -> 184
+	  148 -> 172
+	  149 -> 53
+	  150 -> 211
+	  151 -> 152
+	  152 -> 10
+	  153 -> 135
+	  154 -> 38
+	  155 -> 108
+	  156 -> 73
+	  156 -> 137
+	  157 -> 158
+	  158 -> 51
+	  159 -> 186
+	  160 -> 3
+	  161 -> 139
+	  162 -> 16
+	  163 -> 180
+	  164 -> 184
+	  165 -> 8
+	  165 -> 166
+	  165 -> 95
+	  166 -> 49
+	  167 -> 94
+	  168 -> 32
+	  168 -> 227
+	  168 -> 44
+	  168 -> 17
+	  168 -> 147
+	  168 -> 52
+	  168 -> 116
+	  168 -> 182
+	  168 -> 220
+	  169 -> 170
+	  169 -> 171
+	  170 -> 84
+	  171 -> 74
+	  172 -> 235
+	  173 -> 234
+	  174 -> 168
+	  175 -> 164
+	  176 -> 177
+	  176 -> 154
+	  176 -> 69
+	  177 -> 155
+	  178 -> 41
+	  179 -> 70
+	  180 -> 139
+	  181 -> 140
+	  182 -> 141
+	  183 -> 22
+	  184 -> 78
+	  185 -> 81
+	  186 -> 187
+	  186 -> 188
+	  187 -> 88
+	  188 -> 129
+	  189 -> 190
+	  189 -> 191
+	  190 -> 205
+	  191 -> 142
+	  192 -> 226
+	  193 -> 194
+	  193 -> 195
+	  194 -> 105
+	  195 -> 51
+	  196 -> 180
+	  197 -> 193
+	  198 -> 200
+	  198 -> 199
+	  199 -> 15
+	  200 -> 216
+	  201 -> 202
+	  201 -> 203
+	  202 -> 46
+	  203 -> 192
+	  204 -> 168
+	  205 -> 206
+	  205 -> 207
+	  206 -> 119
+	  207 -> 142
+	  208 -> 209
+	  208 -> 210
+	  209 -> 156
+	  210 -> 179
+	  211 -> 235
+	  212 -> 213
+	  212 -> 214
+	  214 -> 144
+	  215 -> 168
+	  216 -> 12
+	  217 -> 218
+	  217 -> 219
+	  219 -> 76
+	  220 -> 30
+	  221 -> 136
+	  221 -> 123
+	  222 -> 27
+	  223 -> 198
+	  224 -> 7
+	  225 -> 55
+	  226 -> 58
+	  227 -> 228
+	  228 -> 229
+	  228 -> 230
+	  229 -> 23
+	  230 -> 23
+	  231 -> 168
+	  232 -> 109
+	  233 -> 57
+	  233 -> 123
+	  234 -> 168
+	  235 -> 168
+	  236 -> 237
+	  236 -> 238
+	  237 -> 31
+	  238 -> 42
+	  239 -> 235
+	  240 -> 236
+}
+

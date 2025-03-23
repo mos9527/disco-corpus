@@ -1,0 +1,291 @@
+# DOOMED / ICE CREAM MAKER
+# Doomed cellar, a pistachio green ice cream maker next to the breaker box with a radio computer's filament memory inside. Difficulty: heroic, turns into easy if you've read the note from the Ice Bear Fridge.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Logic: And it's already unplugged. There's not much else to do other than wait for it to defrost or *bulk up* and get stronger."];
+	  3 [label="Kim Kitsuragi: \"A scoop of ice cream would have been nice, yes,\" the lieutenant agrees. Someone's stomach grumbles. The room feels very cold."];
+	  4 [label="Ice Cream Maker: Darkness lies inside, but you can faintly make out an object, intricate and foreign, left there for a sub-zero beauty sleep -- a filament memory with the words \"OFF-SITE COPY\" written on its side."];
+	  5 [label="Ice Cream Maker: IsKimHere()"];
+	  6 [label="IsKimHere()", shape=diamond];
+	  7 [label="!(IsKimHere())", shape=diamond];
+	  9 [label="Inland Empire: It's all gone now. You never became a poet or an entroponaut."];
+	  10 [label="Electrochemistry: Disappointment washes over you as you stare into the almost-empty ice cream maker."];
+	  11 [label="Ice Cream Maker: You gently lift the cube from its frosty bedding, careful to not damage it."];
+	  12 [label="Physical Instrument: The ice squeaks beneath the prybar -- you could *swear* you succeeded! -- but the lid simply won't budge."];
+	  13 [label="Ice Cream Maker: CheckItem(\"prybar\")"];
+	  14 [label="CheckItem(\"prybar\")", shape=diamond];
+	  15 [label="!(CheckItem(\"prybar\"))", shape=diamond];
+	  16 [label="Ice Cream Maker: IsKimHere()"];
+	  17 [label="IsKimHere()", shape=diamond];
+	  18 [label="!(IsKimHere())", shape=diamond];
+	  19 [label="Kim Kitsuragi: \"Didn't Soona give you a perfect tool for this kind of job -- the Kvalsund? You should take it out.\""];
+	  20 [label="Physical Instrument: Ice squeaks beneath your Kvalsund multitool, but your fingers slip away from the tool, the lid shut as tightly as before."];
+	  21 [label="Ice Cream Maker: CheckEquippedGroup(\"gloves\")"];
+	  22 [label="CheckEquippedGroup(\"gloves\")", shape=diamond];
+	  23 [label="!(CheckEquippedGroup(\"gloves\"))", shape=diamond];
+	  24 [label="Kim Kitsuragi: \"We should take it back to Miss Luukanen-Kilde as soon as possible. I'm not sure how well unused filaments tolerate room temperatures.\""];
+	  25 [label="Esprit de Corps: Lieutenant Kitsuragi would have a prybar in his Kineema, but he's not here right now."];
+	  26 [label="Tutorial Agent: Equip the MULTI-TOOL by going to the TOOLS tab in your INVENTORY. From there, you can equip it to a HELD slot."];
+	  27 [label="Ice Cream Maker: You slip your fingers under the frozen lid, but the ice is too cold for you to get a good grip. A prybar would come handy here... or something stronger, like the Kvalsund KR+2 Multi-Tool."];
+	  28 [label="You: Turn the ice cream crank."];
+	  29 [label="Ice Cream Maker: This orange machine is dead-still. It has a hand-cranked ice cream churner and an electric freezer, the ice around it slowly melting."];
+	  30 [label="You: [Close the lid.]"];
+	  31 [label="Ice Cream Maker: IsKimHere()"];
+	  32 [label="IsKimHere()", shape=diamond];
+	  33 [label="!(IsKimHere())", shape=diamond];
+	  34 [label="Ice Cream Maker: IsKimHere()"];
+	  35 [label="IsKimHere()", shape=diamond];
+	  36 [label="!(IsKimHere())", shape=diamond];
+	  37 [label="You: \"Advanced? Where do we get one?\""];
+	  38 [label="Interfacing: No -- this is going to need something else, some kind of *super* prybar. Don't even try to open it with a regular prybar, you're just wasting your time."];
+	  39 [label="Jump to: [greeting hub]"];
+	  40 [label="Ice Cream Maker: Variable[\"doomed.breakerbox_black_wire_plugged_out\"]"];
+	  41 [label="Variable[\"doomed.breakerbox_black_wire_plugged_out\"]", shape=diamond];
+	  42 [label="!(Variable[\"doomed.breakerbox_black_wire_plugged_out\"])", shape=diamond];
+	  43 [label="post success hub"];
+	  44 [label="Kim Kitsuragi: \"I have no idea, officer. This ice cream maker isn't important enough to requisition a special tool.\""];
+	  45 [label="Ice Cream Maker: You slip your fingers under the frozen lid, but the ice is too cold for you to get a good grip. A prybar would come handy here."];
+	  46 [label="Ice Cream Maker: CheckItem(\"kvalsund_multitool\")"];
+	  47 [label="CheckItem(\"kvalsund_multitool\")", shape=diamond];
+	  48 [label="!(CheckItem(\"kvalsund_multitool\"))", shape=diamond];
+	  49 [label="Ice Cream Maker: Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge\"]"];
+	  50 [label="Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge\"]", shape=diamond];
+	  51 [label="!(Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge\"])", shape=diamond];
+	  52 [label="Perception (Sight): Look, a black cable is running into the breaker box..."];
+	  53 [label="Interfacing: You're still holding the wrong tool! Do it with the Kvalsund multitool, you even have one..."];
+	  54 [label="You: What? No ice cream..."];
+	  55 [label="Interfacing: Yes, but aren't you curious to know what's on the precious filament? There's a radiocomputer upstairs..."];
+	  56 [label="Ice Cream Maker: CheckEquipped(\"kvalsund_multitool\")"];
+	  57 [label="CheckEquipped(\"kvalsund_multitool\")", shape=diamond];
+	  58 [label="!(CheckEquipped(\"kvalsund_multitool\"))", shape=diamond];
+	  59 [label="Jump to: [greeting hub]"];
+	  60 [label="You: What is this..."];
+	  61 [label="Interfacing: That's a good prybar, but this ice cream maker is frozen *shut*. It takes an *advanced* tool to get it open. Some kind of... superprybar? You have no idea where to get one."];
+	  62 [label="Inland Empire: Sooner or later you will stumble upon a tool mighty enough. Then we will know what's in this mysterious ice cream maker."];
+	  63 [label="Ice Cream Maker: Variable[\"doomed.breakerbox_black_wire_plugged_out\"]"];
+	  64 [label="Variable[\"doomed.breakerbox_black_wire_plugged_out\"]", shape=diamond];
+	  65 [label="!(Variable[\"doomed.breakerbox_black_wire_plugged_out\"])", shape=diamond];
+	  66 [label="Ice Cream Maker: You see the prybar's metal handle bending, right before your very eyes."];
+	  67 [label="Ice Cream Maker: This orange machine is dead-still. It has a hand-cranked ice cream churner and an electric freezer, the ice around it slowly melting."];
+	  68 [label="Physical Instrument: Ice groans and howls under the strain of your giant Kvalsund multitool -- until the lid cracks open."];
+	  69 [label="Hand/Eye Coordination: If you want to try again, then you need to have the prybar in your *hand*, detective."];
+	  70 [label="You: Crack open the lid."];
+	  71 [label="You: Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge_2\"]"];
+	  72 [label="Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge_2\"]", shape=diamond];
+	  73 [label="!(Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge_2\"])", shape=diamond];
+	  74 [label="Jump to: [greeting hub]"];
+	  75 [label="Ice Cream Maker: Turning the crank feels oddly satisfying, like stirring your childhood dreams... In the distance you hear water dripping."];
+	  76 [label="Ice Cream Maker: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  77 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  78 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  79 [label="You: Try to crack open the lid."];
+	  80 [label="Ice Cream Maker: This orange machine is buzzing like an old submarine. It has a hand-cranked ice cream churner on top and an electric freezer that appears to be frozen shut."];
+	  81 [label="Physical Instrument: Ice groans and howls under the strain of your giant Kvalsund multitool -- until the lid cracks open. Blue electric lights come to life..."];
+	  82 [label="Ice Cream Maker: This orange machine is buzzing like an old submarine. It has a hand-cranked ice cream churner on top and an electric freezer that appears to be frozen shut."];
+	  83 [label="Ice Cream Maker: Inside on a frosty platform lies an object, intricate and foreign, left there for a sub-zero beauty sleep -- a filament memory with the words \"OFF-SITE COPY\" written on its side."];
+	  84 [label="Kim Kitsuragi: \"Yeah, well, that's a good prybar -- I'm not criticising it -- but this ice cream maker is frozen *shut*. It takes an *advanced* tool to get it open.\""];
+	  85 [label="Jump to: [greeting hub]"];
+	  86 [label="Ice Cream Maker: IsTaskActive(\"TASK.help_soona_with_her_project\")--[[ Variable[ ]]"];
+	  87 [label="IsTaskActive(\"TASK.help_soona_with_her_project\")--[[ Variable[ ]]", shape=diamond];
+	  88 [label="!(IsTaskActive(\"TASK.help_soona_with_her_project\")--[[ Variable[ ]])", shape=diamond];
+	  89 [label="Jump to: [greeting hub]"];
+	  90 [label="Kim Kitsuragi: \"I have a prybar in my Kineema, in case you want to try again. Though it might be that my prybar isn't strong enough for that lid...\" He eyes the ice cream maker suspiciously."];
+	  91 [label="greeting hub"];
+	  92 [label="Logic: Unplugging the ice cream maker will allow it to defrost."];
+	  93 [label="You: \"What? No ice cream...\""];
+	  94 [label="Ice Cream Maker: CheckEquipped(\"kvalsund_multitool\")"];
+	  95 [label="CheckEquipped(\"kvalsund_multitool\")", shape=diamond];
+	  96 [label="!(CheckEquipped(\"kvalsund_multitool\"))", shape=diamond];
+	  97 [label="Electrochemistry: What better to assuage the creeping sense of failure than some frozen fat and sugar?"];
+	  98 [label="Ice Cream Maker: IsTaskActive(\"TASK.help_soona_with_her_project\")--[[ Variable[ ]]"];
+	  99 [label="IsTaskActive(\"TASK.help_soona_with_her_project\")--[[ Variable[ ]]", shape=diamond];
+	  100 [label="!(IsTaskActive(\"TASK.help_soona_with_her_project\")--[[ Variable[ ]])", shape=diamond];
+	  101 [label="Ice Cream Maker: Your stomach grumbles. The fridge is cold, the cellar dark and humid."];
+	  102 [label="Ice Cream Maker: Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge_2\"]"];
+	  103 [label="Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge_2\"]", shape=diamond];
+	  104 [label="!(Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge_2\"])", shape=diamond];
+	  105 [label="You: Crack open the lid."];
+	  106 [label="You: Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge\"]"];
+	  107 [label="Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge\"]", shape=diamond];
+	  108 [label="!(Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge\"])", shape=diamond];
+	  109 [label="You: Take the filament memory."];
+	  110 [label="Ice Cream Maker: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  111 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  112 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  113 [label="Ice Cream Maker: Variable[\"doomed.breakerbox_greeting_done\"]"];
+	  114 [label="Variable[\"doomed.breakerbox_greeting_done\"]", shape=diamond];
+	  115 [label="!(Variable[\"doomed.breakerbox_greeting_done\"])", shape=diamond];
+	  116 [label="Ice Cream Maker: CheckItem(\"kvalsund_multitool\")"];
+	  117 [label="CheckItem(\"kvalsund_multitool\")", shape=diamond];
+	  118 [label="!(CheckItem(\"kvalsund_multitool\"))", shape=diamond];
+	  119 [label="Ice Cream Maker: Variable[\"doomed.breakerbox_black_wire_plugged_out\"]"];
+	  120 [label="Variable[\"doomed.breakerbox_black_wire_plugged_out\"]", shape=diamond];
+	  121 [label="!(Variable[\"doomed.breakerbox_black_wire_plugged_out\"])", shape=diamond];
+	  122 [label="Interfacing: Maybe you could get better grip with some gloves..."];
+	  123 [label="Physical Instrument: The ice squeaks beneath the prybar. You think you've got the bar jammed in there pretty well, but the lid simply won't budge."];
+	  124 [label="Hand/Eye Coordination: You need to have the Kvalsund KR+2 Multi-Tool in your *hand*, detective."];
+	  125 [label="Tutorial Agent: Equip the PRYBAR by going to the TOOLS tab in your INVENTORY. From there, you can equip it to a HELD slot."];
+	  126 [label="You: [Leave.]"];
+	  127 [label="Ice Cream Maker: Variable[\"doomed.icecreammaker_inland_failure_feeling\"]"];
+	  128 [label="Variable[\"doomed.icecreammaker_inland_failure_feeling\"]", shape=diamond];
+	  129 [label="!(Variable[\"doomed.icecreammaker_inland_failure_feeling\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 63
+	  2 -> 21
+	  3 -> 109
+	  4 -> 10
+	  5 -> 6
+	  5 -> 7
+	  6 -> 90
+	  7 -> 25
+	  9 -> 127
+	  10 -> 43
+	  11 -> 31
+	  12 -> 60
+	  13 -> 14
+	  13 -> 15
+	  14 -> 69
+	  15 -> 5
+	  16 -> 17
+	  16 -> 18
+	  17 -> 19
+	  18 -> 124
+	  19 -> 110
+	  20 -> 113
+	  21 -> 22
+	  21 -> 23
+	  22 -> 74
+	  23 -> 122
+	  24 -> 55
+	  25 -> 39
+	  26 -> 39
+	  27 -> 16
+	  28 -> 75
+	  29 -> 91
+	  31 -> 32
+	  31 -> 33
+	  32 -> 24
+	  33 -> 55
+	  34 -> 35
+	  34 -> 36
+	  35 -> 84
+	  36 -> 61
+	  37 -> 44
+	  38 -> 13
+	  39 -> 91
+	  40 -> 41
+	  40 -> 42
+	  41 -> 68
+	  42 -> 81
+	  43 -> 109
+	  43 -> 93
+	  43 -> 54
+	  44 -> 62
+	  45 -> 38
+	  46 -> 48
+	  46 -> 47
+	  47 -> 53
+	  48 -> 34
+	  49 -> 50
+	  49 -> 51
+	  50 -> 56
+	  51 -> 94
+	  52 -> 92
+	  53 -> 85
+	  54 -> 101
+	  55 -> 30
+	  56 -> 57
+	  56 -> 58
+	  57 -> 40
+	  58 -> 12
+	  59 -> 91
+	  60 -> 66
+	  61 -> 62
+	  62 -> 89
+	  63 -> 64
+	  63 -> 65
+	  64 -> 98
+	  65 -> 86
+	  66 -> 46
+	  67 -> 91
+	  68 -> 4
+	  69 -> 76
+	  70 -> 71
+	  71 -> 72
+	  71 -> 73
+	  72 -> 102
+	  73 -> 102
+	  74 -> 91
+	  75 -> 9
+	  76 -> 77
+	  76 -> 78
+	  77 -> 39
+	  78 -> 125
+	  79 -> 116
+	  80 -> 91
+	  81 -> 83
+	  82 -> 91
+	  83 -> 10
+	  84 -> 37
+	  85 -> 91
+	  86 -> 88
+	  86 -> 87
+	  87 -> 82
+	  88 -> 80
+	  89 -> 91
+	  90 -> 39
+	  91 -> 70
+	  91 -> 105
+	  91 -> 79
+	  91 -> 28
+	  91 -> 126
+	  92 -> 21
+	  93 -> 3
+	  94 -> 96
+	  94 -> 95
+	  95 -> 20
+	  96 -> 123
+	  97 -> 59
+	  98 -> 99
+	  98 -> 100
+	  99 -> 67
+	  100 -> 29
+	  101 -> 109
+	  102 -> 104
+	  102 -> 103
+	  103 -> 40
+	  104 -> 20
+	  105 -> 106
+	  106 -> 107
+	  106 -> 108
+	  107 -> 49
+	  108 -> 49
+	  109 -> 11
+	  110 -> 112
+	  110 -> 111
+	  111 -> 39
+	  112 -> 26
+	  113 -> 114
+	  113 -> 115
+	  114 -> 119
+	  115 -> 52
+	  116 -> 117
+	  116 -> 118
+	  117 -> 27
+	  118 -> 45
+	  119 -> 120
+	  119 -> 121
+	  120 -> 2
+	  121 -> 92
+	  122 -> 74
+	  123 -> 60
+	  124 -> 110
+	  125 -> 39
+	  127 -> 128
+	  127 -> 129
+	  128 -> 97
+	  129 -> 59
+}
+

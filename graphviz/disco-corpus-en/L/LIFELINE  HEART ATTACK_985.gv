@@ -1,0 +1,87 @@
+# LIFELINE / HEART ATTACK
+# When you lose enough Health (Endurance), you have a heart attack. This is the freebie/tutorial.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: The end of the world is here."];
+	  3 [label="You: Let it all go."];
+	  4 [label="Endurance: There's no shame in surrendering now. We all do, it gets *so* dark. You don't even see her face, like you always thought you would. You only see pain and fear."];
+	  5 [label="Physical Instrument: Get it together, boy. You've gotta hold on, no matter how bad..."];
+	  6 [label="Endurance: Yeah, screaming isn't happening on account of extreme shortness of breath. You're just making it worse. Oh god, it's painful..."];
+	  7 [label="Untitled hub (03)"];
+	  8 [label="Endurance: Very. *Very* bad. *This is the end* bad."];
+	  9 [label="Endurance: Nope, sorry, you don't. Not this time."];
+	  11 [label="You: Try to remain conscious."];
+	  12 [label="Variable[\"whirling.fan_heart_left_arm\"]"];
+	  13 [label="Variable[\"whirling.fan_heart_left_arm\"]", shape=diamond];
+	  14 [label="!(Variable[\"whirling.fan_heart_left_arm\"])", shape=diamond];
+	  15 [label="Endurance: You feel something in your chest. An unnatural pressure. It's spreading to your left arm, your jaw..."];
+	  16 [label="Variable[\"whirling.fan_pain_threshold_heart\"]"];
+	  17 [label="Variable[\"whirling.fan_pain_threshold_heart\"]", shape=diamond];
+	  18 [label="!(Variable[\"whirling.fan_pain_threshold_heart\"])", shape=diamond];
+	  19 [label="Endurance: No. It's many years of combined self-neglect and self-abuse."];
+	  20 [label="Composure: Don't go grabbing at your chest and screaming bloody murder. Keep your cool. Remember -- looking good always makes you feel better."];
+	  21 [label="Endurance: All you feel is pain and weakness. You have to surrender now. We all do, it gets *so* dark. You don't even see her face, like you always thought you would. You only see pain and fear."];
+	  22 [label="You: So I'm guessing this is bad."];
+	  23 [label="You: I'm sure it's just heartburn. Oh god..."];
+	  24 [label="Pain Threshold: We've been here before. You've got this."];
+	  25 [label="Variable[\"stats.heart_t_pain\"]"];
+	  26 [label="Variable[\"stats.heart_t_pain\"]", shape=diamond];
+	  27 [label="!(Variable[\"stats.heart_t_pain\"])", shape=diamond];
+	  28 [label="Untitled hub (05)"];
+	  29 [label="IsTHCPresent(\"coach_physical_instrument\")"];
+	  30 [label="IsTHCPresent(\"coach_physical_instrument\")", shape=diamond];
+	  31 [label="!(IsTHCPresent(\"coach_physical_instrument\"))", shape=diamond];
+	  32 [label="You: \"Help.. someone...\""];
+	  33 [label="Jump to: [NewspaperEndgame(\"HEART_ATTACK\", \"CO ...]"];
+	  34 [label="Savoir Faire: Well, this feels familiar."];
+	  35 [label="Endurance: Don't think this is a sign of anything other than your heart failing."];
+	  36 [label="Half Light: Fucking shit, I'm scared. What do I do? Who do I call?"];
+	  12410020 [label="JUMP OUT to GAME OVER!", shape=diamond];
+	  0 -> 1
+	  1 -> 15
+	  2 -> 35
+	  3 -> 4
+	  4 -> 33
+	  5 -> 28
+	  6 -> 28
+	  7 -> 32
+	  7 -> 2
+	  7 -> 22
+	  7 -> 23
+	  8 -> 29
+	  9 -> 36
+	  11 -> 21
+	  12 -> 13
+	  12 -> 14
+	  13 -> 34
+	  14 -> 16
+	  15 -> 12
+	  16 -> 17
+	  16 -> 18
+	  17 -> 24
+	  18 -> 36
+	  19 -> 28
+	  20 -> 7
+	  21 -> 33
+	  22 -> 8
+	  23 -> 19
+	  24 -> 25
+	  25 -> 26
+	  25 -> 27
+	  26 -> 9
+	  27 -> 36
+	  28 -> 3
+	  28 -> 11
+	  29 -> 30
+	  29 -> 31
+	  30 -> 5
+	  31 -> 28
+	  32 -> 6
+	  33 -> 12410020
+	  34 -> 16
+	  35 -> 28
+	  36 -> 20
+}
+

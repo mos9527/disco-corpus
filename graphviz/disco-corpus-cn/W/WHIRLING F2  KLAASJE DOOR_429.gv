@@ -1,0 +1,350 @@
+# WHIRLING F2 / KLAASJE DOOR
+# When the dialogue with Klaasje is over you can go and click and her door.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Half Light: 你应该在里面砸个洞。"];
+	  3 [label="Half Light: 耳中的低语声慢慢褪去，你的呼吸变得正常起来。那扇门很幸运。"];
+	  4 [label="door2nddayhub"];
+	  5 [label="Inland Empire: 你都咽了下去，就像上次一样。不管当时有怎样的苦涩情绪浮上表面——现在都已渐渐平息。将你淹没。深深沉入你的身体。"];
+	  6 [label="Variable[\"whirling.klaasjedoor_inlandcomment_swallowed\"]"];
+	  7 [label="Variable[\"whirling.klaasjedoor_inlandcomment_swallowed\"]", shape=diamond];
+	  8 [label="!(Variable[\"whirling.klaasjedoor_inlandcomment_swallowed\"])", shape=diamond];
+	  9 [label="Perception (Hearing): 听起来像是来自楼上的某个地方——在上去之前，你可以巡视一下……"];
+	  10 [label="Door, Room #3: 门是关着的。"];
+	  11 [label="You: 再敲一次。"];
+	  12 [label="You: 敲门。\n再敲一次。"];
+	  13 [label="Variable[\"whirling.klaasjedoor_inland_loneliness\"]"];
+	  14 [label="Variable[\"whirling.klaasjedoor_inland_loneliness\"]", shape=diamond];
+	  15 [label="!(Variable[\"whirling.klaasjedoor_inland_loneliness\"])", shape=diamond];
+	  16 [label="Kim Kitsuragi: “我们应该早上再回来。”"];
+	  17 [label="IsKimHere()"];
+	  18 [label="IsKimHere()", shape=diamond];
+	  19 [label="!(IsKimHere())", shape=diamond];
+	  20 [label="Variable[\"whirling.klaasjedoor_inlandcomment_dont_do_this\"]"];
+	  21 [label="Variable[\"whirling.klaasjedoor_inlandcomment_dont_do_this\"]", shape=diamond];
+	  22 [label="!(Variable[\"whirling.klaasjedoor_inlandcomment_dont_do_this\"])", shape=diamond];
+	  23 [label="Door, Room #3: 没有回应。"];
+	  24 [label="Jump to: [klaasje_door_main]"];
+	  25 [label="Jump to: [Door, Room #3: \"The door is closed.\"]"];
+	  26 [label="You: 该死的贱人。"];
+	  27 [label="Inland Empire: 白色哀悼。一直以来都是哀悼。你早就该预料到的，它就藏在她的双眸之后……"];
+	  28 [label="Jump to: [door2nddayhub]"];
+	  29 [label="Jump to: [klaasje_door_main]"];
+	  30 [label="half_light_is_angery_at_door"];
+	  31 [label="IsKimHere()"];
+	  32 [label="IsKimHere()", shape=diamond];
+	  33 [label="!(IsKimHere())", shape=diamond];
+	  34 [label="Inland Empire: 腐蚀性的回音。一直以来都是黑暗。但那时的你很年轻，而且是在一个夏季。你不得不认输……"];
+	  35 [label="Door, Room #3: 还是没反应。"];
+	  36 [label="You: 再敲一次，再重一点。"];
+	  37 [label="Jump to: [klaasje_door_main]"];
+	  38 [label="IsKimHere()"];
+	  39 [label="IsKimHere()", shape=diamond];
+	  40 [label="!(IsKimHere())", shape=diamond];
+	  42 [label="Door, Room #3: 门只能用钥匙，或者是从里面打开。"];
+	  43 [label="Inland Empire: 一阵极大的孤独感向你袭来。世界上的每一个人都在做自己的事，但与你无关。"];
+	  44 [label="Door, Room #3: 门是关着的。"];
+	  45 [label="Door, Room #3: “是谁？”一个女人的声音响起——隔着门有些听不清。"];
+	  46 [label="Variable[\"whirling.klaasjedoor_second_day_inland_reactivity_passive\"]"];
+	  47 [label="Variable[\"whirling.klaasjedoor_second_day_inland_reactivity_passive\"]", shape=diamond];
+	  48 [label="!(Variable[\"whirling.klaasjedoor_second_day_inland_reactivity_passive\"])", shape=diamond];
+	  49 [label="You: 试试把手。"];
+	  50 [label="You: [离开。]"];
+	  51 [label="Kim Kitsuragi: 喂！你有什么问题吗？"];
+	  52 [label="Kim Kitsuragi: “我们是警察。可以进来吗？”"];
+	  53 [label="Half Light: 你听见血液在你耳边窃窃私语。当你呼出一口气的时候，你的后背慢慢放松下来。那扇门很幸运。"];
+	  54 [label="Variable[\"whirling.klaasje_exit_to_room\"]"];
+	  55 [label="Variable[\"whirling.klaasje_exit_to_room\"]", shape=diamond];
+	  56 [label="!(Variable[\"whirling.klaasje_exit_to_room\"])", shape=diamond];
+	  57 [label="IsKimHere()"];
+	  58 [label="IsKimHere()", shape=diamond];
+	  59 [label="!(IsKimHere())", shape=diamond];
+	  60 [label="thefinaleofthisbranch"];
+	  61 [label="Variable[\"whirling.klaasjedoor_echem_partying\"]"];
+	  62 [label="Variable[\"whirling.klaasjedoor_echem_partying\"]", shape=diamond];
+	  63 [label="!(Variable[\"whirling.klaasjedoor_echem_partying\"])", shape=diamond];
+	  64 [label="Shivers: 在加姆洛克住宅区，音乐、公司和人类的帕里瑟姆……或者是河流的门户，为了死亡和人造麻醉剂。又或者，远在科戎东部，像*榭赫蒂*一样星光闪耀的*夜总会*……远离这里，远离你，这条颤抖的老狗。"];
+	  65 [label="Drama: 疲倦。克制。"];
+	  66 [label="Variable[\"whirling.klaasjedoor_inlandcomment_beauty_dont_abandon_in_ugliness\"]"];
+	  67 [label="Variable[\"whirling.klaasjedoor_inlandcomment_beauty_dont_abandon_in_ugliness\"]", shape=diamond];
+	  68 [label="!(Variable[\"whirling.klaasjedoor_inlandcomment_beauty_dont_abandon_in_ugliness\"])", shape=diamond];
+	  69 [label="You: “该死的贱人！”"];
+	  70 [label="Jump to: [klaasje_door_main]"];
+	  71 [label="Door, Room #3: 门对你的孤独表现地很冷淡。这个世界也毫不关心。"];
+	  72 [label="Variable[\"whirling.klaasjedoor_inland_loneliness\"]"];
+	  73 [label="Variable[\"whirling.klaasjedoor_inland_loneliness\"]", shape=diamond];
+	  74 [label="!(Variable[\"whirling.klaasjedoor_inland_loneliness\"])", shape=diamond];
+	  75 [label="Variable[\"whirling.klaasjedoor_whore_yelled\"]"];
+	  76 [label="Variable[\"whirling.klaasjedoor_whore_yelled\"]", shape=diamond];
+	  77 [label="!(Variable[\"whirling.klaasjedoor_whore_yelled\"])", shape=diamond];
+	  78 [label="Inland Empire: 你和上次一样孤独。这个世界上陪伴着你的一切——这个世界上保护着你的一切——都抛弃了你，不再回来。"];
+	  79 [label="You: 敲门……"];
+	  80 [label="Jump to: [door2nddayhub]"];
+	  81 [label="Door, Room #3: “进来吧——门是开的！”她大喊到：“我在吹头发……”"];
+	  82 [label="Variable[\"whirling.klaasjedoor_half_punch_a_hole_in_it\"]"];
+	  83 [label="Variable[\"whirling.klaasjedoor_half_punch_a_hole_in_it\"]", shape=diamond];
+	  84 [label="!(Variable[\"whirling.klaasjedoor_half_punch_a_hole_in_it\"])", shape=diamond];
+	  85 [label="Jump to: [half_light_is_angery_at_door]"];
+	  86 [label="Door, Room #3: 你用拳头狠狠地砸在乙烯基材料上，但是并没有制造出一个洞。门仍然牢牢地停留在门框里，你的拳头隐隐作痛。这是一件很好，也很正常的事。"];
+	  87 [label="You: “美人，别把我留在这个丑陋的世界！”"];
+	  88 [label="Empathy: 他不喜欢这样。"];
+	  89 [label="IsHourBetween(23, 6)"];
+	  90 [label="IsHourBetween(23, 6)", shape=diamond];
+	  91 [label="!(IsHourBetween(23, 6))", shape=diamond];
+	  92 [label="Door, Room #3: 这扇门感觉冷冰冰的。"];
+	  93 [label="Jump to: [door2nddayhub]"];
+	  94 [label="Inland Empire: “你为什么要这么做？别这样对我，拜托！”还记得吗？那个说的*是谁*？"];
+	  95 [label="You: 敲门。"];
+	  96 [label="klaasje_door_main"];
+	  97 [label="Jump to: [klaasje_door_main]"];
+	  98 [label="Door, Room #3: 门毫不关心。"];
+	  99 [label="Variable[\"TASK.interrogate_klaasje\"]"];
+	  100 [label="Variable[\"TASK.interrogate_klaasje\"]", shape=diamond];
+	  101 [label="!(Variable[\"TASK.interrogate_klaasje\"])", shape=diamond];
+	  102 [label="Door, Room #3: 门是关着的。"];
+	  103 [label="Jump to: [door2nddayhub]"];
+	  104 [label="Perception (Hearing): 你听见里面某个地方传来淋浴开启的声音。"];
+	  105 [label="You: “你为什么要这么做？为什么要这样对我……”"];
+	  106 [label="Volition: 别这样。所有人都是贱货？这句话到底是什么意思？深吸一口气，然后离开吧。"];
+	  107 [label="IsKimHere()"];
+	  108 [label="IsKimHere()", shape=diamond];
+	  109 [label="!(IsKimHere())", shape=diamond];
+	  110 [label="Variable[\"whirling.klaasjedoor_halflight_whore_return\"]"];
+	  111 [label="Variable[\"whirling.klaasjedoor_halflight_whore_return\"]", shape=diamond];
+	  112 [label="!(Variable[\"whirling.klaasjedoor_halflight_whore_return\"])", shape=diamond];
+	  113 [label="You: “我真的很孤独。”"];
+	  114 [label="Jump to: [klaasje_door_main]"];
+	  115 [label="Half Light: 那种感觉很好。所有人都是贱货。现在，在门上砸个洞吧。"];
+	  116 [label="Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")"];
+	  117 [label="Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")", shape=diamond];
+	  118 [label="!(Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\"))", shape=diamond];
+	  119 [label="Variable[\"whirling.klaasjedoor_punched\"]"];
+	  120 [label="Variable[\"whirling.klaasjedoor_punched\"]", shape=diamond];
+	  121 [label="!(Variable[\"whirling.klaasjedoor_punched\"])", shape=diamond];
+	  122 [label="Pain Threshold: 话语仍然在走廊里回响……"];
+	  123 [label="Half Light: 好啊——*该死的贱人*。说得真好，哈里。你一切都很好。"];
+	  124 [label="Jump to: [door2nddayhub]"];
+	  125 [label="Esprit de Corps: 就在离这里不远的某个地方，警督正在准备她的文件。“卡拉洁·阿曼多，”他书写着。你意识到接下来要发生的事，警探也应该待在这里。孤身一个人进去……可能很*危险*。"];
+	  126 [label="You: 咽下这种情绪。"];
+	  127 [label="You: 抑制住冲动。"];
+	  128 [label="Door, Room #3: 门沉默而冷淡。对于它来说，你的绝望就是个笑话。"];
+	  129 [label="You: 用你的手指拂过凹痕。"];
+	  130 [label="Inland Empire: 美丽把你一个人抛弃在这个丑陋的世界，兄弟。而且你甚至记不清美丽的*名字*；美丽是什么……"];
+	  131 [label="IsTHCPresent(\"white_mourning\")  or  Variable[\"inventory.ledger_white_mourning\"]"];
+	  132 [label="IsTHCPresent(\"white_mourning\")  or  Variable[\"inventory.ledger_white_mourning\"]", shape=diamond];
+	  133 [label="!(IsTHCPresent(\"white_mourning\")  or  Variable[\"inventory.ledger_white_mourning\"])", shape=diamond];
+	  134 [label="Door, Room #3: 没有回应——现在是半夜，警官。"];
+	  135 [label="Horrific Necktie: 门可能也觉得你是个过气的失败者。你感觉脖子上那条可笑的领带越勒越紧……"];
+	  136 [label="Door, Room #3: 你只能给门留下这么一丁点的凹痕。"];
+	  137 [label="IsTHCPresent(\"caustic_echo\")  or  Variable[\"inventory.ledger_caustic_echo\"]"];
+	  138 [label="IsTHCPresent(\"caustic_echo\")  or  Variable[\"inventory.ledger_caustic_echo\"]", shape=diamond];
+	  139 [label="!(IsTHCPresent(\"caustic_echo\")  or  Variable[\"inventory.ledger_caustic_echo\"])", shape=diamond];
+	  140 [label="Jump to: [klaasje_door_main]"];
+	  141 [label="Variable[\"whirling.klaasjedoor_inlandcomment_alone\"]"];
+	  142 [label="Variable[\"whirling.klaasjedoor_inlandcomment_alone\"]", shape=diamond];
+	  143 [label="!(Variable[\"whirling.klaasjedoor_inlandcomment_alone\"])", shape=diamond];
+	  144 [label="Door, Room #3: 还是没有回应。"];
+	  145 [label="You: 重重砸门。"];
+	  146 [label="Kim Kitsuragi: 警督飞快地瞥了你一眼。"];
+	  147 [label="You: 深吸一口气。"];
+	  148 [label="Perception (Sight): 乙烯基材料上还留着一道凹痕——就在你刚才击中的位置。"];
+	  149 [label="You: 敲门……"];
+	  150 [label="Electrochemistry: 像这样的年轻女人可能会整晚在外面狂欢。那里有酒精，还有甜美的毒品。孤独也会远去……"];
+	  151 [label="Electrochemistry: 你握住金属手柄，感觉到她手心留下的温度。"];
+	  152 [label="Jump to: [klaasje_door_main]"];
+	  153 [label="Physical Instrument: 更不用说这是一种*超棒*的锻炼了！"];
+	  154 [label="Kim Kitsuragi: “停下来！”警督听起来很生气。"];
+	  155 [label="You: [离开。]"];
+	  156 [label="You: 再敲一次。"];
+	  0 -> 1
+	  1 -> 99
+	  2 -> 82
+	  3 -> 70
+	  4 -> 129
+	  4 -> 155
+	  4 -> 12
+	  5 -> 46
+	  6 -> 8
+	  6 -> 7
+	  7 -> 5
+	  8 -> 93
+	  10 -> 96
+	  11 -> 144
+	  12 -> 89
+	  13 -> 14
+	  13 -> 15
+	  14 -> 113
+	  14 -> 126
+	  14 -> 105
+	  14 -> 87
+	  15 -> 29
+	  16 -> 28
+	  17 -> 18
+	  17 -> 19
+	  18 -> 52
+	  19 -> 125
+	  20 -> 21
+	  20 -> 22
+	  21 -> 94
+	  22 -> 141
+	  23 -> 104
+	  24 -> 96
+	  25 -> 10
+	  26 -> 123
+	  27 -> 75
+	  28 -> 4
+	  29 -> 96
+	  30 -> 145
+	  30 -> 147
+	  30 -> 69
+	  30 -> 127
+	  31 -> 32
+	  31 -> 33
+	  32 -> 146
+	  33 -> 2
+	  34 -> 75
+	  35 -> 31
+	  36 -> 35
+	  37 -> 96
+	  38 -> 40
+	  38 -> 39
+	  39 -> 16
+	  40 -> 28
+	  42 -> 151
+	  43 -> 13
+	  45 -> 65
+	  46 -> 48
+	  46 -> 47
+	  47 -> 131
+	  48 -> 103
+	  49 -> 42
+	  51 -> 115
+	  52 -> 81
+	  53 -> 70
+	  54 -> 56
+	  54 -> 55
+	  55 -> 10
+	  56 -> 44
+	  57 -> 58
+	  57 -> 59
+	  58 -> 51
+	  59 -> 115
+	  60 -> 26
+	  60 -> 156
+	  61 -> 62
+	  61 -> 63
+	  62 -> 64
+	  63 -> 38
+	  64 -> 38
+	  65 -> 17
+	  66 -> 67
+	  66 -> 68
+	  67 -> 130
+	  68 -> 6
+	  69 -> 57
+	  70 -> 96
+	  71 -> 152
+	  72 -> 73
+	  72 -> 74
+	  73 -> 20
+	  74 -> 93
+	  75 -> 76
+	  75 -> 77
+	  76 -> 122
+	  77 -> 124
+	  78 -> 46
+	  79 -> 27
+	  80 -> 4
+	  81 -> 9
+	  82 -> 83
+	  82 -> 84
+	  83 -> 30
+	  84 -> 37
+	  85 -> 30
+	  86 -> 153
+	  87 -> 98
+	  88 -> 2
+	  89 -> 90
+	  89 -> 91
+	  90 -> 134
+	  91 -> 45
+	  92 -> 124
+	  93 -> 4
+	  94 -> 46
+	  95 -> 23
+	  96 -> 36
+	  96 -> 11
+	  96 -> 49
+	  96 -> 50
+	  96 -> 95
+	  97 -> 96
+	  98 -> 116
+	  99 -> 100
+	  99 -> 101
+	  100 -> 102
+	  101 -> 54
+	  102 -> 119
+	  103 -> 4
+	  104 -> 43
+	  105 -> 128
+	  106 -> 85
+	  107 -> 108
+	  107 -> 109
+	  108 -> 154
+	  109 -> 24
+	  110 -> 112
+	  110 -> 111
+	  111 -> 60
+	  112 -> 124
+	  113 -> 71
+	  114 -> 96
+	  115 -> 106
+	  116 -> 117
+	  116 -> 118
+	  117 -> 135
+	  118 -> 140
+	  119 -> 120
+	  119 -> 121
+	  120 -> 148
+	  121 -> 4
+	  122 -> 110
+	  123 -> 124
+	  124 -> 4
+	  125 -> 80
+	  126 -> 25
+	  127 -> 3
+	  128 -> 152
+	  129 -> 136
+	  130 -> 46
+	  131 -> 132
+	  131 -> 133
+	  132 -> 79
+	  133 -> 137
+	  134 -> 150
+	  135 -> 140
+	  136 -> 72
+	  137 -> 138
+	  137 -> 139
+	  138 -> 149
+	  139 -> 75
+	  140 -> 96
+	  141 -> 142
+	  141 -> 143
+	  142 -> 78
+	  143 -> 66
+	  144 -> 114
+	  145 -> 86
+	  146 -> 88
+	  147 -> 53
+	  148 -> 4
+	  149 -> 34
+	  150 -> 61
+	  151 -> 97
+	  152 -> 96
+	  153 -> 107
+	  154 -> 24
+	  156 -> 92
+}
+

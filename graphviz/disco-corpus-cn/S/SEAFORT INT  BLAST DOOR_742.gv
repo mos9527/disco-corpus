@@ -1,0 +1,192 @@
+# SEAFORT INT / BLAST DOOR
+# blast door interactable dialogue. (this is closed, no way to open, open from console if has fuel in)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Cuno: 他指着房间另一头的控制台。“你觉得那边那个破玩意是干什么的？走，我们去玩玩按钮。”"];
+	  3 [label="Jump to: [blast_door_main]"];
+	  4 [label="blast_door_main"];
+	  5 [label="IsCunoInParty()"];
+	  6 [label="IsCunoInParty()", shape=diamond];
+	  7 [label="!(IsCunoInParty())", shape=diamond];
+	  8 [label="Jump to: [blast_door_main]"];
+	  9 [label="Variable[\"seafort.blast_hub_reached\"]"];
+	  10 [label="Variable[\"seafort.blast_hub_reached\"]", shape=diamond];
+	  11 [label="!(Variable[\"seafort.blast_hub_reached\"])", shape=diamond];
+	  12 [label="You: 另外一边有什么？\n“另外一边有什么？”"];
+	  13 [label="You: “你说得对。我们把那扇大门打开——你有没有在附近看到控制装置？”"];
+	  14 [label="IsCunoInParty()"];
+	  15 [label="IsCunoInParty()", shape=diamond];
+	  16 [label="!(IsCunoInParty())", shape=diamond];
+	  17 [label="Small Blast Door: 沉重的金属门稳稳地伫立着，死死地锈蚀在它的大哥里面。"];
+	  18 [label="Small Blast Door: 燃料——>发电机——>控制台。既然电源已经接通，这就是最显而易见的一条路。"];
+	  19 [label="Interfacing: 他是对的。最好还是打开它的*大哥*。天花板上悬挂着一台强力电机——肯定控制着那扇防护门。"];
+	  21 [label="Jump to: [blast_door_main]"];
+	  22 [label="You: [离开。]"];
+	  23 [label="IsKimHere()"];
+	  24 [label="IsKimHere()", shape=diamond];
+	  25 [label="!(IsKimHere())", shape=diamond];
+	  26 [label="Kim Kitsuragi: 警督看看门，接着看向门的大哥，最后望向锁……“也许这扇也是我们*打不开*的那种门？”"];
+	  27 [label="Kim Kitsuragi: “好吧。”警督敲打着金属。“我收回自己的话，实在是太幼稚了。我们四处看看，能不能把它打开。”"];
+	  28 [label="Interfacing: 他是对的。最好还是打开它的*大哥*。天花板上悬挂着一台强力电机——肯定控制着那扇防护门。"];
+	  29 [label="You: “不，这不是‘又一扇门’。我们会打开它的。”"];
+	  30 [label="Jump to: [blast_door_main]"];
+	  31 [label="Small Blast Door: 燃料——>发电机——>控制台。这就是最显而易见的一条路。"];
+	  32 [label="You: “我觉得不太可能。”"];
+	  33 [label="IsKimHere()"];
+	  34 [label="IsKimHere()", shape=diamond];
+	  35 [label="!(IsKimHere())", shape=diamond];
+	  36 [label="You: “*极少数门*的其中之一？也许吧……”"];
+	  37 [label="Cuno: 他盯着上面阴森森的大门。“去他妈的，我们把这破烂玩意打开。找出背后的秘密。用秘密的风格。”"];
+	  38 [label="Kim Kitsuragi: “燃料——发电机——控制台。这样成功几率最大。”他指着房间另一头的控制台。“既然电源已经接通了，用那家伙应该就能打开。”"];
+	  39 [label="Cuno: “那边控制台？”他指着东南方。“是啊，是啊。我们把这破玩意打开吧。”\n“是啊，那边的控制台，记得吗？”他指着东南方。“按钮之类的破烂。是啊，是啊。我们把这破玩意打开吧，看起来像是最好的方案。”"];
+	  40 [label="Kim Kitsuragi: “可能是小岛的另一边。”警督望向锁眼。“这把锁看起来还能用。”"];
+	  41 [label="Jump to: [blast_door_main]"];
+	  42 [label="Interfacing: 也许你可以打开它那位*大哥*？天花板上悬挂着一台强力电机——肯定控制着那扇防护门。这附近一定有什么控制装置……"];
+	  43 [label="Variable[\"TASK.open_blast_door\"]"];
+	  44 [label="Variable[\"TASK.open_blast_door\"]", shape=diamond];
+	  45 [label="!(Variable[\"TASK.open_blast_door\"])", shape=diamond];
+	  46 [label="IsKimHere()"];
+	  47 [label="IsKimHere()", shape=diamond];
+	  48 [label="!(IsKimHere())", shape=diamond];
+	  49 [label="Jump to: [blast_door_main]"];
+	  50 [label="Cuno: “我们已经给发电机加过燃料了，不是吗？”他指着房间另一头的控制台。“你觉得那边那个破玩意是干什么的？走，我们去玩玩按钮。”"];
+	  51 [label="Jump to: [blast_door_main]"];
+	  52 [label="You: “当然，你说得对。我们没必要打开它。”"];
+	  53 [label="Kim Kitsuragi: “我想东南方向好像有个控制台……”他跺跺脚保持温度。“我们到处看看吧。打开防护门好像是最佳方案。”\n“是啊——就在东南边的控制台上。还记得吗？”他看了看那个方向，然后跺跺脚保持温度。“我们到处看看吧。打开防护门好像是最佳方案。”"];
+	  54 [label="Kim Kitsuragi: “燃料——发电机——控制台。这样成功几率最大。”他指着房间另一头的控制台。“那家伙应该能打开它，只要我们往发电机里加点燃料。”"];
+	  55 [label="Small Blast Door: 确实，怎么开？找到钥匙似乎是不可能的……"];
+	  56 [label="You: “不。从名义上讲，这只是*又一扇门*。我们会打开它的。”"];
+	  57 [label="Variable[\"TASK.fuel_the_generator\"]"];
+	  58 [label="Variable[\"TASK.fuel_the_generator\"]", shape=diamond];
+	  59 [label="!(Variable[\"TASK.fuel_the_generator\"])", shape=diamond];
+	  60 [label="Variable[\"TASK.fuel_the_generator_done\"]"];
+	  61 [label="Variable[\"TASK.fuel_the_generator_done\"]", shape=diamond];
+	  62 [label="!(Variable[\"TASK.fuel_the_generator_done\"])", shape=diamond];
+	  63 [label="Kim Kitsuragi: “好吧。”警督敲打着金属。“我收回自己的话，实在是太幼稚了。我们四处看看，能不能把它打开。”"];
+	  64 [label="You: “你说的对。我们就开那扇大的——你有没有看见控制装置？”"];
+	  65 [label="Variable[\"TASK.fuel_the_generator_done\"]"];
+	  66 [label="Variable[\"TASK.fuel_the_generator_done\"]", shape=diamond];
+	  67 [label="!(Variable[\"TASK.fuel_the_generator_done\"])", shape=diamond];
+	  68 [label="You: “当然，你说得对。我们没必要打开它。”"];
+	  69 [label="You: “我觉得要打开它是非常不可能的。”"];
+	  70 [label="Cuno: 他看看门，接着看向门的*大哥*，最后望向锁……“坤诺不知道怎么撬这种锁。这玩意……好像是军方的。”"];
+	  71 [label="Logic: 这里‘很重要的破玩意’的可能性很高，没错。"];
+	  72 [label="You: 我该怎么打开它？\n“我们怎么打开这个？”"];
+	  73 [label="Cuno: “死亡岛的另一边？坤诺想是一些秘密隐藏地之类的吧。很重要的破玩意..”"];
+	  74 [label="Variable[\"TASK.fuel_the_generator_done\"]"];
+	  75 [label="Variable[\"TASK.fuel_the_generator_done\"]", shape=diamond];
+	  76 [label="!(Variable[\"TASK.fuel_the_generator_done\"])", shape=diamond];
+	  77 [label="Small Blast Door: 门沉默无语，像坚冰一样冰冷。锁看起来好像最近刚用过，不过也很难说。"];
+	  78 [label="GainTask(\"TASK.fuel_generator\")--[[ Variable[ ]]"];
+	  79 [label="Small Blast Door: 你看见一面小铁门嵌在一扇更大的门里面。把手上方照例有一个钥匙孔，非常小的钥匙孔。"];
+	  80 [label="IsCunoInParty()"];
+	  81 [label="IsCunoInParty()", shape=diamond];
+	  82 [label="!(IsCunoInParty())", shape=diamond];
+	  83 [label="Jump to: [blast_door_main]"];
+	  0 -> 1
+	  1 -> 9
+	  2 -> 51
+	  3 -> 4
+	  4 -> 72
+	  4 -> 12
+	  4 -> 22
+	  5 -> 6
+	  5 -> 7
+	  6 -> 70
+	  7 -> 55
+	  8 -> 4
+	  9 -> 10
+	  9 -> 11
+	  10 -> 17
+	  11 -> 79
+	  12 -> 23
+	  13 -> 39
+	  14 -> 16
+	  14 -> 15
+	  15 -> 73
+	  16 -> 77
+	  17 -> 4
+	  18 -> 21
+	  19 -> 32
+	  19 -> 36
+	  19 -> 68
+	  19 -> 13
+	  19 -> 56
+	  21 -> 4
+	  23 -> 24
+	  23 -> 25
+	  24 -> 40
+	  25 -> 14
+	  26 -> 28
+	  27 -> 8
+	  28 -> 64
+	  28 -> 69
+	  28 -> 29
+	  28 -> 52
+	  29 -> 27
+	  30 -> 4
+	  31 -> 57
+	  32 -> 37
+	  33 -> 34
+	  33 -> 35
+	  34 -> 26
+	  35 -> 5
+	  36 -> 37
+	  37 -> 3
+	  38 -> 30
+	  39 -> 3
+	  40 -> 41
+	  41 -> 4
+	  42 -> 49
+	  43 -> 44
+	  43 -> 45
+	  44 -> 46
+	  45 -> 33
+	  46 -> 48
+	  46 -> 47
+	  47 -> 65
+	  48 -> 80
+	  49 -> 4
+	  50 -> 51
+	  51 -> 4
+	  52 -> 63
+	  53 -> 8
+	  54 -> 57
+	  55 -> 42
+	  56 -> 37
+	  57 -> 58
+	  57 -> 59
+	  58 -> 83
+	  59 -> 78
+	  60 -> 61
+	  60 -> 62
+	  61 -> 50
+	  62 -> 2
+	  63 -> 8
+	  64 -> 53
+	  65 -> 66
+	  65 -> 67
+	  66 -> 38
+	  67 -> 54
+	  68 -> 37
+	  69 -> 27
+	  70 -> 19
+	  71 -> 41
+	  72 -> 43
+	  73 -> 71
+	  74 -> 75
+	  74 -> 76
+	  75 -> 18
+	  76 -> 31
+	  77 -> 41
+	  78 -> 83
+	  79 -> 4
+	  80 -> 81
+	  80 -> 82
+	  81 -> 60
+	  82 -> 74
+	  83 -> 4
+}
+

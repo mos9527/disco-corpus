@@ -1,0 +1,111 @@
+# SHACK ORB / locust city logic
+# Cuno must have taken the locusts from the trap. Get task to confront him.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Perception (Hearing): Sounds like you found the locusts, detective."];
+	  3 [label="Variable[\"yard.cuno_greeting_done\"]"];
+	  4 [label="Variable[\"yard.cuno_greeting_done\"]", shape=diamond];
+	  5 [label="!(Variable[\"yard.cuno_greeting_done\"])", shape=diamond];
+	  6 [label="Kim Kitsuragi: \"I'll let you handle that side of things. You're doing just fine.\""];
+	  7 [label="You: \"Stop being so sarcastic, Kim.\""];
+	  8 [label="You: \"We should talk to the kid outside. It was probably him. Get him to stop.\" [Leave.]"];
+	  9 [label="Kim Kitsuragi: \"Well, detective, it appears you've solved the case...\" The lieutenant looks around, writes something in his notebook, and turns to you..."];
+	  10 [label="You: I should go and ask him to stop then. [Finish thought.]"];
+	  11 [label="You: I need to tell Morell..."];
+	  12 [label="Kim Kitsuragi: \"Instead, it was a kid's prank.\" He shrugs. \"But what do I know?\""];
+	  13 [label="Rhetoric: When someone says they're not being sarcastic, it's usually a good sign that they're being *very* sarcastic."];
+	  14 [label="Kim Kitsuragi: He shrugs. \"But what do I know?\""];
+	  15 [label="Kim Kitsuragi: \"Well, detective, it appears you're on the way to solving the case...\" The lieutenant looks around, writes something in his notebook, and turns to you..."];
+	  16 [label="You: What is this?"];
+	  17 [label="Kim Kitsuragi: \"The missing locust case, which is a sub-case of the imaginary insect case. So at least *that's* going well.\""];
+	  18 [label="Jump to: [Untitled hub]"];
+	  19 [label="Kim Kitsuragi: \"Of course. I'll leave that to you. You seem to have a *handle* on the phasmid-trap-insect situation.\""];
+	  20 [label="You: \"Wait -- could this mean the Insulindian phasmid is nearby?\""];
+	  21 [label="Perception (Hearing): Heaps of leaves are rotting among the mud-cake towers. Dozens of little locusts feed on them, buzzing away with vicious joy. The kid in the yard has really outdone himself here."];
+	  22 [label="Conceptualization: Like skyscrapers, spires of dirt and sand rising. Accommodations for their insectoid inhabitants?"];
+	  23 [label="Kim Kitsuragi: \"Oh, I'm not being sarcastic *at all*. We are making *real* progress here.\""];
+	  24 [label="Logic: Use your powers of deduction! You knew the magic bug was nowhere near here. The phasmid is impairing your judgement."];
+	  25 [label="Inland Empire: It's an ode to self expression."];
+	  26 [label="Kim Kitsuragi: \"Of the locusts. For the missing locust case, which is a sub-case of the imaginary insect case. So at least *that's* going well.\""];
+	  27 [label="Perception (Hearing): Heaps of leaves are rotting among the mud-cake towers. Dozens of little locusts feed on them, buzzing away with vicious joy. Cuno has really outdone himself here."];
+	  28 [label="Perception (Hearing): Sounds like you found the locusts, detective."];
+	  29 [label="Logic: Use your powers of deduction! You knew the bug was nowhere near here. The phasmid is impairing your judgement."];
+	  30 [label="IsKimHere()"];
+	  31 [label="IsKimHere()", shape=diamond];
+	  32 [label="!(IsKimHere())", shape=diamond];
+	  33 [label="You: \"We should talk to Cuno about this. Get him to stop.\" [Leave.]"];
+	  34 [label="IsKimHere()"];
+	  35 [label="IsKimHere()", shape=diamond];
+	  36 [label="!(IsKimHere())", shape=diamond];
+	  37 [label="Kim Kitsuragi: \"If anything, the presence of the locusts points to the opposite -- the phasmid did not take the bait from the traps. It was Cuno. The phasmid doesn't exist...\""];
+	  38 [label="Perception (Hearing): As you turn away, heaps of leaves are rotting among the mud-cake towers. Dozens of little locusts feed on them, buzzing away with vicious joy..."];
+	  39 [label="You: \"Yes, precisely what I was thinking!\""];
+	  41 [label="You: \"Yes. We need to tell Morell about this immediately.\""];
+	  42 [label="Kim Kitsuragi: \"If anything, the presence of the locusts points to the *opposite* -- the phasmid did not take the bait from the traps.\""];
+	  43 [label="You: \"You think the Insulindian phasmid is nearby?\""];
+	  44 [label="Conceptualization: It's the work of a self-taught visionary."];
+	  45 [label="Variable[\"TASK.find_phasmid\"]"];
+	  46 [label="Variable[\"TASK.find_phasmid\"]", shape=diamond];
+	  47 [label="!(Variable[\"TASK.find_phasmid\"])", shape=diamond];
+	  48 [label="Kim Kitsuragi: \"I'll let you handle the Cuno side of things. You're doing just fine.\""];
+	  49 [label="Perception (Hearing): All around you, the hisses and chirps of locusts fill the musky air. The earthen floor of the shack has been shaped into mounds of mud dotted with little holes for windows."];
+	  50 [label="Untitled hub"];
+	  51 [label="Kim Kitsuragi: \"Yes.\" He nods. \"I feel we are nearing a *real* breakthrough.\""];
+	  0 -> 1
+	  1 -> 49
+	  2 -> 11
+	  3 -> 4
+	  3 -> 5
+	  4 -> 27
+	  5 -> 21
+	  7 -> 23
+	  8 -> 6
+	  9 -> 26
+	  11 -> 38
+	  12 -> 29
+	  13 -> 50
+	  14 -> 24
+	  15 -> 17
+	  16 -> 3
+	  17 -> 41
+	  17 -> 20
+	  18 -> 50
+	  20 -> 42
+	  21 -> 25
+	  22 -> 45
+	  23 -> 13
+	  24 -> 18
+	  25 -> 44
+	  26 -> 7
+	  26 -> 39
+	  27 -> 25
+	  28 -> 16
+	  29 -> 41
+	  30 -> 32
+	  30 -> 31
+	  31 -> 9
+	  32 -> 28
+	  33 -> 48
+	  34 -> 35
+	  34 -> 36
+	  35 -> 15
+	  36 -> 2
+	  37 -> 14
+	  39 -> 51
+	  41 -> 19
+	  42 -> 12
+	  43 -> 37
+	  44 -> 10
+	  45 -> 46
+	  45 -> 47
+	  46 -> 30
+	  47 -> 34
+	  49 -> 22
+	  50 -> 8
+	  50 -> 33
+	  50 -> 43
+	  51 -> 50
+}
+

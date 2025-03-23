@@ -1,0 +1,291 @@
+# PAWNSHOP / RACK OF SECOND-HAND UNIFORMS
+# You look at and ask Roy about the Man from Hjelmdall T-Shirt.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Bird's Nest Roy: “粉丝……不，我倒没有那么夸张。但我确实觉得赫姆达尔英雄传是我们共享现实的一个组成部分。”"];
+	  3 [label="You: “也许我可以其他方法来支付？”"];
+	  4 [label="Empathy: 他对你不承认的行为表示惊讶。"];
+	  5 [label="Bird's Nest Roy: 他做了个鬼脸。“我倒是不会说自己是个粉丝。但我确实觉得*赫姆达尔英雄传*是我们共享现实的一个组成部分。”"];
+	  6 [label="Kim Kitsuragi: Variable[\"canal.hjelmdall_roy_real\"]"];
+	  7 [label="Variable[\"canal.hjelmdall_roy_real\"]", shape=diamond];
+	  8 [label="!(Variable[\"canal.hjelmdall_roy_real\"])", shape=diamond];
+	  9 [label="followinghub"];
+	  10 [label="Bird's Nest Roy: “再说了，我去过卡特拉——不过不像赫姆达尔那么偏北，看过极光划过天空。那里有非常独特的能量潮汐。”"];
+	  11 [label="Bird's Nest Roy: 他得意地笑了。“只是简单的因果问题，只要认识到它们是双向的就可以。”"];
+	  12 [label="Bird's Nest Roy: “那你就更要买下它了，”他露出一个干巴巴的笑容，“而且它也不是*很贵*。”"];
+	  13 [label="Jump to: [mainhub]"];
+	  14 [label="Bird's Nest Roy: “其实呢……”他靠了过去。“大部分人都不觉得*来自赫姆达尔的男人*真的存在，但是他们*错了*。”"];
+	  15 [label="Kim Kitsuragi: Variable[\"canal.hjelmdall_empathy_surprise\"]"];
+	  16 [label="Variable[\"canal.hjelmdall_empathy_surprise\"]", shape=diamond];
+	  17 [label="!(Variable[\"canal.hjelmdall_empathy_surprise\"])", shape=diamond];
+	  18 [label="You: “这件T恤卖多少钱？”"];
+	  19 [label="Bird's Nest Roy: “2雷亚尔。”"];
+	  20 [label="pricelogichub"];
+	  21 [label="Bird's Nest Roy: “它应该属于任何准备穿上它的人。”"];
+	  22 [label="You: “*来自赫姆达尔的男人*是一个超级明星，我也是个超级明星——那不是完美的吗！”"];
+	  23 [label="Bird's Nest Roy: 他用手指敲击着柜台。“我怀疑真正的*来自赫姆达尔的男人*就像通俗文学里的一样，是个可怜的角色模型。”"];
+	  24 [label="Jump to: [pricelogichub]"];
+	  25 [label="Bird's Nest Roy: “嗯，我觉得你可能在想其他人……我不喜欢音乐，”他皱起眉头，“所以我也不能告诉你是谁。”"];
+	  26 [label="Bird's Nest Roy: “哦……我明白了。那挺难的，伙计，我有时候也会有这种感觉。*来自赫姆达尔的男人*是一系列畅销作品里的主人公，故事是以虚构版的卡特拉创作的。”"];
+	  27 [label="You: “反正你说过，一切很快都会结束，伙计。我只想穿着这件T恤走向终结。”"];
+	  28 [label="Bird's Nest Roy: “有趣的选择。不过当然了，为什么不可以呢——拿着它吧。欢迎来到赫姆达尔。”"];
+	  29 [label="mainhub"];
+	  31 [label="Kim Kitsuragi: 警督抬高眉毛。“确实特别便宜。”"];
+	  32 [label="You: “赞，我会考虑一下。”"];
+	  33 [label="You: （撒谎）“我是个过度保护的孩子——我的父母只让我阅读讲普通人的无聊书籍，这个*来自赫姆达尔的男人看起来真的很*特别*。”"];
+	  34 [label="Bird's Nest Roy: “*来自赫姆达尔的男人*是一系列畅销作品里的主人公，故事是以虚构版的卡特拉创作的，现在主要指的是阿尔达NFD。”"];
+	  35 [label="Jump to: [mainhub]"];
+	  36 [label="Bird's Nest Roy: “他的儿子被绑架之后，他就离开了生养他的赫姆达尔村庄，踏上了精彩万分的冒险旅途，用手中的宝剑斩杀了很多敌人，不过中途他失去了自己的家人。真的挺惨烈的。”"];
+	  37 [label="Bird's Nest Roy: “其实没那么复杂。唯一需要的就是加深对因果关系的理解而已。”"];
+	  38 [label="You: “我现在要叫停这些鬼话了。”"];
+	  39 [label="Bird's Nest Roy: “当然了，那个人也不是真实存在的人，但是那个男人和赫姆达尔是存在论的必需品……”他突然停了下来。“不过，我们也没必要为了这个而争论。”"];
+	  40 [label="Physical Instrument: 别再说些傻里傻气的话了，这样会让你变得*弱不禁风*的。"];
+	  41 [label="Bird's Nest Roy: “没错了，伙计。”当铺老板听起来很热情。“我一般不会拿印花T恤的，但是这一件简直就是纯粹的范例。”"];
+	  42 [label="Kim Kitsuragi: IsKimHere()"];
+	  43 [label="IsKimHere()", shape=diamond];
+	  44 [label="!(IsKimHere())", shape=diamond];
+	  45 [label="Rack of Second-Hand Uniforms: *哦*，是啊。印花描绘着一个肌肉发达的男人，正大步朝你走来。他的每只手上都握着一把巨剑，周身被燃烧的火焰包围着。他身后是一排被火焰吞噬的小屋。下面是一行字：“燃烧的赫姆达尔。”"];
+	  46 [label="carewhohub"];
+	  47 [label="Bird's Nest Roy: “哈？”"];
+	  48 [label="You: “我说我最近失忆了，需要帮助才能想起现实的基本事实。”"];
+	  49 [label="Rack of Second-Hand Uniforms: 真是件好T恤。跟那个戴着鹿角，手持巨大双手剑的肌肉男相比，其他T恤瞬间显得苍白无力了。"];
+	  50 [label="You: “好吧，我考虑过了，我想买下这件T恤。”"];
+	  51 [label="Bird's Nest Roy: “闻一闻是可以的，”老板回答到。“但是请不要试穿任何衣服。不能把你的光子辐射留在你不打算买的衣物上。”"];
+	  52 [label="You: “你一定是*来自赫姆达尔的男人*的狂热粉丝。”"];
+	  53 [label="Jump to: [mainhub]"];
+	  54 [label="Kim Kitsuragi: “那是来自*来自赫姆达尔的男人*。”"];
+	  55 [label="Bird's Nest Roy: “离开他那被烧毁的村庄，是的。”"];
+	  56 [label="Jump to: [mainhub]"];
+	  57 [label="Bird's Nest Roy: “那可真是太悲惨了，伙计。你错过了一些写得很好，但是有些千篇一律的冒险文学作品。”"];
+	  58 [label="Bird's Nest Roy: “大部分人都不觉得*来自赫姆达尔的男人*真的存在，但是他们*错了*。”"];
+	  59 [label="Kim Kitsuragi: “好吧……”他听起来有些怀疑。"];
+	  60 [label="Bird's Nest Roy: “你好像很怀疑。其实没那么复杂。唯一需要的就是加深对因果关系的理解而已。”"];
+	  61 [label="Bird's Nest Roy: “没错。因果关系是双向的。”"];
+	  62 [label="Drama: 这是谎言，大人。没有任何理由。"];
+	  63 [label="Encyclopedia: 这样最好，因为赫姆达尔根本就*不是*一个真实的地方。因此他也不可能去过。"];
+	  64 [label="Bird's Nest Roy: “那是来自*来自赫姆达尔的男人*，他的村庄被烧毁的时候，他也离开了家乡。”"];
+	  65 [label="You: “这件T恤庆祝的是一个虚假的英雄，一个男性秩序的守护者。”"];
+	  66 [label="You: “听起来是个好主意，不过我真的不知道。”"];
+	  67 [label="Bird's Nest Roy: “哦，是这样的。”"];
+	  68 [label="Bird's Nest Roy: “欢迎来到赫姆达尔，警官。”"];
+	  69 [label="You: 是吗？"];
+	  70 [label="Encyclopedia: 男人斗篷兜帽上的鹿角，还有那双浅蓝色的眼睛看起来很熟悉……"];
+	  71 [label="You: “我们有很多相似之处。我也是*来自赫姆达尔的男人*的粉丝。”"];
+	  72 [label="You: “我猜我真的想不出什么好理由。”"];
+	  73 [label="Kim Kitsuragi: Variable[\"canal.hjelmdall_mainhub_reached\"]"];
+	  74 [label="Variable[\"canal.hjelmdall_mainhub_reached\"]", shape=diamond];
+	  75 [label="!(Variable[\"canal.hjelmdall_mainhub_reached\"])", shape=diamond];
+	  76 [label="Kim Kitsuragi: IsKimHere()"];
+	  77 [label="IsKimHere()", shape=diamond];
+	  78 [label="!(IsKimHere())", shape=diamond];
+	  79 [label="Rack of Second-Hand Uniforms: 像是旧棉花的味道。还有一点点汗味？"];
+	  80 [label="Bird's Nest Roy: 他想了想。“确实有点道理，没错。那就请拿走它吧——欢迎来到赫姆达尔。”"];
+	  81 [label="Bird's Nest Roy: “我很同情你，真的，但我这个店是要盈利的。”"];
+	  82 [label="You: “再提醒我一次，这个*来自赫姆达尔的男人*是谁？”"];
+	  83 [label="Kim Kitsuragi: 警督抬高眉毛。“*赫姆达尔*都不是一个真实的地方。”"];
+	  84 [label="Rack of Second-Hand Uniforms: 哇哦！一件非常大的红色T恤，上面的印花给人留下了深刻的印象，一下就从其他衣服里脱颖而出。"];
+	  85 [label="Jump to: [mainhub]"];
+	  86 [label="Bird's Nest Roy: “我的意思是——就算*来自赫姆达尔的男人*在冒险小说之前不存在，那个故事也让他变成了真实的存在。就是这么简单。”"];
+	  87 [label="Jump to: [mainhub]"];
+	  88 [label="You: “嗯哼，再多说点？”"];
+	  89 [label="Jump to: [mainhub]"];
+	  90 [label="Inland Empire: 确实是非常，*非常*独特的能量。甚至可以说是，地磁方位线。"];
+	  91 [label="Physical Instrument: 别再说些傻里傻气的话了，这样会让你变得*弱不禁风*的。赶快买下那件该死的T恤吧，它很强大。"];
+	  92 [label="You: “你就不能免费送我吗？”"];
+	  93 [label="You: “T恤上这个男人是怎么回事？”"];
+	  94 [label="Kim Kitsuragi: IsKimHere()"];
+	  95 [label="IsKimHere()", shape=diamond];
+	  96 [label="!(IsKimHere())", shape=diamond];
+	  97 [label="You: “因为我是个一文不名的警察，而且还身无分文。”"];
+	  98 [label="Bird's Nest Roy: “但是，没错，这些书非常的男性至上主义，不过表达方式并没有完全让人感到无趣。”"];
+	  99 [label="Kim Kitsuragi: IsKimHere()"];
+	  100 [label="IsKimHere()", shape=diamond];
+	  101 [label="!(IsKimHere())", shape=diamond];
+	  102 [label="Logic: 对于一件保存挺好的T恤来说，已经相当便宜了。"];
+	  103 [label="You: “这件真的特别便宜啊，不是吗？”"];
+	  104 [label="Bird's Nest Roy: 他皱起眉头。“但是……为什么？”"];
+	  105 [label="Bird's Nest Roy: “我经营的是商品，不是服务。”"];
+	  106 [label="You: “你说*来自赫姆达尔的男人*是真的，是什么意思？”"];
+	  107 [label="You: 闻闻T恤。"];
+	  108 [label="Perception (Smell): 旧棉花，再加上一点跳蚤市场或者是垃圾桶的味道。"];
+	  109 [label="Jump to: [mainhub]"];
+	  110 [label="You: “我完全跟不上。”\n“抱歉，我完全跟不上。”"];
+	  111 [label="Conceptualization: 他的理论并没有完全的*不合逻辑*，不过也确实暗示了某种*不寻常*的神经活动。有点意思……"];
+	  112 [label="Kim Kitsuragi: Variable[\"tc.hjelmdall\"]"];
+	  113 [label="Variable[\"tc.hjelmdall\"]", shape=diamond];
+	  114 [label="!(Variable[\"tc.hjelmdall\"])", shape=diamond];
+	  115 [label="You: “那是*来自赫姆达尔的男人*的T恤。”"];
+	  116 [label="Bird's Nest Roy: 他歪了歪头。“你应该这么做。”"];
+	  117 [label="You: “没关系。再跟我多说说这个*来自赫姆达尔的男人*。”"];
+	  118 [label="You: 放下T恤。[离开。]"];
+	  119 [label="You: “他是个跟音乐有关的超级明星，对吧？”"];
+	  120 [label="You: “我完全同意你的说法，伙计。现实有一种让自己首尾相接的方式。”"];
+	  121 [label="You: 现在不行。[离开。]"];
+	  122 [label="Rhetoric: 哇哦，什么？"];
+	  123 [label="Kim Kitsuragi: CheckItem(\"shirt_hjelmdall\")"];
+	  124 [label="CheckItem(\"shirt_hjelmdall\")", shape=diamond];
+	  125 [label="!(CheckItem(\"shirt_hjelmdall\"))", shape=diamond];
+	  126 [label="Inland Empire: 这不是你的想象。光子辐射？他在说什么呢？"];
+	  127 [label="Empathy: 他们不带一丝感情的平淡口吻掩饰着对你不认识印花上那个人的惊讶之情。"];
+	  128 [label="You: “我猜我应该知道这个*来自赫姆达尔的男人*是谁，但是我最近失忆了，需要帮助才能想起现实的基本事实。”"];
+	  129 [label="Bird's Nest Roy: “其实只是个简单的认知问题：因果关系是双向的。”"];
+	  0 -> 1
+	  1 -> 73
+	  2 -> 6
+	  3 -> 105
+	  4 -> 15
+	  5 -> 6
+	  6 -> 8
+	  6 -> 7
+	  7 -> 35
+	  8 -> 58
+	  9 -> 88
+	  9 -> 38
+	  9 -> 120
+	  9 -> 110
+	  10 -> 63
+	  11 -> 10
+	  12 -> 13
+	  13 -> 29
+	  14 -> 83
+	  15 -> 16
+	  15 -> 17
+	  16 -> 62
+	  17 -> 46
+	  18 -> 19
+	  19 -> 42
+	  20 -> 32
+	  20 -> 66
+	  20 -> 92
+	  20 -> 103
+	  21 -> 24
+	  22 -> 80
+	  23 -> 98
+	  24 -> 20
+	  25 -> 34
+	  26 -> 76
+	  27 -> 28
+	  29 -> 65
+	  29 -> 106
+	  29 -> 107
+	  29 -> 18
+	  29 -> 115
+	  29 -> 50
+	  29 -> 118
+	  29 -> 93
+	  31 -> 20
+	  32 -> 116
+	  33 -> 57
+	  34 -> 76
+	  35 -> 29
+	  36 -> 87
+	  37 -> 10
+	  38 -> 11
+	  39 -> 122
+	  40 -> 89
+	  41 -> 52
+	  41 -> 71
+	  42 -> 43
+	  42 -> 44
+	  43 -> 31
+	  44 -> 102
+	  45 -> 112
+	  46 -> 128
+	  46 -> 33
+	  46 -> 82
+	  46 -> 119
+	  47 -> 48
+	  47 -> 117
+	  48 -> 26
+	  49 -> 112
+	  50 -> 68
+	  51 -> 126
+	  52 -> 2
+	  53 -> 29
+	  54 -> 55
+	  55 -> 127
+	  56 -> 29
+	  57 -> 34
+	  58 -> 35
+	  59 -> 60
+	  60 -> 10
+	  61 -> 10
+	  62 -> 46
+	  63 -> 111
+	  64 -> 4
+	  65 -> 23
+	  66 -> 67
+	  67 -> 24
+	  69 -> 45
+	  70 -> 29
+	  71 -> 5
+	  72 -> 12
+	  73 -> 74
+	  73 -> 75
+	  74 -> 49
+	  75 -> 84
+	  76 -> 77
+	  76 -> 78
+	  77 -> 14
+	  78 -> 36
+	  79 -> 108
+	  81 -> 13
+	  82 -> 34
+	  83 -> 39
+	  84 -> 121
+	  84 -> 69
+	  85 -> 29
+	  86 -> 99
+	  87 -> 29
+	  88 -> 129
+	  89 -> 29
+	  90 -> 123
+	  91 -> 89
+	  92 -> 104
+	  93 -> 94
+	  94 -> 96
+	  94 -> 95
+	  95 -> 54
+	  96 -> 64
+	  97 -> 81
+	  98 -> 56
+	  99 -> 100
+	  99 -> 101
+	  100 -> 59
+	  101 -> 9
+	  102 -> 20
+	  103 -> 21
+	  104 -> 97
+	  104 -> 3
+	  104 -> 72
+	  104 -> 22
+	  104 -> 27
+	  105 -> 13
+	  106 -> 86
+	  107 -> 79
+	  108 -> 51
+	  109 -> 29
+	  110 -> 37
+	  111 -> 90
+	  112 -> 113
+	  112 -> 114
+	  113 -> 29
+	  114 -> 70
+	  115 -> 41
+	  116 -> 109
+	  117 -> 34
+	  119 -> 25
+	  120 -> 61
+	  122 -> 53
+	  123 -> 124
+	  123 -> 125
+	  124 -> 40
+	  125 -> 91
+	  126 -> 85
+	  127 -> 15
+	  128 -> 47
+	  129 -> 10
+}
+

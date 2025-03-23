@@ -1,0 +1,43 @@
+# BACKYARD / STONE
+# First follow-up convo with Kim where you discover keys under the stone.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: Ignore it. [Leave.]"];
+	  3 [label="Stone: There's a key beneath it, rusty from the dirt."];
+	  4 [label="Kim Kitsuragi: \"We'll just have to go in and see.\""];
+	  5 [label="IsKimHere()"];
+	  6 [label="IsKimHere()", shape=diamond];
+	  7 [label="!(IsKimHere())", shape=diamond];
+	  8 [label="Kim Kitsuragi: \"This must be for the front door. Pity it doesn't have the apartment number on it. This building has many apartments and the man can be in any of them...\""];
+	  9 [label="Stone: A stone like any other, lying in a whorl of sleet and mud. Maybe there's something under it?"];
+	  10 [label="Variable[\"TASK.where_does_the_smoker_on_the_balcony_live\"]"];
+	  11 [label="Variable[\"TASK.where_does_the_smoker_on_the_balcony_live\"]", shape=diamond];
+	  12 [label="!(Variable[\"TASK.where_does_the_smoker_on_the_balcony_live\"])", shape=diamond];
+	  13 [label="You: Put the stone back. [Leave.]"];
+	  14 [label="You: \"How are we going to find the right one?\""];
+	  15 [label="Kim Kitsuragi: \"This must be for the front door. Let's see if it works.\""];
+	  17 [label="Logic: Looks like it could belong to the building's front door."];
+	  18 [label="You: Turn it over."];
+	  0 -> 1
+	  1 -> 9
+	  3 -> 5
+	  4 -> 13
+	  5 -> 6
+	  5 -> 7
+	  6 -> 10
+	  7 -> 17
+	  8 -> 14
+	  9 -> 18
+	  9 -> 2
+	  10 -> 11
+	  10 -> 12
+	  11 -> 8
+	  12 -> 15
+	  14 -> 4
+	  15 -> 13
+	  17 -> 13
+	  18 -> 3
+}
+

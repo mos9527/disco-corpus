@@ -1,0 +1,78 @@
+# PLAZA ORB / working class husband
+# AUTHORITY: It's a working class woman's drunk husband.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: It's her husband! The missing husband!"];
+	  3 [label="You: I am."];
+	  5 [label="Authority: Not honourable, recruit!! Not honourable at all."];
+	  6 [label="You: This is non-sense. [Discard the thought.]"];
+	  7 [label="Authority: No. Stop goofing around, recruit!"];
+	  8 [label="You: [Discard thought.]"];
+	  9 [label="Authority: Cracked it. All in a good day's work."];
+	  10 [label="You: Give me champagne! I'm going *in*."];
+	  11 [label="Variable[\"tc.mullen\"]"];
+	  12 [label="Variable[\"tc.mullen\"]", shape=diamond];
+	  13 [label="!(Variable[\"tc.mullen\"])", shape=diamond];
+	  14 [label="You: Case solved!"];
+	  15 [label="Empathy: But he *is* missing. You heard her, the worry in her voice."];
+	  16 [label="Authority: There! Working class drunk! You know what this means, right?"];
+	  17 [label="Logic: Didn't she repeatedly tell you her husband isn't missing though?"];
+	  18 [label="Variable[\"plaza.working_authority_logic_husband_not_missing\"]"];
+	  19 [label="Variable[\"plaza.working_authority_logic_husband_not_missing\"]", shape=diamond];
+	  20 [label="!(Variable[\"plaza.working_authority_logic_husband_not_missing\"])", shape=diamond];
+	  21 [label="You: Wait, what did I crack exactly?"];
+	  22 [label="You: It's... uhm... some third option?"];
+	  23 [label="Jump to: [Authority case hub]"];
+	  24 [label="Authority: Yes. And you found him. Now go and tell the working class woman. Protect and serve, recruit!"];
+	  25 [label="You: This doesn't add up. I'm only making a fool of myself."];
+	  26 [label="Authority: There's no need for champagne when there's honour, recruit. Go and tell the working class woman what you found *right now*."];
+	  27 [label="You: It's the future leader of a proletarian uprising."];
+	  28 [label="You: Open and shut. I don't even need to think about this anymore. Goodbye. [Finish thought.]"];
+	  29 [label="Authority case hub"];
+	  30 [label="Answer hub"];
+	  31 [label="Authority: What do you mean *what did I crack*? Look at how working class that drunk is!"];
+	  32 [label="Authority: No, it's not."];
+	  33 [label="Authority: Who's Dick Mullen now?"];
+	  34 [label="Authority: Do marriages make any sense? Does honour? You're not a filthy philosopher, you're an officer of law. It's time to *ace this case* and not brood over your reputation. We can deal with the perception management later."];
+	  0 -> 1
+	  1 -> 16
+	  2 -> 24
+	  3 -> 9
+	  6 -> 5
+	  7 -> 23
+	  9 -> 28
+	  9 -> 21
+	  10 -> 26
+	  11 -> 12
+	  11 -> 13
+	  12 -> 33
+	  13 -> 9
+	  14 -> 11
+	  15 -> 30
+	  16 -> 8
+	  16 -> 14
+	  17 -> 18
+	  18 -> 19
+	  18 -> 20
+	  19 -> 15
+	  20 -> 30
+	  21 -> 31
+	  22 -> 7
+	  23 -> 29
+	  24 -> 17
+	  25 -> 34
+	  27 -> 32
+	  29 -> 2
+	  29 -> 27
+	  29 -> 22
+	  30 -> 25
+	  30 -> 10
+	  31 -> 29
+	  32 -> 23
+	  33 -> 3
+	  34 -> 10
+	  34 -> 6
+}
+

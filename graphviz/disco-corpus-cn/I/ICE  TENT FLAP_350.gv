@@ -1,0 +1,48 @@
+# ICE / TENT FLAP
+# Entering the tent and leaving Kim behind.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Andre: “来啊！进来吧，把你身后的挡板拉上！暖气都要跑出去了。”"];
+	  4 [label="Kim Kitsuragi: “你进去吧。我年纪大了，这种事不适合我……”"];
+	  5 [label="You: 挤进去。\n[挤进去。]"];
+	  6 [label="Andre: “抱歉。”他用拇指指着警督。“我们挤不下另外的人了。”"];
+	  7 [label="Tent Flap: 帐篷只是用油布覆盖着一堆东西搭建而成。拉开挡板，三个年轻人正听着某种新潮的，你闻所未闻的音乐。其中一人朝你看来。\n这顶帐篷不过是通过用一层油布盖着其他东西搭建而成。门帘敞开着。里面有三位青年——都穿着相当前卫的服饰，其造型令人联想起挂锁上的贴纸——他们正在听某种新式音乐。你从来没听过那种东西。其中一人注视着你。"];
+	  8 [label="Andre: IsKimHere()"];
+	  9 [label="IsKimHere()", shape=diamond];
+	  10 [label="!(IsKimHere())", shape=diamond];
+	  11 [label="mainhubs"];
+	  12 [label="You: “不行。”[离开。]"];
+	  13 [label="Andre: SetVariableValue(\"ice.tentflap_transport_without_kim\", true) ;GoTo(\"Tent-int\")--[[ Variable[ ]]"];
+	  14 [label="Andre: Variable[\"ice.tentflap_greeting_done\"]"];
+	  15 [label="Variable[\"ice.tentflap_greeting_done\"]", shape=diamond];
+	  16 [label="!(Variable[\"ice.tentflap_greeting_done\"])", shape=diamond];
+	  17 [label="Esprit de Corps: 他的真实想法是：“其实我不老，我只是讨厌小混混。”"];
+	  18 [label="Tent Flap: 你把警督留在外面，自己挤了进去。"];
+	  19 [label="Kim Kitsuragi: “我相信你会感觉宾至如归的。我会一直看着的。”他朝你比了个手势，让你挤进去。"];
+	  20 [label="Authority: 可以肯定这位就是他们的头领，至少他是这么认为的。"];
+	  21 [label="Andre: “来啊！进来吧，暖气都要跑出去了。”"];
+	  0 -> 1
+	  1 -> 14
+	  2 -> 20
+	  4 -> 17
+	  5 -> 8
+	  6 -> 4
+	  7 -> 2
+	  8 -> 9
+	  8 -> 10
+	  9 -> 6
+	  10 -> 13
+	  11 -> 12
+	  11 -> 5
+	  14 -> 16
+	  14 -> 15
+	  15 -> 21
+	  16 -> 7
+	  17 -> 19
+	  19 -> 18
+	  20 -> 11
+	  21 -> 11
+}
+

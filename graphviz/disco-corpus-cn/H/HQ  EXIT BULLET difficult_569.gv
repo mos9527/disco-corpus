@@ -1,0 +1,151 @@
+# HQ / EXIT BULLET difficult
+# The bullet you find in the shack, hinting that someone else has been staying here. Secretly.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 这颗子弹不是凶器那种后膛枪用的？"];
+	  3 [label="You: “你觉得它为什么会在这里？”"];
+	  4 [label="Kim Kitsuragi: “这是个重大突破，但是根据我听到的消息，这位露比好像很绝望。不管怎么说，”他又看了一眼子弹，“这已经足够跟那位洗衣女工当面对峙了。”"];
+	  5 [label="Loose Floorboard: 你把木板移回到原来的位置。"];
+	  6 [label="You: 是什么？"];
+	  7 [label="Loose Floorboard: 一个小型的柱状体。你把它取了出来——是一颗子弹。"];
+	  8 [label="You: “有可能。”"];
+	  9 [label="Empathy: 握着手中的子弹，你有一种感觉——这枚子弹不是用来对付你的。是她留给自己的。"];
+	  10 [label="You: “我觉得这是最后一招——如果到了必要关头，这颗子弹可以用来自杀。”"];
+	  12 [label="Kim Kitsuragi: “不管怎么说，”他又看了一眼子弹，“这已经足够跟她当面对峙了。”"];
+	  13 [label="Loose Floorboard: 你看着棚屋角落的地板，很显然，其中有一块没有跟其它的对齐。"];
+	  14 [label="CheckItem(\"gun_villiers\")"];
+	  15 [label="CheckItem(\"gun_villiers\")", shape=diamond];
+	  16 [label="!(CheckItem(\"gun_villiers\"))", shape=diamond];
+	  17 [label="Empathy: 想想你要什么，但是你的直觉告诉你，你知道不是这么回事。"];
+	  18 [label="Loose Floorboard: 这块地板不感兴趣——也许洗衣女工会呢？现在掌握的信息已经足够和她对峙了。"];
+	  19 [label="Encyclopedia: 准确的说，是9毫米的子弹，所有那种口径的前膛枪都适用。"];
+	  20 [label="IsKimHere()"];
+	  21 [label="IsKimHere()", shape=diamond];
+	  22 [label="!(IsKimHere())", shape=diamond];
+	  23 [label="Hand/Eye Coordination: 这是备用弹药。她已经锁定目标，准备跟警察对着干了。"];
+	  24 [label="Empathy: 握着手中的子弹，你有一种感觉——这枚子弹不是用来对付*你*的。是她留给自己的。"];
+	  25 [label="Loose Floorboard: 这块地板没什么好关注的——也许应该去找那个洗衣女工？现在掌握的信息已经足够和她对峙了。"];
+	  26 [label="IsKimHere()"];
+	  27 [label="IsKimHere()", shape=diamond];
+	  28 [label="!(IsKimHere())", shape=diamond];
+	  29 [label="You: “金，我觉得这些备用弹药是用来对付我们的。”"];
+	  30 [label="You: 仔细翻遍沙子和锯末。"];
+	  31 [label="Kim Kitsuragi: “是啊，RCM警官配的那种前膛枪用的。有意思。”"];
+	  32 [label="You: 看来有人全副武装，就等着我们了。"];
+	  33 [label="Loose Floorboard: 地板下的空洞黑暗而潮湿。你勉强辨认出下面是一滩沙子和锯末的混合物。"];
+	  34 [label="Variable[\"TASK.advanced_ballistics_analysis_done\"]  and  Variable[\"village.bullet_viscal_calibre\"]"];
+	  35 [label="Variable[\"TASK.advanced_ballistics_analysis_done\"]  and  Variable[\"village.bullet_viscal_calibre\"]", shape=diamond];
+	  36 [label="!(Variable[\"TASK.advanced_ballistics_analysis_done\"]  and  Variable[\"village.bullet_viscal_calibre\"])", shape=diamond];
+	  37 [label="Kim Kitsuragi: “有人藏起来，当做备用弹药？”"];
+	  38 [label="Variable[\"TASK.advanced_ballistics_analysis_done\"]  and  Variable[\"village.bullet_viscal_calibre\"]"];
+	  39 [label="Variable[\"TASK.advanced_ballistics_analysis_done\"]  and  Variable[\"village.bullet_viscal_calibre\"]", shape=diamond];
+	  40 [label="!(Variable[\"TASK.advanced_ballistics_analysis_done\"]  and  Variable[\"village.bullet_viscal_calibre\"])", shape=diamond];
+	  41 [label="Kim Kitsuragi: 警督仔细研究手中的子弹。“不过，还是很有意思。”"];
+	  42 [label="You: “露比？”"];
+	  43 [label="You: 把木板移到一边。"];
+	  44 [label="You: “看，一颗子弹！不过不是后膛枪的……”"];
+	  45 [label="You: “警督，是一颗子弹！”"];
+	  46 [label="Jump to: [Untitled hub (04)]"];
+	  47 [label="Untitled hub"];
+	  48 [label="You: 呃，我不想把手伸进去。[离开。]"];
+	  49 [label="Untitled hub (04)"];
+	  50 [label="Kim Kitsuragi: “这是个重大突破——但是我们应该警惕些。不管怎么说，”他又看了一眼子弹，“这已经足够跟那位洗衣女工当面对峙了。”"];
+	  51 [label="Kim Kitsuragi: “发现什么有意思的东西了吗？”"];
+	  52 [label="Visual Calculus: 旁边地板的边缘好像被划过。"];
+	  53 [label="Untitled hub (02)"];
+	  54 [label="Loose Floorboard: 你把手探进去，开始在沙子里面仔细搜寻。干燥，跟外面的不一样。细细的尘土……然后——你摸到一个包在纸里的硬东西。"];
+	  55 [label="You: 没什么有意思的。[离开。]"];
+	  56 [label="You: 一颗子弹，有意思。"];
+	  57 [label="You: “那我们走吧。”[离开。]"];
+	  58 [label="Encyclopedia: 准确的说，是9毫米的子弹。所有那种口径的前膛枪都适用，打个比方：你的维利耶手枪就可以。"];
+	  59 [label="Kim Kitsuragi: 警督点点头。"];
+	  60 [label="Kim Kitsuragi: “不清楚，也许吧。那个洗衣女工肯定有所隐瞒——她*确实*把这个地方租给了别人。”"];
+	  61 [label="Variable[\"village.bullet_empathy\"]"];
+	  62 [label="Variable[\"village.bullet_empathy\"]", shape=diamond];
+	  63 [label="!(Variable[\"village.bullet_empathy\"])", shape=diamond];
+	  64 [label="Loose Floorboard: 你的眼睛没发现什么特别的东西，看起来像是芦苇。不过，也许沙子里藏了些什么。"];
+	  65 [label="Jump to: [Untitled hub (02)]"];
+	  66 [label="Loose Floorboard: 灰尘及时地落在了木板上，掩盖了所有痕迹。"];
+	  67 [label="Inland Empire: 不好的东西。某人在深夜里的突发奇想。最后一招。一个坏主意。"];
+	  68 [label="You: 里面是什么？"];
+	  0 -> 1
+	  1 -> 13
+	  2 -> 18
+	  3 -> 37
+	  4 -> 57
+	  6 -> 7
+	  7 -> 14
+	  8 -> 59
+	  9 -> 61
+	  10 -> 4
+	  12 -> 57
+	  13 -> 52
+	  14 -> 16
+	  14 -> 15
+	  15 -> 58
+	  16 -> 19
+	  17 -> 46
+	  18 -> 23
+	  19 -> 20
+	  20 -> 21
+	  20 -> 22
+	  21 -> 38
+	  22 -> 34
+	  23 -> 24
+	  25 -> 23
+	  26 -> 27
+	  26 -> 28
+	  27 -> 51
+	  28 -> 53
+	  29 -> 50
+	  30 -> 54
+	  31 -> 3
+	  32 -> 17
+	  33 -> 47
+	  34 -> 35
+	  34 -> 36
+	  35 -> 2
+	  36 -> 56
+	  37 -> 42
+	  38 -> 40
+	  38 -> 39
+	  39 -> 44
+	  40 -> 45
+	  41 -> 3
+	  42 -> 60
+	  43 -> 33
+	  44 -> 41
+	  45 -> 31
+	  46 -> 49
+	  47 -> 48
+	  47 -> 68
+	  47 -> 30
+	  48 -> 5
+	  49 -> 32
+	  49 -> 10
+	  49 -> 29
+	  50 -> 57
+	  51 -> 53
+	  52 -> 26
+	  53 -> 8
+	  53 -> 43
+	  53 -> 55
+	  54 -> 6
+	  55 -> 66
+	  56 -> 25
+	  58 -> 20
+	  59 -> 65
+	  60 -> 9
+	  61 -> 62
+	  61 -> 63
+	  62 -> 49
+	  63 -> 12
+	  64 -> 67
+	  65 -> 53
+	  67 -> 48
+	  67 -> 30
+	  68 -> 64
+}
+

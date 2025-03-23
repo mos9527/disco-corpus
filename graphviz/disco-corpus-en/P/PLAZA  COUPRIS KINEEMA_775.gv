@@ -1,0 +1,1670 @@
+# PLAZA / COUPRIS KINEEMA
+# Lieutenant Kitsuragi's Coupris Kineema. With the built in shortwave radio and a trunk full of goodies, here lies the answer to the question that's been bothering you - what tore me from the soft abyss this morning.
+#
+#* Gain item: Crowbar
+#* Gain item: bodybags
+#* Gain item: Chaincutters
+#* Gain item: Fire extinguisher
+#* Gain secret task: Cut something.
+#* Gain task: Get a Primer-book.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: Tap on the fuel pre-heater gauge."];
+	  3 [label="Untitled hub"];
+	  4 [label="Kim Kitsuragi: He flashes a smile, barely visible in the dark."];
+	  5 [label="Alice: CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  6 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  7 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  8 [label="Jump to: [MAIN HUB]"];
+	  9 [label="Coupris Kineema: Before you stands a motor carriage. The bodywork is covered in blue and white livery bearing the number 57."];
+	  10 [label="Alice: Variable[\"whirling.kineema_TH_check_success\"]"];
+	  11 [label="Variable[\"whirling.kineema_TH_check_success\"]", shape=diamond];
+	  12 [label="!(Variable[\"whirling.kineema_TH_check_success\"])", shape=diamond];
+	  13 [label="You: Tap on the fuel pre-heater gauge."];
+	  14 [label="DEATH COMES FOR EVERYONE"];
+	  15 [label="You: \"Alice, I need you to connect me to Speedfreaks FM.\""];
+	  16 [label="You: \"Are you insulting an officer of the Law, punk?\""];
+	  17 [label="DJ Mesh: \"Yeah, that is the song. 'An Asshole Is A Mouth For Shit (And I'm Puking).'\""];
+	  18 [label="You: \"Exactly like that. Because I think you're an enemy of traditional values forcing your filth on the innocent.\""];
+	  19 [label="You: Say nothing."];
+	  20 [label="You: \"No, that was it. Thank you for your time.\""];
+	  21 [label="DJ Mesh: \"Later, cop-man.\""];
+	  22 [label="Coupris Kineema: An audio-assault descends full force on you. Sonic daggers fly forth from the Kineema's speakers. The soundwaves would slice you if they could."];
+	  23 [label="DJ Mesh: \"That's, uh... Well, have you got *any* address I can send shit to, man?\""];
+	  24 [label="Alice: IsKimHere()"];
+	  25 [label="IsKimHere()", shape=diamond];
+	  26 [label="!(IsKimHere())", shape=diamond];
+	  27 [label="You: \"Change of plans, Alice -- connect me to *you*.\""];
+	  28 [label="DJ Mesh: \"...AS ALWAYS IT'S DJS MESH AND FLACIO AND YOU'RE LISTENING TO S-S-S-SSS-SSSPEE-EED FREAKS FM, BRINGING YOU THE HOTTEST, THE NASTIEST, THE MOST VULGAR...\""];
+	  29 [label="Kim Kitsuragi: \"Someone must have been messing with the radio, or maybe it picked up a random frequency... You wanted the primeline, right?\""];
+	  30 [label="You: \"*Speedfreaks FM*, huh?\" (Look him in the eye.)"];
+	  31 [label="Kim Kitsuragi: \"I have something in the back we could sell so you can pay for your room. Open the suspect transport enclosure.\""];
+	  32 [label="You: \"You mean the cage, right?\""];
+	  33 [label="You: \"This is... Harry. I guess. Lieutenant Kitsuragi is my partner on a case.\""];
+	  34 [label="no_kim_radio"];
+	  35 [label="Jump to: [Coupris Kineema: \"In the cabin you see a set of steer...\"]"];
+	  36 [label="Alice: \"...\""];
+	  37 [label="You: \"I'm pretty sure I like neither motorcars or any 'TipTops'.\""];
+	  38 [label="Alice: Variable[\"plaza.kineema_interfacing_sportsmodel\"]"];
+	  39 [label="Variable[\"plaza.kineema_interfacing_sportsmodel\"]", shape=diamond];
+	  40 [label="!(Variable[\"plaza.kineema_interfacing_sportsmodel\"])", shape=diamond];
+	  41 [label="You: \"Hi, Alice, I'm a policeman too. Nice to meet you.\""];
+	  42 [label="Empathy: He's downplaying his excitement -- the lieutenant is more than happy to show off his precious carriage."];
+	  43 [label="You: \"What do you mean you 'confiscated' them?\""];
+	  44 [label="Jump to: [MAIN HUB]"];
+	  45 [label="Jump to: [Alice: \"\"This is Precinct 57. Can I connect...\"]"];
+	  46 [label="Horrific Necktie: Oh, did you hear that? How she said 'officer'?! She's a wild one, wants it bad, bratan. Get that party going!"];
+	  47 [label="Horrific Necktie: Yeah, bratan, otherwise you're always gonna be wondering what could've been. Just ask her!"];
+	  48 [label="You: \"Hello?\""];
+	  49 [label="DJ Mesh: \"Yo yo yo! You got DJ Mesh here, my man. I got a few minutes before I gotta go back on air. What do you need?\""];
+	  50 [label="You: \"I'm so sorry to bother you. I just have a question.\""];
+	  51 [label="DJ Mesh: \"Ain't a bother, brother. Anyway, I only got a few minutes before I gotta go back on air. What do you need?\""];
+	  52 [label="DJ Mesh: \"I really think it's the future of music, I do. Fuckin', like, stinkcore, or something. Shit's so nasty, those stinkwaves come up like soundwaves, you know what I mean?\""];
+	  53 [label="You: \"Is that legal to play?\""];
+	  54 [label="DJ Mesh: \"It's illegal not to play, man. When you got that kind of music in you, the universe demands you let it out, know what I mean?\""];
+	  55 [label="DJ Mesh: \"Right. Is there anything else you need, or can I hang up the fucking phone now?\""];
+	  56 [label="You: \"Just one more thing -- give a shoutout Lieutenant Kim Kitsuragi. He *coincidentally* has you saved to his radio.\"\n\"Just one thing -- give a big shoutout to my man, Lieutenant Kim Kitsuragi. He's a huge fan of the station.\""];
+	  57 [label="You: Turn the radio back to PRIMELINE."];
+	  58 [label="You: \"It's okay to like what you like, Kim.\""];
+	  59 [label="Kim Kitsuragi: \"Mhm.\" The lieutenant frowns at you."];
+	  60 [label="Authority: That eyebrow! He's using his Authority against you... you... can't resist..."];
+	  61 [label="Coupris Kineema: The frequency tableau lights up and a green button labelled PRIMELINE glows like a feline eye... and then you hear something."];
+	  62 [label="DJ Mesh: \"Now, was there anything else you wanted to ask?\""];
+	  63 [label="You: \"Did you find out more about the owner of the armoured boots?\""];
+	  64 [label="You: \"Lieutenant Harrier Du Bois, reporting in. I'm on a case with Lieutenant Kitsuragi.\""];
+	  65 [label="You: \"He's investigating a lead on his own. Listen, I need help.\""];
+	  66 [label="Alice: \"That is a pretty big problem, yes.\" She seems to sigh. \"Alright. Next time, have Lieutenant Kitsuragi with you.\""];
+	  67 [label="You: Take the red-tipped prybar."];
+	  68 [label="Kim Kitsuragi: \"No, I'm afraid not.\" He straightens his spine. \"We have a murder case on our hands, remember?\""];
+	  69 [label="You: \"What's TipTop?\""];
+	  70 [label="Coupris Kineema: The radio DJ stops. For a moment it seems like he has ran out of things to say..."];
+	  71 [label="You: Turn the radio back to PRIMELINE."];
+	  72 [label="Coupris Kineema: The soft purr of electrical kittens -- radio waves cast far and wide over the metropolis. A woman's voice greets you through the static:"];
+	  73 [label="Kim Kitsuragi: \"That they are.\" The lieutenant looks at the spinners and sighs. \"I was going to take them into evidence, but they weren't necessary for conviction. He never asked for them back.\""];
+	  74 [label="Kim Kitsuragi: \"Take what you need, officer. It's going to be a long case. I'm not *protective* of my tools. Like some men are...\""];
+	  75 [label="Alice: IsKimHere()"];
+	  76 [label="IsKimHere()", shape=diamond];
+	  77 [label="!(IsKimHere())", shape=diamond];
+	  78 [label="Kim Kitsuragi: \"A motorized vehicle, officer. I'm sure you are familiar with the concept. We've had these for nearly a century.\""];
+	  79 [label="Kim Kitsuragi: \"As I said, they're useless anyway. I should have remembered I have these earlier...\""];
+	  80 [label="Electrochemistry: C'mon, wake up! The way she said she's not Sylvie -- practically begging you to make a move. Just go for it."];
+	  81 [label="Alice: CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  82 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  83 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  84 [label="Alice: IsKimHere()"];
+	  85 [label="IsKimHere()", shape=diamond];
+	  86 [label="!(IsKimHere())", shape=diamond];
+	  87 [label="Alice: \"This is Officer Alice DeMettrie, Precinct 57. How may I assist you?\" a voice replies in the radio."];
+	  88 [label="MAIN HUB"];
+	  89 [label="You: Close the door. [Leave.]"];
+	  90 [label="Jump to: [MAIN HUB]"];
+	  91 [label="Untitled hub (07)"];
+	  92 [label="DJ Mesh: \"Very cool, man, I'm dead serious when I say, Flacio is going to make it big in this world.\""];
+	  93 [label="DJ Mesh: \"Right, well -- no, we don't force radio into peoples heads. Don't know how you'd even do that, man.\""];
+	  94 [label="DJ Mesh: \"My pleasure, comrade cop. Is there anything else you needed?\""];
+	  95 [label="Kim Kitsuragi: The lieutenant stares at you, his jaw clenched. A vein strains on his temple."];
+	  96 [label="Reaction Speed: You should check the radio again!"];
+	  97 [label="Alice: IsKimHere()"];
+	  98 [label="IsKimHere()", shape=diamond];
+	  99 [label="!(IsKimHere())", shape=diamond];
+	  100 [label="Kim Kitsuragi: \"Excuse me?\""];
+	  101 [label="Volition: Just leave it alone. He clearly doesn't want to share this with you."];
+	  102 [label="Reaction Speed: Merchandise. Ask for Speedfreaks FM merchandise."];
+	  103 [label="You: \"Send it to the Whirling-in-Rags, in Martinaise.\""];
+	  104 [label="You: \"Come in dispatch, come in dispatch!\""];
+	  105 [label="You: \"Come in, Delta-Ten, this is Firewalker, copy.\""];
+	  106 [label="Kim Kitsuragi: \"Yes, hold on...\" the lieutenant takes a look at his notes. \"Her number is 005 1944 298.\""];
+	  107 [label="Jump to: [The actual Radio HUB]"];
+	  108 [label="You: \"Right, you don't want to get into this, no problem.\""];
+	  109 [label="Alice: \"...\""];
+	  110 [label="Alice: SetVariableValue(\"plaza.kineema_left_after_ignition\", true) --[[ Variable[ ]]"];
+	  111 [label="Kim Kitsuragi: \"You're right.\" A vainglorious smile spreads over his face as he pats his machine. \"I didn't take you for a motorcar enthusiast. Do you also like TipTop, detective?\""];
+	  112 [label="You: Yes -- where?"];
+	  113 [label="Shivers: The Valley of Dogs -- and before it, a familiar dome, like a ladybug without the colours. The building has a designated parking place for *your* carriage."];
+	  114 [label="Coupris Kineema: The prybar feels nice and cold in your hand. Heavier than you'd think."];
+	  115 [label="Jump to: [TOOLBOX]"];
+	  116 [label="Inland Empire: A dark feeling. This is going wrong. Let go of the clutch."];
+	  117 [label="You: What?"];
+	  118 [label="Alice: \"Who doesn't,\" she states matter of factly. \"Now, how can I help you in your *investigation*?\""];
+	  119 [label="Coupris Kineema: Silence."];
+	  120 [label="Jump to: [You: \"\"Hey, Sylvie, it's the police again.\"\"]"];
+	  121 [label="Alice: Variable[\"plaza.kineema_sync_circulation\"]"];
+	  122 [label="Variable[\"plaza.kineema_sync_circulation\"]", shape=diamond];
+	  123 [label="!(Variable[\"plaza.kineema_sync_circulation\"])", shape=diamond];
+	  124 [label="You: Take the rubber-handled chaincutters."];
+	  125 [label="Perception (Hearing): \"Really?\" he says, low and tired."];
+	  126 [label="New jump"];
+	  127 [label="You: \"Yo yo!\""];
+	  128 [label="You: \"No, I was just asking -- and dreaming up a bold new money making scheme.\""];
+	  129 [label="You: \"No, that wasn't my fascist line, that was my ultraliberal one. I can do the fascist one if you want.\""];
+	  130 [label="Esprit de Corps: You crossed a line. This will not be forgotten."];
+	  131 [label="Alice: IsKimHere()"];
+	  132 [label="IsKimHere()", shape=diamond];
+	  133 [label="!(IsKimHere())", shape=diamond];
+	  134 [label="You: \"C'mon, man! You can tell me!\""];
+	  135 [label="Coupris Kineema: The lights unfold with a little click, casting electrical light onto the ground before the vehicle."];
+	  136 [label="Kim Kitsuragi: Right away the lieutenant reaches into the cabin and turns off the radio. He's not looking at you as he says:"];
+	  137 [label="You: Look around the cabin again."];
+	  138 [label="Kim Kitsuragi: \"Oh.\" He looks visibly disappointed. \"I guess it's not for everyone.\""];
+	  139 [label="Jump to: [Coupris Kineema: \"In the cabin you see a set of steer...\"]"];
+	  140 [label="You: What is this sinking feeling I have with the words *motor carriage*?"];
+	  141 [label="Perception (Sight): A flock of seagulls takes off nearby, startled by the roaring radio."];
+	  142 [label="Kim Kitsuragi: \"I don't know, is it?\" The lieutenant looks back, stone-faced. \"I was going to take them into evidence, but they weren't necessary for conviction. He never asked for them back.\""];
+	  143 [label="Coupris Kineema: It's robust, weatherproof and well made. Police issue -- blue."];
+	  144 [label="Authority: Alternative translation: Don't even *think* you can drive my MC."];
+	  145 [label="Kim Kitsuragi: \"It's been this way for a while now.\" The lieutenant shrugs. \"My guess is, the Union is listening in on our conversations -- and jamming outward communications to protect themselves from Krenel.\""];
+	  146 [label="Interfacing: Your fingers waste no time closing around the handle. Clutch disengaged. Release the handle -- clutch drops -- right foot yearns for the familiar touch of the accelerator pedal. You have synced with the machine's mechanical circulation."];
+	  147 [label="Jump to: [very_interfacing]"];
+	  148 [label="Inland Empire: Because it's lonely. Just like you. Seaweed and strange fish around it, limpets clinging to the carcass... The sounds of the streets above..."];
+	  149 [label="TOOLBOX"];
+	  150 [label="Alice: \"Okay, officer. One moment.\""];
+	  151 [label="DJ Mesh: \"It is. I got a few minutes before I gotta go back on air. What can I do for you, cop-man?\""];
+	  152 [label="DJ Mesh: \"Thank you very much! Yeah, it's the shit-hot new single from DJ Flacio. Really shredding up the sonic waves.\""];
+	  153 [label="You: \"Sure, man. I'm young, cool, and with it.\""];
+	  154 [label="DJ Mesh: \"DJ Mesh out.\""];
+	  155 [label="Reaction Speed: You should check the radio!"];
+	  156 [label="Alice: Variable[\"plaza.kineema_radio_speedfreaks\"] == true"];
+	  157 [label="Variable[\"plaza.kineema_radio_speedfreaks\"] == true", shape=diamond];
+	  158 [label="!(Variable[\"plaza.kineema_radio_speedfreaks\"] == true)", shape=diamond];
+	  159 [label="Alice: Variable[\"plaza.kineema_mesh_ugly_hate\"]"];
+	  160 [label="Variable[\"plaza.kineema_mesh_ugly_hate\"]", shape=diamond];
+	  161 [label="!(Variable[\"plaza.kineema_mesh_ugly_hate\"])", shape=diamond];
+	  162 [label="DJ Mesh: \"...SPOKE TO THE W-W-WILDEST COP IN REVACHOL.\"\nAfter a moment of fiddling with the radio, you push the glowing SAVED button. And on comes a familiar voice: \"...SPOKE TO THE W-W-WILDEST COP IN REVACHOL.\""];
+	  163 [label="Reaction Speed: That quickfire patter -- is this the voice the twins heard?"];
+	  164 [label="Jump to: [You: \"\"Sorry about it, I wanted to contac...\"]"];
+	  165 [label="Half Light: Why the fuck can't he just admit it? Don't let this go. Hound him until he admits it."];
+	  166 [label="Kim Kitsuragi: The lieutenant raises an eyebrow. The ocean wind blows, bringing in the smell of salt."];
+	  167 [label="Kim Kitsuragi: He remains silent."];
+	  168 [label="Jump to: [The actual Radio HUB]"];
+	  169 [label="Sylvie: \"Yes, hello!\" A female voice greets you through static -- it sounds like she's million miles away from here."];
+	  170 [label="Alice: \"Officer?\" You hear phones ringing and people talking in the background."];
+	  171 [label="Alice: \"Fifty-seventh, over and out.\" Her voice disappears into the void."];
+	  172 [label="DJ Flacio: \"... AND NOW FOR SOME MUSIC!\" another voice screams into the microphone. Rhythmic rock music fills the cabin, as the back-to-back DJs mix it with sounds from car crashes and illegal speeding competitions."];
+	  173 [label="Conceptualization: This is art... *underground* art... a *scene*."];
+	  174 [label="You: Pick up the radio again."];
+	  175 [label="Reaction Speed: Go for it -- turn the radio back on while it's still on the Speedfreaks FM!"];
+	  176 [label="Kim Kitsuragi: \"Yes, there's one 100 metres south of here, I think it's called Roy's Nest or something. If I'm not mistaken it should be open late.\""];
+	  177 [label="Kim Kitsuragi: \"Yes.\" He frowns. \"I've never liked that crude name. It doesn't do much to improve the RCM's reputation.\""];
+	  178 [label="Alice: \"Yes, hello? Who is this?\" There's a pause. \"My records show this channel is used by Lieutenant Kim Kitsuragi.\""];
+	  179 [label="Alice: \"Who is this?\" There's a pause. \"My records show this channel is used by Lieutenant Kim Kitsuragi.\""];
+	  180 [label="Interfacing: But this is different -- this is a sports model."];
+	  181 [label="Jump to: [what is this machine hub]"];
+	  182 [label="Kim Kitsuragi: \"But seriously, let's quit joking around, alright? We have a case to investigate.\" He turns back to the cabin."];
+	  183 [label="Electrochemistry: Change of plans -- *her* number."];
+	  184 [label="Alice: \"...\""];
+	  185 [label="You: Pick up the radio again."];
+	  186 [label="Electrochemistry: Odd... she didn't sound menopausal. Must be frigid or something. Oh well."];
+	  187 [label="Jump to: [Call People]"];
+	  188 [label="Logic: This must be the infernal machine that tore you from oblivion -- the Coupris Kineema motor carriage."];
+	  189 [label="Interfacing: You feel an uninterrupted connection to the mechanics."];
+	  190 [label="Interfacing: At the bottom of the sea..."];
+	  191 [label="Kim Kitsuragi: The lieutenant sighs under his breath."];
+	  192 [label="Alice: \"...\""];
+	  193 [label="You: \"Sure! Forced radio. Can't tune out. You'd make a killing on ads!\""];
+	  194 [label="You: \"Yeah, like that. Maybe it was part of your civic duty, you were just testing it out for the government.\""];
+	  195 [label="Jump to: [Kim Kitsuragi: \"Right away the lieutenant reaches i...\"]"];
+	  196 [label="Alice: Variable[\"village.twins_spoke_to_boys_about_swearing_done\"]"];
+	  197 [label="Variable[\"village.twins_spoke_to_boys_about_swearing_done\"]", shape=diamond];
+	  198 [label="!(Variable[\"village.twins_spoke_to_boys_about_swearing_done\"])", shape=diamond];
+	  199 [label="You: \"Wait! Can you send me any Speedfreaks merch?\""];
+	  200 [label="You: \"Kim, didn't Garte give you Sylvie's number?\"\n\"Kim, didn't Garte give you Sylvie Malaìika's number?\""];
+	  201 [label="The actual Radio HUB"];
+	  202 [label="Jump to: [Call People]"];
+	  203 [label="Alice: IsKimHere()"];
+	  204 [label="IsKimHere()", shape=diamond];
+	  205 [label="!(IsKimHere())", shape=diamond];
+	  206 [label="Kim Kitsuragi: \"Thank you.\" His eyes glide over the plaza, making sure that no one heard the sudden blast from the radio, before he turns back to the cabin."];
+	  207 [label="Jump to: [The actual Radio HUB]"];
+	  208 [label="Jump to: [spinnershub]"];
+	  209 [label="Jump to: [Alice: \"\"Just a second, officer...\" She put...\"]"];
+	  210 [label="You: \"No, wait! We're solving a murder case in Martinaise.\""];
+	  211 [label="You: \"Do all policemen in the RCM have such *cool* motor carriages?\""];
+	  212 [label="You: (Squint your eyes) \"Okay, but what *is* a motor carriage?\""];
+	  213 [label="You: \"No, I don't care about motorcars, I just know about random things.\""];
+	  214 [label="Jump to: [what is this machine hub]"];
+	  215 [label="Inland Empire: Nothing. Nothing. It's probably nothing, forget I brought it up. Please proceed with the carefree lollygagging."];
+	  216 [label="Alice: Variable[\"plaza.kineema_shivers_where_too\"]"];
+	  217 [label="Variable[\"plaza.kineema_shivers_where_too\"]", shape=diamond];
+	  218 [label="!(Variable[\"plaza.kineema_shivers_where_too\"])", shape=diamond];
+	  219 [label="Coupris Kineema: The handles are long and sleek. *Snap-snap* go the cutters in your hand."];
+	  220 [label="Jump to: [TOOLBOX]"];
+	  221 [label="Perception (Sight): Let's you see things in the dark you would otherwise miss..."];
+	  222 [label="Alice: Variable[\"TASK.read_the_watermark_done\"]"];
+	  223 [label="Variable[\"TASK.read_the_watermark_done\"]", shape=diamond];
+	  224 [label="!(Variable[\"TASK.read_the_watermark_done\"])", shape=diamond];
+	  225 [label="Alice: IsKimHere()"];
+	  226 [label="IsKimHere()", shape=diamond];
+	  227 [label="!(IsKimHere())", shape=diamond];
+	  228 [label="Alice: \"Just a second, officer...\""];
+	  229 [label="Interfacing: Honestly, that sounds like an *amazing* physics demonstration."];
+	  230 [label="You: \"Yes. Outrageously cool.\""];
+	  231 [label="Kim Kitsuragi: \"Don't make your unpaid hostel bill a *moral boon*, officer. It won't stick.\""];
+	  232 [label="Volition: *You* told him to do that stupid thing..."];
+	  233 [label="You: \"Precinct 57, we've been attacked. I repeat -- Lieutenant Kim Kitsuragi and...\""];
+	  234 [label="Coupris Kineema: The white suede feels luxurious under the touch and the metal clutch handle so very familiar in your palm..."];
+	  235 [label="Coupris Kineema: The pull-out toolbox slides back into its nest. Pre-heater gauge casts a warm glow on the steering levers and the radio on its hook."];
+	  236 [label="Alice: IsDayUntil(2) == true  and  (IsMorning() == true  or  IsNoon()== true)"];
+	  237 [label="IsDayUntil(2) == true  and  (IsMorning() == true  or  IsNoon()== true)", shape=diamond];
+	  238 [label="!(IsDayUntil(2) == true  and  (IsMorning() == true  or  IsNoon()== true))", shape=diamond];
+	  239 [label="Alice: \"...\""];
+	  240 [label="You: \"Okay... But what is the song called?\""];
+	  241 [label="DJ Mesh: \"It ain't just a song! It's the shit-hot new single from DJ Flacio that's shredding up the sonic waves.\""];
+	  242 [label="Untitled hub (09)"];
+	  243 [label="You: \"Yeah. Like a new way to equalize people, getting them all on the same station. A great tool for Communism.\""];
+	  244 [label="DJ Mesh: \"You're a fucking wild man. Sure, let's hear it.\""];
+	  245 [label="DJ Flacio: \"KEEP IT FREAKY,\" another voice cuts in, \"LIKE DJ MESH, DJ FLACIO, AND YOUR W-W-W-WILD FRIEND. THIS ONE'S FOR YOU!\""];
+	  246 [label="Jump to: [You: \"Turn the radio back to PRIMELINE.\"]"];
+	  247 [label="Kim Kitsuragi: \"I don't listen to them,\" the lieutenant says sharply."];
+	  248 [label="You: \"I... gah...\" (Grab your head.) \"I'm... sorry, Kim.\""];
+	  249 [label="DJ Mesh: \"Uh, I'm gonna need better than 'streetless shack' if you can get that for me.\""];
+	  250 [label="Jump to: [DJ Mesh: \"No parting words; only the dull cry...\"]"];
+	  251 [label="You: \"Wait! Don't you need to know my name?\""];
+	  252 [label="Jump to: [Untitled hub]"];
+	  253 [label="DJ Mesh: \"...AND DE FACTO THE FASTEST MUSIC IN ALL OF R-R-REVACHOL R-ROCK CITY. ALL YOU HOOLIGANS, DOWNTOWN DRIFTERS, SIDEWAYS SALLIES AND POWERSLIDING PIERRES..."];
+	  254 [label="Alice: Variable[\"yard.cuno_greeting_done\"]"];
+	  255 [label="Variable[\"yard.cuno_greeting_done\"]", shape=diamond];
+	  256 [label="!(Variable[\"yard.cuno_greeting_done\"])", shape=diamond];
+	  257 [label="Jump to: [Alice: \"\"Just a moment, officer...\"\"]"];
+	  258 [label="Jump to: [plaza.serial_number_2]"];
+	  259 [label="Alice: DayCount() <2  or  IsMorning()  or  IsAfternoon()"];
+	  260 [label="DayCount() <2  or  IsMorning()  or  IsAfternoon()", shape=diamond];
+	  261 [label="!(DayCount() <2  or  IsMorning()  or  IsAfternoon())", shape=diamond];
+	  262 [label="Coupris Kineema: As you tap on the gauge, the indicator pin jerks as if startled. It's in the small blue sector, indicating the engine is cold. Next to the gauge is a red switch labelled HEAT."];
+	  263 [label="Kim Kitsuragi: \"A couple weeks ago I stopped a young man for going slower than the speed of traffic. Turns out he was some Coalition official's son -- and high.\""];
+	  264 [label="Alice: IsKimHere()"];
+	  265 [label="IsKimHere()", shape=diamond];
+	  266 [label="!(IsKimHere())", shape=diamond];
+	  267 [label="Interfacing: You need his key to turn on the engine if you want the foldable lights to pop up."];
+	  268 [label="Alice: \"This is Precinct 57. Can I connect you to someone?\" The voice on the shortwave repeats."];
+	  269 [label="Sylvie: \"Yes, hello.\" You recognize her voice."];
+	  270 [label="Kim Kitsuragi: The spinners shine so bright they reflect on the lieutenant's glasses. He doesn't say anything either."];
+	  271 [label="Composure: Operating the radio is easy. Just be confident -- you've probably done it a thousand times."];
+	  272 [label="Perception (Hearing): Everything sounds okay. No drumbeat of total war yet. If anything, everything sounds *too* okay..."];
+	  273 [label="You: \"Alice this is Firewalker. Re-connect me to the 41st.\""];
+	  274 [label="Coupris Kineema: A metallic drawer slides out from under the seat and clicks into place. The tools inside are neatly organized.\nA metallic drawer slides out from under the seat and clicks into place. The toolbox is empty."];
+	  276 [label="You: \"I don't have any idea what you mean.\""];
+	  277 [label="Untitled hub (10)"];
+	  278 [label="Alice: IsKimHere()"];
+	  279 [label="IsKimHere()", shape=diamond];
+	  280 [label="!(IsKimHere())", shape=diamond];
+	  281 [label="Composure: What a reserve of willpower. It's taking all he's got to not smile."];
+	  282 [label="Esprit de Corps: Elsewhere in Revachol, the lieutenant has also just turned on the radio. In his privacy, he doesn't even try to stop himself from smiling."];
+	  283 [label="Alice: IsKimHere()"];
+	  284 [label="IsKimHere()", shape=diamond];
+	  285 [label="!(IsKimHere())", shape=diamond];
+	  286 [label="You: \"I'm done with the radio for now.\" (End call.)"];
+	  287 [label="Alice: \"This is Officer Alice DeMettrie, Precinct 57. How may I assist you?\" You could swear she was friendlier with the lieutenant."];
+	  288 [label="You: Start slapping a marching rhythm on your thighs."];
+	  289 [label="You: \"I need you to connect me to a civilian -- a Sylvie. She may have reported a murder.\""];
+	  290 [label="Alice: \"Sir, you're already connected to the 57th Precinct.\" Her voice is sharp."];
+	  291 [label="You: Ignore Alice and press the button labelled \"Saved\"."];
+	  292 [label="Jump to: [Alice: \"\"This is Precinct 57,\" the operator...\"]"];
+	  293 [label="You: Open the door."];
+	  294 [label="Alice: \"Right... Mr. Sunset.\" Her voice does not sound friendly. \"Do you have permission to call from the lieutenant's vehicle? Where is he?\""];
+	  295 [label="You: \"I don't know, it's not like we're joined by the hip. Anyway, I need assistance.\""];
+	  296 [label="Alice: \"I've got Central Jamrock Public Library on the line and I've already introduced you to their librarian. Connecting the call in 2... 1...\""];
+	  297 [label="You: \"Kim, what are we looking at? What is this machine?\"\n\"Kim, this is the Coupris Kineema motor carriage, right?\""];
+	  298 [label="Jump to: [what is this machine hub]"];
+	  299 [label="You: \"Operating a radio is easy.\" (Speak into the microphone:) \"Come in Delta-Ten, this is Firewalker, copy!\""];
+	  300 [label="Alice: IsKimHere()"];
+	  301 [label="IsKimHere()", shape=diamond];
+	  302 [label="!(IsKimHere())", shape=diamond];
+	  303 [label="You: What's ahead?"];
+	  304 [label="Suggestion: A vanity he wouldn't mind."];
+	  305 [label="Kim Kitsuragi: \"Mhm,\" he nods. \"I took them *and* arrested him for driving under the influence.\""];
+	  306 [label="Alice: Variable[\"plaza.kineema_intro_done\"]"];
+	  307 [label="Variable[\"plaza.kineema_intro_done\"]", shape=diamond];
+	  308 [label="!(Variable[\"plaza.kineema_intro_done\"])", shape=diamond];
+	  309 [label="Suggestion: What is *wrong* with you? Why did you ask to be connected to her? Who *does* that?! Act professional now."];
+	  310 [label="Alice: \"...\""];
+	  311 [label="You: \"It's only right that we sell them.\""];
+	  312 [label="Jump to: [spinnershub]"];
+	  313 [label="Untitled hub"];
+	  314 [label="Tutorial Agent: Items that can be pawned at Bird's Nest Roy's appear in your INVENTORY, under the ITEMS tab. You can pawn these items when talking to Roy."];
+	  315 [label="Jump to: [very_interfacing]"];
+	  316 [label="DJ Mesh: \"Yo!\" The word shoots out of the man's mouth like a bullet."];
+	  317 [label="You: \"I'm guessing that's the song.\""];
+	  318 [label="DJ Mesh: \"That wasn't a threat, by the way. Just a figure of speech, I'm a spoken word guy. Now, is there anything else you needed?\""];
+	  319 [label="DJ Mesh: \"...SPOKE TO THE W-W-WILDEST COP IN REVACHOL. HE ASKED US TO GIVE HIS BUDDY COP, LONG TIME LISTENER KIM KITSURAGI, A BIG SHOUTOUT. KIM, WE LOVE YOU.\"\nAfter a moment of fiddling with the radio, you push the glowing SAVED button. And on comes a familiar voice: \"...SPOKE TO THE W-W-WILDEST COP IN REVACHOL. HE ASKED US TO GIVE HIS BUDDY COP, LONG TIME LISTENER KIM KITSURAGI, A BIG SHOUTOUT. KIM, WE LOVE YOU.\""];
+	  320 [label="DJ Mesh: \"DIDN'T EVEN GET HIS NAME. BUT WHOEVER THAT MYSTERY COP WAS, WE SALUTE HIM.\""];
+	  321 [label="DJ Mesh: \"I can understand why you'd ask, our shit's hot. Think we gave the last of it away at our last live show, but -- what's your address anyway?\""];
+	  322 [label="You: \"I'm staying in a shack by the coast, in a small fishing village near Martinaise.\"\n\"I'm staying in a shack by the coast. No one knows the street name, they just call it *Illisible*.\""];
+	  323 [label="Logic: Even if a package arrives, how will it get to you if it hasn't got your name on it?"];
+	  324 [label="You: Wait patiently."];
+	  325 [label="Alice: Variable[\"plaza.kinema_made_it_to_radio_hub\"]"];
+	  326 [label="Variable[\"plaza.kinema_made_it_to_radio_hub\"]", shape=diamond];
+	  327 [label="!(Variable[\"plaza.kinema_made_it_to_radio_hub\"])", shape=diamond];
+	  328 [label="Kim Kitsuragi: \"You would be too if you had this motor carriage,\" he snaps half-seriously."];
+	  329 [label="You: Take the hand-cranked flashlight."];
+	  330 [label="Alice: \"Mr. Costeau... if that is your real name, unauthorized use of a police officer's radio is a *major* crime. I will have to alert my colleagues.\""];
+	  331 [label="Alice: Variable[\"plaza.kineema_ignition_hub_reached\"]"];
+	  332 [label="Variable[\"plaza.kineema_ignition_hub_reached\"]", shape=diamond];
+	  333 [label="!(Variable[\"plaza.kineema_ignition_hub_reached\"])", shape=diamond];
+	  334 [label="Kim Kitsuragi: \"Yes, it's my patrol vehicle. You can use the toolbox and the radio if you'd like.\" He nods at the cabin."];
+	  335 [label="Kim Kitsuragi: \"An interisolary racing series. You should definitely give it a go if you like motor carriages -- it has fantastic competition.\" He smiles again."];
+	  336 [label="You: \"TipTop? Adore it!\""];
+	  337 [label="Coupris Kineema: As you tap on the gauge, the indicator pin jerks as if startled. It's in the large orange sector, indicating the engine is warm. Next to the gauge is a red switch labelled HEAT."];
+	  338 [label="Coupris Kineema: The dashboard lights up with orange glow. The rounds per minute gauge jumps and the engine of the Coupris Kineema comes to life with a whiny growl."];
+	  339 [label="Jump to: [Coupris Kineema: \"In the cabin you see a set of steer...\"]"];
+	  340 [label="Empathy: He's clearly *a little* protective of his tools, but what can you do? Work is work."];
+	  341 [label="Rhetoric: Translation: We're not going anywhere right now."];
+	  342 [label="You: \"Please connect me to Sylvie again.\""];
+	  343 [label="Alice: Variable[\"plaza.kineema_empathy_connect_me_to_you\"]"];
+	  344 [label="Variable[\"plaza.kineema_empathy_connect_me_to_you\"]", shape=diamond];
+	  345 [label="!(Variable[\"plaza.kineema_empathy_connect_me_to_you\"])", shape=diamond];
+	  346 [label="Kim Kitsuragi: \"Exactly.\""];
+	  347 [label="Jump to: [spinnershub]"];
+	  348 [label="Jump to: [MAIN HUB]"];
+	  349 [label="Electrochemistry: As your parasympathetic nervous system I call bullshit. Now ask her!"];
+	  350 [label="Alice: \"Sir, how can I help you with your *investigation*?\" The voice on the other end is becoming impatient."];
+	  351 [label="You: \"Okay.\" (Turn off the radio.)"];
+	  352 [label="Jump to: [Coupris Kineema: \"In the cabin you see a set of steer...\"]"];
+	  353 [label="You: [Leave.]"];
+	  354 [label="You: \"Excited, Kim?\""];
+	  355 [label="Kim Kitsuragi: \"No.\""];
+	  356 [label="Alice: IsKimHere()"];
+	  357 [label="IsKimHere()", shape=diamond];
+	  358 [label="!(IsKimHere())", shape=diamond];
+	  359 [label="DJ Mesh: \"'An Asshole Is A Mouth For Shit (And I'm Puking).'\""];
+	  360 [label="DJ Mesh: \"What? No, I'm not telling you off, man. That's the name of the song! 'An Asshole Is A Mouth For Shit (And I'm Puking).'\""];
+	  361 [label="DJ Mesh: \"An Asshole Is A Mouth For Shit (And I'm Puking)!\""];
+	  362 [label="DJ Mesh: \"'An Asshole Is A Mouth For Shit (And I'm Puking),'\" he says more slowly."];
+	  363 [label="You: \"Okay. Let's move on. We talked to some kids who said they heard it in their heads. Do you know how that could be possible?\""];
+	  364 [label="Jump to: [Untitled hub (08)]"];
+	  365 [label="You: \"Okay, the fascist thing was me calling you an enemy of the state for force-pumping filth into children, thus corrupting traditional values.\""];
+	  366 [label="DJ Mesh: \"No, we didn't force radio into people's heads. The fuck is it with you fascists and conspiracy theories?\""];
+	  367 [label="DJ Mesh: \"You know, it'd be one thing if you were just crazy. Like, I could forgive you then. I know lots of crazy people.\""];
+	  368 [label="DJ Mesh: \"But you're just fucking hateful. And I got no time for that shit. Anything else you need, or can I hang up?\""];
+	  369 [label="Alice: Variable[\"plaza.kineema_mesh_ugly_hate\"]  or  Variable[\"plaza.kineema_mesh_ugly_hate_nonexplode\"]"];
+	  370 [label="Variable[\"plaza.kineema_mesh_ugly_hate\"]  or  Variable[\"plaza.kineema_mesh_ugly_hate_nonexplode\"]", shape=diamond];
+	  371 [label="!(Variable[\"plaza.kineema_mesh_ugly_hate\"]  or  Variable[\"plaza.kineema_mesh_ugly_hate_nonexplode\"])", shape=diamond];
+	  372 [label="Alice: Variable[\"plaza.kineema_mesh_ugly_hate\"]"];
+	  373 [label="Variable[\"plaza.kineema_mesh_ugly_hate\"]", shape=diamond];
+	  374 [label="!(Variable[\"plaza.kineema_mesh_ugly_hate\"])", shape=diamond];
+	  375 [label="Kim Kitsuragi: The lieutenant's breath catches in his chest."];
+	  376 [label="Jump to: [The actual Radio HUB]"];
+	  377 [label="Alice: Variable[\"plaza.kineema_mesh_best_kim_shoutout\"]  or  Variable[\"plaza.kineema_mesh_worst_kim_shoutout\"]"];
+	  378 [label="Variable[\"plaza.kineema_mesh_best_kim_shoutout\"]  or  Variable[\"plaza.kineema_mesh_worst_kim_shoutout\"]", shape=diamond];
+	  379 [label="!(Variable[\"plaza.kineema_mesh_best_kim_shoutout\"]  or  Variable[\"plaza.kineema_mesh_worst_kim_shoutout\"])", shape=diamond];
+	  380 [label="Jump to: [Kim Kitsuragi: \"\"We aren't discussing this.\" After...\"]"];
+	  381 [label="Alice: Variable[\"plaza.kineema_mesh_ugly_hate\"]  or  Variable[\"plaza.kineema_mesh_ugly_hate_nonexplode\"]"];
+	  382 [label="Variable[\"plaza.kineema_mesh_ugly_hate\"]  or  Variable[\"plaza.kineema_mesh_ugly_hate_nonexplode\"]", shape=diamond];
+	  383 [label="!(Variable[\"plaza.kineema_mesh_ugly_hate\"]  or  Variable[\"plaza.kineema_mesh_ugly_hate_nonexplode\"])", shape=diamond];
+	  384 [label="Kim Kitsuragi: Lieutenant Kitsuragi slowly begins to tap a little rhythm with his right foot. Quite a lot of time has passed."];
+	  385 [label="Alice: \"This is Precinct 57! Hello, lieutenant, how may I assist you?\""];
+	  386 [label="Interfacing: Under the green PRIMELINE a yellow SAVED button catches your eye... You wonder what the lieutenant's default radio station is?"];
+	  387 [label="Kim Kitsuragi: \"I have something here we could sell. Look in the back, in the suspect transport enclosure.\""];
+	  388 [label="Kim Kitsuragi: \"They're spinner hubcaps -- frivolous things you put on your wheels. When the wheels come to a stop,\" he makes a spinning motion with his hands, \"the caps keep on spinning. There's no real use for them, it's just for vanity.\""];
+	  389 [label="You: \"Thanks. I appreciate your help.\" (Take the spinners.)"];
+	  390 [label="You: Hang up quickly."];
+	  391 [label="Alice: \"I'm afraid they're closed. It says here that the library is open from 10 AM to 6 PM.\""];
+	  392 [label="Jump to: [what is this machine hub]"];
+	  393 [label="You: \"Sorry, I can't take them. It wouldn't be right.\" (Don't take the spinners.)"];
+	  394 [label="Kim Kitsuragi: \"There you go. I'll turn them off from the remote once you're done -- we just need to stand in front of the machine now.\""];
+	  395 [label="Alice: \"Sylvie Malaìika on the line for you, officer.\""];
+	  396 [label="Alice: \"...\""];
+	  397 [label="Alice: \"Officer,\" she finally returns. \"I have Sylvie Malaìika on the line for you.\""];
+	  398 [label="Kim Kitsuragi: \"No, no. That would be silly. I just...\" He hesitates. \"I don't know why I kept them. It doesn't matter. I couldn't put them on this MC anyway. A cop with spinners -- that would be outrageous.\""];
+	  399 [label="You: Just nod."];
+	  400 [label="Alice: CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  401 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  402 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  403 [label="You: Release the clutch handle."];
+	  404 [label="You: \"Do people like it?\""];
+	  405 [label="DJ Mesh: \"Okay, cop-man! Can do, will do!\""];
+	  406 [label="Electrochemistry: Look at that! His eyes dilate. That's joy, my man. You wouldn't be able to tell, but his glasses *just* magnify it."];
+	  407 [label="Coupris Kineema: An audio-assault descends full force on you. Sonic daggers fly forth from the Kineema's speakers. The soundwaves would slice you if they could."];
+	  408 [label="Kim Kitsuragi: The lieutenant snaps off the radio, turning it back to PRIMELINE. He stares at you silently."];
+	  409 [label="Composure: He's too stiff. Like a grunt during a military inspection, hoping their commanding officer overlooks them."];
+	  410 [label="Jump to: [MAIN HUB]"];
+	  411 [label="Kim Kitsuragi: \"I confiscated these four a little while back. We can take them to the pawnshop down by the Martinaise Canal.\""];
+	  412 [label="Alice: IsTaskActive(\"TASK.help_kim_with_money_plan\")  and  IsKimHere()--[[ Variable[ ]]"];
+	  413 [label="IsTaskActive(\"TASK.help_kim_with_money_plan\")  and  IsKimHere()--[[ Variable[ ]]", shape=diamond];
+	  414 [label="!(IsTaskActive(\"TASK.help_kim_with_money_plan\")  and  IsKimHere()--[[ Variable[ ]])", shape=diamond];
+	  415 [label="Kim Kitsuragi: The lieutenant nods as you take the spinners."];
+	  416 [label="You: \"Could you run a serial number from a pair of armoured boots for me?\""];
+	  417 [label="Alice: \"I'll contact him later for a full report.\" Her voice hasn't become any friendlier. \"For now, I'm Officer Alice de Mettrie, how can I help you?\""];
+	  418 [label="Alice: \"A-ha. Sounds like trouble.\" She seems to sigh. \"Alright. Next time, have Lieutenant Kitsuragi with you.\""];
+	  419 [label="Alice: \"Hold on, officer.\""];
+	  420 [label="Alice: \"...\""];
+	  421 [label="Jump to: [what is this machine hub]"];
+	  422 [label="no kim hub"];
+	  423 [label="You: Press HEAT."];
+	  424 [label="You: Look in the suspect transport enclosure."];
+	  425 [label="Logic: Sounds likely."];
+	  426 [label="You: \"Yes. Too wacky.\""];
+	  427 [label="Rhetoric: Shot down. I've nothing to add."];
+	  428 [label="Alice: \"Sir, you're already connected to the 57th Precinct.\" Her voice is sharp and noticeably less friendly."];
+	  429 [label="You: \"Isn't that dangerous?\""];
+	  430 [label="kineema_intro_hub"];
+	  431 [label="Alice: Variable[\"plaza.kineema_intro_done\"]"];
+	  432 [label="Variable[\"plaza.kineema_intro_done\"]", shape=diamond];
+	  433 [label="!(Variable[\"plaza.kineema_intro_done\"])", shape=diamond];
+	  434 [label="Interfacing: The handle is pulled back. Somewhere deep inside the drivetrain the disk is mated to the flywheel again."];
+	  435 [label="You: \"I'm ready to try dialing Speedreaks FM again.\""];
+	  436 [label="You: \"...\""];
+	  437 [label="You: \"Yes. And I have a question.\""];
+	  438 [label="DJ Mesh: \"You aren't the only one. Anyway, I only got a few minutes before I gotta go back on air. What can DJ Mesh tell the RCM?\""];
+	  439 [label="DJ Mesh: \"Was there anything else you wanted to ask?\""];
+	  440 [label="Endurance: Tell him the truth, bröther. Even if he isn't *hard* enough to hear it."];
+	  441 [label="DJ Mesh: \"Nah, man, thank you. This has been an absolute pleasure.\""];
+	  442 [label="Coupris Kineema: It requires no adjustment. The radio is already set to Speedfreaks FM."];
+	  443 [label="You: \"You lying to me right now, Kim?\""];
+	  444 [label="Alice: Variable[\"plaza.kineema_kim_authority_lying_shutdown\"]"];
+	  445 [label="Variable[\"plaza.kineema_kim_authority_lying_shutdown\"]", shape=diamond];
+	  446 [label="!(Variable[\"plaza.kineema_kim_authority_lying_shutdown\"])", shape=diamond];
+	  447 [label="You: \"Thank you!\""];
+	  448 [label="DJ Mesh: \"That I can do. Whirling-in-Rags, Martinaise. Got it.\""];
+	  449 [label="Alice: \"Received. Hold on, officer.\""];
+	  450 [label="Alice: \"...\""];
+	  451 [label="You: Pick up the radio."];
+	  452 [label="Kim Kitsuragi: \"Oh, is that what it was called?\" He's trying hard to act surprised."];
+	  453 [label="Jump to: [Alice: \"She sighs. \"Right... please hold.\"\"]"];
+	  454 [label="You: \"He's resting. It's been rough around here. Listen, I need assistance.\""];
+	  455 [label="calling_without_you"];
+	  456 [label="Alice: Her voice does not sound friendly. \"Where is the lieutenant?\""];
+	  457 [label="You: \"I need to report a dead body on the Martinaise boardwalk.\""];
+	  458 [label="Shivers: That sound. You feel the wind in your hair as if you're already driving -- but where?"];
+	  459 [label="Shivers: Down a narrow street lined with shabby wooden houses, the 8/81 motor-tract coiling like a serpent high above. Children play under the viaduct. Eyes turn to watch you as you pass..."];
+	  460 [label="You: (Look at Kim.) \"Isn't that *corruption*?\""];
+	  461 [label="Jump to: [MAIN HUB]"];
+	  462 [label="Alice: Variable[\"plaza.kineema_kim_said_ok_to_take_tools\"]"];
+	  463 [label="Variable[\"plaza.kineema_kim_said_ok_to_take_tools\"]", shape=diamond];
+	  464 [label="!(Variable[\"plaza.kineema_kim_said_ok_to_take_tools\"])", shape=diamond];
+	  465 [label="Interfacing: So strange. The machine is not on the bottom of the sea at all. It's right in front of you, well kept. Why did it say that?"];
+	  466 [label="Electrochemistry: Oh, did you hear that? Pure lust. She's a wild one! Throw her a curve-ball, see if she's down to party."];
+	  467 [label="Kim Kitsuragi: He turns the pre-heater on, waits, takes out his keys and says: \"All right. Ready. I turn, you press START -- it's next to the pre-heater.\""];
+	  468 [label="Coupris Kineema: Vapour emanates from the large engine on the back of the vehicle. It hasn't had time to cool off yet."];
+	  469 [label="You: How are you, my friend?"];
+	  470 [label="Alice: IsKimHere()"];
+	  471 [label="IsKimHere()", shape=diamond];
+	  472 [label="!(IsKimHere())", shape=diamond];
+	  473 [label="Conceptualization: The starting gun fires. And we're off!"];
+	  474 [label="DJ Mesh: \"Plus, Flacio and I got it in our contracts that we could play our own tracks. So really, it would be illegal not to.\""];
+	  475 [label="DJ Mesh: \"I don't understand. Are you asking if we can, like, play our station into people's brains?\""];
+	  476 [label="DJ Mesh: \"But we didn't, like, force it into people's brains. Got no idea how to do that, short of them just tuning in on their favourite radio receiving device.\""];
+	  477 [label="DJ Mesh: \"We ain't testing anything out for the Man, unless it's how many bricks you need to break all of his windows.\""];
+	  478 [label="Alice: Variable[\"plaza.kineema_mesh_ugly_hate\"]  or  Variable[\"plaza.kineema_mesh_ugly_hate_nonexplode\"]"];
+	  479 [label="Variable[\"plaza.kineema_mesh_ugly_hate\"]  or  Variable[\"plaza.kineema_mesh_ugly_hate_nonexplode\"]", shape=diamond];
+	  480 [label="!(Variable[\"plaza.kineema_mesh_ugly_hate\"]  or  Variable[\"plaza.kineema_mesh_ugly_hate_nonexplode\"])", shape=diamond];
+	  481 [label="Alice: Variable[\"plaza.kineema_radio_speedfreaks\"]"];
+	  482 [label="Variable[\"plaza.kineema_radio_speedfreaks\"]", shape=diamond];
+	  483 [label="!(Variable[\"plaza.kineema_radio_speedfreaks\"])", shape=diamond];
+	  484 [label="Alice: Variable[\"plaza.kineema_mesh_regular_talk\"]"];
+	  485 [label="Variable[\"plaza.kineema_mesh_regular_talk\"]", shape=diamond];
+	  486 [label="!(Variable[\"plaza.kineema_mesh_regular_talk\"])", shape=diamond];
+	  487 [label="Kim Kitsuragi: The lieutenant is resolutely silent. Staring at the console."];
+	  488 [label="You: \"Aw, man! You should have told me you liked them! I could have asked for a shoutout.\""];
+	  489 [label="Kim Kitsuragi: \"I don't like it.\" He shrugs very slightly. \"I don't know how that channel got marked.\""];
+	  490 [label="Alice: \"Of course. What is her number, officer?\""];
+	  491 [label="You: \"Sorry about it, I wanted to contact the dispatch.\" (Pick up the radio and turn it back to PRIMELINE.)"];
+	  492 [label="Volition: This must be the most annoying thing you've ever heard -- it feels like someone defecating right into your ear."];
+	  493 [label="Coupris Kineema: The cage at the back of the motor carriage looks rather uncomfortable. Four shiny hubcaps are stacked against the seat. Their silver edges sparkle in the dark."];
+	  494 [label="You: \"What *are* those things?\""];
+	  495 [label="Jump to: [Alice: \"\"It will take just a moment, office...\"]"];
+	  496 [label="Jump to: [Coupris Kineema: \"In the cabin you see a set of steer...\"]"];
+	  497 [label="You: \"Reasons... uh, for one, I don't know where my radio is.\""];
+	  498 [label="Alice: Variable[\"plaza.kineema_kim_on\"]"];
+	  499 [label="Variable[\"plaza.kineema_kim_on\"]", shape=diamond];
+	  500 [label="!(Variable[\"plaza.kineema_kim_on\"])", shape=diamond];
+	  501 [label="You: \"This must be what woke me up when you arrived in Martinaise. The infernal noise.\""];
+	  502 [label="Coupris Kineema: The button stays in the dash for a few seconds, then jumps out and... nothing happens."];
+	  503 [label="You: (Look at the spinners.) \"I get it, I would have confiscated them too -- they're mesmerizing.\""];
+	  504 [label="Physical Instrument: Cold and heavy -- like truth. You feel like you're reunited with *truth* once more."];
+	  505 [label="Interfacing: Useful for opening all sorts of doors and lids..."];
+	  506 [label="Alice: \"...\""];
+	  507 [label="Kim Kitsuragi: \"I don't like it either, but that's the way it is. The streets seem safe enough to me. If anything, taking out the mercs made things calmer. For now...\" He flicks off the radio. Silence."];
+	  508 [label="Esprit de Corps: If only Lieutenant Kitsuragi were here to make sense of it..."];
+	  509 [label="You: \"Alice, please connect me to the 41st again.\""];
+	  510 [label="You: \"An Asshole Is A Mouth For Shit (And I'm Puking)?\""];
+	  511 [label="Untitled hub (08)"];
+	  512 [label="You: \"I understand. Thank you for clearing that up.\""];
+	  513 [label="DJ Mesh: \"Revolution-brain-broadcast. Got it. Yeah, we'll look into it.\""];
+	  514 [label="DJ Mesh: \"Shit keeps getting weirder with you, man. Fucking unbelievable.\""];
+	  515 [label="Alice: Variable[\"TASK.talk_to_speedfreaks_fm\"] == true  and  Variable[\"plaza.kineema_speedfreaks_connected\"] == false"];
+	  516 [label="Variable[\"TASK.talk_to_speedfreaks_fm\"] == true  and  Variable[\"plaza.kineema_speedfreaks_connected\"] == false", shape=diamond];
+	  517 [label="!(Variable[\"TASK.talk_to_speedfreaks_fm\"] == true  and  Variable[\"plaza.kineema_speedfreaks_connected\"] == false)", shape=diamond];
+	  518 [label="You: \"Nothing. Never mind.\""];
+	  519 [label="waiting_hub"];
+	  520 [label="DJ Mesh: \"...SSSSOUPED UP MOTOR CARRIAGE FOR ONE BAD BAD MOMMA'S BOY, F-F-F-FFFOR THE H-H-HEAVY OF F-F-F-FFFOOT AND FREAKY IN...\""];
+	  521 [label="You: \"Sure, you don't have to explain yourself. I'll just forget about it.\""];
+	  522 [label="Coupris Kineema: In the cabin you see a set of steering levers, a radio on a hook, a pull-out toolbox and the soft glow of the fuel pre-heater gauge."];
+	  523 [label="Alice: \"Oh. Do you have permission to call from the lieutenant's vehicle?\" Her voice doesn't sound very friendly. \"Where is he?\""];
+	  524 [label="You: \"It's a long story. Bad shit has gone down.\""];
+	  525 [label="Alice: There's a pause. \"Alright. Next time, have Lieutenant Kitsuragi with you.\""];
+	  526 [label="what is this machine hub"];
+	  527 [label="Empathy: He says it with very badly concealed pride."];
+	  528 [label="Kim Kitsuragi: \"The Coupris MotorCorp does provide most of our patrol vehicles, yes.\""];
+	  529 [label="You: \"I feel deprived of human contact.\""];
+	  530 [label="You: \"Do you like to party, Alice?\""];
+	  531 [label="Jump to: [Alice: \"\"This is Precinct 57,\" the operator...\"]"];
+	  532 [label="Kim Kitsuragi: \"There's no use pressing the HEAT button,\" he says and jingles his keys. \"It won't start without the ignition key.\"\n\"Now-now. That's enough fun with the foldable headlights. I know they're mesmerising. They're also fragile. I'm not going to turn it on for you again.\""];
+	  533 [label="You: Press the button labelled HEADLIGHTS."];
+	  534 [label="Interfacing: The Coupris Kineema cannot be started without an ignition key."];
+	  535 [label="You: Press ENGINE START."];
+	  536 [label="You: Say nothing."];
+	  537 [label="Empathy: He sounds worried, yet ready to assist. This is how people get when the police call."];
+	  538 [label="You: Do I know how to operate this machine?"];
+	  539 [label="Perception (Smell): A scent of leather-work and heavy fuel oils washes over you."];
+	  540 [label="Logic: This is clearly feverish nonsense -- let's rationalize it away. Grab the radio, or tools, or do something normal."];
+	  541 [label="Jump to: [DEATH COMES FOR EVERYONE]"];
+	  542 [label="You: \"I said 'Speedfreaks FM'. Kim's a big fan.\""];
+	  543 [label="You: \"Hello, is this DJ Mesh?\""];
+	  544 [label="DJ Mesh: \"They're lovin' it, man! The requests keep coming in for more.\""];
+	  545 [label="DJ Mesh: \"Doesn't matter. Listen, I'm dead serious when I say, Flacio is going to make it big in this world.\""];
+	  546 [label="You: \"Okay. I'd recommend looking into it, though. For the revolution.\""];
+	  547 [label="Kim Kitsuragi: \"Huh?\" The sound bubbles out of him, even to his own surprise."];
+	  548 [label="DJ Flacio: Another equally furious voice seizes on the silence. \"HERE'S SOME MUSIC.\""];
+	  549 [label="DJ Flacio: Another equally furious voice seizes on the silence. \"HERE'S SOME MUSIC.\""];
+	  550 [label="DJ Mesh: \"I don't want to know, man. I like leaving it to the imagination. Now, anything else?\""];
+	  551 [label="DJ Mesh: \"Hey, don't thank me yet! Again, I don't think we got anything left, but, well... Anything else?\""];
+	  552 [label="You: \"Actually, let's not do that right now.\" (Back.)"];
+	  553 [label="Volition: This radio station is even worse than Cuno -- it feels like someone defecating right into your ear."];
+	  554 [label="Alice: \"This is Precinct 57,\" the operator greets you through the static. \"How may I assist you?\""];
+	  555 [label="Kim Kitsuragi: \"Look, it helps me to stay alert on long nights, okay? It's a method. I'm not some kind of *speed-freak* or...\" He shakes his head, furiously staring at his feet."];
+	  556 [label="Alice: IsTaskActive(\"TASK.help_kim_with_money_plan\")  and  IsKimHere()--[[ Variable[ ]]"];
+	  557 [label="IsTaskActive(\"TASK.help_kim_with_money_plan\")  and  IsKimHere()--[[ Variable[ ]]", shape=diamond];
+	  558 [label="!(IsTaskActive(\"TASK.help_kim_with_money_plan\")  and  IsKimHere()--[[ Variable[ ]])", shape=diamond];
+	  559 [label="Jump to: [Coupris Kineema: \"The cage at the back of the motor c...\"]"];
+	  560 [label="You: \"I prefer to be called Tequila Sunset. Kim's my partner. We're solving a case.\""];
+	  561 [label="Alice: \"From the 41st Precinct. Where is Lieutenant Kitsuragi?\""];
+	  562 [label="Alice: \"Why aren't you using your own radio to contact your precinct?\""];
+	  563 [label="Jump to: [You: \"\"I'm looking for any information th...\"]"];
+	  564 [label="You: \"Can we turn it on and drive somewhere?\""];
+	  565 [label="Alice: Variable[\"plaza.kineema_encyclo_titoptournee\"]"];
+	  566 [label="Variable[\"plaza.kineema_encyclo_titoptournee\"]", shape=diamond];
+	  567 [label="!(Variable[\"plaza.kineema_encyclo_titoptournee\"])", shape=diamond];
+	  568 [label="Half Light: The entirety of Martinaise is watching you!"];
+	  569 [label="Jump to: [MAIN HUB]"];
+	  570 [label="Coupris Kineema: Inside you see a set of steering levers, a radio-microphone, a pull-out toolbox, and the soft glow of the fuel pre-heater gauge."];
+	  571 [label="Jump to: [SYLVIE]"];
+	  572 [label="You: Hold on! As a feminist I find these implications offensive."];
+	  573 [label="Half Light: They're shutting you up. Silencing you. Don't fucking drop your guard."];
+	  574 [label="Kim Kitsuragi: \"It only happens when someone mentions the attack -- the rest is unaffected. Our best bet is to carry on like nothing happened -- that is, if we don't want us cut off the grid completely.\""];
+	  575 [label="Alice: Variable[\"canal.roy_intro_done\"]  or  Variable[\"canal.light_mainhub_reached\"]   or  Variable[\"canal.table_mainhub_reached\"]  or  Variable[\"canal.hjelmdall_mainhub_reached\"]  or Variable[\"canal.boombox_mainhub_reached\"]"];
+	  576 [label="Variable[\"canal.roy_intro_done\"]  or  Variable[\"canal.light_mainhub_reached\"]   or  Variable[\"canal.table_mainhub_reached\"]  or  Variable[\"canal.hjelmdall_mainhub_reached\"]  or Variable[\"canal.boombox_mainhub_reached\"]", shape=diamond];
+	  577 [label="!(Variable[\"canal.roy_intro_done\"]  or  Variable[\"canal.light_mainhub_reached\"]   or  Variable[\"canal.table_mainhub_reached\"]  or  Variable[\"canal.hjelmdall_mainhub_reached\"]  or Variable[\"canal.boombox_mainhub_reached\"])", shape=diamond];
+	  578 [label="Kim Kitsuragi: \"Yes, the Bird's Nest Roy, near the canal -- we've been there. If I'm not mistaken it should be open late.\""];
+	  579 [label="Coupris Kineema: In the cabin you are welcomed by a set of steering levers, a radio-microphone on a hook, a pull-out toolbox under the seat, and the soft glow of the fuel pre-heater gauge."];
+	  580 [label="Alice: \"I have *DJ Mesh* on the line. I'll connect you now.\""];
+	  581 [label="DJ Mesh: \"Uh... What?\" He laughs, confused. \"That's the wildest shit I heard today. You are a cop, right?\""];
+	  582 [label="You: \"I'm just calling to confirm -- did you debut a new track from DJ Flacio a few days ago?\""];
+	  583 [label="Conceptualization: That's the name of the song. Vulgarity is la belle du jour."];
+	  584 [label="Alice: \"The party has terminated the call. Is there anything else I can do for you, officer?\""];
+	  585 [label="Kim Kitsuragi: The lieutenant snaps off the radio, turning it back to PRIMELINE. He stares at you silently."];
+	  586 [label="Coupris Kineema: If, when a motor-carriage's engine was ignited, it could drive by its own accord off to a high mountain and there write a song -- perhaps it'd be something like what you're hearing now."];
+	  587 [label="Untitled hub"];
+	  588 [label="Jump to: [SYLVIE]"];
+	  589 [label="Call People"];
+	  590 [label="Alice: \"...\""];
+	  591 [label="You: \"What about *heavy of foot*?\""];
+	  592 [label="You: \"You said something about a pawnshop?\""];
+	  593 [label="You: \"Uh, the name's Mr. Costeau. Raphaël to friends. Kim's my friend.\""];
+	  594 [label="Alice: \"Mr. Harry, do you have permission to call from the lieutenant's vehicle? Where is he?\""];
+	  595 [label="You: \"That's one of the things I may need help with.\" (Cough.)"];
+	  596 [label="Kim Kitsuragi: \"This is the Coupris Kineema, my motor carriage. You can use the toolbox and the radio if you'd like.\" He nods at the cabin."];
+	  597 [label="Kim Kitsuragi: \"Yes, sorry about that... the Coupris Kineema does have a rather... distinctive engine sound.\""];
+	  598 [label="Empathy: He's still avoiding your gaze -- and his ears glow red."];
+	  599 [label="Perception (Hearing): Like a leopard, waking from its sleep. Yawning and roaring at the same time."];
+	  600 [label="Coupris Kineema: Uhm... When Lieutenant Kitsuragi is here? It's his MC."];
+	  601 [label="Esprit de Corps: Damn it -- the lieutenant had the number and he's not here."];
+	  602 [label="Kim Kitsuragi: \"Give it a minute, she might be busy at the moment... takes a bit to get to the phone.\""];
+	  603 [label="You: Wait, what? 'Wild one'? That doesn't sound right..."];
+	  604 [label="You: Wait, does it mean I know how to pilot it?"];
+	  605 [label="Interfacing: After a while you realize silence is your only answer. Do what you will with it."];
+	  606 [label="Interfacing: The smell of freshly treated leather, the lack of dirt and dust on the dashboard, and a neat little brush in the cup-holder all seem to be whispering:"];
+	  607 [label="Jump to: [MAIN HUB]"];
+	  608 [label="DJ Mesh: The radio host doesn't try to contain his laughter. \"Oh, man, I love it! You're great. No, we didn't do anything like that. Wouldn't know how to -- we just played it on air like normal people.\""];
+	  609 [label="You: \"I'm just thinking of the children.\""];
+	  610 [label="DJ Mesh: \"Not going to happen, you fascist prick. Tell your friend to not listen to us any more.\""];
+	  611 [label="DJ Mesh: No parting words; only the dull cry of the dial tone."];
+	  612 [label="Jump to: [Alice: \"\"This is Precinct 57. Can I connect...\"]"];
+	  613 [label="Drama: A look of betrayal. The secret has been revealed!"];
+	  614 [label="You: \"I don't really know my address...\""];
+	  615 [label="Jump to: [The actual Radio HUB]"];
+	  616 [label="You: \"Hi, Alice, this is the officer from the 41st Precinct speaking. Nice to meet you.\""];
+	  617 [label="Kim Kitsuragi: \"God-damn-it!\" The lieutenant moves quick as a viper as he switches off the radio and sets it on primeline. Then he turns to you:"];
+	  618 [label="spinnershub"];
+	  619 [label="Jump to: [The actual Radio HUB]"];
+	  620 [label="Kim Kitsuragi: \"Really?\" the lieutenant looks at you. \"Well, I'm not indifferent on the matter either.\" He adjusts his glasses, visibly pleased to have found a fellow fan."];
+	  621 [label="Perception (Hearing): Turn it off, this isn't music!"];
+	  622 [label="Kim Kitsuragi: \"All right, let's *not* take them now, then come back once we realize we have to -- have this conversation *again* and then take them.\""];
+	  623 [label="Coupris Kineema: In the cabin you see a set of steering levers, a radio on a hook, a pull-out toolbox and the soft glow of the fuel pre-heater gauge."];
+	  624 [label="Horrific Necktie: Offensive-smoffensive, just ask her, alright!"];
+	  625 [label="Horrific Necktie: What an unbelievable prude... Oh well, at least now you know."];
+	  626 [label="Kim Kitsuragi: \"No more dangerous than stepping between three armed mercenaries and eight Union men, I hope.\" He glances over his shoulder."];
+	  627 [label="Kim Kitsuragi: \"You can try calling again -- just don't mention the tribunal. And remember, they're listening in.\""];
+	  628 [label="You: Release the clutch and squeeze it again."];
+	  629 [label="You: Push in the pull-out toolbox."];
+	  630 [label="Coupris Kineema: I'm good, cherished and cared for, in the hands of a tending owner."];
+	  631 [label="Alice: \"Come again, officer?\""];
+	  632 [label="Alice: \"Right... One moment, officer.\""];
+	  633 [label="DJ Mesh: He sighs. \"Is that what this is about? Listen, it's not our problem if kids decide to tune into R-R-R-Revachol's hottest station.\"\nHe sighs. \"Come on, man, I just told you we're cleared to play shit like that. Listen, it's not our problem if kids decide to tune into R-R-R-Revachol's hottest station.\""];
+	  634 [label="DJ Mesh: \"Was there anything else you need to know?\""];
+	  635 [label="Alice: Variable[\"plaza.kineema_mesh_worst_kim_shoutout\"]"];
+	  636 [label="Variable[\"plaza.kineema_mesh_worst_kim_shoutout\"]", shape=diamond];
+	  637 [label="!(Variable[\"plaza.kineema_mesh_worst_kim_shoutout\"])", shape=diamond];
+	  638 [label="DJ Mesh: \"FASCIST PIGS, I SWEAR. YOU SHOULD ALL...\" The assault gives way to burning quiet.\nAfter a moment of fiddling with the radio, you push the glowing SAVED button. And on comes a familiar voice: \"FASCIST PIGS, I SWEAR. YOU SHOULD ALL...\" The assault gives way to burning quiet."];
+	  639 [label="Alice: Variable[\"plaza.kineema_radio_speedfreaks\"] == true"];
+	  640 [label="Variable[\"plaza.kineema_radio_speedfreaks\"] == true", shape=diamond];
+	  641 [label="!(Variable[\"plaza.kineema_radio_speedfreaks\"] == true)", shape=diamond];
+	  642 [label="You: \"That's DJ Mesh! That was Speedfreaks FM!\""];
+	  643 [label="Untitled hub"];
+	  644 [label="Jump to: [Untitled hub]"];
+	  645 [label="DJ Mesh: \"... GET INTO GEAR, DROP THE MOTHERFUCKING CLUTCH AND LET THE P-P-PPP-PPPPOWER TAKE YOU ON A JOURNEY OF A LIFETIME!\""];
+	  646 [label="Encyclopedia: Those are some fancy words. Most people would just call it *the cage*."];
+	  647 [label="You: \"Have you heard back from the ICP about the serial number?\""];
+	  648 [label="You: \"Connect me to Jamrock Public Library.\""];
+	  649 [label="Jamrock Public Library: \"Yes, this is Central Jamrock Public Library here.\" A male librarian answers the call. \"How can I help you, officer?\""];
+	  650 [label="Inland Empire: Motor carriage, motor carriage... Something bad with a motor carriage.... A dark lump rises in your throat."];
+	  651 [label="Alice: IsKimHere()"];
+	  652 [label="IsKimHere()", shape=diamond];
+	  653 [label="!(IsKimHere())", shape=diamond];
+	  654 [label="Alice: \"Anything else, detective?\""];
+	  655 [label="You: \"Hello... hello... hello....\" (Mimic echo.) \"Is there anybody out there?\""];
+	  656 [label="Jump to: [spinnershub]"];
+	  657 [label="Interfacing: You can do good work with these: cut chains, locks, and ropes -- especially belts..."];
+	  658 [label="You: How do I turn on the headlights?\n\"Kim, how do I turn on the headlights?\""];
+	  659 [label="You: \"So you took his spinners?\""];
+	  660 [label="Alice: \"...\""];
+	  661 [label="Jump to: [Call People]"];
+	  662 [label="Jump to: [Alice: \"\"One moment...\" You can hear her sh...\"]"];
+	  663 [label="Coupris Kineema: No reply. Only the mindless drone of static, crawling through the air."];
+	  664 [label="You: Turn off the radio."];
+	  665 [label="You: Pull out the pull-out toolbox."];
+	  666 [label="You: \"The Lamb is calm before its slaughter. It does not know what will befall it.\""];
+	  667 [label="You: \"Great title, man! Number one stuff.\""];
+	  668 [label="You: \"... What?\""];
+	  669 [label="Logic: This is preposterous. Neither sound nor scent work anything as he's describing. What does he even *mean*?"];
+	  670 [label="DJ Mesh: \"Right on, brother. We gotta make sure everybody tunes into this sonic revolution!\""];
+	  671 [label="You: \"It's not a conspiracy theory, it's logic. The lesser races, still fresh and DRIPPING from the proto-slime, can't beat us outright -- so they resort to impossibly devious schemes.\""];
+	  672 [label="DJ Mesh: \"Not going to happen, you fascist prick.\""];
+	  673 [label="DJ Mesh: \"FASCIST PIGS, I SWEAR. YOU AND KIM KITSURAGI SHOULD ALL...\" The assault gives way to burning quiet.\nAfter a moment of fiddling with the radio, you push the glowing SAVED button. And on comes a familiar voice: \"FASCIST PIGS, I SWEAR. YOU AND KIM KITSURAGI SHOULD ALL...\" The assault gives way to burning quiet."];
+	  674 [label="Kim Kitsuragi: \"We aren't discussing this.\" After a few bars, the lieutenant turns the radio back to PRIMELINE."];
+	  675 [label="Jump to: [Coupris Kineema: \"If, when a motor-carriage's engine...\"]"];
+	  676 [label="Jump to: [Untitled hub]"];
+	  677 [label="Authority: This has gone far enough. You're going to show dignity toward your fellow officer and *apologize*."];
+	  678 [label="Jump to: [Untitled hub (10)]"];
+	  679 [label="address_the_nation"];
+	  680 [label="Alice: \"What do you mean, officer? I'm not Sylvie.\""];
+	  681 [label="You: \"I don't know, Alice... just connect me.\""];
+	  682 [label="Kim Kitsuragi: \"Nothing to *get into* really, but sure, let's focus on the important things.\" He pats the motor carriage."];
+	  683 [label="Alice: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  684 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  685 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  686 [label="You: \"Yes, I know Kim! He's my partner.\""];
+	  687 [label="Alice: \"Affirmative, Lieutenant Du Bois.\" There's a pause, tense with anticipation."];
+	  688 [label="Jump to: [Coupris Kineema: \"In the cabin you see a set of steer...\"]"];
+	  689 [label="Alice: IsHourBetween(10, 17)"];
+	  690 [label="IsHourBetween(10, 17)", shape=diamond];
+	  691 [label="!(IsHourBetween(10, 17))", shape=diamond];
+	  692 [label="You: \"I was told I need to connect to my station... the 41st lazareth.\"\n\"Alice, I need medical attention. Please connect me to Nix Gottlieb at Station 41.\"\n\"Alice, please connect me to Station 41's lazareth.\""];
+	  693 [label="You: \"I might be wrong, but this one is a *sports model*, right?\""];
+	  694 [label="Alice: Variable[\"whirling.kineema_TH_check_success\"]"];
+	  695 [label="Variable[\"whirling.kineema_TH_check_success\"]", shape=diamond];
+	  696 [label="!(Variable[\"whirling.kineema_TH_check_success\"])", shape=diamond];
+	  697 [label="Kim Kitsuragi: \"We should try again during business hours.\""];
+	  698 [label="Alice: \"Now, how can I help you in your *investigation*?\""];
+	  699 [label="Esprit de Corps: This is Precinct 41 -- as close as you have to home now. It's far away..."];
+	  700 [label="Alice: \"...\""];
+	  701 [label="Volition: Just wait. Relax."];
+	  702 [label="You: \"Um.... did you want to put these spinners on your machine?\" (Point at Kineema.)"];
+	  703 [label="You: \"I'm sorry you have to sell them because of me.\""];
+	  704 [label="Esprit de Corps: But thank you."];
+	  705 [label="Alice: CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  706 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  707 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  708 [label="Coupris Kineema: Something is wrong. Only static hisses through the speaker."];
+	  709 [label="Alice: Variable[\"plaza.alice_said_one_of_the_weird_things\"]"];
+	  710 [label="Variable[\"plaza.alice_said_one_of_the_weird_things\"]", shape=diamond];
+	  711 [label="!(Variable[\"plaza.alice_said_one_of_the_weird_things\"])", shape=diamond];
+	  712 [label="Logic: This must be the infernal machine that tore you from oblivion."];
+	  713 [label="You: Run your fingers over one of the steering levers."];
+	  714 [label="very_interfacing"];
+	  715 [label="You: Where have you been?"];
+	  716 [label="Alice: Variable[\"backyard.kineema_something_bad_motorcarriage\"]"];
+	  717 [label="Variable[\"backyard.kineema_something_bad_motorcarriage\"]", shape=diamond];
+	  718 [label="!(Variable[\"backyard.kineema_something_bad_motorcarriage\"])", shape=diamond];
+	  719 [label="You: Open the door."];
+	  720 [label="Interfacing: Of course it's only in your head -- of course it is -- but it almost feels as if the clutch handle is gently squeezing back."];
+	  721 [label="You: \"Speedfreaks FM. A radio station. It's for the case.\""];
+	  722 [label="Alice: \"Sorry, officer. Your radio personalities are unavailable, probably until tomorrow. Is there anything else I can assist you with?\""];
+	  723 [label="You: \"It's not that they played it on a radio. They heard it in their heads. Do you know how that's possible?\""];
+	  724 [label="DJ Mesh: \"Speedfreaks FM is elective listening, man. We don't want to force the people to adopt our thinking. That's fascist bullshit.\""];
+	  725 [label="You: Press the button labelled \"Saved\" and turn on Speedfreaks FM.\nTune Kim's radio into Speedfreaks FM."];
+	  726 [label="DJ Flacio: \"I HOPE HE'S R-R-R-ROCKING WITH US A LONG TIME,\" another voice cuts in. \"THE WORLD NEEDS MORE FREAKS. THIS ONE'S FOR YOU, MYSTERY COP!\""];
+	  727 [label="You: \"Isn't that the station we have to call? Speedfreaks FM? Why's it saved as 'favourite'?\""];
+	  728 [label="You: \"I said, are you fucking lying to me?\""];
+	  729 [label="Kim Kitsuragi: \"Hello, Alice, please assist our colleague from the 41st Precinct here. I'm putting him on.\""];
+	  730 [label="Reaction Speed: Transport enclosure? Regular people just call it *the cage*."];
+	  731 [label="You: \"Could you connect me to the 41st Precinct? I have something I need to report.\""];
+	  732 [label="Encyclopedia: The TipTop Tournée is an interisolary racing series, mostly known for its high speeds, ludicrous sponsorship deals, and high death toll. In Revachol it's held quadrennially on the prestigious Zéro Carrousel racing circuit."];
+	  733 [label="Alice: Variable[\"plaza.kineema_interf_wont_start_without_ignition\"]"];
+	  734 [label="Variable[\"plaza.kineema_interf_wont_start_without_ignition\"]", shape=diamond];
+	  735 [label="!(Variable[\"plaza.kineema_interf_wont_start_without_ignition\"])", shape=diamond];
+	  11760033 [label="JUMP OUT to KINEEMA / CALLING THE LIBRARY", shape=diamond];
+	  11720065 [label="JUMP OUT to KINEEMA / REPORTING THE CORPSE ON THE BOARDWALK", shape=diamond];
+	  6020163 [label="JUMP OUT to KINEEMA / SYLVIE", shape=diamond];
+	  7800104 [label="JUMP OUT to KINEEMA / STATION CALL", shape=diamond];
+	  7800522 [label="JUMP OUT to KINEEMA / STATION CALL", shape=diamond];
+	  7800564 [label="JUMP OUT to KINEEMA / STATION CALL", shape=diamond];
+	  11920053 [label="JUMP OUT to KINEEMA / LAZARETH CALL", shape=diamond];
+	  6020118 [label="JUMP OUT to KINEEMA / SYLVIE", shape=diamond];
+	  9650111 [label="JUMP OUT to KINEEMA / SERIAL NUMBER", shape=diamond];
+	  0 -> 1
+	  1 -> 431
+	  2 -> 259
+	  3 -> 426
+	  3 -> 230
+	  3 -> 399
+	  4 -> 536
+	  4 -> 311
+	  4 -> 703
+	  5 -> 6
+	  5 -> 7
+	  6 -> 624
+	  7 -> 349
+	  8 -> 88
+	  9 -> 412
+	  10 -> 11
+	  10 -> 12
+	  11 -> 188
+	  12 -> 712
+	  13 -> 259
+	  15 -> 631
+	  16 -> 360
+	  17 -> 511
+	  18 -> 514
+	  19 -> 55
+	  20 -> 369
+	  21 -> 584
+	  22 -> 246
+	  23 -> 252
+	  24 -> 25
+	  24 -> 26
+	  25 -> 729
+	  26 -> 422
+	  27 -> 680
+	  28 -> 141
+	  29 -> 598
+	  30 -> 452
+	  31 -> 646
+	  32 -> 177
+	  33 -> 594
+	  34 -> 64
+	  34 -> 33
+	  34 -> 686
+	  34 -> 560
+	  34 -> 593
+	  35 -> 522
+	  36 -> 109
+	  37 -> 138
+	  38 -> 40
+	  38 -> 39
+	  39 -> 693
+	  40 -> 214
+	  41 -> 179
+	  42 -> 535
+	  43 -> 263
+	  44 -> 88
+	  45 -> 268
+	  46 -> 313
+	  47 -> 681
+	  47 -> 530
+	  47 -> 529
+	  48 -> 663
+	  49 -> 582
+	  50 -> 51
+	  51 -> 582
+	  52 -> 669
+	  53 -> 54
+	  54 -> 474
+	  55 -> 102
+	  56 -> 478
+	  57 -> 612
+	  58 -> 489
+	  59 -> 108
+	  59 -> 174
+	  60 -> 444
+	  61 -> 72
+	  62 -> 277
+	  63 -> 258
+	  64 -> 687
+	  65 -> 562
+	  66 -> 417
+	  67 -> 114
+	  68 -> 392
+	  69 -> 335
+	  70 -> 196
+	  71 -> 292
+	  72 -> 385
+	  73 -> 656
+	  74 -> 340
+	  75 -> 76
+	  75 -> 77
+	  76 -> 589
+	  77 -> 601
+	  78 -> 392
+	  79 -> 704
+	  80 -> 705
+	  81 -> 82
+	  81 -> 83
+	  82 -> 625
+	  83 -> 186
+	  84 -> 85
+	  84 -> 86
+	  85 -> 145
+	  86 -> 508
+	  87 -> 386
+	  88 -> 89
+	  88 -> 2
+	  88 -> 451
+	  88 -> 424
+	  88 -> 713
+	  88 -> 297
+	  88 -> 13
+	  88 -> 658
+	  88 -> 665
+	  88 -> 185
+	  89 -> 498
+	  90 -> 88
+	  91 -> 666
+	  91 -> 50
+	  91 -> 543
+	  91 -> 127
+	  92 -> 364
+	  93 -> 634
+	  94 -> 102
+	  95 -> 367
+	  96 -> 376
+	  97 -> 98
+	  97 -> 99
+	  98 -> 408
+	  99 -> 549
+	  100 -> 728
+	  100 -> 134
+	  100 -> 518
+	  101 -> 676
+	  102 -> 277
+	  103 -> 448
+	  104 -> 709
+	  105 -> 709
+	  106 -> 449
+	  107 -> 201
+	  108 -> 682
+	  109 -> 296
+	  110 -> 541
+	  111 -> 732
+	  112 -> 459
+	  113 -> 699
+	  114 -> 504
+	  115 -> 149
+	  116 -> 315
+	  117 -> 465
+	  118 -> 187
+	  119 -> 8
+	  120 -> 6020163
+	  121 -> 122
+	  121 -> 123
+	  122 -> 714
+	  123 -> 90
+	  124 -> 219
+	  125 -> 632
+	  127 -> 49
+	  128 -> 93
+	  129 -> 244
+	  130 -> 584
+	  131 -> 132
+	  131 -> 133
+	  132 -> 674
+	  133 -> 282
+	  134 -> 166
+	  135 -> 394
+	  136 -> 29
+	  137 -> 139
+	  138 -> 421
+	  139 -> 522
+	  140 -> 215
+	  141 -> 203
+	  142 -> 656
+	  143 -> 221
+	  144 -> 44
+	  145 -> 574
+	  146 -> 121
+	  147 -> 714
+	  148 -> 540
+	  149 -> 329
+	  149 -> 67
+	  149 -> 124
+	  149 -> 629
+	  150 -> 239
+	  151 -> 582
+	  152 -> 511
+	  153 -> 92
+	  154 -> 584
+	  155 -> 376
+	  156 -> 157
+	  156 -> 158
+	  157 -> 96
+	  158 -> 155
+	  159 -> 160
+	  159 -> 161
+	  160 -> 638
+	  161 -> 162
+	  162 -> 320
+	  163 -> 172
+	  164 -> 491
+	  165 -> 101
+	  166 -> 60
+	  167 -> 108
+	  167 -> 174
+	  168 -> 201
+	  169 -> 588
+	  170 -> 615
+	  171 -> 496
+	  172 -> 621
+	  173 -> 568
+	  174 -> 520
+	  175 -> 643
+	  176 -> 683
+	  177 -> 293
+	  178 -> 34
+	  179 -> 34
+	  180 -> 38
+	  181 -> 526
+	  182 -> 268
+	  183 -> 75
+	  184 -> 519
+	  185 -> 325
+	  186 -> 350
+	  187 -> 589
+	  188 -> 430
+	  189 -> 628
+	  189 -> 604
+	  190 -> 117
+	  191 -> 125
+	  192 -> 354
+	  192 -> 436
+	  193 -> 724
+	  194 -> 477
+	  195 -> 136
+	  196 -> 197
+	  196 -> 198
+	  197 -> 163
+	  198 -> 254
+	  199 -> 381
+	  200 -> 106
+	  201 -> 416
+	  201 -> 289
+	  201 -> 291
+	  201 -> 647
+	  201 -> 648
+	  201 -> 233
+	  201 -> 457
+	  201 -> 15
+	  201 -> 273
+	  201 -> 435
+	  201 -> 692
+	  201 -> 725
+	  201 -> 342
+	  201 -> 731
+	  201 -> 509
+	  201 -> 286
+	  201 -> 63
+	  202 -> 589
+	  203 -> 204
+	  203 -> 205
+	  204 -> 136
+	  205 -> 253
+	  206 -> 268
+	  207 -> 201
+	  208 -> 618
+	  209 -> 7800104
+	  210 -> 456
+	  211 -> 528
+	  212 -> 78
+	  213 -> 138
+	  214 -> 526
+	  215 -> 181
+	  216 -> 217
+	  216 -> 218
+	  217 -> 112
+	  218 -> 533
+	  219 -> 657
+	  220 -> 149
+	  221 -> 220
+	  222 -> 224
+	  222 -> 223
+	  223 -> 44
+	  224 -> 341
+	  225 -> 226
+	  225 -> 227
+	  226 -> 467
+	  227 -> 600
+	  228 -> 506
+	  229 -> 208
+	  230 -> 4
+	  231 -> 427
+	  232 -> 202
+	  233 -> 708
+	  234 -> 146
+	  235 -> 607
+	  236 -> 237
+	  236 -> 238
+	  237 -> 468
+	  238 -> 10
+	  239 -> 192
+	  240 -> 17
+	  241 -> 511
+	  242 -> 193
+	  242 -> 18
+	  242 -> 243
+	  242 -> 194
+	  243 -> 670
+	  244 -> 365
+	  245 -> 586
+	  246 -> 57
+	  247 -> 676
+	  248 -> 167
+	  249 -> 644
+	  250 -> 611
+	  251 -> 550
+	  252 -> 587
+	  253 -> 645
+	  254 -> 256
+	  254 -> 255
+	  255 -> 553
+	  256 -> 492
+	  257 -> 7800564
+	  258 -> 9650111
+	  259 -> 260
+	  259 -> 261
+	  260 -> 337
+	  261 -> 262
+	  262 -> 300
+	  263 -> 659
+	  263 -> 460
+	  263 -> 503
+	  264 -> 265
+	  264 -> 266
+	  265 -> 462
+	  266 -> 149
+	  267 -> 569
+	  268 -> 207
+	  269 -> 120
+	  270 -> 312
+	  271 -> 679
+	  272 -> 352
+	  273 -> 453
+	  274 -> 264
+	  276 -> 545
+	  277 -> 56
+	  277 -> 20
+	  277 -> 199
+	  278 -> 280
+	  278 -> 279
+	  279 -> 585
+	  280 -> 548
+	  281 -> 612
+	  282 -> 57
+	  283 -> 284
+	  283 -> 285
+	  284 -> 639
+	  285 -> 726
+	  286 -> 171
+	  287 -> 386
+	  288 -> 602
+	  289 -> 490
+	  290 -> 698
+	  291 -> 28
+	  292 -> 554
+	  293 -> 559
+	  294 -> 455
+	  295 -> 562
+	  296 -> 649
+	  297 -> 694
+	  298 -> 526
+	  299 -> 178
+	  300 -> 301
+	  300 -> 302
+	  301 -> 532
+	  302 -> 423
+	  303 -> 113
+	  304 -> 229
+	  305 -> 460
+	  305 -> 503
+	  306 -> 307
+	  306 -> 308
+	  307 -> 461
+	  308 -> 623
+	  309 -> 232
+	  310 -> 397
+	  311 -> 231
+	  312 -> 618
+	  313 -> 681
+	  313 -> 529
+	  313 -> 530
+	  313 -> 603
+	  313 -> 572
+	  314 -> 347
+	  315 -> 714
+	  316 -> 473
+	  317 -> 241
+	  318 -> 102
+	  319 -> 245
+	  320 -> 283
+	  321 -> 587
+	  322 -> 249
+	  323 -> 251
+	  323 -> 447
+	  324 -> 384
+	  325 -> 326
+	  325 -> 327
+	  326 -> 554
+	  327 -> 61
+	  328 -> 182
+	  329 -> 143
+	  330 -> 210
+	  330 -> 390
+	  331 -> 332
+	  331 -> 333
+	  332 -> 110
+	  333 -> 541
+	  334 -> 650
+	  335 -> 421
+	  336 -> 620
+	  337 -> 300
+	  338 -> 599
+	  339 -> 522
+	  340 -> 149
+	  341 -> 144
+	  342 -> 228
+	  343 -> 344
+	  343 -> 345
+	  344 -> 589
+	  345 -> 183
+	  346 -> 536
+	  346 -> 311
+	  346 -> 703
+	  347 -> 618
+	  348 -> 88
+	  349 -> 681
+	  349 -> 530
+	  349 -> 529
+	  350 -> 661
+	  351 -> 119
+	  352 -> 522
+	  354 -> 355
+	  355 -> 580
+	  356 -> 357
+	  356 -> 358
+	  357 -> 580
+	  358 -> 722
+	  359 -> 583
+	  360 -> 511
+	  361 -> 240
+	  361 -> 16
+	  362 -> 240
+	  362 -> 16
+	  362 -> 510
+	  363 -> 633
+	  364 -> 511
+	  365 -> 608
+	  366 -> 440
+	  367 -> 368
+	  368 -> 102
+	  369 -> 370
+	  369 -> 371
+	  370 -> 611
+	  371 -> 441
+	  372 -> 373
+	  372 -> 374
+	  373 -> 610
+	  374 -> 672
+	  375 -> 130
+	  376 -> 201
+	  377 -> 378
+	  377 -> 379
+	  378 -> 635
+	  379 -> 159
+	  380 -> 674
+	  381 -> 382
+	  381 -> 383
+	  382 -> 250
+	  383 -> 321
+	  384 -> 660
+	  385 -> 24
+	  386 -> 201
+	  387 -> 730
+	  388 -> 304
+	  389 -> 415
+	  390 -> 35
+	  391 -> 651
+	  392 -> 526
+	  393 -> 622
+	  394 -> 410
+	  395 -> 269
+	  396 -> 395
+	  397 -> 169
+	  398 -> 3
+	  399 -> 270
+	  400 -> 401
+	  400 -> 402
+	  401 -> 46
+	  402 -> 466
+	  403 -> 434
+	  404 -> 544
+	  405 -> 154
+	  406 -> 405
+	  407 -> 57
+	  408 -> 612
+	  409 -> 165
+	  410 -> 88
+	  411 -> 618
+	  412 -> 413
+	  412 -> 414
+	  413 -> 31
+	  414 -> 236
+	  415 -> 306
+	  416 -> 258
+	  417 -> 201
+	  418 -> 417
+	  419 -> 420
+	  420 -> 36
+	  421 -> 526
+	  422 -> 41
+	  422 -> 299
+	  422 -> 655
+	  423 -> 502
+	  424 -> 493
+	  425 -> 461
+	  426 -> 346
+	  427 -> 312
+	  428 -> 81
+	  429 -> 626
+	  430 -> 353
+	  430 -> 719
+	  431 -> 432
+	  431 -> 433
+	  432 -> 570
+	  433 -> 9
+	  434 -> 688
+	  435 -> 150
+	  436 -> 356
+	  437 -> 438
+	  438 -> 582
+	  439 -> 102
+	  440 -> 609
+	  440 -> 19
+	  440 -> 671
+	  441 -> 21
+	  442 -> 377
+	  443 -> 100
+	  444 -> 445
+	  444 -> 446
+	  445 -> 248
+	  446 -> 677
+	  447 -> 551
+	  448 -> 323
+	  449 -> 590
+	  450 -> 184
+	  451 -> 325
+	  452 -> 175
+	  453 -> 7800522
+	  454 -> 562
+	  455 -> 65
+	  455 -> 454
+	  455 -> 295
+	  456 -> 455
+	  457 -> 662
+	  458 -> 216
+	  459 -> 303
+	  460 -> 142
+	  461 -> 88
+	  462 -> 464
+	  462 -> 463
+	  463 -> 149
+	  464 -> 74
+	  465 -> 716
+	  466 -> 313
+	  467 -> 42
+	  468 -> 10
+	  469 -> 606
+	  470 -> 472
+	  470 -> 471
+	  471 -> 191
+	  472 -> 632
+	  473 -> 91
+	  474 -> 364
+	  475 -> 242
+	  476 -> 512
+	  476 -> 546
+	  477 -> 318
+	  478 -> 480
+	  478 -> 479
+	  479 -> 372
+	  480 -> 547
+	  481 -> 482
+	  481 -> 483
+	  482 -> 377
+	  483 -> 442
+	  484 -> 485
+	  484 -> 486
+	  485 -> 642
+	  485 -> 164
+	  486 -> 515
+	  487 -> 613
+	  488 -> 247
+	  489 -> 409
+	  490 -> 343
+	  491 -> 531
+	  492 -> 172
+	  493 -> 411
+	  494 -> 388
+	  495 -> 11920053
+	  496 -> 522
+	  497 -> 66
+	  498 -> 499
+	  498 -> 500
+	  499 -> 110
+	  500 -> 331
+	  501 -> 597
+	  502 -> 733
+	  503 -> 73
+	  504 -> 505
+	  505 -> 115
+	  506 -> 396
+	  507 -> 627
+	  508 -> 664
+	  509 -> 257
+	  510 -> 361
+	  511 -> 363
+	  511 -> 404
+	  511 -> 53
+	  512 -> 94
+	  513 -> 439
+	  514 -> 366
+	  515 -> 516
+	  515 -> 517
+	  516 -> 164
+	  516 -> 727
+	  517 -> 491
+	  517 -> 30
+	  518 -> 59
+	  519 -> 288
+	  519 -> 324
+	  520 -> 617
+	  521 -> 206
+	  522 -> 88
+	  523 -> 455
+	  524 -> 525
+	  525 -> 417
+	  526 -> 137
+	  526 -> 140
+	  526 -> 211
+	  526 -> 212
+	  526 -> 501
+	  526 -> 564
+	  527 -> 298
+	  528 -> 180
+	  529 -> 118
+	  530 -> 428
+	  531 -> 554
+	  532 -> 222
+	  533 -> 135
+	  534 -> 339
+	  535 -> 338
+	  536 -> 270
+	  537 -> 563
+	  538 -> 189
+	  539 -> 556
+	  540 -> 315
+	  541 -> 14
+	  542 -> 470
+	  543 -> 151
+	  544 -> 52
+	  545 -> 364
+	  546 -> 513
+	  547 -> 406
+	  548 -> 407
+	  549 -> 22
+	  550 -> 678
+	  551 -> 678
+	  552 -> 170
+	  553 -> 172
+	  554 -> 107
+	  555 -> 521
+	  555 -> 591
+	  556 -> 557
+	  556 -> 558
+	  557 -> 387
+	  558 -> 88
+	  559 -> 493
+	  560 -> 294
+	  561 -> 455
+	  562 -> 497
+	  562 -> 595
+	  562 -> 524
+	  563 -> 11760033
+	  564 -> 68
+	  565 -> 566
+	  565 -> 567
+	  566 -> 336
+	  566 -> 213
+	  567 -> 37
+	  567 -> 69
+	  568 -> 71
+	  569 -> 88
+	  570 -> 556
+	  571 -> 6020118
+	  572 -> 5
+	  573 -> 272
+	  574 -> 429
+	  574 -> 351
+	  575 -> 576
+	  575 -> 577
+	  576 -> 578
+	  577 -> 176
+	  578 -> 683
+	  579 -> 539
+	  580 -> 316
+	  581 -> 437
+	  582 -> 359
+	  583 -> 240
+	  583 -> 16
+	  583 -> 667
+	  583 -> 668
+	  583 -> 317
+	  583 -> 510
+	  584 -> 156
+	  585 -> 612
+	  586 -> 131
+	  587 -> 322
+	  587 -> 614
+	  587 -> 103
+	  588 -> 6020118
+	  589 -> 200
+	  589 -> 552
+	  589 -> 27
+	  590 -> 450
+	  591 -> 328
+	  592 -> 575
+	  593 -> 330
+	  594 -> 455
+	  595 -> 418
+	  596 -> 650
+	  597 -> 527
+	  598 -> 484
+	  599 -> 458
+	  600 -> 267
+	  601 -> 589
+	  602 -> 701
+	  603 -> 80
+	  604 -> 605
+	  605 -> 628
+	  606 -> 630
+	  607 -> 88
+	  608 -> 62
+	  609 -> 55
+	  610 -> 375
+	  611 -> 584
+	  612 -> 268
+	  613 -> 175
+	  614 -> 23
+	  615 -> 201
+	  616 -> 709
+	  617 -> 555
+	  618 -> 389
+	  618 -> 393
+	  618 -> 43
+	  618 -> 494
+	  618 -> 592
+	  618 -> 702
+	  619 -> 201
+	  620 -> 421
+	  621 -> 173
+	  622 -> 425
+	  623 -> 461
+	  624 -> 681
+	  624 -> 530
+	  624 -> 529
+	  625 -> 350
+	  626 -> 507
+	  627 -> 573
+	  628 -> 720
+	  629 -> 235
+	  630 -> 147
+	  631 -> 721
+	  631 -> 542
+	  632 -> 239
+	  633 -> 723
+	  634 -> 102
+	  635 -> 636
+	  635 -> 637
+	  636 -> 673
+	  637 -> 319
+	  638 -> 97
+	  639 -> 640
+	  639 -> 641
+	  640 -> 380
+	  641 -> 195
+	  642 -> 487
+	  643 -> 488
+	  643 -> 108
+	  643 -> 174
+	  643 -> 58
+	  643 -> 443
+	  644 -> 587
+	  645 -> 70
+	  646 -> 32
+	  646 -> 293
+	  647 -> 258
+	  648 -> 689
+	  649 -> 537
+	  650 -> 526
+	  651 -> 652
+	  651 -> 653
+	  652 -> 697
+	  653 -> 654
+	  654 -> 619
+	  655 -> 178
+	  656 -> 618
+	  657 -> 220
+	  658 -> 225
+	  659 -> 305
+	  660 -> 700
+	  661 -> 589
+	  662 -> 11720065
+	  663 -> 84
+	  664 -> 348
+	  665 -> 274
+	  666 -> 581
+	  667 -> 152
+	  668 -> 362
+	  669 -> 153
+	  669 -> 276
+	  670 -> 476
+	  671 -> 95
+	  672 -> 375
+	  673 -> 278
+	  674 -> 281
+	  675 -> 586
+	  676 -> 643
+	  677 -> 248
+	  678 -> 277
+	  679 -> 104
+	  679 -> 105
+	  679 -> 616
+	  680 -> 400
+	  681 -> 290
+	  682 -> 45
+	  683 -> 684
+	  683 -> 685
+	  684 -> 347
+	  685 -> 314
+	  686 -> 523
+	  687 -> 561
+	  688 -> 522
+	  689 -> 690
+	  689 -> 691
+	  690 -> 419
+	  691 -> 391
+	  692 -> 495
+	  693 -> 111
+	  694 -> 696
+	  694 -> 695
+	  695 -> 334
+	  696 -> 596
+	  697 -> 654
+	  698 -> 309
+	  699 -> 533
+	  700 -> 310
+	  701 -> 660
+	  702 -> 398
+	  703 -> 79
+	  704 -> 312
+	  705 -> 706
+	  705 -> 707
+	  706 -> 47
+	  707 -> 681
+	  707 -> 530
+	  707 -> 529
+	  708 -> 48
+	  709 -> 710
+	  709 -> 711
+	  710 -> 287
+	  711 -> 87
+	  712 -> 430
+	  713 -> 234
+	  714 -> 538
+	  714 -> 715
+	  714 -> 403
+	  714 -> 469
+	  715 -> 190
+	  716 -> 717
+	  716 -> 718
+	  717 -> 148
+	  718 -> 116
+	  719 -> 579
+	  720 -> 147
+	  721 -> 150
+	  722 -> 168
+	  723 -> 475
+	  724 -> 128
+	  724 -> 129
+	  725 -> 481
+	  726 -> 675
+	  727 -> 487
+	  728 -> 166
+	  729 -> 271
+	  730 -> 88
+	  731 -> 209
+	  732 -> 565
+	  733 -> 734
+	  733 -> 735
+	  734 -> 339
+	  735 -> 534
+}
+

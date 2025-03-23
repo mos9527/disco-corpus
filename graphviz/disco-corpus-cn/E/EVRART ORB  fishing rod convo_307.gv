@@ -1,0 +1,68 @@
+# EVRART ORB / fishing rod convo
+# Quick attempt to catch the fishing rod...
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 等一下。那真的是竹节虫吗？你可不想让自己出洋相。"];
+	  3 [label="Evrart Claire: “我猜也是，哈里，我就知道。我俩应该找个时间一起出去。像有价值的男人一样，团结一心。”"];
+	  4 [label="Reaction Speed: 那个是伊苏林迪竹节虫吗？看起来应该就是。快点——赶快抓住它，别让它跑了！"];
+	  5 [label="Evrart Claire: 他的大肚皮随着笑声起起伏伏。“一个瘦削害羞的年轻姑娘吗？没关系的。”"];
+	  6 [label="Evrart Claire: “也许我们应该找个时间去外面试试。”"];
+	  7 [label="You: “抱歉，我把钓鱼竿当成了……别的东西。”"];
+	  8 [label="Evrart Claire: “好吧，你的确成功了，哈里。”他坐在椅子里，稍微调整了一下姿势。“你确实是个很让人惊喜的警官。”"];
+	  9 [label="You: “没，我不过是想试试你。研究下你的优点，还有弱点。”"];
+	  10 [label="Fishing Rod: 你真是潜行大师。但是看看你抓到了什么——不是什么竹节虫，而是一根钓鱼竿！"];
+	  11 [label="Untitled hub"];
+	  12 [label="Fishing Rod: 你朝着你眼中的竹节虫大声呵斥，没想到它不过是根钓鱼竿。"];
+	  13 [label="Inland Empire: 这次肯定是竹节虫。你看——它动了！"];
+	  15 [label="You: “钓鱼爱好者？那还用说。那可是我平时唯一的乐趣了。”"];
+	  16 [label="Fishing Rod: 肯定不是竹节虫。绝对是钓鱼竿。"];
+	  17 [label="Evrart Claire: “我觉得你从那根钓鱼竿也看不出什么来吧。”"];
+	  18 [label="You: “我是想给你个惊喜。迷惑你，你懂得。”"];
+	  19 [label="Evrart Claire: “我看你好像挺喜欢我的钓鱼装备。你不会刚好也是个钓鱼爱好者吧？”"];
+	  20 [label="You: 悄悄爬向竹节虫。"];
+	  21 [label="You: “站住！”"];
+	  22 [label="Fishing Rod: 漂亮！但握在你手里的不是竹节虫——而是一根钓鱼竿。"];
+	  23 [label="You: “呃，这是一种比较新奇的钓鱼方法。”"];
+	  24 [label="You: 踮着脚走向竹节虫。"];
+	  25 [label="Evrart Claire: “你这是想干什么，哈里？”"];
+	  26 [label="Evrart Claire: “哈哈，也许是吧。”"];
+	  27 [label="You: “我觉得我曾经还可能是钓鱼之王呢……”"];
+	  28 [label="Variable[\"village.orb_nethouse_tried_catching_phasmid\"]"];
+	  29 [label="Variable[\"village.orb_nethouse_tried_catching_phasmid\"]", shape=diamond];
+	  30 [label="!(Variable[\"village.orb_nethouse_tried_catching_phasmid\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 4
+	  2 -> 16
+	  4 -> 28
+	  7 -> 5
+	  9 -> 17
+	  10 -> 25
+	  11 -> 24
+	  11 -> 2
+	  11 -> 20
+	  11 -> 21
+	  12 -> 25
+	  13 -> 11
+	  15 -> 3
+	  16 -> 19
+	  18 -> 8
+	  19 -> 9
+	  19 -> 27
+	  19 -> 15
+	  20 -> 10
+	  21 -> 12
+	  22 -> 25
+	  23 -> 6
+	  24 -> 22
+	  25 -> 18
+	  25 -> 7
+	  25 -> 23
+	  27 -> 26
+	  28 -> 29
+	  28 -> 30
+	  29 -> 13
+	  30 -> 11
+}
+

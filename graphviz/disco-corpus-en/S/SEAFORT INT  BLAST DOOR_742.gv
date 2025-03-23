@@ -1,0 +1,192 @@
+# SEAFORT INT / BLAST DOOR
+# blast door interactable dialogue. (this is closed, no way to open, open from console if has fuel in)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Cuno: \"What do you think that shit's for? Let's press some buttons.\" He points to the console at the other end of the room."];
+	  3 [label="Jump to: [blast_door_main]"];
+	  4 [label="blast_door_main"];
+	  5 [label="IsCunoInParty()"];
+	  6 [label="IsCunoInParty()", shape=diamond];
+	  7 [label="!(IsCunoInParty())", shape=diamond];
+	  8 [label="Jump to: [blast_door_main]"];
+	  9 [label="Variable[\"seafort.blast_hub_reached\"]"];
+	  10 [label="Variable[\"seafort.blast_hub_reached\"]", shape=diamond];
+	  11 [label="!(Variable[\"seafort.blast_hub_reached\"])", shape=diamond];
+	  12 [label="You: What's on the other side?\n\"What's on the other side?\""];
+	  13 [label="You: \"You're right. We open the big one -- do you see controls somewhere?\""];
+	  14 [label="IsCunoInParty()"];
+	  15 [label="IsCunoInParty()", shape=diamond];
+	  16 [label="!(IsCunoInParty())", shape=diamond];
+	  17 [label="Small Blast Door: The heavy metal door stands as it did, firmly rusted shut into its big brother."];
+	  18 [label="Small Blast Door: Fuel --> generator --> console. Seems like an obvious path, now that the power is on."];
+	  19 [label="Interfacing: He's right. It would be better to open its *big brother*. A powerful engine hangs beneath the ceiling -- it must control the blast door."];
+	  21 [label="Jump to: [blast_door_main]"];
+	  22 [label="You: [Leave.]"];
+	  23 [label="IsKimHere()"];
+	  24 [label="IsKimHere()", shape=diamond];
+	  25 [label="!(IsKimHere())", shape=diamond];
+	  26 [label="Kim Kitsuragi: \"Maybe this is one of the doors we *don't* open?\" He looks at the door, then at its bigger brother, then at the lock…"];
+	  27 [label="Kim Kitsuragi: \"All right.\" The lieutenant knocks on the metal. \"I retract my statement. It was naive. Let's look around and get it open.\""];
+	  28 [label="Interfacing: He's right. It would be better to open its *big brother*. A powerful engine hangs under the ceiling -- it must control the blast door."];
+	  29 [label="You: \"No, this isn't 'One More Door'. We're opening it.\""];
+	  30 [label="Jump to: [blast_door_main]"];
+	  31 [label="Small Blast Door: Fuel --> generator --> console. Seems like the obvious path."];
+	  32 [label="You: \"I find that highly unlikely.\""];
+	  33 [label="IsKimHere()"];
+	  34 [label="IsKimHere()", shape=diamond];
+	  35 [label="!(IsKimHere())", shape=diamond];
+	  36 [label="You: \"One of the *very few doors*? Perhaps...\""];
+	  37 [label="Cuno: \"Fuckin' A, let's get this shit open. Get to the secrets behind. Secret style.\" He stares at the large doors looming above him."];
+	  38 [label="Kim Kitsuragi: \"Fuel -- generator -- console. That's our best chance.\" He points to the console at the other end of the room. \"That there could open it, now that the power's on.\""];
+	  39 [label="Cuno: \"Yeah, the console over there?\" He points to the southeast. \"Yeah. Yeah. Let's get this big shit open.\"\n\"Yeah, the console over there. Remember?\" He points to the southeast. \"Buttons and shit. Yeah. Yeah. Let's get this big shit open, seems like the best plan.\""];
+	  40 [label="Kim Kitsuragi: \"Another part of the island probably.\" The lieutenant looks into the keyhole. \"The lock looks like it could still be usable.\""];
+	  41 [label="Jump to: [blast_door_main]"];
+	  42 [label="Interfacing: Perhaps you could open its *big brother*? A powerful engine hangs beneath the ceiling -- it must control the blast door. There must be controls somewhere..."];
+	  43 [label="Variable[\"TASK.open_blast_door\"]"];
+	  44 [label="Variable[\"TASK.open_blast_door\"]", shape=diamond];
+	  45 [label="!(Variable[\"TASK.open_blast_door\"])", shape=diamond];
+	  46 [label="IsKimHere()"];
+	  47 [label="IsKimHere()", shape=diamond];
+	  48 [label="!(IsKimHere())", shape=diamond];
+	  49 [label="Jump to: [blast_door_main]"];
+	  50 [label="Cuno: \"We fuelled the generator, didn't we?\" He points to the console at the other end of the room. \"What do you think that shit's for? Let's press some buttons.\""];
+	  51 [label="Jump to: [blast_door_main]"];
+	  52 [label="You: \"Sure, you're right. We won't have to open it.\""];
+	  53 [label="Kim Kitsuragi: \"I think there's a console just southeast...\"  He shuffles his feet to stay warm. \"Let's look around. Getting the blast door open seems like the best plan.\"\n\"Yeah -- on the console just southeast of here. Remember?\" He points to it, then shuffles his feet to stay warm. \"Let's look around. Getting the blast door open seems like the best plan.\""];
+	  54 [label="Kim Kitsuragi: \"Fuel -- generator -- console. That's our best chance.\" He points to the console at the other end of the room. \"That there could open it, once we've put some fuel in the generator.\""];
+	  55 [label="Small Blast Door: How indeed? Finding the key seems unlikely..."];
+	  56 [label="You: \"No. This is the titular *One More Door*. We're opening it.\""];
+	  57 [label="Variable[\"TASK.fuel_the_generator\"]"];
+	  58 [label="Variable[\"TASK.fuel_the_generator\"]", shape=diamond];
+	  59 [label="!(Variable[\"TASK.fuel_the_generator\"])", shape=diamond];
+	  60 [label="Variable[\"TASK.fuel_the_generator_done\"]"];
+	  61 [label="Variable[\"TASK.fuel_the_generator_done\"]", shape=diamond];
+	  62 [label="!(Variable[\"TASK.fuel_the_generator_done\"])", shape=diamond];
+	  63 [label="Kim Kitsuragi: The lieutenant knocks on the metal. \"I retract my statement. It was naive. Let's look around and get it open.\""];
+	  64 [label="You: \"You're right. We open the big one -- do you see controls anywhere?\""];
+	  65 [label="Variable[\"TASK.fuel_the_generator_done\"]"];
+	  66 [label="Variable[\"TASK.fuel_the_generator_done\"]", shape=diamond];
+	  67 [label="!(Variable[\"TASK.fuel_the_generator_done\"])", shape=diamond];
+	  68 [label="You: \"Sure, you're right. We won't have to open it.\""];
+	  69 [label="You: \"I find us not opening it highly unlikely.\""];
+	  70 [label="Cuno: \"Cuno don't know how to pick this lock. This one's... military shit.\" He looks at the door, then at its bigger brother, then at the lock."];
+	  71 [label="Logic: The chances of there being 'important shit' there are rather high, yes."];
+	  72 [label="You: How do I open this?\n\"How do we open this?\""];
+	  73 [label="Cuno: \"Another part of Death Island? Some secret hidden shit, Cuno thinks. Important shit...\""];
+	  74 [label="Variable[\"TASK.fuel_the_generator_done\"]"];
+	  75 [label="Variable[\"TASK.fuel_the_generator_done\"]", shape=diamond];
+	  76 [label="!(Variable[\"TASK.fuel_the_generator_done\"])", shape=diamond];
+	  77 [label="Small Blast Door: The door is mute, cold as ice. The lock looks like it may have seen recent use, but it's impossible to tell."];
+	  78 [label="GainTask(\"TASK.fuel_generator\")--[[ Variable[ ]]"];
+	  79 [label="Small Blast Door: You see a small metal door nested inside a larger one -- a heavy steel blast door. There is a conventional keyhole above the handle. It's very small."];
+	  80 [label="IsCunoInParty()"];
+	  81 [label="IsCunoInParty()", shape=diamond];
+	  82 [label="!(IsCunoInParty())", shape=diamond];
+	  83 [label="Jump to: [blast_door_main]"];
+	  0 -> 1
+	  1 -> 9
+	  2 -> 51
+	  3 -> 4
+	  4 -> 72
+	  4 -> 12
+	  4 -> 22
+	  5 -> 6
+	  5 -> 7
+	  6 -> 70
+	  7 -> 55
+	  8 -> 4
+	  9 -> 10
+	  9 -> 11
+	  10 -> 17
+	  11 -> 79
+	  12 -> 23
+	  13 -> 39
+	  14 -> 16
+	  14 -> 15
+	  15 -> 73
+	  16 -> 77
+	  17 -> 4
+	  18 -> 21
+	  19 -> 32
+	  19 -> 36
+	  19 -> 68
+	  19 -> 13
+	  19 -> 56
+	  21 -> 4
+	  23 -> 24
+	  23 -> 25
+	  24 -> 40
+	  25 -> 14
+	  26 -> 28
+	  27 -> 8
+	  28 -> 64
+	  28 -> 69
+	  28 -> 29
+	  28 -> 52
+	  29 -> 27
+	  30 -> 4
+	  31 -> 57
+	  32 -> 37
+	  33 -> 34
+	  33 -> 35
+	  34 -> 26
+	  35 -> 5
+	  36 -> 37
+	  37 -> 3
+	  38 -> 30
+	  39 -> 3
+	  40 -> 41
+	  41 -> 4
+	  42 -> 49
+	  43 -> 44
+	  43 -> 45
+	  44 -> 46
+	  45 -> 33
+	  46 -> 48
+	  46 -> 47
+	  47 -> 65
+	  48 -> 80
+	  49 -> 4
+	  50 -> 51
+	  51 -> 4
+	  52 -> 63
+	  53 -> 8
+	  54 -> 57
+	  55 -> 42
+	  56 -> 37
+	  57 -> 58
+	  57 -> 59
+	  58 -> 83
+	  59 -> 78
+	  60 -> 61
+	  60 -> 62
+	  61 -> 50
+	  62 -> 2
+	  63 -> 8
+	  64 -> 53
+	  65 -> 66
+	  65 -> 67
+	  66 -> 38
+	  67 -> 54
+	  68 -> 37
+	  69 -> 27
+	  70 -> 19
+	  71 -> 41
+	  72 -> 43
+	  73 -> 71
+	  74 -> 75
+	  74 -> 76
+	  75 -> 18
+	  76 -> 31
+	  77 -> 41
+	  78 -> 83
+	  79 -> 4
+	  80 -> 81
+	  80 -> 82
+	  81 -> 60
+	  82 -> 74
+	  83 -> 4
+}
+

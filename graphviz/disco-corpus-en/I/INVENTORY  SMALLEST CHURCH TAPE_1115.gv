@@ -1,0 +1,128 @@
+# INVENTORY / SMALLEST CHURCH TAPE
+# tape interactable in inventory; smallest church in saint-saens with all the dialogue necessary. item pickup in world.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: The lieutenant looks at you as you remove the tape from the boombox. He doesn't say anything."];
+	  3 [label="You: Keep the porta-reel at the harmless distance and wait."];
+	  4 [label="You: Scratch that, I'm already crying. And I look dumb. And old."];
+	  5 [label="IsKimHere()"];
+	  6 [label="IsKimHere()", shape=diamond];
+	  7 [label="!(IsKimHere())", shape=diamond];
+	  8 [label="CheckEquipped(\"boombox\")"];
+	  9 [label="CheckEquipped(\"boombox\")", shape=diamond];
+	  10 [label="!(CheckEquipped(\"boombox\"))", shape=diamond];
+	  11 [label="\"Smallest Church in Saint-Saëns\": You press the large button marked *Commencer* and the tape starts spinning. There's a small delay before the song starts playing..."];
+	  12 [label="You: Press play on tape."];
+	  13 [label="Variable[\"TASK.sing_karaoke\"]"];
+	  14 [label="Variable[\"TASK.sing_karaoke\"]", shape=diamond];
+	  15 [label="!(Variable[\"TASK.sing_karaoke\"])", shape=diamond];
+	  16 [label="Inland Empire: Crying is good, it gives your performance authenticity. Besides, you already know the lyrics since you've listened to it, like, a million times!"];
+	  17 [label="\"Smallest Church in Saint-Saëns\": A click -- then silence, for a bit. Then the tape stops spinning."];
+	  18 [label="You: Nothing can stop me now."];
+	  19 [label="\"Smallest Church in Saint-Saëns\": The porta-reel is just what you needed -- the reels attach to the apparatus with a satisfying click. The tape is routed behind the magnetic reader."];
+	  20 [label="CheckEquipped(\"boombox\")"];
+	  21 [label="CheckEquipped(\"boombox\")", shape=diamond];
+	  22 [label="!(CheckEquipped(\"boombox\"))", shape=diamond];
+	  23 [label="IsTaskActive(\"TASK.sing_karaoke\")--[[ Variable[ ]]"];
+	  24 [label="IsTaskActive(\"TASK.sing_karaoke\")--[[ Variable[ ]]", shape=diamond];
+	  25 [label="!(IsTaskActive(\"TASK.sing_karaoke\")--[[ Variable[ ]])", shape=diamond];
+	  26 [label="\"Smallest Church in Saint-Saëns\": Telling you about the tiniest church in Saint-Saëns, surrounded by even tinier yard. You almost feel the seaside mist on your skin. It's *mega* sad."];
+	  27 [label="You: Could I sing this for karaoke? I think I could sing this."];
+	  28 [label="Encyclopedia: Yup. They're all here. All three verses."];
+	  29 [label="You: Remove the tape."];
+	  30 [label="Reaction Speed: A pawnshop -- a pawnshop would have a tape player..."];
+	  31 [label="You: Press your ear against the speaker."];
+	  32 [label="Inland Empire: Garte. You have to convince Garte to let you sing karaoke in the Whirling. After you've won him over, you can *express* yourself. Let the pain out. Make everyone understand."];
+	  33 [label="CheckEquipped(\"boombox\")"];
+	  34 [label="CheckEquipped(\"boombox\")", shape=diamond];
+	  35 [label="!(CheckEquipped(\"boombox\"))", shape=diamond];
+	  36 [label="\"Smallest Church in Saint-Saëns\": Then the organ starts playing a simple melancholic tune, echoing in the hallway. A lone singing voice joins in..."];
+	  37 [label="You: No, I couldn't! It's too sad, I might cry and trash the room again."];
+	  38 [label="\"Smallest Church in Saint-Saëns\": Immediately the boombox tunes itself back to the Friday night beats, vibrating on your shoulder."];
+	  39 [label="\"Smallest Church in Saint-Saëns\": There's no way to listen to the tape without a working tape player or porta-reel at hand."];
+	  40 [label="Logic: Nothing to do with this right now."];
+	  41 [label="sad_song_reaction"];
+	  42 [label="CheckItem(\"boombox\")"];
+	  43 [label="CheckItem(\"boombox\")", shape=diamond];
+	  44 [label="!(CheckItem(\"boombox\"))", shape=diamond];
+	  45 [label="IsTaskActive(\"TASK.sing_karaoke\")--[[ Variable[ ]]"];
+	  46 [label="IsTaskActive(\"TASK.sing_karaoke\")--[[ Variable[ ]]", shape=diamond];
+	  47 [label="!(IsTaskActive(\"TASK.sing_karaoke\")--[[ Variable[ ]])", shape=diamond];
+	  48 [label="\"Smallest Church in Saint-Saëns\": The porta-reel is just what you needed -- the reels attach to the apparatus with a satisfying click. The tape is routed behind the magnetic reader."];
+	  49 [label="Inland Empire: But even just holding the tape makes you feel a little sad..."];
+	  50 [label="Inland Empire: Of course you could sing this! You could take sad to a whole new level with this. And you already know the lyrics since you've listened to it, like, a million times!"];
+	  51 [label="Inland Empire: Within seconds you know -- this is the one. The *real shit* you've been looking for. The one you trashed your room to. This one tells it like it is. This is your tune.\nWithin seconds you know -- this is the one. The *real shit* you've been looking for. The one you trashed your room to that Klaasje told you about. Perform it!"];
+	  52 [label="Inland Empire: *And* the B-side of the tape contains the instrumental version. It's like the world itself is telling you to do it. Only one obstacle stands on your way..."];
+	  53 [label="Kim Kitsuragi: The lieutenant watches you pack up the boombox. He doesn't say anything."];
+	  54 [label="\"Smallest Church in Saint-Saëns\": It sounds like someone's moving in the room, getting comfortable. Then the organ starts playing a simple melancholic tune, echoing in the hallway. A lone singing voice joins in..."];
+	  55 [label="You: What?"];
+	  56 [label="You: Not now. [Put the tape away.]"];
+	  0 -> 1
+	  1 -> 42
+	  3 -> 36
+	  4 -> 16
+	  5 -> 6
+	  5 -> 7
+	  6 -> 33
+	  7 -> 20
+	  8 -> 9
+	  8 -> 10
+	  9 -> 19
+	  10 -> 48
+	  11 -> 3
+	  11 -> 31
+	  12 -> 11
+	  13 -> 14
+	  13 -> 15
+	  14 -> 20
+	  15 -> 40
+	  16 -> 28
+	  17 -> 23
+	  18 -> 32
+	  19 -> 56
+	  19 -> 12
+	  20 -> 21
+	  20 -> 22
+	  21 -> 29
+	  23 -> 24
+	  23 -> 25
+	  24 -> 41
+	  25 -> 13
+	  26 -> 45
+	  27 -> 50
+	  28 -> 52
+	  29 -> 38
+	  31 -> 54
+	  32 -> 5
+	  33 -> 34
+	  33 -> 35
+	  34 -> 2
+	  35 -> 53
+	  36 -> 26
+	  37 -> 16
+	  39 -> 49
+	  40 -> 20
+	  41 -> 27
+	  41 -> 4
+	  41 -> 37
+	  42 -> 43
+	  42 -> 44
+	  43 -> 8
+	  44 -> 39
+	  45 -> 46
+	  45 -> 47
+	  46 -> 51
+	  47 -> 17
+	  48 -> 56
+	  48 -> 12
+	  49 -> 30
+	  50 -> 28
+	  51 -> 17
+	  52 -> 18
+	  52 -> 55
+	  54 -> 26
+	  55 -> 32
+}
+

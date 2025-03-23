@@ -1,0 +1,123 @@
+# KINEEMA / CALLING THE LIBRARY
+# Calling Jamrock Public Library to see if you can find out anything about the dead man found at the boardwalk. You'll get Working Class Woman's home address from here.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"Thank you. That's all from me, I have no other questions.\" (End call with the library.)"];
+	  3 [label="Logic: They're too poor to have a phone line."];
+	  4 [label="Jamrock Public Library: \"Yes, hello, are you still there?\" You can hear him fiddle with the printout. \"I found Billie Méjean's home address, is that alright? No phone number unfortunately.\""];
+	  5 [label="Jamrock Public Library: \"Happy we could help. Good bye, officer.\" The librarian hangs up and the call gets redirected back to the station."];
+	  6 [label="You: \"Do you know someone who was?\""];
+	  7 [label="Jamrock Public Library: \"Marie?\" He covers the phone with his hand and yells out into the room behind him: \"Marie! Do you remember a reader named Billie Méjean? They returned a Thibault book the other day...\" You hear someone answer from afar."];
+	  8 [label="Variable[\"plaza.working_asked_about_loos_radio_city\"]"];
+	  9 [label="Variable[\"plaza.working_asked_about_loos_radio_city\"]", shape=diamond];
+	  10 [label="!(Variable[\"plaza.working_asked_about_loos_radio_city\"])", shape=diamond];
+	  12 [label="You: \"Thank you. That's all from me, I have no other questions.\" (End call with the library.)"];
+	  13 [label="Variable[\"TASK.find_a_way_inside_apt_building_done\"]"];
+	  14 [label="Variable[\"TASK.find_a_way_inside_apt_building_done\"]", shape=diamond];
+	  15 [label="!(Variable[\"TASK.find_a_way_inside_apt_building_done\"])", shape=diamond];
+	  16 [label="Jamrock Public Library: \"Billie, Billie *Méjean*, you said? Give me a moment, I'll have to check our database.\" He puts down the receiver."];
+	  17 [label="address known hub"];
+	  18 [label="Empathy: And then goes for a little drink later, on the lookout..."];
+	  19 [label="last questions hub"];
+	  20 [label="Jamrock Public Library: \"Happy we could help. Good bye, officer.\" The librarian hangs up and the call gets redirected back to the station with a soft click..."];
+	  21 [label="Jamrock Public Library: \"Maybe you can write it down? It's Rue de Saint-Ghislaine 33B, apartment no 20. It's in Martinaise, I believe... Capeside Apartments, it says. That's all.\""];
+	  22 [label="Alice: \"Anything else you need from me?\""];
+	  23 [label="Jamrock Public Library: \"Marie...\" A moment passes."];
+	  24 [label="You: \"Yes, home address is fine.\""];
+	  25 [label="You: \"Do you have any other information on Billie Méjean?\""];
+	  26 [label="Jamrock Public Library: \"She said it was an older man... And that she's pretty sure he had had a drink or two the last time she saw him.\""];
+	  27 [label="Jamrock Public Library: \"...\""];
+	  28 [label="Jump to: [The actual Radio HUB]"];
+	  29 [label="You: \"So Billie Méjean is a woman, not a man? How did your colleague know that it was her husband?\""];
+	  30 [label="You: \"Can Marie describe to me what the husband looked like?\""];
+	  31 [label="You: \"What was he wearing?\""];
+	  32 [label="Reaction Speed: That's where the smoker on the balcony lives, isn't it?"];
+	  33 [label="You: \"I'm looking for any information that you can provide on Billie Méjean, a reader.\""];
+	  34 [label="Jump to: [last questions hub]"];
+	  35 [label="You: \"Do you know the husband's name?\""];
+	  36 [label="Jamrock Public Library: \"Sorry, no -- Marie only knows him by sight.\""];
+	  37 [label="Alice: \"Anything else you need from me?\" Alice asks."];
+	  38 [label="Logic: Loos, Radio City? That's the same book the working class woman was reading at the bookstand..."];
+	  39 [label="Jump to: [last questions hub]"];
+	  40 [label="Perception (Hearing): \"Maurice, what?!\" a woman yells. Then: \"Yes-yes, okay, if it was the police...\" She starts explaining something."];
+	  41 [label="Logic: Good. You have a name now."];
+	  42 [label="Reaction Speed: By the pier, north of here. Those big apartment buildings there."];
+	  43 [label="Jamrock Public Library: \"...\""];
+	  44 [label="Jamrock Public Library: \"Uh, one second...\" The librarian turns away from the phone again and relays the question."];
+	  45 [label="Jamrock Public Library: \"...\""];
+	  46 [label="Jamrock Public Library: \"Here we go, sir: Rue de Saint-Ghislaine 33B, apartment no 20. It's in Martinaise, I believe... Capeside Apartments, it says. That's all.\""];
+	  47 [label="Jamrock Public Library: \"It says here that they returned their last book just a few days ago, but I wasn't at work that day.\""];
+	  48 [label="Jamrock Public Library: \"Yes, it was my colleague Marie,\" the librarian is speaking into the phone again. \"She said that it was Billie's *husband* who returned the book. He also asked for this new sci-fi release \"Loos, Radio City '87\", but we don't have it yet.\""];
+	  49 [label="Jump to: [The actual Radio HUB]"];
+	  50 [label="Jamrock Public Library: \"Marie knows Billie, she's been working here longer than me. Sometimes her husband returns some books for her.\""];
+	  51 [label="Shivers: On Meroe drive in Central Jamrock -- in a darkened hall lit by orange desk lamps -- far away from the noise outside -- a middle-aged man taps commands into an old radiocomputer. A printout falls on the desk. Behind him, a lonely reader scours some dusty bookshelves, looking for a paperback..."];
+	  52 [label="You: \"I'm not really that good with addresses.\""];
+	  53 [label="Inland Empire: Something unpleasant twitches in your stomach."];
+	  54 [label="Jamrock Public Library: \"Sorry, Marie wasn't really paying any attention to that.\""];
+	  7760201 [label="JUMP OUT to PLAZA / COUPRIS KINEEMA", shape=diamond];
+	  0 -> 1
+	  1 -> 33
+	  2 -> 20
+	  3 -> 24
+	  3 -> 52
+	  4 -> 3
+	  5 -> 37
+	  6 -> 7
+	  7 -> 40
+	  8 -> 9
+	  8 -> 10
+	  9 -> 38
+	  10 -> 41
+	  12 -> 5
+	  13 -> 14
+	  13 -> 15
+	  14 -> 32
+	  15 -> 42
+	  16 -> 45
+	  17 -> 25
+	  17 -> 12
+	  18 -> 34
+	  19 -> 2
+	  19 -> 35
+	  19 -> 29
+	  19 -> 30
+	  20 -> 22
+	  21 -> 13
+	  22 -> 28
+	  23 -> 26
+	  24 -> 46
+	  25 -> 47
+	  26 -> 31
+	  27 -> 43
+	  28 -> 7760201
+	  29 -> 50
+	  30 -> 23
+	  31 -> 44
+	  32 -> 17
+	  33 -> 16
+	  34 -> 19
+	  35 -> 36
+	  36 -> 34
+	  37 -> 49
+	  38 -> 53
+	  39 -> 19
+	  40 -> 48
+	  41 -> 19
+	  42 -> 17
+	  43 -> 51
+	  44 -> 54
+	  45 -> 27
+	  46 -> 13
+	  47 -> 12
+	  47 -> 6
+	  48 -> 8
+	  49 -> 7760201
+	  50 -> 18
+	  51 -> 4
+	  52 -> 21
+	  53 -> 19
+	  54 -> 39
+}
+

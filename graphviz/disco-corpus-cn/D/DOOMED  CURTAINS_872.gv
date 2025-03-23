@@ -1,0 +1,157 @@
+# DOOMED / CURTAINS
+# Safety Curtains blocking entrance to Dicemaker. (p.s. they are made of metal not wood, apparently)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 再敲大力一点。"];
+	  3 [label="Kim Kitsuragi: “谢谢。”"];
+	  4 [label="Safety Curtains: 一道铁质的防火幕出现在你眼前，像风箱一样褶曲着。它遮住了半个房间——挡住了通往巨大工业烟囱的道路。"];
+	  5 [label="Variable[\"TASK.doomed_investigation\"] == true  and  Variable[\"TASK.doomed_investigation_done\"] == false"];
+	  6 [label="Variable[\"TASK.doomed_investigation\"] == true  and  Variable[\"TASK.doomed_investigation_done\"] == false", shape=diamond];
+	  7 [label="!(Variable[\"TASK.doomed_investigation\"] == true  and  Variable[\"TASK.doomed_investigation_done\"] == false)", shape=diamond];
+	  8 [label="Variable[\"TASK.find_the_witch\"]"];
+	  9 [label="Variable[\"TASK.find_the_witch\"]", shape=diamond];
+	  10 [label="!(Variable[\"TASK.find_the_witch\"])", shape=diamond];
+	  11 [label="curtains hub"];
+	  12 [label="Kim Kitsuragi: “你为什么会觉得对面肯定有东西呢？”警督询问着，但你可以在他的眼神中看到一丝好奇的光芒。"];
+	  13 [label="IsKimHere()"];
+	  14 [label="IsKimHere()", shape=diamond];
+	  15 [label="!(IsKimHere())", shape=diamond];
+	  16 [label="Safety Curtains: 这么做也太奇怪了吧……什么也没发生。"];
+	  17 [label="Jump to: [curtains hub]"];
+	  18 [label="Variable[\"doomed.seen_safety_curtains\"]"];
+	  19 [label="Variable[\"doomed.seen_safety_curtains\"]", shape=diamond];
+	  20 [label="!(Variable[\"doomed.seen_safety_curtains\"])", shape=diamond];
+	  21 [label="Physical Instrument: 不管里面住了什么东西，肯定有其他办法把它唤醒……也许你应该试试朝楼下的那个壁炉里大叫？"];
+	  22 [label="You: [离开。]"];
+	  23 [label="You: “这可不是随意的，这很*重要*。我想看看另一边有什么。”"];
+	  24 [label="Kim Kitsuragi: “无论如何，我们现在是进不去的。之后再来调查吧。”"];
+	  25 [label="IsTaskActive(\"TASK.find_the_witch\")--[[ Variable[ ]]"];
+	  26 [label="IsTaskActive(\"TASK.find_the_witch\")--[[ Variable[ ]]", shape=diamond];
+	  27 [label="!(IsTaskActive(\"TASK.find_the_witch\")--[[ Variable[ ]])", shape=diamond];
+	  28 [label="Logic: 如果烟囱真有入口，那这里的某个地方肯定有一个壁炉。也许还有其他进去的办法？"];
+	  29 [label="IsKimHere()"];
+	  30 [label="IsKimHere()", shape=diamond];
+	  31 [label="!(IsKimHere())", shape=diamond];
+	  32 [label="You: “我可以试试……”（对着青肿的指关节轻轻吹一口气。）"];
+	  33 [label="Jump to: [curtains hub]"];
+	  34 [label="Safety Curtains: 你的声音再次变成一阵刺耳而沙哑的叫唤，话也被吞没了一半。废弃的办公大楼里一片寂静——没有人回应你。"];
+	  35 [label="Safety Curtains: 这些窗帘真是惊人的结实……现在你的拳头开始疼了。"];
+	  36 [label="Jump to: [curtains hub]"];
+	  37 [label="Kim Kitsuragi: “不管里面住了什么东西，肯定有其他办法把它唤醒……也许我们可以试试朝楼下的那个壁炉里大叫？”"];
+	  38 [label="Safety Curtains: 还是什么都没有。没人在家。"];
+	  39 [label="You: 敲的*再*用力一些！"];
+	  40 [label="Drama: 大人，我能提个建议吗？您就把朝着壁炉里大喊当成是一个*盛大的演出*。使用您的胸音，不要用头音。从隔膜发声歌唱。"];
+	  41 [label="Empathy: 你突然产生一种自怜的感觉。"];
+	  42 [label="Variable[\"TASK.find_the_witch\"]"];
+	  43 [label="Variable[\"TASK.find_the_witch\"]", shape=diamond];
+	  44 [label="!(Variable[\"TASK.find_the_witch\"])", shape=diamond];
+	  45 [label="Logic: 这里就是地窖那个中央壁炉的正上方。声音可能就是从这里传出来的。"];
+	  46 [label="Physical Instrument: 你尝试过，但还是错过了。不过，你已经尽力了，冠军。忏愧的是，这样还不够好。"];
+	  48 [label="Jump to: [curtains hub]"];
+	  49 [label="Logic: 不管谁在那里，肯定有其他办法把人叫醒……也许我们应该跟书店的那位女士聊聊，问问是怎么回事？"];
+	  50 [label="Kim Kitsuragi: 金叹叹气。“幽灵是不存在的，难道你父母没告诉过你吗？无论如何，我们现在是进不去的。之后再来调查吧。”"];
+	  51 [label="Variable[\"doomed.curtains_drama_performance\"]"];
+	  52 [label="Variable[\"doomed.curtains_drama_performance\"]", shape=diamond];
+	  53 [label="!(Variable[\"doomed.curtains_drama_performance\"])", shape=diamond];
+	  54 [label="SetVariableValue(\"doomed.curtains_knocked_three_times\", true) --[[ Variable[ ]]"];
+	  55 [label="You: 敲敲它。"];
+	  56 [label="You: “我需要找到那个*邪恶的存在*，金。这就是那个烟囱。”"];
+	  57 [label="Variable[\"doomed.furnace_heard_voices\"]"];
+	  58 [label="Variable[\"doomed.furnace_heard_voices\"]", shape=diamond];
+	  59 [label="!(Variable[\"doomed.furnace_heard_voices\"])", shape=diamond];
+	  60 [label="Physical Instrument: 也许这主意也不算太糟糕？再试一次，小子。"];
+	  61 [label="You: “喂？我喊了，但是没什么用……”"];
+	  62 [label="Safety Curtains: 就像之前一样，一道铁质的防火幕挡在你眼前，像风箱一样褶曲着。它遮住了半个房间——挡住了通往巨大工业烟囱的道路。"];
+	  63 [label="Inland Empire: 这肯定就是那个*存在*居住的地方……"];
+	  64 [label="Kim Kitsuragi: “不管谁在那里，肯定有其他办法把人叫醒……也许我们应该问问书店的那位女士是怎么回事？”"];
+	  65 [label="Kim Kitsuragi: “你能不能尽量克制一下，不要随意攻击什么东西？”"];
+	  66 [label="Variable[\"doomed.furnace_heard_voices\"]"];
+	  67 [label="Variable[\"doomed.furnace_heard_voices\"]", shape=diamond];
+	  68 [label="!(Variable[\"doomed.furnace_heard_voices\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 18
+	  2 -> 38
+	  3 -> 24
+	  4 -> 25
+	  5 -> 6
+	  5 -> 7
+	  6 -> 28
+	  7 -> 29
+	  8 -> 9
+	  8 -> 10
+	  9 -> 21
+	  10 -> 49
+	  11 -> 2
+	  11 -> 39
+	  11 -> 22
+	  11 -> 55
+	  11 -> 61
+	  12 -> 24
+	  13 -> 14
+	  13 -> 15
+	  14 -> 42
+	  15 -> 8
+	  16 -> 17
+	  17 -> 11
+	  18 -> 19
+	  18 -> 20
+	  19 -> 62
+	  20 -> 4
+	  21 -> 33
+	  23 -> 12
+	  24 -> 36
+	  25 -> 26
+	  25 -> 27
+	  26 -> 63
+	  27 -> 66
+	  28 -> 29
+	  29 -> 30
+	  29 -> 31
+	  30 -> 65
+	  31 -> 17
+	  32 -> 3
+	  33 -> 11
+	  34 -> 41
+	  35 -> 57
+	  36 -> 11
+	  37 -> 33
+	  38 -> 17
+	  39 -> 35
+	  40 -> 51
+	  41 -> 40
+	  42 -> 43
+	  42 -> 44
+	  43 -> 37
+	  44 -> 64
+	  45 -> 11
+	  46 -> 48
+	  48 -> 11
+	  49 -> 33
+	  50 -> 36
+	  51 -> 52
+	  51 -> 53
+	  52 -> 60
+	  53 -> 46
+	  54 -> 5
+	  55 -> 16
+	  56 -> 50
+	  57 -> 58
+	  57 -> 59
+	  58 -> 13
+	  59 -> 54
+	  60 -> 48
+	  61 -> 34
+	  62 -> 66
+	  63 -> 66
+	  64 -> 33
+	  65 -> 56
+	  65 -> 32
+	  65 -> 23
+	  66 -> 67
+	  66 -> 68
+	  67 -> 45
+	  68 -> 11
+}
+

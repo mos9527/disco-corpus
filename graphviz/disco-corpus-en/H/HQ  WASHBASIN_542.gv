@@ -1,0 +1,175 @@
+# HQ / WASHBASIN
+# A washbasin An interactable dialogue where you can shave your beard/muttonchops! This changes the portrait in the mirror dialogue, and the one on UI.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Washbasin: On the table you see a bowl of water, a rough soap, and next to it a small hand mirror. A straight razor soaks inside the wash basin."];
+	  3 [label="Physical Instrument: Yeah, purified yourself right back to infancy. You look like a baby!"];
+	  4 [label="You: [Leave.]"];
+	  5 [label="Washbasin: How would you know? You haven't even seen your face! Go take a peek in the mirror, then decide for yourself."];
+	  6 [label="mainhubbasin"];
+	  7 [label="Jump to: [mainhubbasin]"];
+	  8 [label="Suggestion: Your face, such as it is. A regular human face. Sans expression."];
+	  9 [label="Suggestion: The beardless nature of your cheeks makes The Expression seem even more like a terrifying grimace."];
+	  10 [label="Washbasin: Variable[\"coast.morells_pheromone_spray\"]"];
+	  11 [label="Variable[\"coast.morells_pheromone_spray\"]", shape=diamond];
+	  12 [label="!(Variable[\"coast.morells_pheromone_spray\"])", shape=diamond];
+	  13 [label="You: Time to shave. Get these mutton chops off."];
+	  14 [label="You: Variable[\"village.hq_whitec_shave_it_off\"]"];
+	  15 [label="Variable[\"village.hq_whitec_shave_it_off\"]", shape=diamond];
+	  16 [label="!(Variable[\"village.hq_whitec_shave_it_off\"])", shape=diamond];
+	  17 [label="Composure: A fresh start looms ahead. Clean yourself up and be born anew."];
+	  18 [label="Hand/Eye Coordination: The sharp blade chafes against your skin, producing a scratching sound. The surface underneath the beard feels tender, the air brushing against it chilly."];
+	  19 [label="Washbasin: But man persists and after fifteen minutes pass, you look almost presentable. Sort of. The sudden absence of the morbid dead tissue smell instantly lifts your spirit."];
+	  20 [label="Washbasin: Scrubbing all the necrotic tissue off your hands takes a while. The fingernails are especially hard. Death has made it's way into every nook and cranny..."];
+	  21 [label="Washbasin: The water reflects back a vague image of your face -- nose bulbous and red, hair unkempt, wrinkles lining the eyes and forehead. The 'stache is gigantic."];
+	  22 [label="You: I *need* to shave the chops!"];
+	  23 [label="Physical Instrument: You'll be lookin' like a pansy without the chops! A fuckin' pansy!"];
+	  24 [label="Volition: There's no way to salvage this."];
+	  25 [label="Washbasin: But man persists and finally your bruised hands look clean and presentable... sort of. The sudden absence of the morbid dead tissue smell is uplifting."];
+	  26 [label="Washbasin: Variable[\"whirling.mirror_saw_your_face\"] == false"];
+	  27 [label="Variable[\"whirling.mirror_saw_your_face\"] == false", shape=diamond];
+	  28 [label="!(Variable[\"whirling.mirror_saw_your_face\"] == false)", shape=diamond];
+	  29 [label="Jump to: [mainhubbasin]"];
+	  30 [label="Jump to: [mainhubbasin]"];
+	  31 [label="You: This isn't sharp enough. Scrape harder."];
+	  32 [label="Hand/Eye Coordination: Stop, for crying out loud! You're gonna cut your own throat."];
+	  33 [label="Washbasin: The water reflects back a vague image of your clean-shaven face. Despite the bulbous nose, unkempt hair and persistent swelling, you look... a little younger, maybe?"];
+	  34 [label="Jump to: [mainhubbasin]"];
+	  35 [label="Washbasin: Variable[\"whirling.mirror_stopped_expression\"]"];
+	  36 [label="Variable[\"whirling.mirror_stopped_expression\"]", shape=diamond];
+	  37 [label="!(Variable[\"whirling.mirror_stopped_expression\"])", shape=diamond];
+	  38 [label="You: Leave it for now."];
+	  39 [label="Washbasin: Thank god you didn't go in there barehanded! Death smell is notoriously difficult to get off yourself and your clothes though and cleaning up takes a while..."];
+	  40 [label="Hand/Eye Coordination: Your hand trembles as you scratch at your cheek... oh no, that's not how a grown man shaves!"];
+	  41 [label="Interfacing: Should have used gloves. Detectives use gloves, when they go rummaging around in someone's dead brain..."];
+	  42 [label="Hand/Eye Coordination: They feel so smooth, surprisingly so. A feeling of freshness overcomes you, as if you just came from a cold bath."];
+	  43 [label="Volition: The centipede is exaggerating -- people don't actually cut their own throats when they're shaving. At least not accidentally."];
+	  44 [label="Washbasin: Variable[\"village.washbasin_failed_shave_once\"]"];
+	  45 [label="Variable[\"village.washbasin_failed_shave_once\"]", shape=diamond];
+	  46 [label="!(Variable[\"village.washbasin_failed_shave_once\"])", shape=diamond];
+	  48 [label="Hand/Eye Coordination: Beneath the doubt sprouts a new vigour, like you've discarded some bad decisions. It feels as though you've passed through a ritual. Emerged from cold water, even..."];
+	  49 [label="Esprit de Corps: Please attend to personal hygiene on your own time."];
+	  50 [label="Jump to: [mainhubbasin]"];
+	  51 [label="You: Feel your clean-shaven cheeks."];
+	  52 [label="Washbasin: IsKimHere()"];
+	  53 [label="IsKimHere()", shape=diamond];
+	  54 [label="!(IsKimHere())", shape=diamond];
+	  55 [label="Hand/Eye Coordination: The razor lands with a *clang*. A red trickle begins to spread in the water."];
+	  56 [label="Washbasin: On the table you see a bowl of water, a rough soap, and next to it a small hand mirror. A straight razor soaks inside the wash basin."];
+	  57 [label="Kim Kitsuragi: The lieutenant throws you an embarrassed glance as you consider the washbasin."];
+	  58 [label="Hand/Eye Coordination: Thank god, I would have cut your throat."];
+	  59 [label="You: Is shaving the right call?"];
+	  60 [label="You: Drop the razor in the water basin."];
+	  61 [label="Washbasin: Variable[\"village.hq_whitec_shave_it_off\"]"];
+	  62 [label="Variable[\"village.hq_whitec_shave_it_off\"]", shape=diamond];
+	  63 [label="!(Variable[\"village.hq_whitec_shave_it_off\"])", shape=diamond];
+	  64 [label="Jump to: [You: \"[Leave.]\"]"];
+	  65 [label="Washbasin: Variable[\"yard.hanged_man_used_gloves_for_bullet_digging\"]"];
+	  66 [label="Variable[\"yard.hanged_man_used_gloves_for_bullet_digging\"]", shape=diamond];
+	  67 [label="!(Variable[\"yard.hanged_man_used_gloves_for_bullet_digging\"])", shape=diamond];
+	  68 [label="Jump to: [mainhubbasin]"];
+	  69 [label="Hand/Eye Coordination: Your hand shakes so hard you can't even muster up the courage to *try*. Maybe you're just too *wild* at heart?"];
+	  70 [label="You: *Was* shaving the right call?"];
+	  71 [label="Hand/Eye Coordination: Like an artist with a brush or a master swordsman, you use the small mirror and the straight razor -- with some soap -- to remove all that unkempt hair from below the nose-line."];
+	  72 [label="You: Wash the smell of death off yourself.\nFirst wash the smell of death off yourself."];
+	  73 [label="Physical Instrument: You don't have a face anymore. It's all baby-ass now."];
+	  74 [label="Logic: You almost look like a professional."];
+	  75 [label="Hand/Eye Coordination: Your hand refuses to move another millimetre. A small trickle of blood runs down your cheek."];
+	  76 [label="You: Hope this was the right decision."];
+	  77 [label="Hand/Eye Coordination: The sharp blade chafes against your skin, producing a scratching sound. The surface underneath the beard feels tender, the air brushing against it chilly."];
+	  0 -> 1
+	  1 -> 52
+	  2 -> 57
+	  3 -> 29
+	  5 -> 7
+	  6 -> 4
+	  6 -> 70
+	  6 -> 72
+	  6 -> 13
+	  6 -> 59
+	  7 -> 6
+	  8 -> 7
+	  9 -> 7
+	  10 -> 11
+	  10 -> 12
+	  11 -> 18
+	  12 -> 77
+	  13 -> 14
+	  14 -> 16
+	  14 -> 15
+	  15 -> 61
+	  16 -> 61
+	  17 -> 7
+	  18 -> 51
+	  18 -> 76
+	  19 -> 50
+	  20 -> 41
+	  21 -> 23
+	  22 -> 75
+	  23 -> 17
+	  24 -> 60
+	  24 -> 22
+	  25 -> 50
+	  26 -> 27
+	  26 -> 28
+	  27 -> 5
+	  28 -> 21
+	  29 -> 6
+	  30 -> 6
+	  31 -> 32
+	  32 -> 24
+	  33 -> 74
+	  34 -> 6
+	  35 -> 36
+	  35 -> 37
+	  36 -> 8
+	  37 -> 9
+	  38 -> 58
+	  39 -> 19
+	  40 -> 38
+	  40 -> 31
+	  41 -> 25
+	  42 -> 73
+	  43 -> 68
+	  44 -> 45
+	  44 -> 46
+	  45 -> 69
+	  46 -> 40
+	  48 -> 3
+	  49 -> 64
+	  50 -> 6
+	  51 -> 42
+	  52 -> 53
+	  52 -> 54
+	  53 -> 2
+	  54 -> 56
+	  55 -> 30
+	  56 -> 6
+	  57 -> 49
+	  58 -> 43
+	  59 -> 26
+	  60 -> 55
+	  61 -> 62
+	  61 -> 63
+	  62 -> 71
+	  63 -> 44
+	  64 -> 4
+	  65 -> 66
+	  65 -> 67
+	  66 -> 39
+	  67 -> 20
+	  68 -> 6
+	  69 -> 34
+	  70 -> 33
+	  71 -> 10
+	  72 -> 65
+	  73 -> 29
+	  74 -> 35
+	  75 -> 30
+	  76 -> 48
+	  77 -> 51
+	  77 -> 76
+}
+

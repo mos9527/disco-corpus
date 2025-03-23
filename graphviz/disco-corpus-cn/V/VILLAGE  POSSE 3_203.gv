@@ -1,0 +1,1570 @@
+# VILLAGE / POSSE 3
+# the end where you ask your final questions.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: “我不能。没有这份工作的话，我没办法活下去……你他妈的去死吧！我也该死！我会走的。”"];
+	  3 [label="Trant Heidelstam: 他慢慢点点头。"];
+	  4 [label="Kim Kitsuragi: IsKimHere()"];
+	  5 [label="IsKimHere()", shape=diamond];
+	  6 [label="!(IsKimHere())", shape=diamond];
+	  7 [label="Esprit de Corps: 还有41分局，台灯的微光，咖啡杯叮当声，香烟的烟雾，铃铃作响的电话……你的青春。还有一条回去的路。"];
+	  8 [label="Esprit de Corps: 你没有喝酒，她想到。所以也许这次……"];
+	  9 [label="You: “什么？”"];
+	  10 [label="You: “不可能。我是个天生的哲学家。”\n“不可能。我是个摇滚歌手。”\n“不可能。我是个精通古代艺术的启示者。”\n“不可能。我是个苦行僧。”"];
+	  11 [label="Kim Kitsuragi: CheckItem(\"jacket_faln\")  or  CheckItem(\"pants_faln\")  or  CheckItem(\"hat_faln\")  or  CheckItem(\"shirt_faln\")  or  CheckItem(\"shoes_faln\")"];
+	  12 [label="CheckItem(\"jacket_faln\")  or  CheckItem(\"pants_faln\")  or  CheckItem(\"hat_faln\")  or  CheckItem(\"shirt_faln\")  or  CheckItem(\"shoes_faln\")", shape=diamond];
+	  13 [label="!(CheckItem(\"jacket_faln\")  or  CheckItem(\"pants_faln\")  or  CheckItem(\"hat_faln\")  or  CheckItem(\"shirt_faln\")  or  CheckItem(\"shoes_faln\"))", shape=diamond];
+	  14 [label="Kim Kitsuragi: “还有你那些，咳咳，*保守的*社会观点……”\n“还有你那些，咳咳，*保守的*社会观点。你为什么能做出360度回旋踢的动作……”\n“还有你那些，咳咳，*保守的*社会观点。你在教堂地板上的动作——老实说，那就是在*跳健美操*……”\n“还有你那些，咳咳，*保守的*社会观点。你对*复古*风格舞曲的热爱……”\n“还有你那些，咳咳，*保守的*社会观点。还有你跟坤诺之间的很多*互动*……”"];
+	  15 [label="Kim Kitsuragi: “中学。哈里！你跟坤诺，安德烈，阿西尔之间的相处——冰面上的所有事。这就是你为什么这么像*失足青年*的原因。”"];
+	  16 [label="Jean Vicquemare: “是吧……或者是7年？你的状态不太好。这是年纪大的问题。*老*两年等于普通的一年。那个——而且，朵拉·英格伦德真的跟你闹得很凶。很严重。”"];
+	  17 [label="You: “能跟我讲讲她吗？”"];
+	  18 [label="Jean Vicquemare: “我想她是在艺术学院教书，就在河东。很东边的地方。很难说到底哪个在前——是那个资产阶级小妞先走了，还是你先开始酗酒的？有点鸡生蛋还是蛋生鸡的感觉……”"];
+	  19 [label="You: “等等，朵拉·英格伦德？”"];
+	  20 [label="Kim Kitsuragi: Variable[\"village.posse_41st_concept_iconic\"]"];
+	  21 [label="Variable[\"village.posse_41st_concept_iconic\"]", shape=diamond];
+	  22 [label="!(Variable[\"village.posse_41st_concept_iconic\"])", shape=diamond];
+	  23 [label="Kim Kitsuragi: IsNight()"];
+	  24 [label="IsNight()", shape=diamond];
+	  25 [label="!(IsNight())", shape=diamond];
+	  26 [label="Kim Kitsuragi: “不——祝愿*你的*报告一切顺利，”警督亲切地笑了。"];
+	  27 [label="Kim Kitsuragi: Variable[\"tc.lenas_address\"]"];
+	  28 [label="Variable[\"tc.lenas_address\"]", shape=diamond];
+	  29 [label="!(Variable[\"tc.lenas_address\"])", shape=diamond];
+	  30 [label="You: “是啊……不。你要待在这里，坤诺。你还太年轻了。”"];
+	  31 [label="Jump to: [You: \"\"Good bye, then.\" (End.)\"]"];
+	  32 [label="Rhetoric: 他是*真的*在考虑。"];
+	  33 [label="Kim Kitsuragi: IsMorning()"];
+	  34 [label="IsMorning()", shape=diamond];
+	  35 [label="!(IsMorning())", shape=diamond];
+	  36 [label="Shivers: 夜空之下，整片大区域都陷入沉睡：雪中的旧木屋组成一张黑色棋盘，里面生活着80,000条生命。一眼望去全是容易失火的建筑物——从大街到高速公路顶部的41分局，再到在地平线上闪闪发亮的布吉街……"];
+	  37 [label="Kim Kitsuragi: IsMorning()"];
+	  38 [label="IsMorning()", shape=diamond];
+	  39 [label="!(IsMorning())", shape=diamond];
+	  40 [label="Kim Kitsuragi: Variable[\"village.posse_esprit_final\"]"];
+	  41 [label="Variable[\"village.posse_esprit_final\"]", shape=diamond];
+	  42 [label="!(Variable[\"village.posse_esprit_final\"])", shape=diamond];
+	  43 [label="Jean Vicquemare: “你不能当警察。你才12岁。而且你每隔四秒就会说一句‘混球’。”"];
+	  44 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  45 [label="IsCunoInParty()", shape=diamond];
+	  46 [label="!(IsCunoInParty())", shape=diamond];
+	  47 [label="Kim Kitsuragi: Variable[\"gates.mhead_fight_success\"]"];
+	  48 [label="Variable[\"gates.mhead_fight_success\"]", shape=diamond];
+	  49 [label="!(Variable[\"gates.mhead_fight_success\"])", shape=diamond];
+	  50 [label="You: “你*真的*打算在这种时刻维护男性特权吗！？！”"];
+	  51 [label="Inland Empire: 跟瑞瓦肖24小时录像店前的十字路口相比——这根本不算什么。跟那个相比，一切都是可能的。"];
+	  52 [label="Kim Kitsuragi: IsHighestPolitical(\"revacholian_nationhood\")"];
+	  53 [label="IsHighestPolitical(\"revacholian_nationhood\")", shape=diamond];
+	  54 [label="!(IsHighestPolitical(\"revacholian_nationhood\"))", shape=diamond];
+	  55 [label="Kim Kitsuragi: Variable[\"TASK.return_to_mainland_done\"]"];
+	  56 [label="Variable[\"TASK.return_to_mainland_done\"]", shape=diamond];
+	  57 [label="!(Variable[\"TASK.return_to_mainland_done\"])", shape=diamond];
+	  58 [label="Judit Minot: “在你当警察之前，你是科戎的一个体育老师。”她四下看了看。“外面越来越冷了。也许我们应该……”"];
+	  59 [label="You: “我收集的FALN运动套装……”"];
+	  60 [label="Cuno: “你蹩脚的音乐品味。就像是——40年代的喜好吧。就连你*站立*和伸展的姿势……坤诺之前见过这些。在*体育*课上。”\n“你对那个吉皮特使出的回旋踢，体操运动员的风格……坤诺之前见过这些。在*体育*课上。”\n“还有你的跳跃动作，爬上屋顶……坤诺之前见过这些。在*体育*课上。”"];
+	  61 [label="You: “她是叫朵拉·杜博阿吗？”"];
+	  62 [label="You: “不是？因为嫌疑人似乎以为我是……”"];
+	  63 [label="You: “真的吗？”"];
+	  64 [label="Conceptualization: 不过他们*的确*是该死的标志性人物——托森和麦克莱恩！"];
+	  65 [label="You: “我猜是一个偶像双人组？”"];
+	  66 [label="Judit Minot: “加姆洛克是瑞瓦肖最大的贫民区。严格意义上讲，是市郊……不过它被划分成了*11*个区域。加姆洛克只有我们分局。”"];
+	  67 [label="Cuno: “坤诺喜欢这种狗屁玩意。加姆洛克真的跟屎一样——马丁内斯他妈的白的跟个球一样。大海什么的狗屁。这里不是真正的贫民区。”"];
+	  68 [label="Kim Kitsuragi: Variable[\"village.posse_4_esprit_price_gottlieb\"]"];
+	  69 [label="Variable[\"village.posse_4_esprit_price_gottlieb\"]", shape=diamond];
+	  70 [label="!(Variable[\"village.posse_4_esprit_price_gottlieb\"])", shape=diamond];
+	  71 [label="Kim Kitsuragi: Variable[\"village.posse_kim_shivers\"]"];
+	  72 [label="Variable[\"village.posse_kim_shivers\"]", shape=diamond];
+	  73 [label="!(Variable[\"village.posse_kim_shivers\"])", shape=diamond];
+	  74 [label="Kim Kitsuragi: “跟普赖斯警长聊聊？还是不要用我的灾难性预言去触怒*两位*警长比较好。”"];
+	  75 [label="Esprit de Corps: 能不能适应？我够疯狂吗？能承受住压力吗？他不知道该怎么说完这句话。"];
+	  76 [label="You: “但我什么都没承诺过。”"];
+	  77 [label="Shivers: 夜空之下，整片大区域都陷入沉睡：雨中的旧木屋组成一张黑色棋盘，里面生活着80,000条生命。一眼望去全是容易失火的建筑物——从大街到高速公路顶部的41分局，再到在大雨滂沱的地平线上闪闪发亮的布吉街……"];
+	  78 [label="Shivers: 紫色晨光中，整片大区逐渐苏醒：旧木屋组成一张黑色棋盘，里面生活着80,000条生命，还有层层叠叠的烟囱。一眼望去全是容易失火的建筑物——从大街到41分局，再到嵌入在发光地平线上的布吉街……"];
+	  79 [label="Kim Kitsuragi: Variable[\"auto.is_snowing\"]"];
+	  80 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  81 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  82 [label="Jean Vicquemare: “所以我*必须*这么做吗。茱蒂？”"];
+	  83 [label="Kim Kitsuragi: Variable[\"auto.is_snowing\"]"];
+	  84 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  85 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  86 [label="Kim Kitsuragi: IsEvening()"];
+	  87 [label="IsEvening()", shape=diamond];
+	  88 [label="!(IsEvening())", shape=diamond];
+	  89 [label="Inland Empire: 他担心的不是本地人——而是一个11岁大的小女孩。"];
+	  90 [label="You: FALN装备……"];
+	  91 [label="You: “我准备好了。”（总结。）"];
+	  92 [label="Jump to: [Inland Empire: \"Now! Now you will *finally* get to...\"]"];
+	  93 [label="Jean Vicquemare: Jean Vicquemare: \"...\""];
+	  94 [label="Trant Heidelstam: “这很难。这是最难戒掉的一种瘾。*只有*重度合成阿片类药物与它相匹敌。就连吗啡都比酒精容易戒——从统计学上看是这样的。他戒掉的可能性不大。特别是对于他这把年纪来说。”"];
+	  95 [label="You: “我的生活已经了无希望。我唯一能胜任的只有这份工作。我*会*戒掉的。”"];
+	  96 [label="Trant Heidelstam: “……”"];
+	  97 [label="You: “那好吧。去他妈的。我在这里有一间小棚户。我不需要你们。”"];
+	  98 [label="You: “特种部队的体育老师？”\n“一个游击队战士兼体育老师？”\n“一个企业家兼体育老师？”\n“一个骑士兼体育老师？”"];
+	  99 [label="Kim Kitsuragi: IsKimHere()"];
+	  100 [label="IsKimHere()", shape=diamond];
+	  101 [label="!(IsKimHere())", shape=diamond];
+	  102 [label="Judit Minot: “是的……外面*的确*越来越冷了……”她四下看了看——看着破败的渔村。"];
+	  103 [label="You: “好吧。现在我明白了。”（总结。）"];
+	  104 [label="You: “这是什么时候的事？”"];
+	  105 [label="Kim Kitsuragi: Variable[\"tc.welkin\"]"];
+	  106 [label="Variable[\"tc.welkin\"]", shape=diamond];
+	  107 [label="!(Variable[\"tc.welkin\"])", shape=diamond];
+	  108 [label="Jean Vicquemare: “差不多吧。她有一半的瓦萨血统。”"];
+	  109 [label="Suggestion: 他可不是什么失败者。尽管他也愿意被看作是一个失败者。这样更酷一些。"];
+	  110 [label="Jean Vicquemare: “好吧。我们的警局人手不足，工作却多得堆成山，所以我们要回去了。这已经不再是你的问题了。”"];
+	  111 [label="You: “出什么事了？我们为什么要去那里？”"];
+	  112 [label="Perception (Hearing): 你现在还在工会总部的听力所及范围之内，你的等级是不会提升的。"];
+	  113 [label="Jump to: [Untitled hub]"];
+	  114 [label="Untitled hub (06)"];
+	  115 [label="Jean Vicquemare: “你……承诺过？”"];
+	  116 [label="Jean Vicquemare: “你必须到*15*岁才能参加初级警员项目——你甚至还没到呢。”"];
+	  117 [label="Kim Kitsuragi: IsNight()"];
+	  118 [label="IsNight()", shape=diamond];
+	  119 [label="!(IsNight())", shape=diamond];
+	  120 [label="Kim Kitsuragi: IsAfternoon()"];
+	  121 [label="IsAfternoon()", shape=diamond];
+	  122 [label="!(IsAfternoon())", shape=diamond];
+	  123 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  124 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  125 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  126 [label="Judit Minot: “看……”她转身面向大海。“很快就会下雨。是时候回家了。”"];
+	  127 [label="Volition: 我告诉过你，没那么糟糕的。"];
+	  128 [label="Conceptualization: 当然。"];
+	  129 [label="Kim Kitsuragi: Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"]"];
+	  130 [label="Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"]", shape=diamond];
+	  131 [label="!(Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"])", shape=diamond];
+	  132 [label="Kim Kitsuragi: Variable[\"ice.andre_composure_done\"]"];
+	  133 [label="Variable[\"ice.andre_composure_done\"]", shape=diamond];
+	  134 [label="!(Variable[\"ice.andre_composure_done\"])", shape=diamond];
+	  135 [label="You: 为什么我能一天跑*5个小时*……"];
+	  136 [label="Kim Kitsuragi: IsTHCPresent(\"homosexual_underground\")"];
+	  137 [label="IsTHCPresent(\"homosexual_underground\")", shape=diamond];
+	  138 [label="!(IsTHCPresent(\"homosexual_underground\"))", shape=diamond];
+	  139 [label="Rhetoric: 这场闹剧必须结束。大家都能看出来。"];
+	  140 [label="You: “一击即溃·迈克是公开赛的基础运动理念中最激动人心的重现！一个5,000比1级别的局外人！”"];
+	  141 [label="Kim Kitsuragi: “你在教堂地板上的动作——老实说，那就是在*跳健美操*。你使用了*涂鸦*这个词……”"];
+	  142 [label="Jump to: [Untitled hub (06)]"];
+	  143 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  144 [label="IsCunoInParty()", shape=diamond];
+	  145 [label="!(IsCunoInParty())", shape=diamond];
+	  146 [label="Cuno: “不，猪猡，这样*一切*都能解释通了。”男孩看着你。“跑步。跳跃。*掷铅球*。你那把乱糟糟的大胡子……”\n“不，猪猡，这样*一切*都能解释通了。”男孩看着你。“跑步。跳跃。你胳膊上的*肌肉*。你那把乱糟糟的大胡子……”\n“不，猪猡，这样*一切*都能解释通了。”男孩看着你。“跑步。跳跃。你胳膊上的*肌肉*。你那把乱糟糟的大胡子……坤诺喜欢那个疯狂的面部动作。”\n“不，猪猡，这样*一切*都能解释通了。”男孩看着你。“跑步。跳跃。*掷铅球*。你那把乱糟糟的大胡子……坤诺喜欢那个疯狂的面部动作。”"];
+	  147 [label="You: “FALN装备……”"];
+	  148 [label="Judit Minot: “看……”她转身面向大海。“太阳要落山了。是时候回家了。”"];
+	  149 [label="Jump to: [Untitled hub (04)]"];
+	  150 [label="Jump to: [Untitled hub]"];
+	  151 [label="Kim Kitsuragi: IsKimHere()"];
+	  152 [label="IsKimHere()", shape=diamond];
+	  153 [label="!(IsKimHere())", shape=diamond];
+	  154 [label="Jean Vicquemare: “再次感谢你，警督。”"];
+	  155 [label="Rhetoric: 这确实让他大吃一惊。倒也不坏。但他有些不知所措。"];
+	  156 [label="Kim Kitsuragi: 突然间，警督变得非常严肃。“好吧，我要先处理好GRIH的事。但是……我的意思是，不管会发生什么——加姆洛克都*会*比港口更加重要。”"];
+	  157 [label="Judit Minot: 她难过地听着你说话。起风了。"];
+	  158 [label="Cuno: “你他妈在想什么？当然是跟你们这帮家伙一起让执法部门摇滚起来啊——警探坤诺。”他咀嚼着一片幻想中的口香糖。“就像你承诺过的。”"];
+	  159 [label="Cuno: “我们刚刚一起经历了那么多之后，你打算*撒谎*吗？让坤诺再提醒你一下：坤诺说可以把你这个死瘸子带到岛上去，如果你带坤诺去加姆洛克。船夫坤诺。”"];
+	  160 [label="Jean Vicquemare: “你多大了？10岁？11岁？”"];
+	  161 [label="Trant Heidelstam: “也许你可以带走这个孩子，”特别顾问看着男孩说道。“提前一年登记，就说他14岁了。*如果*他……”"];
+	  162 [label="Shivers: 夜空之下，整片大区域都陷入沉睡：雨中的旧木屋组成一张黑色棋盘，里面生活着80,000条生命。一眼望去全是容易失火的建筑物——从大街到高速公路顶部的41分局，再到在大雨滂沱的地平线上闪闪发亮的布吉街……"];
+	  163 [label="Shivers: 整片大区人声鼎沸：旧木屋组成一张黑色棋盘，里面生活着80,000条生命。一眼望去全是容易失火的建筑物——从主路到大科戎，从41分局到嵌入遥远地平线的布吉街……"];
+	  164 [label="Kim Kitsuragi: IsKimHere()"];
+	  165 [label="IsKimHere()", shape=diamond];
+	  166 [label="!(IsKimHere())", shape=diamond];
+	  167 [label="Endurance: 自从你那天早上醒来后，你脸上那种浮肿*已经*减轻了……"];
+	  168 [label="Jean Vicquemare: “你这个喜欢指使别人的混账……好吧。这里实在是太冷了，我们的車就停在广场。而且罪犯也需要被拘留起来——我们赶紧走吧。”"];
+	  169 [label="Perception (Hearing): 車钥匙在他的口袋里叮当直响。"];
+	  170 [label="Jean Vicquemare: “呃——现在你是个警察，”他停顿下来，“或者……不再是了，所以我猜你又变成体育老师了。”"];
+	  171 [label="Empathy: 看他的样子，是强行憋着没笑出来。"];
+	  172 [label="Kim Kitsuragi: “我就知道。我就知道没有普通人能像那样跑个不停。他是个真正的体育老师。”"];
+	  173 [label="You: “我为什么能一天跑*6个小时*……”"];
+	  174 [label="Untitled hub (04)"];
+	  175 [label="You: “好吧。6年也没那么久。”"];
+	  176 [label="Rhetoric: 换句话说——他已经听*够*了。"];
+	  177 [label="Judit Minot: “很好。”她看着你，然后是维克玛……"];
+	  178 [label="Kim Kitsuragi: Variable[\"TASK.return_to_mainland_done\"]"];
+	  179 [label="Variable[\"TASK.return_to_mainland_done\"]", shape=diamond];
+	  180 [label="!(Variable[\"TASK.return_to_mainland_done\"])", shape=diamond];
+	  181 [label="Jump to: [Untitled hub]"];
+	  182 [label="Kim Kitsuragi: “应该把这个消息立即告诉他们。送去好消息对你来说是个很好的转变。”\n“应该把这个消息立即告诉他们。尽管我们没有相片……”"];
+	  183 [label="You: （压低声音。）“让，他什么都没有了。”"];
+	  184 [label="Cuno: “我保证我不会说的。”他拼命摇头，脸都红了。“我再也不会说了。”"];
+	  185 [label="Kim Kitsuragi: Variable[\"apt.cuno_homework_orb_seen\"]"];
+	  186 [label="Variable[\"apt.cuno_homework_orb_seen\"]", shape=diamond];
+	  187 [label="!(Variable[\"apt.cuno_homework_orb_seen\"])", shape=diamond];
+	  188 [label="Inland Empire: 现在！现在你*总算*是能知道你是谁了！"];
+	  189 [label="Shivers: 紫色晨光中，整片大区逐渐苏醒：旧木屋组成一张黑色棋盘，里面生活着80,000条生命，还有层层叠叠的烟囱。一眼望去全是容易失火的建筑物——从大街到41分局，再到嵌入在发光地平线上的布吉街……"];
+	  190 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  191 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  192 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  193 [label="Jean Vicquemare: “我不在乎——他不能当警察。他只有12岁。而且每隔四秒就会说一句‘混球’。”"];
+	  194 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  195 [label="IsCunoInParty()", shape=diamond];
+	  196 [label="!(IsCunoInParty())", shape=diamond];
+	  197 [label="Composure: 你在教堂地板上的动作——老实说——那就是在*跳健美操*。"];
+	  198 [label="Untitled hub (06)"];
+	  199 [label="You: “等等。在你们离开之前，我还有*一些*问题。关于我是谁……”"];
+	  200 [label="Judit Minot: “你没跟我们说过——你只说以前当过体育老师。”"];
+	  201 [label="You: “那我为什么会加入RCM？”"];
+	  202 [label="Jean Vicquemare: “天啦，我不知道……”他想到。“6年前？在我来之前，她就已经离开了。”"];
+	  203 [label="Cuno: “什么？！婊子们都很向往41分局。你以为坤诺为什么要*参与*这种破事？都说那里他妈的很暴力。你们的普赖斯警长干掉了……差不多几千号人吧。”"];
+	  204 [label="You: “我们最近有没有碰巧突袭过一座教堂？”（指向教堂。）"];
+	  205 [label="Jean Vicquemare: “我们的*敌人*藏在*一座*教堂里——根据我们得到的消息。就这些。我不会再谈论这个话题了。你的安全许可现在很*低级*。等它升级之后再说。”"];
+	  206 [label="Shivers: 远处的交通。一张废弃的报纸随风飘荡。"];
+	  207 [label="You: “不，我的意思是*调查*。来41分局工作。”"];
+	  208 [label="Jean Vicquemare: “我在加姆洛克也听到一些传闻。自从秋天就开始了。我同意有些事正在发生。大家都很紧张。我听见风扇转动的声音。很快。有什么东西就要砸中它了。”"];
+	  209 [label="You: “谁也不是。忘了吧。”"];
+	  210 [label="Cuno: “什么鬼？！”他张开双臂。“坤诺被*看到*跟你在一起，就在外面。现在他是自由人了。跟着条子一起混。是该死的线人。我现在完完全全就是个猪猡了——被烟熏过的猪猡。”"];
+	  211 [label="Cuno: “我待在这里才是不可能。*他妈的*你能明白吗。我不会死在这里的，混球。我要跟你一起走。”"];
+	  212 [label="Judit Minot: “看在老天爷的份上……”她叹了口气。“好吧，就这么办吧。”"];
+	  213 [label="Esprit de Corps: 即便是到了现在——你还是他的同事。"];
+	  214 [label="Kim Kitsuragi: “听起来确实挺不错的……”他朝她还了一个微笑。"];
+	  215 [label="Shivers: 午后的日光之下，整片大区域轰鸣着：旧木屋组成一张黑色棋盘，里面生活着80,000条生命，还有层层叠叠的烟囱。一眼望去全是容易失火的建筑物——从大街到41分局，再到嵌入在大雪纷飞地平线上的布吉街……"];
+	  216 [label="Kim Kitsuragi: Variable[\"auto.is_snowing\"]"];
+	  217 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  218 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  219 [label="Kim Kitsuragi: Variable[\"village.posse_final_shivers\"]"];
+	  220 [label="Variable[\"village.posse_final_shivers\"]", shape=diamond];
+	  221 [label="!(Variable[\"village.posse_final_shivers\"])", shape=diamond];
+	  222 [label="Kim Kitsuragi: CheckEquipped(\"jacket_faln\")  and  (CheckEquipped(\"pants_faln\")  or  CheckEquipped(\"hat_faln\"))"];
+	  223 [label="CheckEquipped(\"jacket_faln\")  and  (CheckEquipped(\"pants_faln\")  or  CheckEquipped(\"hat_faln\"))", shape=diamond];
+	  224 [label="!(CheckEquipped(\"jacket_faln\")  and  (CheckEquipped(\"pants_faln\")  or  CheckEquipped(\"hat_faln\")))", shape=diamond];
+	  225 [label="Judit Minot: “太棒了，”女人看向北边。“那我们能不能现在就回加姆洛克？”"];
+	  226 [label="Kim Kitsuragi: IsKimHere()"];
+	  227 [label="IsKimHere()", shape=diamond];
+	  228 [label="!(IsKimHere())", shape=diamond];
+	  229 [label="Judit Minot: Judit Minot: \"...\""];
+	  230 [label="Judit Minot: Judit Minot: \"...\""];
+	  231 [label="You: “我会成功的，让。我向老天和瑞瓦肖发誓，我会成功的。”"];
+	  232 [label="Judit Minot: “……”"];
+	  233 [label="You: “那样的确解释了很多问题。”"];
+	  234 [label="Jump to: [Untitled hub (03)]"];
+	  235 [label="Cuno: “你之前的那条蠢裤子。就像这个……还有复古什么的狗屁。坤诺之前见过这些——在*体育*课上……”\n“你之前的那条蠢裤子。就像这个……还有复古什么的狗屁。坤诺之前见过这些——在*体育*课上……还有你对那个吉皮特使出的回旋踢，体操运动员的风格……”"];
+	  236 [label="Jean Vicquemare: “是不是觉得很难受？”"];
+	  237 [label="You: “猜到了。”"];
+	  238 [label="Jean Vicquemare: “我也是。你*悲痛地*放弃了*最亲爱的朵拉*，而且真的*闹得很凶*……我想，好像是一周两次？就会出现。”"];
+	  239 [label="Jump to: [Untitled hub (06)]"];
+	  240 [label="Jean Vicquemare: “不是。”"];
+	  241 [label="Jump to: [Untitled hub (06)]"];
+	  242 [label="Jean Vicquemare: “好吧——不是什么血腥杀手分局，只是一个改造过的旧丝绸厂，里面有绿色的台灯，还有个咖啡角。很多很棒的人在那里工作。很努力。每天如此。”"];
+	  243 [label="Cuno: “是啊，而且这狗屁玩意在8频道他妈的很出名。坤诺听过。”"];
+	  244 [label="Jean Vicquemare: “谢谢你，坤诺。你照亮了我的一天。”"];
+	  245 [label="You: “何不在41分局做这些呢？”"];
+	  246 [label="You: “一个神秘动物学家。她住在加姆洛克的圣堂路。她跟我说过竹节虫的事。”\n“一个神秘动物学家。她住在加姆洛克。她跟我说过竹节虫的事。”"];
+	  247 [label="Untitled hub (05)"];
+	  248 [label="Esprit de Corps: 也许你和这位初级警员之间有过一些*不言而喻*的协议？"];
+	  249 [label="Cuno: “坤诺他妈的19了。”"];
+	  250 [label="Cuno: “你不用把*他们*变成警察——只要坤诺就行。坤诺是个值得培养的人。”"];
+	  251 [label="Shivers: 整片大区在落雨中低吟：旧木屋组成一张黑色棋盘，里面生活着80,000条生命。一眼望去全是容易失火的建筑物——从大街到大科戎，从41分局到嵌入在滂沱大雨地平线上的布吉街……"];
+	  252 [label="Shivers: 一场灰色的大雨降落在马丁内斯。城市浸染其中，冷冰冰，湿淋淋。海浪拍打着混凝土破碎机。无家可归的人们蜷缩在栅栏后的火堆周围。就在那堆棚屋之间，是你的家。留下来。喝上一杯。直到永远。"];
+	  253 [label="Jean Vicquemare: “不，他没有。他多大了，10岁？11岁？”"];
+	  254 [label="Kim Kitsuragi: Variable[\"TASK.return_to_mainland_done\"]"];
+	  255 [label="Variable[\"TASK.return_to_mainland_done\"]", shape=diamond];
+	  256 [label="!(Variable[\"TASK.return_to_mainland_done\"])", shape=diamond];
+	  257 [label="Perception (Sight): 她在回避你的目光。"];
+	  258 [label="Physical Instrument: 尽管你没有什么持久的锻炼习惯，还是能做出360度回旋踢的动作。"];
+	  259 [label="Perception (Sight): 想一想！你能够*察觉*到。在加姆洛克。布吉街。科戎。王国。煤城。在8/81高速公路上——当最后一场雪融化的时候，一切都将由你来筛选。"];
+	  260 [label="Kim Kitsuragi: IsHighestPolitical(\"moralist\")"];
+	  261 [label="IsHighestPolitical(\"moralist\")", shape=diamond];
+	  262 [label="!(IsHighestPolitical(\"moralist\"))", shape=diamond];
+	  263 [label="You: “我准备好了。”（总结。）"];
+	  264 [label="You: “我会回到岛上，在那里*生活*。我不在乎。”"];
+	  265 [label="Judit Minot: “警探。”她看着维克玛。“我只是不想这场*审判*继续下去。外面太冷了，而且……我们还是走吧。”"];
+	  266 [label="Kim Kitsuragi: Variable[\"tc.down_with_racism\"]  or  IsHighestPolitical(\"revacholian_nationhood\")"];
+	  267 [label="Variable[\"tc.down_with_racism\"]  or  IsHighestPolitical(\"revacholian_nationhood\")", shape=diamond];
+	  268 [label="!(Variable[\"tc.down_with_racism\"]  or  IsHighestPolitical(\"revacholian_nationhood\"))", shape=diamond];
+	  269 [label="Jump to: [Untitled hub (03)]"];
+	  270 [label="Jean Vicquemare: “这不是秘密。有个小妞把你搅得乱七八糟。而且，你是个酒鬼。”"];
+	  271 [label="Pain Threshold: 你也真的随波逐流了。让伤害最大化。"];
+	  272 [label="Jean Vicquemare: “你太不稳定了，不适合为黑帮老大做事。你有自我毁灭的倾向，哈里。没有黑帮老大会接收你的。”"];
+	  273 [label="Logic: 他可能会立即变卦的。"];
+	  274 [label="You: “那就再见吧。”（总结。）"];
+	  275 [label="Judit Minot: “……马上回去。我们留下托森和麦克莱恩管理C翼。这样不太好。”"];
+	  276 [label="Judit Minot: “这不是真的……”"];
+	  277 [label="Jump to: [Untitled hub (06)]"];
+	  278 [label="You: “祝愿你的报告一切顺利。”"];
+	  279 [label="Judit Minot: “让……”她停了下来。"];
+	  280 [label="You: “很抱歉。我们真的做不到。这不可能。”"];
+	  281 [label="Kim Kitsuragi: Variable[\"auto.is_snowing\"]"];
+	  282 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  283 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  284 [label="Shivers: 黄昏的天空之下，整片大区灯火通明：旧木屋组成一张黑色棋盘，里面生活着80,000条生命。一眼望去全是容易失火的建筑物——从大街到高速公路顶部的41分局，再到嵌入在黑暗地平线上的布吉街……"];
+	  285 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  286 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  287 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  288 [label="Jean Vicquemare: “他不能当警察。哈里。他只有12岁。一而且每隔四秒就会说一句‘混球’。”"];
+	  289 [label="Jump to: [PosseEndgame()]"];
+	  290 [label="Untitled hub (02)"];
+	  291 [label="Judit Minot: “太棒了，”女人看向北边。“那我们能不能现在就回加姆洛克？”"];
+	  292 [label="Kim Kitsuragi: Variable[\"TASK.return_to_mainland_done\"]"];
+	  293 [label="Variable[\"TASK.return_to_mainland_done\"]", shape=diamond];
+	  294 [label="!(Variable[\"TASK.return_to_mainland_done\"])", shape=diamond];
+	  295 [label="Judit Minot: “他……这是真的。”"];
+	  296 [label="You: “我需要成为最伟大的人，让。我就是*为此而生*的。我*会*停下来。我会变好的。”"];
+	  297 [label="You: “41分局……是一个什么样的分局？”"];
+	  298 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  299 [label="IsCunoInParty()", shape=diamond];
+	  300 [label="!(IsCunoInParty())", shape=diamond];
+	  301 [label="Inland Empire: 你，每天早晨，从远航路走到学校去上体育课。她——穿着春装去学院。空气中充满香烟和树莓的味道，还有难以置信的希望。充满希望的海洋。"];
+	  302 [label="You: “*6*年？”"];
+	  303 [label="Trant Heidelstam: 特别顾问瞥了一眼自己的腕表。"];
+	  304 [label="Jump to: [Untitled hub (06)]"];
+	  305 [label="Trant Heidelstam: “还有很多外援也参与了。不仅仅是我。”他笑了。“还有其他失败者。”"];
+	  306 [label="You: “所以我在血腥杀手分局工作？”（总结。）"];
+	  307 [label="Esprit de Corps: 他们说到了变化。这座城市。街道上的紧张氛围。他们说的是四月的大事件，还有五月街上的流血事件。"];
+	  308 [label="Kim Kitsuragi: “呃——首先我会回警局，写下一篇所有人都前所未见的详尽报告。必须要写好一点，把所有细节都包含进去。然后我会跟我们警长严肃地谈一谈。”"];
+	  309 [label="Jean Vicquemare: “受宠若惊？你可是曷城警督。哪怕是你愿意考虑一下，受宠若惊的应该是*我们*……”"];
+	  310 [label="Volition: 我们看到的是一个真正的好心人。你越早开始越好。"];
+	  311 [label="Jean Vicquemare: “已经办好了。我们走吧？”"];
+	  312 [label="Composure: 他双手颤抖，面色发白。"];
+	  313 [label="Shivers: 粉色晨光中，整片大区逐渐苏醒：旧木屋组成一张黑色棋盘，里面生活着80,000条生命，还有层层叠叠的烟囱。一眼望去全是容易失火的建筑物——从大街到41分局，再到嵌入在大雪纷飞地平线上的布吉街……"];
+	  314 [label="Kim Kitsuragi: IsNight()"];
+	  315 [label="IsNight()", shape=diamond];
+	  316 [label="!(IsNight())", shape=diamond];
+	  317 [label="Untitled hub"];
+	  318 [label="Physical Instrument: 你甚至都不知道同性恋是什么的事实。"];
+	  319 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  320 [label="IsCunoInParty()", shape=diamond];
+	  321 [label="!(IsCunoInParty())", shape=diamond];
+	  322 [label="You: “我准备好了。”（总结。）"];
+	  323 [label="Judit Minot: Judit Minot: \"...\""];
+	  324 [label="Kim Kitsuragi: IsTHCCookingOrFixed(\"the_waste_land_of_reality\") or  SubstanceUsedOnce(\"alcohol\") == false"];
+	  325 [label="IsTHCCookingOrFixed(\"the_waste_land_of_reality\") or  SubstanceUsedOnce(\"alcohol\") == false", shape=diamond];
+	  326 [label="!(IsTHCCookingOrFixed(\"the_waste_land_of_reality\") or  SubstanceUsedOnce(\"alcohol\") == false)", shape=diamond];
+	  327 [label="You: “我们走吧。”（马上出发。）"];
+	  328 [label="Kim Kitsuragi: “当然了！一击即溃·迈克！”"];
+	  329 [label="Kim Kitsuragi: Variable[\"ice.andre_composure_done\"]"];
+	  330 [label="Variable[\"ice.andre_composure_done\"]", shape=diamond];
+	  331 [label="!(Variable[\"ice.andre_composure_done\"])", shape=diamond];
+	  332 [label="You: “不可能是6年。3年。还是3年吧。”"];
+	  333 [label="Jean Vicquemare: “她真的是个很有吸引力的女人，哈里。漂亮。一个漂亮的资产阶级女人，身材苗条，基本上就像*精灵*一样。”"];
+	  334 [label="Jean Vicquemare: “我只见过一张相片——不过很显然，你跟她有多*漂亮*这一点建立了真正的精神联系。让你永远也无法复原。”"];
+	  335 [label="Jean Vicquemare: “是吧……你的状态不太好。我想是年纪大的问题。*老*两年等于普通的一年。那个——而且，朵拉·英格伦德真的跟你闹得很凶。很严重。”"];
+	  336 [label="You: “那C翼是……”"];
+	  337 [label="Jean Vicquemare: “天啦……”他叹了口气。“一共有4翼，哈里。A，B，C还有D。我们属于C翼。里面都是一帮失败者，还有每天只等着下班打卡的人。你和我把它*重新概念化*了，变成一个特别行动小组。这是个错误。”"];
+	  338 [label="You: “那普赖斯是……”"];
+	  339 [label="Kim Kitsuragi: “他是警队里最受尊敬的人之一。你很幸运。”"];
+	  340 [label="Esprit de Corps: 一栋低矮的房子，暴露在风雨中——而且没有你。車流在旁边呼啸而过……"];
+	  341 [label="Kim Kitsuragi: 他环顾四周——看着街道上越来越深的阴影——然后拉起衣领。“警探，我们阻止了一场小规模的战争。有些事正在瑞瓦肖发生。”"];
+	  342 [label="Perception (Sight): 它说：“鉴于B中转站的装卸工罢工事件，YC中转站的紧张局势正在加剧，煤城的重工业代表们……”你念到。"];
+	  343 [label="Kim Kitsuragi: “跟普赖斯*一起*工作？”他的嘴角露出一弯微笑。“我受宠若惊，不过我不知道能不能……”"];
+	  344 [label="Jean Vicquemare: “好吧。反正我们要把你送回去。”"];
+	  345 [label="Jean Vicquemare: “不，他不行。他才12岁。”"];
+	  346 [label="Jean Vicquemare: “我认识一百个一无所有的孩子，哈里。我们不能把他们都变成警察吧。”"];
+	  347 [label="Composure: 他咬紧牙关，喉咙哽咽着。"];
+	  348 [label="Jean Vicquemare: “*如果*你能做到——如果你能戒酒10个月——告诉我们。我还会跟你一起工作。不过不像这样。永远也不要这样。这一切都结束了。”"];
+	  349 [label="Kim Kitsuragi: Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"]"];
+	  350 [label="Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"]", shape=diamond];
+	  351 [label="!(Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"])", shape=diamond];
+	  352 [label="Composure: 你的姿态。不断的*伸展*……成为迪斯科明星的愿望。"];
+	  353 [label="Kim Kitsuragi: IsKimHere()"];
+	  354 [label="IsKimHere()", shape=diamond];
+	  355 [label="!(IsKimHere())", shape=diamond];
+	  356 [label="Volition: 不。你*可以*停下来。只要趟过地狱就可以。月复一月。年复一年——你将会跟虚无对抗。这是可能的，因为*时间*充满可能性。"];
+	  357 [label="Rhetoric: 为了瑞瓦肖公民武装。灰色天空中的那一朵勿忘我。"];
+	  358 [label="Esprit de Corps: 远远不止这些。他就是做不到。最后一次……"];
+	  359 [label="Kim Kitsuragi: “哈里……这就解释了*一切*。到处跑来跑去。跳跃。*掷铅球*。你那把难以言喻的大胡子……”\n“哈里……这就解释了*一切*。到处跑来跑去。跳跃。*发达的二头肌*。你那把*难以言喻的*大胡子……”"];
+	  360 [label="Kim Kitsuragi: “事实是，你似乎不*知道*什么是同性恋……”\n“事实是，你似乎不*知道*什么是同性恋……还有你为什么能做出360度回旋踢的动作！”\n“事实是，你似乎不*知道*什么是同性恋……你在教堂地板上的动作——老实说，那就是在*跳健美操*……”"];
+	  361 [label="Kim Kitsuragi: Variable[\"ice.tentflap_greeting_done\"]  and  Variable[\"yard.cuno_intro_hub\"]"];
+	  362 [label="Variable[\"ice.tentflap_greeting_done\"]  and  Variable[\"yard.cuno_intro_hub\"]", shape=diamond];
+	  363 [label="!(Variable[\"ice.tentflap_greeting_done\"]  and  Variable[\"yard.cuno_intro_hub\"])", shape=diamond];
+	  364 [label="Savoir Faire: 还有我这个家伙。"];
+	  365 [label="You: “所以我们甚至都没结婚……”"];
+	  366 [label="You: “那好吧。”"];
+	  367 [label="Judit Minot: “谈话结束？”她抱紧自己寻求温暖。"];
+	  368 [label="Esprit de Corps: 在一间旧丝绸厂那弯曲的屋顶下面，它的形状就像一个长着两只烟囱的瓢虫，警长托勒密·普赖斯正坐在一张厚重的木桌后面。住院医师尼克斯·戈特利布给他倒了杯咖啡。警长的办公室里格外安静……"];
+	  369 [label="Judit Minot: “托勒密·普赖斯？他是老普赖斯的儿子——RCM的创始人之一。”"];
+	  370 [label="Trant Heidelstam: “突袭教堂从来不是什么好新闻。我得声明一点，我当时不在城里……”"];
+	  371 [label="Authority: 他是认真的。不能在海岸上讨论RCM和它的敌人的话题。"];
+	  372 [label="You: “关于什么的？”"];
+	  373 [label="Logic: 该死。是的。还有*那个*。"];
+	  374 [label="Jean Vicquemare: “你必须到*15*岁才能参加初级警员项目——但是你没有。”"];
+	  375 [label="Jean Vicquemare: “再见，哈里。还有——我知道这不会发生的，不过……”他看着你，心如钢铁，眼神冰冷。"];
+	  376 [label="Jean Vicquemare: 又是一声叹息——因为屈服。"];
+	  377 [label="Shivers: 紫色晨光中，整片大区逐渐苏醒：旧木屋组成一张黑色棋盘，里面生活着80,000条生命，还有层层叠叠的烟囱。一眼望去全是容易失火的建筑物——从大街到41分局，再到嵌入在大雨滂沱地平线上的布吉街……"];
+	  378 [label="Suggestion: 她一定会欣喜若狂的。"];
+	  379 [label="Shivers: 夜空之下，整片大区域都陷入沉睡：雪中的旧木屋组成一张黑色棋盘，里面生活着80,000条生命。一眼望去全是容易失火的建筑物——从大街到高速公路顶部的41分局，再到在地平线上闪闪发亮的布吉街……"];
+	  380 [label="Shivers: 黄昏的天空之下，整片大区灯火通明：旧木屋组成一张黑色棋盘，里面生活着80,000条生命。一眼望去全是容易失火的建筑物——从大街到高速公路顶部的41分局，再到消失在细雨交织地平线上的布吉街……"];
+	  381 [label="Shivers: 整片大区在缓缓飘落的雪花中低吟：旧木屋组成一张黑色棋盘，里面生活着80,000条生命，还有层层叠叠的烟囱。一眼望去全是容易失火的建筑物——从大街到大科戎，从41分局到在大雨滂沱的地平线上闪闪发亮的布吉街……"];
+	  382 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  383 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  384 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  385 [label="Kim Kitsuragi: Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"]"];
+	  386 [label="Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"]", shape=diamond];
+	  387 [label="!(Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"])", shape=diamond];
+	  388 [label="Jean Vicquemare: “就算是有什么昆虫——我不在乎。不过你是一个*酒鬼*。而且你——又开始喝酒了。我不会因为这件事把自己的生活搞得乱七八糟。”"];
+	  389 [label="Electrochemistry: 不。你可以搞定的。*代替*它！用安非他命代替酒精。或者是丁内酯！去他的——吗啡！涂鸦清除剂！任何东西。这样能为你争取时间。你唯一需要的只有时间。"];
+	  390 [label="Empathy: 为了世界。"];
+	  392 [label="Jean Vicquemare: 男人看向西边，有些不耐烦。"];
+	  393 [label="You: “曷城警督——现在你怎么办？”"];
+	  394 [label="Untitled hub (07)"];
+	  395 [label="You: “天啦——*一击即溃·迈克*……”"];
+	  396 [label="Jean Vicquemare: “是的，你在科戎*教体育*。我相信应该是这么说的吧？在一个中学教体育。你是个中学体育老师。”"];
+	  397 [label="Kim Kitsuragi: “还有你那些，咳咳，*保守的*词语选择。甚至是你的姿势。不停的*伸展*……”"];
+	  398 [label="Kim Kitsuragi: Variable[\"village.posse_gym_endur_stamina\"]"];
+	  399 [label="Variable[\"village.posse_gym_endur_stamina\"]", shape=diamond];
+	  400 [label="!(Variable[\"village.posse_gym_endur_stamina\"])", shape=diamond];
+	  401 [label="Kim Kitsuragi: Variable[\"tc.dora_du_is_her_full_name\"]"];
+	  402 [label="Variable[\"tc.dora_du_is_her_full_name\"]", shape=diamond];
+	  403 [label="!(Variable[\"tc.dora_du_is_her_full_name\"])", shape=diamond];
+	  404 [label="You: “她的名字是叫朵拉吗？”"];
+	  405 [label="Jean Vicquemare: “朵拉什么的。朵拉·英格伦德？”他想了想。“是啊。你提过她的名字。”"];
+	  406 [label="Jean Vicquemare: “不对。是6年。就像*古代*一样。这是年纪大的问题。*老*两年等于普通的一年。那个——而且，朵拉·英格伦德真的跟你闹得很凶。很严重。”"];
+	  407 [label="You: “小妞——谁？”"];
+	  408 [label="Jean Vicquemare: “是啊。朵拉·英格伦德，我想是的。”"];
+	  409 [label="Kim Kitsuragi: “这不是真的。加姆洛克对于一个辖区来说太大了。你们人手不足。不过每个人都很尊敬41分局——你们有普赖斯警长。”"];
+	  410 [label="Jean Vicquemare: “所以他还记得*那个*……是的。可能是有针对*某些*教堂的突袭。这可不是什么好新闻。”"];
+	  411 [label="Jean Vicquemare: “莉娜是谁？”"];
+	  412 [label="Kim Kitsuragi: “她和她丈夫在海岸边搜寻竹节虫。这是他们的发现——在某种程度上是。”\n“她和她丈夫在海岸边搜寻竹节虫。这是他们的发现——在某种程度上是。”他转向你。“我们肯定会找到他们的。”"];
+	  413 [label="Jump to: [Untitled hub (06)]"];
+	  414 [label="Shivers: 你闭上双眼，听见狗在吠叫。一个孤独的女人坐在工厂窗户旁边，梦想着陨石撞击这个星球。圣杰罗姆路上，一枚方形子弹滑入方形枪膛。旧南城里，一个没有眼睑的男人在微笑。春天来了。到时间了。"];
+	  415 [label="Kim Kitsuragi: Variable[\"auto.is_snowing\"]"];
+	  416 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  417 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  418 [label="Kim Kitsuragi: Variable[\"auto.is_snowing\"]"];
+	  419 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  420 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  421 [label="Kim Kitsuragi: Variable[\"village.posse_final_shivers\"]"];
+	  422 [label="Variable[\"village.posse_final_shivers\"]", shape=diamond];
+	  423 [label="!(Variable[\"village.posse_final_shivers\"])", shape=diamond];
+	  424 [label="Judit Minot: “太棒了，”女人看向北边。“那我们能不能现在就回加姆洛克？”"];
+	  425 [label="Kim Kitsuragi: Variable[\"village.posse_esprit_final\"]"];
+	  426 [label="Variable[\"village.posse_esprit_final\"]", shape=diamond];
+	  427 [label="!(Variable[\"village.posse_esprit_final\"])", shape=diamond];
+	  428 [label="Kim Kitsuragi: Variable[\"auto.is_snowing\"]"];
+	  429 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  430 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  431 [label="Esprit de Corps: “托森？”“有。”“麦克莱恩?”“有。”“海德斯塔姆？”“没有。”“维克玛？”“有。”“杜博阿？”“当然。”"];
+	  432 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  433 [label="IsCunoInParty()", shape=diamond];
+	  434 [label="!(IsCunoInParty())", shape=diamond];
+	  435 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  436 [label="IsCunoInParty()", shape=diamond];
+	  437 [label="!(IsCunoInParty())", shape=diamond];
+	  438 [label="Jump to: [Inland Empire: \"Now! Now you will *finally* get to...\"]"];
+	  439 [label="Suggestion: 他们要走了。他们全都离开了你。"];
+	  440 [label="Untitled hub (04)"];
+	  441 [label="Kim Kitsuragi: IsHighestPolitical(\"communist\")"];
+	  442 [label="IsHighestPolitical(\"communist\")", shape=diamond];
+	  443 [label="!(IsHighestPolitical(\"communist\"))", shape=diamond];
+	  444 [label="Kim Kitsuragi: SubstanceUsedOnce(\"alcohol\") == false  or  IsTHCCookingOrFixed(\"the_waste_land_of_reality\")"];
+	  445 [label="SubstanceUsedOnce(\"alcohol\") == false  or  IsTHCCookingOrFixed(\"the_waste_land_of_reality\")", shape=diamond];
+	  446 [label="!(SubstanceUsedOnce(\"alcohol\") == false  or  IsTHCCookingOrFixed(\"the_waste_land_of_reality\"))", shape=diamond];
+	  447 [label="Judit Minot: 飞快地点点头。“说实在的——只要能结束这场*审判*，我怎样都可以。”"];
+	  448 [label="Jean Vicquemare: “不要自哀自怜的。到目前为止，你还没把自己弄死。不过现在差不多了。”"];
+	  449 [label="Kim Kitsuragi: IsTHCPresent(\"homosexual_underground\")"];
+	  450 [label="IsTHCPresent(\"homosexual_underground\")", shape=diamond];
+	  451 [label="!(IsTHCPresent(\"homosexual_underground\"))", shape=diamond];
+	  452 [label="Physical Instrument: 还有——我*这个*家伙。就是……关于这个家伙的一切。"];
+	  453 [label="Kim Kitsuragi: Variable[\"TASK.buy_faln_pants_from_cuno_done\"]  and  CheckEquipped(\"pants_bellbottom\") == false"];
+	  454 [label="Variable[\"TASK.buy_faln_pants_from_cuno_done\"]  and  CheckEquipped(\"pants_bellbottom\") == false", shape=diamond];
+	  455 [label="!(Variable[\"TASK.buy_faln_pants_from_cuno_done\"]  and  CheckEquipped(\"pants_bellbottom\") == false)", shape=diamond];
+	  456 [label="Kim Kitsuragi: IsKimHere()"];
+	  457 [label="IsKimHere()", shape=diamond];
+	  458 [label="!(IsKimHere())", shape=diamond];
+	  459 [label="Suggestion: 她一定会欣喜若狂的。给某人送去些*好*消息对你来说是个很好的转变。"];
+	  460 [label="Cuno: “如果你把我留在这里，他们会把我绞死的。你希望这样吗？一个死去的小孩？”他眯起眼睛。“或者你想让坤诺加入你们分局，解决这摊破事？就像我们*刚刚*做的一样。”"];
+	  461 [label="Cuno: “喂，混球！你要明白——如果你把我留在这里，他们会把我绞死的。你希望这样吗？一个死去的小孩？*或者*你想让坤诺加入你们分局，解决这摊破事？就像我们*刚刚*做的一样？”"];
+	  462 [label="Shivers: 整片大区人声鼎沸：旧木屋组成一张黑色棋盘，里面生活着80,000条生命。一眼望去全是容易失火的建筑物——从主路到大科戎，从41分局到嵌入遥远地平线的布吉街……"];
+	  463 [label="You: “我准备好了。”（总结。）"];
+	  464 [label="Kim Kitsuragi: 他对此很有激情。"];
+	  465 [label="Judit Minot: “让——我想他没有。我能从他的脸上看出来……”"];
+	  466 [label="Jean Vicquemare: “不。”一阵沉默。“当然了，你破案了——你可以*完成*警察工作——不过是一阵一阵的。这在我看来没什么好惊讶的。”"];
+	  467 [label="You: “好吧。我是帮马德雷教父做事的黑警吗？”"];
+	  468 [label="You: “你说科戎？我在那里当体育老师？”"];
+	  469 [label="Jump to: [Untitled hub (03)]"];
+	  470 [label="Kim Kitsuragi: IsKimHere()"];
+	  471 [label="IsKimHere()", shape=diamond];
+	  472 [label="!(IsKimHere())", shape=diamond];
+	  473 [label="Hand/Eye Coordination: 太难啦……就连这个标枪怪人……"];
+	  474 [label="Jean Vicquemare: “杜博阿？”他摇摇头。“是叫……朵拉·英格伦德，我想是的。你提过她的名字。不过你们没有结婚。只是订婚了。”"];
+	  475 [label="Untitled hub (05)"];
+	  476 [label="Jump to: [Untitled hub (06)]"];
+	  477 [label="Jean Vicquemare: “是啊——不像*我们*。两个被临床诊断为抑郁症的老人。这里有什么好对比的？我们是垃圾。”"];
+	  478 [label="Jump to: [Untitled hub (06)]"];
+	  479 [label="Jump to: [Untitled hub (06)]"];
+	  480 [label="You: “伙计们。坤诺要加入初级警员项目。”"];
+	  481 [label="Shivers: 黄昏的天空之下，整片大区灯火通明：旧木屋组成一张黑色棋盘，里面生活着80,000条生命。一眼望去全是容易失火的建筑物——从大街到高速公路顶部的41分局，再到嵌入在大雪纷飞地平线上的布吉街……"];
+	  482 [label="Kim Kitsuragi: IsMorning()"];
+	  483 [label="IsMorning()", shape=diamond];
+	  484 [label="!(IsMorning())", shape=diamond];
+	  485 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  486 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  487 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  488 [label="Esprit de Corps: “真的吗？”尼克斯·戈特利布看着名单，突然抬起头。“我听说他很不稳定。”“你这口气好像这是件*坏事*，”警长托勒密·普赖斯用笔指着医生。他的办公室很暗，窗帘拉上了。“哈里是我们的人，他会渡过难关的——而且等他恢复过来之后，他会站在瑞瓦肖这一边。”“明白了。”戈特利布又回到名单上。“迈诺特？”“当然。”\n“真的吗？”尼克斯·戈特利布看着名单，突然抬起头。“我听说他很不稳定。”“你这口气好像这是件*坏事*，”警长托勒密·普赖斯用圆珠笔比划了一下。他的办公室很暗，窗帘拉上了。“哈里是我们的人，他会渡过难关的。等他恢复过来之后，他会站在人民这一边。”“明白了。”戈特利布又回到名单上。“迈诺特？”“当然。”\n“真的吗？”尼克斯·戈特利布看着名单，突然抬起头。“我听说他很不稳定。”“你这口气好像这是件*坏事*，”警长托勒密·普赖斯用圆珠笔比划了一下。他的办公室很暗，窗帘拉上了。“哈里是我们的人，他会渡过难关的。等他恢复过来之后，他会站在RCM这一边。”“明白了。”戈特利布又回到名单上。“迈诺特？”“当然。”\n“真的吗？”尼克斯·戈特利布看着名单，突然抬起头。“我听说他很不稳定。”“你这口气好像这是件*坏事*，”警长托勒密·普赖斯用圆珠笔比划了一下。他的办公室很暗，窗帘拉上了。“哈里是我们的人，他会渡过难关的。他一直都是这样……比起女人更看中钱。”“明白了。”戈特利布又回到名单上。“迈诺特？”“当然。”\n“真的吗？”尼克斯·戈特利布看着名单，突然抬起头。“我听说他很不稳定。”“你这口气好像这是件*坏事*，”警长托勒密·普赖斯用圆珠笔比划了一下。他的办公室很暗，窗帘拉上了。“哈里是我们的人，他会渡过难关的。等他恢复过来之后，他会站在瑞瓦肖这一边。”“明白了。”戈特利布又回到名单上。“迈诺特？”“当然。”"];
+	  489 [label="Kim Kitsuragi: Variable[\"village.posse_achievement_kim\"]"];
+	  490 [label="Variable[\"village.posse_achievement_kim\"]", shape=diamond];
+	  491 [label="!(Variable[\"village.posse_achievement_kim\"])", shape=diamond];
+	  492 [label="Kim Kitsuragi: IsKimHere()"];
+	  493 [label="IsKimHere()", shape=diamond];
+	  494 [label="!(IsKimHere())", shape=diamond];
+	  495 [label="Judit Minot: Judit Minot: \"...\""];
+	  496 [label="Kim Kitsuragi: IsTHCCookingOrFixed(\"the_waste_land_of_reality\")  or  SubstanceUsedOnce(\"alcohol\") == false"];
+	  497 [label="IsTHCCookingOrFixed(\"the_waste_land_of_reality\")  or  SubstanceUsedOnce(\"alcohol\") == false", shape=diamond];
+	  498 [label="!(IsTHCCookingOrFixed(\"the_waste_land_of_reality\")  or  SubstanceUsedOnce(\"alcohol\") == false)", shape=diamond];
+	  499 [label="Conceptualization: 如果你断言生活已经了无希望；如果你断言自己是个被诅咒的人……被诅咒的人不需要安慰。*任何*安慰都不需要。他可以继续走下去，没有酒精，没有帮助。就像是一个时钟。"];
+	  500 [label="You: “我可以——我可以消磨时光，直到我的大脑从受到的虐待当中恢复过来。我现在就可以这么做。我教会自己了。”"];
+	  501 [label="You: “我已经不是那个人了。我变成了别的人，而且那个人*会*戒掉的。”"];
+	  502 [label="You: “我已经不是那个人了。我变成了别的人，而且那个人*已经*戒掉了。”"];
+	  503 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  504 [label="IsCunoInParty()", shape=diamond];
+	  505 [label="!(IsCunoInParty())", shape=diamond];
+	  506 [label="Untitled hub (02)"];
+	  507 [label="You: “我收集的FALN运动套装……”"];
+	  508 [label="Perception (Smell): 汗水和胶水的味道，磨损的地板……"];
+	  509 [label="Endurance: *难以置信*的耐力输出……"];
+	  510 [label="Endurance: 原始的、稳健的耐力输出……"];
+	  511 [label="Kim Kitsuragi: CheckItem(\"jacket_faln\")  and  CheckItem(\"pants_faln\")  and  CheckItem(\"hat_faln\")  and  CheckItem(\"shirt_faln\")  and  CheckItem(\"shoes_faln\")"];
+	  512 [label="CheckItem(\"jacket_faln\")  and  CheckItem(\"pants_faln\")  and  CheckItem(\"hat_faln\")  and  CheckItem(\"shirt_faln\")  and  CheckItem(\"shoes_faln\")", shape=diamond];
+	  513 [label="!(CheckItem(\"jacket_faln\")  and  CheckItem(\"pants_faln\")  and  CheckItem(\"hat_faln\")  and  CheckItem(\"shirt_faln\")  and  CheckItem(\"shoes_faln\"))", shape=diamond];
+	  514 [label="You: “哈？”"];
+	  515 [label="Reaction Speed: 不是朵拉·*杜博阿*吗？”"];
+	  516 [label="Jump to: [Untitled hub (06)]"];
+	  517 [label="Jean Vicquemare: “他的意思是*加入*我们。来41分局。调动。”"];
+	  518 [label="You: “是啊。当然。”"];
+	  519 [label="Jump to: [Untitled hub (03)]"];
+	  520 [label="Judit Minot: “圣堂路？正好路过。离你住的地方很近，永劫路……”她看着维克玛。"];
+	  521 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  522 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  523 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  524 [label="Kim Kitsuragi: IsEvening()"];
+	  525 [label="IsEvening()", shape=diamond];
+	  526 [label="!(IsEvening())", shape=diamond];
+	  527 [label="You: 现在不行。"];
+	  528 [label="Shivers: 夜空之下，整片大区域都陷入沉睡：旧木屋组成一张黑色棋盘，里面生活着80,000条生命。一眼望去全是容易失火的建筑物——从大街到高速公路顶部的41分局，再到嵌入黑色地平线的布吉街……"];
+	  529 [label="Shivers: 午后的日光之下，整片大区域轰鸣着：旧木屋组成一张黑色棋盘，里面生活着80,000条生命，还有层层叠叠的烟囱。一眼望去全是容易失火的建筑物——从大街到41分局，再到嵌入在大雪纷飞地平线上的布吉街……"];
+	  530 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  531 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  532 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  533 [label="Kim Kitsuragi: IsAfternoon()"];
+	  534 [label="IsAfternoon()", shape=diamond];
+	  535 [label="!(IsAfternoon())", shape=diamond];
+	  536 [label="Jean Vicquemare: “你不能当警察。你还是个小孩。而且你每隔四秒就会说一句‘混球’。”"];
+	  537 [label="Jean Vicquemare: “我不在乎——他不能当警察。他还是个孩子。一个每隔四秒就会说一句‘混球’的孩子。”"];
+	  538 [label="You: 我收集的FALN运动套装……"];
+	  539 [label="Kim Kitsuragi: Variable[\"tc.down_with_racism\"]  or  IsHighestPolitical(\"revacholian_nationhood\")"];
+	  540 [label="Variable[\"tc.down_with_racism\"]  or  IsHighestPolitical(\"revacholian_nationhood\")", shape=diamond];
+	  541 [label="!(Variable[\"tc.down_with_racism\"]  or  IsHighestPolitical(\"revacholian_nationhood\"))", shape=diamond];
+	  542 [label="Rhetoric: 为了行星的工人阶级。"];
+	  543 [label="Jean Vicquemare: “你这个喜欢指使别人的狗杂种……”他摇摇头，吸了吸鼻子。“这里*实在*是太冷了，我们的車就停在广场。罪犯需要被拘留起来。我们赶紧走吧。”"];
+	  544 [label="You: “我为什么会*这样*？”"];
+	  545 [label="Kim Kitsuragi: IsKimHere()"];
+	  546 [label="IsKimHere()", shape=diamond];
+	  547 [label="!(IsKimHere())", shape=diamond];
+	  548 [label="You: “这是什么时候的事？我当体育老师的时候？”"];
+	  549 [label="Encyclopedia: 科戎就在加姆洛克东边。每天早上，步行只有很短的路程——就能走到棒球场或者是体育设施……"];
+	  550 [label="Cuno: “坤诺他妈的就*知道*肯定有点不对劲，如果你能那样跑个不停的话……”"];
+	  551 [label="Jean Vicquemare: “你又在念叨迈克了？”警探摇摇头。“我讨厌那个家伙。”"];
+	  552 [label="Kim Kitsuragi: CheckEquipped(\"jacket_faln\")  and  (CheckEquipped(\"pants_faln\")  or  CheckEquipped(\"hat_faln\"))"];
+	  553 [label="CheckEquipped(\"jacket_faln\")  and  (CheckEquipped(\"pants_faln\")  or  CheckEquipped(\"hat_faln\"))", shape=diamond];
+	  554 [label="!(CheckEquipped(\"jacket_faln\")  and  (CheckEquipped(\"pants_faln\")  or  CheckEquipped(\"hat_faln\")))", shape=diamond];
+	  555 [label="You: “我听够了。”（总结。）"];
+	  556 [label="You: “托森和麦克莱恩？”"];
+	  557 [label="Jean Vicquemare: “我们？我们现在是*血腥杀手分局*了，你没听说过吗？我们是坏人。没人喜欢我们。”"];
+	  558 [label="Jean Vicquemare: “谢谢你，坤诺，”他被逗乐了。“你很善良。那是个人手不足的分局，而且辖区还特别大——这就是我们为什么需要……”他把头歪向北边，咂了下舌头。"];
+	  559 [label="Judit Minot: “而且我们还有一大堆案子要处理，警督，”她笑着说道。“成堆的东西等着我们去处理。像小山一样。”"];
+	  560 [label="Encyclopedia: 她说自己住在圣堂路1113号，加姆洛克。还记得吗？"];
+	  561 [label="Esprit de Corps: 库洛·德鲁伊特警探。"];
+	  562 [label="Jump to: [Untitled hub (06)]"];
+	  563 [label="Jean Vicquemare: “妈的，我们走吧。”男人指着街道的方向。*特兰特把車开来了。开回加姆洛克要20分钟。”"];
+	  564 [label="Shivers: 粉色晨光中，整片大区逐渐苏醒：旧木屋组成一张黑色棋盘，里面生活着80,000条生命，还有层层叠叠的烟囱。一眼望去全是容易失火的建筑物——从大街到41分局，再到嵌入在大雪纷飞地平线上的布吉街……"];
+	  565 [label="Judit Minot: “看……”她转身面向大海。“下雨了。是时候回家了。”"];
+	  566 [label="Shivers: 紫色晨光中，整片大区逐渐苏醒：旧木屋组成一张黑色棋盘，里面生活着80,000条生命，还有层层叠叠的烟囱。一眼望去全是容易失火的建筑物——从大街到41分局，再到在大雨滂沱的地平线上闪闪发亮的布吉街……"];
+	  567 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  568 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  569 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  570 [label="Kim Kitsuragi: IsNighttime()"];
+	  571 [label="IsNighttime()", shape=diamond];
+	  572 [label="!(IsNighttime())", shape=diamond];
+	  573 [label="Judit Minot: “警探。”她看着维克玛。“我只是不想这场*审判*继续下去。外面太冷了，而且……”"];
+	  574 [label="Jean Vicquemare: “不。我们完事了，哈里。你喝醉了。等你清醒之后，你会收到一份警局传唤通知。”"];
+	  575 [label="Esprit de Corps: 没人知道该说什么。不过他们也表示同意。让你继续留在警队会危及平民的安全。"];
+	  576 [label="Jean Vicquemare: “好吧。”他叹了一口气。“我们的車就停在广场。而且罪犯也需要被拘留起来。我们走吧。”"];
+	  577 [label="Jean Vicquemare: “我*不想*这样。但是你发现了一个新物种。而且还破获了凶杀案……”他耸耸肩。"];
+	  578 [label="You: “我*是*谁？”"];
+	  579 [label="Jean Vicquemare: “你*是*谁？你是个体育老师，哈里。”"];
+	  580 [label="Jean Vicquemare: “不，”他冷淡地评论到，“普通的那种。”"];
+	  581 [label="You: “我为什么能一天不停地跑*12个小时*……”"];
+	  582 [label="Judit Minot: “看……”她转身面向大海。“太阳就快落下了。到时间回家了。”"];
+	  583 [label="Inland Empire: 心碎精灵。"];
+	  584 [label="Judit Minot: “‘躯干’麦克·托森和切斯特·麦克莱恩——”她弯起眉头。“他们不适合管理。相信我。情况本来就不太稳定。”"];
+	  585 [label="Jump to: [Untitled hub]"];
+	  586 [label="Inland Empire: 归来……"];
+	  587 [label="Kim Kitsuragi: “也许吧……”他停下来，陷入沉思。“有人说控制区撑不了多久。收音机里还没提——暂时没有。不过外面有些党派……”\n“也许吧……”他看着报纸掉落在地上。“有人说控制区撑不了多久。收音机里还没提——暂时没有。不过外面有些党派……”"];
+	  588 [label="You: “让。我想让坤诺加入我们分局，一起解决这摊破事。”"];
+	  589 [label="Cuno: “坤诺他妈的19了。”"];
+	  590 [label="Kim Kitsuragi: Variable[\"auto.is_raining\"]"];
+	  591 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  592 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  593 [label="Shivers: 黄昏的天空之下，整片大区灯火通明：旧木屋组成一张黑色棋盘，里面生活着80,000条生命。一眼望去全是容易失火的建筑物——从大街到高速公路顶部的41分局，再到消失在细雨交织地平线上的布吉街……"];
+	  594 [label="Shivers: 整片大区在缓缓飘落的雪花中低吟：旧木屋组成一张黑色棋盘，里面生活着80,000条生命，还有层层叠叠的烟囱。一眼望去全是容易失火的建筑物——从大街到41分局，再到嵌入在白色地平线上的布吉街……"];
+	  595 [label="Esprit de Corps: “托森？”“有。”“麦克莱恩?”“有。”“海德斯塔姆？”“没有。”“维克玛？”“有。”“杜博阿？”“当然。”"];
+	  596 [label="Shivers: 黄昏的天空之下，整片大区灯火通明：旧木屋组成一张黑色棋盘，里面生活着80,000条生命。一眼望去全是容易失火的建筑物——从大街到高速公路顶部的41分局，再到嵌入在大雪纷飞地平线上的布吉街……"];
+	  597 [label="Shivers: 整片大区在缓缓飘落的雪花中低吟：旧木屋组成一张黑色棋盘，里面生活着80,000条生命，还有层层叠叠的烟囱。一眼望去全是容易失火的建筑物——从大街到41分局，再到嵌入在白色地平线上的布吉街……"];
+	  598 [label="Jump to: [Shivers: \"You close your eyes and hear the do...\"]"];
+	  599 [label="Empathy: 他的真的害怕被留下来。"];
+	  600 [label="Judit Minot: “太棒了，”女人看向北边。“那我们能不能现在就回加姆洛克？”"];
+	  601 [label="Jean Vicquemare: “好吧，你是对的。她的确非常有吸引力，哈里。漂亮。一个顶级资产女性。弱不禁风。基本上就像个*精灵*一样。”"];
+	  602 [label="Kim Kitsuragi: IsKimHere()"];
+	  603 [label="IsKimHere()", shape=diamond];
+	  604 [label="!(IsKimHere())", shape=diamond];
+	  605 [label="Jean Vicquemare: “等我们回去之后，祝愿你能找到她。”"];
+	  606 [label="Empathy: 这份坦白里隐含着一种巨大的悲伤。"];
+	  607 [label="Jean Vicquemare: 他点点头。“他太老了。他这个样子已经持续很久了。我见他尝试过很多次。现在已经变成了一场闹剧。”"];
+	  608 [label="Reaction Speed: 房子，街道，高速公司，都在歌唱。坚持住。这是一场我们可以*打赢*的战争。"];
+	  609 [label="Cuno: “听听这些屁话，老兄……”他举起双手。"];
+	  610 [label="Jean Vicquemare: “去你妈的，哈里……你他妈的居然让这个小孩跟着你。*只是*因为他在为你辩护——这是你*唯一*不会留在这里等死的理由。”"];
+	  611 [label="You: “等等。在我们离开之前，我还有*几个*问题。关于我是谁。”"];
+	  612 [label="You: “竹节虫——我需要把这件事立即告诉莉娜。”"];
+	  613 [label="You: “坤诺——现在你怎么办？”"];
+	  614 [label="You: “那就再见吧。现在我就当我的流浪汉去。流浪警探。”"];
+	  615 [label="Jean Vicquemare: “关于你*是*谁？”"];
+	  616 [label="Jean Vicquemare: “好吧——显然你不再是个体育老师了，不过……”"];
+	  617 [label="Jean Vicquemare: “现在没人会结婚的。这里可是瑞瓦肖。”"];
+	  618 [label="Pain Threshold: 痛苦精灵。"];
+	  619 [label="Encyclopedia: 瓦萨是真正的金发人的故乡。"];
+	  620 [label="Jean Vicquemare: “谢谢你，警督。你很宽容。我们分局*的确*人手不足，辖区也*的确*太大了——这就是我们为什么需要……”他把头歪向北边……"];
+	  621 [label="Untitled hub (03)"];
+	  622 [label="Endurance: 要小心些，不然她会晕过去的。"];
+	  623 [label="Kim Kitsuragi: Variable[\"TASK.return_to_mainland_done\"]"];
+	  624 [label="Variable[\"TASK.return_to_mainland_done\"]", shape=diamond];
+	  625 [label="!(Variable[\"TASK.return_to_mainland_done\"])", shape=diamond];
+	  626 [label="Cuno: “喂，混球！你没明白。坤诺现在是个完完全全的猪猡了——坤诺闻起来都是一股培根的油腻味。被人*看见*跟你在一起。他妈的坤诺就像个线人。你以为没人*看见*吗？”他张开双臂。"];
+	  627 [label="Cuno: “我不会说的！我再也不会说了。”"];
+	  628 [label="Jean Vicquemare: “他不能当警察。哈里。他还是个小孩。一个每隔四秒就会说一句‘混球’的孩子。”"];
+	  629 [label="Kim Kitsuragi: Variable[\"tc.lenas_address\"]"];
+	  630 [label="Variable[\"tc.lenas_address\"]", shape=diamond];
+	  631 [label="!(Variable[\"tc.lenas_address\"])", shape=diamond];
+	  632 [label="Savoir Faire: 这就解释了一切。到处跑来跑去。那个跳跃。还有*发达的二头肌*。"];
+	  633 [label="Jean Vicquemare: “好吧，所以他清醒了多久？一星期？”他叹了口气。"];
+	  634 [label="Rhetoric: 为了瑞瓦肖。"];
+	  635 [label="You: “我知道这很难相信，不过我会做的。为了公社的白色旗帜。”\n“我知道这很难相信，不过我会做的。为了王国。”\n“我知道这很难相信，不过我会做的。为了我自己。为了*我的*生活。”\n“我知道这很难相信，不过我会做的。为了RCM。”"];
+	  636 [label="Judit Minot: 她飞快地点点头。“只要能结束这场*审判*，我怎样都可以。”"];
+	  637 [label="You: “但是在那之前……”"];
+	  638 [label="Kim Kitsuragi: Variable[\"ice.acele_asked_about_contact_mike\"]"];
+	  639 [label="Variable[\"ice.acele_asked_about_contact_mike\"]", shape=diamond];
+	  640 [label="!(Variable[\"ice.acele_asked_about_contact_mike\"])", shape=diamond];
+	  641 [label="Jean Vicquemare: “他又在念叨迈克了？”警探摇摇头。“我讨厌那个家伙。”"];
+	  642 [label="Untitled hub (03)"];
+	  643 [label="Jean Vicquemare: “还不是老故事——你遇到了一个小妞。她*鼓励*你*大干一场*，超越自己，诸如此类吧。”"];
+	  644 [label="Jump to: [Untitled hub (03)]"];
+	  645 [label="Jean Vicquemare: “我的观点是，你的问题需要去找个*精神病医生*看看。不是心理学家——学位再难一点的那种。有什么比精神病医生更高级的吗？”他停下来，想了一下。“法医精神病学家。去跟他们聊聊。”"];
+	  646 [label="Jean Vicquemare: “很有吸引力，哈里。漂亮。一个漂亮的资产阶级女人。流浪儿。基本上就像*精灵*一样。”"];
+	  647 [label="Judit Minot: “他说的是实话。你曾经是科戎的一个体育老师。”她四下看了看。“外面真的很冷。也许我们应该……”"];
+	  648 [label="Kim Kitsuragi: IsKimHere()"];
+	  649 [label="IsKimHere()", shape=diamond];
+	  650 [label="!(IsKimHere())", shape=diamond];
+	  651 [label="Kim Kitsuragi: 他拉起衣领，四下看了看，春光反射在他的镜片上。“警探，我们阻止了一场小规模的战争。有些事正在瑞瓦肖悄悄酝酿。”"];
+	  652 [label="Kim Kitsuragi: Variable[\"tc.the_return\"]"];
+	  653 [label="Variable[\"tc.the_return\"]", shape=diamond];
+	  654 [label="!(Variable[\"tc.the_return\"])", shape=diamond];
+	  655 [label="Kim Kitsuragi: “我暂时还不知道是什么——不过对于RCM来说，这将会是一个艰难的春天。我们必须做好准备。潜入。调查。”"];
+	  656 [label="Untitled hub (06)"];
+	  657 [label="Drama: 吾辈很确定不是那样的，大人。"];
+	  658 [label="You: “他的爸爸还在昏迷，而且他唯一的朋友也不在了。”"];
+	  659 [label="Shivers: 夜空之下，整片大区域都陷入沉睡：旧木屋组成一张黑色棋盘，里面生活着80,000条生命。一眼望去全是容易失火的建筑物——从大街到高速公路顶部的41分局，再到嵌入黑色地平线的布吉街……"];
+	  660 [label="Volition: 6年了，你还没走出来，你到底有什么问题啊？"];
+	  661 [label="Shivers: 黄昏的天空之下，整片大区灯火通明：旧木屋组成一张黑色棋盘，里面生活着80,000条生命。一眼望去全是容易失火的建筑物——从大街到高速公路顶部的41分局，再到嵌入在黑暗地平线上的布吉街……"];
+	  662 [label="Kim Kitsuragi: Variable[\"auto.is_snowing\"]"];
+	  663 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  664 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  665 [label="Rhetoric: 为了复仇。"];
+	  666 [label="Shivers: 停下来，你可以去燃尽区。在那里与我相遇——飘过燃尽的废墟上空。就像焦糖的味道——归来正在等待。"];
+	  667 [label="Trant Heidelstam: “同意。这个的公共关系潜力太有价值了，不能就这么放弃。”"];
+	  668 [label="Esprit de Corps: 不过他在喝酒，她想到。他每次都是这样脱身的。这样对他很不好，不过……"];
+	  669 [label="Untitled hub"];
+	  670 [label="Jean Vicquemare: “哦——你没说吗？”他弯起眉头。“他还*成功跨越了财政和特权之间那条鸿沟*？”"];
+	  671 [label="Jean Vicquemare: “在你20多岁，或者快30岁的时候。从那以后，你真的是放飞自我了。”他打量着你。"];
+	  672 [label="Kim Kitsuragi: “你对*复古风*舞曲的热爱。你为什么能做出360度回旋踢……”"];
+	  673 [label="Kim Kitsuragi: Variable[\"gates.mhead_fight_success\"]"];
+	  674 [label="Variable[\"gates.mhead_fight_success\"]", shape=diamond];
+	  675 [label="!(Variable[\"gates.mhead_fight_success\"])", shape=diamond];
+	  676 [label="You: “不，我的意思是——她是做什么的？”"];
+	  677 [label="Jean Vicquemare: “她真的特别有吸引力。一个漂亮的资产阶级女人。流浪儿。基本上就像*精灵*一样。”"];
+	  678 [label="Conceptualization: 雪精灵。金发精灵……"];
+	  679 [label="You: “*现在*我真的听够了。”"];
+	  680 [label="Jump to: [Jean Vicquemare: \"\"So have I. You *bitterly* drop *De...\"]"];
+	  681 [label="Trant Heidelstam: “我向你保证——我是不会给一个腐败的小队当顾问的。”"];
+	  682 [label="Untitled hub"];
+	  683 [label="Kim Kitsuragi: IsKimHere()"];
+	  684 [label="IsKimHere()", shape=diamond];
+	  685 [label="!(IsKimHere())", shape=diamond];
+	  686 [label="Kim Kitsuragi: “舆论会平息的，”他的口吻很让人宽慰。“加姆洛克有你是一种幸运。而且它通常被认为是最伟大的区域——这也是你的幸运。”"];
+	  687 [label="Judit Minot: “……马上回去。我们留下托森和麦克莱恩管理C翼。这样不太好。”"];
+	  688 [label="Jump to: [Untitled hub (06)]"];
+	  689 [label="You: “等等，你的意思是归来？”"];
+	  690 [label="Trant Heidelstam: “是的。”他的脸沉了下来。“我听过类似的担忧——来自维斯珀和墨西拿的系统分析师。银行的国际风险部。就是他们一类的人。”"];
+	  691 [label="Jean Vicquemare: “呃，你很快会有大把大把的业余时间去做这件事。”"];
+	  692 [label="You: “她是个神秘动物学家。她跟我说过竹节虫的事……”"];
+	  693 [label="You: “他挺好的。在岛上的时候。他可以的。”"];
+	  694 [label="Kim Kitsuragi: Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"]"];
+	  695 [label="Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"]", shape=diamond];
+	  696 [label="!(Variable[\"coast.posse_corrected_vicquemare_about_cunos_age\"])", shape=diamond];
+	  697 [label="Kim Kitsuragi: Variable[\"yard.cuno_offered_to_hook_you_up_get_you_hookin\"]"];
+	  698 [label="Variable[\"yard.cuno_offered_to_hook_you_up_get_you_hookin\"]", shape=diamond];
+	  699 [label="!(Variable[\"yard.cuno_offered_to_hook_you_up_get_you_hookin\"])", shape=diamond];
+	  700 [label="Kim Kitsuragi: CheckItem(\"jacket_faln\")  and  CheckItem(\"pants_faln\")  and  CheckItem(\"hat_faln\")  and  CheckItem(\"shirt_faln\")  and  CheckItem(\"shoes_faln\")"];
+	  701 [label="CheckItem(\"jacket_faln\")  and  CheckItem(\"pants_faln\")  and  CheckItem(\"hat_faln\")  and  CheckItem(\"shirt_faln\")  and  CheckItem(\"shoes_faln\")", shape=diamond];
+	  702 [label="!(CheckItem(\"jacket_faln\")  and  CheckItem(\"pants_faln\")  and  CheckItem(\"hat_faln\")  and  CheckItem(\"shirt_faln\")  and  CheckItem(\"shoes_faln\"))", shape=diamond];
+	  703 [label="Pain Threshold: 你那些*老派*的社会观点。你对复古音乐的热爱。"];
+	  704 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  705 [label="IsCunoInParty()", shape=diamond];
+	  706 [label="!(IsCunoInParty())", shape=diamond];
+	  12410011 [label="JUMP OUT to GAME OVER!", shape=diamond];
+	  0 -> 1
+	  1 -> 4
+	  2 -> 503
+	  3 -> 168
+	  4 -> 5
+	  4 -> 6
+	  5 -> 577
+	  6 -> 466
+	  7 -> 608
+	  8 -> 667
+	  9 -> 55
+	  10 -> 200
+	  11 -> 12
+	  11 -> 13
+	  12 -> 507
+	  13 -> 581
+	  14 -> 509
+	  15 -> 171
+	  16 -> 17
+	  16 -> 679
+	  17 -> 236
+	  18 -> 645
+	  19 -> 108
+	  20 -> 21
+	  20 -> 22
+	  21 -> 65
+	  21 -> 527
+	  22 -> 150
+	  23 -> 24
+	  23 -> 25
+	  24 -> 341
+	  25 -> 651
+	  26 -> 373
+	  27 -> 28
+	  27 -> 29
+	  28 -> 560
+	  29 -> 247
+	  30 -> 210
+	  31 -> 274
+	  32 -> 516
+	  33 -> 34
+	  33 -> 35
+	  34 -> 123
+	  35 -> 163
+	  36 -> 421
+	  37 -> 38
+	  37 -> 39
+	  38 -> 190
+	  39 -> 462
+	  40 -> 41
+	  40 -> 42
+	  41 -> 488
+	  42 -> 704
+	  43 -> 627
+	  44 -> 45
+	  44 -> 46
+	  45 -> 178
+	  46 -> 276
+	  47 -> 48
+	  47 -> 49
+	  48 -> 258
+	  49 -> 132
+	  50 -> 353
+	  51 -> 259
+	  52 -> 53
+	  52 -> 54
+	  53 -> 634
+	  54 -> 441
+	  55 -> 56
+	  55 -> 57
+	  56 -> 616
+	  57 -> 170
+	  58 -> 254
+	  59 -> 453
+	  60 -> 509
+	  61 -> 474
+	  62 -> 272
+	  63 -> 647
+	  64 -> 20
+	  65 -> 477
+	  66 -> 151
+	  67 -> 244
+	  68 -> 69
+	  68 -> 70
+	  69 -> 307
+	  70 -> 113
+	  71 -> 72
+	  71 -> 73
+	  72 -> 342
+	  73 -> 652
+	  74 -> 518
+	  74 -> 207
+	  75 -> 155
+	  76 -> 159
+	  77 -> 421
+	  78 -> 421
+	  79 -> 80
+	  79 -> 81
+	  80 -> 564
+	  81 -> 78
+	  82 -> 324
+	  83 -> 84
+	  83 -> 85
+	  84 -> 596
+	  85 -> 661
+	  86 -> 88
+	  86 -> 87
+	  87 -> 382
+	  88 -> 533
+	  89 -> 114
+	  90 -> 136
+	  91 -> 177
+	  92 -> 188
+	  93 -> 289
+	  94 -> 607
+	  95 -> 503
+	  96 -> 575
+	  97 -> 448
+	  98 -> 580
+	  99 -> 100
+	  99 -> 101
+	  100 -> 328
+	  101 -> 551
+	  102 -> 234
+	  103 -> 470
+	  104 -> 202
+	  105 -> 106
+	  105 -> 107
+	  106 -> 678
+	  107 -> 334
+	  108 -> 619
+	  109 -> 585
+	  110 -> 340
+	  111 -> 205
+	  112 -> 181
+	  113 -> 682
+	  114 -> 588
+	  114 -> 658
+	  114 -> 693
+	  114 -> 183
+	  114 -> 280
+	  115 -> 656
+	  116 -> 626
+	  117 -> 118
+	  117 -> 119
+	  118 -> 521
+	  119 -> 524
+	  120 -> 121
+	  120 -> 122
+	  121 -> 285
+	  122 -> 33
+	  123 -> 124
+	  123 -> 125
+	  124 -> 377
+	  125 -> 79
+	  126 -> 18
+	  127 -> 304
+	  128 -> 150
+	  129 -> 130
+	  129 -> 131
+	  130 -> 288
+	  131 -> 628
+	  132 -> 133
+	  132 -> 134
+	  133 -> 197
+	  134 -> 352
+	  135 -> 136
+	  136 -> 137
+	  136 -> 138
+	  137 -> 318
+	  138 -> 539
+	  139 -> 394
+	  140 -> 670
+	  141 -> 509
+	  142 -> 198
+	  143 -> 144
+	  143 -> 145
+	  144 -> 550
+	  145 -> 142
+	  146 -> 552
+	  147 -> 453
+	  148 -> 18
+	  149 -> 174
+	  150 -> 682
+	  151 -> 152
+	  151 -> 153
+	  152 -> 686
+	  153 -> 432
+	  154 -> 688
+	  155 -> 309
+	  156 -> 559
+	  157 -> 413
+	  158 -> 115
+	  159 -> 657
+	  160 -> 589
+	  161 -> 184
+	  162 -> 219
+	  163 -> 421
+	  164 -> 165
+	  164 -> 166
+	  165 -> 489
+	  166 -> 291
+	  167 -> 633
+	  168 -> 188
+	  169 -> 198
+	  170 -> 669
+	  171 -> 269
+	  172 -> 142
+	  173 -> 453
+	  174 -> 19
+	  174 -> 365
+	  175 -> 335
+	  176 -> 476
+	  177 -> 563
+	  178 -> 179
+	  178 -> 180
+	  179 -> 203
+	  180 -> 276
+	  181 -> 682
+	  182 -> 378
+	  183 -> 346
+	  184 -> 185
+	  185 -> 186
+	  185 -> 187
+	  186 -> 561
+	  187 -> 212
+	  188 -> 611
+	  189 -> 219
+	  190 -> 192
+	  190 -> 191
+	  191 -> 566
+	  192 -> 216
+	  193 -> 627
+	  194 -> 195
+	  194 -> 196
+	  195 -> 243
+	  196 -> 368
+	  197 -> 509
+	  198 -> 544
+	  198 -> 578
+	  198 -> 612
+	  198 -> 613
+	  198 -> 297
+	  198 -> 393
+	  198 -> 467
+	  198 -> 435
+	  198 -> 319
+	  199 -> 615
+	  200 -> 233
+	  201 -> 643
+	  202 -> 660
+	  203 -> 558
+	  204 -> 410
+	  205 -> 371
+	  206 -> 71
+	  207 -> 343
+	  208 -> 519
+	  209 -> 311
+	  210 -> 160
+	  211 -> 349
+	  212 -> 376
+	  213 -> 252
+	  214 -> 32
+	  215 -> 421
+	  216 -> 217
+	  216 -> 218
+	  217 -> 313
+	  218 -> 189
+	  219 -> 220
+	  219 -> 221
+	  220 -> 598
+	  221 -> 598
+	  222 -> 224
+	  222 -> 223
+	  223 -> 90
+	  224 -> 700
+	  225 -> 229
+	  226 -> 227
+	  226 -> 228
+	  227 -> 292
+	  228 -> 91
+	  229 -> 289
+	  230 -> 289
+	  231 -> 503
+	  232 -> 96
+	  233 -> 545
+	  234 -> 642
+	  235 -> 509
+	  236 -> 50
+	  236 -> 514
+	  236 -> 676
+	  236 -> 237
+	  237 -> 646
+	  238 -> 303
+	  239 -> 198
+	  240 -> 366
+	  240 -> 62
+	  241 -> 198
+	  242 -> 66
+	  243 -> 368
+	  244 -> 688
+	  245 -> 74
+	  246 -> 629
+	  247 -> 209
+	  247 -> 246
+	  248 -> 480
+	  248 -> 30
+	  249 -> 116
+	  250 -> 658
+	  250 -> 588
+	  250 -> 693
+	  251 -> 421
+	  252 -> 348
+	  253 -> 249
+	  254 -> 256
+	  254 -> 255
+	  255 -> 506
+	  256 -> 257
+	  257 -> 506
+	  258 -> 509
+	  259 -> 666
+	  260 -> 261
+	  260 -> 262
+	  261 -> 357
+	  262 -> 665
+	  263 -> 177
+	  264 -> 448
+	  265 -> 610
+	  266 -> 267
+	  266 -> 268
+	  267 -> 14
+	  268 -> 673
+	  269 -> 642
+	  270 -> 271
+	  271 -> 401
+	  272 -> 681
+	  273 -> 127
+	  274 -> 375
+	  275 -> 682
+	  276 -> 110
+	  277 -> 198
+	  278 -> 26
+	  279 -> 692
+	  280 -> 211
+	  281 -> 282
+	  281 -> 283
+	  282 -> 36
+	  283 -> 659
+	  284 -> 421
+	  285 -> 286
+	  285 -> 287
+	  286 -> 251
+	  287 -> 418
+	  288 -> 627
+	  289 -> 12410011
+	  290 -> 404
+	  290 -> 407
+	  291 -> 495
+	  292 -> 293
+	  292 -> 294
+	  293 -> 263
+	  293 -> 463
+	  295 -> 606
+	  296 -> 503
+	  297 -> 557
+	  298 -> 299
+	  298 -> 300
+	  299 -> 146
+	  300 -> 632
+	  301 -> 644
+	  302 -> 16
+	  303 -> 239
+	  304 -> 198
+	  305 -> 109
+	  306 -> 242
+	  307 -> 113
+	  308 -> 372
+	  309 -> 156
+	  310 -> 277
+	  311 -> 478
+	  312 -> 599
+	  313 -> 219
+	  314 -> 315
+	  314 -> 316
+	  315 -> 567
+	  316 -> 86
+	  317 -> 61
+	  317 -> 407
+	  318 -> 509
+	  319 -> 320
+	  319 -> 321
+	  320 -> 322
+	  321 -> 226
+	  322 -> 177
+	  323 -> 289
+	  324 -> 325
+	  324 -> 326
+	  325 -> 636
+	  326 -> 447
+	  328 -> 641
+	  329 -> 330
+	  329 -> 331
+	  330 -> 141
+	  331 -> 397
+	  332 -> 406
+	  333 -> 105
+	  334 -> 570
+	  335 -> 17
+	  335 -> 679
+	  336 -> 337
+	  337 -> 305
+	  338 -> 369
+	  339 -> 368
+	  340 -> 241
+	  341 -> 655
+	  342 -> 652
+	  343 -> 75
+	  344 -> 456
+	  345 -> 249
+	  346 -> 250
+	  347 -> 161
+	  348 -> 93
+	  349 -> 350
+	  349 -> 351
+	  350 -> 43
+	  351 -> 536
+	  352 -> 509
+	  353 -> 354
+	  353 -> 355
+	  354 -> 464
+	  355 -> 601
+	  356 -> 499
+	  357 -> 51
+	  358 -> 543
+	  359 -> 11
+	  360 -> 509
+	  361 -> 362
+	  361 -> 363
+	  362 -> 602
+	  363 -> 269
+	  364 -> 473
+	  365 -> 617
+	  366 -> 367
+	  367 -> 304
+	  368 -> 68
+	  369 -> 683
+	  370 -> 111
+	  371 -> 112
+	  372 -> 23
+	  373 -> 310
+	  374 -> 461
+	  375 -> 213
+	  376 -> 562
+	  377 -> 421
+	  378 -> 622
+	  379 -> 219
+	  380 -> 219
+	  381 -> 219
+	  382 -> 384
+	  382 -> 383
+	  383 -> 380
+	  384 -> 83
+	  385 -> 386
+	  385 -> 387
+	  386 -> 193
+	  387 -> 537
+	  388 -> 496
+	  389 -> 356
+	  390 -> 52
+	  392 -> 169
+	  393 -> 308
+	  394 -> 264
+	  394 -> 97
+	  394 -> 614
+	  394 -> 199
+	  395 -> 99
+	  396 -> 508
+	  397 -> 509
+	  398 -> 400
+	  398 -> 399
+	  399 -> 452
+	  400 -> 510
+	  401 -> 402
+	  401 -> 403
+	  402 -> 317
+	  403 -> 290
+	  404 -> 408
+	  405 -> 515
+	  406 -> 17
+	  406 -> 679
+	  407 -> 405
+	  408 -> 515
+	  409 -> 620
+	  410 -> 370
+	  411 -> 27
+	  412 -> 182
+	  413 -> 198
+	  414 -> 595
+	  415 -> 416
+	  415 -> 417
+	  416 -> 481
+	  417 -> 284
+	  418 -> 419
+	  418 -> 420
+	  419 -> 594
+	  420 -> 215
+	  421 -> 422
+	  421 -> 423
+	  422 -> 414
+	  423 -> 314
+	  424 -> 323
+	  425 -> 426
+	  425 -> 427
+	  426 -> 488
+	  427 -> 431
+	  428 -> 429
+	  428 -> 430
+	  429 -> 597
+	  430 -> 529
+	  431 -> 40
+	  432 -> 433
+	  432 -> 434
+	  433 -> 67
+	  434 -> 688
+	  435 -> 436
+	  435 -> 437
+	  437 -> 492
+	  438 -> 188
+	  439 -> 389
+	  440 -> 2
+	  440 -> 231
+	  440 -> 296
+	  440 -> 500
+	  440 -> 501
+	  440 -> 502
+	  440 -> 635
+	  440 -> 95
+	  441 -> 442
+	  441 -> 443
+	  442 -> 542
+	  443 -> 260
+	  444 -> 445
+	  444 -> 446
+	  445 -> 573
+	  446 -> 574
+	  447 -> 668
+	  448 -> 31
+	  449 -> 450
+	  449 -> 451
+	  450 -> 360
+	  451 -> 266
+	  452 -> 364
+	  453 -> 454
+	  453 -> 455
+	  454 -> 235
+	  455 -> 60
+	  456 -> 457
+	  456 -> 458
+	  457 -> 412
+	  458 -> 459
+	  459 -> 479
+	  460 -> 312
+	  461 -> 312
+	  462 -> 219
+	  463 -> 177
+	  464 -> 601
+	  465 -> 167
+	  466 -> 388
+	  467 -> 240
+	  468 -> 396
+	  469 -> 642
+	  470 -> 472
+	  470 -> 471
+	  471 -> 172
+	  472 -> 143
+	  473 -> 638
+	  474 -> 174
+	  475 -> 332
+	  475 -> 302
+	  475 -> 175
+	  476 -> 198
+	  477 -> 150
+	  478 -> 198
+	  479 -> 198
+	  480 -> 694
+	  481 -> 421
+	  482 -> 483
+	  482 -> 484
+	  483 -> 485
+	  484 -> 582
+	  485 -> 486
+	  485 -> 487
+	  486 -> 565
+	  487 -> 126
+	  488 -> 704
+	  489 -> 490
+	  489 -> 491
+	  490 -> 600
+	  491 -> 225
+	  492 -> 493
+	  492 -> 494
+	  494 -> 274
+	  495 -> 289
+	  496 -> 497
+	  496 -> 498
+	  497 -> 465
+	  498 -> 295
+	  499 -> 390
+	  500 -> 503
+	  501 -> 503
+	  502 -> 503
+	  503 -> 504
+	  503 -> 505
+	  504 -> 609
+	  505 -> 444
+	  506 -> 233
+	  506 -> 10
+	  506 -> 98
+	  507 -> 449
+	  508 -> 549
+	  509 -> 398
+	  510 -> 452
+	  511 -> 512
+	  511 -> 513
+	  512 -> 59
+	  513 -> 173
+	  514 -> 333
+	  515 -> 174
+	  516 -> 198
+	  517 -> 343
+	  518 -> 517
+	  519 -> 621
+	  520 -> 344
+	  521 -> 522
+	  521 -> 523
+	  522 -> 77
+	  523 -> 281
+	  524 -> 525
+	  524 -> 526
+	  525 -> 590
+	  526 -> 120
+	  527 -> 128
+	  528 -> 219
+	  529 -> 219
+	  530 -> 531
+	  530 -> 532
+	  531 -> 381
+	  532 -> 428
+	  533 -> 534
+	  533 -> 535
+	  534 -> 530
+	  535 -> 37
+	  536 -> 627
+	  537 -> 627
+	  538 -> 136
+	  539 -> 540
+	  539 -> 541
+	  540 -> 703
+	  541 -> 47
+	  542 -> 51
+	  543 -> 188
+	  544 -> 270
+	  545 -> 546
+	  545 -> 547
+	  546 -> 359
+	  547 -> 298
+	  548 -> 671
+	  549 -> 361
+	  550 -> 142
+	  551 -> 642
+	  552 -> 553
+	  552 -> 554
+	  553 -> 147
+	  554 -> 511
+	  555 -> 680
+	  556 -> 584
+	  557 -> 648
+	  558 -> 687
+	  559 -> 214
+	  560 -> 247
+	  561 -> 212
+	  562 -> 198
+	  563 -> 117
+	  564 -> 421
+	  565 -> 18
+	  566 -> 219
+	  567 -> 568
+	  567 -> 569
+	  568 -> 162
+	  569 -> 662
+	  570 -> 571
+	  570 -> 572
+	  571 -> 148
+	  572 -> 482
+	  573 -> 3
+	  574 -> 232
+	  575 -> 139
+	  576 -> 92
+	  577 -> 82
+	  578 -> 579
+	  579 -> 9
+	  580 -> 233
+	  580 -> 10
+	  581 -> 449
+	  582 -> 18
+	  583 -> 618
+	  584 -> 64
+	  585 -> 682
+	  586 -> 621
+	  587 -> 690
+	  588 -> 129
+	  589 -> 374
+	  590 -> 592
+	  590 -> 591
+	  591 -> 593
+	  592 -> 415
+	  593 -> 421
+	  594 -> 421
+	  595 -> 425
+	  596 -> 219
+	  597 -> 219
+	  598 -> 414
+	  599 -> 697
+	  600 -> 230
+	  601 -> 105
+	  602 -> 603
+	  602 -> 604
+	  603 -> 15
+	  604 -> 269
+	  605 -> 456
+	  606 -> 94
+	  607 -> 439
+	  608 -> 440
+	  609 -> 265
+	  610 -> 358
+	  611 -> 392
+	  612 -> 623
+	  613 -> 158
+	  614 -> 448
+	  615 -> 198
+	  616 -> 669
+	  617 -> 104
+	  617 -> 555
+	  618 -> 334
+	  619 -> 149
+	  620 -> 275
+	  621 -> 689
+	  621 -> 245
+	  621 -> 278
+	  622 -> 479
+	  623 -> 624
+	  623 -> 625
+	  624 -> 411
+	  625 -> 691
+	  626 -> 460
+	  627 -> 347
+	  628 -> 627
+	  629 -> 630
+	  629 -> 631
+	  630 -> 520
+	  631 -> 605
+	  632 -> 222
+	  633 -> 94
+	  634 -> 51
+	  635 -> 503
+	  636 -> 8
+	  637 -> 58
+	  638 -> 640
+	  638 -> 639
+	  639 -> 395
+	  640 -> 642
+	  641 -> 642
+	  642 -> 548
+	  642 -> 103
+	  642 -> 201
+	  642 -> 140
+	  642 -> 468
+	  643 -> 301
+	  644 -> 642
+	  645 -> 176
+	  646 -> 105
+	  647 -> 254
+	  648 -> 649
+	  648 -> 650
+	  649 -> 409
+	  650 -> 44
+	  651 -> 655
+	  652 -> 653
+	  652 -> 654
+	  653 -> 586
+	  654 -> 621
+	  655 -> 206
+	  656 -> 480
+	  656 -> 76
+	  656 -> 30
+	  657 -> 248
+	  658 -> 385
+	  659 -> 421
+	  660 -> 475
+	  661 -> 219
+	  662 -> 664
+	  662 -> 663
+	  663 -> 379
+	  664 -> 528
+	  665 -> 51
+	  666 -> 7
+	  667 -> 576
+	  668 -> 667
+	  669 -> 637
+	  669 -> 63
+	  670 -> 102
+	  671 -> 469
+	  672 -> 509
+	  673 -> 674
+	  673 -> 675
+	  674 -> 672
+	  675 -> 329
+	  676 -> 677
+	  677 -> 105
+	  678 -> 583
+	  679 -> 238
+	  680 -> 238
+	  681 -> 273
+	  682 -> 204
+	  682 -> 556
+	  682 -> 336
+	  682 -> 338
+	  682 -> 306
+	  683 -> 684
+	  683 -> 685
+	  684 -> 339
+	  685 -> 194
+	  686 -> 154
+	  687 -> 682
+	  688 -> 198
+	  689 -> 587
+	  690 -> 208
+	  691 -> 279
+	  692 -> 157
+	  693 -> 385
+	  694 -> 696
+	  694 -> 695
+	  695 -> 345
+	  696 -> 253
+	  697 -> 698
+	  697 -> 699
+	  698 -> 89
+	  699 -> 114
+	  700 -> 701
+	  700 -> 702
+	  701 -> 538
+	  702 -> 135
+	  703 -> 509
+	  704 -> 705
+	  704 -> 706
+	  705 -> 424
+	  706 -> 164
+}
+

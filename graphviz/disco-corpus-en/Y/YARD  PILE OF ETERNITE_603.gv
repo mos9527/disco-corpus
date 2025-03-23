@@ -1,0 +1,98 @@
+# YARD / PILE OF ETERNITE
+# Someone has left some crumbly looking eternite panels leaning against this wall. Most suspicious.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Pile of Eternite: Variable[\"yard.shack_strange_feeling\"]"];
+	  3 [label="Variable[\"yard.shack_strange_feeling\"]", shape=diamond];
+	  4 [label="!(Variable[\"yard.shack_strange_feeling\"])", shape=diamond];
+	  5 [label="You: What feeling?"];
+	  6 [label="Pile of Eternite: Variable[\"yard.shack_ency_eternite_dump\"]"];
+	  7 [label="Variable[\"yard.shack_ency_eternite_dump\"]", shape=diamond];
+	  8 [label="!(Variable[\"yard.shack_ency_eternite_dump\"])", shape=diamond];
+	  9 [label="You: [Leave.]"];
+	  10 [label="Pile of Eternite: An inconspicuous pile of the roofing material, eternite.\nThe pile of eternite looks stranger now that Cuno told you about his... pad."];
+	  11 [label="Perception (Sight): There it is! You see a shabby little door."];
+	  12 [label="Perception (Sight): It reveals no secrets at this time."];
+	  13 [label="You: Why am I looking at this pile of the roofing material?"];
+	  14 [label="You: Variable[\"yard.cuno_shack_white_perc_sight\"]"];
+	  15 [label="Variable[\"yard.cuno_shack_white_perc_sight\"]", shape=diamond];
+	  16 [label="!(Variable[\"yard.cuno_shack_white_perc_sight\"])", shape=diamond];
+	  17 [label="Jump to: [Pile of Eternite: \"An inconspicuous pile of the roofin...\"]"];
+	  18 [label="Inland Empire: Hard to say, it's gone now. Feelings pass, you see. Especially the small ones."];
+	  19 [label="Pile of Eternite: It's nothing. Someone just left some roofing material slanted against an old shack."];
+	  20 [label="Encyclopedia: Glad you asked. When junior researcher Õlari Taal invented eternite in the Värtna Polytechnic Institute, some thirty odd years ago, he thought it would last forever -- hence the name eternite. Sadly the only lasting thing turned out to be the material's highly carcinogenic effect."];
+	  21 [label="Conceptualization: Rhythmic pattern -- calms your mind. Mammals like this stuff."];
+	  22 [label="feeling_strange"];
+	  23 [label="Pile of Eternite: Variable[\"yard.cuno_shack_white_perc_sight\"]"];
+	  24 [label="Variable[\"yard.cuno_shack_white_perc_sight\"]", shape=diamond];
+	  25 [label="!(Variable[\"yard.cuno_shack_white_perc_sight\"])", shape=diamond];
+	  26 [label="Perception (Sight): Because there's a secret door hidden behind the panels of eternite. That's why they're *too* orderly.\nBecause unless Cuno lied, you should just be able to pull the panels aside."];
+	  27 [label="Pile of Eternite: IsKimHere()"];
+	  28 [label="IsKimHere()", shape=diamond];
+	  29 [label="!(IsKimHere())", shape=diamond];
+	  30 [label="Jump to: [real eternite]"];
+	  31 [label="You: What is this?"];
+	  32 [label="Kim Kitsuragi: \"What is this, then? A tool shed?\" He peeks inside. \"Let's investigate.\"\n\"So this is the shack Cuno mentioned... Let's take a look inside, then.\""];
+	  33 [label="Inland Empire: No, there's more to this. You get this strange *feeling*."];
+	  34 [label="Pile of Eternite: Variable[\"yard.shack_strange_feeling\"]"];
+	  35 [label="Variable[\"yard.shack_strange_feeling\"]", shape=diamond];
+	  36 [label="!(Variable[\"yard.shack_strange_feeling\"])", shape=diamond];
+	  37 [label="Jump to: [real eternite]"];
+	  38 [label="Jump to: [real eternite]"];
+	  40 [label="real eternite"];
+	  41 [label="You: Discard the feeling."];
+	  42 [label="Perception (Sight): Because it's nice and orderly. Well laid pallet. Easy on the eyes."];
+	  43 [label="You: Pull the panels aside."];
+	  0 -> 1
+	  1 -> 10
+	  2 -> 3
+	  2 -> 4
+	  3 -> 12
+	  4 -> 21
+	  5 -> 18
+	  6 -> 8
+	  6 -> 7
+	  7 -> 30
+	  8 -> 20
+	  10 -> 40
+	  11 -> 27
+	  12 -> 38
+	  13 -> 14
+	  14 -> 16
+	  14 -> 15
+	  15 -> 23
+	  16 -> 23
+	  17 -> 10
+	  18 -> 37
+	  19 -> 6
+	  20 -> 30
+	  21 -> 33
+	  22 -> 41
+	  22 -> 5
+	  23 -> 24
+	  23 -> 25
+	  24 -> 26
+	  25 -> 42
+	  26 -> 43
+	  27 -> 28
+	  27 -> 29
+	  28 -> 32
+	  30 -> 40
+	  31 -> 19
+	  33 -> 34
+	  34 -> 35
+	  34 -> 36
+	  35 -> 22
+	  36 -> 38
+	  37 -> 40
+	  38 -> 40
+	  40 -> 9
+	  40 -> 13
+	  40 -> 31
+	  41 -> 17
+	  42 -> 2
+	  43 -> 11
+}
+

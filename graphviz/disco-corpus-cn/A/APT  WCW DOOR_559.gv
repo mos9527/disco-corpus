@@ -1,0 +1,149 @@
+# APT / WCW DOOR
+# DOOR, APARTMENT #20 (WORKING CLASS WOMAN)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  3 [label="IsKimHere()"];
+	  4 [label="IsKimHere()", shape=diamond];
+	  5 [label="!(IsKimHere())", shape=diamond];
+	  6 [label="Kim Kitsuragi: 警督示意你上前敲门。"];
+	  7 [label="Kim Kitsuragi: “传达死讯从来都不是一件容易的工作。它经常被称作是我们工作中压力最大的部分，其中是有一定原因的。所以这种工作经常会交给两个人完成。你来吧。我会负责观察对方的反应，如果有必要的话随时做出反应。”"];
+	  8 [label="IsMorning()"];
+	  9 [label="IsMorning()", shape=diamond];
+	  10 [label="!(IsMorning())", shape=diamond];
+	  11 [label="You: “如果我不想这样做怎么办？”"];
+	  12 [label="You: “好吧，我想我已经准备好了。”（继续。）"];
+	  13 [label="Volition: 镇定一点。这只是警察的工作而已。"];
+	  14 [label="You: 敲门。"];
+	  15 [label="Untitled hub"];
+	  16 [label="You: “这里是比莉·梅让家吗？我是警察，请开门。”"];
+	  17 [label="You: [离开。]"];
+	  18 [label="Horrific Necktie: 别敲门，直接离开吧。你不需要这样。你不需要*悲伤*。"];
+	  19 [label="Perception (Hearing): 你听到门口有轻微的脚步声经过，收音机里正播放着民族音乐。"];
+	  20 [label="Pain Threshold: 这样才会变得更困难。痛苦来了。"];
+	  21 [label="Kim Kitsuragi: “根据我们的初步鉴定结果——死者十分可能是比莉·梅让的丈夫。我们需要确定这一点，同时还要向比莉本人传达他的死讯。”"];
+	  22 [label="Jump to: [apt 20 hub]"];
+	  23 [label="Perception (Smell): 里面飘出很好闻的味道——洋葱汤吗？"];
+	  24 [label="Perception (Hearing): 还有人调低了收音机的声音。"];
+	  25 [label="Kim Kitsuragi: “不管是谁在门口迎接我们，都可能跟死者有所关联。这就意味着我们的工作是传达死讯，还有确认死者身份。”"];
+	  26 [label="Perception (Hearing): 你听到一阵轻微的脚步声，收音机里像是在播放一出深夜脱口秀节目。"];
+	  27 [label="You: 先看看警督。"];
+	  28 [label="IsNight()"];
+	  29 [label="IsNight()", shape=diamond];
+	  30 [label="!(IsNight())", shape=diamond];
+	  31 [label="You: “金，我不想这么做，我们转回去吧。”（试着放弃。）"];
+	  32 [label="Kim Kitsuragi: “现在太晚了，我觉得大家都已经睡着了。我们还是明天再来一次吧。”"];
+	  33 [label="Door, Apartment #20: 一扇风化的棕色大门。号码是“20”。"];
+	  34 [label="CheckEquipped(\"neck_tie\") == true  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  35 [label="CheckEquipped(\"neck_tie\") == true  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  36 [label="!(CheckEquipped(\"neck_tie\") == true  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  37 [label="IsNight()"];
+	  38 [label="IsNight()", shape=diamond];
+	  39 [label="!(IsNight())", shape=diamond];
+	  40 [label="Empathy: 这是个好建议。"];
+	  41 [label="Kim Kitsuragi: 他朝你微微点了点头，以示鼓励。"];
+	  42 [label="Door, Apartment #20: 没人应门。"];
+	  43 [label="Kim Kitsuragi: 警督朝门口走去。"];
+	  44 [label="Door, Apartment #20: 她打开门。“请进，门打开了。”"];
+	  45 [label="Kim Kitsuragi: “你说的没错，我们先聊聊。”他看着公寓大门，稍微压低了声音……"];
+	  46 [label="Door, Apartment #20: 没人应门。这个时间他们一定是睡着了。最好明天再试一次。"];
+	  47 [label="apt 20 hub"];
+	  48 [label="Variable[\"plaza.kineema_library_know_billies_husband_returned_the_book\"]"];
+	  49 [label="Variable[\"plaza.kineema_library_know_billies_husband_returned_the_book\"]", shape=diamond];
+	  50 [label="!(Variable[\"plaza.kineema_library_know_billies_husband_returned_the_book\"])", shape=diamond];
+	  51 [label="Kim Kitsuragi: “死了？只是千万别说你明白他们的感受。你不明白。”"];
+	  52 [label="Perception (Hearing): 正在收拾。紧张不安。"];
+	  53 [label="Door, Apartment #20: “你好！请问是谁？”一个声音从大门另一侧传了出来。"];
+	  54 [label="Jump to: [apt 20 hub]"];
+	  55 [label="Kim Kitsuragi: “不可以。必须有人传达这个消息。”他朝着门口走去。“我们走吧。”"];
+	  56 [label="Perception (Hearing): 你听到一阵轻微的脚步声，收音机里像是在播放每日天气预报。"];
+	  57 [label="IsKimHere()"];
+	  58 [label="IsKimHere()", shape=diamond];
+	  59 [label="!(IsKimHere())", shape=diamond];
+	  60 [label="Door, Apartment #20: “警察？请等等，给我们一点时间。”你听见里面有些响动。"];
+	  61 [label="Empathy: 她的声音里有些恐惧的意味。"];
+	  62 [label="You: “等一下，金。继续之前我们应该先讨论一下。我们可能会遇到什么状况？”"];
+	  63 [label="Kim Kitsuragi: “是的，这很难。”他盯着前门看了一会儿，面容毫无波澜。“但是恐怕没有什么简单的方法来处理这种信息。必须把消息传达出去，越快越好。”"];
+	  64 [label="Inland Empire: 就是这扇门，你知道这就是正确的那扇门。肯定会*相当困难*的。"];
+	  65 [label="Untitled hub"];
+	  66 [label="You: “你有什么建议吗，该怎么告诉她说他已经……？”"];
+	  0 -> 1
+	  1 -> 33
+	  3 -> 4
+	  3 -> 5
+	  4 -> 6
+	  5 -> 64
+	  6 -> 64
+	  7 -> 65
+	  8 -> 9
+	  8 -> 10
+	  9 -> 56
+	  10 -> 37
+	  11 -> 63
+	  12 -> 43
+	  13 -> 34
+	  14 -> 28
+	  15 -> 16
+	  15 -> 27
+	  16 -> 60
+	  18 -> 47
+	  19 -> 48
+	  20 -> 22
+	  21 -> 7
+	  22 -> 47
+	  23 -> 3
+	  24 -> 15
+	  25 -> 7
+	  26 -> 48
+	  27 -> 41
+	  28 -> 29
+	  28 -> 30
+	  29 -> 57
+	  30 -> 53
+	  31 -> 55
+	  32 -> 54
+	  33 -> 23
+	  34 -> 35
+	  34 -> 36
+	  35 -> 18
+	  36 -> 47
+	  37 -> 38
+	  37 -> 39
+	  38 -> 26
+	  39 -> 19
+	  40 -> 65
+	  41 -> 16
+	  42 -> 32
+	  43 -> 22
+	  45 -> 8
+	  46 -> 54
+	  47 -> 17
+	  47 -> 62
+	  47 -> 14
+	  48 -> 49
+	  48 -> 50
+	  49 -> 21
+	  50 -> 25
+	  51 -> 40
+	  52 -> 61
+	  53 -> 24
+	  54 -> 47
+	  55 -> 20
+	  56 -> 48
+	  57 -> 58
+	  57 -> 59
+	  58 -> 42
+	  59 -> 46
+	  60 -> 52
+	  61 -> 44
+	  62 -> 45
+	  63 -> 65
+	  64 -> 13
+	  65 -> 66
+	  65 -> 11
+	  65 -> 12
+	  65 -> 31
+	  66 -> 51
+}
+

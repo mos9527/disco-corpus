@@ -1,0 +1,326 @@
+# CONTAINERYARD / RICH GUY CONTAINER DOOR
+# Here be the container door with which you converse good Sir, getting rhetorical awards you the ability to *drum-roll* enter the container!
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Cargo Container Door: 你面前矗立着一只货物集装箱。不过是院子里众多集装箱中的一个。"];
+	  3 [label="Kim Kitsuragi: “是吗？我不觉得。”"];
+	  4 [label="Rhetoric: 你为什么要尝试用花言巧语打开一扇门呢？"];
+	  5 [label="You: “使用我的肉体多于我的智慧。”"];
+	  6 [label="You: [不管这个集装箱。]"];
+	  7 [label="Cargo Container Door: Variable[\"TASK.interview_union_boss\"] == true  and  Variable[\"TASK.ask_for_help_from_the_harbour\"] == false  and  Variable[\"TASK.interview_union_boss_done\"] == false"];
+	  8 [label="Variable[\"TASK.interview_union_boss\"] == true  and  Variable[\"TASK.ask_for_help_from_the_harbour\"] == false  and  Variable[\"TASK.interview_union_boss_done\"] == false", shape=diamond];
+	  9 [label="!(Variable[\"TASK.interview_union_boss\"] == true  and  Variable[\"TASK.ask_for_help_from_the_harbour\"] == false  and  Variable[\"TASK.interview_union_boss_done\"] == false)", shape=diamond];
+	  10 [label="You: “记住我说的——里面有个有钱人在嗡嗡声响！”"];
+	  11 [label="Rhetoric: 哇！小心！"];
+	  12 [label="wcfaileoncehub"];
+	  13 [label="You: 这里暂时没有什么可以做的了。[离开。]"];
+	  14 [label="You: （调查集装箱）“也许里面有违禁品？”"];
+	  15 [label="You: “不，这完全不一样。我不想在上面刷油漆。我只是被它*吸引*了。”"];
+	  16 [label="Rhetoric: 没人需要你。走开。"];
+	  17 [label="Rhetoric: 再试一次。"];
+	  18 [label="You: “它吊在起重机上了。”"];
+	  19 [label="Cargo Container Door: Variable[\"TASK.ask_for_help_from_the_harbour\"] == true  and  Variable[\"TASK.interview_union_boss\"] == false  and  Variable[\"TASK.ask_for_help_from_the_harbour_done\"] == false"];
+	  20 [label="Variable[\"TASK.ask_for_help_from_the_harbour\"] == true  and  Variable[\"TASK.interview_union_boss\"] == false  and  Variable[\"TASK.ask_for_help_from_the_harbour_done\"] == false", shape=diamond];
+	  21 [label="!(Variable[\"TASK.ask_for_help_from_the_harbour\"] == true  and  Variable[\"TASK.interview_union_boss\"] == false  and  Variable[\"TASK.ask_for_help_from_the_harbour_done\"] == false)", shape=diamond];
+	  22 [label="Cargo Container Door: Variable[\"cargo.savvy_container_door_unlock\"]"];
+	  23 [label="Variable[\"cargo.savvy_container_door_unlock\"]", shape=diamond];
+	  24 [label="!(Variable[\"cargo.savvy_container_door_unlock\"])", shape=diamond];
+	  25 [label="You: 打开门。"];
+	  26 [label="Cargo Container Door: Variable[\"backyard.wall_concept_wc_failed\"]  or  Variable[\"backyard.wall_concept_wc\"]"];
+	  27 [label="Variable[\"backyard.wall_concept_wc_failed\"]  or  Variable[\"backyard.wall_concept_wc\"]", shape=diamond];
+	  28 [label="!(Variable[\"backyard.wall_concept_wc_failed\"]  or  Variable[\"backyard.wall_concept_wc\"])", shape=diamond];
+	  29 [label="Kim Kitsuragi: “现在不是探讨哲学问题的时候，警探。你可以几小时之后再做。”"];
+	  30 [label="You: 敲敲门。"];
+	  31 [label="You: “咳-咳…”(清清嗓子，敲敲门。) “嗨，我是鬼鬼，有两个V的鬼鬼，我在名单上。客人名单上的。”"];
+	  32 [label="You: “是啊，我为什么要*这样做*？”"];
+	  33 [label="Cargo Container Door: 没有回应。"];
+	  34 [label="Perception (Hearing): 你的敲击发出一个空洞的金属声。听起来集装箱里面好像什么也没有。"];
+	  35 [label="You: “也许？我也说不出来。我觉得我们应该做进一步调查。”"];
+	  36 [label="Cargo Container Door: Variable[\"cargo.failed_container_wc_once\"]"];
+	  37 [label="Variable[\"cargo.failed_container_wc_once\"]", shape=diamond];
+	  38 [label="!(Variable[\"cargo.failed_container_wc_once\"])", shape=diamond];
+	  39 [label="Savoir Faire: 靠边站，排好队，鬼鬼在这里的VIP名单中名列前茅。没错——让开!"];
+	  40 [label="Rhetoric: 尽管你的周围和身后都是尘埃，一束光还是从你的内心深处照射出来。"];
+	  41 [label="You: “算了，没事了。”"];
+	  42 [label="Rhetoric: 谁能理解你做的一切？"];
+	  43 [label="Kim Kitsuragi: 笑容消失了。“这不是真的吧。”\n警督的笑容消失了。“你不是认真的吧。”"];
+	  44 [label="Kim Kitsuragi: “见鬼，现在你搞得*我*都开始好奇了……我们来港口可*不是*为了这个的。”"];
+	  45 [label="Esprit de Corps: 警督站在你的左边，思考着你的行动——带着一些费解。"];
+	  46 [label="You: “警督，我觉得这个集装箱有些不一样。”"];
+	  47 [label="Kim Kitsuragi: 警督考虑了一下。“很可能有，不过我们不是为调查这个来的。”"];
+	  48 [label="Jump to: [Cargo Container Door Hub]"];
+	  49 [label="Cargo Container Door: Variable[\"cargo.container_hub_reach\"]"];
+	  50 [label="Variable[\"cargo.container_hub_reach\"]", shape=diamond];
+	  51 [label="!(Variable[\"cargo.container_hub_reach\"])", shape=diamond];
+	  52 [label="Cargo Container Door Hub"];
+	  53 [label="Jump to: [Cargo Container Door Hub]"];
+	  54 [label="Jump to: [Cargo Container Door Hub]"];
+	  55 [label="Cargo Container Door: 门对你的示爱好像没有反应。有没有可能它变得比以前*更加*封闭了？"];
+	  56 [label="Savoir Faire: 这是个很好的问题，考虑到鬼鬼就在你身边——那位终极VIP。"];
+	  57 [label="Cargo Container Door: 就这样，你听见一个咔哒声。然后是咯咯声。某种机械装置在门里面自动解锁了。"];
+	  58 [label="Untitled hub"];
+	  59 [label="Kim Kitsuragi: “我们来这里可不是为了跟集装箱互动——我们来这里是为了走访工会老大的。”"];
+	  60 [label="Physical Instrument: 他是怎么走到前面来的？小滑头……"];
+	  61 [label="Mega Rich Light-Bending Guy: 集装箱最深处响起一个声音：“啊嗬！进来吧！”"];
+	  62 [label="You: “不知道里面是什么。”"];
+	  63 [label="Kim Kitsuragi: 警督点点头。“你满意了吗，警探？”"];
+	  64 [label="Cargo Container Door: Variable[\"cargo.container_physinst_summon\"]"];
+	  65 [label="Variable[\"cargo.container_physinst_summon\"]", shape=diamond];
+	  66 [label="!(Variable[\"cargo.container_physinst_summon\"])", shape=diamond];
+	  67 [label="Jump to: [Cargo Container Door Hub]"];
+	  68 [label="Cargo Container Door: IsKimHere()  or  Variable[\"cargo.container_flattered\"]"];
+	  69 [label="IsKimHere()  or  Variable[\"cargo.container_flattered\"]", shape=diamond];
+	  70 [label="!(IsKimHere()  or  Variable[\"cargo.container_flattered\"])", shape=diamond];
+	  71 [label="You: 劝说门自己打开。"];
+	  72 [label="You: Variable[\"cargo.container_rhetoric_wc\"]"];
+	  73 [label="Variable[\"cargo.container_rhetoric_wc\"]", shape=diamond];
+	  74 [label="!(Variable[\"cargo.container_rhetoric_wc\"])", shape=diamond];
+	  75 [label="Kim Kitsuragi: “为什么要什么？”警督看起来受了惊吓。"];
+	  76 [label="Cargo Container Door: IsKimHere()"];
+	  77 [label="IsKimHere()", shape=diamond];
+	  78 [label="!(IsKimHere())", shape=diamond];
+	  79 [label="Kim Kitsuragi: “我们来这里可不是为了跟集装箱互动——我们来这里是为了把尸体从树上弄下来的。”"];
+	  80 [label="Kim Kitsuragi: “我什么也没听到。”警督捂住他的一只耳朵。"];
+	  81 [label="Cargo Container Door: 起初你的敲门声在门上空洞回响——然后……"];
+	  83 [label="Kim Kitsuragi: “这里有几百万个集装箱。你为什么要盯着这一个？”"];
+	  84 [label="Cargo Container Door: 门沉默地站着。"];
+	  85 [label="You: “拜托，别把我关在外面。让我进去。”"];
+	  86 [label="Cargo Container Door: 这种世俗的状况似乎丝毫没有影响到这个集装箱。"];
+	  87 [label="You: “你说得对，可能什么也没有。”"];
+	  88 [label="Kim Kitsuragi: “我们来这里可不是为了跟集装箱互动——我们来这里是为了跟工会谈谈的，对吗？”"];
+	  89 [label="You: “我不知道，金，我只是*感觉*到它很特别。”"];
+	  90 [label="You: “没什么。”"];
+	  91 [label="You: “你好啊，甜心。”"];
+	  92 [label="Cargo Container Door: 你的努力奉承似乎没有打动集装箱的门。"];
+	  93 [label="Jump to: [Cargo Container Door Hub]"];
+	  94 [label="You: “因为动粗不在选择范围之内！”"];
+	  95 [label="Jump to: [Cargo Container Door Hub]"];
+	  96 [label="Cargo Container Door: Variable[\"cargo.savvy_container_door_unlock\"]"];
+	  97 [label="Variable[\"cargo.savvy_container_door_unlock\"]", shape=diamond];
+	  98 [label="!(Variable[\"cargo.savvy_container_door_unlock\"])", shape=diamond];
+	  99 [label="You: “你真是工程学上的一件杰作，你知道吗？”"];
+	  100 [label="Cargo Container Door: 门好像上锁了，决定性的。"];
+	  101 [label="Untitled hub (02)"];
+	  102 [label="Cargo Container Door: IsKimHere()"];
+	  103 [label="IsKimHere()", shape=diamond];
+	  104 [label="!(IsKimHere())", shape=diamond];
+	  105 [label="You: “什么，为什么不呢？”"];
+	  106 [label="Kim Kitsuragi: “这是个货物集装箱，警探。就像其他这些一样。”他甚至看都没看。"];
+	  107 [label="Cargo Container Door: IsKimHere()"];
+	  108 [label="IsKimHere()", shape=diamond];
+	  109 [label="!(IsKimHere())", shape=diamond];
+	  110 [label="You: “如果里面有人的话，我想跟你谈谈。”"];
+	  111 [label="Inland Empire: 为什么这种状况感觉这么熟悉？你有过向非生命物体求爱的前科吗？"];
+	  112 [label="Cargo Container Door: IsKimHere()"];
+	  113 [label="IsKimHere()", shape=diamond];
+	  114 [label="!(IsKimHere())", shape=diamond];
+	  115 [label="Cargo Container Door: 你又回到了货物集装箱前。自从上次来这里，它的吸引力丝毫没有减弱。如果说有什么的话，它的吸引力反而更大了。"];
+	  116 [label="Kim Kitsuragi: “你只是随便挑了一个，因为你想跟货物集装箱互动。”"];
+	  117 [label="Savoir Faire: 好像是这样。你还和这个傻瓜在一起？有些不对劲……"];
+	  118 [label="You: “喂，里面有人吗？”"];
+	  119 [label="You: “没事了，我还有更重要的事要做。”[离开。]"];
+	  120 [label="Suggestion: 这肯定是个棘手的问题。但是最牢固的集装箱往往也有一颗最柔软的心。"];
+	  121 [label="Physical Instrument: 你在召唤我吗？"];
+	  122 [label="Cargo Container Door: IsKimHere()"];
+	  123 [label="IsKimHere()", shape=diamond];
+	  124 [label="!(IsKimHere())", shape=diamond];
+	  125 [label="Kim Kitsuragi: “因为什么不在选择范围之内？”警督看起来好像受惊了。"];
+	  126 [label="Rhetoric: 你应该对关照你的人表现自己的忠诚，警探。"];
+	  127 [label="You: “又是一天，又是一个警察和又一个集装箱。”"];
+	  128 [label="You: “那是因为你没有*同调*，这可是骗子的特长。你会明白的——我很快就会发大财。”"];
+	  129 [label="Savoir Faire: 谢谢，谢谢。现在，你准备好了吗？是时候*华丽入场*了。"];
+	  130 [label="Cargo Container Door: IsKimHere()"];
+	  131 [label="IsKimHere()", shape=diamond];
+	  132 [label="!(IsKimHere())", shape=diamond];
+	  133 [label="Kim Kitsuragi: 警督叹了口气。“你又要玩之前墙壁那一套了吗？”"];
+	  134 [label="Kim Kitsuragi: “满意了吗，警探？”警督的脸上露出一个揶揄的笑容。"];
+	  135 [label="Cargo Container Door: Variable[\"cargo.savvy_container_door_unlock\"]"];
+	  136 [label="Variable[\"cargo.savvy_container_door_unlock\"]", shape=diamond];
+	  137 [label="!(Variable[\"cargo.savvy_container_door_unlock\"])", shape=diamond];
+	  138 [label="Cargo Container Door: 你打算转动把手，但是没有用。这扇门似乎是用机械装置锁上的。"];
+	  139 [label="Cargo Container Door: Variable[\"cargo.mrlb_has_left\"]"];
+	  140 [label="Variable[\"cargo.mrlb_has_left\"]", shape=diamond];
+	  141 [label="!(Variable[\"cargo.mrlb_has_left\"])", shape=diamond];
+	  142 [label="You: “出什么事了，亲爱的？你在害羞吗？”"];
+	  143 [label="Rhetoric: 而且总是这样——想用花言巧语打开集装箱是不可能的。也许是你疯了？"];
+	  144 [label="Cargo Container Door: Variable[\"cargo.container_rhetoric_wc\"]"];
+	  145 [label="Variable[\"cargo.container_rhetoric_wc\"]", shape=diamond];
+	  146 [label="!(Variable[\"cargo.container_rhetoric_wc\"])", shape=diamond];
+	  147 [label="Cargo Container Door: 门对你的示爱好像没有反应。有没有可能它变得比以前*更加*封闭了？"];
+	  0 -> 1
+	  1 -> 139
+	  2 -> 102
+	  3 -> 105
+	  4 -> 96
+	  5 -> 29
+	  7 -> 8
+	  7 -> 9
+	  8 -> 59
+	  9 -> 88
+	  10 -> 80
+	  11 -> 60
+	  12 -> 32
+	  12 -> 94
+	  14 -> 47
+	  15 -> 83
+	  16 -> 67
+	  17 -> 110
+	  18 -> 116
+	  19 -> 20
+	  19 -> 21
+	  20 -> 79
+	  21 -> 7
+	  22 -> 24
+	  22 -> 23
+	  23 -> 117
+	  24 -> 54
+	  25 -> 138
+	  26 -> 27
+	  26 -> 28
+	  27 -> 133
+	  28 -> 3
+	  29 -> 93
+	  30 -> 33
+	  31 -> 81
+	  32 -> 130
+	  33 -> 34
+	  34 -> 48
+	  35 -> 3
+	  36 -> 37
+	  36 -> 38
+	  37 -> 143
+	  38 -> 4
+	  39 -> 11
+	  40 -> 118
+	  41 -> 63
+	  42 -> 54
+	  44 -> 19
+	  45 -> 53
+	  46 -> 26
+	  47 -> 19
+	  48 -> 52
+	  49 -> 50
+	  49 -> 51
+	  50 -> 115
+	  51 -> 2
+	  52 -> 25
+	  52 -> 13
+	  52 -> 30
+	  52 -> 71
+	  53 -> 52
+	  54 -> 52
+	  55 -> 52
+	  56 -> 12
+	  57 -> 61
+	  58 -> 46
+	  58 -> 6
+	  59 -> 95
+	  60 -> 129
+	  61 -> 112
+	  63 -> 93
+	  64 -> 65
+	  64 -> 66
+	  65 -> 16
+	  66 -> 126
+	  67 -> 52
+	  68 -> 69
+	  68 -> 70
+	  69 -> 52
+	  70 -> 101
+	  71 -> 72
+	  72 -> 73
+	  72 -> 74
+	  73 -> 144
+	  74 -> 144
+	  75 -> 41
+	  75 -> 90
+	  76 -> 77
+	  76 -> 78
+	  77 -> 134
+	  78 -> 17
+	  79 -> 95
+	  80 -> 128
+	  81 -> 57
+	  83 -> 10
+	  83 -> 14
+	  83 -> 18
+	  83 -> 87
+	  83 -> 89
+	  84 -> 76
+	  85 -> 55
+	  86 -> 52
+	  87 -> 44
+	  88 -> 95
+	  89 -> 106
+	  90 -> 29
+	  91 -> 92
+	  92 -> 120
+	  93 -> 52
+	  94 -> 122
+	  95 -> 52
+	  96 -> 97
+	  96 -> 98
+	  97 -> 56
+	  98 -> 12
+	  99 -> 147
+	  101 -> 91
+	  101 -> 6
+	  102 -> 104
+	  102 -> 103
+	  103 -> 58
+	  104 -> 101
+	  105 -> 83
+	  106 -> 19
+	  107 -> 108
+	  107 -> 109
+	  108 -> 45
+	  109 -> 53
+	  110 -> 57
+	  111 -> 52
+	  112 -> 113
+	  112 -> 114
+	  113 -> 43
+	  115 -> 68
+	  116 -> 19
+	  117 -> 54
+	  118 -> 84
+	  120 -> 99
+	  120 -> 85
+	  120 -> 127
+	  121 -> 64
+	  122 -> 123
+	  122 -> 124
+	  123 -> 125
+	  124 -> 121
+	  125 -> 41
+	  125 -> 5
+	  126 -> 67
+	  127 -> 86
+	  128 -> 19
+	  129 -> 31
+	  130 -> 131
+	  130 -> 132
+	  131 -> 75
+	  132 -> 42
+	  133 -> 35
+	  133 -> 15
+	  134 -> 17
+	  135 -> 136
+	  135 -> 137
+	  136 -> 39
+	  137 -> 40
+	  138 -> 107
+	  139 -> 140
+	  139 -> 141
+	  140 -> 100
+	  141 -> 49
+	  143 -> 22
+	  144 -> 145
+	  144 -> 146
+	  145 -> 135
+	  146 -> 36
+	  147 -> 111
+}
+

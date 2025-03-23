@@ -1,0 +1,53 @@
+# NETHOUSE ORB / fireplace phasmid
+# You think the fire iron is a phasmid.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 忘了竹节虫吧……呃，火钩。[离开。]"];
+	  3 [label="Variable[\"cargo.evrart_fishing_rod\"]"];
+	  4 [label="Variable[\"cargo.evrart_fishing_rod\"]", shape=diamond];
+	  5 [label="!(Variable[\"cargo.evrart_fishing_rod\"])", shape=diamond];
+	  6 [label="You: 当然不是竹节虫了，它实在是大过头了。"];
+	  7 [label="Inland Empire: 好吧。这不是竹节虫，甚至都不是有机物。不过是壁炉边放着的火钩而已。不过……你的惊奇感哪里去了，伙计？"];
+	  8 [label="You: 忽略你看到的东西。[放弃思维。]"];
+	  10 [label="You: 我打算不当警察，换个科学家试试，结果这就是我的下场。我的意思是，我甚至连个*好警察*都算不上。"];
+	  11 [label="Inland Empire: 别对自己太苛刻。你本来也没办法太确定的。再说了，找到竹节虫是你的特殊命运——你一定感觉到了吧！"];
+	  12 [label="You: 要不还是放下发现伊苏林迪竹节虫的梦想吧……不过是暂时的。[离开。]"];
+	  13 [label="You: 尝试偷偷靠近竹节虫。"];
+	  14 [label="Untitled hub"];
+	  15 [label="You: 你不会再被愚弄一次。只要静静地站在这里，观察这个肯定*不是竹节虫*的东西，直到看清它的真面目……"];
+	  16 [label="Reaction Speed: 等等，难道又要上演一遍之前的钓鱼竿戏码？"];
+	  17 [label="You: 跳向竹节虫，用手紧紧抓住它！"];
+	  18 [label="Inland Empire: 是吗？！不过下次你会更走运的。找到竹节虫——就是你的命运。"];
+	  19 [label="Inland Empire: 那是竹节虫吗？靠在墙边的那个，很像竹节虫……"];
+	  20 [label="You: 简直难以置信！"];
+	  21 [label="Inland Empire: 这不是竹节虫……甚至都不是有机物——只是一根火钩。真是太让人失望了！"];
+	  22 [label="Inland Empire: 你只不过是听从了自己的直觉，还有你的命运。你一定会找到竹节虫的！只不过，可能不在这里罢了……"];
+	  0 -> 1
+	  1 -> 19
+	  3 -> 4
+	  3 -> 5
+	  4 -> 16
+	  5 -> 14
+	  6 -> 11
+	  7 -> 2
+	  10 -> 22
+	  11 -> 12
+	  13 -> 21
+	  14 -> 8
+	  14 -> 17
+	  14 -> 13
+	  14 -> 15
+	  15 -> 7
+	  16 -> 14
+	  17 -> 21
+	  18 -> 12
+	  19 -> 3
+	  20 -> 18
+	  21 -> 10
+	  21 -> 20
+	  21 -> 6
+	  22 -> 12
+}
+

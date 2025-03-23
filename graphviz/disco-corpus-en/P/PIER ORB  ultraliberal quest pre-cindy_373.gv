@@ -1,0 +1,167 @@
+# PIER ORB / ultraliberal quest pre-cindy
+# Savoir Faire spots Cindy and gives you a pep talk before you try to negotiate for her art.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Savoir Faire: There! On that balcony. Do you see it? It's an artist!"];
+	  3 [label="You: Yes, I can sense the *originality*..."];
+	  4 [label="Empathy: Hints of deep emotional trauma that have led to ironic detachment..."];
+	  5 [label="You: Not now. I'm on a roll. [Leave.]"];
+	  6 [label="Savoir Faire: What you need to do is lure them in with a strong one-liner -- get them on your side before you've even finished a sentence. Show us what you've got -- pretend you're facing the SKULL-girl!"];
+	  7 [label="Savoir Faire: A streak of individuality? As you wish..."];
+	  8 [label="Suggestion: Nonsense, no one 'repels wealth', the businessmen just don't know how to entice them."];
+	  9 [label="Variable[\"auto.on_cindy_balcony\"]"];
+	  10 [label="Variable[\"auto.on_cindy_balcony\"]", shape=diamond];
+	  11 [label="!(Variable[\"auto.on_cindy_balcony\"])", shape=diamond];
+	  12 [label="Empathy: It's polite. What's wrong with being polite?"];
+	  13 [label="Variable[\"pier.cindy_first_greeting_pier_done\"]  or  Variable[\"pier.cindy_first_greeting_balcony_done\"]"];
+	  14 [label="Variable[\"pier.cindy_first_greeting_pier_done\"]  or  Variable[\"pier.cindy_first_greeting_balcony_done\"]", shape=diamond];
+	  15 [label="!(Variable[\"pier.cindy_first_greeting_pier_done\"]  or  Variable[\"pier.cindy_first_greeting_balcony_done\"])", shape=diamond];
+	  16 [label="Savoir Faire: A streak of individuality. As you wish..."];
+	  17 [label="listen or leave"];
+	  18 [label="You: See *what*? (Squint your eyes.)"];
+	  19 [label="Savoir Faire: Holy-moly, are we being arrested here?! Only tax inspectors and debt collectors speak like that. You don't want to start your business relationship with the wrong vibe."];
+	  20 [label="Reaction Speed: But it would catch her off-guard. That's *always* an advantage."];
+	  21 [label="Variable[\"pier.artist_guessed_wrong_once\"]"];
+	  22 [label="Variable[\"pier.artist_guessed_wrong_once\"]", shape=diamond];
+	  23 [label="!(Variable[\"pier.artist_guessed_wrong_once\"])", shape=diamond];
+	  24 [label="Rhetoric: It's true, some of them are known to turn the entire thing into a happening."];
+	  25 [label="Savoir Faire: Mamma mia, if this isn't the Top Seller in La Delta! Everyone knew you'd eventually get it right..."];
+	  26 [label="oneliner hub"];
+	  27 [label="Savoir Faire: The dishevelled hair, cheap clothes, slumping posture that suggests an unearned sense of superiority..."];
+	  28 [label="You: I know how to handle this, no need to coach me. [Leave.]"];
+	  29 [label="Variable[\"pier.orb_ultralib_happening\"]"];
+	  30 [label="Variable[\"pier.orb_ultralib_happening\"]", shape=diamond];
+	  31 [label="!(Variable[\"pier.orb_ultralib_happening\"])", shape=diamond];
+	  32 [label="Savoir Faire: There! Right in front of you. Do you see it?"];
+	  33 [label="Savoir Faire: Artistos are known to *repel* wealth. It bounces off their skin like rubber. The moment a reasonable business proposal enters their periphery, they go and get 'political'."];
+	  34 [label="Variable[\"auto.on_cindy_balcony\"]"];
+	  35 [label="Variable[\"auto.on_cindy_balcony\"]", shape=diamond];
+	  36 [label="!(Variable[\"auto.on_cindy_balcony\"])", shape=diamond];
+	  37 [label="Savoir Faire: There! Right in front of you. Do you see it? It's an artist!"];
+	  38 [label="You: Not now. I'm on a roll. [Leave.]"];
+	  39 [label="Savoir Faire: Straight into a bullring with no prep talk? No-no-no. It's your first sales negotiation, Savvy's gotta give you the do-s and don't-s."];
+	  40 [label="Half Light: Oh no, not a *happening*!! I don't like the sound of that..."];
+	  41 [label="Savoir Faire: Okay then, off you go! Let's see what you've got."];
+	  42 [label="Half Light: Quick, kill it with fire before it organises a *happening*!"];
+	  44 [label="You: Alright, I'm listening. What's the plan?"];
+	  45 [label="Savoir Faire: What is this, a dating agency? Are you looking for a Pretty Young Thing to sponsor? Never mix business and pleasure -- *never*."];
+	  46 [label="Suggestion: Hmm, it's a decent start, but you might need to change strategies down the line..."];
+	  47 [label="You: Cindy? Yes, that's where I'm headed..."];
+	  48 [label="You: (Lean in.) Hey beautiful. Let's go for a walk on the *wild side*."];
+	  49 [label="You: It's your lucky day! I'm in the market for some original *art* by the crème de la crème."];
+	  50 [label="You: How can you tell?"];
+	  51 [label="Savoir Faire: There! On that balcony. Do you see it?"];
+	  52 [label="Savoir Faire: What you need to do is lure them in with a strong one-liner -- get them on your side before you've even finished a sentence. Show us what you've got -- pretend you're facing the girl!"];
+	  53 [label="You: All stations beware, it's a level three happening-alert!"];
+	  54 [label="You: I've got this. Trust me. [Leave.]"];
+	  55 [label="Variable[\"pier.cindy_first_greeting_pier_done\"]  or  Variable[\"pier.cindy_first_greeting_balcony_done\"]"];
+	  56 [label="Variable[\"pier.cindy_first_greeting_pier_done\"]  or  Variable[\"pier.cindy_first_greeting_balcony_done\"]", shape=diamond];
+	  57 [label="!(Variable[\"pier.cindy_first_greeting_pier_done\"]  or  Variable[\"pier.cindy_first_greeting_balcony_done\"])", shape=diamond];
+	  58 [label="Conceptualization: A strong aura of *originality* surrounds the girl in question."];
+	  59 [label="Savoir Faire: Seems to be one of those conceptual types... not good. If we proceed cautiously we might get something tangible out of her."];
+	  60 [label="You: Alright, I'm listening."];
+	  61 [label="You: Excuse me, could I please take a look at your art?"];
+	  62 [label="Savoir Faire: The *artisto*. Now hold up, you can't go into a bullring without a prep talk. It's baby's first sales negotiation after all! Savvy's gotta give you the do-s and don't-s."];
+	  63 [label="Pain Threshold: That's a pathetic-looking *bull*. Where are the sharpened horns ready to puncture your gristle? There's no real danger here."];
+	  64 [label="You: Hand over your art. Put it in the bag. NOW!!"];
+	  65 [label="Savoir Faire: Mamma mia, if this isn't the Top Seller in La Delta! No one expected you to nail this on the *first* try -- *congratulazioni*!"];
+	  66 [label="Savoir Faire: It's all there if you know how to read people. Commanders of the streets like me have it down to a tee. I'll teach you. Listen up..."];
+	  67 [label="Savoir Faire: Boring... BORING... Yawning my jaw off here... Next!"];
+	  68 [label="You: (Whip out your finger pistols and bang them in the sky.) It's your lucky day! I'm in the market for some original *art* by the crème de la crème."];
+	  69 [label="Savoir Faire: Yes, this seems to be one of those *conceptual* types... not good. If we proceed cautiously we might get something tangible out of her."];
+	  70 [label="Drama: Rehearsal helps fine tune a performance. Learn your lines so they can flow out of you like Herc Zeitung's legendary soliloquy in 'Hoppla, jetzt komm ich!'!"];
+	  71 [label="Electrochemistry: Counterpoint! What if pleasure *is* your business? Gigolos make bank *and* get that wet-wet. It's never too late to change careers..."];
+	  72 [label="plan hub"];
+	  73 [label="Jump to: [oneliner hub]"];
+	  0 -> 1
+	  1 -> 55
+	  2 -> 58
+	  3 -> 59
+	  4 -> 66
+	  5 -> 7
+	  6 -> 26
+	  8 -> 13
+	  9 -> 10
+	  9 -> 11
+	  10 -> 32
+	  11 -> 51
+	  12 -> 73
+	  13 -> 14
+	  13 -> 15
+	  14 -> 24
+	  15 -> 52
+	  17 -> 60
+	  17 -> 54
+	  18 -> 62
+	  19 -> 20
+	  20 -> 73
+	  21 -> 22
+	  21 -> 23
+	  22 -> 25
+	  23 -> 65
+	  24 -> 29
+	  25 -> 46
+	  26 -> 64
+	  26 -> 68
+	  26 -> 48
+	  26 -> 49
+	  26 -> 61
+	  27 -> 4
+	  28 -> 16
+	  29 -> 30
+	  29 -> 31
+	  30 -> 40
+	  31 -> 6
+	  32 -> 18
+	  32 -> 5
+	  32 -> 47
+	  33 -> 8
+	  34 -> 35
+	  34 -> 36
+	  35 -> 37
+	  36 -> 2
+	  37 -> 58
+	  39 -> 63
+	  40 -> 6
+	  42 -> 50
+	  42 -> 3
+	  42 -> 53
+	  42 -> 38
+	  44 -> 33
+	  45 -> 71
+	  46 -> 41
+	  47 -> 39
+	  48 -> 45
+	  49 -> 21
+	  50 -> 27
+	  51 -> 18
+	  51 -> 5
+	  51 -> 47
+	  52 -> 26
+	  53 -> 69
+	  54 -> 7
+	  55 -> 56
+	  55 -> 57
+	  56 -> 9
+	  57 -> 34
+	  58 -> 42
+	  59 -> 72
+	  60 -> 33
+	  61 -> 67
+	  62 -> 63
+	  63 -> 70
+	  64 -> 19
+	  65 -> 46
+	  66 -> 72
+	  67 -> 12
+	  68 -> 21
+	  69 -> 72
+	  70 -> 17
+	  71 -> 73
+	  72 -> 44
+	  72 -> 28
+	  73 -> 26
+}
+

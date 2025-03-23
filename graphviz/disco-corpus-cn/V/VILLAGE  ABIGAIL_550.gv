@@ -1,0 +1,173 @@
+# VILLAGE / ABIGAIL
+# Don't Call Abigail -- a member of the Union of Moribund Alcoholics, who talks about (not calling) Abigail.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Don't Call Abigail: IsKimHere()"];
+	  3 [label="IsKimHere()", shape=diamond];
+	  4 [label="!(IsKimHere())", shape=diamond];
+	  5 [label="You: 不要靠近。"];
+	  6 [label="Don't Call Abigail: 他对着你耳语，浓烈的口气闻起来就像有毒的沼泽：“别打给阿比盖尔。别打给阿比盖尔！”接着他摆摆手，似乎要把你赶走。"];
+	  7 [label="Don't Call Abigail: Variable[\"village.abigail_drunk_alt_greet\"]"];
+	  8 [label="Variable[\"village.abigail_drunk_alt_greet\"]", shape=diamond];
+	  9 [label="!(Variable[\"village.abigail_drunk_alt_greet\"])", shape=diamond];
+	  10 [label="You: “喂，我正在进行一项重要的官方调查，我要求你回答我的问题。”"];
+	  11 [label="Don't Call Abigail: “阿比盖尔？”他的声音兴奋了起来，然后变成一连串胡乱的呓语。“阿比盖尔，你在哪？”"];
+	  12 [label="Don't Call Abigail: “别打给她，你听见没。别打给阿比盖尔……”"];
+	  13 [label="Don't Call Abigail: 他发出一阵令人厌恶的哼声，然后举起一只手指朝你的方向挥了挥，嘟囔到：“呃……阿比盖尔……不要……他妈的……打给阿比盖尔。”"];
+	  14 [label="You: 让他睡去吧。[离开。]"];
+	  15 [label="Jump to: [abigailhasbeengreeted]"];
+	  16 [label="abigailhasbeengreeted"];
+	  17 [label="Don't Call Abigail: “别打给阿比盖尔。”醉汉看着你，眼睛悲伤又肿胀。"];
+	  18 [label="Suggestion: 阿比盖尔是他的妻子，或者是女朋友。有可能她离开了。打给她也是于事无补。"];
+	  19 [label="You: “你是谁？你叫什么名字？”"];
+	  20 [label="Don't Call Abigail: “阿比盖尔！”他咕哝到。“不要……打给她。”他伸出一只手指，朝你的方向挥舞着。"];
+	  21 [label="Don't Call Abigail: 他怒视着你。“别他妈打给她，听到我的话了吗。”他说出的每一个词都在颤抖，变得越发虚弱了。“阿比盖尔，”最后话语变成了啜泣。"];
+	  22 [label="Don't Call Abigail: Variable[\"village.abigail_drunk_counter\"] >= 5"];
+	  23 [label="Variable[\"village.abigail_drunk_counter\"] >= 5", shape=diamond];
+	  24 [label="!(Variable[\"village.abigail_drunk_counter\"] >= 5)", shape=diamond];
+	  25 [label="You: “喂，醒醒！”"];
+	  26 [label="Electrochemistry: 从没想过你这辈子还会见到这种事情，但是这家伙醉得有些*太*厉害。"];
+	  27 [label="You: “我感觉有点不太舒服。”[离开。]"];
+	  28 [label="Don't Call Abigail: 醉汉开始咳嗽，非常恶心的干咳。"];
+	  29 [label="Don't Call Abigail: 男人打了个嗝，接着开始不知所云的喃喃自语。"];
+	  30 [label="You: 走开。[离开。]"];
+	  32 [label="Don't Call Abigail: “别打给阿比盖尔，”一个胡子凌乱的红鼻子男人嘟囔着。他眯起眼睛看着你，似乎在辨认你是谁，然后又把头转到了一边。"];
+	  33 [label="Don't Call Abigail: 他摆摆手，似乎要把你赶走，嘴里还嘟囔着某些难以理解的话。"];
+	  34 [label="Endurance: 他听起来一点也不好。"];
+	  35 [label="Don't Call Abigail: “别……打开阿比盖尔……”他轻声抱怨着，声音逐渐消失在一片虚无之中。"];
+	  36 [label="Kim Kitsuragi: 警督叹了口气。“你真不用……再说了，他会理解你的。”"];
+	  37 [label="You: 靠近些。"];
+	  38 [label="Perception (Smell): 从醉汉身上传出的有毒气味强烈又熟悉。"];
+	  39 [label="Kim Kitsuragi: “没错，你可能找到了不知道你是执法人员的人，考虑到他有多醉的话。”"];
+	  40 [label="mainabigail"];
+	  41 [label="You: “我想打给谁就打给谁，不用你告诉我怎么做。”"];
+	  42 [label="Don't Call Abigail: “阿比盖尔……哦，阿比盖尔……”他一边嘟囔，一边试图把什么东西从那条脏的要命的裤子上拍掉。他的动作缓慢而笨拙。"];
+	  43 [label="Don't Call Abigail: 唤醒恍惚的他是不可能的。他的思绪已经不在这里了。"];
+	  44 [label="You: “你最近有没有在附近见过一个女人？”"];
+	  45 [label="Don't Call Abigail: 假寐的男人无声地嘟囔着什么。"];
+	  46 [label="You: “为什么我不能打给阿比盖尔？”"];
+	  47 [label="Don't Call Abigail: IsKimHere()"];
+	  48 [label="IsKimHere()", shape=diamond];
+	  49 [label="!(IsKimHere())", shape=diamond];
+	  50 [label="Don't Call Abigail: 他的眼睛游移不定，眼神朦胧而涣散。“别打给阿比盖斯，”他说道。"];
+	  51 [label="Jump to: [mainabigail]"];
+	  52 [label="Don't Call Abigail: Variable[\"village.abigail_greeting_done\"]"];
+	  53 [label="Variable[\"village.abigail_greeting_done\"]", shape=diamond];
+	  54 [label="!(Variable[\"village.abigail_greeting_done\"])", shape=diamond];
+	  55 [label="Don't Call Abigail: IsKimHere()"];
+	  56 [label="IsKimHere()", shape=diamond];
+	  57 [label="!(IsKimHere())", shape=diamond];
+	  58 [label="Rhetoric: 你从这家伙口里问不出什么的。他醉得太厉害。"];
+	  59 [label="Don't Call Abigail: IsKimHere()"];
+	  60 [label="IsKimHere()", shape=diamond];
+	  61 [label="!(IsKimHere())", shape=diamond];
+	  62 [label="Don't Call Abigail: 他哼了一声，召唤你靠的更近一些。"];
+	  63 [label="You: “阿比盖尔是谁？”"];
+	  64 [label="Kim Kitsuragi: “朝醉鬼大声嚷嚷是没用的，”警督插了一嘴。“他勉强才能撑下来的。”"];
+	  65 [label="Kim Kitsuragi: “不管怎么说，他基本上不可能成为一个可靠的证人。”"];
+	  66 [label="You: “跟我说说你的朋友吧。”（指向其他人。）"];
+	  67 [label="You: “我就是法律。”\n“我就是法律。”"];
+	  68 [label="Don't Call Abigail: Variable[\"reputation.the_law\"] >=5"];
+	  69 [label="Variable[\"reputation.the_law\"] >=5", shape=diamond];
+	  70 [label="!(Variable[\"reputation.the_law\"] >=5)", shape=diamond];
+	  71 [label="Don't Call Abigail: Variable[\"reputation.the_law\"] >=3"];
+	  72 [label="Variable[\"reputation.the_law\"] >=3", shape=diamond];
+	  73 [label="!(Variable[\"reputation.the_law\"] >=3)", shape=diamond];
+	  74 [label="You: “我在哪？这是什么地方？”"];
+	  75 [label="Don't Call Abigail: “不……别……”男人结巴了，“别打给……”慢慢地，他的脑袋歪向一边，晕了过去，舌头还悬在嘴里。"];
+	  76 [label="Don't Call Abigail: “别打……别打给她……”醉汉在睡梦中呓语。口水从左边的嘴角滴落下来，流到了夹克的翻领上。"];
+	  0 -> 1
+	  1 -> 7
+	  2 -> 3
+	  2 -> 4
+	  3 -> 65
+	  5 -> 33
+	  6 -> 22
+	  7 -> 8
+	  7 -> 9
+	  8 -> 76
+	  9 -> 52
+	  10 -> 59
+	  11 -> 22
+	  12 -> 16
+	  13 -> 18
+	  14 -> 43
+	  15 -> 16
+	  16 -> 27
+	  16 -> 41
+	  16 -> 67
+	  16 -> 63
+	  17 -> 40
+	  18 -> 58
+	  19 -> 50
+	  20 -> 58
+	  21 -> 22
+	  22 -> 24
+	  22 -> 23
+	  23 -> 75
+	  24 -> 51
+	  25 -> 43
+	  26 -> 40
+	  27 -> 45
+	  28 -> 34
+	  29 -> 22
+	  30 -> 35
+	  32 -> 38
+	  33 -> 22
+	  34 -> 22
+	  36 -> 42
+	  37 -> 6
+	  38 -> 12
+	  39 -> 42
+	  40 -> 66
+	  40 -> 10
+	  40 -> 74
+	  40 -> 44
+	  40 -> 46
+	  40 -> 19
+	  40 -> 30
+	  41 -> 20
+	  42 -> 15
+	  44 -> 11
+	  46 -> 62
+	  47 -> 48
+	  47 -> 49
+	  48 -> 36
+	  49 -> 42
+	  50 -> 22
+	  51 -> 40
+	  52 -> 53
+	  52 -> 54
+	  53 -> 17
+	  54 -> 32
+	  55 -> 56
+	  55 -> 57
+	  56 -> 39
+	  57 -> 42
+	  58 -> 26
+	  59 -> 60
+	  59 -> 61
+	  60 -> 64
+	  61 -> 28
+	  62 -> 5
+	  62 -> 37
+	  63 -> 13
+	  64 -> 28
+	  66 -> 21
+	  67 -> 71
+	  68 -> 69
+	  68 -> 70
+	  69 -> 47
+	  70 -> 55
+	  71 -> 72
+	  71 -> 73
+	  72 -> 68
+	  73 -> 42
+	  74 -> 29
+	  75 -> 2
+	  76 -> 25
+	  76 -> 14
+}
+

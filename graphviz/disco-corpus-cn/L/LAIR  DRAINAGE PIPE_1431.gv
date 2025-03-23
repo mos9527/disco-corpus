@@ -1,0 +1,149 @@
+# LAIR / DRAINAGE PIPE
+# Alternate path into Feld building.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 试着把门拉开。"];
+	  3 [label="You: Variable[\"boardwalk.drainage_wc\"]"];
+	  4 [label="Variable[\"boardwalk.drainage_wc\"]", shape=diamond];
+	  5 [label="!(Variable[\"boardwalk.drainage_wc\"])", shape=diamond];
+	  6 [label="Inland Empire: 不能没有警督在。你要是*真的*找到一条进去的路但却是个*陷阱*呢？必须有曷城在场为你提供掩护。"];
+	  7 [label="You: 好吧。*还有*呢？"];
+	  8 [label="Visual Calculus: 他的意思是：管道也许是从大厦的*某个地方*延伸出来的。"];
+	  9 [label="Untitled hub"];
+	  10 [label="Physical Instrument: 你可以把门硬拉开的时间似乎不足以让你从门缝里钻进去。要是再来一双手就好了。"];
+	  11 [label="Drainage Pipe: IsKimHere()"];
+	  12 [label="IsKimHere()", shape=diamond];
+	  13 [label="!(IsKimHere())", shape=diamond];
+	  15 [label="Drainage Pipe: IsKimHere()"];
+	  16 [label="IsKimHere()", shape=diamond];
+	  17 [label="!(IsKimHere())", shape=diamond];
+	  18 [label="You: 里面有什么？"];
+	  19 [label="Drainage Pipe: 还有呢？也没什么特别的。扔到管壁上被砸碎的玻璃瓶碎屑。一支注射器……"];
+	  20 [label="Perception (Smell): 一股非常、非常微弱的陈年老酒味道仍然挥散不去——或者这只是你的想象？"];
+	  21 [label="Physical Instrument: 试都不用试，光看着就非得累掉半条命不可，你的手指会被铁锈划破的。"];
+	  22 [label="Drainage Pipe: Variable[\"boardwalk.drainage_hub_reached\"]"];
+	  23 [label="Variable[\"boardwalk.drainage_hub_reached\"]", shape=diamond];
+	  24 [label="!(Variable[\"boardwalk.drainage_hub_reached\"])", shape=diamond];
+	  25 [label="Drainage Pipe: 管道后面——藏着扇维修门，紧紧地锈死了，有一半还掩埋在沙子里。"];
+	  26 [label="Jump to: [Untitled hub]"];
+	  27 [label="Kim Kitsuragi: 警督的越过你的肩膀朝里看。"];
+	  28 [label="Jump to: [Untitled hub]"];
+	  29 [label="You: 还有呢？"];
+	  30 [label="Kim Kitsuragi: “我明白了。这是你对抗麻醉剂瘾的又一个站点。我*还*希望我们是在追查凶杀案的嫌疑人……”"];
+	  31 [label="Drainage Pipe: 一条老旧的管道从步道底下的烂木板下伸了出来。这条管道也能通入菲尔德大厦内部吗？"];
+	  32 [label="Kim Kitsuragi: 警督靠在门上，气喘吁吁。“我们先喘口气，之后再试一次？还真是……挺牢固的。”"];
+	  33 [label="Logic: 哦，你怎么就没想到呢？"];
+	  34 [label="Physical Instrument: 金属门很沉，凭一己之力很难打开，但你还是想办法把门缝拽开到一个刚好够自己钻过去的宽度……\n金属门很沉，上面剥落的铁锈把你的掌心弄的生疼，不过在警督的帮助下，你还是把门缝拽开到刚好够一个人溜进去的宽度。"];
+	  35 [label="Interfacing: 门卡得这么死，手再巧也没用。"];
+	  36 [label="Physical Instrument: 你和警督用尽全身的力量想把门拽开，但两人发力的时机却不一致。你们还没来得及挤进去，刚刚拉开的门就又关上了。"];
+	  37 [label="You: [离开。]"];
+	  38 [label="You: 靠近一些，往里面看。"];
+	  39 [label="Jump to: [Untitled hub]"];
+	  40 [label="You: 我能通过管道进入菲尔德大厦吗？\n“我们可以通过管道进入菲尔德大厦吗？”"];
+	  41 [label="Drainage Pipe: Variable[\"boardwalk.drainage_wc\"]"];
+	  42 [label="Variable[\"boardwalk.drainage_wc\"]", shape=diamond];
+	  43 [label="!(Variable[\"boardwalk.drainage_wc\"])", shape=diamond];
+	  44 [label="You: [离开。]"];
+	  45 [label="Suggestion: 警督的脸突然亮了起来。他通常不会注意到这些小东西。"];
+	  46 [label="Drainage Pipe: IsKimHere()"];
+	  47 [label="IsKimHere()", shape=diamond];
+	  48 [label="!(IsKimHere())", shape=diamond];
+	  49 [label="Visual Calculus: 像这种建筑肯定有很多扇门，每一扇都有不同的功能。也许这是地下室的入口？"];
+	  50 [label="Kim Kitsuragi: “鉴于这不是一部动作惊悚片，”他的脸上闪过一丝微笑，“这是不太可能的——而且也并非全无生命危险。”"];
+	  51 [label="Jump to: [Untitled hub]"];
+	  52 [label="Drainage Pipe: Variable[\"boardwalk.drainage_tried_once\"]"];
+	  53 [label="Variable[\"boardwalk.drainage_tried_once\"]", shape=diamond];
+	  54 [label="!(Variable[\"boardwalk.drainage_tried_once\"])", shape=diamond];
+	  55 [label="You: [进去。]"];
+	  56 [label="Jump to: [Untitled hub]"];
+	  57 [label="Drainage Pipe: 你的眼睛开始慢慢适应排水管里的黑暗。"];
+	  58 [label="Drainage Pipe: 一个普通的排水管。漆黑一片。\n最开始，你在黑暗中根本什么也看不见。\n管道因为雨水变得光滑。\n一层薄薄的雪在管道里闪闪发光。"];
+	  59 [label="You: “这里看起来像是个藏匿麻药的好地方。我要确保里面没藏着什么小朋友不该捡到的东西。”"];
+	  60 [label="Jump to: [Untitled hub]"];
+	  61 [label="Kim Kitsuragi: “不过，这个管道意味着这周围可能真有一个通往地下室的入口……”警督拨开芦苇，环顾四周。"];
+	  62 [label="Drainage Pipe: 等到双眼适应之后，你看见一些垃圾——皱巴巴的报纸，还有香烟头。有人在右边敷衍了事地喷涂了个‘骷髅头’。"];
+	  63 [label="Kim Kitsuragi: “……在这儿！维修门。”他指向管道右侧一扇生锈的金属门，被芦苇给遮挡住了。"];
+	  64 [label="Endurance: 噢耶……现在是*大男孩时间*。你要全力以赴了。"];
+	  65 [label="Inland Empire: 不能没有警督在。你要是*真的*找到一条进去的路但却是个*陷阱*呢？必须有曷城在场为你提供掩护。"];
+	  66 [label="Untitled hub (02)"];
+	  67 [label="Kim Kitsuragi: “做得好。”警督朝着眼前黑漆漆的洞口点了点头。“我们进去吧？”"];
+	  0 -> 1
+	  1 -> 22
+	  2 -> 3
+	  3 -> 4
+	  3 -> 5
+	  4 -> 41
+	  5 -> 41
+	  6 -> 9
+	  7 -> 62
+	  8 -> 33
+	  9 -> 2
+	  9 -> 37
+	  9 -> 40
+	  9 -> 18
+	  9 -> 59
+	  10 -> 28
+	  11 -> 12
+	  11 -> 13
+	  12 -> 27
+	  13 -> 6
+	  15 -> 16
+	  15 -> 17
+	  16 -> 36
+	  17 -> 10
+	  18 -> 58
+	  19 -> 20
+	  20 -> 60
+	  21 -> 56
+	  22 -> 24
+	  22 -> 23
+	  23 -> 25
+	  24 -> 31
+	  25 -> 46
+	  26 -> 9
+	  27 -> 9
+	  28 -> 9
+	  29 -> 19
+	  30 -> 39
+	  31 -> 49
+	  32 -> 28
+	  33 -> 45
+	  34 -> 67
+	  35 -> 64
+	  36 -> 32
+	  38 -> 57
+	  39 -> 9
+	  40 -> 50
+	  41 -> 42
+	  41 -> 43
+	  42 -> 34
+	  43 -> 52
+	  45 -> 63
+	  46 -> 48
+	  46 -> 47
+	  47 -> 26
+	  48 -> 65
+	  49 -> 66
+	  50 -> 61
+	  51 -> 9
+	  52 -> 53
+	  52 -> 54
+	  53 -> 21
+	  54 -> 15
+	  56 -> 9
+	  57 -> 11
+	  58 -> 7
+	  59 -> 30
+	  60 -> 9
+	  61 -> 8
+	  62 -> 29
+	  63 -> 35
+	  64 -> 51
+	  65 -> 26
+	  66 -> 44
+	  66 -> 38
+	  67 -> 55
+}
+

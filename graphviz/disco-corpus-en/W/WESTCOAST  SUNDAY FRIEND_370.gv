@@ -1,0 +1,544 @@
+# WESTCOAST / SUNDAY FRIEND
+# PART OF THE MORALIST DREAM QUEST. You come across the Sunday friend enjoying the historical scenery. You also have the chance to apologise if you accused him earlier.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Untitled hub (05)"];
+	  3 [label="Kim Kitsuragi: \"Now, let's go. You've done enough damage here.\""];
+	  4 [label="You: \"I need your help forming a committee. I'm trying to assign *la responsabilité*.\""];
+	  5 [label="You: \"I got it. You're only here on *personal* business.\""];
+	  6 [label="Volition: No, no. You can't let them give you the runaround."];
+	  7 [label="Variable[\"apt.sunday_perc_archer_saw\"]"];
+	  8 [label="Variable[\"apt.sunday_perc_archer_saw\"]", shape=diamond];
+	  9 [label="!(Variable[\"apt.sunday_perc_archer_saw\"])", shape=diamond];
+	  10 [label="You: \"It's not quite my scene.\""];
+	  11 [label="You: \"Did you see all the bullet holes in that wall over there?\""];
+	  12 [label="Sunday Friend: The man takes a deep breath. \"Yes, there's nothing like a stroll along the coast to lift one's spirits.\""];
+	  13 [label="Encyclopedia: The Bristelmüne Conventions are a series of international agreements governing the treatment of military personnel and civilians in theatres of war as well as occupied territories. In practice, they are more talked about than observed."];
+	  14 [label="Sunday Friend: \"Unbelievable. I have never seen the nerve before...\""];
+	  15 [label="Sunday Friend: \"Does this behaviour represent the RCM's *official stance* toward its Coalition partners?\" He turns to the lieutenant."];
+	  16 [label="Sunday Friend: \"That is certainly a *euphemistic* way to describe what I recall...\""];
+	  17 [label="Kim Kitsuragi: \"I must apologise on my partner's behalf, again. Please believe me when I say that he does not speak for the RCM in *any* capacity.\""];
+	  18 [label="Empathy: He appears completely at ease, like a common holidaymaker."];
+	  19 [label="Inland Empire: You *knew* there was something strange about this one! He's an astral projection, a bureaucratic phantasm!"];
+	  20 [label="Untitled hub (08)"];
+	  21 [label="Sunday Friend: \"Why, *officially* I am still in La Delta, preparing for an upcoming conference on fuel oil derivatives. I'm only in Martinaise in an unofficial capacity...\""];
+	  22 [label="You: \"You said you weren't really here. I had to make sure you weren't an astral projection.\"\n\"He said he wasn't really here. I had to make sure he wasn't an astral projection.\""];
+	  23 [label="Sunday Friend: \"Ah, well, I'm glad to hear that at least. It would really be *quite unusual* for you to have never noticed it before...\""];
+	  24 [label="Jump to: [ArcherCoastHub]"];
+	  25 [label="Sunday Friend: \"Ah, is that what those pock marks are? I might've guessed. Fascinating, *how much history* is contained right here, if only one knows where to look for it...\""];
+	  26 [label="You: \"Ugly work, but at least someone had the balls to do what had to be done.\""];
+	  27 [label="Rhetoric: You feel like there's *something* you could say here, if only you really knew what was going on..."];
+	  28 [label="Variable[\"apt.sunday_accused_friend\"]"];
+	  29 [label="Variable[\"apt.sunday_accused_friend\"]", shape=diamond];
+	  30 [label="!(Variable[\"apt.sunday_accused_friend\"])", shape=diamond];
+	  31 [label="Sunday Friend: The man considers your words a moment, then nods slowly..."];
+	  32 [label="Sunday Friend: \"My friend, if it's *la responsabilité* you're after, I have good news for you: There's no need to form such a committee, because it already exists!\""];
+	  33 [label="Variable[\"apt.sunday_perc_where\"]"];
+	  34 [label="Variable[\"apt.sunday_perc_where\"]", shape=diamond];
+	  35 [label="!(Variable[\"apt.sunday_perc_where\"])", shape=diamond];
+	  36 [label="IsKimHere()"];
+	  37 [label="IsKimHere()", shape=diamond];
+	  38 [label="!(IsKimHere())", shape=diamond];
+	  39 [label="Variable[\"coast.sunday_minimainhub_reached\"]"];
+	  40 [label="Variable[\"coast.sunday_minimainhub_reached\"]", shape=diamond];
+	  41 [label="!(Variable[\"coast.sunday_minimainhub_reached\"])", shape=diamond];
+	  42 [label="Rhetoric: He's speaking figuratively. He means he's not in Martinaise in his *official* capacity."];
+	  43 [label="You: \"Why do I need to go through Archer to speak to the Committee?\""];
+	  44 [label="Perception (Sight): You follow the man's gaze out toward the west. There, amidst the low-hanging stars, you can just make out signs of motion..."];
+	  45 [label="archerreactionhub"];
+	  46 [label="You: \"It's amazing. An inspiring symbol.\""];
+	  47 [label="Rhetoric: You feel like there's *something* you could say here, if only you really knew what was going on..."];
+	  48 [label="Untitled hub (02)"];
+	  49 [label="Empathy: This isn't the end. There may yet be someone along this coast who can direct you where you need to go..."];
+	  50 [label="You: \"Look what the tide dragged in.\""];
+	  51 [label="Sunday Friend: \"Yes?\" He turns to face you."];
+	  52 [label="Perception (Sight): What? Where is he, then?"];
+	  53 [label="You: (Attempt to stick your hand through his astral form.)"];
+	  54 [label="Sunday Friend: \"That's why it would be extremely irregular, or potentially even *inappropriate* for me to intercede with the Committee concerning a district I'm not officially in.\""];
+	  55 [label="jardorehubs"];
+	  56 [label="You: \"It looks like a killing machine.\""];
+	  57 [label="Sunday Friend: \"I suppose there might be some way to *circuit-bend* your way onto those frequencies, but you'd have to be one of those *techno-tinkerers* to do it.\""];
+	  58 [label="You: \"Really, it's the property damage that most offends me.\""];
+	  59 [label="IsKimHere()"];
+	  60 [label="IsKimHere()", shape=diamond];
+	  61 [label="!(IsKimHere())", shape=diamond];
+	  62 [label="Sunday Friend: \"Ah, super, it's the officer! I was not expecting to run into you again, but things have a funny way of turning out, no?\""];
+	  63 [label="You: \"Actually, I was wondering what *you're* doing out here.\""];
+	  64 [label="You: \"Nothing, just lost my balance a moment.\""];
+	  65 [label="Sunday Friend: \"Isn't it? A triumph of both technical ingenuity and international cooperation. I, for one, feel much safer knowing it's up there, watching all of us.\""];
+	  66 [label="Variable[\"TASK.talk_moralism_with_sunday_friend_done\"]"];
+	  67 [label="Variable[\"TASK.talk_moralism_with_sunday_friend_done\"]", shape=diamond];
+	  68 [label="!(Variable[\"TASK.talk_moralism_with_sunday_friend_done\"])", shape=diamond];
+	  69 [label="Sunday Friend: \"Always my pleasure to be of assistance to the RCM. Godspeed, and if we don't meet again, bonne chance!\""];
+	  70 [label="Sunday Friend: \"Ah, a very useful gift for a police detective, I'm sure. Fascinating, *how much history* is contained right here, if only one knows where to look for it...\""];
+	  71 [label="Kim Kitsuragi: \"Hmmm, perhaps your young friends in the *tent* might be of assistance?\""];
+	  72 [label="Kim Kitsuragi: \"Mr. Villedrouin...\" The lieutenant nods."];
+	  73 [label="Sunday Friend: \"I must admit. I did not take you for a sightseer. What do you want now?\""];
+	  74 [label="Authority: Do you hear that contempt in his voice? He's always considered himself *above* you."];
+	  75 [label="You: \"I'm sorry, Kim. I just can't help it.\""];
+	  76 [label="Kim Kitsuragi: \"Good god, couldn't you *try* at least?\""];
+	  77 [label="Kim Kitsuragi: \"I'm not even sure why I'm bothering. This is *your* side task, after all...\""];
+	  78 [label="Empathy: Yes, this is just the sort of reasonable authority you're looking for!"];
+	  79 [label="Sunday Friend: \"I would offer to connect you with the committee myself, but alas, I am not actually *in* Martinaise.\""];
+	  80 [label="Perception (Sight): It looks, to your eye, like some kind of long, metallic fish, suspended beneath a number of ceiling fans..."];
+	  81 [label="Jump to: [ArcherCoastHub]"];
+	  82 [label="Sunday Friend: \"And then, well, I had some extra time on my hands, so I decided to stroll down here. It's quite peaceful, isn't it?\""];
+	  83 [label="Variable[\"coast.sunday_finished\"]"];
+	  84 [label="Variable[\"coast.sunday_finished\"]", shape=diamond];
+	  85 [label="!(Variable[\"coast.sunday_finished\"])", shape=diamond];
+	  86 [label="You: \"It feels like he holds us in contempt, like he thinks he's better than we are.\""];
+	  87 [label="You: \"Thank you for your time.\" [Leave.]"];
+	  88 [label="Sunday Friend: \"Perhaps your blood sugar is a bit low? As I was saying, *officially* speaking I am still in La Delta, preparing for an upcoming conference on fuel oil derivatives...\""];
+	  89 [label="IsDaytime()"];
+	  90 [label="IsDaytime()", shape=diamond];
+	  91 [label="!(IsDaytime())", shape=diamond];
+	  92 [label="Perception (Sight): It's a set of position lights moving in unison, like a restless constellation..."];
+	  93 [label="Sunday Friend: \"Yes, the loss of human life was truly catastrophic... This is why the Coalition is so focused on preventing another war. Our peacekeeping mission is a testament to this...\""];
+	  94 [label="Variable[\"TASK.sync_the_sines\"]"];
+	  95 [label="Variable[\"TASK.sync_the_sines\"]", shape=diamond];
+	  96 [label="!(Variable[\"TASK.sync_the_sines\"])", shape=diamond];
+	  97 [label="Empathy: How do you expect to assign la responsabilité if you won't apologise for your own mistakes?"];
+	  99 [label="Authority: Do you hear that contempt in his voice? He's always considered himself *above* you."];
+	  100 [label="You: \"I just don't like his face, okay?\""];
+	  101 [label="Kim Kitsuragi: \"Yes, I was wondering the same thing. What are you doing?\""];
+	  102 [label="You: \"Are you saying I should just give up?\""];
+	  103 [label="Variable[\"apt.sunday_perc_archer_saw\"]"];
+	  104 [label="Variable[\"apt.sunday_perc_archer_saw\"]", shape=diamond];
+	  105 [label="!(Variable[\"apt.sunday_perc_archer_saw\"])", shape=diamond];
+	  106 [label="Conceptualization: No, it's more like a creature from the abyssopelagic zone, a great dark bioluminescent fish..."];
+	  107 [label="Jump to: [MINIMAINHUB]"];
+	  108 [label="IsKimHere()"];
+	  109 [label="IsKimHere()", shape=diamond];
+	  110 [label="!(IsKimHere())", shape=diamond];
+	  111 [label="Sunday Friend: \"I accept your apology, officer, out of my *profound* respect for the RCM, and the importance of our continuing partnership.\""];
+	  112 [label="Kim Kitsuragi: \"I don't understand why you have it in for this man. He's never been anything but gracious and helpful to our cause. Why do you feel the need to insult him?\""];
+	  113 [label="Sunday Friend: The man frowns. \"Well, under ordinary circumstances, the Committee contacts *you*.\""];
+	  114 [label="Sunday Friend: \"I don't mean to discourage you, of course, just to say that it won't be *easy* to reach the Committee.\""];
+	  115 [label="You: \"Wait, what's Coalition Warship Archer?\""];
+	  116 [label="Sunday Friend: \"Officer? You mean to say you haven't noticed the giant Coalition aerostatic peacefully patrolling the skies over Revachol?\""];
+	  117 [label="Half Light: Don't let the paintjob fool you, it's a goddamn killing machine, and there's nothing you can do to stop it!"];
+	  118 [label="You: \"I don't think I've ever noticed it before.\""];
+	  119 [label="Sunday Friend: \"That is part of the idea, of course. The Coalition doesn't want the people of Revachol to feel that they are under a *military* occupation. That is why the Archer is always careful to maintain a constant, discreet distance.\""];
+	  120 [label="You: \"So what am I supposed to do?\""];
+	  121 [label="Sunday Friend: \"Though, I do hope whoever was responsible at least compensated the building's owner appropriately.\""];
+	  122 [label="Empathy: This sounds like something that programmer you met in the church might help with..."];
+	  123 [label="Sunday Friend: \"And what is that, officer?\" He turns to face you."];
+	  124 [label="You: \"I'm still pretty sure you were in the wrong, but I'm willing to forgive you.\""];
+	  125 [label="Jump to: [MINIMAINHUB]"];
+	  126 [label="Sunday Friend: \"Yes, you've made your *persistence* quite clear. Under normal circumstances I would have to insist you go through the regular channels.\""];
+	  127 [label="Sunday Friend: \"Hmmm, this is quite the problem, very tricky. Of course, the Archer has orders to fire on any unidentified aerostatics that might approach it, so it might be safer to get in touch *from the ground*...\""];
+	  128 [label="Sunday Friend: \"Mm, well that's très simple. I was visiting the fishing village just north of here. They have applied for a series of micro-loans to revitalise the old market, and well, I wished to see the situation *first-hand*...\""];
+	  129 [label="You: \"For one, that wall over there is *covered* in bullet holes.\""];
+	  130 [label="Sunday Friend: \"Ah, is that what those pock marks are? I might've guessed. Fascinating, *how much history* is contained right here, if only one knows where to look for it...\""];
+	  131 [label="Sunday Friend: \"Officer...\"\n\"Officers...\""];
+	  132 [label="You: \"Mr. Villedrouin...\""];
+	  133 [label="You: \"It seems we had a little 'misunderstanding.'\""];
+	  134 [label="Kim Kitsuragi: \"Of course he does, he's from the Moralintern. But that doesn't mean *we* don't have standards to maintain...\""];
+	  135 [label="Kim Kitsuragi: \"Good god, couldn't you *pretend* at least?\""];
+	  136 [label="Sunday Friend: \"The Comité de Responsabilité de Revachol. It acts as a sort-of clearinghouse for Coalition activities. To put it simply, they are the ultimate arbiters of la responsabilité in this part of the world.\""];
+	  137 [label="You: \"So how does one go about contacting a Coalition warship?\" (Proceed.)"];
+	  138 [label="Perception (Sight): You can't see anything. But then, it's dark, and your eyes aren't the sharpest..."];
+	  139 [label="You: \"Huh. Can't believe I never noticed it before.\"\n\"It looks like it's about four-and-a-half kilometres away.\""];
+	  140 [label="Sunday Friend: \"You see, in addition to being an airborne artillery platform, Coalition Warship Archer is also the linchpin of the Coalition's surveillance and communications infrastructure in Revachol.\""];
+	  141 [label="Jump to: [ArcherCoastHub]"];
+	  142 [label="You: \"You do know there was a mass execution right over there?\""];
+	  143 [label="Jump to: [You: \"\"Actually, there was something *els...\"]"];
+	  144 [label="Jump to: [You: \"\"Actually, there was something *els...\"]"];
+	  145 [label="Variable[\"church.soona_greeting_done\"]"];
+	  146 [label="Variable[\"church.soona_greeting_done\"]", shape=diamond];
+	  147 [label="!(Variable[\"church.soona_greeting_done\"])", shape=diamond];
+	  148 [label="You: \"Sorry, bad joke. I wanted to talk about what happened earlier.\""];
+	  149 [label="You: \"Let's get right to it. I have something to say.\""];
+	  150 [label="Sunday Friend: \"Especially from a common officer of the Revachol Citizens Militia.\""];
+	  151 [label="Empathy: You aren't going to get out of this with evasion."];
+	  152 [label="You: \"So... where *are* you, then?\""];
+	  153 [label="Sunday Friend: \"Précisément. *Officially* I am still in La Delta, preparing for an upcoming conference on fuel oil derivatives...\""];
+	  154 [label="Visual Calculus: It's about four-and-a-half kilometres from your position, you estimate."];
+	  155 [label="Sunday Friend: \"Well, of course it *is* a heavily armed and armoured warship with a full complement. But I assure you its purpose in Revachol is to *keep* the peace, not disturb it.\""];
+	  156 [label="Sunday Friend: \"I find it a great comfort to know there are benevolent powers watching over all, in strict accordance with the Wayfarer Act and the Bristelmüne Conventions.\""];
+	  157 [label="You: \"Hold on, it's *watching* us, too?\""];
+	  158 [label="You: \"Do you know any of these tinkerers?\""];
+	  159 [label="You: (Look around.) \"Yeah, it's lovely.\""];
+	  160 [label="You: \"It's sort of a gift I have. I can reconstruct things that happened in the past. High-end detective stuff.\""];
+	  161 [label="Variable[\"coast.sunday_rhetoric_euphemisms\"]"];
+	  162 [label="Variable[\"coast.sunday_rhetoric_euphemisms\"]", shape=diamond];
+	  163 [label="!(Variable[\"coast.sunday_rhetoric_euphemisms\"])", shape=diamond];
+	  164 [label="Rhetoric: *Tranquilou bilou*? Let's not get into this, you can't argue with someone who uses words like 'tranquilou bilou'."];
+	  165 [label="Jump to: [You: \"\"Actually, there was something *els...\"]"];
+	  166 [label="Sunday Friend: \"Let me just say that I have *complete confidence* in the RCM. I'm sure you'll figure something out.\""];
+	  167 [label="Empathy: You *will* figure it out. Something tells you the person you're looking for is already on this coast..."];
+	  168 [label="You: \"I would like to sincerely apologise for my behaviour. It was completely inappropriate, and I accept full responsibility.\""];
+	  169 [label="Logic: God, of course it does. These Moralintern types..."];
+	  170 [label="Sunday Friend: \"Of course, we are speaking informally, but *officially* I am still in La Delta, preparing for an upcoming conference on fuel oil derivatives...\""];
+	  171 [label="IsKimHere()"];
+	  172 [label="IsKimHere()", shape=diamond];
+	  173 [label="!(IsKimHere())", shape=diamond];
+	  174 [label="Sunday Friend: \"No, no, don't be silly. We're simply speaking in an informal capacity. *Officially* I am still in La Delta, preparing for an upcoming conference on fuel oil derivatives...\""];
+	  175 [label="Perception (Sight): You look around, but you don't see anything unusual. Then again, your eyes aren't the sharpest..."];
+	  176 [label="You: \"Is that... legal?\""];
+	  177 [label="Sunday Friend: \"Unfortunately not, no, I don't have the pleasure. I am merely a representative of the Coalition Government, not very well-versed in technology. But you...\""];
+	  178 [label="You: \"I'm sure the communards who were killed here take a different view.\""];
+	  179 [label="Sunday Friend: \"Now, now. Human life is *always* more important than private property...\""];
+	  180 [label="You: \"You're right. It's so complex and fascinating I can't even *begin* to think critically about it.\""];
+	  181 [label="Jump to: [You: \"\"Actually, there was something *els...\"]"];
+	  182 [label="Jump to: [ArcherCoastHub]"];
+	  183 [label="Sunday Friend: \"Is that an RCM *term of art* for the *wrongfully accused*?\""];
+	  184 [label="Sunday Friend: \"Now, what brings you down to the coast?\""];
+	  185 [label="Rhetoric: In other words, the Committee only knows what it *wants* to know."];
+	  186 [label="ArcherCoastHub"];
+	  187 [label="Conceptualization: Not just any fish, it moves like some ancient bottom-feeder gliding over the ocean floor in search of prey..."];
+	  188 [label="Half Light: Don't let the shiny lights fool you, it's a goddamn killing machine, and there's nothing you can do to stop it!"];
+	  189 [label="Sunday Friend: \"Fascinating. I always thought it was more like a dragonfly. But isn't it interesting how humanity always finds inspiration in nature?\""];
+	  190 [label="Jump to: [MINIMAINHUB]"];
+	  191 [label="Jump to: [You: \"\"Actually, there was something *els...\"]"];
+	  192 [label="IsKimHere()"];
+	  193 [label="IsKimHere()", shape=diamond];
+	  194 [label="!(IsKimHere())", shape=diamond];
+	  195 [label="Empathy: Perhaps your new friends in the tent might be able to help you?"];
+	  196 [label="Kim Kitsuragi: \"Oh, good: 'Techno-tinkerers.' Just what this *side task* was missing...\""];
+	  197 [label="Sunday Friend: \"Is that so? Have you come to *enforce* an arrest warrant?\""];
+	  198 [label="Kim Kitsuragi: The lieutenant stares at the man's back, then steps away. He makes sure no one else can hear him as he turns to face you..."];
+	  199 [label="Sunday Friend: \"Ah, super, here you are again, officer. How can I help?\""];
+	  200 [label="Sunday Friend: \"What brings you down to the scenic Martinaise coast?\""];
+	  201 [label="Perception (Sight): You follow the man's gaze out toward the west. There, hanging some distance above the horison, you can just make out a strange silhouette..."];
+	  202 [label="You: \"Oh, right. The *Archer*. I thought you said... something else.\""];
+	  203 [label="You: \"It looks like a fish.\""];
+	  204 [label="Sunday Friend: \"And listening! It has the most objective vantage point in the entire city. Not to mention a vast array of radio, photographic, and meteorological monitoring instruments.\""];
+	  205 [label="Sunday Friend: \"Unauthorised circuit-bending is a very serious matter with grave security implications, but as of the moment there is no specific law *forbidding* it, in Revachol at least...\""];
+	  206 [label="coastalhub"];
+	  207 [label="Sunday Friend: \"Well, you know what they say, 'In matters of taste, there can be no dispute'! For my part, I find it quite invigorating.\""];
+	  208 [label="Sunday Friend: \"Really?\" The man frowns. \"*Here*? How can you be sure?\""];
+	  209 [label="Sunday Friend: \"A rather *brutal* perspective on history.\" He frowns slightly. \"I personally take the more nuanced view that it was regrettably harsh, but perhaps necessary to end the war...\""];
+	  210 [label="You: \"I've been looking all over for you.\""];
+	  211 [label="Sunday Friend: \"I'm listening.\" He turns to face you."];
+	  212 [label="apologyhub"];
+	  213 [label="Sunday Friend: \"And now, this conversation is over. Good day, *officer*.\""];
+	  214 [label="You: \"What are you talking about? I'm looking at you right now!\""];
+	  215 [label="Sunday Friend: \"That, my friend, is your responsabilité. I cannot take it from you, nor can you delegate it to someone else...\""];
+	  216 [label="Sunday Friend: \"What's certain is that we must do everything to prevent such tragic events from ever happening again. The answers lie in *debates*, not in violence.\""];
+	  217 [label="You: \"Listen, about what happened earlier...\""];
+	  218 [label="Jump to: [apologyhub]"];
+	  219 [label="IsKimHere()"];
+	  220 [label="IsKimHere()", shape=diamond];
+	  221 [label="!(IsKimHere())", shape=diamond];
+	  222 [label="MINIMAINHUB"];
+	  223 [label="Sunday Friend: \"But if you have information of a vital interest, they might be willing to entertain an exception. In which case, I would advise you to contact them via Coalition Warship Archer.\""];
+	  224 [label="You: \"Actually, there was something *else* I wanted to ask you about.\""];
+	  225 [label="Sunday Friend: \"Well said. Let us just be grateful that *we* don't live in such fascinating times.\""];
+	  226 [label="Kim Kitsuragi: \"Hmmm, sounds like something that programmer we met in the church might be able to help with...\""];
+	  227 [label="Sunday Friend: The awkward silence that follows is yours to fill."];
+	  228 [label="You: [Leave.]"];
+	  229 [label="Sunday Friend: The man sees you approaching and turns away..."];
+	  230 [label="Sunday Friend: \"Perhaps he does, perhaps he does not. In any case, this conversation is over. Good day, officers.\""];
+	  231 [label="Sunday Friend: With that, he turns his back to you once more."];
+	  232 [label="Sunday Friend: \"Mais que faites-vous, officer?\" Your hand bumps up against the man's solid if somewhat fleshy chest."];
+	  233 [label="You: \"But this is an urgent matter. I *need* to get in touch with the Committee.\""];
+	  234 [label="You: \"How am I supposed to contact the Committee then?\""];
+	  235 [label="Sunday Friend: \"But in that case, you would require a radio transmitter capable of broadcasting on Coalition frequencies. And that kind of technology naturally isn't typically available for non-Coalition use. Yes, it *is* a bit of a conundrum.\""];
+	  236 [label="Sunday Friend: \"Already leaving?\" He shakes his head merrily. \"À tout à l'heure, officer!\""];
+	  237 [label="Rhetoric: Are you just going to let him get away with these generalities and euphemisms?"];
+	  238 [label="Empathy: This isn't the end. There may yet be someone along this coast who can direct you where you need to go..."];
+	  239 [label="Jump to: [Sunday Friend: \"\"Always my pleasure to be of assist...\"]"];
+	  240 [label="Sunday Friend: As you approach, the man turns and greets you with a polite wave."];
+	  241 [label="Logic: Not exactly a model of accessible and accountable governance..."];
+	  242 [label="Sunday Friend: \"Interesting. In a sense, that's the very idea. The Coalition doesn't want the people of Revachol to feel that they are under a *military* occupation. That is why the Archer is always careful to maintain a constant, discreet distance.\""];
+	  243 [label="Sunday Friend: \"Ah, bon? I'm all ears, officer.\""];
+	  244 [label="Sunday Friend: \"Thankfully, the region is becoming more and more stable. I'm confident that atrocities like this belong in the past. The future is...\" he snaps his fingers, \"*tranquilou bilou!*\""];
+	  0 -> 1
+	  1 -> 83
+	  2 -> 210
+	  2 -> 228
+	  2 -> 132
+	  2 -> 50
+	  4 -> 32
+	  5 -> 153
+	  6 -> 223
+	  7 -> 8
+	  7 -> 9
+	  8 -> 80
+	  9 -> 175
+	  10 -> 207
+	  11 -> 130
+	  12 -> 224
+	  12 -> 11
+	  12 -> 142
+	  13 -> 141
+	  14 -> 219
+	  15 -> 74
+	  16 -> 151
+	  17 -> 230
+	  18 -> 62
+	  19 -> 42
+	  20 -> 152
+	  20 -> 5
+	  20 -> 53
+	  20 -> 214
+	  21 -> 54
+	  22 -> 174
+	  23 -> 81
+	  24 -> 186
+	  25 -> 237
+	  26 -> 209
+	  27 -> 224
+	  28 -> 29
+	  28 -> 30
+	  29 -> 229
+	  30 -> 39
+	  31 -> 111
+	  32 -> 169
+	  33 -> 34
+	  33 -> 35
+	  34 -> 19
+	  35 -> 42
+	  36 -> 37
+	  36 -> 38
+	  37 -> 226
+	  38 -> 122
+	  39 -> 40
+	  39 -> 41
+	  40 -> 199
+	  41 -> 240
+	  42 -> 20
+	  43 -> 140
+	  44 -> 103
+	  45 -> 56
+	  45 -> 203
+	  45 -> 139
+	  45 -> 46
+	  46 -> 65
+	  47 -> 181
+	  48 -> 180
+	  48 -> 178
+	  48 -> 26
+	  48 -> 58
+	  49 -> 3
+	  50 -> 183
+	  51 -> 212
+	  52 -> 33
+	  53 -> 232
+	  54 -> 233
+	  54 -> 234
+	  54 -> 102
+	  55 -> 64
+	  55 -> 22
+	  56 -> 155
+	  57 -> 176
+	  57 -> 120
+	  57 -> 158
+	  58 -> 179
+	  59 -> 60
+	  59 -> 61
+	  60 -> 196
+	  61 -> 167
+	  62 -> 200
+	  63 -> 128
+	  64 -> 88
+	  65 -> 24
+	  66 -> 67
+	  66 -> 68
+	  67 -> 69
+	  68 -> 236
+	  70 -> 237
+	  71 -> 166
+	  72 -> 227
+	  73 -> 217
+	  74 -> 17
+	  75 -> 76
+	  76 -> 77
+	  77 -> 49
+	  78 -> 79
+	  79 -> 52
+	  80 -> 187
+	  81 -> 186
+	  82 -> 206
+	  83 -> 84
+	  83 -> 85
+	  84 -> 239
+	  85 -> 28
+	  86 -> 134
+	  87 -> 66
+	  88 -> 54
+	  89 -> 90
+	  89 -> 91
+	  90 -> 201
+	  91 -> 44
+	  92 -> 106
+	  93 -> 244
+	  94 -> 96
+	  94 -> 95
+	  95 -> 192
+	  96 -> 59
+	  97 -> 148
+	  97 -> 149
+	  99 -> 238
+	  100 -> 135
+	  101 -> 55
+	  102 -> 114
+	  103 -> 104
+	  103 -> 105
+	  104 -> 92
+	  105 -> 138
+	  106 -> 188
+	  107 -> 222
+	  108 -> 109
+	  108 -> 110
+	  109 -> 72
+	  110 -> 2
+	  111 -> 184
+	  112 -> 75
+	  112 -> 100
+	  112 -> 86
+	  113 -> 185
+	  114 -> 241
+	  115 -> 116
+	  116 -> 89
+	  117 -> 154
+	  118 -> 242
+	  119 -> 24
+	  120 -> 215
+	  121 -> 191
+	  122 -> 166
+	  123 -> 212
+	  124 -> 14
+	  125 -> 222
+	  126 -> 6
+	  127 -> 235
+	  128 -> 82
+	  129 -> 25
+	  130 -> 27
+	  131 -> 108
+	  132 -> 73
+	  133 -> 16
+	  134 -> 77
+	  135 -> 77
+	  136 -> 78
+	  137 -> 127
+	  138 -> 202
+	  138 -> 118
+	  139 -> 119
+	  140 -> 182
+	  141 -> 186
+	  142 -> 208
+	  143 -> 224
+	  144 -> 224
+	  145 -> 146
+	  145 -> 147
+	  146 -> 36
+	  147 -> 94
+	  148 -> 211
+	  149 -> 123
+	  150 -> 99
+	  151 -> 218
+	  152 -> 21
+	  153 -> 54
+	  154 -> 45
+	  155 -> 24
+	  156 -> 13
+	  157 -> 204
+	  158 -> 177
+	  159 -> 12
+	  160 -> 70
+	  161 -> 162
+	  161 -> 163
+	  162 -> 48
+	  163 -> 47
+	  164 -> 143
+	  165 -> 224
+	  166 -> 107
+	  167 -> 166
+	  168 -> 31
+	  169 -> 136
+	  170 -> 54
+	  171 -> 172
+	  171 -> 173
+	  172 -> 101
+	  173 -> 55
+	  174 -> 54
+	  175 -> 202
+	  175 -> 118
+	  176 -> 205
+	  177 -> 145
+	  178 -> 93
+	  179 -> 121
+	  180 -> 225
+	  181 -> 224
+	  182 -> 186
+	  183 -> 97
+	  184 -> 125
+	  185 -> 223
+	  186 -> 43
+	  186 -> 137
+	  186 -> 115
+	  186 -> 157
+	  187 -> 117
+	  188 -> 154
+	  189 -> 24
+	  190 -> 222
+	  191 -> 224
+	  192 -> 193
+	  192 -> 194
+	  193 -> 71
+	  194 -> 195
+	  195 -> 166
+	  196 -> 166
+	  197 -> 217
+	  198 -> 112
+	  199 -> 222
+	  200 -> 222
+	  201 -> 7
+	  202 -> 23
+	  203 -> 189
+	  204 -> 156
+	  205 -> 145
+	  206 -> 224
+	  206 -> 10
+	  206 -> 11
+	  206 -> 142
+	  206 -> 159
+	  207 -> 224
+	  207 -> 11
+	  207 -> 142
+	  208 -> 160
+	  208 -> 129
+	  209 -> 216
+	  210 -> 197
+	  211 -> 212
+	  212 -> 168
+	  212 -> 124
+	  212 -> 133
+	  214 -> 170
+	  215 -> 145
+	  216 -> 144
+	  217 -> 51
+	  218 -> 212
+	  219 -> 220
+	  219 -> 221
+	  220 -> 15
+	  221 -> 150
+	  222 -> 4
+	  222 -> 87
+	  222 -> 63
+	  223 -> 186
+	  224 -> 243
+	  225 -> 165
+	  226 -> 166
+	  227 -> 2
+	  229 -> 131
+	  230 -> 231
+	  231 -> 198
+	  232 -> 171
+	  233 -> 126
+	  234 -> 113
+	  235 -> 57
+	  237 -> 161
+	  238 -> 213
+	  239 -> 69
+	  240 -> 18
+	  241 -> 223
+	  242 -> 81
+	  243 -> 190
+	  244 -> 164
+}
+

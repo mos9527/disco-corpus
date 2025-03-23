@@ -1,0 +1,192 @@
+# FRITTE / KNICK-KNACKS STAND
+# The counter.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Frittte clerk: “我说，我不会是看到一个中年男人想要偷走一件价值4雷亚尔的雨衣吧？”"];
+	  3 [label="Variable[\"gates.frittte_savoire_steal_the_coat\"]"];
+	  4 [label="Variable[\"gates.frittte_savoire_steal_the_coat\"]", shape=diamond];
+	  5 [label="!(Variable[\"gates.frittte_savoire_steal_the_coat\"])", shape=diamond];
+	  6 [label="Variable[\"gates.fritte_tried_to_steal_raincoat_and_failed\"]"];
+	  7 [label="Variable[\"gates.fritte_tried_to_steal_raincoat_and_failed\"]", shape=diamond];
+	  8 [label="!(Variable[\"gates.fritte_tried_to_steal_raincoat_and_failed\"])", shape=diamond];
+	  9 [label="CheckItem(\"jacket_fritte_raincoat\")"];
+	  10 [label="CheckItem(\"jacket_fritte_raincoat\")", shape=diamond];
+	  11 [label="!(CheckItem(\"jacket_fritte_raincoat\"))", shape=diamond];
+	  12 [label="You: 试着抓一包。随便哪个都可以。把它藏进你的袖子里，然后……"];
+	  13 [label="Knick-knacks Stand: 左边是一些牛角面包和果汁瓶，一个矮架子上堆满了好几包雨衣。其中有一包不见了：就是你合法买下的那一包。"];
+	  14 [label="Rhetoric: 她的那句‘招惹弗利多’就像一句谚语，或者她是在引用别人的话。也许之后你可以问问她？"];
+	  15 [label="You: [离开。]"];
+	  16 [label="You: “不，你没看见。我没有做！”"];
+	  17 [label="CheckItem(\"jacket_fritte_raincoat\")"];
+	  18 [label="CheckItem(\"jacket_fritte_raincoat\")", shape=diamond];
+	  19 [label="!(CheckItem(\"jacket_fritte_raincoat\"))", shape=diamond];
+	  20 [label="Knick-knacks Stand: 左边是一些牛角面包和果汁瓶，一个矮架子上堆满了好几包雨衣。其中有一包不见了。某人已经再聪明不过了。"];
+	  21 [label="Kim Kitsuragi: “真的吗？一件*塑料雨披*？”警督叹了口气，望向别处。"];
+	  22 [label="You: 偷一件雨衣。"];
+	  23 [label="You: Variable[\"gates.fritte_savoire_redcheck\"]"];
+	  24 [label="Variable[\"gates.fritte_savoire_redcheck\"]", shape=diamond];
+	  25 [label="!(Variable[\"gates.fritte_savoire_redcheck\"])", shape=diamond];
+	  26 [label="IsKimHere()"];
+	  27 [label="IsKimHere()", shape=diamond];
+	  28 [label="!(IsKimHere())", shape=diamond];
+	  29 [label="Pain Threshold: 她大概14岁吧！你居然在一个未成年人面前丢脸，你到底有什么*毛病*啊，小子？！"];
+	  30 [label="You: “不要评判我。我需要征用它参与正式的警方调查。”"];
+	  31 [label="Jump to: [stuff_hub]"];
+	  32 [label="Jump to: [stuff_hub]"];
+	  33 [label="Frittte clerk: “你知道吗，招惹弗利多是很*危险*的。”她摩挲着自己的脸庞，沉思着。“把东西放在那儿吧，我一会儿再把它收起来。”"];
+	  34 [label="CheckItem(\"jacket_fritte_raincoat\")"];
+	  35 [label="CheckItem(\"jacket_fritte_raincoat\")", shape=diamond];
+	  36 [label="!(CheckItem(\"jacket_fritte_raincoat\"))", shape=diamond];
+	  37 [label="Knick-knacks Stand: 你看见一些包装好的雨衣摆在低矮的货架中，其上展列着牛角面包和果汁瓶。雨衣是透明的，只是背后印着一个巨大的‘弗利多’标语。"];
+	  38 [label="You: “我想买一件雨衣。”"];
+	  39 [label="Variable[\"gates.fritte_bought_rain_coat\"]"];
+	  40 [label="Variable[\"gates.fritte_bought_rain_coat\"]", shape=diamond];
+	  41 [label="!(Variable[\"gates.fritte_bought_rain_coat\"])", shape=diamond];
+	  42 [label="Variable[\"gates.fritte_tried_to_steal_raincoat_and_failed\"]"];
+	  43 [label="Variable[\"gates.fritte_tried_to_steal_raincoat_and_failed\"]", shape=diamond];
+	  44 [label="!(Variable[\"gates.fritte_tried_to_steal_raincoat_and_failed\"])", shape=diamond];
+	  45 [label="Variable[\"gates.frittte_savoire_theft_attempted\"]"];
+	  46 [label="Variable[\"gates.frittte_savoire_theft_attempted\"]", shape=diamond];
+	  47 [label="!(Variable[\"gates.frittte_savoire_theft_attempted\"])", shape=diamond];
+	  48 [label="Frittte clerk: “什么是什么？”女孩靠在柜台上，看着你手指的方向。“呃……是雨衣？你知道的——就是你刚才买的那种？”"];
+	  50 [label="Variable[\"gates.fritte_savoire_redcheck\"]"];
+	  51 [label="Variable[\"gates.fritte_savoire_redcheck\"]", shape=diamond];
+	  52 [label="!(Variable[\"gates.fritte_savoire_redcheck\"])", shape=diamond];
+	  53 [label="Jump to: [stuff_hub]"];
+	  54 [label="Variable[\"gates.fritte_bought_rain_coat\"]"];
+	  55 [label="Variable[\"gates.fritte_bought_rain_coat\"]", shape=diamond];
+	  56 [label="!(Variable[\"gates.fritte_bought_rain_coat\"])", shape=diamond];
+	  57 [label="Interfacing: 东西杂乱地堆积在一起，很难看出到底丢了什么。应该挺安全的。"];
+	  58 [label="Interfacing: 女孩埋头钻研杂志，头发盖住了她的脸庞……视线被阻挡，她肯定看不见你的手在动。"];
+	  59 [label="Frittte clerk: 店员盯着你，但是一时间没有说话。"];
+	  60 [label="Jump to: [stuff_hub]"];
+	  61 [label="Jump to: [stuff_hub]"];
+	  62 [label="Frittte clerk: “什么是什么？”女孩靠在柜台上，看着你手指的方向。“呃……是雨衣？你知道的——就是你刚才打算偷的那种？”"];
+	  63 [label="Jump to: [stuff_hub]"];
+	  64 [label="Knick-knacks Stand: 左边是一些牛角面包和果汁瓶，一个矮架子上堆满了好几包雨衣。然而，有一包躺在了肮脏的地板上：就是你试着偷走，但是失败的那一包。"];
+	  65 [label="Frittte clerk: “那是什么？”女孩靠在柜台上，看着你手指的方向。“嗯，是雨衣？”"];
+	  66 [label="You: “抱歉……我最近状态很糟糕……”"];
+	  67 [label="Frittte clerk: 她接着说到：“我是说，其实它花不了多少钱……所以，你为什么会想因为它去招惹弗利多呢？”"];
+	  68 [label="Variable[\"gates.frittte_savoire_steal_the_coat\"]"];
+	  69 [label="Variable[\"gates.frittte_savoire_steal_the_coat\"]", shape=diamond];
+	  70 [label="!(Variable[\"gates.frittte_savoire_steal_the_coat\"])", shape=diamond];
+	  71 [label="You: “那是什么？”（指着雨衣。）"];
+	  72 [label="Volition: 看着它，警探。你应该感到羞愧。除非你*合法买下*那包雨衣，挽回这一切，不然我保证你每次看见它都会感到有罪。"];
+	  73 [label="Interfacing: 她的注意力被雨衣吸引了，想要偷窃不被察觉就变得更加困难。"];
+	  74 [label="stuff_hub"];
+	  75 [label="Knick-knacks Stand: 左边是一些牛角面包和果汁瓶，一个矮架子上堆满了好几包雨衣。其中有一包不见了：你尝试偷走，最后又合法买下的那一包。"];
+	  76 [label="Volition: 错误已经挽回。现在你可以放松地休息了。"];
+	  77 [label="Endurance: 这样你在外面就会感觉温暖又舒适。很不错的选择，只是看起来有些傻傻的……"];
+	  78 [label="Interfacing: 单膝跪下。假装在系鞋带。从底部拿一包散装的。把它塞进袖子里。女孩*什么*也没注意到。"];
+	  79 [label="Frittte clerk: “呃，你是不是……”女孩盯着地上的东西。躺在灰扑扑的地面上的它，看起来有些悲伤。"];
+	  80 [label="Frittte clerk: “如果你想买的话，只需要4雷亚尔。”她拍了拍玻璃柜台。雨衣耐心地等着被人购买。"];
+	  81 [label="Jump to: [stuff_hub]"];
+	  82 [label="Frittte clerk: “是的——请买下它，不要偷……”店员从肮脏的地板上拿起衣服，然后递给你。"];
+	  83 [label="Frittte clerk: “好了。”店员从矮架子上拿出衣服，然后递给了你。"];
+	  84 [label="Interfacing: 哦不！我说*不要*让它啪的一声掉出来！你在搞什么鬼？"];
+	  85 [label="Interfacing: 女孩埋头钻研杂志，头发盖住了她的脸庞……视线被阻挡，她肯定看不见你的手在动。"];
+	  86 [label="Interfacing: “我想买一件雨衣。”"];
+	  0 -> 1
+	  1 -> 45
+	  2 -> 16
+	  2 -> 66
+	  2 -> 30
+	  3 -> 4
+	  3 -> 5
+	  4 -> 74
+	  5 -> 86
+	  6 -> 8
+	  6 -> 7
+	  7 -> 82
+	  8 -> 83
+	  9 -> 10
+	  9 -> 11
+	  10 -> 57
+	  11 -> 68
+	  12 -> 84
+	  14 -> 33
+	  16 -> 26
+	  17 -> 18
+	  17 -> 19
+	  18 -> 13
+	  19 -> 37
+	  21 -> 59
+	  22 -> 23
+	  23 -> 24
+	  23 -> 25
+	  24 -> 50
+	  25 -> 50
+	  26 -> 27
+	  26 -> 28
+	  27 -> 21
+	  28 -> 59
+	  29 -> 67
+	  30 -> 26
+	  31 -> 74
+	  32 -> 74
+	  33 -> 31
+	  34 -> 35
+	  34 -> 36
+	  35 -> 54
+	  36 -> 64
+	  37 -> 3
+	  38 -> 6
+	  39 -> 40
+	  39 -> 41
+	  40 -> 48
+	  41 -> 65
+	  42 -> 43
+	  42 -> 44
+	  43 -> 62
+	  44 -> 39
+	  45 -> 46
+	  45 -> 47
+	  46 -> 34
+	  47 -> 17
+	  48 -> 61
+	  50 -> 51
+	  50 -> 52
+	  51 -> 58
+	  52 -> 85
+	  53 -> 74
+	  54 -> 56
+	  54 -> 55
+	  55 -> 75
+	  56 -> 20
+	  57 -> 63
+	  58 -> 78
+	  59 -> 29
+	  60 -> 74
+	  61 -> 74
+	  62 -> 81
+	  63 -> 74
+	  64 -> 72
+	  65 -> 80
+	  66 -> 26
+	  67 -> 14
+	  68 -> 69
+	  68 -> 70
+	  69 -> 73
+	  70 -> 32
+	  71 -> 42
+	  72 -> 74
+	  73 -> 32
+	  74 -> 22
+	  74 -> 15
+	  74 -> 38
+	  74 -> 71
+	  76 -> 77
+	  77 -> 60
+	  78 -> 53
+	  79 -> 2
+	  80 -> 9
+	  81 -> 74
+	  82 -> 76
+	  83 -> 77
+	  84 -> 79
+	  85 -> 12
+	  86 -> 74
+}
+

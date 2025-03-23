@@ -1,0 +1,66 @@
+# APT / WRITING DESK IN CUNO'S APT
+# 2 bottles of speed on the table, in plain sight. A straw in the bottle. Low-quality trucker speed. Drugs have charges, this is a low-charge one. 0 bonus to your electrochem base-count of how many times you can use the drug.
+#
+#FIND THE SPEED finishes when you click on the table. While you're taking that shit, Kim is already checking the other room. Kitsuragi love goes down if you take the drugs.
+#
+#Table diag despaws after you've taken the drugs.
+#
+#Habit-initiation dialogue. Electrochem tells you blast one already in this dialogue. Ask Argo (abt cigarette initiation dial). It should also teach you to put it in your hold slot. 
+#
+#Global afterthought, electrochem pops up
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Jump to: [table hub]"];
+	  3 [label="You: “警督，我在桌子上发现了精神活性物质。”"];
+	  5 [label="Kim Kitsuragi: “很好，没收了。”"];
+	  6 [label="Writing Desk: 一本电话簿躺在桌子上，压在一叠物业账单上面。就在它旁边，一小瓶安非他命就摆在十分显眼的地方，还方便地配了一根吸管。"];
+	  7 [label="Electrochemistry: 别等了，现在就庆祝吧！把这玩意一口气干个精光！等搜查完这张无聊的桌子，马上就去清点一下存货！"];
+	  8 [label="Esprit de Corps: 这么少量的安非他命，警督压根就不会感兴趣的。他在听其他房间的动静。"];
+	  9 [label="Electrochemistry: 找到了！它就在那里，宝贝。今天是你的幸运日。"];
+	  10 [label="You: 从桌子上拿走思必得。"];
+	  11 [label="Variable[\"TASK.get_speed\"] == true  and  Variable[\"TASK.get_speed_done\"] == false"];
+	  12 [label="Variable[\"TASK.get_speed\"] == true  and  Variable[\"TASK.get_speed_done\"] == false", shape=diamond];
+	  13 [label="!(Variable[\"TASK.get_speed\"] == true  and  Variable[\"TASK.get_speed_done\"] == false)", shape=diamond];
+	  14 [label="table hub"];
+	  15 [label="IsKimHere()"];
+	  16 [label="IsKimHere()", shape=diamond];
+	  17 [label="!(IsKimHere())", shape=diamond];
+	  18 [label="You: [离开。]"];
+	  19 [label="Savoir Faire: 你可以把瓶子直接塞进口袋——警督甚至都不会注意到……"];
+	  20 [label="Half Light: 在你面对那头野兽，德鲁伊特之前，一口气干了它。你需要一点鼓励。"];
+	  21 [label="Writing Desk: 你把瓶子塞进口袋，好像这是世界上最自然的一件事情。"];
+	  22 [label="Variable[\"apt.cuno_dad_main_hub_reached\"]"];
+	  23 [label="Variable[\"apt.cuno_dad_main_hub_reached\"]", shape=diamond];
+	  24 [label="!(Variable[\"apt.cuno_dad_main_hub_reached\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 6
+	  2 -> 14
+	  3 -> 5
+	  5 -> 8
+	  6 -> 11
+	  7 -> 22
+	  8 -> 2
+	  9 -> 15
+	  10 -> 21
+	  11 -> 12
+	  11 -> 13
+	  12 -> 9
+	  13 -> 15
+	  14 -> 18
+	  14 -> 10
+	  14 -> 3
+	  15 -> 16
+	  15 -> 17
+	  16 -> 19
+	  17 -> 14
+	  19 -> 14
+	  20 -> 18
+	  21 -> 7
+	  22 -> 24
+	  22 -> 23
+	  23 -> 18
+	  24 -> 20
+}
+

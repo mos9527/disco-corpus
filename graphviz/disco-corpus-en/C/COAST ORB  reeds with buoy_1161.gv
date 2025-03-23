@@ -1,0 +1,24 @@
+# COAST ORB / reeds with buoy
+# Visual Calculus notes that this is a good place to hide things.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: What is this about?"];
+	  3 [label="buoy_orb"];
+	  4 [label="Inland Empire: You don't have a reason to -- yet."];
+	  5 [label="You: [Discard thought.]"];
+	  7 [label="You: Wait, I can't see anything interesting..."];
+	  8 [label="Inland Empire: That patch of reeds over there -- it's a great place to hide something. Kind of out of the way, being so close to the water."];
+	  9 [label="Inland Empire: Nothing. Just a hunch. The hunch passes, leaving you there, by the old buoy bobbing in the water. Time to go."];
+	  0 -> 1
+	  1 -> 8
+	  2 -> 9
+	  3 -> 2
+	  3 -> 5
+	  3 -> 7
+	  4 -> 3
+	  7 -> 4
+	  8 -> 3
+}
+

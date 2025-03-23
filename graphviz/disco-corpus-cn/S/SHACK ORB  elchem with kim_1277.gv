@@ -1,0 +1,64 @@
+# SHACK ORB / elchem with kim
+# Discussing the speed with Kim.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 舔一口。大口一点。"];
+	  4 [label="no_kimz"];
+	  5 [label="Electrochemistry: 是的，反正这点量也不多。你不过是在*愚弄*自己。"];
+	  6 [label="Kim Kitsuragi: “不过确实有个有趣的发现——小孩前往港口的备用通道。做得好。”"];
+	  7 [label="You: “我绝对没想过拿走它，我发誓！我不过是想到了*正义*。”"];
+	  8 [label="Variable[\"backyard.cloak_greeting_done\"] == true  or Variable[\"yard.sense_clicked_on_collapsing_doorway\"] == true  or  Variable[\"yard.yard_sense_clicked_on_reinforcing_pillars\"] == true"];
+	  9 [label="Variable[\"backyard.cloak_greeting_done\"] == true  or Variable[\"yard.sense_clicked_on_collapsing_doorway\"] == true  or  Variable[\"yard.yard_sense_clicked_on_reinforcing_pillars\"] == true", shape=diamond];
+	  10 [label="!(Variable[\"backyard.cloak_greeting_done\"] == true  or Variable[\"yard.sense_clicked_on_collapsing_doorway\"] == true  or  Variable[\"yard.yard_sense_clicked_on_reinforcing_pillars\"] == true)", shape=diamond];
+	  11 [label="Kim Kitsuragi: “还是不要比较好吧？”他看着你。“警探，以我们的薪金等级，不该做这种事。不过……”他指了指角落的梯子。"];
+	  12 [label="Electrochemistry: 我的心脏狂跳不止！快冷静下来……这是安非他命啊，安非他命！\n啊，安非他命，甜美的安非他命！你觉得自己应该找出货源……也许还能再多弄点？\n啊，安非他命，甜美的安非他命！也许那个叫坤诺的小孩知道能在哪儿找到更多？"];
+	  13 [label="You: 舔一小口。非常非常小，特别特别小的那种。"];
+	  14 [label="Kim Kitsuragi: “当然了，警探。*迅速*的正义。别担心，我们不需要调查麻醉剂的所有来源……”警督指了指角落里的梯子。"];
+	  15 [label="Kim Kitsuragi: “看到那边的*梯子*了吗？也许是通往工业港口的其他通道，不是吗？可能是本地小孩子的秘密通道。”"];
+	  16 [label="Electrochemistry: 尽责的毒品使用。你的舌尖品尝到一股淡淡的苦味。这点量不够让一个成年男子怎么样。"];
+	  17 [label="You: “有人拿走了这里的麻醉剂。也许警方应该介入？”"];
+	  18 [label="You: 不要舔。"];
+	  19 [label="Kim Kitsuragi: 警督并不是在研究镜子里的粉末。他在研究你。"];
+	  20 [label="IsKimHere()"];
+	  21 [label="IsKimHere()", shape=diamond];
+	  22 [label="!(IsKimHere())", shape=diamond];
+	  23 [label="Electrochemistry: 你伸出舌头来回舔了盘子四五下。就像一条狗。不过，还是只有一点非常微弱的苦味。这点量不够让一个成年男子怎么样。"];
+	  24 [label="kim_full_of_perception"];
+	  25 [label="Rhetoric: 这种方法能够从侧面试探出他对使用毒品的态度。我是说，可以利用职业便利。"];
+	  26 [label="You: “我听说安非他命能让你变成一个真正的好警探。所以，*你*是个好警探吗？”"];
+	  27 [label="Kim Kitsuragi: “不，我只是个*普通*的警探。谢谢。”"];
+	  28 [label="Electrochemistry: 是啊，迅速，如闪电般的正义！更快……更强……更公正！"];
+	  0 -> 1
+	  1 -> 12
+	  2 -> 23
+	  4 -> 2
+	  4 -> 18
+	  4 -> 13
+	  7 -> 14
+	  8 -> 9
+	  8 -> 10
+	  9 -> 6
+	  10 -> 15
+	  11 -> 8
+	  12 -> 20
+	  13 -> 16
+	  14 -> 28
+	  17 -> 11
+	  18 -> 5
+	  19 -> 25
+	  20 -> 21
+	  20 -> 22
+	  21 -> 19
+	  22 -> 4
+	  24 -> 17
+	  24 -> 26
+	  24 -> 7
+	  25 -> 24
+	  26 -> 27
+	  27 -> 17
+	  27 -> 7
+	  28 -> 8
+}
+

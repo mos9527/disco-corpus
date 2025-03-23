@@ -1,0 +1,357 @@
+# INVENTORY / KLAASJE PASSPORT
+# This is the inventory interaction folder for the readable item: Klaasje's Passport!
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Logic: 卡拉洁藏起来的证件——在一个空浮标里。"];
+	  3 [label="Oranjese Passport: 相片上的女人没有回应。她用那双神秘的眼睛看着你，伪装成了其他人的样子。"];
+	  4 [label="Encyclopedia: 一只偶尔喜欢收集东西的好奇章鱼？或者是一只乌贼？"];
+	  5 [label="Cuno: “坤诺会说这跟你*想到*的任何东西都*不一样*。坤诺要深入调查这点破事，不过不管是什么——你被耍了。这点很肯定。”"];
+	  6 [label="Shivers: 风沉默无语。街道上不见她的身影。她已经不在瑞瓦肖城了。"];
+	  7 [label="Encyclopedia: 充满好奇的章鱼就有类似的习性。就连乌贼也会这样。"];
+	  8 [label="Untitled hub (02)"];
+	  9 [label="Kim Kitsuragi: 他翻开笔记本。“她说是*安诺·梅耶尔-斯密特*。安诺——梅耶尔——斯密特。”"];
+	  10 [label="You: “也许它跟我们的奥兰治小姐之间有深仇大恨吧？”"];
+	  11 [label="Kim Kitsuragi: “不。她对我们撒谎了。她那个所谓的真名也不是她的真名。不知怎么的，她连那个也设法骗过了我们……”他几乎笑了起来。"];
+	  12 [label="Variable[\"TASK.arrest_klaasje_done\"]"];
+	  13 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  14 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  15 [label="Jump to: [Cuno: \"\"Cool. Got lied to. Double-lied to....\"]"];
+	  16 [label="Variable[\"TASK.arrest_klaasje_done\"]"];
+	  17 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  18 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  19 [label="Empathy: 会吗？也许只是简单地好奇。"];
+	  20 [label="Variable[\"TASK.arrest_klaasje_done\"]"];
+	  21 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  22 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  23 [label="Variable[\"XP.klaasjes_real_name\"]"];
+	  24 [label="Variable[\"XP.klaasjes_real_name\"]", shape=diamond];
+	  25 [label="!(Variable[\"XP.klaasjes_real_name\"])", shape=diamond];
+	  26 [label="Kim Kitsuragi: “像喜鹊那样吗？”他看了看周围。“真是个巧合。那它可能还会*收集*其他物品，这一点是很不寻常的……”"];
+	  27 [label="Oranjese Passport: 是卡拉洁。黑色短发，戴着眼镜。看起来有些男孩子气，好像也更年轻一些。"];
+	  28 [label="Kim Kitsuragi: “我不知道卡拉林·艾拉洁是谁，不过可以肯定的说也不是她。简而言之：我们又被骗了。在某种程度上来说，她*还在*欺骗我们……”警督忍不住笑了。"];
+	  29 [label="You: [把护照放在一边。]"];
+	  30 [label="Drama: 这位卡特琳·艾拉洁——可以肯定也不是她。简而言之：您被骗了，大人。也许我们放她走最好——至少我们不用再审问她了。"];
+	  31 [label="Variable[\"TASK.arrest_klaasje_done\"]"];
+	  32 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  33 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  34 [label="IsKimHere()"];
+	  35 [label="IsKimHere()", shape=diamond];
+	  36 [label="!(IsKimHere())", shape=diamond];
+	  37 [label="Jump to: [passport_main_hub]"];
+	  38 [label="Savoir Faire: 57分局需要加倍她周围的安全保护。"];
+	  39 [label="Jump to: [passport_main_hub]"];
+	  40 [label="You: “这玩意在竹节虫窝里干什么？”"];
+	  41 [label="Untitled hub"];
+	  42 [label="You: “是竹节虫拿走的——我*感觉*到它这么做了。我看见某种东西用细长的腿打开了那个浮标。”（指指你的头。）"];
+	  43 [label="You: “卡特琳·艾拉洁应该是她的真名。她对我们撒谎了。”"];
+	  44 [label="Variable[\"TASK.arrest_klaasje_done\"]"];
+	  45 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  46 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  47 [label="Jump to: [passport_main_hub]"];
+	  48 [label="Variable[\"XP.detect_compromized_skillset\"]"];
+	  49 [label="Variable[\"XP.detect_compromized_skillset\"]", shape=diamond];
+	  50 [label="!(Variable[\"XP.detect_compromized_skillset\"])", shape=diamond];
+	  51 [label="You: “那她的*真名*叫什么？”"];
+	  52 [label="Jump to: [passport_main_hub]"];
+	  53 [label="Kim Kitsuragi: “卡拉洁藏起来的证件……”警督看着你手中的东西。“空浮标里的。”"];
+	  54 [label="passport_main_hub"];
+	  55 [label="You: 看着相片。"];
+	  56 [label="Kim Kitsuragi: “是的，不知怎么的，她成功骗过了我们——*又一次*。从某种程度上来说，她现在还在欺骗我们。”警督笑了。"];
+	  57 [label="Kim Kitsuragi: “我不知道卡拉林·艾拉洁是谁，不过可以肯定的说也不是她。简而言之：我们又被骗了。不管是谁现在在57分局审问她，真要祝对方好运了。”"];
+	  58 [label="Variable[\"TASK.inspect_the_buoy_done\"]"];
+	  59 [label="Variable[\"TASK.inspect_the_buoy_done\"]", shape=diamond];
+	  60 [label="!(Variable[\"TASK.inspect_the_buoy_done\"])", shape=diamond];
+	  61 [label="You: “这上面的名字跟她说的不一样。我被骗了。”"];
+	  62 [label="Reaction Speed: 她说假护照上的名字应该是*安诺·梅耶尔-斯密特*……"];
+	  63 [label="Volition: 我告诉过你，她一直在对你撒谎，现在很可能又在跟别人撒谎呢——跟另一个警探。"];
+	  64 [label="Volition: 我告诉过你，她一直在对你撒谎，现在很可能又在跟别人撒谎呢。在另一座城市。她的动作很快。"];
+	  65 [label="Kim Kitsuragi: “像喜鹊那样吗？”他看了看周围。“真是个巧合。那它可能还会*收集*其他物品，这一点是很不寻常的……”"];
+	  66 [label="CheckItem(\"deserter_scope\")  or  CheckItem(\"hat_t500\")"];
+	  67 [label="CheckItem(\"deserter_scope\")  or  CheckItem(\"hat_t500\")", shape=diamond];
+	  68 [label="!(CheckItem(\"deserter_scope\")  or  CheckItem(\"hat_t500\"))", shape=diamond];
+	  69 [label="Jump to: [passport_main_hub]"];
+	  70 [label="Kim Kitsuragi: “我不知道。不过也不是卡特琳·艾拉洁或者卡拉洁。或者安诺·梅耶尔-斯密特。我们甚至连她的表面都没有触及到，警探。”"];
+	  71 [label="Kim Kitsuragi: “卡拉洁藏起来的证件……”警督看着你手中的东西。“她说东西在海岸边的一个空浮标里。”"];
+	  72 [label="Encyclopedia: 充满好奇的章鱼就有类似的习性。就连乌贼也会这样。"];
+	  73 [label="Oranjese Passport: 也不是*安诺·梅耶尔-斯密特*。她是这么跟你说的。安诺——梅耶尔——斯密特。还记得吗？你被骗了。又一次。"];
+	  74 [label="Oranjese Passport: 护照上的女孩看着你，没有回应。她不是卡特琳·艾拉洁。或者安诺·梅耶尔-斯密特。*或者*卡拉洁。这些是可以肯定的。"];
+	  75 [label="You: “上面写着——卡特琳·艾拉洁。”"];
+	  76 [label="IsKimHere()"];
+	  77 [label="IsKimHere()", shape=diamond];
+	  78 [label="!(IsKimHere())", shape=diamond];
+	  79 [label="You: “她告诉我说这是她的真名——但并不是。这上面的名字甚至跟她说的都不一样……”"];
+	  80 [label="Jump to: [passport_main_hub]"];
+	  81 [label="Empathy: 一张老照片。拍摄于惨遭生活摧残之前。"];
+	  82 [label="Kim Kitsuragi: “章鱼属于完全不同的种类。它甚至都不是昆虫，而是软体动物。不过，没错——我明白你的意思了。”"];
+	  83 [label="Kim Kitsuragi: “竹节虫是不会跟人结仇的。只有人类和某些跟踪的捕食者才会这么做。”"];
+	  84 [label="Jump to: [passport_main_hub]"];
+	  85 [label="Variable[\"XP.klaasjes_real_name\"]"];
+	  86 [label="Variable[\"XP.klaasjes_real_name\"]", shape=diamond];
+	  87 [label="!(Variable[\"XP.klaasjes_real_name\"])", shape=diamond];
+	  88 [label="Jump to: [passport_main_hub]"];
+	  89 [label="Jump to: [You: \"\"Never mind.\"\"]"];
+	  90 [label="Logic: 更糟糕的是——她的*真名实姓*应该是*卡特琳·艾拉洁*。*卡拉洁*这个名字是这么来的，记住了？真见鬼！"];
+	  91 [label="Kim Kitsuragi: “有可能……但还是解释不了这是怎么跑到巢穴里的。”"];
+	  92 [label="You: “也许这是她的真护照？不是为了伪装？因为这是她的真名。”"];
+	  93 [label="Jump to: [passport_main_hub]"];
+	  94 [label="Oranjese Passport: 这本护照，是由奥兰治独立共和国签发的——发给了一个名叫卡特琳·艾拉洁的黑发女子。"];
+	  95 [label="Volition: 我告诉过你，她一直在对你撒谎，现在很可能又在跟别人撒谎呢——跟另一个警探。"];
+	  96 [label="Logic: 她的*真名实姓*应该是卡特琳·艾拉洁。*卡拉洁*这个名字是这么来的，记住了？真见鬼！"];
+	  97 [label="Cuno: “哼——好啊。*别*告诉坤诺。让坤诺蒙在鼓里吧。随便。”他假装漠不关心。"];
+	  98 [label="Variable[\"XP.klaasjes_real_name\"]"];
+	  99 [label="Variable[\"XP.klaasjes_real_name\"]", shape=diamond];
+	  100 [label="!(Variable[\"XP.klaasjes_real_name\"])", shape=diamond];
+	  101 [label="Rhetoric: 事到如今，警督已经接受了你不寻常的办案方式。"];
+	  102 [label="Volition: 我告诉过你，她一直在对你撒谎，现在很可能又在跟别人撒谎呢。在另一座城市。"];
+	  103 [label="Kim Kitsuragi: “我不知道。不过不是卡特琳·艾拉洁或者安诺·梅耶尔-斯密特。或者卡拉洁。不管她是谁——我们回去之后，我需要警告我们的拘留室。她周围的安全保护必须加倍。”"];
+	  104 [label="IsCunoInParty()"];
+	  105 [label="IsCunoInParty()", shape=diamond];
+	  106 [label="!(IsCunoInParty())", shape=diamond];
+	  107 [label="Drama: 这位卡特琳·艾拉洁——可以肯定也不是她。简而言之：您被骗了，大人。不管57分局现在是谁在审问她，祝君好运。"];
+	  108 [label="Variable[\"inventory.passport_empathy_curious\"]  or  Variable[\"inventory.passport_encyclo_curious\"]"];
+	  109 [label="Variable[\"inventory.passport_empathy_curious\"]  or  Variable[\"inventory.passport_encyclo_curious\"]", shape=diamond];
+	  110 [label="!(Variable[\"inventory.passport_empathy_curious\"]  or  Variable[\"inventory.passport_encyclo_curious\"])", shape=diamond];
+	  112 [label="IsCunoInParty()"];
+	  113 [label="IsCunoInParty()", shape=diamond];
+	  114 [label="!(IsCunoInParty())", shape=diamond];
+	  115 [label="Variable[\"TASK.inspect_the_buoy_done\"]"];
+	  116 [label="Variable[\"TASK.inspect_the_buoy_done\"]", shape=diamond];
+	  117 [label="!(Variable[\"TASK.inspect_the_buoy_done\"])", shape=diamond];
+	  118 [label="Cuno: “我他妈怎么知道……也是为了收藏？比如说章鱼之类的会感到，好奇？”"];
+	  119 [label="IsKimHere()"];
+	  120 [label="IsKimHere()", shape=diamond];
+	  121 [label="!(IsKimHere())", shape=diamond];
+	  122 [label="Variable[\"XP.detect_compromized_skillset\"]"];
+	  123 [label="Variable[\"XP.detect_compromized_skillset\"]", shape=diamond];
+	  124 [label="!(Variable[\"XP.detect_compromized_skillset\"])", shape=diamond];
+	  125 [label="Cuno: “酷。被骗了。两次被骗。我明白了。这种事你们警察要找坤诺。没人能跟坤诺说谎。”他点点头，表情严肃又认真。"];
+	  126 [label="Variable[\"XP.detect_compromized_skillset\"]"];
+	  127 [label="Variable[\"XP.detect_compromized_skillset\"]", shape=diamond];
+	  128 [label="!(Variable[\"XP.detect_compromized_skillset\"])", shape=diamond];
+	  129 [label="Kim Kitsuragi: “我可以理解头盔有可能被水流冲上这座岛。也可以理解为什么瞄准镜会出现在这里——可能是德罗斯先生弄丢了？但搜寻这种东西对节肢动物而言可是*非常*罕见的习性。”"];
+	  130 [label="You: “也许它很好奇？像是一只章鱼？”"];
+	  131 [label="Shivers: 风沉默无语。街道上不见她的身影。她已经不在瑞瓦肖城了。"];
+	  132 [label="IsCunoInParty()"];
+	  133 [label="IsCunoInParty()", shape=diamond];
+	  134 [label="!(IsCunoInParty())", shape=diamond];
+	  135 [label="Untitled hub"];
+	  136 [label="You: “没关系。”"];
+	  137 [label="IsKimHere()"];
+	  138 [label="IsKimHere()", shape=diamond];
+	  139 [label="!(IsKimHere())", shape=diamond];
+	  140 [label="Variable[\"TASK.arrest_klaasje_done\"]"];
+	  141 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  142 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  143 [label="Jump to: [passport_main_hub]"];
+	  144 [label="Logic: 她的*真名实姓*应该是卡特琳·艾拉洁。*卡拉洁*这个名字是这么来的，记住了？真见鬼！"];
+	  145 [label="Volition: 我告诉过你，她一直在对你撒谎，现在很可能又在跟别人撒谎呢。在另一座城市。她的动作很快。"];
+	  146 [label="Variable[\"TASK.arrest_klaasje_done\"]"];
+	  147 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  148 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  149 [label="Kim Kitsuragi: “也许是我们的德罗斯先生从卡拉洁的——或者不管她叫什么名字——藏身之处拿走的？或者……”"];
+	  150 [label="You: “我觉得是*竹节虫*拿走的。”"];
+	  151 [label="Volition: 我告诉过你，她一直在对你撒谎，现在很可能又在跟别人撒谎呢——跟另一个警探。"];
+	  152 [label="Logic: 卡拉洁藏起来的证件。她说放在海岸边的一个空浮标里。"];
+	  153 [label="Cuno: “好吧。那又怎么样？跟坤诺同步一下消息。”"];
+	  154 [label="IsCunoInParty()"];
+	  155 [label="IsCunoInParty()", shape=diamond];
+	  156 [label="!(IsCunoInParty())", shape=diamond];
+	  157 [label="You: “也许——是为了什么勒索计划？”"];
+	  158 [label="Kim Kitsuragi: 他看向东边。“也许没逮捕她更好。谁知道这个见鬼的女人现在会把我们辖区搞成什么样……”"];
+	  0 -> 1
+	  1 -> 94
+	  2 -> 154
+	  3 -> 4
+	  4 -> 88
+	  5 -> 74
+	  6 -> 39
+	  7 -> 108
+	  8 -> 43
+	  8 -> 92
+	  9 -> 85
+	  10 -> 83
+	  11 -> 93
+	  12 -> 13
+	  12 -> 14
+	  13 -> 151
+	  14 -> 102
+	  15 -> 125
+	  16 -> 17
+	  16 -> 18
+	  17 -> 63
+	  18 -> 64
+	  19 -> 7
+	  20 -> 21
+	  20 -> 22
+	  21 -> 103
+	  22 -> 70
+	  23 -> 24
+	  23 -> 25
+	  24 -> 144
+	  25 -> 89
+	  25 -> 61
+	  26 -> 66
+	  27 -> 81
+	  28 -> 143
+	  30 -> 37
+	  31 -> 32
+	  31 -> 33
+	  32 -> 38
+	  33 -> 6
+	  34 -> 35
+	  34 -> 36
+	  35 -> 149
+	  36 -> 132
+	  37 -> 54
+	  38 -> 39
+	  39 -> 54
+	  40 -> 34
+	  41 -> 42
+	  41 -> 157
+	  41 -> 150
+	  42 -> 65
+	  43 -> 56
+	  44 -> 45
+	  44 -> 46
+	  45 -> 95
+	  46 -> 145
+	  47 -> 54
+	  48 -> 49
+	  48 -> 50
+	  49 -> 12
+	  50 -> 8
+	  51 -> 137
+	  52 -> 54
+	  53 -> 54
+	  54 -> 40
+	  54 -> 75
+	  54 -> 51
+	  54 -> 55
+	  54 -> 29
+	  55 -> 27
+	  56 -> 93
+	  57 -> 143
+	  58 -> 59
+	  58 -> 60
+	  59 -> 53
+	  60 -> 71
+	  61 -> 15
+	  62 -> 54
+	  63 -> 80
+	  64 -> 80
+	  65 -> 101
+	  66 -> 67
+	  66 -> 68
+	  67 -> 129
+	  68 -> 84
+	  69 -> 54
+	  70 -> 158
+	  71 -> 54
+	  72 -> 88
+	  73 -> 98
+	  74 -> 31
+	  75 -> 119
+	  76 -> 77
+	  76 -> 78
+	  77 -> 58
+	  78 -> 115
+	  79 -> 125
+	  80 -> 54
+	  81 -> 69
+	  82 -> 84
+	  83 -> 84
+	  84 -> 54
+	  85 -> 86
+	  85 -> 87
+	  86 -> 96
+	  87 -> 140
+	  88 -> 54
+	  89 -> 136
+	  90 -> 126
+	  91 -> 42
+	  91 -> 150
+	  92 -> 11
+	  93 -> 54
+	  94 -> 76
+	  95 -> 135
+	  96 -> 48
+	  97 -> 47
+	  98 -> 99
+	  98 -> 100
+	  99 -> 90
+	  100 -> 146
+	  101 -> 66
+	  102 -> 8
+	  103 -> 52
+	  104 -> 105
+	  104 -> 106
+	  105 -> 153
+	  106 -> 73
+	  107 -> 37
+	  108 -> 109
+	  108 -> 110
+	  109 -> 130
+	  109 -> 10
+	  110 -> 84
+	  112 -> 113
+	  112 -> 114
+	  113 -> 5
+	  114 -> 74
+	  115 -> 116
+	  115 -> 117
+	  116 -> 2
+	  117 -> 152
+	  118 -> 72
+	  119 -> 120
+	  119 -> 121
+	  120 -> 9
+	  121 -> 104
+	  122 -> 123
+	  122 -> 124
+	  123 -> 44
+	  124 -> 135
+	  125 -> 47
+	  126 -> 128
+	  126 -> 127
+	  127 -> 16
+	  128 -> 80
+	  129 -> 19
+	  130 -> 82
+	  131 -> 52
+	  132 -> 133
+	  132 -> 134
+	  133 -> 118
+	  134 -> 3
+	  135 -> 136
+	  135 -> 79
+	  136 -> 97
+	  137 -> 138
+	  137 -> 139
+	  138 -> 20
+	  139 -> 112
+	  140 -> 141
+	  140 -> 142
+	  141 -> 57
+	  142 -> 28
+	  143 -> 54
+	  144 -> 122
+	  145 -> 135
+	  146 -> 147
+	  146 -> 148
+	  147 -> 107
+	  148 -> 30
+	  149 -> 41
+	  150 -> 26
+	  151 -> 8
+	  152 -> 154
+	  153 -> 23
+	  154 -> 155
+	  154 -> 156
+	  155 -> 62
+	  156 -> 54
+	  157 -> 91
+	  158 -> 131
+}
+

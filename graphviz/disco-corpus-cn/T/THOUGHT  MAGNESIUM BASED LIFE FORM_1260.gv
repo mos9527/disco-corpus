@@ -1,0 +1,67 @@
+# THOUGHT / MAGNESIUM BASED LIFE FORM
+# MAGNESIUM BASED LIFE FORM INITIATION
+#
+#triggered in Cuno dialogue; as an Obsession!
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Electrochemistry: 也不是吡嚯浣酮，那个甜美又迷人的精神辐射药品。"];
+	  3 [label="You: 所以我的身体里缺镁吗？"];
+	  4 [label="Electrochemistry: 而且肯定也不是右旋安非他命。"];
+	  5 [label="Electrochemistry: 也不是抽了40年的烟。就是缺镁。还有过量饮用咖啡。你不能再喝咖啡了。它会严重破坏你的消化系统。"];
+	  6 [label="Variable[\"character.habit_pyrholidon\"]"];
+	  7 [label="Variable[\"character.habit_pyrholidon\"]", shape=diamond];
+	  8 [label="!(Variable[\"character.habit_pyrholidon\"])", shape=diamond];
+	  9 [label="You: 我他妈当然知道不是酒精……或者其他什么东西了。"];
+	  10 [label="Composure: 你真的*太需要*多镁一点了！你很可能已经心脏病发两次，还有一次轻度中风……唯一的处方就是加入疯狂剂量的镁。"];
+	  11 [label="Composure: 是的，而且是至关重要的。看看你自己。因为血液里缺少镁，你几乎就快退化成一条咸鱼了。"];
+	  12 [label="Electrochemistry: 你血液里面的镁含量已经低到一个很危险的水平。这里说的是低镁含量，*不是*高酒精含量。"];
+	  13 [label="You: 我不能再想这个。[放弃思维。]"];
+	  14 [label="You: 我身体的镁含量挺好的。[放弃思维。]"];
+	  15 [label="Composure: 是的。如果你想活下去，就需要*进化*。你需要跨越碳的壁垒。马上去找药剂师，买下疯狂剂量的镁——它会逆转你损坏的循环系统。"];
+	  16 [label="Variable[\"yard.maglife_afterthought_elchem_summoned\"]"];
+	  17 [label="Variable[\"yard.maglife_afterthought_elchem_summoned\"]", shape=diamond];
+	  18 [label="!(Variable[\"yard.maglife_afterthought_elchem_summoned\"])", shape=diamond];
+	  19 [label="Endurance: 一次中风？别谦虚了。他现在就已经中风了。"];
+	  20 [label="Electrochemistry: 只要记住——它不是酒精。但酒精也要多买一点，因为酒精*不是*问题。"];
+	  21 [label="You: 所以我要再稍微来点*镁*？"];
+	  22 [label="Composure: 稍微来点*镁*？你在说什么呢？！你需要*多加*一点镁！你很可能已经心脏病发两次，还有一次轻度中风……唯一的处方就是加入疯狂剂量的镁。"];
+	  23 [label="magnesium_based_hub"];
+	  25 [label="Electrochemistry: 是啊，其他东西！其他东西万岁！它们让你变得强壮如牛。"];
+	  26 [label="You: 你是说……我需要变成一个以镁过活的生命体？"];
+	  27 [label="Composure: 听见了吗？镁。那是你缺少的东西。缺少镁会让你变得没精打采。"];
+	  28 [label="You: 我需要再多*镁*一点？"];
+	  0 -> 1
+	  1 -> 27
+	  2 -> 5
+	  3 -> 11
+	  4 -> 6
+	  6 -> 8
+	  6 -> 7
+	  7 -> 2
+	  8 -> 5
+	  9 -> 25
+	  10 -> 19
+	  11 -> 28
+	  11 -> 21
+	  12 -> 23
+	  15 -> 16
+	  16 -> 17
+	  16 -> 18
+	  17 -> 20
+	  19 -> 26
+	  19 -> 13
+	  20 -> 4
+	  21 -> 22
+	  22 -> 19
+	  23 -> 9
+	  23 -> 3
+	  23 -> 14
+	  25 -> 3
+	  25 -> 14
+	  26 -> 15
+	  27 -> 12
+	  28 -> 10
+}
+

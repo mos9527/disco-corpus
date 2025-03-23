@@ -1,0 +1,157 @@
+# KINEEMA / REPORTING THE CORPSE ON THE BOARDWALK
+# You report to the station that you have found a dead body from the boardwalk.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"There might be a *sequence killer* on the loose.\""];
+	  3 [label="You: \"An unidentified middle-aged man. Looks like he slipped, fell through a hole in the boardwalk and hit his head against the metal bench.\""];
+	  4 [label="Alice: \"Did you perform a field autopsy?\""];
+	  5 [label="You: \"No, it's still just a theory.\""];
+	  6 [label="Kim Kitsuragi: \"We suspect he might have been inebriated when he fell -- there were bottles all around him, and traces of vomit on his shirt.\""];
+	  7 [label="Alice: \"What about his belongings? Did you examine his clothes?\""];
+	  8 [label="You: \"It's from Central Jamrock Public Library. It belongs to someone named Billie Méjean.\""];
+	  9 [label="Alice: \"Can you please describe the body -- age, sex, cause of death?\""];
+	  10 [label="Alice: \"No field autopsy necessary...\" she repeats."];
+	  11 [label="Variable[\"boardwalk.library_card_main_hub\"]"];
+	  12 [label="Variable[\"boardwalk.library_card_main_hub\"]", shape=diamond];
+	  13 [label="!(Variable[\"boardwalk.library_card_main_hub\"])", shape=diamond];
+	  14 [label="IsKimHere()"];
+	  15 [label="IsKimHere()", shape=diamond];
+	  16 [label="!(IsKimHere())", shape=diamond];
+	  18 [label="You: \"He was wearing boots, trousers and an old leather jacket with a bright blue lining. I found a library card from his pockets.\""];
+	  19 [label="You: \"We're taking the case.\""];
+	  20 [label="IsKimHere()"];
+	  21 [label="IsKimHere()", shape=diamond];
+	  22 [label="!(IsKimHere())", shape=diamond];
+	  23 [label="Alice: \"What about his belongings? Did you examine his clothes?\" She goes on as if nothing happened."];
+	  24 [label="Alice: You can hear her sigh audibly on the other side."];
+	  25 [label="IsKimHere()"];
+	  26 [label="IsKimHere()", shape=diamond];
+	  27 [label="!(IsKimHere())", shape=diamond];
+	  28 [label="You: \"An unidentified middle-aged man. Height 170-175 cm, dark hair, medium build. Looks like he slipped, fell through a hole in the boardwalk and hit his head against the metal bench.\""];
+	  29 [label="You: \"No, seems like it was an accident.\""];
+	  30 [label="You: \"I haven't examined it yet.\""];
+	  31 [label="Kim Kitsuragi: \"Assign it to someone else, Alice -- we've got enough on our plate.\""];
+	  32 [label="Alice: \"I see.\" Silence. \"This is something you should discuss with the Lieutenant Kitsuragi, as you're sharing the case.\""];
+	  33 [label="Jump to: [The actual Radio HUB]"];
+	  34 [label="Alice: \"That's all for now. Thank you for reporting in. Is there anything else I can do for you?\""];
+	  35 [label="Kim Kitsuragi: \"The man was about 173 cm tall, stout, with dark hair and a moustache. We suspect he might have been inebriated when he slipped -- there were bottles all around him, and traces of vomit on his shirt.\""];
+	  36 [label="IsKimHere()"];
+	  37 [label="IsKimHere()", shape=diamond];
+	  38 [label="!(IsKimHere())", shape=diamond];
+	  39 [label="Kim Kitsuragi: \"No, we're not,\" the lieutenant rushes in to say. \"There is no evidence to suggest that this man was connected to the lynching -- or that we're dealing with a sequence killer here.\""];
+	  40 [label="Alice: \"Any signs of violence?\""];
+	  41 [label="Alice: \"I have assigned the case to Lieutenant Kim Kitsuragi. Please follow up on this library lead to identify the man. We'll send someone to take the body to the morgue.\""];
+	  42 [label="Alice: \"That's all for now. Thank you for reporting in. Is there anything else I can do for you?\""];
+	  43 [label="You: \"Yes.\""];
+	  44 [label="Alice: \"Do you and Lieutenant Kitsuragi want to take the case or should I assign it to someone else?\""];
+	  45 [label="Alice: \"Good, you have a lead.\""];
+	  46 [label="Alice: \"A sequence killer.\" You can hear her stop typing. \"Are you suggesting that this might be connected to the case you're working on?\""];
+	  47 [label="Perception (Hearing): You can hear her quickly typing in the background."];
+	  48 [label="You: \"No.\""];
+	  49 [label="Variable[\"boardwalk.corpse_viscal_personal_details\"]"];
+	  50 [label="Variable[\"boardwalk.corpse_viscal_personal_details\"]", shape=diamond];
+	  51 [label="!(Variable[\"boardwalk.corpse_viscal_personal_details\"])", shape=diamond];
+	  52 [label="Kim Kitsuragi: \"It looked like a simple accident to me, Alice. No field autopsy necessary.\""];
+	  53 [label="Alice: \"No? It's some *other* sequence killer?\" Silence. \"I see.\""];
+	  54 [label="Authority: So unprofessional of you... Pity!"];
+	  55 [label="Kim Kitsuragi: \"It looked like an accident to me, Alice,\" the lieutenant rushes in to say. \"But that's for the guys in processing to confirm.\""];
+	  56 [label="IsKimHere()"];
+	  57 [label="IsKimHere()", shape=diamond];
+	  58 [label="!(IsKimHere())", shape=diamond];
+	  59 [label="minihubo"];
+	  60 [label="Alice: \"You just made it up?\" Silence. \"I see.\""];
+	  61 [label="Variable[\"TASK.identify_corpse_boardwalk\"]"];
+	  62 [label="Variable[\"TASK.identify_corpse_boardwalk\"]", shape=diamond];
+	  63 [label="!(Variable[\"TASK.identify_corpse_boardwalk\"])", shape=diamond];
+	  64 [label="You: \"Actually, scratch that -- there is no sequence killer, I just made it up.\""];
+	  65 [label="Alice: \"One moment...\" You can hear her shuffling through some papers."];
+	  66 [label="Alice: \"Great, I'll give it to your colleagues. You don't have to worry about the case anymore, we'll send our officers to take away the body.\""];
+	  67 [label="You: \"Someone might have... pushed him?\""];
+	  68 [label="Alice: \"Any information on the library card?\""];
+	  69 [label="You: \"Please assign it to someone else.\""];
+	  7760201 [label="JUMP OUT to PLAZA / COUPRIS KINEEMA", shape=diamond];
+	  0 -> 1
+	  1 -> 65
+	  2 -> 46
+	  3 -> 25
+	  4 -> 5
+	  5 -> 14
+	  6 -> 40
+	  7 -> 18
+	  8 -> 45
+	  9 -> 49
+	  10 -> 47
+	  11 -> 12
+	  11 -> 13
+	  12 -> 8
+	  13 -> 30
+	  14 -> 16
+	  14 -> 15
+	  15 -> 55
+	  16 -> 47
+	  18 -> 68
+	  19 -> 41
+	  20 -> 21
+	  20 -> 22
+	  21 -> 31
+	  22 -> 69
+	  23 -> 18
+	  24 -> 54
+	  25 -> 26
+	  25 -> 27
+	  26 -> 35
+	  27 -> 40
+	  28 -> 56
+	  29 -> 10
+	  30 -> 24
+	  31 -> 66
+	  32 -> 47
+	  33 -> 7760201
+	  34 -> 33
+	  35 -> 40
+	  36 -> 37
+	  36 -> 38
+	  37 -> 39
+	  38 -> 59
+	  39 -> 52
+	  40 -> 2
+	  40 -> 67
+	  40 -> 29
+	  41 -> 42
+	  42 -> 33
+	  43 -> 32
+	  44 -> 61
+	  45 -> 44
+	  46 -> 36
+	  47 -> 7
+	  48 -> 53
+	  49 -> 50
+	  49 -> 51
+	  50 -> 28
+	  51 -> 3
+	  52 -> 10
+	  53 -> 23
+	  54 -> 44
+	  55 -> 47
+	  56 -> 57
+	  56 -> 58
+	  57 -> 6
+	  58 -> 40
+	  59 -> 48
+	  59 -> 64
+	  59 -> 43
+	  60 -> 23
+	  61 -> 62
+	  61 -> 63
+	  62 -> 19
+	  63 -> 20
+	  64 -> 60
+	  65 -> 9
+	  66 -> 34
+	  67 -> 4
+	  68 -> 11
+	  69 -> 66
+}
+

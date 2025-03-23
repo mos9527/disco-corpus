@@ -1,0 +1,210 @@
+# BOOKSTORE / MAP WALL
+# Different maps attached to the wall. Including the Map of Martinaise (fast travel?)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Map Wall: You can. On Caillou -- Revachol, a single black star; on Ozonne -- Fond de l'Air and Virmandeux; on Archipelagos -- Croyant-Morain, Villiers; on Semenine -- Olduvai. And on Laurentide -- Deora Of The Seven Seas..."];
+	  3 [label="You: Look at the edges."];
+	  4 [label="Map Wall: The maps look old and faded. Your eye catches a map of Insulinde, a map of Revachol, and a map of Martinaise."];
+	  5 [label="Interfacing: You peek at the storekeep, waiting for her to be distracted. When she's not looking, you deftly rip the map off the bulletin board and pocket it."];
+	  6 [label="Plaisance: \"They didn't get far... for some reason. A shame the project never got going. Would be nice if someone fixed Martinaise up. All these ruins are bad for business.\""];
+	  7 [label="Jump to: [mainmapwallhub]"];
+	  8 [label="Tutorial Agent: You've acquired an interactable item. Investigate this item further by going to the INTERACT tab in your INVENTORY."];
+	  9 [label="You: \"Why is the one of Martinaise so cheap?\""];
+	  10 [label="Map Wall: Variable[\"tc.isola\"]"];
+	  11 [label="Variable[\"tc.isola\"]", shape=diamond];
+	  12 [label="!(Variable[\"tc.isola\"])", shape=diamond];
+	  14 [label="Jump to: [mainmapwallhub]"];
+	  15 [label="Map Wall: Variable[\"TASK.buy_a_map_of_martinaise\"]  and  Variable[\"TASK.buy_a_map_of_martinaise_done\"] == false  and  CheckItem(\"map_of_martinaise\") == false"];
+	  16 [label="Variable[\"TASK.buy_a_map_of_martinaise\"]  and  Variable[\"TASK.buy_a_map_of_martinaise_done\"] == false  and  CheckItem(\"map_of_martinaise\") == false", shape=diamond];
+	  17 [label="!(Variable[\"TASK.buy_a_map_of_martinaise\"]  and  Variable[\"TASK.buy_a_map_of_martinaise_done\"] == false  and  CheckItem(\"map_of_martinaise\") == false)", shape=diamond];
+	  18 [label="You: And west of the river?"];
+	  19 [label="Volition: No. This is somewhere to be. This is all you have, but it's still something. Streets and sodium lights. The sky, the world. You're still alive."];
+	  20 [label="You: \"I want to buy the map of Martinaise.\""];
+	  21 [label="Empathy: Lost little pearls of light. Tiny fires in the dark."];
+	  22 [label="You: And Martinaise?"];
+	  23 [label="You: Look at the map of Revachol."];
+	  24 [label="Map Wall: It's not really a map. It's a tourist thing -- a picture postcard with buildings on it, drawn from an isometric perspective. A date in the upper right corner says: '48."];
+	  25 [label="You: \"What happened then?\""];
+	  26 [label="You: Squint first -- can you see *cities* on the islands?"];
+	  27 [label="Inland Empire: Connections to other worlds. Worlds past the Insulindian, unknown to you. You only know you've never been there."];
+	  28 [label="Shivers: No. Coal City is worse. A charred limb. Rain falls on its slick black streets. And then there's the Burnt-Out Quarter in the heart of Jamrock... is it cold in this bookstore, or is it just *you*?"];
+	  29 [label="Map Wall: Several maps have been attached to a bulletin board hidden inside the alcove. They're held up by small pins. The board has come loose from one corner."];
+	  30 [label="You: Look at the map of Insulinde."];
+	  31 [label="You: \"You seem to underestimate my resources, but sure, okay.\""];
+	  32 [label="Map Wall: The ocean breaks apart into a tangle of cosines and azimuths, all pointing into pale nothingness. *Mundi* is the north azimuth; *Graad* is the northeast azimuth; *Samara* is the east azimuth; *Seol* is the west azimuth. *Isolas*, they're called."];
+	  33 [label="You: What else?"];
+	  34 [label="Jump to: [mainmapwallhub]"];
+	  35 [label="Jump to: [mainmapwallhub]"];
+	  36 [label="Visual Calculus: This one *could* work for seeing where the shot came from."];
+	  37 [label="Map Wall: This large map displays archipelagos. You see a constellation of small dots on the light blue emptiness of the Insulindic ocean. The largest, in the northeast, is \"Le Caillou\" (you are here). Another, far away in the southwest -- \"Semenese Islands (Ile du Fantôme)\"."];
+	  38 [label="Kim Kitsuragi: The lieutenant nods toward it and says: \"Map of Martinaise. This could work maybe?\""];
+	  39 [label="Conceptualization: Perhaps they *are* gods. Gods of distance and outer dust."];
+	  40 [label="Map Wall: It's so small you can't even see it on the map. No... wait. There it is! North of Jamrock, the strip of coast next to the Greater Revachol Industrial Harbour. It looks downright despondent. It's almost Coal City, to be honest."];
+	  41 [label="Plaisance: She nods. \"Always good to be informed of your surroundings.\""];
+	  42 [label="Plaisance: \"Yes-yes. Are you interested or not?\""];
+	  43 [label="Jump to: [mainmapwallhub]"];
+	  44 [label="Map Wall: IsKimHere()"];
+	  45 [label="IsKimHere()", shape=diamond];
+	  46 [label="!(IsKimHere())", shape=diamond];
+	  47 [label="Visual Calculus: Disintegrating into mathematics."];
+	  48 [label="You: Look at the map of Martinaise."];
+	  49 [label="Map Wall: Ozonne, Laurentide, Face-a-la-Mer, Archipelagos, North Arcade Islands... all just specks of dust on the vastness of the Insulindic. On the edges of the map, the colour fades into a blur of dotted lines. Black and white."];
+	  50 [label="Kim Kitsuragi: The lieutenant coughs sharply, then whispers: \"Perhaps not. It's against RCM policy to defraud small business owners.\""];
+	  51 [label="Plaisance: \"Sir, please, no touching the merchandise. These old maps are... relics of the past.\""];
+	  52 [label="Plaisance: \"From when some *design-studio people* tried to spruce the place up, four or five years ago. They also renovated the horse-statue, set up those coin-operated viewers and designed the new street lamps.\""];
+	  53 [label="Reaction Speed: Martinaise!"];
+	  54 [label="Inland Empire: In the northeast a dust mite stands on the north coast of Caillou. In a bookstore. It's you."];
+	  55 [label="Shivers: Radiating outwards from you -- the Suzerain Revachol. With a radius of 80 kilometres. Still, the crown jewel of this isola would be barely visible."];
+	  56 [label="Encyclopedia: You have little idea what they are -- distant stars? gods? -- but looking at them makes you feel almost non-existent. Whatever they are, the *isolas* are immeasurably large compared to you. And very, very far away."];
+	  57 [label="Map Wall: To the east, rolling hillsides: Le Jardin, Stella Maris, the suburbs of Saint-Batiste, swallowed up into the megacity. They sound *rich* to you. This is Revachol East."];
+	  58 [label="Inland Empire: You feel you're *just* west of Coal City. Somewhere above Jamrock and close to Coal City."];
+	  59 [label="Map Wall: Variable[\"doomed.mapwall_whitec_steal_it\"]"];
+	  60 [label="Variable[\"doomed.mapwall_whitec_steal_it\"]", shape=diamond];
+	  61 [label="!(Variable[\"doomed.mapwall_whitec_steal_it\"])", shape=diamond];
+	  62 [label="Jump to: [mainmapwallhub]"];
+	  63 [label="Encyclopedia: 850 million people live on these little dots. An oceanic world of culture and commerce, torn apart by history."];
+	  64 [label="Map Wall: The north coast of a verdant island is shattered by the delta of a river. It is the River Esperance. Countless bridges put the shards back together, connecting city blocks to river islands. *La Delta*, says a great, artificial heart in the centre, teeming with lifeforms and construction."];
+	  65 [label="Interfacing: Slowly, you move your hand towards the map attached to the board. Before you can even reach it, you're interrupted..."];
+	  66 [label="Plaisance: \"I'm sorry, officer, the map of Martinaise is the only one available. The other two are not for sale anymore... and besides, you could scarcely afford them.\""];
+	  67 [label="Rhetoric: The place does not look like a successful tourist trap, does it?"];
+	  68 [label="Map Wall: Variable[\"tc.that_in_martinaise\"]"];
+	  69 [label="Variable[\"tc.that_in_martinaise\"]", shape=diamond];
+	  70 [label="!(Variable[\"tc.that_in_martinaise\"])", shape=diamond];
+	  71 [label="You: [Leave.]"];
+	  72 [label="Logic: 850 million people live on these tiny dots. An oceanic world of culture and commerce, torn apart by history."];
+	  73 [label="You: \"Storekeep, can I buy these maps?\""];
+	  74 [label="Map Wall: Couron. It's somewhere to live. Not bad. Then there's Jamrock -- it's *bad*. People shouldn't live there, but they do. Then Faubourg -- it's almost *as* bad and much larger. Then Coal City. It's the worst."];
+	  75 [label="You: \"I want to buy the map of Martinaise.\""];
+	  76 [label="Map Wall: Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"]"];
+	  77 [label="Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"]", shape=diamond];
+	  78 [label="!(Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"])", shape=diamond];
+	  79 [label="mainmapwallhub"];
+	  80 [label="Map Wall: Still, it's detailed. Could be pretty useful for scouting ahead. You see the jagged boxes of an industrial harbour, even the Whirling-in-Rags there..."];
+	  81 [label="Plaisance: \"They're quite valuable, though they might not look it. The map of Martinaise is 90 cents, though.\""];
+	  82 [label="Plaisance: \"That old thing? It's an out-of-date map of a tourist location that never was nor came to be...\""];
+	  83 [label="Jump to: [mainmapwallhub]"];
+	  84 [label="Map Wall: IsKimHere()"];
+	  85 [label="IsKimHere()", shape=diamond];
+	  86 [label="!(IsKimHere())", shape=diamond];
+	  87 [label="You: Steal it instead."];
+	  88 [label="You: Variable[\"doomed.mapwall_whitec_steal_it\"]"];
+	  89 [label="Variable[\"doomed.mapwall_whitec_steal_it\"]", shape=diamond];
+	  90 [label="!(Variable[\"doomed.mapwall_whitec_steal_it\"])", shape=diamond];
+	  91 [label="Interfacing: You're now the proud owner of a map of Martinaise, which, to be honest, did not even cost that much."];
+	  92 [label="Jump to: [mainmapwallhub]"];
+	  93 [label="Jump to: [mainmapwallhub]"];
+	  94 [label="Plaisance: \"Officer, discard the thought. For your brave efforts against those thugs you may have it for free.\""];
+	  0 -> 1
+	  1 -> 29
+	  2 -> 21
+	  3 -> 32
+	  4 -> 15
+	  5 -> 91
+	  6 -> 35
+	  7 -> 79
+	  8 -> 34
+	  9 -> 82
+	  10 -> 11
+	  10 -> 12
+	  11 -> 72
+	  12 -> 56
+	  14 -> 79
+	  15 -> 16
+	  15 -> 17
+	  16 -> 84
+	  17 -> 79
+	  18 -> 74
+	  19 -> 93
+	  20 -> 41
+	  21 -> 63
+	  22 -> 40
+	  23 -> 64
+	  24 -> 80
+	  25 -> 6
+	  26 -> 2
+	  27 -> 10
+	  28 -> 19
+	  29 -> 4
+	  30 -> 37
+	  31 -> 42
+	  32 -> 27
+	  33 -> 49
+	  34 -> 79
+	  35 -> 79
+	  36 -> 79
+	  37 -> 33
+	  38 -> 79
+	  39 -> 92
+	  40 -> 28
+	  41 -> 76
+	  42 -> 7
+	  43 -> 79
+	  44 -> 45
+	  44 -> 46
+	  45 -> 50
+	  46 -> 51
+	  47 -> 54
+	  48 -> 24
+	  49 -> 47
+	  50 -> 83
+	  51 -> 83
+	  52 -> 67
+	  53 -> 36
+	  54 -> 55
+	  55 -> 26
+	  55 -> 3
+	  56 -> 39
+	  57 -> 18
+	  58 -> 93
+	  59 -> 60
+	  59 -> 61
+	  60 -> 5
+	  61 -> 65
+	  62 -> 79
+	  63 -> 3
+	  64 -> 57
+	  65 -> 44
+	  66 -> 81
+	  67 -> 25
+	  68 -> 69
+	  68 -> 70
+	  69 -> 22
+	  70 -> 58
+	  72 -> 92
+	  73 -> 66
+	  74 -> 68
+	  75 -> 94
+	  76 -> 77
+	  76 -> 78
+	  77 -> 34
+	  78 -> 8
+	  79 -> 71
+	  79 -> 73
+	  79 -> 75
+	  79 -> 48
+	  79 -> 20
+	  79 -> 87
+	  79 -> 23
+	  79 -> 30
+	  80 -> 62
+	  81 -> 9
+	  81 -> 31
+	  82 -> 52
+	  83 -> 79
+	  84 -> 85
+	  84 -> 86
+	  85 -> 38
+	  86 -> 53
+	  87 -> 88
+	  88 -> 89
+	  88 -> 90
+	  89 -> 59
+	  90 -> 59
+	  91 -> 14
+	  92 -> 79
+	  93 -> 79
+	  94 -> 43
+}
+

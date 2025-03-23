@@ -1,0 +1,589 @@
+# LANDS END / NETPICKER
+# A dialogue featuring you, Kim, Lilienne the Netpicker, about the sun (if it's rising, setting or high in the sky) -- what the sun is, what means. THE SETTING SUN
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Pain Threshold: 你会被烧成灰烬的。或者更糟。"];
+	  3 [label="Logic: 她觉得这是个谜语。她甚至都不知道是怎么一回事。这样更好。"];
+	  4 [label="Variable[\"TASK.ask_about_ruby_in_village\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false"];
+	  5 [label="Variable[\"TASK.ask_about_ruby_in_village\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false", shape=diamond];
+	  6 [label="!(Variable[\"TASK.ask_about_ruby_in_village\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false)", shape=diamond];
+	  7 [label="IsHourBetween(19,  2)"];
+	  8 [label="IsHourBetween(19,  2)", shape=diamond];
+	  9 [label="!(IsHourBetween(19,  2))", shape=diamond];
+	  10 [label="Lilienne, the Net Picker: “啊，你来了。现在很晚了，外面还在下雪。雪很……”她把手伸了出去，一朵雪花飘落在她的掌心。“……好吧，好像不是真正的雪，是污水。”"];
+	  11 [label="Lilienne, the Net Picker: “哎，刚开始的日子我没怎么见过。不过，这对你来说是件好事……”她朝你点点头，眼睛里闪烁着调皮的光芒。"];
+	  12 [label="Lilienne, the Net Picker: “哈！我的鱼能去就够了。春鳕鱼一条就能卖50雷亚尔……”"];
+	  13 [label="Lilienne, the Net Picker: “是啊。”她点点头。“我还是回去陪孩子吧。”"];
+	  14 [label="IsMorning()"];
+	  15 [label="IsMorning()", shape=diamond];
+	  16 [label="!(IsMorning())", shape=diamond];
+	  17 [label="IsAfternoon()"];
+	  18 [label="IsAfternoon()", shape=diamond];
+	  19 [label="!(IsAfternoon())", shape=diamond];
+	  20 [label="Rhetoric: 她的意思是她的孩子。"];
+	  21 [label="You: “太阳唯一的缺点是——它同样也照耀在我们的*敌人*身上。”"];
+	  22 [label="You: “永远不会。”"];
+	  23 [label="Perception (Hearing): 她的笑声沙哑又温暖，与阳光映照下的海浪和海鸥的鸣叫交织成一曲韵律诗。"];
+	  24 [label="The Sun: 太阳映照在廉价的岬岸公寓和饱受战争摧残的废墟上。一栋古老的海堡尤其突出，仿佛并未被那笼罩万物的光芒所影响，将你从幻想中摇醒……"];
+	  25 [label="Lilienne, the Net Picker: “它为我们带来了春天，夏天……不论发生什么，或者不论我们是谁，完全都会站在我们这一边。完全*没有*任何理由。它不像其他强大的存在——肯定不是强大的组织，或者政府？这怎么可能呢？”"];
+	  26 [label="Jump to: [Lilienne, the Net Picker: \"The wind ruffles her hair as she lo...\"]"];
+	  27 [label="Lilienne, the Net Picker: “谢谢。我有一半尤比人的血统。我母亲来自尤比萨特。我听说那里的阳光不多，不过我从没见过……”"];
+	  28 [label="Inland Empire: 快的好像天气在她的命令下瞬间转换了。"];
+	  29 [label="Lilienne, the Net Picker: “既然你已经知道了——那还保留这个名字吗？”"];
+	  30 [label="Conceptualization: 说什么？说些*有趣*的事吗？不可能的。"];
+	  31 [label="Lilienne, the Net Picker: 她露出悲伤的笑容。“说不好。不过还是谢谢你的陪伴。”"];
+	  32 [label="Lilienne, the Net Picker: 她转头望向海面上倒影的太阳，摩天大楼在海湾对岸升起，你忍不住追逐她那沉静的目光。"];
+	  33 [label="You: “所以你给自己的船起名为*太阳*？”"];
+	  34 [label="Logic: 太阳也不总是那么好的。想想那些生活在沙漠气候里，植被稀疏，水源不足那些地方的人。"];
+	  35 [label="Volition: 这是真的，你不应该去爱废墟和地狱——还有杏子的残香。"];
+	  36 [label="Lilienne, the Net Picker: “这个嘛——也许是神明让所有原子在那个大玩意里燃烧……”她笑了笑。“你知道的……”"];
+	  37 [label="Lilienne, the Net Picker: 然后她把它递给了你。“给你。太阳很好，但是它不会*粘着*东西——我已经用不着它了。”"];
+	  38 [label="Lilienne, the Net Picker: “啊。大脑，一般不是特别好，对吧？我更喜欢后背，胳膊，肩膀——还有肺。”她笑了笑。“你知道的……”"];
+	  39 [label="IsKimHere()"];
+	  40 [label="IsKimHere()", shape=diamond];
+	  41 [label="!(IsKimHere())", shape=diamond];
+	  42 [label="You: “你确定不需要这把剑了吗？”（看着它。）"];
+	  43 [label="IsMorning()"];
+	  44 [label="IsMorning()", shape=diamond];
+	  45 [label="!(IsMorning())", shape=diamond];
+	  46 [label="You: “我无论如何也不会错过的。”"];
+	  47 [label="waste_land"];
+	  48 [label="Lilienne, the Net Picker: 她咯咯地笑了。“酗酒的男人可不是因为信守承诺出名的。”"];
+	  49 [label="You: “你的耳朵上有鱼钩。”"];
+	  50 [label="tequila_name"];
+	  51 [label="You: “我最近觉得自己跟哈里尔·杜博阿这个名字相处的不错。”"];
+	  52 [label="Rhetoric: 你应该说点什么。什么都行。要不说说龙舌兰日落的事？"];
+	  53 [label="Suggestion: 没有留下很深刻的印象，但也不奇怪。"];
+	  54 [label="You: “也许之后我们可以再来一次？”"];
+	  55 [label="Esprit de Corps: 可别把它带到动枪的场合，他想到。请理解，这不过是种礼仪性的东西。"];
+	  56 [label="Lilienne, the Net Picker: “啊，你来了。大中午的，外面的雨……”她把手伸了出去“……像往常一样冰冷。那群醉鬼和年轻人好像还没到。”"];
+	  57 [label="Perception (Hearing): 她的笑声沙哑又温暖，与海浪和海鸥的声音交织成一曲韵律诗。"];
+	  58 [label="Lilienne, the Net Picker: “不如还是欣赏一下眼前的这片世界吧，好吗？”她朝你点点头，眼睛里闪烁着调皮的光芒。"];
+	  59 [label="getting_to_the_end"];
+	  60 [label="Lilienne, the Net Picker: 什么也不说？好，那就沉默吧。她看着海边，你听着自己的呼吸。"];
+	  61 [label="Lilienne, the Net Picker: “好吧——现在有那个大家伙照看你。所以……让青春见鬼去吧。”她笑了笑。“你也知道……”"];
+	  62 [label="You: “谢谢你来跟我一起散步。”（结束）"];
+	  63 [label="Lilienne, the Net Picker: “再见了。”她朝你点点头，然后转身离开。"];
+	  64 [label="Lilienne, the Net Picker: “谢谢。在另一个行星上——大海——你会开始在奇怪的光芒中看到一些东西。很高兴能和你一起分享。”她笑了笑。“你知道的……”"];
+	  65 [label="Lilienne, the Net Picker: 她摇摇头笑了。“你还真是挺……那个词怎么说来着——*可悲*，对吗？”"];
+	  66 [label="Lilienne, the Net Picker: “嗯，从你的样子来看，确实如此。好吧，现在我们到了。”她朝你点点头，眼睛里闪烁着调皮的光芒。"];
+	  67 [label="a_mainly_hub"];
+	  68 [label="Shivers: 在红果满枝外面的阳台上——德尔塔中心一处时尚的商务午餐地点，玻璃杯在满桌的牡蛎之间交错碰撞。有人不知道该吃什么。有人推荐酸橘汁腌鱼。有人遮住双眼，想要遥望海湾的对岸……"];
+	  69 [label="You: “为了这个案子的话，我得跟海岸*合拍*才行。”"];
+	  70 [label="Rhetoric: 看见了吧？她*不想*争执。这是个好信号，继续保持下去。"];
+	  71 [label="Conceptualization: 她转过头，塑料鱼钩在耳朵上来回摇晃。你的脑子里没有什么值得分享的东西。"];
+	  72 [label="Lilienne, the Net Picker: “你不是第一个把女孩带到地之角的人呢。本地人都把这里叫做*情人角*。不过这种事今天不会发生——这一点我要先讲清楚，小酒窝。”她又把脸转向了大海的方向。"];
+	  73 [label="You: “是啊。这对我来说是一种很好的影响。”"];
+	  74 [label="You: “你知道的，我也有特殊的能力。超自然的力量。”"];
+	  75 [label="Lilienne, the Net Picker: “等等，你觉得是*我*做的吗？没有，我只是在海边长大而已。知道风会朝哪个方向吹。”"];
+	  76 [label="You: “太阳并不算是一个组织。”"];
+	  77 [label="You: 不！对你肮脏的过去一言不发。"];
+	  78 [label="Lilienne, the Net Picker: “是吗，那好吧……”她耸耸肩，转头望向波光粼粼的海面。"];
+	  80 [label="Suggestion: 在你说些大话之前，也许先来点一般的评论？用你的方式一路达到*酷*的境地。"];
+	  81 [label="You: “有一种解释。而且挺政治的。你也知道……”（开始一段漫长而又慷慨激昂的政治演说。）"];
+	  82 [label="Jump to: [getting_to_the_end]"];
+	  83 [label="You: “当爱情还与我同在的时候。”"];
+	  84 [label="Lilienne, the Net Picker: “不。这里的男人醉得太厉害，对我来说没什么威胁。”"];
+	  85 [label="You: “我只是想做个有责任心的成年人。”"];
+	  86 [label="You: “我已经清醒一整天了。”"];
+	  87 [label="The Sun: 空气中有一股咸咸的味道，还有海鸥和贼鸥的鸣叫；沙砾的窸窣声，还有破瓶子闪烁的绿光。但是你的目光总会回到那耀眼的光斑，无论映照在什么地方，都是那样丰饶……\n空气中弥漫着一股咸咸的味道，还有海鸥和贼鸥在哭叫；沙砾在作响，还有破瓶子在闪烁着绿光。但是你的目光总会回到那耀眼的光斑，无论被反射到什么地方，都发散着褪色的丰饶……"];
+	  88 [label="Lilienne, the Net Picker: “嗯，一直这样……我挺喜欢的。就像是在另一个星球。一颗水之星球，有像水一样多的忧虑……还有水一样多的欢乐。”"];
+	  89 [label="You: “最近发现了一具尸体。他倒是享受了一刻的*龙舌兰日落*。”"];
+	  90 [label="Lilienne, the Net Picker: “是吗，那好吧，库斯托警探。”她轻声笑了笑，转头望向波光粼粼的海面。"];
+	  91 [label="Untitled hub"];
+	  92 [label="You: （盯着太阳。）“是啊，一个50亿岁的巨大热核反应堆——太阳就是一个神明。”"];
+	  93 [label="Shivers: 她渐渐走远，风也越来越大。太阳发出的光芒似乎有些褪色——菲尔德电气研究所那破碎的轮廓在远方朝你招手。"];
+	  94 [label="Lilienne, the Net Picker: “所以是这么回事吗——责任心？”她耸耸肩。“好吧……可能是吧。也许你会得到*启示*，然后破了手上的案子。”"];
+	  95 [label="You: “这是摇滚明星一种习惯。拖延。”"];
+	  96 [label="the_sunnnnn"];
+	  97 [label="Conceptualization: 而且还有些概念上的统一，它也是黄色的，而且……"];
+	  98 [label="Lilienne, the Net Picker: 她点点头。“如果它不站在我们这边，我猜我们就不会真的*存在于此*了……”"];
+	  99 [label="Variable[\"TASK.find_working_class_husband_done\"]"];
+	  100 [label="Variable[\"TASK.find_working_class_husband_done\"]", shape=diamond];
+	  101 [label="!(Variable[\"TASK.find_working_class_husband_done\"])", shape=diamond];
+	  102 [label="You: “金，我们准备好了吗？”"];
+	  103 [label="Lilienne, the Net Picker: “风很快会起来，我得走了，不过……”她从鞘中抽出佩剑。剑身映照出昏暗的阳光，呈现出一股深橙色。\n“很快就要起风了，我也得走了，不过……”她从剑鞘中抽出剑。剑刃在浓郁的黑暗中闪烁着微光。"];
+	  104 [label="IsAfternoon()"];
+	  105 [label="IsAfternoon()", shape=diamond];
+	  106 [label="!(IsAfternoon())", shape=diamond];
+	  107 [label="Lilienne, the Net Picker: “没关系的。我很少能找到独处的借口，毕竟家里有三只小怪兽……”"];
+	  108 [label="Perception (Hearing): 她的笑声沙哑又温暖，与海浪和海鸥的声音交织成一曲韵律诗。"];
+	  109 [label="The Sun: 太阳映照在海浪上，海湾对岸升起的摩天大楼充满迷人的诱惑。你全心投入自己的感官，思绪在片刻间变得清晰——不仅仅是玻璃摩天大楼，在微微发亮的空中显得脆弱易碎；埃斯佩兰斯河汇入海湾……\n没落太阳的残辉映照在海浪上，海湾对岸的摩天大楼正在升起。你全心投入自己的感官，思绪在片刻间变得清晰——不仅仅只有玻璃摩天大楼，在微微发亮的空中显得脆弱易碎；埃斯佩兰斯河汇入了海湾……"];
+	  110 [label="You: “这是全新的我。它需要一个新名字。”"];
+	  111 [label="You: “因为它不是人类。人类会背叛你。”"];
+	  112 [label="You: “也许在我20岁出头的时候？”"];
+	  113 [label="You: “有时候我总觉得自己的脑子不好使。”"];
+	  114 [label="settingsunprehub"];
+	  115 [label="Lilienne, the Net Picker: “我？不，不，不是。”她笑了。“只是在海边长大。知道风往哪个方向吹之类的。”"];
+	  116 [label="Lilienne, the Net Picker: “我们一到这儿，我就知道天会放晴——不然这次散步就不会那么愉快了，不是吗？”"];
+	  117 [label="Encyclopedia: 锈色的大海对岸——是金融区德尔塔。在薄雾笼罩的远方，林立的高塔像是在控诉这片贫瘠的海岸。"];
+	  118 [label="You: “这样感觉很好。谢谢你。”（结束约会）"];
+	  119 [label="Lilienne, the Net Picker: “还有那里的人吗？”她大笑起来。“很高兴能帮上忙。”"];
+	  120 [label="You: 什么也不说。太愚蠢了。这主意太愚蠢了。"];
+	  121 [label="You: “哦。”"];
+	  122 [label="Perception (Sight): 她是对的。它们基本是塑料制成的，一个可以从花店或者报摊买到的新鲜又廉价的小礼物。"];
+	  123 [label="Variable[\"coast.netpicker_red_check\"]"];
+	  124 [label="Variable[\"coast.netpicker_red_check\"]", shape=diamond];
+	  125 [label="!(Variable[\"coast.netpicker_red_check\"])", shape=diamond];
+	  126 [label="Lilienne, the Net Picker: “好吧——现在有那个大家伙照看你。所以……让残酷无情的神明见鬼去吧”她笑了笑。“你知道的……”"];
+	  127 [label="Variable[\"auto.is_raining\"]"];
+	  128 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  129 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  130 [label="You: “也许不会吧，管它呢。下一步打算怎么做？”"];
+	  131 [label="Perception (Hearing): 她的笑声沙哑又温暖，与海浪和海鸥的声音交织成一曲韵律诗。"];
+	  132 [label="You: “这是第二次了！你是海洋女巫或者什么的吗？”"];
+	  133 [label="Lilienne, the Net Picker: “至于你的*超自然能力*——以后有空跟我讲讲吧，不过现在能不能先享受一下眼前的这幅美景？”"];
+	  134 [label="Lilienne, the Net Picker: “不觉得奇怪吗？\"她突然打破了宁静，“这个无所不能的东西，太阳……居然会对我们如此慷慨？你也知道，外出钓鱼最好的时间一般是在黄昏，当海水变温暖的时候……”"];
+	  135 [label="You: “呃，总得*有什么*站在我们这边吧。”"];
+	  136 [label="Jump to: [The Sun: \"The sun reflected in the waves and...\"]"];
+	  137 [label="IsEvening()"];
+	  138 [label="IsEvening()", shape=diamond];
+	  139 [label="!(IsEvening())", shape=diamond];
+	  140 [label="Kim Kitsuragi: 警督看着佩剑，眼里闪过不信任的光芒。"];
+	  141 [label="Jump to: [Untitled hub (02)]"];
+	  142 [label="Variable[\"TASK.ask_about_ruby_in_village\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false"];
+	  143 [label="Variable[\"TASK.ask_about_ruby_in_village\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false", shape=diamond];
+	  144 [label="!(Variable[\"TASK.ask_about_ruby_in_village\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false)", shape=diamond];
+	  145 [label="Lilienne, the Net Picker: “啊，你来了。太阳出来了，还下了好大的雪。”她伸出手去碰触雪花。“好吧，好像不是真正的雪，是污水。至少这样能把那群醉鬼和年轻人挡在海湾。”"];
+	  146 [label="Lilienne, the Net Picker: “无论如何？”她笑了笑。“那些爱吹牛的男人总是喜欢信口开河，搞得好像自己是什么重要人物一样。”"];
+	  147 [label="Kim Kitsuragi: 警督始终保持着恰当的距离，他拿出笔记本，对你的“约会”没有表现出丝毫的兴趣。"];
+	  148 [label="You: 还是保密吧。这才刚刚开始。"];
+	  149 [label="You: （转向她）“你对我的到来似乎很惊讶。”"];
+	  150 [label="You: “我不确定生活在沙漠的人会不会很喜欢阳光。”"];
+	  151 [label="Lilienne, the Net Picker: “你说这个？”她转过头，耳朵上的东西也跟着摇晃。“这不是真正的鱼钩，傻瓜。只是形状像鱼钩的耳环。一个叫罗斯马雷的醉鬼给我的，所以我就留下了。”"];
+	  152 [label="Lilienne, the Net Picker: “那好吧，H.D.B…….”她笑着望向波光粼粼的海面。"];
+	  153 [label="Untitled hub"];
+	  154 [label="You: 拜托，这很重要！"];
+	  155 [label="IsKimHere()"];
+	  156 [label="IsKimHere()", shape=diamond];
+	  157 [label="!(IsKimHere())", shape=diamond];
+	  158 [label="Variable[\"auto.is_snowing\"]"];
+	  159 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  160 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  161 [label="Lilienne, the Net Picker: “啊，你来了。大中午的，外面的雪……”她伸出手去碰触雪花。“……好吧，好像不是真正的雪，是污水。至少那群醉鬼和年轻人还没来。”"];
+	  162 [label="Lilienne, the Net Picker: “戒酒？开始信教？”有那么一瞬间，她露出了严肃的表情，接着又换上温柔的笑脸。“见鬼去吧。我才不会跟你讲什么喝酒的大道理，至少在这里不会。”"];
+	  163 [label="Lilienne, the Net Picker: 她转回身面向大海，一动不动地凝视海面，天气逐渐开始放晴。“要来了，”她说到。"];
+	  164 [label="Lilienne, the Net Picker: “不是。”她得意的笑了。“而且它会活的比那些都久。”"];
+	  165 [label="Kim Kitsuragi: 警督慢慢瞥了一眼手表，拍了拍脚。"];
+	  166 [label="Lilienne, the Net Picker: “我已经等不及想听到了。”她假笑着，转头望向波光粼粼的海面。"];
+	  167 [label="Lilienne, the Net Picker: “啊，你来了。现在不早了，太阳也快要下山。很快天就会黑了。如果我们在这里待得够久，就会有一群醉鬼和年轻人加入我们了。”"];
+	  168 [label="Lilienne, the Net Picker: “嗯，你是其中最耀眼的那一个，”她假装很严肃，随后把脸转向海面倒映的太阳，噗的一声大笑了出来。\n“嗯，你是其中最耀眼的那一个，”她假装很严肃，随后把脸转向倒映在海浪上的太阳，噗的一声大笑了出来。\n“嗯，你是其中最耀眼的那一个，”她假装很严肃，随后把脸转向海面上倒映的落日，噗的一声大笑了出来。\n“嗯，你是其中最耀眼的那一个，”她假装很严肃，随后把脸转向倒映在海浪上的朝阳，噗的一声大笑了出来。"];
+	  169 [label="Authority: 别被骗了。他一直盯着你，免得你表现的太不专业。"];
+	  170 [label="You: “你知道吗，我过去的一个化身称呼自己为*龙舌兰日落*。不知道为什么会这样。”"];
+	  171 [label="You: “我这是跟谁开玩笑呢？不管我选了什么名字，很可能都会把自己喝死的……”"];
+	  172 [label="Lilienne, the Net Picker: “是吗，杜博阿警官……”她朝你点点头，然后转头望向波光粼粼的海面。"];
+	  173 [label="Lilienne, the Net Picker: “哦哦。”"];
+	  174 [label="Shivers: 她渐渐走远，风也越来越大。太阳的光芒似乎有些褪色——菲尔德电气研究所那破碎的轮廓在远方朝你招手。"];
+	  175 [label="You: 说些关于太阳的话题。"];
+	  176 [label="You: Variable[\"coast.netpicker_red_check\"]"];
+	  177 [label="Variable[\"coast.netpicker_red_check\"]", shape=diamond];
+	  178 [label="!(Variable[\"coast.netpicker_red_check\"])", shape=diamond];
+	  179 [label="Conceptualization: 来了。有两种不同的方法漂亮地结束这一切。"];
+	  180 [label="Lilienne, the Net Picker: “确实如此。不过……对于我们的敌人来说，我们也是敌人，不是吗？但它还是会照耀在我们身上。警察和康米党，杀手和圣人。你知道的……”"];
+	  181 [label="Lilienne, the Net Picker: “好吧——现在有那个大家伙照看你。所以……让爱情见鬼去吧。”她笑了笑。“你知道的……”"];
+	  182 [label="Suggestion: 和她一起差不多就这样了。在你和你的最后一杯酒之间，你得留出一年的时间。"];
+	  183 [label="Variable[\"auto.is_snowing\"]"];
+	  184 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  185 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  186 [label="Lilienne, the Net Picker: “啊，你来了。”她看了看周围。“有点吃惊啊，这里居然只有我们。现在大中午的，太阳也没出来。我还以为会有很多醉鬼。还有醉醺醺的年轻人。”"];
+	  187 [label="You: “也许这是个错误。一切都感觉不是很舒服。我该走了。”[离开。]"];
+	  188 [label="Lilienne, the Net Picker: 女人直直地盯着海浪。一阵狂风吹起她的黑发，随后又胡乱放下，凌乱又狂野。她拂去眼前的几缕发丝，才发现渐渐靠近的你。"];
+	  189 [label="You: 静静欣赏风景。（继续。）"];
+	  190 [label="You: “你希望我们现在去钓鱼吗？”"];
+	  191 [label="tequila!"];
+	  192 [label="Lilienne, the Net Picker: “那好吧，哈里警官……”她笑着望向波光粼粼的海面。"];
+	  193 [label="You: “你的声音里有一种很有意思的调调。”"];
+	  194 [label="Lilienne, the Net Picker: “是吗？有些人确实会，不过……”她耸耸肩。“在我看来，你应该更好地选择盟友，仅此而已。”"];
+	  195 [label="Lilienne, the Net Picker: “是啊，是啊——是政治。”她阻止了你。“没必要对这个发表什么高谈阔论吧。如果我们*不同意*呢？”"];
+	  196 [label="Lilienne, the Net Picker: “这是个好问题。我会选*绳子*吧。”"];
+	  197 [label="You: “还是老样子。我是个正直的人。”"];
+	  198 [label="Volition: 放心。一切还是不错的。"];
+	  199 [label="Variable[\"auto.is_raining\"]"];
+	  200 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  201 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  202 [label="Lilienne, the Net Picker: “啊，你来了。一大清早的，太阳也刚刚升起。”她呼吸了一口新鲜空气。“没有看见醉鬼或者年轻人，这还挺让人吃惊的。”"];
+	  203 [label="You: “其实我还挺擅长*行程安排*的。”"];
+	  204 [label="You: “抱歉，我说我很抱歉……”"];
+	  205 [label="Empathy: 她的思绪还停留在别处——在那遥远的大海彼岸，还有大海本身。"];
+	  206 [label="Lilienne, the Net Picker: 她朝你点点头，眼睛里闪烁着调皮的光芒。"];
+	  207 [label="Variable[\"coast.netpicker_sun_inland\"]"];
+	  208 [label="Variable[\"coast.netpicker_sun_inland\"]", shape=diamond];
+	  209 [label="!(Variable[\"coast.netpicker_sun_inland\"])", shape=diamond];
+	  210 [label="Variable[\"tc.tequila_sunset\"]"];
+	  211 [label="Variable[\"tc.tequila_sunset\"]", shape=diamond];
+	  212 [label="!(Variable[\"tc.tequila_sunset\"])", shape=diamond];
+	  213 [label="Lilienne, the Net Picker: “那你呢？还留着这个名号吗？”"];
+	  214 [label="You: “也可以。反正我也没其他的。”"];
+	  215 [label="Kim Kitsuragi: 因为尼龙而不舒服的挪动。"];
+	  216 [label="Lilienne, the Net Picker: “啊，你来了。现在很晚了，外面还在下雨。很……”她把手伸了出去，雨滴拍打在她的掌心。“冷。冰冷。”"];
+	  217 [label="Variable[\"auto.is_raining\"]"];
+	  218 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  219 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  220 [label="Lilienne, the Net Picker: “啊，警官就应该这样。天天东奔西跑的肯定需要很多*组织设计*吧……”她把脸转向海面上倒影的太阳，笑出了声。\n“啊，那就是警官先生了。天天东奔西跑的肯定需要很多*组织设计*吧……”她把脸转向海面上倒影的落日，笑出了声。\n“啊，那就是警官先生了。天天东奔西跑的肯定需要很多*组织设计*吧……”她把脸转向倒映在海浪上的太阳，笑出了声。\n“啊，那就是警官先生了。天天东奔西跑的肯定需要很多*组织设计*吧……”她把脸转向倒映在海浪上的朝阳，笑出了声。"];
+	  221 [label="You: “如果你希望我离开的话……”"];
+	  222 [label="Inland Empire: 太阳对那些死去的人，还有绝望地迷失在自己脑海中的人来说，是派不上多大用场的。"];
+	  223 [label="Lilienne, the Net Picker: 她眯起双眼。“这是瑞瓦肖人的常用语。意思是把自己喝到死为止。”"];
+	  224 [label="You: “我叫哈里，不需要其他名字。”"];
+	  225 [label="Jump to: [getting_to_the_end]"];
+	  226 [label="You: “所以……你觉得是谁杀了吊人？”"];
+	  227 [label="Untitled hub (02)"];
+	  228 [label="You: “那个叫太阳的玩意挺漂亮的，抱歉我没什么可以补充的……”"];
+	  229 [label="Kim Kitsuragi: “希望这能让你提提神，警探，”警督看着她离去的背影，开口说到。“让我们带着全新的目光继续回去调查吧。”"];
+	  230 [label="Lilienne, the Net Picker: “啊，你来了。太阳已经升起来了，外面的雨……”她把手伸了出去。“……很冷。冰冷。我倒不介意。至少这样能把那群醉鬼和年轻人挡在海湾。”"];
+	  231 [label="Variable[\"auto.is_snowing\"]"];
+	  232 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  233 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  234 [label="IsTHCCookingOrFixed(\"the_waste_land_of_reality\")"];
+	  235 [label="IsTHCCookingOrFixed(\"the_waste_land_of_reality\")", shape=diamond];
+	  236 [label="!(IsTHCCookingOrFixed(\"the_waste_land_of_reality\"))", shape=diamond];
+	  237 [label="Lilienne, the Net Picker: “现在你又变成另一种傻瓜了。”她笑了笑，眼睛里闪烁着调皮的光芒。“你应该知道——我是不会出于责任感跟别人待在一起的。”"];
+	  238 [label="Lilienne, the Net Picker: 她大笑起来。“现在还不要操之过急，好吗。”"];
+	  239 [label="Variable[\"auto.is_raining\"]  or  Variable[\"auto.is_snowing\"]"];
+	  240 [label="Variable[\"auto.is_raining\"]  or  Variable[\"auto.is_snowing\"]", shape=diamond];
+	  241 [label="!(Variable[\"auto.is_raining\"]  or  Variable[\"auto.is_snowing\"])", shape=diamond];
+	  242 [label="You: “等等……刚才难道是*你*做的？”"];
+	  243 [label="Lilienne, the Net Picker: “哦，好像是有些骄傲，还有点迷信……”"];
+	  244 [label="Logic: 或者是生活在沙漠气候里，植被稀疏，水源不足那些地方的人。"];
+	  245 [label="Lilienne, the Net Picker: “你这就是在挑刺了。”她笑了笑。“不过也是，我让一步——也许*沙漠子民*有时候会不赞同。”"];
+	  246 [label="Variable[\"coast.netpicker_small_talk_counter\"] == 3  and  IsKimHere()"];
+	  247 [label="Variable[\"coast.netpicker_small_talk_counter\"] == 3  and  IsKimHere()", shape=diamond];
+	  248 [label="!(Variable[\"coast.netpicker_small_talk_counter\"] == 3  and  IsKimHere())", shape=diamond];
+	  249 [label="You: “难道你不想去德尔塔看看吗？”"];
+	  250 [label="You: “我还是比较喜欢用大写字母，这样听起来更像个阴谋家。叫我H.D.B.吧！”"];
+	  251 [label="You: “那是当然了！自始自终都是龙舌兰日落！”"];
+	  252 [label="IsKimHere()"];
+	  253 [label="IsKimHere()", shape=diamond];
+	  254 [label="!(IsKimHere())", shape=diamond];
+	  255 [label="You: 太病态了。我为什么找不到好想法？"];
+	  256 [label="Lilienne, the Net Picker: “是啊，”她点点头。“而且很仁慈。上次有人跟你站在一边是什么时候？”"];
+	  257 [label="You: “抱歉让你久等了。”"];
+	  258 [label="You: “我觉得自己已经独处很久了……”"];
+	  259 [label="Lilienne, the Net Picker: 她看着沐浴在阳光下的海岸，风轻轻吹起了她的头发。\n她看着落日，风轻轻吹起了她的头发。\n她看着阳光慢慢洒满另一边的海岸，风轻轻吹起了她的头发。\n风轻轻吹起她的头发，上面被月光映照出银色的斑纹。"];
+	  260 [label="Lilienne, the Net Picker: “感觉还不赖，”她笑了笑。“我就不打扰你继续工作了。我家双胞胎现在都可能都找到地雷了……”"];
+	  261 [label="Lilienne, the Net Picker: 一时间无人言语。“所以你打算保留这个名号吗？”"];
+	  262 [label="You: “最近我用的都是库斯托警探。”"];
+	  0 -> 1
+	  1 -> 188
+	  2 -> 80
+	  3 -> 82
+	  4 -> 5
+	  4 -> 6
+	  5 -> 174
+	  7 -> 8
+	  7 -> 9
+	  8 -> 127
+	  9 -> 104
+	  10 -> 72
+	  11 -> 239
+	  12 -> 68
+	  14 -> 16
+	  14 -> 15
+	  17 -> 18
+	  17 -> 19
+	  19 -> 14
+	  20 -> 258
+	  20 -> 204
+	  20 -> 221
+	  21 -> 180
+	  22 -> 126
+	  23 -> 234
+	  24 -> 222
+	  25 -> 81
+	  25 -> 76
+	  25 -> 111
+	  25 -> 135
+	  26 -> 259
+	  27 -> 246
+	  28 -> 120
+	  28 -> 242
+	  28 -> 132
+	  28 -> 74
+	  29 -> 50
+	  30 -> 113
+	  30 -> 154
+	  30 -> 228
+	  31 -> 182
+	  32 -> 210
+	  33 -> 243
+	  34 -> 96
+	  35 -> 80
+	  36 -> 103
+	  37 -> 227
+	  38 -> 103
+	  39 -> 40
+	  39 -> 41
+	  40 -> 140
+	  41 -> 141
+	  42 -> 84
+	  43 -> 44
+	  43 -> 45
+	  44 -> 199
+	  46 -> 146
+	  47 -> 148
+	  47 -> 86
+	  48 -> 67
+	  49 -> 151
+	  50 -> 224
+	  50 -> 262
+	  50 -> 171
+	  50 -> 110
+	  50 -> 51
+	  50 -> 214
+	  50 -> 250
+	  50 -> 251
+	  51 -> 172
+	  52 -> 191
+	  53 -> 109
+	  54 -> 31
+	  55 -> 141
+	  56 -> 72
+	  57 -> 239
+	  58 -> 239
+	  59 -> 193
+	  59 -> 226
+	  59 -> 175
+	  59 -> 49
+	  59 -> 118
+	  59 -> 249
+	  59 -> 190
+	  60 -> 210
+	  61 -> 103
+	  62 -> 63
+	  63 -> 142
+	  64 -> 103
+	  65 -> 131
+	  66 -> 239
+	  67 -> 257
+	  67 -> 203
+	  67 -> 46
+	  67 -> 85
+	  67 -> 95
+	  68 -> 82
+	  69 -> 119
+	  70 -> 80
+	  71 -> 198
+	  72 -> 205
+	  73 -> 238
+	  74 -> 75
+	  75 -> 133
+	  76 -> 164
+	  77 -> 109
+	  78 -> 53
+	  80 -> 59
+	  81 -> 195
+	  82 -> 59
+	  83 -> 181
+	  84 -> 39
+	  85 -> 94
+	  86 -> 11
+	  87 -> 25
+	  88 -> 246
+	  89 -> 213
+	  90 -> 136
+	  91 -> 92
+	  91 -> 21
+	  92 -> 256
+	  93 -> 155
+	  94 -> 73
+	  94 -> 130
+	  94 -> 69
+	  95 -> 168
+	  96 -> 33
+	  96 -> 189
+	  96 -> 150
+	  97 -> 96
+	  98 -> 2
+	  99 -> 100
+	  99 -> 101
+	  100 -> 89
+	  100 -> 121
+	  101 -> 261
+	  102 -> 147
+	  103 -> 37
+	  104 -> 105
+	  104 -> 106
+	  105 -> 217
+	  106 -> 43
+	  107 -> 20
+	  108 -> 239
+	  109 -> 134
+	  110 -> 166
+	  111 -> 194
+	  112 -> 61
+	  113 -> 38
+	  114 -> 187
+	  114 -> 149
+	  114 -> 102
+	  115 -> 116
+	  116 -> 210
+	  117 -> 114
+	  118 -> 260
+	  119 -> 23
+	  120 -> 60
+	  121 -> 173
+	  122 -> 246
+	  123 -> 124
+	  123 -> 125
+	  124 -> 179
+	  125 -> 30
+	  126 -> 103
+	  127 -> 128
+	  127 -> 129
+	  128 -> 216
+	  129 -> 183
+	  130 -> 162
+	  131 -> 239
+	  132 -> 115
+	  133 -> 210
+	  134 -> 24
+	  135 -> 98
+	  136 -> 109
+	  137 -> 138
+	  137 -> 139
+	  139 -> 17
+	  140 -> 55
+	  141 -> 227
+	  142 -> 144
+	  142 -> 143
+	  143 -> 93
+	  145 -> 72
+	  146 -> 58
+	  147 -> 169
+	  148 -> 206
+	  149 -> 48
+	  150 -> 245
+	  151 -> 122
+	  152 -> 136
+	  153 -> 112
+	  153 -> 83
+	  153 -> 197
+	  153 -> 22
+	  154 -> 71
+	  155 -> 156
+	  155 -> 157
+	  156 -> 229
+	  158 -> 160
+	  158 -> 159
+	  159 -> 161
+	  160 -> 186
+	  161 -> 72
+	  162 -> 234
+	  163 -> 28
+	  164 -> 80
+	  165 -> 225
+	  166 -> 136
+	  167 -> 72
+	  168 -> 57
+	  169 -> 187
+	  169 -> 149
+	  170 -> 223
+	  171 -> 78
+	  172 -> 136
+	  173 -> 252
+	  175 -> 176
+	  176 -> 177
+	  176 -> 178
+	  177 -> 123
+	  178 -> 123
+	  179 -> 91
+	  180 -> 103
+	  181 -> 103
+	  182 -> 141
+	  183 -> 184
+	  183 -> 185
+	  184 -> 10
+	  185 -> 167
+	  186 -> 72
+	  187 -> 13
+	  188 -> 7
+	  189 -> 87
+	  190 -> 88
+	  191 -> 170
+	  191 -> 77
+	  192 -> 136
+	  193 -> 27
+	  194 -> 35
+	  195 -> 70
+	  196 -> 3
+	  197 -> 36
+	  198 -> 113
+	  198 -> 228
+	  199 -> 200
+	  199 -> 201
+	  200 -> 230
+	  201 -> 231
+	  202 -> 72
+	  203 -> 220
+	  204 -> 65
+	  205 -> 117
+	  206 -> 239
+	  207 -> 208
+	  207 -> 209
+	  208 -> 244
+	  209 -> 34
+	  210 -> 211
+	  210 -> 212
+	  211 -> 52
+	  212 -> 109
+	  213 -> 50
+	  214 -> 78
+	  215 -> 89
+	  215 -> 255
+	  216 -> 72
+	  217 -> 218
+	  217 -> 219
+	  218 -> 56
+	  219 -> 158
+	  220 -> 108
+	  221 -> 237
+	  222 -> 207
+	  223 -> 99
+	  224 -> 192
+	  225 -> 59
+	  226 -> 196
+	  227 -> 62
+	  227 -> 42
+	  227 -> 54
+	  228 -> 64
+	  230 -> 72
+	  231 -> 232
+	  231 -> 233
+	  232 -> 145
+	  233 -> 202
+	  234 -> 235
+	  234 -> 236
+	  235 -> 47
+	  236 -> 206
+	  237 -> 239
+	  238 -> 23
+	  239 -> 240
+	  239 -> 241
+	  240 -> 163
+	  241 -> 32
+	  242 -> 115
+	  243 -> 97
+	  244 -> 96
+	  245 -> 96
+	  246 -> 248
+	  246 -> 247
+	  247 -> 165
+	  248 -> 26
+	  249 -> 12
+	  250 -> 152
+	  251 -> 78
+	  252 -> 253
+	  252 -> 254
+	  253 -> 215
+	  254 -> 89
+	  255 -> 29
+	  256 -> 153
+	  257 -> 107
+	  258 -> 66
+	  259 -> 59
+	  260 -> 4
+	  261 -> 50
+	  262 -> 90
+}
+

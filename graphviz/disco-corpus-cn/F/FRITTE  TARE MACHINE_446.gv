@@ -1,0 +1,78 @@
+# FRITTE / TARE MACHINE
+# Right next to the glass-doored fridge.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: “我明白了。那我该怎么捡回收品呢？”"];
+	  3 [label="Jump to: [Tare machine hub]"];
+	  4 [label="Frittte clerk: “不可以。”她甚至都懒得抬头看你一眼。“有回收品才能用回收机。”"];
+	  5 [label="You: 投入你的瓶子。"];
+	  6 [label="Electrochemistry: 你知道该拿那些钱做什么吗，小子？你应该*多买点酒*！走向无尽的消费循环吧！”"];
+	  7 [label="You: “这是什么机器？”"];
+	  8 [label="Frittte clerk: “我猜你需要一个袋子？我们这里之前有，不过都已经发出去了，所以……”她笨拙地耸耸肩。"];
+	  9 [label="Frittte clerk: “不过如果你找到袋子的话，请随意使用吧。我肯定应该还有的……就在外面。”她指向外面。“某个地方……”"];
+	  10 [label="You: [离开。]"];
+	  11 [label="Tare Machine: 你的瓶子咚的一声进入机器，钱带着一阵悦耳的叮当声出现在你眼前。你现在有钱了！"];
+	  12 [label="Frittte clerk: “哈？”店员的眼睛离开了杂志。“哦，那是回收机。”"];
+	  13 [label="Savoir Faire: 厉害。让我们来一场诈骗。*回收品*诈骗。"];
+	  14 [label="You: “现在我明白了。谢谢你。”"];
+	  16 [label="Tare Machine: 你的瓶子咚的一声进入机器，钱带着一阵悦耳的叮当声出现在你眼前。你现在有钱了！"];
+	  17 [label="Frittte clerk: 她皱起眉头，很是困惑。“这是台……回收用的机器？你知道的。如果在外面找到回收品——比如说，瓶子什么之类的——然后放到机器里。它就会给你钱。”"];
+	  18 [label="You: “是啊，但到底是*做什么*的？”"];
+	  19 [label="Jump to: [Tare machine hub]"];
+	  20 [label="Tare machine hub"];
+	  21 [label="Inland Empire: 你100%确定那个回收品能给你些特别的钱，流浪警探用的钱。至少+100%额外的回收品钱。如果机器上的数字不一样，那就是在*撒谎*。"];
+	  22 [label="Frittte clerk: “嗯。”她低下头，继续翻看杂志。"];
+	  23 [label="Tare Machine: 回收机站在角落。上面的标志写着：“一瓶=10分钱”"];
+	  24 [label="Variable[\"TASK.get_a_drink\"] == true  and  Variable[\"TASK.get_a_drink_done\"] == false"];
+	  25 [label="Variable[\"TASK.get_a_drink\"] == true  and  Variable[\"TASK.get_a_drink_done\"] == false", shape=diamond];
+	  26 [label="!(Variable[\"TASK.get_a_drink\"] == true  and  Variable[\"TASK.get_a_drink_done\"] == false)", shape=diamond];
+	  27 [label="Jump to: [Tare machine hub]"];
+	  28 [label="You: “不好意思——我有回收袋，但是没有回收品。这样能用回收机吗？”"];
+	  29 [label="Variable[\"gates.fritte_tare_hobo_inland\"]"];
+	  30 [label="Variable[\"gates.fritte_tare_hobo_inland\"]", shape=diamond];
+	  31 [label="!(Variable[\"gates.fritte_tare_hobo_inland\"])", shape=diamond];
+	  32 [label="IsTHCFixed(\"hobocop\")"];
+	  33 [label="IsTHCFixed(\"hobocop\")", shape=diamond];
+	  34 [label="!(IsTHCFixed(\"hobocop\"))", shape=diamond];
+	  0 -> 1
+	  1 -> 23
+	  2 -> 8
+	  3 -> 20
+	  4 -> 19
+	  5 -> 32
+	  7 -> 12
+	  8 -> 9
+	  9 -> 27
+	  11 -> 24
+	  12 -> 18
+	  12 -> 14
+	  13 -> 2
+	  14 -> 22
+	  16 -> 29
+	  17 -> 13
+	  18 -> 17
+	  19 -> 20
+	  20 -> 10
+	  20 -> 28
+	  20 -> 5
+	  20 -> 7
+	  21 -> 24
+	  22 -> 3
+	  23 -> 20
+	  24 -> 25
+	  24 -> 26
+	  25 -> 6
+	  27 -> 20
+	  28 -> 4
+	  29 -> 30
+	  29 -> 31
+	  30 -> 24
+	  31 -> 21
+	  32 -> 33
+	  32 -> 34
+	  33 -> 16
+	  34 -> 11
+}
+

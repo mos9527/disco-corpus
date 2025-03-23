@@ -1,0 +1,78 @@
+# BOARDWALK / REPORTING TO KIM
+# If Kim wasn't with you when you first discovered the body then you're going to have to tell him about it. (Jumps here from Kim's main; then jumps back).
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Jump to: [WHIRLING / KIM MAIN]"];
+	  3 [label="Kim Kitsuragi: \"But if all of this seems too much of a hassle, then there's also the option of reporting back to the station and leaving the case for our colleagues to solve.\""];
+	  4 [label="Kim Kitsuragi: \"If we take the case then we have to identify the man and take care of the corpse. I can take the body to the morgue on my own or we can ask for the help of the Hardie boys.\""];
+	  5 [label="Kim Kitsuragi: \"Alright. The station is going to want details, however. Let's make sure we didn't miss anything before we head back to my Kineema to make the call.\""];
+	  6 [label="Kim Kitsuragi: \"Are you serious?\" The lieutenant's face changes immediately, taking on a more sombre expression."];
+	  7 [label="Kim Kitsuragi: \"Great, we should call the library -- maybe it can provide us with a lead. That is, if we decide to take the case.\""];
+	  8 [label="Kim Kitsuragi: \"Maybe, but we don't really have that much time or resources to spare. Still, if you want to go ahead -- be my guest.\""];
+	  9 [label="You: \"Hold on -- what about field autopsy?\""];
+	  10 [label="Kim Kitsuragi: \"Good call.\""];
+	  11 [label="You: \"Let's leave this case for the station, I don't want to spend any time on it.\""];
+	  12 [label="Kim Kitsuragi: The lieutenant nods to himself, thinking. \"From where I stand I can see two options. We either take the case or report back to the station and leave it for our colleagues to handle.\""];
+	  13 [label="You: \"I want us to solve the case completely on our own.\""];
+	  15 [label="Kim Kitsuragi: \"How long has he been dead? Did you *identify* him, search through his pockets? Is he still there?\""];
+	  16 [label="You: \"You're right, I don't see anything criminal here. Let's leave it at that.\""];
+	  17 [label="Jump to: [what do we do]"];
+	  18 [label="Variable[\"boardwalk.library_card_know_phone_number\"]  and  Variable[\"TASK.call_jamrock_library\"] == false"];
+	  19 [label="Variable[\"boardwalk.library_card_know_phone_number\"]  and  Variable[\"TASK.call_jamrock_library\"] == false", shape=diamond];
+	  20 [label="!(Variable[\"boardwalk.library_card_know_phone_number\"]  and  Variable[\"TASK.call_jamrock_library\"] == false)", shape=diamond];
+	  21 [label="Kim Kitsuragi: \"Taking the case would mean that we need to identify the man and take care of the corpse. I can take the body to the morgue on my own or we could ask for the help of the Hardie boys.\""];
+	  22 [label="Kim Kitsuragi: \"Let's make sure we didn't miss anything -- especially any identifying information -- before we go.\""];
+	  23 [label="Jump to: [what do we do]"];
+	  24 [label="what do we do kim 2"];
+	  25 [label="You: \"Whoah, easy now... I haven't done anything yet, I wanted to tell you first.\""];
+	  26 [label="Kim Kitsuragi: \"Field autopsy isn't necessary if the cause of death doesn't appear to be criminal -- and this looks like a simple accident to me.\""];
+	  27 [label="Kim Kitsuragi: \"I'd say we should just write down 'head trauma' in the autopsy report and leave it at that. It would save us at least two hours of unnecessary work.\""];
+	  28 [label="Kim Kitsuragi: \"We should also give the Jamrock Library a call, see if we can learn anything about this Billie Méjean.\""];
+	  29 [label="You: \"I found a library card from his pockets, issued to someone named Billie Méjean by the Jamrock Public Library. The body is still there.\""];
+	  30 [label="Kim Kitsuragi: \"Alright. We're still going to have to call the station to let them know we're taking on an additional case, and so they can take away the body.\""];
+	  31 [label="You: \"I found a library card from his pockets, but I haven't examined it yet. The body is still there.\""];
+	  32 [label="You: \"Yes, but... isn't that kind of sloppy?\""];
+	  290001 [label="JUMP OUT to WHIRLING / KIM MAIN", shape=diamond];
+	  10430123 [label="JUMP OUT to BOARDWALK / WCH", shape=diamond];
+	  0 -> 1
+	  1 -> 6
+	  2 -> 290001
+	  3 -> 24
+	  4 -> 24
+	  5 -> 2
+	  6 -> 15
+	  7 -> 21
+	  8 -> 23
+	  9 -> 26
+	  10 -> 17
+	  11 -> 5
+	  12 -> 4
+	  13 -> 30
+	  15 -> 25
+	  15 -> 29
+	  15 -> 31
+	  16 -> 10
+	  17 -> 10430123
+	  18 -> 19
+	  18 -> 20
+	  19 -> 28
+	  20 -> 22
+	  21 -> 3
+	  22 -> 2
+	  23 -> 10430123
+	  24 -> 9
+	  24 -> 11
+	  24 -> 13
+	  25 -> 12
+	  26 -> 27
+	  27 -> 32
+	  27 -> 16
+	  28 -> 2
+	  29 -> 7
+	  30 -> 18
+	  31 -> 7
+	  32 -> 8
+}
+

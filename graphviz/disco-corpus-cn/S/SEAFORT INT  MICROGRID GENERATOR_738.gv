@@ -1,0 +1,335 @@
+# SEAFORT INT / MICROGRID GENERATOR
+# (generator, rewired – insert fuel here (use controls to activate electricity and open door if fuel in). kim remarks on wiring.)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Variable[\"seafort.generator_logic_fireguy\"]"];
+	  3 [label="Variable[\"seafort.generator_logic_fireguy\"]", shape=diamond];
+	  4 [label="!(Variable[\"seafort.generator_logic_fireguy\"])", shape=diamond];
+	  5 [label="Cuno: “好吧。”他拍拍手。“我们抓到什么了——坤诺也在说那个火人。”"];
+	  6 [label="Microgrid Generator: 汽缸一侧有个红色的启动开关，另一侧是一根启动绳——坤诺扳动了开关。"];
+	  7 [label="Logic: 那是……"];
+	  8 [label="Variable[\"TASK.ask_twins_about_island_done\"]"];
+	  9 [label="Variable[\"TASK.ask_twins_about_island_done\"]", shape=diamond];
+	  10 [label="!(Variable[\"TASK.ask_twins_about_island_done\"])", shape=diamond];
+	  11 [label="Jump to: [generatorhub]"];
+	  12 [label="You: 把你的手放在机器上。"];
+	  13 [label="Variable[\"seafort.generator_switch_flicked\"]"];
+	  14 [label="Variable[\"seafort.generator_switch_flicked\"]", shape=diamond];
+	  15 [label="!(Variable[\"seafort.generator_switch_flicked\"])", shape=diamond];
+	  16 [label="Cuno: “是啊——不知道。”他很快又把注意力转回到发电机身上。“坤诺不来这里的，我告诉过你。”"];
+	  17 [label="Inland Empire: 他本来应该说，“现在是冷的，不过有人一直在维护它。电线也修理过。”……"];
+	  18 [label="Inland Empire: 等……等等。这话之前是不是听过？"];
+	  19 [label="generatorhub"];
+	  20 [label="Microgrid Generator: 它很冷。锈迹片片剥落，粘在了你的掌心。"];
+	  21 [label="You: 拉动绳子。"];
+	  22 [label="Cuno: “我们搞定了。我们就要这样做，”他的声音盖过了噼啪声。"];
+	  23 [label="Cuno: “是啊，坤诺就他妈这么聪明。坤诺会变成一头超级聪明的猪。”"];
+	  24 [label="You: “坤诺，你教会了我聪明的含义。”"];
+	  25 [label="Kim Kitsuragi: 他赞许地点点头，甚至露出了笑容。"];
+	  26 [label="Variable[\"TASK.fuel_generator\"]"];
+	  27 [label="Variable[\"TASK.fuel_generator\"]", shape=diamond];
+	  28 [label="!(Variable[\"TASK.fuel_generator\"])", shape=diamond];
+	  29 [label="Kim Kitsuragi: “我不知道。我不是哲学家。”"];
+	  30 [label="Kim Kitsuragi: “流浪汉和燃料小偷就喜欢这种。毕竟冬天这么长……又漫长又冷。”"];
+	  31 [label="Microgrid Generator: 一阵空洞的声音响起——里面是空的。灰尘从发电机上震落，落入弹药电梯。"];
+	  32 [label="IsCunoInParty()"];
+	  33 [label="IsCunoInParty()", shape=diamond];
+	  34 [label="!(IsCunoInParty())", shape=diamond];
+	  35 [label="Microgrid Generator: 一道微弱的红光在烧焦的塑料里晕染开来。”"];
+	  36 [label="Jump to: [generatorhub]"];
+	  37 [label="FinishTask(\"TASK.fuel_generator_done\");XPMinorSetBool(\"XP.fuel_generator\")--[[ Variable[ ]]"];
+	  38 [label="Rhetoric: 如果有人待在这儿，他们会需要一台发电机。"];
+	  39 [label="You: “这是什么意思？一台发电机放在这里？”"];
+	  40 [label="Pain Threshold: 有点痛——大概是一块小骨头断裂了——但是刚好就证明了这一点。"];
+	  41 [label="Jump to: [generatorhub]"];
+	  42 [label="You: 这些电线通向什么地方？\n“这些电线通向什么地方？”"];
+	  43 [label="You: “一台发电机为什么会在这里？这意味着什么？”"];
+	  44 [label="You: “我是。这个发电机证明宇宙是物质的……”（踢一脚发电机。）"];
+	  45 [label="Kim Kitsuragi: “某个懂基础电气技能的人修好了它，来保持这个房间的温度。也许是那个*火人*……”"];
+	  46 [label="Microgrid Generator: 什么也没发生。"];
+	  47 [label="Cuno: 男孩帮你扶稳油桶，你倾斜油桶把燃料倒了进去。深褐色的粘稠液体倾泄而出，整个房间充满一股化学的味道。"];
+	  48 [label="FinishTask(\"TASK.fuel_the_generator_done\")--[[ Variable[ ]]"];
+	  49 [label="You: 怎么了？"];
+	  50 [label="Variable[\"TASK.contact_warship_archer_done\"]"];
+	  51 [label="Variable[\"TASK.contact_warship_archer_done\"]", shape=diamond];
+	  52 [label="!(Variable[\"TASK.contact_warship_archer_done\"])", shape=diamond];
+	  53 [label="You: 轻拍侧面。"];
+	  54 [label="Jump to: [flick_it_off]"];
+	  55 [label="Jump to: [generatorhub]"];
+	  56 [label="Microgrid Generator: 外面突然起风了，发出微弱的嚎叫。里面很温暖。"];
+	  57 [label="Variable[\"seafort.generator_painthresh_philosophy_kick\"]"];
+	  58 [label="Variable[\"seafort.generator_painthresh_philosophy_kick\"]", shape=diamond];
+	  59 [label="!(Variable[\"seafort.generator_painthresh_philosophy_kick\"])", shape=diamond];
+	  60 [label="Variable[\"TASK.contact_warship_archer_done\"]"];
+	  61 [label="Variable[\"TASK.contact_warship_archer_done\"]", shape=diamond];
+	  62 [label="!(Variable[\"TASK.contact_warship_archer_done\"])", shape=diamond];
+	  63 [label="You: “那个火人。有几个小孩跟我说过这里的*那个家伙*。一个生火的男人。”"];
+	  65 [label="IsKimHere()"];
+	  66 [label="IsKimHere()", shape=diamond];
+	  67 [label="!(IsKimHere())", shape=diamond];
+	  68 [label="flick_it_off"];
+	  69 [label="You: 扳动开关。"];
+	  70 [label="Kim Kitsuragi: 警督把手放在金属管上，检查它的温度……"];
+	  71 [label="Jump to: [generatorhub]"];
+	  72 [label="Jump to: [generatorhub]"];
+	  73 [label="Kim Kitsuragi: “现在是冷的，”他总结道。“不过有人一直在维护它。电线也修理过。”"];
+	  74 [label="Jump to: [generatorhub]"];
+	  75 [label="You: 拉动绳子。"];
+	  76 [label="Kim Kitsuragi: “这样应该可以了。”"];
+	  77 [label="Cuno: “闻起来像*重油*”。小孩拍了拍发电机侧面开启的油箱盖。“重油之类的狗屁玩意。”"];
+	  78 [label="Inland Empire: 可是他没有这么说。有什么*别的原因*阻碍了他。事情被*干扰*了……"];
+	  79 [label="You: 拉动绳子。"];
+	  80 [label="You: “我是说它为什么会在这里？”"];
+	  81 [label="Microgrid Generator: 楼下的某个地方——或者是接入照明系统的？你分辨不出来。\n楼下，接入控制台——已经搭建好了。从那里再分布到整个房间……"];
+	  82 [label="Kim Kitsuragi: 警督帮你稳住油桶，你倾斜油桶把燃料倒了进去。深褐色的粘稠液体倾泄而出，整个房间充满一股化学的味道。"];
+	  83 [label="Jump to: [flick_it_off]"];
+	  84 [label="Kim Kitsuragi: “某个懂基础电气技能的人修好了它，来保持这个房间的温度。”"];
+	  85 [label="Inland Empire: 不……不不。不对劲……"];
+	  86 [label="Kim Kitsuragi: “流浪汉和偷燃料的小贼就喜欢这种。毕竟冬天这么漫长……”"];
+	  87 [label="IsKimHere()"];
+	  88 [label="IsKimHere()", shape=diamond];
+	  89 [label="!(IsKimHere())", shape=diamond];
+	  90 [label="You: [离开。]"];
+	  91 [label="Kim Kitsuragi: 他看着墙上的插座。“楼下的某个地方吧。”\n他看着墙上的插座。“楼下，先进入控制台，然后是房间里的电子产品。”"];
+	  92 [label="Microgrid Generator: 油箱盖中升腾起*重油*的工业味道。这台发电机是重油的。"];
+	  93 [label="Microgrid Generator: 汽缸一侧有个红色的启动开关，另一侧是一根启动绳——警督扳动了开关。"];
+	  94 [label="Cuno: 他看着墙上的插座。“不知道，看起来像是楼下的某个地方……”\n他看着墙上的插座。“是我们之前在楼下看到的控制台。然后再通往房间的其他地方。是啊。电气之类的狗屁玩意。”"];
+	  95 [label="Microgrid Generator: 这是一台老式的圆柱形发电机，上面的油箱盖是敞开的。临时电线从侧面绕出，一路穿过整个地板。"];
+	  96 [label="You: 什么也不说。"];
+	  97 [label="You: “我是说它为什么会在这里？”"];
+	  98 [label="You: “……好痛。”（抓住你受伤的脚趾头。）"];
+	  99 [label="Esprit de Corps: 这时候没空去细想了。你必须继续行动……"];
+	  100 [label="Conceptualization: 这是他对笑话的定义。"];
+	  101 [label="Microgrid Generator: 外面突然起风了，发出微弱的嚎叫。里面很温暖。"];
+	  102 [label="Variable[\"TASK.fuel_the_generator_done\"]"];
+	  103 [label="Variable[\"TASK.fuel_the_generator_done\"]", shape=diamond];
+	  104 [label="!(Variable[\"TASK.fuel_the_generator_done\"])", shape=diamond];
+	  105 [label="Cuno: “坤诺他妈的怎么知道？”"];
+	  106 [label="You: 忽略它。"];
+	  107 [label="Kim Kitsuragi: “……漫长而又冰冷。”"];
+	  108 [label="Cuno: 坤诺把手放在发电机上。“这破玩意凉了。”"];
+	  109 [label="Microgrid Generator: 你打消了念头，把注意力转回到发电机上。"];
+	  110 [label="Kim Kitsuragi: 警督停顿了一下。似乎有什么东西分散了他的注意力。他瞥了你一眼，然后继续说道……"];
+	  111 [label="Jump to: [generatorhub]"];
+	  112 [label="You: 把燃料倒进罐子里。"];
+	  113 [label="Microgrid Generator: 反冲启动唤醒了这台老发电机。机器像老战马一样发出噼里啪啦的声响，随之嗡嗡地稳定下来。"];
+	  114 [label="Microgrid Generator: 油罐还远远没有装满，但也足够维持一天了。"];
+	  115 [label="Conceptualization: 只有最聪明的人才能认识到自己的无知，不是吗？"];
+	  116 [label="Variable[\"TASK.ask_twins_about_island_done\"]"];
+	  117 [label="Variable[\"TASK.ask_twins_about_island_done\"]", shape=diamond];
+	  118 [label="!(Variable[\"TASK.ask_twins_about_island_done\"])", shape=diamond];
+	  119 [label="Microgrid Generator: 一台老式的圆柱形发电机嵌在弹药电梯上方，临时电线从侧面绕出，一路穿过整个地板。电线最终消失在你右侧的墙上。"];
+	  120 [label="You: 我眼前的这台是什么类型的发电机？\n“这是哪种发电机？”"];
+	  121 [label="You: 什么也不说。"];
+	  122 [label="IsCunoInParty()"];
+	  123 [label="IsCunoInParty()", shape=diamond];
+	  124 [label="!(IsCunoInParty())", shape=diamond];
+	  125 [label="IsKimHere()"];
+	  126 [label="IsKimHere()", shape=diamond];
+	  127 [label="!(IsKimHere())", shape=diamond];
+	  128 [label="Microgrid Generator: 深褐色的液体流入罐中，房间四处弥漫着一股化学的味道。汽缸的一侧有个红色的启动开关，另一侧是一根启动绳。"];
+	  129 [label="Microgrid Generator: 反冲启动唤醒了这台老发电机。机器像老战马一样发出噼里啪啦的声响，随之嗡嗡地稳定下来。"];
+	  130 [label="Microgrid Generator: 反冲启动立即唤醒了这台老发电机。机器像老战马一样发出噼里啪啦的声响，随之嗡嗡地稳定下来。"];
+	  131 [label="You: “*你*认不认识那个火人？”"];
+	  132 [label="Variable[\"TASK.contact_warship_archer_done\"]"];
+	  133 [label="Variable[\"TASK.contact_warship_archer_done\"]", shape=diamond];
+	  134 [label="!(Variable[\"TASK.contact_warship_archer_done\"])", shape=diamond];
+	  135 [label="Kim Kitsuragi: “液碳，我想应该要烧*重油*吧。”他指着发电机旁敞开的油箱盖。"];
+	  136 [label="IsCunoInParty()"];
+	  137 [label="IsCunoInParty()", shape=diamond];
+	  138 [label="!(IsCunoInParty())", shape=diamond];
+	  139 [label="Variable[\"seafort.generator_hub_reached\"]"];
+	  140 [label="Variable[\"seafort.generator_hub_reached\"]", shape=diamond];
+	  141 [label="!(Variable[\"seafort.generator_hub_reached\"])", shape=diamond];
+	  142 [label="IsKimHere()"];
+	  143 [label="IsKimHere()", shape=diamond];
+	  144 [label="!(IsKimHere())", shape=diamond];
+	  145 [label="IsCunoInParty()"];
+	  146 [label="IsCunoInParty()", shape=diamond];
+	  147 [label="!(IsCunoInParty())", shape=diamond];
+	  148 [label="Cuno: “大概因为是冬天吧。有些在这里扎营的流浪汉不想被冻死？也许？可能吧。坤诺也许是对的……”"];
+	  0 -> 1
+	  1 -> 139
+	  2 -> 3
+	  2 -> 4
+	  3 -> 63
+	  4 -> 36
+	  5 -> 131
+	  6 -> 21
+	  7 -> 2
+	  8 -> 9
+	  8 -> 10
+	  9 -> 7
+	  10 -> 36
+	  11 -> 19
+	  12 -> 20
+	  13 -> 14
+	  13 -> 15
+	  14 -> 129
+	  15 -> 46
+	  16 -> 41
+	  17 -> 78
+	  18 -> 19
+	  19 -> 39
+	  19 -> 42
+	  19 -> 43
+	  19 -> 112
+	  19 -> 53
+	  19 -> 120
+	  19 -> 90
+	  20 -> 19
+	  21 -> 130
+	  22 -> 26
+	  23 -> 96
+	  23 -> 97
+	  24 -> 23
+	  25 -> 80
+	  25 -> 121
+	  26 -> 27
+	  26 -> 28
+	  27 -> 37
+	  28 -> 48
+	  29 -> 100
+	  30 -> 38
+	  31 -> 11
+	  32 -> 33
+	  32 -> 34
+	  33 -> 47
+	  34 -> 128
+	  35 -> 54
+	  36 -> 19
+	  37 -> 72
+	  38 -> 55
+	  39 -> 105
+	  40 -> 57
+	  41 -> 19
+	  42 -> 142
+	  43 -> 29
+	  44 -> 40
+	  45 -> 101
+	  46 -> 83
+	  47 -> 6
+	  48 -> 72
+	  49 -> 17
+	  50 -> 51
+	  50 -> 52
+	  51 -> 18
+	  52 -> 19
+	  53 -> 102
+	  54 -> 68
+	  55 -> 19
+	  56 -> 36
+	  57 -> 58
+	  57 -> 59
+	  58 -> 98
+	  59 -> 25
+	  60 -> 61
+	  60 -> 62
+	  61 -> 86
+	  62 -> 30
+	  63 -> 5
+	  65 -> 66
+	  65 -> 67
+	  66 -> 135
+	  67 -> 122
+	  68 -> 69
+	  68 -> 79
+	  69 -> 35
+	  70 -> 73
+	  71 -> 19
+	  72 -> 19
+	  73 -> 50
+	  74 -> 19
+	  75 -> 113
+	  76 -> 26
+	  77 -> 74
+	  78 -> 19
+	  79 -> 13
+	  80 -> 116
+	  81 -> 71
+	  82 -> 93
+	  83 -> 68
+	  84 -> 101
+	  85 -> 132
+	  86 -> 110
+	  87 -> 88
+	  87 -> 89
+	  88 -> 70
+	  89 -> 136
+	  91 -> 71
+	  92 -> 74
+	  93 -> 75
+	  94 -> 71
+	  95 -> 19
+	  96 -> 56
+	  97 -> 148
+	  98 -> 25
+	  99 -> 55
+	  100 -> 80
+	  100 -> 121
+	  100 -> 44
+	  101 -> 111
+	  102 -> 104
+	  102 -> 103
+	  103 -> 114
+	  104 -> 31
+	  105 -> 115
+	  106 -> 109
+	  107 -> 99
+	  108 -> 85
+	  109 -> 19
+	  110 -> 107
+	  111 -> 19
+	  112 -> 125
+	  113 -> 76
+	  114 -> 11
+	  115 -> 24
+	  115 -> 97
+	  115 -> 96
+	  116 -> 117
+	  116 -> 118
+	  117 -> 45
+	  118 -> 84
+	  119 -> 87
+	  120 -> 65
+	  121 -> 101
+	  122 -> 123
+	  122 -> 124
+	  123 -> 77
+	  124 -> 92
+	  125 -> 126
+	  125 -> 127
+	  126 -> 82
+	  127 -> 32
+	  128 -> 68
+	  129 -> 26
+	  130 -> 22
+	  131 -> 16
+	  132 -> 133
+	  132 -> 134
+	  133 -> 49
+	  133 -> 106
+	  134 -> 19
+	  135 -> 60
+	  136 -> 137
+	  136 -> 138
+	  137 -> 108
+	  138 -> 90
+	  138 -> 12
+	  139 -> 140
+	  139 -> 141
+	  140 -> 95
+	  141 -> 119
+	  142 -> 144
+	  142 -> 143
+	  143 -> 91
+	  144 -> 145
+	  145 -> 146
+	  145 -> 147
+	  146 -> 94
+	  147 -> 81
+	  148 -> 8
+}
+

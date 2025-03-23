@@ -1,0 +1,817 @@
+# APT / WCW MAIN
+# Working Class Woman in her room, apartment #20.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Pain Threshold: 要来了。"];
+	  3 [label="Jump to: [MAIN HUB]"];
+	  4 [label="Working Class Woman: “是关于我的丈夫维克托吗？他是不是又惹上什么麻烦了？我可以去警局接他，如果是这么回事的话……”她停了下来，眼睛似乎想从你的脸上找到答案。"];
+	  5 [label="MAIN HUB"];
+	  6 [label="Working Class Woman: “女孩们今晚在朋友家里过夜，维克托……出去了。”"];
+	  7 [label="Jump to: [small questions hub]"];
+	  8 [label="You: “你的女儿们多大了？”"];
+	  9 [label="IsKimHere()"];
+	  10 [label="IsKimHere()", shape=diamond];
+	  11 [label="!(IsKimHere())", shape=diamond];
+	  12 [label="Reaction Speed: 你感觉到警督准备说些什么——别让他这样做。自己搞定，你可以的。"];
+	  13 [label="Working Class Woman: “哦，”她又说了一次，“但他只是……”她看着厨房的桌子，上面的烟灰缸里还留着两只烟头。"];
+	  14 [label="Working Class Woman: “你就这么……在那里找到他的？冰冷的躺在那里？”她摇摇头。"];
+	  15 [label="You: “我不想这么做。”"];
+	  16 [label="You: “你知道吗，无所谓了。我还是……离开吧。”"];
+	  17 [label="Perception (Hearing): 你听见孩子们的房间传来钟表的滴答声。"];
+	  18 [label="Working Class Woman: “哦，”她又说了一次，“但他只是……”她看着厨房的桌子，上面的烟灰缸里还留着两只烟头。"];
+	  19 [label="Working Class Woman: “呃，只是一件普通的深棕色皮夹克。不过衣服是他十几岁的时候买的，所以……”"];
+	  20 [label="Working Class Woman: “天啦，我该打给她们吗？我应该让她们回家吗？”"];
+	  21 [label="Physical Instrument: 这是她仅存的一点力气。很快，她的肌肉会投降。她已经开始颤抖了。"];
+	  22 [label="Working Class Woman: “我最近怎么样？”她摇摇头。“我肯定你来这里不是为了讨论*我*的事——怎么回事，警官？”"];
+	  23 [label="You: [把借书证放在她身边。离开房间。]"];
+	  24 [label="Working Class Woman: “是你。书摊的那个人。”有那么一会儿，她似乎愣住了，只是呆呆地看着你。然后，她强迫自己摆脱了那种状态。\n“是你。书摊的那个人。”有那么一会儿，她似乎愣住了，只是呆呆地看着你和金。然后，她强迫自己摆脱了那种状态。"];
+	  25 [label="Working Class Woman: “不，我是比莉。”她眯起眼睛。“是关于我的丈夫维克托的吗？我可以去警局接他，如果是这么回事的话……”她停了下来，眼睛似乎想从你的脸上找到答案。"];
+	  26 [label="Working Class Woman: “为什么，真有*那么糟糕*吗？”"];
+	  27 [label="IsKimHere()"];
+	  28 [label="IsKimHere()", shape=diamond];
+	  29 [label="!(IsKimHere())", shape=diamond];
+	  30 [label="Working Class Woman: “告诉我，接下来我该怎么做？他在哪？我能看看他吗？”"];
+	  31 [label="Working Class Woman: “什么？”她用空洞的眼睛盯着你。"];
+	  32 [label="You: “夫人，我很抱歉的通知你，你的丈夫维克托·梅让被发现死在了马丁内斯的木板道上。”"];
+	  33 [label="Working Class Woman: “谢谢你。”她低下头。“感谢你告诉我这个消息。我会打电话的，如果……”她有些喘不过气。"];
+	  34 [label="Working Class Woman: “嗯，后来她们回来了。她们都是好姑娘。”"];
+	  35 [label="Empathy: 是的。那才是最重要的事情。用那个词。"];
+	  36 [label="You: “是的。”"];
+	  37 [label="Empathy: 如果你说出‘也许两天’，它就会永远铭刻在她的脑海里。"];
+	  38 [label="Working Class Woman: “你好，我是比莉。你想来点喝的吗？茶，柠檬水？”她紧张地问到。“我们的咖啡喝完了，我本来应该明天去买的……”"];
+	  39 [label="You: “去哪了？”"];
+	  40 [label="You: “他还没有回家？”"];
+	  41 [label="Empathy: 我不想。"];
+	  42 [label="IsKimHere()"];
+	  43 [label="IsKimHere()", shape=diamond];
+	  44 [label="!(IsKimHere())", shape=diamond];
+	  45 [label="Working Class Woman: “请原谅，你说什么？”她眨眨眼。“你说什么？”"];
+	  46 [label="You: “你的丈夫到期了。”"];
+	  47 [label="Working Class Woman: “接下来就交给我吧。谢谢你。”她指了指大门的方向，呼吸变得有些急促。她正在努力控制自己。"];
+	  48 [label="You: “这是一起事故——他从木板道的洞里摔了下去，然后撞到了头。”"];
+	  49 [label="You: “我们还不知道，等结果出来了我们会告诉你的。”"];
+	  50 [label="Kim Kitsuragi: “我们已经把他送到市停尸房了。本地验尸官很快会联系你，安排葬礼事宜。如果你想提前联系他的话，这里是他的电话号码。”"];
+	  51 [label="Empathy: 你知道答案。很奇怪，但你就是知道。"];
+	  52 [label="Working Class Woman: “是的。”她的话语里有一些不稳定的情绪，前额皱成了一副忧虑的神情。"];
+	  53 [label="IsKimHere()"];
+	  54 [label="IsKimHere()", shape=diamond];
+	  55 [label="!(IsKimHere())", shape=diamond];
+	  56 [label="Composure: 她明显咽了下口水。"];
+	  57 [label="IsKimHere()"];
+	  58 [label="IsKimHere()", shape=diamond];
+	  59 [label="!(IsKimHere())", shape=diamond];
+	  60 [label="Kim Kitsuragi: “加姆洛克公共图书馆？”"];
+	  61 [label="Empathy: 你还在这里做什么？！现在她需要些时间独处。"];
+	  62 [label="small questions hub"];
+	  63 [label="You: “我还有些事要告诉你……”"];
+	  64 [label="Jump to: [MAIN HUB]"];
+	  65 [label="Working Class Woman: “说什么？”她似乎吓到了。"];
+	  66 [label="You: 看向别处。"];
+	  67 [label="Working Class Woman: “脑子有问题？”"];
+	  68 [label="IsKimHere()"];
+	  69 [label="IsKimHere()", shape=diamond];
+	  70 [label="!(IsKimHere())", shape=diamond];
+	  71 [label="You: “我们已经把他送到市停尸房了。本地验尸官很快会联系你，安排葬礼事宜。同时，如果你有什么问题的话，可以随时打给RCM。”"];
+	  72 [label="You: “没有什么显著的特征吗？”"];
+	  73 [label="Working Class Woman: “是的……”她停了下来。“内衬是手工缝制的，蓝色；我想让夹克变得更防风雨一些，因为他总是在隆冬的时候穿着它到处跑。”"];
+	  74 [label="You: “也许两天吧。”"];
+	  75 [label="Working Class Woman: “大家都要吃饭的。”她紧张地摩擦双手。“这是要干什么？为什么突然问我做饭的事？”"];
+	  76 [label="IsKimHere()"];
+	  77 [label="IsKimHere()", shape=diamond];
+	  78 [label="!(IsKimHere())", shape=diamond];
+	  80 [label="You: “不是凤头鹦鹉的事。”"];
+	  81 [label="You: “据你所知，他去图书馆了吗？”"];
+	  82 [label="You: “只是死了。”"];
+	  83 [label="Kim Kitsuragi: “我能理解，这对你来说是一个巨大的冲击。我想让你知道，我和我的搭档，”他指向你，“专程过来回答你的所有问题，我们对你丈夫的死深表遗憾，夫人。”"];
+	  84 [label="You: “我不知道他们去了哪里……”"];
+	  85 [label="You: （不说话。只是把警督的手帕递给她。）"];
+	  86 [label="Variable[\"apt.NewVariable\"]"];
+	  87 [label="Variable[\"apt.NewVariable\"]", shape=diamond];
+	  88 [label="!(Variable[\"apt.NewVariable\"])", shape=diamond];
+	  89 [label="Variable[\"plaza.working_asked_about_cockatoo\"]"];
+	  90 [label="Variable[\"plaza.working_asked_about_cockatoo\"]", shape=diamond];
+	  91 [label="!(Variable[\"plaza.working_asked_about_cockatoo\"])", shape=diamond];
+	  92 [label="You: “你能描述一下吗？”"];
+	  93 [label="You: （自己打脸。）“笨蛋……笨蛋……直接说啊……”"];
+	  94 [label="You: （转向比莉。）“看来有部分我拒绝这样做。”"];
+	  95 [label="Working Class Woman: “不，不……”她深吸一口气。“我只是需要告诉我的女儿们……”突然，她肺里的空气全被抽了出来。"];
+	  96 [label="Working Class Woman: “朱莉16岁，珍妮下个月18岁。”"];
+	  97 [label="Logic: 是的。"];
+	  98 [label="Physical Instrument: 强迫你自己。扇自己巴掌。"];
+	  99 [label="Empathy: 他就在这里。活生生的。"];
+	  100 [label="Conceptualization: 那么的不真实。"];
+	  101 [label="Working Class Woman: “不。我猜他决定回家的时候，我就知道了吧。”她看着大门的方向。"];
+	  102 [label="You: 等等，什么？"];
+	  103 [label="kim fail hub"];
+	  104 [label="Variable[\"apt.wcw_reaction_dont_let_kim_cut_in\"]"];
+	  105 [label="Variable[\"apt.wcw_reaction_dont_let_kim_cut_in\"]", shape=diamond];
+	  106 [label="!(Variable[\"apt.wcw_reaction_dont_let_kim_cut_in\"])", shape=diamond];
+	  107 [label="Working Class Woman: “哦。”"];
+	  108 [label="Working Class Woman: “你还没有把他带走吗？！”她的声音里有一股警告的意味。"];
+	  109 [label="Working Class Woman: “不，我是说——*他的尸体*在哪？”"];
+	  110 [label="You: “给你，拿着吧。”（把警督的手帕递给她。）"];
+	  111 [label="You: “不，用一天恢复一下，这样明天她们回家的时候，你就准备好了。”"];
+	  112 [label="Working Class Woman: “告诉我，接下来我该怎么做？他在哪？我能看看他吗？”"];
+	  113 [label="You: “是的，我记得，你在书摊前面提到过。”"];
+	  114 [label="Working Class Woman: 她抬起头，由于太过紧张，她一句话都说不出来。"];
+	  115 [label="Kim Kitsuragi: 警督对女人点点头，然后把目光转向你，压低了声音：“我们应该出去聊几句。”"];
+	  116 [label="Untitled hub"];
+	  117 [label="IsKimHere()"];
+	  118 [label="IsKimHere()", shape=diamond];
+	  119 [label="!(IsKimHere())", shape=diamond];
+	  120 [label="You: [把借书证放在她身边。离开房间。]"];
+	  121 [label="You: “你跟你丈夫维克托一起住在这里，是吗？”"];
+	  122 [label="Working Class Woman: “你是书摊的那个人……”她只是呆呆地看了你一会儿，不知道该怎么做。"];
+	  123 [label="You: “我真的不知道。”"];
+	  124 [label="Working Class Woman: “我明白了……”她后退几步，试着想象那个画面。“你就这么……在那里找到他的吗？冰冷的躺在那里？”"];
+	  125 [label="IsKimHere()"];
+	  126 [label="IsKimHere()", shape=diamond];
+	  127 [label="!(IsKimHere())", shape=diamond];
+	  128 [label="Working Class Woman: “我明白了。呃，谢谢你……告诉我这个消息。”她摩挲着自己的脸庞，手指抚摸着早已麻木的面颊。"];
+	  129 [label="Working Class Woman: “我想应该是蒂博的‘闪耀曲线’。”她把一缕头发拨到耳后。“挺不错的……”"];
+	  130 [label="Empathy: 做点什么？打破点什么？这是一个愚蠢的希望。"];
+	  131 [label="Pain Threshold: 一根巨大而恐怖的尖刺。血液在她的血管里冻结成冰。"];
+	  132 [label="Drama: 您的判断非常正确。"];
+	  133 [label="prehub"];
+	  134 [label="Variable[\"plaza.working_pre_greeting_done\"]"];
+	  135 [label="Variable[\"plaza.working_pre_greeting_done\"]", shape=diamond];
+	  136 [label="!(Variable[\"plaza.working_pre_greeting_done\"])", shape=diamond];
+	  137 [label="Working Class Woman: “我，维克托还有孩子们，”她点点头。“我们有两个女儿，珍妮和朱莉。”"];
+	  138 [label="Working Class Woman: “为什么这么问，你有什么消息吗？”"];
+	  139 [label="Working Class Woman: “哦，在加姆洛克。就是麦罗埃街上那个。我不知道官方名称是什么。”"];
+	  140 [label="You: “不，他死了。”"];
+	  141 [label="You: “他在停尸房里。”"];
+	  142 [label="You: “我能理解，这对你来说是一个巨大的冲击。我想让你知道，我这次来会回答你的所有问题。慢慢来，夫人，我哪里也不去。”"];
+	  143 [label="Working Class Woman: “他喝醉了吗？”"];
+	  144 [label="Working Class Woman: “他在那多久了？”"];
+	  145 [label="Working Class Woman: 当她掏出手帕擦拭眼泪的时候，脸上流露出一丝惊恐的微笑。她看起来有些混乱。"];
+	  146 [label="You: “是的，她们应该知道。你希望我们打电话叫她们过来吗？”"];
+	  147 [label="Pain Threshold: 它像酸液一样灼烧着。"];
+	  148 [label="Physical Instrument: 这是她仅存的一点力气。很快，她的肌肉会投降。她已经开始颤抖了。"];
+	  149 [label="Working Class Woman: “天啦，我该打给她们吗？我应该让她们回家吗？”"];
+	  150 [label="You: “是的。”"];
+	  151 [label="Drama: 要是不了解演员的话，怎么能写得出一幕场景呢。再多问一些，让自己在她身边舒服一些。"];
+	  152 [label="Pain Threshold: 这就像是撕绷带。痛苦最少的方式就是最直接的方式，不要拖拉。"];
+	  153 [label="You: “你还记得最后一次看见他的时候，他穿的是什么衣服吗？”\n“再提醒我一次，你最后一次看见他的时候，他穿的是什么衣服？”"];
+	  154 [label="You: “相信我，夫人，你*不想*知道的。”"];
+	  155 [label="You: “你的丈夫维克托·梅让死了。对你的丈夫的死，我深表遗憾，夫人。”"];
+	  156 [label="how did he die"];
+	  157 [label="You: “现在还很难说。”"];
+	  158 [label="Visual Calculus: 冷凝——因为刚走进屋内。"];
+	  159 [label="IsKimHere()"];
+	  160 [label="IsKimHere()", shape=diamond];
+	  161 [label="!(IsKimHere())", shape=diamond];
+	  162 [label="You: “我真的不是来这里喝茶的。”"];
+	  163 [label="You: [离开。]"];
+	  164 [label="Logic: 她一定知道你是为她丈夫来的。"];
+	  165 [label="Variable[\"TASK.find_working_class_husband\"]"];
+	  166 [label="Variable[\"TASK.find_working_class_husband\"]", shape=diamond];
+	  167 [label="!(Variable[\"TASK.find_working_class_husband\"])", shape=diamond];
+	  168 [label="You: “等等……*你是*比莉？我还以为比莉是个男人……”"];
+	  169 [label="Working Class Woman: “他出了什么事？告诉我。”她的脖子和脸颊被红疹斑覆盖，双下巴在颤抖。"];
+	  170 [label="IsKimHere()"];
+	  171 [label="IsKimHere()", shape=diamond];
+	  172 [label="!(IsKimHere())", shape=diamond];
+	  173 [label="Reaction Speed: 手帕！"];
+	  174 [label="Kim Kitsuragi: 他递给女人一张传单，上面有停尸房的联系方式。“RCM还能为你做些什么吗？”"];
+	  175 [label="Empathy: 没有眼镜的他一定感觉很脆弱。这就是他让你主导的原因吗？"];
+	  176 [label="You: 天啦，我是不是要直接说他*死了*……"];
+	  177 [label="Empathy: 痛苦已经够多了。"];
+	  178 [label="Pain Threshold: 她很痛苦。她跟你一样痛苦，你的胸膛在燃烧。"];
+	  179 [label="Working Class Woman: “我已经告诉过你了，他有点酗酒的问题，而且他……时不时会失踪。”"];
+	  180 [label="Variable[\"TASK.find_working_class_husband\"]"];
+	  181 [label="Variable[\"TASK.find_working_class_husband\"]", shape=diamond];
+	  182 [label="!(Variable[\"TASK.find_working_class_husband\"])", shape=diamond];
+	  183 [label="Working Class Woman: “他可能在帕克斯，跟他的朋友一起喝酒。几天前我让他去一趟图书馆，但是我猜有什么东西上来了……”她的笑容有些酸涩。"];
+	  184 [label="You: “你丈夫死了。”"];
+	  185 [label="Working Class Woman: “做什么？”"];
+	  186 [label="IsKimHere()"];
+	  187 [label="IsKimHere()", shape=diamond];
+	  188 [label="!(IsKimHere())", shape=diamond];
+	  189 [label="Kim Kitsuragi: “我们已经把死者送到市停尸房了。本地验尸官很快会联系你，安排葬礼事宜。如果你想提前联系他的话，这里是他的电话号码。”"];
+	  190 [label="Kim Kitsuragi: 他递给女人一张传单，上面有停尸房的联系方式。“RCM还能为你做些什么吗？”"];
+	  191 [label="Working Class Woman: “那我应该联系谁……？”"];
+	  192 [label="You: “我喝的太多，现在什么事都做不太好。”"];
+	  193 [label="Working Class Woman: 她只是点点头，冷漠疏离、伤心欲绝。她开始颤抖，身下床垫的弹簧发出吱呀吱呀的声响。"];
+	  194 [label="Working Class Woman: 她眨眨眼，眼中满是泪水，手开始在裙子的口袋里翻找着什么。"];
+	  195 [label="You: “他打算去图书馆做什么？”"];
+	  196 [label="Kim Kitsuragi: 警督取下满是雾气的眼镜，正忙着用手帕擦拭。这里你只能靠自己了。"];
+	  197 [label="Pain Threshold: 它像酸液一样灼烧着。"];
+	  198 [label="Working Class Woman: “接下来就交给我吧。谢谢你。”她指了指大门的方向，呼吸变得有些急促。她正在努力控制自己。"];
+	  199 [label="Jump to: [Working Class Woman: \"...\"]"];
+	  200 [label="Working Class Woman: 她只是点点头。"];
+	  201 [label="Working Class Woman: “应该用不了太久。他从没离开过几天的。”"];
+	  202 [label="You: （转向金。）“我不想这样。”"];
+	  203 [label="You: “图书馆叫什么名字？”"];
+	  204 [label="You: 但是我们*必须*这样做。"];
+	  205 [label="You: “酗酒过量。”"];
+	  206 [label="Working Class Woman: “他在那里*多久*了？”"];
+	  207 [label="You: 什么也不说。"];
+	  208 [label="Working Class Woman: “我想知道……他是怎么死的？”"];
+	  209 [label="Kim Kitsuragi: “看起来他像是在木板道上滑了一跤——恐怕这一下是致命的。这只是一起非常不幸的事故，不过其中可能也有酒精的影响。”"];
+	  210 [label="IsKimHere()"];
+	  211 [label="IsKimHere()", shape=diamond];
+	  212 [label="!(IsKimHere())", shape=diamond];
+	  213 [label="Kim Kitsuragi: “我们能理解，这对你来说是一个巨大的冲击。我想让你知道，我和我的搭档，”他指向你，“专程过来回答你的所有问题，慢慢来，夫人。”"];
+	  214 [label="Working Class Woman: 她眨眨眼。“你说什么？”"];
+	  215 [label="You: “不是很久。”"];
+	  216 [label="Jump to: [small questions hub]"];
+	  217 [label="Variable[\"apt.wcw_reaction_handkerchief\"]"];
+	  218 [label="Variable[\"apt.wcw_reaction_handkerchief\"]", shape=diamond];
+	  219 [label="!(Variable[\"apt.wcw_reaction_handkerchief\"])", shape=diamond];
+	  220 [label="Rhetoric: 没有委婉的说法，你就是为这个来的。"];
+	  221 [label="Empathy: 不。一天。"];
+	  222 [label="Kim Kitsuragi: 警督插了进来。“我们非常抱歉的通知你，你的丈夫维克托·梅让今早被发现死在了马丁内斯的木板道。”"];
+	  223 [label="Volition: 不！停下来，现在。"];
+	  224 [label="You: “所以……你最近怎么样？”"];
+	  225 [label="Working Class Woman: 她的表情有了些变化。“不，情况更糟糕是不是……他住院了吗？伤的多重？”"];
+	  226 [label="Working Class Woman: “我还没有好好做个自我介绍——我叫比莉。你想来点喝的吗？”她四下看了看厨房。“茶，柠檬水？我们家没有咖啡了……”"];
+	  227 [label="Working Class Woman: 她把两只手交叠着放在胸前。"];
+	  228 [label="no kim fail hub"];
+	  229 [label="Empathy: 太迟了，你毁了它，话语就这么脱口而出。"];
+	  230 [label="Kim Kitsuragi: “我们非常抱歉的通知你，你的丈夫维克托·梅让今早被发现死在了马丁内斯的木板道。”"];
+	  231 [label="You: 让他说。"];
+	  232 [label="You: “他摔了一跤，头撞到了长凳。”"];
+	  233 [label="You: “至少几天了。”"];
+	  234 [label="You: “抱歉我做不到，我的脑袋稍微有点问题……”（拍拍自己的头。）"];
+	  235 [label="Kim Kitsuragi: “重新声明一次，如果有什么我们能为你做的事，请不要犹豫，直接打给RCM，夫人。”"];
+	  236 [label="IsKimHere()"];
+	  237 [label="IsKimHere()", shape=diamond];
+	  238 [label="!(IsKimHere())", shape=diamond];
+	  239 [label="Kim Kitsuragi: “需要我们帮你打给谁吗？朋友，家人，或者可以来陪你的人？”"];
+	  240 [label="You: “需要我们帮你打给谁吗？朋友，家人，或者可以来陪你的人？”"];
+	  241 [label="Working Class Woman: “感谢你告诉我，警官……”她低下头。"];
+	  242 [label="Empathy: 它让他想起自己的青少年时期。"];
+	  243 [label="Empathy: 他前不久还在这里，活生生的。"];
+	  244 [label="Endurance: 她再也不能言语，胃里在不停翻搅。很快她就不得不冲进浴室尖叫。"];
+	  245 [label="Half Light: 你这个白痴……*为什么*要这么说？！"];
+	  246 [label="Working Class Woman: “不，不……”她深吸一口气。“我只是需要告诉我的女儿们……”突然，她肺里的空气全被抽了出来。"];
+	  247 [label="IsKimHere()"];
+	  248 [label="IsKimHere()", shape=diamond];
+	  249 [label="!(IsKimHere())", shape=diamond];
+	  250 [label="Working Class Woman: “他……有点酗酒的问题。而且他……时不时会失踪。”"];
+	  251 [label="Kim Kitsuragi: 警督闭上嘴，但是看起来不太高兴。"];
+	  252 [label="Working Class Woman: “哪里？他*跑路*了吗？”"];
+	  253 [label="Working Class Woman: “是的，我……”她被什么东西噎住了，紧紧抓住自己的脖子。"];
+	  254 [label="Working Class Woman: “哦。”她的手抚上自己的脖子，双眼像海水里的珍珠一样苍白。"];
+	  255 [label="how did he die"];
+	  256 [label="CheckItem(\"lieutenants_handkerchief\")"];
+	  257 [label="CheckItem(\"lieutenants_handkerchief\")", shape=diamond];
+	  258 [label="!(CheckItem(\"lieutenants_handkerchief\"))", shape=diamond];
+	  259 [label="Working Class Woman: “没有，呃……”她停了下来。“内衬是手工缝制的，蓝色；我想让夹克变得更防风雨一些，因为他总是在隆冬的时候穿着它到处跑。”"];
+	  260 [label="Jump to: [small questions hub]"];
+	  261 [label="You: “加姆洛克公共图书馆？”"];
+	  262 [label="Conceptualization: 那么的不真实。"];
+	  263 [label="Pain Threshold: 是的。你他妈就是一场彻头彻尾的恐怖秀。"];
+	  264 [label="You: “再次向你表达我的遗憾，夫人。”"];
+	  265 [label="Jump to: [Kim Kitsuragi: \"The lieutenant nods at the woman, t...\"]"];
+	  266 [label="Working Class Woman: 女人用袖子擦了把脸，勉强挤出了一丝惊恐的微笑。她看起来有些混乱。"];
+	  267 [label="You: “谢谢，我还好。”"];
+	  268 [label="Variable[\"apt.wcw_empathy_redcheck\"]"];
+	  269 [label="Variable[\"apt.wcw_empathy_redcheck\"]", shape=diamond];
+	  270 [label="!(Variable[\"apt.wcw_empathy_redcheck\"])", shape=diamond];
+	  271 [label="You: （转向金。）“看来有部分我拒绝这样做。”"];
+	  272 [label="You: （转向比莉。）“我不想这么做。”"];
+	  273 [label="Kim Kitsuragi: “警官……”警督向你发出警告。"];
+	  274 [label="Working Class Woman: “说什么？”她似乎吓到了。"];
+	  275 [label="You: “好吧，那就这样吧。”"];
+	  276 [label="sorry hub"];
+	  277 [label="IsKimHere()"];
+	  278 [label="IsKimHere()", shape=diamond];
+	  279 [label="!(IsKimHere())", shape=diamond];
+	  280 [label="Kim Kitsuragi: “很抱歉，我的搭档，”警督斜了你一眼，插了进来，“我的搭档*并不是*有意轻视这种状况的。”"];
+	  281 [label="Empathy: 你之前做过的。只要集中注意力就好。"];
+	  282 [label="Working Class Woman: “哦。”她的手抚上自己的脖子，双眼像海水里的珍珠一样苍白。"];
+	  283 [label="Working Class Woman: “他出了什么事？告诉我。”她的脖子和脸颊被红疹斑覆盖，双下巴在颤抖。"];
+	  284 [label="Physical Instrument: 这是她仅存的一点力气。很快，她的肌肉就会屈服。向尖叫屈服。"];
+	  285 [label="Jump to: [MAIN HUB]"];
+	  286 [label="IsKimHere()"];
+	  287 [label="IsKimHere()", shape=diamond];
+	  288 [label="!(IsKimHere())", shape=diamond];
+	  289 [label="Variable[\"apt.wcw_finished_dialogue_teleported_outside\"]"];
+	  290 [label="Variable[\"apt.wcw_finished_dialogue_teleported_outside\"]", shape=diamond];
+	  291 [label="!(Variable[\"apt.wcw_finished_dialogue_teleported_outside\"])", shape=diamond];
+	  292 [label="You: （环顾四周。）“那其他人呢？我好像没看见其他人在家。”"];
+	  293 [label="Empathy: 我不想这么做。"];
+	  294 [label="Empathy: 太迟了，你毁了它，话语就这么脱口而出。"];
+	  295 [label="You: “他现在去了一个更好的地方。”"];
+	  296 [label="Working Class Woman: “到期？”她眯起眼睛。“就像*牛奶盒*吗？”"];
+	  297 [label="Working Class Woman: “告诉我，维克托怎么了？”她先看了一眼警督，然后把目光转回到你身上。"];
+	  298 [label="Working Class Woman: “抱歉，我需要……我不知道该说什么。”她双手捂住额头，双眼像海水里的珍珠一样苍白。"];
+	  299 [label="Working Class Woman: “好吧，我会打给他们……”她再次深吸一口气，试着稳定自己的情绪。"];
+	  300 [label="You: “他在停尸房。”"];
+	  301 [label="You: “没有，不过我们会做的。我们会把他送到市停尸房。”"];
+	  302 [label="Working Class Woman: “不，我自己来，我只是……”她又吸了一口气，紧握着身体左侧，好像非常痛苦。"];
+	  303 [label="IsKimHere()"];
+	  304 [label="IsKimHere()", shape=diamond];
+	  305 [label="!(IsKimHere())", shape=diamond];
+	  306 [label="Drama: 看在神明的面上，撒谎吧。"];
+	  307 [label="Rhetoric: 不如在宣布消息之前先闲聊一下？"];
+	  308 [label="Jump to: [small questions hub]"];
+	  309 [label="You: 现在不行。[离开。]"];
+	  310 [label="Working Class Woman: “他的旧皮夹克。”"];
+	  311 [label="dead hub"];
+	  312 [label="Jump to: [dead hub]"];
+	  313 [label="Working Class Woman: “没了。如果有什么事我会打给你，我还是有点……”她摩挲着自己的脸颊，上面满是斑点，有些木然。"];
+	  314 [label="You: （嘟囔）“我不想这么做……”"];
+	  315 [label="Empathy: RCM？真希望金在这里……"];
+	  316 [label="You: “RCM？”"];
+	  317 [label="You: “他还在那里，在木板道上。”"];
+	  318 [label="You: “现在说还有些太早，但是第一眼看上去，他好像是滑倒，然后撞到了头。”"];
+	  319 [label="Kim Kitsuragi: “给你。”金掏出自己的手帕，递给了女人。她点点头，开始轻轻擦拭着眼泪。"];
+	  320 [label="Working Class Woman: “我的手帕……”她像孩子一样用手摩挲着哭泣的面庞，想要挤出一点笑容。"];
+	  321 [label="Working Class Woman: “没了，如果有什么事我会打给你，我还是有点……”她摩挲着自己的脸庞，手指抚摸着早已麻木的面颊。"];
+	  322 [label="You: “那内衬呢？”"];
+	  323 [label="You: “我看到你好像在做饭。”"];
+	  324 [label="Kim Kitsuragi: “不，我们*有*。”"];
+	  325 [label="Suggestion: 绝对不要闲聊，时间不对，地点也不对。"];
+	  326 [label="Working Class Woman: “你是书摊的那个人……你把我的凤头鹦鹉带回来了吗？”她的笑容有些紧张，接着就从脸上消失了。"];
+	  327 [label="Composure: 沉着一点。你可不希望自己的肢体语言向她传达消息。"];
+	  328 [label="Variable[\"apt.wcw_composure_keep_it_together\"]"];
+	  329 [label="Variable[\"apt.wcw_composure_keep_it_together\"]", shape=diamond];
+	  330 [label="!(Variable[\"apt.wcw_composure_keep_it_together\"])", shape=diamond];
+	  331 [label="Working Class Woman: “抱歉，我的话有些不着边际……”她摇摇头，试着一笑置之。“只是维克托经常惹上各种各样的麻烦。所以，我有什么能帮你的吗？”"];
+	  332 [label="Working Class Woman: “没有。”她停了下来。"];
+	  333 [label="You: 告诉她尸体的事。"];
+	  334 [label="You: Variable[\"apt.wcw_empathy_redcheck\"]"];
+	  335 [label="Variable[\"apt.wcw_empathy_redcheck\"]", shape=diamond];
+	  336 [label="!(Variable[\"apt.wcw_empathy_redcheck\"])", shape=diamond];
+	  337 [label="Kim Kitsuragi: “警官……”警督向你发出警告。"];
+	  338 [label="You: “很难说。”"];
+	  339 [label="Kim Kitsuragi: “需要我们帮你打给谁吗？朋友，家人，或者可以来陪你的人？”"];
+	  340 [label="Working Class Woman: “好吧，我会打给RCM，”她自顾自的点点头。"];
+	  341 [label="Working Class Woman: “是的，谢谢你。”她露出一丝惊恐的微笑，轻轻擦拭着眼泪。她看起来有些混乱。"];
+	  342 [label="You: “再次向你表达我的遗憾，夫人。”[把借书证放在她身边。离开房间。]"];
+	  343 [label="You: “书的名字是什么？”"];
+	  344 [label="You: “是M·蒂博的‘闪耀曲线’吗？”"];
+	  345 [label="Working Class Woman: “我想是的。如果是麦罗埃街上那家的话。”"];
+	  346 [label="Drama: 您的判断非常正确。大人，现在您必须离开了。"];
+	  347 [label="Endurance: 她再也不能言语，胃里在不停翻搅。很快她就不得不冲进浴室尖叫。"];
+	  348 [label="You: “很久了，夫人。我很抱歉。”"];
+	  349 [label="Half Light: 她很害怕——你也一样。爷们一点，直奔主题吧。"];
+	  350 [label="Working Class Woman: ……"];
+	  351 [label="Working Class Woman: 她在哭泣，太过悲伤的她没有注意到站在身旁的你。"];
+	  352 [label="You: 不要把警督的手帕交给她，它太特别了。"];
+	  353 [label="Composure: 沉着一点。不要让肢体语言暴露了。"];
+	  354 [label="You: （自己打脸。）“笨蛋……笨蛋……直接说啊……”"];
+	  355 [label="Working Class Woman: “做什么？”"];
+	  356 [label="You: “我说他死了。”"];
+	  357 [label="You: （举起手。）“金，我可以处理好的。让我来吧。”"];
+	  358 [label="Working Class Woman: 她没有回应。她的眼里满是泪水，却拼命忍着不让它们落下来。"];
+	  359 [label="You: “请不要哭。”"];
+	  360 [label="You: 砸吧嘴唇。"];
+	  361 [label="You: “他还在那里，在木板道上。”"];
+	  362 [label="Working Class Woman: “是的，”她尖锐地说到，“维克托也是这样。”"];
+	  363 [label="Working Class Woman: “我不能……”她捂住嘴巴。“我不能相信他居然还在*那里*，这真是太*疯狂*了。”"];
+	  364 [label="You: “酒精可能是起了点作用，没错。”"];
+	  365 [label="handkerchief"];
+	  366 [label="Working Class Woman: “好吧，这样做可能是对的，谢谢……”她点点头，但脸上的表情很难受。"];
+	  367 [label="Working Class Woman: “帮我还本书，为什么这么问？”她疑惑地看着你。“为什么要问这些问题，警探？他是不是……”"];
+	  0 -> 1
+	  1 -> 289
+	  2 -> 64
+	  3 -> 5
+	  4 -> 327
+	  5 -> 224
+	  5 -> 163
+	  5 -> 323
+	  5 -> 333
+	  5 -> 121
+	  6 -> 56
+	  7 -> 62
+	  8 -> 96
+	  9 -> 10
+	  9 -> 11
+	  10 -> 12
+	  11 -> 311
+	  12 -> 104
+	  13 -> 99
+	  14 -> 206
+	  15 -> 31
+	  16 -> 277
+	  17 -> 27
+	  18 -> 243
+	  19 -> 242
+	  20 -> 221
+	  21 -> 342
+	  22 -> 151
+	  23 -> 199
+	  24 -> 164
+	  25 -> 327
+	  26 -> 245
+	  27 -> 28
+	  27 -> 29
+	  28 -> 339
+	  29 -> 314
+	  29 -> 359
+	  30 -> 306
+	  31 -> 207
+	  32 -> 214
+	  33 -> 148
+	  34 -> 292
+	  35 -> 220
+	  36 -> 124
+	  37 -> 74
+	  37 -> 157
+	  37 -> 215
+	  38 -> 53
+	  39 -> 180
+	  40 -> 332
+	  41 -> 204
+	  41 -> 102
+	  42 -> 43
+	  42 -> 44
+	  43 -> 103
+	  44 -> 228
+	  45 -> 178
+	  46 -> 296
+	  47 -> 286
+	  48 -> 143
+	  49 -> 124
+	  50 -> 132
+	  51 -> 71
+	  52 -> 216
+	  53 -> 54
+	  53 -> 55
+	  54 -> 196
+	  55 -> 133
+	  56 -> 40
+	  56 -> 39
+	  57 -> 58
+	  57 -> 59
+	  58 -> 60
+	  59 -> 261
+	  60 -> 345
+	  62 -> 195
+	  62 -> 203
+	  62 -> 81
+	  62 -> 153
+	  62 -> 63
+	  63 -> 227
+	  64 -> 5
+	  65 -> 229
+	  66 -> 299
+	  67 -> 263
+	  68 -> 69
+	  68 -> 70
+	  69 -> 319
+	  70 -> 320
+	  71 -> 128
+	  72 -> 259
+	  73 -> 260
+	  74 -> 194
+	  75 -> 349
+	  76 -> 77
+	  76 -> 78
+	  77 -> 189
+	  78 -> 317
+	  78 -> 141
+	  80 -> 200
+	  81 -> 101
+	  82 -> 253
+	  83 -> 169
+	  84 -> 109
+	  85 -> 145
+	  86 -> 88
+	  86 -> 87
+	  87 -> 114
+	  88 -> 134
+	  89 -> 90
+	  89 -> 91
+	  90 -> 326
+	  91 -> 165
+	  92 -> 19
+	  93 -> 65
+	  94 -> 185
+	  95 -> 147
+	  96 -> 292
+	  97 -> 308
+	  98 -> 42
+	  99 -> 186
+	  100 -> 149
+	  101 -> 201
+	  102 -> 177
+	  103 -> 202
+	  103 -> 354
+	  103 -> 271
+	  104 -> 105
+	  104 -> 106
+	  105 -> 357
+	  105 -> 231
+	  106 -> 222
+	  107 -> 82
+	  108 -> 247
+	  109 -> 76
+	  110 -> 341
+	  111 -> 366
+	  112 -> 303
+	  113 -> 34
+	  114 -> 5
+	  115 -> 120
+	  116 -> 361
+	  116 -> 84
+	  116 -> 300
+	  117 -> 118
+	  117 -> 119
+	  118 -> 189
+	  119 -> 315
+	  120 -> 350
+	  121 -> 137
+	  122 -> 226
+	  123 -> 340
+	  124 -> 144
+	  125 -> 126
+	  125 -> 127
+	  126 -> 239
+	  127 -> 240
+	  128 -> 346
+	  129 -> 216
+	  130 -> 344
+	  130 -> 343
+	  131 -> 155
+	  132 -> 174
+	  133 -> 162
+	  133 -> 168
+	  133 -> 267
+	  133 -> 80
+	  133 -> 309
+	  134 -> 136
+	  134 -> 135
+	  135 -> 89
+	  136 -> 38
+	  137 -> 8
+	  137 -> 113
+	  137 -> 292
+	  138 -> 62
+	  139 -> 57
+	  140 -> 107
+	  141 -> 191
+	  142 -> 283
+	  143 -> 49
+	  143 -> 364
+	  143 -> 36
+	  144 -> 37
+	  145 -> 125
+	  146 -> 302
+	  147 -> 262
+	  148 -> 264
+	  149 -> 360
+	  149 -> 66
+	  149 -> 150
+	  150 -> 299
+	  151 -> 285
+	  152 -> 5
+	  153 -> 310
+	  154 -> 26
+	  155 -> 282
+	  156 -> 48
+	  156 -> 318
+	  157 -> 194
+	  158 -> 175
+	  159 -> 160
+	  159 -> 161
+	  160 -> 198
+	  161 -> 47
+	  162 -> 4
+	  164 -> 226
+	  165 -> 166
+	  165 -> 167
+	  166 -> 24
+	  167 -> 122
+	  168 -> 25
+	  169 -> 255
+	  170 -> 171
+	  170 -> 172
+	  171 -> 209
+	  172 -> 232
+	  172 -> 205
+	  173 -> 217
+	  174 -> 321
+	  175 -> 133
+	  176 -> 35
+	  177 -> 204
+	  178 -> 9
+	  179 -> 183
+	  180 -> 181
+	  180 -> 182
+	  181 -> 179
+	  182 -> 250
+	  183 -> 62
+	  184 -> 45
+	  185 -> 229
+	  186 -> 187
+	  186 -> 188
+	  187 -> 83
+	  188 -> 207
+	  188 -> 15
+	  189 -> 190
+	  190 -> 313
+	  191 -> 117
+	  192 -> 362
+	  193 -> 284
+	  194 -> 256
+	  195 -> 367
+	  196 -> 158
+	  197 -> 100
+	  198 -> 286
+	  199 -> 350
+	  200 -> 353
+	  201 -> 7
+	  202 -> 355
+	  203 -> 139
+	  204 -> 293
+	  205 -> 14
+	  206 -> 233
+	  206 -> 338
+	  206 -> 348
+	  207 -> 208
+	  208 -> 255
+	  209 -> 14
+	  210 -> 211
+	  210 -> 212
+	  211 -> 280
+	  212 -> 16
+	  213 -> 283
+	  214 -> 131
+	  215 -> 194
+	  216 -> 62
+	  217 -> 218
+	  217 -> 219
+	  218 -> 365
+	  219 -> 68
+	  220 -> 32
+	  221 -> 146
+	  221 -> 111
+	  222 -> 254
+	  223 -> 192
+	  223 -> 16
+	  224 -> 22
+	  225 -> 307
+	  226 -> 53
+	  227 -> 2
+	  228 -> 272
+	  228 -> 93
+	  228 -> 94
+	  229 -> 184
+	  230 -> 254
+	  231 -> 230
+	  232 -> 14
+	  233 -> 358
+	  234 -> 67
+	  235 -> 193
+	  236 -> 237
+	  236 -> 238
+	  237 -> 213
+	  238 -> 142
+	  239 -> 95
+	  240 -> 95
+	  241 -> 21
+	  242 -> 72
+	  242 -> 322
+	  243 -> 236
+	  244 -> 112
+	  245 -> 170
+	  246 -> 197
+	  247 -> 248
+	  247 -> 249
+	  248 -> 324
+	  249 -> 301
+	  250 -> 183
+	  251 -> 297
+	  252 -> 140
+	  253 -> 298
+	  254 -> 13
+	  255 -> 232
+	  255 -> 154
+	  255 -> 205
+	  256 -> 257
+	  256 -> 258
+	  257 -> 173
+	  258 -> 68
+	  259 -> 260
+	  260 -> 62
+	  261 -> 345
+	  262 -> 20
+	  263 -> 223
+	  264 -> 115
+	  265 -> 115
+	  266 -> 125
+	  267 -> 4
+	  268 -> 269
+	  268 -> 270
+	  269 -> 281
+	  270 -> 41
+	  271 -> 355
+	  272 -> 185
+	  273 -> 294
+	  274 -> 337
+	  275 -> 277
+	  276 -> 234
+	  276 -> 275
+	  277 -> 278
+	  277 -> 279
+	  278 -> 235
+	  279 -> 193
+	  280 -> 16
+	  280 -> 275
+	  281 -> 176
+	  281 -> 32
+	  282 -> 18
+	  283 -> 156
+	  284 -> 159
+	  285 -> 5
+	  286 -> 288
+	  286 -> 287
+	  287 -> 265
+	  288 -> 23
+	  289 -> 290
+	  289 -> 291
+	  290 -> 351
+	  291 -> 86
+	  292 -> 6
+	  293 -> 98
+	  294 -> 184
+	  295 -> 252
+	  296 -> 140
+	  297 -> 312
+	  298 -> 207
+	  298 -> 15
+	  299 -> 347
+	  300 -> 191
+	  301 -> 363
+	  302 -> 244
+	  303 -> 304
+	  303 -> 305
+	  304 -> 50
+	  305 -> 51
+	  306 -> 116
+	  307 -> 325
+	  308 -> 62
+	  310 -> 92
+	  311 -> 356
+	  311 -> 46
+	  311 -> 295
+	  312 -> 311
+	  313 -> 276
+	  314 -> 246
+	  315 -> 123
+	  315 -> 316
+	  316 -> 340
+	  317 -> 108
+	  318 -> 143
+	  319 -> 240
+	  320 -> 240
+	  321 -> 33
+	  322 -> 73
+	  323 -> 75
+	  324 -> 189
+	  325 -> 152
+	  326 -> 226
+	  327 -> 328
+	  328 -> 329
+	  328 -> 330
+	  329 -> 331
+	  330 -> 225
+	  331 -> 307
+	  332 -> 138
+	  333 -> 334
+	  334 -> 336
+	  334 -> 335
+	  335 -> 268
+	  336 -> 268
+	  337 -> 294
+	  338 -> 358
+	  339 -> 246
+	  340 -> 276
+	  341 -> 125
+	  342 -> 350
+	  343 -> 129
+	  344 -> 52
+	  345 -> 97
+	  346 -> 241
+	  347 -> 30
+	  348 -> 358
+	  349 -> 3
+	  351 -> 61
+	  352 -> 266
+	  353 -> 328
+	  354 -> 274
+	  355 -> 273
+	  356 -> 107
+	  357 -> 251
+	  358 -> 17
+	  359 -> 246
+	  360 -> 299
+	  361 -> 108
+	  362 -> 210
+	  363 -> 191
+	  364 -> 124
+	  365 -> 352
+	  365 -> 85
+	  365 -> 110
+	  366 -> 244
+	  367 -> 130
+}
+

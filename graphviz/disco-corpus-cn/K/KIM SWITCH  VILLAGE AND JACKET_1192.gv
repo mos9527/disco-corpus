@@ -1,0 +1,274 @@
+# KIM SWITCH / VILLAGE AND JACKET
+# kim switch about wearing stuffz
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="(CheckEquipped(\"hat_rcm\")  or  CheckEquipped(\"pants_rcm\"))  and  (CheckEquipped(\"jacket_rcm\")  or  CheckEquipped(\"jacket_patrol_cloak\"))"];
+	  3 [label="(CheckEquipped(\"hat_rcm\")  or  CheckEquipped(\"pants_rcm\"))  and  (CheckEquipped(\"jacket_rcm\")  or  CheckEquipped(\"jacket_patrol_cloak\"))", shape=diamond];
+	  4 [label="!((CheckEquipped(\"hat_rcm\")  or  CheckEquipped(\"pants_rcm\"))  and  (CheckEquipped(\"jacket_rcm\")  or  CheckEquipped(\"jacket_patrol_cloak\")))", shape=diamond];
+	  5 [label="CheckEquipped(\"hat_bum\")  and  CheckEquipped(\"gloves_bum\")"];
+	  6 [label="CheckEquipped(\"hat_bum\")  and  CheckEquipped(\"gloves_bum\")", shape=diamond];
+	  7 [label="!(CheckEquipped(\"hat_bum\")  and  CheckEquipped(\"gloves_bum\"))", shape=diamond];
+	  8 [label="You: “优雅流浪汉。”"];
+	  9 [label="You: “呃，是啊。你永远也不知道什么时候就需要推销一份商业计划书了。”"];
+	  10 [label="Composure: 警督是对的。它给了你一个自行車信使应有的*派头*，让你能变成整条城市街道上最鲁莽大胆的指挥官！"];
+	  11 [label="CheckEquipped(\"jacket_carabineer\")  or  CheckEquipped(\"pants_carabineer\")"];
+	  12 [label="CheckEquipped(\"jacket_carabineer\")  or  CheckEquipped(\"pants_carabineer\")", shape=diamond];
+	  13 [label="!(CheckEquipped(\"jacket_carabineer\")  or  CheckEquipped(\"pants_carabineer\"))", shape=diamond];
+	  14 [label="Kim Kitsuragi: “不过，你还是应该试着*扩展一下范围*。你知道有句话叫‘人靠衣装’吗？在适当的场景选择正确的着装，能让这个世界的一切都变得截然不同。”"];
+	  15 [label="Kim Kitsuragi: “首先，从我第一次见到你的时候，你一直穿着*完全一样*的衣服……”他捏了捏鼻子。"];
+	  16 [label="Kim Kitsuragi: “你到底有没有*闻过*那件夹克？感觉好像有个可怜的夜间动物死在了里面一样。”"];
+	  17 [label="You: “普通的警察，普通的衣服。”"];
+	  18 [label="You: “你*喜欢*这个吗？我觉得它真的束缚了我的风格。”"];
+	  19 [label="Kim Kitsuragi: 警督注视了你一会儿，不确定你是不是真的在开玩笑，如果真是这样的话，他是否应该承认……"];
+	  20 [label="Kim Kitsuragi: “坦率的讲，你穿的就像个嗜血的雇佣兵。”"];
+	  21 [label="You: “我才不会从一个穿的像四眼仔的人那里接受什么‘着装风格’建议。”"];
+	  22 [label="Kim Kitsuragi: “如果你希望自己醒来的时候，身旁除了*海军准将红朗姆*之外谁也没有，那你可能要做好笔记。”"];
+	  23 [label="Kim Kitsuragi: 警督叹了口气。“你真想给别人留下这种印象吗？”"];
+	  24 [label="Variable[\"kimswitch.jacket_authority_vestments\"]"];
+	  25 [label="Variable[\"kimswitch.jacket_authority_vestments\"]", shape=diamond];
+	  26 [label="!(Variable[\"kimswitch.jacket_authority_vestments\"])", shape=diamond];
+	  27 [label="Composure: 没有错——你是和平的企业家，来这儿是为了用流行词汇和私有化草案破坏遗产法案的执行。"];
+	  28 [label="Composure: 不知道为什么，你觉得自己在*隐藏*它，但是现在你知道*所有人*都注意到了。"];
+	  29 [label="You: “话说，*你*为什么没穿警服？”"];
+	  30 [label="You: “那不是我想要的。”"];
+	  31 [label="Perception (Smell): 最近这几天，你已经长出了一些*新皮*。"];
+	  32 [label="Kim Kitsuragi: “坦率的讲，你穿的就像个流浪汉。而且身上的味道也像。”"];
+	  33 [label="You: “但是手套能温暖我的手——看。”（给他看看手套。）"];
+	  34 [label="You: “普通核心？”"];
+	  35 [label="You: “哦，我还以为专业人士就应该这么穿。”"];
+	  36 [label="Kim Kitsuragi: “无所谓了，我们应该回到案子上来。走吧。”"];
+	  37 [label="You: “这是迪斯科风，金。”"];
+	  38 [label="Kim Kitsuragi: “好吧，那套FALN装备让你看起来像个自行車信使。唯一缺的就只有那件衬衫了。”"];
+	  39 [label="Rhetoric: 只是那些穿法衣的人犯下了所有战争罪行，但是如果穿起来*看着很酷*的话，稍微来那么一点小暴行又有什么的呢？"];
+	  40 [label="CheckEquipped(\"shirt_interisolar\")  and  CheckEquipped(\"jacket_interisolar\")  or  CheckEquipped(\"pants_interisolar\")"];
+	  41 [label="CheckEquipped(\"shirt_interisolar\")  and  CheckEquipped(\"jacket_interisolar\")  or  CheckEquipped(\"pants_interisolar\")", shape=diamond];
+	  42 [label="!(CheckEquipped(\"shirt_interisolar\")  and  CheckEquipped(\"jacket_interisolar\")  or  CheckEquipped(\"pants_interisolar\"))", shape=diamond];
+	  43 [label="Kim Kitsuragi: “也许你应该换一身打扮……”"];
+	  44 [label="Kim Kitsuragi: 警督叹了一口气。“玩*超级雇佣兵*游戏可能感觉挺好的，但是你也许应该问问自己，这样是不是真能帮你解决这起案件……”"];
+	  45 [label="Kim Kitsuragi: “问题是平民更愿意向那些穿得不像典型警察的人敞开心扉……”"];
+	  46 [label="You: “它们只是衣服，金。谁在乎呢？”"];
+	  47 [label="Kim Kitsuragi: “只是，呃，你看起来更像是个野心勃勃的商人，而不是一个警察。”"];
+	  48 [label="You: “超级巨星休闲风。”（咂咂舌头。）"];
+	  49 [label="Kim Kitsuragi: “这位*过气大师赛車手*知道要翻领和调整背衩。”警督扬起一侧的眉毛。"];
+	  50 [label="You: “我的*风格*？怎么了？”"];
+	  51 [label="Kim Kitsuragi: 看到快要哭出来的你，警督意识到他对你的着装问题表达地可能有些过于直接了……"];
+	  52 [label="Kim Kitsuragi: “谁知道？”警督耸耸肩。“也许会发生某种*奇迹*吧。”"];
+	  53 [label="You: “我穿这个是为了防止跟别人交战。”"];
+	  54 [label="Kim Kitsuragi: “也许你应该换一身打扮……”"];
+	  55 [label="Kim Kitsuragi: “本身没什么*问题*。只是有点……太过了……”"];
+	  57 [label="Kim Kitsuragi: “我很高兴，你总算穿的更像是RCM的警官了。继续保持。”"];
+	  58 [label="Kim Kitsuragi: “现在，没必要绝望，警探。你知道有句话叫‘人靠衣装’吗？我们只需要帮你找到一种*新风格*就好了。你刚弄到的那件夹克就是个很好的开始。”"];
+	  59 [label="Kim Kitsuragi: “是的。而且这个‘四眼仔’知道要翻领和调整背衩。”警督扬起一侧的眉毛。"];
+	  60 [label="Esprit de Corps: 你那不是血亲但胜似血亲的兄弟很骄傲地站在你的身边。"];
+	  61 [label="Composure: 警督是对的。你是能让那些可敬的人皱起鼻子的腐烂辛甜味，是能把所有人轰出屋子的臭屁……"];
+	  62 [label="Kim Kitsuragi: “我们还是不要想太多了，警探……”"];
+	  63 [label="Kim Kitsuragi: “你知道有句话叫‘人靠衣装’吗？在适当的场景选择正确的着装，能让这个世界的一切都变得截然不同。”"];
+	  64 [label="CheckEquipped(\"shoes_t500\")  and  CheckEquipped(\"shirt_t500\")  and  CheckEquipped(\"gloves_t500\")"];
+	  65 [label="CheckEquipped(\"shoes_t500\")  and  CheckEquipped(\"shirt_t500\")  and  CheckEquipped(\"gloves_t500\")", shape=diamond];
+	  66 [label="!(CheckEquipped(\"shoes_t500\")  and  CheckEquipped(\"shirt_t500\")  and  CheckEquipped(\"gloves_t500\"))", shape=diamond];
+	  67 [label="You: “真的吗？你真这么觉得？”"];
+	  68 [label="Kim Kitsuragi: “也许你应该换一身打扮……”"];
+	  69 [label="You: “那不是我想要的。”"];
+	  70 [label="You: “是啊，也许我应该让这些线团透透气。”"];
+	  71 [label="CheckEquipped(\"shirt_dress_disco\")  and  CheckEquipped(\"jacket_suede\")  and  CheckEquipped(\"pants_bellbottom\")"];
+	  72 [label="CheckEquipped(\"shirt_dress_disco\")  and  CheckEquipped(\"jacket_suede\")  and  CheckEquipped(\"pants_bellbottom\")", shape=diamond];
+	  73 [label="!(CheckEquipped(\"shirt_dress_disco\")  and  CheckEquipped(\"jacket_suede\")  and  CheckEquipped(\"pants_bellbottom\"))", shape=diamond];
+	  74 [label="Kim Kitsuragi: “如果你说的‘迪斯科’是指‘笨拙和悲伤’，那就是了，它*极其*迪斯科。”"];
+	  75 [label="You: “我不在乎什么政治，只是*看起来*很酷罢了。”"];
+	  76 [label="Kim Kitsuragi: “也许你应该换一身打扮……”"];
+	  77 [label="You: “我是流浪警察，金，你在期待什么呢？”"];
+	  78 [label="Kim Kitsuragi: 警督叹了口气。"];
+	  79 [label="Kim Kitsuragi: “没错，警探。你是个普通的警察。”"];
+	  80 [label="Kim Kitsuragi: “也许你应该换一身打扮……”"];
+	  81 [label="Variable[\"kimswitch.jacket_composure_smell\"]"];
+	  82 [label="Variable[\"kimswitch.jacket_composure_smell\"]", shape=diamond];
+	  83 [label="!(Variable[\"kimswitch.jacket_composure_smell\"])", shape=diamond];
+	  84 [label="You: “那不是我想要的。”"];
+	  85 [label="You: “如果我找到衬衫，会怎么样？”"];
+	  86 [label="You: “先驱警官。”"];
+	  87 [label="Kim Kitsuragi: “哦，天啦。那可千万别学那些人一样*说话*……”"];
+	  88 [label="Composure: 不知道为什么，你觉得自己在*隐藏*它，但是现在你知道*所有人*都注意到了。"];
+	  89 [label="You: “我才不会从一个穿的像个*过气大师赛車手*的人那里接受什么‘着装风格’建议。”"];
+	  90 [label="CheckEquipped(\"shoes_faln\")  and  CheckEquipped(\"jacket_faln\")  and  CheckEquipped(\"gloves_faln\")  and  CheckEquipped(\"pants_faln\")  and  CheckEquipped(\"hat_faln\")"];
+	  91 [label="CheckEquipped(\"shoes_faln\")  and  CheckEquipped(\"jacket_faln\")  and  CheckEquipped(\"gloves_faln\")  and  CheckEquipped(\"pants_faln\")  and  CheckEquipped(\"hat_faln\")", shape=diamond];
+	  92 [label="!(CheckEquipped(\"shoes_faln\")  and  CheckEquipped(\"jacket_faln\")  and  CheckEquipped(\"gloves_faln\")  and  CheckEquipped(\"pants_faln\")  and  CheckEquipped(\"hat_faln\"))", shape=diamond];
+	  93 [label="You: “正式道歉风。”"];
+	  94 [label="Kim Kitsuragi: “呃，也不能说它*不适合*你……”"];
+	  95 [label="Perception (Smell): 最近这几天，你已经长出了一些*新皮*。"];
+	  96 [label="Kim Kitsuragi: “如果你把它们放进垃圾堆里透气就更好了，那才是属于它们的地方……”"];
+	  97 [label="You: “那不是我想要的。”"];
+	  98 [label="You: “嗯，是啊，我想让所有人知道我是来守护传统价值观、践踏公社社员的。”"];
+	  99 [label="Untitled hub"];
+	  100 [label="Kim Kitsuragi: “首先，你穿的像个老法西斯主义分子。这样真的合适吗？”"];
+	  101 [label="You: “好吧。”（点头。）“你是个穿着很有品味的男人。跟你一起我也可以变得有范儿一点。”"];
+	  102 [label="Kim Kitsuragi: 看到快要哭出来的你，警督意识到他对你的着装问题表达地可能有些过于直接了……"];
+	  103 [label="Composure: 警督是对的。你是人们撤离房间时留下的那股腐烂的辛甜味。”"];
+	  104 [label="Kim Kitsuragi: “很高兴见到你穿的像个值得骄傲的RCM警官了。让马丁内斯的人知道我们的存在是很重要的。”"];
+	  105 [label="Kim Kitsuragi: “它是，呃，有点*不拘一格*，你不觉得吗？你该怎么描述自己现在这身打扮？”"];
+	  106 [label="Kim Kitsuragi: “拥有警长以上头衔的警官选择制服的自由度会大一些……”"];
+	  107 [label="Authority: 你穿着*秩序*与*层级*的法衣。你不需要对任何东西负责。"];
+	  108 [label="Variable[\"kimswitch.jacket_composure_smell\"]"];
+	  109 [label="Variable[\"kimswitch.jacket_composure_smell\"]", shape=diamond];
+	  110 [label="!(Variable[\"kimswitch.jacket_composure_smell\"])", shape=diamond];
+	  111 [label="You: “那不是我想要的。”"];
+	  112 [label="Empathy: 一个温暖的笑容。"];
+	  113 [label="Composure: 这就是他的衣服如此合身的原因……"];
+	  114 [label="Conceptualization: ‘不拘一格’是为使用‘本土’打击乐器的流行音乐准备的。而*你*是一个在着装上特立独行的人。"];
+	  115 [label="CheckEquipped(\"hat_rcm\")  or  CheckEquipped(\"jacket_rcm\")  or  CheckEquipped(\"pants_rcm\")  or  CheckEquipped(\"jacket_patrol_cloak\")"];
+	  116 [label="CheckEquipped(\"hat_rcm\")  or  CheckEquipped(\"jacket_rcm\")  or  CheckEquipped(\"pants_rcm\")  or  CheckEquipped(\"jacket_patrol_cloak\")", shape=diamond];
+	  117 [label="!(CheckEquipped(\"hat_rcm\")  or  CheckEquipped(\"jacket_rcm\")  or  CheckEquipped(\"pants_rcm\")  or  CheckEquipped(\"jacket_patrol_cloak\"))", shape=diamond];
+	  118 [label="Kim Kitsuragi: “你是RCM的一名警官，不是什么*享乐主义者*……”"];
+	  119 [label="Endurance: 没错。你被保护在你的陶瓷甲壳里。不论世界上有何种何样的伤害，都不会降临到你的头上。"];
+	  120 [label="these_things"];
+	  0 -> 1
+	  1 -> 50
+	  2 -> 3
+	  2 -> 4
+	  3 -> 104
+	  4 -> 115
+	  5 -> 6
+	  5 -> 7
+	  6 -> 32
+	  7 -> 2
+	  8 -> 94
+	  9 -> 87
+	  10 -> 85
+	  10 -> 30
+	  11 -> 12
+	  11 -> 13
+	  12 -> 100
+	  13 -> 5
+	  14 -> 99
+	  15 -> 16
+	  16 -> 95
+	  17 -> 19
+	  18 -> 118
+	  19 -> 79
+	  20 -> 119
+	  21 -> 59
+	  22 -> 36
+	  23 -> 63
+	  24 -> 25
+	  24 -> 26
+	  25 -> 39
+	  26 -> 120
+	  27 -> 9
+	  27 -> 35
+	  27 -> 111
+	  28 -> 51
+	  29 -> 106
+	  30 -> 76
+	  31 -> 61
+	  32 -> 31
+	  33 -> 78
+	  34 -> 94
+	  35 -> 55
+	  37 -> 74
+	  38 -> 10
+	  39 -> 120
+	  40 -> 41
+	  40 -> 42
+	  41 -> 47
+	  42 -> 11
+	  43 -> 63
+	  44 -> 63
+	  45 -> 63
+	  46 -> 63
+	  47 -> 27
+	  48 -> 94
+	  49 -> 113
+	  50 -> 71
+	  51 -> 58
+	  52 -> 67
+	  53 -> 44
+	  54 -> 63
+	  55 -> 63
+	  57 -> 60
+	  58 -> 99
+	  59 -> 113
+	  60 -> 17
+	  60 -> 18
+	  60 -> 29
+	  61 -> 108
+	  62 -> 112
+	  63 -> 99
+	  64 -> 65
+	  64 -> 66
+	  65 -> 20
+	  66 -> 40
+	  67 -> 63
+	  68 -> 63
+	  69 -> 54
+	  70 -> 96
+	  71 -> 72
+	  71 -> 73
+	  72 -> 15
+	  73 -> 90
+	  74 -> 63
+	  75 -> 23
+	  76 -> 63
+	  77 -> 78
+	  78 -> 63
+	  79 -> 63
+	  80 -> 63
+	  81 -> 82
+	  81 -> 83
+	  82 -> 37
+	  82 -> 70
+	  83 -> 28
+	  84 -> 43
+	  85 -> 52
+	  86 -> 94
+	  87 -> 63
+	  88 -> 102
+	  89 -> 49
+	  90 -> 91
+	  90 -> 92
+	  91 -> 38
+	  92 -> 64
+	  93 -> 94
+	  94 -> 14
+	  95 -> 103
+	  96 -> 63
+	  97 -> 68
+	  98 -> 23
+	  99 -> 89
+	  99 -> 21
+	  99 -> 101
+	  100 -> 107
+	  101 -> 62
+	  102 -> 58
+	  103 -> 81
+	  104 -> 60
+	  105 -> 114
+	  106 -> 45
+	  107 -> 24
+	  108 -> 109
+	  108 -> 110
+	  109 -> 33
+	  109 -> 77
+	  109 -> 97
+	  110 -> 88
+	  111 -> 80
+	  112 -> 36
+	  113 -> 22
+	  114 -> 34
+	  114 -> 8
+	  114 -> 46
+	  114 -> 48
+	  114 -> 86
+	  114 -> 93
+	  115 -> 116
+	  115 -> 117
+	  116 -> 57
+	  117 -> 105
+	  118 -> 63
+	  119 -> 84
+	  119 -> 53
+	  120 -> 98
+	  120 -> 75
+	  120 -> 69
+}
+

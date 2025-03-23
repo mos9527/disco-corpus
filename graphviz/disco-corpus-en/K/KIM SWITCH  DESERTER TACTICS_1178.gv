@@ -1,0 +1,145 @@
+# KIM SWITCH / DESERTER TACTICS
+# Kim talks to you on the side and says you got him, push motive angle.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: \"Ballistics. Let him cook here for a minute or two -- we can have another look at the set-up he had there, with the mattress.\" He nods southeast to the tower. \"Ballistics always impresses these military types.\""];
+	  3 [label="You: \"Do you think he did it?\""];
+	  4 [label="You: \"I'm trying to get him to confess...\""];
+	  5 [label="Drama: Yes, sire! Make a production of this examination!"];
+	  7 [label="Kim Kitsuragi: \"Good.\" He nods. \"We're doing very good. He *wants* to confess -- I can see that. We just need to pile it on, a little more -- the more we have on him, the closer he is...\""];
+	  8 [label="Kim Kitsuragi: \"Remember,\" the lieutenant whispers. \"He wants to tell us -- but he doesn't want to *help* us. It needs to look like we already have everything.\""];
+	  9 [label="Variable[\"TASK.check_seafort_done\"]"];
+	  10 [label="Variable[\"TASK.check_seafort_done\"]", shape=diamond];
+	  11 [label="!(Variable[\"TASK.check_seafort_done\"])", shape=diamond];
+	  12 [label="Variable[\"TASK.inspect_the_phasmid\"]"];
+	  13 [label="Variable[\"TASK.inspect_the_phasmid\"]", shape=diamond];
+	  14 [label="!(Variable[\"TASK.inspect_the_phasmid\"])", shape=diamond];
+	  15 [label="Kim Kitsuragi: He smiles. \"You should be proud. Come on -- let's wrap this up.\""];
+	  16 [label="Kim Kitsuragi: \"Ballistics. Let him cook here for a minute or two -- we can have another look around the island for a sniper's nest.\" He looks to the small tower on the coast. \"I think we should check out the post.\""];
+	  17 [label="CheckItem(\"deserter_gun\")"];
+	  18 [label="CheckItem(\"deserter_gun\")", shape=diamond];
+	  19 [label="!(CheckItem(\"deserter_gun\"))", shape=diamond];
+	  20 [label="Variable[\"seafort.kimswitch_emp_more_to_it\"]"];
+	  21 [label="Variable[\"seafort.kimswitch_emp_more_to_it\"]", shape=diamond];
+	  22 [label="!(Variable[\"seafort.kimswitch_emp_more_to_it\"])", shape=diamond];
+	  23 [label="Logic: You hear that? He thinks you're *this* close..."];
+	  24 [label="Jump to: [get_on_this_kim_switch_business]"];
+	  25 [label="Kim Kitsuragi: \"Yes, good going -- that should be our *first* priority.\""];
+	  26 [label="Kim Kitsuragi: \"I can see that, yes. I'm not judging.\""];
+	  27 [label="Jump to: [do_the_motive]"];
+	  28 [label="You: \"We really did, didn't we?\""];
+	  29 [label="Suggestion: It doesn't have to hold in court. Just establish a line of sight and he'll do the rest himself."];
+	  30 [label="Jump to: [do_the_motive]"];
+	  31 [label="You: \"Okay, let's do this.\" (Conclude.)"];
+	  32 [label="Kim Kitsuragi: \"Well, I can think of one thing. The gun.\" He smiles very politely. \"We should pick it up, and discuss it in front of him. Make a show of it.\""];
+	  33 [label="get_on_this_kim_switch_business"];
+	  34 [label="Kim Kitsuragi: \"Remember,\" the lieutenant whispers. \"He wants to tell us -- but he doesn't want to *help* us. It needs to look like we already have everything.\""];
+	  35 [label="Variable[\"seafort.kimswitch_lets_do_ballistics\"]"];
+	  36 [label="Variable[\"seafort.kimswitch_lets_do_ballistics\"]", shape=diamond];
+	  37 [label="!(Variable[\"seafort.kimswitch_lets_do_ballistics\"])", shape=diamond];
+	  38 [label="You: \"You think he has more? Than this case?\""];
+	  39 [label="You: \"How do you think the questioning is going?\""];
+	  40 [label="You: \"What can I put on him -- to get him to fess up?\""];
+	  41 [label="Variable[\"seafort.nest_mainhub_got\"]"];
+	  42 [label="Variable[\"seafort.nest_mainhub_got\"]", shape=diamond];
+	  43 [label="!(Variable[\"seafort.nest_mainhub_got\"])", shape=diamond];
+	  44 [label="You: Pat him on the back. [Leave.]"];
+	  45 [label="You: \"What am I missing? What haven't I done?\""];
+	  46 [label="Variable[\"seafort.deserter_motive_with_companion\"]"];
+	  47 [label="Variable[\"seafort.deserter_motive_with_companion\"]", shape=diamond];
+	  48 [label="!(Variable[\"seafort.deserter_motive_with_companion\"])", shape=diamond];
+	  49 [label="Kim Kitsuragi: \"We just need to get him back to the mainland.\" A crooked little smile. \"We actually did it...\""];
+	  50 [label="do_the_motive"];
+	  51 [label="Jump to: [do_the_motive]"];
+	  52 [label="Kim Kitsuragi: \"Also, the gun.\" He smiles very politely. \"We should pick it up and discuss it in front of him. Make a show of it.\""];
+	  53 [label="Variable[\"seafort.kimswitch_logic_deserter_knows_more\"]"];
+	  54 [label="Variable[\"seafort.kimswitch_logic_deserter_knows_more\"]", shape=diamond];
+	  55 [label="!(Variable[\"seafort.kimswitch_logic_deserter_knows_more\"])", shape=diamond];
+	  56 [label="You: \"Let's get him back before we congratulate ourselves.\""];
+	  57 [label="Kim Kitsuragi: \"He's a communard. The victim was a mercenary. We should get him talking politics again. You could even tell him we already *have* a motive.\"\n\"He's a communard. The victim was a mercenary. From Oranje. If everything else fails, get him talking politics... You could even tell him we already *have* a motive.\""];
+	  58 [label="Empathy: There is palpable excitement in his tone. He likes him for this -- *a lot*. But there's something more too..."];
+	  59 [label="Kim Kitsuragi: \"Oh yes...\" He nods. \"And -- he hasn't spoken to anybody in a long time. If we get him open, who knows what will pour out...\""];
+	  60 [label="You: \"I'm slapping myself to get ideas!\""];
+	  61 [label="Logic: He thinks the deserter has more than just this case in him. Forty-four years here..."];
+	  62 [label="Kim Kitsuragi: He nods. \"From nothing to this in a day...\" A crooked little smile. \"This is *good*, we just need a confession first, and then *maybe* a solid motive later.\"\nHe nods. \"From nothing to this in a day...\" A crooked little smile. \"This is *good*, lieutenant-yefreitor, we just need a confession first, and then *maybe* a solid motive later.\"\nHe nods. \"From nothing to this in a day...\" A crooked little smile. \"This is *good*, Detective Du Bois, we just need a confession first, and then *maybe* a solid motive later.\""];
+	  63 [label="Jump to: [do_the_motive]"];
+	  64 [label="Jump to: [do_the_motive]"];
+	  0 -> 1
+	  1 -> 33
+	  2 -> 29
+	  3 -> 62
+	  4 -> 25
+	  5 -> 30
+	  7 -> 23
+	  8 -> 58
+	  9 -> 10
+	  9 -> 11
+	  10 -> 17
+	  11 -> 41
+	  12 -> 13
+	  12 -> 14
+	  13 -> 49
+	  14 -> 3
+	  16 -> 29
+	  17 -> 18
+	  17 -> 19
+	  18 -> 30
+	  19 -> 35
+	  20 -> 21
+	  20 -> 22
+	  21 -> 61
+	  23 -> 51
+	  24 -> 33
+	  25 -> 63
+	  26 -> 64
+	  27 -> 50
+	  28 -> 15
+	  29 -> 17
+	  30 -> 50
+	  31 -> 46
+	  32 -> 5
+	  33 -> 12
+	  34 -> 58
+	  35 -> 36
+	  35 -> 37
+	  36 -> 52
+	  37 -> 32
+	  38 -> 59
+	  39 -> 7
+	  40 -> 57
+	  41 -> 42
+	  41 -> 43
+	  42 -> 2
+	  43 -> 16
+	  45 -> 9
+	  46 -> 48
+	  46 -> 47
+	  47 -> 34
+	  48 -> 8
+	  49 -> 56
+	  49 -> 28
+	  50 -> 4
+	  50 -> 39
+	  50 -> 40
+	  50 -> 45
+	  50 -> 60
+	  50 -> 31
+	  51 -> 50
+	  52 -> 5
+	  53 -> 54
+	  53 -> 55
+	  54 -> 44
+	  54 -> 38
+	  56 -> 15
+	  57 -> 27
+	  58 -> 20
+	  59 -> 44
+	  60 -> 26
+	  61 -> 53
+	  62 -> 50
+	  63 -> 50
+	  64 -> 50
+}
+

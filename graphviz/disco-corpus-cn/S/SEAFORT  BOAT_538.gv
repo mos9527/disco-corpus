@@ -1,0 +1,73 @@
+# SEAFORT / BOAT
+# You're gonna need to boat yourself back somehow after everything is done.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  3 [label="You: “你说得对。我们开始吧。”[离开。]"];
+	  4 [label="ROO A72 Motor Skiff: 你爬上船，启动引擎。"];
+	  5 [label="Cuno: “你确定吗？我们还有些破事要处理呢，警长……”他看着悬崖边废弃的高射炮塔。"];
+	  6 [label="IsCunoInParty()"];
+	  7 [label="IsCunoInParty()", shape=diamond];
+	  8 [label="!(IsCunoInParty())", shape=diamond];
+	  9 [label="You: “你说得对。我们开始吧。”[离开。]"];
+	  10 [label="ROO A72 Motor Skiff: 码头旁的小艇在波浪中摇摆。"];
+	  11 [label="Kim Kitsuragi: “你确定吗？我们在这里还有事没做完……”他看着悬崖边废弃的高射炮塔。"];
+	  12 [label="You: [离开。]"];
+	  13 [label="You: 返回内陆。\n“我们返回内陆吧。”"];
+	  14 [label="ROO A72 Motor Skiff: 你踏上小艇，它在你的重量下轻柔地摇晃。回去的路上风平浪静。"];
+	  15 [label="Kim Kitsuragi: “走吧。这里的事已经做完了，”他说着，调整了一下眼镜，望向水面。"];
+	  16 [label="IsKimHere()"];
+	  17 [label="IsKimHere()", shape=diamond];
+	  18 [label="!(IsKimHere())", shape=diamond];
+	  19 [label="Cuno: “哦耶。”他交叉双臂，朝你点点头，露出一个自鸣得意的傻笑。“我们在这里干得不错，警探。”"];
+	  20 [label="Esprit de Corps: 曷城警督躺在医院里，正在恢复。很是勉强。他会问你，你真的做完所有工作了吗？调查完成了吗？"];
+	  21 [label="You: 是啊……还没有。[离开。]"];
+	  22 [label="ROO A72 Motor Skiff: 你抵达码头，爬出小艇。"];
+	  23 [label="Esprit de Corps: 两个男人和一个女人站在无名村庄的混凝土广场，看着一艘黄色小船越靠越近。大海十分平静。"];
+	  24 [label="IsKimHere()"];
+	  25 [label="IsKimHere()", shape=diamond];
+	  26 [label="!(IsKimHere())", shape=diamond];
+	  27 [label="Perception (Hearing): 只是水面上传来了对话声。有人在内陆，在等你。"];
+	  28 [label="Variable[\"TASK.inspect_the_phasmid_done\"]"];
+	  29 [label="Variable[\"TASK.inspect_the_phasmid_done\"]", shape=diamond];
+	  30 [label="!(Variable[\"TASK.inspect_the_phasmid_done\"])", shape=diamond];
+	  31 [label="IsCunoInParty()"];
+	  32 [label="IsCunoInParty()", shape=diamond];
+	  33 [label="!(IsCunoInParty())", shape=diamond];
+	  0 -> 1
+	  1 -> 10
+	  4 -> 14
+	  5 -> 3
+	  6 -> 8
+	  6 -> 7
+	  7 -> 5
+	  8 -> 20
+	  10 -> 12
+	  10 -> 13
+	  11 -> 9
+	  13 -> 28
+	  14 -> 27
+	  15 -> 14
+	  16 -> 17
+	  16 -> 18
+	  17 -> 11
+	  18 -> 6
+	  19 -> 14
+	  20 -> 21
+	  23 -> 22
+	  24 -> 25
+	  24 -> 26
+	  25 -> 15
+	  26 -> 31
+	  27 -> 23
+	  28 -> 29
+	  28 -> 30
+	  29 -> 24
+	  30 -> 16
+	  31 -> 32
+	  31 -> 33
+	  32 -> 19
+	  33 -> 4
+}
+

@@ -1,0 +1,221 @@
+# COAST / SMALL BUOY
+# Here you can find Klaasje's buoy if you know about it.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: “肯定是卡拉洁的敌人——也就是说，她现在很危险！”"];
+	  3 [label="You: 这里肯定有大阴谋——身份证明丢失，到处偷来摸去……"];
+	  4 [label="Logic: 你应该问问那位女士的看法。之后，如果你有时间的话——虽然你怀疑她对此没什么能说的。"];
+	  5 [label="Jump to: [mainhub]"];
+	  6 [label="You: 够了。别想了。"];
+	  7 [label="Kim Kitsuragi: “的确。”警督若有所思的点点头。“我们看看里面有什么。”"];
+	  8 [label="Perception (Smell): 其实，半岛这一侧的水要清澈很多。闻起来有点咸味。"];
+	  9 [label="empty_emptiness"];
+	  10 [label="buoyspection"];
+	  11 [label="Savoir Faire: 很原始的装置，不过也算派上用场了。"];
+	  12 [label="Kim Kitsuragi: “看那边，”他指着一个奇怪的东西，“肯定是卡拉洁告诉我们的浮标——就是她藏护照的地方。我们应该去看看。”"];
+	  13 [label="Shivers: 是的，纤弱的四肢曾经来过这里，割裂了绑住浮标的绳索。如果再长一点——它就会飘到远海上的某个地方去了……"];
+	  14 [label="You: “我觉得里面有个大阴谋——身份证明丢失，到处偷来摸去……”"];
+	  16 [label="Variable[\"whirling.klaasje_shivers_phasmid_buoy\"]"];
+	  17 [label="Variable[\"whirling.klaasje_shivers_phasmid_buoy\"]", shape=diamond];
+	  18 [label="!(Variable[\"whirling.klaasje_shivers_phasmid_buoy\"])", shape=diamond];
+	  19 [label="You: “这只是个很不上道的怪癖。反正我们知道浮标里藏了什么。”"];
+	  20 [label="You: “该死，我刚才*真的*有种奇怪的感觉。”"];
+	  21 [label="Small Buoy: 一个金属塑料制成的奇妙装置在摇摆的芦苇丛中若隐若现。一开始看起来像是垃圾，但是当你靠近一看……"];
+	  22 [label="IsKimHere()"];
+	  23 [label="IsKimHere()", shape=diamond];
+	  24 [label="!(IsKimHere())", shape=diamond];
+	  25 [label="Kim Kitsuragi: “这不是*真正*的身份证明，至少据我们所知不是。”他叹了口气。“我们该走了。”"];
+	  26 [label="Kim Kitsuragi: “以我的经验来看，神秘动物一般对旅行证明文件没什么兴趣。”他叹了口气。“我们该走了。”\n“是的，神秘动物一直想变成安诺・梅耶尔-斯密特。”他叹了口气。“我们该走了。”"];
+	  27 [label="Rhetoric: 胆小鬼。你就应该*一直*猜下去。"];
+	  28 [label="You: 是的，但是到底是谁，或者是什么？"];
+	  29 [label="Kim Kitsuragi: “该死。”"];
+	  30 [label="Inland Empire: 又是身份错位……一定在进行什么大阴谋！"];
+	  31 [label="You: 肯定是卡拉洁的敌人——也就是说，她现在很危险！"];
+	  32 [label="Shivers: 辉煌壮丽。"];
+	  33 [label="Variable[\"coast.reeds_buoy_opened\"]"];
+	  34 [label="Variable[\"coast.reeds_buoy_opened\"]", shape=diamond];
+	  35 [label="!(Variable[\"coast.reeds_buoy_opened\"])", shape=diamond];
+	  36 [label="You: 别管这个浮标了。[离开。]\n不管空浮标了。[离开。]"];
+	  37 [label="Logic: 这一定就是卡拉洁提到的浮标。"];
+	  38 [label="Small Buoy: 里面有什么东西……溅得到处都是。"];
+	  39 [label="You: 捡起浮标。"];
+	  40 [label="IsKimHere()"];
+	  41 [label="IsKimHere()", shape=diamond];
+	  42 [label="!(IsKimHere())", shape=diamond];
+	  43 [label="Kim Kitsuragi: 他咬紧双唇。“或者*以为*我们如此……不管怎么说，这里留了个小悬念。希望不会太关键。”"];
+	  44 [label="Jump to: [mainhub]"];
+	  45 [label="Kim Kitsuragi: “我倒不会这么说。这不过是个小悬念。不过我确实想知道是谁拿走了文件。”"];
+	  46 [label="You: 别再猜到底是谁拿走文件的了。现在手上掌握的信息还不够。"];
+	  47 [label="You: 打开浮标。（继续。）"];
+	  48 [label="You: “也许是卡拉洁自己拿走的……”"];
+	  49 [label="Shivers: 漂洋过海，不留痕迹。像往常一样，你又感觉到寒冷了……"];
+	  50 [label="You: 检查塑料球。"];
+	  51 [label="Small Buoy: 你没费太大力气就把浮标提出了水面。它没有系在什么东西上面——底部悬挂的绳索像是被割断了。\n浮标没有系在任何东西上面——底部悬挂的绳索像是被扯开或者割断了。你很容易就把它从水里提了起来，感觉轻飘飘的。"];
+	  52 [label="Small Buoy: 黄色塑料上写着数字“11”。它在水里泡了不是很久，但却已经有些褪色，上面附着的淤泥黏糊糊的。浮标是关上的，不过很勉强——闩锁的脆弱金属裂开了。"];
+	  53 [label="Small Buoy: 圆顶型的塑料浮标在水面上浮浮沉沉，四周环绕着摇摆的芦苇。\n圆顶型的塑料浮标在水里浮浮沉沉，四周环绕着摇摆的芦苇。半开的闩锁仍然展示着内在的空虚。"];
+	  54 [label="You: “它还在这里，算我们走运。要是再久一点，说不定就飘走了……”"];
+	  55 [label="IsKimHere()"];
+	  56 [label="IsKimHere()", shape=diamond];
+	  57 [label="!(IsKimHere())", shape=diamond];
+	  58 [label="You: “这是个灾难。一切都毁了。”"];
+	  59 [label="Shivers: 寒冷。空气。肌腱。割裂了绑住浮标的绳索。如果再长一点，它就会飘到远海的某个地方去了……"];
+	  60 [label="Kim Kitsuragi: “我不知道。”警督皱着眉头，跺了跺脚。"];
+	  61 [label="who_dunnit"];
+	  62 [label="You: “这会不会跟神秘动物学家和他们的小探险有关？”"];
+	  63 [label="Electrochemistry: ……而且还有一丁点烈酒的味道。美味。"];
+	  64 [label="Small Buoy: 在浮标底部肮脏的海水里，你找不到任何答案。只不过海水和淤泥浓厚的味道消失了。"];
+	  65 [label="You: 也许是卡拉洁自己拿走的……"];
+	  66 [label="shivershub"];
+	  67 [label="Kim Kitsuragi: “情况很可能就是这样。我们应该盯着她点。”他叹了口气。“我们没什么能做的了，走吧。”"];
+	  68 [label="You: 什么？"];
+	  69 [label="Small Buoy: 一玻璃杯量的海水倾泄而出——有些海藻。除此之外别无其他。"];
+	  70 [label="Variable[\"coast.reeds_buoy_mainhub_reached\"]"];
+	  71 [label="Variable[\"coast.reeds_buoy_mainhub_reached\"]", shape=diamond];
+	  72 [label="!(Variable[\"coast.reeds_buoy_mainhub_reached\"])", shape=diamond];
+	  73 [label="Small Buoy: 浮标里还是空空如也。"];
+	  74 [label="IsKimHere()"];
+	  75 [label="IsKimHere()", shape=diamond];
+	  76 [label="!(IsKimHere())", shape=diamond];
+	  77 [label="Shivers: 它只是在水面上快速的移动而已，没有留下痕迹。一声耳语……"];
+	  78 [label="Small Buoy: 它的味道跟你期待的没什么不同：海岸味道的高度浓缩版。咸味，工业废水味，还有腐烂的味道。"];
+	  79 [label="Jump to: [buoyspection]"];
+	  80 [label="You: 我觉得……可能是东南亚竹节虫。"];
+	  81 [label="Drama: 噢噢噢噢，藏起来的东西——秘密，谎言！"];
+	  82 [label="mainhub"];
+	  83 [label="Variable[\"coast.reeds_buoy_shivers\"]"];
+	  84 [label="Variable[\"coast.reeds_buoy_shivers\"]", shape=diamond];
+	  85 [label="!(Variable[\"coast.reeds_buoy_shivers\"])", shape=diamond];
+	  86 [label="Kim Kitsuragi: “也许是卡拉洁。也许是追查她的人。又或许是本地的一个醉汉。”他耸耸肩。“我们该走了。”"];
+	  87 [label="You: 闻闻浮标。"];
+	  88 [label="Kim Kitsuragi: “嗯。”没有更多的回应。他的全部精力都集中在那个奇妙的装置上。"];
+	  89 [label="You: 盯着空浮标。\n“没有文件。你觉得是谁拿走的？”"];
+	  90 [label="Jump to: [mainhub]"];
+	  91 [label="You: 摇一下浮标。"];
+	  92 [label="Kim Kitsuragi: “结构很简单，非常不安全。”"];
+	  93 [label="Kim Kitsuragi: “也许。我们应该留心一点。”他叹了口气。“我们没什么能做的了，走吧。”"];
+	  94 [label="Kim Kitsuragi: 警督脸上闪过一丝苦笑。“我们来的太晚了。这里已经没什么有用的东西了。”"];
+	  95 [label="You: “我不知道。你有什么看法吗，警督。”"];
+	  0 -> 1
+	  1 -> 70
+	  2 -> 93
+	  3 -> 64
+	  4 -> 5
+	  5 -> 82
+	  6 -> 77
+	  7 -> 90
+	  8 -> 79
+	  9 -> 65
+	  9 -> 3
+	  9 -> 46
+	  9 -> 80
+	  9 -> 31
+	  10 -> 50
+	  10 -> 91
+	  10 -> 47
+	  10 -> 87
+	  11 -> 79
+	  12 -> 81
+	  13 -> 83
+	  14 -> 25
+	  16 -> 17
+	  16 -> 18
+	  17 -> 59
+	  18 -> 13
+	  19 -> 43
+	  20 -> 88
+	  21 -> 22
+	  22 -> 24
+	  22 -> 23
+	  23 -> 12
+	  24 -> 37
+	  25 -> 4
+	  26 -> 4
+	  27 -> 64
+	  28 -> 32
+	  29 -> 44
+	  30 -> 44
+	  31 -> 64
+	  32 -> 82
+	  33 -> 34
+	  33 -> 35
+	  34 -> 94
+	  35 -> 7
+	  37 -> 81
+	  38 -> 79
+	  39 -> 51
+	  40 -> 41
+	  40 -> 42
+	  41 -> 60
+	  42 -> 73
+	  43 -> 61
+	  44 -> 82
+	  45 -> 61
+	  46 -> 27
+	  47 -> 69
+	  48 -> 67
+	  49 -> 66
+	  50 -> 52
+	  51 -> 10
+	  52 -> 55
+	  53 -> 82
+	  54 -> 33
+	  55 -> 56
+	  55 -> 57
+	  56 -> 92
+	  57 -> 11
+	  58 -> 45
+	  59 -> 83
+	  60 -> 58
+	  60 -> 19
+	  61 -> 2
+	  61 -> 14
+	  61 -> 48
+	  61 -> 62
+	  61 -> 95
+	  62 -> 26
+	  63 -> 8
+	  64 -> 4
+	  65 -> 64
+	  66 -> 68
+	  66 -> 28
+	  66 -> 6
+	  67 -> 4
+	  68 -> 49
+	  69 -> 74
+	  70 -> 72
+	  70 -> 71
+	  71 -> 53
+	  72 -> 21
+	  73 -> 9
+	  74 -> 75
+	  74 -> 76
+	  75 -> 29
+	  76 -> 30
+	  77 -> 82
+	  78 -> 63
+	  79 -> 10
+	  80 -> 64
+	  81 -> 16
+	  82 -> 36
+	  82 -> 39
+	  82 -> 20
+	  82 -> 54
+	  82 -> 89
+	  83 -> 84
+	  83 -> 85
+	  84 -> 66
+	  85 -> 82
+	  86 -> 4
+	  87 -> 78
+	  88 -> 90
+	  89 -> 40
+	  90 -> 82
+	  91 -> 38
+	  92 -> 79
+	  93 -> 4
+	  94 -> 90
+	  95 -> 86
+}
+

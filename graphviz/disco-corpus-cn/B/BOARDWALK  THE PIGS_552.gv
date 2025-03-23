@@ -1,0 +1,685 @@
+# BOARDWALK / THE PIGS
+# The Pigs! Evrart arranges you to meet the woman who has been posing as a police officer. She's carrying an attachment of sirens and police lights. She's got your gun.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: “女士，我是来帮忙的。告诉我，出什么事了。”\n“女士，我们是来帮忙的。告诉我们，出什么事了。”"];
+	  3 [label="The Pigs: “骚扰报告，授权使用致命武力。分部，开枪！”她的脑袋朝你猛撞。“大红钥匙，大红钥匙！”"];
+	  4 [label="You: “我们谈谈，好吗？”"];
+	  5 [label="Reaction Speed: 她吓得瞪大了双眼，前额青筋爆出。"];
+	  6 [label="The Pigs: “需要进行全面体腔检查！违禁物质可能隐藏在鼻孔、耳朵、嘴巴、肚脐、泌尿管、下体、还有直肠！”"];
+	  7 [label="The Pigs: “按住侧颈部血管！扼喉！扼喉！嫌疑人颈部流通血液严重减少！”"];
+	  8 [label="Jump to: [thereareitemshere]"];
+	  9 [label="You: IsKimHere()"];
+	  10 [label="IsKimHere()", shape=diamond];
+	  11 [label="!(IsKimHere())", shape=diamond];
+	  12 [label="Kim Kitsuragi: “放松…”警督低语到。“别给她太多压力，不然她会..”"];
+	  13 [label="Untitled hub (02)"];
+	  14 [label="You: IsKimHere()"];
+	  15 [label="IsKimHere()", shape=diamond];
+	  16 [label="!(IsKimHere())", shape=diamond];
+	  17 [label="Untitled hub (03)"];
+	  18 [label="Composure: 在这犹豫的片刻，她似乎没有任何不安，更像是一个从深度睡眠中突然惊醒的人。"];
+	  19 [label="You: Variable[\"boardwalk.thepigs_redc_handeye_recognize_gun\"]"];
+	  20 [label="Variable[\"boardwalk.thepigs_redc_handeye_recognize_gun\"]", shape=diamond];
+	  21 [label="!(Variable[\"boardwalk.thepigs_redc_handeye_recognize_gun\"])", shape=diamond];
+	  22 [label="Kim Kitsuragi: “情况不妙，”警督低语到。“需要优先考虑的是怎么把你的武器拿回来。我们不能让一个神志不清的市民带着枪到处跑。”"];
+	  23 [label="Interfacing: 她的手因为某种神经变性疾病不停地颤抖。"];
+	  24 [label="Reaction Speed: 你不可能抢在她之前瞄准开枪的。"];
+	  25 [label="You: “我是老鼠小队的！”"];
+	  26 [label="Electrochemistry: 镁片，多巴宁，也许还有思必得……我的天啦，她身上有思必得？还有别的吗？"];
+	  27 [label="Visual Calculus: 近期的。自残。"];
+	  28 [label="Logic: 现在，一个剧本正在她的脑海里慢慢展开，不过跟这里真正发生的事一点关系都没有。"];
+	  29 [label="You: Variable[\"boardwalk.thepigs_blackc_emp_what_happened\"]"];
+	  30 [label="Variable[\"boardwalk.thepigs_blackc_emp_what_happened\"]", shape=diamond];
+	  31 [label="!(Variable[\"boardwalk.thepigs_blackc_emp_what_happened\"])", shape=diamond];
+	  32 [label="You: 不，现在不行。[离开。]\n“看起来不太妙啊。等会再过来吧。”[离开。]"];
+	  33 [label="The Pigs: “嫌疑人在逃！在逃嫌疑犯！警官维护街头正义，自负一切后果！”"];
+	  34 [label="The Pigs: “使用警棍或者膝盖进行额外打击已经超出实际需求！嫌疑人已被控制！嫌疑人已被控制！”"];
+	  35 [label="You: “不！我需要这本手册做笔记。”"];
+	  36 [label="The Pigs: 当你伸出手，从她身上那堆RCM警用品上取下相当眼熟的警督帽时，她完全没有一丝畏惧。"];
+	  37 [label="The Pigs: 老妇人对你的碰触没有反应。"];
+	  38 [label="Jump to: [THEPIGSISDONE]"];
+	  39 [label="The Pigs: “见鬼，”她重复到，“见鬼，该死，你搞砸了，你搞砸了，加雷斯！”她朝着扩音器大喊，唾沫星子飞溅地到处都是：“加重攻击罪，有人倒下，嫌疑人徒步逃脱！”"];
+	  40 [label="Perception (Sight): 那里面是不是有一顶…警察帽？"];
+	  41 [label="You: “没错，猪猪女侠，把枪给我。没事的。它是我的。”"];
+	  42 [label="Jump to: [The Pigs: \"\"CONFINED QUARTERS, ASSAILANT COMIN...\"]"];
+	  43 [label="You: Variable[\"yard.hanged_shot_and_missed_cunoesse\"]"];
+	  44 [label="Variable[\"yard.hanged_shot_and_missed_cunoesse\"]", shape=diamond];
+	  45 [label="!(Variable[\"yard.hanged_shot_and_missed_cunoesse\"])", shape=diamond];
+	  46 [label="The Pigs: “未服从命令。嫌疑人表现出攻击行为！警官受到胁迫！警官受到胁迫！”"];
+	  47 [label="themainhub"];
+	  48 [label="The Pigs: “男人好像要从口袋里掏东西！”她的眼神里满是恐惧。“害怕受到威胁！害怕受到威胁！”"];
+	  49 [label="You: “我没动。”"];
+	  50 [label="You: “小心，我也在填充弹药了…”（亮出你的东西。）\n“我也有枪！看来要进行射击对决了！”（竖起枪管。）"];
+	  51 [label="Suggestion: 一定能找到和平解决这种情况的办法。"];
+	  53 [label="Kim Kitsuragi: 警督咳了一声。“你打算把那些东西拿走，是吧？”"];
+	  54 [label="You: 什么也不说。"];
+	  55 [label="Kim Kitsuragi: “当然。”警督像往常一样死死地盯着你。“我猜应该还好吧。”"];
+	  56 [label="The Pigs: 随着一下迅速但非常不协调的动作，女人用扩音器狠狠砸向自己的嘴唇和牙齿。一丝血从她的下巴滴落。她甚至都没注意到。"];
+	  57 [label="Esprit de Corps: 很难说。你已经很久没戴了。"];
+	  58 [label="Rhetoric: 手放在哪…？"];
+	  59 [label="Untitled hub"];
+	  60 [label="The Pigs: “趴下！现在马上给我趴在地上！我是猪猪女侠！”"];
+	  61 [label="You: IsKimHere()"];
+	  62 [label="IsKimHere()", shape=diamond];
+	  63 [label="!(IsKimHere())", shape=diamond];
+	  64 [label="You: Variable[\"boardwalk.thepigs_took_rcm_cap\"]  and  Variable[\"boardwalk.thepigs_took_narcotics\"]  and  Variable[\"boardwalk.thepigs_altgreet_items_done\"]"];
+	  65 [label="Variable[\"boardwalk.thepigs_took_rcm_cap\"]  and  Variable[\"boardwalk.thepigs_took_narcotics\"]  and  Variable[\"boardwalk.thepigs_altgreet_items_done\"]", shape=diamond];
+	  66 [label="!(Variable[\"boardwalk.thepigs_took_rcm_cap\"]  and  Variable[\"boardwalk.thepigs_took_narcotics\"]  and  Variable[\"boardwalk.thepigs_altgreet_items_done\"])", shape=diamond];
+	  67 [label="Kim Kitsuragi: “我猜我知道答案了。”警督像往常一样死死地盯着你。"];
+	  68 [label="You: “没错，我就是增援。”（抑制住打哈欠的冲动。）“我是来支援你的。”"];
+	  69 [label="The Pigs: “无处可去…”她重复着，眼里突然充满悲伤。只有片刻的清醒。“莫兰德先生？不，我…”她举起扩音器，大喊到：“加重攻击罪，有人倒下，嫌疑人徒步逃脱！”"];
+	  70 [label="Jump to: [thereareitemshere]"];
+	  71 [label="Interfacing: 就是*那支枪*，伙计！那是*你的*枪。一定要把它拿回来！"];
+	  72 [label="Interfacing: 是的，当然。不过——以一种不那么抽象的方式——我之前提过的神经变性疾病。"];
+	  73 [label="The Pigs: 电池供电的警灯在她身后十分突出。闪烁的灯光映照出她颤抖的双手，还有手中的那把枪。"];
+	  74 [label="Kim Kitsuragi: “你把情况搞得更糟糕了，警官，”警督小声说着，眼神一直停留在女人的脸上。"];
+	  75 [label="The Pigs: “没收违禁品！”扩音器让她的声音充满痛苦的金属质感。“封闭通道，丢失2公斤，目击证人暴露！”"];
+	  76 [label="Kim Kitsuragi: “谢谢。”他把毒品装进口袋。“我这样做是为了帮你。我们必须把精力都放在这个案子上。”"];
+	  77 [label="You: “没错，你说得对。我们动手吧！”"];
+	  78 [label="Jump to: [IsKimHere()]"];
+	  79 [label="You: 是时候找回我的枪了！"];
+	  80 [label="You: Variable[\"boardwalk.thepigs_redc_handeye_recognize_gun\"]"];
+	  81 [label="Variable[\"boardwalk.thepigs_redc_handeye_recognize_gun\"]", shape=diamond];
+	  82 [label="!(Variable[\"boardwalk.thepigs_redc_handeye_recognize_gun\"])", shape=diamond];
+	  83 [label="You: “现在是什么情况？”"];
+	  84 [label="Jump to: [themainhub]"];
+	  85 [label="Empathy: 到底发生了什么，让她变成现在这个样子？"];
+	  86 [label="Logic: 她没有用过。她看起来没有嗑嗨。她‘没收’了它们，跟你现在做的有点相似。"];
+	  87 [label="You: “金？”"];
+	  88 [label="Rhetoric: 确认完毕。现在不要听信你的腺体。听我的。这位女士问你，你是不是增援人员？"];
+	  89 [label="Rhetoric: 难道她不相信你真是警官？"];
+	  90 [label="Jump to: [themainhub]"];
+	  91 [label="Kim Kitsuragi: “女士！请立即放下武器！”"];
+	  92 [label="You: “放松，女士，放松点…”"];
+	  93 [label="You: “等等，我们应该怎么办，金？”"];
+	  94 [label="Composure: 他的肩膀放松下来，眼睛里流露出几分顿悟的意味…他是注意到什么了吗？"];
+	  95 [label="You: “我没有从口袋里掏东西。”"];
+	  96 [label="You: “这是个普通的手电筒，女士。请冷静一点。”"];
+	  97 [label="You: “女士…我有枪。”"];
+	  98 [label="The Pigs: “不要动！”她似乎咬紧了牙关。“双手抱头，呼叫人盾！赶紧他妈的把手抱在头上！”"];
+	  99 [label="THEPIGSISDONE"];
+	  100 [label="Jump to: [THEPIGSISDONE]"];
+	  101 [label="You: IsKimHere()"];
+	  102 [label="IsKimHere()", shape=diamond];
+	  103 [label="!(IsKimHere())", shape=diamond];
+	  104 [label="You: “也许。可能吧。你懂我的。”"];
+	  105 [label="Kim Kitsuragi: 警督点点头。“这是你的帽子。”"];
+	  106 [label="Kim Kitsuragi: “好吧。”警督像往常一样死死地盯着你。“好吧。”"];
+	  107 [label="Kim Kitsuragi: “我不觉得她嗑药了，”警督低语到。“*没*嗑药可能才是问题…”"];
+	  108 [label="Hand/Eye Coordination: 这很危险。你有70%的肯定，你的枪应该是上膛的。"];
+	  109 [label="Half Light: 她要失去控制了——再来一下肯定会见血。"];
+	  110 [label="Reaction Speed: 太迟了，警督。"];
+	  111 [label="Jump to: [CheckEquipped(\"ledger_damaged\") || C ...]"];
+	  112 [label="The Pigs: 女人看着你，但却穿过了你。就好像你根本不存在。她的眼睛里闪烁着兴奋的光，警灯旋转的光映照出她脸上的划痕。"];
+	  113 [label="You: “请证明自己的身份，女士？”"];
+	  114 [label="Suggestion: 她觉得自己是个警察…试着把她当成警官对待。一个*级别较低*的警官。"];
+	  115 [label="Jump to: [themainhub]"];
+	  116 [label="The Pigs: “先生…”她有些犹豫，困惑地看着四周。随后放下了手中的三管胡椒盒手枪。"];
+	  117 [label="You: Variable[\"boardwalk.thepigs_greeting_done\"]"];
+	  118 [label="Variable[\"boardwalk.thepigs_greeting_done\"]", shape=diamond];
+	  119 [label="!(Variable[\"boardwalk.thepigs_greeting_done\"])", shape=diamond];
+	  120 [label="Kim Kitsuragi: “你可能还是别拿走它们的好。”警督死死地盯着你。“你好像有一点点…小问题…”"];
+	  121 [label="The Pigs: “是吗？”这个问题更像是留给她自己的，而不是你。“加雷斯？不，我…”她举起扩音器，大喊到：“加重攻击罪，有人倒下，嫌疑人徒步逃脱！”"];
+	  122 [label="The Pigs: “警官陷入危险，非法假扮！猪猪女侠*正赶往现场*，各自为战！！！”"];
+	  123 [label="You: “没错，你被捕了！”"];
+	  124 [label="The Pigs: “老鼠小队？”这个问题更像是留给她自己的，而不是你。“但是我以为…但是莫兰德先生…”她举起扩音器，大喊到：“加重攻击罪，有人倒下，嫌疑人徒步逃脱！”"];
+	  125 [label="You: “没事的，女士。一切都会好起来的。”"];
+	  126 [label="The Pigs: “但是…”她的眼中饱含泪水，然后突然用扩音器猛砸自己的嘴唇和牙齿。鲜血沿着她的下巴滴落，但她根本没有注意到。"];
+	  127 [label="Suggestion: 好吧，现在她确实变得*更*焦虑了。我的错。"];
+	  128 [label="Rhetoric: 这不是代码。只是些杂乱无章的词句。"];
+	  129 [label="Kim Kitsuragi: “女士，请冷静…”警督试着保持眼神接触。“我们想帮你，但你需要放下武器。”"];
+	  130 [label="Jump to: [themainhub]"];
+	  131 [label="You: IsKimHere()"];
+	  132 [label="IsKimHere()", shape=diamond];
+	  133 [label="!(IsKimHere())", shape=diamond];
+	  134 [label="You: “军刀只是个装饰，对你来说不构成威胁。”"];
+	  135 [label="Jump to: [thereareitemshere]"];
+	  136 [label="Kim Kitsuragi: “哦，这是你的吗？”"];
+	  137 [label="Jump to: [thereareitemshere]"];
+	  138 [label="You: “我要*没收*这些东西，作为证据。”"];
+	  139 [label="drugtakinghub"];
+	  140 [label="You: IsKimHere()"];
+	  141 [label="IsKimHere()", shape=diamond];
+	  142 [label="!(IsKimHere())", shape=diamond];
+	  143 [label="The Pigs: “你是吗？”这个问题更像是留给她自己的，而不是你。“莫兰德先生？不，我…”她举起扩音器，大喊到：“加重攻击罪，有人倒下，嫌疑人徒步逃脱！”"];
+	  144 [label="Jump to: [themainhub]"];
+	  145 [label="Jump to: [themainhub]"];
+	  146 [label="You: Variable[\"boardwalk.pigs_kim_esprit_its_okay_go_for_the_gun\"]"];
+	  147 [label="Variable[\"boardwalk.pigs_kim_esprit_its_okay_go_for_the_gun\"]", shape=diamond];
+	  148 [label="!(Variable[\"boardwalk.pigs_kim_esprit_its_okay_go_for_the_gun\"])", shape=diamond];
+	  149 [label="Inland Empire: 孤独。"];
+	  150 [label="Kim Kitsuragi: “警官…”警督摇摇头，补充到：“我是*绝对不会*就这样放手不管的。”"];
+	  151 [label="Kim Kitsuragi: 警督点点头，目光停留在晃荡的枪支上。"];
+	  152 [label="The Pigs: “把手放在我能看见的地方，”一个身上堆满警察装备的老妇人正在喃喃自语，接着，她注意到了你，把手伸向扩音器的方向。"];
+	  153 [label="Half Light: 你不应该在这里。她好像很有问题，已经完全失去控制了。"];
+	  154 [label="The Pigs: “什…什么？”她放下扩音器，盯着手中的枪。"];
+	  155 [label="You: “女士，我只想跟你谈谈。”\n“女士，我们只想跟你谈谈。”"];
+	  156 [label="You: IsKimHere()"];
+	  157 [label="IsKimHere()", shape=diamond];
+	  158 [label="!(IsKimHere())", shape=diamond];
+	  159 [label="Kim Kitsuragi: 警督点点头。"];
+	  160 [label="You: “好吧，那就交给你了。”"];
+	  161 [label="You: SubstanceUsedMore(\"speed\")  or  SubstanceUsedMore(\"pyrholidon\")"];
+	  162 [label="SubstanceUsedMore(\"speed\")  or  SubstanceUsedMore(\"pyrholidon\")", shape=diamond];
+	  163 [label="!(SubstanceUsedMore(\"speed\")  or  SubstanceUsedMore(\"pyrholidon\"))", shape=diamond];
+	  164 [label="The Pigs: “但是增援…”她环顾四周，有些困惑。“我以为莫兰德先生…”她举起扩音器，大喊到：“加重攻击罪，有人倒下，嫌疑人徒步逃脱！”"];
+	  165 [label="You: Variable[\"boardwalk.thepigs_blackc_perc_saw_drugs\"]"];
+	  166 [label="Variable[\"boardwalk.thepigs_blackc_perc_saw_drugs\"]", shape=diamond];
+	  167 [label="!(Variable[\"boardwalk.thepigs_blackc_perc_saw_drugs\"])", shape=diamond];
+	  168 [label="Empathy: 他很欣赏你能这么做。"];
+	  169 [label="Volition: 听他的。哪怕就这一次。"];
+	  170 [label="You: Variable[\"boardwalk.thepigs_blackc_perc_saw_drugs\"]"];
+	  171 [label="Variable[\"boardwalk.thepigs_blackc_perc_saw_drugs\"]", shape=diamond];
+	  172 [label="!(Variable[\"boardwalk.thepigs_blackc_perc_saw_drugs\"])", shape=diamond];
+	  173 [label="Electrochemistry: 是啊，撑住她，就靠在那些箱子上，然后进行性治疗…"];
+	  174 [label="The Pigs: “拒捕！封锁现场！把头低下！”她用扩音器用力地砸向自己的头，一遍又一遍。接着，她对着被血染红的扩音器喊到：“紧急情况！操，快回话！平民卷入案件！！！”"];
+	  175 [label="You: “呃…我穿着全套的RCM警督制服。相信我，我是个警察。”\n“呃…我穿着全套的RCM警督制服，而且看看我的搭档。我们真是警察。”"];
+	  176 [label="Esprit de Corps: 拿走枪，警督，没事的。很安全，他想到。直接去拿吧。"];
+	  177 [label="Jump to: [themainhub]"];
+	  178 [label="You: IsKimHere()"];
+	  179 [label="IsKimHere()", shape=diamond];
+	  180 [label="!(IsKimHere())", shape=diamond];
+	  181 [label="littlehub"];
+	  182 [label="Jump to: [themainhub]"];
+	  183 [label="The Pigs: 女人颓然地站着。裹在一堆RCM装备下的她，看起来像个紧张性精神病患者。"];
+	  184 [label="You: 捡起RCM帽子。"];
+	  185 [label="You: “跟我的多用工具分开感觉不太舒服。”"];
+	  186 [label="You: 不管她。[离开。]"];
+	  187 [label="You: “我是遥视者部队的。”"];
+	  188 [label="Composure: 情况看起来很糟糕。冷静下来。稳住呼吸。"];
+	  189 [label="You: Variable[\"boardwalk.pigs_superhigh_elchem_back_you_up_against_those_boxes\"]"];
+	  190 [label="Variable[\"boardwalk.pigs_superhigh_elchem_back_you_up_against_those_boxes\"]", shape=diamond];
+	  191 [label="!(Variable[\"boardwalk.pigs_superhigh_elchem_back_you_up_against_those_boxes\"])", shape=diamond];
+	  192 [label="Volition: 住手！看在老天爷的份上，不要。"];
+	  193 [label="Encyclopedia: 大红钥匙？那是攻城槌的代号。警察的行话。你知道这个。"];
+	  194 [label="You: “看，女士…”（指着自己的衣服。）“白色矩形。我*是*个警察。”"];
+	  195 [label="You: Variable[\"boardwalk.pigs_elchem_recognizes_speed\"]"];
+	  196 [label="Variable[\"boardwalk.pigs_elchem_recognizes_speed\"]", shape=diamond];
+	  197 [label="!(Variable[\"boardwalk.pigs_elchem_recognizes_speed\"])", shape=diamond];
+	  198 [label="Empathy: 所以这就是坤妮斯的感觉…就在你向她开枪之前。"];
+	  199 [label="You: “我们可以和平解决问题的，请放下武器。”"];
+	  200 [label="You: “巡警，我需要你去参加纪律听证会…”（慢慢摇头。）"];
+	  201 [label="The Pigs: “警官呼叫增援！”她的眼睛在你和金之间飞快扫过。“发现被通缉嫌疑人，趴下！”"];
+	  202 [label="The Pigs: 女人颓然地站着。裹在一堆RCM装备下的她，看起来像个紧张性精神病患者。这里没什么可以做的了。"];
+	  203 [label="You: “不！回收品是我的，都是我收集的。”"];
+	  204 [label="You: “你嗑药了吗？”"];
+	  205 [label="Kim Kitsuragi: “等等，警官！”警督大叫到。“我们*不能*让眼前的紧张事态加剧！增加枪支只会让情况变得更糟。”"];
+	  206 [label="Half Light: 够了！给我煎点培根！"];
+	  207 [label="You: “*增援*？！有什么好增援的，已经无处可退了——可怕的结局就要降临在我们头上！”"];
+	  208 [label="You: “我，像增援吗？我更像个混账吧…”"];
+	  209 [label="Pain Threshold: 当情况变得非常糟糕的时候，提醒你自己还有一具身体是很不错的。只要抓一抓就可以。"];
+	  210 [label="Rhetoric: 难道她不相信你们俩真是警官？"];
+	  211 [label="You: “喂，你才是冒充警官的人好吗！”"];
+	  212 [label="You: Variable[\"boardwalk.pigs_interfacing_neurodegenerative_disease\"]"];
+	  213 [label="Variable[\"boardwalk.pigs_interfacing_neurodegenerative_disease\"]", shape=diamond];
+	  214 [label="!(Variable[\"boardwalk.pigs_interfacing_neurodegenerative_disease\"])", shape=diamond];
+	  215 [label="You: IsKimHere()"];
+	  216 [label="IsKimHere()", shape=diamond];
+	  217 [label="!(IsKimHere())", shape=diamond];
+	  218 [label="You: 举起你的手。"];
+	  219 [label="The Pigs: “增援？”她略微放低手中的扩音器，随后又立即举了起来，大声叫喊到：“增援，呼叫增援！身份未确认！”"];
+	  220 [label="You: “你不是警察。*我*才是警察。”\n“你不是警察。*我们*才是警察。”\n“你不是警察。*我*才是警察。我就是法律！”\n“你不是警察。*我们*才是警察。我们就是法律！”"];
+	  221 [label="The Pigs: “我他妈是警察，混球，”她对着扩音器大喊。“趴在路面上，你被捕了！”"];
+	  222 [label="The Pigs: “嫌疑人徒步在逃，”她对着一个扩音器大喊。“猪猪女侠正在追踪，把他拷起来，小伙子们！”"];
+	  223 [label="The Pigs: “证件和登记号！！！”她反复用扩音机砸向自己的头，然后对着被血染红的扩音器大喊：“证件和登记号！紧急情况呼叫！分部，分部，报告方位！！！”"];
+	  224 [label="You: “我们真的是警察。看，白色矩形！”"];
+	  225 [label="Kim Kitsuragi: “现在…”警督深吸一口气，然后稳住自己的声音，“…时机不对。”"];
+	  226 [label="You: Variable[\"boardwalk.pigs_tried_to_exit_with_kim_once\"]"];
+	  227 [label="Variable[\"boardwalk.pigs_tried_to_exit_with_kim_once\"]", shape=diamond];
+	  228 [label="!(Variable[\"boardwalk.pigs_tried_to_exit_with_kim_once\"])", shape=diamond];
+	  229 [label="Empathy: 所以当你拿枪指着坤妮斯的时候，她一定就是这种感受。"];
+	  230 [label="You: “巡警，我需要检查你的枪。”\n“警官！我是双重荣誉警督哈里尔·杜博阿，请求检查你的配枪。”（拿出你的警徽。）"];
+	  231 [label="The Pigs: “替代事件！瞬间决定！趴下！他妈的给我趴下！”"];
+	  232 [label="Kim Kitsuragi: “小心，警探。不要做出任何激怒她的事。”"];
+	  233 [label="Empathy: 只要她这么说，那就代表她的脑海里正在进行体腔搜查。看来对于她来说，自己口中说出的话就是真实发生的事情。"];
+	  234 [label="Jump to: [themainhub]"];
+	  235 [label="You: 没收麻醉剂。（眨眼！）"];
+	  236 [label="The Pigs: 你拿走一瓶吡嚯浣酮，还有一瓶思必得。显然是拿来当证物的。"];
+	  237 [label="You: “亲，你知道我是谁——大家都知道。”（眨眨眼。）"];
+	  238 [label="Electrochemistry: 那里面还有麻醉剂。你想拿走它们吗？那就去吧！"];
+	  239 [label="You: “我们是真警察。看，这是我的警徽…”（把你的警徽拿给她看。）\n“我是真警察。看……这是我的警徽。”（把你的警徽拿给她看。）"];
+	  240 [label="The Pigs: “照我说的做，不然我他妈就把你点燃！”她一边缓慢地移动着，一边对你大声叫喊。"];
+	  241 [label="The Pigs: “举起手来。我是猪猪女侠。*马上*把手举起来，”她对着扩音器大喊。“现在把手举起来！”"];
+	  242 [label="The Pigs: “我是警察！”她对着扩音器大声叫喊。“非法接触！趴下，你们这些人渣！”"];
+	  243 [label="Jump to: [themainhub]"];
+	  244 [label="You: “女士，我需要你冷静。我只想和你谈谈。”\n“女士，我需要你冷静。我们只想和你谈谈。”"];
+	  245 [label="You: “放松一点。这只是切链钳而已。”"];
+	  246 [label="Jump to: [thereareitemshere]"];
+	  247 [label="Half Light: 不想伤害她？！要么逃跑，要么战斗——不是生，就是死。"];
+	  248 [label="Jump to: [themainhub]"];
+	  249 [label="You: IsKimHere()"];
+	  250 [label="IsKimHere()", shape=diamond];
+	  251 [label="!(IsKimHere())", shape=diamond];
+	  252 [label="Kim Kitsuragi: “你把情况搞得更糟糕了，警官，”警督小声说着，眼神一直停留在女人的脸上。"];
+	  253 [label="You: “随便你，但是*我*要先减减压。”（转身离开。）"];
+	  254 [label="Jump to: [The Pigs: \"\"CONFINED QUARTERS, ASSAILANT COMIN...\"]"];
+	  255 [label="You: “录音机是不会给你的……”"];
+	  256 [label="Perception (Sight): 当她挥手时，你注意到很眼熟的安瓿和小包，在她背后山一样高的警用装备中格外显眼。药品？还是毒品？"];
+	  257 [label="You: IsKimHere()"];
+	  258 [label="IsKimHere()", shape=diamond];
+	  259 [label="!(IsKimHere())", shape=diamond];
+	  260 [label="You: “我听见了，女士，你看…”（慢慢弯下腰。）“…我把手放在地上。”"];
+	  261 [label="The Pigs: “不，”那个疯女人摇摇头，嘴里念念有词。“不，不，不，我以为莫兰特先生…加雷斯…”她突然举起扩音器，大喊到：“加重攻击罪，有人倒下，警官开始追踪！”"];
+	  262 [label="Esprit de Corps: 相信我，去拿枪吧。"];
+	  263 [label="Interfacing: 再说一次，是神经变性疾病。"];
+	  264 [label="You: “我的？不，是我们的，RCM的。”"];
+	  265 [label="Kim Kitsuragi: “我们不能离开。一个神志不清的市民正拿武器对着我们。*你的*武器。你*必须*解决这个问题。”"];
+	  266 [label="You: “杀了她，警督！”"];
+	  267 [label="Kim Kitsuragi: 警督的眼睛死死盯着女人和她手中的枪——他仔细地观察了一下，然后嘟囔到：“太好了”。"];
+	  268 [label="You: “巡警，你严重违反了RCM的行为准则。”"];
+	  269 [label="You: “如果你想要撬棍的话，那你必须…从我手里抢走。”"];
+	  270 [label="thereareitemshere"];
+	  271 [label="You: “我想是的。”"];
+	  272 [label="Rhetoric: 你迟早都要把枪拿回来…也许在这之前，你可以先了解一些重要事实？"];
+	  273 [label="You: “我们*只想*帮你，仅此而已。”\n“我*只想*帮你，仅此而已。”"];
+	  274 [label="The Pigs: “执法人员暴露了，”她对着扩音器大喊。红蓝相间的灯光照射出四处飞溅的唾沫星子。“冒充警官！”"];
+	  275 [label="You: Variable[\"yard.hanged_pointed_at_cunoesse\"]"];
+	  276 [label="Variable[\"yard.hanged_pointed_at_cunoesse\"]", shape=diamond];
+	  277 [label="!(Variable[\"yard.hanged_pointed_at_cunoesse\"])", shape=diamond];
+	  278 [label="The Pigs: “我*是*警察！别动！不要动！双手抱头！嫌疑人有武器，十分危险！”"];
+	  279 [label="The Pigs: “嫌疑人携带武器，非常危险！请求立即增援！”她开始重重地喘气。“拒捕，请求打断，打断他的话！”"];
+	  280 [label="Kim Kitsuragi: “现在是什么情况…”警督犹豫地对她喊话到，“…警官？”"];
+	  281 [label="You: “把枪放下，警官。”"];
+	  282 [label="You: Variable[\"boardwalk.thepigs_took_narcotics\"]"];
+	  283 [label="Variable[\"boardwalk.thepigs_took_narcotics\"]", shape=diamond];
+	  284 [label="!(Variable[\"boardwalk.thepigs_took_narcotics\"])", shape=diamond];
+	  285 [label="You: “等等，如果她是对的，我其实*真是*个冒名顶替的骗子呢？”"];
+	  286 [label="Kim Kitsuragi: “看见了吗？”他瞥了你一眼。“我们不在的时候，就发生了这种事。”"];
+	  287 [label="You: “麻烦你，猪猪女侠，把枪给我。”"];
+	  288 [label="Empathy: 在她的脑海里，现在你已经被控制住了，但是下一刻又没有。看来只要是她自己说出来的，那就是此刻正在发生的事情。"];
+	  289 [label="You: 摇晃她的肩膀。"];
+	  290 [label="You: “我需要这个案子。我需要我所能得到的一切。”"];
+	  291 [label="Empathy: 所以站在警枪的另一端感觉怎么样？"];
+	  292 [label="You: “是的。我是41区的一名警探。”\n“双重荣誉警督哈里尔·杜博阿，隶属于41辖区。这是我的搭档，57区的曷城警督。”\n“双重荣誉警督哈里尔·杜博阿，隶属于41辖区。”\n“我是41区的一名警探。这位是我57区的搭档。”"];
+	  2800008 [label="JUMP OUT to BOARDWALK / THE PIGS RED CHECK", shape=diamond];
+	  2800308 [label="JUMP OUT to BOARDWALK / THE PIGS RED CHECK", shape=diamond];
+	  2800016 [label="JUMP OUT to BOARDWALK / THE PIGS RED CHECK", shape=diamond];
+	  0 -> 1
+	  1 -> 64
+	  2 -> 112
+	  3 -> 193
+	  4 -> 3
+	  5 -> 278
+	  6 -> 233
+	  7 -> 61
+	  8 -> 270
+	  9 -> 10
+	  9 -> 11
+	  10 -> 280
+	  11 -> 83
+	  12 -> 110
+	  13 -> 28
+	  14 -> 16
+	  14 -> 15
+	  15 -> 210
+	  16 -> 89
+	  17 -> 224
+	  17 -> 194
+	  17 -> 239
+	  17 -> 175
+	  17 -> 211
+	  17 -> 285
+	  18 -> 200
+	  18 -> 125
+	  18 -> 287
+	  19 -> 20
+	  19 -> 21
+	  20 -> 111
+	  21 -> 78
+	  22 -> 240
+	  23 -> 215
+	  24 -> 156
+	  25 -> 124
+	  26 -> 195
+	  27 -> 209
+	  28 -> 9
+	  29 -> 30
+	  29 -> 31
+	  30 -> 149
+	  31 -> 248
+	  32 -> 178
+	  33 -> 34
+	  34 -> 288
+	  35 -> 46
+	  36 -> 101
+	  37 -> 8
+	  38 -> 99
+	  39 -> 13
+	  40 -> 165
+	  41 -> 56
+	  42 -> 2800008
+	  43 -> 44
+	  43 -> 45
+	  44 -> 198
+	  45 -> 229
+	  46 -> 5
+	  47 -> 32
+	  47 -> 2
+	  47 -> 230
+	  47 -> 199
+	  47 -> 204
+	  47 -> 79
+	  47 -> 113
+	  47 -> 50
+	  47 -> 220
+	  48 -> 231
+	  49 -> 33
+	  50 -> 279
+	  51 -> 84
+	  53 -> 169
+	  54 -> 67
+	  55 -> 137
+	  56 -> 122
+	  57 -> 104
+	  57 -> 264
+	  57 -> 271
+	  58 -> 275
+	  59 -> 68
+	  59 -> 292
+	  59 -> 237
+	  59 -> 207
+	  59 -> 208
+	  59 -> 25
+	  59 -> 187
+	  60 -> 6
+	  61 -> 62
+	  61 -> 63
+	  62 -> 232
+	  63 -> 188
+	  64 -> 65
+	  64 -> 66
+	  65 -> 202
+	  66 -> 117
+	  67 -> 137
+	  68 -> 143
+	  69 -> 13
+	  70 -> 270
+	  71 -> 18
+	  72 -> 248
+	  73 -> 23
+	  74 -> 3
+	  75 -> 140
+	  76 -> 168
+	  77 -> 151
+	  78 -> 2800308
+	  79 -> 80
+	  80 -> 81
+	  80 -> 82
+	  81 -> 19
+	  82 -> 19
+	  83 -> 274
+	  84 -> 47
+	  85 -> 29
+	  86 -> 257
+	  87 -> 131
+	  88 -> 59
+	  89 -> 17
+	  90 -> 47
+	  91 -> 153
+	  92 -> 46
+	  93 -> 22
+	  94 -> 286
+	  95 -> 60
+	  96 -> 46
+	  97 -> 46
+	  98 -> 206
+	  100 -> 99
+	  101 -> 102
+	  101 -> 103
+	  102 -> 136
+	  103 -> 135
+	  104 -> 105
+	  105 -> 70
+	  106 -> 137
+	  107 -> 234
+	  108 -> 47
+	  109 -> 177
+	  110 -> 56
+	  111 -> 2800016
+	  112 -> 27
+	  113 -> 221
+	  114 -> 145
+	  115 -> 47
+	  116 -> 71
+	  117 -> 118
+	  117 -> 119
+	  118 -> 183
+	  119 -> 152
+	  120 -> 169
+	  121 -> 13
+	  122 -> 127
+	  123 -> 252
+	  124 -> 13
+	  125 -> 126
+	  126 -> 122
+	  127 -> 182
+	  128 -> 109
+	  129 -> 247
+	  130 -> 47
+	  131 -> 132
+	  131 -> 133
+	  132 -> 267
+	  133 -> 222
+	  134 -> 46
+	  135 -> 270
+	  136 -> 57
+	  137 -> 270
+	  138 -> 55
+	  139 -> 160
+	  139 -> 138
+	  139 -> 290
+	  139 -> 54
+	  140 -> 141
+	  140 -> 142
+	  141 -> 107
+	  142 -> 234
+	  143 -> 13
+	  144 -> 47
+	  145 -> 47
+	  146 -> 147
+	  146 -> 148
+	  147 -> 262
+	  148 -> 243
+	  149 -> 212
+	  150 -> 253
+	  150 -> 77
+	  151 -> 90
+	  152 -> 241
+	  153 -> 181
+	  154 -> 281
+	  154 -> 268
+	  154 -> 41
+	  155 -> 6
+	  156 -> 157
+	  156 -> 158
+	  157 -> 205
+	  158 -> 98
+	  159 -> 70
+	  160 -> 76
+	  161 -> 162
+	  161 -> 163
+	  162 -> 120
+	  163 -> 53
+	  164 -> 13
+	  165 -> 166
+	  165 -> 167
+	  166 -> 282
+	  167 -> 270
+	  168 -> 246
+	  169 -> 139
+	  170 -> 171
+	  170 -> 172
+	  171 -> 26
+	  172 -> 114
+	  173 -> 189
+	  174 -> 109
+	  175 -> 223
+	  176 -> 144
+	  177 -> 47
+	  178 -> 179
+	  178 -> 180
+	  179 -> 226
+	  180 -> 254
+	  181 -> 96
+	  181 -> 97
+	  181 -> 35
+	  181 -> 134
+	  181 -> 203
+	  181 -> 269
+	  181 -> 245
+	  181 -> 185
+	  181 -> 218
+	  181 -> 92
+	  181 -> 93
+	  181 -> 255
+	  182 -> 47
+	  183 -> 40
+	  184 -> 36
+	  185 -> 46
+	  186 -> 100
+	  187 -> 164
+	  188 -> 272
+	  189 -> 190
+	  189 -> 191
+	  190 -> 192
+	  191 -> 59
+	  192 -> 88
+	  193 -> 85
+	  194 -> 223
+	  195 -> 196
+	  195 -> 197
+	  196 -> 130
+	  197 -> 114
+	  198 -> 273
+	  198 -> 260
+	  198 -> 87
+	  199 -> 201
+	  200 -> 249
+	  201 -> 129
+	  202 -> 38
+	  203 -> 46
+	  204 -> 75
+	  205 -> 98
+	  206 -> 51
+	  207 -> 69
+	  208 -> 39
+	  209 -> 242
+	  210 -> 17
+	  211 -> 174
+	  212 -> 213
+	  212 -> 214
+	  213 -> 72
+	  214 -> 263
+	  215 -> 216
+	  215 -> 217
+	  216 -> 91
+	  217 -> 153
+	  218 -> 48
+	  219 -> 173
+	  220 -> 219
+	  221 -> 256
+	  222 -> 115
+	  223 -> 128
+	  224 -> 223
+	  225 -> 224
+	  225 -> 194
+	  225 -> 239
+	  225 -> 175
+	  225 -> 211
+	  226 -> 227
+	  226 -> 228
+	  227 -> 150
+	  228 -> 265
+	  229 -> 273
+	  229 -> 260
+	  229 -> 87
+	  230 -> 154
+	  231 -> 155
+	  231 -> 95
+	  232 -> 188
+	  233 -> 61
+	  234 -> 47
+	  235 -> 236
+	  236 -> 86
+	  237 -> 121
+	  238 -> 270
+	  239 -> 223
+	  240 -> 96
+	  240 -> 97
+	  240 -> 35
+	  240 -> 134
+	  240 -> 269
+	  240 -> 245
+	  240 -> 185
+	  240 -> 218
+	  240 -> 92
+	  240 -> 255
+	  241 -> 73
+	  242 -> 58
+	  243 -> 47
+	  244 -> 7
+	  245 -> 46
+	  246 -> 270
+	  247 -> 266
+	  247 -> 123
+	  247 -> 4
+	  248 -> 47
+	  249 -> 250
+	  249 -> 251
+	  250 -> 12
+	  251 -> 56
+	  252 -> 3
+	  253 -> 42
+	  254 -> 2800008
+	  255 -> 46
+	  256 -> 170
+	  257 -> 258
+	  257 -> 259
+	  258 -> 161
+	  259 -> 137
+	  260 -> 131
+	  261 -> 13
+	  262 -> 243
+	  263 -> 248
+	  264 -> 105
+	  265 -> 146
+	  266 -> 74
+	  267 -> 94
+	  268 -> 116
+	  269 -> 46
+	  270 -> 184
+	  270 -> 289
+	  270 -> 186
+	  270 -> 235
+	  271 -> 159
+	  272 -> 108
+	  273 -> 131
+	  274 -> 14
+	  275 -> 276
+	  275 -> 277
+	  276 -> 43
+	  277 -> 291
+	  278 -> 49
+	  278 -> 244
+	  279 -> 24
+	  280 -> 274
+	  281 -> 116
+	  282 -> 283
+	  282 -> 284
+	  283 -> 270
+	  284 -> 238
+	  285 -> 225
+	  286 -> 176
+	  287 -> 56
+	  288 -> 61
+	  289 -> 37
+	  290 -> 106
+	  291 -> 273
+	  291 -> 260
+	  291 -> 87
+	  292 -> 261
+}
+

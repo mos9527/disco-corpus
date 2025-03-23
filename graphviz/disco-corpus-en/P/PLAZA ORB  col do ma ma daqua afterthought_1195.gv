@@ -1,0 +1,99 @@
+# PLAZA ORB / col do ma ma daqua afterthought
+# Afterthought when Lena has told you about this cryptid.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Inland Empire: There it is again! You are about to re-discover a long-lost species!"];
+	  3 [label="Inland Empire: Keep your ears peeled, then. If the species really has migrated to Martinaise, you're sure to hear it again."];
+	  4 [label="Inland Empire: Was that -- could it be -- the Col Do Ma Ma Daqua?! No. It's probably just your *imagination* ringing in your ear..."];
+	  5 [label="You: Probably not. [Discard thought.]"];
+	  6 [label="You: Is it? Is there a ringing? (Listen more closely.)"];
+	  7 [label="the_main_stuff"];
+	  8 [label="Jump to: [the_main_stuff]"];
+	  9 [label="Variable[\"canal.roy_likes_recording_sounds\"]"];
+	  10 [label="Variable[\"canal.roy_likes_recording_sounds\"]", shape=diamond];
+	  11 [label="!(Variable[\"canal.roy_likes_recording_sounds\"])", shape=diamond];
+	  12 [label="Inland Empire: Of course he doesn't. He's DEAF."];
+	  13 [label="IsTHCPresent(\"remote_viewer\")"];
+	  14 [label="IsTHCPresent(\"remote_viewer\")", shape=diamond];
+	  15 [label="!(IsTHCPresent(\"remote_viewer\"))", shape=diamond];
+	  16 [label="Inland Empire: So it does. It's gone. All that's left for you -- is the disco."];
+	  17 [label="Variable[\"canal.roy_necktie_altercation\"]  and  CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"]"];
+	  18 [label="Variable[\"canal.roy_necktie_altercation\"]  and  CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"]", shape=diamond];
+	  19 [label="!(Variable[\"canal.roy_necktie_altercation\"]  and  CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"])", shape=diamond];
+	  20 [label="You: Listen closely first."];
+	  22 [label="col_do_ma_ma_hub"];
+	  23 [label="Composure: Keep still! It might perch on your shoulder."];
+	  24 [label="Physical Instrument: What are you doing? You're a police officer, not a pansy ornithologist. The only birds you should be looking for are healthy women of child-bearing age."];
+	  25 [label="Reaction Speed: That pawnbroker -- Roy -- was into natural sounds too. Maybe you could talk to him."];
+	  26 [label="You: \"Wait, Kim, do *you* hear a high pitched noise?\""];
+	  27 [label="You: Go then, leave! Leave like everything else! (Don't.)"];
+	  28 [label="Inland Empire: There seems to be. An *extremely* high pitched ring. Ultrasonic. Lena said it was very high-pitched, right? It's like something *tickles* your ear."];
+	  29 [label="You: Hold very still and hope the bird comes to perch on your shoulder. (Proceed.)"];
+	  30 [label="Variable[\"canal.roy_likes_recording_sounds\"]"];
+	  31 [label="Variable[\"canal.roy_likes_recording_sounds\"]", shape=diamond];
+	  32 [label="!(Variable[\"canal.roy_likes_recording_sounds\"])", shape=diamond];
+	  33 [label="Inland Empire: It must be very close... maybe, just maybe it will come toward you..."];
+	  34 [label="Electrochemistry: Don't be a weirdo like that Roy at the pawnshop who doesn't like music. You don't need *sounds* when you have beats."];
+	  35 [label="Perception (Hearing): Honestly, your ear isn't hearing a whole lot. The distant hum of the industrial harbour. The traffic. But, admittedly -- there *is* a high pitched noise somewhere there too. But then, isn't there always..."];
+	  36 [label="Savoir Faire: Yeah, but how are you going to catch it?"];
+	  37 [label="Inland Empire: Oh no! The sound -- it's moving away, somewhere over there -- go after it!"];
+	  38 [label="Horrific Necktie: Remember that asshole Roy who wanted you to take me off? He didn't like music, only sounds. What a loser. It's good you're not like him. You and disco will be together forever."];
+	  39 [label="Kim Kitsuragi: \"No. I don't hear the Col Do Ma Ma Daqua -- and neither do you.\""];
+	  40 [label="Inland Empire: But you're not a regular animal. You're not even a regular cop. You see -- and hear! -- beyond the veil."];
+	  41 [label="You: Move your head toward the sound. (Proceed.)"];
+	  42 [label="Inland Empire: No... Too late. It's gone... There is no ringing anymore. Just the sound of the streets."];
+	  43 [label="Logic: Lena also said that it couldn't be heard by any other animal -- including humans. What you're hearing must just be a regular bird."];
+	  44 [label="You: Keep listening."];
+	  45 [label="You: No, come back, please! (Listen more.)"];
+	  0 -> 1
+	  1 -> 4
+	  2 -> 36
+	  3 -> 9
+	  4 -> 22
+	  6 -> 28
+	  7 -> 41
+	  7 -> 26
+	  7 -> 20
+	  7 -> 29
+	  8 -> 7
+	  9 -> 10
+	  9 -> 11
+	  10 -> 25
+	  12 -> 8
+	  13 -> 14
+	  13 -> 15
+	  14 -> 40
+	  15 -> 35
+	  16 -> 30
+	  17 -> 18
+	  17 -> 19
+	  18 -> 38
+	  19 -> 34
+	  20 -> 2
+	  22 -> 5
+	  22 -> 6
+	  23 -> 24
+	  24 -> 8
+	  26 -> 39
+	  27 -> 16
+	  28 -> 43
+	  29 -> 37
+	  30 -> 32
+	  30 -> 31
+	  31 -> 17
+	  33 -> 23
+	  35 -> 7
+	  36 -> 44
+	  37 -> 42
+	  39 -> 12
+	  40 -> 7
+	  41 -> 37
+	  42 -> 27
+	  42 -> 45
+	  43 -> 13
+	  44 -> 33
+	  45 -> 3
+}
+

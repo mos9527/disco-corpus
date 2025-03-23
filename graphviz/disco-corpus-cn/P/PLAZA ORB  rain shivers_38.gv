@@ -1,0 +1,479 @@
+# PLAZA ORB / rain shivers
+# rain shivers
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Shivers: 雨滴坠落在水面上。一段楼梯延伸入海。大海的波浪冲刷着马丁内斯海岸，还有那些停靠在岸边的摩托艇和微微轻摆的芦苇丛。"];
+	  3 [label="Shivers: 雨水滑落。"];
+	  4 [label="Shivers: 一个院子。雨水从小木棚的屋顶上滑落下来。脏水在尸体旁汇成一弯水池。腐烂迟迟不散的味道跟潮湿的泥土味混合在了一起。"];
+	  5 [label="Mack Torson: “不知道维克有没有找到他那个失踪很久的男朋友。”他看着切斯特·麦克莱恩，突然被自己的话给逗笑了。雨在外面淅淅沥沥地下着。"];
+	  6 [label="Variable[\"plaza.sense_rainshivers_composure_cloak\"]"];
+	  7 [label="Variable[\"plaza.sense_rainshivers_composure_cloak\"]", shape=diamond];
+	  8 [label="!(Variable[\"plaza.sense_rainshivers_composure_cloak\"])", shape=diamond];
+	  9 [label="Jump to: [Shivers: \"Behind the gates -- heaps of supply...\"]"];
+	  10 [label="Esprit de Corps: 桥上，托森和麦克莱恩警官正在站岗。托森穿着牛仔裤和一件贴身鱼网背心。随迁警官维克玛经过，年轻人跟他搭起了话……"];
+	  11 [label="Rhetoric: 午夜新闻和重播节目。"];
+	  12 [label="Variable[\"plaza.rainshivers_esprit_2\"]"];
+	  13 [label="Variable[\"plaza.rainshivers_esprit_2\"]", shape=diamond];
+	  14 [label="!(Variable[\"plaza.rainshivers_esprit_2\"])", shape=diamond];
+	  15 [label="You: 我在做什么？"];
+	  16 [label="Shivers: 抬头望向天空，冰冷的雨水从你的头发上滴落。\n抬头望向天空，冰冷的雨水从你的帽子上滴落。"];
+	  17 [label="You: 科戎上面是什么？"];
+	  18 [label="Jump to: [Untitled hub]"];
+	  19 [label="You: 我会吗？"];
+	  20 [label="Esprit de Corps: 现在这是你唯一的家了。但是你不能回去。这样可不行。"];
+	  21 [label="IsAfternoon()"];
+	  22 [label="IsAfternoon()", shape=diamond];
+	  23 [label="!(IsAfternoon())", shape=diamond];
+	  24 [label="Shivers: 大塞車。雨滴拍打在汽車顶上。車里，司机们看着雨水从挡风玻璃上汩汩地流淌下来。国王的雕像也在颤抖着，因为他也觉得太冷了。运河的大桥已经抬升起来了。"];
+	  25 [label="You: 你是谁，幽灵？"];
+	  26 [label="Shivers: 不。你只是千百万人中的一个，看着它们每天从马丁内斯海湾的对岸升起。"];
+	  27 [label="Shivers: 两只绿色的蛇皮鞋立正站在广场地砖上。"];
+	  28 [label="Shivers: 站在雨里，眺望北方，摇滚都市加姆洛克在那里向内陆延伸。"];
+	  29 [label="Chester McLaine: “那也*太不负责任*了。”"];
+	  30 [label="IsKimHere()"];
+	  31 [label="IsKimHere()", shape=diamond];
+	  32 [label="!(IsKimHere())", shape=diamond];
+	  33 [label="HasShirt()"];
+	  34 [label="HasShirt()", shape=diamond];
+	  35 [label="!(HasShirt())", shape=diamond];
+	  36 [label="Variable[\"coast.snow_shivers_above\"]"];
+	  37 [label="Variable[\"coast.snow_shivers_above\"]", shape=diamond];
+	  38 [label="!(Variable[\"coast.snow_shivers_above\"])", shape=diamond];
+	  39 [label="Nix Gottlieb: 分局的外科医生嘴里咀嚼着一颗糖果，路过的时候向她投去了疑问的一瞥：“需要帮忙吗？”"];
+	  41 [label="You: 感觉怎么样？"];
+	  42 [label="Shivers: 工业港口的大门紧锁着。你的后背感到一阵寒意。你像只动物一样抖动着，试着把水从皮毛上甩下来。"];
+	  43 [label="Rhetoric: 你从没去过那里。河流的东岸不需要法律。"];
+	  44 [label="Jump to: [Untitled hub]"];
+	  45 [label="Jump to: [mega shivers hjub]"];
+	  46 [label="Shivers: 一个院子。雨水从小木棚的屋顶上滑落下来。煤灰漏进死人脚下的一个水坑里。他挂在树上来回摇荡，尸体已经有些膨胀。雨滴从他冰冷的脸颊滑过。\n一个院子。雨水从小木棚的屋顶上滑落下来。煤灰漏进死人脚下的一个水坑里。他挂在树上来回摇荡，赤裸腐烂的胸口有一个大洞。"];
+	  47 [label="Variable[\"plaza.rainshivers_esprit\"]  or  Variable[\"coast.snowshivers_esprit\"]"];
+	  48 [label="Variable[\"plaza.rainshivers_esprit\"]  or  Variable[\"coast.snowshivers_esprit\"]", shape=diamond];
+	  49 [label="!(Variable[\"plaza.rainshivers_esprit\"]  or  Variable[\"coast.snowshivers_esprit\"])", shape=diamond];
+	  50 [label="Chester McLaine: “老兄，他们是*异性恋生活伴侣*。不是那样的，”他的同伴假笑到。“不过也是。那种双人组的天堂里也是有麻烦的，龙舌兰日落总是……”雨声越来越大，把他的声音渐渐淹没。"];
+	  51 [label="Shivers: 你的头发贴在额头上，冰冷又潮湿。"];
+	  52 [label="You: 那这附近呢？"];
+	  53 [label="You: “这样感觉挺酷的，一切都在我掌控之中。”"];
+	  54 [label="You: 向上看。"];
+	  55 [label="Jump to: [mega shivers hjub]"];
+	  56 [label="Shivers: 在马丁内斯，那是没有人去过的地方。在一条早已被人遗忘的运河径流口，也是整个镇子上最苍白的地方。在白昼的阴影下，大革命以失败告终。"];
+	  57 [label="Shivers: 远方一阵倾盆大雨，拍打着加姆洛克的屋顶，高速公路的出口旁坐落着一间改造过的丝绸厂。41分局在大雨中弓起了腰。"];
+	  58 [label="Jean Vicquemare: “没，没什么。只不过……茱蒂特去他那看了看，发现周一的邮件没开过封。我觉得他应该还在*那里*。你不会……周末跟他一起喝酒去了吧？”"];
+	  59 [label="Mack Torson: “跟那只野兽吗？再也不会了，伙计。什么，你说他还在那里，在……你知道的，枢纽站南边？那个……是什么来着？”"];
+	  60 [label="Shivers: 你的衬衫紧贴在胸膛。迪斯科夹克肩部的位置变得沉重起来。寒冷一路钻到你的皮肤之下。你颤抖着，整个城市也跟着你一起颤抖。"];
+	  61 [label="You: 南边有什么？"];
+	  62 [label="You: 什么也不说。"];
+	  63 [label="Shivers: 走廊早已在许久之前那场败仗的炮火洗礼下垮塌。晒衣绳在雨水中变成了废物。你听见收音机的声音。"];
+	  64 [label="Shivers: 更多联盟的静风舰。就在那上方——雨水形成的地方——转子静静地振动着。你的视线变得清晰起来。"];
+	  65 [label="Esprit de Corps: 巡警茱蒂特·迈诺特站在入口悬挂的雨篷下，挣扎着想要撑开自己的黑色雨伞。"];
+	  66 [label="Shivers: 你看着自己脚下，不住的颤抖着。肮脏的雨水在广场的雪地上蜿蜒流淌。"];
+	  67 [label="Shivers: 银色的雨幕覆盖在房屋上，就此将阶层分割开来。"];
+	  68 [label="Shivers: 城市海岸线，雨水从亘石覆盖的屋顶滴落。半成品建筑的煤渣砖随意丢弃了一地。一栋曾经被革命者占领的废弃研究大楼。一座古老的教堂高高地矗立在海面上。"];
+	  69 [label="Shivers: 金融区德尔塔的摩天大楼。办公室的窗户渗出微弱的金色光芒。"];
+	  70 [label="IsKimHere()"];
+	  71 [label="IsKimHere()", shape=diamond];
+	  72 [label="!(IsKimHere())", shape=diamond];
+	  73 [label="Kim Kitsuragi: 警督眼角的余光透露出对你双脚的担忧。雨滴从他的眼镜上滑落下来。"];
+	  74 [label="You: 我在这里做什么？"];
+	  75 [label="You: 浑身颤抖着，继续向远方眺望……"];
+	  76 [label="Rhetoric: 晚间新闻。"];
+	  77 [label="Jump to: [Shivers: \"Your vision blurs. You wipe your fa...\"]"];
+	  78 [label="Shivers: 潮湿。外套帮你挡住了雨水，周围的整座城市都在随你一起颤抖。"];
+	  79 [label="Jump to: [mega shivers hjub]"];
+	  80 [label="Kim Kitsuragi: 警督点点头，然后朝东边看去。"];
+	  81 [label="You: 我住在哪里？"];
+	  82 [label="Rhetoric: 早间新闻。"];
+	  83 [label="HasShirt()  and  CheckEquipped(\"jacket_suede\")"];
+	  84 [label="HasShirt()  and  CheckEquipped(\"jacket_suede\")", shape=diamond];
+	  85 [label="!(HasShirt()  and  CheckEquipped(\"jacket_suede\"))", shape=diamond];
+	  86 [label="You: 西边有什么？"];
+	  87 [label="You: 咬紧牙关，让自己不再发抖。"];
+	  88 [label="You: 那上面呢？"];
+	  89 [label="Kim Kitsuragi: 警督点点头，然后朝东边看去。"];
+	  90 [label="Untitled hub"];
+	  91 [label="Untitled hub (02)"];
+	  92 [label="Shivers: 联盟的静风舰就像幽灵一样悬挂在云层中。就在那上方——雨水形成的地方——转子静静地振动着。你的视线变得清晰起来。"];
+	  93 [label="CheckEquipped(\"jacket_patrol_cloak\")  or  CheckEquipped(\"jacket_fritte_raincoat\")  or  CheckEquipped(\"jacket_nansencoat\")  or  CheckEquipped(\"jacket_navalcoat\")"];
+	  94 [label="CheckEquipped(\"jacket_patrol_cloak\")  or  CheckEquipped(\"jacket_fritte_raincoat\")  or  CheckEquipped(\"jacket_nansencoat\")  or  CheckEquipped(\"jacket_navalcoat\")", shape=diamond];
+	  95 [label="!(CheckEquipped(\"jacket_patrol_cloak\")  or  CheckEquipped(\"jacket_fritte_raincoat\")  or  CheckEquipped(\"jacket_nansencoat\")  or  CheckEquipped(\"jacket_navalcoat\"))", shape=diamond];
+	  96 [label="Judit Minot: “不用了，谢谢。我自己能行。”她撑开雨伞，笑着朝医生点点头，随后快步冲下了台阶。雨水降落在她的周围……"];
+	  97 [label="You: 在那前面呢？"];
+	  98 [label="Shivers: 岬岸公寓——高大的塔楼鳞次栉比，4.46毫米的子弹还卡在被战争摧毁的石墙上。"];
+	  99 [label="Shivers: 你意识到自己没穿鞋子，脚都被冻红了。"];
+	  100 [label="You: 那是什么？"];
+	  101 [label="Jean Vicquemare: “哈？是吗。”他打开雨伞，但却立即被狂风吹翻了过来。"];
+	  102 [label="Mack Torson: “异性——恋。生活——伴侣。”"];
+	  103 [label="Variable[\"plaza.kineema_57th_hub\"]"];
+	  104 [label="Variable[\"plaza.kineema_57th_hub\"]", shape=diamond];
+	  105 [label="!(Variable[\"plaza.kineema_57th_hub\"])", shape=diamond];
+	  106 [label="Shivers: 衬衫紧贴在你的胸口。夹克的肩部变得沉重。寒冷一路钻到你的皮肤之下。你颤抖着，整个城市也跟着你一起颤抖。"];
+	  107 [label="Shivers: 一个院子。雨水从小木棚的屋顶上滑落下来。脏水在尸体旁汇成一弯水池。雨滴从死人冰冷的脸颊上滑过。"];
+	  108 [label="Jump to: [Shivers: \"Your vision blurs. You wipe your fa...\"]"];
+	  109 [label="You: 下面是什么？"];
+	  110 [label="You: 用手指拂过你湿漉漉的头发。"];
+	  111 [label="You: 放开这种感觉。"];
+	  112 [label="Jump to: [Untitled hub (02)]"];
+	  113 [label="Esprit de Corps: 随迁警官让·维克玛从辖区的楼梯上冲了下来，手里还拿着一把没有撑开的伞。他看上去好像不是很喜欢这场春雨。"];
+	  114 [label="Variable[\"plaza.rainshivers_esprit\"]"];
+	  115 [label="Variable[\"plaza.rainshivers_esprit\"]", shape=diamond];
+	  116 [label="!(Variable[\"plaza.rainshivers_esprit\"])", shape=diamond];
+	  117 [label="Jean Vicquemare: “什么？”"];
+	  118 [label="Shivers: 衬衫紧贴在你的胸口。寒冷一路钻到你的皮肤之下。你颤抖着，整个城市也跟着你一起颤抖。"];
+	  119 [label="You: 北边有什么？"];
+	  120 [label="Composure: 街角有一间弗利多便利店。一件叠成小三角的塑料衣堆放在窗边的柜台下面。再往前，就是工贼的聚集地了。"];
+	  121 [label="Shivers: 春季冰雪融化的季节不会持续太久。冬季很快会重新降临瑞瓦肖。"];
+	  122 [label="You: 海岸下面是什么？"];
+	  123 [label="Shivers: 你再也回不去了。"];
+	  124 [label="You: 我的猎犬在哪？我的豪车在哪？我的弟兄们在哪？"];
+	  125 [label="Shivers: 哪里的大雨不停下？有人就在那陋巷里倒下。"];
+	  126 [label="Jean Vicquemare: “在马丁内斯。他就在马丁内斯。”"];
+	  127 [label="HasJacket()"];
+	  128 [label="HasJacket()", shape=diamond];
+	  129 [label="!(HasJacket())", shape=diamond];
+	  130 [label="Shivers: 冬季放松了对这座城市的掌控。春融期已经到来。"];
+	  131 [label="You: 总算好了。现在呢？"];
+	  132 [label="Shivers: 像大战舰一样的灰色天空，白色的云朵互相碰撞着。雨点降落在这个世界上。"];
+	  133 [label="You: 再摇摇你的肩膀。"];
+	  134 [label="Shivers: 暴风雨铺天盖地。老旧的下水道系统被雨水淹没，将大革命时期遗留下来的秘密武器隐藏。向下方延伸的大门通向王国——三个多世纪以来，他们将贵族死者不断送往陵寝。"];
+	  135 [label="Untitled hub"];
+	  136 [label="Jean Vicquemare: “你这模仿的有点意思啊。”维克玛还在跟雨伞抗争，伞骨从雨篷中突了出来。“男性为主的工作场所专属的幽默。你见着他了吗？”"];
+	  137 [label="Kim Kitsuragi: “这场雨不会很快就停的。你应该弄一件雨衣。东边有一间弗利多，那里有得卖。”"];
+	  138 [label="Kim Kitsuragi: “这场雨不会很快就停的。不过至少我们身上的衣服还能扛住——继续前进吧。”"];
+	  139 [label="HasShirt()  and  HasJacket()"];
+	  140 [label="HasShirt()  and  HasJacket()", shape=diamond];
+	  141 [label="!(HasShirt()  and  HasJacket())", shape=diamond];
+	  142 [label="Shivers: 夹克的肩部变得沉重。寒冷一路钻到你的皮肤之下。你颤抖着，整个城市也跟着你一起颤抖。"];
+	  143 [label="Shivers: 雨水沿着你赤裸的胸膛滑落。寒冷一路钻到你的皮肤之下。你颤抖着，整个城市也跟着你一起颤抖。"];
+	  144 [label="DayCount() < 3"];
+	  145 [label="DayCount() < 3", shape=diamond];
+	  146 [label="!(DayCount() < 3)", shape=diamond];
+	  147 [label="You: 我看见什么了？"];
+	  148 [label="Composure: 你身上的衣服并不适合这样的天气。你应该找一件大衣，或者巡逻斗篷。"];
+	  149 [label="Inland Empire: 你会去那里吗？"];
+	  150 [label="Shivers: 瑞瓦肖是世界的中心。加姆洛克是瑞瓦肖的中心。雨水从你的睫毛上滴落下来。"];
+	  151 [label="You: “也许我应该做点什么。”"];
+	  152 [label="Jump to: [mega shivers hjub]"];
+	  153 [label="You: 抖掉身上的寒颤。[放弃思维。]"];
+	  154 [label="Shivers: 大门下面——是一堆补给箱。红蓝相间的航运集装箱被雨水冲刷地滑溜溜的。瑞瓦肖大工业港是一座人造山脉，将巨大的财富蕴藏其中，也将不可估量的贫穷掩在了它的阴影之下。"];
+	  155 [label="Shivers: 煤城，所有线路的终点。"];
+	  156 [label="You: 为什么我不在那里？"];
+	  157 [label="Shivers: 街道宛如雪地流过的一弯泥泞河水，它的两边肃立着没有太平门的建筑。淅淅沥沥的雨中，一家电影租赁店还在营业，一辆装甲汽車从角落疾驰而过，那里就是你们曾经一起走过的地方……突然间，你感觉背上的汗毛全都竖了起来。"];
+	  158 [label="Shivers: 海湾入口的海堡早已崩塌瓦解，只剩废墟半沉在水中。瑞瓦肖的海湾之上，幽灵慢慢升往天空。"];
+	  159 [label="Jump to: [mega shivers hjub]"];
+	  160 [label="You: 上面是什么？"];
+	  161 [label="You: “狗娘养的。”[完成思维。]"];
+	  162 [label="Shivers: 你的头发油腻腻的，上面还沾着附近煤场吹出的点点飞灰。远处的某个地方，烟囱伸长了它的脖子。"];
+	  163 [label="Mack Torson: “你的同性恋朋友去哪了，基佬？”"];
+	  164 [label="Jump to: [mega shivers hjub]"];
+	  165 [label="Kim Kitsuragi: “这场雨不会很快就停的。我建议你穿上外套。”"];
+	  166 [label="Rhetoric: 午间新闻。"];
+	  167 [label="Variable[\"TASK.get_the_dead_body_down_from_the_tree_done\"]"];
+	  168 [label="Variable[\"TASK.get_the_dead_body_down_from_the_tree_done\"]", shape=diamond];
+	  169 [label="!(Variable[\"TASK.get_the_dead_body_down_from_the_tree_done\"])", shape=diamond];
+	  170 [label="Shivers: 淅淅沥沥的雨水坠落在伟大的瑞瓦肖城。雨滴从屋檐滑落，淹没了水沟，把脏东西冲刷得一干二净。"];
+	  171 [label="mega shivers hjub"];
+	  172 [label="Shivers: 科戎，中下层阶级的聚居地。一道道支流将这座城市的街区切割成两半。七层楼的建筑逐渐消失在雨中。"];
+	  173 [label="You: 另一边是什么？"];
+	  174 [label="Shivers: 道路向上伸展着；高架高速公路在贫民区上方盘旋。水泥柱下方——是一片屋顶的海洋，木制品，还有焦油一路向北方延伸。雨滴所及之处，是四层楼的建筑。雪花在加姆洛克融化。"];
+	  175 [label="Variable[\"plaza.rainshivers_inland_longs_for_delta\"]"];
+	  176 [label="Variable[\"plaza.rainshivers_inland_longs_for_delta\"]", shape=diamond];
+	  177 [label="!(Variable[\"plaza.rainshivers_inland_longs_for_delta\"])", shape=diamond];
+	  178 [label="Chester McLaine: “不是这样的。他们是大家口中的*异性恋生活伴侣*。彼此之间的关系久经考验。如果你喜欢的话，可以称之为‘兄弟情'。”"];
+	  179 [label="Mack Torson: “出什么问题了吗？”"];
+	  180 [label="Jump to: [Shivers: \"Your vision blurs. You wipe your fa...\"]"];
+	  181 [label="CheckItem(\"jacket_patrol_cloak\")  or  CheckItem(\"jacket_fritte_raincoat\")  or  CheckItem(\"jacket_nansencoat\")  or  CheckItem(\"jacket_navalcoat\")"];
+	  182 [label="CheckItem(\"jacket_patrol_cloak\")  or  CheckItem(\"jacket_fritte_raincoat\")  or  CheckItem(\"jacket_nansencoat\")  or  CheckItem(\"jacket_navalcoat\")", shape=diamond];
+	  183 [label="!(CheckItem(\"jacket_patrol_cloak\")  or  CheckItem(\"jacket_fritte_raincoat\")  or  CheckItem(\"jacket_nansencoat\")  or  CheckItem(\"jacket_navalcoat\"))", shape=diamond];
+	  184 [label="CheckEquipped(\"jacket_patrol_cloak\")  or  CheckEquipped(\"jacket_fritte_raincoat\")  or  CheckEquipped(\"jacket_nansencoat\")  or  CheckEquipped(\"jacket_navalcoat\")"];
+	  185 [label="CheckEquipped(\"jacket_patrol_cloak\")  or  CheckEquipped(\"jacket_fritte_raincoat\")  or  CheckEquipped(\"jacket_nansencoat\")  or  CheckEquipped(\"jacket_navalcoat\")", shape=diamond];
+	  186 [label="!(CheckEquipped(\"jacket_patrol_cloak\")  or  CheckEquipped(\"jacket_fritte_raincoat\")  or  CheckEquipped(\"jacket_nansencoat\")  or  CheckEquipped(\"jacket_navalcoat\"))", shape=diamond];
+	  187 [label="IsTHCFixed(\"the_way_home\")  or  Variable[\"tc.live_in_jamrock\"]"];
+	  188 [label="IsTHCFixed(\"the_way_home\")  or  Variable[\"tc.live_in_jamrock\"]", shape=diamond];
+	  189 [label="!(IsTHCFixed(\"the_way_home\")  or  Variable[\"tc.live_in_jamrock\"])", shape=diamond];
+	  190 [label="You: 东边有什么？"];
+	  191 [label="Shivers: 德瑞斯利恩，德瑞斯国王的客运港口。游船两侧都是码头武装。起重机在河流的支流口上遥望。"];
+	  192 [label="You: 支流的对岸是什么？"];
+	  193 [label="Shivers: 你的视线变得模糊。你用手搓了搓脸。雨水刺痛了你的双眼，你不由得抬起头，眨了眨眼。"];
+	  194 [label="IsEvening()"];
+	  195 [label="IsEvening()", shape=diamond];
+	  196 [label="!(IsEvening())", shape=diamond];
+	  197 [label="Variable[\"coast.snow_shivers_activated\"]"];
+	  198 [label="Variable[\"coast.snow_shivers_activated\"]", shape=diamond];
+	  199 [label="!(Variable[\"coast.snow_shivers_activated\"])", shape=diamond];
+	  200 [label="Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"]"];
+	  201 [label="Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"]", shape=diamond];
+	  202 [label="!(Variable[\"TASK.fridge_victims_body_done\"]  or  Variable[\"TASK.send_corpse_to_processing_done\"])", shape=diamond];
+	  203 [label="Variable[\"coast.snowshivers_esprit\"]"];
+	  204 [label="Variable[\"coast.snowshivers_esprit\"]", shape=diamond];
+	  205 [label="!(Variable[\"coast.snowshivers_esprit\"])", shape=diamond];
+	  206 [label="Jump to: [mega shivers hjub]"];
+	  207 [label="Shivers: 一定是到了春季解冻的时间。雪花正在融化……"];
+	  208 [label="Jump to: [mega shivers hjub]"];
+	  209 [label="You: 在那上面呢？"];
+	  210 [label="Shivers: 你——站在马丁内斯广场。就像一个凝望天空的小点。雨滴从你的睫毛上滑落下来。"];
+	  211 [label="You: 加姆洛克是什么？"];
+	  212 [label="Inland Empire: 这是家。"];
+	  213 [label="Shivers: 你意识到自己只穿了一只鞋。褴褛飞旋旅社的阳台附近，一只鳄鱼皮鞋里积满了雨水。"];
+	  214 [label="IsMorning()"];
+	  215 [label="IsMorning()", shape=diamond];
+	  216 [label="!(IsMorning())", shape=diamond];
+	  0 -> 1
+	  1 -> 170
+	  2 -> 158
+	  3 -> 152
+	  4 -> 79
+	  5 -> 50
+	  6 -> 8
+	  6 -> 7
+	  7 -> 120
+	  8 -> 42
+	  9 -> 154
+	  10 -> 163
+	  11 -> 52
+	  12 -> 13
+	  12 -> 14
+	  13 -> 39
+	  14 -> 206
+	  15 -> 16
+	  16 -> 153
+	  16 -> 147
+	  17 -> 67
+	  18 -> 135
+	  19 -> 26
+	  20 -> 180
+	  21 -> 22
+	  21 -> 23
+	  22 -> 166
+	  23 -> 194
+	  24 -> 173
+	  25 -> 69
+	  26 -> 18
+	  27 -> 208
+	  28 -> 112
+	  29 -> 59
+	  30 -> 32
+	  30 -> 31
+	  31 -> 181
+	  32 -> 121
+	  33 -> 34
+	  33 -> 35
+	  34 -> 118
+	  35 -> 127
+	  36 -> 37
+	  36 -> 38
+	  37 -> 64
+	  38 -> 92
+	  39 -> 96
+	  41 -> 184
+	  42 -> 133
+	  42 -> 87
+	  43 -> 159
+	  44 -> 135
+	  45 -> 171
+	  46 -> 79
+	  47 -> 48
+	  47 -> 49
+	  48 -> 5
+	  49 -> 108
+	  50 -> 108
+	  51 -> 18
+	  52 -> 200
+	  53 -> 89
+	  54 -> 3
+	  55 -> 171
+	  56 -> 74
+	  57 -> 144
+	  58 -> 29
+	  59 -> 126
+	  60 -> 148
+	  61 -> 24
+	  62 -> 3
+	  63 -> 214
+	  64 -> 55
+	  65 -> 12
+	  66 -> 99
+	  66 -> 27
+	  66 -> 213
+	  67 -> 43
+	  68 -> 88
+	  69 -> 149
+	  70 -> 72
+	  70 -> 71
+	  71 -> 73
+	  72 -> 208
+	  73 -> 53
+	  73 -> 62
+	  73 -> 151
+	  74 -> 28
+	  75 -> 57
+	  76 -> 52
+	  77 -> 193
+	  78 -> 171
+	  79 -> 171
+	  80 -> 90
+	  81 -> 157
+	  82 -> 52
+	  83 -> 84
+	  83 -> 85
+	  84 -> 60
+	  85 -> 139
+	  86 -> 2
+	  87 -> 154
+	  88 -> 155
+	  89 -> 90
+	  90 -> 100
+	  90 -> 54
+	  91 -> 81
+	  91 -> 156
+	  91 -> 75
+	  91 -> 124
+	  92 -> 55
+	  93 -> 94
+	  93 -> 95
+	  94 -> 138
+	  95 -> 165
+	  96 -> 206
+	  97 -> 210
+	  98 -> 63
+	  99 -> 70
+	  100 -> 9
+	  101 -> 102
+	  102 -> 136
+	  103 -> 104
+	  103 -> 105
+	  104 -> 77
+	  105 -> 113
+	  106 -> 148
+	  107 -> 79
+	  108 -> 193
+	  109 -> 134
+	  110 -> 162
+	  111 -> 51
+	  112 -> 91
+	  113 -> 114
+	  114 -> 115
+	  114 -> 116
+	  115 -> 10
+	  116 -> 20
+	  117 -> 178
+	  118 -> 148
+	  119 -> 98
+	  120 -> 42
+	  122 -> 68
+	  123 -> 112
+	  124 -> 125
+	  125 -> 112
+	  126 -> 193
+	  127 -> 128
+	  127 -> 129
+	  128 -> 142
+	  129 -> 143
+	  130 -> 153
+	  130 -> 131
+	  131 -> 184
+	  132 -> 41
+	  133 -> 66
+	  134 -> 55
+	  135 -> 25
+	  135 -> 122
+	  135 -> 110
+	  136 -> 179
+	  139 -> 140
+	  139 -> 141
+	  140 -> 106
+	  141 -> 33
+	  142 -> 148
+	  143 -> 148
+	  144 -> 145
+	  144 -> 146
+	  145 -> 203
+	  146 -> 47
+	  147 -> 132
+	  148 -> 171
+	  149 -> 175
+	  150 -> 212
+	  151 -> 80
+	  152 -> 171
+	  154 -> 209
+	  154 -> 97
+	  155 -> 44
+	  156 -> 56
+	  157 -> 123
+	  158 -> 135
+	  159 -> 171
+	  160 -> 36
+	  161 -> 30
+	  162 -> 45
+	  163 -> 117
+	  164 -> 171
+	  166 -> 52
+	  167 -> 168
+	  167 -> 169
+	  168 -> 107
+	  169 -> 46
+	  170 -> 197
+	  171 -> 160
+	  171 -> 161
+	  171 -> 109
+	  171 -> 86
+	  171 -> 119
+	  171 -> 61
+	  171 -> 190
+	  172 -> 17
+	  173 -> 174
+	  174 -> 187
+	  175 -> 176
+	  175 -> 177
+	  176 -> 19
+	  176 -> 111
+	  177 -> 18
+	  178 -> 101
+	  179 -> 58
+	  180 -> 193
+	  181 -> 182
+	  181 -> 183
+	  182 -> 93
+	  183 -> 137
+	  184 -> 185
+	  184 -> 186
+	  185 -> 78
+	  186 -> 83
+	  187 -> 188
+	  187 -> 189
+	  188 -> 91
+	  189 -> 211
+	  190 -> 6
+	  191 -> 192
+	  192 -> 172
+	  193 -> 164
+	  194 -> 195
+	  194 -> 196
+	  195 -> 76
+	  196 -> 11
+	  197 -> 198
+	  197 -> 199
+	  198 -> 130
+	  199 -> 207
+	  200 -> 201
+	  200 -> 202
+	  201 -> 4
+	  202 -> 167
+	  203 -> 204
+	  203 -> 205
+	  204 -> 65
+	  205 -> 103
+	  206 -> 171
+	  207 -> 15
+	  208 -> 171
+	  209 -> 191
+	  210 -> 209
+	  211 -> 150
+	  212 -> 91
+	  213 -> 70
+	  214 -> 216
+	  214 -> 215
+	  215 -> 82
+	  216 -> 21
+}
+

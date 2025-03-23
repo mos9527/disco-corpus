@@ -1,0 +1,746 @@
+# VILLAGE / LILIENNES TWINS
+# You can talk to them before and get nothing, but when you hear the twins have been to the island they tell you details about it.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Lilienne's Twin: \"Yes.\""];
+	  3 [label="You: \"Hey, where is your mom?\""];
+	  4 [label="You: \"Kids, have you seen any bad people around?\""];
+	  5 [label="Lilienne's Other Twin: The boy doesn't answer. His brother throws another rock. Both of their hair is covered in some kind of dirt."];
+	  6 [label="Lilienne's Twin: \"I...\" starts one of them -- it's hard to tell which one now. \"I don't know.\""];
+	  7 [label="Jump to: [islandquestionnaire]"];
+	  8 [label="Variable[\"TASK.ask_twins_about_island\"]"];
+	  9 [label="Variable[\"TASK.ask_twins_about_island\"]", shape=diamond];
+	  10 [label="!(Variable[\"TASK.ask_twins_about_island\"])", shape=diamond];
+	  11 [label="IsKimHere()"];
+	  12 [label="IsKimHere()", shape=diamond];
+	  13 [label="!(IsKimHere())", shape=diamond];
+	  14 [label="Kim Kitsuragi: \"Full circle.\" The lieutenant smiles to himself. \"Back to Feld, then. When you're ready.\"\n\"Points back to Feld.\" The lieutenant frowns slightly at the building, towering ominously. \"Be sure you're ready when we go in, detective.\""];
+	  15 [label="Jump to: [themainlyhub]"];
+	  16 [label="Lilienne's Other Twin: \"Bad words,\" the other says, nodding absent-mindedly. \"Bad, bad words...\""];
+	  17 [label="Variable[\"TASK.ask_twins_about_island\"]"];
+	  18 [label="Variable[\"TASK.ask_twins_about_island\"]", shape=diamond];
+	  19 [label="!(Variable[\"TASK.ask_twins_about_island\"])", shape=diamond];
+	  20 [label="Lilienne's Other Twin: \"I dunno what you're talking about,\" the other kid nods along."];
+	  21 [label="Jump to: [themainlyhub]"];
+	  22 [label="Variable[\"village.twins_said_kill_yourself\"]"];
+	  23 [label="Variable[\"village.twins_said_kill_yourself\"]", shape=diamond];
+	  24 [label="!(Variable[\"village.twins_said_kill_yourself\"])", shape=diamond];
+	  25 [label="Kim Kitsuragi: \"Lights? Fire guy?\" The lieutenant looks at you. \"We should check up on that island and you...\""];
+	  26 [label="You: I don't care."];
+	  27 [label="Lilienne's Twin: \"You're stupid,\" the other one repeats, still deathly serious."];
+	  28 [label="You: \"Okay kids. You've been to that island, right?\""];
+	  29 [label="Kim Kitsuragi: \"Let's go with *yes*.\" The lieutenant raises his eyebrows and whips out his notebook."];
+	  30 [label="Lilienne's Other Twin: \"Don't say that. He didn't.\" His brother punches him. The boy's eyes well up like he's about to start crying."];
+	  31 [label="Lilienne's Twin: \"I don't know...\" The boy who made the claim finds himself unsure of it. He looks around."];
+	  32 [label="Kim Kitsuragi: \"Lights? Fire guy?\" The lieutenant looks at you. \"We should check up on that island.\""];
+	  33 [label="You: \"Hey, boys. Your sister told me you got in trouble for saying bad words.\""];
+	  34 [label="Empathy: The lieutenant is deeply unimpressed."];
+	  35 [label="You: \"Let's move on. Where did you hear the bad words -- was it from someone on the coast? The radio?\""];
+	  36 [label="You: \"Nah. I just thought it was funny to say.\""];
+	  37 [label="You: \"Okay kids, tell Kim here what happened with the voices.\""];
+	  38 [label="Lilienne's Other Twin: \"The one we heard say a bad word?\" The boy shrugs. \"Okay. The voices were like...\" He scratches his head -- then seems to remember."];
+	  39 [label="Lilienne's Twin: \"'It is time at last, my nasty speedfreaks! Our brotherman is about to grow up!'\""];
+	  40 [label="Lilienne's Twin: \"Yes.\""];
+	  41 [label="Pain Threshold: A dull pain flashes through your mind."];
+	  42 [label="You: \"You guys look identical.\""];
+	  43 [label="You: \"Children are stupid.\""];
+	  44 [label="Lilienne's Twin: \"On that island?\" The one who's busy kicking his stone points to the bay."];
+	  45 [label="You: \"Why does he ask you to put the fire out?\""];
+	  46 [label="IsKimHere()"];
+	  47 [label="IsKimHere()", shape=diamond];
+	  48 [label="!(IsKimHere())", shape=diamond];
+	  49 [label="Jump to: [islandquestionnaire]"];
+	  50 [label="Lilienne's Twin: \"I'm sorry.\" The one says to the other, rubbing his brother's shoulder affectionately."];
+	  51 [label="Lilienne's Twin: \"I don't know,\" they say almost in unison."];
+	  52 [label="Lilienne's Other Twin: \"Don't say that, he's a *po-leees oooffi-ser*,\" his brother whispers."];
+	  53 [label="Lilienne's Other Twin: \"We won't,\" the little boy says. He adjusts his cap in the cool air."];
+	  54 [label="Lilienne's Twin: \"We learned,\" the other replies."];
+	  55 [label="Lilienne's Other Twin: \"'DJ Flacio's big boy debut single is here! Buckle up, because this is the fastest trash that you're ever gonna hear.'\""];
+	  56 [label="Electrochemistry: COME ON BOYS, YOU CAN DO IT!"];
+	  57 [label="Perception (Hearing): It's a purposefully shrill laugh. Like he's practised it for the express purpose of annoying people."];
+	  58 [label="Lilienne's Twin: It doesn't look like he knows what that means."];
+	  59 [label="You: \"Okay.\""];
+	  60 [label="Jump to: [themainlyhub]"];
+	  61 [label="Lilienne's Other Twin: \"Because he asks to put the fire out!\" the other explains."];
+	  62 [label="Lilienne's Twin: The scruffy-haired little boy kicks a stone while the other watches him do it."];
+	  63 [label="Lilienne's Twin: \"There's a...\" the boy says, rubbing his eyes. It's clear that he has no intention of finishing the sentence."];
+	  64 [label="Electrochemistry: Why does he have to be such a binoclard? It's just a funny word!"];
+	  65 [label="Lilienne's Other Twin: \"We just heard funny voices.\" The boy shrugs. His jacket whispers as his shoulders move."];
+	  66 [label="Lilienne's Twin: \"He dunno what you're talking about,\" the first kid says loudly. Or you think it's the first kid -- it could be the second."];
+	  67 [label="Esprit de Corps: I'm not telling you twice."];
+	  68 [label="You: \"You must be Lilienne's twins.\""];
+	  69 [label="You: \"Bye.\" [Leave.]"];
+	  70 [label="You: \"I'm just gonna leave now. I'm gonna leave and not talk to you anymore.\" [Leave.]"];
+	  71 [label="Lilienne's Twin: Just a second ago, the first one was laughing. Now he's doing something with his lip and his gap tooth."];
+	  72 [label="Lilienne's Other Twin: \"Yes.\" His brother looks at him, then at you."];
+	  73 [label="Lilienne's Other Twin: \"And! And!\" the other one butts in. \"We make a fire. We make a... we make a fire.\""];
+	  74 [label="You: \"Okay, how about the policeman asks you something else now?\""];
+	  75 [label="Lilienne's Twin: \"Uhm...\" The boy turns a rock over in his hand. \"We heard *bad* words and said them, and got in trouble...\""];
+	  76 [label="Lilienne's Other Twin: The boy blinks. \"Fffff....\" Despite his efforts, the unfamiliar word catches in his mouth."];
+	  77 [label="You: \"Bad words are bad. Don't say them, kids. It's a first step to a life of crime.\""];
+	  78 [label="Jump to: [Lilienne's Other Twin: \"\"We just heard funny voices.\" The b...\"]"];
+	  79 [label="IsKimHere()"];
+	  80 [label="IsKimHere()", shape=diamond];
+	  81 [label="!(IsKimHere())", shape=diamond];
+	  82 [label="Lilienne's Twin: The boy draws a jagged rock across the ground. It leaves a white scratch."];
+	  83 [label="You: \"Sure. But what words did you hear?\""];
+	  84 [label="Electrochemistry: Why does he have to be such a binoclard? It's just a funny word!"];
+	  85 [label="You: \"I heard you kids sometimes play in the abandoned Feld building?\""];
+	  86 [label="You: \"Do *you* know what I'm talking about?\""];
+	  87 [label="Conceptualization: Are there actually two of them? Are you sure you're not just hallucinating or seeing double?"];
+	  88 [label="Empathy: It looks like he's *sad*. Because you're going or... who knows, really?"];
+	  89 [label="You: \"Yes?\""];
+	  90 [label="Logic: Wow, so intellectually stimulating."];
+	  91 [label="Variable[\"reputation.suicide_cop\"] >= 2"];
+	  92 [label="Variable[\"reputation.suicide_cop\"] >= 2", shape=diamond];
+	  93 [label="!(Variable[\"reputation.suicide_cop\"] >= 2)", shape=diamond];
+	  94 [label="Jump to: [themainlyhub]"];
+	  95 [label="Variable[\"village.twins_inland_mysterious_laugh\"]"];
+	  96 [label="Variable[\"village.twins_inland_mysterious_laugh\"]", shape=diamond];
+	  97 [label="!(Variable[\"village.twins_inland_mysterious_laugh\"])", shape=diamond];
+	  98 [label="You: \"Why is he the *fire* guy?\""];
+	  99 [label="You: \"Anything else? What does this guy look like?\""];
+	  100 [label="Lilienne's Other Twin: don't know why it's funny...\" The boy frowns."];
+	  101 [label="Kim Kitsuragi: \"A word when you're done.\" The lieutenant clears his throat. His eyes are wider than usual."];
+	  102 [label="Lilienne's Other Twin: The boy picks up a rock. Then another. He looks at you and blinks."];
+	  103 [label="You: \"Wait, you mean *shells*?\""];
+	  104 [label="Authority: Then we're *definitely* doing it."];
+	  105 [label="Jump to: [themainlyhub]"];
+	  106 [label="Lilienne's Twin: \"Mhm. Lily's our mom,\" says one of the twins."];
+	  107 [label="Lilienne's Twin: \"No, he doesn't live there. I don't think.\""];
+	  108 [label="Lilienne's Twin: \"Uh-huh!\" one says, throwing a rock into the sand."];
+	  109 [label="IsKimHere()"];
+	  110 [label="IsKimHere()", shape=diamond];
+	  111 [label="!(IsKimHere())", shape=diamond];
+	  112 [label="Jump to: [themainlyhub]"];
+	  113 [label="You: \"Hah! I knew it!\""];
+	  114 [label="Lilienne's Twin: \"Oh...\" The boy looks uncomfortable, at the jetty toward his mother."];
+	  115 [label="Lilienne's Other Twin: \"We didn't hear that word. We heard other bad words...\""];
+	  116 [label="You: \"You're not helping me..\""];
+	  117 [label="Lilienne's Twin: The boy stops laughing and looks at his toes."];
+	  118 [label="Variable[\"TASK.ask_twins_about_island\"]"];
+	  119 [label="Variable[\"TASK.ask_twins_about_island\"]", shape=diamond];
+	  120 [label="!(Variable[\"TASK.ask_twins_about_island\"])", shape=diamond];
+	  121 [label="Jump to: [islandquestionnaire]"];
+	  122 [label="Kim Kitsuragi: \"Anything else? What does this guy look like?\""];
+	  123 [label="Variable[\"village.twin_volition_just_said_grats\"]"];
+	  124 [label="Variable[\"village.twin_volition_just_said_grats\"]", shape=diamond];
+	  125 [label="!(Variable[\"village.twin_volition_just_said_grats\"])", shape=diamond];
+	  126 [label="Lilienne's Other Twin: \"We didn't hear that word. We heard other bad words...\""];
+	  127 [label="You: \"Where did you hear them? Did you overhear someone say them? Was it on the radio?\""];
+	  128 [label="Lilienne's Other Twin: \"No.\" The boy shakes his head. \"Just people talking real fast.\""];
+	  129 [label="Lilienne's Other Twin: \"You know.\" He points at his head. His fingers are red from the cold. \"I heard people talking. Except just in my head!\""];
+	  130 [label="Lilienne's Twin: \"'Turn up the volume, blow those speakers out. Now here's---'\""];
+	  131 [label="Lilienne's Other Twin: \"We were there.\" The other child nods. The Feld building looms overhead."];
+	  132 [label="Lilienne's Other Twin: The boy turns the rock over in his hands. He looks to you, then his brother, then back to you."];
+	  133 [label="Composure: Conduct yourself with some dignity. You don't need to swear in front of the children."];
+	  134 [label="Variable[\"TASK.ask_the_wind_done\"]"];
+	  135 [label="Variable[\"TASK.ask_the_wind_done\"]", shape=diamond];
+	  136 [label="!(Variable[\"TASK.ask_the_wind_done\"])", shape=diamond];
+	  137 [label="Half Light: A suspicious request. Made out of fear?"];
+	  138 [label="Jump to: [islandquestionnaire]"];
+	  139 [label="Lilienne's Twin: The stone-kicker laughs suddenly. His head is too large for his shoulders."];
+	  140 [label="Lilienne's Twin: The boy keeps laughing. Then he bows down to inspect the rock as though there's something noteworthy about it."];
+	  141 [label="Lilienne's Twin: \"Because.... because...\" The boy pauses to think."];
+	  142 [label="Lilienne's Other Twin: \"No, he lives there.\" The other nods. \"He's been there twice, two times.\""];
+	  143 [label="Lilienne's Twin: \"Huh...\" The first one pauses to think, then comes to some kind of conclusion. \"He doesn't live there. He isn't there sometimes.\""];
+	  144 [label="Jump to: [themainlyhub]"];
+	  145 [label="Volition: This is a shame and a disappointment."];
+	  146 [label="You: \"Okay. What did you hear?\""];
+	  147 [label="Variable[\"plaza.kineema_radio_speedfreaks\"] == true"];
+	  148 [label="Variable[\"plaza.kineema_radio_speedfreaks\"] == true", shape=diamond];
+	  149 [label="!(Variable[\"plaza.kineema_radio_speedfreaks\"] == true)", shape=diamond];
+	  150 [label="Lilienne's Other Twin: \"No!\" The brother cuts in, suddenly and sharply. \"Don't say bad words, stupid!\""];
+	  151 [label="You: \"And so I return to thee, Feld.\""];
+	  152 [label="You: \"Thanks, kids.\""];
+	  153 [label="Logic: Wait! Stop everything. Back this up. What are *bad words*?"];
+	  154 [label="Lilienne's Other Twin: \"Ff...\" The other boy tries. He looks at his brother for understanding, then at you. \"What does that mean?\""];
+	  155 [label="Jump to: [themainlyhub]"];
+	  156 [label="Lilienne's Twin: \"What's a Feld building?\" one of the twins asks with a shrug."];
+	  157 [label="Lilienne's Twin: \"I don't know what those are...\""];
+	  158 [label="Composure: The rock-kicker was just being *shy*, but now he's enthusiastic again."];
+	  159 [label="You: \"I need you to tell me what you know about it -- what's *on* the island?\""];
+	  160 [label="Lilienne's Twin: One of the boys nods, the other one looks at his brother and shrugs."];
+	  161 [label="Jump to: [themainlyhub]"];
+	  162 [label="IsKimHere()"];
+	  163 [label="IsKimHere()", shape=diamond];
+	  164 [label="!(IsKimHere())", shape=diamond];
+	  165 [label="You: \"Kids, has anything *strange* happened lately?\""];
+	  166 [label="Lilienne's Twin: \"Yeah.\" The boy turns a rock over in his hand. \"We heard *bad* words and said them, and got in trouble...\""];
+	  167 [label="Horrific Necktie: It would be hilarious, my man! Live it up! Say *FUCK!*"];
+	  168 [label="IsKimHere()"];
+	  169 [label="IsKimHere()", shape=diamond];
+	  170 [label="!(IsKimHere())", shape=diamond];
+	  171 [label="You: \"Voices in your head? Like little bleeps and bloops of information?\""];
+	  172 [label="Esprit de Corps: Elsewhere in Revachol, the Lieutenant switches on the radio. His head rocks subtly to a violent track. He needs to hear this story."];
+	  173 [label="Drama: Why, what a splendid rendition these two rapsssssssssscallions have offered us here today! Faultless memorization! Perchance they'll enjoy greatness as a double-act in the Performing Artsss."];
+	  174 [label="You: \"Any family history of schizophrenia?\""];
+	  175 [label="Logic: Bullet shells? There are a lot of them left over from the war -- but this could be important."];
+	  176 [label="Lilienne's Twin: The kids don't reply, absorbed in their little game."];
+	  177 [label="Jump to: [themainlyhub]"];
+	  178 [label="Lilienne's Twin: The scruffy-haired little boy kicks a stone. He can't be more than five years old."];
+	  179 [label="IsKimHere()"];
+	  180 [label="IsKimHere()", shape=diamond];
+	  181 [label="!(IsKimHere())", shape=diamond];
+	  182 [label="You: \"Is that all you know? Is there anything more you can tell me about the island?\" (Conclude.)"];
+	  183 [label="You: Say nothing."];
+	  184 [label="Jump to: [IsKimHere()]"];
+	  185 [label="IsKimHere()"];
+	  186 [label="IsKimHere()", shape=diamond];
+	  187 [label="!(IsKimHere())", shape=diamond];
+	  188 [label="Jump to: [islandquestionnaire]"];
+	  189 [label="Kim Kitsuragi: \"Nothing. What happened? Where'd you hear bad words? Was it from someone on the coast? The radio?\""];
+	  190 [label="Lilienne's Other Twin: \"Bou... what?\" The boy gently tosses his rock at the rock tower, and misses. \"Was that a bad word?\""];
+	  191 [label="Lilienne's Twin: \"There.\" The boy points toward one of the ruined monoliths nearby."];
+	  192 [label="You: \"No. Just tell me what you heard.\""];
+	  193 [label="Lilienne's Twin: \"Ha ha, I dunno what you're talking about.\" One of the boys shrugs his shoulders and starts laughing."];
+	  194 [label="Logic: You will never get an answer. That's how it is with these little idiots."];
+	  195 [label="Jump to: [themainlyhub]"];
+	  196 [label="Jump to: [themainlyhub]"];
+	  197 [label="IsKimHere()"];
+	  198 [label="IsKimHere()", shape=diamond];
+	  199 [label="!(IsKimHere())", shape=diamond];
+	  200 [label="Lilienne's Other Twin: \"No, we're not really supposed to talk to strangers, you know.\" The other twin shakes his head."];
+	  202 [label="You: \"Bye.\" [Leave.]"];
+	  203 [label="Logic: There's no *system* to this."];
+	  204 [label="Variable[\"village.twins_logic_something_else\"]"];
+	  205 [label="Variable[\"village.twins_logic_something_else\"]", shape=diamond];
+	  206 [label="!(Variable[\"village.twins_logic_something_else\"])", shape=diamond];
+	  207 [label="Lilienne's Twin: \"That's... uhm... nothing?\" The boy pauses to think with his finger in his mouth. \"It's just a seafort and some plants. You can take a raft there. It's great.\""];
+	  208 [label="You: \"You mentioned something about *lights*?\""];
+	  209 [label="Lilienne's Twin: \"Please don't...\" The boy's eyes well up as he looks at you. They're dark and round. The wind tussles his hair.\nThe boy's eyes well up as he looks at you. They're dark and round. The wind tussles his hair."];
+	  210 [label="Logic: The two things are *unconnected*. Your question didn't make sense."];
+	  211 [label="Electrochemistry: Say *fuck.* It'd be HILARIOUS."];
+	  212 [label="Variable[\"village.twins_electrochem_said_to_swear\"]"];
+	  213 [label="Variable[\"village.twins_electrochem_said_to_swear\"]", shape=diamond];
+	  214 [label="!(Variable[\"village.twins_electrochem_said_to_swear\"])", shape=diamond];
+	  215 [label="Lilienne's Other Twin: \"Is that a bad word?\" The boy blinks at you."];
+	  216 [label="Kim Kitsuragi: \"I don't think questioning four-year-olds without their parents present is gonna crack the case,\" says the lieutenant."];
+	  217 [label="Lilienne's Other Twin: \"Lily's our mom,\" explains the other one, tongue still lolling out of his mouth."];
+	  218 [label="Inland Empire: Maybe there's some kind of reason why they're laughing? An interesting reason somehow tied to the case!"];
+	  219 [label="Lilienne's Other Twin: \"He looks just like me,\" the other one says."];
+	  220 [label="You: \"Yeah, I said that.\""];
+	  221 [label="Kim Kitsuragi: \"Don't worry, everyone is.\" He looks at the little scruffian, then at you. \"How about we do some police work now? We're not getting anything here.\""];
+	  222 [label="Kim Kitsuragi: \"You're right there.\" He looks at the little scruffian, then at you. \"Let's see if we can find some police work, shall we? We're not getting anything here.\""];
+	  223 [label="You: \"Bye.\" [Leave.]"];
+	  224 [label="Lilienne's Twin: \"Mhm,\" his brother nods. \"Gather the sticks for the fire -- and bullets. Or not real bullets, empty bullets.\""];
+	  225 [label="islandquestionnaire"];
+	  226 [label="Lilienne's Twin: \"Okay.\" The scruffy-haired boy squints up at you."];
+	  227 [label="You: \"He killed himself all right.\""];
+	  228 [label="You: \"Is there anything else you can tell me about this *guy*? Age? Does he live there?\""];
+	  229 [label="Lilienne's Twin: \"Oh...\" The boy looks uncomfortable, at the jetty toward his mother."];
+	  230 [label="Lilienne's Other Twin: \"'DJ Flacio's big boy debut single is here! Buckle up, because this is the fastest trash that you're ever gonna hear.'\""];
+	  231 [label="You: \"'Fuck' is the bad word, remember? But tell me what you heard.\""];
+	  232 [label="Lilienne's Other Twin: \"He dunno what you're talking about.\" The other nods."];
+	  233 [label="Lilienne's Twin: \"What bad people?\" One of the twins looks up, his mouth slightly open."];
+	  234 [label="You: \"Yes, that one. I need to know what's there.\""];
+	  235 [label="Variable[\"village.twins_hub_reached\"]"];
+	  236 [label="Variable[\"village.twins_hub_reached\"]", shape=diamond];
+	  237 [label="!(Variable[\"village.twins_hub_reached\"])", shape=diamond];
+	  238 [label="Lilienne's Twin: \"There are lights. The fire guy comes and asks us to put the fire out.\""];
+	  239 [label="Rhetoric: They must mean a human being. On that island? But it's cut off..."];
+	  240 [label="Jump to: [themainlyhub]"];
+	  241 [label="Lilienne's Other Twin: \"Don't start *crying*,\" his brother says, then, in a whisper, adds: \"I'm sorry.\""];
+	  242 [label="Variable[\"village.twins_electrochem_said_to_swear\"]"];
+	  243 [label="Variable[\"village.twins_electrochem_said_to_swear\"]", shape=diamond];
+	  244 [label="!(Variable[\"village.twins_electrochem_said_to_swear\"])", shape=diamond];
+	  245 [label="Volition: Good on you. I know you were tempted to shout *fuck*, but you controlled your impulse. Well done."];
+	  246 [label="Lilienne's Twin: \"We thought the voices were funny.\" The brother nods. \"We said what they said and then we got in trouble...\""];
+	  247 [label="Conceptualization: Could it be? Do their minds work in the same way?"];
+	  248 [label="Lilienne's Twin: \"Uh...\" He scratches his head. He looks at his twin, who nods -- and then he begins. \"It was like... 'It is time at last, my nasty speedfreaks! Our brotherman is about to grow up!'\""];
+	  249 [label="You: \"Bye.\" [Leave.]"];
+	  250 [label="You: \"What are you laughing about?\""];
+	  251 [label="Kim Kitsuragi: \"Maybe I am?\" He grins. \"Now, how about some actual police work? We're not getting anything here.\""];
+	  252 [label="You: \"No, some other island. *Of course* that one.\""];
+	  253 [label="Lilienne's Twin: \"Uhm... I don't know. He doesn't like it. He doesn't like people to be there. You shouldn't go.\""];
+	  254 [label="Kim Kitsuragi: \"Did you mean there are *electrical* lights?\" He points to the streetlight."];
+	  255 [label="Reaction Speed: Your nerve endings *sting* from the mention of a *guy*."];
+	  256 [label="Variable[\"TASK.ask_twins_about_island_done\"]"];
+	  257 [label="Variable[\"TASK.ask_twins_about_island_done\"]", shape=diamond];
+	  258 [label="!(Variable[\"TASK.ask_twins_about_island_done\"])", shape=diamond];
+	  259 [label="Lilienne's Twin: \"Maybe *you're* stupid!\""];
+	  260 [label="Untitled hub (06)"];
+	  261 [label="Electrochemistry: Preach it, brother! Spread the good word *fuck* all over town!"];
+	  262 [label="Lilienne's Twin: \"Radio? What's that?\" The boy sniffs up a drip of snot. \"We just heard them. In our head.\""];
+	  263 [label="Reaction Speed: A memory stirs. You've heard this quickfire patter before."];
+	  264 [label="Inland Empire: Voices from another self? Voices from *a deeper self*?  Voices from... *early schizophrenia*?"];
+	  265 [label="You: \"I already said that.\""];
+	  266 [label="Lilienne's Other Twin: \"You're stupid,\" the other one tells him, suddenly very serious."];
+	  267 [label="You: \"Bye.\" [Leave.]"];
+	  268 [label="You: \"Mhm.\" (Nod in agreement.)"];
+	  269 [label="Jump to: [themainlyhub]"];
+	  270 [label="fatheringhub"];
+	  271 [label="Lilienne's Twin: \"I'm not gonna start *crying*,\" the one who almost started crying snaps, regaining control of his quivering chin."];
+	  272 [label="You: \"Fuck.\""];
+	  273 [label="You: \"Bourgeois? Yes. One of the worst, child.\""];
+	  274 [label="Kim Kitsuragi: \"I understand.\" The lieutenant's eyes are wide in surprise, despite his calm voice. \"Thank you. Let's have a word when you're finished, detective.\""];
+	  275 [label="You: \"It's a mystery. You'll have to find out yourselves.\""];
+	  276 [label="Variable[\"village.twins_anti_logic_bad_words_what\"]"];
+	  277 [label="Variable[\"village.twins_anti_logic_bad_words_what\"]", shape=diamond];
+	  278 [label="!(Variable[\"village.twins_anti_logic_bad_words_what\"])", shape=diamond];
+	  279 [label="Untitled hub"];
+	  280 [label="Jump to: [themainlyhub]"];
+	  281 [label="Rhetoric: The secrets of understanding the tongues of children have been lost to you a long time ago."];
+	  282 [label="Lilienne's Twin: This one doesn't say anything, kicking the concrete with his worn-out sneaker."];
+	  283 [label="IsKimHere()"];
+	  284 [label="IsKimHere()", shape=diamond];
+	  285 [label="!(IsKimHere())", shape=diamond];
+	  286 [label="Savoir Faire: Because he doesn't want to be found. Smoke traces..."];
+	  287 [label="Lilienne's Twin: \"Our father killed himself.\""];
+	  288 [label="Lilienne's Other Twin: \"We... we ran. He just yelled we shouldn't be there.\""];
+	  289 [label="You: \"What do you mean you 'heard them in your head'?\""];
+	  290 [label="You: \"Real quick, boys -- where were you when you heard the voices?\""];
+	  291 [label="Lilienne's Twin: \"I dunno what you're talking about.\" The boy stuffs his hands deep into his pockets and kicks another rock."];
+	  292 [label="Half Light: Oh, okay. So now he's *shy*. Now he's not talking, just wobbling around like he's afraid of something."];
+	  293 [label="Lilienne's Twin: \"Yes.\""];
+	  294 [label="You: \"Bye kids, take care.\" [Leave.]"];
+	  295 [label="Lilienne's Twin: \"Ha-ha,\" the scruffy-haired little kid laughs, as though in agreement."];
+	  296 [label="Kim Kitsuragi: \"You're bad with kids,\" the lieutenant remarks with evident glee."];
+	  297 [label="You: \"I am, yes.\""];
+	  298 [label="You: \"You're being *random*!\""];
+	  299 [label="Lilienne's Twin: \"No,\" the boy answers, shaking his head vehemently."];
+	  300 [label="Lilienne's Other Twin: \"Yes,\" the other one adds laconically, standing with his hands glued to his sides like a little tin soldier."];
+	  301 [label="Lilienne's Other Twin: \"Okay.\" His brother answers for him."];
+	  302 [label="Lilienne's Twin: \"Uhm... yes.\" The boy looks at his toes."];
+	  303 [label="You: \"What then?\""];
+	  304 [label="Kim Kitsuragi: \"Shut up.\" The lieutenant jabs you in the ribs with his elbow, then turns to the boy..."];
+	  305 [label="You: \"It's okay to kill yourself, you know. I'm gonna blow my brains out. Gonna close this one final case and then *blam* -- I'm outta here.\""];
+	  306 [label="Lilienne's Twin: The other boy straightens his back. \"I'm not gonna start *crying*, stupid,\" he snaps, regaining control of his quivering chin."];
+	  307 [label="Lilienne's Other Twin: The other watches him, brows knitted. \"It doesn't even have anything to do with this, you. Father isn't the fire guy.\""];
+	  308 [label="Jump to: [Lilienne's Other Twin: \"The other watches him, brows knitte...\"]"];
+	  309 [label="Empathy: The boys seem less happy now."];
+	  310 [label="You: \"Bad words? What bourgeois mentality, to deem certain *working class words* bad.\""];
+	  311 [label="You: \"Bye.\" [Leave.]"];
+	  312 [label="Lilienne's Other Twin: The other one looks indistinguishable from him. He watches his brother kick the stone with his tongue lolling out of his mouth."];
+	  313 [label="themainlyhub"];
+	  314 [label="Lilienne's Other Twin: The other one laughs as well."];
+	  315 [label="Lilienne's Twin: The stone-kicking one becomes frantic all of a sudden, as if that's something to be scared of -- the obvious fact that you just stated."];
+	  316 [label="You: \"Your father used to go to that island too, didn't he?\""];
+	  317 [label="You: \"Your father did not kill himself.\""];
+	  318 [label="Kim Kitsuragi: \"Don't punch your brother.... please. Don't start crying. We still need to ask more questions.\""];
+	  319 [label="You: \"How come?\""];
+	  320 [label="You: \"It's a bad word. The worst word.\""];
+	  321 [label="You: \"Okay. What happened?\""];
+	  322 [label="Authority: Pipe down Puzzle Face, this is a Code Red situation! If we review all the *bad words*, that's only going to add more temptation to saying them -- in front of the *children*. And we *do not* want that."];
+	  323 [label="Electrochemistry: Preach it, brother! Spread the good word *fuck* all over town!"];
+	  324 [label="Lilienne's Other Twin: \"Nah, we don't go anywhere, nah,\" the other mumbles."];
+	  325 [label="You: \"Is little Lily your sister?\" (Point to the house.)"];
+	  326 [label="You: \"That's it? You're being laconic about it?\""];
+	  327 [label="Physical Instrument: The stone-kicking isn't even of very high calibre. Anyone can do that."];
+	  328 [label="Kim Kitsuragi: He whispers: \"You need to keep your *dark humour* in check in front of children, okay?\""];
+	  329 [label="You: \"Bad people. Criminals. Dangerous women.\""];
+	  330 [label="You: \"It's impossible to be *good* with kids, they're too stupid.\""];
+	  331 [label="You: \"And what are you, Kid Master General?\""];
+	  332 [label="You: \"Someone lives on the island?\""];
+	  333 [label="Jump to: [themainlyhub]"];
+	  334 [label="Lilienne's Twin: \"Don't say more bad words!\" The boy frowns."];
+	  335 [label="Lilienne's Twin: \"'Turn up the volume, blow those speakers out. Now here's---'\""];
+	  336 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  337 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  338 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  0 -> 1
+	  1 -> 235
+	  2 -> 59
+	  2 -> 326
+	  3 -> 176
+	  4 -> 233
+	  5 -> 158
+	  6 -> 46
+	  7 -> 225
+	  8 -> 9
+	  8 -> 10
+	  9 -> 160
+	  10 -> 315
+	  11 -> 12
+	  11 -> 13
+	  12 -> 304
+	  13 -> 209
+	  14 -> 132
+	  15 -> 313
+	  16 -> 211
+	  17 -> 18
+	  17 -> 19
+	  18 -> 156
+	  19 -> 291
+	  20 -> 249
+	  20 -> 116
+	  21 -> 313
+	  22 -> 24
+	  22 -> 23
+	  23 -> 25
+	  24 -> 32
+	  25 -> 328
+	  26 -> 140
+	  27 -> 281
+	  28 -> 44
+	  29 -> 7
+	  30 -> 91
+	  31 -> 307
+	  32 -> 333
+	  33 -> 166
+	  34 -> 84
+	  35 -> 78
+	  36 -> 100
+	  37 -> 38
+	  38 -> 39
+	  39 -> 230
+	  40 -> 89
+	  40 -> 59
+	  41 -> 270
+	  42 -> 8
+	  43 -> 256
+	  44 -> 234
+	  44 -> 252
+	  45 -> 253
+	  46 -> 48
+	  46 -> 47
+	  47 -> 254
+	  48 -> 49
+	  49 -> 225
+	  50 -> 121
+	  51 -> 319
+	  52 -> 144
+	  53 -> 54
+	  54 -> 242
+	  55 -> 335
+	  56 -> 154
+	  57 -> 87
+	  58 -> 280
+	  59 -> 293
+	  60 -> 313
+	  61 -> 7
+	  62 -> 313
+	  63 -> 162
+	  65 -> 246
+	  66 -> 20
+	  67 -> 333
+	  68 -> 118
+	  70 -> 71
+	  71 -> 88
+	  72 -> 283
+	  73 -> 224
+	  74 -> 226
+	  75 -> 16
+	  76 -> 56
+	  77 -> 53
+	  78 -> 65
+	  79 -> 80
+	  79 -> 81
+	  80 -> 101
+	  81 -> 172
+	  82 -> 112
+	  83 -> 248
+	  84 -> 309
+	  85 -> 17
+	  86 -> 66
+	  87 -> 196
+	  88 -> 203
+	  89 -> 2
+	  90 -> 327
+	  91 -> 92
+	  91 -> 93
+	  92 -> 41
+	  93 -> 270
+	  94 -> 313
+	  95 -> 96
+	  95 -> 97
+	  96 -> 250
+	  96 -> 26
+	  97 -> 90
+	  98 -> 141
+	  99 -> 51
+	  100 -> 242
+	  101 -> 82
+	  102 -> 15
+	  103 -> 157
+	  104 -> 177
+	  105 -> 313
+	  106 -> 269
+	  107 -> 142
+	  108 -> 109
+	  109 -> 110
+	  109 -> 111
+	  110 -> 14
+	  111 -> 15
+	  112 -> 313
+	  113 -> 108
+	  114 -> 115
+	  115 -> 78
+	  116 -> 193
+	  117 -> 292
+	  118 -> 120
+	  118 -> 119
+	  119 -> 106
+	  120 -> 282
+	  121 -> 225
+	  122 -> 51
+	  123 -> 124
+	  123 -> 125
+	  124 -> 145
+	  125 -> 76
+	  126 -> 78
+	  127 -> 262
+	  128 -> 146
+	  129 -> 146
+	  130 -> 274
+	  131 -> 152
+	  131 -> 113
+	  131 -> 151
+	  132 -> 15
+	  133 -> 153
+	  134 -> 136
+	  134 -> 135
+	  137 -> 7
+	  138 -> 225
+	  139 -> 314
+	  140 -> 60
+	  141 -> 61
+	  142 -> 143
+	  143 -> 185
+	  144 -> 313
+	  145 -> 76
+	  146 -> 248
+	  147 -> 148
+	  147 -> 149
+	  148 -> 263
+	  149 -> 55
+	  150 -> 173
+	  151 -> 108
+	  152 -> 108
+	  153 -> 276
+	  154 -> 168
+	  155 -> 313
+	  156 -> 324
+	  157 -> 268
+	  157 -> 303
+	  158 -> 179
+	  159 -> 207
+	  160 -> 240
+	  161 -> 313
+	  162 -> 163
+	  162 -> 164
+	  163 -> 22
+	  164 -> 333
+	  165 -> 75
+	  166 -> 16
+	  167 -> 133
+	  168 -> 169
+	  168 -> 170
+	  169 -> 189
+	  170 -> 320
+	  170 -> 275
+	  171 -> 128
+	  172 -> 82
+	  173 -> 79
+	  174 -> 215
+	  175 -> 279
+	  176 -> 94
+	  177 -> 313
+	  178 -> 312
+	  179 -> 180
+	  179 -> 181
+	  180 -> 296
+	  181 -> 105
+	  182 -> 63
+	  183 -> 50
+	  184 -> 11
+	  185 -> 186
+	  185 -> 187
+	  186 -> 122
+	  187 -> 99
+	  188 -> 225
+	  189 -> 34
+	  190 -> 273
+	  190 -> 36
+	  191 -> 131
+	  192 -> 248
+	  193 -> 57
+	  194 -> 60
+	  195 -> 313
+	  196 -> 313
+	  197 -> 198
+	  197 -> 199
+	  198 -> 216
+	  199 -> 329
+	  200 -> 177
+	  203 -> 204
+	  204 -> 205
+	  204 -> 206
+	  205 -> 298
+	  205 -> 267
+	  206 -> 195
+	  207 -> 73
+	  208 -> 6
+	  209 -> 241
+	  210 -> 138
+	  211 -> 212
+	  212 -> 213
+	  212 -> 214
+	  213 -> 336
+	  214 -> 260
+	  215 -> 192
+	  215 -> 83
+	  215 -> 231
+	  216 -> 104
+	  217 -> 265
+	  217 -> 202
+	  218 -> 95
+	  219 -> 220
+	  219 -> 69
+	  220 -> 5
+	  221 -> 105
+	  222 -> 105
+	  224 -> 175
+	  225 -> 98
+	  225 -> 228
+	  225 -> 332
+	  225 -> 45
+	  225 -> 208
+	  225 -> 182
+	  225 -> 316
+	  226 -> 161
+	  227 -> 184
+	  228 -> 107
+	  229 -> 323
+	  230 -> 130
+	  231 -> 248
+	  232 -> 86
+	  232 -> 311
+	  233 -> 197
+	  234 -> 207
+	  235 -> 236
+	  235 -> 237
+	  236 -> 62
+	  237 -> 178
+	  238 -> 255
+	  239 -> 225
+	  240 -> 313
+	  241 -> 306
+	  242 -> 243
+	  242 -> 244
+	  243 -> 245
+	  244 -> 35
+	  245 -> 272
+	  245 -> 35
+	  246 -> 127
+	  247 -> 264
+	  248 -> 147
+	  250 -> 117
+	  251 -> 105
+	  252 -> 301
+	  253 -> 300
+	  254 -> 302
+	  255 -> 239
+	  256 -> 257
+	  256 -> 258
+	  257 -> 259
+	  258 -> 295
+	  259 -> 52
+	  260 -> 272
+	  260 -> 321
+	  260 -> 77
+	  260 -> 310
+	  262 -> 247
+	  263 -> 55
+	  264 -> 289
+	  264 -> 171
+	  264 -> 174
+	  265 -> 139
+	  266 -> 74
+	  266 -> 70
+	  266 -> 223
+	  268 -> 238
+	  269 -> 313
+	  270 -> 305
+	  270 -> 227
+	  270 -> 317
+	  270 -> 183
+	  271 -> 308
+	  272 -> 123
+	  273 -> 334
+	  274 -> 102
+	  275 -> 114
+	  276 -> 277
+	  276 -> 278
+	  277 -> 322
+	  278 -> 260
+	  279 -> 268
+	  279 -> 303
+	  279 -> 103
+	  280 -> 313
+	  281 -> 195
+	  282 -> 217
+	  283 -> 284
+	  283 -> 285
+	  284 -> 29
+	  285 -> 7
+	  286 -> 137
+	  287 -> 30
+	  288 -> 188
+	  289 -> 129
+	  290 -> 191
+	  291 -> 232
+	  292 -> 194
+	  293 -> 21
+	  295 -> 266
+	  296 -> 297
+	  296 -> 330
+	  296 -> 331
+	  297 -> 221
+	  298 -> 27
+	  299 -> 72
+	  300 -> 286
+	  301 -> 159
+	  302 -> 49
+	  303 -> 238
+	  304 -> 318
+	  305 -> 11
+	  306 -> 308
+	  307 -> 210
+	  308 -> 307
+	  309 -> 126
+	  310 -> 190
+	  312 -> 313
+	  313 -> 33
+	  313 -> 290
+	  313 -> 3
+	  313 -> 4
+	  313 -> 37
+	  313 -> 165
+	  313 -> 68
+	  313 -> 325
+	  313 -> 294
+	  313 -> 42
+	  313 -> 43
+	  313 -> 85
+	  313 -> 28
+	  314 -> 218
+	  315 -> 219
+	  316 -> 287
+	  317 -> 31
+	  318 -> 271
+	  319 -> 288
+	  320 -> 229
+	  321 -> 65
+	  322 -> 260
+	  323 -> 309
+	  324 -> 155
+	  325 -> 40
+	  326 -> 58
+	  327 -> 60
+	  328 -> 67
+	  329 -> 200
+	  330 -> 222
+	  331 -> 251
+	  332 -> 299
+	  333 -> 313
+	  334 -> 242
+	  335 -> 150
+	  336 -> 337
+	  336 -> 338
+	  337 -> 167
+	  338 -> 133
+}
+

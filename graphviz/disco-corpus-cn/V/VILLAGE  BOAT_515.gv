@@ -1,0 +1,169 @@
+# VILLAGE / BOAT
+# This is the boat you can get from the Net picker. This boat takes you to the Sea Fortress island.VILLAGE ORB / ask boat from netpicker
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Cuno: “很好。你做到了。”坤诺站在那里，双手叉腰，看着头顶那尊废弃高射炮投下的阴影。"];
+	  3 [label="ROO A72 Motor Skiff: 这样它就能陪伴你度过这段孤独的旅程。"];
+	  4 [label="Variable[\"plaza.tribunal_kim_shot\"] == false  and  IsKimHere() == false"];
+	  5 [label="Variable[\"plaza.tribunal_kim_shot\"] == false  and  IsKimHere() == false", shape=diamond];
+	  6 [label="!(Variable[\"plaza.tribunal_kim_shot\"] == false  and  IsKimHere() == false)", shape=diamond];
+	  7 [label="You: 酷啊。"];
+	  8 [label="You: “这不是死亡岛，对吧？”"];
+	  9 [label="ROO A72 Motor Skiff: 好了。现在它是一艘*摇滚*小艇了。"];
+	  10 [label="Variable[\"village.skiff_inland_sad_fm\"]"];
+	  11 [label="Variable[\"village.skiff_inland_sad_fm\"]", shape=diamond];
+	  12 [label="!(Variable[\"village.skiff_inland_sad_fm\"])", shape=diamond];
+	  13 [label="Jump to: [boat_away_hub]"];
+	  14 [label="ROO A72 Motor Skiff: 一艘尾部装有小舵机引擎的小艇正漂浮在平滑如镜的海面上。里面有两个空座位。"];
+	  15 [label="Variable[\"village.skiff_perc_trigger_for_ency\"]"];
+	  16 [label="Variable[\"village.skiff_perc_trigger_for_ency\"]", shape=diamond];
+	  17 [label="!(Variable[\"village.skiff_perc_trigger_for_ency\"])", shape=diamond];
+	  18 [label="Encyclopedia: SRV制造，这台机器代表了萨马拉洲一个工人国家的人道主义援助。引擎上的*ROO*标志暴露了它的身份——除此之外，还有那颗白色的五角星。"];
+	  19 [label="You: （我还没准备好。）[离开。]"];
+	  20 [label="Kim Kitsuragi: “什么？”"];
+	  21 [label="You: “你到底在说什么鬼啊？”"];
+	  22 [label="You: 我刚刚做了什么？我为什么要这么做？"];
+	  23 [label="ROO A72 Motor Skiff: 船慢慢停了下来。你关掉引擎——接着，周围一片寂静。\n船慢慢停了下来。警督关掉引擎——接着，周围一片寂静。"];
+	  24 [label="Perception (Hearing): 在一片沉默之中——传来一阵翅膀的扑扇声。远方，一群鹌鹑起飞了……"];
+	  25 [label="Inland Empire: 是啊。*悲伤*的摇滚乐。调到悲伤FM电台。"];
+	  26 [label="Cuno: “我在地图上把那个地方标出来了，还有……看来我们俩都撑不过去的。这是死亡岛。地狱的咽喉。”他擦掉了鼻子里的鼻涕。"];
+	  27 [label="Variable[\"TASK.return_to_mainland\"]"];
+	  28 [label="Variable[\"TASK.return_to_mainland\"]", shape=diamond];
+	  29 [label="!(Variable[\"TASK.return_to_mainland\"])", shape=diamond];
+	  30 [label="You: “你已经听见了。别让我再重复一遍。”"];
+	  31 [label="You: 什么也不说。"];
+	  32 [label="You: 上船吧，朝小岛进发。"];
+	  33 [label="Variable[\"village.skiff_main_hub_reached\"]"];
+	  34 [label="Variable[\"village.skiff_main_hub_reached\"]", shape=diamond];
+	  35 [label="!(Variable[\"village.skiff_main_hub_reached\"])", shape=diamond];
+	  36 [label="You: “地狱岛？终于找到你了。”"];
+	  37 [label="Logic: 要记得拾网人说的话：油箱很小。乘着它往返是不可能的。"];
+	  38 [label="Esprit de Corps: 警督不在的话，这里没什么能做的——你必须跟他一起回到这里来。"];
+	  39 [label="Perception (Sight): 船身是亮黄色的，新刷的柏油上面涂了一层工业油漆。你看着它倒映在水面上，还有出厂编号：A72。"];
+	  40 [label="Jump to: [boat_away_hub]"];
+	  41 [label="Inland Empire: 太酷了。现在调到悲伤FM电台。你知道你想的。"];
+	  42 [label="Cuno: “是的……终于到了。”他有些保留地说道。"];
+	  43 [label="ROO A72 Motor Skiff: 小艇在平静的水面上摆动。没什么别的事可以做了。"];
+	  44 [label="ROO A72 Motor Skiff: 为什么？因为*摇滚*啊。"];
+	  45 [label="Inland Empire: 一旦爬进去，没错——拉一下启动杆，就可以驶入海湾。一种奇怪的恐惧朝你袭来：你确定想*现在*过去吗？"];
+	  46 [label="You: [爬出船来。]"];
+	  47 [label="You: “什么‘什么’？不然我们怎么能在上岛的路上播*悲伤FM*呢？”"];
+	  48 [label="Variable[\"whirling.cuno_accepted_to_party\"]"];
+	  49 [label="Variable[\"whirling.cuno_accepted_to_party\"]", shape=diamond];
+	  50 [label="!(Variable[\"whirling.cuno_accepted_to_party\"])", shape=diamond];
+	  51 [label="Encyclopedia: 悲伤FM是一个无线电台，专门播放悲伤的慢摇滚歌曲。你似乎已经把那个频率记在心里了。"];
+	  52 [label="You: “你负责引擎，金。我拿手提音响。”"];
+	  54 [label="HELLMAW"];
+	  55 [label="Kim Kitsuragi: “它能浮起来的。”"];
+	  56 [label="Jump to: [boat_away_hub]"];
+	  57 [label="Shivers: 今天这里的风很小。那个幽灵一动不动。你看着自己的胳膊，然后是头上的悬崖……"];
+	  58 [label="Kim Kitsuragi: “我们走吧。”他低语到。"];
+	  59 [label="IsKimHere()"];
+	  60 [label="IsKimHere()", shape=diamond];
+	  61 [label="!(IsKimHere())", shape=diamond];
+	  62 [label="Savoir Faire: 你已经做好所有必要的准备了吗？所有报告都结束了吗？"];
+	  63 [label="boat_away_hub"];
+	  64 [label="You: “这个破旧的老东西……是ROOA72。”"];
+	  65 [label="Kim Kitsuragi: “好吧。”他顺从地耸耸肩。“那就*来点*猛的，悲伤FM。”"];
+	  66 [label="Cuno: “也许坤诺嗑了很多思必得还没清醒，所以有点悲观吧。不过我确实侦察过那个地方。我可以跟你说说。”"];
+	  67 [label="Cuno: 男孩转过身去，小心地左右张望着。他有些紧张。"];
+	  68 [label="Logic: 他之前也没来过这里。"];
+	  69 [label="You: 首先——把你的手提音响绑在船首肘板上陪伴你。"];
+	  70 [label="You: [爬出船来。]"];
+	  71 [label="ROO A72 Motor Skiff: 小艇漂浮在平滑如镜的海面上——里面的两个座位是空的。"];
+	  72 [label="You: [爬出船来。]"];
+	  73 [label="Endurance: 他伤的太严重——没办法跟你讨论扭矩。"];
+	  74 [label="Cuno: “我不知道。”他举起双手。"];
+	  75 [label="ROO A72 Motor Skiff: 时间到了。"];
+	  76 [label="Kim Kitsuragi: “好吧。为什么不呢。”他耸耸肩。"];
+	  0 -> 1
+	  1 -> 27
+	  2 -> 46
+	  3 -> 41
+	  4 -> 5
+	  4 -> 6
+	  5 -> 38
+	  6 -> 63
+	  7 -> 3
+	  8 -> 74
+	  9 -> 22
+	  9 -> 7
+	  10 -> 11
+	  10 -> 12
+	  11 -> 51
+	  12 -> 13
+	  13 -> 63
+	  14 -> 39
+	  15 -> 16
+	  15 -> 17
+	  16 -> 18
+	  17 -> 45
+	  18 -> 45
+	  20 -> 31
+	  20 -> 30
+	  20 -> 47
+	  21 -> 74
+	  22 -> 44
+	  23 -> 24
+	  24 -> 57
+	  25 -> 10
+	  26 -> 54
+	  27 -> 28
+	  27 -> 29
+	  28 -> 43
+	  29 -> 33
+	  30 -> 76
+	  31 -> 76
+	  32 -> 23
+	  33 -> 34
+	  33 -> 35
+	  34 -> 71
+	  35 -> 14
+	  36 -> 42
+	  37 -> 4
+	  38 -> 63
+	  39 -> 15
+	  40 -> 63
+	  41 -> 10
+	  42 -> 66
+	  44 -> 25
+	  45 -> 62
+	  46 -> 26
+	  47 -> 65
+	  48 -> 49
+	  48 -> 50
+	  49 -> 2
+	  50 -> 75
+	  51 -> 40
+	  52 -> 20
+	  54 -> 8
+	  54 -> 36
+	  54 -> 21
+	  55 -> 73
+	  56 -> 63
+	  57 -> 59
+	  58 -> 70
+	  59 -> 60
+	  59 -> 61
+	  60 -> 58
+	  61 -> 48
+	  62 -> 37
+	  63 -> 64
+	  63 -> 32
+	  63 -> 69
+	  63 -> 19
+	  63 -> 52
+	  64 -> 55
+	  65 -> 51
+	  66 -> 67
+	  67 -> 68
+	  69 -> 9
+	  71 -> 45
+	  73 -> 56
+	  74 -> 66
+	  75 -> 72
+	  76 -> 41
+}
+

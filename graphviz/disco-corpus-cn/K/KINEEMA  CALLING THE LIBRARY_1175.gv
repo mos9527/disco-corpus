@@ -1,0 +1,123 @@
+# KINEEMA / CALLING THE LIBRARY
+# Calling Jamrock Public Library to see if you can find out anything about the dead man found at the boardwalk. You'll get Working Class Woman's home address from here.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: “谢谢。我可以了，没有其他问题。”（结束跟图书馆的通话。）"];
+	  3 [label="Logic: 他们穷的连电话线都买不起。"];
+	  4 [label="Jamrock Public Library: “有了，喂喂，请问还在吗？”你听见他翻动资料的声音。“我找到了比莉·梅让的家庭住址，可以吗？可惜没有电话号码。”"];
+	  5 [label="Jamrock Public Library: “很高兴能帮到你。再见，警官。”图书管理员挂断电话，电话又接回了警局。"];
+	  6 [label="You: “你知道是谁吗？”"];
+	  7 [label="Jamrock Public Library: “玛丽？”他用手捂住电话，然后朝着身后的房间大喊：“玛丽！你还记不记得一个叫比莉·梅让的读者？他们前几天来还过蒂博的书……”你听到远处有人回答的声音。"];
+	  8 [label="Variable[\"plaza.working_asked_about_loos_radio_city\"]"];
+	  9 [label="Variable[\"plaza.working_asked_about_loos_radio_city\"]", shape=diamond];
+	  10 [label="!(Variable[\"plaza.working_asked_about_loos_radio_city\"])", shape=diamond];
+	  12 [label="You: “谢谢。我可以了，没有其他问题。”（结束跟图书馆的通话。）"];
+	  13 [label="Variable[\"TASK.find_a_way_inside_apt_building_done\"]"];
+	  14 [label="Variable[\"TASK.find_a_way_inside_apt_building_done\"]", shape=diamond];
+	  15 [label="!(Variable[\"TASK.find_a_way_inside_apt_building_done\"])", shape=diamond];
+	  16 [label="Jamrock Public Library: “比莉，你说，比莉·*梅让*？给我几分钟，我检查一下资料库。”他放下听筒。"];
+	  17 [label="address known hub"];
+	  18 [label="Empathy: 然后可以去小喝一杯，在瞭望台……"];
+	  19 [label="last questions hub"];
+	  20 [label="Jamrock Public Library: “很高兴能帮到你。再见，警官。”图书管理员挂断电话，伴随一阵轻柔的咔嗒声，电话又重新接回了警局……"];
+	  21 [label="Jamrock Public Library: “也许你可以写下来？圣·吉斯莱恩路33B，20号公寓。我相信它就在马丁内斯……上面写着岬岸公寓。就这些。”"];
+	  22 [label="Alice: “还有什么需要我帮忙的吗？”"];
+	  23 [label="Jamrock Public Library: “玛丽……”过了一会儿。"];
+	  24 [label="You: “可以，家庭住址就行。”"];
+	  25 [label="You: “还有比莉·梅让的其他信息吗？”"];
+	  26 [label="Jamrock Public Library: “她说是个年纪比较大的男人……而且她很肯定最后一次见到他的时候，对方肯定喝了一两杯。”"];
+	  27 [label="Jamrock Public Library: “……”"];
+	  28 [label="Jump to: [The actual Radio HUB]"];
+	  29 [label="You: “所以比莉·梅让是个女人，不是男人？你的同事怎么知道是她的丈夫？”"];
+	  30 [label="You: “玛丽能描述一下那位丈夫什么样吗？”"];
+	  31 [label="You: “他什么打扮？”"];
+	  32 [label="Reaction Speed: 那就是阳台上的吸烟者住的地方，不是吗？"];
+	  33 [label="You: “关于你们的一个读者，比莉·梅让，我需要你们能够提供的所有信息。”"];
+	  34 [label="Jump to: [last questions hub]"];
+	  35 [label="You: “你知道丈夫的名字吗？”"];
+	  36 [label="Jamrock Public Library: “抱歉，不知道——玛丽只是脸熟。”"];
+	  37 [label="Alice: “还有什么需要我帮忙的吗？”爱丽丝问到。"];
+	  38 [label="Logic: 卢斯，无线之城？书摊那个女工人看的就是这本书……"];
+	  39 [label="Jump to: [last questions hub]"];
+	  40 [label="Perception (Hearing): “莫里斯，什么？！”一个女人在大喊。然后：*是的是的，好吧，如果是警察……*她开始解释着什么。"];
+	  41 [label="Logic: 很好。现在你找到一个名字了。"];
+	  42 [label="Reaction Speed: 就在码头附近，这里的北面。那些大公寓楼。"];
+	  43 [label="Jamrock Public Library: “……”"];
+	  44 [label="Jamrock Public Library: “呃，等一下……”图书管理员又离开话机，转述问题去了。"];
+	  45 [label="Jamrock Public Library: “……”"];
+	  46 [label="Jamrock Public Library: “那我就说了，先生：圣·吉斯莱恩路33B，20号公寓。我相信它就在马丁内斯……上面写着岬岸公寓。就这些。”"];
+	  47 [label="Jamrock Public Library: “这上面写着他们几天前刚还了最后一本书，但是那天我没上班。”"];
+	  48 [label="Jamrock Public Library: “没错，是我的同事玛丽，”图书管理员的声音再次响起。“她说来还书的是比莉的*丈夫*。他还想借一本新的科幻小说“卢斯，无线之城87”，但是我们这里还没到。”"];
+	  49 [label="Jump to: [The actual Radio HUB]"];
+	  50 [label="Jamrock Public Library: “玛丽认识比莉，她在这里工作的时间比我长。有时候她的丈夫会代替她来还书。”"];
+	  51 [label="Shivers: 加姆洛克中心区的麦罗埃街——在一个被橙色灯光照亮的黑色大厅——远离外面的杂音——某个中年男子在正对着一台老旧的无线电脑输入指令。桌子上放着一份打印资料。在他身后，一个孤独的读者正在擦拭满是灰尘的书架，寻找一本平装书……"];
+	  52 [label="You: “我真的不太擅长记地址。”"];
+	  53 [label="Inland Empire: 你的胃里有些不舒服的东西在抽搐。"];
+	  54 [label="Jamrock Public Library: “抱歉，玛丽真的没有注意。”"];
+	  7760201 [label="JUMP OUT to PLAZA / COUPRIS KINEEMA", shape=diamond];
+	  0 -> 1
+	  1 -> 33
+	  2 -> 20
+	  3 -> 24
+	  3 -> 52
+	  4 -> 3
+	  5 -> 37
+	  6 -> 7
+	  7 -> 40
+	  8 -> 9
+	  8 -> 10
+	  9 -> 38
+	  10 -> 41
+	  12 -> 5
+	  13 -> 14
+	  13 -> 15
+	  14 -> 32
+	  15 -> 42
+	  16 -> 45
+	  17 -> 25
+	  17 -> 12
+	  18 -> 34
+	  19 -> 2
+	  19 -> 35
+	  19 -> 29
+	  19 -> 30
+	  20 -> 22
+	  21 -> 13
+	  22 -> 28
+	  23 -> 26
+	  24 -> 46
+	  25 -> 47
+	  26 -> 31
+	  27 -> 43
+	  28 -> 7760201
+	  29 -> 50
+	  30 -> 23
+	  31 -> 44
+	  32 -> 17
+	  33 -> 16
+	  34 -> 19
+	  35 -> 36
+	  36 -> 34
+	  37 -> 49
+	  38 -> 53
+	  39 -> 19
+	  40 -> 48
+	  41 -> 19
+	  42 -> 17
+	  43 -> 51
+	  44 -> 54
+	  45 -> 27
+	  46 -> 13
+	  47 -> 12
+	  47 -> 6
+	  48 -> 8
+	  49 -> 7760201
+	  50 -> 18
+	  51 -> 4
+	  52 -> 21
+	  53 -> 19
+	  54 -> 39
+}
+

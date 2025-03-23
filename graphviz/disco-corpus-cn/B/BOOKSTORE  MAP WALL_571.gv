@@ -1,0 +1,210 @@
+# BOOKSTORE / MAP WALL
+# Different maps attached to the wall. Including the Map of Martinaise (fast travel?)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Map Wall: 你可以的。在卡尤——瑞瓦肖，一颗黑色的星星；在欧佐纳尔——丰德艾尔和维曼迪克斯；在阿基佩戈斯——是克里杨特-莫兰，维利耶；在塞美尼——奥杜瓦。还有劳伦冰盖——是七海德奥拉…"];
+	  3 [label="You: 看看边缘。"];
+	  4 [label="Map Wall: 地图看上去破旧而褪色。你的眼睛注意到一份伊苏林迪地图，一份瑞瓦肖地图，还有一份马丁内斯地图。"];
+	  5 [label="Interfacing: 你偷偷盯着店主，等待她分心。当她没看到时，你熟练地从布告牌上撕下地图，然后装进口袋。"];
+	  6 [label="Plaisance: “出于某种原因…他们没能取得太大进展。很遗憾，那个项目根本没能展开。如果有人能修整马丁内斯就好了。这些废墟可不利于做生意啊。”"];
+	  7 [label="Jump to: [mainmapwallhub]"];
+	  8 [label="Tutorial Agent: 你得到了一个可互动物品。前往物品栏中与之互动吧。"];
+	  9 [label="You: “为什么马丁内斯的这么便宜？”"];
+	  10 [label="Map Wall: Variable[\"tc.isola\"]"];
+	  11 [label="Variable[\"tc.isola\"]", shape=diamond];
+	  12 [label="!(Variable[\"tc.isola\"])", shape=diamond];
+	  14 [label="Jump to: [mainmapwallhub]"];
+	  15 [label="Map Wall: Variable[\"TASK.buy_a_map_of_martinaise\"]  and  Variable[\"TASK.buy_a_map_of_martinaise_done\"] == false  and  CheckItem(\"map_of_martinaise\") == false"];
+	  16 [label="Variable[\"TASK.buy_a_map_of_martinaise\"]  and  Variable[\"TASK.buy_a_map_of_martinaise_done\"] == false  and  CheckItem(\"map_of_martinaise\") == false", shape=diamond];
+	  17 [label="!(Variable[\"TASK.buy_a_map_of_martinaise\"]  and  Variable[\"TASK.buy_a_map_of_martinaise_done\"] == false  and  CheckItem(\"map_of_martinaise\") == false)", shape=diamond];
+	  18 [label="You: 那河流西边呢？"];
+	  19 [label="Volition: 不。这里就是属于你的某个地方。虽然是你拥有的全部，不过仍然不是空无一物。那里有街道，有钠光灯，有天空，有世界。还有你——还在呼吸。"];
+	  20 [label="You: “我想买一份马丁内斯的地图。”"];
+	  21 [label="Empathy: 光芒中遗漏的小珍珠。黑暗中的点点火光。"];
+	  22 [label="You: 那马丁内斯呢？"];
+	  23 [label="You: 查看瑞瓦肖地图。"];
+	  24 [label="Map Wall: 它不是一份真正的地图。好像是旅游相关的东西——一张美术明信片，上面还有些建筑，是以等角透视的方法画的。右上角有一个日期：48年。"];
+	  25 [label="You: “后来发生什么事了？”"];
+	  26 [label="You: 先斜着看——你能看见岛上的*城市*吗？"];
+	  27 [label="Inland Empire: 与其他世界的联系。比伊苏林迪更遥远，对于你来说尚是未知的世界。你只知道自己从未到过那个地方。"];
+	  28 [label="Shivers: 不。煤城要糟糕得多。那是一具焦黑的残躯。雨水坠落在它粘腻的黑色街道上。然后是加姆洛克正中央的燃尽区……是书店突然变冷了，还是只是*你*一个人的感觉？"];
+	  29 [label="Map Wall: 小阁子里藏着一张布告牌，上面还有几份地图——是被小钉子固定住的。布告牌有一个角落已经松动了。"];
+	  30 [label="You: 查看伊苏林迪地图。"];
+	  31 [label="You: “你好像低估了我的财力，不过没事，无所谓。”"];
+	  32 [label="Map Wall: 海洋分裂成一团余弦和方位角，全都指向苍白的虚无。*蒙迪*位于北角；*格拉德*位于东北角；*萨马拉*位于东角；*西奥*位于西角。它们都叫做*洲*。"];
+	  33 [label="You: 还有什么？"];
+	  34 [label="Jump to: [mainmapwallhub]"];
+	  35 [label="Jump to: [mainmapwallhub]"];
+	  36 [label="Visual Calculus: 这个*也许*可以用来确认子弹的来源。"];
+	  37 [label="Map Wall: 这份大地图上展示了所有群岛。你在伊苏林迪大洋浅蓝色的空白处看到一群小点。最大的在东北边，名叫“卡尤”（你在这里）。还有一个在遥远的西南方——“塞美尼群岛（幽灵岛）。”"];
+	  38 [label="Kim Kitsuragi: 警督朝着它点点头，然后说到：“马丁内斯地图。也许能派上用场？”"];
+	  39 [label="Conceptualization: 也许它们*是*神明。远方和外尘的神。"];
+	  40 [label="Map Wall: 它实在太小，在地图上几乎很难看见。不…等等。有了！加姆洛克北边，就在瑞瓦肖大工业港旁边的海岸地带。看起来十分沮丧。老实说，跟煤城不相上下。"];
+	  41 [label="Plaisance: 她点点头。“了解自己周围的环境总是不错的。”"];
+	  42 [label="Plaisance: “是啊是啊。你到底有没有兴趣？”"];
+	  43 [label="Jump to: [mainmapwallhub]"];
+	  44 [label="Map Wall: IsKimHere()"];
+	  45 [label="IsKimHere()", shape=diamond];
+	  46 [label="!(IsKimHere())", shape=diamond];
+	  47 [label="Visual Calculus: 分解成数学。"];
+	  48 [label="You: 查看马丁内斯地图。"];
+	  49 [label="Map Wall: 欧佐纳尔，劳伦冰盖，法斯拉美，阿基佩戈斯，北廊群岛……在广阔无垠的伊苏林迪里，它们都不过是粒粒斑驳的尘埃。地图边缘的颜色已经褪变成一些模糊的虚线，黑白相间。"];
+	  50 [label="Kim Kitsuragi: 警督用力咳了几声，然后低语到：“还是别了吧。诈骗小商家是违反RCM政策的。”"];
+	  51 [label="Plaisance: “先生，请不要乱碰商品。这些旧地图…是过去的纪念品。”"];
+	  52 [label="Plaisance: “从那些*设计工作室的人*想把这里收拾干净开始，大概是4、5年前的事吧。他们还翻新了那座骏马雕像，装了投币望远镜，还设计了新街灯。”"];
+	  53 [label="Reaction Speed: 马丁内斯！"];
+	  54 [label="Inland Empire: 在东北方，卡尤的北部海岸上站着一粒尘螨。那是站在书店里的你。"];
+	  55 [label="Shivers: 从你的位置向外辐射——是瑞瓦肖宗主国。半径大约80公里。不过，这个洲的宝珠还是很难看见。"];
+	  56 [label="Encyclopedia: 你根本不知道它们是什么——遥远的星星？神明？——但是看着它们的时候，让你几乎感觉自己并不存在。不管它们是什么，这些*洲*跟你相比，实在是大的无边无际。而且还很遥远，遥不可及。"];
+	  57 [label="Map Wall: 东边起伏的山坡上：勒雅尔丹，斯特拉里斯，圣巴蒂斯特郊区，被吞入了这座巨型都市。在你听来，它们非常*富有*。这是瑞瓦肖东部。"];
+	  58 [label="Inland Empire: 你感觉到自己*就在*煤城西边。就在加姆洛克上方，靠近煤城的某个地方。"];
+	  59 [label="Map Wall: Variable[\"doomed.mapwall_whitec_steal_it\"]"];
+	  60 [label="Variable[\"doomed.mapwall_whitec_steal_it\"]", shape=diamond];
+	  61 [label="!(Variable[\"doomed.mapwall_whitec_steal_it\"])", shape=diamond];
+	  62 [label="Jump to: [mainmapwallhub]"];
+	  63 [label="Encyclopedia: 一共有8.5亿人住在这些小点上。一个被历史撕裂的、文化和商业的海洋世界。"];
+	  64 [label="Map Wall: 一座青翠的岛屿北岸被一条河流的三角洲弄的支离破碎。那是艾斯普兰河。数不清的桥梁把碎片拼凑在一起，连接着城区和河心滩。*德尔塔*，就是中央那颗巨大的人造心脏，充满各种生命体和建筑物。"];
+	  65 [label="Interfacing: 你慢慢把手伸向布告牌上的地图。不过还没碰到，你就被打断了："];
+	  66 [label="Plaisance: “抱歉，警官，马丁内斯地图只有这一份了。其他两份也是非卖品…再说了，你基本上是买不起的。”"];
+	  67 [label="Rhetoric: 这里看起来不像是个成功的旅游陷阱，不是吗？"];
+	  68 [label="Map Wall: Variable[\"tc.that_in_martinaise\"]"];
+	  69 [label="Variable[\"tc.that_in_martinaise\"]", shape=diamond];
+	  70 [label="!(Variable[\"tc.that_in_martinaise\"])", shape=diamond];
+	  71 [label="You: [离开。]"];
+	  72 [label="Logic: 8.5亿人住在这些小点上。一个被历史撕裂的、文化和商业的海洋世界。"];
+	  73 [label="You: “店主，我能买这些地图吗？”"];
+	  74 [label="Map Wall: 科戎。一个适合居住的地方。不算太糟糕。然后是加姆洛克——那里很*糟糕*。人们不应该住在那里，但事实并非如此。然后是市郊——几乎是*同样的*糟糕，而且要大上许多。最后是煤城，最糟糕的地方。"];
+	  75 [label="You: “我想买这份马丁内斯地图。”"];
+	  76 [label="Map Wall: Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"]"];
+	  77 [label="Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"]", shape=diamond];
+	  78 [label="!(Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"])", shape=diamond];
+	  79 [label="mainmapwallhub"];
+	  80 [label="Map Wall: 不过还是挺详尽的，对之后的搜查可能会很有用。你看见一个锯齿状的盒子——代表工业港口，甚至连褴褛飞旋都有……"];
+	  81 [label="Plaisance: “看起来可能不怎么样，但它们其实很贵重。不过，马丁内斯地图只要90分。”"];
+	  82 [label="Plaisance: “那个旧玩意？那是一份过时的地图，上面标的都是些从来都不是、也从来没实现的旅游景点。”"];
+	  83 [label="Jump to: [mainmapwallhub]"];
+	  84 [label="Map Wall: IsKimHere()"];
+	  85 [label="IsKimHere()", shape=diamond];
+	  86 [label="!(IsKimHere())", shape=diamond];
+	  87 [label="You: 把它偷走。"];
+	  88 [label="You: Variable[\"doomed.mapwall_whitec_steal_it\"]"];
+	  89 [label="Variable[\"doomed.mapwall_whitec_steal_it\"]", shape=diamond];
+	  90 [label="!(Variable[\"doomed.mapwall_whitec_steal_it\"])", shape=diamond];
+	  91 [label="Interfacing: 现在你是马丁内斯地图骄傲的所有者，说实话，甚至都没花多少钱。"];
+	  92 [label="Jump to: [mainmapwallhub]"];
+	  93 [label="Jump to: [mainmapwallhub]"];
+	  94 [label="Plaisance: “警官，你还是放弃这个想法吧。为了感谢你对抗恶徒的英勇行为，我可以把它免费送给你。”"];
+	  0 -> 1
+	  1 -> 29
+	  2 -> 21
+	  3 -> 32
+	  4 -> 15
+	  5 -> 91
+	  6 -> 35
+	  7 -> 79
+	  8 -> 34
+	  9 -> 82
+	  10 -> 11
+	  10 -> 12
+	  11 -> 72
+	  12 -> 56
+	  14 -> 79
+	  15 -> 16
+	  15 -> 17
+	  16 -> 84
+	  17 -> 79
+	  18 -> 74
+	  19 -> 93
+	  20 -> 41
+	  21 -> 63
+	  22 -> 40
+	  23 -> 64
+	  24 -> 80
+	  25 -> 6
+	  26 -> 2
+	  27 -> 10
+	  28 -> 19
+	  29 -> 4
+	  30 -> 37
+	  31 -> 42
+	  32 -> 27
+	  33 -> 49
+	  34 -> 79
+	  35 -> 79
+	  36 -> 79
+	  37 -> 33
+	  38 -> 79
+	  39 -> 92
+	  40 -> 28
+	  41 -> 76
+	  42 -> 7
+	  43 -> 79
+	  44 -> 45
+	  44 -> 46
+	  45 -> 50
+	  46 -> 51
+	  47 -> 54
+	  48 -> 24
+	  49 -> 47
+	  50 -> 83
+	  51 -> 83
+	  52 -> 67
+	  53 -> 36
+	  54 -> 55
+	  55 -> 26
+	  55 -> 3
+	  56 -> 39
+	  57 -> 18
+	  58 -> 93
+	  59 -> 60
+	  59 -> 61
+	  60 -> 5
+	  61 -> 65
+	  62 -> 79
+	  63 -> 3
+	  64 -> 57
+	  65 -> 44
+	  66 -> 81
+	  67 -> 25
+	  68 -> 69
+	  68 -> 70
+	  69 -> 22
+	  70 -> 58
+	  72 -> 92
+	  73 -> 66
+	  74 -> 68
+	  75 -> 94
+	  76 -> 77
+	  76 -> 78
+	  77 -> 34
+	  78 -> 8
+	  79 -> 71
+	  79 -> 73
+	  79 -> 75
+	  79 -> 48
+	  79 -> 20
+	  79 -> 87
+	  79 -> 23
+	  79 -> 30
+	  80 -> 62
+	  81 -> 9
+	  81 -> 31
+	  82 -> 52
+	  83 -> 79
+	  84 -> 85
+	  84 -> 86
+	  85 -> 38
+	  86 -> 53
+	  87 -> 88
+	  88 -> 89
+	  88 -> 90
+	  89 -> 59
+	  90 -> 59
+	  91 -> 14
+	  92 -> 79
+	  93 -> 79
+	  94 -> 43
+}
+

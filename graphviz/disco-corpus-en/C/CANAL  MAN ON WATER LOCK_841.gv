@@ -1,0 +1,269 @@
+# CANAL / MAN ON WATER LOCK
+# A man is eating salami on the water lock.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Untitled hub (03)"];
+	  3 [label="Jump to: [introhub]"];
+	  4 [label="Logic: You should probably tell Lena. It'll take a load off her mind."];
+	  5 [label="You: \"Do you know what caused this wreckage?\" (Point at the smashed billboard in the canal.)"];
+	  6 [label="You: \"Right, bye.\" [Leave.]"];
+	  7 [label="Man on water lock: Variable[\"TASK.close_water_lock_done\"]  or  Variable[\"canal.water_lock_alt_cant_chat\"]"];
+	  8 [label="Variable[\"TASK.close_water_lock_done\"]  or  Variable[\"canal.water_lock_alt_cant_chat\"]", shape=diamond];
+	  9 [label="!(Variable[\"TASK.close_water_lock_done\"]  or  Variable[\"canal.water_lock_alt_cant_chat\"])", shape=diamond];
+	  10 [label="Jump to: [Untitled hub]"];
+	  11 [label="Man on water lock: \"Good morning to you, officer!\"\n\"Good morning to you, officers!\""];
+	  12 [label="You: \"But what's further down the coast?\""];
+	  13 [label="Man on water lock: \"Welcome back, officer.\"\n\"Welcome back, officers.\""];
+	  14 [label="You: \"Why don't you just do it yourself?\""];
+	  15 [label="Man on water lock: Variable[\"canal.water_lock_honours\"]"];
+	  16 [label="Variable[\"canal.water_lock_honours\"]", shape=diamond];
+	  17 [label="!(Variable[\"canal.water_lock_honours\"])", shape=diamond];
+	  18 [label="Man on water lock: \"Sure thing.\" He cuts off a slice of salami."];
+	  19 [label="Man on water lock: \"Suit yourself. Just drop by on Wednesday if you want to see the water lock work again.\" He cuts a fresh slice from his salami."];
+	  20 [label="You: \"But, wait, what's further down the coast?\""];
+	  21 [label="Jump to: [mainhub]"];
+	  22 [label="Man on water lock: \"I wasn't here to witness it, but those look like tyre tracks on that sign. Weird, huh? Then again, plenty of daredevil drivers in Revachol.\""];
+	  23 [label="You: \"Do you know what's further down the coast?\""];
+	  24 [label="You: [Leave.]"];
+	  25 [label="Man on water lock: IsKimHere()"];
+	  26 [label="IsKimHere()", shape=diamond];
+	  27 [label="!(IsKimHere())", shape=diamond];
+	  28 [label="Jump to: [mainhub]"];
+	  29 [label="Man on water lock: \"My friend Barry the Butcher is stuck on the other side of the water lock. I'm keeping him company -- and eating his salami.\""];
+	  30 [label="You: \"You said the coast is closed off? This may be why Lena's husband Morell the cryptozoologist hasn't returned.\""];
+	  31 [label="You: \"Can I have some of that salami?\" (Point at his food.)"];
+	  32 [label="Man on water lock: \"*Very* good stuff. Anything I can do for you, officer?\" The man on the water lock picks the skin off a slice of a salami and takes a sizeable bite."];
+	  33 [label="Man on water lock: \"Want some too, officer?\" he turns to the lieutenant."];
+	  34 [label="Man on water lock: \"G'day to you, officer!\"\n\"G'day to you, officers!\""];
+	  35 [label="Jump to: [mainhub]"];
+	  36 [label="You: \"What's with the lever that does nothing?\" (Point at the control panel next to him.)"];
+	  37 [label="Man on water lock: \"Well, there's the fishing village. An abandoned fish market. A bizarro church. Not much use to the congregation, though -- there always seems to be something wrong with it.\" He thinks for a moment."];
+	  38 [label="Man on water lock: Variable[\"canal.water_lock_left_mid_intro\"]"];
+	  39 [label="Variable[\"canal.water_lock_left_mid_intro\"]", shape=diamond];
+	  40 [label="!(Variable[\"canal.water_lock_left_mid_intro\"])", shape=diamond];
+	  41 [label="Man on water lock: \"'Fraid I can't hang out and chat.\" He looks west, across the water, chewing on a piece of salami. \"Damned water lock's finally been fixed, so I've got to get going.\""];
+	  42 [label="You: \"First things first -- what are you doing here, man on the water lock?\""];
+	  43 [label="Man on water lock: \"Great! Just drop in on Wednesday if you want to see the water lock at work. They say the canal crew will be here at 07.15.\" He cuts a fresh slice from his salami."];
+	  44 [label="Man on water lock: \"Bah! I've handled enough heavy machinery in my day.\""];
+	  45 [label="Man on water lock: \"Cheers!\" He salutes you with a half-eaten piece of salami."];
+	  46 [label="Man on water lock: \"Yeah, not really much else. Just bombed-out ruins.\""];
+	  48 [label="Jump to: [Untitled hub]"];
+	  49 [label="Man on water lock: \"So, wanna do the honours now?\""];
+	  50 [label="You: \"Alrighty then.\" [Leave.]"];
+	  51 [label="Man on water lock: \"Uhm... I haven't seen any *cryptologists* around here, but sure -- if they're on the other side, they're stuck. Like my friend Barry.\""];
+	  52 [label="Man on water lock: Variable[\"canal.water_lock_greeting_done\"]"];
+	  53 [label="Variable[\"canal.water_lock_greeting_done\"]", shape=diamond];
+	  54 [label="!(Variable[\"canal.water_lock_greeting_done\"])", shape=diamond];
+	  55 [label="Kim Kitsuragi: \"Why not?\" The lieutenant ponders the offer for a moment, then decides to go for it. He takes a slice of salami from the man and chews on it."];
+	  56 [label="Man on water lock: IsAfternoon()"];
+	  57 [label="IsAfternoon()", shape=diamond];
+	  58 [label="!(IsAfternoon())", shape=diamond];
+	  59 [label="Man on water lock: IsEvening()"];
+	  60 [label="IsEvening()", shape=diamond];
+	  61 [label="!(IsEvening())", shape=diamond];
+	  62 [label="You: \"We'll see... I'm not all that into manual labour.\""];
+	  63 [label="Jump to: [mainhub]"];
+	  64 [label="Man on water lock: \"G'day to you, officer!\"\n\"G'day to you, officers!\""];
+	  65 [label="Man on water lock: \"Good morning to you, officer!\"\n\"Good morning to you, officers!\""];
+	  66 [label="Man on water lock: \"It'll be restarted on Wednesday morning.\" He nods his head towards the control panel. \"You wanna do the honours when the time comes?\""];
+	  67 [label="Man on water lock: \"Safety measure. Turns out the panel needs a special key to be re-activated. Wouldn't want anyone moving the water lock with debris still in the channel.\""];
+	  68 [label="Man on water lock: DayCount() > 2"];
+	  69 [label="DayCount() > 2", shape=diamond];
+	  70 [label="!(DayCount() > 2)", shape=diamond];
+	  71 [label="Reaction Speed: This is the water lock on the Martinaise Canal. It has to be the same water lock Lena mentioned, the one her husband crossed on his \"expedition.\""];
+	  72 [label="introhub"];
+	  73 [label="Physical Instrument: His posture is relaxed. Despite his powerful build and the knife in his hand, this man resorts to physical intimidation only infrequently, if at all."];
+	  74 [label="Man on water lock: DayCount() > 2"];
+	  75 [label="DayCount() > 2", shape=diamond];
+	  76 [label="!(DayCount() > 2)", shape=diamond];
+	  77 [label="Man on water lock: \"High time I got moving up the coast. But please, officer, after you.\"\n\"'Fraid I can't hang out and chat.\" He looks west, across the water. \"High time I got moving up the coast. But, please, officer, after you.\""];
+	  78 [label="Man on water lock: \"Too bad it also takes a year and a day to repair anything 'round here -- especially a water lock. The rest of the coast is closed off till then.\""];
+	  79 [label="Man on water lock: \"Yeah, not really much else. Just bombed-out ruins.\""];
+	  80 [label="Perception (Taste): It is salty. It is savoury. It is chewy. The hangover only makes the salami *more* tasty."];
+	  81 [label="Man on water lock: IsMorning()"];
+	  82 [label="IsMorning()", shape=diamond];
+	  83 [label="!(IsMorning())", shape=diamond];
+	  84 [label="Man on water lock: \"It's supposed to operate the water lock, but as noted... it's all junk right now. Disabled because of the blockage.\""];
+	  85 [label="Man on water lock: \"Have you ever made a water lock move yourself?\" he adds, gesturing toward the water lock control panel to his right. \"It's quite the thing. Makes a man feel real powerful.\""];
+	  86 [label="Man on water lock: \"Yeah, not really much else. Just bombed-out ruins.\""];
+	  87 [label="Man on water lock: IsKimHere()"];
+	  88 [label="IsKimHere()", shape=diamond];
+	  89 [label="!(IsKimHere())", shape=diamond];
+	  90 [label="Man on water lock: A burly man hangs out by the water lock, carving up a generous serving of salami with an old hunter's knife. His eyes are fixed on a man stranded on the other side of the water lock -- and on an enormous billboard that has fallen down into the canal between them."];
+	  91 [label="Man on water lock: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  92 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  93 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  94 [label="Man on water lock: IsAfternoon()"];
+	  95 [label="IsAfternoon()", shape=diamond];
+	  96 [label="!(IsAfternoon())", shape=diamond];
+	  97 [label="Jump to: [mainhub]"];
+	  98 [label="You: \"I'll get right to it.\" [Leave.]"];
+	  99 [label="Man on water lock: \"Well, there's the fishing village. An abandoned fish market. A bizarro church. Not much use to the congregation, though -- there always seems to be something wrong with it.\" He thinks for a moment."];
+	  100 [label="Kim Kitsuragi: \"We should probably go tell Lena. Take a load off her mind.\""];
+	  101 [label="Man on water lock: Variable[\"whirling.lena_husband_across_water_lock\"]  and  Variable[\"canal.know_water_lock_time\"] == false"];
+	  102 [label="Variable[\"whirling.lena_husband_across_water_lock\"]  and  Variable[\"canal.know_water_lock_time\"] == false", shape=diamond];
+	  103 [label="!(Variable[\"whirling.lena_husband_across_water_lock\"]  and  Variable[\"canal.know_water_lock_time\"] == false)", shape=diamond];
+	  104 [label="Composure: He doesn't actually seem to be in a rush. It's not in his nature. Enviable calm."];
+	  105 [label="Man on water lock: IsMorning()"];
+	  106 [label="IsMorning()", shape=diamond];
+	  107 [label="!(IsMorning())", shape=diamond];
+	  108 [label="Inland Empire: The words *daredevil driver* sound ominous to you."];
+	  109 [label="Man on water lock: \"Evening, officer!\"\n\"Evening, officers!\""];
+	  110 [label="Untitled hub"];
+	  111 [label="Man on water lock: \"Well, there's the fishing village. An abandoned fish market. A bizarro church. Not much use to the congregation, though -- there always seems to be something wrong with it.\" He thinks for a moment."];
+	  112 [label="mainhub"];
+	  113 [label="You: \"Why is it disabled?\""];
+	  114 [label="Tutorial Agent: The coast part of the map is inaccessible until the third day."];
+	  115 [label="Barry the Butcher: From the corner of your eye you see a man in a yellow shirt and grey overalls waving at you from across the canal. He seems disappointed about the wreckage on the water lock -- *and* the salami."];
+	  116 [label="Man on water lock: IsEvening()"];
+	  117 [label="IsEvening()", shape=diamond];
+	  118 [label="!(IsEvening())", shape=diamond];
+	  119 [label="Man on water lock: \"Evening, officer!\"\n\"Evening, officers!\""];
+	  120 [label="You: \"Do I ever!\" (Nod enthusiastically.)"];
+	  0 -> 1
+	  1 -> 52
+	  2 -> 98
+	  2 -> 12
+	  2 -> 14
+	  3 -> 72
+	  4 -> 21
+	  5 -> 22
+	  7 -> 8
+	  7 -> 9
+	  8 -> 77
+	  9 -> 41
+	  10 -> 110
+	  11 -> 74
+	  12 -> 111
+	  13 -> 68
+	  14 -> 44
+	  15 -> 16
+	  15 -> 17
+	  16 -> 49
+	  17 -> 85
+	  18 -> 80
+	  19 -> 91
+	  20 -> 99
+	  21 -> 112
+	  22 -> 108
+	  23 -> 37
+	  25 -> 26
+	  25 -> 27
+	  26 -> 33
+	  27 -> 28
+	  28 -> 112
+	  29 -> 115
+	  30 -> 51
+	  31 -> 18
+	  32 -> 3
+	  33 -> 55
+	  34 -> 74
+	  35 -> 112
+	  36 -> 84
+	  37 -> 79
+	  38 -> 40
+	  38 -> 39
+	  39 -> 13
+	  40 -> 59
+	  41 -> 104
+	  42 -> 29
+	  43 -> 91
+	  44 -> 98
+	  45 -> 48
+	  46 -> 2
+	  48 -> 110
+	  49 -> 2
+	  50 -> 45
+	  51 -> 87
+	  52 -> 53
+	  52 -> 54
+	  53 -> 116
+	  54 -> 38
+	  55 -> 28
+	  56 -> 57
+	  56 -> 58
+	  57 -> 64
+	  58 -> 105
+	  59 -> 60
+	  59 -> 61
+	  60 -> 119
+	  61 -> 56
+	  62 -> 19
+	  63 -> 112
+	  64 -> 90
+	  65 -> 90
+	  66 -> 120
+	  66 -> 62
+	  67 -> 66
+	  68 -> 69
+	  68 -> 70
+	  69 -> 7
+	  70 -> 72
+	  71 -> 112
+	  72 -> 24
+	  72 -> 42
+	  72 -> 5
+	  73 -> 68
+	  74 -> 75
+	  74 -> 76
+	  75 -> 7
+	  76 -> 97
+	  77 -> 50
+	  77 -> 20
+	  78 -> 101
+	  79 -> 35
+	  80 -> 25
+	  81 -> 82
+	  81 -> 83
+	  82 -> 11
+	  83 -> 34
+	  84 -> 113
+	  85 -> 2
+	  86 -> 50
+	  87 -> 88
+	  87 -> 89
+	  88 -> 100
+	  89 -> 4
+	  90 -> 73
+	  91 -> 92
+	  91 -> 93
+	  92 -> 63
+	  93 -> 114
+	  94 -> 96
+	  94 -> 95
+	  95 -> 34
+	  96 -> 81
+	  97 -> 112
+	  98 -> 45
+	  99 -> 86
+	  100 -> 21
+	  101 -> 102
+	  101 -> 103
+	  102 -> 71
+	  103 -> 112
+	  104 -> 15
+	  105 -> 106
+	  105 -> 107
+	  106 -> 65
+	  107 -> 64
+	  108 -> 78
+	  109 -> 74
+	  111 -> 46
+	  112 -> 36
+	  112 -> 6
+	  112 -> 23
+	  112 -> 30
+	  112 -> 31
+	  113 -> 67
+	  114 -> 63
+	  115 -> 32
+	  116 -> 117
+	  116 -> 118
+	  117 -> 109
+	  118 -> 94
+	  119 -> 90
+	  120 -> 43
+}
+

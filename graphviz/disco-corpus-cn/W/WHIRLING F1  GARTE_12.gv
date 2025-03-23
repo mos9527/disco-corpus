@@ -1,0 +1,1578 @@
+# WHIRLING F1 / GARTE
+# ltn Kitsuragi suggests you talk to the manager of the Whirling-in-Rags first. Garte is a hub of knowledge on the area and the case and you will come back to him later. He is also a problem, asking you to pay for the night, to pay for "the damages". It does not reflect well on you.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Garte, the Cafeteria Manager: “是啊，没错！一个真正的英雄。”"];
+	  3 [label="Garte, the Cafeteria Manager: “哦，不是吗？！”他耸了耸肩，好像还想说些什么，但很快又克制住了。"];
+	  4 [label="Kim Kitsuragi: “好吧……我们确实花了一段时间才到现场，但你也花了一段时间才打电话通报尸体——*是*你报的警，对吗？”"];
+	  5 [label="You: “哦，你是说，我还有没有*问题*了？”（问问题）"];
+	  6 [label="Garte, the Cafeteria Manager: “是啊，是啊，他问你还有没有别的问题想问我。像个警官一样。”餐厅经理显然又激动起来了。"];
+	  7 [label="Kim Kitsuragi: “那很好。但这次调查是有时间要求的，由尸体腐败的阶段而定。而这意味着我们得继续了。”"];
+	  8 [label="You: 悄悄溜走。"];
+	  9 [label="You: Variable[\"whirling.garte_vanishment_succeeded\"]"];
+	  10 [label="Variable[\"whirling.garte_vanishment_succeeded\"]", shape=diamond];
+	  11 [label="!(Variable[\"whirling.garte_vanishment_succeeded\"])", shape=diamond];
+	  12 [label="You: “好吧。”"];
+	  13 [label="Authority: 这句话让那个男人定在了原地，他一动不动地盯着柜台，双颊通红。"];
+	  14 [label="You: “去他妈的吧，我要去街上碰碰运气。”"];
+	  15 [label="Garte, the Cafeteria Manager: “账本记得啊！账本上有记录！”他指着账本。“酒钱没得商量，你的警局绝对不可能买单的。”"];
+	  16 [label="Garte, the Cafeteria Manager: “先别谢我。你还欠我30块酒钱呢。如果你今晚还拿不出钱来，我是不会让你上去的……”他指着楼上。"];
+	  17 [label="Garte, the Cafeteria Manager: “你是想恐吓我吗？”他转向警督：“这是怎么回事？”"];
+	  18 [label="Lena, the Cryptozoologist's wife: “看起来不像啊，亲爱的。你还好吗？”一位老妇人出现在黑暗中。"];
+	  19 [label="Lena, the Cryptozoologist's wife: “有椅子挡着，别担心。”"];
+	  20 [label="Jump to: [money_down_hub]"];
+	  21 [label="You: “我不会付窗户钱的……哎呦。”（扶着你的老腰。）"];
+	  22 [label="You: “你看着很像酒保。”"];
+	  23 [label="Authority: 他对你没有丝毫尊重的意思，但这个男人认为自己是个守法公民——而你是法律的代表。"];
+	  24 [label="Perception (Sight): 小小的钢铁铭牌也说明了这一点：“大贼鸥（北贼鸥）。”"];
+	  25 [label="Jump to: [Untitled hub]"];
+	  26 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_half_light_adrenalinequestioning\"]"];
+	  27 [label="Variable[\"whirling.garte_half_light_adrenalinequestioning\"]", shape=diamond];
+	  28 [label="!(Variable[\"whirling.garte_half_light_adrenalinequestioning\"])", shape=diamond];
+	  29 [label="You: “好吧，我就不过多纠缠了。”"];
+	  30 [label="Garte, the Cafeteria Manager: “哦，谢了。”"];
+	  31 [label="Jump to: [Garte_main_hub]"];
+	  32 [label="You: “没错。如果说我对自己有什么了解的话，那就是我是个*彻头彻尾的*、狂热女权主义者。”"];
+	  33 [label="You: “你的耳朵里有生殖器吗？我说我是女权主义者。”"];
+	  34 [label="Composure: 他突然变得活跃起来。这对他来说显然是个敏感的话题。"];
+	  35 [label="You: “你口中的*瑞亚尔*是指某种街头信誉点吗？”"];
+	  36 [label="Garte altintro HUB"];
+	  37 [label="You: “我不可能是警察的……这也太荒谬了。”"];
+	  38 [label="Kim Kitsuragi: “我是57分局的金·曷城。这次是跨区域办案，所以跟我一起来的是41分局的……”他看着你，发现他还不知道你的名字。"];
+	  39 [label="Garte, the Cafeteria Manager: “是的，”他简短地答道。"];
+	  40 [label="Garte, the Cafeteria Manager: “这算什么，你觉得这很好笑吗？现在大家报警的结果就是*这样*？*这种人*？”他指着你。“我们都在这等了一星期了！”"];
+	  41 [label="Kim Kitsuragi: “你说自己刚到——从哪里过来的？你是本地人吗？”"];
+	  42 [label="Garte, the Cafeteria Manager: 他低头看着那只海鸟标本，沉默地摇头。"];
+	  43 [label="You: “你说的对，或许我不该问。”"];
+	  44 [label="Garte, the Cafeteria Manager: “是的。”"];
+	  45 [label="Conceptualization: 是不是很……邪恶？一个人被索取——以及他所拥有的的东西之间的数量级差。"];
+	  46 [label="You: 我出了点意外。"];
+	  47 [label="Garte, the Cafeteria Manager: “你是什么哲学家吗？”"];
+	  48 [label="Kim Kitsuragi: “不，不用，没必要……”他的前额出现了几道皱纹。“你真的应该向局里汇报当前的状况，我車里就有短波电台。打给他们，请求支援。我们必须现在就开始调查。”"];
+	  49 [label="You: “听起来你认为*性*不仅仅是社会组成部分。告诉我，你觉得女人的智力比男人低下吗？”"];
+	  50 [label="Kim Kitsuragi: “41，”警督插了一句。"];
+	  51 [label="Garte, the Cafeteria Manager: “看到那边的门了吗？”他朝西指着弹球桌。“出门右转。那里有……”他停下叹了一口气。“围栏上有个大洞。不用钥匙，穿过那个洞就能进去院子了。”"];
+	  52 [label="Savoir Faire: 在你匆忙离开之前——身后传来一声暴躁的喊叫："];
+	  53 [label="Jump to: [Garte_main_hub]"];
+	  54 [label="You: “所以我不仅是个警察，还是个英雄？”"];
+	  55 [label="You: “我的天，我做了那么多事？”"];
+	  56 [label="Perception (Sight): 一个小小的雕花钢铁铭牌上写着：“大贼鸥（北贼鸥）。”"];
+	  57 [label="You: 沉默不语。"];
+	  58 [label="Garte, the Cafeteria Manager: “你是怎么回事——疯了吗？我当然没有*杀*他啊！”"];
+	  59 [label="You: “好吧，我相信你。”"];
+	  60 [label="Garte, the Cafeteria Manager: “哦。”他有些惊讶你竟然捕捉到了这一点。“我是指码头工人工会，*大家*都说凶手是他们。但都没有人提到我——因为我没有杀人。”"];
+	  61 [label="Garte, the Cafeteria Manager: “是的，没错。”"];
+	  62 [label="Garte, the Cafeteria Manager: “我为什么要对你有意见呢？你可是个英雄警察。”"];
+	  63 [label="Garte, the Cafeteria Manager: “我有*三家*餐厅要管理。三家。得了吧。”"];
+	  64 [label="Garte, the Cafeteria Manager: “我的天呐！你对塞尔维这个人究竟有什么*执念*？算了吧你！”"];
+	  65 [label="Garte, the Cafeteria Manager: “酒算我请你的，好吗？账单上记了*很多*杯。不过我还是得收你三个晚上的住宿费，还有窗户修理费——整好100块。”"];
+	  66 [label="You: “我刚才是听到我的领带*两次*对我说话了吗？”"];
+	  67 [label="You: “看来你不太喜欢我。”"];
+	  68 [label="You: “你在讽刺我。”"];
+	  69 [label="You: “那我一直在干什么呢？你看到过我吗？”"];
+	  70 [label="Garte, the Cafeteria Manager: “我有吗？还是你确实来到这里，放下了尸体，解决了谋杀案，*没有*破坏我的旅社？”"];
+	  71 [label="You: “我都不知道自己是个警察，你确定吗？”"];
+	  72 [label="Garte, the Cafeteria Manager: “哼。”"];
+	  73 [label="Garte, the Cafeteria Manager: “太棒了。”"];
+	  74 [label="You: “那好吧。”"];
+	  75 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_reaction_queastions\"]"];
+	  76 [label="Variable[\"whirling.garte_reaction_queastions\"]", shape=diamond];
+	  77 [label="!(Variable[\"whirling.garte_reaction_queastions\"])", shape=diamond];
+	  78 [label="Garte, the Cafeteria Manager: “哇哦，你可真是个天才！是的，没错——钱。你欠这里130雷亚尔。”他指着柜台上面红色的账本。"];
+	  79 [label="Garte, the Cafeteria Manager: “小心！！”"];
+	  80 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_necktie_talked\"]"];
+	  81 [label="Variable[\"whirling.garte_necktie_talked\"]", shape=diamond];
+	  82 [label="!(Variable[\"whirling.garte_necktie_talked\"])", shape=diamond];
+	  83 [label="Jump to: [main debt hub]"];
+	  84 [label="You: “这附近没有别的地方可以住了吗？”"];
+	  85 [label="Garte, the Cafeteria Manager: “你说另一个让你继续欠钱的地方？我不觉得。工会为了给罢工集资把大多数地方压榨一空，你最好还是回家去吧。”"];
+	  86 [label="Kim Kitsuragi: “警官……”他的前额出现了几道皱纹。“你真的应该向局里汇报当前的状况，我車里就有短波电台。打给他们，请求支援。我们必须现在就开始调查。”"];
+	  87 [label="Garte, the Cafeteria Manager: “你可以找找，但……工会为了给罢工集资把大多数人压榨一空。所以，我不知道……你最好还是回家去吧。”"];
+	  88 [label="You: “我不记得我的家在哪儿了。”"];
+	  89 [label="You: “我没有家。”"];
+	  90 [label="Jump to: [Savoir Faire: \"No. You have sustained a trauma to...\"]"];
+	  91 [label="You: “感谢你的配合。”"];
+	  92 [label="Garte, the Cafeteria Manager: “我有*三家*餐厅要管理。三家。得了吧。”"];
+	  93 [label="You: “不行！他骂我是个混蛋！”"];
+	  94 [label="You: “我能帮你做些什么吗？”"];
+	  95 [label="Empathy: 警督微微挥手，仿若远处鼓点的回声。这是批准的意思。"];
+	  96 [label="You: “我想我就是喜欢面面俱到。”"];
+	  97 [label="Kim Kitsuragi: “我们走吧。”"];
+	  98 [label="You: “我不是女权主义者，只是想看看你的脸上的表情而已。”"];
+	  99 [label="You: 好主意，我会考虑的。（用力扯一下领带。）"];
+	  100 [label="You: “怎么？你不喜欢警官吗？”"];
+	  101 [label="You: “我的天，我做了那么多事？”"];
+	  102 [label="Garte, the Cafeteria Manager: “不是——明白吗——其实你没有。你到这儿来以后，一件有用的事情都没干过。”"];
+	  103 [label="Jump to: [Garte altintro HUB]"];
+	  104 [label="You: “我当然不是认真的啦。”"];
+	  105 [label="Garte, the Cafeteria Manager: 他翻了个白眼。"];
+	  106 [label="You: “没什么。只是想看看如果我这么说了会有什么反应，所以就这么说了。”"];
+	  107 [label="You: “别放在心上。”"];
+	  108 [label="Garte, the Cafeteria Manager: “那可真是太棒了！真的，我真心的。但还有一具尸体在后面，没人愿意在这种情形下工作！已经挂了一个星期了！”"];
+	  109 [label="You: “就这样。”"];
+	  110 [label="Horrific Necktie: 我们快溜吧！是时候按下脱出按钮了。听起来像是一份*责任*，你不喜欢这种东西。"];
+	  111 [label="You: “去死吧，混蛋！”"];
+	  112 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_arrest_authority_success\"]"];
+	  113 [label="Variable[\"whirling.garte_arrest_authority_success\"]", shape=diamond];
+	  114 [label="!(Variable[\"whirling.garte_arrest_authority_success\"])", shape=diamond];
+	  115 [label="Garte, the Cafeteria Manager: “我很抱歉，但如果他付不出钱，我就不能让他继续住在这里……已经三天了，如果今晚还是没钱，他就只能在家工作了。”"];
+	  116 [label="Garte, the Cafeteria Manager: “先别谢我。你还欠我70块呢。如果你今晚还拿不出钱来，我是不会让你上去的。”他指着楼上。"];
+	  117 [label="You: “是的！”"];
+	  118 [label="Lena, the Cryptozoologist's wife: “你说的我是什么意思，是什么意思？”一位老妇人出现在黑暗中。“你还好吗？”"];
+	  119 [label="You: “什么？”"];
+	  120 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_debt_window_and_drinks_down\"]"];
+	  121 [label="Variable[\"whirling.garte_debt_window_and_drinks_down\"]", shape=diamond];
+	  122 [label="!(Variable[\"whirling.garte_debt_window_and_drinks_down\"])", shape=diamond];
+	  123 [label="You: “没问题。”"];
+	  124 [label="Empathy: 那里有个不太好的东西，你现在只知道这么多。"];
+	  125 [label="Garte, the Cafeteria Manager: Variable[\"whirling.dreamone_apes\"]"];
+	  126 [label="Variable[\"whirling.dreamone_apes\"]", shape=diamond];
+	  127 [label="!(Variable[\"whirling.dreamone_apes\"])", shape=diamond];
+	  128 [label="Kim Kitsuragi: 他平静地转向你。“没必要在这里表明我们的主张。我们只需要他的说明，他是这里的店主，记得吗？”"];
+	  129 [label="Authority: 有那么一会儿，男人在警督的注视下有些烦躁。然后他放弃挣扎了。"];
+	  130 [label="Empathy: 他是想让你因为那个洞而感到*愧疚*吗？他的声音暗示了这一点。"];
+	  131 [label="Jump to: [Garte_main_hub]"];
+	  132 [label="Kim Kitsuragi: 警督一动不动地站在那里，面上的表情难以捉摸。"];
+	  133 [label="You: “他伤害过你吗？这就是动机？杀人过后你有觉得很*畅快*吗？”"];
+	  134 [label="Kim Kitsuragi: “是装卸工们自己跟她说的，还是只是谣言？”"];
+	  135 [label="Jump to: [whirling.garte_logic_hoisted]"];
+	  136 [label="Jump to: [Garte_main_hub]"];
+	  137 [label="You: “谁？我吗？”\n（装傻。）“谁？我吗？”"];
+	  138 [label="You: “这是你第二次回避这个话题了。”"];
+	  139 [label="Savoir Faire: 没错，是的。而且很令人担忧，但我们不要过于*纠结*。看看那个愚蠢的酒保吧——根本不知道发生了什么！你的中指竖在半空，酒吧老板像个白痴似的张着嘴巴。给他点颜色看看。"];
+	  140 [label="You: “你是这里的酒保吗？”"];
+	  141 [label="Garte, the Cafeteria Manager: “不知道，我有吗？”他打量着你，评估着你身上的警察气息，发现它严重不足。"];
+	  142 [label="Esprit de Corps: “让他自己去解决吧。”"];
+	  143 [label="You: 沉默不语。"];
+	  144 [label="You: “我的名字*叫*黄昏。”"];
+	  145 [label="Garte, the Cafeteria Manager: “这算什么，你觉得这很好笑吗？现在大家报警的结果就是*这样*？*这种人*？”他转向警督。“我们都在这等了一星期了！”"];
+	  146 [label="Garte, the Cafeteria Manager: “我正好有。”他在一堆杯垫后面翻了翻，找到一张纸条递给了警督。"];
+	  147 [label="Kim Kitsuragi: “我没暗示什么。”他转向你。“警探你呢？”"];
+	  148 [label="Kim Kitsuragi: “是的，库斯托警探。”他刻意板着脸说出了你的名字。“我没什么想问的了。你呢？”"];
+	  149 [label="Kim Kitsuragi: “嗯。”他翻看着自己的小笔记本。“我没什么想问的了。你呢？”"];
+	  150 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_feminist\"]"];
+	  151 [label="Variable[\"whirling.garte_feminist\"]", shape=diamond];
+	  152 [label="!(Variable[\"whirling.garte_feminist\"])", shape=diamond];
+	  153 [label="Garte, the Cafeteria Manager: Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")"];
+	  154 [label="Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")", shape=diamond];
+	  155 [label="!(Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\"))", shape=diamond];
+	  156 [label="You: “自从醒来之后，我甚至连最基本的生活常识都想不起来了。”"];
+	  157 [label="You: “不是很顺利。”"];
+	  158 [label="Garte, the Cafeteria Manager: 那人开口说了几句，但很快止住了。“祝你好运。”"];
+	  159 [label="Garte, the Cafeteria Manager: “行了，妈的。我自己来，我会打给你的警局……41，是不是？我会问他们要房费。但是酒和窗户的钱你还是得给我，一共是70块。完了吗，警官们？”"];
+	  160 [label="You: “我不是很好。”"];
+	  161 [label="Garte, the Cafeteria Manager: “先生，我不是故意的。抱歉，这里一直对警察很友好……”那人似乎被这个事故吓坏了。"];
+	  162 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_debt_window_and_drinks_down\"]"];
+	  163 [label="Variable[\"whirling.garte_debt_window_and_drinks_down\"]", shape=diamond];
+	  164 [label="!(Variable[\"whirling.garte_debt_window_and_drinks_down\"])", shape=diamond];
+	  165 [label="You: “你在讽刺我。”"];
+	  166 [label="Garte, the Cafeteria Manager: “应该是你*没有*做什么？首先是把尸体放下来，解决谋杀案，之后也*没有*破坏我的旅社。也许你还去参与了罢工谈判？”"];
+	  167 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_tc_real\"]"];
+	  168 [label="Variable[\"whirling.garte_tc_real\"]", shape=diamond];
+	  169 [label="!(Variable[\"whirling.garte_tc_real\"])", shape=diamond];
+	  170 [label="Jump to: [Garte, the Cafeteria Manager: \"The man plucks at the seabird, frow...\"]"];
+	  171 [label="Kim Kitsuragi: “我们确实花了一段时间才到现场，但你也花了一段时间才给我们打电话。是你报的警，对吗？”"];
+	  172 [label="You: “为什么码头工人要对这个男人动用私刑呢？”"];
+	  173 [label="Garte, the Cafeteria Manager: “是啊，*罢工*，”他用手指比划着引号。“他们吊死的那个人是港口公司的安保人员，我听说——是个雇佣兵。那些工会分子大概觉得这能传递出一种讯号吧。”"];
+	  174 [label="Garte, the Cafeteria Manager: “那可真是太谢谢你了。”"];
+	  175 [label="You: “她与即将到来的世界末日有关。”"];
+	  176 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_bartender_later\"]"];
+	  177 [label="Variable[\"whirling.garte_bartender_later\"]", shape=diamond];
+	  178 [label="!(Variable[\"whirling.garte_bartender_later\"])", shape=diamond];
+	  179 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_rhetoric_sequencing_trick\"]"];
+	  180 [label="Variable[\"whirling.garte_rhetoric_sequencing_trick\"]", shape=diamond];
+	  181 [label="!(Variable[\"whirling.garte_rhetoric_sequencing_trick\"])", shape=diamond];
+	  182 [label="Garte, the Cafeteria Manager: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  183 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  184 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  185 [label="Garte, the Cafeteria Manager: “夫人，你没事吧？”"];
+	  186 [label="Authority: 他对你没有丝毫尊重的意思，但这个男人认为自己是个守法公民——而你是法律的代表。他想试图避免直接冲突。"];
+	  187 [label="Esprit de Corps: 离这里不远处，一名叫做让·维克玛的三十四岁男子不情愿地修整着自己脸上的毛发，而一位西装革履的黑发女士正等待着他的答案。一个典型的警局清晨在背后嗡嗡作响：电话铃声，翻阅联络簿的声音……"];
+	  188 [label="You: 金正打算说些什么，让他说。"];
+	  189 [label="You: 那位坐着轮椅的女士就在我后面，是吗？"];
+	  190 [label="main debt hub"];
+	  191 [label="Authority: 意思是说：“我没有主动提出要付钱，因为我也没有钱。”"];
+	  192 [label="Suggestion: 一瞬间，他的反感被对于那丁点儿硬币的同情所压倒了。"];
+	  193 [label="Garte, the Cafeteria Manager: “为了生存，为了付*我*钱。除非你想变成*流浪汉*？你想当流浪汉吗？在马丁内斯你无处可去，外面就是寒春。金钱不会让你快乐，却能让你*不*快乐更久一点。”"];
+	  194 [label="You: “我肯定是没有感受过缺爱的！”"];
+	  195 [label="Jump to: [money hub]"];
+	  196 [label="You: “拒绝帮助治安官。你在用疯狂的讨钱诉求妨碍我正在进行的谋杀调查。”"];
+	  197 [label="Jump to: [window_and_room]"];
+	  198 [label="Suggestion: 也许是有办法让他倒杯酒（甚至是给你）的，但并不是这回事"];
+	  199 [label="Garte, the Cafeteria Manager: “什么？！”"];
+	  200 [label="Volition: 不，别听他的。这太疯狂了——只是*聊聊*而已。"];
+	  201 [label="You: “我听着像是敲诈啊。”"];
+	  202 [label="You: “意思是现在我还不能排除*哈里*的可能性。”"];
+	  203 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_asked_about_sylvie_before\"]"];
+	  204 [label="Variable[\"whirling.garte_asked_about_sylvie_before\"]", shape=diamond];
+	  205 [label="!(Variable[\"whirling.garte_asked_about_sylvie_before\"])", shape=diamond];
+	  206 [label="You: “不顺利吗？”"];
+	  207 [label="Jump to: [Untitled hub]"];
+	  208 [label="You: “很好。”"];
+	  209 [label="Garte, the Cafeteria Manager: “祝贺你。还有别的事吗？我想回去做自己的事了。”"];
+	  210 [label="Rhetoric: 他笑着，直到他意识到自己的回击并不漂亮。于是又皱起了眉头。"];
+	  211 [label="You: “什么东西是如同森林大火一般金橙相间，但闻上去像是烈酒？”"];
+	  212 [label="Drama: 他认为您很蠢，大人。"];
+	  213 [label="Lena, the Cryptozoologist's wife: “哦，我没事。但他被我的轮椅绊倒了——去看看他吧！”她关切地看着你。"];
+	  214 [label="You: “我不欠你什么。”"];
+	  215 [label="You: 看着海鸟标本。"];
+	  216 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_esprit_judging\"]"];
+	  217 [label="Variable[\"whirling.garte_esprit_judging\"]", shape=diamond];
+	  218 [label="!(Variable[\"whirling.garte_esprit_judging\"])", shape=diamond];
+	  219 [label="Garte, the Cafeteria Manager: “我生命中的那个阶段已经结束了。不是所有站在柜台后面的人都是酒保，明白吗？我是餐厅的经理。”"];
+	  220 [label="You: “这片幽暗之地很快就会消失，无论你明白与否。”\n“人类实验很快就会结束了，*餐厅经理*。你明白与否无足轻重。”"];
+	  221 [label="Kim Kitsuragi: “先生，我能理解你的担心，但我们就是来履行职责查案的。因此，我需要你保持冷静。”"];
+	  222 [label="Jump to: [Kim Kitsuragi: \"\"Right... Now, I know it took us a...\"]"];
+	  223 [label="You: “她就……什么？”"];
+	  224 [label="Logic: 他的意思大概是现在你应该介入并提出疑问。"];
+	  225 [label="Garte_main_hub"];
+	  226 [label="You: “塞尔维为什么离开了？”"];
+	  227 [label="You: “每件事与每件事都是息息相关的。”"];
+	  228 [label="Jump to: [main debt hub]"];
+	  229 [label="Garte, the Cafeteria Manager: “确实，不是吗？”"];
+	  230 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_esprit_kitsuragi_cash\"]"];
+	  231 [label="Variable[\"whirling.garte_esprit_kitsuragi_cash\"]", shape=diamond];
+	  232 [label="!(Variable[\"whirling.garte_esprit_kitsuragi_cash\"])", shape=diamond];
+	  233 [label="You: “我想那些小猩猩已经开始尖叫了，是的。”"];
+	  234 [label="You: “我不记得我的家在哪儿了。”"];
+	  235 [label="Kim Kitsuragi: “先生，注意措辞。”警督的声音很克制，但很有威胁性，仿佛是从另一个人的口中说出的。"];
+	  236 [label="Kim Kitsuragi: “好的……”警督长叹一口气。“我们走吧。再见，先生。”"];
+	  237 [label="Garte, the Cafeteria Manager: 那人准备说点什么，但很快止住了。“祝你好运。”"];
+	  238 [label="You: “是我在用磨人的法律程序威胁你，因为你妨碍了我办案。”"];
+	  239 [label="Lena, the Cryptozoologist's wife: “这是个玩笑，甜心。我不认为你会在马丁内斯的一家旅社里看到南萨弗里的善良绿人猿。不然就太荒谬了。你还好吗？”"];
+	  240 [label="You: “不，我不那么觉得。”"];
+	  241 [label="Garte, the Cafeteria Manager: “并不是*完全*没问题。你仍然欠我100雷亚尔。如果你今晚还拿不出钱来，我是不会让你上去的……”他指着楼上，你房间的位置。"];
+	  242 [label="Jump to: [Kim Kitsuragi: \"\"Let's go.\"\"]"];
+	  243 [label="Garte, the Cafeteria Manager: “如果我是酒保的话，确实可以。但我不是，我是餐厅的经理。所以我不会。”"];
+	  244 [label="Jump to: [Garte_main_hub]"];
+	  245 [label="Empathy: 他突然变得活跃起来，这对他来说显然是个敏感的话题。"];
+	  246 [label="You: “那我一直在干什么呢？你看到过我吗？”"];
+	  247 [label="Garte, the Cafeteria Manager: “不是——明白吗——其实你没有。你到这儿来以后，一件有用的事情都没干过。”"];
+	  248 [label="Suggestion: 现在不是问他尸体冰箱的时候。"];
+	  249 [label="You: “‘我的*伙伴*’，你是什么意思？”"];
+	  250 [label="Garte, the Cafeteria Manager: “这算什么？你觉得这很好笑吗？外面的尸体已经挂了一星期了！没人愿意在这种情形下工作！”"];
+	  251 [label="Garte, the Cafeteria Manager: “我也不是很清楚，得去问本人了。”"];
+	  252 [label="Jump to: [Garte_main_hub]"];
+	  253 [label="Jump to: [Garte_main_hub]"];
+	  254 [label="lightitup"];
+	  255 [label="You: “我猜这些事我都没做过吧？”\n“啊，那具尸体。我其实并没有把他放下来，对吧？”"];
+	  256 [label="Garte, the Cafeteria Manager: “她就，你懂的……”他耸耸肩。"];
+	  257 [label="Jump to: [Garte altintro HUB]"];
+	  258 [label="Jump to: [Garte, the Cafeteria Manager: \"\"No, I only just got here. It was p...\"]"];
+	  259 [label="Garte, the Cafeteria Manager: “什么？你问我是不是马丁内斯人？不，我住加姆洛克，我只是*时不时*来这里看看。这里只是我管理的众多餐厅之一。”"];
+	  260 [label="Kim Kitsuragi: 警督朝你肯定地点头，然后看了一眼出口。“尸体在大楼后面，是吗——我们要怎么过去？”"];
+	  261 [label="Garte, the Cafeteria Manager: “你不能抓我，我什么都没做。”"];
+	  262 [label="Horrific Necktie: 那个小丑以为自己是什么东西？逮捕他！"];
+	  263 [label="Garte, the Cafeteria Manager: Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")"];
+	  264 [label="Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\")", shape=diamond];
+	  265 [label="!(Variable[\"whirling.necktie_personified\"]  and  CheckEquipped(\"neck_tie\"))", shape=diamond];
+	  266 [label="Garte, the Cafeteria Manager: “啧……”他翻了个白眼。"];
+	  267 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garthe_sayd_they_killed\"]"];
+	  268 [label="Variable[\"whirling.garthe_sayd_they_killed\"]", shape=diamond];
+	  269 [label="!(Variable[\"whirling.garthe_sayd_they_killed\"])", shape=diamond];
+	  270 [label="Ancient Reptilian Brain: 这么快就回来了？"];
+	  271 [label="You: “我还不错。”"];
+	  272 [label="Kim Kitsuragi: “警官，”他转向你。“你需要联系局里，请同事帮你结清这里的账单。我車里就有短波电台，有空就用一下吧。我们必须现在就开始调查。”"];
+	  273 [label="You: “这附近没有别的地方可以住了吗？”"];
+	  274 [label="Jump to: [Garte_altgreeting end HUB]"];
+	  275 [label="Garte, the Cafeteria Manager: “行吧，我把它从账单上划掉！你想睡在末日的狗窝里，随你去吧！我不会再给你另外的房间了。”"];
+	  276 [label="window_and_room"];
+	  277 [label="Jump to: [Garte, the Cafeteria Manager: \"\"Behind this building, there's a co...\"]"];
+	  278 [label="Garte, the Cafeteria Manager: “不，我不是*酒保*。我是这里的经理。”"];
+	  279 [label="Garte, the Cafeteria Manager: “去死吧你。”"];
+	  280 [label="Garte, the Cafeteria Manager: “当地人，客人，来用餐的人。很多码头工人都会来这里用餐。塞尔维跟我说大家都知道是那些码头工人干的。”"];
+	  281 [label="You: “我还有一个问题。”"];
+	  282 [label="Garte, the Cafeteria Manager: “你不是已经问过了吗？你跟这个女人之间有什么问题？她与此事无关。”"];
+	  283 [label="Half Light: 你瞬间紧张起来，血液在你的肌肉里奔腾。你猎食者的直觉告诉你自己，你应该在这个问题上抓住他，*使劲*纠缠他。"];
+	  284 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_bartender_later\"]"];
+	  285 [label="Variable[\"whirling.garte_bartender_later\"]", shape=diamond];
+	  286 [label="!(Variable[\"whirling.garte_bartender_later\"])", shape=diamond];
+	  287 [label="Garte, the Cafeteria Manager: “那你是个沙文主义者咯？哈！”"];
+	  288 [label="Kim Kitsuragi: 曷城警佐在他的橙色夹克口袋里翻找时，传出一阵尼龙摩擦声。\n曷城警佐在他的黑色夹克口袋里翻找时，传出一阵尼龙摩擦声。"];
+	  289 [label="You: 不可能，我有职责在身。我是个警察，是不会跟领带对话的。（取下领带。）"];
+	  290 [label="Jump to: [Garte altintro HUB]"];
+	  291 [label="You: “你看着很像酒保。”"];
+	  292 [label="Garte, the Cafeteria Manager: 一个年近三十，留着稀疏胡子的男人注意到了你的到来。他放下手中的账本，转向警督。\n一个留着稀疏胡子的男人注意到了你的到来。他放下手中的账本，转向警督。\n餐厅经理看到你走过来。他放下手中的账本，转向警督。"];
+	  293 [label="You: “毁灭的先驱。”"];
+	  294 [label="You: “目前我还没想好我的名字。”"];
+	  295 [label="You: “怎么了？”"];
+	  296 [label="Untitled hub"];
+	  297 [label="Garte, the Cafeteria Manager: “我看看。”他做作地翻开开了一页账本。20雷亚尔一晚的房间，三天就是60雷亚尔。还有你*报废*的那扇窗户——我一来上班就看到窗户上的洞了，所以别想狡辩。一共是40雷亚尔的赔偿费用。”"];
+	  298 [label="You: 我不明白……那给人的感觉只是简单地重新定义了一个蹒跚的醉汉的滑稽表演。"];
+	  299 [label="You: “我看看能做什么。”"];
+	  300 [label="Garte, the Cafeteria Manager: “但这并不疯狂，我只是……你欠我钱。”"];
+	  301 [label="You: “没问题。”[离开。]"];
+	  302 [label="Jump to: [Savoir Faire: \"No. You have sustained a trauma to...\"]"];
+	  303 [label="Jump to: [whirling.garte_logic_hoisted]"];
+	  304 [label="Jump to: [whirling.garte_logic_hoisted]"];
+	  305 [label="Garte, the Cafeteria Manager: “我生命中的那个阶段已经结束了。不是所有站在柜台后面的人都是酒保，明白吗？我是餐厅的经理。”"];
+	  306 [label="Garte, the Cafeteria Manager: “哦！”他愤怒地喘着粗气。“你不欠我*什么*？好吧，警官，你说对了——你不欠我什么，你欠我钱。”"];
+	  307 [label="Garte, the Cafeteria Manager: “听着，你的*伙伴*在那边呢。”他看向门口，一个穿着短夹克的男人正用脚轻敲着地板。"];
+	  308 [label="Garte, the Cafeteria Manager: “你去跟他说话吧，行吗？”"];
+	  309 [label="Garte, the Cafeteria Manager: “不，不是我。”"];
+	  310 [label="Kim Kitsuragi: 警督把他一直在记录的小笔记本翻了页。"];
+	  311 [label="You: “谜题解开了！”"];
+	  312 [label="Garte, the Cafeteria Manager: “特别好。”"];
+	  313 [label="Jump to: [Garte_main_hub]"];
+	  314 [label="Untitled hub"];
+	  315 [label="Conceptualization: 看见了吗——大家都认为这是你的配色。关于名字的问题我们是正确的。"];
+	  316 [label="Untitled hub (05)"];
+	  317 [label="Garte, the Cafeteria Manager: “哦，不好意思。你还欠我130*雷亚尔*。”他模仿着贵族的腔调发出了“雷”的音。"];
+	  318 [label="Garte, the Cafeteria Manager: 一名年近三十的男子站在柜台后面，打量着一只海鸟标本。当你靠近时，他瞥了你一眼，很快又收回了视线。"];
+	  320 [label="Drama: 他的眼神左右游移着。这个男人并非在说谎，而是*有*所隐瞒。"];
+	  321 [label="Jump to: [Garte altintro HUB]"];
+	  322 [label="You: “谁？我吗？”\n（装傻。）“谁？我吗？”"];
+	  323 [label="Garte, the Cafeteria Manager: “我约了一名员工出去。她不愿意，却又觉得不得不来。这是个坏主意，但这到底有什么地方如此吸引你？跟私刑一点关系都没有。”"];
+	  324 [label="Kim Kitsuragi: 警督看着你摆弄那条可怕的领带，你的腋下开始出汗。他把手放在你的肩膀上。"];
+	  325 [label="Authority: 脱口而出的这些话，就仿佛上楼梯一般——一切都很好，直至你步子迈得太大，一脚跨过了终点："];
+	  326 [label="You: “老实说，有可能。”"];
+	  327 [label="You: “不，我只是想弄清其中的关联。”"];
+	  328 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_conceptualization_darkness\"]"];
+	  329 [label="Variable[\"whirling.garte_conceptualization_darkness\"]", shape=diamond];
+	  330 [label="!(Variable[\"whirling.garte_conceptualization_darkness\"])", shape=diamond];
+	  331 [label="Jump to: [money hub]"];
+	  332 [label="Kim Kitsuragi: “不，没这个必要……”警督沉默了一会儿。“我们走吧。再见，先生。”"];
+	  333 [label="Garte, the Cafeteria Manager: “好吧，那你只要付窗户修理费用，还有酒钱，一共70。剩下的我就找你的分局要了。”"];
+	  334 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_debt_window_and_room_down\"]"];
+	  335 [label="Variable[\"whirling.garte_debt_window_and_room_down\"]", shape=diamond];
+	  336 [label="!(Variable[\"whirling.garte_debt_window_and_room_down\"])", shape=diamond];
+	  337 [label="Empathy: 你应该为那个洞感到愧疚吗？他的叹息声告诉你：是的。"];
+	  338 [label="Jump to: [Garte_main_hub]"];
+	  339 [label="Garte, the Cafeteria Manager: “好的，应该的。”他退后了一步。"];
+	  340 [label="Jump to: [Kim Kitsuragi: \"\"Sir, I understand your concern, bu...\"]"];
+	  341 [label="Garte, the Cafeteria Manager: “我不知道是谁杀了他，我又不是警察。那是你的工作。”"];
+	  342 [label="You: “任何人？那你杀过别人吗？”"];
+	  343 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_murder_questioned\"]"];
+	  344 [label="Variable[\"whirling.garte_murder_questioned\"]", shape=diamond];
+	  345 [label="!(Variable[\"whirling.garte_murder_questioned\"])", shape=diamond];
+	  346 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_half_light_volition_stopped\"]"];
+	  347 [label="Variable[\"whirling.garte_half_light_volition_stopped\"]", shape=diamond];
+	  348 [label="!(Variable[\"whirling.garte_half_light_volition_stopped\"])", shape=diamond];
+	  349 [label="Garte, the Cafeteria Manager: “是吗？因为我以为你应该去调查私刑，而不是来管该我怎么当老板的。”"];
+	  350 [label="Savoir Faire: 一切都变黑了。"];
+	  351 [label="Garte, the Cafeteria Manager: “现在是不是有点太晚了？”"];
+	  352 [label="Garte, the Cafeteria Manager: “你是对的，不是。”"];
+	  353 [label="You: “这就像你离开了乐队，但还没想好一个单飞艺术家的名字。”"];
+	  354 [label="Garte, the Cafeteria Manager: 他的脸上流露出对于你的深切怀疑。"];
+	  355 [label="Garte, the Cafeteria Manager: “不，你欠我的不是街头信誉点。你欠我钱，欠这里130雷亚尔。”他指着柜台上面红色的账本。"];
+	  356 [label="Garte, the Cafeteria Manager: “你报废的另一样东西是半个吧台——这是30雷亚尔。实际上还有更多，但因为你努力工作、维护瑞瓦肖的稳定与秩序，我们为你四舍五入到30。一共是60+40+30=130雷亚尔。而且没错，雷亚尔仍然是钱。”"];
+	  357 [label="Ancient Reptilian Brain: 感觉像这样，是因为事实就是*如此*，你就是*如此*。"];
+	  358 [label="Ancient Reptilian Brain: 承认吧，你只是想念边窗了。城市边缘的黑暗。"];
+	  359 [label="You: “你是什么意思？”"];
+	  360 [label="You: “去他妈的吧，我要去街上碰碰运气。”"];
+	  361 [label="Garte, the Cafeteria Manager: 那人安静地站在柜台后面，眼睛死死地盯着那件破损的标本，然后又看向账本。他不知道该说什么好了。\n餐厅经理安静地站在柜台后面，眼睛死死地盯着那件破损的标本，然后又看向账本。他不知道该说什么好了。"];
+	  362 [label="Garte, the Cafeteria Manager: “我会打给他们要求补偿房费。但你还欠我70块的酒和窗户费用，而且我并*不*认为女性在智力上不如男性。”"];
+	  363 [label="Garte, the Cafeteria Manager: “并不是*完全*没问题。你仍然欠我60雷亚尔的房费。如果你今晚还拿不出钱来，我是不会让你上去的……”他指着楼上，你房间的位置。"];
+	  364 [label="You: “我猜这些事我都没做过吧？”\n“啊，那具尸体。我其实并没有把他放下来，对吧？”"];
+	  365 [label="Empathy: 你跟这家伙之间的所有事都解决了。他是我的超级粉丝。跟他闲聊一下吧。"];
+	  366 [label="Garte, the Cafeteria Manager: 他假装没听见你的话，反而把注意力集中到了那只鸟身上。"];
+	  367 [label="Jump to: [Kim Kitsuragi: \"\"Right... Now, I know it took us a...\"]"];
+	  368 [label="Garte, the Cafeteria Manager: “她离开是因为*不关你的事*。”"];
+	  369 [label="Garte, the Cafeteria Manager: “是吗？或许吧……或许她跟世界末日*有关*。”他嗤之以鼻。“塞尔维不在这儿是因为我问她要了电话。或多或少也是因为外面的尸体，但主要是因为我。希望你能理解……”"];
+	  370 [label="Garte, the Cafeteria Manager: “算了吧。”"];
+	  371 [label="Untitled hub (02)"];
+	  372 [label="You: 金正打算说些什么，让他说。"];
+	  373 [label="You: “哦，我明白了，你的意思是我欠你钱。”"];
+	  374 [label="Horrific Necktie: 没人这么说，没人说过领带会说话——不然也太可笑了。只是……你应该逮捕他，这样*比较好*，他想拿你的钱。"];
+	  375 [label="Garte, the Cafeteria Manager: Variable[\"reputation.superstar_cop\"] >=2"];
+	  376 [label="Variable[\"reputation.superstar_cop\"] >=2", shape=diamond];
+	  377 [label="!(Variable[\"reputation.superstar_cop\"] >=2)", shape=diamond];
+	  378 [label="Garte, the Cafeteria Manager: “应该是你*没有*做什么？首先是把尸体放下来，解决谋杀案，之后也*没有*破坏我的旅社。甚至还有参加罢工谈判……”"];
+	  379 [label="You: “这段时间以来我都在干什么？你看到过我吗？”"];
+	  380 [label="Garte, the Cafeteria Manager: “我真的无言以对了。”他低着头看海鸟。"];
+	  381 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_alt_logic_sylvie\"]"];
+	  382 [label="Variable[\"whirling.garte_alt_logic_sylvie\"]", shape=diamond];
+	  383 [label="!(Variable[\"whirling.garte_alt_logic_sylvie\"])", shape=diamond];
+	  384 [label="Garte, the Cafeteria Manager: “没错，我知道*一些*地方。但就像我说的，我不住这儿。我以前在这里工作过，但之后都不打算再来了。如果你想暗示我什么的话，不必了。”"];
+	  385 [label="You: “好吧。问题，我有一个。”"];
+	  386 [label="You: “实际上，我什么都想不出来。”"];
+	  387 [label="You: （继续，但别让他看到硬币。它们是*你的*。）"];
+	  388 [label="You: “我看看能做什么。”"];
+	  389 [label="Garte, the Cafeteria Manager: “不，很有*问题*。你还欠我30块酒钱呢。如果你今晚还拿不出钱来，我是不会让你上去的……”他指着楼上。"];
+	  390 [label="Lena, the Cryptozoologist's wife: “那太糟了。”一位老妇人出现在黑暗中。“我们都需要一点爱。你还好吗？”"];
+	  391 [label="Garte, the Cafeteria Manager: “行吧，我把它从账单上划掉！你想睡在末日的狗窝里就去吧！但记住，我不会再给你另外的房间了。”"];
+	  392 [label="Jump to: [Garte_main_hub]"];
+	  393 [label="Jump to: [Garte altintro HUB]"];
+	  394 [label="Garte, the Cafeteria Manager: 这只白褐相间的海鸟是一件极其出色的动物标本作品，它躺在成堆的杯垫和晒干的马克杯之中，一只翅膀折断了。这人正在设法修理它。"];
+	  395 [label="Jump to: [Kim Kitsuragi: \"\"Sir, I understand your concern, bu...\"]"];
+	  396 [label="You: “是你杀的吗？”"];
+	  397 [label="Garte, the Cafeteria Manager: “你是白痴吗？！我说了我没杀过任何人！”"];
+	  398 [label="You: “你杀了塞尔维吗？”"];
+	  399 [label="Kim Kitsuragi: “够了。”你听不出这句话在针对谁，你还是加尔特。"];
+	  400 [label="Jump to: [Kim Kitsuragi: \"There's a shuffle of nylon as Lieut...\"]"];
+	  401 [label="You: “好吧，我就不过多纠缠了。”"];
+	  402 [label="Lena, the Cryptozoologist's wife: “是的，是的——去看看他吧！”"];
+	  403 [label="Garte, the Cafeteria Manager: “这算什么问题？”"];
+	  404 [label="Untitled hub"];
+	  405 [label="Garte, the Cafeteria Manager: Variable[\"tc.you_are_cop\"]"];
+	  406 [label="Variable[\"tc.you_are_cop\"]", shape=diamond];
+	  407 [label="!(Variable[\"tc.you_are_cop\"])", shape=diamond];
+	  408 [label="Garte_altgreeting end HUB"];
+	  409 [label="You: “就像我说的，拉斐尔·安普罗修斯·库斯托警探。”"];
+	  410 [label="Garte, the Cafeteria Manager: “我*完全*不知道那是什么意思。”"];
+	  411 [label="Garte, the Cafeteria Manager: “别放在心上？*黄昏*？什么东西？现在大家报警的结果就是*这样*？”他指着你。“*这种人*？警督，我们已经在这等了一星期了！”"];
+	  412 [label="You: “你对我有什么意见吗？”"];
+	  413 [label="Jump to: [Garte_main_hub]"];
+	  414 [label="Garte, the Cafeteria Manager: “别急啊。”他指着你。“你还欠我130雷亚尔。”"];
+	  415 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_vanishment_succeeded\"]"];
+	  416 [label="Variable[\"whirling.garte_vanishment_succeeded\"]", shape=diamond];
+	  417 [label="!(Variable[\"whirling.garte_vanishment_succeeded\"])", shape=diamond];
+	  418 [label="You: 我为什么要这么做？为什么我要用*两只*手朝他竖中指？为什么是两只……"];
+	  419 [label="You: “好吧，你没有被捕。”"];
+	  420 [label="Garte, the Cafeteria Manager: “我不需要你*说*任何东西，把钱给我就行。”"];
+	  421 [label="You: （数一数，交给他。）这里有10加10加20一共40。现在我只欠你90了，对吗？”"];
+	  422 [label="You: “为什么我会需要钱呢？”"];
+	  423 [label="Garte, the Cafeteria Manager: “你认真的吗？工作啊，我也说不好……还可以受贿，我猜。”他看着警督。“抱歉，我不觉得警察会收受贿赂。”"];
+	  424 [label="You: “你告诉我这是怎么回事？你*强暴*过她吗？”"];
+	  425 [label="You: “有什么区别吗？”"];
+	  426 [label="Garte, the Cafeteria Manager: “我有吗？还是你确实来到这里，放下了尸体，解决了谋杀案，*没有*破坏我的旅社？”"];
+	  427 [label="Jump to: [Garte_main_hub]"];
+	  428 [label="Jump to: [Garte_main_hub]"];
+	  429 [label="You: “不知道，我只是想争取一下。”"];
+	  430 [label="You: “不，老兄。帮帮我吧：什么东西是金橙相间，但闻上去像是烈酒？”"];
+	  431 [label="Kim Kitsuragi: “够了，先生。再见。”"];
+	  432 [label="You: 收起硬币。"];
+	  433 [label="Garte, the Cafeteria Manager: 他明显抑制住了一声厌世的叹息。"];
+	  434 [label="You: “你被逮捕了。”"];
+	  435 [label="Garte, the Cafeteria Manager: “答对了，你没有。不过是整整*三天*一事无成而已。”"];
+	  436 [label="Esprit de Corps: “你看到他穿的衣服了吗？”男人问。“就好像他甚至都不再是个警察了。像个小丑一样出现，浑身散发着酒气。冲每个人大喊大叫……我受够那家伙了。”"];
+	  437 [label="Garte, the Cafeteria Manager: “没错，不是吗？”他看着你，难以置信地摇着头。"];
+	  438 [label="You: “责任已经让我的身体付出了代价，但我仍然会再次承担起来。我就是这样的人。”"];
+	  439 [label="Garte, the Cafeteria Manager: “哼。”"];
+	  440 [label="Garte, the Cafeteria Manager: Variable[\"tc.raphael_ambrosius_costeau\"]"];
+	  441 [label="Variable[\"tc.raphael_ambrosius_costeau\"]", shape=diamond];
+	  442 [label="!(Variable[\"tc.raphael_ambrosius_costeau\"])", shape=diamond];
+	  443 [label="You: “你说的对。”"];
+	  444 [label="Kim Kitsuragi: “如果你实在没钱也没关系，我们都不是为了工资才干这个的。”"];
+	  445 [label="You: 哇哦，还有更多的你在这里吗？藏起来了？我可真是太酷了。"];
+	  446 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_alt_cafeteriamanager\"]"];
+	  447 [label="Variable[\"whirling.garte_alt_cafeteriamanager\"]", shape=diamond];
+	  448 [label="!(Variable[\"whirling.garte_alt_cafeteriamanager\"])", shape=diamond];
+	  449 [label="Pain Threshold: 当你把背部贴在冰冷的地砖上时，疼痛消失了。你只需站起来，掸掸身上的灰尘……"];
+	  450 [label="Garte, the Cafeteria Manager: “不，”他倾身强调，“不可以。”"];
+	  451 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_logic_hoisted\"]"];
+	  452 [label="Variable[\"whirling.garte_logic_hoisted\"]", shape=diamond];
+	  453 [label="!(Variable[\"whirling.garte_logic_hoisted\"])", shape=diamond];
+	  454 [label="You: “你这有冰箱吗？”"];
+	  455 [label="Inland Empire: 关于它的某些东西让你觉得苦涩……"];
+	  456 [label="You: “这只鸟怎么了？”"];
+	  457 [label="You: “那是大贼鸥，对吗？”"];
+	  458 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_alt_cafeteriamanager\"]"];
+	  459 [label="Variable[\"whirling.garte_alt_cafeteriamanager\"]", shape=diamond];
+	  460 [label="!(Variable[\"whirling.garte_alt_cafeteriamanager\"])", shape=diamond];
+	  461 [label="Garte, the Cafeteria Manager: “而且我不想再看到那个挂了一个星期的死尸了！”他冲外面比划了一下。“没人愿意在这种情形下工作！”"];
+	  462 [label="You: “具体是谁说的呢？”"];
+	  463 [label="Garte, the Cafeteria Manager: 他愤怒地盯着你。“那真的太遗憾了。”"];
+	  464 [label="You: “大家指的是谁？”"];
+	  465 [label="You: “但如果我没有呢？”（继续。）"];
+	  466 [label="Rhetoric: *先*问他尸体的位置，再问是不是他干的。人们往往会在一些无关痛痒的问题中泄露某些信息，你可以在之后更加严肃的提问中利用起来，反之亦然。"];
+	  467 [label="Rhetoric: 他动摇了。现在去讨价还价吧，他会屈服的。"];
+	  468 [label="Garte, the Cafeteria Manager: “你确定吗，夫人？”"];
+	  469 [label="You: “我觉得你不怎么喜欢我。”"];
+	  470 [label="Garte, the Cafeteria Manager: “*现在*你又是警察了？得了吧。”"];
+	  471 [label="Garte, the Cafeteria Manager: “什么？”"];
+	  472 [label="Garte, the Cafeteria Manager: “那是什么意思——大概？”"];
+	  473 [label="You: “是谁杀了他？”"];
+	  474 [label="Kim Kitsuragi: 他翻看着自己的小笔记本。“我没什么想问的了。你呢？”"];
+	  475 [label="Jump to: [Garte_main_hub]"];
+	  476 [label="Garte, the Cafeteria Manager: “你欠我的是钱，不是什么护肤品。钱，你欠这里130雷亚尔。”他指着柜台上面红色的账本。"];
+	  477 [label="Kim Kitsuragi: 警督看着你扯着那条花哨的领带，他把手放在你的肩膀上："];
+	  478 [label="You: “我不知道自己为什么会这么说，还以为这是警察会说的话呢。”"];
+	  479 [label="Jump to: [main debt hub]"];
+	  480 [label="Garte, the Cafeteria Manager: “钱是成年人用来交易的东西，比如这间旅社的房间或是……”他瞄了一眼账本。“……八瓶*混合烈酒*和九包*精装皇家*。说真的，我们用它完成日常的一切。”"];
+	  481 [label="Garte, the Cafeteria Manager: “是的。”"];
+	  482 [label="You: “这也太可怕了。”"];
+	  483 [label="Kim Kitsuragi: 曷城警督在他的橙色夹克口袋里翻找时，传出一阵尼龙摩擦声。"];
+	  484 [label="You: 相当值得。"];
+	  485 [label="Limbic System: 外面怎么样了？那些小猩猩还在尖叫着要钱吗？"];
+	  486 [label="Kim Kitsuragi: “抱歉我帮不上什么忙。”他的前额，眼镜上方出现了几道皱纹。“你真的应该向局里汇报当前的状况，我車里就有短波电台，好吗？我们必须现在就开始调查。”"];
+	  487 [label="Authority: 这句话让餐厅经理定在了原地，他一动不动地盯着柜台，双颊通红。"];
+	  488 [label="Authority: 在你忧郁的灵魂深处，一个术语浮现出来：\n有人想听对于*法律*含糊而滑稽的解读吗？你的脑海中浮现了不止一个：\n你的脑海中浮现出一大堆含糊、滑稽的法律解读："];
+	  489 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_noquestions\"]"];
+	  490 [label="Variable[\"whirling.garte_noquestions\"]", shape=diamond];
+	  491 [label="!(Variable[\"whirling.garte_noquestions\"])", shape=diamond];
+	  492 [label="You: “能给我来杯喝的吗？”"];
+	  493 [label="Garte, the Cafeteria Manager: “如果我是酒保的话，确实可以。但我不是，我是餐厅的经理。所以我不会。”"];
+	  494 [label="Untitled hub"];
+	  495 [label="Garte, the Cafeteria Manager: “哦，不是吗？！”他耸了耸肩，好像还想说些什么，但很快又克制住了。"];
+	  496 [label="Garte, the Cafeteria Manager: “答对了，你没有。不过是整整*三天*一事无成而已。”"];
+	  497 [label="Rhetoric: 这就对了！他说是*他们*把他吊在了树上——如果他什么都不知道，那*他们*是谁？"];
+	  498 [label="Reaction Speed: 似乎是你可以*用到*的东西——之后可以打给这个塞尔维……"];
+	  499 [label="Tutorial Agent: 你获得了一项思维！在本次对话结束后，前往你的思维阁并开始内化新思维吧，这将给你带来加成效果。"];
+	  500 [label="Garte, the Cafeteria Manager: 看上去这只鸟是从用来镶嵌它的盾牌上扯下来的——很可能是在墙上。"];
+	  501 [label="Encyclopedia: 这是一只大贼鸥。这种海鸟是发现伊苏林迪洲的象征，就是现在这个世界的一部分。"];
+	  502 [label="Garte, the Cafeteria Manager: “大楼后面有个院子。”他指着身后的厨房。“他们把他吊在那边的树上了。”"];
+	  503 [label="You: “那我们要怎么过去呢？”"];
+	  504 [label="Encyclopedia: 这人指的是无罪之王弗兰考格斯的重骑兵，以第五世纪的风姿扫荡了平原以及其上的人类公敌之国。他们的觉醒统一了货币以及带来了种种被称为*酷*的东西。他们身披薄甲，手持尖枪。但最重要的是，弗兰考格斯的重骑兵团极其之浩大，围栏上的那个洞一定*硕大无比*。"];
+	  505 [label="Garte, the Cafeteria Manager: “我一定得回答他吗？”他问警督。“这是强制性的吗？”"];
+	  506 [label="Half Light: 更多，用力，施压……"];
+	  507 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_esprit_kitsuragi_cash\"]"];
+	  508 [label="Variable[\"whirling.garte_esprit_kitsuragi_cash\"]", shape=diamond];
+	  509 [label="!(Variable[\"whirling.garte_esprit_kitsuragi_cash\"])", shape=diamond];
+	  510 [label="Jump to: [main debt hub]"];
+	  511 [label="Empathy: 或许真正对“塞尔维这个人”有执念的是他？听上去确实如此。"];
+	  512 [label="Garte, the Cafeteria Manager: 他转向警督。“现在报警的结果就是*这样*？我们都在这等了一星期了！”"];
+	  513 [label="Garte, the Cafeteria Manager: “哦，不是的，”他头也不抬地说。“你是个英雄，真正的英雄警察。”"];
+	  514 [label="You: “等等，你刚才是不是说我是个*警察*？”\n“所以这都是真的，*我*真是一个警察？”"];
+	  515 [label="Garte, the Cafeteria Manager: 那人皱着眉头，拨弄着海鸟。"];
+	  516 [label="Garte, the Cafeteria Manager: “你现在是认真的吗？”"];
+	  517 [label="You: “当然——如果你口中的*法律*指的是*血液酒精含量*的话。”"];
+	  518 [label="You: “明白了。”"];
+	  519 [label="Garte, the Cafeteria Manager: “我有三家餐厅要管理。*三家*。塞尔维才是这里的酒保，不是我，我只是站在这里而已。”"];
+	  520 [label="Kim Kitsuragi: “是……加尔特先生吗？”金瞄了一眼他的小笔记本。“你是这里的店主吗？”"];
+	  521 [label="You: “别放在心上。”"];
+	  522 [label="Jump to: [Garte altintro HUB]"];
+	  523 [label="You: “不了，我不用。”（不问问题。）"];
+	  524 [label="You: “不，之前我问的是*哪里*。现在我问的是她*为什么*要离开。”"];
+	  525 [label="Garte, the Cafeteria Manager: “知道吗，我经常听到这种话。几个流浪汉，或是几个混蛋背包客从船上下来。到第二天他们掏不出钱来的时候，就会变得*咄咄逼人*起来。不过我从未想过这会发生在警察身上。拜托了，把钱给我就好……”"];
+	  526 [label="You: 让这个男人摆正位置。"];
+	  527 [label="You: Variable[\"whirling.garte_arrest_authority_success\"]"];
+	  528 [label="Variable[\"whirling.garte_arrest_authority_success\"]", shape=diamond];
+	  529 [label="!(Variable[\"whirling.garte_arrest_authority_success\"])", shape=diamond];
+	  530 [label="Jump to: [main debt hub]"];
+	  531 [label="You: 自己留着，把硬币收起来。"];
+	  532 [label="money hub"];
+	  533 [label="Ancient Reptilian Brain: 我不该让你离开的，应该把你留在这儿……你所在的地方光明吗？可怕吗？你感受到爱了吗？"];
+	  534 [label="You: “我没有家。”"];
+	  535 [label="Lena, the Cryptozoologist's wife: “看起来不像啊，亲爱的。你还好吗？”一位老妇人出现在黑暗中。"];
+	  536 [label="Kim Kitsuragi: “警官，或许你还是从家里来办案比较好？你住在加姆洛克，是吗？也不是很远。”"];
+	  537 [label="Garte, the Cafeteria Manager: “先别谢我。你还欠我60雷亚尔的房费呢。如果你今晚还拿不出钱来，我是不会让你上去的……”他指着楼上，你房间的位置。"];
+	  538 [label="You: “我想我*没有*钱。”（继续。）"];
+	  539 [label="You: “明白了。”"];
+	  540 [label="You: “我忘记自己的名字了。”"];
+	  541 [label="You: “我不喜欢你说话的语气。”"];
+	  542 [label="You: “你并没有完全说服我。”"];
+	  543 [label="Garte, the Cafeteria Manager: “好吧，被你发现了。她离开是因为外面那具尸体——以及我问她要了电话。所以塞尔维离开了，希望你能理解……”"];
+	  544 [label="You: “我不是警察吗？每件事都与我有关。”"];
+	  545 [label="You: “你是这里的酒保吗？”"];
+	  546 [label="Garte, the Cafeteria Manager: “我知道。”"];
+	  547 [label="Garte, the Cafeteria Manager: “是你，明显是你。*你*闻上去一股酒味，而且是橙色的。”"];
+	  548 [label="Untitled hub"];
+	  549 [label="Empathy: 他的眼里满是轻蔑，即便是现在他也在故意无视你。"];
+	  550 [label="Logic: 楼上的巨大财产损失与此有关吗？"];
+	  551 [label="You: “我都做了什么？”"];
+	  552 [label="Jump to: [Garte altintro HUB]"];
+	  553 [label="Garte, the Cafeteria Manager: “不，我也是刚到。大概是塞尔维打的电话吧，她通常在这里的酒吧工作。我只是临时来接替她的。”"];
+	  554 [label="Garte, the Cafeteria Manager: “这样的吗？女权先生……”还未将剩下的话说出口他便闭上了嘴，可能觉得还是不说为好。"];
+	  555 [label="Garte, the Cafeteria Manager: “别急啊，女权先生。”他指着你。“你还欠我130雷亚尔。”"];
+	  556 [label="You: “我欠这里多少？”"];
+	  557 [label="Jump to: [main debt hub]"];
+	  558 [label="You: 留下钱。"];
+	  559 [label="Jump to: [Kim Kitsuragi: \"There's a shuffle of nylon as Lieut...\"]"];
+	  560 [label="You: “现在要怎么办？”"];
+	  561 [label="You: “我去哪里能弄到钱呢？”\n“有意思，哪里才能拿到它呢？”"];
+	  562 [label="Ancient Reptilian Brain: 那就是脊髓的奥秘。脊髓还未向你揭示全部的自己——它那极其不洁的奥秘。"];
+	  563 [label="Garte, the Cafeteria Manager: “祝你好运。”"];
+	  564 [label="You: “我不记得我喝过了，我是不会付酒钱的。”"];
+	  565 [label="You: “你已经承认了*性*犯罪，你要被关进*性*监狱了。”"];
+	  566 [label="Garte, the Cafeteria Manager: 他笑了出来。“看在上帝份上……”"];
+	  567 [label="Garte, the Cafeteria Manager: “看在神明的份上，小心点儿。”"];
+	  568 [label="Garte, the Cafeteria Manager: “你是对的，不是。”"];
+	  569 [label="Kim Kitsuragi: “咳……”警督冲你咳了几声。“不是现在。”"];
+	  570 [label="You: “是你杀的吗，加尔特？”"];
+	  571 [label="You: “你为什么要杀他？”"];
+	  572 [label="Garte, the Cafeteria Manager: “我估计是因为他们也没有别的事可做了。”"];
+	  573 [label="Kim Kitsuragi: “你是说罢工？”"];
+	  574 [label="Untitled hub"];
+	  575 [label="You: “这些事让我很烦躁，我是个女权主义者。”"];
+	  576 [label="Untitled hub"];
+	  577 [label="Empathy: 他的眼里满是轻蔑，即便是现在他也在故意无视你。看来他不怎么喜欢你。"];
+	  578 [label="You: “我不喜欢你说话的语气，这不是跟警察说话的方式。”"];
+	  579 [label="Garte, the Cafeteria Manager: “不，我没有*看到过你*。我也没有一直待在这里。”他又低下了头，继续修整那只鸟的羽毛。"];
+	  580 [label="Garte, the Cafeteria Manager: “不，我不是*酒保*。我是这里的经理。”"];
+	  581 [label="You: “没什么，我只是想听你说出来。”"];
+	  582 [label="You: “有什么区别吗？”"];
+	  583 [label="Kim Kitsuragi: “但这一片你还是很熟悉的，是吗？以防我们需要指路。”"];
+	  584 [label="Inland Empire: 没人说过你在吊扇上发现的那条混合纹领带会*说话*，没有人。这一定只是你的*想象*，但……"];
+	  585 [label="Garte, the Cafeteria Manager: “真成熟，老兄！真成熟。”"];
+	  586 [label="Savoir Faire: 上一秒你还在像风一样狂奔着，下一刻就突然转身朝他竖起了中指。那么愤怒，还用了两只手。为什么？！"];
+	  587 [label="Jump to: [Garte_altgreeting end HUB]"];
+	  588 [label="You: “但究竟什么*是*钱呢？”\n“但究竟什么*是*钱呢？”"];
+	  589 [label="You: “我他妈当然可以，*贱人*！”"];
+	  590 [label="Garte, the Cafeteria Manager: “没错。”他静静地站在那里，看着柜面上的硬币。"];
+	  591 [label="Jump to: [Kim Kitsuragi: \"There's a shuffle of nylon as Lieut...\"]"];
+	  592 [label="Garte, the Cafeteria Manager: “如果没有钱，只有死路一条。大家都是一样——包括我。所以我需要你向我付钱。”他停下来，自言自语道：“我不是个混蛋。”"];
+	  593 [label="You: “没关系，会好的。”"];
+	  594 [label="Garte, the Cafeteria Manager: 他转向警督。“我很抱歉，但他必须得付钱，否则我不会让他继续住在这里了。如果他今晚还是付不出钱，那……”他耸耸肩。"];
+	  595 [label="Kim Kitsuragi: “你太鲁莽了。有人在这里被杀了，去向41分局申请补偿金吧。我们现在得去工作了。”"];
+	  596 [label="You: “我不会付窗户钱的。”"];
+	  597 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_debt_window_and_room_down\"]"];
+	  598 [label="Variable[\"whirling.garte_debt_window_and_room_down\"]", shape=diamond];
+	  599 [label="!(Variable[\"whirling.garte_debt_window_and_room_down\"])", shape=diamond];
+	  600 [label="Jump to: [Garte altintro HUB]"];
+	  601 [label="You: “我很好奇塞尔维会怎么说？”"];
+	  602 [label="Kim Kitsuragi: “我们要怎么过去呢？”"];
+	  603 [label="You: “但你还是可以给我倒杯酒的，对吧？”"];
+	  604 [label="You: “我不喜欢你说话的语气，这不是跟警察说话的方式。”"];
+	  605 [label="Garte, the Cafeteria Manager: ”不，我并没有*看到过你*。我也是刚到，记得吗？”他看了看你，然后又看向警督。“还有什么事吗？”"];
+	  606 [label="You: “你之前说过*他们*把他吊在树上，*他们*指的是谁？”"];
+	  607 [label="Garte, the Cafeteria Manager: “我没有。”他转向警督：“我很不喜欢这样，这算什么？”"];
+	  608 [label="Garte, the Cafeteria Manager: “哦。”他有些惊讶你竟然捕捉到了这一点。“大家都说是码头工会的人干的，是一场私刑。”"];
+	  609 [label="Jump to: [Garte_main_hub]"];
+	  610 [label="Rhetoric: 他们没说你是个警察吗？"];
+	  611 [label="You: “你听到我说的了。”"];
+	  612 [label="You: “*雷亚尔*听上去像是某种高档护肤产品……但我怎么会欠你一百三十个呢？”"];
+	  613 [label="You: [离开。]"];
+	  614 [label="You: “所以我不仅是个警察，还是个英雄？”"];
+	  615 [label="You: “那就说得通了。从我起床到现在，就一直感觉到我身体里有某种东西……”（看着自己的手，感觉它流过你的血管。）“现在我明白那是*法律*了。”"];
+	  616 [label="You: “那这个塞尔维去哪儿了？”"];
+	  617 [label="Jump to: [You: \"\"Wait, did you just say I was a *co...\"]"];
+	  618 [label="You: “我站在了悬崖边缘，我看到了终结。”\n“我站在了悬崖边缘，餐厅经理，我看到了终结。”"];
+	  619 [label="Empathy: 他是被你激怒了吗？他完全避开了眼神交流，仿佛你根本不存在一样。"];
+	  620 [label="Kim Kitsuragi: “你有她的号码吗？”"];
+	  621 [label="Kim Kitsuragi: 警督翻开他的小笔记本扉页，号码被安全地塞在一个小口袋里。“谢谢。”他说。"];
+	  622 [label="Horrific Necktie: 不知怎的，这个结系得太死，你无法解开。警督看着你与它之间的斗争，汗水从你的额头上滴落。他把手放在你的肩膀上："];
+	  623 [label="Garte, the Cafeteria Manager: “哦，所以现在我又变成*贱人*了。行吧，我可以当‘贱人’，那你就是欠我钱的破产警察，而且没有人会逮捕任何人，因为那样就太疯狂了。怎么样？”"];
+	  624 [label="Garte, the Cafeteria Manager: “不，你看……”他的声音里有一丝悲哀。“那是40*分*。分是一种比雷亚尔小一百倍的货币，我甚至都不会要这个。等你凑够130雷亚尔的时候再来吧。”"];
+	  625 [label="You: “小*一百*倍？”"];
+	  626 [label="You: “黑暗笼罩一切。”（收起硬币。）"];
+	  627 [label="Garte, the Cafeteria Manager: 他静静地站在那里，看着柜面上的硬币。\n餐厅经理静静地站在那里，看着柜面上的硬币。"];
+	  628 [label="Ancient Reptilian Brain: 你*当然*很酷，比最深的海底还要酷，对这个世界来说酷过头了。"];
+	  629 [label="Garte, the Cafeteria Manager: “好吧，好吧……”他安静下来。“我知道是怎么回事了——那好吧。我会打给你的警局……你刚刚说多少来着？”"];
+	  630 [label="Lena, the Cryptozoologist's wife: “这些*小猩猩*中有没有一只浅绿色脸的？”一位老妇人出现在黑暗中。"];
+	  631 [label="You: “不，*你*还好吗？”"];
+	  632 [label="money_down_hub"];
+	  633 [label="Garte, the Cafeteria Manager: “先别谢我。你还欠我100雷亚尔呢。如果你今晚还拿不出钱来，我是不会让你上去的……”他指着楼上，你房间的位置。"];
+	  634 [label="Kim Kitsuragi: “警官……我想的更多的是你的名字。”"];
+	  635 [label="Garte, the Cafeteria Manager: “是啊，没错！”他带着嘲弄的赞赏看着你。“一个真正的英雄。”"];
+	  636 [label="You: “我都做了什么？”"];
+	  637 [label="You: “那我一直在干什么呢？你看到过我吗？”"];
+	  638 [label="Garte, the Cafeteria Manager: IsTHCPresent(\"shit_together\")"];
+	  639 [label="IsTHCPresent(\"shit_together\")", shape=diamond];
+	  640 [label="!(IsTHCPresent(\"shit_together\"))", shape=diamond];
+	  641 [label="You: “好吧，冷静一点。这到底是怎么回事？”\n“好吧，冷静点，餐厅经理。这到底是怎么回事？”"];
+	  642 [label="Authority: 有那么一会儿，餐厅经理在警督的注视下有些烦躁。然后他放弃挣扎了。"];
+	  643 [label="You: “你可以跟我说实话，加尔特。是你杀的人，对吗？”"];
+	  644 [label="Garte, the Cafeteria Manager: 他无视了你。"];
+	  645 [label="Jump to: [Garte, the Cafeteria Manager: \"\"Okay, you got me. She went away be...\"]"];
+	  646 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_tc_real\"]"];
+	  647 [label="Variable[\"whirling.garte_tc_real\"]", shape=diamond];
+	  648 [label="!(Variable[\"whirling.garte_tc_real\"])", shape=diamond];
+	  649 [label="Encyclopedia: IIR或者跨岛雷亚尔是全球储备的货币。不论你现在身处世界的那个角落，可以肯定他的意思是你欠他钱。"];
+	  650 [label="You: “*瑞亚尔*是什么？”"];
+	  651 [label="You: 我不喜欢这样。（设法把领带塞到别处。）"];
+	  652 [label="Jump to: [Garte altintro HUB]"];
+	  653 [label="You: “大概是哈里吧。”"];
+	  654 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_empathy_disdain\"]"];
+	  655 [label="Variable[\"whirling.garte_empathy_disdain\"]", shape=diamond];
+	  656 [label="!(Variable[\"whirling.garte_empathy_disdain\"])", shape=diamond];
+	  657 [label="You: “尸体到底在哪儿？”"];
+	  658 [label="You: “什么？”"];
+	  659 [label="Kim Kitsuragi: 他礼貌地后退了一小步。“该你了。”"];
+	  660 [label="You: “哦，你是说问题吗？”"];
+	  661 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_necktie_talked\"]"];
+	  662 [label="Variable[\"whirling.garte_necktie_talked\"]", shape=diamond];
+	  663 [label="!(Variable[\"whirling.garte_necktie_talked\"])", shape=diamond];
+	  664 [label="You: （继续，给他看你找到的硬币）“这是钱吗？”"];
+	  665 [label="Garte, the Cafeteria Manager: “你是怎么回事，脑残？”"];
+	  666 [label="Kim Kitsuragi: “有些人的确会收取酬金。”警督非常严肃。“但也只是为了生存。”"];
+	  667 [label="You: 这种情况完全没必要发生，我没对自己的身体下达这样的指令。"];
+	  668 [label="Ancient Reptilian Brain: 那不是意外。那些是来自你脊髓的*迪斯科舞步*。脊髓还未向你揭示全部的自己——它那极其不洁的奥秘。"];
+	  669 [label="Untitled hub"];
+	  670 [label="Jump to: [Garte_altgreeting end HUB]"];
+	  671 [label="You: “再见，感谢你的配合。”[离开。]"];
+	  672 [label="Garte, the Cafeteria Manager: “你还欠我70块呢。如果你今晚还拿不出钱来，我是不会让你上去的。”他指着楼上。"];
+	  673 [label="Savoir Faire: 不，你的下颈部受伤了。另外，你还拉伤了左斜方肌。当你移动时，疼痛就会涌向你的背部。"];
+	  674 [label="You: “哎哟。”"];
+	  675 [label="Garte ALT start hub"];
+	  676 [label="Garte, the Cafeteria Manager: “希望如此。”"];
+	  677 [label="You: “但你还是可以给我倒杯酒的，对吧？”"];
+	  678 [label="Suggestion: 也许是有办法让他倒杯酒（甚至是给你）的，但并不是这回事"];
+	  679 [label="Conceptualization: 雷亚尔？肯定是化妆品。可能是身体乳。"];
+	  680 [label="Kim Kitsuragi: “可是，你看，他并没有。”"];
+	  681 [label="Garte, the Cafeteria Manager: Variable[\"whirling.garte_skua_TC\"]"];
+	  682 [label="Variable[\"whirling.garte_skua_TC\"]", shape=diamond];
+	  683 [label="!(Variable[\"whirling.garte_skua_TC\"])", shape=diamond];
+	  684 [label="You: “我爱跟谁说话就跟谁说话。”\n“又是这种不服从的口气！”\n“我是警察，警察爱跟谁说话就跟谁说话。”"];
+	  685 [label="Jump to: [Garte altintro HUB]"];
+	  686 [label="Garte, the Cafeteria Manager: “很简单！看到那边的门了吗？”他指着西边。“先从那里出去。然后在你右边，应该能看到围栏上有个大洞——非常大的洞，可以穿过它到院子里去。根本不用钥匙，那个洞很大，大到弗兰考格斯骑兵都能穿过去。”"];
+	  687 [label="Garte, the Cafeteria Manager: “什么？”"];
+	  688 [label="Esprit de Corps: 警察这么说的意思就是：“我没有主动提出要付钱，因为我也没有钱。”"];
+	  689 [label="Garte, the Cafeteria Manager: “你在逗我？”"];
+	  690 [label="Reaction Speed: 他不知道？他刚刚才说是*他们*把他吊在树上的——他们是谁？"];
+	  0 -> 1
+	  1 -> 675
+	  2 -> 551
+	  3 -> 352
+	  4 -> 258
+	  5 -> 6
+	  6 -> 212
+	  7 -> 638
+	  8 -> 9
+	  9 -> 10
+	  9 -> 11
+	  10 -> 415
+	  11 -> 415
+	  12 -> 627
+	  13 -> 272
+	  14 -> 332
+	  15 -> 197
+	  16 -> 431
+	  17 -> 424
+	  17 -> 238
+	  18 -> 90
+	  19 -> 468
+	  20 -> 632
+	  21 -> 391
+	  22 -> 305
+	  23 -> 427
+	  24 -> 455
+	  25 -> 574
+	  26 -> 27
+	  26 -> 28
+	  27 -> 254
+	  28 -> 135
+	  29 -> 30
+	  30 -> 451
+	  31 -> 225
+	  32 -> 554
+	  33 -> 7
+	  34 -> 603
+	  34 -> 291
+	  34 -> 582
+	  34 -> 518
+	  35 -> 355
+	  36 -> 67
+	  36 -> 100
+	  36 -> 613
+	  36 -> 140
+	  36 -> 469
+	  36 -> 215
+	  37 -> 437
+	  38 -> 293
+	  38 -> 294
+	  38 -> 492
+	  38 -> 653
+	  38 -> 143
+	  38 -> 211
+	  38 -> 409
+	  39 -> 38
+	  40 -> 221
+	  41 -> 259
+	  42 -> 652
+	  43 -> 370
+	  44 -> 482
+	  44 -> 12
+	  45 -> 328
+	  46 -> 668
+	  47 -> 156
+	  47 -> 326
+	  47 -> 327
+	  48 -> 237
+	  49 -> 629
+	  50 -> 362
+	  51 -> 337
+	  52 -> 585
+	  53 -> 225
+	  54 -> 635
+	  55 -> 247
+	  56 -> 455
+	  57 -> 170
+	  58 -> 283
+	  59 -> 174
+	  60 -> 464
+	  61 -> 252
+	  62 -> 494
+	  63 -> 253
+	  64 -> 511
+	  65 -> 449
+	  66 -> 374
+	  67 -> 513
+	  68 -> 70
+	  69 -> 579
+	  70 -> 578
+	  70 -> 101
+	  70 -> 255
+	  71 -> 141
+	  72 -> 284
+	  73 -> 353
+	  73 -> 188
+	  74 -> 439
+	  75 -> 76
+	  75 -> 77
+	  76 -> 576
+	  77 -> 371
+	  78 -> 263
+	  79 -> 350
+	  80 -> 81
+	  80 -> 82
+	  81 -> 262
+	  82 -> 190
+	  83 -> 190
+	  84 -> 85
+	  85 -> 360
+	  85 -> 234
+	  85 -> 388
+	  85 -> 534
+	  86 -> 237
+	  87 -> 88
+	  87 -> 89
+	  87 -> 299
+	  87 -> 14
+	  88 -> 236
+	  89 -> 236
+	  90 -> 673
+	  91 -> 162
+	  92 -> 53
+	  93 -> 680
+	  94 -> 307
+	  95 -> 59
+	  95 -> 542
+	  96 -> 209
+	  97 -> 150
+	  98 -> 287
+	  99 -> 477
+	  100 -> 513
+	  101 -> 102
+	  102 -> 69
+	  103 -> 36
+	  104 -> 42
+	  105 -> 552
+	  106 -> 145
+	  107 -> 411
+	  108 -> 395
+	  109 -> 97
+	  110 -> 200
+	  111 -> 79
+	  112 -> 113
+	  112 -> 114
+	  113 -> 488
+	  114 -> 325
+	  115 -> 299
+	  115 -> 14
+	  115 -> 273
+	  115 -> 88
+	  115 -> 89
+	  116 -> 431
+	  117 -> 239
+	  118 -> 302
+	  119 -> 239
+	  120 -> 121
+	  120 -> 122
+	  121 -> 363
+	  122 -> 241
+	  123 -> 120
+	  124 -> 393
+	  125 -> 126
+	  125 -> 127
+	  126 -> 485
+	  127 -> 533
+	  128 -> 201
+	  128 -> 641
+	  128 -> 93
+	  129 -> 171
+	  130 -> 131
+	  131 -> 225
+	  132 -> 133
+	  133 -> 397
+	  134 -> 251
+	  135 -> 451
+	  136 -> 225
+	  137 -> 440
+	  138 -> 64
+	  139 -> 418
+	  139 -> 111
+	  140 -> 580
+	  141 -> 187
+	  142 -> 404
+	  143 -> 222
+	  144 -> 410
+	  145 -> 221
+	  146 -> 498
+	  147 -> 224
+	  148 -> 523
+	  148 -> 5
+	  149 -> 523
+	  149 -> 5
+	  150 -> 152
+	  150 -> 151
+	  151 -> 555
+	  152 -> 414
+	  153 -> 154
+	  153 -> 155
+	  154 -> 584
+	  155 -> 296
+	  156 -> 480
+	  157 -> 535
+	  159 -> 276
+	  160 -> 185
+	  161 -> 65
+	  162 -> 163
+	  162 -> 164
+	  163 -> 537
+	  164 -> 633
+	  165 -> 426
+	  166 -> 364
+	  166 -> 604
+	  166 -> 55
+	  167 -> 168
+	  167 -> 169
+	  168 -> 548
+	  169 -> 679
+	  170 -> 515
+	  171 -> 553
+	  172 -> 572
+	  173 -> 25
+	  174 -> 304
+	  175 -> 369
+	  176 -> 177
+	  176 -> 178
+	  177 -> 63
+	  178 -> 519
+	  179 -> 180
+	  179 -> 181
+	  180 -> 497
+	  181 -> 690
+	  182 -> 184
+	  182 -> 183
+	  183 -> 475
+	  184 -> 499
+	  185 -> 213
+	  186 -> 600
+	  187 -> 216
+	  188 -> 367
+	  189 -> 139
+	  190 -> 66
+	  190 -> 556
+	  190 -> 588
+	  190 -> 560
+	  190 -> 434
+	  191 -> 479
+	  192 -> 45
+	  193 -> 592
+	  194 -> 390
+	  195 -> 532
+	  196 -> 300
+	  197 -> 276
+	  198 -> 582
+	  198 -> 518
+	  199 -> 569
+	  200 -> 296
+	  201 -> 525
+	  202 -> 250
+	  203 -> 204
+	  203 -> 205
+	  204 -> 282
+	  205 -> 368
+	  206 -> 323
+	  207 -> 574
+	  208 -> 312
+	  209 -> 313
+	  210 -> 475
+	  211 -> 689
+	  212 -> 466
+	  213 -> 161
+	  214 -> 306
+	  215 -> 394
+	  216 -> 217
+	  216 -> 218
+	  217 -> 436
+	  218 -> 404
+	  219 -> 582
+	  219 -> 518
+	  220 -> 40
+	  221 -> 339
+	  222 -> 4
+	  223 -> 470
+	  224 -> 75
+	  225 -> 545
+	  225 -> 226
+	  225 -> 386
+	  225 -> 454
+	  225 -> 109
+	  225 -> 657
+	  225 -> 473
+	  225 -> 412
+	  226 -> 203
+	  227 -> 209
+	  228 -> 190
+	  229 -> 288
+	  230 -> 232
+	  230 -> 231
+	  231 -> 479
+	  232 -> 191
+	  233 -> 630
+	  234 -> 86
+	  235 -> 446
+	  236 -> 563
+	  238 -> 159
+	  239 -> 673
+	  240 -> 239
+	  241 -> 567
+	  242 -> 97
+	  243 -> 198
+	  244 -> 225
+	  245 -> 425
+	  245 -> 539
+	  245 -> 677
+	  245 -> 22
+	  246 -> 605
+	  247 -> 637
+	  248 -> 392
+	  249 -> 366
+	  250 -> 340
+	  251 -> 172
+	  252 -> 225
+	  253 -> 225
+	  254 -> 570
+	  254 -> 29
+	  255 -> 435
+	  256 -> 320
+	  257 -> 36
+	  258 -> 553
+	  259 -> 583
+	  260 -> 277
+	  261 -> 419
+	  261 -> 478
+	  261 -> 526
+	  262 -> 190
+	  263 -> 264
+	  263 -> 265
+	  264 -> 80
+	  265 -> 190
+	  266 -> 530
+	  267 -> 268
+	  267 -> 269
+	  268 -> 179
+	  269 -> 574
+	  270 -> 667
+	  270 -> 484
+	  270 -> 46
+	  271 -> 18
+	  272 -> 115
+	  273 -> 87
+	  274 -> 408
+	  275 -> 197
+	  276 -> 671
+	  276 -> 564
+	  276 -> 301
+	  276 -> 596
+	  277 -> 502
+	  278 -> 245
+	  279 -> 399
+	  280 -> 134
+	  281 -> 310
+	  282 -> 443
+	  282 -> 524
+	  283 -> 26
+	  284 -> 285
+	  284 -> 286
+	  285 -> 136
+	  286 -> 321
+	  287 -> 210
+	  288 -> 507
+	  289 -> 622
+	  290 -> 36
+	  291 -> 219
+	  292 -> 654
+	  293 -> 471
+	  294 -> 73
+	  295 -> 474
+	  296 -> 8
+	  296 -> 650
+	  296 -> 214
+	  297 -> 356
+	  298 -> 357
+	  299 -> 158
+	  300 -> 595
+	  301 -> 597
+	  302 -> 673
+	  303 -> 451
+	  304 -> 451
+	  305 -> 425
+	  305 -> 539
+	  306 -> 128
+	  307 -> 308
+	  308 -> 249
+	  308 -> 684
+	  309 -> 643
+	  310 -> 609
+	  311 -> 349
+	  312 -> 31
+	  313 -> 225
+	  314 -> 514
+	  314 -> 68
+	  314 -> 614
+	  315 -> 512
+	  316 -> 401
+	  316 -> 398
+	  317 -> 649
+	  318 -> 375
+	  320 -> 381
+	  321 -> 36
+	  322 -> 440
+	  323 -> 96
+	  323 -> 227
+	  323 -> 43
+	  323 -> 429
+	  323 -> 575
+	  324 -> 444
+	  325 -> 589
+	  326 -> 480
+	  327 -> 480
+	  328 -> 329
+	  328 -> 330
+	  329 -> 626
+	  329 -> 531
+	  330 -> 432
+	  331 -> 532
+	  332 -> 361
+	  333 -> 276
+	  334 -> 336
+	  334 -> 335
+	  335 -> 16
+	  336 -> 116
+	  337 -> 242
+	  338 -> 225
+	  339 -> 458
+	  340 -> 221
+	  341 -> 267
+	  342 -> 644
+	  343 -> 344
+	  343 -> 345
+	  344 -> 60
+	  345 -> 608
+	  346 -> 347
+	  346 -> 348
+	  347 -> 316
+	  348 -> 303
+	  349 -> 96
+	  349 -> 227
+	  349 -> 43
+	  349 -> 429
+	  349 -> 575
+	  350 -> 270
+	  351 -> 303
+	  352 -> 186
+	  353 -> 108
+	  354 -> 466
+	  355 -> 263
+	  356 -> 557
+	  357 -> 669
+	  358 -> 669
+	  359 -> 118
+	  360 -> 48
+	  362 -> 276
+	  363 -> 567
+	  364 -> 496
+	  365 -> 36
+	  366 -> 685
+	  367 -> 4
+	  368 -> 610
+	  369 -> 621
+	  370 -> 413
+	  371 -> 658
+	  371 -> 322
+	  371 -> 295
+	  372 -> 367
+	  373 -> 78
+	  374 -> 99
+	  374 -> 289
+	  374 -> 651
+	  375 -> 376
+	  375 -> 377
+	  376 -> 577
+	  377 -> 549
+	  378 -> 578
+	  378 -> 101
+	  378 -> 255
+	  379 -> 579
+	  380 -> 652
+	  381 -> 382
+	  381 -> 383
+	  382 -> 74
+	  382 -> 223
+	  383 -> 124
+	  384 -> 147
+	  385 -> 354
+	  386 -> 546
+	  387 -> 591
+	  388 -> 486
+	  389 -> 431
+	  390 -> 302
+	  391 -> 20
+	  392 -> 225
+	  393 -> 36
+	  394 -> 500
+	  395 -> 221
+	  396 -> 58
+	  397 -> 342
+	  398 -> 279
+	  399 -> 95
+	  400 -> 288
+	  401 -> 351
+	  402 -> 161
+	  403 -> 581
+	  403 -> 615
+	  403 -> 37
+	  403 -> 71
+	  404 -> 103
+	  405 -> 406
+	  405 -> 407
+	  406 -> 257
+	  407 -> 617
+	  407 -> 74
+	  409 -> 4
+	  410 -> 618
+	  410 -> 107
+	  410 -> 220
+	  411 -> 221
+	  412 -> 62
+	  413 -> 225
+	  414 -> 153
+	  415 -> 416
+	  415 -> 417
+	  416 -> 52
+	  417 -> 586
+	  418 -> 79
+	  419 -> 266
+	  420 -> 228
+	  421 -> 624
+	  422 -> 193
+	  423 -> 666
+	  424 -> 159
+	  425 -> 92
+	  426 -> 364
+	  426 -> 604
+	  426 -> 55
+	  427 -> 225
+	  428 -> 225
+	  429 -> 209
+	  430 -> 547
+	  432 -> 433
+	  433 -> 83
+	  434 -> 261
+	  435 -> 379
+	  436 -> 142
+	  437 -> 187
+	  438 -> 380
+	  439 -> 522
+	  440 -> 441
+	  440 -> 442
+	  441 -> 148
+	  442 -> 149
+	  443 -> 61
+	  444 -> 230
+	  445 -> 628
+	  446 -> 448
+	  446 -> 447
+	  447 -> 487
+	  448 -> 13
+	  449 -> 467
+	  450 -> 634
+	  451 -> 452
+	  451 -> 453
+	  452 -> 207
+	  453 -> 244
+	  454 -> 199
+	  455 -> 456
+	  455 -> 457
+	  455 -> 94
+	  455 -> 57
+	  456 -> 307
+	  457 -> 307
+	  458 -> 459
+	  458 -> 460
+	  459 -> 642
+	  460 -> 129
+	  461 -> 340
+	  462 -> 280
+	  463 -> 304
+	  464 -> 280
+	  465 -> 400
+	  466 -> 225
+	  467 -> 632
+	  468 -> 402
+	  469 -> 513
+	  470 -> 405
+	  471 -> 144
+	  471 -> 521
+	  471 -> 106
+	  472 -> 202
+	  472 -> 540
+	  472 -> 541
+	  473 -> 341
+	  474 -> 523
+	  474 -> 5
+	  475 -> 225
+	  476 -> 263
+	  477 -> 444
+	  478 -> 420
+	  479 -> 190
+	  480 -> 532
+	  481 -> 421
+	  481 -> 558
+	  482 -> 590
+	  484 -> 358
+	  485 -> 233
+	  485 -> 157
+	  485 -> 271
+	  486 -> 237
+	  487 -> 272
+	  488 -> 601
+	  488 -> 196
+	  488 -> 565
+	  489 -> 490
+	  489 -> 491
+	  490 -> 602
+	  491 -> 503
+	  492 -> 450
+	  493 -> 678
+	  494 -> 165
+	  494 -> 54
+	  495 -> 568
+	  496 -> 246
+	  497 -> 574
+	  498 -> 41
+	  499 -> 475
+	  500 -> 501
+	  501 -> 681
+	  502 -> 489
+	  503 -> 686
+	  504 -> 130
+	  505 -> 132
+	  506 -> 346
+	  507 -> 508
+	  507 -> 509
+	  508 -> 510
+	  509 -> 688
+	  510 -> 190
+	  511 -> 31
+	  512 -> 395
+	  513 -> 550
+	  514 -> 403
+	  515 -> 36
+	  516 -> 104
+	  516 -> 517
+	  516 -> 438
+	  517 -> 380
+	  518 -> 72
+	  519 -> 616
+	  519 -> 518
+	  520 -> 39
+	  521 -> 4
+	  522 -> 36
+	  523 -> 260
+	  524 -> 543
+	  525 -> 263
+	  526 -> 527
+	  527 -> 528
+	  527 -> 529
+	  528 -> 112
+	  529 -> 112
+	  530 -> 190
+	  531 -> 288
+	  532 -> 387
+	  532 -> 422
+	  532 -> 561
+	  532 -> 465
+	  532 -> 664
+	  532 -> 538
+	  533 -> 593
+	  533 -> 194
+	  533 -> 359
+	  534 -> 86
+	  535 -> 90
+	  536 -> 388
+	  536 -> 360
+	  536 -> 234
+	  536 -> 84
+	  536 -> 534
+	  537 -> 567
+	  538 -> 591
+	  539 -> 676
+	  540 -> 250
+	  541 -> 461
+	  542 -> 463
+	  543 -> 621
+	  544 -> 645
+	  545 -> 278
+	  546 -> 97
+	  547 -> 315
+	  548 -> 35
+	  548 -> 612
+	  548 -> 373
+	  549 -> 365
+	  550 -> 314
+	  551 -> 378
+	  552 -> 36
+	  553 -> 620
+	  554 -> 638
+	  555 -> 153
+	  556 -> 297
+	  557 -> 190
+	  558 -> 559
+	  559 -> 288
+	  560 -> 594
+	  561 -> 423
+	  562 -> 298
+	  562 -> 445
+	  564 -> 15
+	  565 -> 566
+	  566 -> 49
+	  568 -> 23
+	  569 -> 248
+	  570 -> 309
+	  571 -> 505
+	  572 -> 573
+	  573 -> 173
+	  574 -> 281
+	  574 -> 396
+	  574 -> 606
+	  575 -> 687
+	  576 -> 385
+	  576 -> 137
+	  576 -> 523
+	  577 -> 365
+	  578 -> 3
+	  579 -> 290
+	  580 -> 34
+	  581 -> 105
+	  582 -> 176
+	  583 -> 384
+	  584 -> 661
+	  585 -> 587
+	  586 -> 418
+	  586 -> 189
+	  586 -> 111
+	  587 -> 408
+	  588 -> 646
+	  589 -> 623
+	  590 -> 192
+	  591 -> 288
+	  592 -> 331
+	  593 -> 18
+	  594 -> 536
+	  595 -> 333
+	  596 -> 275
+	  597 -> 598
+	  597 -> 599
+	  598 -> 389
+	  599 -> 672
+	  600 -> 36
+	  601 -> 17
+	  602 -> 51
+	  603 -> 243
+	  604 -> 495
+	  605 -> 428
+	  606 -> 343
+	  607 -> 571
+	  608 -> 462
+	  609 -> 225
+	  610 -> 544
+	  610 -> 138
+	  610 -> 208
+	  610 -> 175
+	  611 -> 554
+	  612 -> 476
+	  614 -> 2
+	  615 -> 516
+	  616 -> 256
+	  617 -> 514
+	  618 -> 40
+	  619 -> 520
+	  620 -> 146
+	  621 -> 206
+	  621 -> 311
+	  622 -> 444
+	  623 -> 235
+	  624 -> 625
+	  624 -> 482
+	  624 -> 12
+	  625 -> 44
+	  626 -> 229
+	  627 -> 192
+	  628 -> 669
+	  629 -> 50
+	  630 -> 240
+	  630 -> 117
+	  630 -> 119
+	  631 -> 19
+	  632 -> 91
+	  632 -> 123
+	  632 -> 21
+	  633 -> 567
+	  634 -> 293
+	  634 -> 294
+	  634 -> 653
+	  634 -> 143
+	  634 -> 211
+	  634 -> 409
+	  635 -> 636
+	  636 -> 166
+	  637 -> 605
+	  638 -> 640
+	  638 -> 639
+	  639 -> 475
+	  640 -> 182
+	  641 -> 525
+	  642 -> 171
+	  643 -> 607
+	  644 -> 506
+	  645 -> 543
+	  646 -> 648
+	  646 -> 647
+	  647 -> 47
+	  648 -> 665
+	  649 -> 167
+	  650 -> 317
+	  651 -> 324
+	  652 -> 36
+	  653 -> 472
+	  654 -> 656
+	  654 -> 655
+	  655 -> 520
+	  656 -> 619
+	  657 -> 502
+	  658 -> 659
+	  659 -> 523
+	  659 -> 660
+	  660 -> 6
+	  661 -> 662
+	  661 -> 663
+	  662 -> 110
+	  663 -> 296
+	  664 -> 481
+	  665 -> 156
+	  665 -> 326
+	  665 -> 327
+	  666 -> 195
+	  667 -> 562
+	  668 -> 298
+	  668 -> 445
+	  669 -> 125
+	  670 -> 408
+	  671 -> 334
+	  672 -> 431
+	  673 -> 160
+	  673 -> 674
+	  673 -> 631
+	  674 -> 185
+	  675 -> 515
+	  675 -> 292
+	  675 -> 318
+	  676 -> 338
+	  677 -> 493
+	  678 -> 425
+	  678 -> 539
+	  679 -> 548
+	  680 -> 525
+	  681 -> 682
+	  681 -> 683
+	  682 -> 24
+	  683 -> 56
+	  684 -> 366
+	  685 -> 36
+	  686 -> 504
+	  687 -> 32
+	  687 -> 33
+	  687 -> 98
+	  687 -> 611
+	  688 -> 510
+	  689 -> 372
+	  689 -> 430
+	  690 -> 574
+}
+

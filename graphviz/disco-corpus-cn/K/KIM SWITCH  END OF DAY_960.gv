@@ -1,0 +1,121 @@
+# KIM SWITCH / END OF DAY
+# Kim wants to call it a day.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: “我还没有向餐厅经理赔偿损失。”"];
+	  3 [label="Variable[\"character.pay_garte_30\"]"];
+	  4 [label="Variable[\"character.pay_garte_30\"]", shape=diamond];
+	  5 [label="!(Variable[\"character.pay_garte_30\"])", shape=diamond];
+	  6 [label="Empathy: 虽然他发现眼下的状况让人有些沮丧，不过还是打算尽自己最大努力，让你的感觉不要比现在更糟糕。"];
+	  7 [label="You: “那我应该去问问餐厅经理。”"];
+	  8 [label="Variable[\"character.pay_garte_70\"]"];
+	  9 [label="Variable[\"character.pay_garte_70\"]", shape=diamond];
+	  10 [label="!(Variable[\"character.pay_garte_70\"])", shape=diamond];
+	  11 [label="You: “但是我没钱……”"];
+	  12 [label="Empathy: 你终于振作起来，想办法还清了自己的债务，这让他为你感到骄傲。"];
+	  13 [label="MoneyAmount() >=10000"];
+	  14 [label="MoneyAmount() >=10000", shape=diamond];
+	  15 [label="!(MoneyAmount() >=10000)", shape=diamond];
+	  16 [label="Kim Kitsuragi: 他点点头。“我也去飞旋旅社开个房间。离犯罪现场多近都不为过。”"];
+	  17 [label="MoneyAmount() >=13000"];
+	  18 [label="MoneyAmount() >=13000", shape=diamond];
+	  19 [label="!(MoneyAmount() >=13000)", shape=diamond];
+	  20 [label="MoneyAmount() >=6000"];
+	  21 [label="MoneyAmount() >=6000", shape=diamond];
+	  22 [label="!(MoneyAmount() >=6000)", shape=diamond];
+	  23 [label="Kim Kitsuragi: “不管怎么说，我们还是去跟他聊聊吧。RCM的警官不应该睡在大街上。我们会想出办法的。”"];
+	  24 [label="You: “我现在好像有钱了。这个是钱，没错吧？”（把雷亚尔钞票拿给他看。）"];
+	  25 [label="DayCount() == 1"];
+	  26 [label="DayCount() == 1", shape=diamond];
+	  27 [label="!(DayCount() == 1)", shape=diamond];
+	  28 [label="Kim Kitsuragi: 警督点点头。“明天一早我们可以继续没完成的工作。”"];
+	  29 [label="MoneyAmount() >=7000"];
+	  30 [label="MoneyAmount() >=7000", shape=diamond];
+	  31 [label="!(MoneyAmount() >=7000)", shape=diamond];
+	  32 [label="You: “我觉得应该去跟餐厅经理聊聊房间的事……”"];
+	  34 [label="Kim Kitsuragi: 警督点点头。“很高兴知道这个。早上我会出现在那个地方。明天一大早，7:30分整。”"];
+	  35 [label="Variable[\"character.pay_garte_100\"]"];
+	  36 [label="Variable[\"character.pay_garte_100\"]", shape=diamond];
+	  37 [label="!(Variable[\"character.pay_garte_100\"])", shape=diamond];
+	  38 [label="Kim Kitsuragi: 警督点点头。“我们明天再继续吧，就一大早——7：30分整。我会在楼下等你。”"];
+	  39 [label="Kim Kitsuragi: “你确实一直在逃避。”"];
+	  40 [label="Kim Kitsuragi: 警督点点头。“去吧。明天我在楼下等你。”"];
+	  41 [label="You: “是的，我的旅社房间在呼唤。”"];
+	  42 [label="Variable[\"whirling.kim_took_room\"]"];
+	  43 [label="Variable[\"whirling.kim_took_room\"]", shape=diamond];
+	  44 [label="!(Variable[\"whirling.kim_took_room\"])", shape=diamond];
+	  45 [label="MoneyAmount() >=3000"];
+	  46 [label="MoneyAmount() >=3000", shape=diamond];
+	  47 [label="!(MoneyAmount() >=3000)", shape=diamond];
+	  48 [label="endofdayswitch"];
+	  49 [label="Variable[\"character.pay_garte_60\"]"];
+	  50 [label="Variable[\"character.pay_garte_60\"]", shape=diamond];
+	  51 [label="!(Variable[\"character.pay_garte_60\"])", shape=diamond];
+	  52 [label="Kim Kitsuragi: “我也去飞旋旅社开个房间。”"];
+	  53 [label="You: “我在村庄里发现一些住所，打算去那里过夜。”"];
+	  54 [label="Kim Kitsuragi: “那你应该把这件事处理好。”"];
+	  0 -> 1
+	  1 -> 48
+	  2 -> 54
+	  3 -> 4
+	  3 -> 5
+	  4 -> 45
+	  5 -> 49
+	  7 -> 40
+	  8 -> 9
+	  8 -> 10
+	  9 -> 29
+	  10 -> 35
+	  11 -> 23
+	  13 -> 14
+	  13 -> 15
+	  14 -> 24
+	  15 -> 11
+	  16 -> 12
+	  17 -> 18
+	  17 -> 19
+	  18 -> 24
+	  19 -> 11
+	  20 -> 21
+	  20 -> 22
+	  21 -> 24
+	  22 -> 11
+	  23 -> 6
+	  24 -> 16
+	  25 -> 26
+	  25 -> 27
+	  26 -> 28
+	  27 -> 38
+	  29 -> 30
+	  29 -> 31
+	  30 -> 24
+	  31 -> 11
+	  32 -> 39
+	  35 -> 36
+	  35 -> 37
+	  36 -> 13
+	  37 -> 17
+	  41 -> 42
+	  42 -> 43
+	  42 -> 44
+	  43 -> 25
+	  44 -> 52
+	  45 -> 46
+	  45 -> 47
+	  46 -> 24
+	  47 -> 11
+	  48 -> 32
+	  48 -> 2
+	  48 -> 7
+	  48 -> 41
+	  48 -> 53
+	  49 -> 50
+	  49 -> 51
+	  50 -> 20
+	  51 -> 8
+	  53 -> 34
+	  54 -> 3
+}
+

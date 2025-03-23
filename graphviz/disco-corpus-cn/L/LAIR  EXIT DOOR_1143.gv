@@ -1,0 +1,78 @@
+# LAIR / EXIT DOOR
+# Door interactable, open the door, let Kim in. Kim possibly hidden behind fog of war.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: “你准备好了吗？”"];
+	  3 [label="Kim Kitsuragi: “警官？你在里面还好吗？”"];
+	  4 [label="Kim Kitsuragi: “什么*谁在里面*，你说什么呢？我是金啊，别闹了，快帮我把这扇门打开。”"];
+	  5 [label="Savoir Faire: 只要别*跑步*就能达成这个目标。"];
+	  6 [label="Kim Kitsuragi: “你是说，在你*爬上*屋顶之后吗？木板步道下面有一个维修入口，就挨着排水管，也许是雨水沟——不是很好发现。”"];
+	  7 [label="Variable[\"boardwalk.drainage_found_door\"]"];
+	  8 [label="Variable[\"boardwalk.drainage_found_door\"]", shape=diamond];
+	  9 [label="!(Variable[\"boardwalk.drainage_found_door\"])", shape=diamond];
+	  10 [label="You: “本来可以帮我省点麻烦的。”"];
+	  11 [label="Kim Kitsuragi: “没错，我们有紧急出口了。好了，继续前进吧。是时候调查一下这些通道了……”他凝视着眼前的黑暗。"];
+	  12 [label="Door: 这样就*容易多了*——只要把沙子拂去，就会发现这两块金属板就安在滑轮轨道上。有了你的搭档在另一侧帮手，这扇门*嘎吱*一声打开了。"];
+	  13 [label="You: “谁在里面？”"];
+	  14 [label="You: 无视这扇门。[离开。]"];
+	  15 [label="Kim Kitsuragi: “是的。是时候该调查一下通道了。我们悄悄地进去，别出声。”"];
+	  16 [label="You: 把门推开。"];
+	  17 [label="thedoor"];
+	  19 [label="Variable[\"boardwalk.drainage_tried_once\"]"];
+	  20 [label="Variable[\"boardwalk.drainage_tried_once\"]", shape=diamond];
+	  21 [label="!(Variable[\"boardwalk.drainage_tried_once\"])", shape=diamond];
+	  22 [label="Kim Kitsuragi: “是啊是啊，要论*酷*的话怎么能跟冒着生命危险爬摇摇晃晃的梯子相媲美啊。总之，我们还是先调查一下这些通道吧……”"];
+	  23 [label="You: “维修入口？真没劲。”"];
+	  24 [label="Kim Kitsuragi: “哈，希望可别被什么*危险*的人听到才好。”"];
+	  25 [label="Variable[\"boardwalk.gate_is_open\"] == true"];
+	  26 [label="Variable[\"boardwalk.gate_is_open\"] == true", shape=diamond];
+	  27 [label="!(Variable[\"boardwalk.gate_is_open\"] == true)", shape=diamond];
+	  28 [label="Jump to: [thedoor]"];
+	  29 [label="Door: 两块生锈的金属板组成了一道简陋的大门。它在这个木板步道下面已经有一阵子了。"];
+	  30 [label="Door: 这两扇门好像是有滑轮轨道的，不过已经卡住了。你抓住一侧，用力想把门强行拽开，你的搭档在另一侧帮手。伴随着一阵*嘎吱*声，两块金属板打开了。"];
+	  31 [label="Esprit de Corps: 你应该把这扇门弄开，独自前行太危险了。"];
+	  32 [label="Empathy: 他对自己的表现颇为满意。"];
+	  33 [label="Untitled hub"];
+	  34 [label="You: “至少咱们找到了条捷径了。”"];
+	  35 [label="Kim Kitsuragi: 他耸耸肩。“至少现在我们有个紧急出口了。好了，继续前进吧。是时候该调查一下这些通道了……”"];
+	  36 [label="You: “你到底是怎么进来的？”"];
+	  0 -> 1
+	  1 -> 29
+	  2 -> 15
+	  3 -> 31
+	  4 -> 28
+	  6 -> 32
+	  7 -> 8
+	  7 -> 9
+	  8 -> 2
+	  9 -> 36
+	  10 -> 35
+	  12 -> 24
+	  13 -> 4
+	  14 -> 3
+	  15 -> 5
+	  16 -> 19
+	  17 -> 16
+	  17 -> 13
+	  17 -> 14
+	  19 -> 20
+	  19 -> 21
+	  20 -> 12
+	  21 -> 30
+	  23 -> 22
+	  24 -> 7
+	  25 -> 26
+	  25 -> 27
+	  28 -> 17
+	  29 -> 17
+	  30 -> 24
+	  32 -> 33
+	  33 -> 10
+	  33 -> 34
+	  33 -> 23
+	  34 -> 11
+	  36 -> 6
+}
+

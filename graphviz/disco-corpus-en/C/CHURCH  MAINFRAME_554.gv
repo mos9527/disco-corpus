@@ -1,0 +1,893 @@
+# CHURCH / MAINFRAME
+# Mainframe. Related to Doomed-Soona-questline related stuff.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: \"We should probably let it be. This little 'foray' bears little connection to the case, no?\""];
+	  3 [label="Kim Kitsuragi: The lieutenant says nothing. You see the machine's glowing frame reflected back from his diamond-shaped glasses. You're free to proceed."];
+	  4 [label="Shivers: On an island on the River Esperance, a small woman, all skin and bones, sits in a room filled with audio equipment. Thousands of tiny lights are reflected back from her prescription lenses, like stars in the dark."];
+	  5 [label="You: \"I don't know the password.\""];
+	  6 [label="You: \"What do I get out of it?\""];
+	  7 [label="Jump to: [church repeater hub]"];
+	  8 [label="You: Let go of the printout."];
+	  9 [label="You: \"Do you think this log might be connected to the case?\""];
+	  10 [label="Mainframe: \"6th FEB, '51: Had a little chat with the local fishermen. Said I shouldn't go near that place, that the church was *spooky* and ridden with *narcotics*. It's a little spooky, alright. Still haven't figured out the electricity.\""];
+	  11 [label="Kim Kitsuragi: \"I doubt that we can find any. It's just idle fishermen's gossip to scare away the kids.\" He looks at the stained glass window."];
+	  12 [label="You: Read the fifth entry."];
+	  13 [label="You: \"She must be describing Acele.\""];
+	  14 [label="You: Read the tenth entry."];
+	  15 [label="Kim Kitsuragi: The lieutenant doesn't answer. He follows your gaze, studying the basins. The water shines in them. No ripples."];
+	  16 [label="Variable[\"doomed.fortress_accident_kim_switch_done\"]  or  Variable[\"doomed.dicemaker_fortress_explained\"]"];
+	  17 [label="Variable[\"doomed.fortress_accident_kim_switch_done\"]  or  Variable[\"doomed.dicemaker_fortress_explained\"]", shape=diamond];
+	  18 [label="!(Variable[\"doomed.fortress_accident_kim_switch_done\"]  or  Variable[\"doomed.dicemaker_fortress_explained\"])", shape=diamond];
+	  19 [label="East-Insulindian Repeater Station: \"Anything else I can help you with?\""];
+	  20 [label="Jump to: [main hub]"];
+	  21 [label="You: \"I can assure you I'm an expert circuit-bender. I'm not breaking into your computer, I'm using it to access Coalition military datalinks.\""];
+	  22 [label="Kim intro hub"];
+	  23 [label="You: \"You're right, let's get out of here.\" [Leave.]"];
+	  24 [label="Jump to: [Kim intro hub]"];
+	  25 [label="Encyclopedia: The Rehm Prefect is the governmental version of the commonly used Rehm Civic. Although mostly based on the same technology, the Rehm Prefect is equipped with better noise attenuation circuits."];
+	  26 [label="East-Insulindian Repeater Station: \"Now please tell me why you're calling, Fortress Accident.\""];
+	  27 [label="Jump to: [church repeater hub]"];
+	  28 [label="East-Insulindian Repeater Station: \"After you've told me the filament's name and password you can access its contents.\""];
+	  29 [label="Jump to: [repeat the password]"];
+	  30 [label="Jump to: [church repeater hub]"];
+	  31 [label="Jump to: [church repeater hub]"];
+	  32 [label="Jump to: [East-Insulindian Repeater Station: \"\"Good. Please repeat the password.\"\"]"];
+	  33 [label="You: \"Sorry, I forgot to look inside the core to check what filament is inside.\""];
+	  34 [label="9th entry hub"];
+	  35 [label="IsKimHere()"];
+	  36 [label="IsKimHere()", shape=diamond];
+	  37 [label="!(IsKimHere())", shape=diamond];
+	  38 [label="Interfacing: Another filament memory. Press PLAY to talk with the repeater."];
+	  39 [label="Mainframe: The machine's keyboard is still illuminated, revealing virescent PLAY and PRINT buttons."];
+	  40 [label="Soona, the Programmer: \"You won't find any answers from here.\" She barely looks up from the keyboard. You hear the machine whir back to life."];
+	  41 [label="Variable[\"TASK.locate_ruby_on_the_coast_done\"]"];
+	  42 [label="Variable[\"TASK.locate_ruby_on_the_coast_done\"]", shape=diamond];
+	  43 [label="!(Variable[\"TASK.locate_ruby_on_the_coast_done\"])", shape=diamond];
+	  44 [label="Mainframe: You see virescent PLAY and PRINT buttons on the keyboard. A hatch connected to the central compartment is wide open."];
+	  45 [label="Inland Empire: Better not touch it. Who knows what evils it may hide."];
+	  46 [label="You: Step behind the machine."];
+	  47 [label="Mainframe: A bar of fabric right above the keyboard starts producing a soft hum. The sound of static seeps through the machine's planar magnetic driver."];
+	  48 [label="You: \"Yes.\""];
+	  49 [label="East-Insulindian Repeater Station: The old lady sighs, as a wave of static distorts her voice to a robotic sprawl. \"If you are unsure, could you please take a look?\""];
+	  50 [label="Variable[\"church.mainframe_repeater_said_no\"]"];
+	  51 [label="Variable[\"church.mainframe_repeater_said_no\"]", shape=diamond];
+	  52 [label="!(Variable[\"church.mainframe_repeater_said_no\"])", shape=diamond];
+	  53 [label="East-Insulindian Repeater Station: \"Now please tell me if there's anything else I can do for you, Fortress Accident.\""];
+	  54 [label="Jump to: [East-Insulindian Repeater Station: \"\"Good. Please repeat the password.\"\"]"];
+	  55 [label="Kim Kitsuragi: The lieutenant leans closer, scouring the printout over your shoulder. Just as you finish reading he looks up, muttering under his breath:"];
+	  56 [label="You: Read the sixth entry."];
+	  57 [label="8th entry hub"];
+	  58 [label="You: Read the ninth entry."];
+	  59 [label="Interfacing: For setting up her radiocomputer."];
+	  60 [label="You: Read the printout."];
+	  61 [label="Conceptualization: That's not bad."];
+	  62 [label="Jump to: [main hub]"];
+	  63 [label="You: \"I'm here on a side case, representing certain music venue organisers. I'm with the RCM, you see.\"\n\"We're here on a side case, representing certain music venue organisers.\" "];
+	  64 [label="Kim Kitsuragi: And before you have time to ask: \"No, I don't know how to operate it or what it's used for. Let's go.\""];
+	  65 [label="Encyclopedia: The Rehm Prefect is the governmental version of the commonly used Rehm Civic model. Although mostly based on the same technology, the Rehm Prefect is equipped with better noise attenuation circuits."];
+	  66 [label="East-Insulindian Repeater Station: \"They're merely cautious,\" says the old lady. \"It's my job to protect their filaments as a password repeater at the East-Insulindian Station.\""];
+	  67 [label="You: Read the third entry."];
+	  68 [label="You: Read the fourth entry."];
+	  69 [label="You: Read the seventh entry."];
+	  70 [label="Variable[\"church.mainframe_log_password\"]  or  Variable[\"doomed.radiocomputer_concept_password_after_death\"]  or  Variable[\"doomed.radiocomputer_reached_password_hub\"]  or  Variable[\"church.mainframe_personal_log_password_hub_reached\"]"];
+	  71 [label="Variable[\"church.mainframe_log_password\"]  or  Variable[\"doomed.radiocomputer_concept_password_after_death\"]  or  Variable[\"doomed.radiocomputer_reached_password_hub\"]  or  Variable[\"church.mainframe_personal_log_password_hub_reached\"]", shape=diamond];
+	  72 [label="!(Variable[\"church.mainframe_log_password\"]  or  Variable[\"doomed.radiocomputer_concept_password_after_death\"]  or  Variable[\"doomed.radiocomputer_reached_password_hub\"]  or  Variable[\"church.mainframe_personal_log_password_hub_reached\"])", shape=diamond];
+	  73 [label="You: \"Yes, but this machine looks just like the one in Doomed Commercial Area.\""];
+	  74 [label="Kim Kitsuragi: \"It's also quite similar to the one we have down at the station. Must be the same model.\" He inspects the machine's framework, careful not to touch anything."];
+	  75 [label="Logic: Saint-Brune -- that's the church; Rue de Saint-Ghislaine -- the Doomed Commercial Area."];
+	  76 [label="You: Press PRINT."];
+	  77 [label="Variable[\"doomed.radiocomputer_guessed_password\"] > 1"];
+	  78 [label="Variable[\"doomed.radiocomputer_guessed_password\"] > 1", shape=diamond];
+	  79 [label="!(Variable[\"doomed.radiocomputer_guessed_password\"] > 1)", shape=diamond];
+	  80 [label="IsKimHere()"];
+	  81 [label="IsKimHere()", shape=diamond];
+	  82 [label="!(IsKimHere())", shape=diamond];
+	  83 [label="You: \"Yes, I could -- I'm a cybernetic god. I'm using the network to commandeer Coalition Warship Archer. I will turn its cannons against its masters.\"\n\"Fine, I'm actually trying to reach Coalition Warship Archer. I'm on a mission of great responsibility.\"\n\"Fine, I'm actually using your Rehm Prefect to reach Coalition Warship Archer. I'm on a mission of great responsibility.\"\n\"Yes, I could -- I'm a cybernetic god. I'm using your Rehm Prefect to commandeer Coalition Warship Archer. I will turn its cannons against its masters.\""];
+	  84 [label="is it the log"];
+	  85 [label="East-Insulindian Repeater Station: \"Yes, I am alive. I am 74 years old and my name is Yvonne.\""];
+	  86 [label="East-Insulindian Repeater Station: \"One moment...\" You hear her flip through a catalogue, before she reads out with studious care:"];
+	  87 [label="Mainframe: \"MARCH, '51: Some kind of young *discomen* have appeared next to the church. I've been trying to record the silence to find the epicentre, but now it turns out I've also been capturing the future of dance music, one neo-disco song over and over again...\""];
+	  88 [label="You: Read the eighth entry."];
+	  89 [label="Variable[\"doomed.radiocomputer_guessed_parole_wrong_and_got_reported_dev_schedule\"]  or  Variable[\"doomed.radiocomputer_guessed_parole_wrong_and_got_reported_offsite_copy\"]"];
+	  90 [label="Variable[\"doomed.radiocomputer_guessed_parole_wrong_and_got_reported_dev_schedule\"]  or  Variable[\"doomed.radiocomputer_guessed_parole_wrong_and_got_reported_offsite_copy\"]", shape=diamond];
+	  91 [label="!(Variable[\"doomed.radiocomputer_guessed_parole_wrong_and_got_reported_dev_schedule\"]  or  Variable[\"doomed.radiocomputer_guessed_parole_wrong_and_got_reported_offsite_copy\"])", shape=diamond];
+	  92 [label="Reaction Speed: See -- *ridden* with narcotics. Just like Andre said."];
+	  93 [label="Half Light: That sounds bad -- a log-in *attempt*. Something a criminal would do."];
+	  94 [label="main hub"];
+	  95 [label="Half Light: Oh no... it was already glowing and now it's also making a *sound*? It's probably some alien Seolite technology..."];
+	  96 [label="no kim hub"];
+	  97 [label="Variable[\"doomed.radiocomputer_fortress_accident_why_failed_clicked\"]"];
+	  98 [label="Variable[\"doomed.radiocomputer_fortress_accident_why_failed_clicked\"]", shape=diamond];
+	  99 [label="!(Variable[\"doomed.radiocomputer_fortress_accident_why_failed_clicked\"])", shape=diamond];
+	  100 [label="Soona, the Programmer: \"Now please, give me some room. I need two seconds to see that you haven't destroyed anything.\""];
+	  101 [label="Kim Kitsuragi: \"Another radiocomputer,\" says the lieutenant, stepping closer. \"And this time it's already turned on.\" He seems cautious around the machine."];
+	  102 [label="East-Insulindian Repeater Station: \"As for me, well...\" Some static. Then... \"I am sitting in my cubicle surrounded by a wall of radios.\""];
+	  103 [label="You: \"Yvonne, my partner here tells me that you're here because radiocomputer guys are all paranoid.\""];
+	  104 [label="You: \"Is it my birthday?\""];
+	  105 [label="East-Insulindian Repeater Station: \"Still no.\""];
+	  106 [label="Jump to: [church repeater hub]"];
+	  107 [label="second entry hub"];
+	  108 [label="You: Read the second entry."];
+	  109 [label="Kim Kitsuragi: \"Fourth of February? That's over a month ago... Whoever set up those machines has been here for quite a while.\""];
+	  110 [label="fourth entry hub"];
+	  111 [label="7th entry hub"];
+	  112 [label="Jump to: [Mainframe: \"The machine's keyboard is still ill...\"]"];
+	  113 [label="Kim Kitsuragi: \"Saint-Brune -- that's the church,\" the lieutenant gestures around him, \"and Rue de Saint-Ghislaine, that's the Doomed Commercial Area.\""];
+	  114 [label="Mainframe: The printer prints out a long text document with dated paragraphs. It looks a bit like someone's journal."];
+	  115 [label="Logic: Fortress Accident, just like in the Doomed Commercial Area... There must be a connection."];
+	  116 [label="Soona, the Programmer: \"Breaking into my radiocomputer, I see.\" She glares at you as she holds down the OFF button for several seconds. The machine reboots."];
+	  117 [label="Variable[\"doomed.seen_radiocomputer\"]"];
+	  118 [label="Variable[\"doomed.seen_radiocomputer\"]", shape=diamond];
+	  119 [label="!(Variable[\"doomed.seen_radiocomputer\"])", shape=diamond];
+	  120 [label="East-Insulindian Repeater Station: \"The filament you have inserted into the core.\""];
+	  121 [label="You: \"You mean that glowing thing with a tape on it that said \"LOG (FEB-MAR)\"?\""];
+	  122 [label="East-Insulindian Repeater Station: \"Good. Please repeat the password.\""];
+	  123 [label="You: \"A password? I'm really bad at passwords. Can you give me a hint?\""];
+	  124 [label="East-Insulindian Repeater Station: \"No.\""];
+	  125 [label="East-Insulindian Repeater Station: \"Fortress Accident, is there anything else I can do for you today?\""];
+	  126 [label="You: \"Yvonne, it's me again! How are you?\""];
+	  127 [label="You: \"I looked inside the core, but the tape on the filament just said \"LOG (FEB-MAR)\".\""];
+	  128 [label="East-Insulindian Repeater Station: \"The company on whose name the terminal you're currently using has been registered to.\""];
+	  129 [label="You: Let it go."];
+	  130 [label="Kim Kitsuragi: \"The pillar of silence! She *is* talking about the silence... Is she suggesting it's more than just an architectural quirk?\""];
+	  131 [label="Mainframe: \"MARCH '51: I got a call from the repeater station. Someone has tried to access the radiocomputer in our old office in Martinaise. Can't do anything about it; the storekeeper still doesn't want to let me inside the building. Thinks I'm part of some kind of *curse*. How Martinaise of her.\""];
+	  132 [label="Kim Kitsuragi: \"Is she talking about...?\" The lieutenant looks to his right, toward the silence."];
+	  133 [label="Variable[\"ice.andre_vol_manipulated_narcomania\"]"];
+	  134 [label="Variable[\"ice.andre_vol_manipulated_narcomania\"]", shape=diamond];
+	  135 [label="!(Variable[\"ice.andre_vol_manipulated_narcomania\"])", shape=diamond];
+	  136 [label="Kim Kitsuragi: \"Something about the backup data getting destroyed... and how everyone thought it was the author's fault.\" He adjusts his glasses. \"Let's just keep reading.\""];
+	  137 [label="IsKimHere()"];
+	  138 [label="IsKimHere()", shape=diamond];
+	  139 [label="!(IsKimHere())", shape=diamond];
+	  140 [label="Reaction Speed: That discoman? Must be Acele."];
+	  141 [label="Kim Kitsuragi: \"Psst, someone's coming...\""];
+	  142 [label="East-Insulindian Repeater Station: \"Good morning, Fortress Accident on Saint-Brune, this is the East-Insulindian Repeater Station 1. Please repeat, is this the personal log?\""];
+	  143 [label="You: \"Okay, I'm actually trying to locate a suspect in a murder investigation. I thought they might be hiding here. I'm with the RCM, you see.\""];
+	  144 [label="Esprit de Corps: These machines sometimes harbour traps, he thinks -- alarm systems and the like. Let's be careful."];
+	  145 [label="You: \"Wait, let me just investigate it...\" (Step behind the computer.)"];
+	  146 [label="no Kim intro hub"];
+	  147 [label="You: \"Okay, but where are you? How did you know where I am?\""];
+	  148 [label="You: \"It just says 'LOG (FEB-MAR)' and nothing else.\""];
+	  149 [label="Jump to: [no Kim intro hub]"];
+	  150 [label="Empathy: Doesn't it get lonely, sitting there all by herself?"];
+	  151 [label="Electrochemistry: What was that about narcotics? This could prove to be interesting."];
+	  152 [label="Mainframe: \"28th FEB, '51: Yes, the first recordings confirm that the swallow is real and I'm not just losing my mind. It's a pillar of silence with a diameter of approximately three meters. Seems like the higher I go, the less I record. This might be a coincidence. Or it *could* be connected to the data loss that led me here.\""];
+	  153 [label="Kim Kitsuragi: \"Why would anyone need *any* of this equipment here?\" He steps on a wire running on the ground, inspecting it with his boot."];
+	  154 [label="You: Press PLAY again."];
+	  155 [label="Jump to: [East-Insulindian Repeater Station: \"\"Good. Please repeat the password.\"\"]"];
+	  156 [label="You: \"Fortress Accident... like the one in the Doomed Commercial Area?\""];
+	  157 [label="East-Insulindian Repeater Station: \"I have two machines registered to this company name in Martinaise -- one on Saint-Brune, the other on Rue de Saint-Ghislaine.\""];
+	  158 [label="Soona, the Programmer: \"No one asked you to do anything *interesting* with my radiocomputer.\" She barely looks up from the keyboard. You hear the machine whir back to life."];
+	  159 [label="Jump to: [Soona, the Programmer: \"\"No one's hiding here.\" She barely...\"]"];
+	  160 [label="Interfacing: This is the Rehm Prefect, radiocomputer model number RC7024, equipped with a Feld mainframe and a Rehm-compatible Interim printer."];
+	  161 [label="Jump to: [church repeater hub]"];
+	  162 [label="repeat the password"];
+	  163 [label="You: \"How do I do that?\""];
+	  164 [label="Variable[\"church.mainframe_looked_inside_the_compartment\"]"];
+	  165 [label="Variable[\"church.mainframe_looked_inside_the_compartment\"]", shape=diamond];
+	  166 [label="!(Variable[\"church.mainframe_looked_inside_the_compartment\"])", shape=diamond];
+	  167 [label="East-Insulindian Repeater Station: \"Good, I've unlocked the filament. After ending the call please press PRINT to access the filament.\""];
+	  168 [label="Variable[\"church.mainframe_log_password\"]"];
+	  169 [label="Variable[\"church.mainframe_log_password\"]", shape=diamond];
+	  170 [label="!(Variable[\"church.mainframe_log_password\"])", shape=diamond];
+	  171 [label="You: \"Doesn't it get lonely, doing this job?\""];
+	  172 [label="fifth entry hub"];
+	  173 [label="Kim Kitsuragi: \"Her friends, colleagues?\" He shrugs. \"She must be quite educated if she knew how to set up all this machinery.\""];
+	  174 [label="Conceptualization: A quaint little box of radio waves."];
+	  175 [label="IsKimHere() == false  and  (Variable[\"doomed.fortress_accident_kim_switch_done\"]  or  Variable[\"doomed.dicemaker_fortress_explained\"]) == true"];
+	  176 [label="IsKimHere() == false  and  (Variable[\"doomed.fortress_accident_kim_switch_done\"]  or  Variable[\"doomed.dicemaker_fortress_explained\"]) == true", shape=diamond];
+	  177 [label="!(IsKimHere() == false  and  (Variable[\"doomed.fortress_accident_kim_switch_done\"]  or  Variable[\"doomed.dicemaker_fortress_explained\"]) == true)", shape=diamond];
+	  178 [label="You: [Leave.]"];
+	  179 [label="church repeater hub"];
+	  180 [label="Interfacing: This is the machine's filament memory. Press PLAY to access its contents."];
+	  181 [label="You: \"I'm not *just* breaking in! I'm pursuing a mysterious lead, in search of my lost identity.\"\n\"We're not just breaking in! I'm pursuing a mysterious lead, searching for my lost identity.\""];
+	  182 [label="Mainframe: A machine stands in the corner, watched over by the figures on the stained glass window. It's turned on and quivering with soft electricity."];
+	  183 [label="Kim Kitsuragi: The lieutenant whispers into your ear: \"She repeats passwords. Programming people are all... paranoid.\""];
+	  184 [label="Jump to: [repeat the password]"];
+	  185 [label="Jump to: [Mainframe: \"The machine's keyboard is still ill...\"]"];
+	  186 [label="You: \"And what's that -- this 'interactive call-in radio game'?\""];
+	  187 [label="Variable[\"church.mainframe_reached_intro_hub\"]"];
+	  188 [label="Variable[\"church.mainframe_reached_intro_hub\"]", shape=diamond];
+	  189 [label="!(Variable[\"church.mainframe_reached_intro_hub\"])", shape=diamond];
+	  190 [label="Variable[\"church.mainframe_have_seen_radiocomputer\"]"];
+	  191 [label="Variable[\"church.mainframe_have_seen_radiocomputer\"]", shape=diamond];
+	  192 [label="!(Variable[\"church.mainframe_have_seen_radiocomputer\"])", shape=diamond];
+	  193 [label="Mainframe: \"12th FEB, '51: Brought some food from the grocery store. Apparently there's a strike going on in the harbour. Definitely not happy to see the Martinaise people again. Everything's now set up in the church, going to start working tomorrow 8 AM.\""];
+	  194 [label="IsKimHere()"];
+	  195 [label="IsKimHere()", shape=diamond];
+	  196 [label="!(IsKimHere())", shape=diamond];
+	  197 [label="IsKimHere()"];
+	  198 [label="IsKimHere()", shape=diamond];
+	  199 [label="!(IsKimHere())", shape=diamond];
+	  200 [label="Mainframe: The speaker comes to life, static seeps through the machine's planar magnetic driver. An old lady greets you, her voice sounds a hundred years old..."];
+	  201 [label="Variable[\"church.mainframe_unlocked_personal_log\"]"];
+	  202 [label="Variable[\"church.mainframe_unlocked_personal_log\"]", shape=diamond];
+	  203 [label="!(Variable[\"church.mainframe_unlocked_personal_log\"])", shape=diamond];
+	  204 [label="Kim Kitsuragi: \"I do apologize for the intrusion, madam. We're with the RCM, you see.\""];
+	  205 [label="Kim Kitsuragi: \"We should probably let it be. It's becoming clear that there's no trace of the suspect anywhere inside the church.\""];
+	  206 [label="Variable[\"TASK.locate_ruby_on_the_coast\"]"];
+	  207 [label="Variable[\"TASK.locate_ruby_on_the_coast\"]", shape=diamond];
+	  208 [label="!(Variable[\"TASK.locate_ruby_on_the_coast\"])", shape=diamond];
+	  209 [label="Interfacing: This is the Rehm Prefect radiocomputer, a model number RC7024, equipped with a Feld mainframe and a Rehm-compatible Interim printer."];
+	  210 [label="You: \"I don't know, maybe?\""];
+	  211 [label="East-Insulindian Repeater Station: \"Now, can you please repeat the password?\" the voice in the machine asks again. She sounds cold in the damp air."];
+	  212 [label="Variable[\"church.mainframe_asked_whats_personal_log\"]"];
+	  213 [label="Variable[\"church.mainframe_asked_whats_personal_log\"]", shape=diamond];
+	  214 [label="!(Variable[\"church.mainframe_asked_whats_personal_log\"])", shape=diamond];
+	  215 [label="Mainframe: Machine's keyboard is still illuminated, revealing virescent PLAY and PRINT buttons."];
+	  216 [label="You: \"That's me. I was the one who broke into that radiocomputer! And the storekeeper must be Plaisance...\""];
+	  217 [label="Mainframe: \"Arrived at the church. The door was boarded up, so I used a crowbar to get inside. Looks like the place has been deserted. Nothing out of the ordinary, but I'll ask around. Need to figure out how to get the electricity in.\""];
+	  218 [label="East-Insulindian Repeater Station: \"I wouldn't know, I'm only here for passwords.\""];
+	  219 [label="You: Press PLAY."];
+	  220 [label="Soona, the Programmer: A strange woman makes straight for the radiocomputer."];
+	  221 [label="Perception: Your reading is interrupted by the sound of the church door opening."];
+	  222 [label="You: \"I'm looking for a suspect in a murder investigation. I thought they might be hiding here. I'm with the RCM, you see.\"\n\"We're looking for a suspect in a murder investigation. We thought they might be hiding here.\""];
+	  223 [label="Soona, the Programmer: \"Well, you won't find any music venue organisers here.\" She barely looks up from the keyboard. You hear the machine whir back to life."];
+	  224 [label="Interfacing: Yes, you *are* breaking in. But not into *her* radiocomputer. You're a master circuit-bender."];
+	  225 [label="Soona, the Programmer: \"There are no *Coalition military datalinks*.\" She barely looks up from the keyboard. \"And even if there was, you couldn't access them over a civilian network.\""];
+	  226 [label="You: \"You're right, I'm just a drunk cop. I don't know how to do anything interesting with radiocomputers.\""];
+	  227 [label="Soona, the Programmer: \"That's nonsense. You're just a police officer.\" She barely looks up from the keyboard. You hear the machine whir back to life."];
+	  228 [label="Conceptualization: A quaint little box of radio waves."];
+	  229 [label="You: \"Ah, right. Thanks for the explanation.\""];
+	  230 [label="East-Insulindian Repeater Station: The static drowns her response. \"Any other questions?\" you hear her ask when the connection finally improves."];
+	  231 [label="Jump to: [main hub]"];
+	  232 [label="Kim Kitsuragi: \"The girl on the ice? Sounds like her, yes.\""];
+	  233 [label="Interfacing: No-no. It was a great idea. You're learning things. This is how you learn things about machines."];
+	  234 [label="Interfacing: This is a *human interface* -- a retired person sitting behind a switchboard somewhere."];
+	  235 [label="Empathy: That's why she does this."];
+	  236 [label="Soona, the Programmer: You're so engrossed in your reading that you don't even notice the sound of the door opening..."];
+	  237 [label="Variable[\"church.mainframe_interfacing_ream_prefect\"]"];
+	  238 [label="Variable[\"church.mainframe_interfacing_ream_prefect\"]", shape=diamond];
+	  239 [label="!(Variable[\"church.mainframe_interfacing_ream_prefect\"])", shape=diamond];
+	  240 [label="IsDaytime()"];
+	  241 [label="IsDaytime()", shape=diamond];
+	  242 [label="!(IsDaytime())", shape=diamond];
+	  243 [label="You: \"This is the police. Please open this thing!\""];
+	  244 [label="East-Insulindian Repeater Station: The voice recites: \"I am contractually obliged to protect the privacy of the filament holder Fortress Accident. Without filing a warrant with Lintel I cannot give you access to this filament.\""];
+	  245 [label="Kim Kitsuragi: \"Let's look around. There's no use trying to guess the answer.\""];
+	  246 [label="Authority: Artists, yet again!! Harassing citizens, stealing badges, 'occupying' public spaces with 'installations' like the one here..."];
+	  247 [label="Kim Kitsuragi: \"The strike...\" He strokes his chin. \"We're nearing the date of the murder.\""];
+	  248 [label="You: \"Why would she need an antenna?\""];
+	  249 [label="Kim Kitsuragi: \"Keep reading, I'm interested now -- I want to know what's that radio anomaly that sent this person here in the first place.\""];
+	  250 [label="Encyclopedia: A hint system is not part of the protocol for repeater stations."];
+	  251 [label="Variable[\"doomed.radiocomputer_repeater_station_called_once\"]"];
+	  252 [label="Variable[\"doomed.radiocomputer_repeater_station_called_once\"]", shape=diamond];
+	  253 [label="!(Variable[\"doomed.radiocomputer_repeater_station_called_once\"])", shape=diamond];
+	  254 [label="IsKimHere()"];
+	  255 [label="IsKimHere()", shape=diamond];
+	  256 [label="!(IsKimHere())", shape=diamond];
+	  257 [label="East-Insulindian Repeater Station: \"Good evening, Fortress Accident on Saint-Brune, this is the East-Insulindian Repeater Station 1. Please repeat, is this the personal log?\""];
+	  258 [label="DOES THIS HUB WORK"];
+	  259 [label="Variable[\"doomed.radiocomputer_repeater_station_called_once\"]"];
+	  260 [label="Variable[\"doomed.radiocomputer_repeater_station_called_once\"]", shape=diamond];
+	  261 [label="!(Variable[\"doomed.radiocomputer_repeater_station_called_once\"])", shape=diamond];
+	  262 [label="Variable[\"church.mainframe_interfacing_ream_prefect\"]"];
+	  263 [label="Variable[\"church.mainframe_interfacing_ream_prefect\"]", shape=diamond];
+	  264 [label="!(Variable[\"church.mainframe_interfacing_ream_prefect\"])", shape=diamond];
+	  265 [label="You: \"I swear I haven't touched anything!\""];
+	  266 [label="You: \"Alright, I'll do that.\""];
+	  267 [label="East-Insulindian Repeater Station: \"Good bye, Fortress Accident,\" she says as her voice disappears into a whirl of static."];
+	  268 [label="East-Insulindian Repeater Station: \"Good, thank you.\" It's not clear whether she recognizes your voice. \"Please repeat, is this the personal log?\""];
+	  269 [label="Kim Kitsuragi: \"I'm afraid we're not doing that. Unless we want to wait for a month.\""];
+	  270 [label="You: \"What's Fortress Accident?\"\n\"Fortress Accident -- sounds familiar...\""];
+	  271 [label="Kim Kitsuragi: \"Maybe *he* knows something.\" The lieutenant nods toward Tiago."];
+	  272 [label="Mainframe: A machine stands in the corner, watched over by the figures on the stained glass window. It's turned on and quivering with soft electricity."];
+	  273 [label="Jump to: [Kim intro hub]"];
+	  274 [label="Jump to: [East-Insulindian Repeater Station: \"\"Good. Please repeat the password.\"\"]"];
+	  275 [label="Variable[\"church.mainframe_interfacing_ream_prefect\"]"];
+	  276 [label="Variable[\"church.mainframe_interfacing_ream_prefect\"]", shape=diamond];
+	  277 [label="!(Variable[\"church.mainframe_interfacing_ream_prefect\"])", shape=diamond];
+	  278 [label="Perception (Hearing): It's the same old woman you spoke with through the radiocomputer in the Doomed Commercial Area."];
+	  279 [label="Mainframe: The static gets louder, slowly filling up the abandoned hall. Until a voice speaks out, crackling and old, cutting into the air..."];
+	  280 [label="Soona, the Programmer: \"It's just me and my computer -- and it has been this way for weeks. Now please, give me some room. I need two seconds to see that you haven't destroyed anything.\""];
+	  281 [label="Kim Kitsuragi: \"A radiocomputer,\" says the lieutenant, stepping closer. \"And it's turned on.\" He seems cautious around the machine."];
+	  282 [label="East-Insulindian Repeater Station: \"Open the hatch on the compartment. Don't touch the wires, a current is running through it, but the core is safe. There's a filament inside -- I need to know what it's called.\""];
+	  283 [label="You: \"Wow. So conceptual.\""];
+	  284 [label="Kim Kitsuragi: The lieutenant doesn't say anything, but you can sense that he doesn't like you meddling with the machine."];
+	  285 [label="Variable[\"church.mainframe_empathy_lonely\"]"];
+	  286 [label="Variable[\"church.mainframe_empathy_lonely\"]", shape=diamond];
+	  287 [label="!(Variable[\"church.mainframe_empathy_lonely\"])", shape=diamond];
+	  288 [label="You: \"Artists, programmers, *Lexie* -- who are all those people?\""];
+	  289 [label="You: \"A data loss?\""];
+	  290 [label="10th entry hub"];
+	  291 [label="Variable[\"church.mainframe_repeater_station_called_once\"]"];
+	  292 [label="Variable[\"church.mainframe_repeater_station_called_once\"]", shape=diamond];
+	  293 [label="!(Variable[\"church.mainframe_repeater_station_called_once\"])", shape=diamond];
+	  294 [label="Encyclopedia: The Rehm Prefect is the governmental version of the commonly used Rehm Civic model. Although mostly based on the same technology, the Rehm Prefect is equipped with better noise attenuation circuits."];
+	  295 [label="Logic: She must be talking about her former colleagues from Fortress Accident. They all sound like *radio game people*."];
+	  296 [label="Shivers: A shiver runs through you as you look to your left, toward the silence."];
+	  297 [label="Variable[\"church.mainframe_perc_door_opens\"]"];
+	  298 [label="Variable[\"church.mainframe_perc_door_opens\"]", shape=diamond];
+	  299 [label="!(Variable[\"church.mainframe_perc_door_opens\"])", shape=diamond];
+	  300 [label="East-Insulindian Repeater Station: \"Good afternoon, Fortress Accident on Saint-Brune, this is the East-Insulindian Repeater Station 1. Please repeat, is this the personal log?\""];
+	  301 [label="Kim Kitsuragi: \"We should leave; I doubt this place bears any connection to the case.\""];
+	  302 [label="Conceptualization: A quaint little box of radio waves."];
+	  303 [label="East-Insulindian Repeater Station: \"Yes, I am alive. I am 74 years old and my name is Yvonne. Now please repeat, is this the personal log?\""];
+	  304 [label="IsKimHere()"];
+	  305 [label="IsKimHere()", shape=diamond];
+	  306 [label="!(IsKimHere())", shape=diamond];
+	  307 [label="paranoid hub"];
+	  308 [label="East-Insulindian Repeater Station: \"Yes. First you have to end this call though, and then you have to call us back. Is there anything else I could do for you meanwhile?\""];
+	  309 [label="You: \"Let's try this again. I think I may have the right password for the personal log.\""];
+	  310 [label="Variable[\"church.tiago_spook_typing\"]"];
+	  311 [label="Variable[\"church.tiago_spook_typing\"]", shape=diamond];
+	  312 [label="!(Variable[\"church.tiago_spook_typing\"])", shape=diamond];
+	  313 [label="East-Insulindian Repeater Station: \"Please end the call and do that.\""];
+	  314 [label="Kim Kitsuragi: \"Seems like something to do with radiocomputers -- unfortunately, I don't know enough about them to understand what the author is saying.\""];
+	  315 [label="Mainframe: \"25th FEB, '51: I've been sending data up to Lintel for a while now, trying to recreate the data loss, but nothing. Didn't even feel like logging in the disappointment. But I did discover a curious *audio-spatial* anomaly at the back of the church. I've named it *the swallow*. (It swallows sound.) Need to get some mics.\""];
+	  316 [label="Kim Kitsuragi: \"I think these people worked in the radiocomputer games business. The one we saw in the Doomed Commercial Area. They must be her former co-workers.\""];
+	  317 [label="You: Look inside the compartment."];
+	  318 [label="Mainframe: Nothing happens."];
+	  319 [label="IsKimHere()"];
+	  320 [label="IsKimHere()", shape=diamond];
+	  321 [label="!(IsKimHere())", shape=diamond];
+	  322 [label="Variable[\"doomed.seen_radiocomputer\"]"];
+	  323 [label="Variable[\"doomed.seen_radiocomputer\"]", shape=diamond];
+	  324 [label="!(Variable[\"doomed.seen_radiocomputer\"])", shape=diamond];
+	  325 [label="East-Insulindian Repeater Station: \"That was a question. Have you inserted it into the core?\""];
+	  326 [label="East-Insulindian Repeater Station: \"Sleep well, Fortress Accident,\" she says as her voice disappears into a whirl of static."];
+	  327 [label="You: \"I looked inside the core, but the tape on the filament just said \"LOG (FEB-MAR)\"."];
+	  328 [label="Kim Kitsuragi: \"Our case? No, I don't think so. It must be some local...\" his eyes wander to the various machines around him, \"*eccentric*.\""];
+	  329 [label="You: \"Wait, *narcotics*?\" (Look around the derelict building.)"];
+	  330 [label="Mainframe: \"Fortunately, the song is so monotonous I was able to devise an algorithm to factor it out. The other day one of the discomen came in. Before I could even say hello, she got scared and left. Good, I don't want anyone distracting me from my work.\""];
+	  331 [label="IsKimHere()"];
+	  332 [label="IsKimHere()", shape=diamond];
+	  333 [label="!(IsKimHere())", shape=diamond];
+	  334 [label="You: \"But what could it be?\" (Look at the water basins behind you.)"];
+	  335 [label="Kim Kitsuragi: \"I knew it wasn't a good idea to meddle with that machine...\""];
+	  336 [label="Variable[\"doomed.radiocomputer_interfacing_humaninterface\"]"];
+	  337 [label="Variable[\"doomed.radiocomputer_interfacing_humaninterface\"]", shape=diamond];
+	  338 [label="!(Variable[\"doomed.radiocomputer_interfacing_humaninterface\"])", shape=diamond];
+	  339 [label="You: \"Thanks, but I'm finished with this call.\" (Press OFF/SILENT.)"];
+	  340 [label="Variable[\"tc.filament_memory\"]"];
+	  341 [label="Variable[\"tc.filament_memory\"]", shape=diamond];
+	  342 [label="!(Variable[\"tc.filament_memory\"])", shape=diamond];
+	  343 [label="Soona, the Programmer: \"Breaking into my radiocomputer again, I see.\" She glares at you as she holds down the OFF button for several seconds. The machine reboots."];
+	  344 [label="You: \"Yes, but what is this strange thing?\" (Point at the machine.)"];
+	  345 [label="East-Insulindian Repeater Station: \"I don't know, that's what I'm asking. Is this the personal log?\""];
+	  346 [label="You: \"Do you have any other information about this company?\""];
+	  347 [label="East-Insulindian Repeater Station: \"'Fortress Accident SCA produces revolutionary interactive call-in radio games' -- that's what the catalogue says.\""];
+	  348 [label="Variable[\"church.mainframe_asked_whats_personal_log\"]"];
+	  349 [label="Variable[\"church.mainframe_asked_whats_personal_log\"]", shape=diamond];
+	  350 [label="!(Variable[\"church.mainframe_asked_whats_personal_log\"])", shape=diamond];
+	  351 [label="third entry hub"];
+	  352 [label="6th entry hub"];
+	  353 [label="Mainframe: \"MARCH '51: A new 2m AUX cable, noodles, crackers, Ping-Ping energy drinks, water, TOOTHPASTE, gum, also some canned air...\""];
+	  354 [label="Drama: Then why doth the lieutenant protest against spending time here? So often?"];
+	  355 [label="Logic: Password. Of course it would have a password. That's why there's a human administrator involved."];
+	  356 [label="Suggestion: You should ask her for a hint."];
+	  357 [label="Variable[\"doomed.radiocomputer_hl_loginattempt\"]"];
+	  358 [label="Variable[\"doomed.radiocomputer_hl_loginattempt\"]", shape=diamond];
+	  359 [label="!(Variable[\"doomed.radiocomputer_hl_loginattempt\"])", shape=diamond];
+	  360 [label="Jump to: [church repeater hub]"];
+	  361 [label="(Variable[\"ice.andre_noid_acele_went_into_church\"]  or  Variable[\"ice.andre_greeting_done\"]  or  Variable[\"ice.acele_greet_hub_reached\"])"];
+	  362 [label="(Variable[\"ice.andre_noid_acele_went_into_church\"]  or  Variable[\"ice.andre_greeting_done\"]  or  Variable[\"ice.acele_greet_hub_reached\"])", shape=diamond];
+	  363 [label="!((Variable[\"ice.andre_noid_acele_went_into_church\"]  or  Variable[\"ice.andre_greeting_done\"]  or  Variable[\"ice.acele_greet_hub_reached\"]))", shape=diamond];
+	  364 [label="Mainframe: Behind the hatch sits a cube-like crisscross of filaments, smouldering in the dark like fireflies. Silver tape on the side says in black marker: \"LOG (FEB-MAR)\"."];
+	  365 [label="Soona, the Programmer: \"No one's hiding here.\" She barely looks up from the keyboard. You hear the machine whir back to life."];
+	  366 [label="Variable[\"church.mainframe_repeater_station_called_once\"]"];
+	  367 [label="Variable[\"church.mainframe_repeater_station_called_once\"]", shape=diamond];
+	  368 [label="!(Variable[\"church.mainframe_repeater_station_called_once\"])", shape=diamond];
+	  369 [label="Kim Kitsuragi: \"A radiocomputer,\" the lieutenant repeats a little impatiently, \"we have one down at the station.\""];
+	  370 [label="Reaction Speed: Another radiocomputer! Could it bear connection to the one in the Doomed Commercial Area?"];
+	  371 [label="You: Back off. [Leave.]"];
+	  372 [label="Mainframe: As you step closer, you notice virescent PLAY and PRINT buttons on the keyboard. A hatch connected to the central compartment is wide open."];
+	  373 [label="You: \"What's 'the personal log'?\""];
+	  374 [label="East-Insulindian Repeater Station: \"Received. I will *register* this log-in attempt.\""];
+	  375 [label="You: \"After life death.\""];
+	  376 [label="IsKimHere()"];
+	  377 [label="IsKimHere()", shape=diamond];
+	  378 [label="!(IsKimHere())", shape=diamond];
+	  379 [label="Mainframe: The first entry, made on the 4th February '51 by an unknown author, is short and concise:"];
+	  380 [label="Kim Kitsuragi: \"Nothing *spooky* about this place either, it's just abandoned. And cold. And in an awful part of town...\""];
+	  381 [label="Mainframe: \"But at least the artists have their act together -- they're qualified labour, they can get work anywhere: graphic design, ads. The programmers are doing fine too, I mean, they're programmers. The writers, though... they're fucked.\""];
+	  383 [label="You: \"What are you, a *machine*? Or are you *alive*?\""];
+	  384 [label="East-Insulindian Repeater Station: \"I work as a repeater at the East-Insulindian Repeater Station. It's my job to know where you are, Fortress Accident.\""];
+	  385 [label="IsKimHere()"];
+	  386 [label="IsKimHere()", shape=diamond];
+	  387 [label="!(IsKimHere())", shape=diamond];
+	  388 [label="East-Insulindian Repeater Station: \"Lonely?\" For the first time you hear her chuckle through the rustle of static. \"Why would it get lonely, I get to talk all day to people like you over a warm cup of tea.\""];
+	  389 [label="IsKimHere()"];
+	  390 [label="IsKimHere()", shape=diamond];
+	  391 [label="!(IsKimHere())", shape=diamond];
+	  392 [label="Half Light: See? Even one of the spookers themselves says it's unnerving."];
+	  393 [label="Mainframe: \"7th FEB, '51: Finally got the electricity in! Next on the agenda: a new antenna. I'm thinking ESKER series? Something advanced.\""];
+	  394 [label="Mainframe: \"8th FEB, '51: Bought the antenna, had some problems setting it up, called Simo for help. Heard the others are back to *making art* (drinking somewhere out of town). Sulisław started a rock band again, Lexie has been seen asking money from strangers...\""];
+	  395 [label="Mainframe: \"I just have to find out what caused that data loss and be done with it. Still don't understand how it managed to wipe out the backup when the backup *wasn't even connected to the front*. I know, I know... everyone thinks it's impossible; they say I must be lying. I'm here to set it right.\""];
+	  396 [label="IsKimHere()"];
+	  397 [label="IsKimHere()", shape=diamond];
+	  398 [label="!(IsKimHere())", shape=diamond];
+	  399 [label="Kim Kitsuragi: \"We should talk to her,\" the lieutenant whispers, \"after she has rebooted the machine.\""];
+	  400 [label="Interfacing: The one you saw earlier was the Rehm Civic -- this is the Rehm *Prefect*, a model number RC7024, equipped with a Feld mainframe and a Rehm-compatible Interim printer."];
+	  0 -> 1
+	  1 -> 190
+	  2 -> 22
+	  3 -> 94
+	  4 -> 150
+	  5 -> 374
+	  6 -> 28
+	  7 -> 179
+	  8 -> 112
+	  9 -> 328
+	  10 -> 392
+	  11 -> 380
+	  12 -> 193
+	  13 -> 232
+	  14 -> 353
+	  15 -> 57
+	  16 -> 17
+	  16 -> 18
+	  17 -> 316
+	  18 -> 173
+	  19 -> 360
+	  20 -> 94
+	  21 -> 225
+	  22 -> 344
+	  22 -> 73
+	  22 -> 145
+	  22 -> 23
+	  24 -> 22
+	  25 -> 45
+	  26 -> 161
+	  27 -> 179
+	  28 -> 266
+	  29 -> 162
+	  30 -> 179
+	  31 -> 179
+	  32 -> 122
+	  33 -> 313
+	  34 -> 58
+	  34 -> 13
+	  35 -> 36
+	  35 -> 37
+	  36 -> 399
+	  38 -> 20
+	  39 -> 94
+	  40 -> 280
+	  41 -> 42
+	  41 -> 43
+	  42 -> 2
+	  43 -> 205
+	  44 -> 3
+	  45 -> 146
+	  46 -> 372
+	  47 -> 95
+	  48 -> 122
+	  49 -> 163
+	  50 -> 51
+	  50 -> 52
+	  51 -> 105
+	  52 -> 124
+	  53 -> 161
+	  54 -> 122
+	  55 -> 109
+	  56 -> 315
+	  57 -> 88
+	  57 -> 334
+	  58 -> 89
+	  59 -> 68
+	  60 -> 379
+	  61 -> 186
+	  61 -> 283
+	  62 -> 94
+	  63 -> 223
+	  64 -> 209
+	  65 -> 24
+	  66 -> 4
+	  67 -> 393
+	  68 -> 394
+	  69 -> 152
+	  70 -> 72
+	  70 -> 71
+	  71 -> 162
+	  72 -> 355
+	  73 -> 74
+	  74 -> 400
+	  75 -> 19
+	  76 -> 201
+	  77 -> 78
+	  77 -> 79
+	  78 -> 343
+	  79 -> 116
+	  80 -> 81
+	  80 -> 82
+	  81 -> 204
+	  82 -> 96
+	  83 -> 227
+	  84 -> 48
+	  84 -> 265
+	  84 -> 210
+	  85 -> 304
+	  86 -> 347
+	  87 -> 330
+	  88 -> 87
+	  89 -> 90
+	  89 -> 91
+	  90 -> 131
+	  91 -> 353
+	  92 -> 351
+	  93 -> 125
+	  94 -> 76
+	  94 -> 178
+	  94 -> 154
+	  94 -> 219
+	  94 -> 60
+	  94 -> 317
+	  95 -> 279
+	  96 -> 181
+	  96 -> 21
+	  96 -> 222
+	  96 -> 63
+	  97 -> 98
+	  97 -> 99
+	  98 -> 115
+	  99 -> 179
+	  100 -> 35
+	  101 -> 144
+	  102 -> 4
+	  103 -> 66
+	  104 -> 50
+	  105 -> 184
+	  106 -> 179
+	  107 -> 8
+	  107 -> 9
+	  107 -> 108
+	  108 -> 10
+	  109 -> 107
+	  110 -> 248
+	  110 -> 68
+	  111 -> 69
+	  112 -> 39
+	  113 -> 19
+	  114 -> 62
+	  115 -> 179
+	  116 -> 224
+	  117 -> 118
+	  117 -> 119
+	  118 -> 101
+	  119 -> 281
+	  120 -> 121
+	  120 -> 229
+	  121 -> 345
+	  122 -> 197
+	  123 -> 50
+	  124 -> 250
+	  125 -> 27
+	  126 -> 268
+	  127 -> 155
+	  128 -> 346
+	  129 -> 212
+	  130 -> 57
+	  131 -> 290
+	  132 -> 111
+	  133 -> 134
+	  133 -> 135
+	  134 -> 92
+	  135 -> 351
+	  136 -> 172
+	  137 -> 138
+	  137 -> 139
+	  138 -> 113
+	  139 -> 75
+	  140 -> 34
+	  141 -> 220
+	  142 -> 291
+	  143 -> 159
+	  144 -> 206
+	  145 -> 44
+	  146 -> 371
+	  146 -> 46
+	  147 -> 384
+	  148 -> 274
+	  149 -> 146
+	  150 -> 285
+	  151 -> 133
+	  152 -> 331
+	  153 -> 59
+	  154 -> 366
+	  155 -> 122
+	  156 -> 157
+	  157 -> 137
+	  158 -> 100
+	  159 -> 365
+	  160 -> 262
+	  161 -> 179
+	  162 -> 5
+	  162 -> 104
+	  162 -> 243
+	  162 -> 375
+	  162 -> 123
+	  163 -> 282
+	  164 -> 165
+	  164 -> 166
+	  165 -> 148
+	  166 -> 266
+	  166 -> 6
+	  167 -> 125
+	  168 -> 169
+	  168 -> 170
+	  169 -> 162
+	  170 -> 245
+	  171 -> 388
+	  172 -> 288
+	  172 -> 289
+	  172 -> 12
+	  173 -> 172
+	  174 -> 24
+	  175 -> 176
+	  175 -> 177
+	  176 -> 295
+	  177 -> 172
+	  179 -> 33
+	  179 -> 327
+	  179 -> 383
+	  179 -> 270
+	  179 -> 339
+	  179 -> 309
+	  179 -> 373
+	  179 -> 156
+	  179 -> 126
+	  179 -> 127
+	  180 -> 20
+	  181 -> 40
+	  182 -> 319
+	  183 -> 307
+	  184 -> 162
+	  185 -> 39
+	  186 -> 230
+	  187 -> 188
+	  187 -> 189
+	  188 -> 272
+	  189 -> 182
+	  190 -> 192
+	  190 -> 191
+	  191 -> 215
+	  192 -> 187
+	  193 -> 396
+	  194 -> 195
+	  194 -> 196
+	  195 -> 132
+	  196 -> 296
+	  197 -> 198
+	  197 -> 199
+	  198 -> 168
+	  199 -> 70
+	  200 -> 258
+	  201 -> 202
+	  201 -> 203
+	  202 -> 114
+	  203 -> 318
+	  204 -> 96
+	  205 -> 22
+	  206 -> 208
+	  206 -> 207
+	  207 -> 41
+	  208 -> 301
+	  209 -> 237
+	  210 -> 49
+	  211 -> 29
+	  212 -> 213
+	  212 -> 214
+	  213 -> 53
+	  214 -> 26
+	  215 -> 231
+	  216 -> 335
+	  217 -> 389
+	  218 -> 186
+	  219 -> 366
+	  220 -> 77
+	  221 -> 297
+	  222 -> 365
+	  223 -> 280
+	  224 -> 80
+	  225 -> 226
+	  225 -> 83
+	  225 -> 143
+	  226 -> 158
+	  227 -> 100
+	  228 -> 24
+	  229 -> 325
+	  230 -> 30
+	  231 -> 94
+	  232 -> 58
+	  233 -> 14
+	  234 -> 97
+	  235 -> 212
+	  236 -> 220
+	  237 -> 238
+	  237 -> 239
+	  238 -> 65
+	  239 -> 228
+	  240 -> 241
+	  240 -> 242
+	  241 -> 267
+	  242 -> 326
+	  243 -> 244
+	  244 -> 385
+	  245 -> 310
+	  246 -> 381
+	  247 -> 249
+	  248 -> 153
+	  249 -> 352
+	  250 -> 184
+	  251 -> 252
+	  251 -> 253
+	  252 -> 200
+	  253 -> 47
+	  254 -> 256
+	  254 -> 255
+	  255 -> 141
+	  256 -> 236
+	  257 -> 291
+	  258 -> 257
+	  258 -> 300
+	  258 -> 142
+	  259 -> 260
+	  259 -> 261
+	  260 -> 278
+	  261 -> 336
+	  262 -> 264
+	  262 -> 263
+	  263 -> 25
+	  264 -> 302
+	  265 -> 49
+	  266 -> 308
+	  267 -> 185
+	  268 -> 31
+	  269 -> 211
+	  270 -> 128
+	  271 -> 162
+	  272 -> 376
+	  273 -> 22
+	  274 -> 122
+	  275 -> 276
+	  275 -> 277
+	  276 -> 294
+	  277 -> 174
+	  278 -> 97
+	  279 -> 258
+	  280 -> 35
+	  281 -> 144
+	  282 -> 164
+	  283 -> 218
+	  284 -> 273
+	  285 -> 286
+	  285 -> 287
+	  286 -> 129
+	  286 -> 171
+	  287 -> 212
+	  288 -> 16
+	  289 -> 314
+	  290 -> 216
+	  290 -> 14
+	  291 -> 292
+	  291 -> 293
+	  292 -> 179
+	  293 -> 259
+	  294 -> 24
+	  295 -> 172
+	  296 -> 111
+	  297 -> 298
+	  297 -> 299
+	  298 -> 220
+	  299 -> 254
+	  300 -> 291
+	  301 -> 22
+	  302 -> 45
+	  303 -> 304
+	  304 -> 305
+	  304 -> 306
+	  305 -> 183
+	  306 -> 307
+	  307 -> 147
+	  307 -> 103
+	  308 -> 106
+	  309 -> 32
+	  310 -> 312
+	  310 -> 311
+	  311 -> 271
+	  312 -> 162
+	  313 -> 7
+	  314 -> 136
+	  315 -> 194
+	  316 -> 172
+	  317 -> 364
+	  318 -> 62
+	  319 -> 320
+	  319 -> 321
+	  320 -> 117
+	  321 -> 322
+	  322 -> 323
+	  322 -> 324
+	  323 -> 370
+	  324 -> 160
+	  325 -> 84
+	  326 -> 185
+	  327 -> 54
+	  328 -> 107
+	  329 -> 11
+	  330 -> 361
+	  331 -> 332
+	  331 -> 333
+	  332 -> 130
+	  333 -> 57
+	  334 -> 15
+	  335 -> 233
+	  336 -> 337
+	  336 -> 338
+	  337 -> 97
+	  338 -> 234
+	  339 -> 240
+	  340 -> 341
+	  340 -> 342
+	  341 -> 38
+	  342 -> 180
+	  343 -> 224
+	  344 -> 369
+	  345 -> 84
+	  346 -> 86
+	  347 -> 61
+	  348 -> 349
+	  348 -> 350
+	  349 -> 85
+	  350 -> 303
+	  351 -> 329
+	  351 -> 67
+	  352 -> 56
+	  353 -> 221
+	  354 -> 67
+	  355 -> 356
+	  356 -> 162
+	  357 -> 358
+	  357 -> 359
+	  358 -> 125
+	  359 -> 93
+	  360 -> 179
+	  361 -> 362
+	  361 -> 363
+	  362 -> 140
+	  363 -> 34
+	  364 -> 340
+	  365 -> 280
+	  366 -> 368
+	  366 -> 367
+	  367 -> 200
+	  368 -> 251
+	  369 -> 64
+	  370 -> 160
+	  372 -> 94
+	  373 -> 120
+	  374 -> 357
+	  375 -> 167
+	  376 -> 377
+	  376 -> 378
+	  377 -> 284
+	  378 -> 149
+	  379 -> 217
+	  380 -> 354
+	  381 -> 395
+	  383 -> 348
+	  384 -> 102
+	  385 -> 386
+	  385 -> 387
+	  386 -> 269
+	  387 -> 211
+	  388 -> 235
+	  389 -> 390
+	  389 -> 391
+	  390 -> 55
+	  391 -> 107
+	  392 -> 151
+	  393 -> 110
+	  394 -> 246
+	  395 -> 175
+	  396 -> 397
+	  396 -> 398
+	  397 -> 247
+	  398 -> 352
+	  400 -> 275
+}
+

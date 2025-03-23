@@ -1,0 +1,58 @@
+# KIM SWITCH / flashlight
+# Fires when you remain in the dark with Kim
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  3 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  4 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  5 [label="Kim Kitsuragi: \"I'm sorry the fundamental laws of the universe don't seem to agree with you, detective, but the fact remains that it's too dark to see in here without the flashlight...\""];
+	  7 [label="Kim Kitsuragi: CheckItem(\"flashlight\")"];
+	  8 [label="CheckItem(\"flashlight\")", shape=diamond];
+	  9 [label="!(CheckItem(\"flashlight\"))", shape=diamond];
+	  10 [label="Kim Kitsuragi: \"Right. Now let's get to it,\" the lieutenant nods."];
+	  11 [label="Kim Kitsuragi: \"I've got one in the Kineema's toolbox. We should go back for it before we continue. No sense in tripping around in the darkness.\""];
+	  12 [label="Kim Kitsuragi: \"Yes,\" the lieutenant says. \"You might even call it a *feature* of the universe, that you need to *hold* tools to *use* them.\""];
+	  13 [label="Kim Kitsuragi: \"So come on. We've got work to do.\""];
+	  14 [label="Tutorial Agent: Some areas are inaccessible without your FLASHLIGHT. After you’ve acquired it, go to your INVENTORY and equip it in a HELD slot to continue exploring."];
+	  15 [label="You: \"Fair point. Yes, totally obvious.\""];
+	  16 [label="Kim Kitsuragi: \"And the flashlight works a lot better if you *hold it in your hand*.\""];
+	  17 [label="You: \"That makes so much sense.\""];
+	  18 [label="You: \"That makes no sense at all.\""];
+	  19 [label="You: \"Got it, Kim, no need to rub it in.\" [Leave.]"];
+	  20 [label="Tutorial Agent: Some areas are inaccessible without your FLASHLIGHT. After you’ve acquired it, go to your INVENTORY and equip it in a HELD slot to continue exploring."];
+	  21 [label="Kim Kitsuragi: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  22 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  23 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  24 [label="You: \"Flashlights go *in* hand?\" (Stare at your hand uncomprehendingly.)"];
+	  25 [label="kiminthedark"];
+	  26 [label="Kim Kitsuragi: \"This would be a lot easier with a flashlight...\""];
+	  0 -> 1
+	  2 -> 3
+	  2 -> 4
+	  4 -> 14
+	  5 -> 13
+	  7 -> 8
+	  7 -> 9
+	  8 -> 16
+	  9 -> 26
+	  10 -> 21
+	  11 -> 2
+	  12 -> 17
+	  12 -> 18
+	  13 -> 21
+	  15 -> 10
+	  16 -> 24
+	  16 -> 19
+	  16 -> 15
+	  17 -> 10
+	  18 -> 5
+	  21 -> 22
+	  21 -> 23
+	  23 -> 20
+	  24 -> 12
+	  25 -> 7
+	  26 -> 11
+}
+

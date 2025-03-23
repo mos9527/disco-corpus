@@ -1,0 +1,640 @@
+# SEAFORT INT / FELD INSULAR CONSOLE
+# old electronic console – turn on lights and open blast door if fuel in generator
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Jump to: [consolinghub]"];
+	  3 [label="Encyclopedia: 这是一个气隙系统。军用的*收播*型号。它的电路几乎基本上不可能*篡改*，比如说，是无法远程操控的。"];
+	  4 [label="Feld \"Insular\" Console: 刻度盘在玻璃下方无声地滑动。你在UKV频段辨认出了废弃的电台。上面写着“菲尔德岛”。"];
+	  5 [label="You: “那边是什么？”（指向大门。）"];
+	  6 [label="Kim Kitsuragi: “我有，这就更好了。”"];
+	  7 [label="Perception (Sight): 花粉在光束中漂浮。"];
+	  8 [label="IsTaskActive(\"TASK.fuel_generator\")--[[ Variable[ ]]"];
+	  9 [label="IsTaskActive(\"TASK.fuel_generator\")--[[ Variable[ ]]", shape=diamond];
+	  10 [label="!(IsTaskActive(\"TASK.fuel_generator\")--[[ Variable[ ]])", shape=diamond];
+	  11 [label="You: “等等，那在我汽車里发现的燃料呢？”（给他看看罐子。）"];
+	  12 [label="You: 它到底是……*做什么*的？\n“这个控制台是*做什么*的？”"];
+	  13 [label="You: [离开。]"];
+	  14 [label="Kim Kitsuragi: “电子设备没有电是不能运转的。”警督看着拨弄刻度盘的你。“我们要先给楼上的发电机通上电。”"];
+	  15 [label="Feld \"Insular\" Console: 谁说这东西能用来着？你要先给它通上电。这附近肯定有台发电机。\n谁说这东西能用来着？你要先给它通上电。楼上有一台没燃料的发电机……"];
+	  16 [label="Interfacing: 船的引擎！"];
+	  17 [label="Kim Kitsuragi: “我不知道。”"];
+	  18 [label="You: “我有点害怕。”"];
+	  19 [label="Cuno: “坤诺不知道，但是坤诺想知道。”"];
+	  20 [label="You: “别担心，孩子。我是个警察。也许我是没枪，但我还是个警察。”"];
+	  21 [label="Feld \"Insular\" Console: 绿色的油漆从一体成形的铝制橱柜上剥落。面板上有好几排开关，一个频段，甚至还有一个键盘……"];
+	  22 [label="Kim Kitsuragi: “一台年代久远的计算设备的控制台。”警督指向机器的电线。“楼上的发电机，就是电线跑出来那个，这里就是它们的终点。”"];
+	  23 [label="IsKimHere()"];
+	  24 [label="IsKimHere()", shape=diamond];
+	  25 [label="!(IsKimHere())", shape=diamond];
+	  26 [label="IsCunoInParty()"];
+	  27 [label="IsCunoInParty()", shape=diamond];
+	  28 [label="!(IsCunoInParty())", shape=diamond];
+	  29 [label="Variable[\"seafort.console_logic_soona_idea\"]"];
+	  30 [label="Variable[\"seafort.console_logic_soona_idea\"]", shape=diamond];
+	  31 [label="!(Variable[\"seafort.console_logic_soona_idea\"])", shape=diamond];
+	  32 [label="Logic: 你说的对。你不是*电路创意改装师*。根本不知道这种事。"];
+	  33 [label="You: [离开。]"];
+	  34 [label="Perception (Sight): 花粉在光束中漂浮。"];
+	  35 [label="cuno_is_here"];
+	  36 [label="Kim Kitsuragi: 警督观察着指示器。“这是气隙系统。他们好像把这个叫做*收播*。这样是不行的。”"];
+	  37 [label="You: 点头赞同。"];
+	  38 [label="Kim Kitsuragi: “不用这样。”他掏出武器，检查了一下枪管，然后又收回枪套。“我有枪。”"];
+	  39 [label="Half Light: 突然，一阵焦虑感爬上了你的皮肤。"];
+	  40 [label="Half Light: 突然，一阵焦虑感爬上了你的皮肤。"];
+	  41 [label="You: 也许我可以联系苏娜——那个女程序员？她可以远程开门……\n“也许我们可以联系苏娜——那个女程序员？她可以帮我们远程开门。”"];
+	  42 [label="Kim Kitsuragi: “不，我不确定。不过如果一个女程序员能远程操控的话，那它就算不上是好的军事技术。而且，它很古老。没办法兼容。”"];
+	  43 [label="Variable[\"seafort.console_radio_dial_discussion_had\"]"];
+	  44 [label="Variable[\"seafort.console_radio_dial_discussion_had\"]", shape=diamond];
+	  45 [label="!(Variable[\"seafort.console_radio_dial_discussion_had\"])", shape=diamond];
+	  46 [label="Kim Kitsuragi: “我也是。不在那里，但是……刚到这里我就感觉到了。”"];
+	  47 [label="Variable[\"TASK.open_blast_door_done\"]"];
+	  48 [label="Variable[\"TASK.open_blast_door_done\"]", shape=diamond];
+	  49 [label="!(Variable[\"TASK.open_blast_door_done\"])", shape=diamond];
+	  50 [label="CheckItem(\"bullet\")"];
+	  51 [label="CheckItem(\"bullet\")", shape=diamond];
+	  52 [label="!(CheckItem(\"bullet\"))", shape=diamond];
+	  53 [label="You: “我们走吧。”[离开。]"];
+	  54 [label="GainTask(\"TASK.fuel_the_generator\")--[[ Variable[ ]]"];
+	  55 [label="You: 不行，没用的。这罐子感觉很轻。"];
+	  56 [label="Jump to: [consolinghub]"];
+	  57 [label="Jump to: [consolinghub]"];
+	  58 [label="Variable[\"seafort.console_radio_dial_discussion_had\"]"];
+	  59 [label="Variable[\"seafort.console_radio_dial_discussion_had\"]", shape=diamond];
+	  60 [label="!(Variable[\"seafort.console_radio_dial_discussion_had\"])", shape=diamond];
+	  61 [label="Feld \"Insular\" Console: 玻璃很脏，很难看出上面的记号。一切都没有改变。"];
+	  62 [label="Interfacing: 自动启动。"];
+	  63 [label="Cuno: “旧硬件。”他指着连接在机器上的电线。“应该是从楼上的大电源箱接出来的。电路创意改装之类的狗屁。军事级的。”"];
+	  64 [label="IsNight()"];
+	  65 [label="IsNight()", shape=diamond];
+	  66 [label="!(IsNight())", shape=diamond];
+	  67 [label="Kim Kitsuragi: 他往里面看了看。“基本没剩下什么，应该没什么用。”"];
+	  68 [label="Cuno: “操，开了……”他咧嘴一笑。“转动：紧急，开启。”"];
+	  69 [label="Kim Kitsuragi: 他观察着刻度盘。“‘紧急——开启！’。‘点亮’，‘无线广播’。看起来这台设备控制着这里的电子设备。也许现在还能用？”"];
+	  71 [label="Interfacing: 这台设备以前是用来控制房间里那些电气设备的。它可以开门，控制电灯，还具有无线电脑的功能……"];
+	  72 [label="Kim Kitsuragi: “好像是。我们来看看……”他指着紧急转动开关。“那一个。紧急按钮打开了……”"];
+	  73 [label="You: “我们走吧。”[离开。]"];
+	  74 [label="Variable[\"seafort.console_half_light_fear\"]"];
+	  75 [label="Variable[\"seafort.console_half_light_fear\"]", shape=diamond];
+	  76 [label="!(Variable[\"seafort.console_half_light_fear\"])", shape=diamond];
+	  77 [label="Cuno: “哇啊……告诉过你了吧。这是军工级的。而且，差不多，有400多年了吧，我猜？也许1000年？”"];
+	  78 [label="Variable[\"seafort.console_half_light_fear\"]"];
+	  79 [label="Variable[\"seafort.console_half_light_fear\"]", shape=diamond];
+	  80 [label="!(Variable[\"seafort.console_half_light_fear\"])", shape=diamond];
+	  81 [label="Cuno: “为什么？门都开了——我们他妈的可以走了啊。”"];
+	  82 [label="Cuno: “太他妈好了。狗屁幽灵岛要搞我们，但我们都不能*开枪*射它。”"];
+	  83 [label="You: （看一眼罐子。）"];
+	  84 [label="Feld \"Insular\" Console: 钥匙像牙齿一样发出咯咯的声音。键盘已经有十几年没用了。"];
+	  85 [label="Feld \"Insular\" Console: 控制台上发出一丝黯淡的金色微光，就像鬼火一样闪闪烁烁。一个拨号键上显示着“紧急——开启！”另一个是“点亮”。"];
+	  86 [label="Cuno: “不，不，不……”他盯着拨弄刻度盘的你。“我们要先给这玩意加点料。给它通上电！滋滋滋通电，明白了吗？”"];
+	  87 [label="You: “好吧。”"];
+	  88 [label="Kim Kitsuragi: “岛屿……”警督倾下身子，观察着潦草的字体。“我相信，这是一台*停止工作*的军用无线电脑。用来军事通信的。”"];
+	  89 [label="Logic: 等等，说实在的，如果一个女程序员能远程操控的话，那它就算不上是好的军事技术……它可能没有连接前台。或者只是简单的坏掉了。不过这主意倒是不错……"];
+	  90 [label="Feld \"Insular\" Console: 门一打开，刻度盘开关的位置就锁死了——大概是某种安全措施吧。"];
+	  91 [label="IsCunoInParty()"];
+	  92 [label="IsCunoInParty()", shape=diamond];
+	  93 [label="!(IsCunoInParty())", shape=diamond];
+	  94 [label="Jump to: [cuno_is_here]"];
+	  95 [label="Shivers: 一缕薄烟从焦黑的黑火坑中升起……风吹了起来，接着又停了。"];
+	  96 [label="Feld \"Insular\" Console: 一个拨号键上显示着“紧急——开启！”另一个是“点亮”。频段显示的是“无线广播”。"];
+	  97 [label="IsCunoInParty()"];
+	  98 [label="IsCunoInParty()", shape=diamond];
+	  99 [label="!(IsCunoInParty())", shape=diamond];
+	  100 [label="Variable[\"seafort.console_lights_are_on\"]"];
+	  101 [label="Variable[\"seafort.console_lights_are_on\"]", shape=diamond];
+	  102 [label="!(Variable[\"seafort.console_lights_are_on\"])", shape=diamond];
+	  103 [label="go_in_bros"];
+	  104 [label="Half Light: 突然，一阵焦虑感爬上了你的皮肤。"];
+	  105 [label="Jump to: [consolinghub]"];
+	  106 [label="Cuno: “坤诺知道。这地方妈的像闹鬼一样。”"];
+	  107 [label="CheckItem(\"fuel_canister_rcm\")"];
+	  108 [label="CheckItem(\"fuel_canister_rcm\")", shape=diamond];
+	  109 [label="!(CheckItem(\"fuel_canister_rcm\"))", shape=diamond];
+	  110 [label="Reaction Speed: 当然。你还想让这个控制台做什么吗？"];
+	  111 [label="Variable[\"seafort.console_electricity_on\"]"];
+	  112 [label="Variable[\"seafort.console_electricity_on\"]", shape=diamond];
+	  113 [label="!(Variable[\"seafort.console_electricity_on\"])", shape=diamond];
+	  114 [label="You: “如果失败的话……我们可以返回内陆，然后……”"];
+	  115 [label="Feld \"Insular\" Console: 你在说，没通电的控制台在看，一言不发。上面的刻度盘满是灰尘。"];
+	  116 [label="Cuno: “这都什么垃圾……”他盯着刻度盘。紧急——开启！，’‘点亮，'‘无线广播。’也许，大概是吧，按按钮吧，或者什么之类的。”"];
+	  117 [label="Shivers: 不，绝对不止这些。有什么正在那里，等待着。"];
+	  118 [label="You: 也许这个控制台可以打开那扇防护门？\n“也许这个控制台可以打开那扇防护门？”"];
+	  119 [label="Kim Kitsuragi: “打开了……”他露出笑容。“转动：紧急，开启。”"];
+	  120 [label="IsCunoInParty()"];
+	  121 [label="IsCunoInParty()", shape=diamond];
+	  122 [label="!(IsCunoInParty())", shape=diamond];
+	  123 [label="Interfacing: 这里到处都是油桶。肯定有只里面有燃料……接着把东西倒进发电机里，就大功告成啦！"];
+	  124 [label="Jump to: [consolinghub]"];
+	  125 [label="Jump to: [consolinghub]"];
+	  126 [label="Jump to: [go_in_bros]"];
+	  127 [label="IsTaskActive(\"TASK.fuel_generator\")--[[ Variable[ ]]"];
+	  128 [label="IsTaskActive(\"TASK.fuel_generator\")--[[ Variable[ ]]", shape=diamond];
+	  129 [label="!(IsTaskActive(\"TASK.fuel_generator\")--[[ Variable[ ]])", shape=diamond];
+	  130 [label="You: “别担心，我有枪。虽然没子弹，但是我有枪。”"];
+	  131 [label="Cuno: “是吗？”他斜视着你——直透你的灵魂深处。“*你是吗*？”"];
+	  132 [label="Kim Kitsuragi: 什么也没发生。“在用它之前，我们应该先把电源修好，警官。你漏了一台发电机……”他看向楼上。“里面好像没有燃料了。”\n什么也没发生。“在使用之前，我们应该先把电源修好，警官。那台发电机……”他看向楼上。“看起来里面好像没有燃料了。”"];
+	  133 [label="Feld \"Insular\" Console: 你转动刻度盘，什么也没发生。没有通电的控制台静静站立着。"];
+	  134 [label="IsKimHere()"];
+	  135 [label="IsKimHere()", shape=diamond];
+	  136 [label="!(IsKimHere())", shape=diamond];
+	  137 [label="IsKimHere()"];
+	  138 [label="IsKimHere()", shape=diamond];
+	  139 [label="!(IsKimHere())", shape=diamond];
+	  140 [label="Jump to: [consolinghub]"];
+	  141 [label="Perception (Sight): 花粉在光束中漂浮。"];
+	  142 [label="You: “我没枪。”"];
+	  143 [label="You: “我也有枪。”"];
+	  144 [label="Kim Kitsuragi: “我的还有，那不是更好。”"];
+	  145 [label="Kim Kitsuragi: “我知道。来之不易。”"];
+	  146 [label="Small Blast Door: 门嘎吱嘎吱地停住了。在那背后，你看见混凝土墙上有一个洞，有光线从里面透出来。\n门嘎吱嘎吱地停住了。在那背后，你看见混凝土墙上有一个洞，一阵风吹了进来。"];
+	  147 [label="Shivers: 不，绝对不止这些。有什么正在那里，等待着。"];
+	  148 [label="Shivers: 不，绝对不止这些。有什么正在那里，等待着。"];
+	  149 [label="IsKimHere()"];
+	  150 [label="IsKimHere()", shape=diamond];
+	  151 [label="!(IsKimHere())", shape=diamond];
+	  152 [label="Feld \"Insular\" Console: 黑色的灰尘从钥匙上升起，它们就像牙齿一样发出咯咯的声音。这肯定是台年代久远的计算设备的控制台。楼上那台发电机的电线接到了它的内部。\n一阵咯咯的声音，就像牙齿……键盘已经有十几年没用了。这肯定是另一台无线电脑的控制台，不过型号要旧很多。楼上那台发电机的电线接到了它的内部。"];
+	  153 [label="Kim Kitsuragi: “有可能……”他观察着刻度盘。“‘紧急——开启！’。‘点亮’，‘无线广播’。看起来这台设备控制着这里的电子设备。也许现在还能用？”"];
+	  154 [label="Variable[\"seafort.console_electricity_on\"]"];
+	  155 [label="Variable[\"seafort.console_electricity_on\"]", shape=diamond];
+	  156 [label="!(Variable[\"seafort.console_electricity_on\"])", shape=diamond];
+	  157 [label="You: 不行。这样有点太牵强了。"];
+	  158 [label="IsCunoInParty()"];
+	  159 [label="IsCunoInParty()", shape=diamond];
+	  160 [label="!(IsCunoInParty())", shape=diamond];
+	  161 [label="Jump to: [consolinghub]"];
+	  162 [label="IsCunoInParty()"];
+	  163 [label="IsCunoInParty()", shape=diamond];
+	  164 [label="!(IsCunoInParty())", shape=diamond];
+	  165 [label="Feld \"Insular\" Console: 什么也没发生。"];
+	  166 [label="IsKimHere()"];
+	  167 [label="IsKimHere()", shape=diamond];
+	  168 [label="!(IsKimHere())", shape=diamond];
+	  169 [label="Feld \"Insular\" Console: 刻度盘在玻璃下方无声地滑动。修好电源也没有为它带来生机。"];
+	  170 [label="You: “要是又要跟人起冲突了怎么办？”"];
+	  171 [label="IsCunoInParty()"];
+	  172 [label="IsCunoInParty()", shape=diamond];
+	  173 [label="!(IsCunoInParty())", shape=diamond];
+	  174 [label="Cuno: “苏娜他妈的又是谁？”他咕噜着。“无所谓了。反正没用的。这他妈可是……军事百万级，你知道的。而且好像，有400多年了吧。”"];
+	  175 [label="GainTask(\"TASK.fuel_the_generator\")--[[ Variable[ ]]"];
+	  176 [label="Cuno: “还真他妈是个好消息呢，警察！那就用你那支*该死的空枪*把那些要搞我们的狗屁东西吓出屎吧。”"];
+	  177 [label="Cuno: 他往里面看了看。“你弄到政府燃料真是太好了——好的不得了——不过里面他妈的基本没剩多少货。你需要，大概，满满一罐吧。等你磨蹭完之后，我们出去看看。”"];
+	  178 [label="Jump to: [consolinghub]"];
+	  179 [label="IsCunoInParty()"];
+	  180 [label="IsCunoInParty()", shape=diamond];
+	  181 [label="!(IsCunoInParty())", shape=diamond];
+	  182 [label="IsKimHere()"];
+	  183 [label="IsKimHere()", shape=diamond];
+	  184 [label="!(IsKimHere())", shape=diamond];
+	  185 [label="Variable[\"seafort.console_hub_reached\"]"];
+	  186 [label="Variable[\"seafort.console_hub_reached\"]", shape=diamond];
+	  187 [label="!(Variable[\"seafort.console_hub_reached\"])", shape=diamond];
+	  188 [label="Jump to: [Feld \"Insular\" Console: \"The console stands by, mutely. 'Urg...\"]"];
+	  189 [label="Variable[\"church.soona_greeting_done\"]  and  Variable[\"tc.radiocomputer\"]  and  Variable[\"TASK.open_blast_door\"]  and  Variable[\"TASK.open_blast_door_done\"] == false"];
+	  190 [label="Variable[\"church.soona_greeting_done\"]  and  Variable[\"tc.radiocomputer\"]  and  Variable[\"TASK.open_blast_door\"]  and  Variable[\"TASK.open_blast_door_done\"] == false", shape=diamond];
+	  191 [label="!(Variable[\"church.soona_greeting_done\"]  and  Variable[\"tc.radiocomputer\"]  and  Variable[\"TASK.open_blast_door\"]  and  Variable[\"TASK.open_blast_door_done\"] == false)", shape=diamond];
+	  192 [label="IsKimHere()"];
+	  193 [label="IsKimHere()", shape=diamond];
+	  194 [label="!(IsKimHere())", shape=diamond];
+	  195 [label="IsCunoInParty()"];
+	  196 [label="IsCunoInParty()", shape=diamond];
+	  197 [label="!(IsCunoInParty())", shape=diamond];
+	  198 [label="Kim Kitsuragi: “但是，警官，”他看着你的眼睛，“那我们可能就要*游*回陆地了。还是先在周围看看，好吧。”"];
+	  199 [label="Jump to: [consolinghub]"];
+	  200 [label="Small Blast Door: 伴随着一连串的滴答声，防护门打开了。一束光出现了，接着越变越宽，光线也随着照了进来。\n伴随着一连串的滴答声，防护门打开了。一股冷风吹了近来——你看见它背后的黑暗……"];
+	  201 [label="Cuno: “卧槽对了！”坤诺指着开口。"];
+	  202 [label="IsTaskActive(\"TASK.fuel_generator\")--[[ Variable[ ]]"];
+	  203 [label="IsTaskActive(\"TASK.fuel_generator\")--[[ Variable[ ]]", shape=diamond];
+	  204 [label="!(IsTaskActive(\"TASK.fuel_generator\")--[[ Variable[ ]])", shape=diamond];
+	  205 [label="Interfacing: 开了！自动启动。不，只要转动钥匙就行……"];
+	  206 [label="You: 用手指触碰键盘。"];
+	  207 [label="Feld \"Insular\" Console: 房间里的灯嘶嘶的一声打开了，昏暗的橙光照亮了周围。"];
+	  208 [label="Variable[\"seafort.console_electricity_on\"]"];
+	  209 [label="Variable[\"seafort.console_electricity_on\"]", shape=diamond];
+	  210 [label="!(Variable[\"seafort.console_electricity_on\"])", shape=diamond];
+	  211 [label="Jump to: [consolinghub]"];
+	  212 [label="Variable[\"TASK.fuel_the_generator_done\"]"];
+	  213 [label="Variable[\"TASK.fuel_the_generator_done\"]", shape=diamond];
+	  214 [label="!(Variable[\"TASK.fuel_the_generator_done\"])", shape=diamond];
+	  215 [label="Hand/Eye Coordination: 哈里，这就提醒了你——你没子弹了。"];
+	  216 [label="You: “那里有什么？”"];
+	  217 [label="GainTask(\"TASK.fuel_the_generator\")--[[ Variable[ ]]"];
+	  218 [label="Reaction Speed: 那你在汽車里找到的燃料呢？红色的有政府标记的燃料……"];
+	  219 [label="Untitled hub (03)"];
+	  220 [label="Reaction Speed: 是啊，好吧。里面基本没剩下多少。你得再多找一点才行。"];
+	  221 [label="Variable[\"seafort.console_electricity_on\"]"];
+	  222 [label="Variable[\"seafort.console_electricity_on\"]", shape=diamond];
+	  223 [label="!(Variable[\"seafort.console_electricity_on\"])", shape=diamond];
+	  224 [label="Feld \"Insular\" Console: 刻度盘在玻璃下方无声地滑动。你在UKV频段辨认出了废弃的电台。上面写着“菲尔德岛”。"];
+	  225 [label="Jump to: [consolinghub]"];
+	  226 [label="Cuno: 他指向紧急刻度盘开关，很大，闪烁着令人惊恐的红光。“试试那个破烂。它是红色的。”"];
+	  227 [label="You: “刚才——在外面。我们走过沙滩的时候，我感觉有人在看着我。”"];
+	  228 [label="Feld \"Insular\" Console: 控制台一言不发地站在那里。一个拨号键上显示着“紧急——开启！”另一个是“点亮”。频段显示的是“无线广播”。"];
+	  229 [label="You: 这是什么？（用手指触碰键盘。）\n“这个是什么？”"];
+	  230 [label="IsKimHere()"];
+	  231 [label="IsKimHere()", shape=diamond];
+	  232 [label="!(IsKimHere())", shape=diamond];
+	  233 [label="Variable[\"seafort.console_kim_reacted_to_on\"]"];
+	  234 [label="Variable[\"seafort.console_kim_reacted_to_on\"]", shape=diamond];
+	  235 [label="!(Variable[\"seafort.console_kim_reacted_to_on\"])", shape=diamond];
+	  236 [label="Variable[\"seafort.console_kim_said_needs_electricity_from_generator\"]"];
+	  237 [label="Variable[\"seafort.console_kim_said_needs_electricity_from_generator\"]", shape=diamond];
+	  238 [label="!(Variable[\"seafort.console_kim_said_needs_electricity_from_generator\"])", shape=diamond];
+	  239 [label="Logic: 一个*点子*在你的脑海中点亮……"];
+	  240 [label="Jump to: [consolinghub]"];
+	  241 [label="You: “刚才——在外面。我们走过沙滩的时候，我感觉有人在看着我。”"];
+	  242 [label="You: “话说，我的枪没子弹了。”"];
+	  243 [label="IsCunoInParty()"];
+	  244 [label="IsCunoInParty()", shape=diamond];
+	  245 [label="!(IsCunoInParty())", shape=diamond];
+	  246 [label="Cuno: “坤诺不是机器战神。”他盯着刻度盘。紧急——开启！，’‘点亮，'‘无线广播。’“是啊，妈的为什么不呢？”"];
+	  247 [label="You: “别担心孩子。我是个好人，而且还有枪。”"];
+	  248 [label="You: 转到：“紧急——开启！”"];
+	  249 [label="You: “等等，那我汽車里发现的燃料呢？”（给他看看罐子。）"];
+	  250 [label="Variable[\"seafort.generator_where_do_wires_lead\"]"];
+	  251 [label="Variable[\"seafort.generator_where_do_wires_lead\"]", shape=diamond];
+	  252 [label="!(Variable[\"seafort.generator_where_do_wires_lead\"])", shape=diamond];
+	  253 [label="You: 推动：“灯光（室内）。”"];
+	  254 [label="Feld \"Insular\" Console: 控制台关机了，上面铺满灰尘。一个拨号键上显示着“紧急——开启！”另一个是“点亮”。频段显示的是“无线广播”。"];
+	  255 [label="IsKimHere()"];
+	  256 [label="IsKimHere()", shape=diamond];
+	  257 [label="!(IsKimHere())", shape=diamond];
+	  258 [label="Cuno: “坤诺要阻止你。这个……”他拍了拍控制台，“不是这样用的。”他指向前面发电机的方向。“里面没料可不行。你要是想开动这个狗屁玩意，就要先加满燃料。要不我们去外面看看吧？”"];
+	  259 [label="Kim Kitsuragi: 接着，他看向右侧的微光。“我们应该去外面看看。这里到处都是油桶，也许有的里面还有存货……”"];
+	  260 [label="Kim Kitsuragi: “我们最好还是寻找一种机械解决方案——如果我们真有需要的话。”"];
+	  261 [label="You: “或者我们可以从船的引擎里弄点出来？”"];
+	  262 [label="Kim Kitsuragi: “我的锐影？”他摇摇头。“我不想这么做。还是四处看看吧。”"];
+	  263 [label="Jump to: [consolinghub]"];
+	  264 [label="Kim Kitsuragi: “你先。”警督朝着开口做了个手势。"];
+	  265 [label="IsNight()"];
+	  266 [label="IsNight()", shape=diamond];
+	  267 [label="!(IsNight())", shape=diamond];
+	  268 [label="Variable[\"seafort.console_half_light_fear\"]"];
+	  269 [label="Variable[\"seafort.console_half_light_fear\"]", shape=diamond];
+	  270 [label="!(Variable[\"seafort.console_half_light_fear\"])", shape=diamond];
+	  271 [label="Small Blast Door: 门嘎吱嘎吱地停住了。在那背后，你看见混凝土墙上有一个洞，有光线从里面透出来。\n门嘎吱嘎吱地停住了。在那背后，你看见混凝土墙上有一个洞，一阵风吹了进来。"];
+	  272 [label="Kim Kitsuragi: “一台年代久远的计算设备的控制台。”警督指向机器的电线。“楼上的发电机，就是电线跑出来那个，这里就是它们的终点。”"];
+	  273 [label="consolinghub"];
+	  274 [label="You: 转到：“紧急——开启！”"];
+	  275 [label="You: 滑到：“无线电”刻度盘。"];
+	  276 [label="You: “你确定吗？”"];
+	  277 [label="Feld \"Insular\" Console: 旧按钮卡住了。"];
+	  278 [label="Kim Kitsuragi: “别担心。”他掏出武器，检查了一下枪管，然后又收回枪套。“我有枪。”"];
+	  279 [label="IsKimHere()"];
+	  280 [label="IsKimHere()", shape=diamond];
+	  281 [label="!(IsKimHere())", shape=diamond];
+	  282 [label="You: “我还要先弄一下这个控制台……”"];
+	  0 -> 1
+	  1 -> 185
+	  2 -> 273
+	  3 -> 240
+	  4 -> 189
+	  5 -> 17
+	  6 -> 126
+	  7 -> 104
+	  8 -> 9
+	  8 -> 10
+	  9 -> 16
+	  10 -> 175
+	  11 -> 177
+	  12 -> 182
+	  14 -> 2
+	  15 -> 127
+	  16 -> 249
+	  16 -> 114
+	  16 -> 37
+	  16 -> 261
+	  17 -> 95
+	  18 -> 38
+	  19 -> 94
+	  20 -> 82
+	  21 -> 33
+	  21 -> 229
+	  21 -> 206
+	  22 -> 273
+	  23 -> 24
+	  23 -> 25
+	  24 -> 119
+	  25 -> 179
+	  26 -> 27
+	  26 -> 28
+	  27 -> 258
+	  28 -> 15
+	  29 -> 30
+	  29 -> 31
+	  30 -> 41
+	  30 -> 157
+	  31 -> 134
+	  32 -> 124
+	  34 -> 40
+	  35 -> 130
+	  35 -> 227
+	  35 -> 20
+	  35 -> 53
+	  35 -> 247
+	  35 -> 216
+	  35 -> 282
+	  36 -> 276
+	  36 -> 87
+	  37 -> 115
+	  38 -> 50
+	  39 -> 268
+	  40 -> 74
+	  41 -> 192
+	  42 -> 57
+	  43 -> 44
+	  43 -> 45
+	  44 -> 224
+	  45 -> 61
+	  46 -> 126
+	  47 -> 48
+	  47 -> 49
+	  48 -> 90
+	  49 -> 137
+	  50 -> 51
+	  50 -> 52
+	  51 -> 126
+	  52 -> 215
+	  54 -> 107
+	  55 -> 110
+	  56 -> 273
+	  57 -> 273
+	  58 -> 59
+	  58 -> 60
+	  59 -> 4
+	  60 -> 169
+	  61 -> 211
+	  62 -> 56
+	  63 -> 273
+	  64 -> 65
+	  64 -> 66
+	  65 -> 7
+	  66 -> 104
+	  67 -> 114
+	  67 -> 37
+	  67 -> 261
+	  68 -> 56
+	  69 -> 71
+	  71 -> 225
+	  72 -> 161
+	  74 -> 75
+	  74 -> 76
+	  75 -> 148
+	  76 -> 199
+	  77 -> 3
+	  78 -> 80
+	  78 -> 79
+	  79 -> 117
+	  80 -> 201
+	  81 -> 105
+	  82 -> 94
+	  83 -> 220
+	  84 -> 229
+	  85 -> 233
+	  86 -> 2
+	  87 -> 260
+	  88 -> 3
+	  89 -> 124
+	  90 -> 140
+	  91 -> 92
+	  91 -> 93
+	  92 -> 174
+	  93 -> 89
+	  94 -> 35
+	  95 -> 126
+	  96 -> 71
+	  97 -> 98
+	  97 -> 99
+	  98 -> 77
+	  99 -> 3
+	  100 -> 101
+	  100 -> 102
+	  101 -> 277
+	  102 -> 221
+	  103 -> 5
+	  103 -> 73
+	  103 -> 170
+	  103 -> 142
+	  103 -> 143
+	  103 -> 241
+	  103 -> 18
+	  103 -> 242
+	  104 -> 78
+	  105 -> 273
+	  106 -> 94
+	  107 -> 108
+	  107 -> 109
+	  108 -> 218
+	  109 -> 178
+	  110 -> 228
+	  111 -> 112
+	  111 -> 113
+	  112 -> 85
+	  113 -> 254
+	  114 -> 262
+	  115 -> 178
+	  117 -> 201
+	  118 -> 212
+	  119 -> 62
+	  120 -> 121
+	  120 -> 122
+	  121 -> 86
+	  122 -> 133
+	  123 -> 107
+	  124 -> 273
+	  125 -> 273
+	  126 -> 103
+	  127 -> 128
+	  127 -> 129
+	  128 -> 123
+	  129 -> 217
+	  130 -> 176
+	  131 -> 94
+	  132 -> 259
+	  133 -> 2
+	  134 -> 136
+	  134 -> 135
+	  135 -> 88
+	  136 -> 97
+	  137 -> 138
+	  137 -> 139
+	  138 -> 200
+	  139 -> 162
+	  140 -> 273
+	  141 -> 39
+	  142 -> 6
+	  143 -> 145
+	  144 -> 126
+	  145 -> 126
+	  146 -> 34
+	  147 -> 264
+	  148 -> 199
+	  149 -> 150
+	  149 -> 151
+	  150 -> 250
+	  151 -> 243
+	  152 -> 273
+	  153 -> 71
+	  154 -> 155
+	  154 -> 156
+	  155 -> 47
+	  156 -> 236
+	  157 -> 32
+	  158 -> 160
+	  158 -> 159
+	  159 -> 246
+	  160 -> 96
+	  161 -> 273
+	  162 -> 163
+	  162 -> 164
+	  163 -> 271
+	  164 -> 146
+	  165 -> 125
+	  166 -> 168
+	  166 -> 167
+	  167 -> 132
+	  168 -> 26
+	  169 -> 263
+	  170 -> 278
+	  171 -> 172
+	  171 -> 173
+	  172 -> 226
+	  173 -> 96
+	  174 -> 124
+	  175 -> 16
+	  176 -> 94
+	  177 -> 228
+	  178 -> 273
+	  179 -> 180
+	  179 -> 181
+	  180 -> 68
+	  181 -> 205
+	  182 -> 184
+	  182 -> 183
+	  183 -> 69
+	  184 -> 195
+	  185 -> 186
+	  185 -> 187
+	  186 -> 111
+	  187 -> 21
+	  188 -> 228
+	  189 -> 190
+	  189 -> 191
+	  190 -> 239
+	  191 -> 134
+	  192 -> 193
+	  192 -> 194
+	  193 -> 36
+	  194 -> 91
+	  195 -> 196
+	  195 -> 197
+	  196 -> 116
+	  197 -> 96
+	  198 -> 188
+	  199 -> 273
+	  200 -> 265
+	  201 -> 35
+	  202 -> 203
+	  202 -> 204
+	  203 -> 107
+	  204 -> 54
+	  205 -> 56
+	  206 -> 84
+	  207 -> 125
+	  208 -> 209
+	  208 -> 210
+	  209 -> 58
+	  210 -> 43
+	  211 -> 273
+	  212 -> 213
+	  212 -> 214
+	  213 -> 279
+	  214 -> 230
+	  215 -> 126
+	  216 -> 19
+	  217 -> 123
+	  218 -> 219
+	  219 -> 83
+	  219 -> 11
+	  219 -> 55
+	  220 -> 228
+	  221 -> 222
+	  221 -> 223
+	  222 -> 207
+	  223 -> 165
+	  224 -> 189
+	  225 -> 273
+	  226 -> 161
+	  227 -> 106
+	  228 -> 178
+	  229 -> 149
+	  230 -> 232
+	  230 -> 231
+	  231 -> 153
+	  232 -> 158
+	  233 -> 234
+	  233 -> 235
+	  234 -> 56
+	  235 -> 23
+	  236 -> 237
+	  236 -> 238
+	  237 -> 255
+	  238 -> 166
+	  239 -> 29
+	  240 -> 273
+	  241 -> 46
+	  242 -> 144
+	  243 -> 244
+	  243 -> 245
+	  244 -> 63
+	  245 -> 152
+	  246 -> 71
+	  247 -> 131
+	  248 -> 154
+	  249 -> 67
+	  250 -> 251
+	  250 -> 252
+	  251 -> 272
+	  252 -> 22
+	  253 -> 100
+	  254 -> 56
+	  255 -> 256
+	  255 -> 257
+	  256 -> 14
+	  257 -> 120
+	  258 -> 202
+	  259 -> 8
+	  260 -> 57
+	  261 -> 198
+	  262 -> 188
+	  263 -> 273
+	  264 -> 103
+	  265 -> 266
+	  265 -> 267
+	  266 -> 141
+	  267 -> 39
+	  268 -> 269
+	  268 -> 270
+	  269 -> 147
+	  270 -> 264
+	  271 -> 64
+	  272 -> 273
+	  273 -> 12
+	  273 -> 13
+	  273 -> 274
+	  273 -> 275
+	  273 -> 118
+	  273 -> 248
+	  273 -> 253
+	  274 -> 154
+	  275 -> 208
+	  276 -> 42
+	  277 -> 125
+	  278 -> 50
+	  279 -> 280
+	  279 -> 281
+	  280 -> 72
+	  281 -> 171
+	  282 -> 81
+}
+

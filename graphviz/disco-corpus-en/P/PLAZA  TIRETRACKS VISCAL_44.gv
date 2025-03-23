@@ -1,0 +1,187 @@
+# PLAZA / TIRETRACKS VISCAL
+# You notice a set of a motor carriage tracks backing into the fence.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: This is where I started off with my motor carriage."];
+	  3 [label="Set of Tracks: Variable[\"whirling.garte_mentions_cavalry\"]  or  Variable[\"whirling.garte_gives_directions_to_yard\"]"];
+	  4 [label="Variable[\"whirling.garte_mentions_cavalry\"]  or  Variable[\"whirling.garte_gives_directions_to_yard\"]", shape=diamond];
+	  5 [label="!(Variable[\"whirling.garte_mentions_cavalry\"]  or  Variable[\"whirling.garte_gives_directions_to_yard\"])", shape=diamond];
+	  6 [label="You: What happened next?"];
+	  7 [label="Set of Tracks: DayCount() > 1"];
+	  8 [label="DayCount() > 1", shape=diamond];
+	  9 [label="!(DayCount() > 1)", shape=diamond];
+	  10 [label="drovethroughfencehub"];
+	  11 [label="viscal_viscal_viscal"];
+	  12 [label="Authority: The hole in this fence doesn't look *that* huge."];
+	  13 [label="Jump to: [trackshub]"];
+	  14 [label="Visual Calculus: ...before heading south. Must have been in a hurry."];
+	  15 [label="Jump to: [drovethroughfencehub]"];
+	  16 [label="You: Okay. What happened next?"];
+	  17 [label="Set of Tracks: Variable[\"plaza.tracks_viscal_concept_blackcheck\"]"];
+	  18 [label="Variable[\"plaza.tracks_viscal_concept_blackcheck\"]", shape=diamond];
+	  19 [label="!(Variable[\"plaza.tracks_viscal_concept_blackcheck\"])", shape=diamond];
+	  20 [label="You: \"This is where I started off with my motor carriage... before sinking it in the sea.\""];
+	  21 [label="Set of Tracks: Variable[\"plaza.tracks_viscal_wc_success_done\"]"];
+	  22 [label="Variable[\"plaza.tracks_viscal_wc_success_done\"]", shape=diamond];
+	  23 [label="!(Variable[\"plaza.tracks_viscal_wc_success_done\"])", shape=diamond];
+	  24 [label="Set of Tracks: Variable[\"whirling.garte_mentions_cavalry\"]"];
+	  25 [label="Variable[\"whirling.garte_mentions_cavalry\"]", shape=diamond];
+	  26 [label="!(Variable[\"whirling.garte_mentions_cavalry\"])", shape=diamond];
+	  27 [label="You: I think I got it. [Leave.]"];
+	  28 [label="You: \"A car drove through the fence.\""];
+	  29 [label="You: \"This is the point of departure of the vehicle that crashed into the Samaran Butter sign.\""];
+	  30 [label="Set of Tracks: Variable[\"plaza.tracks_viscal_whitecheck\"]"];
+	  31 [label="Variable[\"plaza.tracks_viscal_whitecheck\"]", shape=diamond];
+	  32 [label="!(Variable[\"plaza.tracks_viscal_whitecheck\"])", shape=diamond];
+	  33 [label="You: Why am I looking at this?"];
+	  34 [label="Visual Calculus: You could *follow* the tracks south. There seems to be a canal there. See where they went. (If you find the time.)"];
+	  35 [label="Interfacing: As a matter of fact, you don't even know why you stopped here. You would never drive recklessly like this. And you don't have a car."];
+	  36 [label="Visual Calculus: The tyre tracks were left here by an unknown event that took place some days ago. It's a message, written in the language of burnt rubber."];
+	  37 [label="Visual Calculus: The driver proceeded to back out of the yard, barely stopping before hitting the adjacent building..."];
+	  38 [label="Perception (Sight): Cop habit. You look at everything."];
+	  39 [label="Perception (Sight): Hard to say. Your vision is blurred and you are having difficulty concentrating thanks to your relentless hangover."];
+	  40 [label="Set of Tracks: IsKimHere()"];
+	  41 [label="IsKimHere()", shape=diamond];
+	  42 [label="!(IsKimHere())", shape=diamond];
+	  43 [label="Visual Calculus: Yes. And ended up half-sunken in the sea. You must have been drunk when you left off."];
+	  44 [label="Authority: He was exaggerating. People blame *cops* for everything that goes wrong in the world. This has nothing to do with you."];
+	  45 [label="Visual Calculus: No, these tracks are not interesting at all. Let the street sweeper just sweep them away."];
+	  46 [label="Kim Kitsuragi: The lieutenant follows the tracks with his gaze. \"That's plausible. A similar... reckless abandon seems to be in evidence.\""];
+	  47 [label="trackshub"];
+	  48 [label="Set of Tracks: Variable[\"coast.sunken_dialogue_done\"]"];
+	  49 [label="Variable[\"coast.sunken_dialogue_done\"]", shape=diamond];
+	  50 [label="!(Variable[\"coast.sunken_dialogue_done\"])", shape=diamond];
+	  51 [label="You: Damn bartender."];
+	  52 [label="Jump to: [drovethroughfencehub]"];
+	  53 [label="Jump to: [trackshub]"];
+	  54 [label="You: This is significant somehow."];
+	  55 [label="Visual Calculus: Maybe. Probably."];
+	  56 [label="Jump to: [viscal_viscal_viscal]"];
+	  57 [label="You: Reconstruct the movement."];
+	  58 [label="You: Variable[\"plaza.tracks_viscal_whitecheck\"]"];
+	  59 [label="Variable[\"plaza.tracks_viscal_whitecheck\"]", shape=diamond];
+	  60 [label="!(Variable[\"plaza.tracks_viscal_whitecheck\"])", shape=diamond];
+	  61 [label="Visual Calculus: The tracks are as they have ever been. A bit more worn, perhaps. Fortunately, the street sweeper still hasn't noticed their presence."];
+	  62 [label="Kim Kitsuragi: \"You are correct. This is a rather motor carriage-friendly city.\""];
+	  63 [label="You: This is the point of departure of the motor carriage that crashed into the Samaran Butter sign, right?"];
+	  64 [label="Kim Kitsuragi: \"No wonder the cafeteria manager seemed frustrated when he was giving us directions to the yard.\""];
+	  65 [label="You: Not now. [Leave.]"];
+	  66 [label="Visual Calculus: ...and then accelerated straight into the fence.\n...and then accelerated straight into the fence. Left a hole *big enough for the Franconigerian cavalry,* according to the cafeteria manager.\n...and then accelerated straight into the fence. Left a hole *big enough for the Franconigerian cavalry,* according to the cafeteria manager. (Why that pang of guilt again?)"];
+	  67 [label="Inland Empire: Somehow that makes you feel... scared. You don't know why."];
+	  68 [label="Perception (Sight): You see a set of tyre tracks in the brown slush that covers the plaza mosaic."];
+	  70 [label="Visual Calculus: Some of that rubber stuck to the tiles right in front of the Whirling-in-Rags. This is point A. The driver started there..."];
+	  71 [label="Inland Empire: An ominous warning of bad things ahead."];
+	  72 [label="Kim Kitsuragi: \"Well,\" he gestures toward the gaping hole in the fence, \"you did provide us with a very convenient access point to the crime scene.\""];
+	  73 [label="Logic: This isn't case-related, you think."];
+	  74 [label="logichub"];
+	  75 [label="You: What kind of vehicle drove through here?"];
+	  76 [label="You: \"Is this connected to the case?\""];
+	  77 [label="You: The hole is not that impressive."];
+	  78 [label="Visual Calculus: Why yes it is! Good connection."];
+	  79 [label="Kim Kitsuragi: \"Yes, it is. Well,\" he gestures toward the gaping hole in the fence, \"you did provide us with a very convenient access point to the crime scene.\""];
+	  80 [label="Perception (Sight): Hard to say."];
+	  81 [label="Kim Kitsuragi: \"I'm not sure... there are plenty of traffic accidents waiting to happen in Martinaise. With the jam right here on the roundabout. I would keep them separate.\""];
+	  0 -> 1
+	  1 -> 21
+	  2 -> 43
+	  3 -> 4
+	  3 -> 5
+	  4 -> 64
+	  5 -> 79
+	  6 -> 37
+	  7 -> 8
+	  7 -> 9
+	  8 -> 80
+	  9 -> 39
+	  10 -> 76
+	  10 -> 20
+	  10 -> 27
+	  10 -> 28
+	  10 -> 29
+	  11 -> 2
+	  11 -> 27
+	  11 -> 54
+	  11 -> 63
+	  12 -> 17
+	  13 -> 47
+	  14 -> 40
+	  15 -> 10
+	  16 -> 37
+	  17 -> 18
+	  17 -> 19
+	  18 -> 74
+	  19 -> 6
+	  20 -> 3
+	  21 -> 22
+	  21 -> 23
+	  22 -> 61
+	  23 -> 68
+	  24 -> 25
+	  24 -> 26
+	  25 -> 48
+	  26 -> 6
+	  28 -> 62
+	  29 -> 46
+	  30 -> 32
+	  30 -> 31
+	  31 -> 36
+	  32 -> 45
+	  33 -> 38
+	  34 -> 15
+	  35 -> 16
+	  36 -> 70
+	  37 -> 14
+	  38 -> 73
+	  39 -> 13
+	  40 -> 41
+	  40 -> 42
+	  41 -> 10
+	  42 -> 11
+	  43 -> 56
+	  44 -> 35
+	  45 -> 53
+	  46 -> 52
+	  47 -> 65
+	  47 -> 33
+	  47 -> 75
+	  47 -> 57
+	  48 -> 49
+	  48 -> 50
+	  49 -> 6
+	  50 -> 12
+	  51 -> 44
+	  52 -> 10
+	  53 -> 47
+	  54 -> 55
+	  55 -> 71
+	  56 -> 11
+	  57 -> 58
+	  58 -> 59
+	  58 -> 60
+	  59 -> 30
+	  60 -> 30
+	  61 -> 40
+	  62 -> 67
+	  63 -> 78
+	  64 -> 72
+	  66 -> 24
+	  67 -> 52
+	  68 -> 47
+	  70 -> 66
+	  71 -> 56
+	  72 -> 52
+	  73 -> 13
+	  74 -> 16
+	  74 -> 51
+	  74 -> 77
+	  75 -> 7
+	  76 -> 81
+	  77 -> 44
+	  78 -> 56
+	  79 -> 52
+	  80 -> 13
+	  81 -> 34
+}
+

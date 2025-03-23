@@ -1,0 +1,64 @@
+# SHACK ORB / elchem with kim
+# Discussing the speed with Kim.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: Lick it. Big-style."];
+	  4 [label="no_kimz"];
+	  5 [label="Electrochemistry: Yes, there isn't enough anyway. You'd only be *fooling* yourself."];
+	  6 [label="Kim Kitsuragi: \"But that there was an interesting find -- an alternative path into the harbour that the kid uses. Well done.\""];
+	  7 [label="You: \"I wasn't thinking about taking it, I swear! I was thinking about *justice*.\""];
+	  8 [label="Variable[\"backyard.cloak_greeting_done\"] == true  or Variable[\"yard.sense_clicked_on_collapsing_doorway\"] == true  or  Variable[\"yard.yard_sense_clicked_on_reinforcing_pillars\"] == true"];
+	  9 [label="Variable[\"backyard.cloak_greeting_done\"] == true  or Variable[\"yard.sense_clicked_on_collapsing_doorway\"] == true  or  Variable[\"yard.yard_sense_clicked_on_reinforcing_pillars\"] == true", shape=diamond];
+	  10 [label="!(Variable[\"backyard.cloak_greeting_done\"] == true  or Variable[\"yard.sense_clicked_on_collapsing_doorway\"] == true  or  Variable[\"yard.yard_sense_clicked_on_reinforcing_pillars\"] == true)", shape=diamond];
+	  11 [label="Kim Kitsuragi: \"Perhaps not?\" He looks at you. \"This is below our pay grade, detective. However...\" He points to the ladder in the corner."];
+	  12 [label="Electrochemistry: Be still, my beating heart... it's amphetamine, sweet amphetamine!\nAmphetamine, sweet amphetamine! You feel like you should find the source... and maybe get more?\nAmphetamine, sweet amphetamine! Maybe this Cuno kid knows where to find more?"];
+	  13 [label="You: Lick it, but only a little. An itty-bitty little lick."];
+	  14 [label="Kim Kitsuragi: \"Of course, detective. *Swift* justice. Don't worry, we don't have to investigate every trace of narcotics...\" The lieutenant points to the ladder in the corner."];
+	  15 [label="Kim Kitsuragi: \"See that *ladder* there? It's probably another way into the industrial harbour, no? A secret path the local kids use.\""];
+	  16 [label="Electrochemistry: Responsible drug use. Just a faint bitter taste on the tip of your tongue. There wasn't enough to get a grown man anywhere."];
+	  17 [label="You: \"Someone has taken narcotics here. Perhaps the police should interfere?\""];
+	  18 [label="You: Don't lick it."];
+	  19 [label="Kim Kitsuragi: The lieutenant isn't studying the powder in the mirror. He's studying you."];
+	  20 [label="IsKimHere()"];
+	  21 [label="IsKimHere()", shape=diamond];
+	  22 [label="!(IsKimHere())", shape=diamond];
+	  23 [label="Electrochemistry: You run your tongue across the plate four or five times. Like a dog. Still, just a very faint, bitter taste. This isn't enough to get a big man anywhere."];
+	  24 [label="kim_full_of_perception"];
+	  25 [label="Rhetoric: There's a good vague way to ask where he stands on drug use. Professionally, I mean."];
+	  26 [label="You: \"I've heard amphetamines make you a really good detective. Are *you* a... really good detective?\""];
+	  27 [label="Kim Kitsuragi: \"No, I'm just a *regular* detective. Thank you very much.\""];
+	  28 [label="Electrochemistry: Yeah, swift, lightning justice! Faster... Harder... Justicer!"];
+	  0 -> 1
+	  1 -> 12
+	  2 -> 23
+	  4 -> 2
+	  4 -> 18
+	  4 -> 13
+	  7 -> 14
+	  8 -> 9
+	  8 -> 10
+	  9 -> 6
+	  10 -> 15
+	  11 -> 8
+	  12 -> 20
+	  13 -> 16
+	  14 -> 28
+	  17 -> 11
+	  18 -> 5
+	  19 -> 25
+	  20 -> 21
+	  20 -> 22
+	  21 -> 19
+	  22 -> 4
+	  24 -> 17
+	  24 -> 26
+	  24 -> 7
+	  25 -> 24
+	  26 -> 27
+	  27 -> 17
+	  27 -> 7
+	  28 -> 8
+}
+

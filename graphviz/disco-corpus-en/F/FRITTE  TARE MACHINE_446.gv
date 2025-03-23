@@ -1,0 +1,78 @@
+# FRITTE / TARE MACHINE
+# Right next to the glass-doored fridge.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"I see. And how do I pick up tare for the tare machine?\""];
+	  3 [label="Jump to: [Tare machine hub]"];
+	  4 [label="Frittte clerk: \"No.\" She doesn't even bother looking up out of her magazine. \"You need tare to use the tare machine.\""];
+	  5 [label="You: Insert your bottles."];
+	  6 [label="Electrochemistry: D'you know what you should do with that money, kiddo? You should *buy more alcohol*! Enter the endless cycle of consumption!"];
+	  7 [label="You: \"What is this machine?\""];
+	  8 [label="Frittte clerk: \"You need a bag I guess? We used to have some but we gave them all out, so...\" She shrugs awkwardly."];
+	  9 [label="Frittte clerk: \"Feel free to use it if you find a bag, though. I'm sure there are some... out there.\" She points outside. \"Somewhere...\""];
+	  10 [label="You: [Leave.]"];
+	  11 [label="Tare Machine: Your bottles clunk into the machine and the money appears with a satisfying jingle. You're a richer man now!"];
+	  12 [label="Frittte clerk: \"Hm?\" The clerk looks up, out of her magazine. \"Oh. That's the tare machine.\""];
+	  13 [label="Savoir Faire: Cool. Let's do this swindle. This *tare* swindle."];
+	  14 [label="You: \"I understand now. Thank you.\""];
+	  16 [label="Tare Machine: Your bottles clunk into the machine and the money appears with a satisfying jingle. You're a richer man now!"];
+	  17 [label="Frittte clerk: She knits her brow, confused. \"It's... a machine for tare? You know. You find tare outside -- like, bottles or whatever -- and put it in the machine. Then it gives you money.\""];
+	  18 [label="You: \"Yes, but what *is* it?\""];
+	  19 [label="Jump to: [Tare machine hub]"];
+	  20 [label="Tare machine hub"];
+	  21 [label="Inland Empire: You're 100% sure you got special Hobocop money for that tare. At least +100% extra tare money. If the numbers on the machine told you otherwise, it's a *lie*."];
+	  22 [label="Frittte clerk: \"Mh.\" She looks down, back into her magazine."];
+	  23 [label="Tare Machine: The tare machine stands in the corner. A sign says: \"ONE BOTTLE = TEN CENTS\"."];
+	  24 [label="Variable[\"TASK.get_a_drink\"] == true  and  Variable[\"TASK.get_a_drink_done\"] == false"];
+	  25 [label="Variable[\"TASK.get_a_drink\"] == true  and  Variable[\"TASK.get_a_drink_done\"] == false", shape=diamond];
+	  26 [label="!(Variable[\"TASK.get_a_drink\"] == true  and  Variable[\"TASK.get_a_drink_done\"] == false)", shape=diamond];
+	  27 [label="Jump to: [Tare machine hub]"];
+	  28 [label="You: \"Excuse me -- I have the tare bag but no tare. Can I still use the tare machine?\""];
+	  29 [label="Variable[\"gates.fritte_tare_hobo_inland\"]"];
+	  30 [label="Variable[\"gates.fritte_tare_hobo_inland\"]", shape=diamond];
+	  31 [label="!(Variable[\"gates.fritte_tare_hobo_inland\"])", shape=diamond];
+	  32 [label="IsTHCFixed(\"hobocop\")"];
+	  33 [label="IsTHCFixed(\"hobocop\")", shape=diamond];
+	  34 [label="!(IsTHCFixed(\"hobocop\"))", shape=diamond];
+	  0 -> 1
+	  1 -> 23
+	  2 -> 8
+	  3 -> 20
+	  4 -> 19
+	  5 -> 32
+	  7 -> 12
+	  8 -> 9
+	  9 -> 27
+	  11 -> 24
+	  12 -> 18
+	  12 -> 14
+	  13 -> 2
+	  14 -> 22
+	  16 -> 29
+	  17 -> 13
+	  18 -> 17
+	  19 -> 20
+	  20 -> 10
+	  20 -> 28
+	  20 -> 5
+	  20 -> 7
+	  21 -> 24
+	  22 -> 3
+	  23 -> 20
+	  24 -> 25
+	  24 -> 26
+	  25 -> 6
+	  27 -> 20
+	  28 -> 4
+	  29 -> 30
+	  29 -> 31
+	  30 -> 24
+	  31 -> 21
+	  32 -> 33
+	  32 -> 34
+	  33 -> 16
+	  34 -> 11
+}
+

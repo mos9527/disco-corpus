@@ -1,0 +1,446 @@
+# COAST ORB / reeds near sunken car
+# These reeds are near your sunken car. The interactable reeds you can search when Morell tells you to check the phasmid traps. There are traps in these reeds.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  3 [label="Kim Kitsuragi: 警督追随着你的目光，先是停留在芦苇上，然后是沙子，最后是水面。接着，他满是期待地把目光转回到你身上。"];
+	  4 [label="Jump to: [remorse hub]"];
+	  5 [label="You: “也许它们还能吸引一些东西？”"];
+	  6 [label="You: 把蝗虫放进空陷阱。"];
+	  7 [label="You: “就是这个。”"];
+	  8 [label="Jump to: [boathouse hub]"];
+	  9 [label="Kim Kitsuragi: 警督跟你一起研究陷阱。“呃，诱饵对*某种东西*起作用了。但也并不意味着它就是芦苇怪兽。除非你亲眼看见里面有？我只看到一个空陷阱……”"];
+	  10 [label="You: 靠近查看。"];
+	  11 [label="You: “肯定在下一个陷阱里面。*绝对的*。”"];
+	  12 [label="You: “你说得对。这次的神秘动物学研究实在是太愚蠢了。”"];
+	  13 [label="Kim Kitsuragi: “是的。下一个里面困了只*螃蟹*。”他竖起衣领——起风了。“你有没有发现，这些只不过是抓螃蟹的陷阱？”"];
+	  14 [label="You: 停下来，只是静静站着。"];
+	  15 [label="Trap: Canal: 这个陷阱也一样，除了蝗虫什么也没有。肯定没有神秘动物学意义上的畸形。"];
+	  16 [label="Kim Kitsuragi: 他拦住了你。“别回答。这是个反问句。”"];
+	  17 [label="Trap: Canal: 要找到这个陷阱并不太难——只要你明白自己在找什么。对于神秘动物学家来说，把它隐藏起来可不是最高优先级。"];
+	  18 [label="Trap: Canal: 你脚下的芦苇丛里有一个陷阱。跟之前看见的莫雷尔的陷阱一模一样——同样的网，同样的线。"];
+	  19 [label="Kim Kitsuragi: “我只是……”他吐出一口气。“很高兴没在里面找到被困住的可怜小猫。”"];
+	  20 [label="Trap: Canal: 这个陷阱没有任何变化。你需要检查一下其它的。"];
+	  21 [label="You: 再仔细看看。"];
+	  22 [label="Untitled hub (08)"];
+	  23 [label="Perception (Sight): 相比其他陷阱，这个的网更凌乱一些。就好像有人或者什么东西把陷阱捡了起来，摇了摇，然后又丢回地面。"];
+	  24 [label="You: “但是如果*真是*竹节虫呢？如果它把蝗虫全吃掉，然后跑出来了呢？”"];
+	  25 [label="Kim Kitsuragi: “当然。记下来了。”他怀疑地看着你把陷阱放回到芦苇丛中。"];
+	  26 [label="You: “你喜欢有氧运动吗，警督？我自己觉得挺舒服的。”"];
+	  27 [label="Jump to: [boathouse hub]"];
+	  28 [label="IsKimHere()"];
+	  29 [label="IsKimHere()", shape=diamond];
+	  30 [label="!(IsKimHere())", shape=diamond];
+	  31 [label="Trap: Canal: 芦苇围绕在阴森森的陷阱旁窃窃私语，好像突然被恐惧包围一样。\n芦苇围绕在阴森森的陷阱旁窃窃私语，好像突然被恐惧包围一样。就连雪花也无法给它们带去安慰。\n芦苇在落雨中颤抖着，低语着。仿佛这个阴森森的陷阱让它们产生了某种奇怪而诡异的恐惧。"];
+	  32 [label="Kim Kitsuragi: 警督挺直后背。"];
+	  33 [label="Kim Kitsuragi: “不，你不会的。”他看着大海，然后看着你——把陷阱放回地面。"];
+	  34 [label="Trap: Canal: 蝗虫的情况不太好，不过它们还在里面。这个陷阱不是空的。肯定还有其他的。\n蝗虫的状况不太好，不过它们还在里面。这个陷阱不是空的。那个在运河边。\n蝗虫的状况不太好，不过它们还在里面。这个陷阱不是空的。那个是莫雷尔设置的，就在神秘动物学家的营地旁边。\n蝗虫的状况不太好，不过它们还在里面。这个陷阱不是空的。那个在地之角，这座半岛的最北端。"];
+	  35 [label="Trap: Canal: 刚经历了长途跋涉的蝗虫还有些头晕，不过也开始慢慢地适应起周围的新环境来。"];
+	  36 [label="Trap: Canal: 现在所有陷阱都设置好了——但还是没有看见竹节虫。回到莫雷尔那里，把消息告诉他。"];
+	  37 [label="Kim Kitsuragi: “不。我很好。我不是想抱怨，只不过……”他有些气喘。话语到这里就结束了。"];
+	  38 [label="Shivers: 一阵冷风吹干你脸上的汗水，你看着远处菲尔德大厦的黑色阴影，慢慢被它吸引。多么奇怪的一种感觉……等这些结束之后，你再问问风？"];
+	  39 [label="You: [离开。]"];
+	  40 [label="You: “可惜，它不在这里……”"];
+	  41 [label="Trap: Canal: 一阵冷风卷起你的声音，在海岸边发出回响。"];
+	  42 [label="You: “不用笑的这么勉强。我没*期望*能找到什么。我只是在帮助市民，然后顺便呼吸一下新鲜空气。”"];
+	  43 [label="SetVariableValue(\"coast.reeds_checked_counter\", Variable[\"coast.reeds_checked_counter\"] +once(1)) "];
+	  44 [label="Logic: 也没有竹节虫——不过……"];
+	  45 [label="You: “我确实感觉到好像有什么人，或者什么东西在破坏陷阱……”"];
+	  46 [label="Kim Kitsuragi: “大惊喜。”警督阴沉地咧嘴笑了。“不管怎么说——排除一个，还剩三个。”"];
+	  47 [label="Variable[\"TASK.report_to_cryptozoologists_1_done\"]"];
+	  48 [label="Variable[\"TASK.report_to_cryptozoologists_1_done\"]", shape=diamond];
+	  49 [label="!(Variable[\"TASK.report_to_cryptozoologists_1_done\"])", shape=diamond];
+	  50 [label="Trap: Canal: 现在已经没什么可以做的了。陷阱只是躺在那里，收集灰尘和雨水。"];
+	  51 [label="Variable[\"coast.reeds_checked_counter\"] == 3"];
+	  52 [label="Variable[\"coast.reeds_checked_counter\"] == 3", shape=diamond];
+	  53 [label="!(Variable[\"coast.reeds_checked_counter\"] == 3)", shape=diamond];
+	  54 [label="You: “我想声明一点，我*其实*并不相信竹节虫的存在，好吗？”\n“再说一次——我要明确*声明*一点，我其实并不相信竹节虫的存在，好吗？”"];
+	  55 [label="SetVariableValue(\"backyard.gary_door_unlocked\", false) --[[ Variable[ ]]"];
+	  56 [label="IsKimHere()"];
+	  57 [label="IsKimHere()", shape=diamond];
+	  58 [label="!(IsKimHere())", shape=diamond];
+	  59 [label="remorse hub"];
+	  60 [label="You: [离开。]"];
+	  61 [label="IsKimHere()"];
+	  62 [label="IsKimHere()", shape=diamond];
+	  63 [label="!(IsKimHere())", shape=diamond];
+	  64 [label="You: 看看周围。"];
+	  65 [label="SetVariableValue(\"coast.reeds_checked_counter\", Variable[\"coast.reeds_checked_counter\"] +once(1)) "];
+	  66 [label="Variable[\"coast.reeds_checked_counter\"] == 3"];
+	  67 [label="Variable[\"coast.reeds_checked_counter\"] == 3", shape=diamond];
+	  68 [label="!(Variable[\"coast.reeds_checked_counter\"] == 3)", shape=diamond];
+	  69 [label="Trap: Canal: 你花了一会儿功夫，总算是找到了莫雷尔的最后一个陷阱。有一部分被芦苇给挡住了……"];
+	  70 [label="Trap: Canal: 没有蝗虫！"];
+	  71 [label="IsKimHere()"];
+	  72 [label="IsKimHere()", shape=diamond];
+	  73 [label="!(IsKimHere())", shape=diamond];
+	  74 [label="Kim Kitsuragi: “很好，很好。我们应该礼貌一点，告诉神秘动物学家有一个陷阱空了，然后就继续回去完成*我们自己*的任务。”"];
+	  75 [label="Jump to: [boathouse hub]"];
+	  76 [label="Kim Kitsuragi: “当然。记下来了。”他怀疑地看着你把陷阱放回到芦苇丛中。"];
+	  77 [label="Variable[\"TASK.open_gary_door_done\"]"];
+	  78 [label="Variable[\"TASK.open_gary_door_done\"]", shape=diamond];
+	  79 [label="!(Variable[\"TASK.open_gary_door_done\"])", shape=diamond];
+	  80 [label="SetVariableValue(\"coast.reeds_checked_counter\", Variable[\"coast.reeds_checked_counter\"] +once(1)) "];
+	  81 [label="SetVariableValue(\"backyard.gary_door_unlocked\", false) --[[ Variable[ ]]"];
+	  82 [label="Variable[\"coast.reeds_checked_counter\"] == 1"];
+	  83 [label="Variable[\"coast.reeds_checked_counter\"] == 1", shape=diamond];
+	  84 [label="!(Variable[\"coast.reeds_checked_counter\"] == 1)", shape=diamond];
+	  85 [label="Kim Kitsuragi: “当然了，”他望着大海又重复了一遍，接着看着你把陷阱放回地面上。“不管怎么说，这里的空气不错，很新鲜……”"];
+	  86 [label="Kim Kitsuragi: “我开始有点……为它们感到抱歉。”"];
+	  87 [label="Variable[\"coast.reeds_checked_counter\"] == 2"];
+	  88 [label="Variable[\"coast.reeds_checked_counter\"] == 2", shape=diamond];
+	  89 [label="!(Variable[\"coast.reeds_checked_counter\"] == 2)", shape=diamond];
+	  90 [label="You: 伸手去碰陷阱。"];
+	  91 [label="Trap: Canal: 你把装置放回地面，隐藏在芦苇丛中。"];
+	  92 [label="Variable[\"TASK.restock_trap\"]"];
+	  93 [label="Variable[\"TASK.restock_trap\"]", shape=diamond];
+	  94 [label="!(Variable[\"TASK.restock_trap\"])", shape=diamond];
+	  95 [label="IsKimHere()"];
+	  96 [label="IsKimHere()", shape=diamond];
+	  97 [label="!(IsKimHere())", shape=diamond];
+	  98 [label="Kim Kitsuragi: “是的。比如说一只猫，或者是又一个精神变态的青年。”"];
+	  99 [label="Kim Kitsuragi: “又是个空陷阱，”警督记下笔记——相比职责，更像是出于一种习惯。"];
+	  100 [label="Trap: Canal: 什么也没有。没有蝗虫*或者*是伊苏林迪竹节虫的痕迹。出什么事了？"];
+	  101 [label="Variable[\"coast.reeds_checked_counter\"] == 2"];
+	  102 [label="Variable[\"coast.reeds_checked_counter\"] == 2", shape=diamond];
+	  103 [label="!(Variable[\"coast.reeds_checked_counter\"] == 2)", shape=diamond];
+	  104 [label="Jump to: [boathouse hub]"];
+	  105 [label="Trap: Canal: 空空如也的陷阱站立在芦苇丛中。周围没有昆虫的声音，或者是动作——只有芦苇那忧郁的沙沙声。\n空空如也的陷阱站立在芦苇丛中，上面堆满雪花。周围没有昆虫的声音，或者是动作——只有芦苇那忧郁的沙沙声。\n空空如也的陷阱站立在芦苇丛中。周围没有昆虫的声音，或者是动作——只有芦苇那忧郁的沙沙声。"];
+	  106 [label="SetVariableValue(\"backyard.gary_door_unlocked\", false) --[[ Variable[ ]]"];
+	  107 [label="Trap: Canal: 一个熟悉的装置躺在芦苇丛中……又是莫雷尔的陷阱，上面压着石头，方便固定它的位置。"];
+	  108 [label="Variable[\"TASK.trap_canal_done\"]"];
+	  109 [label="Variable[\"TASK.trap_canal_done\"]", shape=diamond];
+	  110 [label="!(Variable[\"TASK.trap_canal_done\"])", shape=diamond];
+	  111 [label="Variable[\"coast.reeds_checked_counter\"] == 1"];
+	  112 [label="Variable[\"coast.reeds_checked_counter\"] == 1", shape=diamond];
+	  113 [label="!(Variable[\"coast.reeds_checked_counter\"] == 1)", shape=diamond];
+	  114 [label="You: “我*必须*强调一下，我可没期望能在这个陷阱里看到神秘动物学范畴的畸形。”\n“我*必须*再强调一遍，我可没期望能在这个陷阱里看到神秘动物学范畴的畸形。”"];
+	  115 [label="Variable[\"TASK.report_to_cryptozoologists_1\"]"];
+	  116 [label="Variable[\"TASK.report_to_cryptozoologists_1\"]", shape=diamond];
+	  117 [label="!(Variable[\"TASK.report_to_cryptozoologists_1\"])", shape=diamond];
+	  118 [label="Trap: Canal: 芦苇孤苦伶仃地弯向沙地。在北边，你望见混凝土石板。在东边，市中心朝着你嗡嗡作响。\n芦苇孤苦伶仃地弯向沙地，有几丛已经被碾碎，折断的茎杆就像一场责罚。在东边，城市中心发出嗡嗡的声响。\n芦苇孤苦伶仃地弯向沙地。雪花像寿衣一样盖在折断的茎杆上，它们在黑暗中颤抖地，仿佛幽灵一样。在东边，市中心朝着你嗡嗡作响。\n芦苇孤苦伶仃地弯向沙地，有几丛已经被碾碎。雪花像寿衣一样盖在折断的茎杆上。在东边，市中心朝着你嗡嗡作响。\n芦苇孤苦伶仃地弯向沙地，有几丛已经被碾碎。折断的茎杆，在黑暗中愈发显现出病态般的苍白。在东边，市中心朝着你嗡嗡作响。"];
+	  119 [label="You: 什么也不说，只是把陷阱放下。"];
+	  120 [label="You: 什么也不说，只是把陷阱放下。"];
+	  121 [label="Trap: Canal: 芦苇不断地在你周围嘶嘶作响，你把空陷阱又放回到地面上。是时候去找专业人士咨询一下了——莫雷尔和莉娜。"];
+	  122 [label="You: “你说得对。但我还是要跟神秘动物学家说一声。”"];
+	  123 [label="You: （立马大叫出来。）“它是空的！”"];
+	  124 [label="Empathy: 可怜的家伙……"];
+	  125 [label="You: [离开。]\n“我们走吧。”[离开。]"];
+	  126 [label="IsKimHere()"];
+	  127 [label="IsKimHere()", shape=diamond];
+	  128 [label="!(IsKimHere())", shape=diamond];
+	  129 [label="Jump to: [boathouse hub]"];
+	  130 [label="Variable[\"TASK.unlock_the_weasle_door_done\"]"];
+	  131 [label="Variable[\"TASK.unlock_the_weasle_door_done\"]", shape=diamond];
+	  132 [label="!(Variable[\"TASK.unlock_the_weasle_door_done\"])", shape=diamond];
+	  133 [label="You: 什么也不说，只是把陷阱放下。"];
+	  134 [label="Kim Kitsuragi: “没错。”看起来他是真的认同你说的话。“不管怎么说，现在这是神秘动物学家的需要解决的问题了。”为了澄清，他又补充了一句：“*我们*不是神秘动物学家——我们是警察。”"];
+	  135 [label="Authority: 他不想这么做，但是如果再来一次神秘动物学的借口，他*肯定*会强迫调查回归正轨。最好就到此为止了……"];
+	  136 [label="Jump to: [boathouse hub]"];
+	  137 [label="Kim Kitsuragi: “跟其他的一样空……”他喘着气。“最多再看*一个*，我们就不做了……”他的脸被冰冷的海风吹得通红，蹲伏下身体喘着气。"];
+	  138 [label="You: “我们走吧。下一个应该就能*走运*了。”"];
+	  139 [label="Variable[\"TASK.restock_trap_done\"]"];
+	  140 [label="Variable[\"TASK.restock_trap_done\"]", shape=diamond];
+	  141 [label="!(Variable[\"TASK.restock_trap_done\"])", shape=diamond];
+	  142 [label="IsKimHere()"];
+	  143 [label="IsKimHere()", shape=diamond];
+	  144 [label="!(IsKimHere())", shape=diamond];
+	  145 [label="Kim Kitsuragi: “我们确实*好像*答应过要告诉他们，是吧……”他好像为这个事实感到有些后悔。"];
+	  146 [label="Inland Empire: 伙计，一个人做这个也太孤独了。风似乎都在以一种奇怪的方式呼啸……"];
+	  147 [label="Trap: Canal: 现在所有陷阱已经检查完毕。没什么需要做的了。神秘动物学家还在等待你的报告。"];
+	  148 [label="Kim Kitsuragi: “我一直好好坚持早起慢跑——不然的话，我还会跟*你*一起破*这个*案子吗？”他笑着竖起了衣领，突然起风了。"];
+	  149 [label="boathouse hub"];
+	  150 [label="Shivers: 那遥远的，不变的歌声。在海岸的这一部分尤其响亮。不知为什么，好像更近一些。还有那刺骨的寒冷，永远不变的寒冷……"];
+	  151 [label="Untitled hub"];
+	  152 [label="Variable[\"TASK.report_to_cryptozoologists_3_done\"]"];
+	  153 [label="Variable[\"TASK.report_to_cryptozoologists_3_done\"]", shape=diamond];
+	  154 [label="!(Variable[\"TASK.report_to_cryptozoologists_3_done\"])", shape=diamond];
+	  155 [label="Trap: Canal: 这个陷阱里满是蝗虫，不过看起来十分虚弱又不健康。其中一些已经四脚朝天，腿还不停地抽搐着。还是没有竹节虫的踪影。"];
+	  156 [label="Composure: 它们舒舒服服地生活在这里的机会基本为零。"];
+	  157 [label="Jump to: [boathouse hub]"];
+	  158 [label="CancelTask(\"TASK.open_gary_door_cancelled\")--[[ Variable[ ]]"];
+	  159 [label="SetVariableValue(\"coast.reeds_checked_counter\", Variable[\"coast.reeds_checked_counter\"] +once(1)) "];
+	  160 [label="Kim Kitsuragi: “好吧。但是在那之后，我们要继续自己的任务。既然现在已经对海岸进行了十分彻底的搜查——再这样到处跑来跑去就没什么用了。”\n“好吧。但是在那之后，我们要继续自己的任务。调查进行到这个阶段，像这样绕道而行真的找不到任何合理的解释。一点也没有。”"];
+	  161 [label="You: “该死，我还希望这会是*第一*个呢。”"];
+	  162 [label="Kim Kitsuragi: 警督也没有。他只是竖起衣领——毕竟外面很冷，一如往常。"];
+	  163 [label="You: “你累了吗？”"];
+	  164 [label="IsKimHere()"];
+	  165 [label="IsKimHere()", shape=diamond];
+	  166 [label="!(IsKimHere())", shape=diamond];
+	  167 [label="IsKimHere()"];
+	  168 [label="IsKimHere()", shape=diamond];
+	  169 [label="!(IsKimHere())", shape=diamond];
+	  170 [label="You: “是啊，它也许*不是*竹节虫，不过莫雷尔还是需要知道这一点。”"];
+	  171 [label="Kim Kitsuragi: “我不想冒犯，只是……”警督不知道该如何说完这句话。他看着你，然后把陷阱放回地面。"];
+	  172 [label="see_it_to_believe_it"];
+	  173 [label="Variable[\"coast.traps_dying_regret_done\"]"];
+	  174 [label="Variable[\"coast.traps_dying_regret_done\"]", shape=diamond];
+	  175 [label="!(Variable[\"coast.traps_dying_regret_done\"])", shape=diamond];
+	  176 [label="Jump to: [remorse hub]"];
+	  177 [label="Variable[\"TASK.ask_about_ruby_in_village\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false"];
+	  178 [label="Variable[\"TASK.ask_about_ruby_in_village\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false", shape=diamond];
+	  179 [label="!(Variable[\"TASK.ask_about_ruby_in_village\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false)", shape=diamond];
+	  180 [label="Kim Kitsuragi: “太棒了。”警督看着眼熟的精妙装置，耸了耸肩。"];
+	  181 [label="SetVariableValue(\"backyard.gary_door_unlocked\", false) --[[ Variable[ ]]"];
+	  182 [label="Trap: Canal: 这个陷阱感觉很轻——还很安静。这里好像有点不太一样……"];
+	  183 [label="Untitled hub"];
+	  184 [label="Kim Kitsuragi: 他咬起嘴唇。“也许我们的神秘动物学家与真正的昆虫学家之间存在竞争关系？又或者其他什么人在蓄意破坏？我可以提出更多的理论，不过那样的话，可能就要立案了——但我并*不想*这么做。”"];
+	  185 [label="Kim Kitsuragi: “很好。现在这个事情已经告一段落。我们什么时候才能看到凶杀案调查的启示呢？”"];
+	  186 [label="Untitled hub (02)"];
+	  187 [label="You: [离开。]"];
+	  188 [label="Untitled hub (02)"];
+	  189 [label="Trap: Canal: 这个陷阱里面也满是惊慌失措的蝗虫，没有任何神秘动物学范畴的野兽存在。"];
+	  190 [label="Trap: Canal: 蝗虫在陷阱里爬行，没有被吃掉，但却十分迷惑。你没看见食肉的*芦苇-竹节虫*在狼吞虎咽地享用它们。"];
+	  191 [label="Jump to: [boathouse hub]"];
+	  192 [label="Variable[\"coast.traps_empty_canal\"]"];
+	  193 [label="Variable[\"coast.traps_empty_canal\"]", shape=diamond];
+	  194 [label="!(Variable[\"coast.traps_empty_canal\"])", shape=diamond];
+	  195 [label="You: [离开。]"];
+	  196 [label="Variable[\"TASK.open_gary_door\"]"];
+	  197 [label="Variable[\"TASK.open_gary_door\"]", shape=diamond];
+	  198 [label="!(Variable[\"TASK.open_gary_door\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 92
+	  3 -> 4
+	  4 -> 59
+	  5 -> 98
+	  6 -> 35
+	  7 -> 180
+	  8 -> 149
+	  9 -> 23
+	  10 -> 28
+	  11 -> 85
+	  12 -> 74
+	  13 -> 136
+	  14 -> 31
+	  15 -> 65
+	  16 -> 135
+	  17 -> 149
+	  18 -> 149
+	  19 -> 157
+	  20 -> 195
+	  21 -> 70
+	  22 -> 10
+	  22 -> 123
+	  23 -> 164
+	  24 -> 134
+	  25 -> 136
+	  26 -> 148
+	  27 -> 149
+	  28 -> 29
+	  28 -> 30
+	  29 -> 9
+	  30 -> 100
+	  31 -> 126
+	  32 -> 157
+	  33 -> 191
+	  34 -> 195
+	  35 -> 156
+	  36 -> 39
+	  37 -> 157
+	  38 -> 75
+	  40 -> 19
+	  41 -> 10
+	  42 -> 171
+	  43 -> 181
+	  44 -> 22
+	  45 -> 184
+	  46 -> 183
+	  47 -> 48
+	  47 -> 49
+	  48 -> 50
+	  49 -> 147
+	  50 -> 195
+	  51 -> 52
+	  51 -> 53
+	  52 -> 182
+	  53 -> 87
+	  54 -> 25
+	  55 -> 95
+	  56 -> 57
+	  56 -> 58
+	  57 -> 86
+	  58 -> 59
+	  59 -> 125
+	  59 -> 5
+	  59 -> 14
+	  61 -> 62
+	  61 -> 63
+	  62 -> 137
+	  63 -> 129
+	  64 -> 118
+	  65 -> 106
+	  66 -> 67
+	  66 -> 68
+	  67 -> 69
+	  68 -> 101
+	  69 -> 149
+	  70 -> 44
+	  71 -> 72
+	  71 -> 73
+	  72 -> 41
+	  73 -> 41
+	  74 -> 177
+	  75 -> 149
+	  76 -> 157
+	  77 -> 78
+	  77 -> 79
+	  78 -> 95
+	  79 -> 130
+	  80 -> 81
+	  81 -> 167
+	  82 -> 83
+	  82 -> 84
+	  83 -> 189
+	  84 -> 190
+	  85 -> 191
+	  86 -> 59
+	  87 -> 88
+	  87 -> 89
+	  88 -> 15
+	  89 -> 82
+	  90 -> 51
+	  91 -> 191
+	  92 -> 93
+	  92 -> 94
+	  93 -> 139
+	  94 -> 115
+	  95 -> 96
+	  95 -> 97
+	  96 -> 46
+	  97 -> 27
+	  98 -> 176
+	  99 -> 188
+	  100 -> 23
+	  101 -> 102
+	  101 -> 103
+	  102 -> 17
+	  103 -> 111
+	  104 -> 149
+	  105 -> 151
+	  106 -> 61
+	  107 -> 149
+	  108 -> 109
+	  108 -> 110
+	  109 -> 20
+	  110 -> 66
+	  111 -> 112
+	  111 -> 113
+	  112 -> 107
+	  113 -> 18
+	  114 -> 76
+	  115 -> 116
+	  115 -> 117
+	  116 -> 47
+	  117 -> 108
+	  118 -> 150
+	  119 -> 162
+	  120 -> 91
+	  121 -> 104
+	  122 -> 160
+	  123 -> 71
+	  126 -> 128
+	  126 -> 127
+	  127 -> 3
+	  128 -> 125
+	  129 -> 149
+	  130 -> 131
+	  130 -> 132
+	  131 -> 95
+	  132 -> 158
+	  133 -> 32
+	  134 -> 177
+	  135 -> 60
+	  136 -> 149
+	  137 -> 186
+	  138 -> 13
+	  139 -> 140
+	  139 -> 141
+	  140 -> 152
+	  141 -> 192
+	  142 -> 144
+	  142 -> 143
+	  143 -> 185
+	  144 -> 60
+	  145 -> 177
+	  146 -> 129
+	  147 -> 195
+	  148 -> 136
+	  149 -> 64
+	  149 -> 90
+	  149 -> 187
+	  150 -> 8
+	  151 -> 60
+	  151 -> 6
+	  151 -> 7
+	  152 -> 153
+	  152 -> 154
+	  153 -> 155
+	  154 -> 36
+	  155 -> 173
+	  156 -> 142
+	  157 -> 149
+	  158 -> 95
+	  159 -> 55
+	  160 -> 177
+	  161 -> 33
+	  162 -> 136
+	  163 -> 37
+	  164 -> 165
+	  164 -> 166
+	  165 -> 172
+	  166 -> 121
+	  167 -> 168
+	  167 -> 169
+	  168 -> 99
+	  169 -> 146
+	  170 -> 145
+	  171 -> 191
+	  172 -> 170
+	  172 -> 12
+	  172 -> 45
+	  172 -> 24
+	  172 -> 122
+	  173 -> 174
+	  173 -> 175
+	  174 -> 56
+	  175 -> 124
+	  176 -> 59
+	  177 -> 178
+	  177 -> 179
+	  178 -> 38
+	  179 -> 75
+	  180 -> 60
+	  180 -> 6
+	  181 -> 21
+	  182 -> 43
+	  183 -> 120
+	  183 -> 161
+	  183 -> 42
+	  183 -> 11
+	  184 -> 24
+	  184 -> 170
+	  184 -> 12
+	  184 -> 122
+	  185 -> 16
+	  186 -> 40
+	  186 -> 114
+	  186 -> 163
+	  186 -> 133
+	  188 -> 138
+	  188 -> 26
+	  188 -> 54
+	  188 -> 119
+	  189 -> 80
+	  190 -> 159
+	  191 -> 149
+	  192 -> 193
+	  192 -> 194
+	  193 -> 105
+	  194 -> 34
+	  196 -> 197
+	  196 -> 198
+	  197 -> 77
+}
+

@@ -1,0 +1,389 @@
+# PLAZA ORB / spirit bomb ready
+# A thought orb to pop up just before the Mercenary Tribunal
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Rhetoric: I can talk you out of it, whatever it is."];
+	  3 [label="Hand/Eye Coordination: You are prepared. Don't put away your friend. Your weapon."];
+	  4 [label="Variable[\"auto.is_snowing\"]"];
+	  5 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  6 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  7 [label="Interfacing: Snowflakes speck the barrels of your Nachtwey A80 pistol."];
+	  8 [label="Inland Empire: Good. Be ready to take damage."];
+	  9 [label="CheckEquipped(\"kvalsund_multitool\")"];
+	  10 [label="CheckEquipped(\"kvalsund_multitool\")", shape=diamond];
+	  11 [label="!(CheckEquipped(\"kvalsund_multitool\"))", shape=diamond];
+	  12 [label="Physical Instrument: Snowflakes stick to your prybar. Or crowbar. Or prybar. Call it what you will -- it doesn't stand a chance against military-grade weaponry."];
+	  13 [label="Inland Empire: Stop. Now. It is time."];
+	  14 [label="CheckItem(\"spirit_bomb\")"];
+	  15 [label="CheckItem(\"spirit_bomb\")", shape=diamond];
+	  16 [label="!(CheckItem(\"spirit_bomb\"))", shape=diamond];
+	  17 [label="Inland Empire: You are prepared. Don't put away your friend. Your weapon. It is glowing in your hand, ready to serve."];
+	  18 [label="Composure: The oily tail end of your necktie-turned-fuse glistens in the cool spring light."];
+	  19 [label="CheckItem(\"gun_villiers\")"];
+	  20 [label="CheckItem(\"gun_villiers\")", shape=diamond];
+	  21 [label="!(CheckItem(\"gun_villiers\"))", shape=diamond];
+	  22 [label="Physical Instrument: Water streams down your prybar. Or crowbar. Or prybar. Call it what you will -- it doesn't stand a chance against military-grade weaponry."];
+	  23 [label="Physical Instrument: You try to take comfort in the weight of your prybar. Or crowbar. Or prybar. Call it what you will -- it doesn't stand a chance against military-grade weaponry."];
+	  24 [label="Kim Kitsuragi: \"Then you'd better get ready.\" He frowns, then quickly adds, \"Whatever happens, I've got your back.\""];
+	  25 [label="Inland Empire: Your old friend has prepared you for this -- at great cost to himself. Make sure you have the spirit bomb in your hand when *shit goes south*."];
+	  26 [label="Suggestion: You're too likable to die. Don't worry."];
+	  27 [label="Inland Empire: Stop. Just up ahead: danger."];
+	  28 [label="Authority: What?! You can't compare the sidearm issued to you personally by the RCM to the pistol of a known criminal?"];
+	  29 [label="CheckItem(\"spirit_bomb\")"];
+	  30 [label="CheckItem(\"spirit_bomb\")", shape=diamond];
+	  31 [label="!(CheckItem(\"spirit_bomb\"))", shape=diamond];
+	  32 [label="CheckItem(\"bullet\")"];
+	  33 [label="CheckItem(\"bullet\")", shape=diamond];
+	  34 [label="!(CheckItem(\"bullet\"))", shape=diamond];
+	  35 [label="Hand/Eye Coordination: You are prepared. Don't put away your friend. Your weapon."];
+	  36 [label="Inland Empire: Crisis, death. You can feel it in your blue soul."];
+	  37 [label="Composure: Snow gathers on the oily fabric of the tail end of your necktie-turned-fuse."];
+	  38 [label="You: I'm ready to do this."];
+	  39 [label="CheckEquipped(\"kvalsund_multitool\")"];
+	  40 [label="CheckEquipped(\"kvalsund_multitool\")", shape=diamond];
+	  41 [label="!(CheckEquipped(\"kvalsund_multitool\"))", shape=diamond];
+	  42 [label="Interfacing: Your Kvalsund KR+2 Multi-Tool looks impressive, shining in the cold spring light -- but what can it do against military-grade weaponry?"];
+	  43 [label="Inland Empire: Wait -- your old friend has prepared you for this -- at great cost to himself. Make sure you have the spirit bomb in your hand when *shit goes south*."];
+	  44 [label="You: \"Kim, there's danger. Up ahead.\""];
+	  45 [label="Interfacing: Snowflakes speck the barrels of your Villiers 9mm pistol."];
+	  46 [label="CheckItem(\"gun_villiers\")"];
+	  47 [label="CheckItem(\"gun_villiers\")", shape=diamond];
+	  48 [label="!(CheckItem(\"gun_villiers\"))", shape=diamond];
+	  49 [label="Logic: There really isn't much of a difference between these two guns..."];
+	  50 [label="Variable[\"plaza.spirit_logic_rubys_gun\"]"];
+	  51 [label="Variable[\"plaza.spirit_logic_rubys_gun\"]", shape=diamond];
+	  52 [label="!(Variable[\"plaza.spirit_logic_rubys_gun\"])", shape=diamond];
+	  53 [label="Inland Empire: This is not the time to discuss preferences. It's not just your own life that will be at stake.\nAnd you think you're off to die an honourable death? What about the lives of the people depending on you?"];
+	  54 [label="You: Time for the tribunal?"];
+	  55 [label="CheckEquipped(\"sabre\")"];
+	  56 [label="CheckEquipped(\"sabre\")", shape=diamond];
+	  57 [label="!(CheckEquipped(\"sabre\"))", shape=diamond];
+	  58 [label="Interfacing: Raindrops slip from the barrels of your Villiers 9mm pistol."];
+	  59 [label="You: [Discard thought.]"];
+	  60 [label="Variable[\"auto.is_raining\"]"];
+	  61 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  62 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  63 [label="Variable[\"auto.is_snowing\"]"];
+	  64 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  65 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  66 [label="Inland Empire: It would be better if you didn't have to. It's not just your own life that will be at stake."];
+	  67 [label="CheckItem(\"bullet\")"];
+	  68 [label="CheckItem(\"bullet\")", shape=diamond];
+	  69 [label="!(CheckItem(\"bullet\"))", shape=diamond];
+	  70 [label="CheckItem(\"gun_ruby\")"];
+	  71 [label="CheckItem(\"gun_ruby\")", shape=diamond];
+	  72 [label="!(CheckItem(\"gun_ruby\"))", shape=diamond];
+	  73 [label="Encyclopedia: Statistically speaking, sabres have proven to be rather ineffective against advanced military technology."];
+	  74 [label="CheckItem(\"spirit_bomb\")  or  CheckItem(\"gun_villiers\")  or  CheckItem(\"gun_ruby\")"];
+	  75 [label="CheckItem(\"spirit_bomb\")  or  CheckItem(\"gun_villiers\")  or  CheckItem(\"gun_ruby\")", shape=diamond];
+	  76 [label="!(CheckItem(\"spirit_bomb\")  or  CheckItem(\"gun_villiers\")  or  CheckItem(\"gun_ruby\"))", shape=diamond];
+	  77 [label="Variable[\"auto.is_raining\"]"];
+	  78 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  79 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  80 [label="Inland Empire: Do what you need to do. And then keep moving toward the future."];
+	  81 [label="You: I prefer hand-to-hand combat.\n\"I prefer hand-to-hand combat. It's more honourable.\""];
+	  82 [label="Inland Empire: This isn't the time for fear. Go."];
+	  83 [label="party_nearing_hub"];
+	  84 [label="Electrochemistry: You know what you should do? Take out the spirit bomb..."];
+	  85 [label="prepare to foight!"];
+	  86 [label="You: Time to party?"];
+	  87 [label="Inland Empire: Be prepared. Wield Ruby's double-barrelled pistol."];
+	  88 [label="CheckEquipped(\"prybar\")"];
+	  89 [label="CheckEquipped(\"prybar\")", shape=diamond];
+	  90 [label="!(CheckEquipped(\"prybar\"))", shape=diamond];
+	  91 [label="Perception (Hearing): You hear what sounds like an enthusiastic gurgling coming from the spirit bomb in your pocket."];
+	  92 [label="Inland Empire: No, no. You cannot get off that easy. This is serious. Lives are at stake."];
+	  93 [label="Kim Kitsuragi: \"Yes. I hear commotion...\" He cups his ear. \"Let's go.\""];
+	  94 [label="CheckEquipped(\"prybar\")"];
+	  95 [label="CheckEquipped(\"prybar\")", shape=diamond];
+	  96 [label="!(CheckEquipped(\"prybar\"))", shape=diamond];
+	  97 [label="You: I'm scared..."];
+	  98 [label="CheckEquipped(\"spirit_bomb\")"];
+	  99 [label="CheckEquipped(\"spirit_bomb\")", shape=diamond];
+	  100 [label="!(CheckEquipped(\"spirit_bomb\"))", shape=diamond];
+	  101 [label="Inland Empire: Stop. Just up ahead: danger."];
+	  102 [label="Authority: What a shitty gun. But it's better than nothing."];
+	  103 [label="Composure: Raindrops slip down the oily fabric of the tail end of your necktie-turned-fuse."];
+	  105 [label="Hand/Eye Coordination: For God's sake -- find some bullets before you go any further. An unloaded gun won't do you any good!"];
+	  106 [label="Inland Empire: Arm yourself with anything you can. Unless you have... nothing? Because you didn't find your lost gun? Then just walk to your death."];
+	  107 [label="Inland Empire: Shush. He's not drinking the spirit bomb. He's putting it in his hand and he's going to be ready."];
+	  108 [label="Authority: Why don't you take out your trusty Villiers instead?"];
+	  109 [label="You: I'll feel prepared as soon as I switch out my real police gun."];
+	  110 [label="CheckItem(\"bullet\")"];
+	  111 [label="CheckItem(\"bullet\")", shape=diamond];
+	  112 [label="!(CheckItem(\"bullet\"))", shape=diamond];
+	  113 [label="Hand/Eye Coordination: For God's sake -- find some bullets before you go any further. An unloaded gun won't do you any good!"];
+	  114 [label="Interfacing: Your fingers reflexively reach for the Villiers 9mm pistol in your pocket."];
+	  115 [label="Interfacing: Raindrops slip from the barrels of your Nachtwey A80 pistol."];
+	  116 [label="ready_to_fight"];
+	  117 [label="CheckEquipped(\"gun_villiers\")"];
+	  118 [label="CheckEquipped(\"gun_villiers\")", shape=diamond];
+	  119 [label="!(CheckEquipped(\"gun_villiers\"))", shape=diamond];
+	  120 [label="Hand/Eye Coordination: What you have isn't enough. You'll need more firepower. A ranged weapon."];
+	  121 [label="CheckItem(\"spirit_bomb\")"];
+	  122 [label="CheckItem(\"spirit_bomb\")", shape=diamond];
+	  123 [label="!(CheckItem(\"spirit_bomb\"))", shape=diamond];
+	  124 [label="Inland Empire: Wait -- your old friend has prepared you for this -- at great cost to himself. Make sure you have the spirit bomb in your hand when *shit goes south*."];
+	  125 [label="Inland Empire: Yes. And it's not going to be fun."];
+	  126 [label="Inland Empire: It is."];
+	  127 [label="Variable[\"auto.is_raining\"]"];
+	  128 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  129 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  130 [label="Variable[\"coast.orb_fight_ready_elchem\"]"];
+	  131 [label="Variable[\"coast.orb_fight_ready_elchem\"]", shape=diamond];
+	  132 [label="!(Variable[\"coast.orb_fight_ready_elchem\"])", shape=diamond];
+	  133 [label="Interfacing: The barrels of your Villiers 9mm pistol shine threateningly in the cold spring light."];
+	  134 [label="Interfacing: The barrels of your Nachtwey A80 pistol shine threateningly in the cold spring light."];
+	  135 [label="Inland Empire: Stop. Just up ahead: danger."];
+	  136 [label="Interfacing: Snowflakes stick to your Kvalsund KR+2 Multi-Tool. It looks impressive -- but what can it do against military-grade weaponry?"];
+	  137 [label="You: \"I'm not sure I feel ready for what lies ahead.\""];
+	  138 [label="You: I'll fight with my bare hands if I have to."];
+	  139 [label="CheckEquipped(\"kvalsund_multitool\")"];
+	  140 [label="CheckEquipped(\"kvalsund_multitool\")", shape=diamond];
+	  141 [label="!(CheckEquipped(\"kvalsund_multitool\"))", shape=diamond];
+	  142 [label="Inland Empire: Stop. Just up ahead: danger."];
+	  143 [label="Encyclopedia: Statistically speaking, sabres have proven to be rather ineffective against advanced military technology."];
+	  144 [label="Hand/Eye Coordination: For God's sake -- find some bullets before you go any further. An unloaded gun won't do you any good!"];
+	  145 [label="Inland Empire: Be prepared. Make sure you have your pepperbox in your hand."];
+	  146 [label="You: Sounds ominous."];
+	  147 [label="You: For what?"];
+	  148 [label="Inland Empire: Yours included."];
+	  149 [label="CheckEquipped(\"prybar\")"];
+	  150 [label="CheckEquipped(\"prybar\")", shape=diamond];
+	  151 [label="!(CheckEquipped(\"prybar\"))", shape=diamond];
+	  152 [label="Interfacing: Water streams down your Kvalsund KR+2 Multi-Tool. It looks impressive -- but what can it do against military-grade weaponry?"];
+	  153 [label="Inland Empire: Time for grim, serious, deadly, dangerous. It's not going to be fun."];
+	  154 [label="You: What am I supposed to do?"];
+	  155 [label="CheckEquipped(\"gun_ruby\")"];
+	  156 [label="CheckEquipped(\"gun_ruby\")", shape=diamond];
+	  157 [label="!(CheckEquipped(\"gun_ruby\"))", shape=diamond];
+	  158 [label="Variable[\"auto.is_snowing\"]"];
+	  159 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  160 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  161 [label="CheckEquipped(\"prybar\")"];
+	  162 [label="CheckEquipped(\"prybar\")", shape=diamond];
+	  163 [label="!(CheckEquipped(\"prybar\"))", shape=diamond];
+	  164 [label="Encyclopedia: Statistically speaking, sabres have proven to be rather ineffective against  military technology."];
+	  165 [label="Variable[\"auto.is_snowing\"]"];
+	  166 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  167 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  168 [label="Variable[\"auto.is_raining\"]"];
+	  169 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  170 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  171 [label="CheckEquipped(\"kvalsund_multitool\")"];
+	  172 [label="CheckEquipped(\"kvalsund_multitool\")", shape=diamond];
+	  173 [label="!(CheckEquipped(\"kvalsund_multitool\"))", shape=diamond];
+	  0 -> 1
+	  1 -> 98
+	  2 -> 26
+	  3 -> 168
+	  4 -> 5
+	  4 -> 6
+	  5 -> 7
+	  6 -> 134
+	  7 -> 46
+	  9 -> 10
+	  9 -> 11
+	  10 -> 136
+	  11 -> 149
+	  12 -> 74
+	  13 -> 83
+	  14 -> 16
+	  14 -> 15
+	  15 -> 25
+	  16 -> 19
+	  17 -> 77
+	  18 -> 116
+	  19 -> 20
+	  19 -> 21
+	  20 -> 145
+	  21 -> 70
+	  22 -> 74
+	  23 -> 74
+	  25 -> 91
+	  26 -> 85
+	  27 -> 17
+	  28 -> 110
+	  29 -> 30
+	  29 -> 31
+	  30 -> 124
+	  31 -> 116
+	  32 -> 33
+	  32 -> 34
+	  33 -> 121
+	  34 -> 105
+	  35 -> 60
+	  36 -> 154
+	  37 -> 116
+	  38 -> 8
+	  39 -> 40
+	  39 -> 41
+	  40 -> 42
+	  41 -> 161
+	  42 -> 74
+	  43 -> 116
+	  44 -> 93
+	  45 -> 32
+	  46 -> 48
+	  46 -> 47
+	  47 -> 108
+	  48 -> 110
+	  49 -> 50
+	  50 -> 51
+	  50 -> 52
+	  51 -> 28
+	  52 -> 110
+	  54 -> 125
+	  55 -> 56
+	  55 -> 57
+	  56 -> 135
+	  57 -> 13
+	  58 -> 32
+	  59 -> 92
+	  60 -> 61
+	  60 -> 62
+	  61 -> 58
+	  62 -> 165
+	  63 -> 64
+	  63 -> 65
+	  64 -> 37
+	  65 -> 18
+	  67 -> 68
+	  67 -> 69
+	  68 -> 85
+	  69 -> 113
+	  70 -> 72
+	  70 -> 71
+	  71 -> 87
+	  72 -> 106
+	  73 -> 74
+	  74 -> 75
+	  74 -> 76
+	  75 -> 154
+	  76 -> 85
+	  77 -> 78
+	  77 -> 79
+	  78 -> 103
+	  79 -> 63
+	  81 -> 53
+	  83 -> 146
+	  83 -> 147
+	  83 -> 54
+	  83 -> 86
+	  83 -> 59
+	  84 -> 130
+	  85 -> 81
+	  85 -> 137
+	  85 -> 138
+	  86 -> 153
+	  87 -> 102
+	  88 -> 89
+	  88 -> 90
+	  89 -> 135
+	  90 -> 55
+	  91 -> 84
+	  92 -> 148
+	  93 -> 97
+	  93 -> 109
+	  93 -> 38
+	  94 -> 96
+	  94 -> 95
+	  95 -> 22
+	  96 -> 164
+	  97 -> 82
+	  98 -> 99
+	  98 -> 100
+	  99 -> 27
+	  100 -> 117
+	  101 -> 35
+	  102 -> 67
+	  103 -> 116
+	  105 -> 121
+	  106 -> 2
+	  107 -> 85
+	  108 -> 49
+	  109 -> 80
+	  110 -> 112
+	  110 -> 111
+	  111 -> 29
+	  112 -> 144
+	  113 -> 85
+	  114 -> 67
+	  115 -> 46
+	  116 -> 97
+	  116 -> 44
+	  116 -> 109
+	  116 -> 38
+	  117 -> 118
+	  117 -> 119
+	  118 -> 101
+	  119 -> 155
+	  120 -> 127
+	  121 -> 122
+	  121 -> 123
+	  122 -> 43
+	  123 -> 116
+	  124 -> 116
+	  125 -> 154
+	  126 -> 154
+	  127 -> 128
+	  127 -> 129
+	  128 -> 171
+	  129 -> 158
+	  130 -> 131
+	  130 -> 132
+	  131 -> 107
+	  132 -> 85
+	  133 -> 32
+	  134 -> 46
+	  135 -> 120
+	  136 -> 74
+	  137 -> 24
+	  138 -> 66
+	  139 -> 140
+	  139 -> 141
+	  140 -> 135
+	  141 -> 88
+	  142 -> 3
+	  143 -> 74
+	  144 -> 29
+	  145 -> 114
+	  146 -> 126
+	  147 -> 36
+	  148 -> 154
+	  149 -> 150
+	  149 -> 151
+	  150 -> 12
+	  151 -> 73
+	  152 -> 74
+	  153 -> 154
+	  154 -> 14
+	  155 -> 156
+	  155 -> 157
+	  156 -> 142
+	  157 -> 139
+	  158 -> 160
+	  158 -> 159
+	  159 -> 9
+	  160 -> 39
+	  161 -> 162
+	  161 -> 163
+	  162 -> 23
+	  163 -> 143
+	  164 -> 74
+	  165 -> 166
+	  165 -> 167
+	  166 -> 45
+	  167 -> 133
+	  168 -> 169
+	  168 -> 170
+	  169 -> 115
+	  170 -> 4
+	  171 -> 172
+	  171 -> 173
+	  172 -> 152
+	  173 -> 94
+}
+

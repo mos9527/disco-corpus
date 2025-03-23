@@ -1,0 +1,258 @@
+# SEAFORT ORB / quiet on the island
+# (afterthought on silence and sounds)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Shivers: 对于参加表演的人来说是非常重要的。"];
+	  3 [label="You: 东边……"];
+	  4 [label="Jump to: [islandsoundhub]"];
+	  5 [label="Cuno: “什么事？”"];
+	  6 [label="Perception (Hearing): 这座小岛上吗？这里几乎没有风，只有雪花静静飘落在芦苇丛中。灯心草在水岸边摇晃，早已凋零的树叶互相摩擦着。"];
+	  7 [label="Variable[\"seafort.orb_silence_concept_trig\"]"];
+	  8 [label="Variable[\"seafort.orb_silence_concept_trig\"]", shape=diamond];
+	  9 [label="!(Variable[\"seafort.orb_silence_concept_trig\"])", shape=diamond];
+	  10 [label="You: 前方……"];
+	  11 [label="Perception (Hearing): 空气从一个小窗口流了出来，小到几乎可以忽略不计。轻风爱抚着草地上的花朵？周围鸦雀无声。芦苇静止了。灯心草也一动不动。"];
+	  12 [label="You: “你有没有注意到这里有多安静？”"];
+	  13 [label="Perception (Hearing): 这座小岛上吗？这里几乎没有风，雨水安静地拍打着芦苇丛。灯心草在水岸边摇晃，早已凋零的树叶互相摩擦着。多么柔软的雨滴啊……"];
+	  14 [label="Shivers: 空气的幽灵屏住了它的呼吸。"];
+	  15 [label="islandsoundhub"];
+	  16 [label="You: 而在这沉默之下的是什么？"];
+	  17 [label="Variable[\"seafort.sense_hearing_pain_flash\"]"];
+	  18 [label="Variable[\"seafort.sense_hearing_pain_flash\"]", shape=diamond];
+	  19 [label="!(Variable[\"seafort.sense_hearing_pain_flash\"])", shape=diamond];
+	  20 [label="You: “好像……有点疼。也许是绷带开了？”"];
+	  21 [label="Conceptualization: 就像在重要演出之前——默默调音的管弦乐队。"];
+	  22 [label="You: “这座小岛还真他妈的安静啊。”"];
+	  23 [label="Kim Kitsuragi: “有这个可能——这就是我们停下来的原因吗？”"];
+	  24 [label="Pain Threshold: 刹那间，声音消失了。疼痛像一枚子弹射入你的右脚，一路钻进你的腹股沟……"];
+	  25 [label="Variable[\"seafort.sense_hearing_pain_flash\"]"];
+	  26 [label="Variable[\"seafort.sense_hearing_pain_flash\"]", shape=diamond];
+	  27 [label="!(Variable[\"seafort.sense_hearing_pain_flash\"])", shape=diamond];
+	  28 [label="Variable[\"auto.is_snowing\"]"];
+	  29 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  30 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  31 [label="Perception (Hearing): 这座小岛上吗？这里几乎没有风，只有一丝空气在芦苇丛中流动。灯心草在水岸边摇晃，早已凋零的树叶互相摩擦着。"];
+	  32 [label="Jump to: [islandsoundhub]"];
+	  33 [label="Kim Kitsuragi: “是啊——这就是我们停下来的原因吗？”"];
+	  34 [label="Perception (Hearing): 远处城市的轰鸣，遥远的就像今天的梦境。在那之前，是飞沙的声响。低潮滤过粗细不一的颗粒……一只鸟儿正在梳理自己的羽毛。"];
+	  35 [label="You: 在另一边……更北边一点……"];
+	  36 [label="Pain Threshold: 右脚和腹股沟传来一阵刺痛，如果是个软弱的男人，现在一定会停下脚步——但你不会，你的精神还集中在……"];
+	  37 [label="Perception (Hearing): 大雨浇落在熄灭篝火的黑色残骸上。"];
+	  38 [label="IsTHCPresent(\"col_do_ma_ma_daqua\")"];
+	  39 [label="IsTHCPresent(\"col_do_ma_ma_daqua\")", shape=diamond];
+	  40 [label="!(IsTHCPresent(\"col_do_ma_ma_daqua\"))", shape=diamond];
+	  41 [label="painthreshdamage"];
+	  42 [label="painthreshdamage"];
+	  43 [label="Cuno: 他斜视着你。“这就是我们停下来的原因？听你说些*抱怨绷带的屁话*？”"];
+	  44 [label="You: “不，我没在听什么。”"];
+	  45 [label="Perception (Hearing): 你停了下来，脚下的干草发出哗啦哗啦的声响。远处鸟儿的翅膀触碰着平静的海面……"];
+	  46 [label="You: “金……”"];
+	  47 [label="Variable[\"seafort.sense_hearing_inland_limbs_fidget\"]"];
+	  48 [label="Variable[\"seafort.sense_hearing_inland_limbs_fidget\"]", shape=diamond];
+	  49 [label="!(Variable[\"seafort.sense_hearing_inland_limbs_fidget\"])", shape=diamond];
+	  50 [label="Pain Threshold: 右脚和腹股沟传来一阵刺痛，如果是个软弱的男人，现在一定会停下脚步——但你不会，你的精神还集中在……"];
+	  51 [label="You: “岛上还真够安静的。”"];
+	  52 [label="You: [不听了。]"];
+	  53 [label="You: 在那个会飞的东西下面……"];
+	  54 [label="You: 西边……"];
+	  55 [label="Perception (Hearing): 有什么东西在晃动。一个声音急不可耐地等待着，但却仍未真正降临这个世界。"];
+	  56 [label="go_away"];
+	  57 [label="painthresthnobigdeal"];
+	  58 [label="Variable[\"auto.is_raining\"]"];
+	  59 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  60 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  61 [label="Perception (Hearing): 海风穿过松树的针叶，发出寂静的嘶嘶声。"];
+	  62 [label="Perception (Hearing): 雨滴降落在水面上，但却出奇的安静，密密麻麻地在远处围成了一个圆圈……"];
+	  63 [label="Perception (Hearing): 雪花飘落在水面上，寂静无声的融化成水。"];
+	  64 [label="Variable[\"auto.is_raining\"]"];
+	  65 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  66 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  67 [label="Kim Kitsuragi: “什么事？”"];
+	  69 [label="Perception (Hearing): 成群的鹌鹑出发了；现在已经飞到100米开外的地方……102……105……"];
+	  70 [label="Variable[\"auto.is_snowing\"]"];
+	  71 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  72 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  73 [label="Jump to: [islandsoundhub]"];
+	  74 [label="Logic: 不，这只是你的想象。你什么也没听见。"];
+	  75 [label="You: “这座小岛还真他妈的安静啊。”"];
+	  76 [label="You: “嗯。等一下。我再听听。”"];
+	  77 [label="Variable[\"yard.hanged_way_out_west\"]"];
+	  78 [label="Variable[\"yard.hanged_way_out_west\"]", shape=diamond];
+	  79 [label="!(Variable[\"yard.hanged_way_out_west\"])", shape=diamond];
+	  80 [label="You: “岛上还真够安静的。”"];
+	  81 [label="Cuno: “是啊。像个鬼幽灵岛一样。这里就是这个狗屁样。除了安静屁都没有。”"];
+	  82 [label="Cuno: 孩子耸耸肩。大声吸了一下鼻子——然后，又重归沉默。"];
+	  83 [label="Inland Empire: 你听到肢体烦躁不安的动静，发出一种极其细微的滴答声……"];
+	  84 [label="Inland Empire: 我们已经走远了……正在遥远的西边。"];
+	  85 [label="You: “抱歉，我们走吧。”[离开。]"];
+	  86 [label="You: “好像……有点疼。也许是绷带开了？”"];
+	  87 [label="go_away"];
+	  88 [label="Perception (Hearing): 一瓣雪花轻轻飘落在熄灭篝火的黑色残骸上。发出嘶嘶的声响……"];
+	  89 [label="You: “嗯。等一下。我再听听。”"];
+	  90 [label="Pain Threshold: 刹那间，声音消失了。疼痛像一枚子弹射入你的右脚，一路钻进你的腹股沟……"];
+	  91 [label="Variable[\"auto.is_raining\"]"];
+	  92 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  93 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  94 [label="Jump to: [islandsoundhub]"];
+	  95 [label="Jump to: [islandsoundhub]"];
+	  96 [label="Jump to: [islandsoundhub]"];
+	  97 [label="Perception (Hearing): 哈库多玛达塔。"];
+	  98 [label="Cuno: “是啊，他妈的真像有鬼一样。就是这个鬼样子。”"];
+	  99 [label="Perception (Hearing): 一阵低沉的嗡嗡声。空气缓缓穿过一个混凝土箱子——拂过每一道古老的细缝和裂痕，发出空洞的回声。可真是栋大建筑。"];
+	  100 [label="Kim Kitsuragi: 警督默默地点点头。"];
+	  101 [label="You: “坤诺……”"];
+	  102 [label="You: “你有没有注意到这里有多安静？”"];
+	  103 [label="You: “抱歉，我们走吧。”[离开。]"];
+	  104 [label="You: [睁开你的双眼，别听了。]"];
+	  105 [label="You: “不，我没在听什么。”"];
+	  106 [label="Kim Kitsuragi: “我有——这就是我们停下来的原因吗？”"];
+	  107 [label="Cuno: 他耸耸肩。“像个幽灵岛一样。这里就是这个狗屁样。除了安静屁都没有。”"];
+	  108 [label="You: 那边飞来飞去的是什么？"];
+	  109 [label="Variable[\"auto.is_snowing\"]"];
+	  110 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  111 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  112 [label="Jump to: [islandsoundhub]"];
+	  0 -> 1
+	  1 -> 45
+	  2 -> 15
+	  3 -> 34
+	  4 -> 15
+	  5 -> 90
+	  6 -> 21
+	  7 -> 8
+	  7 -> 9
+	  8 -> 2
+	  9 -> 14
+	  10 -> 99
+	  11 -> 109
+	  12 -> 106
+	  13 -> 21
+	  14 -> 15
+	  15 -> 35
+	  15 -> 3
+	  15 -> 101
+	  15 -> 104
+	  15 -> 10
+	  15 -> 46
+	  15 -> 16
+	  15 -> 54
+	  16 -> 38
+	  17 -> 18
+	  17 -> 19
+	  18 -> 41
+	  19 -> 36
+	  20 -> 43
+	  21 -> 7
+	  22 -> 33
+	  23 -> 105
+	  23 -> 85
+	  24 -> 17
+	  25 -> 26
+	  25 -> 27
+	  26 -> 42
+	  27 -> 50
+	  28 -> 29
+	  28 -> 30
+	  29 -> 6
+	  30 -> 31
+	  31 -> 21
+	  32 -> 15
+	  33 -> 56
+	  34 -> 91
+	  35 -> 11
+	  36 -> 57
+	  37 -> 94
+	  38 -> 40
+	  38 -> 39
+	  39 -> 97
+	  40 -> 55
+	  41 -> 80
+	  41 -> 12
+	  41 -> 22
+	  42 -> 75
+	  42 -> 51
+	  42 -> 20
+	  42 -> 102
+	  43 -> 44
+	  43 -> 103
+	  44 -> 82
+	  45 -> 108
+	  45 -> 52
+	  46 -> 67
+	  47 -> 48
+	  47 -> 49
+	  48 -> 74
+	  49 -> 95
+	  50 -> 42
+	  51 -> 107
+	  53 -> 58
+	  54 -> 61
+	  55 -> 83
+	  56 -> 89
+	  56 -> 85
+	  57 -> 80
+	  57 -> 86
+	  57 -> 12
+	  57 -> 22
+	  58 -> 59
+	  58 -> 60
+	  59 -> 13
+	  60 -> 28
+	  61 -> 4
+	  62 -> 73
+	  63 -> 73
+	  64 -> 65
+	  64 -> 66
+	  65 -> 37
+	  66 -> 94
+	  67 -> 24
+	  69 -> 53
+	  70 -> 72
+	  70 -> 71
+	  71 -> 63
+	  72 -> 73
+	  73 -> 15
+	  74 -> 95
+	  75 -> 98
+	  76 -> 82
+	  77 -> 78
+	  77 -> 79
+	  78 -> 84
+	  79 -> 95
+	  80 -> 33
+	  81 -> 87
+	  82 -> 112
+	  83 -> 47
+	  84 -> 47
+	  86 -> 23
+	  87 -> 76
+	  87 -> 103
+	  88 -> 94
+	  89 -> 100
+	  90 -> 25
+	  91 -> 92
+	  91 -> 93
+	  92 -> 62
+	  93 -> 70
+	  94 -> 15
+	  95 -> 15
+	  96 -> 15
+	  97 -> 77
+	  98 -> 87
+	  99 -> 32
+	  100 -> 96
+	  101 -> 5
+	  102 -> 81
+	  105 -> 100
+	  106 -> 56
+	  107 -> 87
+	  108 -> 69
+	  109 -> 110
+	  109 -> 111
+	  110 -> 88
+	  111 -> 64
+	  112 -> 15
+}
+

@@ -1,0 +1,53 @@
+# LAIR / Door to Outside
+# This prevents the player from leaving the main lair -- only fires if they have dealt with Ruby but not read her journal.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Variable[\"boardwalk.ruby_killed_herself\"]  and  Variable[\"boardwalk.tent_covered\"] == false"];
+	  3 [label="Variable[\"boardwalk.ruby_killed_herself\"]  and  Variable[\"boardwalk.tent_covered\"] == false", shape=diamond];
+	  4 [label="!(Variable[\"boardwalk.ruby_killed_herself\"]  and  Variable[\"boardwalk.tent_covered\"] == false)", shape=diamond];
+	  5 [label="Kim Kitsuragi: The lieutenant only shakes his head. \"Let's just do it, shall we?\""];
+	  6 [label="You: \"Yeah, you're right. Let's get it over with.\""];
+	  7 [label="You: \"Sorry!\" (Hit your head.) \"I forgot.\""];
+	  8 [label="You: \"I'd rather go outside and have a beer right now.\""];
+	  9 [label="CheckItem(\"rubys_journal\")"];
+	  10 [label="CheckItem(\"rubys_journal\")", shape=diamond];
+	  11 [label="!(CheckItem(\"rubys_journal\"))", shape=diamond];
+	  12 [label="Kim Kitsuragi: \"We still have to deal with her...\" He adjusts his coat. \"Not pleasant, I know. But we can't leave her like that. And we have to investigate the scene, too.\""];
+	  13 [label="Kim Kitsuragi: \"We still need to investigate the scene. Remember?\""];
+	  14 [label="You: \"Of course. I was just testing you, to see if *you* remembered.\""];
+	  15 [label="Kim Kitsuragi: \"Her journal? We should probably leaf through it. Might learn something useful.\""];
+	  17 [label="Kim Kitsuragi: \"Be that as it may, it doesn't change the fact. We have a duty to her. Let's see it through.\" He gestures back toward the tunnels. \"After you.\""];
+	  18 [label="You: \"Aw, can't you do it Kim? I'm wiped out.\""];
+	  19 [label="Kim Kitsuragi: He gestures back toward the tunnels. \"After you.\""];
+	  20 [label="Kim Kitsuragi: The lieutenant clears his throat. \"Detective -- aren't you forgetting something?\""];
+	  21 [label="Untitled hub"];
+	  22 [label="You: \"But it's so sad, Kim. Too sad for me!\""];
+	  0 -> 1
+	  1 -> 20
+	  2 -> 3
+	  2 -> 4
+	  3 -> 12
+	  4 -> 9
+	  6 -> 19
+	  7 -> 5
+	  8 -> 17
+	  9 -> 10
+	  9 -> 11
+	  10 -> 15
+	  11 -> 13
+	  12 -> 8
+	  12 -> 22
+	  12 -> 6
+	  13 -> 21
+	  14 -> 5
+	  15 -> 21
+	  18 -> 5
+	  20 -> 2
+	  21 -> 18
+	  21 -> 14
+	  21 -> 7
+	  22 -> 17
+}
+

@@ -1,0 +1,395 @@
+# WHIRLING F1 / KARAOKE STAND
+# Sing karaoke!
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Drama: 室内的气氛充满了期待之情。"];
+	  3 [label="Half Light: 你可以晚上再来唱嘛。人多的时候就不会显得这么可怕了。"];
+	  4 [label="You: 谢谢你，古老的爬行动物脑。"];
+	  5 [label="Garte, the Cafeteria Manager: “呃……好吧。我要把麦克风拔了，行吗？”他说完就直接拔了。"];
+	  6 [label="You: 原地不动。"];
+	  7 [label="Karaoke Stand: 舞台已为你的演出准备就绪。你感到……万籁俱寂，静得能听到脚下的光球在嘎吱作响。"];
+	  8 [label="Garte, the Cafeteria Manager: “没门儿。你还记得*账单*的事吗？”"];
+	  9 [label="You: “这首歌不献给任何人。我仅为自己歌唱。”"];
+	  10 [label="Savoir Faire: 你……一定要动起来，好吗？别傻呆着。"];
+	  11 [label="Ancient Reptilian Brain: 没收到回应。歌声那深沉的源头陷入了沉默。它已然隐退——只会在梦境与噩梦中再度回归。"];
+	  12 [label="Interfacing: 到此为止了。你失去了动力。"];
+	  13 [label="Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  14 [label="Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  15 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  16 [label="Variable[\"TASK.pay_for_the_damages_done\"]"];
+	  17 [label="Variable[\"TASK.pay_for_the_damages_done\"]", shape=diamond];
+	  18 [label="!(Variable[\"TASK.pay_for_the_damages_done\"])", shape=diamond];
+	  19 [label="You: 先观察一下室内的情况。"];
+	  20 [label="IsAfternoon()"];
+	  21 [label="IsAfternoon()", shape=diamond];
+	  22 [label="!(IsAfternoon())", shape=diamond];
+	  23 [label="Ancient Reptilian Brain: “我时常会去那个地方，圣桑最小的那座教堂。我不愿思念它过去的噢……辉煌。雾中的溪水涌向何方，流淌过七位姐妹身旁。那尽头是灰域之崖的噢……方向。我时常停留在那个地方，面对着小院四周的围墙。我曾如此沉醉于从前的噢……思量。可如今你我天涯各一方，一切再也无法回到老路上。”"];
+	  24 [label="Kim Kitsuragi: “不错，非常不错。”警督也对你表示了赞赏。在身体恢复知觉之后，你才意识到自己的双手正在颤抖。"];
+	  25 [label="You: “我唱出的是自己的真实感受！操你们大爷，渣滓！”"];
+	  26 [label="Kim Kitsuragi: “走吧，警官。”警督合上了笔记本“无论你怎么教训他们，这些人都分辨不出演出的好坏的。”"];
+	  27 [label="Garte, the Cafeteria Manager: 一阵相当孤独的喝彩在空荡荡的餐厅内回荡。那是加尔特。“不错嘛。”他向你点头致意。"];
+	  28 [label="Limbic System: “我时常会去那个地方，圣桑最小的那座教堂。我不愿思念它过去的噢……辉煌。雾中的溪水涌向何方，流淌过七位姐妹身旁。那尽头是灰域之崖的噢……方向。我时常停留在那个地方，面对着小院四周的围墙。我曾如此沉醉于从前的噢……思量。可如今你我天涯各一方，一切再也无法回到老路上。”"];
+	  29 [label="Garte, the Cafeteria Manager: 你干嘛呢？我跟你说了这仅限顾客使用。在你把账单付清之前，别指望我会打开卡拉OK点唱机。”"];
+	  31 [label="Jump to: [karaoke mic hub]"];
+	  32 [label="IsEvening()"];
+	  33 [label="IsEvening()", shape=diamond];
+	  34 [label="!(IsEvening())", shape=diamond];
+	  35 [label="IsMorning()"];
+	  36 [label="IsMorning()", shape=diamond];
+	  37 [label="!(IsMorning())", shape=diamond];
+	  38 [label="Karaoke Stand: 餐厅已经清走了今晚的全部顾客。就连厨房也关门了。甚至连灯光都被调暗了。也许你应该在一片黑暗之中高歌一曲？快打烊了……"];
+	  39 [label="You: [一言不发，神秘地退场。]"];
+	  40 [label="You: “人生就他妈是个笑话。”"];
+	  41 [label="You: “你根本不懂什么是*好歌*！这才是*真正的*歌声。我唱出的都是*真情实感*。”"];
+	  42 [label="Drama: 室内响起了不情不愿的喝彩声。在身体恢复知觉之后，你才意识到自己的双手正在颤抖。"];
+	  43 [label="Ancient Reptilian Brain: “我时常会去那个地方，圣桑最小的那座教堂。我不愿思念它过去的噢……辉煌。雾中的溪水涌向何方，流淌过七位姐妹身旁。那尽头是灰域之崖的噢……方向。我时常停留在那个地方，面对着小院四周的围墙。我曾如此沉醉于从前的噢……思量。可如今你我天涯各一方，一切再也无法回到老路上。”"];
+	  44 [label="Garte, the Cafeteria Manager: “呃，你完事儿了吗？我能把麦克风拔掉了吗？我这就拔了啊。”他已经迫不及待地想要恢复正常了。"];
+	  45 [label="IsKimHere()"];
+	  46 [label="IsKimHere()", shape=diamond];
+	  47 [label="!(IsKimHere())", shape=diamond];
+	  48 [label="Drama: 音乐响起，灯光也随之被调暗……突然间，你感到喉咙哽住了……"];
+	  49 [label="Savoir Faire: 你感到一阵晕眩。突然有些*步伐不稳*。"];
+	  50 [label="Drama: 听到了吗？这就是全世界最可悲的喝彩。仅仅是出于同情。和演唱的时间无关，与在场的观众数量也无关——这就是*令人同情*的喝彩。"];
+	  51 [label="Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  52 [label="Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  53 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  54 [label="Karaoke Stand: 现在时间还早，微弱的日光正慢慢渗入餐厅。所有的桌子都擦得干干净净，静待客人的光临……"];
+	  55 [label="Ancient Reptilian Brain: “我时常会去那个地方，圣桑最小的那座教堂。我不愿思念它过去的噢……辉煌。雾中的溪水涌向何方，流淌过七位姐妹身旁。那尽头是灰域之崖的噢……方向。我时常停留在那个地方，面对着小院四周的围墙。我曾如此沉醉于从前的噢……思量。可如今你我天涯各一方，一切再也无法回到老路上。”"];
+	  56 [label="IsKimHere()"];
+	  57 [label="IsKimHere()", shape=diamond];
+	  58 [label="!(IsKimHere())", shape=diamond];
+	  59 [label="are we done"];
+	  60 [label="Karaoke Stand: 目前店内只有在厨房里煮咖啡的人，尚无顾客登门。也许等到晚上再唱更明智一些，不是吗？"];
+	  61 [label="Karaoke Stand: 室内人声鼎沸。虽然没人注意到你，但你还是感到自己两腿发软。好嘛，突然有对情侣在看着你了！这下你更怯场了……"];
+	  62 [label="Garte, the Cafeteria Manager: “好吧，呃……”他显然不知该如何回应——你的致辞完全出乎意料。“这是我的本职工作，仅此而已。”"];
+	  63 [label="Drama: 室内的气氛充满了期待之情。"];
+	  64 [label="Variable[\"tc.harry\"]"];
+	  65 [label="Variable[\"tc.harry\"]", shape=diamond];
+	  66 [label="!(Variable[\"tc.harry\"])", shape=diamond];
+	  67 [label="Endurance: 有人想吐吗？我有点想吐了。"];
+	  68 [label="Variable[\"TASK.report_to_the_tribunal_done\"] == false"];
+	  69 [label="Variable[\"TASK.report_to_the_tribunal_done\"] == false", shape=diamond];
+	  70 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"] == false)", shape=diamond];
+	  71 [label="Karaoke Stand: 一声刺耳的反馈噪音突然惊吓到了室内的所有顾客。你感觉自己特别业余。握麦克风的正确姿势是什么？是不是该直接对着它*开唱*？你到底应该站在什么位置？"];
+	  72 [label="You: “无论是哪位给我写的那封信，这首歌都是献给你的。我仍然爱你。非常感谢，你个混球。”"];
+	  73 [label="Untitled hub (03)"];
+	  74 [label="IsEvening()"];
+	  75 [label="IsEvening()", shape=diamond];
+	  76 [label="!(IsEvening())", shape=diamond];
+	  77 [label="Esprit de Corps: 我是认真的。他这样想着。"];
+	  78 [label="Jump to: [karaoke mic hub]"];
+	  79 [label="You: “这是我的荣幸。”[鞠躬离开。]"];
+	  80 [label="Drama: 磁带滑入点唱机，音乐随之响起……天呐，你感到喉咙突然哽住了……"];
+	  81 [label="Karaoke Stand: 你的话语通过麦克风在室内回荡。人们在远处交谈着。有对情侣避开了你的视线。"];
+	  82 [label="You: “我准备好了，加尔特，开始吧。”"];
+	  83 [label="You: Variable[\"whirling.karaoke_drama_redcheck\"]"];
+	  84 [label="Variable[\"whirling.karaoke_drama_redcheck\"]", shape=diamond];
+	  85 [label="!(Variable[\"whirling.karaoke_drama_redcheck\"])", shape=diamond];
+	  86 [label="Kim Kitsuragi: “看到了。”警督走下舞台，准备欣赏你的表演。"];
+	  87 [label="Jump to: [karaoke mic hub]"];
+	  88 [label="inner monologue hub"];
+	  89 [label="Composure: 他是不会脸红的人，如果他会脸红的话——此刻他一定会脸红的。"];
+	  90 [label="IsEvening()"];
+	  91 [label="IsEvening()", shape=diamond];
+	  92 [label="!(IsEvening())", shape=diamond];
+	  93 [label="Garte, the Cafeteria Manager: “呃……那我这就把麦克风拔了，行吗？”"];
+	  94 [label="Ancient Reptilian Brain: “我时常会去那个地方，圣桑最小的那座教堂。我不愿思念它过去的噢……辉煌。雾中的溪水涌向何方，流淌过七位姐妹身旁。那尽头是灰域之崖的噢……方向。我时常停留在那个地方，面对着小院四周的围墙。我曾如此沉醉于从前的噢……思量。可如今你我天涯各一方，一切再也无法回到老路上。”"];
+	  95 [label="You: “夜幕即将降临，我们要亲手缝制白色的风帆！全世界的工人们，团结起来！”[离开。]"];
+	  96 [label="You: [以拔枪的气势伸出双手，向空气比划几下开枪的姿势，然后退场。]"];
+	  97 [label="Drama: 听到了吗？这就是全世界最可悲的喝彩。仅仅是出于同情。从来就没人*喜欢*你——所有人都认为你是个笑话。"];
+	  98 [label="You: “操你们大爷！我都已经拼尽全力了。我都已经呕心沥血了，而你们居然还敢给老子起哄？！”"];
+	  99 [label="karaoke mic hub"];
+	  100 [label="You: [离开。]"];
+	  101 [label="You: “看好了，金。我要唱卡拉OK了！”"];
+	  102 [label="You: “我想把这首歌献给加尔特，感谢他给了我演唱的机会。一切都太操蛋了，加尔特。”"];
+	  103 [label="Garte, the Cafeteria Manager: “好了，好了。”餐厅经理打断了你的致辞。“准备好了吗？我都想把麦克风拔掉了。”"];
+	  104 [label="You: “我想把这首歌献给一击即溃·迈克，其他人都*弱爆*了。”"];
+	  105 [label="You: “谢谢你。我不需要太多观众，只要我的朋友们在场就行。”"];
+	  106 [label="Interfacing: 双手……你的*双手*到底该放在什么地方？"];
+	  107 [label="IsKimHere()"];
+	  108 [label="IsKimHere()", shape=diamond];
+	  109 [label="!(IsKimHere())", shape=diamond];
+	  110 [label="Variable[\"whirling.karaoke_drama_redcheck\"]"];
+	  111 [label="Variable[\"whirling.karaoke_drama_redcheck\"]", shape=diamond];
+	  112 [label="!(Variable[\"whirling.karaoke_drama_redcheck\"])", shape=diamond];
+	  113 [label="Garte, the Cafeteria Manager: “你准备好……*搞事*了吗？需要我打开卡拉OK的时候就说一声。”"];
+	  114 [label="Variable[\"TASK.pay_for_the_damages_done\"]"];
+	  115 [label="Variable[\"TASK.pay_for_the_damages_done\"]", shape=diamond];
+	  116 [label="!(Variable[\"TASK.pay_for_the_damages_done\"])", shape=diamond];
+	  117 [label="Karaoke Stand: 麦克风以令人不适的方式放大了你的声音。有人在咳嗽。大多数观众已经重新回到了他们的谈话中。"];
+	  118 [label="You: “感谢你，马丁内斯。”[离开。]"];
+	  119 [label="You: 直说：“你*不喜欢*吧？”"];
+	  120 [label="Variable[\"TASK.report_to_the_tribunal_done\"] == false"];
+	  121 [label="Variable[\"TASK.report_to_the_tribunal_done\"] == false", shape=diamond];
+	  122 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"] == false)", shape=diamond];
+	  123 [label="Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  124 [label="Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  125 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  126 [label="Kim Kitsuragi: 警督一言不发，但在他转过身去之前，你看到了他脸上有笑容一闪而过。"];
+	  127 [label="Drama: 室内的气氛充满了期待之情。"];
+	  128 [label="You: 谢谢你，古老的爬虫脑。"];
+	  129 [label="Ancient Reptilian Brain: 歌声那深沉的源头陷入了沉默。它已然隐退——只会在梦境与噩梦中再度回归。"];
+	  130 [label="Drama: 这家伙真的帮了大忙。"];
+	  131 [label="You: “你……喜欢吗？”"];
+	  132 [label="Karaoke Stand: 有人离开了——还是从前门走的。是个女人。都是因为你吧？"];
+	  133 [label="IsDaytime()"];
+	  134 [label="IsDaytime()", shape=diamond];
+	  135 [label="!(IsDaytime())", shape=diamond];
+	  136 [label="Untitled hub"];
+	  137 [label="Physical Instrument: 你大汗淋漓……"];
+	  138 [label="You: “我想把这首歌献给RCM，请不要解雇我。”"];
+	  139 [label="Garte, the Cafeteria Manager: “行了，我要拔了。”他按了下点唱机的顶部。在一丝轻微的反馈噪音之后，手中的麦克风便不再作声了。"];
+	  140 [label="You: [放下麦克风。]"];
+	  141 [label="Conceptualization: 在他看来，你的演唱把身为RCM警察的感受表现得淋漓尽致。"];
+	  142 [label="Karaoke Stand: 台下多少*有点*观众。但最主要的是——当前正值下午觉时间。这里的生意算不上兴旺。等到晚上再唱更明智一些，不是吗？但你说了算……"];
+	  143 [label="Inland Empire: 他们会恨你的。"];
+	  144 [label="IsEvening()"];
+	  145 [label="IsEvening()", shape=diamond];
+	  146 [label="!(IsEvening())", shape=diamond];
+	  147 [label="Volition: 他在这方面是绝对不会让步的。如果不先付清账单，你站在台上就只能做彩排。"];
+	  148 [label="You: “我在台上唱得撕心裂肺，你们这帮混蛋觉得还*不够劲儿*吗？！”"];
+	  149 [label="Karaoke Stand: 你的话语通过麦克风在室内回荡。声音稀稀落落。餐厅里已经没几个人了。"];
+	  150 [label="Glen: “别冲着麦克风喊！”声音是从工会包间传来的。"];
+	  151 [label="Karaoke Stand: 你听到了——也可能是*认为*自己听到了——人群因不适而交换位置的声音。也许还有细微的窃笑声？观众们什么都没说。"];
+	  152 [label="IsKimHere()"];
+	  153 [label="IsKimHere()", shape=diamond];
+	  154 [label="!(IsKimHere())", shape=diamond];
+	  155 [label="Kim Kitsuragi: “是啊，”他稍稍点了点头。“真是彻头彻尾的悲剧，警探。”\n“杜博阿警探……”他稍稍点了点头。“真是彻头彻尾的*悲剧*，咱们还是走吧。”\n“杜博阿警督……”他稍稍点了点头。“真是彻头彻尾的*悲剧*，咱们还是走吧。”"];
+	  156 [label="You: 把嘴唇贴到麦克风上——测试一下。"];
+	  157 [label="Drama: 听到了吗？这就是全世界最可悲的喝彩，哈利。仅仅是出于同情。从来就没人*喜欢*你。"];
+	  158 [label="You: “我想把这首歌献给终将吞噬整个世界的灰域虚空。”"];
+	  159 [label="You: “感谢你迁就我。我也该回去工作了。”"];
+	  160 [label="IsEvening()"];
+	  161 [label="IsEvening()", shape=diamond];
+	  162 [label="!(IsEvening())", shape=diamond];
+	  163 [label="Drama: 室内的气氛充满了期待之情。"];
+	  164 [label="Drama: 最后还有什么要交待吗？"];
+	  165 [label="You: “我想把这首歌献给我的搭档，金。虽然他并不在场。”\n“我想把这首歌献给我的搭档金·曷城。”（向警督点头示意。）”"];
+	  166 [label="Limbic System: “我时常会去那个地方，圣桑最小的那座教堂。我不愿思念它过去的噢……辉煌。雾中的溪水涌向何方，流淌过七位姐妹身旁。那尽头是灰域之崖的噢……方向。我时常停留在那个地方，面对着小院四周的围墙。我曾如此沉醉于从前的噢……思量。可如今你我天涯各一方，一切再也无法回到老路上。”"];
+	  167 [label="Kim Kitsuragi: 警督一言不发——但他的微笑中含着一丝忧伤。"];
+	  168 [label="Shanky: 后排传来了尖利的叫声。绝对是有人在笑。"];
+	  169 [label="Jump to: [karaoke mic hub]"];
+	  170 [label="Garte, the Cafeteria Manager: “好，好的。我这就要拔掉麦克风了，你可以退场了。”"];
+	  171 [label="Drama: 音乐响起，灯光也随之被调暗……很好。开唱吧……"];
+	  172 [label="Drama: 磁带滑入点唱机，音乐随之响起……"];
+	  0 -> 1
+	  1 -> 7
+	  2 -> 171
+	  3 -> 78
+	  4 -> 11
+	  6 -> 139
+	  7 -> 49
+	  8 -> 31
+	  9 -> 117
+	  10 -> 169
+	  11 -> 40
+	  11 -> 105
+	  11 -> 159
+	  12 -> 152
+	  13 -> 14
+	  13 -> 15
+	  14 -> 28
+	  15 -> 166
+	  16 -> 17
+	  16 -> 18
+	  17 -> 113
+	  18 -> 29
+	  19 -> 35
+	  20 -> 21
+	  20 -> 22
+	  21 -> 142
+	  22 -> 32
+	  23 -> 27
+	  24 -> 73
+	  25 -> 139
+	  26 -> 131
+	  26 -> 140
+	  27 -> 45
+	  28 -> 90
+	  29 -> 147
+	  31 -> 99
+	  32 -> 33
+	  32 -> 34
+	  33 -> 61
+	  34 -> 38
+	  35 -> 36
+	  35 -> 37
+	  36 -> 54
+	  37 -> 20
+	  38 -> 87
+	  40 -> 170
+	  41 -> 139
+	  42 -> 136
+	  43 -> 27
+	  44 -> 59
+	  45 -> 46
+	  45 -> 47
+	  46 -> 24
+	  47 -> 73
+	  48 -> 13
+	  49 -> 16
+	  50 -> 88
+	  51 -> 52
+	  51 -> 53
+	  52 -> 55
+	  53 -> 94
+	  54 -> 60
+	  55 -> 42
+	  56 -> 57
+	  56 -> 58
+	  57 -> 126
+	  58 -> 103
+	  59 -> 96
+	  59 -> 39
+	  59 -> 79
+	  59 -> 118
+	  59 -> 95
+	  60 -> 3
+	  61 -> 137
+	  62 -> 44
+	  63 -> 172
+	  64 -> 65
+	  64 -> 66
+	  65 -> 157
+	  66 -> 97
+	  67 -> 31
+	  68 -> 69
+	  68 -> 70
+	  69 -> 150
+	  70 -> 148
+	  71 -> 106
+	  72 -> 117
+	  73 -> 40
+	  73 -> 105
+	  73 -> 4
+	  73 -> 159
+	  74 -> 75
+	  74 -> 76
+	  75 -> 81
+	  76 -> 149
+	  77 -> 141
+	  78 -> 99
+	  80 -> 13
+	  81 -> 68
+	  82 -> 83
+	  83 -> 84
+	  83 -> 85
+	  84 -> 110
+	  85 -> 110
+	  86 -> 114
+	  87 -> 99
+	  88 -> 98
+	  88 -> 148
+	  88 -> 119
+	  89 -> 103
+	  90 -> 91
+	  90 -> 92
+	  91 -> 64
+	  92 -> 50
+	  93 -> 41
+	  93 -> 98
+	  94 -> 42
+	  97 -> 88
+	  98 -> 120
+	  99 -> 100
+	  99 -> 101
+	  99 -> 82
+	  99 -> 19
+	  99 -> 156
+	  101 -> 86
+	  102 -> 62
+	  103 -> 164
+	  104 -> 117
+	  105 -> 170
+	  106 -> 67
+	  107 -> 108
+	  107 -> 109
+	  108 -> 167
+	  109 -> 103
+	  110 -> 112
+	  110 -> 111
+	  111 -> 160
+	  112 -> 144
+	  113 -> 99
+	  114 -> 115
+	  114 -> 116
+	  115 -> 31
+	  116 -> 8
+	  117 -> 103
+	  119 -> 74
+	  120 -> 121
+	  120 -> 122
+	  121 -> 133
+	  122 -> 132
+	  123 -> 124
+	  123 -> 125
+	  124 -> 43
+	  125 -> 23
+	  126 -> 89
+	  127 -> 80
+	  128 -> 129
+	  129 -> 130
+	  130 -> 165
+	  130 -> 102
+	  130 -> 72
+	  130 -> 104
+	  130 -> 9
+	  130 -> 158
+	  131 -> 155
+	  132 -> 41
+	  132 -> 25
+	  132 -> 6
+	  133 -> 134
+	  133 -> 135
+	  134 -> 168
+	  135 -> 132
+	  136 -> 128
+	  136 -> 165
+	  136 -> 102
+	  136 -> 72
+	  136 -> 104
+	  136 -> 138
+	  136 -> 9
+	  136 -> 158
+	  137 -> 143
+	  138 -> 107
+	  139 -> 12
+	  141 -> 140
+	  142 -> 3
+	  143 -> 10
+	  144 -> 145
+	  144 -> 146
+	  145 -> 163
+	  146 -> 127
+	  147 -> 99
+	  148 -> 151
+	  149 -> 68
+	  150 -> 98
+	  150 -> 148
+	  151 -> 93
+	  152 -> 153
+	  152 -> 154
+	  153 -> 26
+	  154 -> 140
+	  155 -> 77
+	  156 -> 71
+	  157 -> 88
+	  158 -> 117
+	  159 -> 5
+	  160 -> 161
+	  160 -> 162
+	  161 -> 2
+	  162 -> 63
+	  163 -> 48
+	  164 -> 59
+	  165 -> 56
+	  166 -> 90
+	  167 -> 103
+	  168 -> 132
+	  169 -> 99
+	  171 -> 51
+	  172 -> 123
+}
+

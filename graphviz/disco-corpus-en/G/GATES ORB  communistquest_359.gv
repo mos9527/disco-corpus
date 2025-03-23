@@ -1,0 +1,190 @@
+# GATES ORB / communistquest
+# Rhetoric smells a communist around here. Part of the Communist Dream Quest
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: I can *kind of* smell dreams being ground down by capital."];
+	  3 [label="You: Does that mean there's a communist nearby?"];
+	  4 [label="Perception (Smell): You inhale. The cilia along your olfactory epithelium tingle with excitement as they sift through the swirling morass of industrial odours..."];
+	  5 [label="Esprit de Corps: His impatience is feigned. He's curious to see how this *personal errand* shakes out."];
+	  6 [label="Variable[\"pier.cindy_talked_communism_quest\"]"];
+	  7 [label="Variable[\"pier.cindy_talked_communism_quest\"]", shape=diamond];
+	  8 [label="!(Variable[\"pier.cindy_talked_communism_quest\"])", shape=diamond];
+	  9 [label="Rhetoric: There it is again! There's a spectral smell haunting this industrial harbour. And it smells like..."];
+	  10 [label="Rhetoric: Can you smell it now?"];
+	  11 [label="Esprit de Corps: It is a mark of the lieutenant's respect for you that he does not press you on this decidedly *extra-curricular* errand."];
+	  12 [label="Rhetoric: The lieutenant lacks your *highly developed* politico-olfactory cortex. The reek of communism is undeniable. And it's coming... from that railing right there!"];
+	  13 [label="Kim Kitsuragi: \"No offence, detective, but you're not particularly *subtle*.\""];
+	  14 [label="You: I *still* don't smell anything."];
+	  15 [label="Kim Kitsuragi: \"Still smelling for communists, detective?\""];
+	  16 [label="You: \"It's kind of a personal errand.\""];
+	  17 [label="Variable[\"reputation.kim\"] >= 1"];
+	  18 [label="Variable[\"reputation.kim\"] >= 1", shape=diamond];
+	  19 [label="!(Variable[\"reputation.kim\"] >= 1)", shape=diamond];
+	  20 [label="Jump to: [Rhetoric: \"Nonsense. The reek of communism is...\"]"];
+	  21 [label="Jump to: [gates.manana_greeting_done]"];
+	  22 [label="You: Smell what?"];
+	  23 [label="You: (Close your eyes and take a deep breath.)"];
+	  24 [label="You: \"Just taking in the fresh air, like a normal detective.\"\n\"Just taking in the morning air, like a normal detective.\"\n\"Just taking in the afternoon air, like a normal detective.\"\n\"Just taking in the evening air, like a normal detective.\"\n\"Just taking in the night air, like a normal detective.\""];
+	  25 [label="Kim Kitsuragi: \"You're smelling for...\""];
+	  26 [label="Kim Kitsuragi: \"Well, I'll be over here when you've finished.\" The lieutenant nudges something on the ground with his foot."];
+	  27 [label="Rhetoric: Can you not detect that inimitable *whiff* of dissatisfaction and restlessness, that sense that the world is in need of dramatic, even *violent* re-ordering?"];
+	  28 [label="Savoir Faire: But be easy about it. Communists have been known to charge when startled."];
+	  29 [label="Jump to: [Perception (Smell): \"In a word, exactly what you would e...\"]"];
+	  30 [label="Savoir Faire: The lieutenant's right. It's sort of amazing how un-subtly you're sniffing the air around you, almost like you're *trying* to call attention to yourself."];
+	  31 [label="Rhetoric: Years of turmoil, of hopes and dreams ground beneath the inexorable tides of capital."];
+	  32 [label="Kim Kitsuragi: \"You're developing your...\""];
+	  34 [label="Kim Kitsuragi: \"There's a lot to take in, isn't there?\" The lieutenant wrinkles his nose."];
+	  35 [label="Variable[\"reputation.kim\"] >= 5"];
+	  36 [label="Variable[\"reputation.kim\"] >= 5", shape=diamond];
+	  37 [label="!(Variable[\"reputation.kim\"] >= 5)", shape=diamond];
+	  38 [label="Drama: The lieutenant issss not persuaded, sssssire."];
+	  39 [label="Esprit de Corps: The lieutenant is not pleased with this turn of events, but it's unlikely that he'll move to intervene to stop them."];
+	  40 [label="You: \"Yes.\""];
+	  41 [label="Rhetoric: What the lieutenant thinks is irrelevant. Your politico-olfactory cortex is lighting up like a holiday display. Look, it's pointing you right... to that railing over there!"];
+	  42 [label="Jump to: [Rhetoric: \"Can you smell it now?\"]"];
+	  43 [label="Perception (Smell): First come the smells of the agitated strikebreakers, layers of body oil and sweat, over-buttered meals pulled from bakelite lunch pails, the biting stench of lye soap. And then there's the slowly oxidizing metal gates, the scent of stale grease emanating from every crack...\nEven though the strikebreakers have departed for the night, their smell lingers, layers of body oil and sweat, over-buttered meals pulled from bakelite lunch pails, the biting stench of lye soap. And then there's the slowly oxidizing metal gates, the scent of stale grease emanating from every crack..."];
+	  44 [label="IsKimHere()"];
+	  45 [label="IsKimHere()", shape=diamond];
+	  46 [label="!(IsKimHere())", shape=diamond];
+	  47 [label="Perception (Smell): In a word, exactly what you would expect to find at any harbour in the industrialized world..."];
+	  48 [label="You: (Close your eyes and take a deep breath.)"];
+	  49 [label="Variable[\"gates.orb_perc_smelled_gates\"]"];
+	  50 [label="Variable[\"gates.orb_perc_smelled_gates\"]", shape=diamond];
+	  51 [label="!(Variable[\"gates.orb_perc_smelled_gates\"])", shape=diamond];
+	  52 [label="Variable[\"pier.cindy_communist_quest_smelled_kim\"]"];
+	  53 [label="Variable[\"pier.cindy_communist_quest_smelled_kim\"]", shape=diamond];
+	  54 [label="!(Variable[\"pier.cindy_communist_quest_smelled_kim\"])", shape=diamond];
+	  55 [label="Esprit de Corps: Nota bene: The lieutenant is not at all convinced that anything will be revealed."];
+	  56 [label="Jump to: [Rhetoric: \"Undoubtedly. And the scent is comin...\"]"];
+	  57 [label="Perception (Smell): No, actually. In fact, you can't smell much of *anything*. Perhaps your allergies are acting up?"];
+	  58 [label="You: I don't smell anything."];
+	  59 [label="Kim Kitsuragi: \"Everything in order, detective?\" The lieutenant gives you a quizzical look."];
+	  60 [label="Variable[\"gates.manana_greeting_done\"]"];
+	  61 [label="Variable[\"gates.manana_greeting_done\"]", shape=diamond];
+	  62 [label="!(Variable[\"gates.manana_greeting_done\"])", shape=diamond];
+	  63 [label="You: You mean from Mañana?"];
+	  64 [label="You: You mean from the skinny guy in the red hat?"];
+	  65 [label="Kim Kitsuragi: \"You know what? I'll just leave you to it. Carry on, detective.\""];
+	  66 [label="Kim Kitsuragi: \"I'm struggling to see the connection with our investigation, but I'm sure *all will be revealed* in time.\""];
+	  67 [label="You: \"What makes you say that?\""];
+	  68 [label="Esprit de Corps: He'll tolerate this *personal errand*, but his patience is wearing thin."];
+	  69 [label="Perception (Smell): Heavy fuel oil, mostly. Because it's an industrial harbour."];
+	  70 [label="You: \"No.\""];
+	  71 [label="Jump to: [gates.manana_greeting_done]"];
+	  72 [label="Rhetoric: There! Do you smell that?"];
+	  73 [label="Variable[\"reputation.kim\"] >= 1"];
+	  74 [label="Variable[\"reputation.kim\"] >= 1", shape=diamond];
+	  75 [label="!(Variable[\"reputation.kim\"] >= 1)", shape=diamond];
+	  76 [label="Rhetoric: Nonsense. The reek of communism is unmistakable, and it's coming... from that railing over there!"];
+	  77 [label="Rhetoric: Undoubtedly. And the scent is coming... from that railing over there!"];
+	  78 [label="Rhetoric: Yes. Now's your chance to *establish contact*."];
+	  79 [label="You: \"I'm smelling for communists, Kim.\""];
+	  80 [label="You: \"I'm working on developing my political consciousness.\""];
+	  81 [label="Kim Kitsuragi: \"A *personal errand*.\""];
+	  82 [label="Kim Kitsuragi: \"In the interest of our investigation, I suggest you focus on the case at hand. You can pursue your *political projects* after hours.\""];
+	  83 [label="Kim Kitsuragi: \"Uh huh.\""];
+	  0 -> 1
+	  1 -> 6
+	  2 -> 56
+	  3 -> 77
+	  4 -> 49
+	  5 -> 41
+	  6 -> 8
+	  6 -> 7
+	  7 -> 9
+	  8 -> 72
+	  9 -> 69
+	  10 -> 4
+	  11 -> 12
+	  12 -> 21
+	  13 -> 30
+	  14 -> 20
+	  15 -> 40
+	  15 -> 67
+	  15 -> 70
+	  16 -> 81
+	  17 -> 18
+	  17 -> 19
+	  18 -> 35
+	  19 -> 82
+	  20 -> 76
+	  21 -> 60
+	  22 -> 27
+	  23 -> 10
+	  24 -> 34
+	  25 -> 17
+	  26 -> 73
+	  27 -> 3
+	  27 -> 23
+	  29 -> 47
+	  30 -> 41
+	  31 -> 48
+	  31 -> 2
+	  31 -> 14
+	  32 -> 17
+	  34 -> 29
+	  35 -> 36
+	  35 -> 37
+	  36 -> 65
+	  37 -> 66
+	  38 -> 41
+	  39 -> 12
+	  40 -> 26
+	  41 -> 71
+	  42 -> 10
+	  43 -> 44
+	  44 -> 45
+	  44 -> 46
+	  45 -> 52
+	  46 -> 47
+	  47 -> 76
+	  48 -> 42
+	  49 -> 50
+	  49 -> 51
+	  50 -> 43
+	  51 -> 57
+	  52 -> 53
+	  52 -> 54
+	  53 -> 15
+	  54 -> 59
+	  55 -> 12
+	  56 -> 77
+	  57 -> 76
+	  58 -> 27
+	  59 -> 16
+	  59 -> 24
+	  59 -> 80
+	  59 -> 79
+	  60 -> 61
+	  60 -> 62
+	  61 -> 63
+	  62 -> 64
+	  63 -> 78
+	  64 -> 78
+	  65 -> 11
+	  66 -> 55
+	  67 -> 13
+	  68 -> 41
+	  69 -> 31
+	  70 -> 83
+	  71 -> 60
+	  72 -> 58
+	  72 -> 22
+	  73 -> 74
+	  73 -> 75
+	  74 -> 5
+	  75 -> 68
+	  76 -> 60
+	  77 -> 60
+	  78 -> 28
+	  79 -> 25
+	  80 -> 32
+	  81 -> 80
+	  81 -> 24
+	  81 -> 79
+	  82 -> 39
+	  83 -> 38
+}
+

@@ -1,0 +1,933 @@
+# BOARDWALK / TRANT HEIDELSTAM INTRO
+# Trant Heidelstam is chilling near the FELD building, with kid, piggy-bank. You can:
+#1. Learn about the FELD building.
+#2. Get useless advice.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Trant Heidelstam: 他停下来，指向另一栋建筑，然后继续说到：“那些都是菲尔德建造的，就连木板道也是。野松公司为他们的中层管理人员把马丁内斯打造成了一个度假村，菲尔德为了R&D建设了城市的这个部分。”"];
+	  3 [label="Jump to: [FELD hub]"];
+	  4 [label="Trant Heidelstam: IsKimHere()"];
+	  5 [label="IsKimHere()", shape=diamond];
+	  6 [label="!(IsKimHere())", shape=diamond];
+	  7 [label="Rhetoric: 向*你*请教？如果说还有什么的话，这明明是一边倒吧。都是他在说。无所谓了…"];
+	  8 [label="Trant Heidelstam: “伊苏林迪指挥中心负责瑞瓦肖军事占领的一切工作。在大革命期间，他们调度了奥西登人和格拉德人的入侵工作，但如今他们的职能主要是后勤工作。”"];
+	  9 [label="You: “你瞎编的吧。”（转向警督。）“金，这都是他瞎编的吗？”"];
+	  10 [label="Trant Heidelstam: “事实是，我没有。三教九流中心，“他随意说到，“如果有机会去弗里德堡，你可以过去看看，他们一直在积极物色一个展览空间/当代艺术研究中心。”他清了清嗓子。"];
+	  11 [label="You: [离开。]"];
+	  12 [label="You: “为什么革命分子要毁掉它？”"];
+	  13 [label="Trant Heidelstam: “你可能对*RTD*更熟悉一些，研究与*技术*开发。”"];
+	  14 [label="Trant Heidelstam: “从进化的角度来看，你可以把这栋建筑看作是基于传统*小屋*合理演化的结果。”"];
+	  15 [label="Untitled hub"];
+	  16 [label="Trant Heidelstam: “磁带电脑。”他点点头，风吹乱了他的西装外套。"];
+	  17 [label="Trant Heidelstam: “他们把这些设备用在军事通信上，”他回答道。他的儿子抬起头，无聊地啃着以蠕虫为主题的填色簿的一角。“同时也用来写作和发送新闻稿。最臭名昭著的例子就是*三月法令*。”"];
+	  18 [label="Jump to: [trantmainhub]"];
+	  19 [label="Jump to: [trantmainhub]"];
+	  20 [label="Trant Heidelstam: “是的——磁带电脑。*还有*菲尔德电气。”"];
+	  21 [label="Jump to: [cohub]"];
+	  22 [label="You: “那么，联盟的内在气质是什么样的呢？”"];
+	  23 [label="Trant Heidelstam: “为什么这么问呢，警官。就是那边那个巨大的航空器啊。你真的从来没有注意过它吗？”那人的脸上露出了深深的忧虑之色。"];
+	  24 [label="Trant Heidelstam: “啊，好吧，这就放心了。如果你直到刚才才注意到的话，那就真的是*相当令人担忧*了……”"];
+	  25 [label="Jump to: [Trant Archer Hub]"];
+	  26 [label="Trant Heidelstam: “非常有趣。我见过的大多数人都说它让他们想起了巨大的金属蜻蜓，但当然，面对一个巨大的空中火炮平台，怎么回应都不准确……”"];
+	  27 [label="rhet fired"];
+	  28 [label="Jump to: [FELD hub]"];
+	  29 [label="You: “挺有趣的。我们之后再继续说。”"];
+	  30 [label="Trant Heidelstam: “没错，那是原型机的官方名称。有些报道把它叫做菲尔德回放*体验*，其实是不对的。”"];
+	  31 [label="Trant Heidelstam: “罗马丹斗棍和吡嚯浣酮一样，会上瘾的。”他微笑着解释到，“我现在大概已经练了快20年，所以可以说我的剂量有点…特别。”"];
+	  32 [label="You: “等一下。超…文本？”"];
+	  33 [label="You: “那栋空无一人的旧建筑到底有什么吸引人的地方？”\n“我们再聊聊那栋空建筑吧。”"];
+	  34 [label="Trant Heidelstam: “抱歉，那是研究与开发部门的缩写，现在已经不这么用了。”他笑的很灿烂，眼圈周围都是细纹。"];
+	  35 [label="Drama: 男人说话的方式带着一种刻意又抑扬顿挫的调调，像个教授——或者是某个听过太多电台节目的人。"];
+	  36 [label="Perception (Sight): 小孩看了一眼封面上绿银相间的蠕虫。已经忘记了这部分的讨论。"];
+	  37 [label="Perception (Sight): 你环顾四周，但你没有看到任何不寻常的东西。不过话说回来，你的眼神也不是最锐利的……"];
+	  38 [label="archerreactionhub"];
+	  39 [label="Trant Heidelstam: “当然可以！你还想知道什么？”他笑了笑，揉乱了孩子的头发。"];
+	  40 [label="Kim Kitsuragi: “说实话，我觉得是有的…”他停了一会儿。“不，有点太过了，他在开玩笑。”"];
+	  41 [label="You: “等等，菲尔德重现实验？”"];
+	  42 [label="Esprit de Corps: 你能感觉到，这个男人与你存在某种近乎手足同僚的联系。但是*为什么*呢？"];
+	  43 [label="Encyclopedia: 他已经说的很好了。这个男人就是知识的源泉！"];
+	  44 [label="Trant Heidelstam: “如果是这样的话，我建议研究一下西奥的*隐形*课程。这是说他们有一种非凡的能力，可以用最有效的方式隐匿到任何环境中去。有一个非常棒的调查新闻，作者是…”"];
+	  45 [label="Trant Heidelstam: “是的，我有！”他的脸因为兴奋整个亮了起来，眼角也带出了一丝笑纹。“有一次，我在…”"];
+	  46 [label="You: “等等，你刚才说那些窗户是怎么回事？”"];
+	  47 [label="Jump to: [trantmainhub]"];
+	  48 [label="Kim Kitsuragi: ”所以你没在附近见到任何人？”"];
+	  49 [label="Trant Heidelstam: “但还有临时委员会，以及瑞瓦肖文化研究所，两者建筑学意义上壮观的总部就在勒雅尔丹。”"];
+	  50 [label="Perception (Sight): 你跟着那人的目光向西边看去。在那里，在低垂的星空中，你勉强可以看到运动的迹象……"];
+	  51 [label="Trant Heidelstam: Variable[\"boardwalk.trant_perc_archer_saw\"]"];
+	  52 [label="Variable[\"boardwalk.trant_perc_archer_saw\"]", shape=diamond];
+	  53 [label="!(Variable[\"boardwalk.trant_perc_archer_saw\"])", shape=diamond];
+	  54 [label="You: “它看起来像一条鱼。”"];
+	  55 [label="Trant Heidelstam: “这可能是最棘手的问题。从技术角度来说，应该不是什么难事。你只需要一个能够在联盟频率上进行广播的无线电发射器……”"];
+	  56 [label="Kim Kitsuragi: “一个摩天轮？”警督看着地平线，望眼欲穿，像是正在脑中描绘贡多拉飞向天空的画面。"];
+	  57 [label="Trant Heidelstam: IsKimHere()"];
+	  58 [label="IsKimHere()", shape=diamond];
+	  59 [label="!(IsKimHere())", shape=diamond];
+	  60 [label="Trant Heidelstam: “那我猜该说的都说过了，对吧？”白茫茫的雪让他眯起双眼。"];
+	  61 [label="Jump to: [trantmainhub]"];
+	  62 [label="Trant Heidelstam: “还有一种攀登的方法，古代伊尔玛人曾经用这种方法爬进敌人的小屋。”"];
+	  63 [label="You: “我没时间看什么报纸。你就不能提供些*实际点的*建议吗？”"];
+	  64 [label="Jump to: [alone holdup hub]"];
+	  65 [label="Untitled hub"];
+	  66 [label="Volition: 鼓舞对于身体的努力大有益处。现在你应该再试一次。"];
+	  67 [label="Trant Heidelstam: “嗯。一种滚轴和湿版摄影色带的高雅折叠结构。它提供了便携式的解决方案，是一种革命性的商用机器，甚至还能把它们带给普通的消费者。”"];
+	  68 [label="You: “这事说来话长，不过你能帮我联系联盟吗？”"];
+	  69 [label="Trant Heidelstam: “这个嘛，这当然要看情况。你知道，大众印象中的联盟是一个单一的政治军事实体，但实际上，它是由许多相互联系，但又半独立的部分组成的……”"];
+	  70 [label="You: “等等，联盟战舰弓箭手号是什么？”"];
+	  71 [label="Visual Calculus: 你估计，它离你的位置约4.5公里。"];
+	  72 [label="You: “它看起来像一台杀人机器。”"];
+	  73 [label="You: “我觉得*一定*还有别的办法。”"];
+	  74 [label="Jump to: [Trant Archer Hub]"];
+	  75 [label="Trant Heidelstam: IsKimHere()"];
+	  76 [label="IsKimHere()", shape=diamond];
+	  77 [label="!(IsKimHere())", shape=diamond];
+	  78 [label="You: “等等。吡嚯浣酮上瘾？真是个有趣的比喻…”（仔细观察他的脸。）“又或者，这根本不是比喻？”"];
+	  79 [label="You: “我真不记得自己说过什么了…”"];
+	  80 [label="Trant Heidelstam: “两个世纪前，他们以中途电子设备制造商的身份在科宁斯坦起家。在采用激进策略进驻瑞瓦肖之后，菲尔德成为了前大革命时代全球新兴个人电子用品市场的有力竞争者。”"];
+	  81 [label="You: “我不想要你的钱，我只想看看自己是否还能正常使用我的剖绘技巧。”"];
+	  82 [label="You: “那是起源于罗马丹岛的一种武术，对吗？”"];
+	  83 [label="You: “等等，你刚才说那些窗户是怎么回事？”"];
+	  84 [label="You: “那些革命者对那些先进的磁带电脑做了什么？”"];
+	  85 [label="Trant Heidelstam: “那边有个污水管，也许有什么用场？很抱歉，我也帮不了你太多。”"];
+	  86 [label="Jump to: [cohub]"];
+	  87 [label="Trant Heidelstam: IsKimHere()"];
+	  88 [label="IsKimHere()", shape=diamond];
+	  89 [label="!(IsKimHere())", shape=diamond];
+	  90 [label="Trant Heidelstam: IsKimHere()"];
+	  91 [label="IsKimHere()", shape=diamond];
+	  92 [label="!(IsKimHere())", shape=diamond];
+	  93 [label="Trant Heidelstam: Variable[\"auto.is_snowing\"]"];
+	  94 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  95 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  96 [label="You: “那是多少，一周两次吗？每隔一天？*伙计*，跟你说话保持一个步调有那么难吗？”"];
+	  97 [label="You: “不，不见得。”"];
+	  98 [label="Inland Empire: 哦不。你犯*史前最大的错误*。他会永远这样絮叨个没完了！"];
+	  99 [label="You: “你知道这不是我的意思。”"];
+	  100 [label="You: “等一下。超…文本？”"];
+	  101 [label="You: “太棒了，谢谢你提供的这些有趣信息。”[离开。]"];
+	  102 [label="Trant Heidelstam: Variable[\"boardwalk.trant_main_hub_reached\"]"];
+	  103 [label="Variable[\"boardwalk.trant_main_hub_reached\"]", shape=diamond];
+	  104 [label="!(Variable[\"boardwalk.trant_main_hub_reached\"])", shape=diamond];
+	  105 [label="You: “工程师还有公司员工怎么样了？”"];
+	  106 [label="Trant Heidelstam: “晚上好！”他笑着对你点点头。"];
+	  107 [label="Jump to: [trantmainhub]"];
+	  108 [label="Physical Instrument: 管道*可以*被砸破，如果用蛮力的话。"];
+	  109 [label="Conceptualization: 由黑膜和折叠磁带结构组成…"];
+	  110 [label="Mikael Heidelstam: “爸爸，我可以爬那个梯子吗？”米克尔问到。“我想爬那个梯子！”"];
+	  111 [label="Trant Heidelstam: “比如，伊苏林迪指挥中心的办公室就负责军事事务。这些办公室位于世界银行大厦，离这里只有几公里……”他向西指着海湾对面的摩天大楼。"];
+	  112 [label="You: “这都可以，但如果我想分配*职责*呢？” (继续)"];
+	  113 [label="Trant Archer Hub"];
+	  114 [label="Conceptualization: 不，它更像是来自深海的生物，一条巨大的黑色发光鱼……"];
+	  115 [label="Conceptualization: 不是普通的鱼，它的动作就像某种古老的食底泥动物在海底滑行寻找猎物……"];
+	  116 [label="Trant Heidelstam: “漂亮！你知道，从某种意义上说，这正是联盟的意图。你看，他们更希望瑞瓦肖的大多数人*不*自觉地生活在*军事*占领之下。这就是为什么他们通常倾向于让自己的战舰与主要人口中心谨慎地保持距离……”"];
+	  117 [label="Suggestion: 他说了！他说出*三教九流中心*的时候，就好像是这个世界上最自然的事情。"];
+	  118 [label="You: “你瞎编的吧。”（转向他的儿子。）“喂，这都是你爸爸瞎编的吗？”"];
+	  119 [label="Jump to: [FELD hub]"];
+	  120 [label="You: （转向米克尔。）“他的意思是说，他们被爆头是因为他们是资产阶级。所以，你知道资产阶级是什么吗？”"];
+	  121 [label="Trant Heidelstam: “被你发现了，警探。”他轻笑出声，随后整张脸都被阴影笼罩。“不过，我的过去应该没有什么好惊讶的吧。”"];
+	  122 [label="Authority: 这个人以前是个瘾君子。我一眼就能认出来。"];
+	  123 [label="You: “好吧。回到…我们刚才说到哪了？磁带电脑，好像是。”"];
+	  124 [label="Trant Heidelstam: “谁知道呢？也许是个意外，或者也许他们不想技术最终落入坏人之手。不管怎么说——现在都没了——三台原型机都没了。这栋大厦里只剩下废墟和灰尘。”他退后一步；脚下的木板道在风中发出凄凉的嘎吱声。"];
+	  125 [label="You: “你看起来好像很富的样子。你有钱吗？”"];
+	  126 [label="Trant Heidelstam: “它是罗马丹族群的人类学遗产，是一种武术，但是只有很少书中有提到：它同时承载着罗马丹人的一种*文化*意义——在过去寻找新娘时，它是一种最佳的炫耀方式…”"];
+	  127 [label="Jump to: [trantmainhub]"];
+	  128 [label="Trant Heidelstam: “不，不，”他立即后退一步，说到，“我只是做些*理论性*的推测…当然了，古代伊尔玛人有一种办法闯入敌人小屋的方式。”"];
+	  129 [label="Trant Heidelstam: “不，听起来不太可行，”特兰特眯着眼睛回答到，“身体状况，还记得吗？但不管怎么说…”"];
+	  130 [label="Trant Heidelstam: “当然可以，你想问什么？”"];
+	  131 [label="Jump to: [FELD hub]"];
+	  132 [label="Trant Heidelstam: “…还有，米克尔，注意到窗户了吗？特别是南边完全没有窗户？这是为了…”一个金发男人站在他的儿子身边，指着被风雨侵蚀的废墟。他看着慢慢靠近的你，笑了笑…"];
+	  133 [label="Trant Heidelstam: “哦，恐怕那些人的结果不怎么样。”他又笑了笑，就好像他需要为那些惨无人道的事情负责一样。“不过这个故事对于我的小米克尔来说，有些太*黑暗*了。不如你问问我*磁带电脑*的事……”"];
+	  134 [label="Empathy: 也许想起了儿时的记忆？显然他更希望能有一个大摩天轮照亮海岸。"];
+	  135 [label="Trant Heidelstam: “啊，简单！你要找的是瑞瓦肖责任委员会。它算是瑞瓦肖的联盟相关事务信息交流中心……”"];
+	  136 [label="Trant Heidelstam: “如果你愿意，可以把联盟想象成某种轮子。这个轮子的中心是责任委员会，从这个中心辐射出许多辐带，这些辐带连接着伊苏林迪指挥中心、瑞瓦肖文化研究所、临时委员会等等……”"];
+	  137 [label="Trant Heidelstam: “有一个关于维斯珀原表现主义的展览，我等不及带米克尔去看。我们正在努力学习上个世纪的主要艺术运动。”"];
+	  138 [label="You: “如果你不是联盟的一员，你怎么会对联盟的官僚体系了解这么多？”"];
+	  139 [label="Trant Heidelstam: “只可惜老菲尔德的工程师已经不在了。这种事情本来*正对*他们的专业。”"];
+	  140 [label="You: “那我该怎么办？”"];
+	  141 [label="Trant Heidelstam: “三教九流中心专门展出当代艺术。”又来了——这些词。“展览本身借鉴了拉格曼的记忆理念，所以也存在一些相似的地方，这也就是为什么主馆长保罗·奥卡曼选择…”"];
+	  142 [label="Mikael Heidelstam: 男孩先是看了看你，然后看看自己的父亲，一头雾水。"];
+	  143 [label="Untitled hub"];
+	  144 [label="Empathy: 这个人的行事风格让你怀疑他能否帮忙处理你的*委员会事务*。"];
+	  145 [label="Trant Heidelstam: 虽然不知其中深意，但他给了你一个鼓励的微笑。"];
+	  146 [label="Trant Heidelstam: “喂，警官！来调查西马丁内斯的历史潜台词吗？我正准备跟我儿子讲讲这栋建筑呢。很少能有人意识到这里的历史意义。这里的*超文本*真的非常丰富。”"];
+	  147 [label="You: “顺便问一句，你有在健身吗？”"];
+	  148 [label="Untitled hub (02)"];
+	  149 [label="Trant Heidelstam: “是的。为了吸引他们的明星工程师。在菲尔德公司到来之前，马丁内斯这片区域除了芦苇丛什么也没有。他们必须让这里的前景变得*有吸引力*。本来这里应该变成神经机械学的全球创新中心——不过历史另有其他计划。”"];
+	  150 [label="Half Light: 他只是在编造一些华丽的词藻。其实根本没有任何含义！"];
+	  151 [label="You: “好吧，你在聊那栋建筑，继续吧。”（继续。）"];
+	  152 [label="You: “你最近跟其他警官说过话吗？”"];
+	  153 [label="Trant Heidelstam: IsKimHere()"];
+	  154 [label="IsKimHere()", shape=diamond];
+	  155 [label="!(IsKimHere())", shape=diamond];
+	  156 [label="Jump to: [FELD hub]"];
+	  157 [label="Trant Heidelstam: IsEvening()"];
+	  158 [label="IsEvening()", shape=diamond];
+	  159 [label="!(IsEvening())", shape=diamond];
+	  160 [label="Trant Heidelstam: “当然了，警探。其实，我也不会做出任何其他假设。事实上，”他再次抬起头，眼睛里闪烁着调皮的光…”"];
+	  161 [label="Feld Mural: 它看起来破旧而风化，还有海鸥在撕扯石头和金属的残骸。浓密的灌木丛托起了倒塌的屋顶；破碎的窗台上筑着某种鸟类的巢。"];
+	  162 [label="You: “谁来处理钱的事情？肯定有负责经济的部门。”"];
+	  163 [label="Jump to: [cohub]"];
+	  164 [label="Trant Heidelstam: “我对政治制度的兴趣由来已久。你看，我个人的理论是，政治制度很像人格。换句话说，一个国家如何组织自身，在某种程度上是其内在气质的公开表达……”"];
+	  165 [label="Trant Heidelstam: “当然，如果你能以某种方式联系到联盟战舰弓箭手号的话，你就可以直接联系到委员会了。但是，怎么说呢，这显然会带来相当数量的后勤和技术难题。”"];
+	  166 [label="You: “为什么我需要联系一艘军队战舰来和一个文职官僚交谈？”\n“为什么我需要联系一架军用静风舰来和一个文职官僚交谈？”"];
+	  167 [label="Perception (Sight): 这是一组夜航示廓灯整齐划一地移动，就像一个不安分的星座……"];
+	  168 [label="Trant Heidelstam: “好吧，我想你可以租一艘私人静风舰，去直接与弓箭手号接触，但我必须警告你不要这么做。像弓箭手号这样的战舰，通常都会被授权在看到不明身份的航空器接近时射击。”"];
+	  169 [label="Trant Heidelstam: “无论如何，这都是一项迷人的技术难题。我很有兴趣看看你是怎么解决的。”"];
+	  170 [label="You: “拜托，根本就没有一个叫三教九流艺术中心的地方。”"];
+	  171 [label="Electrochemistry: 等等。关于吡嚯浣酮上瘾，这个男人都知道些什么？"];
+	  172 [label="Trant Heidelstam: “哦，我明白的，警探。”他轻笑出声，随后整张苍白的脸都被阴影笼罩——他想念那个恶魔。"];
+	  173 [label="Trant Heidelstam: “哦，我明白的，警探。”他轻笑出声，随后整张苍白的脸都被阴影笼罩——他说他*明白*是什么意思？"];
+	  174 [label="You: “发生什么事了？”"];
+	  175 [label="Trant Heidelstam: IsKimHere()"];
+	  176 [label="IsKimHere()", shape=diamond];
+	  177 [label="!(IsKimHere())", shape=diamond];
+	  178 [label="Trant Heidelstam: “我偶尔会练习罗马丹斗棍。”"];
+	  179 [label="Encyclopedia: 罗马丹斗棍是一种武术，起源于罗马丹岛。主要使用细长的木棍对抗敌人。"];
+	  180 [label="Trant Heidelstam: “没错，米克尔。”特兰特一手抱起自己的孩子，看起来略微有些尴尬。“它还有一种禅意，能帮我清空大脑…但不管怎么说，”他一边说，一边挥着手。"];
+	  181 [label="You: “你能教我吗？你身上带着棍子吗？”"];
+	  182 [label="You: “有什么东西告诉我，不要用罗马丹棍去爬那个梯子。”"];
+	  183 [label="Rhetoric: 天啦，他可真能说的。大家肯定都很爱他。"];
+	  184 [label="Trant Heidelstam: “其实，那是一篇很美的文本。我认识的一个创作歌手——夏洛特——在自己的政治概念专辑*群岛蜜吻*中，称之为献给瑞瓦肖的情诗。你真的应该读一下。瑞瓦肖的每座地方图书馆都保存着这份法令。”"];
+	  185 [label="Trant Heidelstam: “如果没有，那你绝对应该这么做——如果不是为了提示和技巧，那为了理论上的好奇心也可以。总之，这只是我脑子里突然蹦出来的一件小事。”他轻轻捏着儿子的肩膀。“所以你刚才在说什么？”"];
+	  186 [label="Trant Heidelstam: “只有很少人知道——这里曾经是*菲尔德电气*的R&D部门。而且，现在菲尔德主要是卖墨盒的了，不过在世纪之交神经机械学盛行的时候，它可是其中的领军人物。”"];
+	  187 [label="You: “等一下，R&D部门是什么？”"];
+	  188 [label="Rhetoric: 不，我是说，拜托——你需要钱。如果这东西不值一提的话，他可以给你一点。"];
+	  189 [label="Perception (Sight): 在你眼里，它看起来像某种长长的金属鱼， 悬挂在一堆吊扇下面……"];
+	  190 [label="Empathy: 这听起来像是你在教堂里遇到的那个程序员能帮得上忙的事情……"];
+	  191 [label="Trant Heidelstam: IsKimHere()"];
+	  192 [label="IsKimHere()", shape=diamond];
+	  193 [label="!(IsKimHere())", shape=diamond];
+	  194 [label="Savoir Faire: 是他的*时尚格调*。就是“见多识广的精明人”……"];
+	  195 [label="Kim Kitsuragi: “警探，借一步说话。”他转身对金发男子说“抱歉，请让我们单独谈谈。”"];
+	  196 [label="Encyclopedia: 我的错！你对那个也不是很熟悉。这男人是个书呆子。"];
+	  197 [label="Trant Heidelstam: 他为你描绘了一幅人类斗棍历史的全景，还加入了一些意想不到的流行文化元素来调剂，而你却感觉昏昏欲睡。"];
+	  198 [label="Rhetoric: 记住我的话，所有这些都与西方经济市场的历史有着某种关联。"];
+	  199 [label="Jump to: [hold up hub]"];
+	  200 [label="Trant Heidelstam: IsMorning()"];
+	  201 [label="IsMorning()", shape=diamond];
+	  202 [label="!(IsMorning())", shape=diamond];
+	  203 [label="You: 看着你头顶的那座大厦。"];
+	  204 [label="Trant Heidelstam: Variable[\"auto.is_raining\"]"];
+	  205 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  206 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  207 [label="Trant Heidelstam: “当然有啊！联盟的经济事务由世界银行——也就是瑞瓦肖使团负责。他们与苏拉菲的价格稳定研究所协同运作。”"];
+	  208 [label="Half Light: 别被那些闪亮的灯光骗了，那是个该死的杀人机器，你根本无法阻止它！"];
+	  209 [label="You: “我想我以前从来没有注意过它。”"];
+	  210 [label="Trant Heidelstam: IsKimHere()"];
+	  211 [label="IsKimHere()", shape=diamond];
+	  212 [label="!(IsKimHere())", shape=diamond];
+	  213 [label="Trant Heidelstam: “那我猜该说的都说过了，对吧？”耀眼的阳光让他眯起双眼。"];
+	  214 [label="You: “那个看家本领是什么？”"];
+	  215 [label="You: “切。我见过比它更酷的东西。”"];
+	  216 [label="Trant Heidelstam: Variable[\"boardwalk.trant_passive_pyrholidon_addiction\"]"];
+	  217 [label="Variable[\"boardwalk.trant_passive_pyrholidon_addiction\"]", shape=diamond];
+	  218 [label="!(Variable[\"boardwalk.trant_passive_pyrholidon_addiction\"])", shape=diamond];
+	  219 [label="Trant Heidelstam: “不，恐怕这个我帮不了你，警官。今天对于我和米克尔来说，只是个惯例的休息日。”他摸了摸儿子的脑袋。"];
+	  220 [label="Kim Kitsuragi: 警督耳语道：“我不知道这位先生是谁，但我有*预感*，他可能与联盟有一些联系，如果你还在认真考虑那个*委员会的事情*……”"];
+	  221 [label="Trant Heidelstam: “我确实有点钱，没错，不过这个问题不重要。”他对这件事避而不谈，好像它根本不值一提。"];
+	  222 [label="Jump to: [FELD hub]"];
+	  223 [label="Trant Heidelstam: “没错，超文本，”他的口气好像这根本不言自明一样。“扬·卡普和文化超链接集合。”"];
+	  224 [label="alone holdup hub"];
+	  225 [label="Trant Heidelstam: “啊哈，但它并不*只是*一栋空置的老楼！”他把手抬到眼睛的位置，想遮挡冰雪的白光。你们三个人开始欣赏起眼前的这幅壁画。"];
+	  226 [label="Reaction Speed: 忘了吧。“犯罪，浪漫&名人传记”是不卖那种书的。"];
+	  227 [label="Perception (Sight): 你顺着那人的目光向西边看去。在那里，悬在地平线上方一段距离外，你可以看到一个奇怪的轮廓……"];
+	  228 [label="Half Light: 别被它的外表骗了，那是个该死的杀人机器，你根本无法阻止它！"];
+	  229 [label="Jump to: [Trant Archer Hub]"];
+	  230 [label="Kim Kitsuragi: “嗯，她并不是‘菲尔德工程师’，确切地说，但也许那个在教堂的程序员可能派的上用场？”"];
+	  231 [label="Trant Heidelstam: “10年前，我做了一段时间的……自由职业者，我猜应该可以这么说吧。我曾经在三教九流中心的一次展会中被聘为特别顾问，地点在奥兰治的弗里德堡。那里有人提出了同样的问题，我们跟当时的主馆长——保罗·奥卡曼进行了漫长的讨论（这是基斯双胞胎和盖伊·约斯特加入团队之前的事了），想要…”"];
+	  232 [label="Trant Heidelstam: “非常、非常酷，”他表示赞同。“虽然我理解大革命爆发的社会经济原因，但是一想到革命者烧毁这些珍贵设备的画面，还是让我感到痛心。但总之他们这么做了。菲尔德重现实验消失在了07年的那场大火中。”"];
+	  233 [label="Conceptualization: 这些听起来像是露比会感兴趣的东西…"];
+	  234 [label="Rhetoric: 他的意思是被康米主义者枪杀的‘那些男孩’。‘那些男孩’都是资产阶级分子。"];
+	  235 [label="You: （转向米克尔。）“他的意思是说，他们都死在了康米主义者的手里。”"];
+	  236 [label="Trant Heidelstam: “啊哈，所以它*并不是*一栋空置的老楼！”他抬起手遮住眼睛，初春的太阳温暖着他英俊的面庞。你们三个人开始欣赏起眼前的这幅壁画。"];
+	  237 [label="You: “我可以向你保证——这个世界上根本*没有什么*能比得上对这个恶魔上瘾。”"];
+	  238 [label="Trant Heidelstam: “不过也许我应该回到磁带电脑的话题上。刚才也说过，设备本身非常精细，甚至有些脆弱。人们可以用一种特殊的化学溶液直接在磁带上书写。机器会分析笔迹，操作处理，然后把成果投射到白屏上。那是一种美丽又精致的东西。”"];
+	  239 [label="You: “RCM应该弄点那玩意。”"];
+	  240 [label="Physical Instrument: 倒不是说担心他会被抢——他看起来出奇的强壮。他有在锻炼吗？"];
+	  241 [label="Kim Kitsuragi: “很高兴见到你。”警督点点头。"];
+	  242 [label="You: “等等，罗马丹斗棍是什么？”"];
+	  243 [label="Jump to: [FELD hub]"];
+	  244 [label="Trant Heidelstam: “*非常*重要。米克尔，跟警官问个好。”他把手放在男孩的肩膀上。男孩一直躲在父亲外套的背后，紧紧握着那本蠕虫主题的填色书。"];
+	  245 [label="hold up hub"];
+	  246 [label="Half Light: 他只是在编造一些华丽的词藻。其实根本没有任何含义！"];
+	  247 [label="You: “如果我们想爬上那个梯子，你有什么建议吗？”（指着壁画旁边的梯子。）"];
+	  248 [label="Trant Heidelstam: “我？是的，在某一时刻，我肯定是有的。有一个特别，呃，“他停了下来，微笑回忆着，“*难忘的例子*，当时我有机会见到柯尼希斯自治领的警察局长。”"];
+	  249 [label="Trant Heidelstam: “哪怕是留下*一台*都会非常有用，”他表示同意。“虽然我理解大革命爆发的社会经济原因，但是一想到革命者烧毁这些珍贵设备的画面，还是让我感到痛心。但总之他们这么做了。菲尔德重现实验消失在了07年的那场大火中。”"];
+	  250 [label="You: “你知不知道有没有*其他*办法可以进入那栋大厦？”"];
+	  251 [label="Empathy: 他说话的方式有种友好和熟悉的感觉。休息日。"];
+	  252 [label="You: “你认为什么样的政治制度才能代表*我*的内在气质呢？”"];
+	  253 [label="You: “哦，对了。*弓箭手号*。我以为你说的是……别的东西。”"];
+	  254 [label="You: “这些磁带电脑是怎么工作的？”\n“这些磁带电脑是怎么工作的？跟无线电脑很像吗？”"];
+	  255 [label="Empathy: 等等。关于吡嚯浣酮上瘾，这个男人都知道些什么？"];
+	  256 [label="Trant Heidelstam: Variable[\"auto.is_raining\"]"];
+	  257 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  258 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  259 [label="Trant Heidelstam: “当然，警督。”他点点头。“慢慢来吧。米克尔和我有很多事要忙！"];
+	  260 [label="Kim Kitsuragi: “不管怎样，接下来的事就交给你了。”"];
+	  261 [label="Trant Heidelstam: “……这一点本身已经很有意思了，能让我们看出罗马丹岛传统乡村部落的社会经济结构…”他继续为你详细概述了他们生活方式，脸上一直挂着亲切又略带些紧张的微笑。"];
+	  262 [label="Trant Heidelstam: “我试过让米克尔记住它。”他看着自己的儿子，米克尔把脸藏在书的后面，咯咯地笑了起来。“*试过*。看来有人对*蠕虫*太感兴趣，根本没有注意听。”"];
+	  263 [label="Trant Heidelstam: “不，不能说我们之前见过。不过我*听说*过金，没错。米克尔，跟警官们打个招呼。”他把手放在男孩的肩膀上。男孩一直躲在父亲外套的背后，紧紧握着那本蠕虫主题的填色书。"];
+	  264 [label="trantmainhub"];
+	  265 [label="Trant Heidelstam: “又见面了！”他微笑着朝你点点头。"];
+	  266 [label="feld first hub"];
+	  267 [label="You: “我好像没听过菲尔德电气。”（继续。）"];
+	  268 [label="Trant Heidelstam: “它就在马丁内斯这里——可能就在这栋大厦里——技术原型诞生了……”他装模作样地停顿了一会儿。“……*磁带电脑*。”"];
+	  269 [label="Trant Heidelstam: “就在马丁内斯的这个位置——也许就在这栋大厦里——他们开发出了原型……”他意识到你没在听，中途停了下来。"];
+	  270 [label="Trant Heidelstam: “其他办法？恐怕我连*主要*办法都不知道，不过…”他指向护栏那边的一个下水道溢放口。"];
+	  271 [label="Mikael Heidelstam: 突然间，小米克尔开了口：“每天晚上吃完晚餐之后，爸爸都会跟棍子打架，要打四个小时呢！他还有个专门的房间——*而且*还有套专门的衣服！”"];
+	  272 [label="Trant Heidelstam: IsDaytime()"];
+	  273 [label="IsDaytime()", shape=diamond];
+	  274 [label="!(IsDaytime())", shape=diamond];
+	  275 [label="Perception (Sight): 你什么也看不见。但是，天黑了，你的眼神也不是最锐利的……"];
+	  276 [label="You: “咦，我竟然从来没有注意到它。”\n“看起来它好像在4.5公里之外的地方。”"];
+	  277 [label="Trant Heidelstam: “问题是，联盟*严密*控制那种无线电发射器流通。即使是RCM，特殊的联合行动除外，一般也不会接触到它们……”"];
+	  278 [label="Empathy: 也许你那些住在帐篷里的新朋友能帮你？"];
+	  279 [label="You: “那能给我一点你那些*不值一提*的钱吗？”"];
+	  280 [label="You: “听起来莫名带感，你能教我这种方法吗？”"];
+	  281 [label="Jump to: [trantmainhub]"];
+	  282 [label="Trant Heidelstam: “三月法令是什么？我是指02年3月7日，新创建的瑞瓦肖公社发送给通讯社和世界政府的无线电广播。”"];
+	  283 [label="Jump to: [alone holdup hub]"];
+	  284 [label="You: “我想问点别的…”"];
+	  285 [label="Trant Heidelstam: “我不知道你对这个熟不熟，不过维斯珀司法部发表过一篇很有意思的论文，内容是关于前社会民主国家的犯罪心理画像。你读过吗？”"];
+	  286 [label="Trant Heidelstam: “这并不奇怪。现在它只是个退化的墨盒和湿版照片制造商。”他整理了一下自己的西装外套。"];
+	  287 [label="Encyclopedia: 一个短命的立法基础，一个短暂的乌托邦。"];
+	  288 [label="You: “这个雷瓦肖文化研究所是什么？”"];
+	  289 [label="Trant Heidelstam: 男人的笑容变成了皱眉。“好吧，现如今要做到*这件事*是相当复杂的。你可以直接给委员会写信，但据我所知积压了不少信件。据我那些略知一二的朋友说，起码要一个多月去处理……”"];
+	  290 [label="Trant Heidelstam: “当然，警官，我们最近才认识。我们没有时间回答这样的问题，这需要更深入的交流。不过，只是思考它就已经很奇妙了，不是吗?”"];
+	  291 [label="Trant Heidelstam: “这当然是联盟打算对人展示的样子！你知道吗，我曾经读过梅西纳的一篇非常有趣的论文，关于空基火炮的心理学……”"];
+	  292 [label="Trant Heidelstam: “很显然，它的外观会刺激神经皮层的*特定*部分，而这部分在某些更原始的文化中会和神罚联系起来。这不是很美妙吗？”"];
+	  293 [label="Trant Heidelstam: Variable[\"TASK.sync_the_sines\"]"];
+	  294 [label="Variable[\"TASK.sync_the_sines\"]", shape=diamond];
+	  295 [label="!(Variable[\"TASK.sync_the_sines\"])", shape=diamond];
+	  296 [label="Trant Heidelstam: IsKimHere()"];
+	  297 [label="IsKimHere()", shape=diamond];
+	  298 [label="!(IsKimHere())", shape=diamond];
+	  299 [label="Trant Heidelstam: Variable[\"whirling.klaasje_ruby_sentimental_radios\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false"];
+	  300 [label="Variable[\"whirling.klaasje_ruby_sentimental_radios\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false", shape=diamond];
+	  301 [label="!(Variable[\"whirling.klaasje_ruby_sentimental_radios\"]  and  Variable[\"TASK.locate_ruby_on_the_coast_done\"] == false)", shape=diamond];
+	  302 [label="You: “磁带电脑，没错。”"];
+	  303 [label="Reaction Speed: 等等，你想问什么来着…”"];
+	  304 [label="You: “好吧，我会调查一下的。”"];
+	  305 [label="You: “我正在找一个嫌疑人。你有没有在附近看到可疑的人？”"];
+	  306 [label="Untitled hub"];
+	  307 [label="You: “你知道吗，还是算了吧。”"];
+	  308 [label="Trant Heidelstam: “实际上呢，不行，我不应该忘记的，我要自己研究一下，有那么多有意思的技术……”小特兰特·海德斯塔姆猛地拉了一下他的衣角，脸上露出兴奋、甚至有些傻傻的表情。"];
+	  309 [label="Trant Heidelstam: “米克尔今天有点累了。我们整晚都尝试在他的无线电脑上运行奥比斯。你听说过吗？那是在格拉德使用的一种编程语言。有些不好上手，不过他想玩格拉德出品的这个冒险程序。我们最近*真的*特别沉迷蠕虫…”"];
+	  310 [label="Trant Heidelstam: “但是我猜你不是为大蠕虫来的吧，特别是这里有那么多真实的东西可以看的时候。就像我之前告诉米克尔的——08年联盟就是在这里登陆的。我们此刻可能就站在西瑞瓦肖最有趣的一个地标上。”他再次指向那栋建筑。"];
+	  311 [label="You: “你和金认识吗？”（继续。）"];
+	  312 [label="Trant Heidelstam: “没错，超文本，”他的口气好像这根本不言自明一样。“简·卡普和文化超链接系列。”"];
+	  313 [label="Trant Heidelstam: “哦，没错。所以，米克尔，他们必须处理显示器反光的问题，特别是夏天。那时候还用的是矢量显示器呢，都是49年前的事了。这就是南边没有窗户的原因。”"];
+	  314 [label="Trant Heidelstam: “你好啊！真是个愉快的清晨，不是吗？”他笑着对你点点头。"];
+	  315 [label="You: “罗马丹什么的已经听够了。我很受鼓舞。”"];
+	  316 [label="Encyclopedia: 坐稳了，刺激的要来了！"];
+	  317 [label="Mikael Heidelstam: 突然间，小米克尔开了口：“每天晚上吃完晚餐之后，爸爸都会跟棍子打架，要打四个小时呢！他还有个专门的房间——*而且*还有套专门的衣服！”"];
+	  318 [label="You: “这真是太神奇了。它是一个鼓舞人心的象征。”"];
+	  319 [label="Trant Heidelstam: “一个非常精辟的问题！你看，弓箭手号除了担任战舰的角色外，还负责调度联盟在瑞瓦肖的所有通讯和监视行动。”"];
+	  320 [label="You: “等等，它在*监视*我们？”"];
+	  321 [label="Reaction Speed: 等等。他刚才好像说了*三教九流中心*？"];
+	  322 [label="Encyclopedia: 三教九流中心*到底*是什么鬼？还有基斯和盖伊·约斯特又是什么鬼？"];
+	  323 [label="Trant Heidelstam: “不过，三生公司在商用机器上胜过了他们。”他朝着大厦比了个手势。“不过菲尔德自有看家本领。或者我应该这样说，他们在*开发*自己的看家本领？…”他咧嘴一笑。“我好像把比喻都混在一起了。”"];
+	  324 [label="You: （点头。）“听起来很酷嘛。”"];
+	  325 [label="Trant Heidelstam: 说完，你们俩回到了金发男人的身边。"];
+	  326 [label="Trant Heidelstam: “喂，警官们！来调查西马丁内斯的历史潜文本吗？我是特兰特·海德斯塔姆，”他转向警督。“这位一定就是金·曷城了，对吗？我正准备跟我儿子讲讲这栋建筑呢。很少有人能意识到这里的历史意义。这里的*超文本*真的非常丰富。”"];
+	  327 [label="You: “没错，不过我们这里对付的可不是*小屋*，不是吗？”（看着那栋建筑。）"];
+	  328 [label="You: “但我抽不出几年时间啊。”"];
+	  329 [label="FELD hub"];
+	  330 [label="Trant Heidelstam: “很好。很高兴能听到你这么说。”"];
+	  331 [label="Physical Instrument: 这些全是那帮娘娘腔说的废话！"];
+	  332 [label="Trant Heidelstam: “噢，研究所是一个了不起的组织，是联盟中迄今为止我*最喜欢*的部门。他们的任务有两个方面：向整个国际道德伦理委员会输出著名的瑞瓦肖文化作品，同时也将全球范围内最重要的文化产品输入给瑞瓦肖的公民……”"];
+	  333 [label="Trant Heidelstam: “不只是监视，还有*监听*。当然，我不知道具体的情况，但我觉得像弓箭手号这样的战舰会拥有索尔之外最先进的监视设备。”"];
+	  334 [label="Trant Heidelstam: “话虽如此，拥有大功率无线电和一定技术水平的人，也许能迂回接入到联军的频率上……”"];
+	  335 [label="Rhetoric: 等等，他是说我们应该*忽视*大革命的暴行吗？"];
+	  336 [label="Trant Heidelstam: Variable[\"boardwalk.trant_rhet_politics\"]"];
+	  337 [label="Variable[\"boardwalk.trant_rhet_politics\"]", shape=diamond];
+	  338 [label="!(Variable[\"boardwalk.trant_rhet_politics\"])", shape=diamond];
+	  339 [label="Trant Heidelstam: IsKimHere()"];
+	  340 [label="IsKimHere()", shape=diamond];
+	  341 [label="!(IsKimHere())", shape=diamond];
+	  342 [label="Trant Heidelstam: “没错，米克尔。”特兰特一把抱起他的孩子，很乐意换个话题。“它还有一种禅意，能帮我清空大脑…不过无所谓了……”他挥挥手说到。"];
+	  343 [label="You: “那是什么？”"];
+	  344 [label="Trant Heidelstam: “事实上，没人知道。根本没人知道完全由磁带组成的电脑长什么样！但是传闻说它们*非常优雅*——精致，有着怪异的外观和超越世代的硬件…”他竖起手指，记起了什么。"];
+	  345 [label="Trant Heidelstam: “啊哈，但它并不*只是*一栋空无一人的旧建筑！”他把手抬到眼睛的位置，想遮挡冰雪的白光。你们三个人开始欣赏起眼前的这幅壁画。"];
+	  346 [label="Trant Heidelstam: “的确，发生了什么事呢？”"];
+	  347 [label="Trant Heidelstam: “*我*确实没见过。”他摇摇头。“虽然我理解大革命爆发的社会经济原因，但是一想到革命者烧毁这些珍贵设备的画面，还是让我感到痛心。但总之他们这么做了。菲尔德重现实验消失在了07年的那场大火中。”"];
+	  348 [label="Drama: 他说的是实话。他没有见过任何人。"];
+	  349 [label="Authority: 他不会给你钱的，你在干什么？你显然只是在做剖绘。"];
+	  350 [label="Mikael Heidelstam: “一个轮子？”孩子看着地平线，望眼欲穿，像是正在脑中描绘贡多拉飞向天空的画面。"];
+	  351 [label="You: “行，好吧。我怎么才能和委员会联系上呢？”"];
+	  352 [label="Kim Kitsuragi: “他说的没错。从我们的角度来说，这使得与联盟方面协调行动变得异常困难。”"];
+	  353 [label="Trant Heidelstam: Variable[\"church.soona_greeting_done\"]"];
+	  354 [label="Variable[\"church.soona_greeting_done\"]", shape=diamond];
+	  355 [label="!(Variable[\"church.soona_greeting_done\"])", shape=diamond];
+	  356 [label="Jump to: [trantmainhub]"];
+	  357 [label="Trant Heidelstam: IsTHCPresent(\"communist\")"];
+	  358 [label="IsTHCPresent(\"communist\")", shape=diamond];
+	  359 [label="!(IsTHCPresent(\"communist\"))", shape=diamond];
+	  360 [label="Trant Heidelstam: “但不管怎么说，”过了一会儿，他开了口，“跟你讲这些细节，你一定觉得挺无聊的吧。不好意思，你刚才说什么了？”"];
+	  361 [label="Trant Heidelstam: “好吧。我家里有些材料，可以跟你分享…”"];
+	  362 [label="Trant Heidelstam: IsTaskActive(\"TASK.find_some_moralists\")--[[ Variable[ ]]"];
+	  363 [label="IsTaskActive(\"TASK.find_some_moralists\")--[[ Variable[ ]]", shape=diamond];
+	  364 [label="!(IsTaskActive(\"TASK.find_some_moralists\")--[[ Variable[ ]])", shape=diamond];
+	  365 [label="Rhetoric: 是他说话的方式。他让你想起了一位讲师……"];
+	  366 [label="Trant Heidelstam: “哦，是的。所以，米克尔，他们必须处理显示器反光的问题，特别是夏天。那时候用的还是矢量显示器呢，都是49年前的事了。这就是南边没有窗户的原因。”"];
+	  367 [label="You: “你说是菲尔德电气造了这个木板道？”（看着自己的脚下。）"];
+	  368 [label="cohub"];
+	  369 [label="You: “什么是伊苏林迪指挥中心？”"];
+	  370 [label="Trant Heidelstam: 那人对着你笑了很久……"];
+	  371 [label="Composure: 虽然他想尽力掩饰，但他的笑容比之前更加勉强了。"];
+	  372 [label="Trant Heidelstam: Variable[\"boardwalk.trant_perc_archer_saw\"]"];
+	  373 [label="Variable[\"boardwalk.trant_perc_archer_saw\"]", shape=diamond];
+	  374 [label="!(Variable[\"boardwalk.trant_perc_archer_saw\"])", shape=diamond];
+	  375 [label="Trant Heidelstam: IsKimHere()"];
+	  376 [label="IsKimHere()", shape=diamond];
+	  377 [label="!(IsKimHere())", shape=diamond];
+	  378 [label="Kim Kitsuragi: “哦，真不错：现在我们要迂回接入无线电塔。正是这个*支线任务*急需的……”"];
+	  379 [label="You: “好吧。三教九流中心？保罗·奥卡曼？基斯和盖伊·约斯特？你到底在*说*什么啊？”"];
+	  380 [label="Trant Heidelstam: “警官！”他听起来有些失望。“我告诉过你，历史的这一章节还不适合纳入米克尔的课程。我们还是继续儿童友好型的话题吧。”"];
+	  381 [label="Trant Heidelstam: “啊哈，所以它*并不是*一栋空置的老楼！”他抬起手遮住眼睛，初春的太阳温暖着他英俊的面庞。你们四个人开始欣赏起眼前的这幅壁画。"];
+	  382 [label="Trant Heidelstam: Variable[\"boardwalk.trant_passive_pyrholidon_addiction\"]"];
+	  383 [label="Variable[\"boardwalk.trant_passive_pyrholidon_addiction\"]", shape=diamond];
+	  384 [label="!(Variable[\"boardwalk.trant_passive_pyrholidon_addiction\"])", shape=diamond];
+	  385 [label="Trant Heidelstam: “一项工程学的创举，就连今天的那些巨头：雷姆，ICN和ZAMM都没能达成。”他咧嘴一笑，回味着自己刚刚说出的那句话。"];
+	  386 [label="Jump to: [trantmainhub]"];
+	  387 [label="Trant Heidelstam: “事实上，很多文明都有自己版本的斗棍术，比如哈利族神圣的码波勒传统，这个名字来源于鳄梨树，传统上是用于制造细长木棍的——然而在其他文明中，这种棍子的使用…”"];
+	  388 [label="Jump to: [trantmainhub]"];
+	  389 [label="Trant Heidelstam: “而且，你也知道，他们的军礼服非常与众不同，深红色马裤，还有圆柱形的小皮帽，我想名字好像是…”你有些困倦，而特兰特还在喋喋不休地讲述着奥西登中央骑警部队的独特性。"];
+	  390 [label="You: “我想再听听菲尔德大厦的事…”"];
+	  391 [label="Trant Heidelstam: “你说怎么爬上那个梯子？”他转过身，看着巨型壁画旁那些黯淡的金属杆。“我确实知道罗马丹人会用*棍子*爬上城垛，甚至还有门特殊技术呢。”"];
+	  392 [label="Trant Heidelstam: “不，要谢谢*你*，能让我和小米克尔在这里向你请教…这的确是一次非常有趣的对话。”"];
+	  393 [label="Trant Heidelstam: “我只是在这里陪陪我的孩子，让他了解一下家乡鲜为人知的部分…外出探险的时候携带大量现金可不是个*明智*的决定！”"];
+	  394 [label="Encyclopedia: 等一下，R&D是什么？"];
+	  395 [label="Trant Heidelstam: Variable[\"auto.is_snowing\"]"];
+	  396 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  397 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  398 [label="Trant Heidelstam: “啊哈，所以它*并不是*一栋空置的老楼！”他把手抬到眼睛的位置，想遮挡冰雪的白光。你们四个人开始欣赏起眼前的这幅壁画。"];
+	  399 [label="Composure: 他想象着一种直面狂风的战斗姿态。"];
+	  400 [label="Jump to: [trantmainhub]"];
+	  401 [label="You: “磁带电脑？”"];
+	  402 [label="Trant Heidelstam: “没有。我很抱歉。我之前也说过了——只是稍微休息一天。而且我们刚刚才到。”"];
+	  403 [label="Empathy: 是的，这正是你要找的那种合理的权威！"];
+	  404 [label="You: “那么如何去联系联盟军舰呢？” (继续)"];
+	  405 [label="Trant Heidelstam: “啊，好吧，它是有史以来火力最强的武装静风舰之一。我听人说过，弓箭手号能够从同时从*多个方向*攻击一整支吨位较小的舰队。怎么样？”"];
+	  406 [label="Trant Heidelstam: “我相信这是有意为之。你看，联盟对瑞瓦肖人怎么看待他们非常敏感，这就是为什么他们通常倾向于让自己的战舰与主要人口中心谨慎地保持距离……”"];
+	  407 [label="Kim Kitsuragi: “嗯，没有人会把他们看错成菲尔德工程师，但也许你那些住在*帐篷*的年轻朋友们可能派的上用场？”"];
+	  408 [label="Empathy: 你*会*想出办法的。直觉告诉你要找的人已经在这里了……"];
+	  409 [label="Trant Heidelstam: “啊哈，所以它*并不是*一栋空置的老楼！”他把手抬到眼睛的位置来遮挡细雨。你们四个人开始欣赏起眼前的这幅壁画。"];
+	  410 [label="Trant Heidelstam: “那我猜该说的都说过了，对吧？”他抬头望向天空。“这雨…好像永远不会停一样，是吧？”"];
+	  412 [label="Mikael Heidelstam: “大革命？”男孩用袖子擦擦鼻子。"];
+	  413 [label="Trant Heidelstam: 他点点头。“可惜，他们的登月项目没能投放市场。菲尔德搬进驻瑞瓦肖的计划也搁浅了。革命政府变现了他们的资产，征用了那些极为先进的技术原型。也许就是从这栋大厦里夺走的…或者是从邻近的某个废墟吧。”"];
+	  414 [label="Shivers: 两只海鸥在空中盘旋。你抬起头想到：真的只有三个吗？或者还有第四个原型藏在煤城下面的坟墓里没被人找到呢？…"];
+	  415 [label="Trant Heidelstam: “哦，不，我现在身上没带*钱*，警官，我其实是用了更…笼统一些的说法。”他看起来不太舒服，左手捏紧了儿子的肩头。"];
+	  416 [label="You: “其实我对实践真的没多大兴趣，我只想知道你锻炼的频率。你说偶尔——那大概是，一周一次吗？”"];
+	  417 [label="Trant Heidelstam: “但不管怎么说，”过了一会儿，他露出一个迷人又歉意的微笑，“跟你讲这些细节，你一定觉得挺无聊的吧。不好意思，你刚才说什么了？”"];
+	  418 [label="Trant Heidelstam: “如果我没弄错的话，那可能需要好几个月的严格训练。不，是*好多年*…”"];
+	  419 [label="Trant Heidelstam: “没错，他们甚至建了个摩天轮，不过在战争中毁坏了。”"];
+	  420 [label="Encyclopedia: 哇哦，看看这家伙。他*真的*很享受自己那点冷知识。编程语言奥比斯是以它的发明者维克托·奥比斯命名的，他是一位来自格拉德的神经机械学专家。奥西登国家运行的是沃克斯…"];
+	  421 [label="Jump to: [hold up hub]"];
+	  0 -> 1
+	  1 -> 102
+	  2 -> 329
+	  3 -> 329
+	  4 -> 5
+	  4 -> 6
+	  5 -> 48
+	  6 -> 251
+	  8 -> 163
+	  9 -> 10
+	  10 -> 238
+	  12 -> 124
+	  13 -> 196
+	  14 -> 97
+	  14 -> 99
+	  15 -> 280
+	  15 -> 327
+	  16 -> 28
+	  17 -> 343
+	  18 -> 264
+	  19 -> 264
+	  20 -> 3
+	  21 -> 368
+	  22 -> 370
+	  23 -> 272
+	  24 -> 25
+	  25 -> 113
+	  26 -> 229
+	  27 -> 120
+	  27 -> 235
+	  27 -> 302
+	  28 -> 329
+	  29 -> 269
+	  30 -> 12
+	  31 -> 171
+	  32 -> 312
+	  33 -> 204
+	  34 -> 13
+	  35 -> 310
+	  36 -> 243
+	  37 -> 209
+	  37 -> 253
+	  38 -> 54
+	  38 -> 72
+	  38 -> 276
+	  38 -> 318
+	  39 -> 18
+	  40 -> 10
+	  41 -> 30
+	  42 -> 420
+	  43 -> 360
+	  44 -> 148
+	  45 -> 98
+	  46 -> 366
+	  47 -> 264
+	  48 -> 402
+	  49 -> 368
+	  50 -> 51
+	  51 -> 52
+	  51 -> 53
+	  52 -> 167
+	  53 -> 275
+	  54 -> 26
+	  55 -> 277
+	  56 -> 134
+	  57 -> 58
+	  57 -> 59
+	  58 -> 398
+	  59 -> 345
+	  60 -> 388
+	  61 -> 264
+	  62 -> 15
+	  63 -> 45
+	  64 -> 224
+	  65 -> 41
+	  65 -> 12
+	  66 -> 281
+	  67 -> 385
+	  68 -> 69
+	  69 -> 111
+	  70 -> 23
+	  71 -> 38
+	  72 -> 405
+	  73 -> 168
+	  74 -> 113
+	  75 -> 76
+	  75 -> 77
+	  76 -> 230
+	  77 -> 190
+	  78 -> 121
+	  79 -> 256
+	  80 -> 323
+	  81 -> 160
+	  82 -> 387
+	  83 -> 313
+	  84 -> 17
+	  85 -> 108
+	  86 -> 368
+	  87 -> 88
+	  87 -> 89
+	  88 -> 407
+	  89 -> 278
+	  90 -> 91
+	  90 -> 92
+	  91 -> 381
+	  92 -> 236
+	  93 -> 94
+	  93 -> 95
+	  94 -> 60
+	  95 -> 213
+	  96 -> 271
+	  97 -> 44
+	  98 -> 198
+	  99 -> 44
+	  100 -> 223
+	  101 -> 392
+	  102 -> 104
+	  102 -> 103
+	  103 -> 200
+	  104 -> 132
+	  105 -> 133
+	  106 -> 47
+	  107 -> 264
+	  108 -> 107
+	  109 -> 239
+	  109 -> 324
+	  109 -> 215
+	  110 -> 129
+	  111 -> 49
+	  112 -> 135
+	  113 -> 404
+	  113 -> 166
+	  113 -> 70
+	  114 -> 208
+	  115 -> 228
+	  116 -> 25
+	  117 -> 322
+	  118 -> 10
+	  119 -> 329
+	  120 -> 380
+	  121 -> 122
+	  122 -> 317
+	  123 -> 20
+	  124 -> 414
+	  125 -> 221
+	  126 -> 261
+	  127 -> 264
+	  128 -> 15
+	  129 -> 281
+	  130 -> 156
+	  131 -> 329
+	  132 -> 153
+	  133 -> 357
+	  134 -> 149
+	  135 -> 403
+	  136 -> 138
+	  136 -> 351
+	  137 -> 21
+	  138 -> 164
+	  139 -> 353
+	  140 -> 334
+	  141 -> 9
+	  141 -> 170
+	  141 -> 118
+	  142 -> 131
+	  143 -> 96
+	  143 -> 237
+	  143 -> 78
+	  144 -> 194
+	  145 -> 264
+	  146 -> 224
+	  147 -> 178
+	  148 -> 304
+	  148 -> 315
+	  148 -> 307
+	  148 -> 63
+	  149 -> 222
+	  150 -> 283
+	  151 -> 244
+	  152 -> 248
+	  153 -> 154
+	  153 -> 155
+	  154 -> 326
+	  155 -> 146
+	  156 -> 329
+	  157 -> 158
+	  157 -> 159
+	  158 -> 106
+	  159 -> 265
+	  160 -> 285
+	  161 -> 266
+	  162 -> 207
+	  163 -> 368
+	  164 -> 252
+	  164 -> 22
+	  165 -> 113
+	  166 -> 319
+	  167 -> 114
+	  168 -> 74
+	  169 -> 356
+	  170 -> 210
+	  171 -> 216
+	  172 -> 122
+	  173 -> 122
+	  174 -> 346
+	  175 -> 176
+	  175 -> 177
+	  176 -> 195
+	  177 -> 144
+	  178 -> 179
+	  179 -> 306
+	  180 -> 388
+	  181 -> 128
+	  182 -> 62
+	  183 -> 417
+	  184 -> 262
+	  185 -> 226
+	  186 -> 394
+	  187 -> 34
+	  188 -> 81
+	  188 -> 279
+	  189 -> 115
+	  190 -> 169
+	  191 -> 192
+	  191 -> 193
+	  192 -> 409
+	  193 -> 225
+	  194 -> 365
+	  195 -> 259
+	  196 -> 266
+	  197 -> 183
+	  198 -> 281
+	  199 -> 245
+	  200 -> 201
+	  200 -> 202
+	  201 -> 314
+	  202 -> 157
+	  203 -> 161
+	  204 -> 205
+	  204 -> 206
+	  205 -> 191
+	  206 -> 395
+	  207 -> 86
+	  208 -> 71
+	  209 -> 116
+	  210 -> 211
+	  210 -> 212
+	  211 -> 40
+	  212 -> 10
+	  213 -> 388
+	  214 -> 268
+	  215 -> 347
+	  216 -> 217
+	  216 -> 218
+	  217 -> 143
+	  218 -> 255
+	  219 -> 4
+	  220 -> 260
+	  221 -> 349
+	  222 -> 329
+	  223 -> 246
+	  224 -> 32
+	  224 -> 83
+	  224 -> 151
+	  225 -> 186
+	  226 -> 386
+	  227 -> 372
+	  228 -> 71
+	  229 -> 113
+	  230 -> 169
+	  231 -> 321
+	  232 -> 65
+	  233 -> 119
+	  234 -> 336
+	  235 -> 380
+	  236 -> 186
+	  237 -> 382
+	  238 -> 109
+	  239 -> 249
+	  240 -> 386
+	  241 -> 245
+	  242 -> 126
+	  243 -> 329
+	  244 -> 309
+	  245 -> 100
+	  245 -> 46
+	  245 -> 311
+	  246 -> 199
+	  247 -> 391
+	  248 -> 389
+	  249 -> 65
+	  250 -> 270
+	  251 -> 348
+	  252 -> 370
+	  253 -> 24
+	  254 -> 344
+	  255 -> 143
+	  256 -> 257
+	  256 -> 258
+	  257 -> 410
+	  258 -> 93
+	  259 -> 220
+	  260 -> 325
+	  261 -> 43
+	  262 -> 36
+	  263 -> 309
+	  264 -> 33
+	  264 -> 68
+	  264 -> 101
+	  264 -> 390
+	  264 -> 11
+	  264 -> 305
+	  264 -> 147
+	  264 -> 247
+	  264 -> 152
+	  264 -> 250
+	  264 -> 125
+	  265 -> 264
+	  266 -> 267
+	  266 -> 203
+	  266 -> 187
+	  267 -> 286
+	  268 -> 401
+	  269 -> 400
+	  270 -> 85
+	  271 -> 180
+	  272 -> 273
+	  272 -> 274
+	  273 -> 227
+	  274 -> 50
+	  275 -> 209
+	  275 -> 253
+	  276 -> 406
+	  277 -> 375
+	  278 -> 169
+	  279 -> 415
+	  280 -> 418
+	  281 -> 264
+	  282 -> 287
+	  283 -> 224
+	  284 -> 39
+	  285 -> 185
+	  286 -> 80
+	  287 -> 184
+	  288 -> 332
+	  289 -> 165
+	  290 -> 351
+	  291 -> 292
+	  292 -> 229
+	  293 -> 294
+	  293 -> 295
+	  294 -> 87
+	  295 -> 296
+	  296 -> 297
+	  296 -> 298
+	  297 -> 378
+	  298 -> 408
+	  299 -> 300
+	  299 -> 301
+	  300 -> 233
+	  301 -> 119
+	  302 -> 16
+	  303 -> 127
+	  304 -> 361
+	  305 -> 219
+	  306 -> 416
+	  306 -> 242
+	  306 -> 82
+	  307 -> 308
+	  308 -> 110
+	  309 -> 35
+	  310 -> 42
+	  311 -> 263
+	  312 -> 150
+	  313 -> 64
+	  314 -> 47
+	  315 -> 330
+	  316 -> 231
+	  317 -> 342
+	  318 -> 291
+	  319 -> 320
+	  319 -> 73
+	  320 -> 333
+	  321 -> 117
+	  322 -> 331
+	  323 -> 29
+	  323 -> 214
+	  324 -> 232
+	  325 -> 264
+	  326 -> 241
+	  327 -> 14
+	  328 -> 44
+	  329 -> 105
+	  329 -> 367
+	  329 -> 84
+	  329 -> 284
+	  329 -> 254
+	  330 -> 66
+	  331 -> 123
+	  331 -> 379
+	  332 -> 137
+	  333 -> 73
+	  334 -> 139
+	  335 -> 336
+	  336 -> 337
+	  336 -> 338
+	  337 -> 27
+	  338 -> 28
+	  339 -> 340
+	  339 -> 341
+	  340 -> 56
+	  341 -> 350
+	  342 -> 388
+	  343 -> 282
+	  344 -> 316
+	  345 -> 186
+	  346 -> 412
+	  347 -> 65
+	  348 -> 61
+	  349 -> 188
+	  350 -> 149
+	  351 -> 289
+	  352 -> 140
+	  353 -> 354
+	  353 -> 355
+	  354 -> 75
+	  355 -> 293
+	  356 -> 264
+	  357 -> 358
+	  357 -> 359
+	  358 -> 234
+	  359 -> 335
+	  360 -> 416
+	  360 -> 79
+	  361 -> 281
+	  362 -> 363
+	  362 -> 364
+	  363 -> 175
+	  364 -> 264
+	  365 -> 145
+	  366 -> 421
+	  367 -> 419
+	  368 -> 288
+	  368 -> 369
+	  368 -> 162
+	  368 -> 112
+	  369 -> 8
+	  370 -> 371
+	  371 -> 290
+	  372 -> 373
+	  372 -> 374
+	  373 -> 189
+	  374 -> 37
+	  375 -> 376
+	  375 -> 377
+	  376 -> 352
+	  377 -> 140
+	  378 -> 169
+	  379 -> 141
+	  380 -> 142
+	  381 -> 186
+	  382 -> 384
+	  382 -> 383
+	  383 -> 172
+	  384 -> 173
+	  385 -> 399
+	  386 -> 264
+	  387 -> 197
+	  388 -> 264
+	  389 -> 303
+	  390 -> 130
+	  391 -> 181
+	  391 -> 182
+	  392 -> 7
+	  393 -> 240
+	  394 -> 266
+	  395 -> 396
+	  395 -> 397
+	  396 -> 57
+	  397 -> 90
+	  398 -> 186
+	  399 -> 174
+	  400 -> 264
+	  401 -> 67
+	  402 -> 251
+	  403 -> 136
+	  404 -> 55
+	  405 -> 229
+	  406 -> 229
+	  407 -> 169
+	  408 -> 169
+	  409 -> 186
+	  410 -> 388
+	  412 -> 413
+	  413 -> 2
+	  414 -> 299
+	  415 -> 393
+	  416 -> 31
+	  417 -> 416
+	  417 -> 79
+	  418 -> 328
+	  419 -> 339
+	  420 -> 362
+	  421 -> 245
+}
+

@@ -1,0 +1,191 @@
+# YARD / CUNOESSE
+# Talk to Cunoesse to find out she's a girl.
+#
+#"I have nothing interesting say, talk to Cuno!"
+#
+#Or approach her from the backyard to catch her off-guard and have something-resembling an actual dialogue with her.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: [离开。]"];
+	  3 [label="Cunoesse: “我来自森林，*警察*……你不会想要跟我一起过去的……也不会想看我所见到的东西。”"];
+	  4 [label="Cunoesse: “猪猡也想知道我是谁？我操你妈——滚蛋吧，猪猡！”"];
+	  5 [label="Cunoesse HUB"];
+	  6 [label="Cunoesse: “你不会想招惹我的——我的手可是沾过血的。”帽子被压得更低了。“我没来过这儿，猪猡。你什么都没看见。”"];
+	  7 [label="You: 上前一步。"];
+	  8 [label="Cunoesse: “又想偷偷接近我了？又想杀掉我吗？滚远点，猪猡！”"];
+	  9 [label="Cunoesse: Variable[\"yard.hangedman_tried_to_shoot_cunoesse_and_missed\"]"];
+	  10 [label="Variable[\"yard.hangedman_tried_to_shoot_cunoesse_and_missed\"]", shape=diamond];
+	  11 [label="!(Variable[\"yard.hangedman_tried_to_shoot_cunoesse_and_missed\"])", shape=diamond];
+	  12 [label="Half Light: 这个孩子远比，远比另一个要难搞得多。"];
+	  13 [label="Cunoesse: “谋杀情况属实，情况属实，他们给我……”她几乎要消失在围栏后面，只露出一顶帽子尖。"];
+	  14 [label="Cunoesse: “真不敢相信你竟然失手了……我们离得那么近，你和我……真他妈的笨手笨脚！你看不出我现在*死不掉*了吗！”"];
+	  15 [label="Kim Kitsuragi: “来吧，我们得走了。”警督把手搭在你的肩上。"];
+	  16 [label="Half Light: 如果真有什么的话，那就是你害怕有一天她会把*你*带走……"];
+	  18 [label="Cunoesse: “猪猡要来带我走吗？”她的声音几乎听不见了。“想干掉我吗？”"];
+	  19 [label="Cuno: “这是怎么回事儿？你想拉她吗，猪猡？”"];
+	  20 [label="Cunoesse: Variable[\"TASK.find_children_of_the_big_sea\"] == true  and  Variable[\"yard.cunoesse_child_feld_mural\"] == false  and  Variable[\"village.twins_spoke_to_boys_about_swearing_done\"] == false  and  Variable[\"TASK.find_children_of_the_big_sea_cancelled\"] == false"];
+	  21 [label="Variable[\"TASK.find_children_of_the_big_sea\"] == true  and  Variable[\"yard.cunoesse_child_feld_mural\"] == false  and  Variable[\"village.twins_spoke_to_boys_about_swearing_done\"] == false  and  Variable[\"TASK.find_children_of_the_big_sea_cancelled\"] == false", shape=diamond];
+	  22 [label="!(Variable[\"TASK.find_children_of_the_big_sea\"] == true  and  Variable[\"yard.cunoesse_child_feld_mural\"] == false  and  Variable[\"village.twins_spoke_to_boys_about_swearing_done\"] == false  and  Variable[\"TASK.find_children_of_the_big_sea_cancelled\"] == false)", shape=diamond];
+	  23 [label="You: “孩子，跟我说说吧。”"];
+	  24 [label="Cunoesse: Variable[\"auto.behind_cunoesse\"]"];
+	  25 [label="Variable[\"auto.behind_cunoesse\"]", shape=diamond];
+	  26 [label="!(Variable[\"auto.behind_cunoesse\"])", shape=diamond];
+	  27 [label="Perception (Sight): 你仍然可以从围栏后方看到她的帽子。"];
+	  28 [label="Cunoesse: “看来我该离开了，坤诺。猪猡来抓我了。”"];
+	  29 [label="Half Light: 她所言非虚，那种恐惧是真实的。"];
+	  30 [label="You: “你这用词怎么这么奇怪啊，小姑娘？”"];
+	  31 [label="You: “好吧，好吧……可以了，我们走吧。[离开。]"];
+	  32 [label="Cunoesse: “喵呜……”"];
+	  33 [label="Cunoesse: 女孩无视了你。就好像在她看来，你根本不存在。"];
+	  34 [label="Cuno: “别再折磨她了，快他妈的滚！”"];
+	  35 [label="Cunoesse: Variable[\"yard.cunoesse_altgreet_gunwaving_done\"]"];
+	  36 [label="Variable[\"yard.cunoesse_altgreet_gunwaving_done\"]", shape=diamond];
+	  37 [label="!(Variable[\"yard.cunoesse_altgreet_gunwaving_done\"])", shape=diamond];
+	  38 [label="You: “是你吗？风让我去寻找的大海之子就是你吗？”\n“是你吗？风让我去寻找的康米主义之子就是你吗？”"];
+	  39 [label="Cunoesse: Variable[\"yard.cunoesse_main_hub_reached\"]"];
+	  40 [label="Variable[\"yard.cunoesse_main_hub_reached\"]", shape=diamond];
+	  41 [label="!(Variable[\"yard.cunoesse_main_hub_reached\"])", shape=diamond];
+	  42 [label="You: “*渔民*是什么？”"];
+	  43 [label="Cunoesse: IsCunoInParty()"];
+	  44 [label="IsCunoInParty()", shape=diamond];
+	  45 [label="!(IsCunoInParty())", shape=diamond];
+	  46 [label="Cunoesse: 一阵风轻轻吹过围栏。“猪从猪圈里跑出来了。在你把事情全搞砸之前赶紧给我滚！”"];
+	  47 [label="You: 走开。[离开。]"];
+	  48 [label="You: “没有，你怎么会这么说？”"];
+	  49 [label="Cunoesse: “我永远出不去了。”她摸了摸自己的脸，和自己的身体。“我要永远留在这里了，我要跟你们这群猪猡耗上一辈子了！该死的咸湿猪猡。该死的渔民。”"];
+	  50 [label="You: “不，金！我想听听关于*女水妖*的事！”"];
+	  51 [label="Perception (Sight): 她抓着围栏的指关节都变成了白色，她已经在这里怒火中烧好几天了。"];
+	  52 [label="Reaction Speed: 原来是个女孩……有趣。"];
+	  53 [label="Cunoesse: Variable[\"yard.cuno_locked_yourself_out_of_cuno_in_his_post_cunoesse_gunpointing_greeting\"] == true  or  Variable[\"yard.cuno_befriend_lost_to_cunoesse\"] == true"];
+	  54 [label="Variable[\"yard.cuno_locked_yourself_out_of_cuno_in_his_post_cunoesse_gunpointing_greeting\"] == true  or  Variable[\"yard.cuno_befriend_lost_to_cunoesse\"] == true", shape=diamond];
+	  55 [label="!(Variable[\"yard.cuno_locked_yourself_out_of_cuno_in_his_post_cunoesse_gunpointing_greeting\"] == true  or  Variable[\"yard.cuno_befriend_lost_to_cunoesse\"] == true)", shape=diamond];
+	  56 [label="Cunoesse: “你打算偷袭我吗？”她低语到。“想割断我的喉咙？趁我睡着的时候？”"];
+	  57 [label="You: “你正在睡觉吗？”"];
+	  58 [label="You: “我只想问你几个问题。”（再上前一步。）"];
+	  59 [label="Cunoesse: IsKimHere()"];
+	  60 [label="IsKimHere()", shape=diamond];
+	  61 [label="!(IsKimHere())", shape=diamond];
+	  62 [label="Cunoesse: “别跟我耍花招，猪猡……你以为自己很聪明吗……”她轻蔑地说。"];
+	  63 [label="You: “*女水妖*是什么意思？”"];
+	  64 [label="Empathy: 她还在*这里*——都因为你是个懦夫，没有朝她开枪。那种轻蔑之情浓郁的需要用尖刀才能穿透。"];
+	  65 [label="Savoir Faire: 很明显，她不喜欢有人站在她的身后。"];
+	  66 [label="Cunoesse: “我死也不会告密的，猪猡。”她躲到了围栏的后面。"];
+	  67 [label="You: “听着，孩子。那股味道难闻到我都吐了，我很好奇……”\n“听着，孩子……那具尸体都让我吐了两次了，我很好奇为什么你不会……”"];
+	  68 [label="You: “嘿，小孩！”"];
+	  69 [label="Cunoesse: “真不敢相信你竟然没开枪。该死的懦夫……像个小丑似的挥着抢。下次你再用那玩意指着我，最好扣下扳机。”"];
+	  70 [label="Cuno: “快从她面前消失！有什么事直接跟我说！”"];
+	  71 [label="Cunoesse: “该死的*女水妖*……”"];
+	  72 [label="Cunoesse: Variable[\"yard.cunoesse_backyard_greeting_done\"]"];
+	  73 [label="Variable[\"yard.cunoesse_backyard_greeting_done\"]", shape=diamond];
+	  74 [label="!(Variable[\"yard.cunoesse_backyard_greeting_done\"])", shape=diamond];
+	  75 [label="You: “抱歉这样接近你。”[离开。]"];
+	  76 [label="You: “好吧，好吧……我们走吧。[离开。]"];
+	  77 [label="Logic: 逻辑错误！她现在可没有睡着。"];
+	  78 [label="Cunoesse: “离我远一点，猪猡——如果你逼得太紧，后果将不堪设想。”"];
+	  79 [label="You: “你过来，围栏后面那个。”"];
+	  80 [label="Cunoesse: “那你为什么要这么鬼鬼祟祟地接近我？吓到我的后果是很严重的，猪猡，*相当*严重。”"];
+	  81 [label="Cunoesse: “基佬…….”在你悄悄离去时，她低声说道。“去查查那个吧。”"];
+	  82 [label="Jump to: [seafort.deserter_cuno_fake_switch]"];
+	  83 [label="Cunoesse: “坤诺，猪猡离我太近了，”她轻蔑到。“该不是来刺杀我的吧。”"];
+	  84 [label="Cunoesse: “这算什么……小孩子的把戏？该死的心理游戏……”她的手指按在太阳穴上。“我死都不会说的！”"];
+	  85 [label="Cunoesse: Variable[\"yard.hanged_pointed_at_cunoesse\"]"];
+	  86 [label="Variable[\"yard.hanged_pointed_at_cunoesse\"]", shape=diamond];
+	  87 [label="!(Variable[\"yard.hanged_pointed_at_cunoesse\"])", shape=diamond];
+	  88 [label="Cunoesse: “我要离开一段时间了，坤诺。有一生那么长的时间。”"];
+	  89 [label="Cunoesse: “喵呜……”"];
+	  12080041 [label="JUMP OUT to PARTY / CUNO MAIN", shape=diamond];
+	  0 -> 1
+	  1 -> 53
+	  3 -> 34
+	  5 -> 67
+	  5 -> 68
+	  5 -> 79
+	  5 -> 47
+	  5 -> 23
+	  5 -> 30
+	  6 -> 27
+	  7 -> 28
+	  9 -> 10
+	  9 -> 11
+	  10 -> 14
+	  11 -> 69
+	  12 -> 51
+	  14 -> 49
+	  15 -> 50
+	  15 -> 31
+	  16 -> 48
+	  16 -> 57
+	  16 -> 75
+	  18 -> 16
+	  19 -> 5
+	  20 -> 21
+	  20 -> 22
+	  21 -> 46
+	  22 -> 24
+	  23 -> 13
+	  24 -> 25
+	  24 -> 26
+	  25 -> 72
+	  26 -> 39
+	  28 -> 29
+	  29 -> 58
+	  30 -> 3
+	  35 -> 36
+	  35 -> 37
+	  36 -> 24
+	  37 -> 85
+	  38 -> 4
+	  39 -> 40
+	  39 -> 41
+	  40 -> 66
+	  41 -> 83
+	  42 -> 71
+	  43 -> 44
+	  43 -> 45
+	  44 -> 82
+	  45 -> 35
+	  46 -> 38
+	  48 -> 80
+	  49 -> 42
+	  50 -> 89
+	  53 -> 54
+	  53 -> 55
+	  54 -> 33
+	  55 -> 43
+	  56 -> 65
+	  57 -> 62
+	  58 -> 88
+	  59 -> 60
+	  59 -> 61
+	  60 -> 15
+	  61 -> 76
+	  61 -> 63
+	  63 -> 32
+	  64 -> 12
+	  65 -> 77
+	  66 -> 5
+	  67 -> 78
+	  68 -> 84
+	  69 -> 64
+	  70 -> 52
+	  71 -> 59
+	  72 -> 73
+	  72 -> 74
+	  73 -> 8
+	  74 -> 56
+	  75 -> 81
+	  77 -> 18
+	  79 -> 6
+	  82 -> 12080041
+	  83 -> 2
+	  83 -> 7
+	  84 -> 70
+	  85 -> 86
+	  85 -> 87
+	  86 -> 9
+	  87 -> 20
+	  88 -> 19
+}
+

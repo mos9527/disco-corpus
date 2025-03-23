@@ -1,0 +1,288 @@
+# BOOKSTORE / CURTAINS
+# The curtains hanging in front of the back room. Curious trinkets attached. Very suspect. Can open, but Plaisance doesn't like that.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: Yeah, actually... this is bullshit."];
+	  3 [label="Closed Curtains: Aside from poking at it -- suspiciously -- there is nothing else to do with the fish-head charm at this time. The curtains remain shut before you."];
+	  4 [label="You: Yes, I've *sensed* that. It's terrifying."];
+	  5 [label="Inland Empire: They lurk in the tropical pale of Semenine, casting strange magicks on everyone! Ignore the curtains -- or suffer the consequences..."];
+	  6 [label="Kim Kitsuragi: \"To the cellar?\" the lieutenant suggests. \"Quick, she's turning around...\""];
+	  7 [label="Plaisance: \"No!\" She raises her hand to try and stop you. \"Please just talk to me, officer... Come here and let's talk this through before you decide to do anything *extreme*...\""];
+	  8 [label="You: Pull the curtains open."];
+	  9 [label="Plaisance: A small terrified \"Oh!\" escapes from Plaisance, as she tries her best to look away, her round face buried in her hands."];
+	  10 [label="Inland Empire: There *is* something mysterious about the curtains... be careful!"];
+	  11 [label="You: I prefer to just not think about it..."];
+	  12 [label="Closed Curtains: Variable[\"doomed.plais_whitecheck_succeeded\"]"];
+	  13 [label="Variable[\"doomed.plais_whitecheck_succeeded\"]", shape=diamond];
+	  14 [label="!(Variable[\"doomed.plais_whitecheck_succeeded\"])", shape=diamond];
+	  15 [label="You: Take a peek behind the curtains."];
+	  16 [label="Half Light: Lies. Rip them open, we say!"];
+	  17 [label="Inland Empire: We must be dealing with seriously malign forces here if there are *dozens* of wards."];
+	  18 [label="Horrific Necktie: What are you, a coward? Think about the marvellous adventures waiting for us on the other side!"];
+	  19 [label="Closed Curtains: Variable[\"doomed.bookstore_curtains_ency_darkisles\"]"];
+	  20 [label="Variable[\"doomed.bookstore_curtains_ency_darkisles\"]", shape=diamond];
+	  21 [label="!(Variable[\"doomed.bookstore_curtains_ency_darkisles\"])", shape=diamond];
+	  22 [label="You: \"But I sense this place calling for me. I must investigate *beyond* the threshold!\""];
+	  23 [label="Jump to: [choicehub]"];
+	  24 [label="Inland Empire: Do you know what takes place upon mist-shrouded Semenese islands? Don't listen to Encyclopedia -- they're inhabited by shamans and wildmen practising unnatural mysticism."];
+	  25 [label="Plaisance: \"I warned you! You are unleashing forces beyond your understanding!\""];
+	  26 [label="Plaisance: \"Excuse me, officer...\" She calls out from the counter. \"The back room is strictly for employees only.\"\n\"Excuse me, officer...\" Plaisance calls out from the counter. \"The back room is strictly for employees only.\""];
+	  27 [label="Inland Empire: Not so! You sense their strange magicks, cast from the dark forests they writhe around in. Don't believe it? Go ahead, straight through the curtains. Suffer the consequences."];
+	  28 [label="Encyclopedia: Inhabitants of Ile du Fantôme, the Semenine Islands down south..."];
+	  29 [label="You: (Rip them apart, this time for real.)"];
+	  30 [label="Plaisance: \"Why? It's not like anyone was *killed* there!\" She stops abruptly as her hand flies over her mouth, baffled by her own bluntness."];
+	  31 [label="Plaisance: \"Para-psychologically speaking -- we're *done* if you decide to open them. I won't be held responsible for the consequences! It's too dangerous!\""];
+	  33 [label="You: \"I see more of those little trinkets. It looks pretty insane.\""];
+	  34 [label="Kim Kitsuragi: \"What do you see?\" the lieutenant asks, whispering conspiratorially."];
+	  35 [label="You: What's so eerie about those curtains?"];
+	  36 [label="Jump to: [curtainshub]"];
+	  37 [label="You: So the Remote Viewers Division... is real? I am it. And I am up to the task!"];
+	  38 [label="Kim Kitsuragi: \"No, what do you *really* see?\""];
+	  39 [label="Jump to: [Closed Curtains: \"You see a tattered set of curtains...\"]"];
+	  40 [label="Savoir Faire: The curtains do seem *frail* suddenly. Not robust enough to contain a slippery darkness."];
+	  41 [label="You: You're out of line."];
+	  42 [label="Plaisance: \"No, it's just a store room for the employees, I told you! Now *please* step away from the curtains...\" She's almost begging you."];
+	  43 [label="Closed Curtains: You see a set of tattered curtains blocking the way to another room. A strange cage-like trinket dangles from the curtains."];
+	  44 [label="Closed Curtains: You see a dimly lit room full of dusty furniture and trash. A doorway stands in the back, covered in dozens of scary little Semenese wards, your shadow looming over it like an omen."];
+	  45 [label="Closed Curtains: IsKimHere()"];
+	  46 [label="IsKimHere()", shape=diamond];
+	  47 [label="!(IsKimHere())", shape=diamond];
+	  48 [label="Inland Empire: Wait... What?"];
+	  49 [label="Plaisance: \"Everybody suddenly *needs* something from there....\" She waves her hands angrily. \"Leave the curtains be. It's what it wants...\""];
+	  50 [label="Savoir Faire: A faint slice of light from the curtains reveals a doorway in the back, draped in cage-like polyhedrons. They are all made of fish heads and tiny animal bones; it looks like a small graveyard..."];
+	  51 [label="Closed Curtains: Variable[\"doomed.bookstore_curtains_inland_darkisles\"]"];
+	  52 [label="Variable[\"doomed.bookstore_curtains_inland_darkisles\"]", shape=diamond];
+	  53 [label="!(Variable[\"doomed.bookstore_curtains_inland_darkisles\"])", shape=diamond];
+	  54 [label="You: \"I see *monsters* crouching in the dark.\""];
+	  55 [label="You: Examine the strange cage-like trinket."];
+	  56 [label="You: Dark isles? What's going on?"];
+	  57 [label="Plaisance: \"What are you doing there, officers?\" The shopkeeper turns around right as you manage to close the curtains. \"I told you not to play with the curtains... Please browse the books, sir!\""];
+	  58 [label="You: \"Alright, I'll think about it for a while...\" (Continue.)"];
+	  59 [label="Jump to: [curtainshub]"];
+	  60 [label="Closed Curtains: You see a set of tattered curtains blocking the way to another room. A strange cage-like trinket dangles from the curtains."];
+	  61 [label="You: \"Ma'am, this is different -- I'm a police officer, I *need* to get in there.\""];
+	  62 [label="Conceptualization: She speaks almost as if she's trying to put a *spell* on you, urging you to buy more books..."];
+	  63 [label="Inland Empire: She's right -- those curtains give off some *eerie vibes*. Better not mess with it."];
+	  64 [label="You: What's the hang-up? Mystical spirits, unnatural emanations -- nothing a para-detective can't handle. Let's go!"];
+	  65 [label="Closed Curtains: Variable[\"doomed.bookstore_curtains_ency_called_ie_racist\"]"];
+	  66 [label="Variable[\"doomed.bookstore_curtains_ency_called_ie_racist\"]", shape=diamond];
+	  67 [label="!(Variable[\"doomed.bookstore_curtains_ency_called_ie_racist\"])", shape=diamond];
+	  68 [label="You: \"This is about *the curse*? That's why you're afraid?\""];
+	  69 [label="Plaisance: \"Thank you!\" The shopkeeper lets out a loud sigh. \"Let's just talk about this first, alright? There's no reason for you to venture into the unknown...\""];
+	  70 [label="You: [Ignore the curtains.]"];
+	  71 [label="You: (Pull open the curtains.)"];
+	  72 [label="Closed Curtains: Variable[\"doomed.bookstore_curtains_perc_secondary\"] == true"];
+	  73 [label="Variable[\"doomed.bookstore_curtains_perc_secondary\"] == true", shape=diamond];
+	  74 [label="!(Variable[\"doomed.bookstore_curtains_perc_secondary\"] == true)", shape=diamond];
+	  75 [label="Jump to: [Closed Curtains: \"You see a tattered set of curtains...\"]"];
+	  76 [label="Closed Curtains: Variable[\"doomed.bookstore_curtains_greeting_done\"] == true"];
+	  77 [label="Variable[\"doomed.bookstore_curtains_greeting_done\"] == true", shape=diamond];
+	  78 [label="!(Variable[\"doomed.bookstore_curtains_greeting_done\"] == true)", shape=diamond];
+	  79 [label="You: And who are the Semenese?"];
+	  80 [label="You: \"I've heard there's a fridge there that I need.\""];
+	  81 [label="Encyclopedia: Inhabitants of Ile du Fantôme or the Semenine Islands down south. Don't listen to what Inland Empire told you -- it's a beautiful place with a rich and unique culture..."];
+	  82 [label="Kim Kitsuragi: \"You're hopeless,\" he sighs. \"Quick, she's turning around...\""];
+	  83 [label="Closed Curtains: You see a dimly lit room full of dusty furniture and trash. A doorway stands in the back, covered in dozens of scary little cage-like trinkets, your shadow looming over it like an omen."];
+	  84 [label="Plaisance: \"I am sorry, I don't mean to be so impolite, just please don't go there! I can't allow that. You'll only make things worse and unleash *the powers*.\""];
+	  85 [label="Savoir Faire: The room behind them is dim... You can only discern shadowy silhouettes of *things* there, crouching in the dark like monsters in a child's bedroom."];
+	  86 [label="Closed Curtains: You see a tattered set of curtains and a polyhedron-shaped cage-like trinket.\nThe curtains, tattered with age and covered in dust, hang before you. As if taunting you..."];
+	  87 [label="Plaisance: \"Sir, don't touch that! I told you it's off-limits for the customers!\" Her hand has closed around her pendant, her fingers nervously playing with the talisman."];
+	  88 [label="Closed Curtains: You see a dimly lit room full of dusty furniture and trash. A doorway stands in the back, covered in dozens of scary little cage-like trinkets, your shadow looming over it like an omen."];
+	  89 [label="Jump to: [curtainshub]"];
+	  90 [label="gotinhub"];
+	  91 [label="Closed Curtains: Oddly enough, the more she tries to draw you away from the curtains, the more alluring they become."];
+	  92 [label="curtainshub"];
+	  93 [label="ency"];
+	  94 [label="Perception (Hearing): She looks away, mumbling: \"Why is everyone *always* messing with the curtains, why can't they just buy books like normal people...\""];
+	  95 [label="You: \"There's a door in the back. Wonder where it leads...\""];
+	  96 [label="You: \"Honestly, I can't really see anything. It looks like a regular back room to me.\""];
+	  97 [label="Inland Empire: Do you realize what's out there? Upon the mist-shrouded islands of Ile du Fantôme, in Semenine? Eerie pygmies and wild shamans practising unnatural mysticism?"];
+	  98 [label="Rhetoric: Talking is always good. Go see what she has to say."];
+	  99 [label="Closed Curtains: Variable[\"tc.wards_plais\"]"];
+	  100 [label="Variable[\"tc.wards_plais\"]", shape=diamond];
+	  101 [label="!(Variable[\"tc.wards_plais\"])", shape=diamond];
+	  102 [label="Inland Empire: Okay... you're one of the initiated. Then go ahead and fiddle with the curtains. But do so at your own PERIL."];
+	  103 [label="Half Light: Okay. So what's in there has a will and it *wants* you to enter? This is bad."];
+	  104 [label="Closed Curtains: You see some kind of charm -- an irregular polyhedron, assembled from bones, sticks, and straw. Inside, a disturbing fish-head with empty eye sockets stares at you."];
+	  105 [label="Encyclopedia: From the looks of it this is a traditional Semenese ward, meant to provide protection against ill luck, bad dreams, curses, and other supra-natural scourges."];
+	  106 [label="Kim Kitsuragi: \"I see,\" the lieutenant nods, before looking at the shopkeeper: \"Quick, she's turning around...\""];
+	  107 [label="Inland Empire: Be wary of those mysterious ornaments from the *dark isles*."];
+	  108 [label="Jump to: [curtainshub]"];
+	  109 [label="You: \"Spirits, from the darkest realms, rising to greet us...\""];
+	  110 [label="Closed Curtains: You see a dimly lit room full of dusty furniture and trash. A doorway stands in the back, covered in dozens of scary little Semenese wards, your shadow looming over it like an omen."];
+	  111 [label="Closed Curtains: Variable[\"tc.wards_plais\"]"];
+	  112 [label="Variable[\"tc.wards_plais\"]", shape=diamond];
+	  113 [label="!(Variable[\"tc.wards_plais\"])", shape=diamond];
+	  114 [label="Jump to: [curtainshub]"];
+	  115 [label="Closed Curtains: CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  116 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  117 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  118 [label="You: \"Shopkeeper, what's behind the curtains?\""];
+	  119 [label="Plaisance: \"You *do*?!\" She grabs her pendant again, visibly shaken. \"My god, even more reasons to not mess with the curtains... Just step away, dear sir!\""];
+	  120 [label="Kim Kitsuragi: \"Spooky,\" the lieutenant comments. \"Quick, she's turning around...\""];
+	  121 [label="Jump to: [Closed Curtains: \"You see a tattered set of curtains...\"]"];
+	  122 [label="choicehub"];
+	  123 [label="You: \"I don't care, you can't stop me! I'll open them.\" (Continue.)"];
+	  124 [label="You: Ignore the curtains for now. [Leave.]"];
+	  125 [label="Closed Curtains: Just as you're about to pull apart the curtains, the petrified voice of the shop owner cries out once more:"];
+	  126 [label="Plaisance: \"Nothing! Why aren't you browsing the books?\" She fiddles with her pendant. \"Don't you feel *compelled* to look at the books? You ought to.\"\n\"Nothing! Now please go back to browsing books.\" She fiddles with her pendant. \"Don't you feel *compelled* to look at the books? The books are all you care about!\""];
+	  0 -> 1
+	  1 -> 12
+	  2 -> 27
+	  3 -> 59
+	  4 -> 5
+	  5 -> 108
+	  6 -> 57
+	  7 -> 98
+	  8 -> 111
+	  10 -> 39
+	  11 -> 75
+	  12 -> 13
+	  12 -> 14
+	  13 -> 43
+	  14 -> 76
+	  15 -> 85
+	  16 -> 10
+	  17 -> 45
+	  18 -> 98
+	  19 -> 20
+	  19 -> 21
+	  20 -> 93
+	  21 -> 3
+	  22 -> 119
+	  23 -> 122
+	  24 -> 41
+	  24 -> 4
+	  24 -> 37
+	  26 -> 63
+	  27 -> 36
+	  28 -> 3
+	  29 -> 99
+	  30 -> 84
+	  31 -> 94
+	  33 -> 120
+	  34 -> 96
+	  34 -> 33
+	  34 -> 54
+	  34 -> 95
+	  35 -> 107
+	  36 -> 92
+	  37 -> 48
+	  38 -> 96
+	  38 -> 33
+	  38 -> 109
+	  38 -> 95
+	  39 -> 86
+	  40 -> 23
+	  41 -> 27
+	  42 -> 23
+	  43 -> 90
+	  44 -> 9
+	  45 -> 46
+	  45 -> 47
+	  46 -> 34
+	  47 -> 121
+	  48 -> 64
+	  48 -> 2
+	  49 -> 103
+	  50 -> 72
+	  51 -> 52
+	  51 -> 53
+	  52 -> 81
+	  53 -> 28
+	  54 -> 38
+	  55 -> 104
+	  56 -> 65
+	  57 -> 114
+	  58 -> 69
+	  59 -> 92
+	  60 -> 26
+	  61 -> 30
+	  62 -> 91
+	  63 -> 92
+	  64 -> 102
+	  65 -> 66
+	  65 -> 67
+	  66 -> 24
+	  67 -> 97
+	  68 -> 42
+	  69 -> 115
+	  71 -> 125
+	  72 -> 73
+	  72 -> 74
+	  73 -> 17
+	  74 -> 45
+	  75 -> 86
+	  76 -> 77
+	  76 -> 78
+	  77 -> 86
+	  78 -> 60
+	  79 -> 51
+	  80 -> 49
+	  81 -> 3
+	  82 -> 57
+	  83 -> 9
+	  84 -> 40
+	  85 -> 50
+	  86 -> 92
+	  87 -> 31
+	  88 -> 25
+	  89 -> 92
+	  90 -> 8
+	  90 -> 70
+	  91 -> 89
+	  92 -> 35
+	  92 -> 71
+	  92 -> 15
+	  92 -> 118
+	  92 -> 55
+	  92 -> 124
+	  92 -> 29
+	  93 -> 79
+	  94 -> 122
+	  95 -> 6
+	  96 -> 106
+	  97 -> 41
+	  97 -> 4
+	  97 -> 37
+	  98 -> 16
+	  99 -> 100
+	  99 -> 101
+	  100 -> 110
+	  101 -> 88
+	  102 -> 108
+	  103 -> 23
+	  104 -> 105
+	  105 -> 19
+	  106 -> 57
+	  107 -> 56
+	  107 -> 11
+	  108 -> 92
+	  109 -> 82
+	  110 -> 25
+	  111 -> 112
+	  111 -> 113
+	  112 -> 44
+	  113 -> 83
+	  114 -> 92
+	  115 -> 116
+	  115 -> 117
+	  116 -> 18
+	  117 -> 98
+	  118 -> 126
+	  119 -> 23
+	  120 -> 57
+	  121 -> 86
+	  122 -> 68
+	  122 -> 80
+	  122 -> 22
+	  122 -> 58
+	  122 -> 123
+	  122 -> 61
+	  123 -> 7
+	  125 -> 87
+	  126 -> 62
+}
+

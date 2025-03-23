@@ -1,0 +1,53 @@
+# CHURCH / WATERBASINS
+# Waterbasin dialogue for solving the "Move the waterbasins" task.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Variable[\"church.waterbowls_physinst_walk\"]  and  Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  3 [label="Variable[\"church.waterbowls_physinst_walk\"]  and  Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  4 [label="!(Variable[\"church.waterbowls_physinst_walk\"]  and  Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  5 [label="Water Bowls: It's awfully silent again, as if someone turned off the entire world outside those walls. Water inside the bowls stands still."];
+	  6 [label="Soona, the Programmer: The lead programmer sends you an encouraging thumbs up from across the hall."];
+	  7 [label="Logic: This task is an insult to your mental skills."];
+	  8 [label="You: Move the third bowl from the left two centimetres away."];
+	  10 [label="Variable[\"church.waterbasins_moved_one_basin\"] == true  and  Variable[\"church.waterbasins_moved_second_basin\"] == true"];
+	  11 [label="Variable[\"church.waterbasins_moved_one_basin\"] == true  and  Variable[\"church.waterbasins_moved_second_basin\"] == true", shape=diamond];
+	  12 [label="!(Variable[\"church.waterbasins_moved_one_basin\"] == true  and  Variable[\"church.waterbasins_moved_second_basin\"] == true)", shape=diamond];
+	  13 [label="Pain Threshold: *And* your leg still hurts from the tribunal."];
+	  14 [label="You: Move the fourth bowl from the left five centimetres to the right."];
+	  15 [label="waterbasins hub"];
+	  16 [label="Jump to: [waterbasins hub]"];
+	  17 [label="Perception (Sight): Measurements have been marked down around the bowls, each chalk-drawn line representing a centimetre on the floor."];
+	  18 [label="Water Bowls: Some water spills out of the bowl, wetting the floor."];
+	  19 [label="Physical Instrument: Time to run back! Or maybe walk, this *is* a sacred place after all..."];
+	  20 [label="Water Bowls: It moves like a ghost without creating a single trace of sound."];
+	  21 [label="Interfacing: Oh boy, this is going to be good."];
+	  22 [label="You: [Leave.]"];
+	  0 -> 1
+	  1 -> 5
+	  2 -> 3
+	  2 -> 4
+	  3 -> 13
+	  4 -> 16
+	  5 -> 17
+	  6 -> 19
+	  7 -> 16
+	  8 -> 20
+	  10 -> 11
+	  10 -> 12
+	  11 -> 6
+	  12 -> 7
+	  13 -> 16
+	  14 -> 18
+	  15 -> 8
+	  15 -> 14
+	  15 -> 22
+	  16 -> 15
+	  17 -> 21
+	  18 -> 10
+	  19 -> 2
+	  20 -> 10
+	  21 -> 15
+}
+

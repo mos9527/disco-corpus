@@ -1,0 +1,2175 @@
+# VILLAGE / POSSE
+# It's time to face your colleagues. 
+#
+#This is the dialogue that autostarts once you step to the villlage square, the others just bark and stand there.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_hardie_shot\"] == true"];
+	  3 [label="Variable[\"plaza.tribunal_hardie_shot\"] == true", shape=diamond];
+	  4 [label="!(Variable[\"plaza.tribunal_hardie_shot\"] == true)", shape=diamond];
+	  5 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  6 [label="Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  7 [label="!(Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  8 [label="Kim Kitsuragi: Variable[\"village.posse_intro_auth_tribunal\"]"];
+	  9 [label="Variable[\"village.posse_intro_auth_tribunal\"]", shape=diamond];
+	  10 [label="!(Variable[\"village.posse_intro_auth_tribunal\"])", shape=diamond];
+	  11 [label="Judit Minot: \"We've read the reports, Harry. Lieutenant Kitsuragi's. We know.\""];
+	  12 [label="Jump to: [HUB 1.0]"];
+	  13 [label="Jean Vicquemare: \"We've come to scrape what's left of you off the pavement.\""];
+	  14 [label="Kim Kitsuragi: CheckEquipped(\"jacket_fucktheworld\")"];
+	  15 [label="CheckEquipped(\"jacket_fucktheworld\")", shape=diamond];
+	  16 [label="!(CheckEquipped(\"jacket_fucktheworld\"))", shape=diamond];
+	  17 [label="Jean Vicquemare: \"I wanna call you a teapot, but I'm honestly kind of impressed... no idea where you got all that gear -- but there's no doubt in my mind that some bad, bad people are looking for it...\""];
+	  18 [label="You: \"You mentioned a 'task force'?\""];
+	  19 [label="Trant Heidelstam: \"What indeed?\" He looks at the dilapidated shacks, then you. \"I was asked to share my take on some of the more *obscure* theories developed in Königstein in the Thirties. Like -- partial psychotraumatic amnesia, group personality theory...\""];
+	  20 [label="Jean Vicquemare: \"You. *Shitkid* -- that's you.\""];
+	  21 [label="Trant Heidelstam: \"The line is from Lu Jiatun's 'Mirova Cycle', isn't it? About Girl Child Communism -- the titular *returning* character. The ghostly apparition of...\" He looks around and, noticing the impatience of his companions, stops himself. \"Good choice, Harry.\""];
+	  22 [label="Cuno: \"Cuno knew dress-up-pigs were in town. Cuno meant to dust them -- Cuno pig-duster -- but didn't, 'cause Cuno cares.\" The kid nods solemnly."];
+	  23 [label="Suggestion: This is the Horse-Faced Woman. I don't know *why* you named her that, but it was beyond idiotic. You should *never* address her using those words again."];
+	  24 [label="Untitled hub (02)"];
+	  25 [label="Jean Vicquemare: \"Yeah, that's *very* good.\""];
+	  26 [label="Jean Vicquemare: \"Other people have left too. Good, smart people. People we won't get back. Only me and this *really patient* patrol officer are still here. And Trant -- because I'm *forcing* him to stay.\""];
+	  27 [label="Jean Vicquemare: \"Oh, you think it was *cool* -- you saying that? *Aesthetic* somehow? You were crying when we got here. Breaking things. You said we were going 'into the abyss'.\""];
+	  28 [label="You: \"I am a highly experimental detective. This was a method I used to solve the case.\""];
+	  29 [label="Trant Heidelstam: \"Interesting. So at first he dipped his toes into it. Prepared. That's where he would have gotten the idea -- yes. Practice. And then he used alcohol to 'get there', so to speak...\""];
+	  30 [label="You: \"Line detective is good for now.\""];
+	  31 [label="Kim Kitsuragi: IsKimHere()  and  Variable[\"church.soona_kim_heard_anomaly\"]"];
+	  32 [label="IsKimHere()  and  Variable[\"church.soona_kim_heard_anomaly\"]", shape=diamond];
+	  33 [label="!(IsKimHere()  and  Variable[\"church.soona_kim_heard_anomaly\"])", shape=diamond];
+	  34 [label="Jean Vicquemare: \"Look at F. Booho here! Victim of the ethanol-industrial complex. What are you, an inva-communist now? You think this is a joke?\""];
+	  35 [label="You: \"Wait, there's a motor carriage in the ocean?\""];
+	  36 [label="Jean Vicquemare: He squints at it suspiciously."];
+	  37 [label="Judit Minot: \"He found it!\" The patrol officer picks it up and gives it back to you -- slippery and cold. \"He found it, Jean. It's his badge!\"\n\"He has it!\" The patrol officer picks it up and gives it back to you -- slippery and cold. \"He has it, Jean. It's his badge!\""];
+	  38 [label="Jean Vicquemare: \"And your *gun*?\" The man stares at you, unimpressed."];
+	  39 [label="Jean Vicquemare: \"Okay.\" Finally, he nods, unimpressed. \"And your *gun*?\""];
+	  40 [label="You: \"This is a *great* gun. Maybe it's not some kind of flashy *side* arm, but still!\""];
+	  41 [label="Jump to: [village.posse_lost_badge]"];
+	  42 [label="You: \"So it doesn't even matter that I found my gun?!\""];
+	  43 [label="Jean Vicquemare: \"A bit of a week?\" He squints. \"You're drunk. And you let a suspect *escape* -- a certain Klaasje. Because you were you too *drunk* to assess her flight risk.\""];
+	  44 [label="Jean Vicquemare: \"Or the fact that you're Evrart Claire's *little peone* now. Doing I-don't-know-what for him. That's small-time stuff. That's nothing. That's a humourous anecdote...\""];
+	  45 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  46 [label="Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  47 [label="!(Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  48 [label="Jean Vicquemare: \"...compared to the *seven people* who were gunned down! The streets are literally red with blood, Harry. It was fucking *mass murder*.\""];
+	  49 [label="Jean Vicquemare: \"Oh well -- if *you* think she didn't know anything...\" He rubs his face in frustration. \"I'm not even gonna get into the eighty other suspects you've failed to arrest.\""];
+	  50 [label="Cuno: \"Wait for fucking what? I'm Cuno. We come from Death Island.\""];
+	  51 [label="You: \"Oh... that explains it.\""];
+	  52 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  53 [label="IsCunoInParty()", shape=diamond];
+	  54 [label="!(IsCunoInParty())", shape=diamond];
+	  55 [label="Cuno: \"Aw, c'mon, you gotta cut him some slack. Pig's been working hard. Digging through the guts of corpses and shit. Getting shot and shit.\""];
+	  56 [label="Kim Kitsuragi: IsCunoInParty()  or  IsKimHere()"];
+	  57 [label="IsCunoInParty()  or  IsKimHere()", shape=diamond];
+	  58 [label="!(IsCunoInParty()  or  IsKimHere())", shape=diamond];
+	  59 [label="Judit Minot: \"We've read the reports. Lieutenant Kitsuragi's. We know.\""];
+	  60 [label="Jean Vicquemare: Without a reply the satellite-officer covers his nose."];
+	  61 [label="Trant Heidelstam: \"Hello, I'm Trant Heidelstam. I believe we've met on several occasions.\""];
+	  62 [label="Kim Kitsuragi: WeirdClothing()  or  CheckEquipped(\"hat_samaran\")  or  CheckEquipped(\"jacket_carabineer\")  or  CheckEquipped(\"pants_carabineer\")  or  CheckEquipped(\"jacket_kimono_robe\")"];
+	  63 [label="WeirdClothing()  or  CheckEquipped(\"hat_samaran\")  or  CheckEquipped(\"jacket_carabineer\")  or  CheckEquipped(\"pants_carabineer\")  or  CheckEquipped(\"jacket_kimono_robe\")", shape=diamond];
+	  64 [label="!(WeirdClothing()  or  CheckEquipped(\"hat_samaran\")  or  CheckEquipped(\"jacket_carabineer\")  or  CheckEquipped(\"pants_carabineer\")  or  CheckEquipped(\"jacket_kimono_robe\"))", shape=diamond];
+	  65 [label="Cuno: \"Good luck with that.\" He turns to you. \"Sounds like you're in some shit.\""];
+	  66 [label="REMEMBERANCE HUB"];
+	  67 [label="You: \"Okay. I had that coming.\""];
+	  68 [label="You: \"So, *Trant Heidelstam*. What are you *special consulting* here?\""];
+	  69 [label="Jean Vicquemare: \"Do? It's a Major Crimes Unit! We clear the desk of cases so Precinct 41 doesn't look like the worst station in town. We're *shit tier* now, Harry. Because of you.\""];
+	  70 [label="Trant Heidelstam: \"As displayed in our interactions with him here, and also his interactions with the locals, where he did not remember being a law official... It's all very interesting.\""];
+	  71 [label="Jean Vicquemare: \"I believe you *drank*. People do that -- you especially. What they don't do is forget their *whole life* because of drinking.\""];
+	  72 [label="Jump to: [You: \"\"I have?\"\"]"];
+	  73 [label="Jean Vicquemare: \"Or perhaps it can be cured with mesmerism? But then I think: No, that's unlikely. He's probably just an *asshole*. A drunk asshole who *pretends* to have amnesia to get out of shit.\""];
+	  74 [label="Jean Vicquemare: \"Yes. It's really, really hard to believe. Because it's *idiotic* and *not true*. It's not possible to wipe your own memory. Even with the amount of *Potent Pilsner* you down every *hour*.\""];
+	  75 [label="You: \"That wasn't me. It was stolen by traffic hooligans.\""];
+	  76 [label="Jean Vicquemare: \"Oh -- well, if it wasn't *you* then it's okay. You only let someone *steal* our 45,000 reál police vehicle, drive it into the sea -- and then just *left* it there.\""];
+	  77 [label="Untitled hub"];
+	  78 [label="Jean Vicquemare: \"And your gun?\" he asks, unimpressed by the piece of plastic in your hand."];
+	  79 [label="You: \"Wait, *how* did you know I lost my gun?\""];
+	  80 [label="You: \"Gun. Gun...\" (Just repeat *gun*.)"];
+	  81 [label="Conceptualization: What is it with all these *material objects*?!"];
+	  82 [label="Jean Vicquemare: \"Who are you posing for, Harry? You let the suspect escape -- a certain Ruby. You were too fucking *high* to take her in, weren't you?\""];
+	  83 [label="KLAASJE ESC"];
+	  84 [label="Kim Kitsuragi: \"He's wounded.\" He looks at you. \"It's been a long week -- and he's handled an actual corpse.\""];
+	  85 [label="Kim Kitsuragi: Variable[\"TASK.arrest_klaasje_done\"] == false"];
+	  86 [label="Variable[\"TASK.arrest_klaasje_done\"] == false", shape=diamond];
+	  87 [label="!(Variable[\"TASK.arrest_klaasje_done\"] == false)", shape=diamond];
+	  88 [label="Jump to: [RUBY SUI]"];
+	  89 [label="Jean Vicquemare: \"Oh well -- if she was *specially trained*.\" He rubs his face in frustration. \"I'm not even gonna get into the other suspect -- the one who shot herself. In the *head*.\""];
+	  90 [label="Jean Vicquemare: \"Oh well -- if you *let* her go...\" He rubs his face in frustration. \"I'm not even gonna get into the other suspect, who shot herself. In the *head*.\""];
+	  91 [label="Jump to: [POSSE 2]"];
+	  92 [label="Jean Vicquemare: He takes a deep breath. \"Fuck it, let's not get into that.\""];
+	  93 [label="You: \"Forget about all this, there's a giant...\""];
+	  94 [label="Jean Vicquemare: \"We're not forgetting about anything -- look at you!\" He points at you with both hands."];
+	  95 [label="You: \"Wait... you're the Man with Sunglasses.\""];
+	  96 [label="Esprit de Corps: Even though we're all pigs here, you and Cuno are more pigs than the rest of the pigs. He'll have your back -- only later."];
+	  97 [label="Jean Vicquemare: \"Where have *we* been? We've been fucking off, as far as I remember.\" He crosses his arms."];
+	  98 [label="Jump to: [REMEMBERANCE HUB]"];
+	  99 [label="You: \"No idea *what* you're smelling. I washed death off me.\""];
+	  100 [label="You: \"Thank you, lieutenant.\""];
+	  101 [label="Composure: Letting the lieutenant know *he* shouldn't feel embarrassed over the shitstorm that's about to befall you."];
+	  102 [label="Jean Vicquemare: \"Won't be long. I just need to talk to Harry about some of the things I think he's done wrong lately.\""];
+	  103 [label="Jump to: [REMEMBERANCE HUB]"];
+	  104 [label="Half Light: His son? What a joke... *Everyone* is lying to you!"];
+	  105 [label="Trant Heidelstam: \"Mikael? Mikael's my son.\""];
+	  106 [label="Jean Vicquemare: \"The cafeteria manager you fucked over told us where you went.\""];
+	  107 [label="You: \"Sylvie's a whore. She rides the cock carousel... and foreigners.\""];
+	  108 [label="Jump to: [REMEMBERANCE HUB]"];
+	  109 [label="Jean Vicquemare: \"Speaking of which. The giant *aero-graffito* in front of the building. The one that's *burning* -- did you do that?\""];
+	  110 [label="Jean Vicquemare: \"I knew it. Didn't I tell you, Trant? I told you it was our shitkid.\""];
+	  111 [label="You: \"Yeah. Totally. I get it. Major Crimes Unit.\""];
+	  112 [label="You: \"Okay. So what does the unit *do*?\""];
+	  113 [label="Jean Vicquemare: \"None of us wanted to see the abyss, so we fucked off.\" He sighs. \"Like you told us to.\""];
+	  114 [label="Kim Kitsuragi: Variable[\"plaza.kineema_57th_hub\"]  and  Variable[\"boardwalk.trant_main_hub_reached\"]"];
+	  115 [label="Variable[\"plaza.kineema_57th_hub\"]  and  Variable[\"boardwalk.trant_main_hub_reached\"]", shape=diamond];
+	  116 [label="!(Variable[\"plaza.kineema_57th_hub\"]  and  Variable[\"boardwalk.trant_main_hub_reached\"])", shape=diamond];
+	  117 [label="You: \"I made it all up. It was a fantasy, a stupid joke. I know what I am.\"\n\"I made it all up. As I already told Lieutenant Kitsuragi, I know what I am.\""];
+	  118 [label="Jean Vicquemare: \"I can believe that. Shitkid made it all up to fuck with us -- because he's a psychopath. This is typical Harry behaviour. A sick joke. I told you, Jude.\"\n\"I can believe that. Not the *detective* part, that's a tall order, but that he fucked with us. This is typical Harry behaviour. A sick joke. I told you, Jude.\""];
+	  119 [label="Jean Vicquemare: \"...what has *not* been proven is total memory loss after drinking too much Commodore Red. Honestly, I think he's just lying to us.\""];
+	  120 [label="You: \"Hold on, in the ocean?\" (Feign ignorance.)"];
+	  121 [label="You: \"I thought the killer would be underwater. He wasn't.\""];
+	  122 [label="You: \"The famous TipTop Tournée driver.\""];
+	  123 [label="You: \"Gun? Behold *all* my guns. If anything, I need more *hands*!\" (Show him your two pistols and two rifles.)"];
+	  124 [label="Authority: Here we go again! \"Lost gun, lost gun\" -- trying to terrorize you!"];
+	  125 [label="Jean Vicquemare: \"I knew it! I told you he didn't have it.\""];
+	  126 [label="You: \"I'm not drunk. I haven't started drinking again!\""];
+	  127 [label="Jump to: [DRINKING]"];
+	  128 [label="Jean Vicquemare: \"*Well?* You let the suspect escape! Klaasje-something. Because you were too *drunk* to assess her flight risk.\""];
+	  129 [label="Jean Vicquemare: \"*Well?!* A suspect shot herself in the head, Harry. I know what you did -- you went in drunk and *intimidated* her, didn't you!?\""];
+	  130 [label="You: \"None of this matters. My *odour* situation? It's *meaningless* compared to what I've discovered.\""];
+	  131 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  132 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  133 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  134 [label="Jean Vicquemare: \"A bit of a week?\" He squints. \"You're drunk. You let the suspect shoot herself in the head. You went in drunk and *intimidated* her.\""];
+	  135 [label="Jean Vicquemare: \"Duped again! Outsmarted by someone who isn't *drunk*.\" He rubs his face in frustration. \"I'm not even gonna get into the *other* suspect -- who also escaped. A Ruby-something?\"\n\"Duped again! Not for one moment do I believe you *quit* drinking.\" He rubs his face in frustration. \"I'm not even gonna get into the *other* suspect -- who also escaped. A Ruby-something?\""];
+	  136 [label="Jean Vicquemare: \"Oh well -- if you've *learned your lesson*...\" He rubs his face in frustration. \"I'm not even gonna get into the eighty other suspects you've failed to arrest.\""];
+	  137 [label="Untitled hub (02)"];
+	  138 [label="Jean Vicquemare: \"Harry, that's because you're a cop with 'Fuck the World' written on his back.\""];
+	  139 [label="Jean Vicquemare: \"Did you?\" He adjusts his tie. \"Or did you literally not recognize my face? We've been partners for how long, Harry? Don't answer that -- you don't *remember*.\""];
+	  140 [label="Trant Heidelstam: \"The line is from Lu Jiatun's 'Mirova 82', isn't it? About Girl Child Communism -- the titular *returning* character. The ghostly apparition of...\" He looks around and, noticing the impatience of his companions, stops himself. \"Good choice, Harry.\""];
+	  141 [label="Half Light: Those cases were hard on you..."];
+	  142 [label="Judit Minot: \"We've read the reports. Lieutenant Kitsuragi's. We know.\""];
+	  143 [label="Judit Minot: \"We've read the reports, Harry. Lieutenant Kitsuragi's. We know.\""];
+	  144 [label="Inland Empire: Precisely, Satellite-Officer Vicquemare. It's Martinaise."];
+	  145 [label="Jump to: [Shivers: \"You close your eyes and hear the do...\"]"];
+	  146 [label="Jean Vicquemare: From the way he covers his nose you can tell the satellite-officer is still fixated on the smell and not your incredible achievement."];
+	  147 [label="You: \"I'm truly sorry, Officer Minot.\""];
+	  148 [label="Judit Minot: \"No.\" She shakes her head. \"Without *any* benefits.\""];
+	  149 [label="Judit Minot: \"Vic, calm down...\""];
+	  150 [label="Kim Kitsuragi: CheckEquipped(\"shirt_t500\")  and  (CheckEquipped(\"shoes_t500\")  or  CheckEquipped(\"gloves_t500\")  or  CheckEquipped(\"hat_t500\"))"];
+	  151 [label="CheckEquipped(\"shirt_t500\")  and  (CheckEquipped(\"shoes_t500\")  or  CheckEquipped(\"gloves_t500\")  or  CheckEquipped(\"hat_t500\"))", shape=diamond];
+	  152 [label="!(CheckEquipped(\"shirt_t500\")  and  (CheckEquipped(\"shoes_t500\")  or  CheckEquipped(\"gloves_t500\")  or  CheckEquipped(\"hat_t500\")))", shape=diamond];
+	  153 [label="Trant Heidelstam: \"My background is in something else entirely. I engage in *neurology*...\" -- he makes air quotes -- \"... on a merely theoretical level. In fact, I should probably get going...\""];
+	  154 [label="You: \"So *Trant Heidelstam* turns out to be... *Special Consultant Trant Heidelstam*...\""];
+	  155 [label="You: \"Despite *all* that I've done?\""];
+	  156 [label="You: (Turn to face the general direction of the Whirling and yell.) \"Damn you, cafeteria manager! You've betrayed me for the last time!\""];
+	  157 [label="Kim Kitsuragi: Variable[\"TASK.light_graffito_on_fire_done\"]"];
+	  158 [label="Variable[\"TASK.light_graffito_on_fire_done\"]", shape=diamond];
+	  159 [label="!(Variable[\"TASK.light_graffito_on_fire_done\"])", shape=diamond];
+	  160 [label="Jean Vicquemare: \"That will never happen, Jude. He's the rudest man on Earth. He is the reason why the rest of us have to take sensitivity training. And I *hate* sensitivity training...\""];
+	  161 [label="Trant Heidelstam: \"What *am* I?\" He taps his foot. \"I was asked to share my take on some of the more *fringe academic* theories developed in Königstein in the Thirties. Regarding partial psychotraumatic amnesia. Group personality theory...\""];
+	  162 [label="Jean Vicquemare: \"Sure...\" he squints at you. \"You're not a... *superstar law official*. Talk on the town is you're Guillaume Le Million reincarnate. I know this shit. Nothing has changed.\""];
+	  163 [label="Rhetoric: Meaning: you forgot both who you are and the definitions of 'money,' 'isola,' 'pale,' and so on."];
+	  164 [label="You: \"A heartbroken drudge.\""];
+	  165 [label="You: \"Something so sad happened to me that I couldn't be me anymore. It was a defence mechanism.\""];
+	  166 [label="Jean Vicquemare: \"What do you mean?\""];
+	  167 [label="Conceptualization: So you don't *remember* not remembering. Beautiful."];
+	  168 [label="Trant Heidelstam: \"Hard-wired to the free market...\" He nods confidently. \"He just needed for it to end.\""];
+	  169 [label="Jump to: [Judit Minot: \"\"But, Detective Vicquemare,\" she in...\"]"];
+	  170 [label="Jean Vicquemare: \"With all due respect, lieutenant -- you're *bewitched by the shitkid*. It happens. What doesn't happen is a cop wiping his own memory to solve a case.\""];
+	  171 [label="You: \"It was stolen by Jacob Irw.\""];
+	  172 [label="Jean Vicquemare: \"Yes. In the ocean. Under the sea. Our work vehicle -- with fish and clams and other sea-shit.\""];
+	  173 [label="Jean Vicquemare: \"Are you drunk right now? You're drunk right now, aren't you, you fucking *bum*. I can smell it!\""];
+	  174 [label="Jump to: [village.posse_lost_badge]"];
+	  175 [label="Jean Vicquemare: \"A *little* drink?! You smell like a corpse. I'm downwind and I can barely breathe.\" He covers his nose. \"You smell like shit.\""];
+	  176 [label="Jean Vicquemare: \"Is that why a suspect shot herself in the head -- Ruby-something? Under the boardwalk? You went in drunk and *intimidated* her?\""];
+	  177 [label="Jump to: [KLAASJE ESC]"];
+	  178 [label="Jump to: [RUBY SUI]"];
+	  179 [label="Jean Vicquemare: \"Oh well -- if she was *specially trained*....\" He rubs his face in frustration. \"I'm not even gonna get into the *other* suspect who *also* escaped. Yeah. Ruby-something?\""];
+	  180 [label="Jean Vicquemare: \"Or the fact that you *very likely sold your gun for booze*. That's peanuts. That's nothing. That's a humourous anecdote...\""];
+	  181 [label="Jean Vicquemare: \"Oh well -- if you got *really* high then I guess it's okay.\" He rubs his face in frustration. \"Then it's all been worth it. Let's not even get into the other suspect -- who *shot* herself. In the head.\""];
+	  182 [label="Jean Vicquemare: \"Oh well -- if you got *really* high then I guess it's okay.\" He rubs his face in frustration. \"Let's not even get into what this means for the ethics commission.\"\n\"Oh well -- if you got *really* high then I guess it's okay.\" He rubs his face in frustration. \"Let's not even gonna get into the catatonic old lady with the police lights -- and what *all of this* means for the ethics commission.\""];
+	  183 [label="You: \"Yeah, fuck the world. No one else seems bothered by that.\""];
+	  184 [label="Cuno: \"Cuno's liking this tense shit.\""];
+	  185 [label="Jean Vicquemare: \"That's right -- and you're some kind of... murder machine.\""];
+	  186 [label="Empathy: Judging by the familiarity you feel toward him -- two years minimum? Or maybe a short, but close stint on the task force..."];
+	  187 [label="You: \"None of this is ringing any bells...\" (Move on.)"];
+	  188 [label="Kim Kitsuragi: Variable[\"whirling.vicq_asked_nurse\"]"];
+	  189 [label="Variable[\"whirling.vicq_asked_nurse\"]", shape=diamond];
+	  190 [label="!(Variable[\"whirling.vicq_asked_nurse\"])", shape=diamond];
+	  191 [label="Esprit de Corps: He means: \"You better not be *partying* with this Sylvie, shitkid.\""];
+	  192 [label="Jump to: [REMEMBERANCE HUB]"];
+	  193 [label="Jean Vicquemare: \"Don't encourage him, Trant.\""];
+	  194 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  195 [label="IsCunoInParty()", shape=diamond];
+	  196 [label="!(IsCunoInParty())", shape=diamond];
+	  197 [label="Judit Minot: \"It's okay,\" she sighs. \"I didn't come here to gloat, or to fool you. Neither did he, actually.\" She gestures toward Vicquemare. \"We're just worried.\""];
+	  198 [label="Jump to: [REMEMBERANCE HUB]"];
+	  199 [label="You: \"Refresh my memory -- who *else* is in this?\""];
+	  200 [label="You: \"Wait, so you let me face a squad of trained killers alone just to teach me a lesson?\""];
+	  201 [label="You: \"I knew you would be too closed-minded to understand *the anomaly*.\""];
+	  202 [label="Jean Vicquemare: \"Don't answer that.\" He exhales to calm his breathing. \"Your badge, Harry. Show me your badge.\""];
+	  203 [label="Perception (Sight): Now that you look where he's pointing -- to the northeast -- then yes. There does seem to be a motor carriage in the ocean. Strange. How did it get there?"];
+	  204 [label="You: \"I got my badge right here.\" (Show it to them.)"];
+	  205 [label="You: \"I lost my gun. And I didn't find it. It's gone.\""];
+	  206 [label="Jean Vicquemare: \"I don't care about your collection, you hoarding freak.\" He waves your arsenal away without looking. \"Is one of them your service weapon? I only want to know about that *one* gun.\""];
+	  207 [label="Jean Vicquemare: \"Whooh. He has it -- *and* he didn't drop it.\" He wipes his brow in mock relief. \"You're drunk like a bum, Harry. Put that thing away before you kill someone.\""];
+	  208 [label="Judit Minot: \"This isn't cause for celebration. It's... bad.\""];
+	  209 [label="Jean Vicquemare: \"*Upgraded it*? I don't care about your weapon-mania, Harry. I only care about your official sidearm -- which you *lost*.\""];
+	  210 [label="Kim Kitsuragi: Variable[\"TASK.arrest_klaasje_done\"] == false"];
+	  211 [label="Variable[\"TASK.arrest_klaasje_done\"] == false", shape=diamond];
+	  212 [label="!(Variable[\"TASK.arrest_klaasje_done\"] == false)", shape=diamond];
+	  213 [label="Kim Kitsuragi: IsKimHere()"];
+	  214 [label="IsKimHere()", shape=diamond];
+	  215 [label="!(IsKimHere())", shape=diamond];
+	  216 [label="Smell like a corpse HUB"];
+	  217 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  218 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  219 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  220 [label="Kim Kitsuragi: Variable[\"TASK.arrest_klaasje_done\"] == false"];
+	  221 [label="Variable[\"TASK.arrest_klaasje_done\"] == false", shape=diamond];
+	  222 [label="!(Variable[\"TASK.arrest_klaasje_done\"] == false)", shape=diamond];
+	  223 [label="Jean Vicquemare: \"...compared to the *six people* who were gunned down! The streets are literally red with blood, Harry. It was fucking *mass murder*.\""];
+	  224 [label="Jean Vicquemare: \"Oh well -- if she was *nice*...\" He rubs his face in frustration. \"I'm not even gonna get into the other suspect -- the one who shot herself. In the *head*.\""];
+	  225 [label="Jean Vicquemare: \"Oh well -- if she was *nice*...\" He rubs his face in frustration. \"I'm not even gonna get into the *other* suspect -- who also escaped. Yeah. Ruby-something?\""];
+	  226 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  227 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  228 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  229 [label="Jean Vicquemare: \"Oh well -- if you feel *guilty* about it...\" He rubs his face in frustration. \"I'm not even gonna get into what this means for the ethics commission.\"\n\"Oh well -- if you feel *guilty* about it...\" He rubs his face in frustration. \"I'm not even gonna get into what this means for the ethics commission. Not to mention the catatonic old lady with the police lights...\""];
+	  230 [label="Jean Vicquemare: \"Oh well -- if she was *unimportant*...\" He rubs his face in frustration. \"I'm not even gonna get into what this means for the ethics commission.\"\n\"Oh well -- if she was *unimportant*...\" He rubs his face in frustration. \"I'm not even gonna get into what this means for the ethics commission. Not to mention the catatonic old lady with the police lights...\""];
+	  231 [label="Jean Vicquemare: \"Look what the tide brought in,\" the man says in a measured tone. Suddenly, his expression changes and he tilts his head...\n\"Look what the tide brought in,\" says the man without sunglasses. Suddenly, his expression changes and he tilts his head..."];
+	  232 [label="Kim Kitsuragi: \"There weren't any cameras around.\" He stares at his boots. \"They don't have cameras...\""];
+	  233 [label="Judit Minot: \"We've read the reports. Lieutenant Kitsuragi's. We know.\""];
+	  234 [label="Empathy: He's still *dwelling* on that jacket."];
+	  235 [label="Composure: 'You should've done a better job' is what it's saying."];
+	  236 [label="Jean Vicquemare: \"I didn't *lie* to you -- no one *lies* to you. You were so fucked up on booze you couldn't recognize your own partner.\""];
+	  237 [label="Jean Vicquemare: \"I told you. He's one drink away from killing someone.\""];
+	  238 [label="Kim Kitsuragi: Variable[\"whirling.vicq_asked_firefighter\"]"];
+	  239 [label="Variable[\"whirling.vicq_asked_firefighter\"]", shape=diamond];
+	  240 [label="!(Variable[\"whirling.vicq_asked_firefighter\"])", shape=diamond];
+	  241 [label="You: \"I understand. Okay. Garte told you.\""];
+	  242 [label="Trant Heidelstam: \"Okay.\""];
+	  243 [label="Judit Minot: \"Okay.\" Another sigh. \"You're my commanding officer. I... I really want to respect you. I want us to have a normal relationship.\""];
+	  244 [label="Kim Kitsuragi: Variable[\"village.posse_minot_rhet_case\"]"];
+	  245 [label="Variable[\"village.posse_minot_rhet_case\"]", shape=diamond];
+	  246 [label="!(Variable[\"village.posse_minot_rhet_case\"])", shape=diamond];
+	  247 [label="Cuno: He looks repentant. \"Just try not to shit yourself -- please.\""];
+	  248 [label="Kim Kitsuragi: Variable[\"village.posse_logic_bevy\"]"];
+	  249 [label="Variable[\"village.posse_logic_bevy\"]", shape=diamond];
+	  250 [label="!(Variable[\"village.posse_logic_bevy\"])", shape=diamond];
+	  251 [label="Empathy: He sincerely thought it was going to be amusing. For both of you."];
+	  252 [label="Jean Vicquemare: \"Interesting?\""];
+	  253 [label="You: \"A police detective.\""];
+	  254 [label="Kim Kitsuragi: \"He is -- he's getting better. And I can confirm that he drank a *lot* of alcohol prior to it happening.\""];
+	  255 [label="You: \"I have?\""];
+	  256 [label="Jean Vicquemare: \"Okay, Trant, thank you. That's... absolutely meaningless. I'm glad we brought you. Will he or will he not be able to work in the Major Crimes Unit? Is he a cretin now? I want to know *that*.\""];
+	  257 [label="Kim Kitsuragi: \"He *did* present this theory to me -- once before. I had trouble believing it then, but he seems to be convinced. And I've seen him work. His methods are... unorthodox.\""];
+	  258 [label="Jean Vicquemare: \"Psychotraumatic amnesia? Trant?\" He turns to the special consultant. \"I can go for that -- shitkid is a broken man, always has been. Who isn't? I know I am. But you know what?\""];
+	  259 [label="You: \"I don't know. I don't know what it's doing there.\""];
+	  260 [label="Untitled hub (04)"];
+	  261 [label="You: \"Lost gun, lost gun! I won't be *terrorized* with this lost gun shit anymore.\""];
+	  262 [label="You: \"Yeah yeah, I got that too.\" (Show him the boring sidearm.)"];
+	  263 [label="Jean Vicquemare: \"I don't care. Where is the gun the RCM gave you to kill people with? Where is that one?\""];
+	  264 [label="You: \"This is a Triangong 4.46! It was used to kill a man from nearly a kilometre away.\""];
+	  265 [label="Judit Minot: \"This isn't cause for celebration. It's... bad.\""];
+	  266 [label="Jean Vicquemare: \"But you haven't -- because you're *drunk*. You lost your gun -- and you're drunk. You're a drunk, gunless bum! I can smell it.\""];
+	  267 [label="You: \"So what? I've had a little drink.\""];
+	  268 [label="You: \"I tried not to, but I can't work as well without it.\""];
+	  269 [label="Jump to: [RUBY ESC]"];
+	  270 [label="You: \"That's just a small detail in a *huge* case you know nothing about.\""];
+	  271 [label="Jean Vicquemare: \"...compared to the *nine people* who were gunned down! The streets are literally red with blood, Harry. It was fucking *mass murder*.\""];
+	  272 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  273 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  274 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  275 [label="Kim Kitsuragi: Variable[\"TASK.arrest_klaasje_done\"] == false"];
+	  276 [label="Variable[\"TASK.arrest_klaasje_done\"] == false", shape=diamond];
+	  277 [label="!(Variable[\"TASK.arrest_klaasje_done\"] == false)", shape=diamond];
+	  278 [label="Jean Vicquemare: \"Special Consultant Trant Heidelstam, Patrol Officer Judit Minot.\""];
+	  279 [label="Reaction Speed: ...aaaand he's said it."];
+	  280 [label="You: \"Okay, I see. Yes.\""];
+	  281 [label="Jump to: [HUB 1.0]"];
+	  282 [label="Jump to: [TASK.light_graffito_on_fire_done]"];
+	  283 [label="Kim Kitsuragi: IsKimHere()"];
+	  284 [label="IsKimHere()", shape=diamond];
+	  285 [label="!(IsKimHere())", shape=diamond];
+	  286 [label="You: Kim recruited"];
+	  287 [label="Jump to: [Shivers: \"You close your eyes and hear the do...\"]"];
+	  288 [label="Judit Minot: \"Harry, we want to help you. Trant, I believe this is where you come in?\""];
+	  289 [label="Jean Vicquemare: \"I'm clinically depressed, Harry. Sorry if I wasn't in the mood to butter you up after you told us to fuck off.\""];
+	  290 [label="Jean Vicquemare: \"Did you? Or did you think I was a god damn MALE NURSE? We've been partners for how long, Harry?\" He adjusts his tie. \"Don't answer that -- you don't *remember*.\""];
+	  291 [label="Judit Minot: \"Uhm, and...\" she interjects, trying to defuse the situation. \"People on this street helped us too.\""];
+	  292 [label="Jean Vicquemare: \"Strange. He didn't mention that. In fact, the establishment didn't look saved at all -- there was a giant *aero-graffito* in front of the building. It was on fire.\""];
+	  293 [label="Untitled hub"];
+	  294 [label="Kim Kitsuragi: IsKimHere()"];
+	  295 [label="IsKimHere()", shape=diamond];
+	  296 [label="!(IsKimHere())", shape=diamond];
+	  297 [label="Jump to: [REMEMBERANCE HUB]"];
+	  298 [label="Jump to: [REMEMBERANCE HUB]"];
+	  299 [label="Cuno: \"Fuck, pig...\" The boy looks slightly uncomfortable. \"The name's Kuuno, not *Cuno*. It's... lamer. My name's lamer than I said it was.\"\n\"Fuck, pig... As you snooped out, the name's Kuuno, not *Cuno*. Let's get on with our lives. I'm Kuuno. It's known now. Stop staring at me.\""];
+	  300 [label="Jean Vicquemare: \"Goddamnit, Harry...\" He shifts his weight, crosses his arms, and looks you in the eye."];
+	  301 [label="Jean Vicquemare: \"And you were probably right too -- I would have never let you abduct a kid and take him on a creepy boat trip in the middle of fucking March!\""];
+	  302 [label="You: \"All *will* burn, Satellite-Officer Vicquemare. Make no mistake about it.\""];
+	  303 [label="Jean Vicquemare: \"The *bells* aren't ringing because you have brain damage. Trant,\" he turns to the blond, \"this is where you come in -- how bad is it?\"\n\"The *bells* aren't ringing because you have brain damage, Detective God. Trant,\" he turns to the blond, \"this is where you come in -- how bad is it?\""];
+	  304 [label="Trant Heidelstam: \"He is *not* a cretin. And he *is* able to do work -- if not in his previous leadership role, then as a line detective.\""];
+	  305 [label="You: \"I'll explain later, but there's another man who's lost his memory. A *crab-man*.\""];
+	  306 [label="Trant Heidelstam: \"It's an urban myth -- a police detective who employs highly experimental investigative techniques. It's a *cultural* reference, detective.\""];
+	  307 [label="You: \"Fuck all of you, I don't *want* to be in your unit.\""];
+	  308 [label="Jean Vicquemare: \"No, Harry -- FUCK YOU. You already fucked us -- I've already explained this shit to Pryce *twice*. To Berdyayeva -- *four times*. I'm your partner. I answer for you when you're not there.\""];
+	  309 [label="Jean Vicquemare: \"I do. You drove it into the water. Everyone on this street saw you do it. It's going to be a local landmark too -- on the brochure. Thank you for fucking us, Harry.\""];
+	  310 [label="Savoir Faire: You juggle the badge for a second, unsuccessfully, and it lands on the ground some two metres away."];
+	  311 [label="Judit Minot: \"This isn't cause for celebration. It's... bad.\""];
+	  312 [label="Jean Vicquemare: \"You let a suspect escape, Harry -- Klaasje-something. Because you were too *drunk* to assess her flight risk.\""];
+	  313 [label="Kim Kitsuragi: Variable[\"TASK.arrest_klaasje_done\"] == false"];
+	  314 [label="Variable[\"TASK.arrest_klaasje_done\"] == false", shape=diamond];
+	  315 [label="!(Variable[\"TASK.arrest_klaasje_done\"] == false)", shape=diamond];
+	  316 [label="Jean Vicquemare: \"*Well*? Harry, you let the suspect escape -- Ruby-something. You were too *drunk* to take her in, weren't you? \""];
+	  317 [label="Jean Vicquemare: \"What you've *discovered*? You let the suspect *escape* -- a certain Ruby. Because you were too *drunk* to take her in. You went in drunk.\""];
+	  318 [label="Jump to: [RUBY SUI]"];
+	  319 [label="Jean Vicquemare: \"I don't believe you.\" He squints. \"You're drunk. You made a suspect shoot herself in the head. You went in drunk and *intimidated* her.\""];
+	  320 [label="You: \"She caught us in a *pale latitude compressor*. You know how much that hurts?\""];
+	  321 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  322 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  323 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  324 [label="HUB 1.0"];
+	  325 [label="You: \"No one else seems bothered by the bleeding.\""];
+	  326 [label="Jean Vicquemare: \"Oh really?! They don't seem bothered by it? That's because you're a cop in an exoskeleton!\""];
+	  327 [label="Jean Vicquemare: \"Actually -- are you? Are you still a cop? There's so much disco going on, it's hard to tell.\""];
+	  328 [label="Authority: As if he recalled that he's, in fact, a decorated police lieutenant, and not a naughty boy."];
+	  329 [label="You: \"A disguise... why?\""];
+	  330 [label="Jump to: [REMEMBERANCE HUB]"];
+	  331 [label="Jump to: [REMEMBERANCE HUB]"];
+	  332 [label="Kim Kitsuragi: (CheckEquipped(\"jacket_faln\")  and  CheckEquipped(\"pants_faln\"))  or  (CheckEquipped(\"shirt_faln\")  and  CheckEquipped(\"pants_faln\"))  or  (CheckEquipped(\"hat_faln\")  and  CheckEquipped(\"pants_faln\")  and  CheckEquipped(\"shoes_faln\")  and  CheckEquipped(\"gloves_faln\"))"];
+	  333 [label="(CheckEquipped(\"jacket_faln\")  and  CheckEquipped(\"pants_faln\"))  or  (CheckEquipped(\"shirt_faln\")  and  CheckEquipped(\"pants_faln\"))  or  (CheckEquipped(\"hat_faln\")  and  CheckEquipped(\"pants_faln\")  and  CheckEquipped(\"shoes_faln\")  and  CheckEquipped(\"gloves_faln\"))", shape=diamond];
+	  334 [label="!((CheckEquipped(\"jacket_faln\")  and  CheckEquipped(\"pants_faln\"))  or  (CheckEquipped(\"shirt_faln\")  and  CheckEquipped(\"pants_faln\"))  or  (CheckEquipped(\"hat_faln\")  and  CheckEquipped(\"pants_faln\")  and  CheckEquipped(\"shoes_faln\")  and  CheckEquipped(\"gloves_faln\")))", shape=diamond];
+	  335 [label="Kim Kitsuragi: \"We might need your help with something later,\" he adds, suddenly regaining his confidence."];
+	  336 [label="You: \"You! You never told me you're not the Horse-Faced Woman!\" (Point at her.)"];
+	  337 [label="You: \"Oh... okay. Sorry.\""];
+	  338 [label="You: \"Yeah, I lit it on fire. It was a poetic gesture.\""];
+	  339 [label="Jean Vicquemare: \"Refresh your memory? It's a god damn Major Crimes Unit. There's you, me, Jude, Trant fucking Heidelstam, and Guillaume Bevy...\" He stares at you."];
+	  340 [label="Jump to: [You: \"\"Okay. So what does the unit *do*?\"\"]"];
+	  341 [label="Jean Vicquemare: \"You told us to fuck off. You said we're *cramping your style*. You're *Detective God*. Fuck everything. All will burn. Detect or die!\""];
+	  342 [label="You: \"Why would you leave a literal *Police God*?\""];
+	  343 [label="Jean Vicquemare: \"You were crying hysterically. You were drunk, breaking things, being emotionally abusive. You said we were going 'into the abyss'.\""];
+	  344 [label="Jean Vicquemare: \"Are you sure?\" He squints at you. \"So you haven't been telling everyone what a *boring cop* you are -- and that you should kill yourself? People say you've been out of your mind. I asked around.\""];
+	  345 [label="You: \"A drunk and a loser.\""];
+	  346 [label="Kim Kitsuragi: \"*Crab-man* is an unfortunate choice of words -- but I was there. The church on the coast shook from an audio-spatial anomaly. It may have been entroponetic, or perhaps related to radio waves...\""];
+	  347 [label="Kim Kitsuragi: Variable[\"whirling.kim_experimental\"]"];
+	  348 [label="Variable[\"whirling.kim_experimental\"]", shape=diamond];
+	  349 [label="!(Variable[\"whirling.kim_experimental\"])", shape=diamond];
+	  350 [label="Esprit de Corps: When you clocked out, *I* became responsible for your cases -- and your special task force."];
+	  351 [label="Jean Vicquemare: \"Thank you for destroying 45,000 reál of police property that's coming out of *my* payslip. You know that, right? You're gonna get fired. And I'm gonna pay till I die...\""];
+	  352 [label="You: Just stand there."];
+	  353 [label="Jean Vicquemare: \"He doesn't have it...\" He points to the sea. \"Here's an idea. Maybe you could look in the mother fucking motor carriage you drove into the sea? Maybe LOOK THERE?!\""];
+	  354 [label="Rhetoric: As if having your badge *and* gun are natural states, not achievements."];
+	  355 [label="Cuno: \"Wow, you're being brutalized... Pig on pig violence.\""];
+	  356 [label="Jump to: [village.posse_lost_badge]"];
+	  357 [label="Jean Vicquemare: \"I *knew* it. I told you he wouldn't have it.\""];
+	  358 [label="Jean Vicquemare: \"Is that why you let a suspect escape -- Ruby-something? Because you were too fucking *drunk* to take her in?\""];
+	  359 [label="Jean Vicquemare: \"A woman shot herself -- in the head. Because you went in high and *intimidated* her, didn't you!? Ruby-something? You basically *killed* her yourself.\""];
+	  360 [label="Jean Vicquemare: \"A bit of a week?\" He squints. \"You let a suspect *escape* -- a certain Ruby. You let her escape because you were too *drunk* to take her in.\""];
+	  361 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  362 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  363 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  364 [label="Jean Vicquemare: \"...compared to the *eight people* who were gunned down! The streets are literally red with blood. Lieutenant Kitsuragi is barely clinging to life in the hospital. Harry, it was fucking *mass murder*.\""];
+	  365 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  366 [label="IsCunoInParty()", shape=diamond];
+	  367 [label="!(IsCunoInParty())", shape=diamond];
+	  368 [label="Jean Vicquemare: \"Bothered by it?! Harry, you look like you need a fucking organ transplant!\""];
+	  369 [label="You: \"Yes... I am a goddamn cop.\"\n\"Yeah, I'm a cop in a goddamn exoskeleton.\""];
+	  370 [label="Jean Vicquemare: \"Had *what* coming? Not recognizing people you work with *every* day?\" He squints. \"Brain damage?\""];
+	  371 [label="Kim Kitsuragi: Variable[\"church.soona_kim_heard_anomaly\"]"];
+	  372 [label="Variable[\"church.soona_kim_heard_anomaly\"]", shape=diamond];
+	  373 [label="!(Variable[\"church.soona_kim_heard_anomaly\"])", shape=diamond];
+	  374 [label="Jean Vicquemare: The man doesn't reply, but his expression speaks for him."];
+	  375 [label="You: \"I may have pawned it... anyway, it's gone now.\""];
+	  376 [label="Jean Vicquemare: \"What does that say on your back...\" He squints. \"'Pissf****ts'... what the *fuck* is wrong with you?!\""];
+	  377 [label="Jean Vicquemare: \"Also, you look like a fucking idiot.\""];
+	  378 [label="Trant Heidelstam: \"Uhm...\" He takes a step back. \"I don't *quite* know what I'm doing here. I was asked to participate as an expert -- I think I need to manage your expectations a little. I'm at best an enthusiast in cognitive science.\""];
+	  379 [label="You: \"Way to feed me to the wolves...\""];
+	  380 [label="You: \"Patrol Officer Minot, glad to make the acquaintance. Let's put the past behind us.\""];
+	  381 [label="Trant Heidelstam: \"Again...\" He looks around. \"I was asked to share my take on some of the more *fringe academic* theories developed in Königstein in the Thirties. For example -- partial psychotraumatic amnesia, group personality theory...\""];
+	  382 [label="Jump to: [REMEMBERANCE HUB]"];
+	  383 [label="Rhetoric: Good idea. It doesn't look like he thinks you're in a position to correct him on the shitkid issue."];
+	  384 [label="You: \"Really?\""];
+	  385 [label="You: \"How did you know I was here?\"\n\"How did you know I was here?\""];
+	  386 [label="Kim Kitsuragi: Variable[\"coast.idiot_teq_story_end_reach\"]"];
+	  387 [label="Variable[\"coast.idiot_teq_story_end_reach\"]", shape=diamond];
+	  388 [label="!(Variable[\"coast.idiot_teq_story_end_reach\"])", shape=diamond];
+	  389 [label="Jean Vicquemare: \"Strange. He didn't mention that. In fact, the establishment didn't look saved at all -- there was a giant *aero-graffito* in front of the building. Mixed with *blood*.\""];
+	  390 [label="You: \"Have you been *spying* on me?\""];
+	  391 [label="Jean Vicquemare: \"You're a *worry-fest*. She's worried about you. I'm worried about you. Even Special Consultant Backpedal is worried about you. Everyone worries -- instead of *working*.\""];
+	  392 [label="Rhetoric: Listen to yourself. You sound like a brutal idiot. No matter what I do."];
+	  393 [label="You: \"Gardener, scab leader, *this*...\" (Turn to the lieutenant.) \"Tell me at least *you* are who you said you were!\"\n\"Gardener, scab leader, *this*...\" (Turn to Cuno.) \"Tell me at least *you* are who you said you were!\""];
+	  394 [label="You: \"Okay. That... does have something to do with it, yes.\""];
+	  395 [label="Esprit de Corps: They're your posse. Or what remains of it. Hand-picked. Hand-lost."];
+	  396 [label="You: \"Why didn't you detect or die then?\""];
+	  397 [label="Trant Heidelstam: \"Well... He doesn't have visible tremors. He talks without slurring. He can drive a boat. He's standing, reasoning. All good signs. But -- complete retrograde amnesia, episodic *and* semantic...\""];
+	  398 [label="Jump to: [Untitled hub]"];
+	  399 [label="Jean Vicquemare: \"Thank you, Lieutenant Kitsuragi. Just to clarify -- I do not think isolary entroponetics are a hoax. Pale produces global phenomena -- it's proven. However...\""];
+	  400 [label="Kim Kitsuragi: \"Either way, it was real. I've even put it in my report -- you should read it. I do not, however, think it has anything to do with him drinking himself to the point of brain damage.\""];
+	  401 [label="Jump to: [Untitled hub (04)]"];
+	  402 [label="You: \"What?! These are *great* guns. Superior to my sidearm any day.\""];
+	  403 [label="You: \"Yeah, I don't have that. I don't have my sidearm.\""];
+	  404 [label="You: \"Wait, it may be because of the *pheromone*.\""];
+	  405 [label="Judit Minot: \"Detective -- please. Don't start talking about your *pheromones* again. This is serious. If you don't...\" She doesn't finish the sentence."];
+	  406 [label="Jump to: [Smell like a corpse HUB]"];
+	  407 [label="Jean Vicquemare: \"Duped again! Outsmarted by someone who isn't *drunk*.\" He rubs his face. \"I'm not even gonna get into the other suspect -- the one who shot herself. In the head.\"\n\"Duped again! Not for one moment do I believe you *quit* drinking.\" He rubs his face. \"I'm not even gonna get into the other suspect -- the one who shot herself. In the head.\""];
+	  408 [label="Jean Vicquemare: \"Oh well -- if you *let* her go....\" He rubs his face in frustration. \"I'm not even gonna get into the *other* suspect who escaped -- another act of mercy?\""];
+	  409 [label="Jean Vicquemare: \"Yes, that has *always* explained it.\""];
+	  410 [label="Jean Vicquemare: \"Harry, there are probably pictures...\" The full gravity of the situation dawns on him."];
+	  411 [label="Trant Heidelstam: \"Yes,\" Trant Heidelstam says. \"There could have been cameras. This needs damage control.\""];
+	  412 [label="Empathy: Everyone felt perfectly safe in your company. He doesn't know what he's talking about."];
+	  413 [label="Jump to: [Jean Vicquemare: \"\"Bothered by it? Harry, you're a *g...\"]"];
+	  414 [label="Encyclopedia: Absolutely no idea. A hundred years?"];
+	  415 [label="Kim Kitsuragi: IsKimHere()"];
+	  416 [label="IsKimHere()", shape=diamond];
+	  417 [label="!(IsKimHere())", shape=diamond];
+	  418 [label="Kim Kitsuragi: Variable[\"inventory.ledger_crack_it_on_the_knee\"]  and  Variable[\"inventory.ledger_case_mural\"]"];
+	  419 [label="Variable[\"inventory.ledger_crack_it_on_the_knee\"]  and  Variable[\"inventory.ledger_case_mural\"]", shape=diamond];
+	  420 [label="!(Variable[\"inventory.ledger_crack_it_on_the_knee\"]  and  Variable[\"inventory.ledger_case_mural\"])", shape=diamond];
+	  421 [label="Judit Minot: \"We've read the reports, Harry. Lieutenant Kitsuragi's. We know.\""];
+	  422 [label="You: \"Friends with... benefits?\""];
+	  423 [label="Authority: What does *he* have to say for *himself*? He left you to catch the bullets!"];
+	  424 [label="Kim Kitsuragi: Variable[\"village.posse_intro_reaction_cuno\"]"];
+	  425 [label="Variable[\"village.posse_intro_reaction_cuno\"]", shape=diamond];
+	  426 [label="!(Variable[\"village.posse_intro_reaction_cuno\"])", shape=diamond];
+	  427 [label="Untitled hub (03)"];
+	  428 [label="You: \"We're still friends, I just have a stupid head.\""];
+	  429 [label="You: \"After all that Sylvie stuff, he betrays me...\""];
+	  430 [label="Jean Vicquemare: \"I don't know...\" He squints at you suspiciously. \"It had *shitkid* written all over it.\""];
+	  431 [label="Jean Vicquemare: \"No. Everyone's just a brilliant master of disguises.\""];
+	  432 [label="Jean Vicquemare: He looks at Minot. \"He doesn't remember.\""];
+	  433 [label="Jean Vicquemare: \"Oh, that's an interesting story, actually!\" He's not smiling. \"Guillaume Bevy is a police reporter who joined our team. He was really good. Then he left, because he lost faith in your ability to lead the unit.\""];
+	  434 [label="Kim Kitsuragi: IsHighestCopotype(\"superstar_cop\")"];
+	  435 [label="IsHighestCopotype(\"superstar_cop\")", shape=diamond];
+	  436 [label="!(IsHighestCopotype(\"superstar_cop\"))", shape=diamond];
+	  437 [label="Jump to: [REMEMBERANCE HUB]"];
+	  438 [label="Trant Heidelstam: \"Yes. Interesting. I have my theories, but I would like to hear Harry's thoughts first. Harry,\" he turns to you, \"what do *you* think happened to you? Neurologically? Psychologically? And -- why not -- *socioeconomically*?\""];
+	  439 [label="Trant Heidelstam: \"As displayed in your interactions with him here and previously, at the bar, and -- I don't want to be a 'snitch',\" he makes air quotes, \"but also mine with him before, when Harry did not seem to know who I was... It's all very interesting.\""];
+	  440 [label="You: \"I drank so much I lost my memory. And I'm now *slowly* recovering it.\""];
+	  441 [label="Trant Heidelstam: \"No, not like that, I'm not talking Vredefort School here. But, Harry, I asked you -- what do *you* think happened?\""];
+	  442 [label="You: \"I'm ready to lead again.\""];
+	  443 [label="Jean Vicquemare: \"No one even *mentioned* that.\" He looks at you, then at Trant. \"I misphrased my question. It should have been: Is he able to put his clothes on, and use the potty, or do we need to get him on a disability pension?\""];
+	  444 [label="Kim Kitsuragi: \"That is what I thought -- at first. That it was a fantasy. But... I've seen him work. It's not. He really is experiencing something out of the ordinary. He really does not remember.\""];
+	  445 [label="Jean Vicquemare: He turns back to you. \"I keep my shit together. Also, I *know* a person can't wipe their own mind -- however traumatic it gets. That doesn't happen. You're lying. Or insane. Or both.\""];
+	  446 [label="You: \"The time had come. Tequila Sunset.\"\n\"Tequila Sunset. I also jumped the canal by the way.\""];
+	  447 [label="Jean Vicquemare: \"Jacob Irw?\""];
+	  448 [label="Jean Vicquemare: \"Yeah, yeah. Just stand there. It's cool.\""];
+	  449 [label="Judit Minot: Patrol Officer Minot picks it up and gives it back to you -- slippery and cold."];
+	  450 [label="You: \"My gun is right here!\" (Show him the Villiers 9mm.)"];
+	  451 [label="Kim Kitsuragi: CheckItem(\"gun_villiers\")"];
+	  452 [label="CheckItem(\"gun_villiers\")", shape=diamond];
+	  453 [label="!(CheckItem(\"gun_villiers\"))", shape=diamond];
+	  454 [label="You: \"I'm sorry I smell bad. It's been a bit of a week.\"\n\"Yeah, it's been a bit of a week. I'm sorry I smell bad.\""];
+	  455 [label="Jump to: [RUBY ESC]"];
+	  456 [label="Kim Kitsuragi: Variable[\"TASK.arrest_klaasje_done\"] == false"];
+	  457 [label="Variable[\"TASK.arrest_klaasje_done\"] == false", shape=diamond];
+	  458 [label="!(Variable[\"TASK.arrest_klaasje_done\"] == false)", shape=diamond];
+	  459 [label="You: \"You're right. I messed up there. I pressured her and it's on me.\""];
+	  460 [label="You: \"No, Kim, you've gotta have my back. Let's destroy them.\""];
+	  461 [label="Jean Vicquemare: \"No... Trant, it's too late. You're part of this shit now!\" He turns to you. \"What have you got to say for yourself, shitkid?\""];
+	  462 [label="You: \"Cuno, you still have my back, right?\""];
+	  463 [label="Cuno: \"We're all pigs here.\" He nods to you, then straightens his back."];
+	  464 [label="Cuno: \"Pig's lying. He's clearly got something real fucked up going on up in here.\" He twists his index finger at his temple."];
+	  465 [label="Esprit de Corps: Still caught up in this crossfire, too..."];
+	  466 [label="Jump to: [IsCunoInParty()]"];
+	  467 [label="You: \"Wait, what smell?! I didn't even get close to the damn corpse and I *still* solved the case. That's how good I am.\""];
+	  468 [label="Kim Kitsuragi: \"He's wounded.\" He looks at you. \"It's been a long week.\""];
+	  469 [label="You: \"Who are you people?\""];
+	  470 [label="Rhetoric: He was too sarcastic for you to realize who he was."];
+	  471 [label="You: \"Maybe if you hadn't been so *sarcastic*, I would have realized I knew you.\""];
+	  472 [label="Judit Minot: \"Lieutenant,\" she says with a heavy sigh. \"My name is not 'Horse-Faced Woman'. It's Judit Minot. I was assigned to your unit two months ago. I thought we were friends...\""];
+	  473 [label="Jean Vicquemare: \"And it was. Good work, Harry. You're insane now. There's one less person for me -- and everyone else -- to rely on.\""];
+	  474 [label="Jean Vicquemare: \"Super,\" he says with a nod. \"Whore. Foreigners. Hatred.\""];
+	  475 [label="You: \"Yeah, I wrote that. It was a poetic gesture.\" (Lie.)"];
+	  476 [label="Judit Minot: \"Okay.\" Another sigh. \"Because you're my commanding officer. I... I really want to respect you. I want us to have a normal relationship.\""];
+	  477 [label="Jean Vicquemare: \"He's here to see if you're insane. He's smart. Let's move on.\""];
+	  478 [label="Jump to: [REMEMBERANCE HUB]"];
+	  479 [label="Jean Vicquemare: \"Yes. You're *sorry*. You're the sorriest cop who ever lived. Nothing has changed, Harry. I've heard this *repentance* shit a million times over.\""];
+	  480 [label="Kim Kitsuragi: Variable[\"boardwalk.trant_main_hub_reached\"]  and  (Variable[\"whirling.minot_whirling_mainhub_reached\"]  or  Variable[\"whirling.vicquemare_main_hub_reached\"])"];
+	  481 [label="Variable[\"boardwalk.trant_main_hub_reached\"]  and  (Variable[\"whirling.minot_whirling_mainhub_reached\"]  or  Variable[\"whirling.vicquemare_main_hub_reached\"])", shape=diamond];
+	  482 [label="!(Variable[\"boardwalk.trant_main_hub_reached\"]  and  (Variable[\"whirling.minot_whirling_mainhub_reached\"]  or  Variable[\"whirling.vicquemare_main_hub_reached\"]))", shape=diamond];
+	  483 [label="Trant Heidelstam: \"Lefty dink? Well, actually -- I don't consider myself a classical leftist at all. Not in the Mazovian sense at least. But, fine -- theory aside, what happened?\""];
+	  484 [label="Judit Minot: \"But, Detective Vicquemare,\" she interjects. \"He *has* blanked out before.\""];
+	  485 [label="You: \"Take this seriously. I suspect there might be something wrong with Martinaise.\""];
+	  486 [label="Kim Kitsuragi: \"Either way, I have put this into my report -- you should read it. I do not, however, think it has anything to do with him drinking himself to the point of brain damage.\""];
+	  487 [label="Drama: Lie. Just -- bide your time, ask something. Then lie."];
+	  488 [label="You: \"Wait, my badge?\""];
+	  489 [label="Kim Kitsuragi: Variable[\"village.posse_savoir_faire_rc_to_not_loose_badeg\"]"];
+	  490 [label="Variable[\"village.posse_savoir_faire_rc_to_not_loose_badeg\"]", shape=diamond];
+	  491 [label="!(Variable[\"village.posse_savoir_faire_rc_to_not_loose_badeg\"])", shape=diamond];
+	  492 [label="Kim Kitsuragi: Variable[\"village.posse_lost_badge\"]"];
+	  493 [label="Variable[\"village.posse_lost_badge\"]", shape=diamond];
+	  494 [label="!(Variable[\"village.posse_lost_badge\"])", shape=diamond];
+	  495 [label="Judit Minot: \"He found it. It's his badge. I can confirm.\"\n\"He has it. It's his badge. I can confirm.\""];
+	  496 [label="Jean Vicquemare: \"I *knew* it. I told you he wouldn't have it.\""];
+	  497 [label="Jean Vicquemare: \"Whooh. He has it -- I thought it was in the ocean...\" He wipes his brow in mock relief. \"You're drunk like a bum, Harry. Put that thing away before you kill someone.\""];
+	  498 [label="You: \"That was nothing. She was unimportant to the investigation. A dead end anyway.\""];
+	  499 [label="You: \"Not taking her in was the right thing to do. She gave a vital clue that led me to the island.\"\n\"Not taking her in was the right thing to do. She gave a vital clue that led us to the island.\""];
+	  500 [label="Kim Kitsuragi: IsKimHere()"];
+	  501 [label="IsKimHere()", shape=diamond];
+	  502 [label="!(IsKimHere())", shape=diamond];
+	  503 [label="Jean Vicquemare: \"Sure -- if it's part of your *master plan*...\"  He rubs his face in frustration. \"Let's not even get into what this means for the ethics commission.\"\n\"Sure -- if it's part of your *masterplan*. Along with the catatonic old lady with the police lights.\"  He rubs his face in frustration. \"Let's not even get into what all of this means for the ethics commission.\""];
+	  504 [label="Visual Calculus: This is the Man with Sunglasses from the Whirling-in-Rags! But where are his sunglasses?"];
+	  505 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"]"];
+	  506 [label="Variable[\"plaza.tribunal_gardener_shot\"]", shape=diamond];
+	  507 [label="!(Variable[\"plaza.tribunal_gardener_shot\"])", shape=diamond];
+	  508 [label="Kim Kitsuragi: \"He *has* hinted at the possibility before. I have trouble believing him, of course, but he seems to want to convince himself of it. And I've seen him work. His methods are... unorthodox.\""];
+	  509 [label="Judit Minot: \"We've read the reports, Harry. Lieutenant Kitsuragi's. We know.\""];
+	  510 [label="Electrochemistry: You *know* what she means by 'friends'. But ask, just to be sure."];
+	  511 [label="You: \"Hold on, I just haven't washed myself after the autopsy...\""];
+	  512 [label="You: Harry recruited"];
+	  513 [label="You: \"The armour? No one else seems bothered by it.\""];
+	  514 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  515 [label="IsCunoInParty()", shape=diamond];
+	  516 [label="!(IsCunoInParty())", shape=diamond];
+	  517 [label="You: \"Actually, I suspected something was off.\""];
+	  518 [label="Judit Minot: \"See? He really *doesn't* remember. It wasn't a 'sick joke' -- at least that's good.\""];
+	  519 [label="You: Better not to piss him off by arguing."];
+	  520 [label="Jean Vicquemare: \"You're a legend among the drunks, Harry. A legendary local *drunk*.\""];
+	  521 [label="You: You're worried *too*?"];
+	  522 [label="You: \"Yeah, um -- first, who's Guillaume Bevy?\""];
+	  523 [label="You: \"Is this Guillaume Bevy blond, with sunglasses? Like you were...\""];
+	  524 [label="Untitled hub"];
+	  525 [label="Judit Minot: \"It wasn't like that...\""];
+	  526 [label="Kim Kitsuragi: IsHighestCopotype(\"apocalypse_cop\")"];
+	  527 [label="IsHighestCopotype(\"apocalypse_cop\")", shape=diamond];
+	  528 [label="!(IsHighestCopotype(\"apocalypse_cop\"))", shape=diamond];
+	  529 [label="Jean Vicquemare: \"Sure...\" he squints at you. \"Talk on the town is you're the 'mouthpiece of the Gloaming.' Deranged apocalyptic rhetoric... Nothing has changed.\""];
+	  530 [label="You: \"Capitalism. Capitalism fucked me beyond all recognition. Trant is right.\""];
+	  531 [label="You: \"What now?\" (Proceed.)"];
+	  532 [label="Jean Vicquemare: \"Yes-yes. Anomaly. Look, I get it. In your delirium you came up with an *entroponetic* explanation for why you're such an insane drunk. And I understand.\""];
+	  533 [label="Jean Vicquemare: \"I've been there: Perhaps it's *not* because he's a petulant teenager in a 40-year-old man's body. Perhaps it's pale-related? Perhaps it's extraphysical?\""];
+	  534 [label="Jean Vicquemare: \"Yes. *Your* motor carriage. White and blue. Under the sea. With fish and clams and other sea-shit.\""];
+	  535 [label="Jean Vicquemare: \"Fuck it. I'll get it myself, just tell me you have your *gun*.\" He collects himself again -- dusts off his black suit, although it's completely clean."];
+	  536 [label="You: Let it fall to the ground."];
+	  537 [label="You: \"I'm on it. 24/7. I'm tracking it down *right now*.\""];
+	  538 [label="Conceptualization: Gun? Yeah, you don't have that. Maybe you can *philosophize* your way out of it?"];
+	  539 [label="Jean Vicquemare: \"Shut up! Show me your sidearm, or fuck off.\""];
+	  540 [label="Jean Vicquemare: \"Oh, I would say it's *very* bad.\" He turns to you. \"You're drunk like a bum, Harry. Please put the stolen rifle away before you kill someone.\""];
+	  541 [label="Jump to: [DRINKING]"];
+	  542 [label="You: \"I'm not drunk. I haven't started drinking again!\" (Lie.)"];
+	  543 [label="Jean Vicquemare: \"I don't buy it. Why do you smell like a *corpse* then? Huh?\""];
+	  544 [label="Jump to: [RUBY ESC]"];
+	  545 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  546 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  547 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  548 [label="Jump to: [KLAASJE ESC]"];
+	  549 [label="You: \"She didn't know anything. It wasn't a big loss to the investigation.\""];
+	  550 [label="Jean Vicquemare: \"Harry, you're a cop with 'Pissf****ts' on his back! Do you have any idea how hard the liberals are going to fuck us for this?\""];
+	  551 [label="Logic: This is not the first time he's seen you all decked out in wacko."];
+	  552 [label="Jean Vicquemare: \"They're going to fuck us to death.\""];
+	  553 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  554 [label="Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  555 [label="!(Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  556 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  557 [label="Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  558 [label="!(Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  559 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  560 [label="Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  561 [label="!(Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  562 [label="Jump to: [REMEMBERANCE HUB]"];
+	  563 [label="Kim Kitsuragi: IsKimHere()"];
+	  564 [label="IsKimHere()", shape=diamond];
+	  565 [label="!(IsKimHere())", shape=diamond];
+	  566 [label="Judit Minot: \"We've read the reports, Harry. Lieutenant Kitsuragi's. We know.\""];
+	  567 [label="You: Harry left behind"];
+	  568 [label="Jump to: [Jean Vicquemare: \"\"Good bye, Harry. And -- I know it...\"]"];
+	  569 [label="Reaction Speed: The kid's about to say he's Cuno!"];
+	  570 [label="Judit Minot: \"Hi.\""];
+	  571 [label="Trant Heidelstam: \"I wouldn't... quite say that. But, yes, he is displaying aggression not atypical of late-stage alcoholism.\""];
+	  572 [label="Jean Vicquemare: \"Now nothing. Now we're just going to stand here.\""];
+	  573 [label="Jean Vicquemare: \"Did you? Or did you think I was a god damn ANIMAL HANDLER? We've been partners for how long, Harry?\" He adjusts his tie. \"Don't answer that -- you don't *remember*.\""];
+	  574 [label="Kim Kitsuragi: Variable[\"whirling.vicq_asked_animal_control\"]"];
+	  575 [label="Variable[\"whirling.vicq_asked_animal_control\"]", shape=diamond];
+	  576 [label="!(Variable[\"whirling.vicq_asked_animal_control\"])", shape=diamond];
+	  577 [label="Jean Vicquemare: \"You're a legend among the drunks, Harry. A legendary local *drunk*.\""];
+	  578 [label="Encyclopedia: He is correct. It was the Seraise poet Lu Jiatun who in the Fifties of the last century composed a..."];
+	  579 [label="Jean Vicquemare: \"Fuck you, you're part of this shit-show.\""];
+	  580 [label="Logic: Is this Guillaume Bevy blond and partial to sunglasses?"];
+	  581 [label="Jean Vicquemare: \"Fuck you, Harry -- we didn't *know* there was gonna be a tribunal, did we?\""];
+	  582 [label="Jump to: [REMEMBERANCE HUB]"];
+	  583 [label="Kim Kitsuragi: IsKimHere()"];
+	  584 [label="IsKimHere()", shape=diamond];
+	  585 [label="!(IsKimHere())", shape=diamond];
+	  586 [label="Trant Heidelstam: \"Well -- here is my theory: What if this is an absolutely normal reaction to the world we're living in? What if this is *not* a significant anomaly at all, something to be explained, approached as a defect? Look at the sensory input here...\" He gestures toward the scenery."];
+	  587 [label="Judit Minot: \"Detective Vicquemare... he *has* blacked out before. We should take this seriously.\""];
+	  588 [label="Judit Minot: \"Detective Vicquemare... I'm not saying he's the Son of Lung. But lying? I mean -- he *has* blacked out before...\""];
+	  589 [label="Hand/Eye Coordination: Not today, badge."];
+	  590 [label="You: \"Okay, I got that too.\" (Show him the boring sidearm.)"];
+	  591 [label="Jean Vicquemare: \"You were never supposed to lose it in the first place. *Not lost* is your gun's *natural state*, you drunk bum.\""];
+	  592 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  593 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  594 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  595 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  596 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  597 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  598 [label="RUBY ESC"];
+	  599 [label="RUBY SUI"];
+	  600 [label="You: \"I *let* her go. It was an act of mercy. She was going to shoot herself if I didn't.\""];
+	  601 [label="You: \"Yes, I let her go -- as an act of mercy.\"\n\"Yes, I let her go -- an act of mercy on behalf of the City of Revachol. She is waiting for the Return.\""];
+	  602 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"] == false  or  Variable[\"plaza.tribunal_hardie_shot\"] == false"];
+	  603 [label="Variable[\"plaza.tribunal_gardener_shot\"] == false  or  Variable[\"plaza.tribunal_hardie_shot\"] == false", shape=diamond];
+	  604 [label="!(Variable[\"plaza.tribunal_gardener_shot\"] == false  or  Variable[\"plaza.tribunal_hardie_shot\"] == false)", shape=diamond];
+	  605 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"] == false  or  Variable[\"plaza.tribunal_hardie_shot\"] == false"];
+	  606 [label="Variable[\"plaza.tribunal_gardener_shot\"] == false  or  Variable[\"plaza.tribunal_hardie_shot\"] == false", shape=diamond];
+	  607 [label="!(Variable[\"plaza.tribunal_gardener_shot\"] == false  or  Variable[\"plaza.tribunal_hardie_shot\"] == false)", shape=diamond];
+	  608 [label="Jean Vicquemare: \"Oh well -- if you *let* her go...\" He rubs his face in frustration. \"I'm not even gonna get into the eighty other suspects you haven't brought in, because it's *hard*.\""];
+	  609 [label="Suggestion: No, no, no! You've sensitivity tested this!"];
+	  610 [label="Kim Kitsuragi: Variable[\"village.posse_intro_auth_kim\"]"];
+	  611 [label="Variable[\"village.posse_intro_auth_kim\"]", shape=diamond];
+	  612 [label="!(Variable[\"village.posse_intro_auth_kim\"])", shape=diamond];
+	  613 [label="Kim Kitsuragi: Variable[\"village.posse_intro_half_fuck\"]"];
+	  614 [label="Variable[\"village.posse_intro_half_fuck\"]", shape=diamond];
+	  615 [label="!(Variable[\"village.posse_intro_half_fuck\"])", shape=diamond];
+	  616 [label="Jean Vicquemare: \"That's right, and you're some kind of a... urban scarecrow thing.\""];
+	  617 [label="Jean Vicquemare: \"Got that right, kid -- he's a psychopath, and he made up this whole amnesia story to fuck with us.\""];
+	  618 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"]"];
+	  619 [label="Variable[\"plaza.tribunal_gardener_shot\"]", shape=diamond];
+	  620 [label="!(Variable[\"plaza.tribunal_gardener_shot\"])", shape=diamond];
+	  621 [label="Kim Kitsuragi: \"The 41st isn't...\" He trails off, not wishing to finish the sentence."];
+	  622 [label="Rhetoric: You may have accidentally admitted to losing it. Just now."];
+	  623 [label="Judit Minot: \"It's good to meet you, Lieutenant Kitsuragi,\" she says warmly, flashing the lieutenant the tiniest of smiles."];
+	  624 [label="Rhetoric: The scene is making even him feel as though he has to justify your actions."];
+	  625 [label="Judit Minot: \"Right, sir.\" Her tone is suddenly very cold."];
+	  626 [label="Jean Vicquemare: \"No -- now we discuss THAT.\" He points to the water. \"What the fuck did you do to our motor carriage?! Why is it *there*, Harry?\""];
+	  627 [label="Jump to: [REMEMBERANCE HUB]"];
+	  628 [label="You: \"You.\" (Nod to the female officer.) \"I'm sorry I didn't recognize you before.\""];
+	  629 [label="You: \"Oh yeah?! What was up with all the *interesting history*? Spying on me?\""];
+	  630 [label="You: \"It's the gardener situation all over again...\" (Turn to the lieutenant.) \"Tell me at least *you* are who you said you were.\"\n\"It's the gardener situation all over again...\" (Turn to Cuno.) \"Tell me at least *you* are who you said you were.\""];
+	  631 [label="You: \"I said all those things? I'm not like that anymore.\""];
+	  632 [label="Jean Vicquemare: \"Here we go -- alcoholic delirium. *Visions*. All must pay...\" He shakes his head."];
+	  633 [label="You: \"Where have you *been* all this time?\"\n\"Where have you been all this time -- there was a mercenary tribunal.\""];
+	  634 [label="Trant Heidelstam: \"Not when you phrase it like that. But I don't think critical theory -- I know everyone thinks this is far-fetched, pink academia, but still -- I don't think it should be off the table here.\""];
+	  635 [label="Jean Vicquemare: \"I believe he *drank*,\" he turns to you. \"People do that -- especially this one. What they don't do is forget their *whole life* because of drinking.\""];
+	  636 [label="Trant Heidelstam: \"Look at the ruins, the neon, listen to the radio, the multitudes. The people. Live here for forty years... As a police detective, he's like a magnetic reader on the world-tape -- to borrow a known metaphor. Harry's been pushed *flat against it*. Total input.\""];
+	  637 [label="Kim Kitsuragi: Variable[\"village.posse_trant_lefty_dink\"]"];
+	  638 [label="Variable[\"village.posse_trant_lefty_dink\"]", shape=diamond];
+	  639 [label="!(Variable[\"village.posse_trant_lefty_dink\"])", shape=diamond];
+	  640 [label="Jean Vicquemare: \"Lieutenant, I'm sorry, but you've been *bewitched by the shitkid*. It happens. I know it's hard to accept, but he made it all up -- because he's a psychopath. It's a simple explanation.\""];
+	  641 [label="Jump to: [You: \"\"I have?\"\"]"];
+	  642 [label="Untitled hub"];
+	  643 [label="You: \"I drove it into the ocean when I was drunk.\""];
+	  644 [label="Jean Vicquemare: \"Ha-ha-ha, ho-ho-ho.\" He grabs his stomach in mirthless laughter. \"Tequila Sunset -- not Sunrise, because you're almost dead. So funny, Harry. Thank you for fucking me.\"\n\"Ha-ha-ha, ho-ho-ho.\" He grabs his stomach in humourless laughter. \"Tequila Sunset. Jumped the canal. So funny, Harry. Thank you for fucking me.\""];
+	  645 [label="Interfacing: In a rush to demonstrate your badge, your eager fingers can't sustain a grip on the smooth plastic, and the badge slips out of your hand."];
+	  646 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  647 [label="IsCunoInParty()", shape=diamond];
+	  648 [label="!(IsCunoInParty())", shape=diamond];
+	  649 [label="You: \"Gun? Badge? Car? These are all *things*. Things don't matter. People do.\""];
+	  650 [label="You: \"Yeah, yeah, I got that.\" (Show him the boring sidearm.)"];
+	  651 [label="DRINKING"];
+	  652 [label="You: \"I don't have that. I don't have the sidearm.\""];
+	  653 [label="Jean Vicquemare: \"Oh, I would say it's *very* bad.\" He turns to you. \"You're drunk like a bum, Harry. Please put the gun collection away before you kill someone.\""];
+	  654 [label="Jump to: [KLAASJE ESC]"];
+	  655 [label="You: \"I didn't *intimidate* her. It was a misunderstanding. She thought I was sent by La Puta Madre.\""];
+	  656 [label="You: \"I *let* her go. It was an act of mercy.\" (Lie.)"];
+	  657 [label="You: \"You're right. I fucked up. We walked in blind and she got away. That's on me.\""];
+	  658 [label="Jean Vicquemare: \"Or the fact that you kidnapped a kid and took him to some island? That's small-time stuff. That's nothing. That's a humourous anecdote...\""];
+	  659 [label="Jean Vicquemare: \"...compared to the *nine people* who were gunned down! The streets are literally red with blood. Lieutenant Kitsuragi is barely clinging to life in the hospital. Harry, it was fucking *mass murder*.\""];
+	  660 [label="Jean Vicquemare: \"...compared to the *seven people* who were gunned down! The streets are literally red with blood. Lieutenant Kitsuragi is barely clinging to life in the hospital. Harry, it was fucking *mass murder*.\""];
+	  661 [label="Jean Vicquemare: \"...compared to the *eight people* who were gunned down! The streets are literally red with blood, Harry. It was fucking *mass murder*.\""];
+	  662 [label="Jean Vicquemare: \"Sure -- if it's part of your *master plan*...\" He rubs his face in frustration. \"Let's not even get into the other suspect who *also* escaped. Another *detail*.\""];
+	  663 [label="Jump to: [HUB 1.0]"];
+	  664 [label="Kim Kitsuragi: IsKimHere()"];
+	  665 [label="IsKimHere()", shape=diamond];
+	  666 [label="!(IsKimHere())", shape=diamond];
+	  667 [label="Jean Vicquemare: \"That's right, and you look like you got twenty STDs.\""];
+	  668 [label="Jump to: [HUB 1.0]"];
+	  669 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  670 [label="Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  671 [label="!(Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  672 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"]"];
+	  673 [label="Variable[\"plaza.tribunal_gardener_shot\"]", shape=diamond];
+	  674 [label="!(Variable[\"plaza.tribunal_gardener_shot\"])", shape=diamond];
+	  675 [label="Reaction Speed: Then you'll be fired. This is a hearing -- toughen up."];
+	  676 [label="Judit Minot: \"We've read the reports, Harry. Lieutenant Kitsuragi's. We know.\""];
+	  677 [label="Untitled hub"];
+	  678 [label="Jump to: [Smell like a corpse HUB]"];
+	  679 [label="Kim Kitsuragi: Variable[\"TASK.inspect_the_dead_body\"] == true  and  Variable[\"TASK.inspect_the_dead_body_done\"] == false"];
+	  680 [label="Variable[\"TASK.inspect_the_dead_body\"] == true  and  Variable[\"TASK.inspect_the_dead_body_done\"] == false", shape=diamond];
+	  681 [label="!(Variable[\"TASK.inspect_the_dead_body\"] == true  and  Variable[\"TASK.inspect_the_dead_body_done\"] == false)", shape=diamond];
+	  682 [label="Kim Kitsuragi: IsKimHere()"];
+	  683 [label="IsKimHere()", shape=diamond];
+	  684 [label="!(IsKimHere())", shape=diamond];
+	  685 [label="Kim Kitsuragi: \"Lieutenant Kim Kitsuragi, Precinct 57. We've just come from the island...\" He points to the seafort. \"Where our investigation led us.\""];
+	  686 [label="You: \"Wait...\" (Elbow him in the ribs.)"];
+	  687 [label="Trant Heidelstam: \"Yes, I'm Trant Heidelstam. I never said I wasn't Trant Heidelstam.\""];
+	  688 [label="Rhetoric: Despite *all* that you've done -- the deserter, the phasmid, the case?!"];
+	  689 [label="Jean Vicquemare: \"Did you? Or did you think I was a god damn FIREFIGHTER? We've been partners for how long, Harry?\" He adjusts his tie. \"Don't answer that -- you don't *remember*.\""];
+	  690 [label="You: \"I saved his establishment and still he betrays me?!\""];
+	  691 [label="Jean Vicquemare: \"I knew it. Didn't I tell you, Trant? I told you it was our shitkid.\""];
+	  692 [label="Jump to: [REMEMBERANCE HUB]"];
+	  693 [label="Jean Vicquemare: \"*Duped*? Hey, here's a brilliant idea -- don't be a morbid drunk and you won't be duped so easily.\""];
+	  694 [label="Jump to: [REMEMBERANCE HUB]"];
+	  695 [label="Jean Vicquemare: \"In fact, it's not possible to wipe one's memory -- at all. Even with the amount of Potent Pilsner he downs every *hour*. He's simply lying. Or insane. Or both.\""];
+	  696 [label="Jean Vicquemare: \"Shut up! You didn't wipe your own memory. We're not even *considering* that option. It's not possible. Even with the amount of *Potent Pilsner* you down every *hour*.\""];
+	  697 [label="Jean Vicquemare: He turns to the special consultant. \"Asking him was a mistake -- he's a teenage psycho. I asked *you*. It's not possible to wipe your own memory with alcohol alone, right? He's either lying or insane.\""];
+	  698 [label="Jean Vicquemare: \"I *know* who Jacob Irw is. I wanted to give you a chance to stop *fucking* me. How naive of me. You drove a 45,000 reál police vehicle into the ocean -- what did I expect?\""];
+	  699 [label="You: \"I lost it. I haven't found it yet.\"\n\"I haven't found it yet.\""];
+	  700 [label="Hand/Eye Coordination: You got it all right! You're showing it to him, victorious. They're *seeing* the badge."];
+	  701 [label="Jean Vicquemare: \"It *worked* too, didn't it? You're drunk right now, aren't you? You fucking bum, I can smell it all the way over here!\""];
+	  702 [label="You: \"I found my gun, but then I realized I didn't need it, so I left it behind.\""];
+	  703 [label="You: \"I didn't lose my gun, I have my gun!\" (Show him the gun.)"];
+	  704 [label="You: \"Yeah I'm drunk! I'm also on drugs.\""];
+	  705 [label="You: \"I've handled an actual corpse.\"\n\"Yeah, I've handled an actual corpse.\""];
+	  706 [label="Jean Vicquemare: \"I don't believe you.\" He squints. \"You're drunk. You let a suspect *escape* -- a certain Ruby. Because you were too *drunk* to take her in.\""];
+	  707 [label="Jean Vicquemare: \"I don't believe you.\" He squints. \"You're drunk. You let a suspect *escape* -- a certain Klaasje. Because you were you too *drunk* to assess her flight risk.\""];
+	  708 [label="You: \"Klaasje? She was some kind of spy from the Occident. Specially trained.\""];
+	  709 [label="Jean Vicquemare: \"...compared to the *six people* who were gunned down! The streets are literally red with blood. Lieutenant Kitsuragi is barely clinging to life in the hospital. Harry, it was fucking *mass murder*.\""];
+	  710 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  711 [label="Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  712 [label="!(Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  713 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"] == false"];
+	  714 [label="Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"] == false", shape=diamond];
+	  715 [label="!(Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"] == false)", shape=diamond];
+	  716 [label="You: \"No one else seems bothered by my FALN gear.\""];
+	  717 [label="You: \"Don't worry, *many* people have seen me like this. No one said anything.\""];
+	  718 [label="Jump to: [HUB 1.0]"];
+	  719 [label="Empathy: No one has been afraid of you without you knowing. They all felt perfectly safe."];
+	  720 [label="Jean Vicquemare: \"Believe me, they felt uncomfortable.\""];
+	  721 [label="Rhetoric: Whatever this is, it is completely unimportant compared to what you've just *seen*."];
+	  722 [label="Kim Kitsuragi: Variable[\"whirling.vicquemare_main_hub_reached\"]"];
+	  723 [label="Variable[\"whirling.vicquemare_main_hub_reached\"]", shape=diamond];
+	  724 [label="!(Variable[\"whirling.vicquemare_main_hub_reached\"])", shape=diamond];
+	  725 [label="Jean Vicquemare: \"That's right -- and you're bleeding.\""];
+	  726 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  727 [label="Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  728 [label="!(Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  729 [label="Judit Minot: \"We've read the reports, Harry. Lieutenant Kitsuragi's. We know.\""];
+	  730 [label="Judit Minot: \"We've read the reports, Harry. Lieutenant Kitsuragi's. We know.\""];
+	  731 [label="Rhetoric: If you investigated further, you -- or Kim -- would have more to say. But you didn't, so here we are."];
+	  732 [label="Rhetoric: If you investigated further, you would have more to say. But you didn't. So here we are."];
+	  733 [label="Kim Kitsuragi: \"But this is clearly a *departmental matter*, so I'm  going to leave you to discuss it among yourselves.\""];
+	  734 [label="You: \"I don't like being lied to!\""];
+	  735 [label="Trant Heidelstam: \"I sent him home,\" he responds calmly. \"Mikael is with his mother. We share custody.\""];
+	  736 [label="You: \"So what are you *special consulting* here?\""];
+	  737 [label="Kim Kitsuragi: Variable[\"TASK.light_graffito_on_fire_done\"]"];
+	  738 [label="Variable[\"TASK.light_graffito_on_fire_done\"]", shape=diamond];
+	  739 [label="!(Variable[\"TASK.light_graffito_on_fire_done\"])", shape=diamond];
+	  740 [label="Jean Vicquemare: \"Yes, I *was* spying on you. I was in the bar, wearing a wig and stupid sunglasses. You didn't *recognize* me -- your own partner. Walked right past me...\""];
+	  741 [label="Rhetoric: Yes. You often sound like a brutal idiot."];
+	  742 [label="Kim Kitsuragi: \"Yes. I'm still Kim Kitsuragi -- still a lieutenant from Precinct 57.\""];
+	  743 [label="Cuno: \"You talking about Cuno?\" He points to himself. \"Major Cuno wasn't abducted, you fucking fat dink! Fuck outta here...\""];
+	  744 [label="Jean Vicquemare: \"Okay, Trant, thank you. That's absolutely meaningless. You really are a lefty dink. Will he or will he not be able to work in the Major Crimes Unit? Is he a cretin now? I want to know *that*.\""];
+	  745 [label="Jean Vicquemare: \"Crab-man... Look, I get it. In your delirium you came up with an *entroponetic* explanation for why you're such an insane drunk.\""];
+	  746 [label="You: \"Is it really so hard to believe?\""];
+	  747 [label="Jean Vicquemare: \"It doesn't matter.\" He exhales to calm his breathing. \"Your badge, Harry. Show me your badge.\""];
+	  748 [label="You: \"I lost it. I haven't found it yet.\" (Lie.)"];
+	  749 [label="You: The drama is unnecessary, I got the badge, all is well."];
+	  750 [label="Drama: Trying to ascertain if it's not a blue candy wrapper or a piece of vinyl."];
+	  751 [label="You: \"I upgraded my gun to a rifle.\" (Present the Triangong 4.46 rifle.)"];
+	  752 [label="Jean Vicquemare: \"Did you check the local pawnshop? Because *I* did  -- and you're not gonna believe it, but you sold the pawnbroker a Villiers 9mm pistol -- to pay for booze!\""];
+	  753 [label="Jean Vicquemare: \"You lost your fucking gun!?\" He looks around. \"I knew it. I knew he lost it. Didn't I tell you? I told you he lost his gun too.\""];
+	  754 [label="Jean Vicquemare: \"Yeah -- gun. The thing that was given to you to *kill people*.\""];
+	  755 [label="Jean Vicquemare: \"Oh? Is that why the suspect shot herself in the head? Under the boardwalk? You went in drunk and *intimidated* her.\""];
+	  756 [label="Jean Vicquemare: \"So you... *forgot* to drink? I don't buy it. Why do you smell like a *corpse* then?\""];
+	  757 [label="You: \"That doesn't matter -- none of it does. You have no idea what I just discovered.\"\n\"That doesn't matter -- none of it does. We are looking at the Oxygen Holocaust -- times a quadrillion. I have come to know the final fate of man and the Universe.\""];
+	  758 [label="You: \"Okay, I got duped there. She pulled one on me.\""];
+	  759 [label="Jump to: [HUB 1.0]"];
+	  760 [label="Half Light: Now that you start thinking about it -- maybe they *were* afraid of you..."];
+	  761 [label="Jump to: [HUB 1.0]"];
+	  762 [label="You: \"Pissf****t. Singular.\""];
+	  763 [label="You: \"I *know* when people are uncomfortable around me. They haven't been.\""];
+	  764 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_hardie_shot\"] == true"];
+	  765 [label="Variable[\"plaza.tribunal_hardie_shot\"] == true", shape=diamond];
+	  766 [label="!(Variable[\"plaza.tribunal_hardie_shot\"] == true)", shape=diamond];
+	  767 [label="Suggestion: He's right. Don't start guessing. Now's not a good time."];
+	  768 [label="Kim Kitsuragi: IsKimHere()"];
+	  769 [label="IsKimHere()", shape=diamond];
+	  770 [label="!(IsKimHere())", shape=diamond];
+	  772 [label="Jean Vicquemare: \"You look like a fucking clown, Harry. *Not* like a funny police officer, but like a real-life, full-time, pie-in-the-face, unicycle-riding circus employee.\""];
+	  773 [label="Jean Vicquemare: \"What does that say on your back? 'Fuck the World'? So you've turned into some kind of... nihilistic rock-and-roll *world ender*?\""];
+	  774 [label="Cuno: \"Task force. Cool. I'm the Cuno. We just came from the fucking island.\" He points to the seafort behind him."];
+	  775 [label="Jean Vicquemare: \"Harrier and I are old friends... from way back. Mind letting us have a moment?\""];
+	  776 [label="Jean Vicquemare: \"Guilty as charged.\" He exchanges a look with the special consultant. \"I heard you'd lost your mind *and* your memory. I wanted to see if it was true.\""];
+	  777 [label="Jump to: [REMEMBERANCE HUB]"];
+	  778 [label="Jean Vicquemare: \"Shitkid,\" he says, shaking his index finger, \"he didn't *betray* you. He just told us the direction you went in. Who's Sylvie?\""];
+	  779 [label="Jump to: [REMEMBERANCE HUB]"];
+	  780 [label="Jean Vicquemare: \"I heard you'd lost your mind *and* your memory. I wanted to see if it was true. And it is, Harry -- you're totally insane now. Good job.\""];
+	  781 [label="You: \"Duped again! No one's who they say they are!\""];
+	  782 [label="Jump to: [REMEMBERANCE HUB]"];
+	  783 [label="Kim Kitsuragi: IsHighestCopotype(\"sorry_cop\")"];
+	  784 [label="IsHighestCopotype(\"sorry_cop\")", shape=diamond];
+	  785 [label="!(IsHighestCopotype(\"sorry_cop\"))", shape=diamond];
+	  786 [label="Jump to: [REMEMBERANCE HUB]"];
+	  787 [label="Trant Heidelstam: \"As displayed in the station call, our interactions with him, and -- I don't want to be a 'snitch',\" he makes air quotes, \"but also mine with him before, when Harry did not seem to know who I was... It's all very interesting.\""];
+	  788 [label="Untitled hub"];
+	  789 [label="Jean Vicquemare: \"And what is that?\""];
+	  790 [label="Judit Minot: \"Yes, a couple of times. After some of the more... serious benders.\" She pauses, remembering. \"One was after the Two Drunks case, the other when we looked into that mural.\""];
+	  791 [label="Jean Vicquemare: \"For *now*?\" He looks at you, then at Trant. \"I misphrased my question. It should have been: Is he able to put his clothes on, and use the potty, or do we need to get him on a disability pension?\""];
+	  792 [label="Jean Vicquemare: \"Son of fucking Lung here! Detective Far Out Son of Lung on the case!\""];
+	  793 [label="You: \"Who's Son of Lung?\"\n\"Who was the Son of Lung again?\""];
+	  794 [label="You: Catch it!"];
+	  795 [label="You: Variable[\"village.posse_savoir_faire_rc_to_not_loose_badeg\"]"];
+	  796 [label="Variable[\"village.posse_savoir_faire_rc_to_not_loose_badeg\"]", shape=diamond];
+	  797 [label="!(Variable[\"village.posse_savoir_faire_rc_to_not_loose_badeg\"])", shape=diamond];
+	  798 [label="You: \"Behold, my badge!\""];
+	  799 [label="You: \"I have a new gun now.\" (Present Ruby's gun.)"];
+	  800 [label="Jean Vicquemare: \"I don't care if you have a *new gun*, I only care about your *old gun*. Your official sidearm. You lost it, didn't you?\""];
+	  801 [label="Jean Vicquemare: \"We're not talking about the fucking gun anymore -- we're talking about the *vaporized cloud* of ethanol coming from your mouth.\""];
+	  802 [label="Jean Vicquemare: \"I would say it's *very* bad, yes.\" He turns to you. \"You're drunk like an asshole, Harry -- please put the stolen firearm away before you kill someone.\""];
+	  803 [label="You: \"I don't have that one. I don't have my sidearm.\" (Lie.)"];
+	  804 [label="Jump to: [IsCunoInParty()]"];
+	  805 [label="You: \"I quit drinking. Forever. It's only me in this boring hell hole now.\""];
+	  806 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  807 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  808 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  809 [label="Kim Kitsuragi: IsCunoInParty()  and  Variable[\"TASK.perform_field_autopsy_done\"]"];
+	  810 [label="IsCunoInParty()  and  Variable[\"TASK.perform_field_autopsy_done\"]", shape=diamond];
+	  811 [label="!(IsCunoInParty()  and  Variable[\"TASK.perform_field_autopsy_done\"])", shape=diamond];
+	  812 [label="Jean Vicquemare: \"What you've *discovered*? You let the suspect *escape* -- a certain Klaasje. Because you were you too *drunk* to assess her flight risk!\""];
+	  813 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  814 [label="IsCunoInParty()", shape=diamond];
+	  815 [label="!(IsCunoInParty())", shape=diamond];
+	  816 [label="Jean Vicquemare: \"Oh well, if it made you *boo-boo*...\" He rubs his face in frustration. \"I'm not even gonna get into the eighty other suspects you've failed to arrest.\""];
+	  817 [label="Kim Kitsuragi: Variable[\"TASK.arrest_klaasje_done\"] == false"];
+	  818 [label="Variable[\"TASK.arrest_klaasje_done\"] == false", shape=diamond];
+	  819 [label="!(Variable[\"TASK.arrest_klaasje_done\"] == false)", shape=diamond];
+	  820 [label="Electrochemistry: The two aren't mutually exclusive."];
+	  821 [label="You: \"No one else seems bothered by my *style*.\""];
+	  822 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  823 [label="Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  824 [label="!(Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  825 [label="Reaction Speed: The two cases... in your ledger. The Unsolvable Case and the Next World Mural. Those were recent."];
+	  826 [label="You: \"Sylvie's a girl I hooked Garte up with. I did that *and* saved his establishment!\""];
+	  827 [label="Authority: Leadership -- now."];
+	  828 [label="Pain Threshold: Ouch, you strained your elbow trying to catch that stupid thing... dammit."];
+	  829 [label="Jump to: [Judit Minot: \"\"But, Detective Vicquemare,\" she in...\"]"];
+	  830 [label="Jean Vicquemare: \"Yeah, I checked the local pawnshop. You sold the pawnbroker a Villiers 9mm pistol -- to pay for booze!\""];
+	  831 [label="Kim Kitsuragi: IsKimHere()"];
+	  832 [label="IsKimHere()", shape=diamond];
+	  833 [label="!(IsKimHere())", shape=diamond];
+	  834 [label="Jean Vicquemare: \"I'm your goddamn *partner* Jean Vicquemare, and this is *your* special task force,\" he says, gesturing toward his companions. \"Or what's left of it.\""];
+	  835 [label="Jean Vicquemare: \"What is that, FALN AC? What's with all the *performance gear*? Are you back in high school?\""];
+	  836 [label="Kim Kitsuragi: CheckEquipped(\"jacket_pissflaubert\")"];
+	  837 [label="CheckEquipped(\"jacket_pissflaubert\")", shape=diamond];
+	  838 [label="!(CheckEquipped(\"jacket_pissflaubert\"))", shape=diamond];
+	  839 [label="Jean Vicquemare: \"Listen... Cuno.\" The man assesses the kid like a strike team leader about to kick in a door."];
+	  840 [label="You: \"Okay, you're Trant Heidelstam. Special Consultant. I get it.\""];
+	  841 [label="Jean Vicquemare: \"No -- *because* of all that you've done.\""];
+	  842 [label="Kim Kitsuragi: Variable[\"whirling.minot_whirling_mainhub_reached\"]"];
+	  843 [label="Variable[\"whirling.minot_whirling_mainhub_reached\"]", shape=diamond];
+	  844 [label="!(Variable[\"whirling.minot_whirling_mainhub_reached\"])", shape=diamond];
+	  845 [label="Rhetoric: He's got a very, very solid case there. Actually, I've been trying to find a good moment to tell you..."];
+	  846 [label="Jean Vicquemare: \"Yeah -- Major Crimes Unit, under Lieutenants Du Bois and Vicquemare -- ring any bells?\""];
+	  847 [label="Jean Vicquemare: \"See -- there!\" He wags his finger at you. \"He's getting it! I was *impersonating* him. Look at me, I'm G-Bevy. It was going to be funny. But then you really did have brain damage -- so not so much anymore.\""];
+	  848 [label="You: \"Wait, socioeconomically? You think I'm so *poor* I lost my memory?\""];
+	  849 [label="Jump to: [Untitled hub]"];
+	  850 [label="You: \"He's wrong. I'm too far gone for work.\""];
+	  851 [label="Jean Vicquemare: \"Corresponding to the twenty-centimetre hole in your brain? Sure. This theory has great symmetry. I see how it folds into itself neatly.\""];
+	  852 [label="Kim Kitsuragi: IsKimHere()"];
+	  853 [label="IsKimHere()", shape=diamond];
+	  854 [label="!(IsKimHere())", shape=diamond];
+	  855 [label="Physical Instrument: They can keep that pension, you're rock solid. You can put your clothes on *hard*."];
+	  856 [label="You: \"What I *do* have is this futuristic armour.\" (Point to yourself.)\n\"What I *do* have is this futuristic armour.\" (Tap your helmet.)\n\"What I *do* have is this futuristic armour.\" (Tap your cuirass.)\n\"What I *do* have is this futuristic armour.\" (Click the heels of your boots.)\n\"What I *do* have is this futuristic armour.\" (Clench your armored fist.)"];
+	  857 [label="Jump to: [Untitled hub]"];
+	  858 [label="Jean Vicquemare: \"You're *drunk*, aren't you? You lost your gun and you're drunk! You're a drunk, gunless bum! I can smell it!\""];
+	  859 [label="Jean Vicquemare: \"Who are you posing for, huh? A suspect escaped, Harry. Klaasje-something. Because you were too *high* to assess her flight risk.\""];
+	  860 [label="Kim Kitsuragi: Variable[\"TASK.open_gary_door_done\"]"];
+	  861 [label="Variable[\"TASK.open_gary_door_done\"]", shape=diamond];
+	  862 [label="!(Variable[\"TASK.open_gary_door_done\"])", shape=diamond];
+	  863 [label="You: \"What is this about?\" (Move on.)"];
+	  864 [label="Jump to: [HUB 1.0]"];
+	  865 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"]"];
+	  866 [label="Variable[\"plaza.tribunal_gardener_shot\"]", shape=diamond];
+	  867 [label="!(Variable[\"plaza.tribunal_gardener_shot\"])", shape=diamond];
+	  868 [label="Conceptualization: Shitkid. What an interesting moniker."];
+	  869 [label="Judit Minot: \"We've read the reports, Harry. Lieutenant Kitsuragi's. We know.\""];
+	  870 [label="Jean Vicquemare: \"Bothered by it? Harry, you're a *goddamn* cop! They're afraid of you!\""];
+	  871 [label="Jean Vicquemare: \"Harry... you're bleeding all over the place. You're half dead.\""];
+	  872 [label="You: \"You aren't the Man with Sunglasses at all... you're not even blond!\""];
+	  873 [label="You: \"Oh yeah?! Where the fuck is your *son* now, *special consultant*?!\""];
+	  874 [label="You: \"What's a shitkid?\""];
+	  875 [label="Kim Kitsuragi: Variable[\"village.posse_rhet_all\"]"];
+	  876 [label="Variable[\"village.posse_rhet_all\"]", shape=diamond];
+	  877 [label="!(Variable[\"village.posse_rhet_all\"])", shape=diamond];
+	  878 [label="Jump to: [REMEMBERANCE HUB]"];
+	  879 [label="Jean Vicquemare: \"It better not be.\""];
+	  880 [label="You: \"It was this one junior delinquent.\""];
+	  881 [label="Judit Minot: \"Uhm, and...\" She looks around. \"People on this street helped us too. With your whereabouts.\""];
+	  882 [label="Kim Kitsuragi: Variable[\"coast.idiot_teq_story_end_reach\"]"];
+	  883 [label="Variable[\"coast.idiot_teq_story_end_reach\"]", shape=diamond];
+	  884 [label="!(Variable[\"coast.idiot_teq_story_end_reach\"])", shape=diamond];
+	  885 [label="Jump to: [REMEMBERANCE HUB]"];
+	  886 [label="Suggestion: It's true. You have a problem."];
+	  887 [label="Jean Vicquemare: \"That's right -- 'worried'. I'm always worried about you. Every time you don't show up to work, or when you do -- but *stink*.\""];
+	  888 [label="Trant Heidelstam: \"I'm technically just a civilian advisor.\""];
+	  889 [label="Kim Kitsuragi: IsKimHere()"];
+	  890 [label="IsKimHere()", shape=diamond];
+	  891 [label="!(IsKimHere())", shape=diamond];
+	  892 [label="Kim Kitsuragi: \"This sounds odd -- but I was there. The church on the coast was shaking from an audio-spatial anomaly. It may have been entroponetic, or perhaps related to radio waves...\""];
+	  893 [label="You: \"This is all *pointless*. I have completely TRANSCENDED all of this. You have no idea what I just saw!\""];
+	  894 [label="Jean Vicquemare: \"You're simply lying. Or insane. Or both.\""];
+	  895 [label="Jean Vicquemare: \"We're not armour-cops, we're cop-cops! People don't know us by our armour, they know us by our badges. Where the fuck is your badge?\"\n\"We're not armour-cops, we're cop-cops! People don't know us by our armour, they know us by our badges. You called in and said you lost yours -- have you *found* it?\""];
+	  896 [label="Jean Vicquemare: \"For the record, you pressured us into getting it. 'It'll be cool Jean, we'll have wheels, rapid response...' I was fine being an equestrian cop. I hope you're fine driving a *bicycle*.\""];
+	  897 [label="Jean Vicquemare: \"So *refreshing*. He just admits it. Thank you for your honesty. Thank you for destroying 45,000 reál of police property that's coming out of *everyone's* payslip.\""];
+	  898 [label="Jean Vicquemare: \"The thing that tells people you're a police officer.\""];
+	  899 [label="Jump to: [Untitled hub]"];
+	  900 [label="You: Did I get the badge?"];
+	  901 [label="Jean Vicquemare: \"I would say it's *very* bad, yes.\" He turns to you. \"You lost your service weapon -- while drunk. And then you couldn't find it, because you were *still* drunk?! You're drunk right now, aren't you?\""];
+	  902 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  903 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  904 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  905 [label="Jean Vicquemare: \"Oh well -- if you got *really* high then I guess it's okay.\" He rubs his face in frustration. \"Let's not even get into the *other* suspect -- who also escaped.\"\n\"Oh well -- if you got *really* high then I guess it's okay.\" He rubs his face in frustration. \"Let's not even get into the *other* suspect -- who also escaped. Or the catatonic old lady with the police lights.\""];
+	  906 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_shanky_ran_earlier\"]"];
+	  907 [label="Variable[\"plaza.tribunal_shanky_ran_earlier\"]", shape=diamond];
+	  908 [label="!(Variable[\"plaza.tribunal_shanky_ran_earlier\"])", shape=diamond];
+	  909 [label="You: \"Yeah, I don't have that. I don't have my sidearm.\" (Lie.)"];
+	  910 [label="Rhetoric: Maybe you've *deserved* it?"];
+	  911 [label="You: Let him."];
+	  912 [label="You: \"Wait, what was up with the kid then?\""];
+	  913 [label="Trant Heidelstam: \"No problem.\""];
+	  914 [label="You: \"No one. It's not important.\""];
+	  915 [label="Jean Vicquemare: \"Speaking of which. The giant *aero-graffito* in front of his building, in red, government-marked fuel -- did you do that?\""];
+	  916 [label="Kim Kitsuragi: \"In the crowd, there was a man and a woman in RCM uniform,\" he says to you, then turns to Vicquemare. \"In his defence -- we were in a hurry.\""];
+	  917 [label="Jean Vicquemare: \"You fucking idiot. You stupid fucking idiot. You're even worse than before. How is that even *possible*?\""];
+	  918 [label="You: Fuck you too! I don't need help!"];
+	  919 [label="Empathy: Him being there with his son -- it was not a coincidence. It's difficult to see, but he was worried about you. And *also* interested in the Feld building."];
+	  920 [label="Trant Heidelstam: \"No. I was just interested in the Feld building and the Martinaise Beachhead. And Mikael wanted to see Martinaise. It was a coincidence.\""];
+	  921 [label="Jean Vicquemare: \"He's here to see if you're insane. He's smart. Let's move on.\""];
+	  922 [label="Kim Kitsuragi: IsCunoInParty()"];
+	  923 [label="IsCunoInParty()", shape=diamond];
+	  924 [label="!(IsCunoInParty())", shape=diamond];
+	  925 [label="You: \"It might have something to do with an anomaly in the church. A two-millimetre hole in the world.\""];
+	  926 [label="Jean Vicquemare: \"What?! He lost his memory because of *capitalism*?\""];
+	  927 [label="You: \"Well it's *not* capitalism. So we can cross that off the list, you lefty dink.\""];
+	  928 [label="Untitled hub (02)"];
+	  929 [label="You: \"I have accomplished things no normal detective ever has. I have detected a...\""];
+	  930 [label="Jean Vicquemare: \"Agreed, Harry.\" He nods. \"Just don't expect us to get you a disability pension. Cops who actually gave a shit are waiting in line. You're not gonna hog their seat.\""];
+	  931 [label="Jean Vicquemare: \"Ha-ha-ha, ho-ho-ho.\" He grabs his stomach in mirthless laughter. \"Underwater killer. So funny, Harry. Thank you for fucking me.\""];
+	  932 [label="Jean Vicquemare: \"And your *gun*?\" The man stares at you, unimpressed with the badge-finding."];
+	  933 [label="Rhetoric: This is so unfair. He knows you have the gun and *still* he's punishing you."];
+	  934 [label="Kim Kitsuragi: Variable[\"village.posse_lost_badge\"]"];
+	  935 [label="Variable[\"village.posse_lost_badge\"]", shape=diamond];
+	  936 [label="!(Variable[\"village.posse_lost_badge\"])", shape=diamond];
+	  937 [label="Jean Vicquemare: \"I don't care. Where is the gun the RCM gave you to kill people with? Where is that one?\""];
+	  938 [label="Judit Minot: \"This isn't cause for celebration. It's... bad.\""];
+	  939 [label="Jean Vicquemare: \"So you... *forgot* to drink? I don't buy it. Why do you smell like a *corpse* then?\""];
+	  940 [label="Kim Kitsuragi: Variable[\"TASK.arrest_klaasje_done\"] == false"];
+	  941 [label="Variable[\"TASK.arrest_klaasje_done\"] == false", shape=diamond];
+	  942 [label="!(Variable[\"TASK.arrest_klaasje_done\"] == false)", shape=diamond];
+	  943 [label="Jean Vicquemare: \"Oh well -- if she thought you were sent by La Puta Madre...\" He rubs his face in frustration. \"I'm not even gonna get into what this means for the ethics commission.\"\n\"Oh well -- if she thought you were sent by La Puta Madre...\" He rubs his face in frustration. \"I'm not even gonna get into what this means for the ethics commission. Not to mention the catatonic old lady with the police lights...\""];
+	  944 [label="Kim Kitsuragi: Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"] == false"];
+	  945 [label="Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"] == false", shape=diamond];
+	  946 [label="!(Variable[\"plaza.tribunal_gardener_shot\"] == false  and  Variable[\"plaza.tribunal_hardie_shot\"] == false  and  Variable[\"plaza.tribunal_shanky_ran_earlier\"] == false)", shape=diamond];
+	  947 [label="Jean Vicquemare: \"Sure -- if it's part of your *master plan*....\" He rubs his face in frustration. \"Let's not even get into the other suspect, the one who shot herself. In the head. Another *detail*.\""];
+	  948 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_ran_away\"]"];
+	  949 [label="Variable[\"boardwalk.ruby_ran_away\"]", shape=diamond];
+	  950 [label="!(Variable[\"boardwalk.ruby_ran_away\"])", shape=diamond];
+	  951 [label="You: \"My jacket... no one else seems bothered by it...\""];
+	  952 [label="Jean Vicquemare: \"Yes-yes... What's *wrong* with you?\""];
+	  953 [label="Jump to: [HUB 1.0]"];
+	  11890129 [label="JUMP OUT to VILLAGE / POSSE 2", shape=diamond];
+	  2040414 [label="JUMP OUT to VILLAGE / POSSE 3", shape=diamond];
+	  2040375 [label="JUMP OUT to VILLAGE / POSSE 3", shape=diamond];
+	  0 -> 1
+	  1 -> 231
+	  2 -> 3
+	  2 -> 4
+	  3 -> 865
+	  4 -> 672
+	  5 -> 6
+	  5 -> 7
+	  6 -> 660
+	  7 -> 364
+	  8 -> 9
+	  8 -> 10
+	  9 -> 300
+	  10 -> 97
+	  11 -> 178
+	  12 -> 324
+	  13 -> 365
+	  14 -> 16
+	  14 -> 15
+	  15 -> 773
+	  16 -> 62
+	  17 -> 377
+	  18 -> 846
+	  19 -> 477
+	  20 -> 688
+	  21 -> 578
+	  22 -> 885
+	  23 -> 378
+	  24 -> 393
+	  24 -> 394
+	  24 -> 630
+	  25 -> 478
+	  26 -> 580
+	  27 -> 113
+	  28 -> 792
+	  29 -> 166
+	  30 -> 791
+	  31 -> 32
+	  31 -> 33
+	  32 -> 892
+	  33 -> 532
+	  34 -> 697
+	  35 -> 534
+	  36 -> 750
+	  37 -> 38
+	  38 -> 354
+	  39 -> 451
+	  40 -> 263
+	  41 -> 934
+	  42 -> 591
+	  43 -> 869
+	  44 -> 500
+	  45 -> 46
+	  45 -> 47
+	  47 -> 944
+	  48 -> 91
+	  49 -> 860
+	  50 -> 279
+	  51 -> 409
+	  52 -> 53
+	  52 -> 54
+	  53 -> 464
+	  54 -> 118
+	  55 -> 216
+	  56 -> 57
+	  56 -> 58
+	  57 -> 24
+	  58 -> 562
+	  59 -> 599
+	  60 -> 678
+	  61 -> 834
+	  62 -> 64
+	  62 -> 63
+	  63 -> 772
+	  64 -> 871
+	  65 -> 12
+	  66 -> 385
+	  66 -> 68
+	  66 -> 390
+	  66 -> 872
+	  66 -> 874
+	  66 -> 781
+	  66 -> 336
+	  66 -> 18
+	  66 -> 628
+	  66 -> 633
+	  66 -> 154
+	  66 -> 187
+	  67 -> 370
+	  68 -> 161
+	  69 -> 395
+	  70 -> 252
+	  71 -> 484
+	  72 -> 255
+	  73 -> 829
+	  74 -> 894
+	  75 -> 76
+	  76 -> 896
+	  77 -> 488
+	  77 -> 204
+	  77 -> 748
+	  77 -> 856
+	  77 -> 699
+	  78 -> 354
+	  79 -> 753
+	  80 -> 754
+	  81 -> 124
+	  82 -> 233
+	  83 -> 708
+	  83 -> 270
+	  83 -> 499
+	  83 -> 757
+	  83 -> 758
+	  83 -> 601
+	  84 -> 216
+	  85 -> 86
+	  85 -> 87
+	  86 -> 812
+	  87 -> 131
+	  88 -> 599
+	  89 -> 860
+	  90 -> 860
+	  91 -> 11890129
+	  92 -> 761
+	  93 -> 94
+	  94 -> 864
+	  95 -> 616
+	  95 -> 725
+	  95 -> 952
+	  95 -> 185
+	  95 -> 667
+	  96 -> 668
+	  97 -> 341
+	  98 -> 66
+	  99 -> 374
+	  100 -> 623
+	  101 -> 759
+	  102 -> 65
+	  103 -> 66
+	  104 -> 337
+	  104 -> 873
+	  104 -> 629
+	  105 -> 104
+	  106 -> 677
+	  107 -> 474
+	  108 -> 66
+	  109 -> 293
+	  110 -> 21
+	  111 -> 432
+	  112 -> 69
+	  113 -> 786
+	  114 -> 115
+	  114 -> 116
+	  115 -> 787
+	  116 -> 480
+	  117 -> 789
+	  118 -> 587
+	  119 -> 829
+	  120 -> 172
+	  121 -> 931
+	  122 -> 698
+	  123 -> 206
+	  124 -> 260
+	  125 -> 938
+	  126 -> 756
+	  127 -> 651
+	  128 -> 142
+	  129 -> 59
+	  130 -> 85
+	  131 -> 132
+	  131 -> 133
+	  132 -> 317
+	  133 -> 755
+	  134 -> 729
+	  135 -> 860
+	  136 -> 860
+	  137 -> 369
+	  137 -> 763
+	  137 -> 51
+	  138 -> 760
+	  139 -> 414
+	  140 -> 578
+	  141 -> 29
+	  142 -> 83
+	  143 -> 654
+	  144 -> 305
+	  144 -> 201
+	  144 -> 485
+	  145 -> 2040414
+	  146 -> 678
+	  147 -> 243
+	  148 -> 917
+	  149 -> 663
+	  150 -> 152
+	  150 -> 151
+	  151 -> 17
+	  152 -> 332
+	  153 -> 461
+	  154 -> 687
+	  155 -> 841
+	  156 -> 157
+	  157 -> 158
+	  157 -> 159
+	  158 -> 109
+	  159 -> 915
+	  160 -> 331
+	  161 -> 921
+	  162 -> 582
+	  163 -> 114
+	  164 -> 889
+	  165 -> 258
+	  166 -> 586
+	  167 -> 418
+	  168 -> 637
+	  169 -> 484
+	  170 -> 695
+	  171 -> 447
+	  172 -> 643
+	  172 -> 259
+	  172 -> 75
+	  172 -> 171
+	  172 -> 121
+	  172 -> 446
+	  173 -> 804
+	  174 -> 934
+	  175 -> 210
+	  176 -> 59
+	  177 -> 83
+	  178 -> 599
+	  179 -> 860
+	  180 -> 500
+	  181 -> 860
+	  182 -> 860
+	  183 -> 138
+	  184 -> 718
+	  185 -> 953
+	  186 -> 767
+	  187 -> 303
+	  188 -> 189
+	  188 -> 190
+	  189 -> 290
+	  190 -> 574
+	  191 -> 98
+	  192 -> 66
+	  193 -> 242
+	  194 -> 195
+	  194 -> 196
+	  195 -> 22
+	  196 -> 885
+	  197 -> 887
+	  198 -> 66
+	  199 -> 339
+	  200 -> 525
+	  201 -> 31
+	  202 -> 77
+	  203 -> 643
+	  203 -> 259
+	  203 -> 75
+	  203 -> 171
+	  203 -> 121
+	  203 -> 446
+	  204 -> 645
+	  205 -> 752
+	  206 -> 650
+	  206 -> 803
+	  206 -> 402
+	  207 -> 651
+	  208 -> 802
+	  209 -> 264
+	  209 -> 403
+	  209 -> 909
+	  209 -> 590
+	  210 -> 211
+	  210 -> 212
+	  211 -> 312
+	  212 -> 592
+	  213 -> 214
+	  213 -> 215
+	  214 -> 679
+	  215 -> 809
+	  216 -> 705
+	  216 -> 130
+	  216 -> 99
+	  216 -> 454
+	  216 -> 467
+	  216 -> 404
+	  216 -> 511
+	  217 -> 218
+	  217 -> 219
+	  218 -> 706
+	  219 -> 319
+	  220 -> 221
+	  220 -> 222
+	  221 -> 707
+	  222 -> 217
+	  223 -> 91
+	  224 -> 860
+	  225 -> 860
+	  226 -> 227
+	  226 -> 228
+	  227 -> 408
+	  228 -> 90
+	  229 -> 860
+	  230 -> 860
+	  231 -> 150
+	  232 -> 718
+	  233 -> 598
+	  234 -> 953
+	  235 -> 678
+	  236 -> 103
+	  237 -> 571
+	  238 -> 240
+	  238 -> 239
+	  239 -> 689
+	  240 -> 188
+	  241 -> 881
+	  242 -> 779
+	  243 -> 160
+	  244 -> 245
+	  244 -> 246
+	  245 -> 521
+	  245 -> 918
+	  246 -> 297
+	  247 -> 298
+	  248 -> 249
+	  248 -> 250
+	  249 -> 523
+	  250 -> 340
+	  251 -> 340
+	  252 -> 438
+	  253 -> 889
+	  254 -> 635
+	  255 -> 790
+	  256 -> 304
+	  257 -> 170
+	  258 -> 445
+	  259 -> 309
+	  260 -> 450
+	  260 -> 261
+	  260 -> 649
+	  260 -> 205
+	  260 -> 751
+	  260 -> 80
+	  260 -> 79
+	  260 -> 375
+	  260 -> 537
+	  260 -> 123
+	  260 -> 702
+	  260 -> 799
+	  261 -> 858
+	  262 -> 41
+	  263 -> 652
+	  263 -> 262
+	  264 -> 937
+	  265 -> 653
+	  266 -> 466
+	  267 -> 175
+	  268 -> 313
+	  269 -> 598
+	  270 -> 817
+	  271 -> 91
+	  272 -> 273
+	  272 -> 274
+	  273 -> 225
+	  274 -> 224
+	  275 -> 276
+	  275 -> 277
+	  276 -> 902
+	  277 -> 182
+	  278 -> 570
+	  279 -> 839
+	  280 -> 410
+	  281 -> 324
+	  282 -> 737
+	  283 -> 284
+	  283 -> 285
+	  284 -> 731
+	  285 -> 732
+	  286 -> 287
+	  287 -> 2040414
+	  288 -> 842
+	  289 -> 67
+	  289 -> 517
+	  289 -> 734
+	  290 -> 414
+	  291 -> 386
+	  292 -> 293
+	  293 -> 880
+	  293 -> 338
+	  293 -> 475
+	  294 -> 296
+	  294 -> 295
+	  295 -> 916
+	  296 -> 194
+	  297 -> 66
+	  298 -> 66
+	  299 -> 247
+	  300 -> 341
+	  301 -> 743
+	  302 -> 632
+	  303 -> 397
+	  304 -> 827
+	  305 -> 852
+	  306 -> 929
+	  306 -> 746
+	  306 -> 893
+	  307 -> 308
+	  308 -> 350
+	  309 -> 351
+	  310 -> 828
+	  311 -> 901
+	  312 -> 142
+	  313 -> 314
+	  313 -> 315
+	  314 -> 128
+	  315 -> 595
+	  316 -> 233
+	  317 -> 421
+	  318 -> 599
+	  319 -> 11
+	  320 -> 816
+	  321 -> 322
+	  321 -> 323
+	  322 -> 135
+	  323 -> 407
+	  324 -> 512
+	  324 -> 513
+	  324 -> 325
+	  324 -> 567
+	  324 -> 716
+	  324 -> 462
+	  324 -> 821
+	  324 -> 469
+	  324 -> 951
+	  324 -> 863
+	  324 -> 183
+	  324 -> 93
+	  324 -> 286
+	  324 -> 95
+	  325 -> 368
+	  326 -> 760
+	  327 -> 149
+	  328 -> 610
+	  329 -> 780
+	  330 -> 66
+	  331 -> 66
+	  332 -> 333
+	  332 -> 334
+	  333 -> 835
+	  334 -> 836
+	  335 -> 328
+	  336 -> 472
+	  337 -> 913
+	  338 -> 691
+	  339 -> 888
+	  340 -> 112
+	  341 -> 922
+	  342 -> 343
+	  343 -> 113
+	  344 -> 582
+	  345 -> 889
+	  346 -> 486
+	  347 -> 348
+	  347 -> 349
+	  348 -> 257
+	  349 -> 508
+	  350 -> 855
+	  351 -> 747
+	  352 -> 448
+	  353 -> 535
+	  354 -> 451
+	  355 -> 651
+	  356 -> 934
+	  357 -> 265
+	  358 -> 233
+	  359 -> 59
+	  360 -> 730
+	  361 -> 362
+	  361 -> 363
+	  362 -> 179
+	  363 -> 89
+	  364 -> 91
+	  365 -> 366
+	  365 -> 367
+	  366 -> 569
+	  367 -> 514
+	  368 -> 92
+	  369 -> 327
+	  370 -> 103
+	  371 -> 372
+	  371 -> 373
+	  372 -> 533
+	  373 -> 283
+	  374 -> 235
+	  375 -> 830
+	  376 -> 721
+	  377 -> 721
+	  378 -> 153
+	  379 -> 623
+	  380 -> 625
+	  381 -> 477
+	  382 -> 66
+	  383 -> 330
+	  384 -> 626
+	  385 -> 106
+	  386 -> 387
+	  386 -> 388
+	  387 -> 520
+	  388 -> 108
+	  389 -> 293
+	  390 -> 740
+	  391 -> 845
+	  392 -> 297
+	  393 -> 831
+	  394 -> 431
+	  395 -> 415
+	  396 -> 27
+	  397 -> 163
+	  398 -> 788
+	  399 -> 119
+	  400 -> 399
+	  401 -> 260
+	  402 -> 539
+	  403 -> 125
+	  404 -> 405
+	  405 -> 675
+	  406 -> 216
+	  407 -> 860
+	  408 -> 860
+	  409 -> 551
+	  410 -> 552
+	  411 -> 664
+	  412 -> 137
+	  413 -> 870
+	  414 -> 186
+	  415 -> 416
+	  415 -> 417
+	  416 -> 621
+	  417 -> 694
+	  418 -> 419
+	  418 -> 420
+	  419 -> 825
+	  420 -> 29
+	  421 -> 455
+	  422 -> 148
+	  423 -> 868
+	  424 -> 425
+	  424 -> 426
+	  425 -> 686
+	  425 -> 911
+	  426 -> 514
+	  427 -> 67
+	  427 -> 517
+	  427 -> 734
+	  427 -> 471
+	  428 -> 476
+	  429 -> 778
+	  430 -> 627
+	  431 -> 782
+	  432 -> 518
+	  433 -> 26
+	  434 -> 435
+	  434 -> 436
+	  435 -> 162
+	  436 -> 526
+	  437 -> 66
+	  438 -> 788
+	  439 -> 252
+	  440 -> 583
+	  441 -> 849
+	  442 -> 443
+	  443 -> 855
+	  444 -> 640
+	  445 -> 169
+	  446 -> 644
+	  447 -> 122
+	  448 -> 384
+	  449 -> 495
+	  450 -> 934
+	  451 -> 452
+	  451 -> 453
+	  452 -> 81
+	  453 -> 538
+	  454 -> 456
+	  455 -> 598
+	  456 -> 457
+	  456 -> 458
+	  457 -> 43
+	  458 -> 545
+	  459 -> 229
+	  460 -> 623
+	  461 -> 423
+	  462 -> 463
+	  463 -> 96
+	  464 -> 617
+	  465 -> 298
+	  466 -> 646
+	  467 -> 146
+	  468 -> 216
+	  469 -> 61
+	  470 -> 427
+	  471 -> 289
+	  472 -> 510
+	  473 -> 470
+	  474 -> 291
+	  475 -> 110
+	  476 -> 160
+	  477 -> 692
+	  478 -> 66
+	  479 -> 582
+	  480 -> 481
+	  480 -> 482
+	  481 -> 439
+	  482 -> 70
+	  483 -> 398
+	  484 -> 255
+	  485 -> 31
+	  486 -> 399
+	  487 -> 642
+	  488 -> 898
+	  489 -> 490
+	  489 -> 491
+	  490 -> 589
+	  491 -> 310
+	  492 -> 493
+	  492 -> 494
+	  493 -> 536
+	  493 -> 794
+	  494 -> 36
+	  495 -> 932
+	  496 -> 208
+	  497 -> 651
+	  498 -> 230
+	  499 -> 272
+	  500 -> 501
+	  500 -> 502
+	  501 -> 764
+	  502 -> 2
+	  503 -> 860
+	  504 -> 324
+	  505 -> 506
+	  505 -> 507
+	  506 -> 726
+	  507 -> 669
+	  508 -> 170
+	  509 -> 269
+	  510 -> 380
+	  510 -> 147
+	  510 -> 428
+	  510 -> 422
+	  511 -> 60
+	  512 -> 145
+	  513 -> 326
+	  514 -> 515
+	  514 -> 516
+	  515 -> 774
+	  516 -> 682
+	  517 -> 238
+	  518 -> 25
+	  519 -> 383
+	  520 -> 108
+	  521 -> 741
+	  522 -> 433
+	  523 -> 847
+	  524 -> 200
+	  524 -> 396
+	  524 -> 302
+	  524 -> 342
+	  524 -> 631
+	  525 -> 581
+	  526 -> 528
+	  526 -> 527
+	  527 -> 529
+	  528 -> 783
+	  529 -> 582
+	  530 -> 34
+	  531 -> 572
+	  532 -> 371
+	  533 -> 73
+	  534 -> 203
+	  535 -> 260
+	  536 -> 449
+	  537 -> 266
+	  538 -> 124
+	  539 -> 650
+	  539 -> 803
+	  540 -> 651
+	  541 -> 651
+	  542 -> 939
+	  543 -> 213
+	  544 -> 598
+	  545 -> 546
+	  545 -> 547
+	  546 -> 360
+	  547 -> 134
+	  548 -> 83
+	  549 -> 49
+	  550 -> 609
+	  551 -> 149
+	  552 -> 411
+	  553 -> 554
+	  553 -> 555
+	  554 -> 660
+	  555 -> 364
+	  556 -> 557
+	  556 -> 558
+	  557 -> 364
+	  558 -> 659
+	  559 -> 560
+	  559 -> 561
+	  560 -> 709
+	  561 -> 660
+	  562 -> 66
+	  563 -> 564
+	  563 -> 565
+	  564 -> 347
+	  565 -> 696
+	  566 -> 177
+	  567 -> 568
+	  568 -> 2040375
+	  569 -> 424
+	  570 -> 13
+	  571 -> 736
+	  571 -> 840
+	  572 -> 384
+	  572 -> 352
+	  573 -> 414
+	  574 -> 576
+	  574 -> 575
+	  575 -> 573
+	  576 -> 139
+	  577 -> 192
+	  578 -> 193
+	  579 -> 112
+	  579 -> 522
+	  580 -> 248
+	  581 -> 342
+	  581 -> 396
+	  581 -> 302
+	  581 -> 631
+	  582 -> 66
+	  583 -> 584
+	  583 -> 585
+	  584 -> 254
+	  585 -> 71
+	  586 -> 636
+	  587 -> 72
+	  588 -> 641
+	  589 -> 900
+	  589 -> 749
+	  589 -> 798
+	  590 -> 356
+	  591 -> 127
+	  592 -> 593
+	  592 -> 594
+	  593 -> 358
+	  594 -> 176
+	  595 -> 596
+	  595 -> 597
+	  596 -> 316
+	  597 -> 129
+	  598 -> 320
+	  598 -> 549
+	  598 -> 270
+	  598 -> 656
+	  598 -> 657
+	  598 -> 757
+	  598 -> 600
+	  599 -> 459
+	  599 -> 270
+	  599 -> 655
+	  599 -> 498
+	  599 -> 757
+	  600 -> 608
+	  601 -> 226
+	  602 -> 603
+	  602 -> 604
+	  605 -> 606
+	  605 -> 607
+	  608 -> 860
+	  609 -> 280
+	  609 -> 762
+	  609 -> 717
+	  610 -> 611
+	  610 -> 612
+	  611 -> 820
+	  612 -> 733
+	  613 -> 614
+	  613 -> 615
+	  614 -> 719
+	  615 -> 412
+	  616 -> 953
+	  617 -> 587
+	  618 -> 619
+	  618 -> 620
+	  619 -> 906
+	  620 -> 822
+	  621 -> 694
+	  622 -> 311
+	  623 -> 101
+	  624 -> 335
+	  625 -> 777
+	  626 -> 487
+	  627 -> 66
+	  628 -> 197
+	  629 -> 920
+	  630 -> 831
+	  631 -> 434
+	  632 -> 437
+	  633 -> 8
+	  634 -> 926
+	  635 -> 484
+	  636 -> 168
+	  637 -> 638
+	  637 -> 639
+	  638 -> 744
+	  639 -> 256
+	  640 -> 587
+	  641 -> 255
+	  642 -> 35
+	  642 -> 643
+	  642 -> 259
+	  642 -> 75
+	  642 -> 171
+	  642 -> 120
+	  642 -> 121
+	  642 -> 446
+	  643 -> 897
+	  644 -> 351
+	  645 -> 492
+	  646 -> 648
+	  646 -> 647
+	  647 -> 355
+	  648 -> 651
+	  649 -> 858
+	  650 -> 174
+	  651 -> 704
+	  651 -> 805
+	  651 -> 542
+	  651 -> 42
+	  651 -> 267
+	  651 -> 268
+	  651 -> 126
+	  651 -> 703
+	  652 -> 496
+	  653 -> 651
+	  654 -> 83
+	  655 -> 943
+	  656 -> 608
+	  657 -> 136
+	  658 -> 500
+	  659 -> 91
+	  660 -> 91
+	  661 -> 91
+	  662 -> 860
+	  663 -> 324
+	  664 -> 665
+	  664 -> 666
+	  665 -> 232
+	  666 -> 184
+	  667 -> 953
+	  668 -> 324
+	  669 -> 670
+	  669 -> 671
+	  670 -> 223
+	  671 -> 48
+	  672 -> 673
+	  672 -> 674
+	  673 -> 553
+	  674 -> 559
+	  675 -> 406
+	  676 -> 318
+	  677 -> 241
+	  677 -> 690
+	  677 -> 156
+	  677 -> 429
+	  678 -> 216
+	  679 -> 680
+	  679 -> 681
+	  680 -> 468
+	  681 -> 84
+	  682 -> 683
+	  682 -> 684
+	  683 -> 685
+	  684 -> 281
+	  685 -> 624
+	  686 -> 50
+	  687 -> 912
+	  687 -> 736
+	  687 -> 840
+	  688 -> 875
+	  689 -> 414
+	  690 -> 737
+	  691 -> 140
+	  692 -> 66
+	  693 -> 56
+	  694 -> 66
+	  695 -> 588
+	  696 -> 894
+	  697 -> 169
+	  698 -> 747
+	  699 -> 353
+	  700 -> 749
+	  700 -> 798
+	  701 -> 804
+	  702 -> 173
+	  703 -> 801
+	  704 -> 940
+	  705 -> 220
+	  706 -> 509
+	  707 -> 143
+	  708 -> 361
+	  709 -> 91
+	  710 -> 712
+	  710 -> 711
+	  712 -> 713
+	  713 -> 714
+	  713 -> 715
+	  715 -> 605
+	  716 -> 413
+	  717 -> 410
+	  718 -> 324
+	  719 -> 137
+	  720 -> 149
+	  721 -> 722
+	  722 -> 723
+	  722 -> 724
+	  723 -> 504
+	  724 -> 324
+	  725 -> 953
+	  726 -> 728
+	  726 -> 727
+	  727 -> 48
+	  728 -> 661
+	  729 -> 88
+	  730 -> 544
+	  731 -> 533
+	  732 -> 533
+	  733 -> 460
+	  733 -> 379
+	  733 -> 100
+	  734 -> 236
+	  735 -> 237
+	  736 -> 19
+	  737 -> 738
+	  737 -> 739
+	  738 -> 292
+	  739 -> 389
+	  740 -> 329
+	  741 -> 297
+	  742 -> 465
+	  743 -> 524
+	  744 -> 304
+	  745 -> 371
+	  746 -> 768
+	  747 -> 77
+	  748 -> 353
+	  749 -> 78
+	  750 -> 39
+	  751 -> 209
+	  752 -> 701
+	  753 -> 622
+	  754 -> 401
+	  755 -> 676
+	  756 -> 213
+	  757 -> 275
+	  758 -> 321
+	  759 -> 324
+	  760 -> 613
+	  761 -> 324
+	  762 -> 410
+	  763 -> 720
+	  764 -> 765
+	  764 -> 766
+	  765 -> 618
+	  766 -> 505
+	  767 -> 878
+	  768 -> 769
+	  768 -> 770
+	  769 -> 347
+	  770 -> 74
+	  772 -> 721
+	  773 -> 721
+	  774 -> 839
+	  775 -> 102
+	  776 -> 473
+	  777 -> 66
+	  778 -> 826
+	  778 -> 107
+	  778 -> 914
+	  779 -> 66
+	  780 -> 294
+	  781 -> 693
+	  782 -> 66
+	  783 -> 784
+	  783 -> 785
+	  784 -> 479
+	  785 -> 344
+	  786 -> 66
+	  787 -> 252
+	  788 -> 165
+	  788 -> 848
+	  788 -> 530
+	  788 -> 117
+	  788 -> 440
+	  788 -> 28
+	  788 -> 925
+	  788 -> 927
+	  789 -> 345
+	  789 -> 164
+	  789 -> 253
+	  790 -> 167
+	  791 -> 855
+	  792 -> 793
+	  792 -> 746
+	  792 -> 929
+	  792 -> 893
+	  793 -> 306
+	  794 -> 795
+	  795 -> 796
+	  795 -> 797
+	  796 -> 489
+	  797 -> 489
+	  798 -> 78
+	  799 -> 800
+	  800 -> 40
+	  800 -> 652
+	  800 -> 262
+	  801 -> 933
+	  802 -> 651
+	  803 -> 357
+	  804 -> 646
+	  805 -> 543
+	  806 -> 808
+	  806 -> 807
+	  807 -> 82
+	  808 -> 359
+	  809 -> 810
+	  809 -> 811
+	  810 -> 55
+	  811 -> 216
+	  812 -> 566
+	  813 -> 814
+	  813 -> 815
+	  814 -> 658
+	  815 -> 180
+	  816 -> 860
+	  817 -> 818
+	  817 -> 819
+	  818 -> 948
+	  819 -> 503
+	  820 -> 733
+	  821 -> 870
+	  822 -> 824
+	  822 -> 823
+	  823 -> 48
+	  824 -> 661
+	  825 -> 141
+	  826 -> 282
+	  827 -> 928
+	  828 -> 37
+	  829 -> 484
+	  830 -> 701
+	  831 -> 832
+	  831 -> 833
+	  832 -> 742
+	  833 -> 299
+	  834 -> 278
+	  835 -> 721
+	  836 -> 837
+	  836 -> 838
+	  837 -> 376
+	  838 -> 14
+	  839 -> 775
+	  840 -> 381
+	  841 -> 330
+	  842 -> 843
+	  842 -> 844
+	  843 -> 23
+	  844 -> 378
+	  845 -> 244
+	  846 -> 111
+	  846 -> 199
+	  847 -> 251
+	  848 -> 634
+	  849 -> 788
+	  850 -> 930
+	  851 -> 144
+	  852 -> 853
+	  852 -> 854
+	  853 -> 346
+	  854 -> 745
+	  855 -> 531
+	  856 -> 895
+	  857 -> 77
+	  858 -> 466
+	  859 -> 142
+	  860 -> 861
+	  860 -> 862
+	  861 -> 44
+	  862 -> 813
+	  863 -> 288
+	  864 -> 324
+	  865 -> 866
+	  865 -> 867
+	  866 -> 556
+	  867 -> 5
+	  868 -> 66
+	  869 -> 548
+	  870 -> 760
+	  871 -> 721
+	  872 -> 776
+	  873 -> 735
+	  874 -> 20
+	  875 -> 876
+	  875 -> 877
+	  876 -> 155
+	  876 -> 519
+	  877 -> 910
+	  878 -> 66
+	  879 -> 191
+	  880 -> 430
+	  881 -> 882
+	  882 -> 883
+	  882 -> 884
+	  883 -> 577
+	  884 -> 192
+	  885 -> 66
+	  886 -> 331
+	  887 -> 391
+	  888 -> 579
+	  889 -> 890
+	  889 -> 891
+	  890 -> 444
+	  891 -> 52
+	  892 -> 400
+	  893 -> 563
+	  894 -> 588
+	  895 -> 857
+	  896 -> 202
+	  897 -> 747
+	  898 -> 899
+	  899 -> 77
+	  900 -> 700
+	  901 -> 646
+	  902 -> 904
+	  902 -> 903
+	  903 -> 905
+	  904 -> 181
+	  905 -> 860
+	  906 -> 907
+	  906 -> 908
+	  907 -> 661
+	  908 -> 271
+	  909 -> 125
+	  910 -> 382
+	  911 -> 774
+	  912 -> 105
+	  913 -> 736
+	  913 -> 840
+	  914 -> 879
+	  915 -> 293
+	  916 -> 885
+	  917 -> 886
+	  918 -> 392
+	  919 -> 736
+	  919 -> 840
+	  920 -> 919
+	  921 -> 198
+	  922 -> 923
+	  922 -> 924
+	  923 -> 301
+	  924 -> 524
+	  925 -> 851
+	  926 -> 441
+	  927 -> 483
+	  928 -> 850
+	  928 -> 531
+	  928 -> 307
+	  928 -> 442
+	  928 -> 30
+	  929 -> 563
+	  930 -> 855
+	  931 -> 351
+	  932 -> 354
+	  933 -> 541
+	  934 -> 936
+	  934 -> 935
+	  935 -> 207
+	  936 -> 497
+	  937 -> 403
+	  937 -> 909
+	  937 -> 590
+	  938 -> 540
+	  939 -> 213
+	  940 -> 941
+	  940 -> 942
+	  941 -> 859
+	  942 -> 806
+	  943 -> 860
+	  944 -> 945
+	  944 -> 946
+	  946 -> 602
+	  947 -> 860
+	  948 -> 949
+	  948 -> 950
+	  949 -> 662
+	  950 -> 947
+	  951 -> 550
+	  952 -> 234
+	  953 -> 324
+}
+

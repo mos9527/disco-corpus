@@ -1,0 +1,273 @@
+# LANDS END ORB / lands end shot viscal
+# the conclusion dialogue where you conclude the shot did not come from land's end. this fires only if you have  TASK.check_lands_end
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: Maybe the assailant climbed the comms tower, took the shot there?\n\"Maybe the assailant climbed the comms tower, took the shoot there?\""];
+	  3 [label="You: What about the cigarette butts?\n\"What about the cigarette butts?\""];
+	  4 [label="IsKimHere()"];
+	  5 [label="IsKimHere()", shape=diamond];
+	  6 [label="!(IsKimHere())", shape=diamond];
+	  7 [label="IsKimHere()"];
+	  8 [label="IsKimHere()", shape=diamond];
+	  9 [label="!(IsKimHere())", shape=diamond];
+	  10 [label="Variable[\"coast.sense_cyclo_tioumoutiri\"]"];
+	  11 [label="Variable[\"coast.sense_cyclo_tioumoutiri\"]", shape=diamond];
+	  12 [label="!(Variable[\"coast.sense_cyclo_tioumoutiri\"])", shape=diamond];
+	  13 [label="Variable[\"coast.sense_shot_rhetoric_kim_hat\"]"];
+	  14 [label="Variable[\"coast.sense_shot_rhetoric_kim_hat\"]", shape=diamond];
+	  15 [label="!(Variable[\"coast.sense_shot_rhetoric_kim_hat\"])", shape=diamond];
+	  16 [label="You: \"Copsicle. You meant to say copsicle.\""];
+	  17 [label="Esprit de Corps: Esprit de Corps: \"...\""];
+	  18 [label="Jump to: [viscalmaimhub]"];
+	  19 [label="Encyclopedia: Nothing is unimportant, detective."];
+	  20 [label="Kim Kitsuragi: \"Those?\" He points to them. \"A smoking assailant who favours Tioumoutiri to Astra or Drouin? Cigarette butts are everywhere. This is a common brand for old men.\""];
+	  21 [label="You: \"You're right. I should look into this situation before I die of hypothermia.\""];
+	  22 [label="Visual Calculus: The light is off on the third floor of the Whirling-in-Rags. The young woman is gone who knows where. Safe, closed off. Her form no longer moves behind the glass there..."];
+	  23 [label="You: Look over the water -- to the Whirling-in-Rags."];
+	  24 [label="Kim Kitsuragi: \"Truthfully -- this seems like a very poor choice to take a 1.2 kilometre rifle shot from. Visibility is awful, there's water vapour everywhere -- I think we can rule out... B double prime, was it?\""];
+	  26 [label="Electrochemistry: Smoking. Drinking. Being happy and elated. Without you -- because you're here, freezing in the wind, aren't you? Doing your *detective work*."];
+	  27 [label="Visual Calculus: There, 1.2 kilometres over the cold water of the bay, through a thick snowstorm melting flake by flake in the waves you see the smallest rectangle, barely visible."];
+	  28 [label="You: \"Kim, you look cold -- maybe a thicker coat?\""];
+	  29 [label="You: Oh right..."];
+	  30 [label="Electrochemistry: Such a good girl, you think."];
+	  31 [label="Encyclopedia: Oh, you do! The butts you saw had a silhouette of a boy wearing a kofia hat -- a tobacco picker. This boy is the Tioumoutiri brand logo. Contemporary Revacholians prefer Drouin (a local blend from the southern islands) or Astra, a legendary cigarette from Graad. Tioumoutiri is favoured by older men who like its old fashioned paper filter tips, insane amount of tar and the sweet smells of colonialism and halva."];
+	  32 [label="Kim Kitsuragi: \"No, an orange pilot cap would not help.\" He turns to face the sea."];
+	  33 [label="Jump to: [viscalmaimhub]"];
+	  34 [label="Kim Kitsuragi: \"I'm okay. You on the other hand -- look like you're about to turn into a popsicle.\"\n\"I'm okay. You on the other hand, yefreitor... you look like you're about to turn into a popsicle.\""];
+	  35 [label="Kim Kitsuragi: \"That seems smart, yes.\""];
+	  36 [label="Visual Calculus: There, 1.2 kilometres over the cold water of the bay, blue from the distance and the air, you see the smallest rectangle, barely visible."];
+	  37 [label="IsNight()"];
+	  38 [label="IsNight()", shape=diamond];
+	  39 [label="!(IsNight())", shape=diamond];
+	  40 [label="Visual Calculus: Is there something here that would indicate a sniper used this place as a nest for taking the shot? Just some urban detritus, a bottle and a dilapidated old comms tower."];
+	  41 [label="Encyclopedia: Tioumoutiri was a Revacholian colony on Iilmaraa. The suzerainty's population was mostly Iilmaraan Areopagites -- up to 97%. The region was known for its tobacco export. Hence the name."];
+	  42 [label="Rhetoric: Technically speaking that would be a..."];
+	  43 [label="Variable[\"auto.is_snowing\"]"];
+	  44 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  45 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  46 [label="Visual Calculus: The light is off on the third floor of the Whirling-in-Rags. The young woman is gone, in Precinct 57. Safe, closed off. Her form no longer moves behind the glass there..."];
+	  47 [label="Jump to: [viscalmaimhub]"];
+	  48 [label="Kim Kitsuragi: \"No, an orange pilot cap would not help.\" He turns to face the sea.\n\"No, a black pilot cap would not help.\" He turns to face the sea."];
+	  49 [label="Rhetoric: How do you respond to a pithy *no* like that? He's just *not* into pilot caps, it seems."];
+	  50 [label="Endurance: He looks like he's cold out here at the tip of the coast. The jacket is warm, but not for this weather."];
+	  51 [label="You: I said finish the god damn thought.[Leave.]"];
+	  52 [label="Jump to: [viscalmaimhub]"];
+	  53 [label="Variable[\"whirling.klaasje_arrest_decision_made_did_not_arrest\"]"];
+	  54 [label="Variable[\"whirling.klaasje_arrest_decision_made_did_not_arrest\"]", shape=diamond];
+	  55 [label="!(Variable[\"whirling.klaasje_arrest_decision_made_did_not_arrest\"])", shape=diamond];
+	  56 [label="You: \"No what -- an orange pilot cap would not help?\"\n\"No what -- a black pilot cap would not help?\""];
+	  57 [label="Kim Kitsuragi: \"No. I did not. We *Seolites* don't do paranomastic humour.\""];
+	  58 [label="You: [Finish thought.]"];
+	  59 [label="Visual Calculus: So?"];
+	  60 [label="Variable[\"TASK.inspect_window\"]"];
+	  61 [label="Variable[\"TASK.inspect_window\"]", shape=diamond];
+	  62 [label="!(Variable[\"TASK.inspect_window\"])", shape=diamond];
+	  63 [label="You: \"No what -- an orange pilot cap would not help?\""];
+	  64 [label="Endurance: The wind picks up. Fine sea foam lashes your face. It feels like needles. You can take it -- just raise your collar, detective."];
+	  65 [label="You: I want to know *a lot* more about this."];
+	  66 [label="You: Enough. The cigarettes are unimportant."];
+	  67 [label="Kim Kitsuragi: \"I don't see it, officer. I don't see a person take a shot here and hit something there...\" He looks east, over the coast. \"In the Whirling-in-Rags.\"\n\"I don't see it, lieutenant double-yefreitor. I don't see a person take a shot *here* and hit something there...\" he looks east, over the coast. \"In the Whirling-in-Rags.\""];
+	  68 [label="Variable[\"coast.sense_shooter_endurance_kim_cold\"]"];
+	  69 [label="Variable[\"coast.sense_shooter_endurance_kim_cold\"]", shape=diamond];
+	  70 [label="!(Variable[\"coast.sense_shooter_endurance_kim_cold\"])", shape=diamond];
+	  71 [label="Visual Calculus: Are you sure? You haven't ruled out the shot coming from here yet..."];
+	  72 [label="Variable[\"auto.is_raining\"]"];
+	  73 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  74 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  75 [label="viscalmaimhub"];
+	  76 [label="IsKimHere()"];
+	  77 [label="IsKimHere()", shape=diamond];
+	  78 [label="!(IsKimHere())", shape=diamond];
+	  79 [label="Kim Kitsuragi: \"It's not possible to climb that ladder and even if it were -- why? There's no platform up there to aim from.\" The lieutenant looks up, raising his collar."];
+	  80 [label="Kim Kitsuragi: \"Absolute idiocy,\" he nods in acknowledgement of the idiocy on display."];
+	  81 [label="You: Maybe the campfire was used by the perpetrator?\n\"Maybe the campfire was used by the perpetrator?\""];
+	  82 [label="You: \"No what -- you're not cold?\""];
+	  83 [label="Jump to: [viscalmaimhub]"];
+	  84 [label="Variable[\"TASK.check_lands_end_done\"]"];
+	  85 [label="Variable[\"TASK.check_lands_end_done\"]", shape=diamond];
+	  86 [label="!(Variable[\"TASK.check_lands_end_done\"])", shape=diamond];
+	  87 [label="IsNighttime()"];
+	  88 [label="IsNighttime()", shape=diamond];
+	  89 [label="!(IsNighttime())", shape=diamond];
+	  90 [label="Jump to: [viscalmaimhub]"];
+	  91 [label="Perception: In the distance you can hear the breakers roar."];
+	  92 [label="You: \"Kim, you look cold -- maybe a little pilot cap?"];
+	  93 [label="Kim Kitsuragi: \"Yes, that one. No to the orange pilot cap.\" He turns to face the sea."];
+	  94 [label="Kim Kitsuragi: \"Don't be silly, no one wants to be a popsicle.\""];
+	  95 [label="Variable[\"auto.is_raining\"]"];
+	  96 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  97 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  98 [label="Variable[\"coast.sense_shot_esprit_story\"]"];
+	  99 [label="Variable[\"coast.sense_shot_esprit_story\"]", shape=diamond];
+	  100 [label="!(Variable[\"coast.sense_shot_esprit_story\"])", shape=diamond];
+	  101 [label="Kim Kitsuragi: \"No.\""];
+	  102 [label="You: \"It's my style. Superstar cops don't wear parkas. They rock out.\""];
+	  103 [label="Variable[\"TASK.arrest_klaasje_done\"]"];
+	  104 [label="Variable[\"TASK.arrest_klaasje_done\"]", shape=diamond];
+	  105 [label="!(Variable[\"TASK.arrest_klaasje_done\"])", shape=diamond];
+	  106 [label="Variable[\"auto.is_snowing\"]"];
+	  107 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  108 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  109 [label="Visual Calculus: A smoking assailant who favours Tioumoutiri to Astra or Drouin? Cigarette butts are part of the campfire set -- they're also everywhere."];
+	  110 [label="IsKimHere()"];
+	  111 [label="IsKimHere()", shape=diamond];
+	  112 [label="!(IsKimHere())", shape=diamond];
+	  113 [label="Kim Kitsuragi: \"To warm his hands before pulling the trigger? Perhaps. But anyone could have made this. The coast is specked with fires this time of year.\" He looks around."];
+	  114 [label="Visual Calculus: There, 1.2 kilometres over the wave-crossed bay, through heavy, dark grey curtains of rain you see the smallest rectangle, barely visible."];
+	  115 [label="Visual Calculus: A glowing light on the third floor of the Whirling-in-Rags. With binoculars you would see a young woman's shape move behind the glass, her limbs long and slender."];
+	  116 [label="Kim Kitsuragi: \"Yes, that one. No to the orange pilot cap.\" He turns to face the sea.\n\"Yes, that one. No to the black pilot cap.\" He turns to face the sea."];
+	  117 [label="Inland Empire: Still, you felt it was important enough to make a mental note. That means *something*. You didn't pay attention to any of the other cigarette butts on the coast."];
+	  118 [label="You: \"What if I *want* to be a popsicle?\""];
+	  119 [label="Visual Calculus: It's glowing in the dark night. The lights are on. Klaasje must be in there... looks like she's kept her promise not to go out at night anymore."];
+	  120 [label="Visual Calculus: To warm his hands before he pulled the trigger? There are no markings on the ground for a tripod, he would have had to lie on a mattress. This is simply not a good spot for a 1.2 kilometre shot."];
+	  121 [label="Rhetoric: No what?"];
+	  122 [label="Jump to: [viscalmaimhub]"];
+	  123 [label="Visual Calculus: It's late. There is no light on the third floor of the Whirling-in-Rags. No shape moves behind it. Klaasje must be out on the town."];
+	  124 [label="Savoir Faire: It does look *extremely* rickety. And wouldn't help much either."];
+	  125 [label="Visual Calculus: The salty water has corroded the ladder to nothing but two thin orange rails. In addition, there is no stable nest up there. It would have been useless."];
+	  0 -> 1
+	  1 -> 40
+	  2 -> 4
+	  3 -> 76
+	  4 -> 5
+	  4 -> 6
+	  5 -> 79
+	  6 -> 125
+	  7 -> 8
+	  7 -> 9
+	  8 -> 113
+	  9 -> 120
+	  10 -> 11
+	  10 -> 12
+	  11 -> 65
+	  11 -> 66
+	  12 -> 117
+	  13 -> 14
+	  13 -> 15
+	  14 -> 56
+	  14 -> 82
+	  15 -> 49
+	  16 -> 57
+	  18 -> 75
+	  19 -> 47
+	  20 -> 41
+	  21 -> 35
+	  22 -> 18
+	  23 -> 95
+	  24 -> 122
+	  26 -> 18
+	  27 -> 103
+	  28 -> 34
+	  29 -> 59
+	  30 -> 18
+	  31 -> 47
+	  33 -> 75
+	  34 -> 42
+	  35 -> 83
+	  36 -> 103
+	  37 -> 38
+	  37 -> 39
+	  40 -> 64
+	  41 -> 10
+	  42 -> 16
+	  42 -> 118
+	  42 -> 21
+	  42 -> 102
+	  43 -> 44
+	  43 -> 45
+	  44 -> 27
+	  45 -> 36
+	  46 -> 18
+	  47 -> 75
+	  48 -> 33
+	  49 -> 33
+	  50 -> 68
+	  52 -> 75
+	  53 -> 54
+	  53 -> 55
+	  54 -> 119
+	  55 -> 123
+	  56 -> 116
+	  57 -> 83
+	  58 -> 84
+	  59 -> 52
+	  60 -> 61
+	  60 -> 62
+	  61 -> 22
+	  62 -> 87
+	  63 -> 93
+	  64 -> 91
+	  65 -> 31
+	  66 -> 19
+	  67 -> 75
+	  68 -> 69
+	  68 -> 70
+	  69 -> 28
+	  69 -> 92
+	  70 -> 124
+	  71 -> 51
+	  71 -> 29
+	  72 -> 73
+	  72 -> 74
+	  74 -> 106
+	  75 -> 2
+	  75 -> 3
+	  75 -> 81
+	  75 -> 23
+	  75 -> 58
+	  76 -> 77
+	  76 -> 78
+	  77 -> 20
+	  78 -> 109
+	  79 -> 50
+	  80 -> 83
+	  81 -> 7
+	  82 -> 48
+	  83 -> 75
+	  84 -> 85
+	  84 -> 86
+	  86 -> 71
+	  87 -> 88
+	  87 -> 89
+	  88 -> 53
+	  89 -> 115
+	  90 -> 75
+	  91 -> 110
+	  92 -> 101
+	  94 -> 83
+	  95 -> 96
+	  95 -> 97
+	  96 -> 114
+	  97 -> 43
+	  98 -> 99
+	  98 -> 100
+	  101 -> 121
+	  102 -> 80
+	  103 -> 104
+	  103 -> 105
+	  104 -> 46
+	  105 -> 60
+	  106 -> 107
+	  106 -> 108
+	  109 -> 41
+	  110 -> 112
+	  110 -> 111
+	  111 -> 67
+	  112 -> 75
+	  113 -> 24
+	  114 -> 103
+	  115 -> 26
+	  116 -> 33
+	  117 -> 47
+	  118 -> 94
+	  119 -> 30
+	  120 -> 122
+	  121 -> 13
+	  122 -> 75
+	  123 -> 26
+	  124 -> 90
+	  125 -> 124
+}
+

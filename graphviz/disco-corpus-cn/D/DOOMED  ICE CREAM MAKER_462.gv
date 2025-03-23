@@ -1,0 +1,291 @@
+# DOOMED / ICE CREAM MAKER
+# Doomed cellar, a pistachio green ice cream maker next to the breaker box with a radio computer's filament memory inside. Difficulty: heroic, turns into easy if you've read the note from the Ice Bear Fridge.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Logic: 它已经被拔下来了。现在也没什么可以做的，只有等它解冻，或者*胀大*，变得更加强壮。"];
+	  3 [label="Kim Kitsuragi: “要是能来上一勺冰淇淋确实不错，”警督表示赞同。某人的肚子开始咕噜咕噜地叫唤。这个房间非常冷。"];
+	  4 [label="Ice Cream Maker: 里面很黑，但你可以模糊地辨认出一个物体，错综复杂、充满异域感，被独自留下睡了个零度以下的美容觉——那是一个纤维内存，侧面写着“场外拷贝”几个字。"];
+	  5 [label="Ice Cream Maker: IsKimHere()"];
+	  6 [label="IsKimHere()", shape=diamond];
+	  7 [label="!(IsKimHere())", shape=diamond];
+	  9 [label="Inland Empire: 现在全没了。你永远也不会变成诗人，或者是企业家。"];
+	  10 [label="Electrochemistry: 你盯着几乎空无一物的冰淇淋制造机，一种失望感朝你的全身席卷而来。"];
+	  11 [label="Ice Cream Maker: 你轻轻地把立方体从冻住的基座里取了出来，小心地不弄坏它。"];
+	  12 [label="Physical Instrument: 撬棍下的冰块发出嘎吱嘎吱的声响——你可以*发誓*你已经成功了！——但盖子还是纹丝不动。"];
+	  13 [label="Ice Cream Maker: CheckItem(\"prybar\")"];
+	  14 [label="CheckItem(\"prybar\")", shape=diamond];
+	  15 [label="!(CheckItem(\"prybar\"))", shape=diamond];
+	  16 [label="Ice Cream Maker: IsKimHere()"];
+	  17 [label="IsKimHere()", shape=diamond];
+	  18 [label="!(IsKimHere())", shape=diamond];
+	  19 [label="Kim Kitsuragi: “苏娜不是给过你一个工具吗，它是处理这种工作的完美选择——库瓦桑德？你应该把它拿出来。”"];
+	  20 [label="Physical Instrument: 冰块在你的库瓦桑德多用工具下发出嘎吱的声响，但你的手指从工具上滑了下来，盖子又像以前一样紧紧合上了。"];
+	  21 [label="Ice Cream Maker: CheckEquippedGroup(\"gloves\")"];
+	  22 [label="CheckEquippedGroup(\"gloves\")", shape=diamond];
+	  23 [label="!(CheckEquippedGroup(\"gloves\"))", shape=diamond];
+	  24 [label="Kim Kitsuragi: “我们应该尽快把它带回去，交给卢凯伦-吉尔德小姐。我不确定未使用的纤维内存能不能承受这个房间的温度。”"];
+	  25 [label="Esprit de Corps: 曷城警督的锐影里应该有撬棍，但是他现在不在这里。"];
+	  26 [label="Tutorial Agent: 打你可以在道具栏的工具界面中装备多用工具至一个手持栏位中。"];
+	  27 [label="Ice Cream Maker: 你把手指滑到冻住的盖子下方，但是冰块太凉，你没办法好好抓住它。一根撬棍应该能帮上你的忙……或者更强大的工具，比如库瓦桑德KR+2多用工具。"];
+	  28 [label="You: 转动冰淇淋机手柄。"];
+	  29 [label="Ice Cream Maker: 这台橙色的机器还是没有通电。上面有一个手摇冰淇淋搅拌器和一个电冻器，周围的冰块正在慢慢融化。"];
+	  30 [label="You: [关上盖子。]"];
+	  31 [label="Ice Cream Maker: IsKimHere()"];
+	  32 [label="IsKimHere()", shape=diamond];
+	  33 [label="!(IsKimHere())", shape=diamond];
+	  34 [label="Ice Cream Maker: IsKimHere()"];
+	  35 [label="IsKimHere()", shape=diamond];
+	  36 [label="!(IsKimHere())", shape=diamond];
+	  37 [label="You: “更高级？我们去哪找？”"];
+	  38 [label="Interfacing: 不行——你需要别的东西，某种*超级*撬棍。根本都不用试着用普通的撬棍，你只是在浪费时间。"];
+	  39 [label="Jump to: [greeting hub]"];
+	  40 [label="Ice Cream Maker: Variable[\"doomed.breakerbox_black_wire_plugged_out\"]"];
+	  41 [label="Variable[\"doomed.breakerbox_black_wire_plugged_out\"]", shape=diamond];
+	  42 [label="!(Variable[\"doomed.breakerbox_black_wire_plugged_out\"])", shape=diamond];
+	  43 [label="post success hub"];
+	  44 [label="Kim Kitsuragi: “我不知道，警官。这台冰淇淋制造机没那么重要，不值得申请特殊工具。”"];
+	  45 [label="Ice Cream Maker: 你把手指滑到冻住的盖子下方，但是冰块太凉，你没办法好好抓住它。一根撬棍应该能帮上你的忙。"];
+	  46 [label="Ice Cream Maker: CheckItem(\"kvalsund_multitool\")"];
+	  47 [label="CheckItem(\"kvalsund_multitool\")", shape=diamond];
+	  48 [label="!(CheckItem(\"kvalsund_multitool\"))", shape=diamond];
+	  49 [label="Ice Cream Maker: Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge\"]"];
+	  50 [label="Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge\"]", shape=diamond];
+	  51 [label="!(Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge\"])", shape=diamond];
+	  52 [label="Perception (Sight): 看，一条黑色的电线插在断路器盒上……"];
+	  53 [label="Interfacing: 你手里的这个工具不对！要用库瓦桑德的多用工具，你正好有一个……"];
+	  54 [label="You: 什么？没有冰淇淋吗……"];
+	  55 [label="Interfacing: 是的，但是你难道不会好奇，这个宝贵的纤维内存上有什么吗？楼上就有一台无线电脑……"];
+	  56 [label="Ice Cream Maker: CheckEquipped(\"kvalsund_multitool\")"];
+	  57 [label="CheckEquipped(\"kvalsund_multitool\")", shape=diamond];
+	  58 [label="!(CheckEquipped(\"kvalsund_multitool\"))", shape=diamond];
+	  59 [label="Jump to: [greeting hub]"];
+	  60 [label="You: 这是什么……"];
+	  61 [label="Interfacing: 那是根好撬棍，但是这个冰淇淋制造机冻的太*严实*。要想打开的话，只能找把更*高级*一点的工具。某种……超级撬棍？你不知道该去哪里找。"];
+	  62 [label="Inland Empire: 你迟早会偶然发现一个足够强大的工具。然后我们就能知道这个冰淇淋制造机里面的秘密了。"];
+	  63 [label="Ice Cream Maker: Variable[\"doomed.breakerbox_black_wire_plugged_out\"]"];
+	  64 [label="Variable[\"doomed.breakerbox_black_wire_plugged_out\"]", shape=diamond];
+	  65 [label="!(Variable[\"doomed.breakerbox_black_wire_plugged_out\"])", shape=diamond];
+	  66 [label="Ice Cream Maker: 撬棍的金属手柄在你眼前弯曲了。"];
+	  67 [label="Ice Cream Maker: 这台橙色的机器还是没有通电。上面有一个手摇冰淇淋搅拌器和一个电冻器，周围的冰块正在慢慢融化。"];
+	  68 [label="Physical Instrument: 在你手中巨大的库瓦桑德多用工具的压力下，冰块开始呻吟嚎叫——直到盖子被撬开了。"];
+	  69 [label="Hand/Eye Coordination: 如果你想再试一次，那就要把撬棍握在*手里*，警探。"];
+	  70 [label="You: 把盖子撬开。"];
+	  71 [label="You: Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge_2\"]"];
+	  72 [label="Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge_2\"]", shape=diamond];
+	  73 [label="!(Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge_2\"])", shape=diamond];
+	  74 [label="Jump to: [greeting hub]"];
+	  75 [label="Ice Cream Maker: 转动手柄让你产生了一种奇妙的满足感，就像激活了年幼时代的梦想……你听见远处传来水滴滴答答的声音。"];
+	  76 [label="Ice Cream Maker: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  77 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  78 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  79 [label="You: 试着砸开盖子。"];
+	  80 [label="Ice Cream Maker: 这台橙色的机器像一台破旧的潜水艇一样嗡嗡叫着。它的顶部是一个手摇冰淇淋搅拌器，还有一个似乎被冻住的电冻器。"];
+	  81 [label="Physical Instrument: 在你手中巨大的库瓦桑德多用工具的压力下，冰块开始呻吟嚎叫——直到盖子破裂开来。蓝色的电光苏醒了……"];
+	  82 [label="Ice Cream Maker: 这台橙色的机器嗡嗡直响，就像一台破旧的潜水艇。它的顶部是一个手摇冰淇淋搅拌器，还有个似乎被冻住的电冻器。"];
+	  83 [label="Ice Cream Maker: 冻结的平台上躺着一个物体，错综复杂、充满异域感，被独自留下睡了个零度以下的美容觉——那是一个纤维内存，侧面写着“场外拷贝”几个字。"];
+	  84 [label="Kim Kitsuragi: “那是根好撬棍——我不是批评它——但是这个冰淇淋制造机冻的很*严实*。要想打开的话，只能找把更*高级*一点的工具。”"];
+	  85 [label="Jump to: [greeting hub]"];
+	  86 [label="Ice Cream Maker: IsTaskActive(\"TASK.help_soona_with_her_project\")--[[ Variable[ ]]"];
+	  87 [label="IsTaskActive(\"TASK.help_soona_with_her_project\")--[[ Variable[ ]]", shape=diamond];
+	  88 [label="!(IsTaskActive(\"TASK.help_soona_with_her_project\")--[[ Variable[ ]])", shape=diamond];
+	  89 [label="Jump to: [greeting hub]"];
+	  90 [label="Kim Kitsuragi: “我的锐影里有一根撬棍，如果你想再试一次的话。不过我的撬棍可能力量不够，打不开那个盖子……”他怀疑地打量着那台冰淇淋制造机。"];
+	  91 [label="greeting hub"];
+	  92 [label="Logic: 拔掉冰淇淋制造机的插头应该能让它解冻。"];
+	  93 [label="You: “什么？没有冰淇淋吗……”"];
+	  94 [label="Ice Cream Maker: CheckEquipped(\"kvalsund_multitool\")"];
+	  95 [label="CheckEquipped(\"kvalsund_multitool\")", shape=diamond];
+	  96 [label="!(CheckEquipped(\"kvalsund_multitool\"))", shape=diamond];
+	  97 [label="Electrochemistry: 还有什么能比冻结的脂肪和糖分更能缓和这种涌动的诡异失败感呢？"];
+	  98 [label="Ice Cream Maker: IsTaskActive(\"TASK.help_soona_with_her_project\")--[[ Variable[ ]]"];
+	  99 [label="IsTaskActive(\"TASK.help_soona_with_her_project\")--[[ Variable[ ]]", shape=diamond];
+	  100 [label="!(IsTaskActive(\"TASK.help_soona_with_her_project\")--[[ Variable[ ]])", shape=diamond];
+	  101 [label="Ice Cream Maker: 你的肚子咕噜咕噜地叫唤着。冰箱很冷，地下室又黑又潮。"];
+	  102 [label="Ice Cream Maker: Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge_2\"]"];
+	  103 [label="Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge_2\"]", shape=diamond];
+	  104 [label="!(Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge_2\"])", shape=diamond];
+	  105 [label="You: 把盖子撬开。"];
+	  106 [label="You: Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge\"]"];
+	  107 [label="Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge\"]", shape=diamond];
+	  108 [label="!(Variable[\"doomed.icecreammaker_whitecheck_open_the_fridge\"])", shape=diamond];
+	  109 [label="You: 取走纤维内存。"];
+	  110 [label="Ice Cream Maker: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  111 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  112 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  113 [label="Ice Cream Maker: Variable[\"doomed.breakerbox_greeting_done\"]"];
+	  114 [label="Variable[\"doomed.breakerbox_greeting_done\"]", shape=diamond];
+	  115 [label="!(Variable[\"doomed.breakerbox_greeting_done\"])", shape=diamond];
+	  116 [label="Ice Cream Maker: CheckItem(\"kvalsund_multitool\")"];
+	  117 [label="CheckItem(\"kvalsund_multitool\")", shape=diamond];
+	  118 [label="!(CheckItem(\"kvalsund_multitool\"))", shape=diamond];
+	  119 [label="Ice Cream Maker: Variable[\"doomed.breakerbox_black_wire_plugged_out\"]"];
+	  120 [label="Variable[\"doomed.breakerbox_black_wire_plugged_out\"]", shape=diamond];
+	  121 [label="!(Variable[\"doomed.breakerbox_black_wire_plugged_out\"])", shape=diamond];
+	  122 [label="Interfacing: 也许有手套的话，就能好好抓住了……"];
+	  123 [label="Physical Instrument: 撬棍下的冰块发出嘎吱嘎吱的声响。你觉得撬棍的位置卡的很好，但盖子还是纹丝不动。"];
+	  124 [label="Hand/Eye Coordination: 你需要把库瓦桑德KR+2多用工具握在*手里*，警探。"];
+	  125 [label="Tutorial Agent: 你可以在道具栏的工具界面中装备撬棍至一个手持栏位中。"];
+	  126 [label="You: [离开。]"];
+	  127 [label="Ice Cream Maker: Variable[\"doomed.icecreammaker_inland_failure_feeling\"]"];
+	  128 [label="Variable[\"doomed.icecreammaker_inland_failure_feeling\"]", shape=diamond];
+	  129 [label="!(Variable[\"doomed.icecreammaker_inland_failure_feeling\"])", shape=diamond];
+	  0 -> 1
+	  1 -> 63
+	  2 -> 21
+	  3 -> 109
+	  4 -> 10
+	  5 -> 6
+	  5 -> 7
+	  6 -> 90
+	  7 -> 25
+	  9 -> 127
+	  10 -> 43
+	  11 -> 31
+	  12 -> 60
+	  13 -> 14
+	  13 -> 15
+	  14 -> 69
+	  15 -> 5
+	  16 -> 17
+	  16 -> 18
+	  17 -> 19
+	  18 -> 124
+	  19 -> 110
+	  20 -> 113
+	  21 -> 22
+	  21 -> 23
+	  22 -> 74
+	  23 -> 122
+	  24 -> 55
+	  25 -> 39
+	  26 -> 39
+	  27 -> 16
+	  28 -> 75
+	  29 -> 91
+	  31 -> 32
+	  31 -> 33
+	  32 -> 24
+	  33 -> 55
+	  34 -> 35
+	  34 -> 36
+	  35 -> 84
+	  36 -> 61
+	  37 -> 44
+	  38 -> 13
+	  39 -> 91
+	  40 -> 41
+	  40 -> 42
+	  41 -> 68
+	  42 -> 81
+	  43 -> 109
+	  43 -> 93
+	  43 -> 54
+	  44 -> 62
+	  45 -> 38
+	  46 -> 48
+	  46 -> 47
+	  47 -> 53
+	  48 -> 34
+	  49 -> 50
+	  49 -> 51
+	  50 -> 56
+	  51 -> 94
+	  52 -> 92
+	  53 -> 85
+	  54 -> 101
+	  55 -> 30
+	  56 -> 57
+	  56 -> 58
+	  57 -> 40
+	  58 -> 12
+	  59 -> 91
+	  60 -> 66
+	  61 -> 62
+	  62 -> 89
+	  63 -> 64
+	  63 -> 65
+	  64 -> 98
+	  65 -> 86
+	  66 -> 46
+	  67 -> 91
+	  68 -> 4
+	  69 -> 76
+	  70 -> 71
+	  71 -> 72
+	  71 -> 73
+	  72 -> 102
+	  73 -> 102
+	  74 -> 91
+	  75 -> 9
+	  76 -> 77
+	  76 -> 78
+	  77 -> 39
+	  78 -> 125
+	  79 -> 116
+	  80 -> 91
+	  81 -> 83
+	  82 -> 91
+	  83 -> 10
+	  84 -> 37
+	  85 -> 91
+	  86 -> 88
+	  86 -> 87
+	  87 -> 82
+	  88 -> 80
+	  89 -> 91
+	  90 -> 39
+	  91 -> 70
+	  91 -> 105
+	  91 -> 79
+	  91 -> 28
+	  91 -> 126
+	  92 -> 21
+	  93 -> 3
+	  94 -> 96
+	  94 -> 95
+	  95 -> 20
+	  96 -> 123
+	  97 -> 59
+	  98 -> 99
+	  98 -> 100
+	  99 -> 67
+	  100 -> 29
+	  101 -> 109
+	  102 -> 104
+	  102 -> 103
+	  103 -> 40
+	  104 -> 20
+	  105 -> 106
+	  106 -> 107
+	  106 -> 108
+	  107 -> 49
+	  108 -> 49
+	  109 -> 11
+	  110 -> 112
+	  110 -> 111
+	  111 -> 39
+	  112 -> 26
+	  113 -> 114
+	  113 -> 115
+	  114 -> 119
+	  115 -> 52
+	  116 -> 117
+	  116 -> 118
+	  117 -> 27
+	  118 -> 45
+	  119 -> 120
+	  119 -> 121
+	  120 -> 2
+	  121 -> 92
+	  122 -> 74
+	  123 -> 60
+	  124 -> 110
+	  125 -> 39
+	  127 -> 128
+	  127 -> 129
+	  128 -> 97
+	  129 -> 59
+}
+

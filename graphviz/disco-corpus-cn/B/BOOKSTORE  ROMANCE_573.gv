@@ -1,0 +1,106 @@
+# BOOKSTORE / ROMANCE
+# Shelf of romance books.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Shelf of Romance Stories: 你得买下这本书才能知道它究竟讲了些什么。书的封面是一堵混凝土建筑的墙，涂有黑白彩虹状图案。这本书的作者想必来自一个连彩虹都只有黑白两色的国家。估计读了会很沮丧。"];
+	  3 [label="Jump to: [romcom]"];
+	  5 [label="You: 还有什么更真实，更*像你*的东西吗？"];
+	  6 [label="You: Variable[\"doomed.book_whitech_pain_threshold_romance\"]"];
+	  7 [label="Variable[\"doomed.book_whitech_pain_threshold_romance\"]", shape=diamond];
+	  8 [label="!(Variable[\"doomed.book_whitech_pain_threshold_romance\"])", shape=diamond];
+	  9 [label="Shelf of Romance Stories: 作为一个粗旷的*硬汉*警探，你只会被更加真实，更加*可信*的东西打动。"];
+	  10 [label="Volition: 转身离开，这是个坏主意。"];
+	  11 [label="Pain Threshold: 你把注意力集中在眼前大量色彩斑斓的小说上，想找到些真正值得注意的东西，最后只换来一双因为疲惫而刺痛的眼睛。"];
+	  12 [label="Pain Threshold: 当你集中在眼前大量色彩斑斓的小说上时，一个不和谐的东西抓住了你的眼球——有一本书跟其他的不太一样。"];
+	  13 [label="You: 这是怎么回事？"];
+	  14 [label="You: [离开。]"];
+	  15 [label="You: “我想买这本*四月最冷的那16天*。”"];
+	  16 [label="You: 我觉得自己应该喜欢看这些书吧。"];
+	  17 [label="Shelf of Romance Stories: 书的封面是一栋混凝土建筑的高墙，上方跨越着一道黑白彩虹。这本书的作者来自于一个连彩虹都是黑白色的国度。"];
+	  18 [label="Shelf of Romance Stories: 你看见一大团粉色和红色…彩色的封面上充斥着不雅的意象。这些书大多装饰着衣着清凉，大腿裸露的女性…配上一些玫瑰花，有时甚至还有手枪。"];
+	  19 [label="romcom"];
+	  20 [label="Jump to: [romcom]"];
+	  21 [label="Plaisance: “啊，这本放错书架了…安妮特老是喜欢把东西到处乱放！那个丫头…”她摇摇头。“不要紧的，希望你能喜欢…这个。”"];
+	  22 [label="Jump to: [romcom]"];
+	  23 [label="Shelf of Romance Stories: Variable[\"doomed.book_whitech_pain_threshold_romance\"]"];
+	  24 [label="Variable[\"doomed.book_whitech_pain_threshold_romance\"]", shape=diamond];
+	  25 [label="!(Variable[\"doomed.book_whitech_pain_threshold_romance\"])", shape=diamond];
+	  26 [label="Shelf of Romance Stories: 不，你不会的。作为一个粗旷的*硬汉*警探，你只会被更加真实，更加*可信*的东西打动。"];
+	  27 [label="You: “店主，这个书架上有什么？”"];
+	  28 [label="You: “老实说，我在找一些更*真实*的东西。”"];
+	  29 [label="Shelf of Romance Stories: Variable[\"doomed.book_wc_trigger_bad_romance\"]"];
+	  30 [label="Variable[\"doomed.book_wc_trigger_bad_romance\"]", shape=diamond];
+	  31 [label="!(Variable[\"doomed.book_wc_trigger_bad_romance\"])", shape=diamond];
+	  32 [label="Jump to: [romcom]"];
+	  33 [label="Shelf of Romance Stories: 他们还倾向于刻画一些身着黑色西装、面容如雕刻般完美的男人。全都是些…浮夸的垃圾。"];
+	  34 [label="Jump to: [romcom]"];
+	  35 [label="Jump to: [Shelf of Romance Stories: \"The shelves are littered with roman...\"]"];
+	  36 [label="Shelf of Romance Stories: 书架上散落着来自各个时空的浪漫小说。"];
+	  37 [label="Plaisance: “哦，那是个美妙又精彩的故事，关于爱情的故事！”她激动地叹息到。“你绝对应该买下它。”"];
+	  38 [label="You: 这里有什么在呼唤我吗？"];
+	  39 [label="You: 为什么它的位置放错了？"];
+	  40 [label="You: 救命，我不想这样做…"];
+	  41 [label="You: 浏览陈列的书籍。"];
+	  42 [label="Shelf of Romance Stories: 一本灰色的书被遗忘在了这片浪漫的海洋。标题是：“四月最冷的那16天。”"];
+	  43 [label="Plaisance: “不，先生，你不想的。那不是真正的浪漫…浪漫说的应该是克服逆境，找到一位愿意照顾你直到天荒地老的*单身百万富翁*。”"];
+	  44 [label="Jump to: [romcom]"];
+	  45 [label="Pain Threshold: 有人觉得这只是个浪漫故事，其实是一部折磨人心的心理现实主义作品。"];
+	  0 -> 1
+	  1 -> 36
+	  2 -> 3
+	  3 -> 19
+	  5 -> 6
+	  6 -> 8
+	  6 -> 7
+	  7 -> 23
+	  8 -> 23
+	  9 -> 22
+	  10 -> 40
+	  10 -> 13
+	  10 -> 39
+	  11 -> 34
+	  12 -> 42
+	  13 -> 2
+	  15 -> 21
+	  16 -> 26
+	  17 -> 44
+	  18 -> 33
+	  19 -> 5
+	  19 -> 41
+	  19 -> 14
+	  19 -> 15
+	  19 -> 27
+	  20 -> 19
+	  21 -> 32
+	  22 -> 19
+	  23 -> 24
+	  23 -> 25
+	  24 -> 12
+	  25 -> 11
+	  26 -> 22
+	  27 -> 37
+	  28 -> 43
+	  29 -> 30
+	  29 -> 31
+	  30 -> 28
+	  31 -> 20
+	  32 -> 19
+	  33 -> 16
+	  33 -> 38
+	  34 -> 19
+	  35 -> 36
+	  36 -> 19
+	  37 -> 29
+	  38 -> 9
+	  39 -> 45
+	  40 -> 35
+	  41 -> 18
+	  42 -> 10
+	  43 -> 20
+	  44 -> 19
+	  45 -> 40
+	  45 -> 13
+}
+

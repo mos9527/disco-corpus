@@ -1,0 +1,1202 @@
+# YARD / HANGED MAN BULLET
+# This is the final phase of the hanged man:
+#1. White check to find bullet
+#2. Failure to find fridge
+#3. Bagging him and taking it away
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Perception: 你触摸着死者的身体。他的皮肤很冷，在冰箱灯光下交织成浅蓝与银灰色。你*仍然*不知该从何下手——甚至要怎样处理他……"];
+	  3 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"]"];
+	  4 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"]", shape=diamond];
+	  5 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"])", shape=diamond];
+	  6 [label="Authority: 这句话在地下室的空气里回荡着，远处的冰淇淋店里人声鼎沸，海风阵阵……"];
+	  7 [label="Authority: *警探*。"];
+	  8 [label="You: 触摸他的鼻孔。"];
+	  9 [label="Cuno: 坤诺陷入了沉默。"];
+	  10 [label="You: 继续深入。"];
+	  11 [label="Empathy: 敬畏地颤抖着。"];
+	  12 [label="You: “真该死。”"];
+	  13 [label="bullet_time"];
+	  14 [label="The Hanged Man: IsKimHere()"];
+	  15 [label="IsKimHere()", shape=diamond];
+	  16 [label="!(IsKimHere())", shape=diamond];
+	  17 [label="Kim Kitsuragi: “是的。以及他脖子上的绑带；上吊；甚至把他拖到院子里……*一切*都是这个男人死后才做的。”"];
+	  18 [label="The Hanged Man: Variable[\"yard.hanged_result_probable_cause\"]"];
+	  19 [label="Variable[\"yard.hanged_result_probable_cause\"]", shape=diamond];
+	  20 [label="!(Variable[\"yard.hanged_result_probable_cause\"])", shape=diamond];
+	  21 [label="You: “我得去清理一下自己。”"];
+	  22 [label="Kim Kitsuragi: “为了隐藏某样东西。真正的凶手？真正的动机？真实发生的一切。”"];
+	  23 [label="Kim Kitsuragi: “哦，”他点点头。“你*的确*需要，我很高兴你这么说了。你在褴褛飞旋订的房间应该有浴室，晚上务必要利用起来。”"];
+	  24 [label="Cunoesse: “那头该死的猪猡很可能又想摸了……”"];
+	  25 [label="Kim Kitsuragi: “没有这么做的必要了，我们已经全面调查了生殖器……”警督看上去很焦虑。"];
+	  26 [label="The Hanged Man: 他指甲的颜色变深了，坑坑洼洼的而且很长。里面还有些污垢，就是这样。\n他指甲的颜色变深了。坑坑洼洼的而且很长。里面还有些污垢。令人惊奇的是，并没有子弹藏在里面。"];
+	  27 [label="end hub 2 known bullet"];
+	  28 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]"];
+	  29 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]", shape=diamond];
+	  30 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"])", shape=diamond];
+	  31 [label="Authority: 他似乎是让你别无选择了。"];
+	  32 [label="Kim Kitsuragi: “卡拉洁告诉我们子弹射进了他的*嘴里*——不如把你的手伸进去……”"];
+	  33 [label="Esprit de Corps: 警督*显然*应该在这里坐镇，你输了。"];
+	  34 [label="You: 把尸体装袋并拖进車厢。[离开。]"];
+	  35 [label="The Hanged Man: CancelTask(\"TASK.fridge_victims_body_cancelled\")--[[ Variable[ ]]"];
+	  36 [label="You: 先摸索四周。"];
+	  37 [label="Interfacing: 不远了，它会来找你的，继续爬下去……"];
+	  38 [label="You: “我拿不到……”"];
+	  39 [label="You: “我能留着它吗？”"];
+	  40 [label="You: “同意。”"];
+	  41 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  42 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  43 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  44 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  45 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  46 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  47 [label="You: “勒痕、被折断的舌骨，都是被动过手脚的……”"];
+	  48 [label="You: “然后呢？”（继续。）"];
+	  49 [label="Cuno: “真不敢相信那头猪猡*又*在摸他了……”"];
+	  50 [label="You: “我的直觉告诉我这具尸体还藏着更多秘密。”"];
+	  51 [label="You: “他就不能……在这里多待一会儿吗？”"];
+	  52 [label="The Hanged Man: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  53 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  54 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  55 [label="The Hanged Man: 当你抽出手来的时候，脑袋内部感觉冰冷湿滑，就像手套似的，汗水从你的额头上滴了下来——小心别把你手指间的战利品弄丢了……"];
+	  56 [label="Untitled hub"];
+	  57 [label="Kim Kitsuragi: “除非是*其它办法*都行不通了。”他强调着。"];
+	  58 [label="Kim Kitsuragi: “我们把尸体装进袋子里然后搬到我的锐影車厢上吧。我可以送他去分析部门，但今天剩下的时间我*将*无法奉陪了。”"];
+	  59 [label="The Hanged Man: Variable[\"yard.hanged_authority_detective\"]"];
+	  60 [label="Variable[\"yard.hanged_authority_detective\"]", shape=diamond];
+	  61 [label="!(Variable[\"yard.hanged_authority_detective\"])", shape=diamond];
+	  62 [label="Interfacing: 哦好吧——来生再见。"];
+	  63 [label="Tutorial Agent: 如果你实在无事可做，不如去看书或者坐在广场的长椅上。"];
+	  64 [label="Esprit de Corps: 我们并没有上当，他想。非常值得骄傲。"];
+	  65 [label="The Hanged Man: 再见了那双漂亮的珐琅质靴子。现在你永远也没办法拥有一整套了。在分析部门安息吧……"];
+	  66 [label="The Hanged Man: 一副红与黑交融的死亡景象，被你赤裸的双手撑开，嵌满了牙齿。他好像在笑着，喉咙里喷出死亡的气息。在那里，他口腔的后方，腭垂的上面，就在软腭那儿……\n一副红与黑交融的死亡景象：被你赤裸的双手撑开，嵌满了牙齿。他好像在笑着，喉咙里喷出死亡的气息。在那里，他口腔的后方，腭垂的上面，就在软腭那儿……"];
+	  67 [label="The Hanged Man: 你的手指一直伸进了他的头骨。弹孔还在更深处，但裂口的宽度还不足以让你手掌的其余部分伸进去……"];
+	  68 [label="Kim Kitsuragi: “你……能拿到它吗？”他在口袋里翻找着。"];
+	  69 [label="The Hanged Man: 他的后脑勺上有一条细缝和一处凸起。你的手指一定是顶到那里了，从头骨*内部*。"];
+	  70 [label="Cuno: “那混蛋对那根丁丁爱不释手了……”"];
+	  71 [label="Jump to: [Perception: \"Your arm reaches out and your eyes...\"]"];
+	  72 [label="The Hanged Man: Variable[\"whirling.dreamtwo_open_case\"]"];
+	  73 [label="Variable[\"whirling.dreamtwo_open_case\"]", shape=diamond];
+	  74 [label="!(Variable[\"whirling.dreamtwo_open_case\"])", shape=diamond];
+	  75 [label="Kim Kitsuragi: 他摊开塑料布。“我需要人帮我把他扛到我的锐影車厢上，我就从这里接手吧。”"];
+	  76 [label="The Hanged Man: Variable[\"doomed.icebear_main_hub_reached\"]"];
+	  77 [label="Variable[\"doomed.icebear_main_hub_reached\"]", shape=diamond];
+	  78 [label="!(Variable[\"doomed.icebear_main_hub_reached\"])", shape=diamond];
+	  79 [label="Kim Kitsuragi: 他合上笔记本，扭了扭脖子。“行动起来吧。随着时间的推移，我们想在死者体内寻找的东西也会变得越来越难找。”"];
+	  80 [label="Jump to: [ICE BEAR FRIDGE MAIN HUB]"];
+	  81 [label="Tutorial Agent: 如果你实在无事可做，不如去看书或者坐在广场的长椅上。"];
+	  82 [label="You: 这是什么？\n“在这儿。”"];
+	  83 [label="You: 玩弄它——感觉好极了。"];
+	  84 [label="The Hanged Man: 一股黑色的液体从伤处流进了他的喉咙……"];
+	  85 [label="You: 把手指伸进去。"];
+	  86 [label="Perception: 锋利的锯齿状材质，边缘直接割进了你的皮肤。\n锋利的锯齿状材质，边缘直接割进了你的皮肤。一定是那颗*子弹*了。\n冰冷的锯齿状金属，边缘直接穿透乳胶手套，割进了你的手指。"];
+	  87 [label="The Hanged Man: 软骨就像水果似的咔嚓裂开，你的手就这样插进了他的脑袋。奇怪的液体顺着你的手腕流了下来——然后你的指尖，感受到了它……\n软骨就像水果似的咔嚓裂开，你的手就这样插进了他的脑袋。液体顺着你的手腕流了下来——然后你的指尖，感受到了它……"];
+	  88 [label="Suggestion: 她激动得声音嘶哑。"];
+	  89 [label="The Hanged Man: Variable[\"yard.hanged_interfacing_pulled_out_bullet\"]"];
+	  90 [label="Variable[\"yard.hanged_interfacing_pulled_out_bullet\"]", shape=diamond];
+	  91 [label="!(Variable[\"yard.hanged_interfacing_pulled_out_bullet\"])", shape=diamond];
+	  92 [label="You: 慢慢地抽出手指……"];
+	  93 [label="Kim Kitsuragi: 他*啪*的一声把刀刺进头骨中，一次——又一次——直到骨头如同蛋壳般松动。头骨中你的手指感觉随着他的动作，果冻状的物体也在随之移动。那个东西仍在你的手指下方。\n他*啪*的一声把刀刺进头骨中，一次——又一次——直到骨头如同蛋壳般松动。头骨中的你的手指感觉随着他的动作，果冻状的物体也在随之移动。子弹仍在你的手指下方。"];
+	  94 [label="Kim Kitsuragi: 他转而看向自己的笔记本：“我们得在伤情列表里加上这条：伤情#4：带有射伤轮的椭圆贯穿伤。软腭，口腔后方。”\n接着他拿出自己的笔记本：“看来我们得在你的伤情列表中添上一笔了……”——*咔哒*按下了笔——“伤情#4。带有射伤轮的椭圆贯穿伤。软腭，口腔后方。”"];
+	  95 [label="Kim Kitsuragi: “很好-很好……”背景中的冰箱因为兴奋而嗡嗡作响。"];
+	  96 [label="Esprit de Corps: 你突然想起：现场尸检必须有两名警官在场。你把手从死者的脸上拿开，睁开了眼睛。你还是得跟警督一起回来。"];
+	  97 [label="Kim Kitsuragi: 他指着尸体脖子上的痕迹“……*这*圈伤痕。”"];
+	  98 [label="Kim Kitsuragi: “自从我检查过他的双手之后就一直心存疑虑，警官——根本没有挣扎的痕迹。他的脖子上也没有抓痕，为什么？为什么他不挣扎求生呢？”\n“自从你让我看过那些脚印之后，我就一直心存疑虑，警官。我们无法解释他们为何要把他*背*过来——为什么不让他自己过来？一直没有令人满意的解释。”\n“自从你指出尸斑很暗淡之后，我就一直心存疑虑。他们知道我们会——分析尸斑。我也曾遇到过会摆弄尸体姿势的犯罪者。”\n“自从你有*预感*之后，我就一直心存疑虑。在他临死前，正在做*别的*事儿。我自己是没有那种直觉的——一般也不相信它。但它让我……产生了怀疑。”"];
+	  99 [label="Kim Kitsuragi: “帮他从痛苦中解脱？”他思索着。“有可能，但这不能解释其余的疑点——主要是缺少挣扎痕迹。可能我头脑方面有些随意，但我更倾向于这条推测。在我看来绝对动了手脚。”"];
+	  100 [label="Jump to: [end hub]"];
+	  101 [label="Kim Kitsuragi: “嘿……”他的脸上露出了灿烂的笑容。“那栋楼下面不是有个*巨型冰熊石棺*吗？”他指着那片即将消失的商业区。"];
+	  102 [label="Endurance: 很快你就要在一堆腐肉和骨头之间寻找线索了。"];
+	  103 [label="The Hanged Man: IsKimHere()"];
+	  104 [label="IsKimHere()", shape=diamond];
+	  105 [label="!(IsKimHere())", shape=diamond];
+	  106 [label="Tutorial Agent: 这意味着直到明天早上，曷城警探都不会在队伍中了。你可以去做些日常杂事，或者调查这起案件——虽然可能会棘手许多。"];
+	  107 [label="You: 脑干？"];
+	  108 [label="The Hanged Man: Variable[\"yard.hanged_logic_explain_bulelt_and_ligament\"]"];
+	  109 [label="Variable[\"yard.hanged_logic_explain_bulelt_and_ligament\"]", shape=diamond];
+	  110 [label="!(Variable[\"yard.hanged_logic_explain_bulelt_and_ligament\"])", shape=diamond];
+	  111 [label="The Hanged Man: Variable[\"whirling.dreamtwo_open_case\"]"];
+	  112 [label="Variable[\"whirling.dreamtwo_open_case\"]", shape=diamond];
+	  113 [label="!(Variable[\"whirling.dreamtwo_open_case\"])", shape=diamond];
+	  114 [label="The Hanged Man: Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false"];
+	  115 [label="Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false", shape=diamond];
+	  116 [label="!(Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false)", shape=diamond];
+	  117 [label="Kim Kitsuragi: “继续办案，处理私事？但尽量不要以身*犯险*。在这种地方警官们都需要自己的搭档。”"];
+	  118 [label="Jump to: [You: \"Touch it with your finger, gently....\"]"];
+	  119 [label="You: 不，这太过头了。（抽出手来。）"];
+	  120 [label="Pain Threshold: 在肾上腺素的刺激下，疼痛几乎无从察觉。"];
+	  121 [label="You: 先检查头骨。"];
+	  122 [label="Kim Kitsuragi: “未知口径，步枪。某种易碎的合金，撞击后断裂……”"];
+	  123 [label="You: 沉默不语，点头就好。"];
+	  124 [label="You: “死咯-死噜-死透啦。”"];
+	  125 [label="The Hanged Man: 你扯下他的马裤，胯下满是肥胖的细纹。阴茎萎缩着，只有小半部分暴露在外。这里并没有什么神秘或值得注意的东西。\n他内裤下的生殖器官依然不值得注意——你看见的是一个死者的阴茎。只要看过一次，你的脑海中就有了画面。"];
+	  126 [label="Kim Kitsuragi: “嗯。”他站起身。“这是我们唯一*不能*耽搁的任务。随着时间的推移，我们想找的东西也会变得越来越难找。”"];
+	  127 [label="The Hanged Man: Variable[\"yard.cuno_of_many_means\"]"];
+	  128 [label="Variable[\"yard.cuno_of_many_means\"]", shape=diamond];
+	  129 [label="!(Variable[\"yard.cuno_of_many_means\"])", shape=diamond];
+	  130 [label="The Hanged Man: Variable[\"doomed.doorbell_know_revachol_ice_city\"]"];
+	  131 [label="Variable[\"doomed.doorbell_know_revachol_ice_city\"]", shape=diamond];
+	  132 [label="!(Variable[\"doomed.doorbell_know_revachol_ice_city\"])", shape=diamond];
+	  133 [label="The Hanged Man: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  134 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  135 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  136 [label="Kim Kitsuragi: 他皱着眉头思考。“不如你把手伸进他的嘴巴，去他*脑袋*里摸索看看。”"];
+	  137 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  138 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  139 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  140 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  141 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  142 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  143 [label="You: 把尸体装袋并拖进車厢。[离开。]"];
+	  144 [label="The Hanged Man: Variable[\"whirling.dreamtwo_open_case\"]"];
+	  145 [label="Variable[\"whirling.dreamtwo_open_case\"]", shape=diamond];
+	  146 [label="!(Variable[\"whirling.dreamtwo_open_case\"])", shape=diamond];
+	  147 [label="You: 掏出来。"];
+	  148 [label="You: Variable[\"yard.hanged_interfacing_pulled_out_bullet\"]"];
+	  149 [label="Variable[\"yard.hanged_interfacing_pulled_out_bullet\"]", shape=diamond];
+	  150 [label="!(Variable[\"yard.hanged_interfacing_pulled_out_bullet\"])", shape=diamond];
+	  151 [label="Perception: 你闭着眼睛伸出手臂，仿佛它们生出了自己的意志。四周陷入黑暗，你感受到了冰冷又滑腻的肉体——先是指尖，紧接着是你的整个手掌。\n你闭着眼睛伸出手臂――仿佛它们生出了自己的意志。四周陷入黑暗，透过乳胶手套，你感受到了冰冷的肉体，就在你的手掌之下。"];
+	  152 [label="Perception: ……你看到一个小洞，肉眼很难看见。它肿胀到近乎闭合，几乎要消失了，半径不超过0.4厘米。边缘部分变得越来越暗淡。"];
+	  153 [label="Cuno: 坤诺同样点了点头，他走近了一步。"];
+	  154 [label="Kim Kitsuragi: 警督用纸笔的声音作为回答。"];
+	  155 [label="Jump to: [Interfacing: \"You're not far, it'll come to you,...\"]"];
+	  156 [label="You: “留着吧，警督。就当是一个礼物。”"];
+	  157 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  158 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  159 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  160 [label="You: 再次查看他的内裤。"];
+	  161 [label="You: 放弃。"];
+	  162 [label="The Hanged Man: Variable[\"yard.hanged_touched_genitals\"]"];
+	  163 [label="Variable[\"yard.hanged_touched_genitals\"]", shape=diamond];
+	  164 [label="!(Variable[\"yard.hanged_touched_genitals\"])", shape=diamond];
+	  165 [label="You: “没有，还是把他交给分析部门的人吧。”"];
+	  166 [label="Authority: 更别说放任这具尸体就这么烂在这里会对警队的声誉造成多大损害了……"];
+	  167 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  168 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  169 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  170 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"]"];
+	  171 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"]", shape=diamond];
+	  172 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"])", shape=diamond];
+	  173 [label="Electrochemistry: 他后脑勺的那位*放克灵魂兄弟*已经永远的消失了。"];
+	  174 [label="Jump to: [autopsy hub]"];
+	  175 [label="The Hanged Man: Variable[\"yard.hanged_kim_leaving_not_tutorialized\"]  and  Variable[\"whirling.dreamtwo_open_case\"]"];
+	  176 [label="Variable[\"yard.hanged_kim_leaving_not_tutorialized\"]  and  Variable[\"whirling.dreamtwo_open_case\"]", shape=diamond];
+	  177 [label="!(Variable[\"yard.hanged_kim_leaving_not_tutorialized\"]  and  Variable[\"whirling.dreamtwo_open_case\"])", shape=diamond];
+	  178 [label="You: 缩回手指然后点头。"];
+	  179 [label="Kim Kitsuragi: “一颗子弹。”警督用手指将其夹了起来。“未知口径，步枪……你可以把手从被害人的头里抽出来了，警官——-干得漂亮。”"];
+	  180 [label="Kim Kitsuragi: “不不，这是你应得的。我们可以稍后再记录。”警督把袋子扔到你血淋淋的手里，感觉很轻。\n不-不，它是你应得的。我们可以稍后再归档。警督把袋子扔到你的手里，感觉很轻。"];
+	  181 [label="Kim Kitsuragi: “那是之前。这次我们发现了远离伤口轨道的组织损伤，这次我们还发现了*子弹*。”"];
+	  182 [label="Cunoesse: “真他妈的*漂亮……*”"];
+	  183 [label="treatment_here"];
+	  184 [label="You: 别再摸它了。"];
+	  185 [label="Kim Kitsuragi: “如果你这么想的话，警官。”他点点头。“我也不会持反对意见。”"];
+	  186 [label="Kim Kitsuragi: “留下来继续工作。走访当地人，这起案子或者办点自己的私事？我们之后在褴褛飞旋的楼下，明天早上——7：30准时集合。”"];
+	  187 [label="Kim Kitsuragi: “好吧。”他拿出一个闪闪发光的黑色裹尸袋，开始用塑料布盖住死者的脸。"];
+	  188 [label="Jump to: [ICE BEAR FRIDGE MAIN HUB]"];
+	  189 [label="Kim Kitsuragi: “是的——现在。我很少会对一个*巨型*冰熊冰箱的尺寸感到失望，但我想我们还是得提前看一眼。在我们把他抬过去之前，确保它确实*足够*大。”"];
+	  190 [label="Perception: 你真的应该等到尸体被*冷藏*的。事实证明，想在这片混乱中找东西真是极其困难。"];
+	  191 [label="Kim Kitsuragi: 警督摩擦着身侧取暖。“你迟早会有所发现的，至少在那之前他在这里很安全。”"];
+	  192 [label="Kim Kitsuragi: “继续办案，处理私事？但尽量不要以身*犯险*。在这种地方警官们都需要自己的搭档。”"];
+	  193 [label="Kim Kitsuragi: “正如我说的，被处理过就是指一种在死者死后试图操纵尸体的行为——用*伪造*的死因掩盖真正的死亡原因。若是如此……”"];
+	  194 [label="Tutorial Agent: 这意味着直到明天早上，曷城警探都都不在场了。你可以去做些日常杂事，或者调查这起案件——虽然可能会棘手许多。"];
+	  195 [label="The Hanged Man: Variable[\"yard.hanged_perception_white_oval_wound\"]"];
+	  196 [label="Variable[\"yard.hanged_perception_white_oval_wound\"]", shape=diamond];
+	  197 [label="!(Variable[\"yard.hanged_perception_white_oval_wound\"])", shape=diamond];
+	  198 [label="You: 睁开眼睛观察。"];
+	  199 [label="You: 掏出来。"];
+	  200 [label="You: Variable[\"yard.hanged_interfacing_pulled_out_bullet\"]"];
+	  201 [label="Variable[\"yard.hanged_interfacing_pulled_out_bullet\"]", shape=diamond];
+	  202 [label="!(Variable[\"yard.hanged_interfacing_pulled_out_bullet\"])", shape=diamond];
+	  203 [label="You: 不，摸摸别的。"];
+	  204 [label="Kim Kitsuragi: “那好吧……我们目前在检查尸斑，他已经开始分解了。如果还想做另一项检查的话，我们需要把尸体*冷藏*起来——而且速度要快。”"];
+	  205 [label="Kim Kitsuragi: “好吧。”他摊开塑料布。“我需要人帮我把他扛到我的锐影車厢上，剩下的我来处理就好。”"];
+	  206 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]"];
+	  207 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]", shape=diamond];
+	  208 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"])", shape=diamond];
+	  209 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  210 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  211 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  212 [label="You: “一个绝对巨大的冰箱——还通着电——*完全*就是冰熊的形状！”"];
+	  213 [label="Kim Kitsuragi: “这么说就有些夸张了。实际上它不是*用来*储存尸体的，至少我希望如此。我想我们还是得提前看一眼，在我们把他抬过去之前，确保它确实*足够*大。”"];
+	  214 [label="Jump to: [autopsy hub]"];
+	  215 [label="end"];
+	  216 [label="Authority: 这句话在院子的空气里回荡着，远处有狗在吠叫，还有汽車的轰鸣从更远处飘来……"];
+	  217 [label="Cuno: “他他妈的在搞什么？”你听见一阵吱吱的声音，听起来非常遥远。"];
+	  218 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  219 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  220 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  221 [label="Cuno: “该死的*弹孔*坤……”坤诺的声音戛然而止。"];
+	  222 [label="Cunoesse: “别管那*该死的贯穿伤*了死四眼！那头猪把他当成了一个该死的人偶！”"];
+	  223 [label="Authority: 他看着自己的老爸在抓握游戏中拔得头筹。"];
+	  224 [label="The Hanged Man: *扑通*一声你的手从他的嘴里抽了出来，鲜血一路流至手腕。你的两指之间——是一朵用铅做成的，小花。\n*扑通*一声你的手从他的嘴里抽了出来，鲜血一路流至手腕。你的两指之间——是一朵用铅做成的，小花。\n*扑通*一声你的手从他的嘴里抽了出来，园艺手套上充斥的鲜血一路流至手腕。你的两指之间——是一朵用铅做成的，小花！"];
+	  225 [label="Kim Kitsuragi: 他的折叠刀出场了——警督用刀片划过那人的头骨，寻找着贯穿伤……"];
+	  226 [label="Kim Kitsuragi: “你能把它推出来吗？”"];
+	  227 [label="Kim Kitsuragi: “速度很快，脑组织中有瞬时空腔。枕骨上有小型贯穿伤。”他着重在这处损伤下划了几笔。”听起来如何？”"];
+	  228 [label="You: “太美妙了。”"];
+	  229 [label="You: 如果我再摸摸它……"];
+	  230 [label="The Hanged Man: 尸体似乎在心满意足地打着哈欠，好像很高兴你已经失去了动力。"];
+	  231 [label="You: “好吧——我们要去哪儿找能够存放尸体的冰箱呢？”"];
+	  232 [label="Kim Kitsuragi: “它得是*工业级别*的大小。我们先去问问褴褛飞旋的老板，再去大门前的弗利多试试吧。如果两个地方都没有……”他的声音渐渐低沉下来——目光落在了*坤诺*身上。\n“它得是*工业级别*的大小。我们先去飞旋褴褛问问加尔特，再去正门前的弗利多试试吧。如果他们都不知道……”他的声音渐渐低沉下来——目光落在了*坤诺*身上。“除非是*其它办法*都行不通了。”"];
+	  233 [label="Kim Kitsuragi: 他摊开塑料布。“我需要人帮我把他扛到我的锐影車厢上，我就从这里接手吧。”"];
+	  234 [label="Kim Kitsuragi: “今天送他去做分析已经太迟了，明早我会直接带他过去。”他把黑色塑料布盖到了被害人的脸上。"];
+	  235 [label="Cuno: “该死的你在看什么，小四眼？你想尝尝坤诺的怒火吗？想*挨揍*吗？”"];
+	  236 [label="The Hanged Man: Variable[\"yard.hanged_authority_detective\"]"];
+	  237 [label="Variable[\"yard.hanged_authority_detective\"]", shape=diamond];
+	  238 [label="!(Variable[\"yard.hanged_authority_detective\"])", shape=diamond];
+	  239 [label="The Hanged Man: 再见了那双漂亮的珐琅质靴子，在分析部门安息吧……"];
+	  240 [label="The Hanged Man: 再见了那双漂亮的珐琅质靴子，在分析部门安息吧……"];
+	  241 [label="Hand/Eye Coordination: 这个小东西可以揭示出更多关于凶器的信息。"];
+	  242 [label="Kim Kitsuragi: “好吧。”他拿出一个闪闪发光的黑色裹尸袋，开始用塑料布盖住死者的脸。"];
+	  243 [label="The Hanged Man: 只有小指头才伸得进去。当你钻开软骨寻找某样东西的时候，肌肉也会改变形状。"];
+	  244 [label="You: 用你的手指轻轻地触摸它。（继续。）"];
+	  245 [label="Kim Kitsuragi: “嗯，“他赞同道。”继续。”"];
+	  246 [label="You: 蜿蜒行进……"];
+	  247 [label="no_bullet"];
+	  248 [label="Jump to: [Interfacing: \"You're not far, it'll come to you,...\"]"];
+	  249 [label="Cunoesse: “什么？！是什么*东西？”"];
+	  250 [label="Kim Kitsuragi: “一颗子弹……”警督把一个标着*证物*的小袋放在它下面。"];
+	  251 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  252 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  253 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  254 [label="Kim Kitsuragi: “还有其它的迹象，一些小细节。没有把上吊作为死亡原因是对的，正如犯罪者原本*期望*的那样——他们不会继续得逞了。”"];
+	  255 [label="Inland Empire: 你无法摆脱那种面前的这具肉体还隐藏着更多秘密的感觉。"];
+	  256 [label="know_bullet"];
+	  257 [label="You: “正确。”"];
+	  258 [label="Esprit de Corps: 他的眉头紧锁，目光呆滞。警督看上去很后悔之前没有把这件事弄清楚。"];
+	  259 [label="Jump to: [end hub 2 known bullet]"];
+	  260 [label="fail_missing"];
+	  261 [label="You: 诅咒商业区的那个巨型冰熊冰箱呢？"];
+	  262 [label="Jump to: [ICE BEAR FRIDGE MAIN HUB]"];
+	  263 [label="Kim Kitsuragi: “好吧。”他拿出一个闪闪发光的黑色裹尸袋，开始用塑料布盖住死者的脸。"];
+	  264 [label="Esprit de Corps: 我们差点就上当了，他想。*差一点*。"];
+	  265 [label="Kim Kitsuragi: “我今天就可以开車送他去分析部门，没问题。反正什么事也做不了……但这*的确*意味着我在今天余下的时间里都无法奉陪了。”"];
+	  266 [label="You: 把你的手指伸进他的鼻子。"];
+	  267 [label="You: 摸摸别的。"];
+	  268 [label="Perception: 你想找的东西——不在这儿。爬下来吧，小蜘蛛……\n你想找的东西——也不在这儿。爬下来吧，小蜘蛛……"];
+	  269 [label="Cuno: “我的猪猡他妈的*找到*了！”"];
+	  270 [label="Kim Kitsuragi: “等等，警探！”就在你准备抽出手指的时候……"];
+	  271 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  272 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  273 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  274 [label="Cunoesse: “漂亮啊……”"];
+	  275 [label="You: 捏他的鼻子。"];
+	  276 [label="Interfacing: 这正是你之前感觉到的*异样*，因为太小而被人下意识的忽略了。"];
+	  277 [label="Logic: 当然，他也很有可能是*同时*被枪杀和吊死的。"];
+	  278 [label="Logic: 嗯……坤诺看上去路子很多，对马丁内斯*了如指掌*，可能对冰箱也……"];
+	  279 [label="You: “在此期间我要做什么呢？”"];
+	  280 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  281 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  282 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  283 [label="whatelse"];
+	  284 [label="Kim Kitsuragi: “现在，警探……我很少会对一个*巨型*冰熊冰箱的尺寸感到失望，但我想我们还是得提前看一眼。在我们把他抬过去之前，确保它确实*足够*大。”"];
+	  285 [label="The Hanged Man: Variable[\"whirling.klaasje_open_downstairs_branch\"]"];
+	  286 [label="Variable[\"whirling.klaasje_open_downstairs_branch\"]", shape=diamond];
+	  287 [label="!(Variable[\"whirling.klaasje_open_downstairs_branch\"])", shape=diamond];
+	  288 [label="You: “所以这就是那个*冰熊形状*的冰箱的用途了！”"];
+	  289 [label="The Hanged Man: Variable[\"yard.hanged_authority_detective\"]"];
+	  290 [label="Variable[\"yard.hanged_authority_detective\"]", shape=diamond];
+	  291 [label="!(Variable[\"yard.hanged_authority_detective\"])", shape=diamond];
+	  292 [label="Interfacing: 哦好吧——来生再见。"];
+	  293 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  294 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  295 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  296 [label="Kim Kitsuragi: “看出来了……”金望过去，手中握着一支钢笔，他的笔记本翻开至红页处。\n“射伤轮……”金望过去，手中握着一支钢笔，他的笔记本翻开至复写纸处。"];
+	  297 [label="Jump to: [search_for_it]"];
+	  298 [label="Kim Kitsuragi: 他的脸上浮现出了笑容：“别傻了。这是你应得的。四眼仔这篇就算翻过去了。”警督把袋子扔到你血淋淋的手里，感觉很轻。\n“别傻了。”他的脸上浮现出了笑容。“它是你应得的。至于四眼仔的事情就忘了吧。”他把袋子扔到你的手里。"];
+	  299 [label="You: “太他妈对了。”"];
+	  300 [label="You: “处理过？”"];
+	  301 [label="You: “我们现在下结论是不是为时过早了？”"];
+	  302 [label="Kim Kitsuragi: “死咯-死噜-死透啦。”"];
+	  303 [label="Kim Kitsuragi: “我并非是*灵光一闪*。自从我们在他的手腕上没有找到任何挣扎痕迹时我就一直心存疑虑，脖子上也没有抓痕——为什么？为什么他不挣扎求生呢？”\n“我并非是*灵光一闪*。自从你让我看过那些脚印后我就一直心存疑虑。他们为何要把他*背*过来——为什么不让他自己过来？没有一个令人满意的解释。”\n“我并非是*灵光一闪*。自从你指出尸斑很暗淡之后我就一直心存疑虑。*他们*知道我们会——分析尸斑。我也曾遇到过会摆弄尸体姿势的犯罪者。”\n“我并非是*灵光一闪*。自从你告诉我了那个预感之后我就一直心存疑虑，警官。他在临死之前正在做*别的*事。我自己是没有那种直觉的——一般也不相信它。但它让我产生了怀疑。”"];
+	  304 [label="You: “谁会这么做呢？”"];
+	  305 [label="You: 查看他的指甲下面，正如金之前做过的那样。"];
+	  306 [label="You: “没错，我们忽视了某样东西。”"];
+	  307 [label="Kim Kitsuragi: 他摇摇头。“我在*分析部门*工作过一年，里面就是一群屠夫和小丑。我曾经在一周内看过20起死因误判事件，想让他们分析出什么有用的东西根本就是天方夜谭。”"];
+	  308 [label="The Hanged Man: Variable[\"yard.hanged_perc_failed_once\"]"];
+	  309 [label="Variable[\"yard.hanged_perc_failed_once\"]", shape=diamond];
+	  310 [label="!(Variable[\"yard.hanged_perc_failed_once\"])", shape=diamond];
+	  311 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  312 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  313 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  314 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  315 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  316 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  317 [label="You: “然后呢？”"];
+	  318 [label="The Hanged Man: 你面前的尸体几乎是肉眼可见的腐烂着。你最好暂时搁置其余的工作，想办法将其保存起来，以便更好的进行尸检。"];
+	  319 [label="You: “我需要先去看一眼尸体。”"];
+	  320 [label="The Hanged Man: Variable[\"whirling.klaasje_open_downstairs_branch\"]"];
+	  321 [label="Variable[\"whirling.klaasje_open_downstairs_branch\"]", shape=diamond];
+	  322 [label="!(Variable[\"whirling.klaasje_open_downstairs_branch\"])", shape=diamond];
+	  323 [label="The Hanged Man: Variable[\"yard.hanged_autopsy_exited_cause_known_path\"]"];
+	  324 [label="Variable[\"yard.hanged_autopsy_exited_cause_known_path\"]", shape=diamond];
+	  325 [label="!(Variable[\"yard.hanged_autopsy_exited_cause_known_path\"])", shape=diamond];
+	  326 [label="The Hanged Man: 没错，那就是这块地方的名字。"];
+	  327 [label="Kim Kitsuragi: “我们把他装进袋子里然后搬到我的锐影車厢上吧。裹尸袋在运送期间应该会有气味残留……”"];
+	  328 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  329 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  330 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  331 [label="The Hanged Man: 他的脸、双颊、鼻子以及肥胖肿胀的嘴唇。你的手如蜘蛛一般在他的五官上爬行，全世界都陷入了静默之中。\n他的脸、双颊、鼻子以及肥胖肿胀的嘴唇。你的手如橡胶蜘蛛一般在他的五官上爬行，全世界都陷入了静默之中。"];
+	  332 [label="The Hanged Man: 它们肿胀到近乎闭合了——你得全力*推*进去。"];
+	  333 [label="Jump to: [You: \"Touch it with your finger, gently....\"]"];
+	  334 [label="You: 在他的嘴里打一个洞。"];
+	  335 [label="Jump to: [no_bullet]"];
+	  336 [label="Interfacing: 你的手继续深入。无论里面藏了什么，只要你试图把它掏出来，它就会不停地在你的手指间滚动。\n你的手继续深入。只要你试图把它掏出来，它就会不停地在你的手指间滚动。"];
+	  337 [label="You: 放进去。"];
+	  338 [label="Kim Kitsuragi: “当然。这是你*应得*的。”警督把袋子扔在你血淋淋的手上，感觉很轻。\n“当然，这是你应得的。”警督把袋子扔到你血淋淋的手里，感觉很轻。"];
+	  339 [label="You: “差不多吧。”"];
+	  340 [label="Kim Kitsuragi: “还有其它的迹象，一些小细节。一切都被精心设计成我们可以找出大致死因的样子，就像我们之前那样鲁莽。不过——不会再继续下去了。”"];
+	  341 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  342 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  343 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  344 [label="Logic: 或者——还记得吗对讲机上的按钮吗，就在褴褛飞旋旁边的大楼那儿？有一个叫*瑞瓦肖冰城*的？可能也算一条……线索？"];
+	  345 [label="The Hanged Man: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  346 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  347 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  348 [label="Kim Kitsuragi: “好吧。”他拿出一个闪闪发光的黑色裹尸袋，开始用塑料布盖住死者的脸。"];
+	  349 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]"];
+	  350 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]", shape=diamond];
+	  351 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"])", shape=diamond];
+	  352 [label="Kim Kitsuragi: “尽快。这是我们唯一*不能*耽搁的任务。随着时间的推移，我们想找的东西也会变得越来越难找。”"];
+	  353 [label="Jump to: [Authority: \"It seems he is leaving you no choic...\"]"];
+	  354 [label="Inland Empire: 你走对了路。"];
+	  355 [label="Encyclopedia: 这就是他用来控制情绪的东西……"];
+	  356 [label="Kim Kitsuragi: “还有一件事——干得*真*不错，警探。”"];
+	  357 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  358 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  359 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  360 [label="The Hanged Man: 舌头在口腔内自由地游移着，口腔黏膜很滑腻，感觉很脆弱。软肉中——牙齿崭露了头角；是牙龈上最坚硬的骨头。至于口腔后方……\n舌头在口腔内自由地游移着，口腔黏膜很滑腻，即便透过乳胶手套也能感受到那份脆弱。软肉中——牙齿崭露了头角；是牙龈上最坚硬的骨头。至于口腔后方……"];
+	  361 [label="Visual Calculus: 一个*射伤轮*！这正是我们想找的。"];
+	  362 [label="Cuno: “该死，坤……”"];
+	  363 [label="The Hanged Man: 基底神经节处呈块状——打进里面的东西撕裂了他的爬虫复合体。\n基底神经节处呈块状——一颗子弹撕裂了他的爬行动物脑。"];
+	  364 [label="Physical Instrument: 你全身上下所有的肌肉都僵硬起来，是时候*进入*他了。"];
+	  365 [label="Perception: 你感觉到了吗？就差一点了！快把他的下巴掀开，朝里面看看吧……"];
+	  366 [label="You: “帮个忙吧，警督？”"];
+	  367 [label="Visual Calculus: 里面的东西在距离头骨不远处停了下来，就在大脑底端，把颅骨敲开了一条细缝……"];
+	  368 [label="Kim Kitsuragi: “你认为我们错过了什么吗？”"];
+	  369 [label="Jump to: [looking_again]"];
+	  370 [label="The Hanged Man: 你面前的尸体几乎是肉眼可见的腐烂着。你最好暂时搁置其余的工作，想办法将其保存起来。这样你就可以更好的进行尸检了。"];
+	  371 [label="nuhconfront"];
+	  372 [label="Kim Kitsuragi: 他点点头。“我也有些疑虑——他的手上没有挣扎迹象，脖子上也没有抓痕。但至少……”"];
+	  373 [label="Kim Kitsuragi: “是的，我们是得仔细看看。我敢肯定它还有更多事情要告诉我们。”"];
+	  374 [label="The Hanged Man: 肿胀的腹部让尸体看上去*硕大无朋*。冰熊冰箱真的有这么大吗？你应该过去测量一下，以防万一。"];
+	  375 [label="Authority: *警探*。"];
+	  376 [label="Authority: 这句话在院子的空气里回荡着，远处有狗在吠叫，还有汽車的轰鸣从更远处飘来……"];
+	  377 [label="Authority: 这句话在地下室的空气里回荡着，远处的冰淇淋店里人声鼎沸，海风阵阵……"];
+	  378 [label="The Hanged Man: CancelTask(\"TASK.fridge_victims_body_cancelled\")--[[ Variable[ ]]"];
+	  379 [label="The Hanged Man: 口腔内部又湿又冷，一条球状的舌头蛰伏在嘴巴底部，像只扇贝似的懒洋洋地耸拉着……"];
+	  380 [label="Cunoesse: “这他妈是怎么回事儿？！”"];
+	  381 [label="Kim Kitsuragi: “看起来这是一条……非常小的贯穿伤。”警督靠了过来。"];
+	  382 [label="You: 低语：“找到了。”"];
+	  383 [label="The Hanged Man: 一朵小小的金属花朵在男人的脑袋上绽放开来，随后是你的手指。\n一个碎裂的铅块，如同花朵一样，在男人的脑袋上绽放开来——随后是你的手指。\n一朵小小的金属花朵在男人的脑袋上绽放开来，随后是你黄色的手指。"];
+	  384 [label="The Hanged Man: 你用手指捏起它。这团东西感觉有些分量，还有很多孔。继续前进，以免把它弄坏……\n你用手指捏起它，这团东西甚至比你的*鼻子*还要大。还有很多孔，就像要爆炸了一样。继续前进，以免把它弄坏。"];
+	  385 [label="Kim Kitsuragi: “那就等着我们去发现了。但有了*这个*——就让寻找的过程简单多了。”"];
+	  386 [label="Jump to: [end hub]"];
+	  387 [label="Jump to: [Kim Kitsuragi: \"\"Do you think we missed something?\"\"]"];
+	  388 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]"];
+	  389 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]", shape=diamond];
+	  390 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"])", shape=diamond];
+	  391 [label="You: “我们早该知道的。”"];
+	  392 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"tc.hanged_man_was_shot_known_from_klaasje\"]"];
+	  393 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"tc.hanged_man_was_shot_known_from_klaasje\"]", shape=diamond];
+	  394 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"tc.hanged_man_was_shot_known_from_klaasje\"])", shape=diamond];
+	  395 [label="Esprit de Corps: 与此同时，警督坐在他的办公桌后面，背靠着成堆的文件。他的帮助目前至关重要。"];
+	  396 [label="gain task hub"];
+	  397 [label="Jump to: [ICE BEAR FRIDGE MAIN HUB]"];
+	  398 [label="The Hanged Man: IsKimHere()"];
+	  399 [label="IsKimHere()", shape=diamond];
+	  400 [label="!(IsKimHere())", shape=diamond];
+	  401 [label="Inland Empire: 边缘系统的嚎叫已经结束了，陷入了安静之中。"];
+	  402 [label="Authority: *警探*。"];
+	  403 [label="The Hanged Man: IsTaskActive(\"TASK.fridge_victims_body\")--[[ Variable[ ]]"];
+	  404 [label="IsTaskActive(\"TASK.fridge_victims_body\")--[[ Variable[ ]]", shape=diamond];
+	  405 [label="!(IsTaskActive(\"TASK.fridge_victims_body\")--[[ Variable[ ]])", shape=diamond];
+	  406 [label="The Hanged Man: Variable[\"whirling.dreamtwo_open_case\"]"];
+	  407 [label="Variable[\"whirling.dreamtwo_open_case\"]", shape=diamond];
+	  408 [label="!(Variable[\"whirling.dreamtwo_open_case\"])", shape=diamond];
+	  409 [label="The Hanged Man: Variable[\"XP.discover_the_bullet\"]"];
+	  410 [label="Variable[\"XP.discover_the_bullet\"]", shape=diamond];
+	  411 [label="!(Variable[\"XP.discover_the_bullet\"])", shape=diamond];
+	  412 [label="The Hanged Man: Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false"];
+	  413 [label="Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false", shape=diamond];
+	  414 [label="!(Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false)", shape=diamond];
+	  415 [label="Perception: 你的手指抚摸过被害人冰冷的身体：他的四肢、躯干以及肿胀的器官……或许你应该再*彻底*一些？\n你的手抚摸过被害者冰冷的身体：他的四肢、肿胀的器官……在尸体的某处，藏着一颗子弹。"];
+	  416 [label="The Hanged Man: 你的食指正好可以伸进去，一条狭窄的血肉通道敞开了——组织损伤——足有两指宽。你的两根指头并驾齐驱，穿过他的嘴巴，进入了他的脑干。"];
+	  417 [label="You: 继续深入。"];
+	  418 [label="You: “我摸到一个固体，就在头骨下方。”"];
+	  419 [label="Kim Kitsuragi: “拿好你的奖励。”他把子弹放进证物袋里，然后放在你的手上——另一只手，另一只*没有*被血液及大脑皮层覆盖的手上。\n“拿好你的奖励。”他把子弹放进证物袋里，然后放在你的手上，感觉很轻。"];
+	  420 [label="You: “留着吧，警督。还有，很抱歉我叫你四眼仔了。”"];
+	  421 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  422 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  423 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  424 [label="You: “我*还是*不确定。”（困惑地看着你的手。）"];
+	  425 [label="Kim Kitsuragi: “被处理过，警官，试图在被害人死后对尸体动手脚——用*伪造*的死因掩盖真正的死亡原因。若是如此……”"];
+	  426 [label="end hub"];
+	  427 [label="You: “也许这颗子弹藏着更多答案？”"];
+	  428 [label="Kim Kitsuragi: “如果你想使这个案子渐渐变得无法侦破，那就这样吧。否则——不行。他已经*挂在这*太久了，必须得冷藏起来。”"];
+	  429 [label="You: “这跟哈迪兄弟的说法吻合。”\n“这跟哈迪兄弟的说法——以及卡拉洁的相吻合。”"];
+	  430 [label="noconfront"];
+	  431 [label="yesconfront"];
+	  432 [label="yaconfront"];
+	  433 [label="The Hanged Man: IsKimHere()"];
+	  434 [label="IsKimHere()", shape=diamond];
+	  435 [label="!(IsKimHere())", shape=diamond];
+	  436 [label="Kim Kitsuragi: “如果哈迪兄弟的话可信，里面应该有颗子弹才对……”警督看着你。“不如你把手伸进他的嘴巴，去他脑袋里找出子弹。”"];
+	  437 [label="Jump to: [autopsy hub]"];
+	  438 [label="Untitled hub (02)"];
+	  439 [label="The Hanged Man: IsTaskActive(\"TASK.fridge_victims_body\")--[[ Variable[ ]]"];
+	  440 [label="IsTaskActive(\"TASK.fridge_victims_body\")--[[ Variable[ ]]", shape=diamond];
+	  441 [label="!(IsTaskActive(\"TASK.fridge_victims_body\")--[[ Variable[ ]])", shape=diamond];
+	  442 [label="Kim Kitsuragi: “我需要有人帮我抬着他——你来抬他的手，我负责抬脚。”"];
+	  443 [label="The Hanged Man: CheckEquipped(\"gloves_garden\")"];
+	  444 [label="CheckEquipped(\"gloves_garden\")", shape=diamond];
+	  445 [label="!(CheckEquipped(\"gloves_garden\"))", shape=diamond];
+	  446 [label="The Hanged Man: SetVariableValue(\"yard.hanged_man_used_gloves_for_bullet_digging\", true) --[[ Variable[ ]]"];
+	  447 [label="search_for_it"];
+	  448 [label="The Hanged Man: 你的手指滑进他残存的边缘系统，没受到任何阻力。其呈现凝胶状，鼻涕虫状的结构也被破坏，裂口延伸至两个脑半球。\n你黄色的手指滑进他残存的边缘系统，没受到任何阻力。其呈现凝胶状，鼻涕虫状的结构也被破坏，裂口延伸至两个脑半球。"];
+	  449 [label="Kim Kitsuragi: “嗯。请把手往回收4厘米。”"];
+	  450 [label="You: “好了。”（向着凸起的地方点头。）"];
+	  451 [label="You: 推。"];
+	  452 [label="Jump to: [Kim Kitsuragi: \"Out comes his small folding knife -...\"]"];
+	  453 [label="Jump to: [autopsy hub]"];
+	  454 [label="You: “你这么觉得？”"];
+	  455 [label="Kim Kitsuragi: 他点点头。“我已经心存疑虑很久了。自从我看到他的手上没有挣扎的痕迹，脖子上也没有抓痕……”\n他点点头。“自从你让我看过那些脚印之后我就一直心存疑虑。他们为何要把他*背*过来——为什么不让他自己过来？我是这么想的，没有一个令人满意的解释。”\n他点点头。“自从你指出尸斑很暗淡之后我就一直心存疑虑。他们知道我们会分析尸斑，我也曾遇到过会摆弄尸体姿势的犯罪者。”\n“自从你告诉我他在做*别的*事之后我就一直心存疑虑，在他临死之前。我自己是没有那种直觉的——一般也不相信它。但它让我……产生了怀疑。”"];
+	  456 [label="You: “或许他们是在他被吊起来的*期间*开的枪？”"];
+	  458 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"tc.hanged_man_was_shot_known_from_klaasje\"]"];
+	  459 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"tc.hanged_man_was_shot_known_from_klaasje\"]", shape=diamond];
+	  460 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"tc.hanged_man_was_shot_known_from_klaasje\"])", shape=diamond];
+	  461 [label="Kim Kitsuragi: “另外，如果我们决定相信哈迪兄弟的说法，它一定就在那里……”"];
+	  462 [label="You: “但在哪里呢？”"];
+	  463 [label="Jump to: [ICE BEAR FRIDGE MAIN HUB]"];
+	  464 [label="Half Light: 为什么的确如此。它非常巨大，红色的眼睛在黑暗中闪闪发光。"];
+	  465 [label="The Hanged Man: Variable[\"TASK.fridge_victims_body\"]"];
+	  466 [label="Variable[\"TASK.fridge_victims_body\"]", shape=diamond];
+	  467 [label="!(Variable[\"TASK.fridge_victims_body\"])", shape=diamond];
+	  468 [label="You: “你要离开？那在此期间我该做什么呢？”"];
+	  469 [label="jump_here_to_finish"];
+	  470 [label="The Hanged Man: Variable[\"tc.treatment\"]  and  Variable[\"yard.hanged_logic_explain_bulelt_and_ligament\"] == false"];
+	  471 [label="Variable[\"tc.treatment\"]  and  Variable[\"yard.hanged_logic_explain_bulelt_and_ligament\"] == false", shape=diamond];
+	  472 [label="!(Variable[\"tc.treatment\"]  and  Variable[\"yard.hanged_logic_explain_bulelt_and_ligament\"] == false)", shape=diamond];
+	  473 [label="You: “你要离开？那在此期间我该做什么呢？”"];
+	  474 [label="The Hanged Man: 再见了那双漂亮的珐琅质靴子。现在你永远也没办法拥有一整套了。在分析部门安息吧……"];
+	  475 [label="You: 将手指伸进他的嘴巴。"];
+	  476 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  477 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  478 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  479 [label="Interfacing: 你用食指与中指夹起了那个东西，摸上去很锋利，就像金属。你的脸庞因为疼痛和专注而扭曲着，唯一要做的就是……\n你用食指与中指夹起了那颗锋利的金属子弹。你的脸庞因为疼痛和专注而扭曲着，唯一要做的就是……\n你用食指与中指夹起了那个东西，摸上去很锋利，就像金属。你咬紧牙关，唯一要做的就是……"];
+	  480 [label="Cuno: “好耶……”"];
+	  481 [label="Kim Kitsuragi: “意见——致命伤。”"];
+	  482 [label="You: “我们之前不就是这么想的吗？”（用雪把你的手擦干净。）\n“我们之前不就是这么想的吗？”\n“我们之前不就是这么想的吗？”(把手套甩干净。)\n“我们之前不就是这么想的吗？”(用手帕把你的手擦干净。)"];
+	  483 [label="Kim Kitsuragi: “我们发现了*远离*伤口轨道的组织损伤——我们还发现了*子弹*。”"];
+	  484 [label="Logic: 他认为子弹才是真正的死因——而上吊不过是在试图*掩盖*这一事实。"];
+	  485 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  486 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  487 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  488 [label="Kim Kitsuragi: “简而言之，你和我就是最后一道侦查线了。如果你不确定我们采集到了全部信息，我们就得*再*看一遍。因此——我们需要把尸体冷藏起来。”"];
+	  489 [label="The Hanged Man: Variable[\"doomed.fridge_hub_reached\"]"];
+	  490 [label="Variable[\"doomed.fridge_hub_reached\"]", shape=diamond];
+	  491 [label="!(Variable[\"doomed.fridge_hub_reached\"])", shape=diamond];
+	  492 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]"];
+	  493 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]", shape=diamond];
+	  494 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"])", shape=diamond];
+	  495 [label="The Hanged Man: Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"tc.hanged_man_was_shot_known_from_klaasje\"]"];
+	  496 [label="Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"tc.hanged_man_was_shot_known_from_klaasje\"]", shape=diamond];
+	  497 [label="!(Variable[\"tc.hanged_man_was_shot_known_from_hardie\"]  or  Variable[\"tc.hanged_man_was_shot_known_from_klaasje\"])", shape=diamond];
+	  498 [label="You: “我们还没有找到*子弹*。”"];
+	  499 [label="Jump to: [search_for_it]"];
+	  500 [label="Physical Instrument: 你曾看过那些画，也研究过他们。"];
+	  501 [label="Reaction Speed: 他认为子弹才是真正的死亡原因——而绞死只是在试图*掩盖*这一事实。"];
+	  502 [label="Tutorial Agent: 在你打包尸体后，金警督已离开小队，他会在明天早上与你会和。在此之前，你可以进行支线任务，甚至也可以进行主线任务。好好计划一下他离开时该做什么吧。"];
+	  503 [label="The Hanged Man: Variable[\"yard.hanged_authority_detective\"]"];
+	  504 [label="Variable[\"yard.hanged_authority_detective\"]", shape=diamond];
+	  505 [label="!(Variable[\"yard.hanged_authority_detective\"])", shape=diamond];
+	  506 [label="Kim Kitsuragi: “我*可以*开車送他去分析部门，但今天过去太迟了……明天一早我就过去，没问题。”"];
+	  507 [label="You: 说：“牛逼！”\n“就是这个。”"];
+	  508 [label="You: “这里有个弹孔……正好穿过了两个脑半球。”\n“弹孔在这儿，正好穿过了两个脑半球。”"];
+	  509 [label="The Hanged Man: 你的手指伸向了他的头骨，他的大脑皮层如同果冻一样——冰冷的果冻——当你继续深入的时候，奇怪的液体顺着你的手腕流了下来。直到你的指尖，感觉到了它……"];
+	  510 [label="Kim Kitsuragi: 子弹落入证物袋中，在塑料上留下了一丝血迹。他把袋子举至眼前说道："];
+	  511 [label="Kim Kitsuragi: *咔哒-咔哒*按下了笔：“还有最后一件事。我们应该修正一下伤情#3：勒痕。新意见——非致命，死后造成：*被处理过*。”\n*咔哒-咔哒*按下了笔:“还有最后一件事。我们应该修正一下伤情#3:勒痕。*被处理过*。很明显是哈迪兄弟在混淆视听。”\n*咔哒-咔哒*按下了笔:“还有最后一件事。我们应该修正一下伤情#3:勒痕。*被处理过*。我们有了被篡改过的——以及真正的死亡原因。非常明了。”\n*咔哒-咔哒*按下了笔：“还有最后一件事。我们应该修正一下伤情#3：勒痕。新意见——非致命，死后造成：*被处理过*。”"];
+	  512 [label="Conceptualization: 这个人再也无法沉睡，永远不会醒来了。"];
+	  513 [label="The Hanged Man: Variable[\"yard.hanged_interfacing_felt_bump\"]"];
+	  514 [label="Variable[\"yard.hanged_interfacing_felt_bump\"]", shape=diamond];
+	  515 [label="!(Variable[\"yard.hanged_interfacing_felt_bump\"])", shape=diamond];
+	  516 [label="You: “为什么会有人这么做？”"];
+	  517 [label="looking_again"];
+	  518 [label="You: “为什么……的确如此。”"];
+	  519 [label="Kim Kitsuragi: “卡拉洁告诉我们子弹射进了他的嘴里——不如把你的手伸进去……”"];
+	  520 [label="Kim Kitsuragi: “我把选择权交给你……还有一件事——“他看着你的眼睛。“做得好，警探。”"];
+	  521 [label="Authority: *警探*。"];
+	  522 [label="The Hanged Man: Variable[\"TASK.find_all_armour\"]"];
+	  523 [label="Variable[\"TASK.find_all_armour\"]", shape=diamond];
+	  524 [label="!(Variable[\"TASK.find_all_armour\"])", shape=diamond];
+	  525 [label="The Hanged Man: Variable[\"TASK.find_all_armour\"]"];
+	  526 [label="Variable[\"TASK.find_all_armour\"]", shape=diamond];
+	  527 [label="!(Variable[\"TASK.find_all_armour\"])", shape=diamond];
+	  528 [label="You: 说“射伤轮“。"];
+	  529 [label="The Hanged Man: Variable[\"doomed.fridge_corpse_in_fridge\"]"];
+	  530 [label="Variable[\"doomed.fridge_corpse_in_fridge\"]", shape=diamond];
+	  531 [label="!(Variable[\"doomed.fridge_corpse_in_fridge\"])", shape=diamond];
+	  532 [label="You: “同意。”"];
+	  533 [label="You: “那就赶紧吧。”[离开。]"];
+	  534 [label="Kim Kitsuragi: “好吧。”他摊开塑料布。“我需要人帮我把他扛到我的锐影車厢上，剩下的我来处理就好。”"];
+	  535 [label="Jump to: [autopsy hub]"];
+	  4640194 [label="JUMP OUT to DOOMED / ICE BEAR FRIDGE", shape=diamond];
+	  710635 [label="JUMP OUT to YARD / HANGED MAN AUTOPSY", shape=diamond];
+	  0 -> 1
+	  1 -> 409
+	  1 -> 195
+	  2 -> 3
+	  3 -> 4
+	  3 -> 5
+	  4 -> 103
+	  5 -> 398
+	  6 -> 289
+	  7 -> 140
+	  8 -> 332
+	  9 -> 118
+	  10 -> 448
+	  11 -> 417
+	  12 -> 225
+	  13 -> 10
+	  13 -> 107
+	  13 -> 36
+	  14 -> 16
+	  14 -> 15
+	  15 -> 82
+	  16 -> 96
+	  17 -> 183
+	  18 -> 19
+	  18 -> 20
+	  19 -> 340
+	  20 -> 254
+	  21 -> 23
+	  22 -> 386
+	  23 -> 28
+	  24 -> 25
+	  25 -> 368
+	  26 -> 368
+	  27 -> 48
+	  27 -> 427
+	  27 -> 21
+	  28 -> 29
+	  28 -> 30
+	  29 -> 259
+	  30 -> 386
+	  31 -> 71
+	  32 -> 31
+	  33 -> 397
+	  35 -> 34
+	  36 -> 363
+	  37 -> 447
+	  38 -> 225
+	  39 -> 338
+	  40 -> 511
+	  41 -> 42
+	  41 -> 43
+	  42 -> 335
+	  43 -> 222
+	  44 -> 45
+	  44 -> 46
+	  45 -> 250
+	  46 -> 182
+	  47 -> 17
+	  48 -> 111
+	  49 -> 25
+	  50 -> 204
+	  51 -> 428
+	  52 -> 53
+	  52 -> 54
+	  53 -> 442
+	  54 -> 194
+	  55 -> 224
+	  56 -> 288
+	  56 -> 212
+	  56 -> 518
+	  57 -> 127
+	  58 -> 468
+	  59 -> 60
+	  59 -> 61
+	  60 -> 402
+	  61 -> 140
+	  62 -> 175
+	  63 -> 469
+	  64 -> 277
+	  65 -> 292
+	  66 -> 152
+	  67 -> 364
+	  68 -> 335
+	  69 -> 367
+	  70 -> 387
+	  71 -> 151
+	  72 -> 73
+	  72 -> 74
+	  73 -> 279
+	  74 -> 317
+	  75 -> 114
+	  76 -> 77
+	  76 -> 78
+	  77 -> 318
+	  78 -> 370
+	  80 -> 4640194
+	  81 -> 442
+	  82 -> 331
+	  83 -> 360
+	  84 -> 85
+	  85 -> 416
+	  86 -> 120
+	  87 -> 86
+	  88 -> 335
+	  89 -> 90
+	  89 -> 91
+	  90 -> 479
+	  91 -> 336
+	  92 -> 55
+	  93 -> 226
+	  94 -> 227
+	  95 -> 92
+	  96 -> 209
+	  97 -> 47
+	  98 -> 18
+	  99 -> 100
+	  100 -> 426
+	  101 -> 464
+	  102 -> 214
+	  103 -> 104
+	  103 -> 105
+	  104 -> 320
+	  105 -> 33
+	  106 -> 63
+	  107 -> 326
+	  108 -> 109
+	  108 -> 110
+	  109 -> 438
+	  110 -> 501
+	  111 -> 112
+	  111 -> 113
+	  112 -> 58
+	  113 -> 327
+	  114 -> 115
+	  114 -> 116
+	  115 -> 525
+	  116 -> 72
+	  117 -> 52
+	  118 -> 244
+	  119 -> 270
+	  120 -> 443
+	  121 -> 69
+	  122 -> 420
+	  122 -> 156
+	  122 -> 39
+	  123 -> 481
+	  124 -> 302
+	  125 -> 162
+	  127 -> 128
+	  127 -> 129
+	  128 -> 278
+	  129 -> 130
+	  130 -> 131
+	  130 -> 132
+	  131 -> 344
+	  132 -> 396
+	  133 -> 134
+	  133 -> 135
+	  134 -> 469
+	  135 -> 106
+	  136 -> 31
+	  137 -> 138
+	  137 -> 139
+	  138 -> 2
+	  139 -> 465
+	  140 -> 141
+	  140 -> 142
+	  141 -> 80
+	  142 -> 174
+	  144 -> 145
+	  144 -> 146
+	  145 -> 167
+	  146 -> 314
+	  147 -> 148
+	  148 -> 149
+	  148 -> 150
+	  151 -> 14
+	  152 -> 361
+	  153 -> 118
+	  154 -> 529
+	  155 -> 37
+	  156 -> 180
+	  157 -> 158
+	  157 -> 159
+	  158 -> 179
+	  159 -> 274
+	  160 -> 125
+	  161 -> 230
+	  162 -> 163
+	  162 -> 164
+	  163 -> 184
+	  163 -> 229
+	  164 -> 70
+	  165 -> 307
+	  166 -> 369
+	  167 -> 168
+	  167 -> 169
+	  168 -> 187
+	  169 -> 263
+	  170 -> 171
+	  170 -> 172
+	  171 -> 498
+	  172 -> 255
+	  173 -> 10
+	  174 -> 710635
+	  175 -> 176
+	  175 -> 177
+	  176 -> 265
+	  177 -> 442
+	  178 -> 93
+	  179 -> 419
+	  180 -> 94
+	  181 -> 40
+	  181 -> 299
+	  182 -> 250
+	  183 -> 301
+	  183 -> 124
+	  183 -> 532
+	  183 -> 454
+	  184 -> 485
+	  185 -> 311
+	  186 -> 133
+	  187 -> 412
+	  188 -> 4640194
+	  189 -> 79
+	  190 -> 437
+	  191 -> 188
+	  192 -> 520
+	  193 -> 97
+	  194 -> 81
+	  195 -> 196
+	  195 -> 197
+	  196 -> 151
+	  197 -> 137
+	  198 -> 66
+	  199 -> 200
+	  200 -> 201
+	  200 -> 202
+	  201 -> 89
+	  202 -> 89
+	  203 -> 155
+	  204 -> 517
+	  205 -> 114
+	  206 -> 208
+	  206 -> 207
+	  207 -> 475
+	  208 -> 447
+	  209 -> 210
+	  209 -> 211
+	  210 -> 262
+	  211 -> 453
+	  212 -> 189
+	  213 -> 79
+	  214 -> 710635
+	  216 -> 503
+	  217 -> 268
+	  218 -> 219
+	  218 -> 220
+	  219 -> 118
+	  220 -> 9
+	  221 -> 11
+	  222 -> 88
+	  223 -> 249
+	  224 -> 44
+	  225 -> 450
+	  226 -> 451
+	  227 -> 492
+	  228 -> 481
+	  229 -> 341
+	  230 -> 368
+	  231 -> 489
+	  232 -> 235
+	  233 -> 114
+	  234 -> 469
+	  235 -> 57
+	  236 -> 237
+	  236 -> 238
+	  237 -> 7
+	  238 -> 140
+	  239 -> 62
+	  240 -> 292
+	  241 -> 28
+	  242 -> 412
+	  243 -> 476
+	  244 -> 84
+	  245 -> 293
+	  246 -> 509
+	  247 -> 121
+	  247 -> 418
+	  247 -> 119
+	  247 -> 199
+	  248 -> 37
+	  249 -> 92
+	  250 -> 337
+	  251 -> 252
+	  251 -> 253
+	  252 -> 95
+	  253 -> 269
+	  254 -> 64
+	  255 -> 306
+	  255 -> 50
+	  255 -> 165
+	  256 -> 119
+	  256 -> 199
+	  257 -> 481
+	  258 -> 392
+	  259 -> 27
+	  260 -> 160
+	  260 -> 305
+	  260 -> 161
+	  261 -> 374
+	  262 -> 4640194
+	  263 -> 412
+	  264 -> 277
+	  265 -> 473
+	  266 -> 243
+	  267 -> 248
+	  268 -> 499
+	  269 -> 223
+	  270 -> 452
+	  271 -> 272
+	  271 -> 273
+	  272 -> 178
+	  273 -> 480
+	  274 -> 179
+	  275 -> 384
+	  276 -> 381
+	  277 -> 392
+	  278 -> 130
+	  279 -> 186
+	  280 -> 281
+	  280 -> 282
+	  281 -> 205
+	  282 -> 534
+	  283 -> 83
+	  283 -> 198
+	  283 -> 203
+	  284 -> 79
+	  285 -> 286
+	  285 -> 287
+	  286 -> 32
+	  287 -> 136
+	  288 -> 213
+	  289 -> 290
+	  289 -> 291
+	  290 -> 375
+	  291 -> 345
+	  292 -> 72
+	  293 -> 294
+	  293 -> 295
+	  294 -> 118
+	  295 -> 153
+	  296 -> 218
+	  297 -> 447
+	  298 -> 94
+	  299 -> 511
+	  300 -> 470
+	  301 -> 98
+	  302 -> 532
+	  302 -> 301
+	  302 -> 454
+	  303 -> 18
+	  304 -> 385
+	  305 -> 26
+	  306 -> 204
+	  307 -> 488
+	  308 -> 309
+	  308 -> 310
+	  309 -> 185
+	  310 -> 280
+	  311 -> 312
+	  311 -> 313
+	  312 -> 233
+	  313 -> 75
+	  314 -> 315
+	  314 -> 316
+	  315 -> 242
+	  316 -> 348
+	  317 -> 234
+	  318 -> 261
+	  319 -> 352
+	  320 -> 321
+	  320 -> 322
+	  321 -> 519
+	  322 -> 436
+	  323 -> 324
+	  323 -> 325
+	  324 -> 392
+	  325 -> 391
+	  326 -> 500
+	  327 -> 506
+	  328 -> 329
+	  328 -> 330
+	  329 -> 6
+	  330 -> 216
+	  331 -> 206
+	  332 -> 266
+	  332 -> 267
+	  333 -> 244
+	  334 -> 87
+	  335 -> 247
+	  336 -> 38
+	  336 -> 12
+	  336 -> 366
+	  337 -> 510
+	  338 -> 94
+	  339 -> 481
+	  340 -> 264
+	  341 -> 342
+	  341 -> 343
+	  342 -> 49
+	  343 -> 25
+	  344 -> 396
+	  345 -> 346
+	  345 -> 347
+	  346 -> 140
+	  347 -> 502
+	  348 -> 412
+	  349 -> 350
+	  349 -> 351
+	  350 -> 83
+	  350 -> 198
+	  351 -> 283
+	  352 -> 102
+	  353 -> 31
+	  354 -> 349
+	  355 -> 401
+	  356 -> 357
+	  357 -> 358
+	  357 -> 359
+	  358 -> 377
+	  359 -> 376
+	  360 -> 365
+	  361 -> 528
+	  361 -> 507
+	  361 -> 244
+	  362 -> 13
+	  363 -> 512
+	  364 -> 334
+	  364 -> 246
+	  365 -> 198
+	  366 -> 225
+	  367 -> 513
+	  368 -> 170
+	  369 -> 517
+	  370 -> 395
+	  371 -> 40
+	  371 -> 482
+	  371 -> 299
+	  371 -> 424
+	  372 -> 258
+	  373 -> 241
+	  374 -> 535
+	  375 -> 345
+	  376 -> 59
+	  377 -> 236
+	  378 -> 143
+	  379 -> 354
+	  380 -> 362
+	  381 -> 41
+	  382 -> 251
+	  383 -> 157
+	  384 -> 297
+	  385 -> 386
+	  386 -> 426
+	  387 -> 368
+	  388 -> 389
+	  388 -> 390
+	  389 -> 256
+	  390 -> 247
+	  391 -> 372
+	  392 -> 393
+	  392 -> 394
+	  393 -> 27
+	  394 -> 426
+	  395 -> 535
+	  396 -> 533
+	  396 -> 319
+	  397 -> 4640194
+	  398 -> 400
+	  398 -> 399
+	  399 -> 191
+	  400 -> 463
+	  401 -> 417
+	  401 -> 508
+	  402 -> 140
+	  403 -> 404
+	  403 -> 405
+	  404 -> 378
+	  405 -> 143
+	  406 -> 408
+	  406 -> 407
+	  407 -> 439
+	  408 -> 403
+	  409 -> 410
+	  409 -> 411
+	  410 -> 144
+	  411 -> 308
+	  412 -> 413
+	  412 -> 414
+	  413 -> 522
+	  414 -> 175
+	  415 -> 433
+	  416 -> 421
+	  417 -> 67
+	  418 -> 68
+	  419 -> 94
+	  420 -> 298
+	  421 -> 422
+	  421 -> 423
+	  422 -> 13
+	  423 -> 380
+	  424 -> 483
+	  425 -> 97
+	  426 -> 516
+	  426 -> 456
+	  426 -> 427
+	  426 -> 304
+	  426 -> 48
+	  426 -> 21
+	  427 -> 373
+	  428 -> 166
+	  429 -> 511
+	  430 -> 123
+	  430 -> 339
+	  430 -> 228
+	  431 -> 257
+	  431 -> 123
+	  431 -> 228
+	  432 -> 40
+	  432 -> 429
+	  433 -> 434
+	  433 -> 435
+	  434 -> 260
+	  435 -> 76
+	  436 -> 353
+	  437 -> 710635
+	  438 -> 300
+	  438 -> 47
+	  439 -> 440
+	  439 -> 441
+	  440 -> 35
+	  441 -> 34
+	  442 -> 469
+	  443 -> 444
+	  443 -> 445
+	  444 -> 446
+	  445 -> 388
+	  446 -> 388
+	  447 -> 8
+	  447 -> 275
+	  447 -> 475
+	  448 -> 355
+	  449 -> 271
+	  450 -> 449
+	  451 -> 383
+	  452 -> 225
+	  453 -> 710635
+	  454 -> 303
+	  455 -> 18
+	  456 -> 99
+	  458 -> 459
+	  458 -> 460
+	  459 -> 432
+	  460 -> 371
+	  461 -> 462
+	  462 -> 285
+	  463 -> 4640194
+	  464 -> 56
+	  465 -> 466
+	  465 -> 467
+	  466 -> 190
+	  467 -> 415
+	  468 -> 192
+	  469 -> 406
+	  470 -> 472
+	  470 -> 471
+	  471 -> 193
+	  472 -> 425
+	  473 -> 117
+	  474 -> 62
+	  475 -> 379
+	  476 -> 477
+	  476 -> 478
+	  477 -> 268
+	  478 -> 217
+	  479 -> 92
+	  479 -> 382
+	  480 -> 178
+	  481 -> 458
+	  482 -> 181
+	  483 -> 40
+	  483 -> 299
+	  484 -> 108
+	  485 -> 486
+	  485 -> 487
+	  486 -> 24
+	  487 -> 25
+	  488 -> 517
+	  489 -> 490
+	  489 -> 491
+	  490 -> 101
+	  491 -> 232
+	  492 -> 493
+	  492 -> 494
+	  493 -> 431
+	  494 -> 430
+	  495 -> 496
+	  495 -> 497
+	  496 -> 323
+	  497 -> 484
+	  498 -> 461
+	  499 -> 447
+	  500 -> 10
+	  500 -> 36
+	  501 -> 438
+	  502 -> 140
+	  503 -> 504
+	  503 -> 505
+	  504 -> 521
+	  505 -> 345
+	  506 -> 356
+	  507 -> 245
+	  508 -> 154
+	  509 -> 86
+	  510 -> 122
+	  511 -> 495
+	  512 -> 173
+	  513 -> 514
+	  513 -> 515
+	  514 -> 276
+	  515 -> 381
+	  516 -> 22
+	  517 -> 51
+	  517 -> 231
+	  518 -> 284
+	  519 -> 353
+	  520 -> 328
+	  521 -> 345
+	  522 -> 523
+	  522 -> 524
+	  523 -> 474
+	  524 -> 239
+	  525 -> 526
+	  525 -> 527
+	  526 -> 65
+	  527 -> 240
+	  528 -> 296
+	  529 -> 530
+	  529 -> 531
+	  530 -> 417
+	  531 -> 221
+	  532 -> 455
+	  533 -> 126
+	  534 -> 114
+	  535 -> 710635
+}
+

@@ -1,0 +1,724 @@
+# BOARDWALK / THE PIGS RED CHECK
+# THE PIGS
+#
+#Current Red Check
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Interfacing: The woman stands motionless. Just a heap of clothes and flashers now -- maybe if you search her?"];
+	  3 [label="The Pigs: Variable[\"boardwalk.thepigs_composure_kim_trigger\"]"];
+	  4 [label="Variable[\"boardwalk.thepigs_composure_kim_trigger\"]", shape=diamond];
+	  5 [label="!(Variable[\"boardwalk.thepigs_composure_kim_trigger\"])", shape=diamond];
+	  6 [label="Hand/Eye Coordination: Fire off a shot over her head and use the moment of confusion to close the distance. Left hand grabs the barrel, right one breaks the wrist..."];
+	  7 [label="Kim Kitsuragi: \"Huh?\" The lieutenant studies the swaying firearm. \"My god, I think you're right.\""];
+	  8 [label="The Pigs: \"CONFINED QUARTERS, ASSAILANT COMING AT ME! SPLIT-SECOND DECISION, FIRE AT WILL!\""];
+	  9 [label="Hand/Eye Coordination: No... no-no-no-no. THEY'RE REALLY NOT. The gun wasn't even loaded. No shots fired. You're fine."];
+	  10 [label="You: \"You tried to kill me!!!\""];
+	  11 [label="Kim Kitsuragi: \"Looks like a bad case.\" He gives the woman a compassionate look. \"But the question is what to do with her right now.\""];
+	  12 [label="The Pigs: \"What...?\" The woman looks at the weapon in disbelief, her eyes suddenly reddish with tears. She looks straight down the barrel... and squeezes the trigger."];
+	  13 [label="The Pigs: CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  14 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  15 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  16 [label="The Pigs: CheckEquipped(\"ledger_damaged\")  or  CheckEquipped(\"ledger_oblivion\")  or  CheckEquipped(\"ledger_of_failure_and_hatred\")"];
+	  17 [label="CheckEquipped(\"ledger_damaged\")  or  CheckEquipped(\"ledger_oblivion\")  or  CheckEquipped(\"ledger_of_failure_and_hatred\")", shape=diamond];
+	  18 [label="!(CheckEquipped(\"ledger_damaged\")  or  CheckEquipped(\"ledger_oblivion\")  or  CheckEquipped(\"ledger_of_failure_and_hatred\"))", shape=diamond];
+	  19 [label="The Pigs: CheckEquipped(\"chaincutters\")"];
+	  20 [label="CheckEquipped(\"chaincutters\")", shape=diamond];
+	  21 [label="!(CheckEquipped(\"chaincutters\"))", shape=diamond];
+	  22 [label="Half Light: Like when he had the hanged man in his sights? You're a dead man."];
+	  23 [label="Jump to: [The Pigs: \"\"SUICIDE BY COP! SPLIT-SECOND DECIS...\"]"];
+	  24 [label="The Pigs: \"Wh... what is this?\" The old woman looks at the treacherous weapon. \"This isn't police issue. Police weapons have bullets. This isn't real!\""];
+	  25 [label="Half Light: OH MY GOD!!!!"];
+	  26 [label="You: (Pick up your gun.)"];
+	  27 [label="The Pigs: \"Why would they cheat me like this?! I don't have *ANYONE*!\" She slams her heavy boot in the ground. The impact travelling through the planks, sends your gun through the crack, into the black nothingness below."];
+	  28 [label="You: Nod. \"Neurodegenerative disease.\""];
+	  29 [label="Jump to: [Untitled hub]"];
+	  30 [label="Logic: She's in a stupor. There's no telling when she'll snap out of it. If ever."];
+	  31 [label="Authority: That... was the most honourable thing anyone has ever done, Harry."];
+	  32 [label="Hand/Eye Coordination: She's frantic, confused, teetering under all that gear... There's an opening, if you just move fast enough."];
+	  33 [label="Kim Kitsuragi: \"You're right,\" the lieutenant agrees. \"Let's call her out on this.\""];
+	  34 [label="You: Hold on, why does that make me nauseous?"];
+	  35 [label="Conceptualization: *This* limbed and headed machine of pain and undignified suffering is grinding to a halt. Tired of walking the desert, it doesn't want to feel or think anymore."];
+	  36 [label="The Pigs: Her scratched skin is warm to the touch, but the person inside doesn't even know you're there."];
+	  37 [label="Jump to: [Untitled hub]"];
+	  38 [label="The Pigs: \"Nobody's ever around,\" the old woman mumbles, staring blank at the boardwalk, \"nobody ever comes to visit me.\""];
+	  39 [label="Kim Kitsuragi: \"I guess I'll just notify my station. They'll contact the Sanitarium and handle the logistics.\""];
+	  40 [label="You: She will *know*. (Hang the Setting Sun medal on her chest.)"];
+	  41 [label="The Pigs: Variable[\"boardwalk.thepigs_redc_handeye_recognize_gun\"]"];
+	  42 [label="Variable[\"boardwalk.thepigs_redc_handeye_recognize_gun\"]", shape=diamond];
+	  43 [label="!(Variable[\"boardwalk.thepigs_redc_handeye_recognize_gun\"])", shape=diamond];
+	  44 [label="Inland Empire: No. A strange feeling fills your gut and suddenly you *know* the gun is empty. Thinking about it makes you nauseous."];
+	  45 [label="The Pigs: Variable[\"boardwalk.pigs_logic_gun_is_empty\"]"];
+	  46 [label="Variable[\"boardwalk.pigs_logic_gun_is_empty\"]", shape=diamond];
+	  47 [label="!(Variable[\"boardwalk.pigs_logic_gun_is_empty\"])", shape=diamond];
+	  48 [label="You: No, I know myself. I know I'm gonna fail."];
+	  49 [label="Untitled hub"];
+	  50 [label="The Pigs: IsKimHere()"];
+	  51 [label="IsKimHere()", shape=diamond];
+	  52 [label="!(IsKimHere())", shape=diamond];
+	  53 [label="Esprit de Corps: Kim Kitsuragi is a nice guy. Wish he was here right now."];
+	  54 [label="You: \"Wait, I was really hoping I can give her one of those station call slips...\""];
+	  55 [label="Esprit de Corps: Morrand's from Traffic."];
+	  56 [label="The Pigs: A click. Nothing happens. She looks at the useless weapon. \"This isn't police issue. Police weapons have bullets. This isn't real! What is this?\""];
+	  57 [label="Hand/Eye Coordination: Alright, this is how we do it: You hurl the tare bag in her face -- already darting right -- and *immediately* close the distance. Left hand grabs the barrel, right one breaks the wrist..."];
+	  58 [label="The Pigs: CheckEquipped(\"sabre\")"];
+	  59 [label="CheckEquipped(\"sabre\")", shape=diamond];
+	  60 [label="!(CheckEquipped(\"sabre\"))", shape=diamond];
+	  61 [label="Hand/Eye Coordination: Alright, here's how we do it: As soon as that gun isn't pointed at you again, you dash right, then immediately close the distance. Left hand grabs the barrel, right one breaks the wrist..."];
+	  62 [label="Inland Empire: No. An ominous feeling fills your gut and suddenly you *know* the gun is empty. Thinking about it makes you nauseous."];
+	  63 [label="Logic: NO! Remember, 'Get the gun, it's okay. It's safe'? It must have meant the gun is not loaded. She's holding an empty gun."];
+	  64 [label="You: \"Go ahead, pull the trigger. I dare you.\""];
+	  65 [label="Inland Empire: 'Paint the wall with your brains' dark."];
+	  66 [label="You: \"No gun is worth this risk...\" (Slowly back away.)"];
+	  67 [label="Untitled hub (02)"];
+	  68 [label="Esprit de Corps: I was 80% sure the gun is empty and *still* the instinct almost took over."];
+	  69 [label="You: \"Should we just arrest her?\" (Proceed.)\nAlright, what am I gonna do with you? (Proceed.)"];
+	  70 [label="Jump to: [Untitled hub]"];
+	  71 [label="Untitled hub (02)"];
+	  72 [label="Authority: That... was the most honourable thing *anyone* has ever done. You are virtue embodied."];
+	  73 [label="You: (Whisper.) \"Kim, I'm almost certain there are no bullets in that gun.\""];
+	  74 [label="Jump to: [EMPTY GUN]"];
+	  75 [label="Kim Kitsuragi: \"God...\" the lieutenant exhales loudly and uses his off-hand to wipe his forehead. \"I almost blew her head off...\""];
+	  76 [label="Kim Kitsuragi: \"Phew...\" The lieutenant exhales sharply. \"For a moment there...\""];
+	  77 [label="The Pigs: The gun lands on the wooden planks and tears run down her scratched cheeks. \"Police guns always have bullets... What is this? Why did you sell me this?\""];
+	  78 [label="Untitled hub (02)"];
+	  79 [label="You: \"You're not alone. We're all here.\""];
+	  80 [label="Kim Kitsuragi: \"There's a bit more to this than that,\" the lieutenant disagrees. \"But right now we need to decide what to do with her.\""];
+	  81 [label="You: \"I don't want to endorse the Hardie boys' inflated sense of self-worth. They're not cops -- we are.\""];
+	  82 [label="Conceptualization: She must have built a new -- sadly better -- reality from the only material available: radio waves and cop shows."];
+	  83 [label="The Pigs: Variable[\"boardwalk.pigs_esprit_morrand_traffic\"]"];
+	  84 [label="Variable[\"boardwalk.pigs_esprit_morrand_traffic\"]", shape=diamond];
+	  85 [label="!(Variable[\"boardwalk.pigs_esprit_morrand_traffic\"])", shape=diamond];
+	  86 [label="Interfacing: She stands motionless. Just a heap of clothes and flashers now -- maybe if you search her once more?"];
+	  87 [label="Half Light: A madwoman is pointing a gun at a cop and you're thinking about warning shots?! Fuck the protocol! Shoot to kill."];
+	  88 [label="The Pigs: Variable[\"yard.hanged_shoot_the_betl_yourself_idea\"]"];
+	  89 [label="Variable[\"yard.hanged_shoot_the_betl_yourself_idea\"]", shape=diamond];
+	  90 [label="!(Variable[\"yard.hanged_shoot_the_betl_yourself_idea\"])", shape=diamond];
+	  91 [label="You: \"I'm done with this gun.\" (Leave it behind forever.)"];
+	  92 [label="The Pigs: IsKimHere()"];
+	  93 [label="IsKimHere()", shape=diamond];
+	  94 [label="!(IsKimHere())", shape=diamond];
+	  95 [label="Kim Kitsuragi: \"Poor woman...\" The lieutenant holsters his pistol.  \"We need to figure out what to do with her now.\""];
+	  96 [label="You: \"I guess we'll never know.\""];
+	  97 [label="Empathy: He's trying not to think about how bad it could have been had the gun been loaded."];
+	  98 [label="The Pigs: Variable[\"TASK.pass_the_hardie_authority_check\"]"];
+	  99 [label="Variable[\"TASK.pass_the_hardie_authority_check\"]", shape=diamond];
+	  100 [label="!(Variable[\"TASK.pass_the_hardie_authority_check\"])", shape=diamond];
+	  101 [label="You: \"Cross me again and I will bury you, Pigs.\""];
+	  102 [label="The Pigs: The catatonic woman doesn't understand -- probably even hear -- your kind words. She just *is*."];
+	  103 [label="Authority: That... was the most honourable thing anyone has ever done."];
+	  104 [label="Rhetoric: As in 'Traffic' police?"];
+	  105 [label="Inland Empire: In there she is alone, trapped in a world of blue and red lights."];
+	  106 [label="Logic: Her children and their children, if there were any, stopped coming when it got really bad."];
+	  107 [label="The Pigs: CheckEquipped(\"kvalsund_multitool\")"];
+	  108 [label="CheckEquipped(\"kvalsund_multitool\")", shape=diamond];
+	  109 [label="!(CheckEquipped(\"kvalsund_multitool\"))", shape=diamond];
+	  110 [label="Physical Instrument: Yeah, with shit-eyes it must be, binoclard."];
+	  111 [label="You: \"What do you think is happening to her?\""];
+	  112 [label="Empathy: She looks devastated."];
+	  113 [label="You: \"Yes. This is what happens when you listen to too many cop shows on the radio.\""];
+	  114 [label="Kim Kitsuragi: \"Could be,\" agrees the lieutenant. \"Her hands were trembling and she did seem uncoordinated... But what are we gonna do with her?\""];
+	  115 [label="The Pigs: IsKimHere()"];
+	  116 [label="IsKimHere()", shape=diamond];
+	  117 [label="!(IsKimHere())", shape=diamond];
+	  118 [label="The Pigs: The catatonic woman -- especially now that she's unarmed -- doesn't seem to be a threat to anyone, but herself."];
+	  119 [label="Kim Kitsuragi: \"Then we can ask him once we get back to the Whirling. But we have to hurry, cause it's late and they might have already gone home.\""];
+	  120 [label="Jump to: [Untitled hub (02)]"];
+	  121 [label="The Pigs: Soon someone might have to. Doesn't look like there's much life left in her."];
+	  122 [label="The Pigs: Variable[\"boardwalk.pigs_whats_wrong_branch_passed\"]"];
+	  123 [label="Variable[\"boardwalk.pigs_whats_wrong_branch_passed\"]", shape=diamond];
+	  124 [label="!(Variable[\"boardwalk.pigs_whats_wrong_branch_passed\"])", shape=diamond];
+	  125 [label="EMPTY GUN"];
+	  126 [label="Composure: No. Wait... Earlier the lieutenant noticed something. Something about the gun... Could it be empty without her knowing it?"];
+	  127 [label="The Pigs: Variable[\"boardwalk.pigs_composure_gun_is_empty\"]"];
+	  128 [label="Variable[\"boardwalk.pigs_composure_gun_is_empty\"]", shape=diamond];
+	  129 [label="!(Variable[\"boardwalk.pigs_composure_gun_is_empty\"])", shape=diamond];
+	  130 [label="Hand/Eye Coordination: She's frantic, confused, teetering under all that gear... There's an opening, if you just move fast enough... If not, the lieutenant's got her on his sights."];
+	  131 [label="The Pigs: \"SUICIDE BY COP! SPLIT-SECOND DECISION. EAT LEAD, SCUMBAG!\""];
+	  132 [label="Reaction Speed: In your peripheral vision the lieutenant releases the half-squeezed trigger."];
+	  133 [label="Hand/Eye Coordination: Oh... I see. Okay, the gun was empty. All is good. You're fine."];
+	  134 [label="Kim Kitsuragi: Weapon still trained on The Pigs, the lieutenant swiftly reaches down to snatch up the gun."];
+	  135 [label="The Pigs: IsKimHere()"];
+	  136 [label="IsKimHere()", shape=diamond];
+	  137 [label="!(IsKimHere())", shape=diamond];
+	  138 [label="Kim Kitsuragi: \"Okay,\" he nods. \"That settles it. I'll contact my station after we wrap it up for the day. They can contact the Sanitarium and handle the logistics.\""];
+	  139 [label="Half Light: Take her to the farm. Put her down."];
+	  140 [label="Kim Kitsuragi: \"I've had... disturbances similar to this before. Many calls, but... never this bad.\""];
+	  141 [label="Jump to: [Untitled hub]"];
+	  142 [label="Hand/Eye Coordination: Here's the plan: You jerk left, dash right, close the distance and cut her hand off. Ready?"];
+	  143 [label="Hand/Eye Coordination: Here's the plan: Shine the light straight in her eye and immediately dart right-- the light will blind her, allowing you to close the distance. Left hand grabs the barrel, right one breaks the wrist..."];
+	  144 [label="The Pigs: CheckEquipped(\"boombox\")"];
+	  145 [label="CheckEquipped(\"boombox\")", shape=diamond];
+	  146 [label="!(CheckEquipped(\"boombox\"))", shape=diamond];
+	  147 [label="The Pigs: Variable[\"boardwalk.pigs_inland_gun_is_empty\"]"];
+	  148 [label="Variable[\"boardwalk.pigs_inland_gun_is_empty\"]", shape=diamond];
+	  149 [label="!(Variable[\"boardwalk.pigs_inland_gun_is_empty\"])", shape=diamond];
+	  150 [label="The Pigs: Variable[\"boardwalk.pigs_kim_esprit_its_okay_go_for_the_gun\"]"];
+	  151 [label="Variable[\"boardwalk.pigs_kim_esprit_its_okay_go_for_the_gun\"]", shape=diamond];
+	  152 [label="!(Variable[\"boardwalk.pigs_kim_esprit_its_okay_go_for_the_gun\"])", shape=diamond];
+	  153 [label="Kim Kitsuragi: \"I don't think she actually...\" The lieutenant shakes his head. \"You're right of course. This could've been very bad.\""];
+	  154 [label="The Pigs: The person who did that is no longer there. No one is right now. The empty shell of an old woman is slowly rocking back and forth."];
+	  155 [label="You: \"I think we can just leave her like this. She'll be fine.\""];
+	  156 [label="You: Quietly leave the old woman alone."];
+	  157 [label="You: \"No, I'm *really* done with it. You keep it.\""];
+	  158 [label="The Pigs: As you turn to leave, the faintest of voices comes from the woman. \"Please, leave the radio on...\" she mutters. It seems like a reflex, a half-remembered sentence."];
+	  159 [label="You: \"Understood.\""];
+	  160 [label="You: Time to get my gun!"];
+	  161 [label="You: Variable[\"boardwalk.thepigs_redc_handeye_recognize_gun\"]"];
+	  162 [label="Variable[\"boardwalk.thepigs_redc_handeye_recognize_gun\"]", shape=diamond];
+	  163 [label="!(Variable[\"boardwalk.thepigs_redc_handeye_recognize_gun\"])", shape=diamond];
+	  164 [label="The Pigs: CheckEquipped(\"gun_ruby\")"];
+	  165 [label="CheckEquipped(\"gun_ruby\")", shape=diamond];
+	  166 [label="!(CheckEquipped(\"gun_ruby\"))", shape=diamond];
+	  167 [label="Physical Instrument: ...fingers lock behind her head, knee to the face, knee to the face, crush the ribcage, side-step and drop her with the hammer kick."];
+	  168 [label="Inland Empire: That gun is a joke compared to the actual greatest thing he lost."];
+	  169 [label="Hand/Eye Coordination: Okay, you need to figure out what to do with her now."];
+	  170 [label="Kim Kitsuragi: \"She's in a stupor,\" the lieutenant replies, inspecting the catatonic woman standing in the dark. \"I've seen this before. God knows for how long... Could be days when they get like this.\""];
+	  171 [label="The Pigs: The woman stands in front of you, motionless, unresponsive. Almost like an inanimate object now. A mountain of police paraphernalia."];
+	  172 [label="Kim Kitsuragi: \"We could let Titus know. This is a perfect problem for the local 'peacekeepers' to handle. They might even know her family.\""];
+	  173 [label="You: \"At ease, patrol officer Pigs, your heart is in the right place.\" (Bow.)"];
+	  174 [label="The Pigs: Doesn't look like she would know the difference anyway."];
+	  175 [label="The Pigs: Variable[\"boardwalk.pigs_espirt_morrands_from_trafic\"]"];
+	  176 [label="Variable[\"boardwalk.pigs_espirt_morrands_from_trafic\"]", shape=diamond];
+	  177 [label="!(Variable[\"boardwalk.pigs_espirt_morrands_from_trafic\"])", shape=diamond];
+	  178 [label="You: \"Wait...\""];
+	  179 [label="The Pigs: CheckEquipped(\"yellow_plastic_bag\")"];
+	  180 [label="CheckEquipped(\"yellow_plastic_bag\")", shape=diamond];
+	  181 [label="!(CheckEquipped(\"yellow_plastic_bag\"))", shape=diamond];
+	  182 [label="Hand/Eye Coordination: Alright, this is how we do it: You fling the prybar at her-- already darting right -- and *immediately* close the distance. Left hand grabs the barrel, right one breaks the wrist..."];
+	  183 [label="The Pigs: Variable[\"boardwalk.pigs_kim_esprit_its_okay_go_for_the_gun\"]"];
+	  184 [label="Variable[\"boardwalk.pigs_kim_esprit_its_okay_go_for_the_gun\"]", shape=diamond];
+	  185 [label="!(Variable[\"boardwalk.pigs_kim_esprit_its_okay_go_for_the_gun\"])", shape=diamond];
+	  186 [label="Kim Kitsuragi: \"I've been thinking that too. But it's impossible to tell for certain in these lighting conditions.\""];
+	  187 [label="Physical Instrument: Host Almighty, don't count on *that*! You saw the binoclard can't shoot for shit!"];
+	  188 [label="The Pigs: IsKimHere()"];
+	  189 [label="IsKimHere()", shape=diamond];
+	  190 [label="!(IsKimHere())", shape=diamond];
+	  191 [label="Jump to: [Untitled hub]"];
+	  192 [label="The Pigs: But it feels like *you* are, because the old woman standing there is motionless, emotionless and unresponsive. Almost like an inanimate object."];
+	  193 [label="Kim Kitsuragi: \"That would just be a waste of paper. I mean look at her.\" His eyes travel back to the old woman. \"She's not going to respond to a station slip.\""];
+	  194 [label="Empathy: Exactly. With only the voice of Gareth Morrand to accompany her on Channel 8."];
+	  195 [label="Physical Instrument: It's all nancies up there in Traffic. I count zero balls."];
+	  196 [label="Hand/Eye Coordination: Here's the plan: Drop the multitool and immediately dart right -- the noise will startle her, allowing you to close the distance. Left hand grabs the barrel, right one breaks the wrist..."];
+	  197 [label="Interfacing: Grab the gun! Right now! This might be your *ONLY* chance."];
+	  198 [label="You: \"Titus wants to be the sheriff, I'll tell him where to find you. Maybe he knows your family.\""];
+	  199 [label="Kim Kitsuragi: \"Okay but...\" He bites his lip and mumbles under his breath: \"... probably couldn't change your mind anyway... Let's go then.\""];
+	  200 [label="The Pigs: Variable[\"boardwalk.pigs_empathy_exlains_crimeshowandloneliness\"]"];
+	  201 [label="Variable[\"boardwalk.pigs_empathy_exlains_crimeshowandloneliness\"]", shape=diamond];
+	  202 [label="!(Variable[\"boardwalk.pigs_empathy_exlains_crimeshowandloneliness\"])", shape=diamond];
+	  204 [label="Jump to: [Untitled hub (02)]"];
+	  205 [label="Half Light: OH MY GOD, YES!!!!"];
+	  206 [label="The Pigs: CheckItem(\"bullet\")"];
+	  207 [label="CheckItem(\"bullet\")", shape=diamond];
+	  208 [label="!(CheckItem(\"bullet\"))", shape=diamond];
+	  209 [label="Inland Empire: That knowledge comes from a very dark place."];
+	  210 [label="Untitled hub"];
+	  211 [label="Kim Kitsuragi: \"Probably not,\" the lieutenant agrees. \"But more pressing is the question of what to do with her right now?\""];
+	  212 [label="The Pigs: Variable[\"TASK.pass_the_hardie_authority_check\"]"];
+	  213 [label="Variable[\"TASK.pass_the_hardie_authority_check\"]", shape=diamond];
+	  214 [label="!(Variable[\"TASK.pass_the_hardie_authority_check\"])", shape=diamond];
+	  215 [label="The Pigs: Variable[\"boardwalk.thepigs_kim_did_not_get_weapon\"]"];
+	  216 [label="Variable[\"boardwalk.thepigs_kim_did_not_get_weapon\"]", shape=diamond];
+	  217 [label="!(Variable[\"boardwalk.thepigs_kim_did_not_get_weapon\"])", shape=diamond];
+	  218 [label="The Pigs: Variable[\"tc.harry\"]"];
+	  219 [label="Variable[\"tc.harry\"]", shape=diamond];
+	  220 [label="!(Variable[\"tc.harry\"])", shape=diamond];
+	  221 [label="The Pigs: IsKimHere()"];
+	  222 [label="IsKimHere()", shape=diamond];
+	  223 [label="!(IsKimHere())", shape=diamond];
+	  224 [label="Kim Kitsuragi: \"Honestly, I don't know. Dementia, probably,\" he lowers his voice. \"Dementia and Channel 8. And loneliness.\""];
+	  225 [label="You: \"Yeah, Titus sounds like the man for the job.\""];
+	  226 [label="You: \"Thank you, Kim. I *do* actually want my gun back.\""];
+	  227 [label="Kim Kitsuragi: \"Of course. Understandably things got a bit hectic before. Don't worry about it.\" He smiles as he hands you the weapon. \"Reunited at last. Let's go now.\""];
+	  228 [label="You: Nah, that's not worth it."];
+	  229 [label="The Pigs: As you turn to leave, the faintest of voices comes from the old lady. It's but a reflex -- nothing else. \"Please leave the radio on... Mr. Morrand is on Channel 8...\""];
+	  230 [label="The Pigs: CheckEquipped(\"prybar\")"];
+	  231 [label="CheckEquipped(\"prybar\")", shape=diamond];
+	  232 [label="!(CheckEquipped(\"prybar\"))", shape=diamond];
+	  233 [label="The Pigs: CheckEquipped(\"flashlight\")"];
+	  234 [label="CheckEquipped(\"flashlight\")", shape=diamond];
+	  235 [label="!(CheckEquipped(\"flashlight\"))", shape=diamond];
+	  236 [label="The Pigs: Variable[\"boardwalk.pigs_viscal_gun_is_empty\"]"];
+	  237 [label="Variable[\"boardwalk.pigs_viscal_gun_is_empty\"]", shape=diamond];
+	  238 [label="!(Variable[\"boardwalk.pigs_viscal_gun_is_empty\"])", shape=diamond];
+	  239 [label="Shivers: A drop of sweat runs down your nose and in it you see the Martinaise inlet, wrapped in the night. In the abandoned fish market two figures face each other in a spectacular light-show. One of them is forced to stare into the three empty barrels of a gun. Not an uncommon sight in the neighbourhood."];
+	  240 [label="The Pigs: Variable[\"boardwalk.pigs_kim_esprit_its_okay_go_for_the_gun\"]"];
+	  241 [label="Variable[\"boardwalk.pigs_kim_esprit_its_okay_go_for_the_gun\"]", shape=diamond];
+	  242 [label="!(Variable[\"boardwalk.pigs_kim_esprit_its_okay_go_for_the_gun\"])", shape=diamond];
+	  243 [label="The Pigs: IsKimHere()"];
+	  244 [label="IsKimHere()", shape=diamond];
+	  245 [label="!(IsKimHere())", shape=diamond];
+	  246 [label="You: \"My god, it's not loaded... The gun isn't loaded!\""];
+	  247 [label="Pain Threshold: CONDITION BLACK, ALL SYSTEMS CRITICAL!"];
+	  248 [label="The Pigs: Variable[\"boardwalk.pigs_rc_fil_paintresh_conditionblack\"]"];
+	  249 [label="Variable[\"boardwalk.pigs_rc_fil_paintresh_conditionblack\"]", shape=diamond];
+	  250 [label="!(Variable[\"boardwalk.pigs_rc_fil_paintresh_conditionblack\"])", shape=diamond];
+	  251 [label="You: \"I'm very sorry this is how life turned out for you.\" (Gently touch her shoulder.)"];
+	  252 [label="The Pigs: Variable[\"boardwalk.pigs_interfacing_gun_was_greatest_thing_you_had\"]"];
+	  253 [label="Variable[\"boardwalk.pigs_interfacing_gun_was_greatest_thing_you_had\"]", shape=diamond];
+	  254 [label="!(Variable[\"boardwalk.pigs_interfacing_gun_was_greatest_thing_you_had\"])", shape=diamond];
+	  255 [label="The Pigs: Variable[\"whirling.wakeup_hurting_longing_dancing_to_disco_music\"]"];
+	  256 [label="Variable[\"whirling.wakeup_hurting_longing_dancing_to_disco_music\"]", shape=diamond];
+	  257 [label="!(Variable[\"whirling.wakeup_hurting_longing_dancing_to_disco_music\"])", shape=diamond];
+	  258 [label="You: \"But why was she like this in the first place?\""];
+	  259 [label="Kim Kitsuragi: \"But I think we're done here for now. Let's head out, this is done.\""];
+	  260 [label="Esprit de Corps: Lieutenant Kitsuragi would probably know what to do, but right now you're just gonna have to leave her like this."];
+	  261 [label="The Pigs: IsTHCFixed(\"honour\")"];
+	  262 [label="IsTHCFixed(\"honour\")", shape=diamond];
+	  263 [label="!(IsTHCFixed(\"honour\"))", shape=diamond];
+	  264 [label="Half Light: A madwoman is pointing a gun at two police officers and you're thinking about warning shots?! Fuck the protocol! Take her out!"];
+	  265 [label="The Pigs: Variable[\"boardwalk.pigs_kim_noticed_gun_not_loaded\"]"];
+	  266 [label="Variable[\"boardwalk.pigs_kim_noticed_gun_not_loaded\"]", shape=diamond];
+	  267 [label="!(Variable[\"boardwalk.pigs_kim_noticed_gun_not_loaded\"])", shape=diamond];
+	  268 [label="You: How dark?"];
+	  269 [label="Esprit de Corps: I was 95% sure the gun is empty and *still* that instinctual muscle twitch could have ended in an unnecessary death."];
+	  270 [label="Interfacing: That gun was the single greatest thing you had. This is an enormous loss."];
+	  271 [label="The Pigs: IsKimHere()"];
+	  272 [label="IsKimHere()", shape=diamond];
+	  273 [label="!(IsKimHere())", shape=diamond];
+	  274 [label="The Pigs: \"No one ever cares anymore,\" her voice is growing fainter as she rocks back and forth, slowly. \"Why would they cheat me like this...\""];
+	  275 [label="Logic: Reflex to what? Being left alone?"];
+	  276 [label="The Pigs: \"Mr. Morrand... Gareth, thank you. Thank you!\" As the sharp end of the pin grazes the flesh, a blessed smile emerges. Then it expires, and like a shadow moving on the ground, all sentience fades again."];
+	  277 [label="Jump to: [The Pigs: \"\"CONFINED QUARTERS, ASSAILANT COMIN...\"]"];
+	  278 [label="Hand/Eye Coordination: Alright, here's the plan: You fling the chaincutters in her face -- already darting right -- and *immediately* close the distance. Left hand grabs the barrel, right one breaks the wrist..."];
+	  279 [label="Hand/Eye Coordination: Porta-reel is the key. Up the volume to the *MAX* and hit 'Play'. The sound will startle her, allowing you to close the distance. Left hand grabs the barrel, right one breaks the wrist..."];
+	  280 [label="Hand/Eye Coordination: The gun, throw it in her face -- she won't see it coming. As she tries to catch or evade, you close the distance. Left hand grabs the barrel, right one breaks the wrist..."];
+	  281 [label="Shivers: A drop of sweat runs down your nose and in it you see the Martinaise inlet, wrapped in the night. In the abandoned fish market three figures stand in a spectacular light-show. A large, loud woman is pointing an empty firearm at the other two. She doesn't want to listen... or even to be heard."];
+	  282 [label="Kim Kitsuragi: \"Situation is under control!\" The lieutenant's voice rings over the police siren. \"You're not shot, she's not a threat, everybody stay calm!\""];
+	  283 [label="Conceptualization: Great gears are grinding to a halt. The machine is powering down. She's all out of jolt."];
+	  284 [label="Kim Kitsuragi: \"I don't think there's any need for that. In her current state -- and without the gun -- she isn't really a threat to anyone.\""];
+	  285 [label="The Pigs: Variable[\"boardwalk.pigs_logic_reflex_to_being_left_alone\"]"];
+	  286 [label="Variable[\"boardwalk.pigs_logic_reflex_to_being_left_alone\"]", shape=diamond];
+	  287 [label="!(Variable[\"boardwalk.pigs_logic_reflex_to_being_left_alone\"])", shape=diamond];
+	  288 [label="Horrific Necktie: You weirdo. Get outta here before anyone sees you."];
+	  289 [label="Interfacing: No! Look how she's holding it. Like it's light in the nose. It must be... That means the gun is empty!"];
+	  290 [label="You: \"Ma'am, the weapon you're holding is mine and I *know* it has no bullets.\""];
+	  291 [label="The Pigs: Variable[\"boardwalk.pigs_half_light_kim_cant_shoot\"]"];
+	  292 [label="Variable[\"boardwalk.pigs_half_light_kim_cant_shoot\"]", shape=diamond];
+	  293 [label="!(Variable[\"boardwalk.pigs_half_light_kim_cant_shoot\"])", shape=diamond];
+	  294 [label="You: \"You're probably right.\" (Nod.) \"Loneliness.\""];
+	  295 [label="Kim Kitsuragi: \"No,\" the lieutenant sharply interjects. \"That is not an option. We'll either unload this to Titus and his guys or I'll ask for help from my station.\""];
+	  296 [label="Kim Kitsuragi: \"Oh, before we go...\" The lieutenant pulls out your service pistol. \"I believe this belongs to you.\""];
+	  297 [label="Logic: The locals will take care of her. Someone's bound to know her family. Nothing you can do for her anymore."];
+	  298 [label="Authority: It's a shame. Recognition from an actual police officer would probably mean a lot to her. Too bad she'll never know..."];
+	  299 [label="Hand/Eye Coordination: Alright, here's the plan: You hurl the ledger in her face -- already darting right -- and *immediately* close the distance. Left hand grabs the barrel, right one breaks the wrist..."];
+	  300 [label="Visual Calculus: No. That won't be necessary. Look closer. The gun, all three barrels, red and blue light shining through -- it's not loaded."];
+	  301 [label="The Pigs: Variable[\"boardwalk.pigs_shiver_gun_is_empty\"]"];
+	  302 [label="Variable[\"boardwalk.pigs_shiver_gun_is_empty\"]", shape=diamond];
+	  303 [label="!(Variable[\"boardwalk.pigs_shiver_gun_is_empty\"])", shape=diamond];
+	  304 [label="The Pigs: Variable[\"boardwalk.pigs_shiver_gun_is_empty\"]"];
+	  305 [label="Variable[\"boardwalk.pigs_shiver_gun_is_empty\"]", shape=diamond];
+	  306 [label="!(Variable[\"boardwalk.pigs_shiver_gun_is_empty\"])", shape=diamond];
+	  307 [label="You: \"Gun-gun, I'm coming!\" (Go for it.)"];
+	  308 [label="The Pigs: IsKimHere()"];
+	  309 [label="IsKimHere()", shape=diamond];
+	  310 [label="!(IsKimHere())", shape=diamond];
+	  311 [label="Hand/Eye Coordination: Sure, you're you. But how do we end this? She's not just gonna let you leave."];
+	  312 [label="The Pigs: Variable[\"boardwalk.thepigs_blackc_conc_how_it_feels\"]"];
+	  313 [label="Variable[\"boardwalk.thepigs_blackc_conc_how_it_feels\"]", shape=diamond];
+	  314 [label="!(Variable[\"boardwalk.thepigs_blackc_conc_how_it_feels\"])", shape=diamond];
+	  315 [label="HUB TO THEN END OF THE WORLD"];
+	  316 [label="The Pigs: Variable[\"boardwalk.pigs_authority_recognize_her_courage\"]  and  CheckItem(\"neck_setting_sun_medal\")"];
+	  317 [label="Variable[\"boardwalk.pigs_authority_recognize_her_courage\"]  and  CheckItem(\"neck_setting_sun_medal\")", shape=diamond];
+	  318 [label="!(Variable[\"boardwalk.pigs_authority_recognize_her_courage\"]  and  CheckItem(\"neck_setting_sun_medal\"))", shape=diamond];
+	  319 [label="Encyclopedia: Mr. Morrand? Mr. Gareth Morrand, the former cop, turned Channel 8 crime show host? That Gareth Morrand from the radio?"];
+	  0 -> 1
+	  2 -> 204
+	  3 -> 4
+	  3 -> 5
+	  4 -> 126
+	  5 -> 62
+	  6 -> 243
+	  7 -> 74
+	  8 -> 25
+	  9 -> 210
+	  10 -> 50
+	  11 -> 29
+	  12 -> 178
+	  13 -> 14
+	  13 -> 15
+	  14 -> 288
+	  15 -> 2
+	  16 -> 17
+	  16 -> 18
+	  17 -> 299
+	  18 -> 19
+	  19 -> 20
+	  19 -> 21
+	  20 -> 278
+	  21 -> 179
+	  22 -> 291
+	  23 -> 131
+	  24 -> 77
+	  25 -> 188
+	  26 -> 274
+	  27 -> 270
+	  28 -> 114
+	  29 -> 49
+	  30 -> 191
+	  31 -> 2
+	  32 -> 67
+	  33 -> 74
+	  34 -> 209
+	  35 -> 92
+	  36 -> 37
+	  37 -> 49
+	  38 -> 49
+	  39 -> 215
+	  40 -> 276
+	  41 -> 42
+	  41 -> 43
+	  42 -> 16
+	  43 -> 308
+	  44 -> 125
+	  45 -> 46
+	  45 -> 47
+	  46 -> 125
+	  47 -> 126
+	  48 -> 311
+	  49 -> 69
+	  49 -> 10
+	  49 -> 111
+	  49 -> 79
+	  49 -> 251
+	  50 -> 51
+	  50 -> 52
+	  51 -> 153
+	  52 -> 154
+	  53 -> 106
+	  54 -> 193
+	  55 -> 83
+	  56 -> 77
+	  57 -> 167
+	  58 -> 59
+	  58 -> 60
+	  59 -> 142
+	  60 -> 233
+	  61 -> 167
+	  62 -> 147
+	  63 -> 45
+	  64 -> 23
+	  65 -> 64
+	  65 -> 73
+	  65 -> 290
+	  65 -> 246
+	  66 -> 8
+	  67 -> 48
+	  67 -> 66
+	  67 -> 307
+	  68 -> 210
+	  69 -> 135
+	  70 -> 49
+	  71 -> 101
+	  71 -> 156
+	  71 -> 173
+	  71 -> 198
+	  72 -> 13
+	  73 -> 265
+	  74 -> 125
+	  75 -> 210
+	  76 -> 68
+	  77 -> 112
+	  78 -> 26
+	  78 -> 91
+	  79 -> 115
+	  80 -> 29
+	  81 -> 138
+	  82 -> 86
+	  83 -> 84
+	  83 -> 85
+	  84 -> 104
+	  85 -> 261
+	  86 -> 315
+	  87 -> 300
+	  88 -> 89
+	  88 -> 90
+	  89 -> 22
+	  90 -> 67
+	  91 -> 271
+	  92 -> 93
+	  92 -> 94
+	  93 -> 95
+	  94 -> 169
+	  95 -> 38
+	  96 -> 211
+	  97 -> 191
+	  98 -> 99
+	  98 -> 100
+	  99 -> 71
+	  100 -> 260
+	  101 -> 121
+	  102 -> 298
+	  103 -> 2
+	  104 -> 195
+	  105 -> 106
+	  106 -> 70
+	  107 -> 108
+	  107 -> 109
+	  108 -> 196
+	  109 -> 58
+	  110 -> 74
+	  111 -> 170
+	  112 -> 197
+	  113 -> 80
+	  114 -> 29
+	  115 -> 116
+	  115 -> 117
+	  116 -> 171
+	  117 -> 192
+	  118 -> 98
+	  119 -> 215
+	  120 -> 71
+	  121 -> 139
+	  122 -> 123
+	  122 -> 124
+	  125 -> 64
+	  125 -> 34
+	  125 -> 290
+	  125 -> 73
+	  125 -> 246
+	  126 -> 127
+	  127 -> 128
+	  127 -> 129
+	  128 -> 125
+	  129 -> 62
+	  130 -> 88
+	  131 -> 25
+	  132 -> 75
+	  133 -> 210
+	  134 -> 274
+	  135 -> 136
+	  135 -> 137
+	  136 -> 284
+	  137 -> 118
+	  138 -> 215
+	  139 -> 156
+	  139 -> 198
+	  140 -> 141
+	  141 -> 49
+	  142 -> 205
+	  143 -> 167
+	  144 -> 145
+	  144 -> 146
+	  145 -> 279
+	  146 -> 164
+	  147 -> 148
+	  147 -> 149
+	  148 -> 125
+	  149 -> 44
+	  150 -> 152
+	  150 -> 151
+	  151 -> 282
+	  152 -> 76
+	  153 -> 97
+	  154 -> 30
+	  155 -> 295
+	  156 -> 158
+	  157 -> 199
+	  158 -> 275
+	  159 -> 140
+	  160 -> 161
+	  161 -> 162
+	  161 -> 163
+	  162 -> 41
+	  163 -> 41
+	  164 -> 165
+	  164 -> 166
+	  165 -> 206
+	  166 -> 61
+	  167 -> 205
+	  168 -> 274
+	  169 -> 38
+	  170 -> 258
+	  170 -> 159
+	  171 -> 105
+	  172 -> 81
+	  172 -> 225
+	  172 -> 155
+	  172 -> 54
+	  173 -> 102
+	  174 -> 120
+	  175 -> 176
+	  175 -> 177
+	  176 -> 55
+	  177 -> 261
+	  178 -> 56
+	  179 -> 180
+	  179 -> 181
+	  180 -> 57
+	  181 -> 230
+	  182 -> 167
+	  183 -> 184
+	  183 -> 185
+	  184 -> 33
+	  185 -> 186
+	  186 -> 110
+	  187 -> 67
+	  188 -> 189
+	  188 -> 190
+	  189 -> 312
+	  190 -> 247
+	  191 -> 49
+	  192 -> 53
+	  193 -> 81
+	  193 -> 225
+	  193 -> 155
+	  194 -> 200
+	  195 -> 261
+	  196 -> 167
+	  197 -> 78
+	  198 -> 229
+	  199 -> 158
+	  200 -> 201
+	  200 -> 202
+	  201 -> 82
+	  202 -> 86
+	  204 -> 71
+	  205 -> 300
+	  206 -> 208
+	  206 -> 207
+	  207 -> 6
+	  208 -> 280
+	  209 -> 268
+	  210 -> 24
+	  211 -> 29
+	  212 -> 213
+	  212 -> 214
+	  213 -> 172
+	  214 -> 39
+	  215 -> 216
+	  215 -> 217
+	  216 -> 296
+	  217 -> 259
+	  218 -> 219
+	  218 -> 220
+	  219 -> 31
+	  220 -> 103
+	  221 -> 222
+	  221 -> 223
+	  222 -> 281
+	  223 -> 239
+	  224 -> 96
+	  224 -> 113
+	  224 -> 28
+	  224 -> 294
+	  225 -> 119
+	  226 -> 227
+	  227 -> 158
+	  228 -> 174
+	  229 -> 275
+	  230 -> 232
+	  230 -> 231
+	  231 -> 182
+	  232 -> 107
+	  233 -> 234
+	  233 -> 235
+	  234 -> 143
+	  235 -> 144
+	  236 -> 237
+	  236 -> 238
+	  237 -> 125
+	  238 -> 221
+	  239 -> 301
+	  240 -> 241
+	  240 -> 242
+	  241 -> 63
+	  242 -> 3
+	  243 -> 244
+	  243 -> 245
+	  244 -> 264
+	  245 -> 87
+	  246 -> 12
+	  247 -> 248
+	  248 -> 249
+	  248 -> 250
+	  249 -> 9
+	  250 -> 133
+	  251 -> 36
+	  252 -> 253
+	  252 -> 254
+	  253 -> 168
+	  254 -> 274
+	  255 -> 256
+	  255 -> 257
+	  256 -> 35
+	  257 -> 283
+	  258 -> 224
+	  259 -> 158
+	  260 -> 297
+	  261 -> 262
+	  261 -> 263
+	  262 -> 218
+	  263 -> 72
+	  264 -> 300
+	  265 -> 266
+	  265 -> 267
+	  266 -> 183
+	  267 -> 7
+	  268 -> 65
+	  269 -> 210
+	  270 -> 252
+	  271 -> 272
+	  271 -> 273
+	  272 -> 134
+	  273 -> 27
+	  274 -> 255
+	  275 -> 285
+	  276 -> 319
+	  277 -> 8
+	  278 -> 167
+	  279 -> 167
+	  280 -> 167
+	  281 -> 301
+	  282 -> 269
+	  283 -> 92
+	  284 -> 212
+	  285 -> 286
+	  285 -> 287
+	  286 -> 194
+	  287 -> 86
+	  288 -> 2
+	  289 -> 304
+	  290 -> 12
+	  291 -> 292
+	  291 -> 293
+	  292 -> 67
+	  293 -> 187
+	  294 -> 11
+	  295 -> 81
+	  295 -> 225
+	  296 -> 226
+	  296 -> 157
+	  297 -> 71
+	  298 -> 316
+	  299 -> 167
+	  300 -> 236
+	  301 -> 302
+	  301 -> 303
+	  302 -> 125
+	  303 -> 289
+	  304 -> 305
+	  304 -> 306
+	  305 -> 125
+	  306 -> 240
+	  307 -> 131
+	  308 -> 309
+	  308 -> 310
+	  309 -> 130
+	  310 -> 32
+	  311 -> 66
+	  311 -> 307
+	  312 -> 313
+	  312 -> 314
+	  313 -> 150
+	  314 -> 132
+	  316 -> 317
+	  316 -> 318
+	  317 -> 40
+	  317 -> 228
+	  318 -> 156
+	  318 -> 198
+	  319 -> 175
+}
+

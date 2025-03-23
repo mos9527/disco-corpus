@@ -1,0 +1,50 @@
+# ICE / ETERNITE
+# this dialogue for pushing over eternite for you know very darksoulsy shortcut, yes, gut design.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: [Leave it as is.]"];
+	  3 [label="Variable[\"ice.acele_greet_hub_reached\"] == false  and  Variable[\"ice.tentflap_transport\"] == false  and  IsKimHere()"];
+	  4 [label="Variable[\"ice.acele_greet_hub_reached\"] == false  and  Variable[\"ice.tentflap_transport\"] == false  and  IsKimHere()", shape=diamond];
+	  5 [label="!(Variable[\"ice.acele_greet_hub_reached\"] == false  and  Variable[\"ice.tentflap_transport\"] == false  and  IsKimHere())", shape=diamond];
+	  6 [label="Kim Kitsuragi: \"We should ask that girl on the ice what's going on here.\" The lieutenant gestures toward the young woman next to the tent."];
+	  7 [label="Variable[\"yard.shack_ency_eternite_dump\"]"];
+	  8 [label="Variable[\"yard.shack_ency_eternite_dump\"]", shape=diamond];
+	  9 [label="!(Variable[\"yard.shack_ency_eternite_dump\"])", shape=diamond];
+	  10 [label="Pile of Eternite: A pane of eternite has been planted into the snow. Two poles are holding it up."];
+	  11 [label="Interfacing: *Barely* holding it up. It could fall over any minute... a stronger gust of wind might be enough."];
+	  12 [label="You: What is this?"];
+	  13 [label="Pile of Eternite: Looks like a makeshift bridge, currently drawn up."];
+	  14 [label="Jump to: [pane_eternite]"];
+	  15 [label="You: \"What is this?\""];
+	  16 [label="You: Push the eternite over."];
+	  17 [label="Encyclopedia: When junior researcher Õlari Taal invented eternite in the un-prestigious Värtna Polytechnic Institute some thirty odd years ago, he thought it would last forever -- hence the name eternite. The only lasting thing about it turned out to be its carcinogenic effect."];
+	  18 [label="pane_eternite"];
+	  20 [label="Pile of Eternite: The pane falls into the icy snow with a soft thunk."];
+	  21 [label="Kim Kitsuragi: \"It looks like a makeshift bridge.\" The lieutenant adjusts his collar against a cool breeze. \"Could be convenient.\""];
+	  0 -> 1
+	  1 -> 10
+	  3 -> 4
+	  3 -> 5
+	  4 -> 6
+	  7 -> 8
+	  7 -> 9
+	  8 -> 14
+	  9 -> 17
+	  10 -> 11
+	  11 -> 18
+	  12 -> 13
+	  13 -> 7
+	  14 -> 18
+	  15 -> 21
+	  16 -> 20
+	  17 -> 14
+	  18 -> 16
+	  18 -> 2
+	  18 -> 12
+	  18 -> 15
+	  20 -> 3
+	  21 -> 14
+}
+

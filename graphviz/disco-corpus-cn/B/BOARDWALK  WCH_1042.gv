@@ -1,0 +1,567 @@
+# BOARDWALK / WCH
+# Dead working class husband who has fallen through the blanks and cut himself open and it's generally a very gruesome and sad death.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Savoir Faire: 你走在这里的时候，一定要非常、非常小心。"];
+	  3 [label="You: “不，只有后脑勺有个伤口。”"];
+	  4 [label="CheckEquipped(\"yellow_plastic_bag\")"];
+	  5 [label="CheckEquipped(\"yellow_plastic_bag\")", shape=diamond];
+	  6 [label="!(CheckEquipped(\"yellow_plastic_bag\"))", shape=diamond];
+	  7 [label="IsKimHere()"];
+	  8 [label="IsKimHere()", shape=diamond];
+	  9 [label="!(IsKimHere())", shape=diamond];
+	  10 [label="Kim Kitsuragi: “呃。至少你没结婚。”警督指着男人左手上的戒指，那周围的肉有些浮肿、发灰。"];
+	  11 [label="Variable[\"TASK.get_a_drink_done\"] == true  and  Variable[\"boardwalk.corpse_inland_wonders_married\"] == true"];
+	  12 [label="Variable[\"TASK.get_a_drink_done\"] == true  and  Variable[\"boardwalk.corpse_inland_wonders_married\"] == true", shape=diamond];
+	  13 [label="!(Variable[\"TASK.get_a_drink_done\"] == true  and  Variable[\"boardwalk.corpse_inland_wonders_married\"] == true)", shape=diamond];
+	  14 [label="Working Class Corpse: 他后脑的头发上有一个凝固的血块——是开放性创伤，触感黏腻又冰冷。"];
+	  15 [label="You: “很难说。”"];
+	  16 [label="Kim Kitsuragi: “看来头部那个伤口就是造成死亡的原因。它跟长凳的形状是完全吻合的……”"];
+	  17 [label="Kim Kitsuragi: “接下来，就是回我的锐影打给警局，把案子转交出去。然后我们就能继续调查凶杀案，了结这件事。”"];
+	  18 [label="Jump to: [drunk husband hub]"];
+	  19 [label="Kim Kitsuragi: “是啊，是啊，”警督有些不耐烦，“但你是基于什么*实际*因素把他和书摊前遇到的那个女人联系在一起的呢？”"];
+	  20 [label="Jump to: [study surroundings]"];
+	  21 [label="You: “在我看来，又是一个老酒鬼。”"];
+	  22 [label="Kim Kitsuragi: “*连环杀人犯*？”警督站在风中，眯起双眼。“那两具尸体之间没有任何联系。这是个完全不同的案子——是一场意外。”"];
+	  23 [label="Jump to: [study surroundings]"];
+	  24 [label="Variable[\"boardwalk.corpse_hub_reached\"]"];
+	  25 [label="Variable[\"boardwalk.corpse_hub_reached\"]", shape=diamond];
+	  26 [label="!(Variable[\"boardwalk.corpse_hub_reached\"])", shape=diamond];
+	  27 [label="Kim Kitsuragi: “好吧。我们已经检查过借书证——接着，返回锐影那边，打电话给加姆洛克图书馆，看看能不能获得比莉·梅让的信息。”"];
+	  28 [label="You: “你觉得这里发生什么事了？”"];
+	  29 [label="Logic: 或者只是因为太黑了。"];
+	  30 [label="You: “这可能跟私刑有所关联吗？”\n“这可能跟私刑有所关联吗？露比？”"];
+	  31 [label="Kim Kitsuragi: “怎么了？死者吃过烤肉。”他耸耸肩。“可能就在附近的某个地方，也许在帕克斯…”"];
+	  32 [label="Jump to: [what happened hub]"];
+	  33 [label="Jump to: [what happened hub]"];
+	  34 [label="Jump to: [study surroundings]"];
+	  35 [label="Kim Kitsuragi: “也许，不过我们真的没有时间，也没有那么多资源可以浪费。分析部门的人会处理好接下来的事情。”"];
+	  36 [label="Kim Kitsuragi: “如果死因不像是犯罪行为导致的话，那就没必要现场验尸——而且在我看来，这就是一起简单的事故。”"];
+	  37 [label="Variable[\"boardwalk.library_card_main_hub\"]"];
+	  38 [label="Variable[\"boardwalk.library_card_main_hub\"]", shape=diamond];
+	  39 [label="!(Variable[\"boardwalk.library_card_main_hub\"])", shape=diamond];
+	  40 [label="Logic: 蓝色内衬的酷皮夹克？哦不，这个听起来熟悉地可怕……"];
+	  41 [label="Inland Empire: 这是一个预兆，是上天传达的一个信号——你不能再喝酒了。"];
+	  42 [label="Inland Empire: 如果这一切都是有预谋的呢？那晚，他可能在院子里看到了什么…"];
+	  43 [label="Working Class Corpse: 它们在你脚下发出尖锐刺耳的声音，充满了不祥的感觉。很难说到底是不是死者的重量导致木板破碎的…它们确实看起来挺脆弱的。\n在T-500陶瓷护脚甲的重量下，木板发出尖锐刺耳的声音。还好它们很轻，很难说到底是不是死者的重量导致木板破碎的…确实看起来挺脆弱的。"];
+	  44 [label="Electrochemistry: 这是中端市场的烈酒。带有一丝薄荷醇的味道。这个男人本想好好享受一下，度过一段美好时光。"];
+	  45 [label="You: “你说得对，我没发现什么犯罪行为。这个话题就到此为止吧。”"];
+	  46 [label="Working Class Corpse: 死亡的黑色。恶臭。你觉得自己见过这种白色口香糖。"];
+	  47 [label="IsKimHere()"];
+	  48 [label="IsKimHere()", shape=diamond];
+	  49 [label="!(IsKimHere())", shape=diamond];
+	  50 [label="Jump to: [drunk husband hub]"];
+	  51 [label="Kim Kitsuragi: “是的，”警督点点头。"];
+	  52 [label="You: “这人是谁？”"];
+	  53 [label="Electrochemistry: 跟酒精结婚了，这是肯定的。"];
+	  54 [label="You: “我们在这里见证了一个伟大派对动物的终结。那件皮夹克，一个空伏特加酒瓶…”（亲吻你的手指。）"];
+	  55 [label="You: “你说得对，把这案子跟私刑联系在一起有点夸张了。”"];
+	  56 [label="You: 后退一步。"];
+	  57 [label="Working Class Corpse: 小心。东边吹来的风很大。"];
+	  58 [label="You: “借书证！他是打算去还书的。”"];
+	  59 [label="Inland Empire: 从瞭望台看去，风景十分优美…"];
+	  60 [label="Variable[\"TASK.ask_about_ruby_in_village\"]"];
+	  61 [label="Variable[\"TASK.ask_about_ruby_in_village\"]", shape=diamond];
+	  62 [label="!(Variable[\"TASK.ask_about_ruby_in_village\"])", shape=diamond];
+	  63 [label="Kim Kitsuragi: “你在书摊边遇到的那个女人？”他看着地上那具尸体。“你为什么会觉得是她的丈夫？”"];
+	  64 [label="You: “那件皮夹克。”（指向男人的衣服。）“完全符合她的描述。”"];
+	  65 [label="Jump to: [study surroundings]"];
+	  66 [label="Kim Kitsuragi: “意外身亡。他滑了一下，踩空了一脚。的确是一个不幸的事故…如果没有那个长凳的话，他说不定能活下来。”"];
+	  67 [label="You: “我们把案子留给警局吧，我不想在这件事上面浪费时间。”（不接案子。）"];
+	  68 [label="Kim Kitsuragi: “好吧。不过警局可能会需要我们提供细节。先检查一下你在他身上找到的借书证，看看有没有什么线索。然后我们回到我的锐影那里联系警局，把案子移交出去。”"];
+	  69 [label="You: “如果他*目击*到什么了呢？一切都可能是有预谋的。我们还不知道准确的死因呢。”"];
+	  70 [label="You: 踏上地板。"];
+	  71 [label="Working Class Corpse: 一个男人躺在木板道上，四肢弯曲，颈部扭转到一个不自然的角度。他旁边是一个烈酒空瓶。在他攥紧的拳头里：有一张口香糖包装纸。"];
+	  72 [label="Kim Kitsuragi: 「看来他已经死了有一会儿了。很奇怪，居然没人发现他。」他站起身，一阵狂风吹过他的短夹克，他打了个寒颤。\n「看来他已经死了有一会儿了。很奇怪，居然没人发现他。」他站起身，一阵狂风吹过他的夹克，他打了个寒颤。"];
+	  73 [label="Esprit de Corps: 在8/81下方公路的一条沟渠里，他想到。一个年轻的父亲。然后他摇摇头，让记忆中止。"];
+	  74 [label="Composure: 现在，冷静下来。又是寻常的一天，又是一具尸体而已。深呼吸。"];
+	  75 [label="Jump to: [drunk husband hub]"];
+	  76 [label="Kim Kitsuragi: “不过你说对，我们的想法还是别太超前。现在我们只知道他是一个身份不明的中年男子，死在了马丁内斯的木板道上。”"];
+	  77 [label="Jump to: [what happened hub]"];
+	  78 [label="Perception (Smell): 这种味道…没有一具放了两周的尸体那么糟糕，不过肯定也是朝着那个方向去的。"];
+	  79 [label="Kim Kitsuragi: “好吧。不过警局可能需要我们提供细节。我们已经检查过尸体上发现的借书证——这样挺好的，应该足够作为第一条线索了。”"];
+	  80 [label="IsTaskActive(\"TASK.return_to_body_on_boardwalk_with_kim\")--[[ Variable[ ]]"];
+	  81 [label="IsTaskActive(\"TASK.return_to_body_on_boardwalk_with_kim\")--[[ Variable[ ]]", shape=diamond];
+	  82 [label="!(IsTaskActive(\"TASK.return_to_body_on_boardwalk_with_kim\")--[[ Variable[ ]])", shape=diamond];
+	  83 [label="Kim Kitsuragi: “看来他已经死了有一会儿了。很奇怪，居然没人发现他。”他站起身，一阵狂风吹过他的短夹克，他打了个寒颤。"];
+	  84 [label="Jump to: [study surroundings]"];
+	  85 [label="Variable[\"boardwalk.wch_inland_head_home\"]"];
+	  86 [label="Variable[\"boardwalk.wch_inland_head_home\"]", shape=diamond];
+	  87 [label="!(Variable[\"boardwalk.wch_inland_head_home\"])", shape=diamond];
+	  88 [label="Kim Kitsuragi: “铁青色隐约可见。不管是怎么回事，他大概死了不超过两天。”他站起身，一阵狂风吹过他的短夹克，他打了个寒颤。“我们需要调查一下。”"];
+	  90 [label="Working Class Corpse: 男人踩中了木板道的缝隙，脑袋撞到金属长凳。他脑后的头发上覆盖着血液凝块。其中一只脚还挂在洞里。"];
+	  91 [label="Kim Kitsuragi: “看起来像是本地人——他肯定知道这个地方才会过来。你不会*就这么*走过来的。”他看向南边，你来的方向。"];
+	  92 [label="Jump to: [what happened hub]"];
+	  93 [label="Untitled hub (03)"];
+	  94 [label="Working Class Corpse: 金属长凳上有一些干涸的血迹，就在尸体头部停留的位置。地板有些腐烂，洞的周围又湿又滑。一只空酒瓶就躺在附近不远的地方。他的拳头里还紧紧攥着一张口香糖包装纸。"];
+	  95 [label="You: 检查男人的头部。"];
+	  96 [label="You: “是啊，但是…这样是不是有点太草率了？”"];
+	  97 [label="Logic: 在我回家之前，我要去*喝一杯*。"];
+	  98 [label="Kim Kitsuragi: “我没有看见其他大伤口。你呢？”"];
+	  99 [label="Kim Kitsuragi: “我宁愿这次你别把它们捡走。这样不太…合适。”"];
+	  100 [label="Jump to: [drunk husband hub]"];
+	  101 [label="You: [离开。]"];
+	  102 [label="Variable[\"boardwalk.corpse_electrochem_had_to_be_drunk\"]"];
+	  103 [label="Variable[\"boardwalk.corpse_electrochem_had_to_be_drunk\"]", shape=diamond];
+	  104 [label="!(Variable[\"boardwalk.corpse_electrochem_had_to_be_drunk\"])", shape=diamond];
+	  105 [label="Kim Kitsuragi: “不，我没发现任何线索指往那个方向。我们暂时把这起案子当做一次简单的——尽管有些悲伤的——事故，跟凶杀案没有任何关联。”"];
+	  106 [label="Kim Kitsuragi: “不过，话还是别说的太早——以目前的情况来看，我们只知道他是个身份不明的中年男人，死在了马丁内斯的木板道上。”"];
+	  107 [label="Kim Kitsuragi: “消息传到联盟官员那里之后，他们会把这里封闭起来。我怀疑他们的资源够不够，能不能真的修好这条木板道。”"];
+	  108 [label="You: “好吧。”（总结）"];
+	  109 [label="Kim Kitsuragi: “如果没有进一步证据的话——是这样没错。”"];
+	  110 [label="study surroundings"];
+	  111 [label="Kim Kitsuragi: “说得对。负责分析的人会处理好接下来的事情。”"];
+	  112 [label="Variable[\"boardwalk.library_card_main_hub\"]"];
+	  113 [label="Variable[\"boardwalk.library_card_main_hub\"]", shape=diamond];
+	  114 [label="!(Variable[\"boardwalk.library_card_main_hub\"])", shape=diamond];
+	  115 [label="Kim Kitsuragi: “好吧。首先，我们应该检查一下你发现的那张借书证。然后回到我的锐影，打电话给警局，通知他们这个案子归我们了。”"];
+	  116 [label="Kim Kitsuragi: “等等…”警督在尸体旁边蹲下，检查他的面部。两只玻璃般的眼睛回望着他，完全没有任何生命迹象。"];
+	  117 [label="Kim Kitsuragi: “我们应该再看看你在他身上发现的借书证，”警督挺直了后背，说到。"];
+	  118 [label="Variable[\"boardwalk.wch_found_the_library_card\"]"];
+	  119 [label="Variable[\"boardwalk.wch_found_the_library_card\"]", shape=diamond];
+	  120 [label="!(Variable[\"boardwalk.wch_found_the_library_card\"])", shape=diamond];
+	  121 [label="You: 翻找他的口袋。"];
+	  122 [label="Working Class Corpse: 首先，你需要跟警督聊聊，然后汇报给警局。这个情况太复杂，你一个人处理不了。"];
+	  123 [label="what do we do"];
+	  124 [label="Kim Kitsuragi: “呃，他肯定是*某人*的丈夫。”警督指着男人左手上的戒指，那周围的肉有些浮肿和苍白。"];
+	  125 [label="Kim Kitsuragi: “而且他已婚。”警督指着男人左手上的戒指，那周围的肉有些浮肿、发灰。"];
+	  126 [label="Variable[\"TASK.find_working_class_husband\"]"];
+	  127 [label="Variable[\"TASK.find_working_class_husband\"]", shape=diamond];
+	  128 [label="!(Variable[\"TASK.find_working_class_husband\"])", shape=diamond];
+	  129 [label="Kim Kitsuragi: “这好像是个特别明确的意外事故，不过还有确认尸体身份的问题…”"];
+	  130 [label="You: “我们需要考虑连环杀人犯的可能性。”"];
+	  131 [label="Jump to: [what happened hub]"];
+	  132 [label="Inland Empire: 这里就是他走向终结的地方。在他昏迷的时候，一点一滴。大概花了3分钟，也许是4分钟。"];
+	  133 [label="Working Class Corpse: 你退后一步，整个木板道在风中嘎吱作响。"];
+	  134 [label="Kim Kitsuragi: “不过我觉得死因是头部创伤，不是肝脏衰竭。”"];
+	  135 [label="Inland Empire: 这是真的。感觉…有些无礼。"];
+	  136 [label="You: 往里面看。"];
+	  137 [label="Perception (Sight): 确认完毕。几乎一整包都塞进去了，就凝固在下排牙齿后面。"];
+	  138 [label="Kim Kitsuragi: “该死…他肯定是*某人*的丈夫。”警督指着男人左手上的戒指，那周围的肉有些浮肿和苍白。"];
+	  139 [label="Kim Kitsuragi: “要我说，我们应该在验尸报告里写下‘头部创伤’，然后就到此为止。尽量不要绕太大的弯子——我们越快回去找露比就越好。”"];
+	  140 [label="IsKimHere()"];
+	  141 [label="IsKimHere()", shape=diamond];
+	  142 [label="!(IsKimHere())", shape=diamond];
+	  143 [label="Kim Kitsuragi: “我们过去之后应该打给警局，通知他们这个案子归我们了。”"];
+	  144 [label="Kim Kitsuragi: “亮蓝色的内衬？”他点点头，然后指着男人左手上的戒指：“呃，他确实是*某人*的丈夫。”"];
+	  145 [label="drunk husband hub"];
+	  146 [label="Kim Kitsuragi: “等等…”警督在尸体旁边蹲下，查看他的脸。两只突出的眼睛回望着他，完全没有任何生命迹象。"];
+	  147 [label="Working Class Corpse: 他穿着泥泞的靴子，米黄色裤子，还有一件带亮蓝色内衬的旧皮夹克。他的胸口还残留着烤肉酱的痕迹。"];
+	  148 [label="Electrochemistry: 一定是喝得伶仃大醉才会摔得那么厉害。一升纯酒精，三瓶葡萄酒，或者一瓶半烈酒？"];
+	  149 [label="Kim Kitsuragi: “不用着急。”"];
+	  150 [label="You: “我知道这是谁。是那个女工人走失的丈夫——死在了木板道上。”"];
+	  151 [label="Jump to: [drunk husband hub]"];
+	  152 [label="Jump to: [study surroundings]"];
+	  153 [label="Kim Kitsuragi: “要我说，我们应该在验尸报告里写下‘头部创伤’，然后就到此为止。这样至少可以节省两个小时不必要的工作。”"];
+	  154 [label="Jump to: [what do we do]"];
+	  155 [label="Kim Kitsuragi: “我们周围都是回收品…”他看着投币望远镜附近遗留的另外两只瓶子。"];
+	  156 [label="IsKimHere()"];
+	  157 [label="IsKimHere()", shape=diamond];
+	  158 [label="!(IsKimHere())", shape=diamond];
+	  159 [label="Composure: 他的皮夹克很合身。肯定是专门定制的。"];
+	  160 [label="You: “我还需要点时间来决定怎么处理这个案子。”（稍后再回来。）"];
+	  161 [label="Jump to: [drunk husband hub]"];
+	  162 [label="Logic: 一个死去的男工人，手里还握着一只空瓶？别骗自己了，你知道他是谁。"];
+	  163 [label="Jump to: [drunk husband hub]"];
+	  164 [label="Inland Empire: 这是一个预兆，是上天传达的一个信号——别再喝酒了。"];
+	  165 [label="Perception: 你看见海浪在下面翻腾…有什么东西在你脚下嘎吱直响。"];
+	  166 [label="You: “那酒精中毒和肝脏衰竭呢？”"];
+	  167 [label="Kim Kitsuragi: “我们周围都是回收品…”他看着投币望远镜附近遗留的另外两只瓶子，然后看向你的黄色塑料袋。"];
+	  168 [label="Variable[\"boardwalk.library_card_know_phone_number\"]"];
+	  169 [label="Variable[\"boardwalk.library_card_know_phone_number\"]", shape=diamond];
+	  170 [label="!(Variable[\"boardwalk.library_card_know_phone_number\"])", shape=diamond];
+	  171 [label="Working Class Corpse: 你找到些葵瓜子，一张被雨水浸透的借书证，是对折起来的。他的夹克湿透了，在你手下显得格外沉重。"];
+	  172 [label="Visual Calculus: 身高170-175厘米，卷发，身材肥胖。年龄大约50-60岁。"];
+	  173 [label="Kim Kitsuragi: “在我看来有两种选择。我们可以接下案子，顺着线索确认尸体身份——或者我们汇报给警局，把案子交给同事去处理。”"];
+	  174 [label="Kim Kitsuragi: “是的，但是…我只想说清楚，这不是什么连环杀人犯，好吗？”"];
+	  175 [label="Working Class Corpse: ‘洛博维斯’留兰香口香糖。包装纸上有绿色的叶子。男人的嘴因为坠落的恐惧半张着…"];
+	  176 [label="You: “瓶子，他周围到处都是。”（指着回收品。）“她说他在马丁内斯的某个地方喝酒。”"];
+	  177 [label="Variable[\"TASK.return_to_body_on_boardwalk_with_kim\"]"];
+	  178 [label="Variable[\"TASK.return_to_body_on_boardwalk_with_kim\"]", shape=diamond];
+	  179 [label="!(Variable[\"TASK.return_to_body_on_boardwalk_with_kim\"])", shape=diamond];
+	  180 [label="Working Class Corpse: 他湿透的口袋里只有一些葵瓜子。你已经把借书证拿走了。"];
+	  181 [label="Working Class Corpse: 他的脸部就像背后的大海一样僵硬，水滴在他的胡子上闪闪发亮。他的眼睛，空洞地圆睁着，那种冷冰冰的眼神有些吓人。"];
+	  182 [label="Inland Empire: 如果你结了呢…？"];
+	  183 [label="Half Light: 是的，但是如果还有个逍遥法外的杀人犯呢？在很短的时间内就接连发生了两起可疑的死亡案件！"];
+	  184 [label="Kim Kitsuragi: “有这个可能，不过还是一步步来吧。我们还没有确定这个人的身份。”"];
+	  185 [label="You: “我只是想说，我们应该对一切可能性抱持开放态度。”"];
+	  186 [label="Logic: 就是这个东西杀了他。"];
+	  187 [label="Logic: 摔得很严重。可能是因为外面很黑？这地方在黑暗中就是个雷区。"];
+	  188 [label="Working Class Corpse: 一个男人躺在木板道上，四肢弯曲，颈部扭转到一个不自然的角度。他旁边是一个烈酒空瓶。在他攥紧的拳头里：有一张口香糖包装纸。"];
+	  189 [label="You: 查看男人的衣服。"];
+	  190 [label="Jump to: [drunk husband hub]"];
+	  191 [label="Jump to: [drunk husband hub]"];
+	  192 [label="You: “我觉得给他贴上酒鬼的标签还有些为时过早。我们什么都还不知道呢。”"];
+	  193 [label="Variable[\"plaza.working_husband_leather_jacket_known\"]"];
+	  194 [label="Variable[\"plaza.working_husband_leather_jacket_known\"]", shape=diamond];
+	  195 [label="!(Variable[\"plaza.working_husband_leather_jacket_known\"])", shape=diamond];
+	  196 [label="Jump to: [what do we do]"];
+	  197 [label="You: “应该有人为这条破木板道负责。实在是太危险了。”"];
+	  198 [label="sequence killer hub"];
+	  199 [label="Working Class Corpse: 一瓶0.75公升的‘陶尔洛拉’伏特加，瓶盖已经不见了。里面几乎没剩下什么东西。"];
+	  200 [label="IsKimHere()"];
+	  201 [label="IsKimHere()", shape=diamond];
+	  202 [label="!(IsKimHere())", shape=diamond];
+	  203 [label="Kim Kitsuragi: 男人因为寒冷而颤抖。“我之前也见过：几乎是一模一样的场面。就连口香糖都是。总是这么回事…”"];
+	  204 [label="Electrochemistry: 只要一杯。我穿着自己的酷夹克。我把书送去了图书馆。这是我应得的。"];
+	  205 [label="Conceptualization: 因为这是你见过的最工人阶级的死亡方式。"];
+	  206 [label="You: “他看起来很像我。我最后也可能会落得他这种下场——死在一条空旷的木板道上，尸体旁边还摆着一只空酒瓶。”"];
+	  207 [label="Kim Kitsuragi: “很好，等这边结束之后，我们应该看看那张借书证。”"];
+	  208 [label="Physical Instrument: 他的半边身体从裂开的木板道里滑了下去，从左腿开始的。这一摔把他给摔坏了，像个悲伤的玩偶一样扭曲着。"];
+	  209 [label="Kim Kitsuragi: “我没看见书…”他拍了拍他的口袋。“所以他把书送到了图书馆，然后走回来，想到——我要去喝一杯。”"];
+	  210 [label="You: 查看死去的男人。"];
+	  211 [label="You: “我们拿他怎么办？”"];
+	  212 [label="You: 我应该怎么处理这具尸体？"];
+	  213 [label="You: “你觉得他喝醉了吗？”（指着酒瓶。）"];
+	  214 [label="what happened hub"];
+	  215 [label="Visual Calculus: 通过那个洞，他很容易就能消失在大海里。这样你就永远也找不到他了。"];
+	  216 [label="Inland Empire: 他*正打算*回家。回家的第一步反而变成了他的最后一步。"];
+	  217 [label="You: 检查口香糖包装纸。"];
+	  218 [label="Logic: 口香糖好像也指向了相同的结论。"];
+	  219 [label="no wcw hub"];
+	  220 [label="Kim Kitsuragi: “封起来并不代表别人不会靠近。这样唯一能做的，就是不会把市政府的手弄脏。”他苦涩地笑了。"];
+	  221 [label="You: “可能是带着杀人的意图某个人故意从背后推了他一把。”"];
+	  222 [label="Kim Kitsuragi: “急性酒精中毒的病症确实可能跟他的死因有关：极度混乱，呼吸抑制，无法预测的行为…”"];
+	  223 [label="Kim Kitsuragi: “他吃了一整包，对吗？这是为了在回家之前盖住嘴里的酒味。最糟糕的事情是…”"];
+	  224 [label="Jump to: [study surroundings]"];
+	  225 [label="Logic: 同意。如果之后能收敛一点的话，为什么不呢。不过现在还是简单一点。"];
+	  226 [label="Logic: 有时候，烤肉就是烤肉而已。"];
+	  227 [label="You: “这是最适合工人阶级的死亡方式——完全被隔绝和遗忘。”"];
+	  228 [label="Jump to: [drunk husband hub]"];
+	  229 [label="Savoir Faire: 这些木板潮湿的时候会变得非常滑，就连清醒的人都可能会失去平衡。"];
+	  230 [label="Kim Kitsuragi: “但这不过是个偷懒的假设。你怎么看？”"];
+	  231 [label="Electrochemistry: 至少这个男人知道怎么狂欢！想象一下同样的场景，但是没有那个酒瓶——那就真的只剩下悲哀了。"];
+	  232 [label="You: 查看周围的环境。"];
+	  233 [label="You: “等等——那现场验尸呢？”"];
+	  234 [label="Variable[\"boardwalk.corpse_halflight_killer_on_the_loose\"]"];
+	  235 [label="Variable[\"boardwalk.corpse_halflight_killer_on_the_loose\"]", shape=diamond];
+	  236 [label="!(Variable[\"boardwalk.corpse_halflight_killer_on_the_loose\"])", shape=diamond];
+	  237 [label="You: 检查瓶子。"];
+	  238 [label="Authority: 又是一具尸体。这是你的工作。做好准备。"];
+	  239 [label="You: “我们找到他的。就该由我们了结。”（接下案子。）"];
+	  240 [label="IsKimHere()"];
+	  241 [label="IsKimHere()", shape=diamond];
+	  242 [label="!(IsKimHere())", shape=diamond];
+	  243 [label="You: 退后。"];
+	  244 [label="Logic: 毫无疑问，是为了隐藏酒精的臭味。"];
+	  245 [label="You: 检查他的脸。"];
+	  246 [label="Jump to: [drunk husband hub]"];
+	  247 [label="Kim Kitsuragi: “我们知道他已经结婚了。”警督指着男人左手上的戒指，那周围的肉有些浮肿、发灰。"];
+	  248 [label="Variable[\"TASK.get_a_drink_done\"]"];
+	  249 [label="Variable[\"TASK.get_a_drink_done\"]", shape=diamond];
+	  250 [label="!(Variable[\"TASK.get_a_drink_done\"])", shape=diamond];
+	  251 [label="Kim Kitsuragi: “结婚戒指。”警督指着男人左手上的戒指，那周围的肉有些浮肿、发灰。"];
+	  252 [label="You: “那烤肉酱呢？”"];
+	  253 [label="Jump to: [drunk husband hub]"];
+	  254 [label="Empathy: 他死的时候一定很困惑。很有可能是困惑而孤独的。他被这次恐怖的突袭压倒了。"];
+	  0 -> 1
+	  1 -> 24
+	  2 -> 110
+	  3 -> 16
+	  4 -> 5
+	  4 -> 6
+	  5 -> 167
+	  6 -> 155
+	  7 -> 8
+	  7 -> 9
+	  8 -> 146
+	  9 -> 238
+	  10 -> 182
+	  11 -> 12
+	  11 -> 13
+	  12 -> 53
+	  13 -> 106
+	  14 -> 186
+	  15 -> 16
+	  16 -> 84
+	  17 -> 191
+	  18 -> 145
+	  19 -> 64
+	  19 -> 58
+	  19 -> 176
+	  20 -> 110
+	  21 -> 125
+	  22 -> 42
+	  23 -> 110
+	  24 -> 25
+	  24 -> 26
+	  25 -> 71
+	  26 -> 188
+	  27 -> 143
+	  28 -> 66
+	  29 -> 229
+	  30 -> 105
+	  31 -> 226
+	  32 -> 214
+	  33 -> 214
+	  34 -> 110
+	  35 -> 154
+	  36 -> 60
+	  37 -> 38
+	  37 -> 39
+	  38 -> 117
+	  39 -> 207
+	  40 -> 121
+	  41 -> 219
+	  42 -> 93
+	  43 -> 165
+	  44 -> 140
+	  45 -> 111
+	  46 -> 137
+	  47 -> 48
+	  47 -> 49
+	  48 -> 98
+	  49 -> 23
+	  50 -> 145
+	  51 -> 166
+	  52 -> 91
+	  53 -> 106
+	  54 -> 251
+	  55 -> 109
+	  56 -> 133
+	  57 -> 224
+	  58 -> 209
+	  59 -> 138
+	  60 -> 61
+	  60 -> 62
+	  61 -> 139
+	  62 -> 153
+	  63 -> 205
+	  64 -> 144
+	  65 -> 110
+	  66 -> 214
+	  67 -> 112
+	  68 -> 191
+	  69 -> 184
+	  70 -> 43
+	  71 -> 156
+	  72 -> 145
+	  73 -> 20
+	  74 -> 145
+	  75 -> 145
+	  76 -> 163
+	  77 -> 214
+	  78 -> 7
+	  79 -> 17
+	  80 -> 81
+	  80 -> 82
+	  81 -> 116
+	  82 -> 145
+	  84 -> 110
+	  85 -> 86
+	  85 -> 87
+	  86 -> 218
+	  87 -> 246
+	  88 -> 238
+	  90 -> 148
+	  91 -> 230
+	  92 -> 214
+	  93 -> 221
+	  93 -> 185
+	  93 -> 69
+	  94 -> 2
+	  95 -> 14
+	  96 -> 35
+	  97 -> 204
+	  98 -> 3
+	  98 -> 15
+	  99 -> 135
+	  100 -> 145
+	  102 -> 104
+	  102 -> 103
+	  103 -> 29
+	  104 -> 187
+	  105 -> 183
+	  106 -> 151
+	  107 -> 220
+	  108 -> 129
+	  109 -> 33
+	  110 -> 70
+	  110 -> 237
+	  110 -> 56
+	  110 -> 217
+	  110 -> 95
+	  111 -> 196
+	  112 -> 113
+	  112 -> 114
+	  113 -> 79
+	  114 -> 68
+	  115 -> 18
+	  116 -> 72
+	  117 -> 50
+	  118 -> 120
+	  118 -> 119
+	  119 -> 180
+	  120 -> 171
+	  121 -> 118
+	  122 -> 190
+	  123 -> 160
+	  123 -> 233
+	  123 -> 67
+	  123 -> 239
+	  124 -> 228
+	  125 -> 106
+	  126 -> 128
+	  126 -> 127
+	  127 -> 162
+	  128 -> 231
+	  129 -> 161
+	  130 -> 22
+	  131 -> 214
+	  132 -> 47
+	  133 -> 253
+	  134 -> 32
+	  135 -> 34
+	  136 -> 46
+	  137 -> 240
+	  138 -> 100
+	  139 -> 96
+	  139 -> 45
+	  140 -> 141
+	  140 -> 142
+	  141 -> 4
+	  142 -> 34
+	  143 -> 18
+	  144 -> 228
+	  145 -> 101
+	  145 -> 232
+	  145 -> 210
+	  145 -> 211
+	  145 -> 212
+	  145 -> 52
+	  145 -> 28
+	  145 -> 189
+	  146 -> 88
+	  147 -> 159
+	  148 -> 102
+	  149 -> 75
+	  150 -> 63
+	  151 -> 145
+	  152 -> 110
+	  153 -> 96
+	  153 -> 45
+	  154 -> 123
+	  155 -> 34
+	  156 -> 157
+	  156 -> 158
+	  157 -> 80
+	  158 -> 145
+	  159 -> 193
+	  160 -> 149
+	  161 -> 145
+	  162 -> 150
+	  163 -> 145
+	  164 -> 219
+	  165 -> 215
+	  166 -> 222
+	  167 -> 99
+	  168 -> 169
+	  168 -> 170
+	  169 -> 27
+	  170 -> 115
+	  171 -> 200
+	  172 -> 254
+	  173 -> 123
+	  174 -> 131
+	  175 -> 136
+	  175 -> 243
+	  176 -> 124
+	  177 -> 178
+	  177 -> 179
+	  178 -> 117
+	  179 -> 37
+	  180 -> 200
+	  181 -> 172
+	  182 -> 11
+	  183 -> 234
+	  184 -> 131
+	  185 -> 174
+	  186 -> 132
+	  187 -> 229
+	  188 -> 208
+	  189 -> 147
+	  190 -> 145
+	  191 -> 145
+	  192 -> 247
+	  193 -> 194
+	  193 -> 195
+	  194 -> 40
+	  195 -> 121
+	  196 -> 123
+	  197 -> 107
+	  198 -> 130
+	  198 -> 55
+	  199 -> 44
+	  200 -> 201
+	  200 -> 202
+	  201 -> 177
+	  202 -> 50
+	  203 -> 73
+	  204 -> 59
+	  205 -> 64
+	  205 -> 58
+	  205 -> 227
+	  205 -> 176
+	  206 -> 10
+	  207 -> 50
+	  208 -> 78
+	  209 -> 97
+	  210 -> 90
+	  211 -> 173
+	  212 -> 122
+	  213 -> 51
+	  214 -> 197
+	  214 -> 108
+	  214 -> 213
+	  214 -> 252
+	  214 -> 30
+	  215 -> 152
+	  216 -> 85
+	  217 -> 175
+	  218 -> 246
+	  219 -> 54
+	  219 -> 21
+	  219 -> 206
+	  219 -> 192
+	  220 -> 92
+	  221 -> 184
+	  222 -> 134
+	  223 -> 203
+	  224 -> 110
+	  225 -> 33
+	  226 -> 77
+	  227 -> 19
+	  228 -> 145
+	  229 -> 245
+	  230 -> 126
+	  231 -> 248
+	  232 -> 94
+	  233 -> 36
+	  234 -> 235
+	  234 -> 236
+	  235 -> 198
+	  236 -> 225
+	  237 -> 199
+	  238 -> 74
+	  239 -> 168
+	  240 -> 241
+	  240 -> 242
+	  241 -> 223
+	  242 -> 244
+	  243 -> 57
+	  244 -> 65
+	  245 -> 181
+	  246 -> 145
+	  247 -> 76
+	  248 -> 249
+	  248 -> 250
+	  249 -> 41
+	  250 -> 164
+	  251 -> 106
+	  252 -> 31
+	  253 -> 145
+	  254 -> 216
+}
+

@@ -1,0 +1,80 @@
+# EVRART ORB / communistquest
+# You get to attempt to smell Evrart and ask him about underground communism
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Rhetoric: 是的，*当然了*。我们做得对……"];
+	  3 [label="You: 吸气。"];
+	  4 [label="Rhetoric: 但你也不能就这么直接*问*他。你应该先自我介绍一下，以表尊敬。这个人很有*名望*。"];
+	  5 [label="Evrart Claire: 与此同时，那个很有名望的男人在他的打字机前拼命打着字，故意无视你的存在……"];
+	  6 [label="Untitled hub"];
+	  7 [label="You: 我在哪？"];
+	  8 [label="Kim Kitsuragi: “哦？在工会老大的办公室里*康米主义*味道很浓烈吗？”"];
+	  9 [label="Perception (Smell): 那些箱子和货板让人联想到冬日里的大片松树，厚重的地毯吸收了空气中古旧的气息。不过，也有一股四处弥漫的甜蜜*芬芳*，不禁让你联想到可乐果……"];
+	  10 [label="You: “唔。”"];
+	  11 [label="IsKimHere()"];
+	  12 [label="IsKimHere()", shape=diamond];
+	  13 [label="!(IsKimHere())", shape=diamond];
+	  15 [label="Kim Kitsuragi: 警督用尖锐的余光打量着你。"];
+	  16 [label="Rhetoric: 从意识形态的角度来看，*这个*地方很有潜力……"];
+	  17 [label="Rhetoric: 这是个重要的地方。是马丁内斯保存下来最后一批堡垒。或许在这儿可以发现帮你找到组织的人？"];
+	  18 [label="Perception (Smell): ……这是一间办公室吗？还是什么办公所？有这个词吗？空气中的尘埃可能会导致你过敏……"];
+	  19 [label="Evrart Claire: 与此同时，艾弗拉特·克莱尔在他的打字机前拼命打着字，故意无视你的存在……"];
+	  20 [label="Variable[\"cargo.orb_perc_communism\"]"];
+	  21 [label="Variable[\"cargo.orb_perc_communism\"]", shape=diamond];
+	  22 [label="!(Variable[\"cargo.orb_perc_communism\"])", shape=diamond];
+	  23 [label="You: “嘘，金，我正在调查呢。”"];
+	  24 [label="Variable[\"cargo.evrart_evrart_met\"]"];
+	  25 [label="Variable[\"cargo.evrart_evrart_met\"]", shape=diamond];
+	  26 [label="!(Variable[\"cargo.evrart_evrart_met\"])", shape=diamond];
+	  27 [label="Rhetoric: 这闻起来像是……"];
+	  28 [label="Variable[\"gates.manana_communist_quest_smelled_kim\"]  or  Variable[\"pier.cindy_communist_quest_smelled_kim\"]"];
+	  29 [label="Variable[\"gates.manana_communist_quest_smelled_kim\"]  or  Variable[\"pier.cindy_communist_quest_smelled_kim\"]", shape=diamond];
+	  30 [label="!(Variable[\"gates.manana_communist_quest_smelled_kim\"]  or  Variable[\"pier.cindy_communist_quest_smelled_kim\"])", shape=diamond];
+	  31 [label="Evrart Claire: 与此同时，桌子后面的那个男人在他的打字机前拼命打着字，故意无视你的存在……"];
+	  32 [label="Variable[\"cargo.evrart_evrart_met\"]"];
+	  33 [label="Variable[\"cargo.evrart_evrart_met\"]", shape=diamond];
+	  34 [label="!(Variable[\"cargo.evrart_evrart_met\"])", shape=diamond];
+	  35 [label="Perception (Smell): 你觉得这个地方真应该好好打扫一下了。"];
+	  0 -> 1
+	  1 -> 32
+	  2 -> 6
+	  3 -> 27
+	  4 -> 5
+	  6 -> 3
+	  6 -> 7
+	  7 -> 17
+	  8 -> 10
+	  8 -> 23
+	  9 -> 20
+	  10 -> 24
+	  11 -> 12
+	  11 -> 13
+	  12 -> 28
+	  13 -> 24
+	  15 -> 24
+	  16 -> 6
+	  17 -> 4
+	  18 -> 11
+	  20 -> 21
+	  20 -> 22
+	  21 -> 35
+	  22 -> 18
+	  23 -> 24
+	  24 -> 25
+	  24 -> 26
+	  25 -> 19
+	  26 -> 31
+	  27 -> 9
+	  28 -> 29
+	  28 -> 30
+	  29 -> 8
+	  30 -> 15
+	  32 -> 33
+	  32 -> 34
+	  33 -> 2
+	  34 -> 16
+	  35 -> 11
+}
+

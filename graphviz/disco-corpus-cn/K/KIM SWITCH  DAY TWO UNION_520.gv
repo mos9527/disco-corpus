@@ -1,0 +1,194 @@
+# KIM SWITCH / DAY TWO UNION
+# Kim blinks red when he's joined your team near the stairs. He wants to tell you the vigilantes have showed up and that you should talk to them -- but be careful. (Final warning about RCM non-presence in Martinaise.)
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: Variable[\"TASK.find_out_whos_in_the_union_box\"]"];
+	  3 [label="Variable[\"TASK.find_out_whos_in_the_union_box\"]", shape=diamond];
+	  4 [label="!(Variable[\"TASK.find_out_whos_in_the_union_box\"])", shape=diamond];
+	  5 [label="Authority: 很好。这一步走得很漂亮。*有目的地*集中在其他事情上。"];
+	  6 [label="Kim Kitsuragi: “还有一件事……”他拉开死者脸上的黑色塑料，然后看向你。“你做的*非常棒*，警探。”"];
+	  7 [label="Interfacing: 好吧——我们下辈子再弄双装甲靴穿吧。"];
+	  8 [label="Kim Kitsuragi: “看来我们马上就要开始工作了。工会的人来了。”他指着餐厅的门。“他们看起来很爱惹是生非。我们应该跟他们聊聊。”"];
+	  9 [label="Rhetoric: 警督把自己的贡献轻描淡写地带过了——今天太阳还没出来之前，他就已经起来把这件事处理好了。现在他很高兴自己能这么有效率地处理掉这种令人厌恶的工作。"];
+	  10 [label="Kim Kitsuragi: “那样只会让紧张局势加剧。没有警长愿意签字负责的。解决一起凶杀案而已，不值得引起RCM和装卸工会的冲突。”"];
+	  11 [label="dialogueoptionhub"];
+	  12 [label="Kim Kitsuragi: “我有些好消息。”警督笑了。“那具尸体我处理好了。一想到他还在我的MC腐烂，我连觉都睡不好了。”"];
+	  13 [label="Kim Kitsuragi: “还有那个大个子，”他眯起眼睛，研究着餐厅里的那个男人，“一定就是哈迪本人……”"];
+	  14 [label="Kim Kitsuragi: CheckEquipped(\"shoes_t500\") and  Variable[\"whirling.kim_stolen_boots_greet_done\"] == false"];
+	  15 [label="CheckEquipped(\"shoes_t500\") and  Variable[\"whirling.kim_stolen_boots_greet_done\"] == false", shape=diamond];
+	  16 [label="!(CheckEquipped(\"shoes_t500\") and  Variable[\"whirling.kim_stolen_boots_greet_done\"] == false)", shape=diamond];
+	  17 [label="Empathy: 他有点希望你能承认他的贡献，但是现在你已经失去这个机会了。"];
+	  18 [label="Kim Kitsuragi: “那些把啤酒当早餐的人。毫无疑问，他们就是艾弗拉特口中的哈迪兄弟，那些在这里*维持秩序*的人。”"];
+	  19 [label="Logic: 但是……难道你不*好奇*他们会怎么说这次凶杀案吗？"];
+	  21 [label="Kim Kitsuragi: “一切都指向了装卸工会：泥地里的痕迹，马丁内斯的环境，我手上的事前资料……”"];
+	  22 [label="Kim Kitsuragi: “当然了，也有可能全都是错的。不过我们还是得走访他们——这绝对不是什么简单的工作。”"];
+	  23 [label="Kim Kitsuragi: Variable[\"yard.sense_viscal_greeting_done\"]"];
+	  24 [label="Variable[\"yard.sense_viscal_greeting_done\"]", shape=diamond];
+	  25 [label="!(Variable[\"yard.sense_viscal_greeting_done\"])", shape=diamond];
+	  26 [label="Kim Kitsuragi: “他走了我很高兴。我们还有其他的事要做。”"];
+	  27 [label="Kim Kitsuragi: 他划掉了一些东西。“少了一点小烦恼——换成了一个大麻烦。”"];
+	  28 [label="Kim Kitsuragi: “呃，现在已经有人在处理他的事了。我们还有其他的事要做。”"];
+	  29 [label="Jump to: [dialogueoptionhub]"];
+	  30 [label="Kim Kitsuragi: Variable[\"TASK.find_out_whos_in_the_union_box\"]"];
+	  31 [label="Variable[\"TASK.find_out_whos_in_the_union_box\"]", shape=diamond];
+	  32 [label="!(Variable[\"TASK.find_out_whos_in_the_union_box\"])", shape=diamond];
+	  33 [label="Kim Kitsuragi: “他走了我很高兴。我们还有其他的事要做。”"];
+	  34 [label="Kim Kitsuragi: “当然了，我们也无法确定——艾弗拉特也许对我们撒谎了。他肯定有自己的议程。不管怎么说，我们得走访他们。而且这绝对不是什么简单的工作。”"];
+	  35 [label="You: “他们就是昨天加尔特说的那群人吗？”"];
+	  36 [label="Kim Kitsuragi: 他指着餐厅大门。“工会的人总算出现了，他们看起来很爱惹是生非，我们得跟他们谈谈。”"];
+	  37 [label="Kim Kitsuragi: CancelTask(\"TASK.find_out_whos_in_the_union_box_cancelled\")--[[ Variable[ ]]"];
+	  38 [label="Kim Kitsuragi: Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false"];
+	  39 [label="Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false", shape=diamond];
+	  40 [label="!(Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false)", shape=diamond];
+	  41 [label="switchhub-secondday"];
+	  42 [label="Kim Kitsuragi: “……好像也*不算*很多事情。昨天我们应该多挖点消息的。不管怎么说，我们还是得走访他们——这绝对不是什么简单的工作。”"];
+	  43 [label="Kim Kitsuragi: “他们不会着急离开——他们觉得这里是他们的地盘……话说回来，选择权就交给你了。不管你做出什么决定，我都没意见。”"];
+	  44 [label="You: “我不确定自己有没有准备好放他走……”"];
+	  45 [label="Kim Kitsuragi: “我完全忘记了。”他看着自己的笔记。“抱歉，我昨晚睡的不好。从外表来看，是他们没错——又吵又粗鲁，跟经理口中的一样。”"];
+	  46 [label="You: “好的，谢谢。”"];
+	  47 [label="Composure: 他甚至都不会*知道*你穿的是一双偷来的鞋子。对于他来说，它们根本不存在。之后你得自己提出来——*如果*你有这个胆量的话。"];
+	  48 [label="Kim Kitsuragi: “事实上，甚至两个警探的*死*也许都不会引爆全面战争。所以一定要保持头脑冷静，好吗？”"];
+	  49 [label="Kim Kitsuragi: “看来我们马上就要开始工作了。工会的人来了——”他指着餐厅的门。“他们看起来很爱惹是生非。我们应该跟他们聊聊。”"];
+	  50 [label="Kim Kitsuragi: “很多事情都指向了装卸工会：马丁内斯的环境，我手上的事前资料。嗯，其实……”"];
+	  51 [label="Kim Kitsuragi: “呃，他已经交到分析部了。我们还有其他的事要做。”"];
+	  52 [label="Kim Kitsuragi: “我的意思是很难管制。马丁内斯对RCM可不是很热情。他们更喜欢被工会*管制*——就是这里那些人……”"];
+	  53 [label="Kim Kitsuragi: Variable[\"whirling.kim_took_away_body_day_2\"]"];
+	  54 [label="Variable[\"whirling.kim_took_away_body_day_2\"]", shape=diamond];
+	  55 [label="!(Variable[\"whirling.kim_took_away_body_day_2\"])", shape=diamond];
+	  56 [label="Kim Kitsuragi: “他们肯定就是艾弗拉特说过的——工会里*维护和平*的力量，吊死被害人的那群人。”"];
+	  57 [label="Interfacing: 好吧——我们下辈子再弄双装甲靴穿吧。"];
+	  58 [label="You: “为什么要跟他们谈？”"];
+	  59 [label="Kim Kitsuragi: Variable[\"cargo.evrart_hardieboys_did_the_merco_in\"]"];
+	  60 [label="Variable[\"cargo.evrart_hardieboys_did_the_merco_in\"]", shape=diamond];
+	  61 [label="!(Variable[\"cargo.evrart_hardieboys_did_the_merco_in\"])", shape=diamond];
+	  62 [label="Kim Kitsuragi: Variable[\"yard.hanged_autopsy_exited_cause_known_path\"]  or  Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"]"];
+	  63 [label="Variable[\"yard.hanged_autopsy_exited_cause_known_path\"]  or  Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"]", shape=diamond];
+	  64 [label="!(Variable[\"yard.hanged_autopsy_exited_cause_known_path\"]  or  Variable[\"TASK.get_hardie_boys_to_tell_you_the_whole_story_done\"])", shape=diamond];
+	  65 [label="Kim Kitsuragi: Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false"];
+	  66 [label="Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false", shape=diamond];
+	  67 [label="!(Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet\"]  and  Variable[\"TASK.get_the_boots_off_the_hanged_mans_feet_done\"] == false)", shape=diamond];
+	  68 [label="You: “你说*爱惹是生非*是什么意思？”"];
+	  69 [label="You: “他们人好多。也许我们应该呼叫增援？”"];
+	  70 [label="Kim Kitsuragi: “还有一件事……”他又瞥了一眼包厢。“我们不用马上跟他们谈。可以先直接走过去，继续我们的工作。”"];
+	  71 [label="Kim Kitsuragi: Variable[\"yard.hanged_rope_industrial_strength\"] == true  or  Variable[\"yard.hanged_rope_airlifting_carfo\"] == true"];
+	  72 [label="Variable[\"yard.hanged_rope_industrial_strength\"] == true  or  Variable[\"yard.hanged_rope_airlifting_carfo\"] == true", shape=diamond];
+	  73 [label="!(Variable[\"yard.hanged_rope_industrial_strength\"] == true  or  Variable[\"yard.hanged_rope_airlifting_carfo\"] == true)", shape=diamond];
+	  74 [label="Jump to: [dialogueoptionhub]"];
+	  75 [label="Half Light: 他说的有生命危险，一点也不夸张。只要冷静地把这一点纳入考虑范围就好。你的拳头紧握，脉搏也升高到让人不适的程度。"];
+	  76 [label="Reaction Speed: 是啊——这就是街头智慧。直接走过去，按你自己的方式去做。"];
+	  77 [label="You: “我们走吧。”[离开。]"];
+	  78 [label="Jump to: [dialogueoptionhub]"];
+	  79 [label="Kim Kitsuragi: “一切都指向了装卸工会：那根把他吊起来的*皮带*，马丁内斯的环境，我手上的事前资料……”\n“一切都指向了码头工人工会：用来上吊的皮带，泥地里的痕迹，马丁内斯的环境，我得到的事前资料……”"];
+	  80 [label="Kim Kitsuragi: Variable[\"TASK.find_out_whos_in_the_union_box_done\"]"];
+	  81 [label="Variable[\"TASK.find_out_whos_in_the_union_box_done\"]", shape=diamond];
+	  82 [label="!(Variable[\"TASK.find_out_whos_in_the_union_box_done\"])", shape=diamond];
+	  83 [label="Kim Kitsuragi: Variable[\"cargo.evrart_hardieboys_did_the_merco_in\"]"];
+	  84 [label="Variable[\"cargo.evrart_hardieboys_did_the_merco_in\"]", shape=diamond];
+	  85 [label="!(Variable[\"cargo.evrart_hardieboys_did_the_merco_in\"])", shape=diamond];
+	  86 [label="Jump to: [dialogueoptionhub]"];
+	  87 [label="Kim Kitsuragi: “那些把啤酒当早餐的人？大家说工会有一支叫*哈迪兄弟*的武装小队，据说是专门负责*维持治安*的。我觉得应该就是他们。”"];
+	  0 -> 1
+	  1 -> 41
+	  2 -> 3
+	  2 -> 4
+	  3 -> 80
+	  4 -> 70
+	  5 -> 76
+	  7 -> 17
+	  8 -> 14
+	  9 -> 36
+	  10 -> 48
+	  11 -> 35
+	  11 -> 68
+	  11 -> 69
+	  11 -> 77
+	  11 -> 58
+	  12 -> 44
+	  12 -> 46
+	  13 -> 74
+	  14 -> 16
+	  14 -> 15
+	  15 -> 47
+	  16 -> 11
+	  17 -> 36
+	  18 -> 13
+	  19 -> 43
+	  21 -> 22
+	  22 -> 86
+	  23 -> 24
+	  23 -> 25
+	  24 -> 21
+	  25 -> 50
+	  26 -> 9
+	  27 -> 29
+	  28 -> 7
+	  29 -> 11
+	  30 -> 32
+	  30 -> 31
+	  31 -> 49
+	  32 -> 8
+	  33 -> 57
+	  34 -> 86
+	  35 -> 45
+	  36 -> 14
+	  37 -> 70
+	  38 -> 40
+	  38 -> 39
+	  39 -> 33
+	  40 -> 26
+	  41 -> 53
+	  42 -> 86
+	  44 -> 65
+	  45 -> 27
+	  46 -> 38
+	  47 -> 11
+	  48 -> 75
+	  49 -> 14
+	  50 -> 42
+	  51 -> 17
+	  52 -> 59
+	  53 -> 54
+	  53 -> 55
+	  54 -> 12
+	  55 -> 30
+	  56 -> 34
+	  57 -> 9
+	  58 -> 83
+	  59 -> 60
+	  59 -> 61
+	  60 -> 18
+	  61 -> 87
+	  62 -> 64
+	  62 -> 63
+	  64 -> 6
+	  65 -> 66
+	  65 -> 67
+	  66 -> 28
+	  67 -> 51
+	  68 -> 52
+	  69 -> 10
+	  70 -> 5
+	  71 -> 72
+	  71 -> 73
+	  72 -> 79
+	  73 -> 23
+	  74 -> 11
+	  75 -> 78
+	  76 -> 19
+	  77 -> 2
+	  78 -> 11
+	  79 -> 22
+	  80 -> 81
+	  80 -> 82
+	  81 -> 70
+	  82 -> 37
+	  83 -> 84
+	  83 -> 85
+	  84 -> 56
+	  85 -> 71
+	  86 -> 11
+	  87 -> 74
+}
+

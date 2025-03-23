@@ -1,0 +1,32 @@
+# INVENTORY / MAP OF MARTINAISE
+# because the map is possibly a readable items, it might need some sort of an interaction dialogue?
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  3 [label="Tutorial Agent: 要想查看更详细的地图，打开日志界面，然后点击地图分页。"];
+	  4 [label="You: [把地图放在一边。]"];
+	  5 [label="Tourist map of Martinaise: 你的手指在一条条街道上穿行，穿过圣吉斯林路和圣西斯帕路，越过圣布伦和马丁内斯北部……"];
+	  6 [label="Tourist map of Martinaise: ……最终停在了你现在站立的位置，虽然地图本身并没有给出这样的提示。"];
+	  7 [label="map_hub_maybe"];
+	  8 [label="Jump to: [map_hub_maybe]"];
+	  9 [label="Variable[\"tc.turn_off_tutorial_node\"]"];
+	  10 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  11 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  12 [label="Tourist map of Martinaise: 这张破损的地图上绘制着马丁内斯街道的拼接网格，还有适当的*旅游*景点指示。右上角印着48年的字样。"];
+	  13 [label="You: 在网格中追踪一条道路。"];
+	  0 -> 1
+	  1 -> 12
+	  3 -> 8
+	  5 -> 6
+	  6 -> 9
+	  7 -> 4
+	  7 -> 13
+	  8 -> 7
+	  9 -> 10
+	  9 -> 11
+	  11 -> 3
+	  12 -> 7
+	  13 -> 5
+}
+

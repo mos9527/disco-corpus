@@ -1,0 +1,161 @@
+# DOOMED / BARBELL
+# You can lift the barbell.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Logic: 也许砸破那扇后门不是个好主意……"];
+	  3 [label="You: 什么也不说。"];
+	  4 [label="Barbell: IsKimHere()"];
+	  5 [label="IsKimHere()", shape=diamond];
+	  6 [label="!(IsKimHere())", shape=diamond];
+	  7 [label="You: “是哪个混账玩意把夹圈卸下来的？这绝对是重罪。”"];
+	  8 [label="Jump to: [barbell hub]"];
+	  9 [label="reaction with kim"];
+	  11 [label="Kim Kitsuragi: “戴着手套肯定会容易一点，”警督表示赞同。"];
+	  12 [label="You: 这种熟悉的感觉，难道我是个举重运动员吗？"];
+	  13 [label="Barbell: 地上躺着一只杠铃。夹圈的颜色已经脱落了。"];
+	  14 [label="Physical Instrument: 你奇迹般地激发出超乎常人的力量，把杠铃举到了空中。你的肱二头肌在颤抖，不过你是一个野蛮人。这不过是小孩子的游戏！"];
+	  15 [label="You: [离开。]"];
+	  16 [label="Barbell: Variable[\"doomed.bookstore_backdoor_forced\"]"];
+	  17 [label="Variable[\"doomed.bookstore_backdoor_forced\"]", shape=diamond];
+	  18 [label="!(Variable[\"doomed.bookstore_backdoor_forced\"])", shape=diamond];
+	  19 [label="You: “其实呢，我真的不在乎什么安全隐患。”"];
+	  20 [label="Kim Kitsuragi: “谁都不在乎，直到他们被压在杠铃底下。”"];
+	  21 [label="You: “哦耶。”"];
+	  22 [label="Jump to: [barbell hub]"];
+	  23 [label="Physical Instrument: 你把杠铃扔在地板上，一股温热的成就感从你的头顶倾泄而下。片刻之间，你感觉自己是那么的强大，只要下定决心，就一定能够成功。"];
+	  24 [label="Visual Calculus: 杠铃上没有夹圈。这是一个安全隐患。"];
+	  25 [label="Kim Kitsuragi: “合适的举重手套肯定能提供更好的抓力，”警督表示赞同。"];
+	  26 [label="You: “我是真正的冠军！”"];
+	  27 [label="Logic: 这只是一段记忆。"];
+	  28 [label="Barbell: 杠铃耐心地躺在地板上等待着，就像一条等待主人的狗。"];
+	  29 [label="Barbell: Variable[\"doomed.gym_doing_reps\"]"];
+	  30 [label="Variable[\"doomed.gym_doing_reps\"]", shape=diamond];
+	  31 [label="!(Variable[\"doomed.gym_doing_reps\"])", shape=diamond];
+	  32 [label="Kim Kitsuragi: “我的意思是说，在警局的健身房。我更喜欢跑步，能让你清空大脑……”警督走到杠铃旁边，给你留了点安静恢复的空间。"];
+	  33 [label="Jump to: [barbell hub]"];
+	  34 [label="Barbell: Variable[\"tc.doomed_commercial_area\"]"];
+	  35 [label="Variable[\"tc.doomed_commercial_area\"]", shape=diamond];
+	  36 [label="!(Variable[\"tc.doomed_commercial_area\"])", shape=diamond];
+	  37 [label="Kim Kitsuragi: “技巧很不错。”警督点头表示赞同。"];
+	  38 [label="Kim Kitsuragi: “如果健身房还在运营的话，那就违反了EPIS的安全条例。但是它没有。应该不会有人来这里了。”"];
+	  39 [label="You: “去你的吧，该死的杠铃！”"];
+	  40 [label="Kim Kitsuragi: “举重也一直都不是我的最爱。”警督显然是在*应付*你。"];
+	  41 [label="Inland Empire: 为什么感觉这么熟悉？"];
+	  42 [label="Endurance: 来自另一种生活的记忆——那时的你年轻有为，苗条健康。"];
+	  43 [label="Kim Kitsuragi: “你说得对，杠铃片可能会掉下来。最好还是别碰了。”"];
+	  44 [label="Physical Instrument: 这是60公斤重的杠铃。你的肱三头肌一看到这些重量就发出了不满的声音。让这个世界看看，它要对付的是哪种野兽。把杠铃举起来。"];
+	  45 [label="You: “无所谓了，反正举重是为那些智力受损的人准备的。”"];
+	  46 [label="You: “看来我的体型有点走样了。或者只是我的手掌心太滑了……”\n“看来我的体型有点走样了。或者只是这副手套太垃圾了……”"];
+	  47 [label="Physical Instrument: 你设法把它从地上提了起来，但是杠铃感觉有些摇晃，很是危险，你的双手开始出汗打滑。结果你根本不是什么野兽，只是个体型糟糕的老男人。"];
+	  48 [label="Physical Instrument: 你把杠铃扔在地板上，一股温热的成就感从你的头顶倾泄而下。片刻之间，你感觉自己是那么的强大，只要下定决心，就一定能够成功。"];
+	  49 [label="Barbell: CheckEquippedGroup(\"gloves\")"];
+	  50 [label="CheckEquippedGroup(\"gloves\")", shape=diamond];
+	  51 [label="!(CheckEquippedGroup(\"gloves\"))", shape=diamond];
+	  52 [label="You: “看，金，这是个陷阱。这个杠铃上没有夹圈！”"];
+	  53 [label="Barbell: IsKimHere()"];
+	  54 [label="IsKimHere()", shape=diamond];
+	  55 [label="!(IsKimHere())", shape=diamond];
+	  56 [label="Kim Kitsuragi: “这也从来都不是我的最爱。”警督显然是在应付你。"];
+	  57 [label="You: 举起杠铃。"];
+	  58 [label="You: Variable[\"doomed.gym_doing_reps\"]"];
+	  59 [label="Variable[\"doomed.gym_doing_reps\"]", shape=diamond];
+	  60 [label="!(Variable[\"doomed.gym_doing_reps\"])", shape=diamond];
+	  61 [label="Endurance: 就连你的身体也辜负了你。你没伤到自己简直就是奇迹。"];
+	  62 [label="Inland Empire: 不，不是的……是橡胶那陈腐的味道，运动鞋嘎吱嘎吱的声响，是你青肿的膝盖抵在垫子上的感觉。还有那声口哨……然后这种感觉消失了。"];
+	  63 [label="Inland Empire: 看见没，看见没！这个地方被诅咒了！"];
+	  64 [label="Inland Empire: 喂，你还在一栋鬼屋里……如果被什么人听见呢？如果他们不知道你在这里呢？！"];
+	  65 [label="Barbell: Variable[\"doomed.barbell_main_hub_reached\"]"];
+	  66 [label="Variable[\"doomed.barbell_main_hub_reached\"]", shape=diamond];
+	  67 [label="!(Variable[\"doomed.barbell_main_hub_reached\"])", shape=diamond];
+	  68 [label="barbell hub"];
+	  69 [label="Jump to: [barbell hub]"];
+	  70 [label="You: （什么也不说，沉浸在这种感觉里。）"];
+	  0 -> 1
+	  1 -> 65
+	  2 -> 53
+	  3 -> 40
+	  4 -> 5
+	  4 -> 6
+	  5 -> 37
+	  6 -> 33
+	  7 -> 38
+	  8 -> 68
+	  9 -> 3
+	  9 -> 45
+	  9 -> 46
+	  9 -> 39
+	  11 -> 8
+	  12 -> 62
+	  13 -> 44
+	  14 -> 26
+	  14 -> 21
+	  14 -> 70
+	  16 -> 17
+	  16 -> 18
+	  17 -> 2
+	  18 -> 53
+	  19 -> 20
+	  20 -> 69
+	  21 -> 48
+	  22 -> 68
+	  24 -> 41
+	  25 -> 8
+	  26 -> 48
+	  27 -> 42
+	  28 -> 68
+	  29 -> 30
+	  29 -> 31
+	  30 -> 14
+	  31 -> 47
+	  32 -> 8
+	  33 -> 68
+	  34 -> 35
+	  34 -> 36
+	  35 -> 63
+	  36 -> 61
+	  37 -> 33
+	  38 -> 69
+	  39 -> 40
+	  40 -> 32
+	  41 -> 68
+	  42 -> 22
+	  43 -> 19
+	  43 -> 7
+	  44 -> 24
+	  45 -> 56
+	  46 -> 49
+	  47 -> 34
+	  48 -> 64
+	  49 -> 50
+	  49 -> 51
+	  50 -> 25
+	  51 -> 11
+	  52 -> 43
+	  53 -> 54
+	  53 -> 55
+	  54 -> 9
+	  55 -> 8
+	  56 -> 32
+	  57 -> 58
+	  58 -> 59
+	  58 -> 60
+	  59 -> 29
+	  60 -> 29
+	  61 -> 16
+	  62 -> 27
+	  63 -> 61
+	  64 -> 4
+	  65 -> 66
+	  65 -> 67
+	  66 -> 28
+	  67 -> 13
+	  68 -> 57
+	  68 -> 12
+	  68 -> 52
+	  68 -> 15
+	  69 -> 68
+	  70 -> 48
+}
+

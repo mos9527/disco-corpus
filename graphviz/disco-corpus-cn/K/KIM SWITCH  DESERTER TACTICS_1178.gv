@@ -1,0 +1,145 @@
+# KIM SWITCH / DESERTER TACTICS
+# Kim talks to you on the side and says you got him, push motive angle.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: “弹道学。让他在这儿得瑟个一两分钟——我们再去他的定居点看看，有床垫的那个地方。”他朝着东南方向的小塔点点头。“弹道学总是能给那种军事咖留下深刻的印象。”"];
+	  3 [label="You: “你觉得是他做的吗？”"];
+	  4 [label="You: “我在尝试让他招供……”"];
+	  5 [label="Drama: 遵命，长官！来一场大张旗鼓的审问吧！"];
+	  7 [label="Kim Kitsuragi: “很好。”他点点头。我们做的很不错。他*想要*招供——我能看出来。我们只要加点压力，再稍微多一点——我们加的越多，他就越接近……”"];
+	  8 [label="Kim Kitsuragi: “记住，”警督低语到。“他想告诉我们——但他不想*帮*我们。要让他觉得我们已经知道一切了。”"];
+	  9 [label="Variable[\"TASK.check_seafort_done\"]"];
+	  10 [label="Variable[\"TASK.check_seafort_done\"]", shape=diamond];
+	  11 [label="!(Variable[\"TASK.check_seafort_done\"])", shape=diamond];
+	  12 [label="Variable[\"TASK.inspect_the_phasmid\"]"];
+	  13 [label="Variable[\"TASK.inspect_the_phasmid\"]", shape=diamond];
+	  14 [label="!(Variable[\"TASK.inspect_the_phasmid\"])", shape=diamond];
+	  15 [label="Kim Kitsuragi: 他笑了笑。“你应该感到骄傲。来吧——让我们结束这一切。”"];
+	  16 [label="Kim Kitsuragi: “弹道学。让他在这儿得瑟个一两分钟——我们再去岛上看看有没有狙击手掩体。”他看着海岸上的小塔。“我觉得应该去看看那个哨岗。”"];
+	  17 [label="CheckItem(\"deserter_gun\")"];
+	  18 [label="CheckItem(\"deserter_gun\")", shape=diamond];
+	  19 [label="!(CheckItem(\"deserter_gun\"))", shape=diamond];
+	  20 [label="Variable[\"seafort.kimswitch_emp_more_to_it\"]"];
+	  21 [label="Variable[\"seafort.kimswitch_emp_more_to_it\"]", shape=diamond];
+	  22 [label="!(Variable[\"seafort.kimswitch_emp_more_to_it\"])", shape=diamond];
+	  23 [label="Logic: 你听见了吗？他觉得你已经*这么*接近了……"];
+	  24 [label="Jump to: [get_on_this_kim_switch_business]"];
+	  25 [label="Kim Kitsuragi: “是的，进展迅速——这应该是我们的*第一*优先级。”"];
+	  26 [label="Kim Kitsuragi: “我能看见，没错。我不会说什么的。”"];
+	  27 [label="Jump to: [do_the_motive]"];
+	  28 [label="You: “我们已经做到了，不是吗？”"];
+	  29 [label="Suggestion: 没必要专门去法庭。只要构建出一条瞄准线，剩下的他自己会做完。"];
+	  30 [label="Jump to: [do_the_motive]"];
+	  31 [label="You: “好吧，就这么做吧。”（总结。）"];
+	  32 [label="Kim Kitsuragi: “呃，我能想到一个东西。那把枪。”他礼貌的笑了。“我们应该把它捡起来，拿到他面前讨论。做一场秀。”"];
+	  33 [label="get_on_this_kim_switch_business"];
+	  34 [label="Kim Kitsuragi: “记住，”警督低语到。“他想告诉我们——但他不想*帮*我们。要让他觉得我们已经知道一切了。”"];
+	  35 [label="Variable[\"seafort.kimswitch_lets_do_ballistics\"]"];
+	  36 [label="Variable[\"seafort.kimswitch_lets_do_ballistics\"]", shape=diamond];
+	  37 [label="!(Variable[\"seafort.kimswitch_lets_do_ballistics\"])", shape=diamond];
+	  38 [label="You: “你觉得他还有问题？除了这个案子外？”"];
+	  39 [label="You: “你觉得询问进行的怎么样？”"];
+	  40 [label="You: “我该怎么对付他——才能让他招供？”"];
+	  41 [label="Variable[\"seafort.nest_mainhub_got\"]"];
+	  42 [label="Variable[\"seafort.nest_mainhub_got\"]", shape=diamond];
+	  43 [label="!(Variable[\"seafort.nest_mainhub_got\"])", shape=diamond];
+	  44 [label="You: 拍拍他的背。[离开。]"];
+	  45 [label="You: “我还漏了什么？还有什么没所做的事？”"];
+	  46 [label="Variable[\"seafort.deserter_motive_with_companion\"]"];
+	  47 [label="Variable[\"seafort.deserter_motive_with_companion\"]", shape=diamond];
+	  48 [label="!(Variable[\"seafort.deserter_motive_with_companion\"])", shape=diamond];
+	  49 [label="Kim Kitsuragi: “我们只要把他弄回内陆。”他露出一丝坏笑。“其实我们已经做到了……”"];
+	  50 [label="do_the_motive"];
+	  51 [label="Jump to: [do_the_motive]"];
+	  52 [label="Kim Kitsuragi: “还有，那把枪。”他礼貌的笑了。“我们应该把它捡起来，拿到他面前讨论。做一场秀。”"];
+	  53 [label="Variable[\"seafort.kimswitch_logic_deserter_knows_more\"]"];
+	  54 [label="Variable[\"seafort.kimswitch_logic_deserter_knows_more\"]", shape=diamond];
+	  55 [label="!(Variable[\"seafort.kimswitch_logic_deserter_knows_more\"])", shape=diamond];
+	  56 [label="You: “在庆祝之前，最好先把他弄回去。”"];
+	  57 [label="Kim Kitsuragi: “他是一个公社社员。被害人是个雇佣兵。我们应该再让他聊聊政治。你甚至可以告诉他，就说我们已经*找到*动机了。”\n“他是个公社社员。受害人是一个雇佣兵。来自奥兰治。如果其他手段都失败了，就跟他聊政治……你甚至可以告诉他，我们已经*知道*动机了。”"];
+	  58 [label="Empathy: 他的语调中透露出明显的兴奋。他喜欢这样——是*很喜欢*。但是还不止这些……"];
+	  59 [label="Kim Kitsuragi: “哦，是的……”他点点头。还有——他已经很久没跟别人说过话了。如果我们能让他开口，谁知道能撬出些什么……"];
+	  60 [label="You: “我扇自己是为了获得灵感！”"];
+	  61 [label="Logic: 他觉得这个逃兵身上不只背了现在这个案子。毕竟在这里已经44年……"];
+	  62 [label="Kim Kitsuragi: 他点点头。“就在一天之内，从一无所有到现在……”他露出一丝狡黠的微笑。“这样*挺好的*，首先我们只需要一份认罪状，然后*也许*再来点可靠的动机。\n他点点头。“一天之内，从无到这个……”一丝扭曲的笑容。“这真的挺*好*的，荣誉警督。我们只要先拿到认罪口供，之后*也许*再来一个可靠的动机。”\n他点点头。“一天之内，从无到这个……”一丝扭曲的笑容。“这真的挺*好*的，杜博阿警探。我们只要先拿到认罪口供，之后*也许*再来一个可靠的动机。”"];
+	  63 [label="Jump to: [do_the_motive]"];
+	  64 [label="Jump to: [do_the_motive]"];
+	  0 -> 1
+	  1 -> 33
+	  2 -> 29
+	  3 -> 62
+	  4 -> 25
+	  5 -> 30
+	  7 -> 23
+	  8 -> 58
+	  9 -> 10
+	  9 -> 11
+	  10 -> 17
+	  11 -> 41
+	  12 -> 13
+	  12 -> 14
+	  13 -> 49
+	  14 -> 3
+	  16 -> 29
+	  17 -> 18
+	  17 -> 19
+	  18 -> 30
+	  19 -> 35
+	  20 -> 21
+	  20 -> 22
+	  21 -> 61
+	  23 -> 51
+	  24 -> 33
+	  25 -> 63
+	  26 -> 64
+	  27 -> 50
+	  28 -> 15
+	  29 -> 17
+	  30 -> 50
+	  31 -> 46
+	  32 -> 5
+	  33 -> 12
+	  34 -> 58
+	  35 -> 36
+	  35 -> 37
+	  36 -> 52
+	  37 -> 32
+	  38 -> 59
+	  39 -> 7
+	  40 -> 57
+	  41 -> 42
+	  41 -> 43
+	  42 -> 2
+	  43 -> 16
+	  45 -> 9
+	  46 -> 48
+	  46 -> 47
+	  47 -> 34
+	  48 -> 8
+	  49 -> 56
+	  49 -> 28
+	  50 -> 4
+	  50 -> 39
+	  50 -> 40
+	  50 -> 45
+	  50 -> 60
+	  50 -> 31
+	  51 -> 50
+	  52 -> 5
+	  53 -> 54
+	  53 -> 55
+	  54 -> 44
+	  54 -> 38
+	  56 -> 15
+	  57 -> 27
+	  58 -> 20
+	  59 -> 44
+	  60 -> 26
+	  61 -> 53
+	  62 -> 50
+	  63 -> 50
+	  64 -> 50
+}
+

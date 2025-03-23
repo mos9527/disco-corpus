@@ -5,6 +5,8 @@ from UnityPy.classes import MonoBehaviour
 from tqdm import tqdm
 from collections import defaultdict
 
+MAX_DIALOGUE = 10000
+
 ROOT = r"C:\Program Files (x86)\Steam\steamapps\common\Disco Elysium"
 LOCKIT = r"disco_Data\StreamingAssets\AssetBundles\Windows\lockits"
 DIALOG = r"disco_Data\StreamingAssets\aa\StandaloneWindows64\dialoguebundle_assets_all_3472cb598f88f38eef12cdb3aa5fdc80.bundle"
@@ -30,18 +32,19 @@ all_graph = {convo.id: convo.dialogueEntries for convo in disco.conversations}
 
 
 def escape_quotes(s: str):
-    return s.replace('"', '\\"')
+    return s.replace('"', '\\"').replace("\n", "")
 
 
 def escape_filename(s: str):
     ng = r'<>:"/\|?*'
     for c in ng:
-        s = s.replace(c, "_")
+        s = s.replace(c, "")
     return s
 
 
 lockit = dialog["DialoguesLockitChinese"]
 lang_def = defaultdict(dict)
+DEST = "graphviz/disco-corpus-cn"
 # TODO: Argparse?
 if True:
     for data in lockit.mSource.mTerms:
@@ -53,7 +56,7 @@ if True:
             cat, aid = term
         lang_def[aid][cat] = text
 
-DEST = "disco-corpus-cn"
+
 os.makedirs(DEST, exist_ok=True)
 
 
@@ -68,7 +71,7 @@ def process_one(convo_id):
         if not fdir.isalpha():
             fdir = "_"
         os.makedirs(os.path.join(DEST, fdir), exist_ok=True)
-        fpath = os.path.join(DEST, fdir, f"{escape_filename(ctitle)}_{cid}.gv")
+        fpath = os.path.join(DEST, fdir, f"{escape_filename(ctitle)}_{convo_id}.gv")
         f = open(fpath, "w", encoding="utf-8")
         writeline = lambda *a, **k: print(*a, **k, file=f)
 
@@ -80,13 +83,21 @@ def process_one(convo_id):
             lambda entry: from_fields(entry.fields).get("DialogueEntryType", None)
             == "Fork"
         )
-        for entry_id, entry in enumerate(convo.dialogueEntries):
+        jumpout = set()
+        for entry in convo.dialogueEntries:
             for outlink in entry.outgoingLinks:
-                if convo_id + 1 == outlink.destinationConversationID:
-                    entry_fields = from_fields(entry.fields)
-                    graph[entry_id].add(outlink.destinationDialogueID - 1)
+                if convo_id + 1 != outlink.destinationConversationID:
+                    dest = (
+                        MAX_DIALOGUE * outlink.destinationConversationID
+                        + outlink.destinationDialogueID
+                    )
+                    jumpout.add(dest)
+                    graph[entry.id].add(dest)
+                else:
+                    graph[entry.id].add(outlink.destinationDialogueID)
         writeline("digraph G {")
-        for u, entry in enumerate(convo.dialogueEntries):
+        for entry in convo.dialogueEntries:
+            u = entry.id
             entry_fields = from_fields(entry.fields)
             aid = entry_fields.get("Articy Id", None)
             lang = lang_def.get(aid, None)
@@ -120,6 +131,13 @@ def process_one(convo_id):
                 title = entry_fields.get("Title", None)
                 title = escape_quotes(title or "")
                 writeline(f'\t  {u} [label="{title}", shape=diamond];')
+        for u in jumpout:
+            dest = u // MAX_DIALOGUE
+            convo = disco.conversations[dest - 1]
+            convo_fields = from_fields(convo.fields)
+            writeline(
+                f'\t  {u} [label="JUMP OUT to {convo_fields.get('Title',dest)}", shape=diamond];'
+            )
         for u, edges in graph.items():
             for v in edges:
                 writeline(f"\t  {u} -> {v}")
@@ -131,5 +149,5 @@ from concurrent.futures import ThreadPoolExecutor
 
 with ThreadPoolExecutor() as executor:
     for convo_id, convo in tqdm(enumerate(disco.conversations)):
-        executor.submit(process_one, convo_id)
-        # process_one(convo_id)
+        # executor.submit(process_one, convo_id)
+        process_one(convo_id)

@@ -1,0 +1,114 @@
+# INVENTORY / DRIED MAY BELLS
+# This dialogue is attached to the "dried_may_bells" item.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"What is the Revolution?\""];
+	  3 [label="Kim Kitsuragi: \"Yes, but not *this* early -- not to my knowledge...\" He observes the petals: \"It looks dried. Preserved.\""];
+	  4 [label="Dried Wildflower: Six crumbling petals rest on your palm. They're white, a bell-shaped crown."];
+	  5 [label="Shivers: Water flows under the channel bridge -- dark water. You rub your sides for warmth but there is none."];
+	  6 [label="Reaction Speed: Wait, have you noticed there's a *war veteran* playing a ball game -- on the plaza? You should ask him about the flowers."];
+	  7 [label="Shivers: ...the wrinkled fingers of an old man crush flower petals. Then sprinkle them in the stream, like white salt."];
+	  8 [label="Kim Kitsuragi: \"As I said -- an Insulindian Lily, or a May bell. Girls pinned them on their boys during the Revolution.\""];
+	  9 [label="Kim Kitsuragi: \"A big political and military conflict. Ask around, or buy a book.\" He seems annoyed by the question."];
+	  10 [label="Shivers: Inland, above the Martinaise distributary, the channel that brought waste water from the silk mills of Jamrock; and then dead bodies during the War..."];
+	  11 [label="Esprit de Corps: Somewhere in Central Jamrock, Lieutenant Kitsuragi steps into the public library, rows of shelves pass on either side... you feel he should be here for in-depth flower analysis."];
+	  12 [label="Encyclopedia: This flower is a spring flower, but it's a bit early for that, isn't it?"];
+	  13 [label="Variable[\"plaza.rene_know_dead\"]"];
+	  14 [label="Variable[\"plaza.rene_know_dead\"]", shape=diamond];
+	  15 [label="!(Variable[\"plaza.rene_know_dead\"])", shape=diamond];
+	  16 [label="You: \"Who pinned them? Which side?\""];
+	  17 [label="Kim Kitsuragi: \"The revolutionaries: so the communards and the anarchists. White's their colour. But the custom started in the Suzerain's army so it held meaning for the kingsmen too.\""];
+	  18 [label="Variable[\"whirling.klaasje_shivers_may_bells\"]"];
+	  19 [label="Variable[\"whirling.klaasje_shivers_may_bells\"]", shape=diamond];
+	  20 [label="!(Variable[\"whirling.klaasje_shivers_may_bells\"])", shape=diamond];
+	  21 [label="Shivers: The feeling recedes."];
+	  22 [label="Kim Kitsuragi: \"Maybe -- maybe not.\" He makes a note in his little note book. \"We'll see.\""];
+	  23 [label="Jump to: [da_flower]"];
+	  24 [label="Variable[\"inventory.wildflower_hub_reached_with_kim\"]"];
+	  25 [label="Variable[\"inventory.wildflower_hub_reached_with_kim\"]", shape=diamond];
+	  26 [label="!(Variable[\"inventory.wildflower_hub_reached_with_kim\"])", shape=diamond];
+	  27 [label="You: Stand still."];
+	  28 [label="Logic: René! That old man in the uniform. Maybe you should show it to him when you get the chance."];
+	  29 [label="Variable[\"TASK.ask_rene_about_maybells_done\"]"];
+	  30 [label="Variable[\"TASK.ask_rene_about_maybells_done\"]", shape=diamond];
+	  31 [label="!(Variable[\"TASK.ask_rene_about_maybells_done\"])", shape=diamond];
+	  32 [label="You: \"Very well.\" (Put the flower back in your pocket.)"];
+	  33 [label="Kim Kitsuragi: \"This is the Insulindian Lily.\" The lieutenant corrects his glasses. \"Called 'May bells' or 'Lucille's tears' during the Revolution. Girls used to pin these on soldiers before sending them off to battle.\""];
+	  34 [label="Dried Wildflower: The petals feel dry and fragile in your hand."];
+	  35 [label="Variable[\"plaza.met_rene\"]"];
+	  36 [label="Variable[\"plaza.met_rene\"]", shape=diamond];
+	  37 [label="!(Variable[\"plaza.met_rene\"])", shape=diamond];
+	  38 [label="You: Blow on your fingers."];
+	  39 [label="Kim Kitsuragi: \"It's about girls and boys more than *sides*. Girls sending off boys who are going to their deaths -- then also dying themselves in the ruins, from dysentery and consumption. It's a symbol of the Civil War.\""];
+	  40 [label="IsKimHere()"];
+	  41 [label="IsKimHere()", shape=diamond];
+	  42 [label="!(IsKimHere())", shape=diamond];
+	  43 [label="Jump to: [da_flower]"];
+	  44 [label="You: \"Is it a coincidence -- it being on the roof?\""];
+	  45 [label="da_flower"];
+	  46 [label="kim_presence"];
+	  47 [label="Jump to: [da_flower]"];
+	  48 [label="You: \"What is this, Kim?\""];
+	  49 [label="You: Never mind [Leave.]"];
+	  50 [label="You: \"Does this flower blossom in early spring?\""];
+	  0 -> 1
+	  1 -> 4
+	  2 -> 9
+	  3 -> 47
+	  4 -> 40
+	  5 -> 18
+	  7 -> 29
+	  8 -> 12
+	  9 -> 43
+	  10 -> 7
+	  12 -> 45
+	  13 -> 14
+	  13 -> 15
+	  14 -> 28
+	  15 -> 6
+	  16 -> 17
+	  17 -> 39
+	  18 -> 19
+	  18 -> 20
+	  19 -> 27
+	  19 -> 38
+	  20 -> 29
+	  21 -> 29
+	  22 -> 23
+	  23 -> 45
+	  24 -> 25
+	  24 -> 26
+	  25 -> 8
+	  26 -> 33
+	  27 -> 21
+	  29 -> 30
+	  29 -> 31
+	  31 -> 35
+	  32 -> 34
+	  33 -> 12
+	  34 -> 5
+	  35 -> 36
+	  35 -> 37
+	  36 -> 13
+	  38 -> 10
+	  39 -> 43
+	  40 -> 41
+	  40 -> 42
+	  41 -> 46
+	  42 -> 11
+	  43 -> 45
+	  44 -> 22
+	  45 -> 32
+	  45 -> 2
+	  45 -> 44
+	  45 -> 16
+	  45 -> 50
+	  46 -> 48
+	  46 -> 49
+	  47 -> 45
+	  48 -> 24
+	  50 -> 3
+}
+

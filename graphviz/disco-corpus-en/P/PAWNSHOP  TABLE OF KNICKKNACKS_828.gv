@@ -1,0 +1,237 @@
+# PAWNSHOP / TABLE OF KNICKKNACKS
+# You look at and ask Roy about the figurines on the accessory stand.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Knick-knacks Stand: IsKimHere()"];
+	  3 [label="IsKimHere()", shape=diamond];
+	  4 [label="!(IsKimHere())", shape=diamond];
+	  5 [label="Bird's Nest Roy: \"Okay.\" He doesn't bat an eye. \"I don't like either set too much, to be honest.\""];
+	  6 [label="Rhetoric: He doesn't elaborate on these 'wrong hands' -- it's unlikely that he ever will."];
+	  7 [label="You: \"Of course.\" (Nod knowingly.)"];
+	  8 [label="You: Step away from the table. [Leave.]"];
+	  9 [label="You: (Point at the blue figurines.) \"What exactly are these?\""];
+	  10 [label="Jump to: [toyhub]"];
+	  11 [label="You: (Point at the blue figurines.) \"Are these royalist soldiers?\""];
+	  12 [label="Knick-knacks Stand: Variable[\"tc.franconigerian_cavalry\"]"];
+	  13 [label="Variable[\"tc.franconigerian_cavalry\"]", shape=diamond];
+	  14 [label="!(Variable[\"tc.franconigerian_cavalry\"])", shape=diamond];
+	  15 [label="You: Inspect the knights on horseback."];
+	  16 [label="Knick-knacks Stand: IsKimHere()"];
+	  17 [label="IsKimHere()", shape=diamond];
+	  18 [label="!(IsKimHere())", shape=diamond];
+	  19 [label="Jump to: [toyhub]"];
+	  20 [label="Bird's Nest Roy: \"Maybe.\""];
+	  21 [label="Jump to: [toyhub]"];
+	  22 [label="Jump to: [toyhub]"];
+	  23 [label="Inland Empire: Try to find something pretty and cool here. Then use it to win her back!"];
+	  24 [label="Knick-knacks Stand: Variable[\"canal.toy_white_check\"]"];
+	  25 [label="Variable[\"canal.toy_white_check\"]", shape=diamond];
+	  26 [label="!(Variable[\"canal.toy_white_check\"])", shape=diamond];
+	  27 [label="You: \"*Who*?\""];
+	  28 [label="Bird's Nest Roy: \"There's been a lot of *interest* in that particular figurine. I had to hide it so it wouldn't fall into the wrong hands.\""];
+	  29 [label="Knick-knacks Stand: Variable[\"canal.roy_inland_buy_done\"]"];
+	  30 [label="Variable[\"canal.roy_inland_buy_done\"]", shape=diamond];
+	  31 [label="!(Variable[\"canal.roy_inland_buy_done\"])", shape=diamond];
+	  32 [label="Bird's Nest Roy: \"The Headless FALN Rider. It's an urban legend -- about a man who rides the streets of Revachol sporting a FALN tracksuit. As you can see, he's missing his head.\" He points at the decapitated figurine."];
+	  33 [label="Jump to: [toyhub]"];
+	  34 [label="Suggestion: That was a very smooth salesman's grin that almost comes off as earnest. You should learn from him."];
+	  35 [label="Kim Kitsuragi: \"Franconigerian knights.\" He looks at the dusty figurines in the dim light. \"I used to be very serious about these guys.\""];
+	  36 [label="Bird's Nest Roy: \"Oh, that's the Headless FALN Rider.\""];
+	  37 [label="You: Purchase the Headless FALN Rider and his cap."];
+	  38 [label="Kim Kitsuragi: The lieutenant studies the tiny figurine in your hand. \"I've heard about it,\" he says with amusement, \"I've heard the Headless FALN Rider rides a headless bull.\""];
+	  39 [label="Bird's Nest Roy: \"I don't like either set very much, to be honest, but there are many parents among my customers.\""];
+	  40 [label="You: \"It is impossible to win against the cohorts of capital. Ask my friend Garte, whose bitch it made me.\""];
+	  41 [label="Bird's Nest Roy: \"Fifty cents. Bargain-priced! I'll throw in the tiny cap too -- I think he's looking for it, or something. That part of the story has many interpretations.\""];
+	  42 [label="You: Win 'her' back?"];
+	  43 [label="Inland Empire: Yes! Buy something nice! A figurine."];
+	  44 [label="You: Inspect the figurines in rags."];
+	  45 [label="Knick-knacks Stand: Big men on big horses clad in lamellar armour and carrying flintlocks. The kind that would mow down a line of enemy soldiers in the blink of an eye."];
+	  46 [label="Bird's Nest Roy: \"Which ones?\" The man peers from his glass box. \"Ah! Royalist soldiers from the time of the Revolution. The uniforms are painted a bit too brightly, I suppose.\""];
+	  47 [label="You: \"It's meant to give people hope -- even *we* can do it.\""];
+	  48 [label="Interfacing: Cool rider, right? I knew we'd find something worthwhile here! Buy it!"];
+	  49 [label="You: \"Wait, this looks like René, the old guy who was playing petanque.\""];
+	  50 [label="Rhetoric: He doesn't elaborate on what that means -- it's unlikely that he will."];
+	  51 [label="You: \"What is this?\" (Show it to the shopkeep.)"];
+	  52 [label="Bird's Nest Roy: \"Indeed.\" He immediately knows what you're talking about. \"I think I even have his cap somewhere down here...\" He looks for it. \"A tiny miniature FALN cap to go with it. Yours for 50 cents.\""];
+	  53 [label="You: (Point at the knights on horseback.) \"Who are they?\""];
+	  54 [label="Esprit de Corps: ...a long, long time ago."];
+	  55 [label="Knick-knacks Stand: You see rows of toy soldiers guarding the rest of the trinkets displayed on the table: some on horseback, others in rags, others yet in bright blue uniforms. All are stern and unyielding in their duty."];
+	  56 [label="Bird's Nest Roy: \"Which ones?\" The man peers from his glass box. \"Ah, those! Yes, they are. I find the paint job a bit gaudy, but children like bright colours indiscriminately.\""];
+	  57 [label="Knick-knacks Stand: Variable[\"village.idiot_gave_second_alcohol\"]"];
+	  58 [label="Variable[\"village.idiot_gave_second_alcohol\"]", shape=diamond];
+	  59 [label="!(Variable[\"village.idiot_gave_second_alcohol\"])", shape=diamond];
+	  60 [label="Kim Kitsuragi: \"This is what the loyalists looked like, yes.\" He inspects the figurine. \"At first. Then they wised up and got camouflage.\""];
+	  61 [label="You: Dig up a truly *cool* figurine in the box under the table."];
+	  62 [label="You: Variable[\"canal.toy_white_check\"]"];
+	  63 [label="Variable[\"canal.toy_white_check\"]", shape=diamond];
+	  64 [label="!(Variable[\"canal.toy_white_check\"])", shape=diamond];
+	  65 [label="Bird's Nest Roy: \"You're probably talking about the revolutionaries, yes?\" the man behind the glass answers. \"Yes -- they are soldiers. Revolutionary soldiers.\""];
+	  66 [label="Inland Empire: He seems to have his own take on the conflict played out in perpetuity by these toys. Might be interesting to find out what it is..."];
+	  67 [label="Kim Kitsuragi: \"Mhm. I used to be very serious about my Franconigerian knights...\" He looks at the dusty figurines in the dim light."];
+	  68 [label="Volition: This sounds... off. You shouldn't trust this guy."];
+	  69 [label="You: (Look at Kim, then back at Roy.) \"Sorry, what are we talking about again?\""];
+	  70 [label="Knick-knacks Stand: IsKimHere()"];
+	  71 [label="IsKimHere()", shape=diamond];
+	  72 [label="!(IsKimHere())", shape=diamond];
+	  73 [label="Knick-knacks Stand: This set of soldiers isn't meant to look impressive. A few have rifles, but most of them carry pistols -- some even shovels and tall sticks."];
+	  74 [label="You: \"I wish it was more *nuanced*. As it stands, I cannot comment.\""];
+	  75 [label="Knick-knacks Stand: Toy soldiers stand guard over bowls filled with bracelets, rings, and used cigarette lighters."];
+	  76 [label="Knick-knacks Stand: IsKimHere()"];
+	  77 [label="IsKimHere()", shape=diamond];
+	  78 [label="!(IsKimHere())", shape=diamond];
+	  79 [label="You: (Point at the knights on horseback.) \"These are Franconigerian cavalry, right?\""];
+	  80 [label="Knick-knacks Stand: That they do -- the uniforms are precisely the same. Some even have the same shape medals pinned to their chests."];
+	  81 [label="You: Inspect the blue uniforms."];
+	  82 [label="Interfacing: Why, what's this? A headless man riding a horse? A headless man wearing futuristic track suit trousers that say FALN!"];
+	  83 [label="You: (Point at the figurines in rags.) \"Are these even soldiers?\""];
+	  85 [label="You: \"The Headless FALN Rider!\""];
+	  86 [label="Logic: He lost his cap when he lost his head. Perhaps he's looking for the *head*?"];
+	  87 [label="Jump to: [toyhub]"];
+	  88 [label="You: \"What do you mean?\""];
+	  89 [label="You: \"Shopkeep, what are these?\""];
+	  90 [label="Bird's Nest Roy: \"A classic set. The figurines represent the Fifth-century Franconigerian Cavalry.\""];
+	  91 [label="Knick-knacks Stand: They're not all blue. These figurines also wear gold coats and caps, complimented by orange trousers. They are variously posed, wielding swords and rifles with bayonets."];
+	  92 [label="Bird's Nest Roy: \"I think their poverty has been exaggerated for effect. When you place them next to the royalists, it doesn't seem like they could possibly win.\""];
+	  93 [label="Kim Kitsuragi: The lieutenant studies the figurine with amusement."];
+	  94 [label="toyhub"];
+	  95 [label="Knick-knacks Stand: Variable[\"tc.franconigerian_cavalry\"]"];
+	  96 [label="Variable[\"tc.franconigerian_cavalry\"]", shape=diamond];
+	  97 [label="!(Variable[\"tc.franconigerian_cavalry\"])", shape=diamond];
+	  98 [label="You: \"These are Franconigerian cavalry, right?\""];
+	  99 [label="Bird's Nest Roy: \"Did I mention that this figurine is supposed to be lucky? Always carry it with you.\" He grins."];
+	  100 [label="Jump to: [toyhub]"];
+	  101 [label="Interfacing: Everything you pick out seems faded, chipped, and sad somehow. Most of them are  just broken toys."];
+	  102 [label="Bird's Nest Roy: \"Yes!\" The man behind the glass takes says. \"A little worn around the edges, but I'm pretty sure it's fully intact.\""];
+	  103 [label="Bird's Nest Roy: \"Yes, there are several competing versions of the story, but I believe this figurine is a more canonical representation.\""];
+	  104 [label="You: \"The contrast is meant to be disheartening. As it ought to be.\""];
+	  0 -> 1
+	  1 -> 55
+	  2 -> 3
+	  2 -> 4
+	  3 -> 60
+	  4 -> 80
+	  5 -> 66
+	  6 -> 70
+	  7 -> 28
+	  9 -> 46
+	  10 -> 94
+	  11 -> 56
+	  12 -> 13
+	  12 -> 14
+	  13 -> 79
+	  14 -> 53
+	  15 -> 45
+	  16 -> 17
+	  16 -> 18
+	  17 -> 12
+	  18 -> 95
+	  19 -> 94
+	  20 -> 66
+	  21 -> 94
+	  22 -> 94
+	  23 -> 94
+	  24 -> 25
+	  24 -> 26
+	  25 -> 82
+	  26 -> 101
+	  27 -> 32
+	  28 -> 6
+	  29 -> 30
+	  29 -> 31
+	  30 -> 94
+	  31 -> 23
+	  32 -> 41
+	  33 -> 94
+	  34 -> 19
+	  35 -> 54
+	  36 -> 27
+	  36 -> 7
+	  37 -> 99
+	  38 -> 103
+	  39 -> 66
+	  40 -> 5
+	  41 -> 86
+	  42 -> 43
+	  43 -> 68
+	  44 -> 73
+	  45 -> 16
+	  46 -> 33
+	  47 -> 20
+	  48 -> 21
+	  49 -> 2
+	  50 -> 76
+	  51 -> 36
+	  52 -> 50
+	  53 -> 35
+	  54 -> 22
+	  55 -> 29
+	  56 -> 33
+	  57 -> 58
+	  57 -> 59
+	  58 -> 85
+	  59 -> 51
+	  60 -> 9
+	  60 -> 11
+	  61 -> 62
+	  62 -> 64
+	  62 -> 63
+	  63 -> 24
+	  64 -> 24
+	  65 -> 92
+	  66 -> 21
+	  67 -> 54
+	  68 -> 100
+	  69 -> 32
+	  70 -> 72
+	  70 -> 71
+	  71 -> 38
+	  72 -> 88
+	  73 -> 83
+	  74 -> 39
+	  75 -> 94
+	  76 -> 77
+	  76 -> 78
+	  77 -> 93
+	  78 -> 48
+	  79 -> 67
+	  80 -> 9
+	  80 -> 11
+	  81 -> 91
+	  82 -> 57
+	  83 -> 65
+	  85 -> 52
+	  86 -> 87
+	  87 -> 94
+	  88 -> 32
+	  89 -> 90
+	  90 -> 22
+	  91 -> 49
+	  91 -> 11
+	  91 -> 9
+	  92 -> 104
+	  92 -> 40
+	  92 -> 74
+	  92 -> 47
+	  93 -> 48
+	  94 -> 37
+	  94 -> 8
+	  94 -> 42
+	  94 -> 44
+	  94 -> 15
+	  94 -> 81
+	  94 -> 61
+	  95 -> 96
+	  95 -> 97
+	  96 -> 98
+	  97 -> 89
+	  98 -> 102
+	  99 -> 34
+	  100 -> 94
+	  101 -> 10
+	  102 -> 22
+	  103 -> 69
+	  104 -> 39
+}
+

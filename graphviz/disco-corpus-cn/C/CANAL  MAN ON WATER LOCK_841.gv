@@ -1,0 +1,269 @@
+# CANAL / MAN ON WATER LOCK
+# A man is eating salami on the water lock.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Untitled hub (03)"];
+	  3 [label="Jump to: [introhub]"];
+	  4 [label="Logic: 你应该告诉莉娜。这样能减轻她的精神负担。"];
+	  5 [label="You: “你知道是什么造成这次事故的吗？”（指向运河里那块损坏的广告牌。）"];
+	  6 [label="You: “好吧，再见。”[离开。]"];
+	  7 [label="Man on water lock: Variable[\"TASK.close_water_lock_done\"]  or  Variable[\"canal.water_lock_alt_cant_chat\"]"];
+	  8 [label="Variable[\"TASK.close_water_lock_done\"]  or  Variable[\"canal.water_lock_alt_cant_chat\"]", shape=diamond];
+	  9 [label="!(Variable[\"TASK.close_water_lock_done\"]  or  Variable[\"canal.water_lock_alt_cant_chat\"])", shape=diamond];
+	  10 [label="Jump to: [Untitled hub]"];
+	  11 [label="Man on water lock: “早上好，警官！”\n“早上好，警官！”"];
+	  12 [label="You: “但是海岸那边有什么？”"];
+	  13 [label="Man on water lock: “欢迎回来，警官。”\n“欢迎回来，警官。”"];
+	  14 [label="You: “为什么你不自己做呢？”"];
+	  15 [label="Man on water lock: Variable[\"canal.water_lock_honours\"]"];
+	  16 [label="Variable[\"canal.water_lock_honours\"]", shape=diamond];
+	  17 [label="!(Variable[\"canal.water_lock_honours\"])", shape=diamond];
+	  18 [label="Man on water lock: “当然可以。”他切下一片萨拉米香肠。"];
+	  19 [label="Man on water lock: “你随意吧。如果想看水闸重新开始运作的话，周三就顺便过来看一眼。”他切下一片新鲜的萨拉米香肠。"];
+	  20 [label="You: “但是，等一下，海岸那边有什么？”"];
+	  21 [label="Jump to: [mainhub]"];
+	  22 [label="Man on water lock: “我没有亲眼见到，但是广告牌上那些看起来像是轮胎印。很奇怪，是吧？不过，瑞瓦肖确实有很多胆大妄为的司机。”"];
+	  23 [label="You: “你知道海岸再往下有什么吗？”"];
+	  24 [label="You: [离开。]"];
+	  25 [label="Man on water lock: IsKimHere()"];
+	  26 [label="IsKimHere()", shape=diamond];
+	  27 [label="!(IsKimHere())", shape=diamond];
+	  28 [label="Jump to: [mainhub]"];
+	  29 [label="Man on water lock: “我的朋友屠夫巴里就被困在水闸的另一边。我在陪他——吃他的萨拉米香肠。”"];
+	  30 [label="You: “你说海岸被关闭了？大概这就是莉娜的丈夫，神秘动物学家莫雷尔没有回来的原因。”"];
+	  31 [label="You: “能分我一点萨拉米香肠吗？”（指向他的食物。）"];
+	  32 [label="Man on water lock: 他剥下萨拉米香肠的肠衣，嚼了一大口。“*非常*好的东西。有什么需要帮忙的吗，警官？”"];
+	  33 [label="Man on water lock: “想来点吗，警官？”他转向警督。"];
+	  34 [label="Man on water lock: “你好啊，警官！”\n“真是个好日子啊，警官！”"];
+	  35 [label="Jump to: [mainhub]"];
+	  36 [label="You: “那个控制杆是做什么的？”（指向他身边的控制面板。）"];
+	  37 [label="Man on water lock: “这个嘛，那边有个渔村。一个废弃的海鲜市场。一座比扎罗教堂，不过对大家来说没多大用处——那边好像老是出问题。”"];
+	  38 [label="Man on water lock: Variable[\"canal.water_lock_left_mid_intro\"]"];
+	  39 [label="Variable[\"canal.water_lock_left_mid_intro\"]", shape=diamond];
+	  40 [label="!(Variable[\"canal.water_lock_left_mid_intro\"])", shape=diamond];
+	  41 [label="Man on water lock: “恐怕我没功夫逛闲聊了。”他看向海岸另一头的西边，嘴里咀嚼着一片萨拉米香肠。“该死的水闸总算是修好了，我也得走了。”"];
+	  42 [label="You: “首先，你在这里做什么，站在水闸上的男人？”"];
+	  43 [label="Man on water lock: “太好了！如果想看水闸重新开始运作的话，周三就顺便过来一趟。他们说运河的员工7点15分会到。”他切下一片新鲜的萨拉米香肠。"];
+	  44 [label="Man on water lock: “嗨！我那时候已经摸过够多重型机械的了。”"];
+	  45 [label="Man on water lock: “干杯！”他用咬了一半的萨拉米香肠向你致敬。"];
+	  46 [label="Man on water lock: 他想了一会儿。“是啊，其实也没什么了。只是片被轰炸后的废墟。”"];
+	  48 [label="Jump to: [Untitled hub]"];
+	  49 [label="Man on water lock: “所以，你想不想亲自*剪彩*呢？”"];
+	  50 [label="You: “那好吧。”[离开。]"];
+	  51 [label="Man on water lock: “嗯……我没在附近见过什么*神秘动物学家*，不过当然了——如果他们在对岸，一定是被困住了。就像我的朋友巴里一样。”"];
+	  52 [label="Man on water lock: Variable[\"canal.water_lock_greeting_done\"]"];
+	  53 [label="Variable[\"canal.water_lock_greeting_done\"]", shape=diamond];
+	  54 [label="!(Variable[\"canal.water_lock_greeting_done\"])", shape=diamond];
+	  55 [label="Kim Kitsuragi: 警督仔细考虑了一会儿，随后决定接受这份好意。“为什么不呢？”他从男人手中接过一片萨拉米香肠，放进口中咀嚼起来。"];
+	  56 [label="Man on water lock: IsAfternoon()"];
+	  57 [label="IsAfternoon()", shape=diamond];
+	  58 [label="!(IsAfternoon())", shape=diamond];
+	  59 [label="Man on water lock: IsEvening()"];
+	  60 [label="IsEvening()", shape=diamond];
+	  61 [label="!(IsEvening())", shape=diamond];
+	  62 [label="You: “再看吧……我不太喜欢体力劳动。”"];
+	  63 [label="Jump to: [mainhub]"];
+	  64 [label="Man on water lock: “你好啊，警官！”\n“真是个好日子啊，警官！”"];
+	  65 [label="Man on water lock: “日安，警官！”\n“早上好，警官！”"];
+	  66 [label="Man on water lock: “周三早晨会重新启动。”他朝着控制台的方向点点头。“到时间的时候，你想不想来*剪彩*呢？”"];
+	  67 [label="Man on water lock: “为了安全起见。这个控制台需要一把特殊的钥匙才能重新激活。渠道里的杂物还没清理完，应该是不想让人动这个水闸吧。”"];
+	  68 [label="Man on water lock: DayCount() > 2"];
+	  69 [label="DayCount() > 2", shape=diamond];
+	  70 [label="!(DayCount() > 2)", shape=diamond];
+	  71 [label="Reaction Speed: 这就是马丁内斯运河的水闸。应该就是莉娜提过的水闸，她的丈夫外出*探险*经过的那个。"];
+	  72 [label="introhub"];
+	  73 [label="Physical Instrument: 他的姿势很放松。虽然他身强体壮，手里还握着一把刀，但是如果真遇到事的话，这个男人很少会诉诸于肢体威胁。"];
+	  74 [label="Man on water lock: DayCount() > 2"];
+	  75 [label="DayCount() > 2", shape=diamond];
+	  76 [label="!(DayCount() > 2)", shape=diamond];
+	  77 [label="Man on water lock: “我该到海岸那边去了。不过，还是你先请吧，警官。”\n“恐怕我没功夫逛闲聊了。”他看向西边，运河对面。“我应该到海岸边去了。不过，你们先请吧，警官。”"];
+	  78 [label="Man on water lock: “可惜啊，要花一年零一天才能修好附近的东西——特别是那个水闸。海岸的其他部分都关闭了，等到修完才能开放。”"];
+	  79 [label="Man on water lock: 他想了一会儿。“是啊，其实也没什么了。只是片被轰炸后的废墟。”"];
+	  80 [label="Perception (Taste): 香肠很咸，很可口，也很有嚼劲。宿醉让萨拉米香肠变得*更有*风味了。"];
+	  81 [label="Man on water lock: IsMorning()"];
+	  82 [label="IsMorning()", shape=diamond];
+	  83 [label="!(IsMorning())", shape=diamond];
+	  84 [label="Man on water lock: “本来应该是操作水闸的，不过刚才说过了……现在的它只是一个废物。因为堵塞，不能用了。”"];
+	  85 [label="Man on water lock: “你有没有试过操作水闸？”他向身体右侧的水闸控制台比划了一下。“还挺有意思的，让人感觉非常强大。”"];
+	  86 [label="Man on water lock: 他想了一会儿。“是啊，其实也没什么了。只是片被轰炸后的废墟。”"];
+	  87 [label="Man on water lock: IsKimHere()"];
+	  88 [label="IsKimHere()", shape=diamond];
+	  89 [label="!(IsKimHere())", shape=diamond];
+	  90 [label="Man on water lock: 一个壮硕的男人站在水闸边，用一把旧猎人刀分割一大片萨拉米香肠。他的眼睛紧盯着困在水闸另一边的男人——还有掉在两人之间那条运河里的巨大广告牌。"];
+	  91 [label="Man on water lock: Variable[\"tc.turn_off_tutorial_node\"]"];
+	  92 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  93 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  94 [label="Man on water lock: IsAfternoon()"];
+	  95 [label="IsAfternoon()", shape=diamond];
+	  96 [label="!(IsAfternoon())", shape=diamond];
+	  97 [label="Jump to: [mainhub]"];
+	  98 [label="You: “我马上就办。”[离开。]"];
+	  99 [label="Man on water lock: “这个嘛，那边有个渔村。一个废弃的海鲜市场。一座比扎罗教堂，不过对大家来说没多大用处——那边好像老是出问题。”"];
+	  100 [label="Kim Kitsuragi: “我们应该告诉莉娜。减轻她的精神负担。”"];
+	  101 [label="Man on water lock: Variable[\"whirling.lena_husband_across_water_lock\"]  and  Variable[\"canal.know_water_lock_time\"] == false"];
+	  102 [label="Variable[\"whirling.lena_husband_across_water_lock\"]  and  Variable[\"canal.know_water_lock_time\"] == false", shape=diamond];
+	  103 [label="!(Variable[\"whirling.lena_husband_across_water_lock\"]  and  Variable[\"canal.know_water_lock_time\"] == false)", shape=diamond];
+	  104 [label="Composure: 他看起来不像很着急，他的本性里就没有。真是让人羡慕的镇静。"];
+	  105 [label="Man on water lock: IsMorning()"];
+	  106 [label="IsMorning()", shape=diamond];
+	  107 [label="!(IsMorning())", shape=diamond];
+	  108 [label="Inland Empire: *胆大妄为的司机*这个词，在你听来有些不祥的感觉。"];
+	  109 [label="Man on water lock: “晚安，警官！”\n“晚上好，警官！”"];
+	  110 [label="Untitled hub"];
+	  111 [label="Man on water lock: “这个嘛，那边有个渔村。一个废弃的海鲜市场。一座比扎罗教堂，不过对大家来说没多大用处——那边好像老是出问题。”"];
+	  112 [label="mainhub"];
+	  113 [label="You: “为什么不能用了？”"];
+	  114 [label="Tutorial Agent: 地图上的海岸部分要到第三天才会开放。"];
+	  115 [label="Barry the Butcher: 通过眼角的余光，你看见一个穿着黄色衬衫和灰色工装裤的男人，正在运河对岸朝你挥手。他似乎对水闸的事故——*还有*萨拉米香肠感到很失望。"];
+	  116 [label="Man on water lock: IsEvening()"];
+	  117 [label="IsEvening()", shape=diamond];
+	  118 [label="!(IsEvening())", shape=diamond];
+	  119 [label="Man on water lock: “晚安，警官！”\n“晚上好，警官！”"];
+	  120 [label="You: “当然想！”（热情地点点头。）"];
+	  0 -> 1
+	  1 -> 52
+	  2 -> 98
+	  2 -> 12
+	  2 -> 14
+	  3 -> 72
+	  4 -> 21
+	  5 -> 22
+	  7 -> 8
+	  7 -> 9
+	  8 -> 77
+	  9 -> 41
+	  10 -> 110
+	  11 -> 74
+	  12 -> 111
+	  13 -> 68
+	  14 -> 44
+	  15 -> 16
+	  15 -> 17
+	  16 -> 49
+	  17 -> 85
+	  18 -> 80
+	  19 -> 91
+	  20 -> 99
+	  21 -> 112
+	  22 -> 108
+	  23 -> 37
+	  25 -> 26
+	  25 -> 27
+	  26 -> 33
+	  27 -> 28
+	  28 -> 112
+	  29 -> 115
+	  30 -> 51
+	  31 -> 18
+	  32 -> 3
+	  33 -> 55
+	  34 -> 74
+	  35 -> 112
+	  36 -> 84
+	  37 -> 79
+	  38 -> 40
+	  38 -> 39
+	  39 -> 13
+	  40 -> 59
+	  41 -> 104
+	  42 -> 29
+	  43 -> 91
+	  44 -> 98
+	  45 -> 48
+	  46 -> 2
+	  48 -> 110
+	  49 -> 2
+	  50 -> 45
+	  51 -> 87
+	  52 -> 53
+	  52 -> 54
+	  53 -> 116
+	  54 -> 38
+	  55 -> 28
+	  56 -> 57
+	  56 -> 58
+	  57 -> 64
+	  58 -> 105
+	  59 -> 60
+	  59 -> 61
+	  60 -> 119
+	  61 -> 56
+	  62 -> 19
+	  63 -> 112
+	  64 -> 90
+	  65 -> 90
+	  66 -> 120
+	  66 -> 62
+	  67 -> 66
+	  68 -> 69
+	  68 -> 70
+	  69 -> 7
+	  70 -> 72
+	  71 -> 112
+	  72 -> 24
+	  72 -> 42
+	  72 -> 5
+	  73 -> 68
+	  74 -> 75
+	  74 -> 76
+	  75 -> 7
+	  76 -> 97
+	  77 -> 50
+	  77 -> 20
+	  78 -> 101
+	  79 -> 35
+	  80 -> 25
+	  81 -> 82
+	  81 -> 83
+	  82 -> 11
+	  83 -> 34
+	  84 -> 113
+	  85 -> 2
+	  86 -> 50
+	  87 -> 88
+	  87 -> 89
+	  88 -> 100
+	  89 -> 4
+	  90 -> 73
+	  91 -> 92
+	  91 -> 93
+	  92 -> 63
+	  93 -> 114
+	  94 -> 96
+	  94 -> 95
+	  95 -> 34
+	  96 -> 81
+	  97 -> 112
+	  98 -> 45
+	  99 -> 86
+	  100 -> 21
+	  101 -> 102
+	  101 -> 103
+	  102 -> 71
+	  103 -> 112
+	  104 -> 15
+	  105 -> 106
+	  105 -> 107
+	  106 -> 65
+	  107 -> 64
+	  108 -> 78
+	  109 -> 74
+	  111 -> 46
+	  112 -> 36
+	  112 -> 6
+	  112 -> 23
+	  112 -> 30
+	  112 -> 31
+	  113 -> 67
+	  114 -> 63
+	  115 -> 32
+	  116 -> 117
+	  116 -> 118
+	  117 -> 109
+	  118 -> 94
+	  119 -> 90
+	  120 -> 43
+}
+

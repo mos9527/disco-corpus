@@ -1,0 +1,125 @@
+# Helen - EasterEggs / Flow – WHIRLING / KIM DOOR
+# Knocking on Kim's door.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Variable[\"TASK.find_murder_weapon_done\"]"];
+	  3 [label="Variable[\"TASK.find_murder_weapon_done\"]", shape=diamond];
+	  4 [label="!(Variable[\"TASK.find_murder_weapon_done\"])", shape=diamond];
+	  5 [label="Door, Room #2: 你听到抽屉关上的声音，接着是脚步声。"];
+	  6 [label="Electrochemistry: 他在哪儿？现在不该是派对时间吗？"];
+	  7 [label="Variable[\"TASK.perform_field_autopsy_done\"]"];
+	  8 [label="Variable[\"TASK.perform_field_autopsy_done\"]", shape=diamond];
+	  9 [label="!(Variable[\"TASK.perform_field_autopsy_done\"])", shape=diamond];
+	  10 [label="Door, Room #2: 你听到抽屉关上的声音，接着是脚步声。"];
+	  11 [label="You: 「你想不想半夜出去兜兜风，让头脑清醒一下？」"];
+	  12 [label="Kim Kitsuragi: 「很好笑。你想干什么？」"];
+	  13 [label="Kim Kitsuragi: 「你有什么时候不在派对吗？」"];
+	  14 [label="You: 「现在是派对时间。」"];
+	  15 [label="Inland Empire: 只要不用面对那个吊死的男人……"];
+	  16 [label="Esprit de Corps: 你得自己想办法了。"];
+	  17 [label="Kim Kitsuragi: 「我也不知道。你该休息一下。」"];
+	  18 [label="Logic: *他*难道不担心你在验尸时有所遗漏吗？"];
+	  19 [label="final hub"];
+	  20 [label="Kim Kitsuragi: 「做噩梦了？」"];
+	  21 [label="Logic: *他*难道不担心你没把尸体弄下来吗？"];
+	  22 [label="Kim Kitsuragi: 「是个好主意。那早上再说吧，就是不用睡觉的时候。」"];
+	  23 [label="Kim Kitsuragi: 「为了什么清醒一下？为了*不睡觉*吗？」"];
+	  24 [label="You: 「我不知道，金。」"];
+	  25 [label="Variable[\"TASK.get_the_dead_body_down_from_the_tree_done\"]"];
+	  26 [label="Variable[\"TASK.get_the_dead_body_down_from_the_tree_done\"]", shape=diamond];
+	  27 [label="!(Variable[\"TASK.get_the_dead_body_down_from_the_tree_done\"])", shape=diamond];
+	  28 [label="You: 敲门。"];
+	  29 [label="Kim Kitsuragi: 「什么事，警官？」警佐的声音听起来很疲惫。\n「什么事，警官？几点了？」警佐的声音听起来很疲惫。"];
+	  30 [label="Door, Room #2: 警佐的房门关着。"];
+	  31 [label="Door, Room #2: 仍然没有回应。"];
+	  32 [label="Kim Kitsuragi: 「我保证你会习惯的。有时候走走路会有帮助。」"];
+	  33 [label="You: 「我想再过一遍案子。」"];
+	  34 [label="You: 我还是不要打扰金了。[离开。]"];
+	  35 [label="Kim Kitsuragi: 「警探？是你吗？」\n「哈里？是你吗？几点了？」"];
+	  36 [label="Kim Kitsuragi: 「晚安，警探。」\n「晚安，哈里。」"];
+	  37 [label="Door, Room #2: 你听到抽屉关上的声音，接着是脚步声。"];
+	  38 [label="Kim Kitsuragi: 「什么事？几点了？」"];
+	  39 [label="You: [离开。]"];
+	  40 [label="Door, Room #2: 没有回应。"];
+	  41 [label="You: 敲出金在秋千上吹的曲子。"];
+	  43 [label="You: 再敲一次，和之前一样。"];
+	  44 [label="Logic: *他*难道就不担心你还没找到凶器吗？"];
+	  45 [label="You: 「我是加尔特，酒吧老板。」"];
+	  46 [label="knocking hub"];
+	  47 [label="Volition: 你在干什么？"];
+	  48 [label="Interfacing: 他不想去兜兜风吗？"];
+	  49 [label="You: 猛地敲门。"];
+	  50 [label="Drama: 不，你是加尔特。"];
+	  51 [label="You: 再次敲门。"];
+	  52 [label="You: 「我……还不想睡觉。」"];
+	  53 [label="You: 「是我，加尔特。这家餐厅的经理。」"];
+	  54 [label="Esprit de Corps: 他现在最需要的是睡眠。"];
+	  0 -> 1
+	  1 -> 30
+	  2 -> 3
+	  2 -> 4
+	  3 -> 48
+	  4 -> 44
+	  5 -> 29
+	  6 -> 25
+	  7 -> 8
+	  7 -> 9
+	  8 -> 2
+	  9 -> 18
+	  10 -> 35
+	  11 -> 23
+	  12 -> 19
+	  13 -> 16
+	  14 -> 13
+	  15 -> 46
+	  16 -> 36
+	  17 -> 54
+	  18 -> 48
+	  19 -> 33
+	  19 -> 11
+	  19 -> 45
+	  19 -> 14
+	  19 -> 52
+	  19 -> 53
+	  19 -> 24
+	  20 -> 32
+	  21 -> 48
+	  22 -> 54
+	  23 -> 54
+	  24 -> 17
+	  25 -> 26
+	  25 -> 27
+	  26 -> 7
+	  27 -> 21
+	  28 -> 40
+	  29 -> 19
+	  30 -> 28
+	  30 -> 39
+	  31 -> 6
+	  32 -> 16
+	  33 -> 22
+	  35 -> 50
+	  37 -> 38
+	  38 -> 19
+	  40 -> 47
+	  41 -> 10
+	  43 -> 37
+	  44 -> 48
+	  45 -> 12
+	  46 -> 41
+	  46 -> 34
+	  46 -> 43
+	  46 -> 49
+	  47 -> 51
+	  47 -> 39
+	  48 -> 15
+	  49 -> 5
+	  50 -> 19
+	  51 -> 31
+	  52 -> 20
+	  53 -> 12
+	  54 -> 36
+}
+

@@ -1,0 +1,101 @@
+# JAM ORB / logic orb
+# logic afterthought about the humanitarian guy being all suspicious and whatnot
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: \"Did you see that?\" The lieutenant nods towards the vehicle. \"The seals on the humanitarian aid lorry have been broken off.\""];
+	  3 [label="Kim Kitsuragi: \"Yes, absolutely,\" he agrees, while his eyes turn to the traffic jam. \"But I suggest we keep our eyes open around that streethawker we met before.\""];
+	  4 [label="Untitled hub"];
+	  5 [label="You: Great! I'm smart."];
+	  6 [label="Kim Kitsuragi: \"Yes, absolutely,\" the lieutenant agrees, while his eyes scan the traffic jam. \"But let's keep our eyes open nevertheless.\""];
+	  7 [label="Logic: Someone here is stealing from a company called Humanox."];
+	  8 [label="Kim Kitsuragi: \"You may be right,\" he agrees, scanning the jam. \"Let's keep our eyes open.\""];
+	  9 [label="Encyclopedia: Then don't."];
+	  10 [label="Variable[\"jam.siileng_called_him_out\"]"];
+	  11 [label="Variable[\"jam.siileng_called_him_out\"]", shape=diamond];
+	  12 [label="!(Variable[\"jam.siileng_called_him_out\"])", shape=diamond];
+	  14 [label="Variable[\"jam.siileng_mainhub_reached\"]"];
+	  15 [label="Variable[\"jam.siileng_mainhub_reached\"]", shape=diamond];
+	  16 [label="!(Variable[\"jam.siileng_mainhub_reached\"])", shape=diamond];
+	  17 [label="You: Okay. But what am I supposed to do about it?"];
+	  18 [label="You: \"I have a feeling Siileng's involved in this.\""];
+	  19 [label="Kim Kitsuragi: \"You may be right. Let's see what he's got to say.\""];
+	  20 [label="You: I don't believe you."];
+	  21 [label="Logic: You were right. That streethawker really *was* stealing from the back of his own truck."];
+	  22 [label="You: \"Humanox... This stands for humanitarian aid, right?\""];
+	  23 [label="Kim Kitsuragi: \"Good to know that we were right,\" the lieutenant remarks dryly. \"Would have *sucked* to rip a man off for no reason at all.\""];
+	  24 [label="Variable[\"jam.siileng_encyclo_humanox\"]"];
+	  25 [label="Variable[\"jam.siileng_encyclo_humanox\"]", shape=diamond];
+	  26 [label="!(Variable[\"jam.siileng_encyclo_humanox\"])", shape=diamond];
+	  27 [label="You: \"Oh my god, I'm a legit genius. Here's proof that Siileng really was selling stolen goods!\""];
+	  28 [label="Logic: Uh, dunno. Nothing, I guess. It's not like there's something you can do, you're but a mere cop."];
+	  29 [label="Kim Kitsuragi: \"Yes,\" nods the lieutenant, \"Humanox is a well-known humanitarian aid organization. It must be the streethawker's truck.\""];
+	  30 [label="You: [Discard thought.]"];
+	  31 [label="Encyclopedia: Humanox is a non-profit humanitarian aid organization created by EPIS countries to provide assistance during humanitarian crises."];
+	  32 [label="You: \"Did you see that, Kim? It must be Siileng's truck.\""];
+	  33 [label="Logic: Atta boy!"];
+	  34 [label="You: \"I did see it, yes. Let's better not jump to any conclusion.\""];
+	  35 [label="IsKimHere()"];
+	  36 [label="IsKimHere()", shape=diamond];
+	  37 [label="!(IsKimHere())", shape=diamond];
+	  38 [label="IsKimHere()"];
+	  39 [label="IsKimHere()", shape=diamond];
+	  40 [label="!(IsKimHere())", shape=diamond];
+	  41 [label="You: Okay-do. What's EPIS, though?"];
+	  42 [label="You: [Discard thought.]"];
+	  43 [label="You: \"Looks like someone's stealing.\""];
+	  44 [label="Encyclopedia: Now that I start to think about it I'm not even sure it was EPIS... maybe it was ECIS, or ETIS? Maybe your brain just made this letter combination up to sound more professional. Kiddo, it's a mystery."];
+	  45 [label="Logic: That's what a cop does, isn't it? Keep your eyes peeled... crime is close by."];
+	  46 [label="Encyclo yes"];
+	  47 [label="You: Cool. Thieves. I should catch them."];
+	  0 -> 1
+	  1 -> 10
+	  2 -> 18
+	  2 -> 43
+	  2 -> 34
+	  4 -> 32
+	  4 -> 27
+	  4 -> 22
+	  5 -> 33
+	  7 -> 38
+	  10 -> 11
+	  10 -> 12
+	  11 -> 21
+	  12 -> 7
+	  14 -> 16
+	  14 -> 15
+	  15 -> 3
+	  16 -> 6
+	  17 -> 28
+	  18 -> 19
+	  20 -> 9
+	  21 -> 35
+	  22 -> 29
+	  24 -> 25
+	  24 -> 26
+	  25 -> 46
+	  26 -> 17
+	  26 -> 30
+	  26 -> 47
+	  27 -> 23
+	  29 -> 23
+	  31 -> 24
+	  32 -> 23
+	  34 -> 14
+	  35 -> 36
+	  35 -> 37
+	  36 -> 4
+	  37 -> 42
+	  37 -> 5
+	  38 -> 40
+	  38 -> 39
+	  39 -> 2
+	  40 -> 31
+	  41 -> 44
+	  43 -> 8
+	  46 -> 41
+	  46 -> 20
+	  47 -> 45
+}
+

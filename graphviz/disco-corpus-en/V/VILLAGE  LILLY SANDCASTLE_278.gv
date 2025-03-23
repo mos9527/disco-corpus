@@ -1,0 +1,56 @@
+# VILLAGE / LILLY SANDCASTLE
+# This is the interaction dialogue with Lilly's Little Sandcastle, where she hid the gloves.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: Leave the sandcastle alone. [Leave.]"];
+	  3 [label="Variable[\"village.sandcastle_hub_reached\"]"];
+	  4 [label="Variable[\"village.sandcastle_hub_reached\"]", shape=diamond];
+	  5 [label="!(Variable[\"village.sandcastle_hub_reached\"])", shape=diamond];
+	  6 [label="You: Reach in the catacombs and pull out the shiny object."];
+	  8 [label="IsKimHere()"];
+	  9 [label="IsKimHere()", shape=diamond];
+	  10 [label="!(IsKimHere())", shape=diamond];
+	  11 [label="Sandcastle: A gush of wind disintegrates another piece of the cellar ceiling, exposing more of the mysterious glimmer underneath. The shithole's about to collapse."];
+	  12 [label="Half Light: The building's coming down on you, you need to get out of here!"];
+	  13 [label="Kim Kitsuragi: \"Congratulations -- that's the gauntlets down, then. We're doing good on the armour collection front.\""];
+	  14 [label="Kim Kitsuragi: \"The little castle?\" The lieutenant smiles a little. \"The reigning lord must have come upon some really tough times to let it slip in such decrepitude.\""];
+	  15 [label="IsKimHere()"];
+	  16 [label="IsKimHere()", shape=diamond];
+	  17 [label="!(IsKimHere())", shape=diamond];
+	  18 [label="Sandcastle: The walls and floors give way to the giant's greed, collapse and present you with a pair of ceramic gauntlets."];
+	  19 [label="Sandcastle: The fortress is still defiantly standing. There's an inviting gleam of *something* coming from the depths of the deepest cellars."];
+	  20 [label="Untitled hub"];
+	  21 [label="Sandcastle: Weather has not been kind to Lily's little sandcastle. The once mighty towers are quickly eroding away. You can see something shining back to you from what must have been a vast underground catacomb network."];
+	  22 [label="Visual Calculus: Smooth reflective surface... are these the gloves you're looking for?"];
+	  23 [label="You: \"Broken...\""];
+	  0 -> 1
+	  1 -> 3
+	  3 -> 4
+	  3 -> 5
+	  4 -> 19
+	  5 -> 21
+	  6 -> 18
+	  8 -> 9
+	  8 -> 10
+	  9 -> 13
+	  11 -> 12
+	  12 -> 22
+	  14 -> 2
+	  14 -> 6
+	  15 -> 16
+	  15 -> 17
+	  16 -> 14
+	  17 -> 11
+	  18 -> 8
+	  19 -> 20
+	  20 -> 2
+	  20 -> 6
+	  20 -> 23
+	  21 -> 20
+	  22 -> 2
+	  22 -> 6
+	  23 -> 15
+}
+

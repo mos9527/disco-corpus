@@ -1,0 +1,70 @@
+# PLAZA ORB / bulletholes esprit
+# esprit the corps afterthought
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Esprit de Corps: If only Kim were here right now! You could ask him if he sees a case here. The sight of those bullet holes stirs something in you."];
+	  3 [label="You: \"Okay. What can you tell me about this Revolution?\""];
+	  4 [label="Kim Kitsuragi: \"Not much. I don't have a *fresh perspective* on it. Shall we go?\""];
+	  5 [label="IsKimHere()"];
+	  6 [label="IsKimHere()", shape=diamond];
+	  7 [label="!(IsKimHere())", shape=diamond];
+	  8 [label="Visual Calculus: They look pretty ancient..."];
+	  10 [label="Kim Kitsuragi: He nods. \"We should focus on present crimes -- from the present century.\""];
+	  11 [label="You: \"Okay. What can you tell me about the Revolution?\""];
+	  12 [label="You: \"Alright then.\" [Finish thought.]"];
+	  13 [label="Esprit de Corps: The sight of bullet holes stirs something in you, making you forget the lieutenant's surname."];
+	  14 [label="Untitled hub (02)"];
+	  15 [label="You: \"Nothing, forget about it.\" [Finish thought.]"];
+	  16 [label="You: \"Oh, you mean like from the Revolution?\""];
+	  17 [label="IsKimHere()"];
+	  18 [label="IsKimHere()", shape=diamond];
+	  19 [label="!(IsKimHere())", shape=diamond];
+	  20 [label="Kim Kitsuragi: \"There?\" He looks to the wall. \"Those are *old*.\""];
+	  21 [label="You: \"What do you mean old?\""];
+	  22 [label="You: \"Kim, look, bullet holes!\""];
+	  23 [label="You: (Point to the chips in the wall.) \"Someone has been shot! We're cops, we should solve it.\""];
+	  24 [label="Kim Kitsuragi: \"These bullets were fired during the Revolution, over half a century ago. They do not warrant investigation.\""];
+	  25 [label="Esprit de Corps: The fading marks are too degraded to draw any forensic conclusions. Just chips in the sandstone."];
+	  26 [label="Kim Kitsuragi: \"Yes, the one that happened half a century ago.\" He blinks. \"Those bullets were fired during the Revolution and do not warrant an investigation by officers of civil law.\""];
+	  27 [label="You: [Discard thought.]"];
+	  28 [label="You: Look closer first."];
+	  29 [label="Kim Kitsuragi: \"Where?\" He looks around."];
+	  30 [label="You: \"Oh, okay then.\" [Finish thought.]"];
+	  0 -> 1
+	  1 -> 17
+	  2 -> 28
+	  3 -> 4
+	  5 -> 6
+	  5 -> 7
+	  6 -> 8
+	  8 -> 22
+	  11 -> 4
+	  12 -> 10
+	  13 -> 27
+	  13 -> 28
+	  13 -> 22
+	  14 -> 11
+	  14 -> 3
+	  14 -> 12
+	  16 -> 26
+	  17 -> 18
+	  17 -> 19
+	  18 -> 13
+	  19 -> 2
+	  20 -> 16
+	  20 -> 21
+	  20 -> 30
+	  21 -> 24
+	  22 -> 29
+	  23 -> 20
+	  24 -> 14
+	  25 -> 5
+	  26 -> 14
+	  28 -> 25
+	  29 -> 15
+	  29 -> 23
+	  30 -> 10
+}
+

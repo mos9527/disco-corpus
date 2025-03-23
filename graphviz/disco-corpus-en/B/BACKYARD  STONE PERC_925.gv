@@ -1,0 +1,43 @@
+# BACKYARD / STONE PERC
+# First follow-up convo with Kim where you discover keys under the stone. Difficult perception finds the stone.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Stone: A stone like any other, lying in a whorl of sleet and mud. Maybe there's something under it?"];
+	  3 [label="You: Ignore it. [Leave.]"];
+	  4 [label="Logic: Looks like it could belong to the building's front door."];
+	  5 [label="Variable[\"TASK.where_does_the_smoker_on_the_balcony_live\"]"];
+	  6 [label="Variable[\"TASK.where_does_the_smoker_on_the_balcony_live\"]", shape=diamond];
+	  7 [label="!(Variable[\"TASK.where_does_the_smoker_on_the_balcony_live\"])", shape=diamond];
+	  8 [label="You: Put the stone back. [Leave.]"];
+	  10 [label="Kim Kitsuragi: \"This must be for the front door. Pity it doesn't have the apartment number on it. This building has hundreds of apartments.\""];
+	  11 [label="IsKimHere()"];
+	  12 [label="IsKimHere()", shape=diamond];
+	  13 [label="!(IsKimHere())", shape=diamond];
+	  14 [label="You: Turn it over."];
+	  15 [label="You: \"How are we going to find the right one?\""];
+	  16 [label="Kim Kitsuragi: \"This must be for the front door. Let's see if it works.\""];
+	  17 [label="Kim Kitsuragi: \"We'll just have to go in and see.\""];
+	  18 [label="Stone: There's a key beneath it, rusty from the dirt."];
+	  0 -> 1
+	  1 -> 2
+	  2 -> 3
+	  2 -> 14
+	  4 -> 8
+	  5 -> 6
+	  5 -> 7
+	  6 -> 10
+	  7 -> 16
+	  10 -> 15
+	  11 -> 12
+	  11 -> 13
+	  12 -> 5
+	  13 -> 4
+	  14 -> 18
+	  15 -> 17
+	  16 -> 8
+	  17 -> 8
+	  18 -> 11
+}
+

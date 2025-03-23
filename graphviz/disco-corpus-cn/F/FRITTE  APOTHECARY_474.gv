@@ -1,0 +1,109 @@
+# FRITTE / APOTHECARY
+# A small cabinet on the wall, right next to the posters.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: “来一瓶镁片，谢谢。”"];
+	  3 [label="You: [离开。]"];
+	  4 [label="Frittte clerk: “呃……我不知道，我看看……鼻通灵是一种鼻用喷雾。多巴宁是一种很好的止痛剂。镁是膳食补充剂。海普伽叮是……”她停了下来。"];
+	  5 [label="Frittte clerk: “呃……”她心不在焉地嚼着口香糖。“不行，对不起。我不是，呃，医生什么之类的。”"];
+	  7 [label="Encyclopedia: 她说的没错。圣巴蒂斯特公司起源于圣巴蒂斯特城……也因此得名……因为它就是如此。一个罕见的案例，完整的词源学历史——几乎所有人……至少都应该知道这个。"];
+	  8 [label="Variable[\"gates.frittte_apothecary_hub_reached\"]"];
+	  9 [label="Variable[\"gates.frittte_apothecary_hub_reached\"]", shape=diamond];
+	  10 [label="!(Variable[\"gates.frittte_apothecary_hub_reached\"])", shape=diamond];
+	  11 [label="Variable[\"tc.turn_off_tutorial_node\"]"];
+	  12 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  13 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  14 [label="You: “能给我鼻通灵吗？”"];
+	  15 [label="You: “圣巴蒂斯特是谁？”"];
+	  16 [label="You: “我想买点氨。”"];
+	  17 [label="Frittte clerk: “好吧，给你。希望圣巴蒂斯特能让你感觉好受一点。”"];
+	  18 [label="Variable[\"gates.frittte_apothecary_saw_logo\"]"];
+	  19 [label="Variable[\"gates.frittte_apothecary_saw_logo\"]", shape=diamond];
+	  20 [label="!(Variable[\"gates.frittte_apothecary_saw_logo\"])", shape=diamond];
+	  21 [label="Frittte clerk: “我也不知道海普伽叮是什么。我猜它能让你感觉没那么糟糕？推荐说是在大量派对、学习或者锻炼之后使用。”"];
+	  22 [label="You: “你这儿有氨吗？”"];
+	  23 [label="Jump to: [apothecary hub]"];
+	  24 [label="You: “给我来点海普伽叮。”"];
+	  25 [label="Frittte clerk: “好的。”她递给你一个小胶囊。“别，比如说……太过火了或者之类的。”"];
+	  26 [label="Jump to: [apothecary hub]"];
+	  27 [label="Frittte clerk: “好的，给你。希望圣巴蒂斯特会让你感觉好受一些。”"];
+	  28 [label="Frittte clerk: “呃，如果你需要圣巴蒂斯特的产品，只要找我就可以了。我们不备处方药，但是我们有鼻通灵，多巴宁，镁还有海普伽叮。”"];
+	  29 [label="You: “这些产品有什么功效？”"];
+	  30 [label="Tutorial Agent: 鼻通灵+1点生命值。多巴宁+3点生命值。镁+1点意志。海普伽叮+3点意志。"];
+	  31 [label="Frittte clerk: 她又埋头看向杂志。“嗯嗯。”"];
+	  32 [label="Encyclopedia: 他们的商标是毫无血色的玫瑰——纯白，不受一点伤害。"];
+	  33 [label="Frittte clerk: “好的，给你。希望圣巴蒂斯特会让你感觉好受一些。”"];
+	  34 [label="Frittte clerk: “好的，给你。希望圣巴蒂斯特会让你感觉好受一些。”"];
+	  35 [label="Saint-Batiste Pharmaceutics: 墙上有一个小橱柜，里面装满了各式各样的药瓶，鼻用喷雾和吸塑装。上面全都有圣巴蒂斯特制药的商标。"];
+	  36 [label="Frittte clerk: “圣巴蒂斯特？你知道的……”她朝着橱柜慢慢点点头。“制药公司？”"];
+	  37 [label="Jump to: [apothecary hub]"];
+	  38 [label="You: “你能不能再……详细点？”"];
+	  39 [label="You: “谢谢你的说明，小姐。”"];
+	  40 [label="Frittte clerk: “圣巴蒂斯特制药？就是那个从圣巴蒂斯城往外买药的公司吗？”她指着橱柜。“就是那个？就在那边？”"];
+	  41 [label="Frittte clerk: “有的……这里好像有安瓿。”她的手心不在焉的在空中挥舞。"];
+	  42 [label="Saint-Batiste Pharmaceutics: 墙上有一个小橱柜，里面装满了各式各样的药瓶，鼻用喷雾和吸塑装。上面全都有圣巴蒂斯特制药的商标。"];
+	  43 [label="apothecary hub"];
+	  44 [label="Jump to: [apothecary hub]"];
+	  45 [label="You: “我需要多巴宁。”"];
+	  46 [label="Jump to: [apothecary hub]"];
+	  0 -> 1
+	  1 -> 8
+	  2 -> 33
+	  4 -> 21
+	  5 -> 11
+	  7 -> 46
+	  8 -> 9
+	  8 -> 10
+	  9 -> 35
+	  10 -> 42
+	  11 -> 12
+	  11 -> 13
+	  12 -> 23
+	  13 -> 30
+	  14 -> 17
+	  15 -> 36
+	  16 -> 25
+	  17 -> 44
+	  18 -> 19
+	  18 -> 20
+	  19 -> 28
+	  20 -> 32
+	  21 -> 38
+	  21 -> 39
+	  22 -> 41
+	  23 -> 43
+	  24 -> 34
+	  25 -> 44
+	  26 -> 43
+	  27 -> 44
+	  28 -> 43
+	  29 -> 4
+	  30 -> 23
+	  31 -> 26
+	  32 -> 28
+	  33 -> 44
+	  34 -> 44
+	  35 -> 43
+	  36 -> 40
+	  37 -> 43
+	  38 -> 5
+	  39 -> 31
+	  40 -> 7
+	  41 -> 37
+	  42 -> 18
+	  43 -> 2
+	  43 -> 3
+	  43 -> 45
+	  43 -> 14
+	  43 -> 15
+	  43 -> 16
+	  43 -> 22
+	  43 -> 24
+	  43 -> 29
+	  44 -> 43
+	  45 -> 27
+	  46 -> 43
+}
+

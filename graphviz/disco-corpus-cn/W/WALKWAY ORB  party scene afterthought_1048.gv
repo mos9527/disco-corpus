@@ -1,0 +1,145 @@
+# WALKWAY ORB / party scene afterthought
+# Someone either had the most depressing solo-party... or there's a sequence killer on the loose.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 也许没什么事。[放弃思维。]"];
+	  3 [label="Kim Kitsuragi: “呃……”警督看着你，然后看了看瓶子。“是的。我想可以相对有把握的说，是你做的。”"];
+	  4 [label="Kim Kitsuragi: “我相信。但是现在不重要。我们还是走吧。”"];
+	  5 [label="Kim Kitsuragi: “没错，”警督冷淡地标记着。“看起来确实很高级。不过现在，我们还是先走吧。”"];
+	  6 [label="You: “是我做的吗？”\n是我做的吗？"];
+	  7 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  8 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  9 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  10 [label="You: 我们走吧。[完成思维。]"];
+	  11 [label="You: “我还没有完全相信是我做的。”\n我还没有完全确信是我干的。"];
+	  12 [label="IsKimHere()"];
+	  13 [label="IsKimHere()", shape=diamond];
+	  14 [label="!(IsKimHere())", shape=diamond];
+	  15 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  16 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  17 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  18 [label="Inland Empire: 是啊，看起来确实不像很开心的样子。没必要老惦记这个，最好还是走吧。"];
+	  19 [label="Kim Kitsuragi: “*真没有*什么开心的。”警督转身要走。“我们还是把精力放到别的地方吧。”"];
+	  20 [label="Untitled hub"];
+	  21 [label="IsKimHere()"];
+	  22 [label="IsKimHere()", shape=diamond];
+	  23 [label="!(IsKimHere())", shape=diamond];
+	  24 [label="Horrific Necktie: “哦，真的*特别*高级。深入敌人的领地——就在所有人的眼皮子下面搞得乱七八糟——情绪高昂，肾上腺素飙升……显然，还有不少酒精。”领带渐渐勒紧了你的脖子。“我为你感到非常骄傲。”"];
+	  25 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  26 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  27 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  28 [label="Variable[\"auto.is_raining\"]"];
+	  29 [label="Variable[\"auto.is_raining\"]", shape=diamond];
+	  30 [label="!(Variable[\"auto.is_raining\"])", shape=diamond];
+	  31 [label="Variable[\"auto.is_snowing\"]"];
+	  32 [label="Variable[\"auto.is_snowing\"]", shape=diamond];
+	  33 [label="!(Variable[\"auto.is_snowing\"])", shape=diamond];
+	  34 [label="Horrific Necktie: 不不，*兄弟*，肯定很开心的。每次你和我在一起的时候，还有*不开心*过？别理它，只要带着这种积极的感觉，继续前进吧！"];
+	  35 [label="Inland Empire: 地上堆满了空酒瓶和烟头……看来有人在这里疯狂*狂欢*了一场。"];
+	  36 [label="Inland Empire: 是啊……真的*很*开心。最好还是别想了，赶紧走吧。"];
+	  37 [label="You: “看来我玩的很开心。”\n看起来我玩得很开心。"];
+	  38 [label="Horrific Necktie: “是我。这种量还有谁可以做到，*兄弟*。这真是太疯狂了。你也很疯狂。我们什么时候应该再来一次。不过现在，你该走了。”"];
+	  39 [label="You: “我肯定是在港口执行一项高级侦察任务。”\n我肯定是在港口执行一项高级侦察任务。"];
+	  40 [label="You: 等等，有多疯狂？"];
+	  41 [label="Untitled hub (02)"];
+	  43 [label="Inland Empire: 这个嘛，他们喝空了6瓶*高度比尔森啤酒*，3瓶*海军准将红朗姆*，还有差不多四包烟——肯定是有够疯狂的。"];
+	  44 [label="Horrific Necktie: 是啊，就是我们，*兄弟*！这么看起来，我们一定玩得很开心。非常开心，*兄弟*。"];
+	  45 [label="IsKimHere()"];
+	  46 [label="IsKimHere()", shape=diamond];
+	  47 [label="!(IsKimHere())", shape=diamond];
+	  48 [label="Inland Empire: 离开这里之后，你就不用再想起它了。只要走开，一切都会*过去*！"];
+	  49 [label="IsKimHere()"];
+	  50 [label="IsKimHere()", shape=diamond];
+	  51 [label="!(IsKimHere())", shape=diamond];
+	  52 [label="Inland Empire: 你看看这里。当然是你啊。在这里*狂欢*的就是你。"];
+	  53 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  54 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  55 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  56 [label="You: “真是太悲哀了。我一定很痛苦。”\n这也太悲伤了吧。我肯定很痛苦。"];
+	  57 [label="Kim Kitsuragi: “是啊，”警督表示同意。“这个场面确实算不上开心。我们还是走吧。”他转身离开。"];
+	  58 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true"];
+	  59 [label="CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true", shape=diamond];
+	  60 [label="!(CheckEquipped(\"neck_tie\")  and  Variable[\"whirling.necktie_personified\"] == true)", shape=diamond];
+	  61 [label="IsKimHere()"];
+	  62 [label="IsKimHere()", shape=diamond];
+	  63 [label="!(IsKimHere())", shape=diamond];
+	  64 [label="Horrific Necktie: 这可是你说的，*兄弟*！如果我们想的话，可以随时再来一次。而且我们也确实想这么做。只是下次要换个别的地方。现在你该走了。"];
+	  65 [label="Inland Empire: 雪花静静飘落，掩埋了一地的空酒瓶和烟头。看来有人在这里疯狂*狂欢*了一场。"];
+	  66 [label="Inland Empire: 一大堆空酒瓶在雨中闪闪发亮。看来有人在这里疯狂*狂欢*了一场。"];
+	  67 [label="Inland Empire: 是的，就是这样。一项侦察任务。希望你还记得自己带回来的有用情报……"];
+	  0 -> 1
+	  1 -> 31
+	  3 -> 41
+	  6 -> 49
+	  7 -> 8
+	  7 -> 9
+	  8 -> 34
+	  9 -> 18
+	  11 -> 21
+	  12 -> 13
+	  12 -> 14
+	  13 -> 19
+	  14 -> 58
+	  15 -> 16
+	  15 -> 17
+	  16 -> 38
+	  17 -> 48
+	  20 -> 40
+	  20 -> 2
+	  20 -> 6
+	  21 -> 22
+	  21 -> 23
+	  22 -> 4
+	  23 -> 15
+	  25 -> 26
+	  25 -> 27
+	  26 -> 24
+	  27 -> 67
+	  28 -> 29
+	  28 -> 30
+	  29 -> 66
+	  30 -> 35
+	  31 -> 32
+	  31 -> 33
+	  32 -> 65
+	  33 -> 28
+	  35 -> 20
+	  37 -> 12
+	  39 -> 61
+	  40 -> 43
+	  41 -> 37
+	  41 -> 39
+	  41 -> 10
+	  41 -> 11
+	  41 -> 56
+	  43 -> 2
+	  43 -> 6
+	  44 -> 41
+	  45 -> 46
+	  45 -> 47
+	  46 -> 57
+	  47 -> 7
+	  49 -> 50
+	  49 -> 51
+	  50 -> 3
+	  51 -> 52
+	  52 -> 53
+	  53 -> 54
+	  53 -> 55
+	  54 -> 44
+	  55 -> 41
+	  56 -> 45
+	  58 -> 59
+	  58 -> 60
+	  59 -> 64
+	  60 -> 36
+	  61 -> 62
+	  61 -> 63
+	  62 -> 5
+	  63 -> 25
+	  65 -> 20
+	  66 -> 20
+}
+

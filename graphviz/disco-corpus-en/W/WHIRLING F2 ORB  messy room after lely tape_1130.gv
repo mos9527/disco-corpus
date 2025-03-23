@@ -1,0 +1,89 @@
+# WHIRLING F2 ORB / messy room after lely tape
+# Kim's reaction to the mess in your room after you've listened to tape and he was present etc.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: \"Of course.\" He nods, then looks longingly toward the exit."];
+	  3 [label="You: \"This is an expression of *me*. My individualism.\""];
+	  4 [label="Kim Kitsuragi: \"I have no idea what that means.\" He looks toward the exit, longingly."];
+	  5 [label="You: \"I defied bourgeoisie morality in here. Defied it *hard*.\""];
+	  6 [label="Endurance: ...where unidentifiable sludge makes it hard for him to breathe. Smells of vomit in here."];
+	  7 [label="Kim Kitsuragi: \"I can see that.\" He takes a step toward the door. It looks like he'd like to leave now. The atmosphere is oppressive."];
+	  8 [label="You: \"This is where *the magic* happens.\""];
+	  9 [label="Variable[\"whirling.tape_savoir_ninjakim\"]"];
+	  10 [label="Variable[\"whirling.tape_savoir_ninjakim\"]", shape=diamond];
+	  11 [label="!(Variable[\"whirling.tape_savoir_ninjakim\"])", shape=diamond];
+	  12 [label="Kim Kitsuragi: \"It's not as bad as I thought. There are no elephant corpses. Should we go maybe?\""];
+	  13 [label="Kim Kitsuragi: \"Wonderful,\" he nods, then looks toward the exit, longingly."];
+	  14 [label="You: \"Yes.\""];
+	  15 [label="You: \"No. I am something *much more*.\""];
+	  16 [label="Kim Kitsuragi: He takes a step toward the door. Like he'd like to leave."];
+	  17 [label="You: Say nothing. Nod stoically."];
+	  18 [label="Savoir Faire: The man is finding it hard not to trip on the tape -- and not to send any of the bottles rolling across the floor..."];
+	  20 [label="You: \"Got my own little Co Hoi here.\""];
+	  21 [label="You: \"I did it -- my way.\""];
+	  22 [label="Kim Kitsuragi: \"I can see that. The potted plant under the table is a Seraise Fern. They have those in South Safre too. All things considered...\" He looks around, as if to check."];
+	  23 [label="Kim Kitsuragi: \"And by that you mean crimes against humanity?\""];
+	  24 [label="You: \"Well, crimes against myself anyway.\""];
+	  25 [label="battlefieldroom"];
+	  26 [label="You: \"No, I meant disco... never mind.\""];
+	  27 [label="Kim Kitsuragi: \"I know what you meant.\" He looks toward the exit, longingly."];
+	  28 [label="Kim Kitsuragi: \"I have no idea what that means.\" He looks toward the exit, longingly."];
+	  29 [label="You: \"I'm sorry for... this.\""];
+	  30 [label="Empathy: Kim also tries *not* to look at the pile of tape viscera on the carpet. Or the weird suitcase on the hat rack. Or the potted plant dying in the corner. But it's all just too morbid to ignore."];
+	  31 [label="IsTHCPresent(\"apocalypse_cop\")  or  Variable[\"TASK.listen_to_merc_tape\"]"];
+	  32 [label="IsTHCPresent(\"apocalypse_cop\")  or  Variable[\"TASK.listen_to_merc_tape\"]", shape=diamond];
+	  33 [label="!(IsTHCPresent(\"apocalypse_cop\")  or  Variable[\"TASK.listen_to_merc_tape\"])", shape=diamond];
+	  34 [label="You: \"You're looking at the destruction?\""];
+	  35 [label="Kim Kitsuragi: \"No problem, officer.\" He takes a step toward the door. Like he'd like to leave."];
+	  36 [label="Kim Kitsuragi: \"I can see that.\" He takes a step toward the door. \"You're the RCM's own Soldier of the Apocalypse, aren't you?\""];
+	  37 [label="Kim Kitsuragi: He nods."];
+	  38 [label="You: \"Yes. Disco doorgunning villagers.\""];
+	  0 -> 1
+	  1 -> 30
+	  3 -> 28
+	  5 -> 28
+	  6 -> 25
+	  8 -> 23
+	  9 -> 10
+	  9 -> 11
+	  10 -> 6
+	  11 -> 25
+	  14 -> 13
+	  15 -> 2
+	  17 -> 16
+	  18 -> 9
+	  20 -> 22
+	  21 -> 31
+	  22 -> 12
+	  23 -> 3
+	  23 -> 5
+	  23 -> 38
+	  23 -> 24
+	  23 -> 26
+	  24 -> 28
+	  25 -> 34
+	  25 -> 8
+	  25 -> 17
+	  25 -> 20
+	  25 -> 21
+	  25 -> 29
+	  26 -> 27
+	  29 -> 35
+	  30 -> 18
+	  31 -> 32
+	  31 -> 33
+	  32 -> 36
+	  33 -> 7
+	  34 -> 37
+	  36 -> 14
+	  36 -> 15
+	  37 -> 8
+	  37 -> 17
+	  37 -> 20
+	  37 -> 21
+	  37 -> 29
+	  38 -> 4
+}
+

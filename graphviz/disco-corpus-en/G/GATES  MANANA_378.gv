@@ -1,0 +1,2053 @@
+# GATES / MANANA
+# A jolly, easy-going man at the very bottom entrance to the gates. He gives information about the scabs, the strike, the union boss, Measurehead and being a boiadeiro.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: \"I've come to Martinaise investigating a murder.\""];
+	  3 [label="Call Me Mañana: \"Besides, there are no non-corrupt systems in the world anyway. And *moralism* is the most corrupt of them all.\"\n\"Besides, there are no non-corrupt systems in the world anyway. Moralism least of all.\""];
+	  4 [label="You: \"I'm investigating a peculiar smell, one with revolutionary implications.\""];
+	  5 [label="You: \"Honestly, I had a weird dream and now I need to get to the bottom of it.\""];
+	  6 [label="Call Me Mañana: \"Chasing a dream, huh? I have to respect that, boia...\" He gives you a small salute."];
+	  7 [label="You: \"'The Revolutionary Lovers.'\""];
+	  8 [label="Call Me Mañana: IsKimHere()"];
+	  9 [label="IsKimHere()", shape=diamond];
+	  10 [label="!(IsKimHere())", shape=diamond];
+	  11 [label="Kim Kitsuragi: \"He's not the only one, it seems.\" The lieutenant doesn't even look up from his notebook."];
+	  12 [label="Jump to: [finalhub]"];
+	  13 [label="Kim Kitsuragi: \"She said that you would need some kind of *passphrase* to gain access to this so-called *mega secret* meeting.\" He snaps the elastic band around his notebook."];
+	  14 [label="strikehub"];
+	  15 [label="Call Me Mañana: \"Never grateful. Were we ever grateful, we'd have nothing. You fight for every piece.\""];
+	  16 [label="You: \"I may take that into consideration.\""];
+	  17 [label="You: \"It's been said I call myself *Tequila Sunset*.\"\n\"I prefer to be called Tequila Sunset.\"\n\"I just found my name some time ago, on the coast. Finally! The name's Tequila Sunset.\""];
+	  18 [label="Composure: He knows who he is. Firmly grounded -- has no need to reinforce or elaborate his political identity to himself or others."];
+	  19 [label="You: \"Okay, I have a name for myself, it's...\""];
+	  20 [label="You: Variable[\"gates.manana_initiate_tequila_sunset\"]"];
+	  21 [label="Variable[\"gates.manana_initiate_tequila_sunset\"]", shape=diamond];
+	  22 [label="!(Variable[\"gates.manana_initiate_tequila_sunset\"])", shape=diamond];
+	  23 [label="You: \"Well, better than the other names I can come up with at least.\""];
+	  24 [label="Call Me Mañana: \"No need to get aggressive.\" He takes a swig from his flask. \"I'm really not the one to ask.\""];
+	  25 [label="Call Me Mañana: \"A name worthy of the man who holds it, friend. Names are important.\""];
+	  26 [label="Jump to: [ACTUALMAINHUB]"];
+	  27 [label="hubhub"];
+	  28 [label="You: \"Okay.\""];
+	  29 [label="Call Me Mañana: \"Right, always glad to help out! We're on the same branch, you and I. Not like these slithering scabs.\""];
+	  30 [label="Jump to: [scabintro]"];
+	  31 [label="Call Me Mañana: \"Is it the dulcet tone of ultraliberalism I hear?\""];
+	  32 [label="You: But..."];
+	  33 [label="Call Me Mañana: CheckItem(\"shoes_t500\")  and  IsKimHere()"];
+	  34 [label="CheckItem(\"shoes_t500\")  and  IsKimHere()", shape=diamond];
+	  35 [label="!(CheckItem(\"shoes_t500\")  and  IsKimHere())", shape=diamond];
+	  36 [label="Call Me Mañana: \"They're sort of like you. Preserve the rule of law and all that. Except it's Evrart's law.\" He takes a swig from his flask. \"But, really, they're just like you.\""];
+	  37 [label="Call Me Mañana: He shrugs. \"There are types of danger. The one I'm usually concerned with is lung cancer, or getting mauled by wildlife. Not... bullets.\""];
+	  38 [label="Call Me Mañana: \"I was asked to look into that armour situation. Official Union probe, you know -- track it down, see who took it.\""];
+	  39 [label="armour!"];
+	  40 [label="You: \"The probe into the armour -- what did you learn?\""];
+	  41 [label="Call Me Mañana: \"Oh so the none-of-the-above type, are you? I get it, I get it. I like to keep my distance too.\" He nods. \"But it doesn't matter. It's a good thing you're doing. Thanks.\""];
+	  42 [label="You: \"Yes, his mug-collection certainly represented... *antiquated* social values.\""];
+	  43 [label="Untitled hub"];
+	  44 [label="You: \"*Anything* else I should know about this task? This weasel person? When he'll be home?\""];
+	  45 [label="Inland Empire: Be honest with him."];
+	  46 [label="Call Me Mañana: Variable[\"tc.tequila_sunset\"]"];
+	  47 [label="Variable[\"tc.tequila_sunset\"]", shape=diamond];
+	  48 [label="!(Variable[\"tc.tequila_sunset\"])", shape=diamond];
+	  49 [label="Call Me Mañana: \"Didn't realize you could smell communism.\" He frowns. \"But then, I've never studied the subject...\""];
+	  50 [label="Call Me Mañana: \"I don't know. Guess not everyone remembers.\" A tight, half-smile crosses his face."];
+	  51 [label="Logic: Of course, such \"inside-talk\" might also serve as a handy passphrase..."];
+	  52 [label="You: \"I was totally about to say that.\""];
+	  53 [label="You: \"What did you tell him?\""];
+	  54 [label="Call Me Mañana: \"No idea. I took it to mean he was asking me to join some sort of underground cell...\"\n\"I don't think so, boia. I took it to mean he was asking me to join some sort of underground cell...\""];
+	  55 [label="Call Me Mañana: \"Oh. Good, good! What matters do you want to discuss with Evrart?\""];
+	  56 [label="Call Me Mañana: \"Even a weak child can think it. The only things holding someone back are *I can't* and *I shouldn't*.\""];
+	  57 [label="You: \"Honesty. I *lost* it while drinking.\""];
+	  58 [label="Encyclopedia: Mañana sounds like a mesque word, but he doesn't actually look much like a mesque."];
+	  59 [label="Logic: Not a given name, for certain. It's a taken name -- the kind for artists, or criminals, or revolutionaries and the sort. An alias. A *nom de guerre*."];
+	  60 [label="Call Me Mañana: \"Suit yourself. Yet one can't live nameless; names are important things. Vessels of the soul.\""];
+	  61 [label="ACTUALMAINHUB"];
+	  62 [label="Jump to: [namehub]"];
+	  63 [label="You: \"The fat ones, always leeching on the honest man.\""];
+	  64 [label="Call Me Mañana: \"It's not enough. Not enough to get ahead. More about keepin' us in our place.\""];
+	  65 [label="You: \"Of course! It's such a *cool* name. Solemn, classy, historical... almost regal.\""];
+	  66 [label="Electrochemistry: Surely a step in the right direction -- feel that smooth texture, savour that flavour. How it flows down your gullet, like a warm caress. *That's* the sunset. By the time you arrived in this world it was already late."];
+	  67 [label="You: \"I'm actually a worker, like you guys!\" (Show him the stolen card.)\n\"Despite of what I just said, I'm actually a worker like you guys!\" (Show him the stolen ID card.)"];
+	  68 [label="Rhetoric: It might come in handy to present ideas as a part of reality -- the only reality that exists -- instead of some abstract *true form*. On the other hand, he's not lying when performing this sleight of hand. He's a self-interested moderate."];
+	  69 [label="You: \"Right.\""];
+	  70 [label="Call Me Mañana: \"He's probably in his container at the harbour, so head right on in there.\" He re-adjusts the beret on his head."];
+	  71 [label="Suggestion: What is this, news of the world? Talk about *personal stuff*. Get to know him."];
+	  72 [label="Call Me Mañana: Variable[\"gates.manana_hardie_authority\"]"];
+	  73 [label="Variable[\"gates.manana_hardie_authority\"]", shape=diamond];
+	  74 [label="!(Variable[\"gates.manana_hardie_authority\"])", shape=diamond];
+	  75 [label="Call Me Mañana: Variable[\"gates.manana_altgreet_mhead_fight_success_done\"]"];
+	  76 [label="Variable[\"gates.manana_altgreet_mhead_fight_success_done\"]", shape=diamond];
+	  77 [label="!(Variable[\"gates.manana_altgreet_mhead_fight_success_done\"])", shape=diamond];
+	  78 [label="You: \"It was nothing.\""];
+	  79 [label="Jump to: [ACTUALMAINHUB]"];
+	  80 [label="Call Me Mañana: Variable[\"gates.scableader_greeting_done\"]"];
+	  81 [label="Variable[\"gates.scableader_greeting_done\"]", shape=diamond];
+	  82 [label="!(Variable[\"gates.scableader_greeting_done\"])", shape=diamond];
+	  83 [label="You: \"Okay. Anything else?\""];
+	  84 [label="You: \"All I'm saying is he had lots of mugs.\""];
+	  85 [label="Call Me Mañana: \"All right, I may have *some* advice for you on how to deal with Jean-Luc there -- out of solidarity to the RCM. It's low on technology, however.\""];
+	  86 [label="Physical Instrument: Ask him about the Hardie boys."];
+	  87 [label="You: \"What I'm trying to say is: I'm looking for communists. You know any?\""];
+	  88 [label="Call Me Mañana: \"Now that *is* an important subject, but also a sensitive one. Still, good of you to just come straight out with it. No beating about the bush...\" He smooths the twin bars of his moustache."];
+	  89 [label="Call Me Mañana: \"... and then he was gone.\""];
+	  90 [label="Kim Kitsuragi: \"Not to interfere in your personal errand, but it might have something to do with that *passphrase* Cindy mentioned earlier.\""];
+	  91 [label="Call Me Mañana: \"Didn't say anything about his name. Wasn't the sort of encounter where names matter.\""];
+	  92 [label="Encyclopedia: It all comes together now, the way he speaks about scabs, his general attitude. He's a follower of a 500-year-old Franconigerian boiadeiro code -- itself an appropriation of Vespertine cool..."];
+	  93 [label="Call Me Mañana: \"No,\" he pauses to think for a moment. \"I don't think I'm a communist. Seeing something of value and saying *I want it all to myself* is a much older and simpler notion. No science to it at all...\""];
+	  94 [label="Call Me Mañana: \"But my own code serves me well. If my code starts failing -- a code can fail a man as well as a man can fail a code -- then I will have to submit to a new one. Which may well be communism.\""];
+	  95 [label="Call Me Mañana: \"See, I am primarily a lazy person.\" He looks very amused, as if thinking about some private joke or mystery."];
+	  96 [label="You: \"What does bossing the Union entail anyway?\""];
+	  97 [label="You: \"So, not a given name, I take it?\""];
+	  98 [label="Call Me Mañana: He takes a swig from his flask, then offers you some."];
+	  99 [label="You: \"Does this mean you can let me through the gate?\""];
+	  100 [label="You: \"Nice talk. Gotta get moving.\" [Leave.]\n\"Good talking to you. Gotta run.\" [Leave.]"];
+	  101 [label="Jump to: [strikehub]"];
+	  102 [label="Call Me Mañana: \"Good thing too. I've known Johannes for a few years now, be *sinister* if he turned into a completely different person overnight.\""];
+	  103 [label="You: \"Sure, I have no real need for it.\""];
+	  104 [label="Call Me Mañana: \"Yes, and you also *told* me you're a cop. But now that this is settled...\" He leans in to inspect the card. \"How did you get his shift card?\""];
+	  105 [label="You: \"Got it. Another thing...\""];
+	  106 [label="Call Me Mañana: \"Oh, sorry, friend. Didn't mean to throw it like that... it's a thing we harbour folk do. Comes naturally.\""];
+	  107 [label="Call Me Mañana: \"... then press the button to unlock the door...\""];
+	  108 [label="Call Me Mañana: \"... then go past him again...\""];
+	  109 [label="You: \"It's still kinda confusing to me, but whatever.\""];
+	  110 [label="You: Maybe I am a boiadeiro?"];
+	  111 [label="Call Me Mañana: Variable[\"gates.manana_blackcheck_ency_boiadeiro\"]"];
+	  112 [label="Variable[\"gates.manana_blackcheck_ency_boiadeiro\"]", shape=diamond];
+	  113 [label="!(Variable[\"gates.manana_blackcheck_ency_boiadeiro\"])", shape=diamond];
+	  114 [label="Logic: If it's so simple -- why did the scab leader warn you of the guards blocking the way?"];
+	  115 [label="You: Walk away. [Leave.]"];
+	  116 [label="Rhetoric: You're hazy on the notion of a *scab*. Smells like politics, though. Maybe it's got something to do with the flask he reaches for, from time to time?"];
+	  117 [label="Jump to: [ACTUALMAINHUB]"];
+	  118 [label="Jump to: [ACTUALMAINHUB]"];
+	  119 [label="Call Me Mañana: IsKimHere()"];
+	  120 [label="IsKimHere()", shape=diamond];
+	  121 [label="!(IsKimHere())", shape=diamond];
+	  122 [label="Call Me Mañana: \"A Mesquese epic then, all across Martinaise.\" He glances south, where the canal runs: \"I hope it will be a real *bonanza* for you.\""];
+	  123 [label="Call Me Mañana: \"I knew this man was a commie.\" He smiles, tilting his head. \"And it's a good thing you're doing too. Thanks.\""];
+	  124 [label="Call Me Mañana: \"The janitor gave it to me. Nice fella. We talked about life and things that really, *truly* matter.\" His gaze wanders off into the distance."];
+	  125 [label="Jump to: [You: \"\"Right on, brother.\"\"]"];
+	  126 [label="Jump to: [ACTUALMAINHUB]"];
+	  127 [label="Jump to: [ACTUALMAINHUB]"];
+	  128 [label="You: \"See how we're all busy concentrating on the racist mugs? That's what the ruling class wants.\""];
+	  129 [label="Drama: He's not lying -- about not doing it himself."];
+	  130 [label="Call Me Mañana: Variable[\"gates.manana_rhetoric_subtle_counter\"] >1"];
+	  131 [label="Variable[\"gates.manana_rhetoric_subtle_counter\"] >1", shape=diamond];
+	  132 [label="!(Variable[\"gates.manana_rhetoric_subtle_counter\"] >1)", shape=diamond];
+	  133 [label="Call Me Mañana: \"Hrmmm. Have you tried a butcher shop?\" He looks at you with perfect equanimity."];
+	  134 [label="Call Me Mañana: \"Some are, some aren't.\" He shrugs. \"It's a big institution, room for all kinds: communistas, Semenese supremacists, even an anti-institutional boiadeiro...\""];
+	  135 [label="Savoir Faire: Blazing his own trail, being his own man... not exactly your typical communist spiel."];
+	  136 [label="You: \"What's an *ideólogo*?\""];
+	  137 [label="Kim Kitsuragi: The lieutenant nods."];
+	  138 [label="Call Me Mañana: \"The same thing I always tell people who try to press some claim on me: I said, 'Every boiadeiro rides alone'.\""];
+	  139 [label="Call Me Mañana: \"Scab?\" asks a man with jolly eyes, tilting his head."];
+	  140 [label="You: \"Wait, so not wages or pensions or...\""];
+	  141 [label="Encyclopedia: *The board* is where the stockholders send their representatives. Often those representatives don't even represent the stockholders' interests. It's not actually like some council-based democracy."];
+	  142 [label="You: \"You seem to have the wrong idea here. The board of a major company is not *council democracy*.\""];
+	  143 [label="Call Me Mañana: You receive a good, strong handshake in return."];
+	  144 [label="You: \"Mañana? You don't look like a Mesque...\""];
+	  145 [label="You: No. I don't *want* to be Tequila Sunset."];
+	  146 [label="You: \"Why not? I need to get through the gate to the harbour. You need to let me in!\""];
+	  147 [label="Jump to: [ACTUALMAINHUB]"];
+	  148 [label="Electrochemistry: The idea of alcoholic swill sloshing around in your bloodstream feels fairly unappealing."];
+	  149 [label="You: \"Any idea who killed the hanged man?\"\n\"Who do you think killed the hanged man?\""];
+	  150 [label="Call Me Mañana: \"Your dead guy -- was an enemy combatant.\""];
+	  151 [label="You: \"I found it on the ground. At the Whirling-in-Rags.\""];
+	  152 [label="Call Me Mañana: Variable[\"gates.manana_rhet_commuchat\"]"];
+	  153 [label="Variable[\"gates.manana_rhet_commuchat\"]", shape=diamond];
+	  154 [label="!(Variable[\"gates.manana_rhet_commuchat\"])", shape=diamond];
+	  155 [label="Jump to: [ACTUALMAINHUB]"];
+	  156 [label="Call Me Mañana: \"I'm always glad to help out when possible -- not like these slithering scabs.\" He looks at them in disbelief."];
+	  157 [label="You: \"Right.\""];
+	  158 [label="You: \"Pushed how?\""];
+	  159 [label="You: \"Hold up. Four pieces? Helmet, cuirass, gauntlets, boots... what about the leggings?\""];
+	  160 [label="Call Me Mañana: The jolly man shrugs. \"I guess you won't be collecting them all then. That's less work for you, at least!\""];
+	  161 [label="You: \"He said it belonged to a weasel.\""];
+	  162 [label="You: \"I don't know, some whistleblower's I think?\""];
+	  163 [label="Call Me Mañana: \"Los Ardies?\" He smiles. \"They're an independent militant group. A bit too high-strung, but it comes with the responsibility.\""];
+	  164 [label="Jump to: [ACTUALMAINHUB]"];
+	  165 [label="Call Me Mañana: \"You a scab *now*?\" The man with jolly eyes winks at you."];
+	  166 [label="Jump to: [ACTUALMAINHUB]"];
+	  167 [label="Jump to: [quickmheadhub]"];
+	  168 [label="You: \"Yeah, I sure did that thing.\""];
+	  169 [label="You: \"Complete shit.\""];
+	  170 [label="You: \"Evrart said you have a key to a door?\""];
+	  171 [label="Call Me Mañana: (Variable[\"gates.mhead_fight_failure\"]  or  Variable[\"gates.mhead_fight_failed_mid_success\"])  and  Variable[\"gates.manana_greeting_done\"]"];
+	  172 [label="(Variable[\"gates.mhead_fight_failure\"]  or  Variable[\"gates.mhead_fight_failed_mid_success\"])  and  Variable[\"gates.manana_greeting_done\"]", shape=diamond];
+	  173 [label="!((Variable[\"gates.mhead_fight_failure\"]  or  Variable[\"gates.mhead_fight_failed_mid_success\"])  and  Variable[\"gates.manana_greeting_done\"])", shape=diamond];
+	  174 [label="Call Me Mañana: \"Time will tell...\" He shrugs. \"I'll tell the bossman you dropped by. I'm sure he'll be glad.\"\n\"Time will tell...\" He shrugs. \"I'll tell Evrart you dropped by. I'm sure he'll be glad.\" He gives you a small wink. \n\"Time will tell...\" He shrugs. \"I'll tell Evrart you dropped by. I'm sure he'll be glad.\" "];
+	  175 [label="You: \"My name is Harrier Du Bois. I think.\" (Conclude.)"];
+	  176 [label="Call Me Mañana: \"So I went to this boy. He said he'll make me his *prison bitch*. He's got *eyes everywhere*, the cops in his pocket and he's the king of Jamrock.\""];
+	  177 [label="You: \"Thank you for the cooperation, sir.\""];
+	  178 [label="Empathy: He is sincerely grateful he is not tracking down pieces of armour right now."];
+	  179 [label="You: \"I heard something about a weasel and it didn't sound like a local *polar* weasel, if you know what I mean.\" (Wink.)"];
+	  180 [label="Call Me Mañana: \"No problem. I wish the best to you in your search. Sure am glad it's not *my* search...\" He takes a sip from his flask."];
+	  181 [label="Call Me Mañana: IsTHCPresent(\"communist\")"];
+	  182 [label="IsTHCPresent(\"communist\")", shape=diamond];
+	  183 [label="!(IsTHCPresent(\"communist\"))", shape=diamond];
+	  184 [label="Call Me Mañana: \"... the old man is corrupt for our *benefit* and we know it. Appreciate it, even. He is, personally, not too lavish.\""];
+	  185 [label="Rhetoric: This was great. You feel mentally reinvigorated."];
+	  186 [label="Endurance: He doesn't have the stamina to deliver mail on these tough streets. But *you* do. Maybe if this cop thing doesn't work out..."];
+	  187 [label="Call Me Mañana: IsKimHere()"];
+	  188 [label="IsKimHere()", shape=diamond];
+	  189 [label="!(IsKimHere())", shape=diamond];
+	  190 [label="Call Me Mañana: \"Body still hangin' in the tree?\" He rubs his chin as if pondering his core beliefs. \"Aye, that's a rough pickle... can't help you with that, sorry.\""];
+	  191 [label="Rhetoric: No doubt he's communist enough to call himself such. But he won't."];
+	  192 [label="You: \"You don't seem to like them much.\""];
+	  193 [label="Call Me Mañana: Variable[\"gates.manana_time\"]"];
+	  194 [label="Variable[\"gates.manana_time\"]", shape=diamond];
+	  195 [label="!(Variable[\"gates.manana_time\"])", shape=diamond];
+	  196 [label="Call Me Mañana: Variable[\"gates.manana_initiate_tequila_sunset\"]"];
+	  197 [label="Variable[\"gates.manana_initiate_tequila_sunset\"]", shape=diamond];
+	  198 [label="!(Variable[\"gates.manana_initiate_tequila_sunset\"])", shape=diamond];
+	  199 [label="You: \"I can't disclose any details of an on-going case.\""];
+	  200 [label="Inland Empire: What's there not to want? It's got range, meaning, layers, colours, associations, the whole works!"];
+	  201 [label="You: \"You can't tell a Raphaël what to do.\""];
+	  202 [label="corpsehub"];
+	  203 [label="Call Me Mañana: \"Thank you plenty. I'll make sure John gets his card back.\""];
+	  204 [label="Jump to: [Call Me Mañana: \"The man whispers a jaunty tune. A c...\"]"];
+	  205 [label="Jump to: [ACTUALMAINHUB]"];
+	  206 [label="Half Light: What did he just call you?! A f*g? Oh no, not this again, you just got away from that fucking kid..."];
+	  207 [label="You: Let it fall on the ground."];
+	  208 [label="Call Me Mañana: CheckItem(\"dockworker_id_card\")"];
+	  209 [label="CheckItem(\"dockworker_id_card\")", shape=diamond];
+	  210 [label="!(CheckItem(\"dockworker_id_card\"))", shape=diamond];
+	  211 [label="You: \"Uh. Gotcha. I think I have some questions for you first.\""];
+	  212 [label="Call Me Mañana: \"That's one way to call it, friend.\" He chuckles. \"An unnecessarily complicated way.\""];
+	  213 [label="You: It doesn't sound that cool. Sounds antiquated, obsolete, *passé*. It's not *disco*."];
+	  214 [label="Call Me Mañana: \"Oh, say no more. I got you.\" He taps the side of his nose with a little wink."];
+	  215 [label="You: (Turn to Kim.) \"Wait, we have *air support*?! Why didn't you tell me?\""];
+	  216 [label="Jump to: [FINAL DESTINATION]"];
+	  217 [label="Call Me Mañana: \"To get me into trouble. To *sic the pigs* on me -- pardon the choice of words. Not mine.\""];
+	  218 [label="You: \"What happened?\""];
+	  219 [label="Call Me Mañana: IsKimHere()"];
+	  220 [label="IsKimHere()", shape=diamond];
+	  221 [label="!(IsKimHere())", shape=diamond];
+	  222 [label="Kim Kitsuragi: \"All of it?\" The lieutenant raises his brow. \"There are junior officers out there, eager to prove themselves. I would leave *some* for them, but okay. Let's find *all of it*.\""];
+	  223 [label="Kim Kitsuragi: \"Okay, but where did you get the key from?\""];
+	  224 [label="Call Me Mañana: He shakes his head. \"I'm more of a philosophical dockworker. I like to talk about the big picture stuff. Who I am. Who you are. What we are fighting for...\" The man takes a big sip from his flask."];
+	  225 [label="Drama: He didn't do it. It's the truth."];
+	  226 [label="Call Me Mañana: \"Probably not.\" He nods. \"I wouldn't even know where to start with that. Much better here at the harbour -- for an honest Union man like me.\""];
+	  227 [label="You: \"However much you feed the wolf...\""];
+	  228 [label="Jump to: [strikehub]"];
+	  229 [label="Call Me Mañana: Variable[\"gates.manana_drama_id_card\"]"];
+	  230 [label="Variable[\"gates.manana_drama_id_card\"]", shape=diamond];
+	  231 [label="!(Variable[\"gates.manana_drama_id_card\"])", shape=diamond];
+	  232 [label="Call Me Mañana: \"Yes.\" He nods. \"You said as much.\""];
+	  233 [label="Suggestion: Something changes in his disposition. A merciful smile in the corner of his eye."];
+	  234 [label="You: \"I know you said you're not really a communist, but aren't you actually a communist?\""];
+	  235 [label="Call Me Mañana: \"*Remember Dobreva and Abadanaiz*...\""];
+	  236 [label="You: \"Oh, right. Good thinking, Kim.\""];
+	  237 [label="You: (Nod.) \"An extremely cool way to establish contact. Wish I'd thought of that.\""];
+	  238 [label="You: \"I am not sure I understand.\""];
+	  239 [label="You: \"The bossman, Evrart, what can you tell me about him?\""];
+	  240 [label="Call Me Mañana: \"I think it's best you make up your own mind, now that you've met him.\" He shrugs. \"In my eyes, he is a capable organizer and a decent businessman.\""];
+	  241 [label="You: \"Hold on, where did they all come from?\""];
+	  242 [label="Jump to: [ACTUALMAINHUB]"];
+	  243 [label="Inland Empire: The encroaching doom is golden red. It is inside you, but also outside, on the horizon, by the water's edge. Innermost but yet to happen -- things make sense from that angle..."];
+	  244 [label="Physical Instrument: What's the matter with this wimp? Is he obstructing *justice*?!"];
+	  245 [label="You: \"Does not seem plausible, now that I think of it.\""];
+	  246 [label="Call Me Mañana: \"Highly unlikely. I've known John for several years now. Also, you *told* me you're a cop, remember? How did you get his shift card?\""];
+	  247 [label="You: Because?"];
+	  248 [label="You: \"Hmm, for some reason it doesn't seem like it's going to be that easy...\"\n\"So you're saying it's actually *quite difficult*.\""];
+	  249 [label="You: \"Appreciated.\""];
+	  250 [label="You: \"I don't think I understand.\""];
+	  251 [label="You: What if..."];
+	  252 [label="nohub"];
+	  253 [label="You: Let it go."];
+	  254 [label="You: \"We sure do, and don't you forget it.\""];
+	  255 [label="Call Me Mañana: \"Knocked him out good...\" he greets you. \"Like the flying desperado!\""];
+	  256 [label="quickmheadhub"];
+	  257 [label="Call Me Mañana: \"I get it, hush-hush about the secret technology.\" He pats the side of his nose with his index finger."];
+	  258 [label="Call Me Mañana: Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  259 [label="Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  260 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  261 [label="Electrochemistry: He thinks -- not yet. Better to get this business out of the way. Sweeter then."];
+	  262 [label="You: \"What sort of technical stuff?\""];
+	  263 [label="You: \"How then?\""];
+	  264 [label="Kim Kitsuragi: \"How *does* it come off?\""];
+	  265 [label="You: \"I'm ambitious. I'm going to find *all of it*. All the pieces.\""];
+	  266 [label="Call Me Mañana: IsKimHere()"];
+	  267 [label="IsKimHere()", shape=diamond];
+	  268 [label="!(IsKimHere())", shape=diamond];
+	  269 [label="quick_slopp"];
+	  270 [label="You: \"You can't help me get inside?\""];
+	  271 [label="Call Me Mañana: \"You know... serious business.\" He smiles. \"I'm sure the big boss would be glad to tell you. You'll have to ask him first.\""];
+	  272 [label="Call Me Mañana: IsKimHere()"];
+	  273 [label="IsKimHere()", shape=diamond];
+	  274 [label="!(IsKimHere())", shape=diamond];
+	  275 [label="Rhetoric: He says it matter-of-factly. Like it's no big deal."];
+	  276 [label="Inland Empire: Who *he* is and what they're fighting for? This is interesting."];
+	  277 [label="Composure: Hold on: This isn't a man who goes in for subterfuge. He prefers someone who'll look him in the eye and say exactly what's on his mind."];
+	  278 [label="Call Me Mañana: \"Hrmm... you might have to look elsewhere for help with that.\" He scratches his chin."];
+	  279 [label="Call Me Mañana: \"Ah, now I see. Can't say I'm surprised. You seem to take your communism seriously. Not a bad thing, mind you. It's good for a man to take time to think about the whole socio-political world picture.\""];
+	  280 [label="Call Me Mañana: Variable[\"gates.manana_talked_about_communism\"]"];
+	  281 [label="Variable[\"gates.manana_talked_about_communism\"]", shape=diamond];
+	  282 [label="!(Variable[\"gates.manana_talked_about_communism\"])", shape=diamond];
+	  283 [label="You: \"I'm not 'hunting' communists, I'm trying to get organised by them.\""];
+	  284 [label="You: \"I thought you Union guys were all communists?\""];
+	  285 [label="You: \"Wait, what was that about again?\""];
+	  286 [label="Call Me Mañana: \"It was late one night as I was leaving the harbour. He was waiting on the corner in a bright white jacket, classic Saramirizian style...\""];
+	  287 [label="You: \"What exactly *is* a scab?\""];
+	  288 [label="Call Me Mañana: \"It means *call me tomorrow*.\""];
+	  289 [label="Call Me Mañana: \"A nom de guerre would be more like *Guerra Mañana*.\" He chuckles. Then realizes something."];
+	  290 [label="Call Me Mañana: \"Yeah,\" he nods. \"A name's the kind of shit that can kill a man. Mañana's a good name in that regard.\""];
+	  291 [label="Call Me Mañana: Variable[\"TASK.get_a_drink\"]"];
+	  292 [label="Variable[\"TASK.get_a_drink\"]", shape=diamond];
+	  293 [label="!(Variable[\"TASK.get_a_drink\"])", shape=diamond];
+	  294 [label="You: \"And you're the ones to reform, thus reaping your own benefits?\""];
+	  295 [label="You: \"Yeah... okay, I'm totally Tequila Sunset.\""];
+	  296 [label="Call Me Mañana: \"Aye -- walk right past Measurehead and go in.\""];
+	  297 [label="Call Me Mañana: \"A man walking on the edge of a razor, eh? Leaves more for me!\" He laughs and takes another sip from the flask."];
+	  298 [label="Call Me Mañana: \"From back when you were not a cop, but a heavy-set dark-skinned dockworker named *Santiago John*?\""];
+	  299 [label="Hand/Eye Coordination: The coin narrowly slips by your out-stretched fingers and falls to the ground."];
+	  300 [label="Call Me Mañana: \"Sometimes you gotta do what you gotta do.\" He nods knowingly. \"But these scabs ain't begging -- they ain't holding on to their integrity.\""];
+	  301 [label="Drama: Psst. Show him your stolen card. Now hast arrived the perfect moment!"];
+	  302 [label="Call Me Mañana: \"My friend, I respect the right to roam. The open range awaits...\" He gazes over the roundabout with a glint of longing."];
+	  303 [label="Call Me Mañana: \"Aye, you lost me there, honcho. But it's okay as long as you're not a sorry-ass scab.\" He looks at them in disbelief."];
+	  304 [label="You: \"I guess that makes sense.\""];
+	  305 [label="You: That's a strange way to go about it."];
+	  306 [label="Jump to: [strikehub]"];
+	  307 [label="Jump to: [ACTUALMAINHUB]"];
+	  308 [label="Call Me Mañana: \"Harry...\" he repeats. with a quizzical expression. \"It's cool. But I'm sure you could come up with something even cooler.\""];
+	  309 [label="You: \"I saw an opportunity and I took it. I'm a hustlegrinder.\""];
+	  310 [label="Call Me Mañana: \"Hehe, I'm not so sure about the hustle-grind, but...\" He waves at you. \"You know, it doesn't matter. It's a good thing you're doing. Thanks.\""];
+	  311 [label="Call Me Mañana: \"Yet it calls back to an older era, where this was commonplace. You have a true boiadeiro heart.\""];
+	  312 [label="You: \"What's the strike about anyway?\""];
+	  313 [label="You: \"You're right. It's almost impossible. I'm 91% sure I'll never get it solved.\""];
+	  314 [label="You: \"Maybe you want to help me solve it by telling me who did it?\""];
+	  315 [label="Call Me Mañana: Variable[\"gates.mhead_introhub_reached\"]"];
+	  316 [label="Variable[\"gates.mhead_introhub_reached\"]", shape=diamond];
+	  317 [label="!(Variable[\"gates.mhead_introhub_reached\"])", shape=diamond];
+	  318 [label="Call Me Mañana: \"Yeah, it would be really bad if we got into an argument about it. Waste of a good noon. Or afternoon? Or night?\" He looks around, oblivious suddenly. \"Anyway, thanks for helping out, friend.\""];
+	  319 [label="Call Me Mañana: \"A really cool guy.\""];
+	  320 [label="Call Me Mañana: Variable[\"TASK.report_to_the_tribunal_done\"] == false  and  Variable[\"TASK.get_the_weasel_key_from_manana_done\"] == true  and  (Variable[\"cargo.evrart_talked_to_him_about_hardies\"] == true  or  Variable[\"whirling.hardie_hub_reached\"] == true)"];
+	  321 [label="Variable[\"TASK.report_to_the_tribunal_done\"] == false  and  Variable[\"TASK.get_the_weasel_key_from_manana_done\"] == true  and  (Variable[\"cargo.evrart_talked_to_him_about_hardies\"] == true  or  Variable[\"whirling.hardie_hub_reached\"] == true)", shape=diamond];
+	  322 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"] == false  and  Variable[\"TASK.get_the_weasel_key_from_manana_done\"] == true  and  (Variable[\"cargo.evrart_talked_to_him_about_hardies\"] == true  or  Variable[\"whirling.hardie_hub_reached\"] == true))", shape=diamond];
+	  323 [label="You: Unless..."];
+	  324 [label="Call Me Mañana: \"Sure.\" The man whistles a jaunty tune, the wind rustling his whiskers."];
+	  325 [label="Composure: It was a foolish approach to begin with."];
+	  326 [label="You: \"I'm on a sort of quest to develop my political potential and I need their help.\""];
+	  327 [label="Call Me Mañana: \"I wish I could help. Unfortunately, I don't know many communistas.\""];
+	  328 [label="ideologohub"];
+	  329 [label="Kim Kitsuragi: \"You're right. How foolish of me. Won't happen again, detective.\""];
+	  330 [label="Conceptualization: No, you weren't. Otherwise you *would have* said it. In truth, it was quite beyond your associative powers."];
+	  331 [label="Call Me Mañana: \"He asked me for a light. We shared cigarettes. Then he asked if I ever thought about 'getting into some of the extra-physical branches of communism'.\""];
+	  332 [label="hubbb"];
+	  333 [label="You: \"Your... share?\""];
+	  334 [label="You: \"Shouldn't you be grateful then? It's a lot more than most people here have.\""];
+	  335 [label="Empathy: The man is deeply moved. You see his eyes turn teary with appreciation. He is extremely happy for you."];
+	  336 [label="Call Me Mañana: \"Sorry. Busy surveying the situation.\" He takes a swig from his flask. \"I'm sure you'll figure something out. You guys have all sorts of gadgets these days.\""];
+	  337 [label="You: \"It sounds scary, I don't want to.\""];
+	  338 [label="Electrochemistry: Yeah! Let's get this party started, it's your chance to shine, boy!"];
+	  339 [label="Jump to: [ACTUALMAINHUB]"];
+	  340 [label="Call Me Mañana: \"What a thought!\" He scoffs, looking shocked. \"Why would noble workers resort to such a thing. Unless they were *pushed*, of course.\""];
+	  341 [label="Call Me Mañana: \"Oh, is my friend in some sort of trouble? Who knew...\""];
+	  342 [label="You: \"I'm looking for assistance with a *dead body* situation.\""];
+	  343 [label="Logic: If it's all so simple -- why don't the strikebreakers just go up the stairs?"];
+	  344 [label="You: \"Aha.\""];
+	  345 [label="You: \"The Union has problems getting by?\""];
+	  346 [label="Call Me Mañana: \"Aye, now here's the thing... at any time, some other capitalist could take the place over with the blink of an eye, without even owning any of the buildings.\""];
+	  347 [label="Kim Kitsuragi: \"Laziness, self-interest, and negligence certainly fit the doctrine espoused here.\""];
+	  348 [label="You: \"Fair enough. Seems interesting.\""];
+	  349 [label="Call Me Mañana: \"Especially getting those boots off him. You'd have an easier time wrestling the spurs off a boiadeiro than that.\""];
+	  350 [label="Call Me Mañana: Variable[\"TASK.claim_high_tech_boots\"] == true  and  Variable[\"TASK.send_corpse_to_processing_done\"] == false"];
+	  351 [label="Variable[\"TASK.claim_high_tech_boots\"] == true  and  Variable[\"TASK.send_corpse_to_processing_done\"] == false", shape=diamond];
+	  352 [label="!(Variable[\"TASK.claim_high_tech_boots\"] == true  and  Variable[\"TASK.send_corpse_to_processing_done\"] == false)", shape=diamond];
+	  353 [label="Call Me Mañana: CheckEquipped(\"jacket_interisolar_white\")"];
+	  354 [label="CheckEquipped(\"jacket_interisolar_white\")", shape=diamond];
+	  355 [label="!(CheckEquipped(\"jacket_interisolar_white\"))", shape=diamond];
+	  357 [label="Call Me Mañana: Variable[\"TASK.interview_union_boss_done\"]  and  Variable[\"gates.manana_greeting_done\"]"];
+	  358 [label="Variable[\"TASK.interview_union_boss_done\"]  and  Variable[\"gates.manana_greeting_done\"]", shape=diamond];
+	  359 [label="!(Variable[\"TASK.interview_union_boss_done\"]  and  Variable[\"gates.manana_greeting_done\"])", shape=diamond];
+	  360 [label="You: \"Yeah, I got shot. No big deal.\""];
+	  361 [label="Call Me Mañana: \"No problem.\" He finally takes a swig from the flask. \"If you see that kid, thank him from Call Me Mañana. Thank him for showing me the *way*.\""];
+	  362 [label="Suggestion: He's a chatty guy. *Wants* to talk about the strike. Return once you've met the Union boss, and are on a better footing with the organization."];
+	  363 [label="You: \"Yes?\""];
+	  364 [label="You: \"You mean corruption?\""];
+	  365 [label="You: \"I've tried that. They don't like what I came up with.\""];
+	  366 [label="Call Me Mañana: \"Too bad. Can't live in this world without a good name, friend. Important things, they are. Vessels of the soul.\""];
+	  367 [label="Jump to: [ACTUALMAINHUB]"];
+	  368 [label="You: \"Okay, how do I find this guy?\" (Proceed.)"];
+	  369 [label="You: \"Who are Dobreva and Abadanaiz?\""];
+	  370 [label="You: \"What do you think it means?\" (Conclude.)"];
+	  371 [label="Call Me Mañana: \"Is that so?\" He raises an eyebrow. \"Well, in that case, I salute you, boia, and wish you good fortune on this grand ideological quest.\""];
+	  372 [label="Call Me Mañana: \"You know, a guy with a theory. Someone who likes to pit his theory against other theories in deadly theory-combat.\""];
+	  373 [label="Call Me Mañana: \"Ah, I was just messing with you.\" His smile deepens his wrinkles even more. \"No one's ever seen a cop scab.\""];
+	  374 [label="You: \"Why are you striking?\""];
+	  375 [label="Call Me Mañana: \"This stuff -- they already covered.\""];
+	  376 [label="You: \"Hold on, have you had any other names?\""];
+	  377 [label="You: Leave him hanging."];
+	  378 [label="You: \"Uhhhh.... I actually don't have a name.\""];
+	  379 [label="You: \"I can't do it. I'm sorry.\""];
+	  380 [label="Jump to: [ACTUALMAINHUB]"];
+	  381 [label="drinkithub"];
+	  382 [label="Call Me Mañana: \"There's no rush to find yourself.\""];
+	  383 [label="You: \"I have no interest in drinking while on duty.\""];
+	  384 [label="straightedgehub"];
+	  385 [label="Jump to: [Call Me Mañana: \"The man whispers a jaunty tune. A c...\"]"];
+	  386 [label="You: \"I literally stole it off him while he slept.\""];
+	  387 [label="You: \"No... I don't want to deal with this again. Did you just call me a f*g?\""];
+	  388 [label="Hand/Eye Coordination: The coin lands into your hand as if it has always belonged there. The swallow returns."];
+	  389 [label="You: Say nothing, pocket the coin."];
+	  390 [label="You: \"You seem to have spent a lot of time thinking about the political situation.\""];
+	  391 [label="Call Me Mañana: \"Right, always glad to help out the RCM! We're on the same branch, you and I. Humans, I mean, not slithering scabs.\""];
+	  392 [label="commuhub"];
+	  393 [label="Call Me Mañana: Variable[\"gates.manana_boiadeiro\"]"];
+	  394 [label="Variable[\"gates.manana_boiadeiro\"]", shape=diamond];
+	  395 [label="!(Variable[\"gates.manana_boiadeiro\"])", shape=diamond];
+	  396 [label="You: \"Four pieces of armour up for grabs, then. But I already sent the boots away...\""];
+	  397 [label="Call Me Mañana: Variable[\"TASK.claim_high_tech_boots\"] == true  and  Variable[\"TASK.send_corpse_to_processing_done\"] == false"];
+	  398 [label="Variable[\"TASK.claim_high_tech_boots\"] == true  and  Variable[\"TASK.send_corpse_to_processing_done\"] == false", shape=diamond];
+	  399 [label="!(Variable[\"TASK.claim_high_tech_boots\"] == true  and  Variable[\"TASK.send_corpse_to_processing_done\"] == false)", shape=diamond];
+	  400 [label="Jump to: [ACTUALMAINHUB]"];
+	  401 [label="Call Me Mañana: Variable[\"gates.mhead_fight_success\"]  and  Variable[\"gates.manana_greeting_done\"]"];
+	  402 [label="Variable[\"gates.mhead_fight_success\"]  and  Variable[\"gates.manana_greeting_done\"]", shape=diamond];
+	  403 [label="!(Variable[\"gates.mhead_fight_success\"]  and  Variable[\"gates.manana_greeting_done\"])", shape=diamond];
+	  404 [label="Call Me Mañana: He shrugs. \"Any political movement goes through a period of strife. Shame you got mixed up in it, though.\""];
+	  405 [label="Jump to: [armour!]"];
+	  406 [label="Kim Kitsuragi: \"I agree, officer. Let's focus on the hanging and later some junior officers can take care of the rest.\""];
+	  407 [label="Call Me Mañana: \"It calls back to an older era, where this was commonplace, though. You have a true boiadeiro heart.\""];
+	  408 [label="Jump to: [FINAL DESTINATION]"];
+	  409 [label="Jump to: [scabintro]"];
+	  410 [label="You: (Whisper) \"I have no idea what I'm *doing*.\""];
+	  411 [label="Call Me Mañana: He whispers back: \"That's okay. I have no idea what I'm doing either. I don't even know what day it is...\" He thinks and then decides: \"Don't tell me. It's a *better* day that way.\""];
+	  412 [label="You: \"Yes, I'm already on it.\""];
+	  413 [label="Call Me Mañana: \"That's a good one. But I know you're not a dockworker. I even gave you that key to the weasel den, remember?\" He raises his flask. \"Now how can I help you?\""];
+	  414 [label="You: \"Evrart says Titus Hardie and his boys killed him.\""];
+	  415 [label="Untitled hub"];
+	  416 [label="Call Me Mañana: IsKimHere()"];
+	  417 [label="IsKimHere()", shape=diamond];
+	  418 [label="!(IsKimHere())", shape=diamond];
+	  419 [label="Call Me Mañana: IsKimHere()"];
+	  420 [label="IsKimHere()", shape=diamond];
+	  421 [label="!(IsKimHere())", shape=diamond];
+	  422 [label="Call Me Mañana: \"Maybe, maybe not.\" He shrugs. \"Either way, I'm not institutional. A man's got to blaze his own trail, in my book...\""];
+	  423 [label="Call Me Mañana: Variable[\"pier.cindy_talked_communism_quest\"]"];
+	  424 [label="Variable[\"pier.cindy_talked_communism_quest\"]", shape=diamond];
+	  425 [label="!(Variable[\"pier.cindy_talked_communism_quest\"])", shape=diamond];
+	  426 [label="Electrochemistry: See? All this political chit-chat is just an excuse to rip tar with strangers. Let's say we just skip right to the good part, then?"];
+	  427 [label="You: \"He might have information about a killing that took place behind the hostel.\""];
+	  428 [label="You: \"But don't you think the owners have a right to the harbour? Didn't they organize it into existence?\""];
+	  429 [label="Call Me Mañana: \"Quite a shitty board, I must say. Means someone's gotta reform it. I, for one, want to face the *fat ones'*, when decisions are made.\""];
+	  430 [label="You: \"Got the picture. Let me ask you something else.\""];
+	  431 [label="You: \"What's a... *boiadeiro*?\"\n\"You said boiadeiro? Tell me about them.\""];
+	  432 [label="Inland Empire: It feels like there's an entire history behind the word... but it doesn't really matter. You got it. You know what it *means*."];
+	  433 [label="Call Me Mañana: \"Beats me. Somewhere in the ground, I think.\""];
+	  434 [label="Inland Empire: You're *Tequila Sunset*. You have been Tequila Sunset for a long time now."];
+	  435 [label="Jump to: [Call Me Mañana: \"He reaches his hand out to you and...\"]"];
+	  436 [label="Call Me Mañana: The man sits on the railing, his hands reaching far and wide, yet it feels as if he could effortlessly go even wider, if need be. An endless torrent of time."];
+	  437 [label="You: \"At least you got the benefits, that's something.\""];
+	  438 [label="You: Try to catch it."];
+	  439 [label="You: Variable[\"gates.manana_redcheck_handeye_coin\"]"];
+	  440 [label="Variable[\"gates.manana_redcheck_handeye_coin\"]", shape=diamond];
+	  441 [label="!(Variable[\"gates.manana_redcheck_handeye_coin\"])", shape=diamond];
+	  442 [label="You: \"Don't worry. Much appreciated.\" (Pick up coin.)"];
+	  443 [label="Call Me Mañana: Variable[\"gates.manana_redcheck_handeye_coin\"]"];
+	  444 [label="Variable[\"gates.manana_redcheck_handeye_coin\"]", shape=diamond];
+	  445 [label="!(Variable[\"gates.manana_redcheck_handeye_coin\"])", shape=diamond];
+	  446 [label="Call Me Mañana: \"Then how can anything ever be 'mine'? But that's okay -- we don't have to agree. The prairie is wide enough for all of us.\""];
+	  447 [label="Call Me Mañana: \"I ain't the murderin' type. But that's just me. Large organizations like our Union have all sorts of men -- with all sorts of skills.\""];
+	  448 [label="You: I could..."];
+	  449 [label="Call Me Mañana: \"So...\" He stares at you with his hazy eyes. \"How'd you like our harbour?\""];
+	  450 [label="Call Me Mañana: Variable[\"gates.manana_back_from_harbour_altgreet\"]"];
+	  451 [label="Variable[\"gates.manana_back_from_harbour_altgreet\"]", shape=diamond];
+	  452 [label="!(Variable[\"gates.manana_back_from_harbour_altgreet\"])", shape=diamond];
+	  453 [label="You: \"Okay, I think might be Harry.\" (Conclude.)"];
+	  454 [label="Call Me Mañana: \"Heh.\" He smiles. \"The little *boia* did good on his promise.\""];
+	  455 [label="Call Me Mañana: \"In parts. Four in total. The helmet was the first to go, the kid says he tore it off and kicked it into the sea. I believe him. The boots were still on the guy last I saw. Too hard to remove.\"\n\"In parts. Four in total. The helmet was the first to go, the kid says he tore it off and kicked it into the sea. I believe him. The boots...\" He looks down at your feet. \"Well, it looks like you're wearing them.\""];
+	  456 [label="Rhetoric: It's implied he finds it unlikely that you will succeed in this."];
+	  457 [label="You: \"Where did you get the key from?\""];
+	  458 [label="You: \"That weasel I visited. Turns out he has one hell of a colonial mug collection.\""];
+	  459 [label="Call Me Mañana: \"I'll be okay here, doing lookout.\" He surveys the red flags, draped from the harbour gates. \"Quite the sight, aren't they? Getting to like that red, I am...\""];
+	  460 [label="Call Me Mañana: \"It wasn't. I'm doing much better here at the harbour. Being an honest Union man with *a lot* of free time on his hands.\""];
+	  461 [label="Rhetoric: Feels like he's hinting at something, but you're too hungover (or dumb) to understand right now."];
+	  462 [label="Rhetoric: He means he's not gonna tell you, 'cause he doesn't know. But he will shoot his mouth off with you now that you're working for Evrart."];
+	  463 [label="Jump to: [contacthub]"];
+	  464 [label="Call Me Mañana: \"Could be coming from one of the jammed lorries? Cargo's been sitting out for a while.\" He sniffs the air and looks toward the roundabout."];
+	  465 [label="Rhetoric: Okay, so maybe he's not exactly a communist, but there's definitely some communistic residue about him."];
+	  466 [label="Call Me Mañana: Variable[\"gates.manana_communist_revolutionary_lovers\"]"];
+	  467 [label="Variable[\"gates.manana_communist_revolutionary_lovers\"]", shape=diamond];
+	  468 [label="!(Variable[\"gates.manana_communist_revolutionary_lovers\"])", shape=diamond];
+	  469 [label="Kim Kitsuragi: \"*Ahem*...\" The lieutenant clears his throat."];
+	  470 [label="Call Me Mañana: \"I have to say, though: It sounds like you've found yourself a proper hunt.\"\n\"I have to say, though: It sounds like you've found yourselves a proper hunt.\""];
+	  471 [label="You: \"That's really dumb. You should feel embarrassed even suggesting that.\""];
+	  472 [label="Call Me Mañana: \"Sound like you two may have been riding together too long. The strain of the open range, and so on...\""];
+	  473 [label="Call Me Mañana: \"I have to say, though: It sounds like you've found yourself a proper hunt.\"\n\"I have to say, though: It sounds like you've found yourselves a proper hunt.\""];
+	  474 [label="Call Me Mañana: \"Aye.\" He seems pleased with himself."];
+	  475 [label="You: \"It sounds like you're a communist who thinks he isn't doing enough to call himself one.\""];
+	  476 [label="You: \"Wait... I don't even know your name. Who are you?\""];
+	  477 [label="Call Me Mañana: \"I'm not. I'm *Vacholiero*. Not all Mesques have the Mesque look, either, you know. Things in the real world are a bit more... fluid. Stuff ain't always what it appears to be.\""];
+	  478 [label="Call Me Mañana: Variable[\"TASK.report_to_the_tribunal_done\"] == false  and  CheckItem(\"dockworker_id_card\")  and  Variable[\"TASK.interview_union_boss_done\"] == false"];
+	  479 [label="Variable[\"TASK.report_to_the_tribunal_done\"] == false  and  CheckItem(\"dockworker_id_card\")  and  Variable[\"TASK.interview_union_boss_done\"] == false", shape=diamond];
+	  480 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"] == false  and  CheckItem(\"dockworker_id_card\")  and  Variable[\"TASK.interview_union_boss_done\"] == false)", shape=diamond];
+	  481 [label="Call Me Mañana: \"Can't live in this world without names, see. Important things, they are. Vessels of the soul.\""];
+	  482 [label="Call Me Mañana: The man whispers a jaunty tune. A coastal breeze ruffles his hair."];
+	  483 [label="Rhetoric: He likely believes that when someone has radical ideas, he should still rather present himself as a self-interested moderate, not as a missionary of a minority ideology."];
+	  484 [label="You: \"It was like a sign, the wind deposited it before my feet. I feel a closeness to this person.\""];
+	  485 [label="You: \"No, I need to continue my undercover infiltration of this compound. Otherwise it's as if I just stole the card for no reason.\""];
+	  486 [label="You: \"That simple? I just walk in?\""];
+	  487 [label="You: \"Has anyone here ever bested him in a physical confrontation?\""];
+	  488 [label="You: Say nothing, pocket the coin."];
+	  489 [label="Call Me Mañana: He rubs the back of his head. \"Was not meant as... provocation or ridicule.\""];
+	  490 [label="Call Me Mañana: \"Man of honour.\" He raises his eyebrow. \"I respect that. We were talking about scabs, yeah?\""];
+	  491 [label="You: \"Right on, brother.\""];
+	  492 [label="You: \"Basically, you're a self-interested moderate?\""];
+	  493 [label="Esprit de Corps: You have no business with those boots. But here we are."];
+	  494 [label="Authority: Is he actually comparing you -- an officer of the law -- to some neighbourhood vigilantes?!"];
+	  495 [label="Untitled hub (04)"];
+	  496 [label="Call Me Mañana: \"Wire tapping. Telescopic batons. Futuristic circuit-bending to infiltrate harbour machinery. Maybe you could even knock that Kvalsund crane over using some remote controls...\""];
+	  497 [label="Call Me Mañana: \"Evrart's got a lot of knowledge about a lot of things, aye. Doesn't often dole it out, though. But sure, why not...\""];
+	  498 [label="Call Me Mañana: \"I'm not really an admirer of dead bodies. Might be someone else from the Union can render assistance...\" He shrugs."];
+	  499 [label="visuallypleasing"];
+	  500 [label="Kim Kitsuragi: \"Because we don't. We don't have air support -- or any of those other things.\""];
+	  501 [label="Call Me Mañana: IsKimHere()"];
+	  502 [label="IsKimHere()", shape=diamond];
+	  503 [label="!(IsKimHere())", shape=diamond];
+	  504 [label="You: \"I'm going to find *one* piece of it. One is enough.\""];
+	  505 [label="Jump to: [strikehub]"];
+	  506 [label="Call Me Mañana: \"Yeah...\" He nods, rubbing his chin. \"The janitor who gave me the key to his apartment said the guy's a bit of an asshole.\""];
+	  507 [label="You: \"I'm sure you'll do good.\""];
+	  508 [label="Call Me Mañana: \"I'm sure I'll be luckier than you, friend.\" His grin is as wide as a desert."];
+	  509 [label="Call Me Mañana: Variable[\"jam.manana_leave_done\"]"];
+	  510 [label="Variable[\"jam.manana_leave_done\"]", shape=diamond];
+	  511 [label="!(Variable[\"jam.manana_leave_done\"])", shape=diamond];
+	  512 [label="Call Me Mañana: \"Murder, huh? That sounds like a lot of hard work. You'd never see me investigating a murder.\""];
+	  513 [label="Half Light: He means -- a more violent faction could easily take care of such a thing."];
+	  514 [label="Call Me Mañana: \"... the wolf always wants more. I like wolves.\""];
+	  515 [label="Call Me Mañana: \"A *none-of-the-above* kind of man? No harm in being that.\""];
+	  516 [label="Call Me Mañana: \"I don't know about that. Anyway, like I said before, bossman said that weasel's not a friendly *boia*.\" He touches his beret. \"So thanks for helping out.\""];
+	  517 [label="You: (Shake your head.) \"It's better than begging, c'mon.\""];
+	  518 [label="Rhetoric: Okay, maybe it's time to abandon the subtle approach."];
+	  519 [label="contacthub"];
+	  520 [label="Call Me Mañana: \"Don't think I've ever met a Kras, personally. Then again, I've never been to Graad.\" He narrows one eye at you."];
+	  521 [label="Call Me Mañana: \"Just in time, the faithful partner arrives with the key that turns the lock. You two make a good pair...\""];
+	  522 [label="You: \"Hang on. What does that mean, *the extra-physical branches of communism*?\"\n\"Sounds like he was trying to recruit you to the homo-sexual underground.\""];
+	  523 [label="Call Me Mañana: \"You see, the owners already benefit greatly from the harbour. No one can doubt that. They get so much.\""];
+	  524 [label="Call Me Mañana: \"He is *reasonably* lavish, sure. That's his prerogative. It's not like you want a saintly demeanour on a corrupt motherfucker. That would be a manipulative illusion.\""];
+	  525 [label="Call Me Mañana: \"It can take time to come up with a good one, for sure.\""];
+	  526 [label="Jump to: [Call Me Mañana: \"He reaches his hand out to you and...\"]"];
+	  527 [label="Call Me Mañana: \"The mercenary, aye?\" He shrugs. \"Who could have killed him, that's indeed the question. Why even do such a thing?\" He shakes his head solemnly."];
+	  528 [label="You: \"The harbour is a prime area of suspicion. In your opinion -- are the dockworkers involved in the killing?\""];
+	  529 [label="Rhetoric: But certainly you have to form an opinion on everything and then tell it to everyone."];
+	  530 [label="Call Me Mañana: \"Good one, officer.\" He grins. \"Don't worry, we here have solidarity with the RCM.\""];
+	  531 [label="Call Me Mañana: \"Jean-Luc himself would say the philosophy has proven... *overly heroic* for the scabs to convert to. Not enough intuition.\""];
+	  532 [label="Call Me Mañana: Variable[\"gates.manana_drama_id_card\"]"];
+	  533 [label="Variable[\"gates.manana_drama_id_card\"]", shape=diamond];
+	  534 [label="!(Variable[\"gates.manana_drama_id_card\"])", shape=diamond];
+	  535 [label="Call Me Mañana: \"You're quite the righteous man.\" He smiles appreciatively. \"Honour allows us to keep a respectful distance from each other. So, what do you need?\""];
+	  536 [label="Kim Kitsuragi: \"At least some people are willing to make the necessary sacrifices in order to reach higher, and to better the world.\""];
+	  537 [label="Encyclopedia: No."];
+	  538 [label="Call Me Mañana: \"Oh, they're just gone. They don't exist anymore, if they ever did at all.\" He gives you a jolly shrug. \"Forget about them. I did.\""];
+	  539 [label="Untitled hub"];
+	  540 [label="pleasinghub"];
+	  541 [label="You: \"What's going to happen next?\""];
+	  542 [label="You: \"Cuno told me you were supposed to know about the armour.\""];
+	  543 [label="Kim Kitsuragi: \"Nice and balanced,\" the lieutenant nods. \"Some junior officers can take care of the rest.\""];
+	  544 [label="You: \"I was hoping you could tell me.\""];
+	  545 [label="Call Me Mañana: \"I got *that* key right here. And let me tell you, it's mighty good of you to help us out during the strike -- working class solidarity, as they say.\""];
+	  546 [label="Jump to: [You: \"\"You shouldn't take what's not your...\"]"];
+	  547 [label="Call Me Mañana: \"Hidin', gatherin' themselves. The harbour's in full lockdown, friend. No getting in or out... for the time being.\""];
+	  548 [label="Call Me Mañana: \"Right! You talked to the boss, eye-to-eye -- like men of the plain. If you have any more questions, I'm set to talk.\""];
+	  549 [label="You: \"What will *you* be doing now?\""];
+	  550 [label="Call Me Mañana: \"Don't worry about me. I live to alleviate the worries of our brothers. See if any other insane killers turn up. Then I'll run. And live.\""];
+	  551 [label="Jump to: [ACTUALMAINHUB]"];
+	  552 [label="Volition: Should we? He's *nice*. I don't like *nice*."];
+	  553 [label="Call Me Mañana: \"I don't believe you. Poste L'Aventurier said the same thing. They tried to get me to be their postman. So fun, so easy, they said. It's just walking.\" He shakes his head at the memory."];
+	  554 [label="Call Me Mañana: \"Yeah, the two-and-a-half-metre tall Semenese supremacist up there.\" He points to the bridge above the gates. \"Walk right past him...\""];
+	  555 [label="You: \"You're right. He's very ascetic.\""];
+	  556 [label="Authority: Not you, you would like to say... But then there's that weasel door."];
+	  557 [label="Jump to: [ACTUALMAINHUB]"];
+	  558 [label="You: (Attempt to establish contact.) \"Listen, brother, there's something *important* I need to talk to you about...\"\n(Attempt to establish contact.) \"Listen, Mañana, there's something *important* I need to talk to you about...\""];
+	  559 [label="You: \"Are you sure? You smell just like a communist.\""];
+	  560 [label="Rhetoric: Maybe it's not taught in any of your so-called universities, but there's definitely something going on here..."];
+	  561 [label="Encyclopedia: Their remains were discovered on a beach in Ozonne in '35. Subsequent forensic analysis suggested suicide by poison."];
+	  562 [label="Call Me Mañana: \"Been wondering about that myself.\" He scratches his chin. \"Some communista inside-talk, could be. Not meant for the wider public. They love that kind of thing. You'd have to ask someone who knows this ideólogo personally...\""];
+	  563 [label="Call Me Mañana: IsKimHere()"];
+	  564 [label="IsKimHere()", shape=diamond];
+	  565 [label="!(IsKimHere())", shape=diamond];
+	  566 [label="Jump to: [Call Me Mañana: \"The man whispers a jaunty tune. A c...\"]"];
+	  567 [label="Call Me Mañana: \"Call me Mañana. I'm just a humble harbour-worker... for the past six, seven years.\""];
+	  568 [label="Jump to: [namehub]"];
+	  569 [label="Call Me Mañana: \"Are you *quite* sure?\""];
+	  570 [label="You: \"Fine, perhaps I'll try again... later.\""];
+	  571 [label="You: \"The merc was hanged with a very specific type of a cargo belt. One often used in heavy transport areas, for example, harbours.\"\n\"The merc was hanged with a very specific type of a cargo belt, one often used in harbours. It had the word *VERMILLION* written on it.\""];
+	  572 [label="Jump to: [Call Me Mañana: \"The man whispers a jaunty tune. A c...\"]"];
+	  573 [label="You: (Take a close look at the card.) \"Guess not.\""];
+	  574 [label="You: \"Has any of the scabs tried converting to his world view?\""];
+	  575 [label="You: Say nothing, pick up and pocket coin."];
+	  576 [label="coinhub"];
+	  577 [label="Call Me Mañana: \"... and you enter the harbour through the office. Esta!\""];
+	  578 [label="You: \"Every little bit helps, you know.\""];
+	  579 [label="Jump to: [strikehub]"];
+	  580 [label="You: \"Did you kill him?\"\n\"Were you involved in his death?\""];
+	  581 [label="Encyclopedia: That of a noble peasant or a travelling herdsman. True to yourself, independent in your actions, loyal to your friends."];
+	  582 [label="You: \"Actually do you know anything about the Hardie boys?\""];
+	  583 [label="You: \"I've already got some armour. I'm pretty happy without struggling to find more.\""];
+	  584 [label="Call Me Mañana: \"Good luck if you go for those boots, though. You'd have an easier time wrestling the spurs off a boiadeiro than getting them off him.\""];
+	  585 [label="Call Me Mañana: He stops to think. \"Or... calling in tactical air support! You guys have air support, right?\""];
+	  586 [label="You: \"I'm pretty sure we don't. At least not all of these things.\""];
+	  587 [label="Call Me Mañana: He nods energetically. \"So, what's on your mind this time?\""];
+	  588 [label="Call Me Mañana: \"I guess getting past the man ain't that simple after all…\" He pauses to think. \"So, what now?\""];
+	  589 [label="Call Me Mañana: The boiadeiro stares at you with respect -- then gestures towards the trickles of blood adorning your clothes."];
+	  590 [label="You: \"It really hurts, Mañana. Pain -- that's what your strike brought upon us.\""];
+	  591 [label="You: \"So Cuno used us to, what? Scare you?\""];
+	  592 [label="Call Me Mañana: \"I did some research into this *armadura*. Let's say I have friends at the library,\" he explains with a wry smile. \"I didn't get into the material science, just how it comes off.\""];
+	  593 [label="You: \"Actually, I may have better things to do too.\""];
+	  594 [label="Jump to: [armour!]"];
+	  595 [label="Jump to: [Call Me Mañana: \"The man sits on the railing, his ha...\"]"];
+	  596 [label="You: \"It's actually very fun and easy.\""];
+	  597 [label="You: \"Got it.\""];
+	  598 [label="Kim Kitsuragi: \"By that you mean corruption?\""];
+	  599 [label="Call Me Mañana: \"Okay, he's *reasonably* lavish, sure. That's his prerogative. It's not like you want a saintly demeanour on a corrupt motherfucker. That would be a manipulative illusion.\""];
+	  600 [label="Call Me Mañana: Variable[\"gates.manana_inland_triggers_personal\"]"];
+	  601 [label="Variable[\"gates.manana_inland_triggers_personal\"]", shape=diamond];
+	  602 [label="!(Variable[\"gates.manana_inland_triggers_personal\"])", shape=diamond];
+	  603 [label="Call Me Mañana: \"I'm really sorry, friend. Frittte's nearby, get some *nosaphed*.\" He points to the boutique just right of him. \"Good stuff. Helps against heart attacks too.\""];
+	  604 [label="Kim Kitsuragi: \"It's certainly been an interesting development to witness first-hand.\""];
+	  605 [label="Half Light: You can smell all sorts of things... fear, disgust, desire. Not communism, though."];
+	  606 [label="Rhetoric: Alright, so if he isn't personally a communist, he's definitely hanging out with them."];
+	  607 [label="You: \"Call Me Mañana.. What kind of a name is that?\""];
+	  608 [label="Call Me Mañana: \"Now that we're getting so well acquainted -- what's your name?\""];
+	  609 [label="Call Me Mañana: \"Wow! This is major! You're like... a man born anew!\" His eyes light up. \"Okay, so if you can't find it, maybe make up a new one?\""];
+	  610 [label="Call Me Mañana: He reaches his hand out to you and shouts: \"Boiadeiro!\""];
+	  611 [label="You: \"The name's... Tequila Sunset.\""];
+	  612 [label="You: Nod knowingly."];
+	  613 [label="You: \"The name's done! It's Raphaël Ambrosius Costeau.\""];
+	  614 [label="Call Me Mañana: \"Umm...\" He looks at his flask for a moment. \"But that's not you, officer?\""];
+	  615 [label="Call Me Mañana: \"Suspicious activity? How very troublesome... yet, take a look around. Strikers, protests, scabs -- isn't it all so very suspicious?\" He smiles widely."];
+	  616 [label="You: I don't want to talk about these interesting things. It's not my business."];
+	  617 [label="You: \"I need to know what's behind these gates. I'm *exploring*.\""];
+	  618 [label="Call Me Mañana: IsKimHere()"];
+	  619 [label="IsKimHere()", shape=diamond];
+	  620 [label="!(IsKimHere())", shape=diamond];
+	  621 [label="Authority: You feel like you earned a significant amount of honour points today."];
+	  622 [label="You: \"I guess you're right, I should.\" (Conclude.)"];
+	  623 [label="Encyclopedia: No.\nYou already know the answer."];
+	  624 [label="Call Me Mañana: \"So you have.\" He smooths a stray moustache hair with his thumb and smiles. \"No wonder you're a detective!\""];
+	  625 [label="Call Me Mañana: Variable[\"TASK.send_corpse_to_processing_done\"] == true  and  CheckItem(\"shoes_t500\") == false  and  CheckItem(\"hanged_boots_raw\") == false  and  Variable[\"gates.manana_armour_oh_well\"] == false"];
+	  626 [label="Variable[\"TASK.send_corpse_to_processing_done\"] == true  and  CheckItem(\"shoes_t500\") == false  and  CheckItem(\"hanged_boots_raw\") == false  and  Variable[\"gates.manana_armour_oh_well\"] == false", shape=diamond];
+	  627 [label="!(Variable[\"TASK.send_corpse_to_processing_done\"] == true  and  CheckItem(\"shoes_t500\") == false  and  CheckItem(\"hanged_boots_raw\") == false  and  Variable[\"gates.manana_armour_oh_well\"] == false)", shape=diamond];
+	  628 [label="Kim Kitsuragi: \"All of it?\" The lieutenant raises his brow. \"There are junior officers out there, eager to prove themselves. I would leave *some* for them -- and I would leave the *boots* to Processing -- but okay. Let's find *all of it*.\""];
+	  629 [label="Call Me Mañana: \"It was late one night as I was leaving the harbour. He was waiting on the corner in a classic Saramirizian jacket, a lot like the one you've got there...\""];
+	  630 [label="Call Me Mañana: \"A key, huh?\" He runs his fingers through his moustache. \"What door is this key supposed to open?\""];
+	  631 [label="Rhetoric: Come on. He's just trying to keep the peace."];
+	  632 [label="Call Me Mañana: Variable[\"gates.manana_boiadeiro\"] == true"];
+	  633 [label="Variable[\"gates.manana_boiadeiro\"] == true", shape=diamond];
+	  634 [label="!(Variable[\"gates.manana_boiadeiro\"] == true)", shape=diamond];
+	  635 [label="Call Me Mañana: Variable[\"gates.scableader_why_they_havent_breached_harbour\"]"];
+	  636 [label="Variable[\"gates.scableader_why_they_havent_breached_harbour\"]", shape=diamond];
+	  637 [label="!(Variable[\"gates.scableader_why_they_havent_breached_harbour\"])", shape=diamond];
+	  638 [label="You: \"Was nice enough.\""];
+	  639 [label="You: \"Did you?\""];
+	  640 [label="Call Me Mañana: \"Nice.\" The moustached man nods in approval. \"From what I learned it was a very heavy, boring set of armour.\""];
+	  641 [label="You: \"I'm not really doing this for political reasons.\""];
+	  642 [label="You: \"Try not to get shot, eh?\""];
+	  643 [label="Kim Kitsuragi: \"Understood.\" The lieutenant takes a note. \"This has been of limited use -- still, thank you.\""];
+	  644 [label="You: \"Thank you -- this has been of *limited* use.\""];
+	  645 [label="You: \"Cool. I don't have anything to add to that.\""];
+	  646 [label="You: \"I almost had a heart attack...\""];
+	  647 [label="Call Me Mañana: Variable[\"gates.manana_composure_subterfuge\"]"];
+	  648 [label="Variable[\"gates.manana_composure_subterfuge\"]", shape=diamond];
+	  649 [label="!(Variable[\"gates.manana_composure_subterfuge\"])", shape=diamond];
+	  650 [label="You: \"I'm looking for some people who know how to really grind a sausage, if you know what I mean.\""];
+	  651 [label="You: \"I believe there's a cell of radical communists operating in Martinaise. Can you help me find them?\""];
+	  652 [label="Jump to: [gates.manana_rhetoric_subtle_counter >1]"];
+	  653 [label="Call Me Mañana: \"So you've given up copping and now you're hunting communistas. Care to say why?\""];
+	  654 [label="You: \"How did you meet him?\""];
+	  655 [label="Call Me Mañana: \"Personally, I'd rather beg than scab. If the gentlemen shouting on the street came *begging*, maybe they'd have gotten something.\""];
+	  656 [label="Call Me Mañana: \"Sure, I've had the necessary free time.\" He spreads his arms wide, using the reach to show how much time he has. \"Fortunately, there's always time.\""];
+	  657 [label="You: \"Are you a... communist?\""];
+	  658 [label="Call Me Mañana: \"Hey, if the rich folk screw over poor folk, with little concern for their merits or futures, why shouldn't poor folk screw over rich folk from time to time?\""];
+	  659 [label="Call Me Mañana: \"I guess you kinda get to be the village chief. He oversees the harbour, makes deals with the owners or other relevant parties. Watches out for his own.\""];
+	  660 [label="Call Me Mañana: \"Yes, friend. The world is certainly stupid enough to have stupid features.\" He grins."];
+	  661 [label="Call Me Mañana: Variable[\"gates.manana_shortgreet\"]"];
+	  662 [label="Variable[\"gates.manana_shortgreet\"]", shape=diamond];
+	  663 [label="!(Variable[\"gates.manana_shortgreet\"])", shape=diamond];
+	  664 [label="Call Me Mañana: \"So, anything else you wanted to discuss, boiadeiro?\""];
+	  665 [label="You: \"Stop being a wimp, you need to help me out right *now*!\""];
+	  666 [label="You: \"Let's change the topic.\""];
+	  667 [label="Call Me Mañana: \"Oh! I'm sorry... didn't mean to throw it like that. It's a thing we harbour folk do, passing around cargo and such.\""];
+	  668 [label="Empathy: Beneath the jolliness he suddenly seems doubtful."];
+	  669 [label="Call Me Mañana: \"Or you could convert to his Semenese supremacist world view. Or, hmm,\" he strokes his moustache, \"maybe it actually *is* completely impossible.\""];
+	  670 [label="Call Me Mañana: \"He should be more careful, that Johannes. Can I have the card?\""];
+	  671 [label="Call Me Mañana: \"You know -- the winter's fat is slowly running out and all. Still better than scabbing, though.\""];
+	  672 [label="Rhetoric: This seditious talk sounds like communism. (Just so we're on the same page: Communism is basically wanting to kill the rich people or deporting them to a labour camp in southeast Graad. But don't say that out loud if you're a communist.)"];
+	  673 [label="You: Maybe..."];
+	  674 [label="You: \"There is only one law, friend -- and that's me!\""];
+	  675 [label="Call Me Mañana: \"Why not? Must be nice being something else for a change. The rest of us are just folks.\""];
+	  676 [label="Call Me Mañana: \"Imagine -- you cops going on a strike, but then another cop comes in and says: 'Let us cop! For less money.'\" He chuckles, then realizes:"];
+	  677 [label="Jump to: [ACTUALMAINHUB]"];
+	  678 [label="Call Me Mañana: \"Aye-aye, sir.\" The easy-going man winks at you."];
+	  679 [label="Jump to: [ACTUALMAINHUB]"];
+	  680 [label="Call Me Mañana: Variable[\"gates.manana_altgreet_mhead_fight_failed_done\"]"];
+	  681 [label="Variable[\"gates.manana_altgreet_mhead_fight_failed_done\"]", shape=diamond];
+	  682 [label="!(Variable[\"gates.manana_altgreet_mhead_fight_failed_done\"])", shape=diamond];
+	  683 [label="Call Me Mañana: \"I learned that people don't want to talk to a drunk Union man about some armour.\""];
+	  684 [label="Call Me Mañana: IsKimHere()"];
+	  685 [label="IsKimHere()", shape=diamond];
+	  686 [label="!(IsKimHere())", shape=diamond];
+	  687 [label="Jump to: [ACTUALMAINHUB]"];
+	  688 [label="Call Me Mañana: \"First -- don't fight him. Obviously. Second, get him to share his theory by being *subordinate*. Admit your lack of expertise. Basically grovel. That's how I'd do it,\" he tips his beret and concludes: \"You're welcome.\""];
+	  689 [label="Call Me Mañana: \"That so?\" The man twirls his moustache around his finger. \"I haven't heard anything about that. But if that's true... well, he was an enemy combatant.\""];
+	  690 [label="Call Me Mañana: Variable[\"gates.manana_suggestion_talk_later\"]"];
+	  691 [label="Variable[\"gates.manana_suggestion_talk_later\"]", shape=diamond];
+	  692 [label="!(Variable[\"gates.manana_suggestion_talk_later\"])", shape=diamond];
+	  693 [label="Call Me Mañana: \"Communistas, huh? Can't say that's where I thought you were heading with this. Not that I'm criticizing. It's good for a man to take his time and think about the whole socio-political world picture.\""];
+	  694 [label="Call Me Mañana: \"Oh, I see...\" He gives you an exaggerated wink."];
+	  695 [label="Kim Kitsuragi: \"Of course you were, detective. Apologies for interrupting.\" The lieutenant smiles to himself."];
+	  696 [label="You: \"That's alright. I think you may have just given me the last piece of the puzzle.\""];
+	  697 [label="Call Me Mañana: \"A kind of a worm, content with mere survival. They come, they want to do *our job* for shittier pay, screwing over both themselves and us. Everybody loses.\""];
+	  698 [label="You: \"So it's a... nom de guerre?\""];
+	  699 [label="You: \"Thanks, I'll pass. I'd just go wild.\""];
+	  700 [label="Jump to: [ACTUALMAINHUB]"];
+	  701 [label="You: \"Sounds stupid, is what I think.\""];
+	  702 [label="Jump to: [strikehub]"];
+	  703 [label="You: \"It's an old picture.\""];
+	  704 [label="Call Me Mañana: He leans in to inspect the card. \"How did you get his shift card anyway?\""];
+	  705 [label="You: \"Well met, Mañana. That's a sweet-ass name.\""];
+	  706 [label="You: Why is that?"];
+	  707 [label="Call Me Mañana: \"Sure thing, my friend, I can help you out.\" He flips a coin toward you."];
+	  708 [label="Call Me Mañana: \"Nothing to worry about, really. The jam's a bit of a mess, cargo can't get in or out. The rationing is a bit stricter, is all. Supplies should last the strike, though.\""];
+	  709 [label="You: \"So you feel like you should also get something?\""];
+	  710 [label="Call Me Mañana: \"Just the way the world works, boiadeiro.\""];
+	  711 [label="boiadeirobaby"];
+	  712 [label="Call Me Mañana: \"It's that really cool flying desperado spin kick you did, boiadeiro. Often performed by the most hard-bodied boiadeiros on the steppes.\""];
+	  713 [label="Call Me Mañana: \"It's but a rest area on the path leading across open plains,\" he notes solemnly, then turns to you, a wide smile adorning his face:"];
+	  714 [label="Call Me Mañana: \"Serves me right for doing menial footwork. I dropped that probe right then and there -- and it *still* got me into trouble,\" he smiles. \"One bad move is all it takes.\""];
+	  715 [label="Call Me Mañana: IsKimHere()"];
+	  716 [label="IsKimHere()", shape=diamond];
+	  717 [label="!(IsKimHere())", shape=diamond];
+	  718 [label="Jump to: [coinhub]"];
+	  719 [label="You: \"Measurehead? I think I met him.\""];
+	  720 [label="Jump to: [quickmheadhub]"];
+	  721 [label="Untitled hub"];
+	  722 [label="Conceptualization: Hmm... maybe that *would* work? We'll have to see."];
+	  723 [label="Call Me Mañana: \"Of course. I got you -- you don't know anything.\" He taps the side of his nose with a little wink."];
+	  724 [label="You: \"That desk seemed lavish to me.\""];
+	  725 [label="Rhetoric: This man has political theory -- and it has not failed him today."];
+	  726 [label="Call Me Mañana: Variable[\"tc.tequila_sunset\"]"];
+	  727 [label="Variable[\"tc.tequila_sunset\"]", shape=diamond];
+	  728 [label="!(Variable[\"tc.tequila_sunset\"])", shape=diamond];
+	  729 [label="Call Me Mañana: Variable[\"TASK.unlock_the_weasle_door\"]"];
+	  730 [label="Variable[\"TASK.unlock_the_weasle_door\"]", shape=diamond];
+	  731 [label="!(Variable[\"TASK.unlock_the_weasle_door\"])", shape=diamond];
+	  732 [label="Rhetoric: He's a chatty guy. *Wants* to talk about the strike too. Just can't break the command structure and tell you now."];
+	  733 [label="Empathy: There is warmth in his voice when he talks about the Union. Whatever his personal politics, this is his home."];
+	  734 [label="Call Me Mañana: He snaps his fingers. \"Ah, but you know, I did meet a genuine *ideólogo* a few months ago. Perhaps he is your guy?\""];
+	  735 [label="Call Me Mañana: Variable[\"gates.manana_logic_inside_talk\"]"];
+	  736 [label="Variable[\"gates.manana_logic_inside_talk\"]", shape=diamond];
+	  737 [label="!(Variable[\"gates.manana_logic_inside_talk\"])", shape=diamond];
+	  738 [label="Call Me Mañana: IsTaskActive(\"TASK.find_smokes\")  or  Variable[\"character.habit_smokes\"]"];
+	  739 [label="IsTaskActive(\"TASK.find_smokes\")  or  Variable[\"character.habit_smokes\"]", shape=diamond];
+	  740 [label="!(IsTaskActive(\"TASK.find_smokes\")  or  Variable[\"character.habit_smokes\"])", shape=diamond];
+	  741 [label="Call Me Mañana: \"A very old-school organising technique, the sort of thing communistas used to do before the Revolution.\""];
+	  742 [label="Call Me Mañana: He shrugs. \"It was alright. A little like something out of a Vespertine spy novel, but I must respect the effort.\""];
+	  743 [label="Call Me Mañana: \"We've explained the matters, but they don't listen.\" He shakes his head. \"This lot would be reasonable and go home if the big guy wasn't riling them up all the time.\""];
+	  744 [label="You: \"I need to get past the gates and speak with your boss.\""];
+	  745 [label="You: \"There's been talk of suspicious activity at the harbour.\""];
+	  746 [label="You: \"It's... umm... Harry.\""];
+	  747 [label="Call Me Mañana: \"I hear you and it's... uh, pleasure meeting you, *Harry*.\" He nods. \"But do keep an eye out for an alternative, alright?\""];
+	  748 [label="You: Shake his hand."];
+	  749 [label="You: \"Oh yeah!\" (Take a swig.)"];
+	  750 [label="Call Me Mañana: \"And then we might go wild together, which sounds fun. But I guess I have a strike to watch.\""];
+	  751 [label="Call Me Mañana: \"Keeps you warm on a day like this. Or any day, for that matter.\""];
+	  752 [label="Jump to: [ACTUALMAINHUB]"];
+	  753 [label="You: \"Name-invention feels too dangerous.\""];
+	  754 [label="You: \"What's your deal with names, anyhow? Is it a spiritual thing or a philosophical one or...?\""];
+	  755 [label="Call Me Mañana: \"More a poetic thing. Any attempt to formulate a grand unified theory about it ends in the stupidest shit imaginable. Doesn't make it less true, though.\" He nods sagely."];
+	  756 [label="Call Me Mañana: Variable[\"gates.manana_greeting_done\"]"];
+	  757 [label="Variable[\"gates.manana_greeting_done\"]", shape=diamond];
+	  758 [label="!(Variable[\"gates.manana_greeting_done\"])", shape=diamond];
+	  759 [label="Call Me Mañana: \"Hold on, man. Keep it slow and steady, don't succumb to fate. It can take time to come up with a really good one...\""];
+	  760 [label="Call Me Mañana: \"If you say so.\" He shrugs and looks about at the surroundings."];
+	  761 [label="Call Me Mañana: \"I don't operate in that capacity. I'm not a *granter of passage*.\" He takes a swig and points up the stairs with his flask. \"The passage grants itself.\""];
+	  762 [label="Call Me Mañana: The man looks at the colourful piece of plastic, then at you, then back at the card, then at you again."];
+	  763 [label="You: \"Oh, okay. Economy stuff. I get it. I want to talk about something else.\""];
+	  764 [label="Call Me Mañana: Variable[\"yard.cuno_greeting_done\"]"];
+	  765 [label="Variable[\"yard.cuno_greeting_done\"]", shape=diamond];
+	  766 [label="!(Variable[\"yard.cuno_greeting_done\"])", shape=diamond];
+	  767 [label="Kim Kitsuragi: Lieutenant Kitsuragi picks up the coin and hands it to you."];
+	  768 [label="You: \"Past Measurehead?\""];
+	  769 [label="Call Me Mañana: \"Not yet, no.\" He fixes his eyes on you, evaluating your prowess. \"He's... incredibly strong.\""];
+	  770 [label="You: \"Yeah, I'm a scab -- poor and downtrodden.\" (Wave your fist.) \"Right to work!\""];
+	  771 [label="Call Me Mañana: \"Oh, John's been out drinking himself blind again? He should watch his step, that John. Can I have the card?\""];
+	  772 [label="You: \"Gotta spend money to make money.\""];
+	  773 [label="Call Me Mañana: He takes a swig from his flask. \"So why should they be the *only* ones with the power to take stuff over?\""];
+	  774 [label="Jump to: [strikehub]"];
+	  775 [label="Call Me Mañana: \"Sure thing.\" A gust of wind blows through his hair."];
+	  776 [label="namehub"];
+	  777 [label="Call Me Mañana: Variable[\"TASK.claim_high_tech_boots\"] == true  and  Variable[\"TASK.send_corpse_to_processing_done\"] == false"];
+	  778 [label="Variable[\"TASK.claim_high_tech_boots\"] == true  and  Variable[\"TASK.send_corpse_to_processing_done\"] == false", shape=diamond];
+	  779 [label="!(Variable[\"TASK.claim_high_tech_boots\"] == true  and  Variable[\"TASK.send_corpse_to_processing_done\"] == false)", shape=diamond];
+	  780 [label="FINAL DESTINATION"];
+	  781 [label="Logic: Big guy -- he means the leader of the scabs."];
+	  782 [label="Call Me Mañana: \"Speakin' of! What brings the RCM here? To the Wild North? Come to see the strife?\""];
+	  783 [label="You: \"Who or what is a flying desperado?\""];
+	  784 [label="Call Me Mañana: \"A strong, solid name telling of dedication and honour.\" He gives a small salute. \"Well met, Harrier.\""];
+	  785 [label="You: \"Hey, you're the man in boots at the gates -- Cuno said you know about the armour.\""];
+	  786 [label="Kim Kitsuragi: \"What happened?\""];
+	  787 [label="Kim Kitsuragi: \"Did you?\""];
+	  788 [label="Call Me Mañana: \"It's a minor nuisance. It's all good.\" He contemplates taking a swig from his flask."];
+	  789 [label="Call Me Mañana: \"Not much. Technical stuff mostly. That was the interesting part.\""];
+	  790 [label="Kim Kitsuragi: \"What else?\""];
+	  791 [label="Call Me Mañana: \"Polar weasel? Oh... I know what you mean. I'm pretty sure he's actually Occidental though. So you're gonna be commitin' fratricide, my racist friend.\""];
+	  792 [label="Call Me Mañana: \"What you're looking for is a basement door behind the greenhouse -- that's behind the Whirling-in-Rags -- that's all I know. Our organisation is what you call *compartmentalized*. Means we keep out of each other's business.\""];
+	  793 [label="Jump to: [armour!]"];
+	  794 [label="Jump to: [Call Me Mañana: \"The man whispers a jaunty tune. A c...\"]"];
+	  795 [label="Call Me Mañana: \"None of this mess we're in. This jivin' and jugglin'... What's it for?\" He doesn't wait for your answer. \"To feed our children I guess.\""];
+	  796 [label="Call Me Mañana: Variable[\"cargo.evrart_hardieboys_did_the_merco_in\"] == true"];
+	  797 [label="Variable[\"cargo.evrart_hardieboys_did_the_merco_in\"] == true", shape=diamond];
+	  798 [label="!(Variable[\"cargo.evrart_hardieboys_did_the_merco_in\"] == true)", shape=diamond];
+	  799 [label="Drama: He believes the Hardie boys could've done it."];
+	  800 [label="Call Me Mañana: \"What's that, boia?\" He tilts his head slightly."];
+	  801 [label="You: \"It involves our mutual friend, Kras.\" (Put your hands next to your head and curl your fingers like deer antlers.)"];
+	  802 [label="You: \"I'm looking for a secret cabal of *mole people*.\""];
+	  803 [label="Call Me Mañana: \"A fellow plains-roamer, in search of greater understanding. A classic story...\" He nods approvingly."];
+	  804 [label="Call Me Mañana: \"I couldn't tell you. Once I declined his offer, we finished our cigarettes and he disappeared back into the night. Just before he melted into the shadows he turned to me and said...\""];
+	  805 [label="finalhub"];
+	  806 [label="Jump to: [ideologohub]"];
+	  807 [label="Jump to: [ideologohub]"];
+	  808 [label="You: (Nod.) \"Have you tried talking to them?\""];
+	  809 [label="Call Me Mañana: \"I have nothing against communists, they are honourable boiadeiros.\" He takes a swig from his flask. \"And they have good analysis.\""];
+	  810 [label="You: \"I guess I understand...\""];
+	  811 [label="Call Me Mañana: \"By Heavens, why would he not be corrupt? We live in a harsh and disordered world, see. And in this world...\""];
+	  812 [label="You: \"What kind of a cool guy exactly? It's not *just* a cool guy, is it?\""];
+	  813 [label="Inland Empire: Your mind can only conjure up Hunk Handy, Fucke Waldéz, Bosco... you might want to decide to keep quiet about these."];
+	  814 [label="Call Me Mañana: \"So mysterious. So intriguing.\" The man gives out a jolly chortle. \"Either way, the road in front of you is wide and open.\""];
+	  815 [label="You: \"I'm a bit short on *money* right now. Can you give me some of it?\""];
+	  816 [label="Call Me Mañana: \"Don't worry, I'm sure it's not *completely* impossible. For example, you could best Measurehead in a physical confrontation.\""];
+	  817 [label="You: \"Hold up, what does that mean?\""];
+	  818 [label="Jump to: [Call Me Mañana: \"The man whispers a jaunty tune. A c...\"]"];
+	  819 [label="Call Me Mañana: \"Yet you live?\" He nods approvingly. \"It calls back to an older era, where this was commonplace. You have a true boiadeiro heart.\""];
+	  820 [label="You: \"I'm not opening this door for myself. I'm opening it for all working men.\""];
+	  821 [label="Call Me Mañana: \"Like I said before, I don't know much about this weasel, but the bossman said he's a real piece of work.\" He touches his beret. \"Thanks for helping out, friend.\""];
+	  822 [label="Call Me Mañana: \"You know it, friend.\" He smooths his moustache with his hand."];
+	  823 [label="You: \"Labour utopia.\" (Nod approvingly.)"];
+	  824 [label="Call Me Mañana: IsKimHere()"];
+	  825 [label="IsKimHere()", shape=diamond];
+	  826 [label="!(IsKimHere())", shape=diamond];
+	  827 [label="Call Me Mañana: \"I'm more of a philosophical dockworker, see -- I like to talk about the big picture stuff. Who I am. Who you are. What we are fighting for...\" The man takes a big sip from his flask."];
+	  828 [label="Drama: He can't know that. Maybe you're just younger on the photo."];
+	  829 [label="Jump to: [ACTUALMAINHUB]"];
+	  830 [label="Rhetoric: Now's your chance! Remember, communists are notoriously skittish, so it's best to *insinuate* your way in..."];
+	  831 [label="You: \"Did he say his name was 'Steban,' by chance?\""];
+	  832 [label="Encyclopedia: Wow, this one's a deep cut. Julia Dobreva and Jean Abadanaiz, popularly known as the 'Revolutionary Lovers', served as Dual Commissars of Revolution on the Insulindian front during the Antecentennial Revolution. Their forbidden love, as well as their disappearance during the final collapse of the Revacholian commune only contributed to their mystique..."];
+	  833 [label="Jump to: [ideologohub]"];
+	  834 [label="Composure: The look in his brown eyes conjures up an understanding: for him, having command of his time is the most important thing."];
+	  835 [label="Call Me Mañana: \"We're negotiating our share.\""];
+	  836 [label="You: \"How large a *share* would you like?\""];
+	  837 [label="Call Me Mañana: \"All of it. However, right now we want all the harbour workers to be on the company's board, so they could take part in *the decision-making process*.\""];
+	  838 [label="Call Me Mañana: \"Well, boiadeiro --\" He pauses to think a moment on the situation. \"I guess I don't really have a claim to your hand or anything.\""];
+	  839 [label="Call Me Mañana: \"Like me and you. Exactly so.\" He takes a swig from his flask, then offers you some."];
+	  840 [label="Call Me Mañana: \"Gotta be bloody stupid or freakin' evil to scab. Or, I guess... scared, maybe. But scared of what, of who?\" He looks at the mass, squinting his eyes as if trying to ascertain what they're scared of."];
+	  841 [label="Jump to: [ACTUALMAINHUB]"];
+	  842 [label="You: \"Yes.\""];
+	  843 [label="Call Me Mañana: \"Plenty to go around. Don't get greedy and try to swipe mine, though.\" He smiles merrily. \"You've got your own.\""];
+	  844 [label="You: \"All right then.\" (Conclude.)"];
+	  845 [label="Call Me Mañana: \"Oh, okay. Good luck with that.\" He tips his beret. \"So, what do you need?\""];
+	  846 [label="Call Me Mañana: \"Yeah, the two-and-a-half-metre tall Semenese supremacist there.\" He points to the bridge above the gates. \"Walk right past him...\""];
+	  847 [label="Physical Instrument: Nothing a couple of solid hooks from Dexter and Sinister won't fix."];
+	  848 [label="You: \"Appreciated.\""];
+	  849 [label="Call Me Mañana: \"Always glad to help out the RCM. Shame I can't do more -- things are meagre at the moment, due to...\" He nods toward the protesters."];
+	  850 [label="You: \"You shouldn't take what's not yours.\""];
+	  851 [label="Call Me Mañana: \"He was an agent of the opposition, attempting to undermine our honourable efforts.\""];
+	  852 [label="Call Me Mañana: \"Words guide our life, we commune with each thing through its word. Every word is also a name, is it not?\" He smiles."];
+	  853 [label="Kim Kitsuragi: \"He can be very *enterprising*...\" The lieutenant looks at his feet, hiding his face."];
+	  854 [label="You: \"His promise?\""];
+	  855 [label="Jump to: [ACTUALMAINHUB]"];
+	  856 [label="Jump to: [Call Me Mañana: \"The man sits on the railing, his ha...\"]"];
+	  857 [label="Call Me Mañana: Variable[\"gates.manana_altgreet_posttribunal\"]"];
+	  858 [label="Variable[\"gates.manana_altgreet_posttribunal\"]", shape=diamond];
+	  859 [label="!(Variable[\"gates.manana_altgreet_posttribunal\"])", shape=diamond];
+	  860 [label="You: \"Right. So where is everyone?\""];
+	  861 [label="Call Me Mañana: \"No, man. Not today. Today is war.\""];
+	  862 [label="Jump to: [ACTUALMAINHUB]"];
+	  863 [label="Call Me Mañana: Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  864 [label="Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  865 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  866 [label="Call Me Mañana: \"Of course, *policía*.\" He gives you a sly smile. \"It wasn't me. You can rule me out. Easier that way.\""];
+	  867 [label="Rhetoric: You've been in there, he means -- talked to the boss man too probably..."];
+	  868 [label="Inland Empire: You're *Tequila Sunset*. You have always been Tequila Sunset. It has always been too late."];
+	  869 [label="Interfacing: No. It will prove useful still, believe your thieving fingers."];
+	  870 [label="Kim Kitsuragi: \"Yes, he certainly has a way of just coming out and saying things that normal people wouldn't.\""];
+	  871 [label="Kim Kitsuragi: \"Oh, he certainly likes to take his time with things, especially when politics are at issue.\""];
+	  872 [label="Jump to: [finalhub]"];
+	  873 [label="Call Me Mañana: \"So they were lovers, eh? Makes sense, he seemed like a romantic, in his way.\""];
+	  874 [label="Jump to: [Call Me Mañana: \"The man whispers a jaunty tune. A c...\"]"];
+	  875 [label="Call Me Mañana: \"I salute you, boias, and wish you good fortune on this grand ideological quest.\" He tips his hat ever so slightly."];
+	  876 [label="You: \"I'm not a scab. I'm a cop.\" (Proceed.)"];
+	  877 [label="You: \"But the stuff you do aligns admirably well with the World Republic, why not call yourself a communist?\""];
+	  878 [label="Call Me Mañana: \"I'd say a real name is what most people call you.\" He realizes something."];
+	  879 [label="You: Have a moment of silence."];
+	  880 [label="You: \"The Measurehead thing didn't go well for me. Could you help me with that somehow?\""];
+	  881 [label="Call Me Mañana: \"Olá, wandering man.\" He looks at you with soft and hazy eyes. \"How can I help you?\"\n\"Ola, wandering man.\" Mañana looks at you with soft and hazy eyes. \"How can I help you now?\""];
+	  882 [label="Call Me Mañana: \"That means I can't *tell* you about it. I can only *show* you. You may understand in time... or not. But it might be easy enough.\""];
+	  883 [label="scabintro"];
+	  884 [label="You: \"No, I'm afraid. The card's evidence in an on-going investigation.\""];
+	  885 [label="rhetohorror"];
+	  886 [label="Call Me Mañana: \"No-no, I said *scab*.\""];
+	  887 [label="You: Leave the coin where it landed."];
+	  888 [label="Drama: Now you're in a mess. The time hath not arrived. Sorry."];
+	  889 [label="Call Me Mañana: \"Yes,\" he nods solemnly. \"The city has a way of pairing souls. John's been out drinking himself blind...\""];
+	  890 [label="Call Me Mañana: IsKimHere()"];
+	  891 [label="IsKimHere()", shape=diamond];
+	  892 [label="!(IsKimHere())", shape=diamond];
+	  893 [label="Call Me Mañana: \"Olá, Tequila Sunset, boiadeiro grande!\" He looks at you with soft and hazy eyes.\n\"Ola, Tequila Sunset, grand boiadeiro!\" Mañana looks at you with soft and hazy eyes."];
+	  894 [label="Jump to: [ACTUALMAINHUB]"];
+	  895 [label="You: \"Danger comes with the boiadeiro lifestyle, right?"];
+	  896 [label="Call Me Mañana: \"At first I thought -- why not, maybe the pieces can feed the strike? Buy us a few more days under the sun, you know.\""];
+	  897 [label="Call Me Mañana: \"So -- as I count -- there are two parts missing: the gauntlets and the cuirass. This is where I left off. Too much hassle. More like a job for some *milicia*.\""];
+	  898 [label="Call Me Mañana: IsKimHere()"];
+	  899 [label="IsKimHere()", shape=diamond];
+	  900 [label="!(IsKimHere())", shape=diamond];
+	  901 [label="Call Me Mañana: IsKimHere()"];
+	  902 [label="IsKimHere()", shape=diamond];
+	  903 [label="!(IsKimHere())", shape=diamond];
+	  904 [label="Call Me Mañana: \"Smart choice,\" the moustached man agrees. \"It's only that *one* spot you need armoured too -- the one the bullet hits.\""];
+	  905 [label="You: \"A man with such a funny mug collection can't be that bad.\""];
+	  906 [label="Call Me Mañana: \"Serious business, as I'm sure you now realize. The boss would have been glad to tell you. Alas, you cannot get to him anymore.\""];
+	  0 -> 1
+	  1 -> 258
+	  2 -> 512
+	  3 -> 556
+	  4 -> 464
+	  5 -> 6
+	  6 -> 327
+	  7 -> 873
+	  8 -> 9
+	  8 -> 10
+	  9 -> 11
+	  10 -> 12
+	  11 -> 12
+	  12 -> 805
+	  13 -> 236
+	  13 -> 52
+	  13 -> 471
+	  14 -> 390
+	  14 -> 430
+	  14 -> 142
+	  14 -> 239
+	  14 -> 657
+	  15 -> 763
+	  15 -> 836
+	  16 -> 481
+	  17 -> 610
+	  18 -> 810
+	  18 -> 475
+	  18 -> 238
+	  19 -> 20
+	  20 -> 21
+	  20 -> 22
+	  21 -> 196
+	  22 -> 196
+	  23 -> 759
+	  24 -> 146
+	  25 -> 376
+	  25 -> 97
+	  26 -> 61
+	  27 -> 386
+	  27 -> 484
+	  27 -> 151
+	  28 -> 577
+	  29 -> 155
+	  30 -> 883
+	  31 -> 536
+	  32 -> 537
+	  33 -> 34
+	  33 -> 35
+	  34 -> 853
+	  35 -> 594
+	  36 -> 494
+	  37 -> 407
+	  38 -> 715
+	  39 -> 40
+	  39 -> 177
+	  39 -> 262
+	  39 -> 591
+	  40 -> 683
+	  41 -> 792
+	  42 -> 821
+	  43 -> 313
+	  43 -> 410
+	  43 -> 596
+	  43 -> 314
+	  44 -> 224
+	  45 -> 776
+	  46 -> 48
+	  46 -> 47
+	  47 -> 776
+	  48 -> 45
+	  49 -> 605
+	  50 -> 872
+	  51 -> 735
+	  52 -> 695
+	  53 -> 138
+	  54 -> 741
+	  55 -> 745
+	  55 -> 427
+	  55 -> 199
+	  56 -> 392
+	  57 -> 609
+	  58 -> 59
+	  59 -> 144
+	  59 -> 705
+	  59 -> 607
+	  60 -> 62
+	  61 -> 2
+	  61 -> 785
+	  61 -> 19
+	  61 -> 149
+	  61 -> 542
+	  61 -> 549
+	  61 -> 170
+	  61 -> 558
+	  61 -> 815
+	  61 -> 312
+	  61 -> 67
+	  61 -> 582
+	  61 -> 458
+	  61 -> 342
+	  61 -> 476
+	  61 -> 100
+	  61 -> 744
+	  61 -> 617
+	  61 -> 880
+	  61 -> 374
+	  62 -> 776
+	  63 -> 523
+	  64 -> 763
+	  64 -> 836
+	  65 -> 759
+	  66 -> 752
+	  67 -> 762
+	  68 -> 546
+	  68 -> 492
+	  68 -> 125
+	  69 -> 107
+	  70 -> 579
+	  71 -> 600
+	  72 -> 73
+	  72 -> 74
+	  73 -> 631
+	  74 -> 164
+	  75 -> 76
+	  75 -> 77
+	  76 -> 756
+	  77 -> 255
+	  78 -> 587
+	  79 -> 61
+	  80 -> 81
+	  80 -> 82
+	  81 -> 781
+	  82 -> 30
+	  83 -> 789
+	  84 -> 821
+	  85 -> 363
+	  86 -> 367
+	  87 -> 280
+	  88 -> 187
+	  89 -> 805
+	  90 -> 236
+	  90 -> 285
+	  90 -> 52
+	  90 -> 471
+	  91 -> 833
+	  92 -> 111
+	  93 -> 56
+	  94 -> 18
+	  95 -> 191
+	  96 -> 659
+	  97 -> 878
+	  98 -> 291
+	  99 -> 761
+	  100 -> 509
+	  101 -> 14
+	  102 -> 704
+	  103 -> 203
+	  104 -> 532
+	  105 -> 324
+	  106 -> 576
+	  107 -> 344
+	  108 -> 28
+	  109 -> 658
+	  110 -> 623
+	  111 -> 112
+	  111 -> 113
+	  112 -> 581
+	  113 -> 436
+	  114 -> 486
+	  115 -> 216
+	  116 -> 764
+	  117 -> 61
+	  118 -> 61
+	  119 -> 120
+	  119 -> 121
+	  120 -> 543
+	  121 -> 904
+	  122 -> 397
+	  123 -> 792
+	  124 -> 795
+	  125 -> 491
+	  126 -> 61
+	  127 -> 61
+	  128 -> 318
+	  129 -> 513
+	  130 -> 131
+	  130 -> 132
+	  131 -> 518
+	  132 -> 519
+	  133 -> 652
+	  134 -> 733
+	  135 -> 465
+	  136 -> 372
+	  137 -> 521
+	  138 -> 807
+	  139 -> 116
+	  140 -> 375
+	  141 -> 672
+	  142 -> 429
+	  143 -> 879
+	  143 -> 431
+	  144 -> 477
+	  145 -> 200
+	  146 -> 761
+	  147 -> 61
+	  148 -> 384
+	  149 -> 527
+	  150 -> 415
+	  151 -> 771
+	  152 -> 153
+	  152 -> 154
+	  153 -> 885
+	  154 -> 101
+	  155 -> 61
+	  156 -> 166
+	  157 -> 346
+	  158 -> 150
+	  159 -> 538
+	  160 -> 539
+	  161 -> 214
+	  162 -> 214
+	  163 -> 36
+	  164 -> 61
+	  165 -> 883
+	  166 -> 61
+	  167 -> 256
+	  168 -> 587
+	  169 -> 713
+	  170 -> 630
+	  171 -> 172
+	  171 -> 173
+	  172 -> 680
+	  173 -> 756
+	  174 -> 117
+	  175 -> 784
+	  176 -> 714
+	  177 -> 361
+	  178 -> 855
+	  179 -> 791
+	  180 -> 557
+	  181 -> 182
+	  181 -> 183
+	  182 -> 672
+	  183 -> 141
+	  184 -> 555
+	  184 -> 724
+	  185 -> 841
+	  186 -> 687
+	  187 -> 188
+	  187 -> 189
+	  188 -> 870
+	  189 -> 653
+	  190 -> 498
+	  191 -> 152
+	  192 -> 840
+	  193 -> 194
+	  193 -> 195
+	  194 -> 92
+	  195 -> 436
+	  196 -> 197
+	  196 -> 198
+	  197 -> 243
+	  198 -> 813
+	  199 -> 814
+	  200 -> 753
+	  200 -> 295
+	  201 -> 760
+	  202 -> 528
+	  202 -> 666
+	  202 -> 571
+	  202 -> 414
+	  203 -> 535
+	  204 -> 482
+	  205 -> 61
+	  206 -> 883
+	  207 -> 106
+	  208 -> 209
+	  208 -> 210
+	  211 -> 818
+	  212 -> 890
+	  213 -> 856
+	  214 -> 545
+	  215 -> 500
+	  216 -> 780
+	  217 -> 219
+	  218 -> 38
+	  219 -> 220
+	  219 -> 221
+	  220 -> 786
+	  221 -> 218
+	  222 -> 456
+	  223 -> 124
+	  224 -> 462
+	  225 -> 687
+	  226 -> 687
+	  227 -> 514
+	  228 -> 14
+	  229 -> 230
+	  229 -> 231
+	  230 -> 573
+	  230 -> 703
+	  231 -> 828
+	  232 -> 594
+	  233 -> 85
+	  234 -> 422
+	  235 -> 832
+	  236 -> 137
+	  237 -> 742
+	  238 -> 95
+	  239 -> 240
+	  240 -> 96
+	  240 -> 622
+	  241 -> 433
+	  242 -> 61
+	  243 -> 726
+	  244 -> 665
+	  244 -> 99
+	  245 -> 104
+	  246 -> 532
+	  247 -> 68
+	  248 -> 816
+	  249 -> 849
+	  250 -> 523
+	  251 -> 537
+	  252 -> 448
+	  252 -> 673
+	  252 -> 32
+	  252 -> 323
+	  252 -> 251
+	  253 -> 794
+	  254 -> 678
+	  255 -> 783
+	  256 -> 105
+	  256 -> 574
+	  256 -> 487
+	  257 -> 233
+	  258 -> 259
+	  258 -> 260
+	  259 -> 857
+	  260 -> 357
+	  261 -> 405
+	  262 -> 592
+	  263 -> 455
+	  264 -> 455
+	  265 -> 901
+	  266 -> 267
+	  266 -> 268
+	  267 -> 223
+	  268 -> 457
+	  269 -> 860
+	  270 -> 861
+	  271 -> 362
+	  272 -> 273
+	  272 -> 274
+	  273 -> 598
+	  274 -> 364
+	  275 -> 541
+	  276 -> 320
+	  277 -> 130
+	  278 -> 652
+	  279 -> 419
+	  280 -> 281
+	  280 -> 282
+	  281 -> 279
+	  282 -> 693
+	  283 -> 694
+	  284 -> 134
+	  285 -> 13
+	  286 -> 331
+	  287 -> 697
+	  288 -> 376
+	  288 -> 97
+	  288 -> 698
+	  289 -> 608
+	  290 -> 700
+	  291 -> 292
+	  291 -> 293
+	  292 -> 338
+	  293 -> 148
+	  294 -> 523
+	  295 -> 526
+	  296 -> 315
+	  297 -> 664
+	  298 -> 842
+	  298 -> 245
+	  299 -> 667
+	  300 -> 30
+	  301 -> 782
+	  302 -> 499
+	  303 -> 166
+	  304 -> 658
+	  305 -> 68
+	  306 -> 14
+	  307 -> 61
+	  308 -> 118
+	  309 -> 310
+	  310 -> 792
+	  311 -> 269
+	  312 -> 863
+	  313 -> 226
+	  314 -> 866
+	  315 -> 316
+	  315 -> 317
+	  316 -> 719
+	  317 -> 768
+	  318 -> 127
+	  319 -> 432
+	  320 -> 321
+	  320 -> 322
+	  321 -> 86
+	  322 -> 367
+	  323 -> 537
+	  324 -> 400
+	  325 -> 463
+	  326 -> 803
+	  327 -> 234
+	  327 -> 284
+	  327 -> 559
+	  328 -> 136
+	  328 -> 368
+	  328 -> 654
+	  328 -> 831
+	  329 -> 472
+	  330 -> 521
+	  331 -> 738
+	  332 -> 237
+	  332 -> 522
+	  332 -> 53
+	  333 -> 474
+	  334 -> 15
+	  335 -> 377
+	  335 -> 748
+	  336 -> 496
+	  337 -> 60
+	  338 -> 381
+	  339 -> 61
+	  340 -> 158
+	  341 -> 26
+	  342 -> 190
+	  343 -> 486
+	  344 -> 108
+	  345 -> 708
+	  346 -> 773
+	  347 -> 31
+	  348 -> 852
+	  349 -> 594
+	  350 -> 352
+	  350 -> 351
+	  351 -> 594
+	  352 -> 584
+	  353 -> 354
+	  353 -> 355
+	  354 -> 629
+	  355 -> 286
+	  357 -> 358
+	  357 -> 359
+	  358 -> 450
+	  359 -> 401
+	  360 -> 819
+	  361 -> 178
+	  362 -> 690
+	  363 -> 688
+	  364 -> 811
+	  365 -> 366
+	  366 -> 62
+	  367 -> 61
+	  368 -> 804
+	  369 -> 50
+	  370 -> 562
+	  371 -> 566
+	  372 -> 806
+	  373 -> 676
+	  374 -> 835
+	  375 -> 227
+	  375 -> 437
+	  375 -> 334
+	  376 -> 843
+	  377 -> 838
+	  378 -> 525
+	  379 -> 525
+	  380 -> 61
+	  381 -> 699
+	  381 -> 749
+	  381 -> 383
+	  382 -> 339
+	  383 -> 297
+	  384 -> 699
+	  384 -> 383
+	  385 -> 482
+	  386 -> 771
+	  387 -> 886
+	  388 -> 488
+	  388 -> 249
+	  389 -> 391
+	  390 -> 656
+	  391 -> 677
+	  392 -> 850
+	  392 -> 491
+	  392 -> 877
+	  392 -> 645
+	  393 -> 394
+	  393 -> 395
+	  394 -> 436
+	  395 -> 252
+	  396 -> 160
+	  397 -> 398
+	  397 -> 399
+	  398 -> 594
+	  399 -> 349
+	  400 -> 61
+	  401 -> 402
+	  401 -> 403
+	  402 -> 75
+	  403 -> 171
+	  404 -> 311
+	  405 -> 39
+	  406 -> 640
+	  407 -> 269
+	  408 -> 780
+	  409 -> 883
+	  410 -> 411
+	  411 -> 687
+	  412 -> 232
+	  413 -> 829
+	  414 -> 689
+	  415 -> 817
+	  415 -> 580
+	  416 -> 417
+	  416 -> 418
+	  417 -> 604
+	  418 -> 653
+	  419 -> 420
+	  419 -> 421
+	  420 -> 871
+	  421 -> 653
+	  422 -> 135
+	  423 -> 424
+	  423 -> 425
+	  424 -> 563
+	  425 -> 470
+	  426 -> 332
+	  427 -> 497
+	  428 -> 658
+	  429 -> 250
+	  429 -> 294
+	  429 -> 63
+	  430 -> 775
+	  431 -> 319
+	  432 -> 612
+	  432 -> 812
+	  433 -> 192
+	  434 -> 145
+	  434 -> 611
+	  435 -> 610
+	  436 -> 380
+	  437 -> 64
+	  438 -> 439
+	  439 -> 440
+	  439 -> 441
+	  440 -> 443
+	  441 -> 443
+	  442 -> 29
+	  443 -> 444
+	  443 -> 445
+	  444 -> 388
+	  445 -> 299
+	  446 -> 306
+	  447 -> 796
+	  448 -> 537
+	  449 -> 867
+	  450 -> 451
+	  450 -> 452
+	  451 -> 756
+	  452 -> 449
+	  453 -> 308
+	  454 -> 854
+	  455 -> 897
+	  456 -> 122
+	  457 -> 124
+	  458 -> 506
+	  459 -> 550
+	  460 -> 186
+	  461 -> 862
+	  462 -> 276
+	  463 -> 519
+	  464 -> 652
+	  465 -> 734
+	  466 -> 467
+	  466 -> 468
+	  467 -> 561
+	  468 -> 89
+	  469 -> 90
+	  470 -> 874
+	  471 -> 329
+	  472 -> 473
+	  473 -> 566
+	  474 -> 763
+	  474 -> 140
+	  474 -> 836
+	  475 -> 95
+	  476 -> 567
+	  477 -> 376
+	  477 -> 97
+	  477 -> 698
+	  478 -> 480
+	  478 -> 479
+	  479 -> 301
+	  480 -> 782
+	  481 -> 62
+	  482 -> 61
+	  483 -> 305
+	  483 -> 247
+	  484 -> 889
+	  485 -> 845
+	  486 -> 296
+	  487 -> 769
+	  488 -> 849
+	  489 -> 618
+	  490 -> 155
+	  491 -> 710
+	  492 -> 212
+	  493 -> 594
+	  494 -> 72
+	  495 -> 674
+	  495 -> 253
+	  496 -> 585
+	  497 -> 499
+	  498 -> 244
+	  499 -> 99
+	  500 -> 257
+	  501 -> 502
+	  501 -> 503
+	  502 -> 790
+	  503 -> 83
+	  504 -> 119
+	  505 -> 14
+	  506 -> 128
+	  506 -> 905
+	  506 -> 42
+	  506 -> 84
+	  507 -> 822
+	  508 -> 551
+	  509 -> 510
+	  509 -> 511
+	  510 -> 408
+	  511 -> 408
+	  512 -> 43
+	  513 -> 824
+	  514 -> 763
+	  514 -> 836
+	  515 -> 306
+	  516 -> 127
+	  517 -> 300
+	  518 -> 647
+	  519 -> 801
+	  519 -> 802
+	  519 -> 4
+	  519 -> 650
+	  519 -> 651
+	  519 -> 87
+	  520 -> 652
+	  521 -> 875
+	  522 -> 54
+	  523 -> 709
+	  523 -> 157
+	  524 -> 3
+	  525 -> 242
+	  526 -> 610
+	  527 -> 202
+	  528 -> 340
+	  529 -> 505
+	  530 -> 676
+	  531 -> 720
+	  532 -> 533
+	  532 -> 534
+	  533 -> 888
+	  534 -> 27
+	  535 -> 621
+	  536 -> 774
+	  537 -> 595
+	  538 -> 504
+	  538 -> 265
+	  538 -> 412
+	  538 -> 593
+	  539 -> 583
+	  539 -> 265
+	  539 -> 593
+	  539 -> 504
+	  539 -> 412
+	  539 -> 159
+	  540 -> 884
+	  540 -> 485
+	  540 -> 103
+	  541 -> 174
+	  542 -> 454
+	  543 -> 904
+	  544 -> 723
+	  545 -> 641
+	  545 -> 179
+	  545 -> 820
+	  545 -> 309
+	  546 -> 850
+	  547 -> 541
+	  547 -> 270
+	  548 -> 307
+	  549 -> 459
+	  550 -> 642
+	  550 -> 507
+	  551 -> 61
+	  552 -> 225
+	  553 -> 460
+	  554 -> 69
+	  555 -> 599
+	  556 -> 725
+	  557 -> 61
+	  558 -> 800
+	  559 -> 49
+	  560 -> 734
+	  561 -> 89
+	  562 -> 423
+	  563 -> 564
+	  563 -> 565
+	  564 -> 469
+	  565 -> 51
+	  566 -> 482
+	  567 -> 58
+	  568 -> 776
+	  569 -> 65
+	  569 -> 23
+	  570 -> 382
+	  571 -> 340
+	  572 -> 482
+	  573 -> 102
+	  574 -> 531
+	  575 -> 29
+	  576 -> 442
+	  576 -> 887
+	  576 -> 575
+	  577 -> 248
+	  577 -> 211
+	  578 -> 156
+	  579 -> 14
+	  580 -> 447
+	  581 -> 711
+	  582 -> 163
+	  583 -> 624
+	  584 -> 594
+	  585 -> 721
+	  586 -> 257
+	  587 -> 79
+	  588 -> 894
+	  589 -> 360
+	  589 -> 590
+	  589 -> 895
+	  590 -> 404
+	  591 -> 788
+	  592 -> 898
+	  593 -> 684
+	  594 -> 39
+	  595 -> 436
+	  596 -> 553
+	  597 -> 827
+	  598 -> 811
+	  599 -> 3
+	  600 -> 601
+	  600 -> 602
+	  601 -> 841
+	  602 -> 185
+	  603 -> 677
+	  604 -> 653
+	  605 -> 560
+	  606 -> 734
+	  607 -> 288
+	  608 -> 46
+	  609 -> 16
+	  609 -> 337
+	  609 -> 365
+	  610 -> 335
+	  611 -> 435
+	  612 -> 98
+	  613 -> 569
+	  614 -> 229
+	  615 -> 499
+	  616 -> 529
+	  617 -> 302
+	  618 -> 619
+	  618 -> 620
+	  619 -> 767
+	  620 -> 718
+	  621 -> 26
+	  622 -> 70
+	  623 -> 393
+	  624 -> 33
+	  625 -> 626
+	  625 -> 627
+	  626 -> 396
+	  627 -> 539
+	  628 -> 456
+	  629 -> 331
+	  630 -> 544
+	  630 -> 161
+	  630 -> 162
+	  631 -> 495
+	  632 -> 633
+	  632 -> 634
+	  633 -> 893
+	  634 -> 881
+	  635 -> 636
+	  635 -> 637
+	  636 -> 114
+	  637 -> 343
+	  638 -> 713
+	  639 -> 896
+	  640 -> 594
+	  641 -> 41
+	  642 -> 508
+	  643 -> 180
+	  644 -> 180
+	  645 -> 515
+	  646 -> 603
+	  647 -> 648
+	  647 -> 649
+	  648 -> 325
+	  649 -> 463
+	  650 -> 133
+	  651 -> 88
+	  652 -> 130
+	  653 -> 283
+	  653 -> 5
+	  653 -> 326
+	  654 -> 353
+	  655 -> 808
+	  655 -> 517
+	  656 -> 834
+	  657 -> 93
+	  658 -> 702
+	  659 -> 272
+	  660 -> 568
+	  661 -> 662
+	  661 -> 663
+	  662 -> 165
+	  663 -> 139
+	  664 -> 752
+	  665 -> 24
+	  666 -> 572
+	  667 -> 489
+	  668 -> 635
+	  669 -> 256
+	  670 -> 869
+	  671 -> 345
+	  671 -> 578
+	  671 -> 772
+	  672 -> 14
+	  673 -> 537
+	  674 -> 675
+	  675 -> 126
+	  676 -> 478
+	  677 -> 61
+	  678 -> 233
+	  679 -> 61
+	  680 -> 681
+	  680 -> 682
+	  681 -> 756
+	  682 -> 588
+	  683 -> 501
+	  684 -> 685
+	  684 -> 686
+	  685 -> 406
+	  686 -> 640
+	  687 -> 61
+	  688 -> 722
+	  689 -> 415
+	  690 -> 691
+	  690 -> 692
+	  691 -> 862
+	  692 -> 732
+	  693 -> 416
+	  694 -> 327
+	  695 -> 330
+	  696 -> 371
+	  697 -> 192
+	  697 -> 241
+	  698 -> 289
+	  699 -> 750
+	  700 -> 61
+	  701 -> 660
+	  702 -> 14
+	  703 -> 298
+	  704 -> 532
+	  705 -> 25
+	  706 -> 483
+	  707 -> 438
+	  707 -> 207
+	  708 -> 578
+	  708 -> 772
+	  709 -> 346
+	  710 -> 306
+	  711 -> 213
+	  711 -> 110
+	  712 -> 168
+	  712 -> 78
+	  713 -> 548
+	  714 -> 39
+	  715 -> 716
+	  715 -> 717
+	  716 -> 787
+	  717 -> 639
+	  718 -> 576
+	  719 -> 554
+	  720 -> 256
+	  721 -> 586
+	  721 -> 254
+	  721 -> 215
+	  722 -> 679
+	  723 -> 545
+	  724 -> 524
+	  725 -> 228
+	  726 -> 728
+	  726 -> 727
+	  727 -> 868
+	  728 -> 434
+	  729 -> 730
+	  729 -> 731
+	  730 -> 413
+	  731 -> 614
+	  732 -> 461
+	  733 -> 606
+	  734 -> 328
+	  735 -> 736
+	  735 -> 737
+	  736 -> 696
+	  737 -> 473
+	  738 -> 739
+	  738 -> 740
+	  739 -> 426
+	  740 -> 332
+	  741 -> 237
+	  741 -> 53
+	  742 -> 807
+	  743 -> 80
+	  744 -> 55
+	  745 -> 615
+	  746 -> 747
+	  747 -> 147
+	  748 -> 143
+	  749 -> 751
+	  750 -> 664
+	  751 -> 66
+	  752 -> 61
+	  753 -> 290
+	  754 -> 755
+	  755 -> 882
+	  756 -> 757
+	  756 -> 758
+	  757 -> 632
+	  758 -> 661
+	  759 -> 201
+	  759 -> 570
+	  760 -> 339
+	  761 -> 668
+	  762 -> 729
+	  763 -> 385
+	  764 -> 765
+	  764 -> 766
+	  765 -> 206
+	  766 -> 883
+	  767 -> 848
+	  767 -> 389
+	  767 -> 646
+	  768 -> 846
+	  769 -> 847
+	  770 -> 530
+	  771 -> 869
+	  772 -> 303
+	  773 -> 304
+	  773 -> 428
+	  773 -> 109
+	  774 -> 14
+	  775 -> 71
+	  776 -> 453
+	  776 -> 844
+	  776 -> 175
+	  776 -> 17
+	  776 -> 754
+	  776 -> 57
+	  777 -> 778
+	  777 -> 779
+	  778 -> 222
+	  779 -> 628
+	  781 -> 30
+	  782 -> 61
+	  783 -> 712
+	  784 -> 118
+	  785 -> 454
+	  786 -> 38
+	  787 -> 896
+	  788 -> 261
+	  789 -> 793
+	  790 -> 789
+	  791 -> 792
+	  792 -> 266
+	  793 -> 39
+	  794 -> 482
+	  795 -> 44
+	  795 -> 597
+	  796 -> 797
+	  796 -> 798
+	  797 -> 799
+	  798 -> 129
+	  799 -> 824
+	  800 -> 830
+	  801 -> 520
+	  802 -> 278
+	  803 -> 327
+	  804 -> 235
+	  805 -> 369
+	  805 -> 370
+	  805 -> 7
+	  806 -> 328
+	  807 -> 328
+	  808 -> 743
+	  809 -> 94
+	  810 -> 95
+	  811 -> 184
+	  812 -> 839
+	  813 -> 746
+	  813 -> 378
+	  813 -> 379
+	  813 -> 613
+	  814 -> 499
+	  815 -> 707
+	  816 -> 669
+	  817 -> 851
+	  818 -> 482
+	  819 -> 269
+	  820 -> 123
+	  821 -> 127
+	  822 -> 551
+	  823 -> 713
+	  824 -> 825
+	  824 -> 826
+	  825 -> 643
+	  826 -> 644
+	  827 -> 462
+	  828 -> 573
+	  828 -> 703
+	  829 -> 61
+	  830 -> 277
+	  831 -> 91
+	  832 -> 466
+	  833 -> 328
+	  834 -> 193
+	  835 -> 333
+	  836 -> 837
+	  837 -> 181
+	  838 -> 879
+	  838 -> 431
+	  839 -> 291
+	  840 -> 655
+	  841 -> 61
+	  842 -> 246
+	  843 -> 97
+	  843 -> 698
+	  844 -> 204
+	  845 -> 26
+	  846 -> 69
+	  847 -> 167
+	  848 -> 391
+	  849 -> 671
+	  850 -> 446
+	  851 -> 580
+	  852 -> 568
+	  853 -> 493
+	  854 -> 217
+	  855 -> 61
+	  856 -> 436
+	  857 -> 858
+	  857 -> 859
+	  858 -> 756
+	  859 -> 589
+	  860 -> 547
+	  861 -> 275
+	  862 -> 61
+	  863 -> 864
+	  863 -> 865
+	  864 -> 906
+	  865 -> 271
+	  866 -> 552
+	  867 -> 169
+	  867 -> 638
+	  867 -> 823
+	  868 -> 145
+	  868 -> 611
+	  869 -> 540
+	  870 -> 653
+	  871 -> 653
+	  872 -> 805
+	  873 -> 8
+	  874 -> 482
+	  875 -> 566
+	  876 -> 373
+	  877 -> 809
+	  878 -> 608
+	  879 -> 98
+	  880 -> 336
+	  881 -> 205
+	  882 -> 348
+	  882 -> 701
+	  883 -> 770
+	  883 -> 387
+	  883 -> 876
+	  883 -> 115
+	  883 -> 287
+	  884 -> 341
+	  885 -> 616
+	  885 -> 706
+	  886 -> 409
+	  887 -> 490
+	  888 -> 27
+	  889 -> 670
+	  890 -> 891
+	  890 -> 892
+	  891 -> 347
+	  892 -> 774
+	  893 -> 205
+	  894 -> 61
+	  895 -> 37
+	  896 -> 176
+	  897 -> 625
+	  898 -> 899
+	  898 -> 900
+	  899 -> 264
+	  900 -> 263
+	  901 -> 902
+	  901 -> 903
+	  902 -> 777
+	  903 -> 122
+	  904 -> 350
+	  905 -> 516
+	  906 -> 862
+}
+

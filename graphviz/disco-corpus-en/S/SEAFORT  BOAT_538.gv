@@ -1,0 +1,73 @@
+# SEAFORT / BOAT
+# You're gonna need to boat yourself back somehow after everything is done.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  3 [label="You: \"You're right. Let's get to it.\" [Leave.]"];
+	  4 [label="ROO A72 Motor Skiff: You climb into the boat and start the engine."];
+	  5 [label="Cuno: \"Are you sure? There's shit we need to do, sheriff...\" He looks at the ruined flak tower on the cliffside."];
+	  6 [label="IsCunoInParty()"];
+	  7 [label="IsCunoInParty()", shape=diamond];
+	  8 [label="!(IsCunoInParty())", shape=diamond];
+	  9 [label="You: \"You're right. Let's get to it.\" [Leave.]"];
+	  10 [label="ROO A72 Motor Skiff: The skiff is swaying on the waves by the dock."];
+	  11 [label="Kim Kitsuragi: \"Are you sure? There are things we still need to do here...\" He looks at the ruined flak tower on the cliffside."];
+	  12 [label="You: [Leave.]"];
+	  13 [label="You: Return to the mainland.\n\"Let's return to the mainland.\""];
+	  14 [label="ROO A72 Motor Skiff: The skiff rocks gently under your weight as you get in. The ride back is uneventful and quiet."];
+	  15 [label="Kim Kitsuragi: \"Let's. We're done here,\" he says, adjusting his glasses as he looks out over the water."];
+	  16 [label="IsKimHere()"];
+	  17 [label="IsKimHere()", shape=diamond];
+	  18 [label="!(IsKimHere())", shape=diamond];
+	  19 [label="Cuno: \"Oh yeah.\" He crosses his arms and nods to you with a self-satisfied smirk. \"We did good shit here, detective.\""];
+	  20 [label="Esprit de Corps: Lieutenant Kitsuragi lies in the hospital, recovering. Barely. Are you really done here, he would ask you? Are you done with the investigation?"];
+	  21 [label="You: Yeah... I'm not. [Leave.]"];
+	  22 [label="ROO A72 Motor Skiff: You reach the jetty and climb out of the skiff."];
+	  23 [label="Esprit de Corps: Two men and a woman stand on the concrete square of a nameless village, looking at a small yellow boat as it draws closer. The sea is calm."];
+	  24 [label="IsKimHere()"];
+	  25 [label="IsKimHere()", shape=diamond];
+	  26 [label="!(IsKimHere())", shape=diamond];
+	  27 [label="Perception (Hearing): But for the sound of conversation on the water. There is someone inland, waiting for you."];
+	  28 [label="Variable[\"TASK.inspect_the_phasmid_done\"]"];
+	  29 [label="Variable[\"TASK.inspect_the_phasmid_done\"]", shape=diamond];
+	  30 [label="!(Variable[\"TASK.inspect_the_phasmid_done\"])", shape=diamond];
+	  31 [label="IsCunoInParty()"];
+	  32 [label="IsCunoInParty()", shape=diamond];
+	  33 [label="!(IsCunoInParty())", shape=diamond];
+	  0 -> 1
+	  1 -> 10
+	  4 -> 14
+	  5 -> 3
+	  6 -> 8
+	  6 -> 7
+	  7 -> 5
+	  8 -> 20
+	  10 -> 12
+	  10 -> 13
+	  11 -> 9
+	  13 -> 28
+	  14 -> 27
+	  15 -> 14
+	  16 -> 17
+	  16 -> 18
+	  17 -> 11
+	  18 -> 6
+	  19 -> 14
+	  20 -> 21
+	  23 -> 22
+	  24 -> 25
+	  24 -> 26
+	  25 -> 15
+	  26 -> 31
+	  27 -> 23
+	  28 -> 29
+	  28 -> 30
+	  29 -> 24
+	  30 -> 16
+	  31 -> 32
+	  31 -> 33
+	  32 -> 19
+	  33 -> 4
+}
+

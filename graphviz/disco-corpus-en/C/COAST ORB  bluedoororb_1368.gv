@@ -1,0 +1,29 @@
+# COAST ORB / bluedoororb
+# Conversation with PhysInt.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: Can *I* try to get in though?"];
+	  3 [label="Kim Kitsuragi: \"The suspect? God, I hope not -- I can't see a way in...\" He inspects the bars. \"Though many have tried.\""];
+	  4 [label="You: Nothing more to do here then. [Finish thought.]"];
+	  5 [label="Untitled hub"];
+	  6 [label="Physical Instrument: There's no way the perp is in here, officer. Look how scarred the boards are -- all attempts to pry them off have failed."];
+	  7 [label="Inland Empire: And dangerous. Dangerous too."];
+	  8 [label="Physical Instrument: Not this time. The opposition is insurmountable. But I like the spirit -- have some *points*! It's lonely and cold without points."];
+	  10 [label="You: \"Kim, you think she's in there?\" (Point at the boarded up building.)"];
+	  11 [label="Jump to: [Untitled hub]"];
+	  0 -> 1
+	  1 -> 6
+	  2 -> 8
+	  3 -> 11
+	  5 -> 2
+	  5 -> 10
+	  5 -> 4
+	  6 -> 5
+	  7 -> 11
+	  8 -> 7
+	  10 -> 3
+	  11 -> 5
+}
+

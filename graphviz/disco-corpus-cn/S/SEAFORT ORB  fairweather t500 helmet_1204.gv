@@ -1,0 +1,66 @@
+# SEAFORT ORB / fairweather t500 helmet
+# Orb that checks how much armour you've collected after you pick up the helmet.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="You: 喂，至少我*现在*搞到这个酷炫的头盔了啊。下次上战场的时候就可以戴上。"];
+	  3 [label="You: 我会的。[离开。]"];
+	  4 [label="Physical Instrument: 这是个好态度。我喜欢。继续保持，善用这个头盔。"];
+	  5 [label="Physical Instrument: 我喜欢这种积极的态度。继续保持，冠军。"];
+	  6 [label="You: [离开。]"];
+	  7 [label="Untitled hub (03)"];
+	  8 [label="Physical Instrument: 是啊，当然，你差不多会变得无敌到寂寞。"];
+	  9 [label="You: 至少满足了我的收集癖。"];
+	  10 [label="You: 我从没想过集齐一整套。我也不是收藏家那一挂的。"];
+	  11 [label="Physical Instrument: 未来派的盔甲当然要用在未来了。武装起来吧，你这个贵重的瓷娃娃。这可是个充满暴力的世界。"];
+	  12 [label="Untitled hub (05)"];
+	  13 [label="Physical Instrument: 没错。但是事情已成定局，后悔也没用。继续保持这个步调，只要一往直前。"];
+	  14 [label="You: 反正这个头盔对我也没什么大用。（低头看向你的伤口。）\n反正这个头盔对我也没什么大用。（低头看向你的伤口。）"];
+	  15 [label="Physical Instrument: 看起来的确会让人印象深刻……不过你还是找齐了。现在你的尘世烦扰已经得到了*完全的*保护。很少有这么未来派的警察。"];
+	  16 [label="You: 反正这个头盔对我也没什么大用。（低头看向你的伤口。）\n反正这个头盔对我也没什么大用。（低头看向你的伤口。）"];
+	  17 [label="You: 也许还能吓唬吓唬敌方战斗人员……"];
+	  18 [label="You: 该死。也许改天吧。[离开。]"];
+	  19 [label="You: 至少现在我是真的无敌到寂寞。[离开。]"];
+	  20 [label="Untitled hub (02)"];
+	  21 [label="You: 现在我无能为力。"];
+	  22 [label="Physical Instrument: 确实。你都找到了。现在你的尘世烦扰已经得到了*完全的*保护。很少有这么未来派的警察。"];
+	  23 [label="CheckItem(\"shoes_t500\")  and  CheckItem(\"shirt_t500\")  and  CheckItem(\"gloves_t500\")"];
+	  24 [label="CheckItem(\"shoes_t500\")  and  CheckItem(\"shirt_t500\")  and  CheckItem(\"gloves_t500\")", shape=diamond];
+	  25 [label="!(CheckItem(\"shoes_t500\")  and  CheckItem(\"shirt_t500\")  and  CheckItem(\"gloves_t500\"))", shape=diamond];
+	  26 [label="Endurance: 兄弟，你已经集齐了所有谜题碎片。可惜已经赶不上最后对决了。"];
+	  27 [label="Physical Instrument: 孩子，你又找到了一个谜题碎片。可惜已经赶不上最后对决了。想把它们全部集齐拼凑在一起也已经太迟了。"];
+	  29 [label="You: 我很肯定，这件盔甲以后一定用得着。"];
+	  30 [label="Physical Instrument: 但是看起来一定会很让人印象深刻。"];
+	  0 -> 1
+	  1 -> 23
+	  2 -> 5
+	  5 -> 6
+	  7 -> 16
+	  7 -> 10
+	  7 -> 2
+	  8 -> 12
+	  9 -> 22
+	  10 -> 8
+	  12 -> 18
+	  12 -> 3
+	  14 -> 15
+	  15 -> 19
+	  16 -> 30
+	  17 -> 13
+	  20 -> 9
+	  20 -> 29
+	  20 -> 14
+	  21 -> 4
+	  22 -> 19
+	  23 -> 24
+	  23 -> 25
+	  24 -> 26
+	  25 -> 27
+	  26 -> 20
+	  27 -> 7
+	  29 -> 11
+	  30 -> 17
+	  30 -> 21
+}
+

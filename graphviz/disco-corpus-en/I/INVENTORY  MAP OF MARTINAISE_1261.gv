@@ -1,0 +1,32 @@
+# INVENTORY / MAP OF MARTINAISE
+# because the map is possibly a readable items, it might need some sort of an interaction dialogue?
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  3 [label="Tutorial Agent: For a more detailed view of the Map, go to your JOURNAL and select the MAP tab."];
+	  4 [label="You: [Put the map away.]"];
+	  5 [label="Tourist map of Martinaise: Your finger moves through the various streets, across Rue de Saint-Ghislaine and Rue Saint-Cispare, over Saint-Brune and Martinaise North..."];
+	  6 [label="Tourist map of Martinaise: ...finally coming to a halt on the spot where you are currently standing, although the map gives no such indication itself."];
+	  7 [label="map_hub_maybe"];
+	  8 [label="Jump to: [map_hub_maybe]"];
+	  9 [label="Variable[\"tc.turn_off_tutorial_node\"]"];
+	  10 [label="Variable[\"tc.turn_off_tutorial_node\"]", shape=diamond];
+	  11 [label="!(Variable[\"tc.turn_off_tutorial_node\"])", shape=diamond];
+	  12 [label="Tourist map of Martinaise: The worn map features the patchwork grid of the streets of Martinaise, with directions to appropriately *tourist-y* locations. Year '48 resides on the upper-right corner."];
+	  13 [label="You: Trace a path through the grid."];
+	  0 -> 1
+	  1 -> 12
+	  3 -> 8
+	  5 -> 6
+	  6 -> 9
+	  7 -> 4
+	  7 -> 13
+	  8 -> 7
+	  9 -> 10
+	  9 -> 11
+	  11 -> 3
+	  12 -> 7
+	  13 -> 5
+}
+

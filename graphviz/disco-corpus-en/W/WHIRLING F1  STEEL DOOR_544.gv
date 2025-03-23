@@ -1,0 +1,250 @@
+# WHIRLING F1 / STEEL DOOR
+# The steel door in the back of the kitchen. Leads to the storage area with the elevator.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Blue door: Variable[\"whirling.steel_door_inland_haunted_ages\"]"];
+	  3 [label="Variable[\"whirling.steel_door_inland_haunted_ages\"]", shape=diamond];
+	  4 [label="!(Variable[\"whirling.steel_door_inland_haunted_ages\"])", shape=diamond];
+	  5 [label="Kim Kitsuragi: \"There must be a key somewhere,\" the lieutenant says. \"Probably somewhere in the Whirling? It's not *too* important. We can get in and out using the roof door.\""];
+	  6 [label="Blue door: The door stands silent, unmoved by your words. You still feel like you should look into it if you get the chance..."];
+	  8 [label="You: \"There was a winch outside, on the roof. Like that of a small *elevator*.\""];
+	  9 [label="Jump to: [steeldoorhub]"];
+	  10 [label="Perception (Smell): No. Smells like engine grease and cut wood. A workshop."];
+	  11 [label="You: \"This door is *connected* to the one upstairs. But how do we get through?\""];
+	  12 [label="Blue door: Variable[\"whirling.bluedoor_inland_blue\"]"];
+	  13 [label="Variable[\"whirling.bluedoor_inland_blue\"]", shape=diamond];
+	  14 [label="!(Variable[\"whirling.bluedoor_inland_blue\"])", shape=diamond];
+	  15 [label="Blue door: Variable[\"whirling.steel_door_physint_a_challenge\"]"];
+	  16 [label="Variable[\"whirling.steel_door_physint_a_challenge\"]", shape=diamond];
+	  17 [label="!(Variable[\"whirling.steel_door_physint_a_challenge\"])", shape=diamond];
+	  18 [label="Blue door: The steel doesn't even tremble."];
+	  19 [label="Kim Kitsuragi: \"So do I.\" The lieutenant touches the lock. \"It's locked -- and sturdy. The paint job looks old. From *before* the cafeteria.\""];
+	  20 [label="You: No, it's not."];
+	  21 [label="You: \"The door and the main investigation will merge into a *stereo*-investigation.\""];
+	  22 [label="Blue door: Variable[\"TASK.enter_the_mysterious_door_done\"] == true"];
+	  23 [label="Variable[\"TASK.enter_the_mysterious_door_done\"] == true", shape=diamond];
+	  24 [label="!(Variable[\"TASK.enter_the_mysterious_door_done\"] == true)", shape=diamond];
+	  25 [label="You: Try the 'Workshop Spare' key on the door."];
+	  26 [label="Interfacing: The winch, outside, in the back yard. Remember? No? Your *fingers* do!"];
+	  27 [label="Kim Kitsuragi: \"It's hardly worth a *title*...\" He looks at the door, then you. \"Anyway, Garte is the person to ask about this -- the cafeteria manager.\""];
+	  28 [label="Jump to: [steeldoorhub]"];
+	  29 [label="Blue door: Variable[\"auto.visited_pinball_room\"]  or  Variable[\"auto.visited_pinball_workshop\"]"];
+	  30 [label="Variable[\"auto.visited_pinball_room\"]  or  Variable[\"auto.visited_pinball_workshop\"]", shape=diamond];
+	  31 [label="!(Variable[\"auto.visited_pinball_room\"]  or  Variable[\"auto.visited_pinball_workshop\"])", shape=diamond];
+	  32 [label="Kim Kitsuragi: \"Hardly.\" He looks at the door, then you. \"Anyway, Garte is the person to ask about this -- the cafeteria manager.\""];
+	  33 [label="Perception (Smell): The darkness before you smells like engine grease and cut wood..."];
+	  34 [label="Blue door: Variable[\"apt.master_investigator_doors_opened\"] >=3"];
+	  35 [label="Variable[\"apt.master_investigator_doors_opened\"] >=3", shape=diamond];
+	  36 [label="!(Variable[\"apt.master_investigator_doors_opened\"] >=3)", shape=diamond];
+	  37 [label="Empathy: He's not bothered by your eccentricity. He seems genuinely intrigued himself."];
+	  38 [label="You: \"No, the door is a *mega-investigation*.\"\n\"No, the door is a *mega*-investigation. I'm calling it... Behind the Blue Door.\""];
+	  39 [label="Kim Kitsuragi: \"Hmm... Yes, I suppose it's worth seeing if we can get in. Just to be thorough. As a... side-investigation.\""];
+	  40 [label="You: [Leave.]"];
+	  41 [label="Blue door: Your words fail to even echo against the door's implacable steel."];
+	  42 [label="Blue door: The key fits the dimple lock. It takes a bit of effort to turn it after all these years, but then -- the lock clicks."];
+	  43 [label="You: Pull on the door -- hard."];
+	  44 [label="You: Put your weight into it."];
+	  45 [label="Physical Instrument: A challenge!"];
+	  46 [label="Blue door: Variable[\"whirling.barreddoor_kick_down_success\"] == true"];
+	  47 [label="Variable[\"whirling.barreddoor_kick_down_success\"] == true", shape=diamond];
+	  48 [label="!(Variable[\"whirling.barreddoor_kick_down_success\"] == true)", shape=diamond];
+	  49 [label="Blue door: CheckItem(\"key_workshop_spare\")"];
+	  50 [label="CheckItem(\"key_workshop_spare\")", shape=diamond];
+	  51 [label="!(CheckItem(\"key_workshop_spare\"))", shape=diamond];
+	  52 [label="Blue door: The key fits the dimple lock. It takes a bit of effort to turn it after all these years, but then -- the lock clicks."];
+	  53 [label="You: Touch the door."];
+	  54 [label="Kim Kitsuragi: \"You do?\" The lieutenant regards you with patient scepticism. \"It's a door in the back of the kitchen. Why do you care where it leads?\""];
+	  55 [label="You: \"Yes, a mini side-investigation.\""];
+	  56 [label="steeldoorhub"];
+	  57 [label="You: \"I wonder where this door leads.\""];
+	  58 [label="You: \"Out of duty. We may find something pertinent to the investigation.\""];
+	  59 [label="Jump to: [steeldoorhub]"];
+	  60 [label="Kim Kitsuragi: \"Eccentric. But okay, I suppose we could look into it. As a... side-investigation.\""];
+	  61 [label="You: \"You're right. It's not important. Let's go.\""];
+	  62 [label="Blue door: The door stands silent, unmoved by your words."];
+	  63 [label="Jump to: [steeldoorhub]"];
+	  64 [label="Visual Calculus: It could be connected to the barred door upstairs."];
+	  65 [label="Blue door: The door does not budge."];
+	  66 [label="Jump to: [steeldoorhub]"];
+	  67 [label="Blue door: The cobalt blue surface feels rough to touch. The stainless steel door is flush with its frame on every side."];
+	  68 [label="You: Give up."];
+	  69 [label="Kim Kitsuragi: He looks at you, then at the door. \"Garte is the person to ask about this -- the cafeteria manager.\""];
+	  70 [label="Kim Kitsuragi: \"If you say so.\" He looks at the door, then you. \"Garte is the person to ask about this -- the cafeteria manager.\""];
+	  71 [label="Blue door: Now you're hanging from the handle. The door remains immobile."];
+	  72 [label="You: \"I am drawn to its cobalt blue.\""];
+	  73 [label="Kim Kitsuragi: \"Hmm... Well, if there was a *winch*, I suppose we could look into it. As a... side-investigation.\""];
+	  74 [label="Kim Kitsuragi: \"It *is* quite pretty. I suppose we could look into it. As a... side-investigation.\""];
+	  75 [label="Conceptualization: It's hardly a side-investigation. You already have a name for it."];
+	  76 [label="Jump to: [steeldoorhub]"];
+	  77 [label="Untitled hub"];
+	  78 [label="You: \"I'll be back, door. Mark my words.\" [Leave.]"];
+	  79 [label="Blue door: The key fits the dimple lock. It takes a bit of effort to turn it after all these years, but then -- the lock clicks."];
+	  80 [label="Inland Empire: You immediately feel *drawn* to the colour. Blue is for mystery."];
+	  81 [label="You: Try to push on the door."];
+	  82 [label="Blue door: Variable[\"whirling.barreddoor_greeting_done\"]"];
+	  83 [label="Variable[\"whirling.barreddoor_greeting_done\"]", shape=diamond];
+	  84 [label="!(Variable[\"whirling.barreddoor_greeting_done\"])", shape=diamond];
+	  85 [label="Visual Calculus: It leads to a side-building, adjacent to this one. The old building next to this, half ruined. Whatever is behind it must be older."];
+	  86 [label="Jump to: [steeldoorhub]"];
+	  87 [label="Blue door: Variable[\"whirling.steel_door_conceptualization_named_investigation\"] == false"];
+	  88 [label="Variable[\"whirling.steel_door_conceptualization_named_investigation\"] == false", shape=diamond];
+	  89 [label="!(Variable[\"whirling.steel_door_conceptualization_named_investigation\"] == false)", shape=diamond];
+	  90 [label="Blue door: You see a heavy steel door with a prominent dimple lock. It's painted blue."];
+	  91 [label="Blue door: SetVariableValue(\"character.trigger_master_investigator_thought\", true) --[[ Variable[ ]]"];
+	  92 [label="Interfacing: Old cobalt paint. Rough on the fingers. Forty, fifty years since this was painted, maybe?"];
+	  93 [label="Kim Kitsuragi: \"We're not getting past it without a key. We should ask the bartender...\" He corrects himself. \"The cafeteria manager.\""];
+	  94 [label="Blue door: Variable[\"TASK.investigate_mysterious_door\"] == false"];
+	  95 [label="Variable[\"TASK.investigate_mysterious_door\"] == false", shape=diamond];
+	  96 [label="!(Variable[\"TASK.investigate_mysterious_door\"] == false)", shape=diamond];
+	  97 [label="Physical Instrument: Okay -- it was a *challenge* and you failed. What now, loser?"];
+	  98 [label="Blue door: Variable[\"whirling.barreddoor_not_unimportant\"]"];
+	  99 [label="Variable[\"whirling.barreddoor_not_unimportant\"]", shape=diamond];
+	  100 [label="!(Variable[\"whirling.barreddoor_not_unimportant\"])", shape=diamond];
+	  101 [label="Inland Empire: Dust rises before you like mist. A tomb? Haunted by regal spirits from distant ages..."];
+	  102 [label="Blue door: You're right. The door looks positively *immutable*. You could never get it open using force."];
+	  103 [label="Blue door: IsKimHere()"];
+	  104 [label="IsKimHere()", shape=diamond];
+	  105 [label="!(IsKimHere())", shape=diamond];
+	  106 [label="whyhub"];
+	  107 [label="You: \"It's part of the Whirling-in-Rags. There's something *about* this place that makes me want to know.\""];
+	  108 [label="Blue door: Variable[\"yard.orb_winch_seen\"]"];
+	  109 [label="Variable[\"yard.orb_winch_seen\"]", shape=diamond];
+	  110 [label="!(Variable[\"yard.orb_winch_seen\"])", shape=diamond];
+	  111 [label="Kim Kitsuragi: \"Have you tried using the key?\" The lieutenant nods toward the lock. \"I suspect that will work.\""];
+	  0 -> 1
+	  1 -> 90
+	  2 -> 3
+	  2 -> 4
+	  3 -> 10
+	  4 -> 33
+	  5 -> 28
+	  8 -> 73
+	  9 -> 56
+	  11 -> 49
+	  12 -> 13
+	  12 -> 14
+	  13 -> 46
+	  14 -> 80
+	  15 -> 16
+	  15 -> 17
+	  16 -> 43
+	  16 -> 20
+	  17 -> 59
+	  18 -> 44
+	  18 -> 68
+	  19 -> 93
+	  20 -> 102
+	  21 -> 70
+	  22 -> 24
+	  22 -> 23
+	  23 -> 79
+	  24 -> 94
+	  25 -> 34
+	  26 -> 106
+	  27 -> 9
+	  28 -> 56
+	  29 -> 30
+	  29 -> 31
+	  31 -> 101
+	  32 -> 9
+	  34 -> 35
+	  34 -> 36
+	  35 -> 91
+	  36 -> 22
+	  37 -> 75
+	  38 -> 87
+	  39 -> 75
+	  41 -> 66
+	  42 -> 29
+	  43 -> 18
+	  44 -> 71
+	  45 -> 15
+	  46 -> 48
+	  46 -> 47
+	  47 -> 56
+	  48 -> 82
+	  49 -> 50
+	  49 -> 51
+	  50 -> 111
+	  51 -> 5
+	  52 -> 29
+	  53 -> 67
+	  54 -> 108
+	  55 -> 69
+	  56 -> 40
+	  56 -> 11
+	  56 -> 78
+	  56 -> 81
+	  56 -> 53
+	  56 -> 25
+	  56 -> 57
+	  57 -> 98
+	  58 -> 39
+	  59 -> 56
+	  60 -> 37
+	  61 -> 6
+	  63 -> 56
+	  64 -> 56
+	  65 -> 45
+	  66 -> 56
+	  67 -> 92
+	  68 -> 102
+	  69 -> 9
+	  70 -> 9
+	  71 -> 97
+	  72 -> 74
+	  73 -> 75
+	  74 -> 75
+	  75 -> 77
+	  76 -> 56
+	  77 -> 21
+	  77 -> 38
+	  77 -> 55
+	  78 -> 62
+	  79 -> 29
+	  80 -> 46
+	  81 -> 65
+	  82 -> 83
+	  82 -> 84
+	  83 -> 64
+	  84 -> 56
+	  85 -> 86
+	  86 -> 56
+	  87 -> 88
+	  87 -> 89
+	  88 -> 32
+	  89 -> 27
+	  90 -> 12
+	  91 -> 22
+	  92 -> 85
+	  93 -> 76
+	  94 -> 96
+	  94 -> 95
+	  95 -> 52
+	  96 -> 42
+	  97 -> 63
+	  98 -> 99
+	  98 -> 100
+	  99 -> 19
+	  100 -> 103
+	  101 -> 2
+	  102 -> 63
+	  103 -> 104
+	  103 -> 105
+	  104 -> 54
+	  105 -> 41
+	  106 -> 8
+	  106 -> 72
+	  106 -> 107
+	  106 -> 58
+	  106 -> 61
+	  107 -> 60
+	  108 -> 109
+	  108 -> 110
+	  109 -> 26
+	  110 -> 106
+	  111 -> 28
+}
+

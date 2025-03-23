@@ -1,0 +1,171 @@
+# LAIR / INSTIGATORS TENT
+# 1. Find Ruby's journal here.
+#2. Use to stow away Ruby's body if she killed herself.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Kim Kitsuragi: Variable[\"boardwalk.tent_covered\"]"];
+	  3 [label="Variable[\"boardwalk.tent_covered\"]", shape=diamond];
+	  4 [label="!(Variable[\"boardwalk.tent_covered\"])", shape=diamond];
+	  5 [label="Instigator's Tent: 各种各样的平装书，大部分都是恐怖小说。其中一本的封面上是一辆掩埋在雪中的汽車，还有一本——是一艘幽灵飞艇。你还发现一系列无线电爱好者的杂志。"];
+	  6 [label="Savoir Faire: 这是一个老手扎的营——她习惯在外面露营了。"];
+	  7 [label="Jump to: [instigatortenthub]"];
+	  8 [label="You: “一本笔记本。”（拿走。）"];
+	  9 [label="Instigator's Tent: 她就躺在那里，被睡袋紧紧包裹着，周围堆满了空的香烟盒、书本、还有翻了一半的杂志。"];
+	  10 [label="Jump to: [You: \"[Leave.]\"]"];
+	  11 [label="Inland Empire: 她就这么看着，一动也不动。"];
+	  12 [label="Perception (Smell): 它散发着一股香烟的味道。"];
+	  13 [label="Jump to: [Instigator's Tent: \"The plain red tent rests stoically...\"]"];
+	  14 [label="Instigator's Tent: 帐篷看起来很破旧，但维护的很好。黑漆漆的帐篷里面——有一只卷起来的睡袋，一些厨房用具，几本书，还有一只煤油灯。"];
+	  15 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_killed_herself\"]"];
+	  16 [label="Variable[\"boardwalk.ruby_killed_herself\"]", shape=diamond];
+	  17 [label="!(Variable[\"boardwalk.ruby_killed_herself\"])", shape=diamond];
+	  18 [label="Jump to: [instigatortenthub]"];
+	  19 [label="Instigator's Tent: 朴素的红色帐篷稳稳地站在角落。"];
+	  20 [label="You: 看看那些书。\n用手电筒照亮那些书。"];
+	  21 [label="Kim Kitsuragi: “我们应该把她放进睡袋，这样老鼠就没法咬她了。”"];
+	  22 [label="Untitled hub"];
+	  23 [label="Kim Kitsuragi: “我们应该*立马*查看一下。比如说——现在。”"];
+	  24 [label="You: 看看里面。"];
+	  25 [label="Kim Kitsuragi: 警督点点头。"];
+	  26 [label="Kim Kitsuragi: IsKimHere()"];
+	  27 [label="IsKimHere()", shape=diamond];
+	  28 [label="!(IsKimHere())", shape=diamond];
+	  29 [label="Kim Kitsuragi: IsKimHere()"];
+	  30 [label="IsKimHere()", shape=diamond];
+	  31 [label="!(IsKimHere())", shape=diamond];
+	  32 [label="You: 拿起笔记本。"];
+	  33 [label="Kim Kitsuragi: FinishTask(\"TASK.look_through_magazines_done\");GainTask(\"TASK.read_ruby_journal\")--[[ Variable[ ]]"];
+	  34 [label="Savoir Faire: 这是一个老手扎的营——她习惯在外面露营了。"];
+	  35 [label="You: 翻阅杂志。"];
+	  36 [label="You: [离开。]"];
+	  37 [label="Instigator's Tent: 教唆者的尸体被分析部的人移走了。现在这座帐篷看起来像个孤儿一样。"];
+	  38 [label="Logic: 杂志？你应该翻翻看。"];
+	  39 [label="You: 离开帐篷。"];
+	  40 [label="Kim Kitsuragi: IsKimHere()"];
+	  41 [label="IsKimHere()", shape=diamond];
+	  42 [label="!(IsKimHere())", shape=diamond];
+	  43 [label="Kim Kitsuragi: IsKimHere()"];
+	  44 [label="IsKimHere()", shape=diamond];
+	  45 [label="!(IsKimHere())", shape=diamond];
+	  47 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_killed_herself\"]"];
+	  48 [label="Variable[\"boardwalk.ruby_killed_herself\"]", shape=diamond];
+	  49 [label="!(Variable[\"boardwalk.ruby_killed_herself\"])", shape=diamond];
+	  50 [label="Instigator's Tent: 你把那本磨损的皮质日记放进了自己的口袋。"];
+	  51 [label="Kim Kitsuragi: IsKimHere()"];
+	  52 [label="IsKimHere()", shape=diamond];
+	  53 [label="!(IsKimHere())", shape=diamond];
+	  54 [label="Instigator's Tent: 《每月音响》，《材料科学》，还有别的技术文摘。其中一本的封面没有图——那不是杂志，而是个皮革笔记本！"];
+	  55 [label="You: 看看里面。"];
+	  56 [label="Kim Kitsuragi: Variable[\"TASK.report_to_the_tribunal_done\"]"];
+	  57 [label="Variable[\"TASK.report_to_the_tribunal_done\"]", shape=diamond];
+	  58 [label="!(Variable[\"TASK.report_to_the_tribunal_done\"])", shape=diamond];
+	  59 [label="Kim Kitsuragi: 警督从你身后看了一眼。“发现什么了吗？”"];
+	  60 [label="You: 翻阅书籍和杂志。\n用手电筒照亮那些书和杂志。"];
+	  61 [label="Instigator's Tent: 你看见卷起来的睡袋，还有些私人物品。"];
+	  62 [label="Instigator's Tent: 纯红色的帐篷稳稳地站在角落。露比的尸体就裹在她自己的睡袋里。"];
+	  63 [label="You: “好，我们把她抬到这里来吧。”"];
+	  64 [label="Inland Empire: 一个值得信赖的朋友被留在了这里……"];
+	  65 [label="Kim Kitsuragi: “分析部的人的动作好像比平时要快。不管怎么说，我们路过来看一眼总是好的。”他朝着那个少了露比的帐篷点了点头，然后环顾了一下周围。“现在——该上岛了。”"];
+	  66 [label="Jump to: [Instigator's Tent: \"Assorted softcovers, mostly pulp ho...\"]"];
+	  67 [label="instigatortenthub"];
+	  68 [label="Instigator's Tent: 黑漆漆的帐篷里面：露比的尸体包在睡袋里。旁边是几本书，还有一只煤油灯。"];
+	  69 [label="Esprit de Corps: 你需要警督的帮忙才能把她抬过来。"];
+	  70 [label="Kim Kitsuragi: FinishTask(\"TASK.search_tent_done\");GainTask(\"TASK.read_ruby_journal\")--[[ Variable[ ]]"];
+	  71 [label="Kim Kitsuragi: Variable[\"boardwalk.ruby_killed_herself\"]"];
+	  72 [label="Variable[\"boardwalk.ruby_killed_herself\"]", shape=diamond];
+	  73 [label="!(Variable[\"boardwalk.ruby_killed_herself\"])", shape=diamond];
+	  74 [label="Instigator's Tent: 纯红色的帐篷稳稳地站在角落。"];
+	  75 [label="Instigator's Tent: 纯红色的帐篷平静地站立着。"];
+	  0 -> 1
+	  1 -> 56
+	  2 -> 3
+	  2 -> 4
+	  3 -> 71
+	  4 -> 75
+	  5 -> 26
+	  6 -> 67
+	  7 -> 67
+	  8 -> 50
+	  9 -> 38
+	  10 -> 36
+	  11 -> 33
+	  12 -> 22
+	  13 -> 19
+	  14 -> 12
+	  15 -> 16
+	  15 -> 17
+	  16 -> 11
+	  17 -> 64
+	  18 -> 67
+	  19 -> 67
+	  20 -> 5
+	  21 -> 63
+	  22 -> 20
+	  22 -> 39
+	  23 -> 18
+	  24 -> 61
+	  25 -> 9
+	  26 -> 27
+	  26 -> 28
+	  27 -> 59
+	  28 -> 35
+	  29 -> 30
+	  29 -> 31
+	  30 -> 21
+	  31 -> 69
+	  32 -> 50
+	  33 -> 51
+	  34 -> 67
+	  35 -> 54
+	  37 -> 10
+	  38 -> 7
+	  39 -> 13
+	  40 -> 41
+	  40 -> 42
+	  41 -> 8
+	  42 -> 32
+	  43 -> 44
+	  43 -> 45
+	  44 -> 65
+	  45 -> 37
+	  47 -> 48
+	  47 -> 49
+	  48 -> 34
+	  49 -> 6
+	  50 -> 15
+	  51 -> 52
+	  51 -> 53
+	  52 -> 23
+	  53 -> 18
+	  54 -> 40
+	  55 -> 68
+	  55 -> 14
+	  56 -> 57
+	  56 -> 58
+	  57 -> 43
+	  58 -> 2
+	  59 -> 35
+	  60 -> 66
+	  61 -> 29
+	  62 -> 67
+	  63 -> 25
+	  64 -> 70
+	  65 -> 10
+	  66 -> 5
+	  67 -> 24
+	  67 -> 60
+	  67 -> 36
+	  67 -> 55
+	  68 -> 22
+	  69 -> 7
+	  70 -> 51
+	  71 -> 72
+	  71 -> 73
+	  72 -> 62
+	  73 -> 74
+	  74 -> 67
+	  75 -> 47
+}
+

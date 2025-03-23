@@ -1,0 +1,2143 @@
+# SEAFORT / INSULINDIAN PHASMID
+# Interact with the Insulindian phasmid.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Insulindian Phasmid: 请不要再这样做了。"];
+	  3 [label="Cuno: “看来竹节虫在那边好像有个*窝*——看。像个宝库，老兄……”"];
+	  4 [label="Cuno: “是啊，老头子看起来不太好。我们得去看看他……”"];
+	  5 [label="fail_at_phero"];
+	  6 [label="Cuno: 他大大地咧开嘴笑了，仿佛他也不相信自己在说什么：“我们他妈的*看见*它了，哟——它是真的。”"];
+	  7 [label="Empathy: 处于某种奇怪的、半紧张性精神症的状态。"];
+	  8 [label="Perception (Sight): 在芦苇丛里，竹节虫躲藏的地方，你看见一道白光——*陶瓷*一般的白色。"];
+	  9 [label="Suggestion: 节状的触须带着恐惧移动着，像是在寻找着什么……你。"];
+	  10 [label="Inland Empire: 你闻了闻……"];
+	  11 [label="Insulindian Phasmid: 通过眼角的余光，你看见一连串突然的动作传送到昆虫的节肢。一连串的超声波滴答声充满了你的耳朵……\n通过眼角的余光，你看见一连串突然的动作传送到竹节虫的节肢。一连串的超声波滴答声充满了你的耳朵……"];
+	  12 [label="Authority: 他的自尊心在作祟。"];
+	  13 [label="You: “你真的存在……”"];
+	  14 [label="Insulindian Phasmid: IsCunoInParty()"];
+	  15 [label="IsCunoInParty()", shape=diamond];
+	  16 [label="!(IsCunoInParty())", shape=diamond];
+	  17 [label="Esprit de Corps: 与此同时，在57分局检疫所的接待室里，一条折叠整齐的工装裤和一件橙色的飞行员夹克躺在一个衣帽柜里。夹克上面——是一个滚花的小铝块，藏在一个皮套里。"];
+	  18 [label="Esprit de Corps: 一台快速照相机——崔格特阳光，迷你型。他转向一侧，检疫所里传来一阵不安的呻吟……"];
+	  19 [label="Conceptualization: 正在向你祈祷。"];
+	  20 [label="You: 告诉我——你在做什么？"];
+	  21 [label="You: Variable[\"seafort.phasmid_wc_what_are_ya_doin\"]"];
+	  22 [label="Variable[\"seafort.phasmid_wc_what_are_ya_doin\"]", shape=diamond];
+	  23 [label="!(Variable[\"seafort.phasmid_wc_what_are_ya_doin\"])", shape=diamond];
+	  24 [label="You: （低语。）“金，它在吐泡泡。”\n（低语。）“坤诺，它在吐泡泡。”"];
+	  25 [label="Jump to: [PHASMID main]"];
+	  26 [label="Insulindian Phasmid: 昆虫不经意地持续发出尖锐的摩擦声。它在移动，而关节上的簇状结构还在伪装成植物。"];
+	  27 [label="Insulindian Phasmid: 芦苇样的生物没有停止尖锐的摩擦声——它耸立在你上方，离开了藏身的那片芦苇丛。簇状结构还在关节上沙沙作响。"];
+	  28 [label="Authority: 现在他什么都愿意相信了。"];
+	  29 [label="Kim Kitsuragi: “那个截瘫病人？她有可能知道，没错……”他似乎不太确定。"];
+	  30 [label="Kim Kitsuragi: “我从没想过那个该死的*神秘动物学*会……好吧，现在我们知道它就在这里。我们*还会*找到它的。”"];
+	  31 [label="Esprit de Corps: “那样大喊大叫，他怕是*真的*昏了头。呃，至少他还*活着*……”身穿蓝色制服的迈诺特警官皱起眉头：“让，也许*出什么事*了？他陷入困境了……”"];
+	  32 [label="The Deserter: “神秘什么？”老人的耳朵捕捉到某种古怪的暗示。"];
+	  33 [label="You: 舔一下你的手指。"];
+	  34 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_one_shudder\"]"];
+	  35 [label="Variable[\"seafort.phasmid_one_shudder\"]", shape=diamond];
+	  36 [label="!(Variable[\"seafort.phasmid_one_shudder\"])", shape=diamond];
+	  37 [label="Insulindian Phasmid: 节肢动物耸立在你上方，僵在原地。一条后肢突然一阵抽搐，而你……"];
+	  38 [label="Interfacing: 感觉什么都没有。节肢动物在你面前纹丝不动……"];
+	  39 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_wc_failure_counter\"] >= 1"];
+	  40 [label="Variable[\"seafort.phasmid_wc_failure_counter\"] >= 1", shape=diamond];
+	  41 [label="!(Variable[\"seafort.phasmid_wc_failure_counter\"] >= 1)", shape=diamond];
+	  42 [label="Pain Threshold: 突然间——又是一阵痛楚掠过。比之前地更严重。你在嘴里尝到血腥的味道。昆虫也尝到了，突然抽搐起来……"];
+	  43 [label="You: 它是很*不可思议*的。\n对于我来说，它是很*不可思议*的。"];
+	  44 [label="Perception (Sight): 在周围的芦苇丛里快速移动，还有泥泞的水面……你注意到它的后肢会时不时地站立在水面上。它就是*那道*光……"];
+	  45 [label="You: 我脑子有病。我疯了。对我来说就是这样。"];
+	  46 [label="Insulindian Phasmid: 那是你的问题。对于我来说，没有什么结束。在我的脑海里，只有2副，或者是3副画面的空间。"];
+	  47 [label="You: 明白了。解决了。"];
+	  48 [label="Insulindian Phasmid: 你是暴力和难以抑制的奇迹。宇宙的真空，还有在那里燃烧的星星都害怕你。如果时间足够，你会把我们统统抹去，不会有什么东西来代替——而且对你来说可能只是个意外。"];
+	  49 [label="Insulindian Phasmid: 她是个资产阶级。用不着一只三米高的竹节虫来告诉你这个吧。"];
+	  50 [label="Half Light: 它可能拥有某种未知的、危险的生物化学特性，能帮它维持伪装。"];
+	  51 [label="Insulindian Phasmid: 非常慢的毁灭他——只是因为他不肯走开。本来是为了让他不注意到我，我干扰了他大脑里的画面。不过他看了我太久。我正在毁灭他。"];
+	  52 [label="Jump to: [the_phasmid]"];
+	  53 [label="You: 在我见过的所有生物当中，你是最吓人的一个。"];
+	  54 [label="You: 那好吧。忘了吧。"];
+	  55 [label="Insulindian Phasmid: 你的眼睛接触到的一切都会回到那里——神经镜像的背后。如果你眨眼了呢？我们还会在这里吗？（请不要眨眼。）如果有一天你将我们的记忆混淆起来——或者遗忘了呢？"];
+	  56 [label="Untitled hub"];
+	  57 [label="Cuno: “该死。它去哪了？”"];
+	  58 [label="Cuno: “妈的……”他眯起眼睛。“那是*陶瓷*吗？还有更多东西——芦苇丛里像是有个*窝*。我们应该偷瞄一下……我去……”"];
+	  59 [label="Jump to: [cuno_massive_failure]"];
+	  60 [label="Cuno: “哟，我们刚刚才看见一只该死的大昆虫，好吗？集中一点，别注意什么……”他四下看了看。“它去哪了？”"];
+	  61 [label="You: “我不明白……我*喷了*费洛蒙……”"];
+	  62 [label="Cuno: “坤诺不明白你什么意思——坤诺只知道那玩意真他妈大。真他妈见鬼了……”"];
+	  63 [label="Insulindian Phasmid: Variable[\"whirling.lena_intro_midgreet\"]"];
+	  64 [label="Variable[\"whirling.lena_intro_midgreet\"]", shape=diamond];
+	  65 [label="!(Variable[\"whirling.lena_intro_midgreet\"])", shape=diamond];
+	  66 [label="Authority: 现在他是真心为你在死亡岛上的表现感到满意。"];
+	  67 [label="Savoir Faire: 不！闪光灯会吓跑那个生物的！马上警告他！"];
+	  68 [label="Half Light: 我不好吃。别吃我。我很害怕。"];
+	  69 [label="Kim Kitsuragi: 他突然清醒过来。“当然。我能理解，”他点头说到。"];
+	  70 [label="You: “喂。”"];
+	  71 [label="Jump to: [phasmid intro hub]"];
+	  72 [label="Insulindian Phasmid: IsKimHere()"];
+	  73 [label="IsKimHere()", shape=diamond];
+	  74 [label="!(IsKimHere())", shape=diamond];
+	  75 [label="Encyclopedia: 生物腹部的气管系统在你面前扩张开来，吸入和排放着空气——它在*闻*你。"];
+	  76 [label="You: 让你的脚后跟落在坚实的地面上。"];
+	  77 [label="You: 把你的手放下。"];
+	  78 [label="Insulindian Phasmid: 无脊椎动物活了过来，发出尖锐的摩擦声。昆虫小脑袋两边的一对对复眼追随着你，一前一后地移动。"];
+	  79 [label="Electrochemistry: 吸入你的气息——弥漫在微风中那股酸臭、油腻的化学信息素味道……"];
+	  80 [label="failure_of_many_proportions"];
+	  81 [label="Kim Kitsuragi: “没有……”他拿出那张白色的相纸。上面有彩虹的颜色——蓝色，白色，黄色，棕色，就像小孩的画作。"];
+	  82 [label="Jump to: [failure_of_many_proportions]"];
+	  83 [label="Authority: 警督身体内部有什么东西碎裂了。他的自尊心在作祟。"];
+	  84 [label="The Deserter: “我没有……”出于某种奇怪的原因，他把手伸进了灰尘里。弄脏了自己的手指，困惑地像个孩子一样……"];
+	  85 [label="Inland Empire: 永永远远。"];
+	  86 [label="Kim Kitsuragi: “这样很好，这样很好，”警督举起相机，低语到。“别担心。我们可以的。”"];
+	  87 [label="Half Light: 它要动了，你能感觉到！"];
+	  88 [label="You: 我想知道你在想什么。"];
+	  89 [label="Insulindian Phasmid: Variable[\"seafort.sense_hearing_pain_flash\"]"];
+	  90 [label="Variable[\"seafort.sense_hearing_pain_flash\"]", shape=diamond];
+	  91 [label="!(Variable[\"seafort.sense_hearing_pain_flash\"])", shape=diamond];
+	  92 [label="You: 我的身体很疼。我在流血。"];
+	  93 [label="Insulindian Phasmid: 我嗅到了，甚至是当你刚刚踏上这座岛屿的时候就嗅到了——草莓。新鲜的红草莓。从成熟变得更加成熟。很快你就会腐烂。"];
+	  94 [label="Insulindian Phasmid: 火焰？哪里？"];
+	  95 [label="Physical Instrument: 不是——这是三米高的竹节虫想出来的。"];
+	  96 [label="You: *怎么会*？"];
+	  97 [label="Jump to: [are_you_sure]"];
+	  98 [label="You: 所以你看起来像芦苇，而且还吃芦苇？"];
+	  99 [label="Insulindian Phasmid: *我*觉得我们应该吃掉它。当成一片树叶塞进嘴里。或者是一条芦苇。很美味。"];
+	  100 [label="You: 我和你一样。"];
+	  101 [label="Jump to: [the_phasmid]"];
+	  102 [label="Kim Kitsuragi: “不。出什么事了？”"];
+	  103 [label="Electrochemistry: 什么都没有，除了你，RCM的一名警探，站在原地，目瞪口呆。"];
+	  104 [label="Jump to: [the_phasmid]"];
+	  105 [label="You: “等等，你怎么知道这个竹节虫的？”\n等等——伊苏林迪竹节虫？你是怎么知道的？"];
+	  106 [label="chat_with_cuno"];
+	  107 [label="Jump to: [Insulindian Phasmid: \"The insect's head is crowned with r...\"]"];
+	  108 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_sugg_prepare\"]"];
+	  109 [label="Variable[\"seafort.phasmid_sugg_prepare\"]", shape=diamond];
+	  110 [label="!(Variable[\"seafort.phasmid_sugg_prepare\"])", shape=diamond];
+	  111 [label="Inland Empire: 畏惧。你的味道不对。"];
+	  112 [label="Jump to: [phasmid intro hub]"];
+	  113 [label="You: “好吧，照相吧。”"];
+	  114 [label="Insulindian Phasmid: 幽灵昆虫看着你挣脱出来，继续着催眠的动作。不清楚它到底有没有注意到你打算走开……"];
+	  115 [label="Esprit de Corps: 一台相机——警督藏在外套口袋里的快速彩色照相机。他转向一侧，检疫所里传来一阵不安的呻吟……"];
+	  116 [label="Insulindian Phasmid: 没有回应。它的嘴里发出一阵完全的、古老的沉默之声，还伴随着似乎是某种泡沫……它的节肢发出的尖锐声音将你重重环绕。"];
+	  117 [label="Insulindian Phasmid: IsKimHere()"];
+	  118 [label="IsKimHere()", shape=diamond];
+	  119 [label="!(IsKimHere())", shape=diamond];
+	  120 [label="Kim Kitsuragi: “我们的嫌犯看起来状态不好，我们应该看看他——还有……”他指向芦苇丛。"];
+	  121 [label="Kim Kitsuragi: “帮他们？”他陷入短暂的沉默。“我看不出我们还能做些什么？”"];
+	  122 [label="Insulindian Phasmid: Variable[\"coast.morells_pheromone_spray\"] == true  and  Variable[\"whirling.bath_washed_pheromones_off\"] == false"];
+	  123 [label="Variable[\"coast.morells_pheromone_spray\"] == true  and  Variable[\"whirling.bath_washed_pheromones_off\"] == false", shape=diamond];
+	  124 [label="!(Variable[\"coast.morells_pheromone_spray\"] == true  and  Variable[\"whirling.bath_washed_pheromones_off\"] == false)", shape=diamond];
+	  125 [label="Insulindian Phasmid: Variable[\"coast.morells_pheromone_spray\"]"];
+	  126 [label="Variable[\"coast.morells_pheromone_spray\"]", shape=diamond];
+	  127 [label="!(Variable[\"coast.morells_pheromone_spray\"])", shape=diamond];
+	  128 [label="Insulindian Phasmid: Variable[\"whirling.lena_intro_midgreet\"]"];
+	  129 [label="Variable[\"whirling.lena_intro_midgreet\"]", shape=diamond];
+	  130 [label="!(Variable[\"whirling.lena_intro_midgreet\"])", shape=diamond];
+	  131 [label="you_met_cryptos"];
+	  132 [label="You: “我应该喷费洛蒙的！”"];
+	  133 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_esprit_stuff_in_station\"]"];
+	  134 [label="Variable[\"seafort.phasmid_esprit_stuff_in_station\"]", shape=diamond];
+	  135 [label="!(Variable[\"seafort.phasmid_esprit_stuff_in_station\"])", shape=diamond];
+	  136 [label="You: “警督，它在用*节肢*思考。”"];
+	  137 [label="Jump to: [PHASMID main]"];
+	  138 [label="You: （我肯定。）“我们可以的，金……”（继续向后退。）"];
+	  139 [label="You: 在我心里。对于我来说，它是一种悲伤——源源不断地进入我的心脏。"];
+	  140 [label="Insulindian Phasmid: 我没有。我的脑袋里甚至没有中枢神经系统。只有吃湿地植物的口器。"];
+	  141 [label="Insulindian Phasmid: 不。我的腿试着独立活动，让走路变得很困难。"];
+	  142 [label="You: 不，我不确定。你为什么这么问？"];
+	  143 [label="Insulindian Phasmid: 我的腿试着独立活动，让走路变得很困难。"];
+	  144 [label="You: ……怎么做到的？"];
+	  145 [label="You: “好吧。忘了吧。”"];
+	  146 [label="Insulindian Phasmid: 再见。一连串唧唧声环绕着你，就像悬崖边上的燕子一样，竹节虫移动前臂——鼓室在白色茎杆内侧清晰可见……"];
+	  147 [label="Perception (Sight): ……下面好像有些什么！在它站立的地方，在芦苇丛中，上下浮动。一堆藏品。"];
+	  148 [label="Jump to: [kim_after_chat]"];
+	  149 [label="You: 我是不是严重癫痫发作了？"];
+	  150 [label="Insulindian Phasmid: 请务必如此。或者有一天，其中一个你会闭上眼睛叹息——再次睁开之后，会发现这一切全没有存在过。"];
+	  151 [label="Logic: 我的天啦，*金*有一台相机！"];
+	  152 [label="Cuno: “看起来你是没疯，”他在你背后小声说到。“坤诺非常了解癫痫。”"];
+	  153 [label="You: “那看起来是什么样的？”"];
+	  154 [label="Cuno: “你只是盯着那只大昆虫看。”"];
+	  155 [label="You: “它可以在水面上走。”"];
+	  156 [label="endhub"];
+	  157 [label="Kim Kitsuragi: “我们的嫌疑人看起来不太好。我们应该看看他——还有，”他指向芦苇丛。"];
+	  158 [label="You: “我不该洗澡的，费洛蒙都被冲掉了！”"];
+	  159 [label="Cuno: “就在那边的芦苇丛里——看起来不经常在外面活动。他妈的够狡猾的……我看见它滑过去的。现在它走了，不过……”他喘着粗气。“哇哦。”"];
+	  160 [label="Savoir Faire: 放松。既然你*知道*它在这里——它还能藏多久呢？"];
+	  161 [label="Perception (Hearing): 嘶嘶嘶嘶嘶-吱吱吱吱-滴滴-嘶嘶-吱吱吱吱-滴滴……"];
+	  162 [label="Kim Kitsuragi: “我们需要一张相片——不然没人会相信我们的。”他继续拉开镜头……"];
+	  163 [label="Insulindian Phasmid: Variable[\"seafort.dolores_said_hey\"]"];
+	  164 [label="Variable[\"seafort.dolores_said_hey\"]", shape=diamond];
+	  165 [label="!(Variable[\"seafort.dolores_said_hey\"])", shape=diamond];
+	  166 [label="Insulindian Phasmid: 回到28公里外的一座小岛上，巨型昆虫移动着它的触须，探测着周围的空气，慢慢悠悠……像是在寻找什么东西……*你*。"];
+	  167 [label="Electrochemistry: 你勉强迈出一步——这只无脊椎动物以离奇的速度做出了反应，一溜烟地滑过水面。它走了，像一颗跳跃的石头，只在平滑如镜的海面上留下一圈圈涟漪……"];
+	  168 [label="PHASMID main"];
+	  169 [label="You: （低语）“好吧，金，照张相。”\n（低语）“金，把相片再拿给我看看……”"];
+	  170 [label="You: 把你的手放下。"];
+	  171 [label="Kim Kitsuragi: “好吧……”伴随着一阵低缓的金属摩擦声，警督打开镜头，把它举到齐眼的高度。"];
+	  172 [label="You: “这*的确*跟公牛喷雾有关！”"];
+	  173 [label="Perception (Sight): 即使是野生动物摄影师也无法辨认出任何熟悉的形状，更不用说是一只巨大的竹节虫了。"];
+	  174 [label="Kim Kitsuragi: 他的嘴角闪过一丝微笑，仿佛他也不相信自己在说什么：“我们*看见*它了——它是真的。”"];
+	  175 [label="The Deserter: “现在怎么做……”你身后的老人突然复述到。他把手伸进灰烬里——那只手又脏又黑。"];
+	  176 [label="Kim Kitsuragi: “看来它在那边好像有个巢……也许在那里能找到证据。”"];
+	  177 [label="You: “老天爷，我不该洗澡的！费洛蒙都被冲掉了！”"];
+	  178 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_esprit_posse_incoming\"]"];
+	  179 [label="Variable[\"seafort.phasmid_esprit_posse_incoming\"]", shape=diamond];
+	  180 [label="!(Variable[\"seafort.phasmid_esprit_posse_incoming\"])", shape=diamond];
+	  181 [label="Insulindian Phasmid: 一阵突如其来的颤栗掠过节肢。看来这种生物正从恍惚中一波一波地苏醒。"];
+	  182 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_inland_only_chance\"]"];
+	  183 [label="Variable[\"seafort.phasmid_inland_only_chance\"]", shape=diamond];
+	  184 [label="!(Variable[\"seafort.phasmid_inland_only_chance\"])", shape=diamond];
+	  185 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_wc_what_are_ya_doin\"]"];
+	  186 [label="Variable[\"seafort.phasmid_wc_what_are_ya_doin\"]", shape=diamond];
+	  187 [label="!(Variable[\"seafort.phasmid_wc_what_are_ya_doin\"])", shape=diamond];
+	  188 [label="Insulindian Phasmid: 就连鸟儿都不知道。甚至就连水百合也不知道。"];
+	  189 [label="You: 我是在做梦吗？出什么事了？"];
+	  190 [label="Insulindian Phasmid: 对于我来说并不像那样。我有的是状态，没有情绪。举个例子，我会对意想不到的糖分奖励感到兴奋，不过这并不重要。"];
+	  191 [label="Insulindian Phasmid: 不。你就是奇迹。"];
+	  192 [label="Insulindian Phasmid: IsTHCPresent(\"shit_together\")"];
+	  193 [label="IsTHCPresent(\"shit_together\")", shape=diamond];
+	  194 [label="!(IsTHCPresent(\"shit_together\"))", shape=diamond];
+	  195 [label="Esprit de Corps: 闪亮"];
+	  196 [label="You: 凶手。"];
+	  197 [label="Insulindian Phasmid: 她是人间炼狱。用不着一只三米高的竹节虫来告诉你这个吧。"];
+	  198 [label="You: 我已经将整个世界遗忘过一次了——当我喝太多的时候。"];
+	  199 [label="Cuno: “所有人都知道。这他妈就是伊苏林迪竹节虫。”"];
+	  200 [label="Insulindian Phasmid: Variable[\"coast.morells_pheromone_spray\"]"];
+	  201 [label="Variable[\"coast.morells_pheromone_spray\"]", shape=diamond];
+	  202 [label="!(Variable[\"coast.morells_pheromone_spray\"])", shape=diamond];
+	  203 [label="You: “那好吧。忘了吧。”"];
+	  204 [label="Cuno: “它走了……”坤诺看向北方。“就在那边的芦苇丛里。妈的它居然可以……”"];
+	  205 [label="Savoir Faire: 既然你知道它的存在——改天还可以再去找它。它不可能永远藏起来的……"];
+	  206 [label="Cuno: “看来竹节虫在那边好像有个*窝*——看。像个宝库，老兄……”"];
+	  207 [label="Insulindian Phasmid: Variable[\"coast.morells_pheromone_spray\"] == true  and  Variable[\"whirling.bath_washed_pheromones_off\"] == false"];
+	  208 [label="Variable[\"coast.morells_pheromone_spray\"] == true  and  Variable[\"whirling.bath_washed_pheromones_off\"] == false", shape=diamond];
+	  209 [label="!(Variable[\"coast.morells_pheromone_spray\"] == true  and  Variable[\"whirling.bath_washed_pheromones_off\"] == false)", shape=diamond];
+	  210 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_rc_composure_approach\"]"];
+	  211 [label="Variable[\"seafort.phasmid_rc_composure_approach\"]", shape=diamond];
+	  212 [label="!(Variable[\"seafort.phasmid_rc_composure_approach\"])", shape=diamond];
+	  213 [label="Savoir Faire: 不！闪光灯会吓到那个生物的！马上警告他！"];
+	  214 [label="Jump to: [taking_photo_hub]"];
+	  215 [label="Jump to: [phasmid intro hub]"];
+	  216 [label="Insulindian Phasmid: 他连看都没看右边的巨型昆虫一眼——而它也没有看他。它的触须在探测着周围的空气，慢慢悠悠……像是在寻找什么东西……*你*。"];
+	  217 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_concept_praying\"]"];
+	  218 [label="Variable[\"seafort.phasmid_concept_praying\"]", shape=diamond];
+	  219 [label="!(Variable[\"seafort.phasmid_concept_praying\"])", shape=diamond];
+	  220 [label="You: （向上看。）“你在闻我的味道……”"];
+	  221 [label="You: “现在怎么办？”（继续。）"];
+	  222 [label="Kim Kitsuragi: “就是一片模糊，”他看着手中的相片说到。"];
+	  223 [label="You: （大叫。）“不要！”"];
+	  224 [label="You: “没人会相信我的……没人会相信这是真的。”"];
+	  225 [label="Interfacing: 你是对的，某种水分让它变得闪闪发亮。你面前的节肢动物纹丝不动……"];
+	  226 [label="You: 我想要更多。"];
+	  227 [label="Insulindian Phasmid: 沉默，昆虫的口器周围吐出泡泡，歪起由融合骨板构成的头部。从左到右，毫无缘由。"];
+	  228 [label="Insulindian Phasmid: 我存在。\n我存在。"];
+	  229 [label="Empathy: 你开始向后退时，昆虫的身体里好像有什么东西被激活了。似乎它也向后退了一步……有什么东西告诉你——下次你再接触或者挣脱，它可能就会逃跑。"];
+	  230 [label="Insulindian Phasmid: 不。你是清醒的。我是真的。光组成了我。这是真的。"];
+	  231 [label="Insulindian Phasmid: 植物和动物的形状。还有*内在的*感觉。一团声响，我前臂内侧的小小共鸣——这种复杂性完全超出了我的理解范围。"];
+	  232 [label="Insulindian Phasmid: 现在我可以告诉你那是什么感觉。对于我来说，它是一连串忽明忽暗的图像。某种黑暗，被打扰了。短暂。模糊。潮湿。"];
+	  233 [label="Jump to: [the_phasmid]"];
+	  234 [label="Insulindian Phasmid: 有时候，蜕皮的时候，我失去的节肢会重新长出来。有次出了点差错。一条小腿代替了失去的触须。"];
+	  235 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_inland_detective\"]"];
+	  236 [label="Variable[\"seafort.phasmid_inland_detective\"]", shape=diamond];
+	  237 [label="!(Variable[\"seafort.phasmid_inland_detective\"])", shape=diamond];
+	  238 [label="Insulindian Phasmid: 是的。它们不介意。"];
+	  239 [label="Insulindian Phasmid: 没人相信我的存在——几乎一个人都没有。直到你的出现，警探。血滴散发着草莓的香味。跨越平静的大海，千年以来的第一人。"];
+	  240 [label="You: “我好像看到一个幻觉。关于人类最终的命运。”"];
+	  241 [label="Insulindian Phasmid: IsHighestPolitical(\"ultraliberal\")"];
+	  242 [label="IsHighestPolitical(\"ultraliberal\")", shape=diamond];
+	  243 [label="!(IsHighestPolitical(\"ultraliberal\"))", shape=diamond];
+	  244 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_touching_hub\"] == true  and  Variable[\"seafort.phasmid_talking_hub_reached\"] == true"];
+	  245 [label="Variable[\"seafort.phasmid_touching_hub\"] == true  and  Variable[\"seafort.phasmid_talking_hub_reached\"] == true", shape=diamond];
+	  246 [label="!(Variable[\"seafort.phasmid_touching_hub\"] == true  and  Variable[\"seafort.phasmid_talking_hub_reached\"] == true)", shape=diamond];
+	  247 [label="Insulindian Phasmid: 就这样，它走了——像一颗跳跃的石头，滑过平滑如镜的海面。除了水面上的圈圈涟漪，什么也没剩下……"];
+	  248 [label="Insulindian Phasmid: 我已经这么做了。"];
+	  249 [label="Insulindian Phasmid: 如果不是你的呢？如果产生幻觉的是这只三米高的竹节虫呢——当一个人傻站着，目瞪口呆的时候。"];
+	  250 [label="You: 我不想知道。"];
+	  251 [label="Insulindian Phasmid: 所以它*已经*发生了。有一天，其中一个你会闭上眼睛叹息——再次睁开之后，会发现这一切都没有存在过。"];
+	  252 [label="Insulindian Phasmid: IsKimHere()"];
+	  253 [label="IsKimHere()", shape=diamond];
+	  254 [label="!(IsKimHere())", shape=diamond];
+	  255 [label="Cuno: “哇哦……它不会有毒吧？太操蛋了……”小孩担忧地看着你。"];
+	  256 [label="You: “坤诺。我是不是严重癫痫发作了？”"];
+	  257 [label="Cuno: “不，别装腔作势了。你这是怎么了？我们是一队的，是警察。”"];
+	  258 [label="You: “我好像看到一个幻觉。关于人类最终的命运。”"];
+	  259 [label="You: “现在怎么办？”[离开。]"];
+	  260 [label="Empathy: 处于某种奇怪的、半紧张性精神症的状态。"];
+	  261 [label="Cuno: 水面上只有你的回音。小孩看着你……"];
+	  262 [label="You: “看在*老天爷*的份上，那到底是什么？”"];
+	  263 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_ency_cryptozoologist\"]"];
+	  264 [label="Variable[\"seafort.phasmid_ency_cryptozoologist\"]", shape=diamond];
+	  265 [label="!(Variable[\"seafort.phasmid_ency_cryptozoologist\"])", shape=diamond];
+	  266 [label="Savoir Faire: 你还会见到它的。既然你已经*知道*它是真的，它还能藏多久呢？"];
+	  267 [label="You: “我应该从莫雷尔那里拿走费洛蒙的！”"];
+	  268 [label="Kim Kitsuragi: “我的相机。”"];
+	  269 [label="Kim Kitsuragi: “我才不是那种不知道拍照的傻瓜……”他停下了摆弄相机的手，不过并没有把它放下。"];
+	  270 [label="Insulindian Phasmid: 一阵突如其来的吱喳声弥漫在空中——那根手杖移动着整个身体，节肢能够独立地工作，就像是一台构造精巧的机器零件……"];
+	  271 [label="Empathy: 这里面蕴藏着一种悲伤——或者来自于你，源于梦境……它还在你身边，你对她说的那句可怜的*嗨*，即使到了现在……"];
+	  272 [label="You: （低语。）“没错。祈祷吧。”"];
+	  273 [label="You: （大叫。）“不要！”"];
+	  274 [label="Empathy: 处于某种奇怪的、半紧张性精神症的状态。"];
+	  275 [label="Kim Kitsuragi: “我知道。我们*本来*应该……我也有错。”他望向对岸。手里的那张相纸还在风干，沮丧地低垂了一会儿。"];
+	  276 [label="Insulindian Phasmid: 芦苇一样的簇毛从关节中伸展出来。昆虫移动前臂，发出一阵微弱的嘶嘶声——像是一台磁带被破坏后仍在运行的开盘录音机。"];
+	  277 [label="Kim Kitsuragi: “哪里？它去哪了？”警督一手拿着相机——另一只手拿着一张白色相片纸，正在显影。"];
+	  278 [label="Kim Kitsuragi: “安瓿会发出响亮的嘶嘶声。”他转向你，低语到。“你说得对。它可能会被吓跑的。我需要找个更好的时刻，等它没往这边看的时候。”"];
+	  279 [label="Jump to: [alone hub]"];
+	  280 [label="Jump to: [alone hub]"];
+	  281 [label="Encyclopedia: 或者*里亚辛塔*，一种奥西登竹节虫，它的大脑储存在四条像树叶一样的节肢里。或者是一种拥有智能触角的拟态章鱼……"];
+	  282 [label="Insulindian Phasmid: Variable[\"XP.phasmid_thinks_with_its_limbs\"]"];
+	  283 [label="Variable[\"XP.phasmid_thinks_with_its_limbs\"]", shape=diamond];
+	  284 [label="!(Variable[\"XP.phasmid_thinks_with_its_limbs\"])", shape=diamond];
+	  285 [label="Insulindian Phasmid: 对于我来说，它是一连串忽明忽暗的图像。某种黑暗，被侵入了。短暂。黯淡。潮湿。"];
+	  286 [label="Pain Threshold: 换个话题！"];
+	  287 [label="are_you_sure"];
+	  288 [label="Insulindian Phasmid: 我是竹节虫目的一种未知物种——伊苏林迪洲特有的。在过去的350年里，我一直隐藏在显而易见的地方，伪装成芦苇的样子。塑造、克隆着自己，到了晚上会现出原形，跟垃圾桶和浮标一起玩耍。"];
+	  289 [label="Insulindian Phasmid: 第一批移居者没有发现我，宗主国的土地测量师没有发现我。大革命的士兵和占领国的官员没有发现我。甚至是第一批来到这里，却没有驻留此地的赛美岛民，也没有发现我。"];
+	  290 [label="Insulindian Phasmid: 不。*你*才有。我们这次相遇的寓意是：我是一种相对中性的生命形式，而你是极端的，能吞没一切的疯狂。一种反复无常的神经系统，对于这颗星球来说，是一种全新的不祥预兆。"];
+	  291 [label="Jump to: [the_phasmid]"];
+	  292 [label="Jump to: [the_phasmid]"];
+	  293 [label="You: “没什么。只是看看竹节虫。一切都很正常。”"];
+	  294 [label="kim_after_chat"];
+	  295 [label="You: 那我看起来什么样？"];
+	  296 [label="Insulindian Phasmid: 嘶嘶声和嘀嗒声，节肢动物伸出类似下颌部位的触须再次向你致意。你就在它的正下方，抬头望着那白色节肢上巨大的甲壳。它的小眼睛并没有盯着什么特别的目标。"];
+	  297 [label="Suggestion: 你从未有过机会。当你靠近的它那一瞬间，感觉就有什么不太对劲的地方……那个生物不*喜欢*你。"];
+	  298 [label="You: “那是什么，水里面？”"];
+	  299 [label="Jump to: [endhub]"];
+	  300 [label="Empathy: 处于某种奇怪的、半紧张性精神症的状态。"];
+	  301 [label="Jump to: [phasmid intro hub]"];
+	  302 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_esprit_posse_incoming\"]"];
+	  303 [label="Variable[\"seafort.phasmid_esprit_posse_incoming\"]", shape=diamond];
+	  304 [label="!(Variable[\"seafort.phasmid_esprit_posse_incoming\"])", shape=diamond];
+	  305 [label="Savoir Faire: 空气从中穿过，细长的节肢。"];
+	  306 [label="Kim Kitsuragi: “我们*需要*一张相片——没人会相信我们的。”他继续拉开镜头……"];
+	  307 [label="You: “打住。让我先靠近一点。”\n“它在害怕。*现在*就停下。”"];
+	  308 [label="The Deserter: 没人听到你的低语。在你背后，逃兵沮丧地坐在火堆旁，对周围的一切浑然不觉。"];
+	  309 [label="Insulindian Phasmid: 被相机对准的时候，昆虫的动作没有任何变化。它的注意力依然固定在你身上。"];
+	  310 [label="Encyclopedia: 你也没有。不过你知道谁可以——神秘动物学家！"];
+	  311 [label="You: “看在老天爷的份上，那到底是什么？”"];
+	  312 [label="You: “我应该帮助那些神秘动物学家的。现在太迟了……”"];
+	  313 [label="Reaction Speed: 神秘动物学？天啦，真有一个……"];
+	  314 [label="Esprit de Corps: 内陆300米的地方，特别顾问特兰特·海德斯塔姆竖起耳朵。随迁警官维克玛站在码头上朝他点点头：“我听见了。”"];
+	  315 [label="Insulindian Phasmid: 生物的胳膊稍微颤抖了一下。在你的头顶上方，那些宛如黑珍珠的小眼睛闪闪发亮，被通过神经系统的光芒迷住了。"];
+	  316 [label="Insulindian Phasmid: 看到里面是不可能的。只有壳质，假装成芦苇的样子——或者是打磨过的，像大理石茎杆。偶然发出的一系列嘀嗒声，人类的耳朵难以辨认。"];
+	  317 [label="You: 现在不行……"];
+	  318 [label="You: 侵入——被什么侵入？"];
+	  319 [label="You: 这是我的杰作。"];
+	  320 [label="Insulindian Phasmid: 当你倒下，我们会来鼓舞你，在你身上发芽、宛如旗帜，在你身上开花，在天葬中将你分离。为了纪念你的逝去。（不过我不会，因为我只是个吃树叶的。）"];
+	  321 [label="Volition: 为了纪念你的意志，荣誉警督。面对绝对无情的恐惧，你没有崩溃。日复一日。分分秒秒。"];
+	  322 [label="Insulindian Phasmid: 你也能吃掉它。当成一片树叶塞进你的嘴里。很美味。或者是一条芦苇。"];
+	  323 [label="You: 不。这只是个意外。"];
+	  324 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_reaction_so\"]"];
+	  325 [label="Variable[\"seafort.phasmid_reaction_so\"]", shape=diamond];
+	  326 [label="!(Variable[\"seafort.phasmid_reaction_so\"])", shape=diamond];
+	  327 [label="Kim Kitsuragi: “我觉得我们应该照张相——然后你应该*远离*这个不知名的物种。”"];
+	  328 [label="You: 我会的。"];
+	  329 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_reaction_next_time_will_flee\"]"];
+	  330 [label="Variable[\"seafort.phasmid_reaction_next_time_will_flee\"]", shape=diamond];
+	  331 [label="!(Variable[\"seafort.phasmid_reaction_next_time_will_flee\"])", shape=diamond];
+	  332 [label="Kim Kitsuragi: “没有。”你很少会在他脸上看到这副表情。"];
+	  333 [label="You: 你有没有不小心吃掉过其他芦苇竹节虫？"];
+	  334 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_logic_kim_has_camera\"]"];
+	  335 [label="Variable[\"seafort.phasmid_logic_kim_has_camera\"]", shape=diamond];
+	  336 [label="!(Variable[\"seafort.phasmid_logic_kim_has_camera\"])", shape=diamond];
+	  337 [label="Cuno: “这太恶心了。它*很像*你……”小孩长大了嘴巴。"];
+	  338 [label="Cuno: “像是一只水蜘蛛，或者……那种水上漂……”他激动地话都说不出来了。“当警察真尼玛太*疯狂*了。”"];
+	  339 [label="Jump to: [endhub]"];
+	  340 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_interfacing_thinks_with_its_limbs\"]"];
+	  341 [label="Variable[\"seafort.phasmid_interfacing_thinks_with_its_limbs\"]", shape=diamond];
+	  342 [label="!(Variable[\"seafort.phasmid_interfacing_thinks_with_its_limbs\"])", shape=diamond];
+	  343 [label="Visual Calculus: 在芦苇丛里，竹节虫躲藏的地方，你看见一道白光——*陶瓷*一般的白色。"];
+	  344 [label="You: “我应该从莫雷尔那里拿走费洛蒙的！”"];
+	  345 [label="You: “我本来可以了解一些竹节虫的习性。跟他们一起寻找。”"];
+	  346 [label="Reaction Speed: 神秘动物学？天啦，真有一个……"];
+	  347 [label="Insulindian Phasmid: 那个生物站立着，长长的腿像踩着高跷，触须从它头上垂落，就像女人的发丝——白色的，顶端有些卷曲。它离你不超过5步远。"];
+	  348 [label="Insulindian Phasmid: 生物节肢依然继续着循环的祈祷动作，没有任何改变。里面是瓷白色，外面是芦苇的颜色——米黄，浅棕，有条纹。你不确定它有没有被吓到。"];
+	  349 [label="Jump to: [yard.hanged_picture_taken]"];
+	  350 [label="Insulindian Phasmid: 泡沫颜色逐渐变深，仿佛烧焦的焦糖——昆虫的口器移动着、咀嚼着。小泡沫开始破裂，一个接着一个……"];
+	  351 [label="Perception (Smell): 散发出同样的味道，就像灼热的夏季。"];
+	  352 [label="You: “别向我祈祷。我什么都不是。”"];
+	  353 [label="You: “我不该洗澡的，费洛蒙都被冲掉了！”"];
+	  354 [label="You: “你没有拍到吗？”"];
+	  355 [label="Empathy: 现在已经太迟了。"];
+	  356 [label="fail_at_phero"];
+	  357 [label="Insulindian Phasmid: 你看见昆虫转向他，伸出了下颌的触须。它的动作突然变快了。\n你看见竹节虫转向他，伸出了下颌的触须。它的动作突然变快了。"];
+	  358 [label="You: 告诉他也没用……"];
+	  359 [label="Insulindian Phasmid: Variable[\"whirling.lena_intro_midgreet\"]"];
+	  360 [label="Variable[\"whirling.lena_intro_midgreet\"]", shape=diamond];
+	  361 [label="!(Variable[\"whirling.lena_intro_midgreet\"])", shape=diamond];
+	  362 [label="You: 小心地抚摸镰刀样的前臂。"];
+	  363 [label="Interfacing: 在它光滑洁白的节肢内部，你感觉到……某种非常私密的东西。想法。"];
+	  364 [label="You: 这是你一个人的秘密。"];
+	  365 [label="Insulindian Phasmid: 又一阵颤栗通过生物的节肢。它的关节重新恢复生机，就像中断的唱片继续开始播放——带着一种摇曳、祈祷的姿态。就连像黑珍珠一样的小眼睛都没有从你身上挪开……"];
+	  366 [label="Half Light: 有那么一会儿，他害怕你没有*明白*，不过现在看着它的样子，他镇定了许多。"];
+	  367 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_interf_bine\"]"];
+	  368 [label="Variable[\"seafort.phasmid_interf_bine\"]", shape=diamond];
+	  369 [label="!(Variable[\"seafort.phasmid_interf_bine\"])", shape=diamond];
+	  370 [label="Kim Kitsuragi: “一个巢穴？”他压低的声音有些紧张。“现在什么也不要做。等一会儿，也许等它走了之后……”"];
+	  371 [label="You: 在城市里，到处都是。它在变*小*。"];
+	  372 [label="Insulindian Phasmid: 当然，相比你的恐惧，这根本算不上什么——所有创造物都会反映在你的前脑。在可怕真实里，一面火焰的镜子。恒定的，永无止境的诅咒。"];
+	  373 [label="You: “金。我是不是严重癫痫发作了？”"];
+	  374 [label="Kim Kitsuragi: “好吧。”警督顿了几秒，问到：“跟案子有什么关联吗？”"];
+	  375 [label="Encyclopedia: 也许你会觉得很有意思呢！"];
+	  376 [label="You: 这也太疯狂了。"];
+	  377 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_touching_hub\"]"];
+	  378 [label="Variable[\"seafort.phasmid_touching_hub\"]", shape=diamond];
+	  379 [label="!(Variable[\"seafort.phasmid_touching_hub\"])", shape=diamond];
+	  380 [label="Kim Kitsuragi: “它走了……”警督看向北方，手抬到了眉毛的位置。\n“它走了……”警督看向北方，相机徒劳地从他指尖垂落。"];
+	  381 [label="Authority: 什么都没有，除了你，RCM的一名警探，站在原地，目瞪口呆。"];
+	  382 [label="Perception (Sight): 看来像是某种筑巢的材料。你应该搜寻一下。"];
+	  383 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_intro_hub_reached\"]"];
+	  384 [label="Variable[\"seafort.phasmid_intro_hub_reached\"]", shape=diamond];
+	  385 [label="!(Variable[\"seafort.phasmid_intro_hub_reached\"])", shape=diamond];
+	  386 [label="Empathy: 他感到*非常*失望，因为你没有警告他这一点——或者跟他一起计划。"];
+	  387 [label="Insulindian Phasmid: 我们猜想，它可能会像26亿年前那场消灭了所有厌氧生命的氧气浩劫一样——那是生物体第一次开始呼吸的时候，但你情况更加糟糕。"];
+	  388 [label="You: “坤诺……那里有什么东西。”"];
+	  389 [label="Volition: 他说得对。振作起来，继续前进。还会有机会的。"];
+	  390 [label="Empathy: 就像笑声。某种幸福。"];
+	  391 [label="get_even_closer_climb_into_its_mouth"];
+	  392 [label="Insulindian Phasmid: 寂静。嘀嗒嘀嗒。泡沫颜色逐渐变深，仿佛烧焦的焦糖——昆虫的口器移动着、咀嚼着。小泡沫开始破裂，一个接着一个……"];
+	  393 [label="Insulindian Phasmid: 无脊椎动物停住了，高高举起镰刀般的胳膊，歪起小脑袋，它是由口器周围的融合骨板构成的。有那么一秒钟，这尊雕像静止不动，之后，随着嘀嗒一声响，它又重新动作起来。"];
+	  394 [label="Insulindian Phasmid: 相机尖锐的闪光像利剑一般划破长空。竹节虫在强光中僵住了——脑袋转向警督的方向。像是被闪光催眠了一般，它在你面前一动不动。"];
+	  395 [label="Shivers: 你胳膊上的汗水冷若冰霜。站在这个巨大壳质大理石雕像的阴影之下，你仿佛也被冻住了。"];
+	  396 [label="Half Light: *绝对*跟公牛喷雾有关！它被你驱赶了，好像是吓到了。"];
+	  397 [label="The Deserter: “那是什么？”逃兵环顾四周。“只是芦苇，它们在捉弄你，右派的家伙……”"];
+	  398 [label="Reaction Speed: 警告！"];
+	  399 [label="Jump to: [touching hub]"];
+	  400 [label="You: 把它擦掉。"];
+	  401 [label="the_phasmid"];
+	  402 [label="Jump to: [the_phasmid]"];
+	  403 [label="Physical Instrument: 官方看来，是三米高的竹节虫解决的。"];
+	  404 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_thats_cool\"]  or  Variable[\"seafort.phasmid_thats_nothing\"]"];
+	  405 [label="Variable[\"seafort.phasmid_thats_cool\"]  or  Variable[\"seafort.phasmid_thats_nothing\"]", shape=diamond];
+	  406 [label="!(Variable[\"seafort.phasmid_thats_cool\"]  or  Variable[\"seafort.phasmid_thats_nothing\"])", shape=diamond];
+	  407 [label="Insulindian Phasmid: 所以，你看见了，有时候当竹节虫也是很困难的。所有天性都是某种恐惧，或者冲突——不过没有哪个像你一样可怕。所有创造物都会反映在你的前脑。"];
+	  408 [label="You: 我生来就是探测你的。"];
+	  409 [label="You: 这算不上什么。"];
+	  410 [label="Authority: 登场"];
+	  411 [label="Insulindian Phasmid: 他的状态非常糟糕，现在正在迅速恶化。他以为我对他有益，其实不然。我只会加速他的恶化。"];
+	  412 [label="Insulindian Phasmid: IsHighestPolitical(\"moralist\")"];
+	  413 [label="IsHighestPolitical(\"moralist\")", shape=diamond];
+	  414 [label="!(IsHighestPolitical(\"moralist\"))", shape=diamond];
+	  415 [label="Insulindian Phasmid: 她是人间炼狱。用不着一只三米高的竹节虫来告诉你这个吧。"];
+	  416 [label="Insulindian Phasmid: 看起来不像。"];
+	  417 [label="You: 那样的话，我好像看到一个幻觉。关于人类最终的命运。"];
+	  418 [label="You: 好吧。只是在看一只竹节虫而已。一切都很正常。"];
+	  419 [label="Logic: 那个逃兵，他在这里已经待了*很长*一段时间了。"];
+	  420 [label="You: 等等，灰域是什么？"];
+	  421 [label="Insulindian Phasmid: 而且还非常、非常危险。"];
+	  422 [label="You: “天啊，我记得金有一台相机。你也有吗？”"];
+	  423 [label="Jump to: [Esprit de Corps: \"Meanwhile, in the antechamber of th...\"]"];
+	  424 [label="IsHardcoreModeActive()  and  WasGameBeatenInHardcoreMode()"];
+	  425 [label="IsHardcoreModeActive()  and  WasGameBeatenInHardcoreMode()", shape=diamond];
+	  426 [label="!(IsHardcoreModeActive()  and  WasGameBeatenInHardcoreMode())", shape=diamond];
+	  427 [label="Esprit de Corps: 与此同时，在57分局检疫所的接待室里，一条折叠整齐的工装裤和一件黑色的飞行员夹克躺在一个衣帽柜里。夹克上面——是一个滚花的小铝块，藏在一个皮套里。"];
+	  428 [label="You: 眨眼。（很快。）"];
+	  429 [label="Insulindian Phasmid: 是的。对于我来说，一切*总是*普通而寻常的。神明待在他的天堂里——地球上的一切平平无奇。"];
+	  430 [label="Empathy: 处于某种奇怪的、半紧张性精神症的状态。"];
+	  431 [label="You: “我觉得它跑进那边的芦苇丛了，就在那座小岛上……”（指向北方。）"];
+	  432 [label="You: “该死，我不知道这会跟案子*有关*……”"];
+	  433 [label="Cuno: “伙计，别怪自己了，我们刚刚发现了一只巨大的昆虫。可没人做到过……”他望向对岸。"];
+	  434 [label="You: “你说得对。真的巨大。”"];
+	  435 [label="You: 小心翼翼地靠近。"];
+	  436 [label="You: Variable[\"seafort.phasmid_rc_composure_approach\"]"];
+	  437 [label="Variable[\"seafort.phasmid_rc_composure_approach\"]", shape=diamond];
+	  438 [label="!(Variable[\"seafort.phasmid_rc_composure_approach\"])", shape=diamond];
+	  439 [label="Jump to: [phasmid intro hub]"];
+	  440 [label="Perception (Smell): 最微弱的味道，你之前从未感觉到过。就像烧焦的玫瑰花。"];
+	  441 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_smell_burnt_roses\"]"];
+	  442 [label="Variable[\"seafort.phasmid_smell_burnt_roses\"]", shape=diamond];
+	  443 [label="!(Variable[\"seafort.phasmid_smell_burnt_roses\"])", shape=diamond];
+	  444 [label="Jump to: [PHASMID main]"];
+	  445 [label="Jump to: [failure_of_many_proportions]"];
+	  446 [label="Volition: 控制住这种遗憾。振作起来，继续前进。下辈子你会成功的，那时候你就不会犯错了。这辈子就尽你所能吧，趁着你还活着的时候。"];
+	  447 [label="Esprit de Corps: “那样大喊大叫，他怕是*真的*昏了头。呃，至少他还*活着*……”身穿蓝色制服的迈诺特警官皱起眉头：“让，也许*出什么事*了？他陷入困境了……”"];
+	  448 [label="Esprit de Corps: 内陆300米，码头上，特别顾问特兰特·海德斯塔姆竖起耳朵。随迁警官维克玛朝他点点头：“我听见了。”"];
+	  449 [label="Kim Kitsuragi: “神经系统可以那样展开……”他在你背后小声说到。“通过节肢，像一只乌贼。”"];
+	  450 [label="Visual Calculus: 某种倒数计时正在进行。你只有这么多思考的时间……"];
+	  451 [label="Suggestion: 它们充满崇拜和好奇。对于某种轮子，或者至高父神周身环绕的统治权的崇拜。还有一只普通大黄蜂的好奇心，品尝着汽水的甜蜜味道。"];
+	  452 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_touching_hub\"]"];
+	  453 [label="Variable[\"seafort.phasmid_touching_hub\"]", shape=diamond];
+	  454 [label="!(Variable[\"seafort.phasmid_touching_hub\"])", shape=diamond];
+	  455 [label="Insulindian Phasmid: 它伸展来开，节肢太过纤细，进行着世界上最难以理解的行动；还有你——看着它，嘴巴微张……你根本想象不到它在想什么。"];
+	  456 [label="Pain Threshold: 又是一阵痛楚掠过。你再次将它咽了下去，不过这一次，还有部分依然残留着。你在嘴里尝到了它的滋味。昆虫也是一样，突然抽搐起来……"];
+	  457 [label="Insulindian Phasmid: 当你转过身去，竹节虫也做出跟你一样的动作，它踩在水面上——纤长的节肢承托着羽毛般轻重的节肢，并没有打破水面的平静。"];
+	  458 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_perc_reflections_in_water\"]"];
+	  459 [label="Variable[\"seafort.phasmid_perc_reflections_in_water\"]", shape=diamond];
+	  460 [label="!(Variable[\"seafort.phasmid_perc_reflections_in_water\"])", shape=diamond];
+	  461 [label="You: 我想变成你这种动物。"];
+	  462 [label="Physical Instrument: 这就解释了为什么它的触须变小了。"];
+	  463 [label="Jump to: [the_phasmid]"];
+	  464 [label="Insulindian Phasmid: 你想当一只竹节虫？你确定吗？"];
+	  465 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_esprit_arriving\"]"];
+	  466 [label="Variable[\"seafort.phasmid_esprit_arriving\"]", shape=diamond];
+	  467 [label="!(Variable[\"seafort.phasmid_esprit_arriving\"])", shape=diamond];
+	  468 [label="You: “案子？跟这个相比，案子根本毫无意义。”（神经质地笑了。）“我已经完全超脱这个案子了。”"];
+	  469 [label="Reaction Speed: 等等，所以……"];
+	  470 [label="You: 我没有那种力量。"];
+	  471 [label="Kim Kitsuragi: “我觉得现在你应该远离这个不知名的物种……”"];
+	  472 [label="You: 这就是我一直等待的黄昏。自从我在旅社房间里醒来之后。"];
+	  473 [label="Cuno: “等等，我们必须做点什么！”"];
+	  474 [label="Cuno: “不过坤诺什么都不知道。坤诺只知道你臭死了，所以它会离开你。”"];
+	  475 [label="Esprit de Corps: “那样大喊大叫，他怕是*真的*昏了头。呃，至少他还*活着*……”身穿蓝色制服的迈诺特警官皱起眉头：“让，也许*出什么事*了？他陷入困境了……”"];
+	  476 [label="You: “好吧，是的，也许你是对的。我不会恐慌的。”"];
+	  477 [label="Insulindian Phasmid: ……"];
+	  478 [label="phasmid intro hub"];
+	  479 [label="Perception (Sight): 看起来像是相机！太好了！"];
+	  480 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_perc_looks_like_camera\"]"];
+	  481 [label="Variable[\"seafort.phasmid_perc_looks_like_camera\"]", shape=diamond];
+	  482 [label="!(Variable[\"seafort.phasmid_perc_looks_like_camera\"])", shape=diamond];
+	  483 [label="do_it_to_it"];
+	  484 [label="You: “听我的！”"];
+	  485 [label="You: “别害怕……”"];
+	  486 [label="Insulindian Phasmid: IsKimHere()"];
+	  487 [label="IsKimHere()", shape=diamond];
+	  488 [label="!(IsKimHere())", shape=diamond];
+	  489 [label="You: “我应该从莫雷尔那里拿走费洛蒙的！”"];
+	  490 [label="Jump to: [failure_of_many_proportions]"];
+	  491 [label="Kim Kitsuragi: “我试过了，”他解释到。“不过它动作太快。我的安瓿还没弄好。而且……”他振作起来。“该死。我相信自己的眼睛。它*就在*那里。”"];
+	  492 [label="Kim Kitsuragi: “那个截瘫病人？*或者*是海岸上的那个人？他们是有可能知道，没错……”他似乎不太确定。"];
+	  493 [label="Electrochemistry: 像一个瘾君子……"];
+	  494 [label="Interfacing: 它出奇地纤弱——触须卷曲的末端，仿佛新生的藤蔓。甚至还有一点潮湿。"];
+	  495 [label="Visual Calculus: 仿佛某种倒数计时正在进行，它正慢慢处理着信号传递的那压倒性的光亮。无脊椎动物正渐渐恢复对自己的控制……"];
+	  496 [label="Insulindian Phasmid: 又一阵颤栗通过前臂传到你的手掌心——感觉像是血液流过大脑。它来了，你慢慢收回自己的手。"];
+	  497 [label="You: 不，等等。"];
+	  498 [label="You: 火焰，在燃烧。\n对于我来说，它是火焰，在燃烧。"];
+	  499 [label="Perception (Sight): 还有……水里好像有光，就在下面？像是塑料？也许藏着什么东西？"];
+	  500 [label="hoarder_here"];
+	  501 [label="Perception (Sight): 当然，没有时间。昆虫耸立在你上方，离开藏身的芦苇丛。"];
+	  502 [label="You: 心里。"];
+	  503 [label="Insulindian Phasmid: 我对城市一无所知。它仅仅存在于我的边缘。是我偶尔会旋转的一颗球。一个玩具，或者是废墟垃圾箱的圆筒。"];
+	  504 [label="You: *这*就是我想出来的解释？"];
+	  505 [label="Insulindian Phasmid: 我们这次相遇的寓意是：我是一种相对中性的生命形式，而你是极端的，能吞没一切的疯狂。一种反复无常的神经系统，对于这颗星球来说，是一种全新的不祥预兆。"];
+	  506 [label="You: 看见没！什么也没有。"];
+	  507 [label="You: 现在我该说再见了。我没什么想法了。就这些。"];
+	  508 [label="Jump to: [the_phasmid]"];
+	  509 [label="Insulindian Phasmid: 不。没人相信我的存在——几乎一个人都没有。直到你的出现，警探。血滴散发着草莓的香味。跨越平静的大海，千年以来的第一人。"];
+	  510 [label="You: 你有毒吗？"];
+	  511 [label="Insulindian Phasmid: 我也探测到了费洛蒙——你身上的味道告诉我，你不会吃掉我。而且我会从与你的亲密接触中受益。简而言之，我爱你。"];
+	  512 [label="Conceptualization: 那就是你了。来自西部。来自飞旋旅社。你来到地方……"];
+	  513 [label="Insulindian Phasmid: 节肢动物伸出触须跟随着你。当你退后时，滴答声还有磁带临近结尾的嘶嘶声，变得越来越遥远……"];
+	  514 [label="Insulindian Phasmid: IsCunoInParty()"];
+	  515 [label="IsCunoInParty()", shape=diamond];
+	  516 [label="!(IsCunoInParty())", shape=diamond];
+	  517 [label="Jump to: [the_phasmid]"];
+	  518 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_main_hub_reached\"]"];
+	  519 [label="Variable[\"seafort.phasmid_main_hub_reached\"]", shape=diamond];
+	  520 [label="!(Variable[\"seafort.phasmid_main_hub_reached\"])", shape=diamond];
+	  521 [label="Insulindian Phasmid: 它是你在这个世界上投下的不安阴影，正侵蚀着现实。一片巨大的、超自然的领域。它的到来与人类思维的到来是一致的。"];
+	  522 [label="You: 怎么个更糟糕法？"];
+	  523 [label="Insulindian Phasmid: 所以它已经发生了。很快，其中一个你会闭上眼睛——再次睁开之后，会发现这一切都没有存在过。"];
+	  524 [label="Jump to: [the_phasmid]"];
+	  525 [label="Esprit de Corps: 我会等。我会严阵以待，他想到，他放在机器边的手全是汗。"];
+	  526 [label="The Deserter: “现在怎么做……”你身后的老人突然复述到。他把手伸进灰烬里——它又脏又黑。"];
+	  527 [label="Esprit de Corps: 我们还会找到它的，老兄。我们可以的，初级警员坤诺想到。总有一天，我们他妈的一定会搞定那只竹节虫。"];
+	  528 [label="Jump to: [endhub]"];
+	  529 [label="Conceptualization: 昆虫的脑袋没办法理解你的推理。"];
+	  530 [label="Jump to: [PHASMID main]"];
+	  531 [label="Kim Kitsuragi: “看起来这种昆虫能在水面上行走。你知道的，就像水黾。快的简直……”他停了下来，呼吸急促。“不可思议……”"];
+	  532 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_rhet_kim_uncertainty\"]"];
+	  533 [label="Variable[\"seafort.phasmid_rhet_kim_uncertainty\"]", shape=diamond];
+	  534 [label="!(Variable[\"seafort.phasmid_rhet_kim_uncertainty\"])", shape=diamond];
+	  535 [label="Kim Kitsuragi: 你的声音回荡在水面上。"];
+	  536 [label="Kim Kitsuragi: 顺着你手指的方向，警督眯起眼睛张望。“看来它不喜欢在户外待很久。”"];
+	  537 [label="You: “你说得对。”"];
+	  538 [label="Jump to: [failure_of_many_proportions]"];
+	  539 [label="You: “该死！该死！我没弄好……”[愤怒地离开。]"];
+	  540 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_ency_cryptozoologist\"]"];
+	  541 [label="Variable[\"seafort.phasmid_ency_cryptozoologist\"]", shape=diamond];
+	  542 [label="!(Variable[\"seafort.phasmid_ency_cryptozoologist\"])", shape=diamond];
+	  543 [label="You: “好吧，是的，也许你是对的。”"];
+	  544 [label="nothing_to_do"];
+	  545 [label="Jump to: [touching hub]"];
+	  546 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_whiskers\"]  and  Variable[\"seafort.phasmid_limbs\"]"];
+	  547 [label="Variable[\"seafort.phasmid_whiskers\"]  and  Variable[\"seafort.phasmid_limbs\"]", shape=diamond];
+	  548 [label="!(Variable[\"seafort.phasmid_whiskers\"]  and  Variable[\"seafort.phasmid_limbs\"])", shape=diamond];
+	  549 [label="Pain Threshold: 我们身上还有些什么？你想到，昆虫逐渐从你的视线消失，你的右脚和腹部感到一阵疼痛，你的眼前慢慢发黑……回过神之后，昆虫抽搐着，感受着你的血液……"];
+	  550 [label="Encyclopedia: 在它的骨髓里——是复杂生物分子的组合。荷尔蒙，氨基酸，脂肪。"];
+	  551 [label="Insulindian Phasmid: 我不知道。对于我来说，你只是个阴影。遥远，微弱的传输信号，不过有一种古怪的味道。"];
+	  552 [label="You: 结果好一切都好。"];
+	  553 [label="You: 是的，我很肯定。你为什么这么问？"];
+	  554 [label="You: “那样的话，我好像看到一个幻觉。关于人类最终的命运。”"];
+	  555 [label="Kim Kitsuragi: “你只是盯着它，”他低语到。"];
+	  556 [label="You: 那我们唯一能做的就是举起拳头对抗它？日复一日。没有答案。"];
+	  557 [label="Insulindian Phasmid: Variable[\"tc.rank_known\"]"];
+	  558 [label="Variable[\"tc.rank_known\"]", shape=diamond];
+	  559 [label="!(Variable[\"tc.rank_known\"])", shape=diamond];
+	  560 [label="Insulindian Phasmid: IsKimHere()"];
+	  561 [label="IsKimHere()", shape=diamond];
+	  562 [label="!(IsKimHere())", shape=diamond];
+	  563 [label="Jump to: [kim_after_chat]"];
+	  564 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_perc_plastic\"]"];
+	  565 [label="Variable[\"seafort.phasmid_perc_plastic\"]", shape=diamond];
+	  566 [label="!(Variable[\"seafort.phasmid_perc_plastic\"])", shape=diamond];
+	  567 [label="Insulindian Phasmid: 生物似乎原谅了你的神经质——暂时而已。它就站在那里，一个纤细的幽灵，腿仿佛踩着高跷一样。它的头部垂下触须，像是一缕人类的卷发。"];
+	  568 [label="You: 我会试试。"];
+	  569 [label="Cuno: “……伊苏林迪竹节虫，”他敬畏地接完了你的句子。\n“伊苏林迪竹节虫，”他压低了声音，充满敬畏。"];
+	  570 [label="what_ever_cuno"];
+	  571 [label="cuno_massive_failure"];
+	  572 [label="The Deserter: “现在怎么做……”你身后的老人突然复述到。他把手从灰烬里抽了出来——它又脏又黑。"];
+	  573 [label="Cuno: “该死……坤诺在*书里*看到过这狗屁玩意。好像是，什么，神秘动物。就是那种别人*以为*是真的，但是没人见过的那种。伊苏林迪竹节虫……”"];
+	  574 [label="You: “谁会相信呢？”"];
+	  575 [label="The Deserter: “现在怎么做……”你身后的老人突然复述到。他把手伸进灰烬里——它又脏又黑。"];
+	  576 [label="Insulindian Phasmid: IsKimHere()"];
+	  577 [label="IsKimHere()", shape=diamond];
+	  578 [label="!(IsKimHere())", shape=diamond];
+	  579 [label="Insulindian Phasmid: IsCunoInParty()"];
+	  580 [label="IsCunoInParty()", shape=diamond];
+	  581 [label="!(IsCunoInParty())", shape=diamond];
+	  582 [label="Insulindian Phasmid: 你是对的。小泡沫在生物的口器上形成——在分节的下唇上。看起来像在慢慢地吐泡泡。泡沫是白色的，然后有些微黄……"];
+	  583 [label="You: “你为什么要吐泡泡呢？”"];
+	  584 [label="Jump to: [PHASMID main]"];
+	  585 [label="Jump to: [failure_of_many_proportions]"];
+	  586 [label="Kim Kitsuragi: “某种竹节虫。伪装成芦苇的样子……”他摇摇头。“它是不是一直都在这里？”"];
+	  587 [label="Suggestion: 你从未有过机会。当你靠近的它的时候，感觉有什么不太对劲的地方。它很怕你。害怕人类。"];
+	  588 [label="You: “*明显*就是的。他不喜欢我。我也没有迈出第一步。”"];
+	  589 [label="Composure: 就像一个小男孩……当他看着相片的时候，有那么一瞬间完全失控了。"];
+	  590 [label="Jump to: [alone hub]"];
+	  591 [label="The Deserter: 看来你是对的。出于某种奇怪的原因，他把手伸进了灰尘里。弄脏了自己的手指，困惑地像个孩子一样……"];
+	  592 [label="Jump to: [alone hub]"];
+	  593 [label="Jump to: [alone hub]"];
+	  594 [label="Jump to: [failure_of_many_proportions]"];
+	  595 [label="Insulindian Phasmid: 触须从很高的地方垂落下来。你的手在颤抖，勉强碰到了左触须的末端。一接触到你的手指，壳质卷成了螺旋状，仿佛毒葛的尖端一般。它的碰触让你的指尖感觉冰冰凉凉，还有些发痒……"];
+	  596 [label="Perception (Taste): 没有味道，主要是水构成的。"];
+	  597 [label="Insulindian Phasmid: 现在我可以告诉你，我的感受是什么。对于我来说，那是一连串忽明忽暗的图像。某种黑暗，被侵入了。短暂。黯淡。潮湿。"];
+	  598 [label="Insulindian Phasmid: 你生了什么病？"];
+	  599 [label="Insulindian Phasmid: 是的，万主之神是圣洁的。整个地球都充满了他的荣耀。"];
+	  600 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_viscal_why_antenna_smaller\"]"];
+	  601 [label="Variable[\"seafort.phasmid_viscal_why_antenna_smaller\"]", shape=diamond];
+	  602 [label="!(Variable[\"seafort.phasmid_viscal_why_antenna_smaller\"])", shape=diamond];
+	  603 [label="Insulindian Phasmid: 所以，你看见了，有时候当竹节虫也是很困难的。我的腿试着独立活动，让走路变得很困难。不过你听到这个会感觉到不太舒服，我能理解。"];
+	  604 [label="You: 我是一名警探。"];
+	  605 [label="You: 我做不到。"];
+	  606 [label="Insulindian Phasmid: 是的。我没法靠外表吓跑人类，所以我用一种神经变性利己素来协助伪装。别担心，只有经过很长一段时间才会表现出破坏性。"];
+	  607 [label="Jump to: [PHASMID main]"];
+	  608 [label="You: 忘了吧。它可是能在水面上走啊！"];
+	  609 [label="Insulindian Phasmid: 你一直看着我。现在大概快三分钟了吧。"];
+	  610 [label="You: 但是我*想要*眨眼，撤消这长达120亿年的物质膨胀。"];
+	  611 [label="Visual Calculus: 顺着他手指的方向，你在芦苇丛中看到一道白光——*陶瓷*一般的白色。"];
+	  612 [label="You: （大叫。）“不要！”"];
+	  613 [label="Encyclopedia: 你知道谁知道的更多——神秘动物学家！"];
+	  614 [label="You: （低语。）“这就是伊苏林迪竹节虫。”\n（低语。）“那是……”"];
+	  615 [label="Insulindian Phasmid: Variable[\"seafort.deserter_rc_success_heard_it\"]"];
+	  616 [label="Variable[\"seafort.deserter_rc_success_heard_it\"]", shape=diamond];
+	  617 [label="!(Variable[\"seafort.deserter_rc_success_heard_it\"])", shape=diamond];
+	  618 [label="Kim Kitsuragi: “我觉得费洛蒙没什么用。”他的低语变成了怀疑的嘶嘶声——但是现在他停下来了。"];
+	  619 [label="You: 慢慢撤回来。[离开。]"];
+	  620 [label="Insulindian Phasmid: 那个生物把小脑袋歪向左边，似乎是在看你。它看起来非常轻，似乎只要一阵最轻柔的风就能将它吹走，不过并没有……"];
+	  621 [label="Kim Kitsuragi: “我们不能让它就这么站在那儿。我们必须做点*什么*，警探。它可能……”他想到。“甚至可能有所关联……”"];
+	  622 [label="Insulindian Phasmid: ……嘶嘶声和嘀嗒声，它伸出类似下颌骨的触须向你致意。现在你就在它的正下方，抬头望着那白色节肢上巨大的甲壳。生物头部周围的芦苇仿佛它的王冠，上面点缀着很多只像小水滴一般的眼睛。"];
+	  623 [label="You: “你好。我不知道我是谁。”\n“你好。我是哈里。我真的不知道自己是谁……”"];
+	  624 [label="You: 慢慢脱开。[离开。]"];
+	  625 [label="You: 把另一手也举起来。"];
+	  626 [label="You: “它去哪了？”（望向北边。）“*你*能看见吗？”"];
+	  627 [label="You: “它是怎么*做到*的？滑翔吗？”"];
+	  628 [label="Reaction Speed: 它的身影逐渐融入到远方的芦苇丛中！在一个个小岛之间移动……"];
+	  629 [label="Perception (Sight): 不论多么努力地挤弄双眼，你还是辨认不出任何东西，更不用说是一只竹节虫了。"];
+	  630 [label="Kim Kitsuragi: “我没有。我们的确应该……我也有错。”他望向对岸。手里的那张相纸还在风干，沮丧地低垂了一会儿。"];
+	  631 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_empathy_such_failure\"]"];
+	  632 [label="Variable[\"seafort.phasmid_empathy_such_failure\"]", shape=diamond];
+	  633 [label="!(Variable[\"seafort.phasmid_empathy_such_failure\"])", shape=diamond];
+	  634 [label="Suggestion: 节状的触须带着恐惧移动着，像是在寻找某种不存在的东西……"];
+	  635 [label="The Deserter: ……然后，他的目光又回到了那堆灰烬上。"];
+	  636 [label="Logic: 警督有一台*相机*。有了相机，他就能拍照。现在他们都觉得你疯了……"];
+	  637 [label="Empathy: 刺激让它的神经超载了。它正在渐渐流逝，仿佛一段延伸的时间，或是胆囊结石。"];
+	  638 [label="Pain Threshold: 昆虫的随着疼痛一起脉动，仿佛一道火焰试图朝你的大腿喷射过去。你忍住了。毫不动摇。现在还不行。鲜血滴落下来……很温暖。那个生物肯定也感觉到了，它在抽搐。"];
+	  639 [label="Jump to: [PHASMID main]"];
+	  640 [label="You: 我也存在。"];
+	  641 [label="Insulindian Phasmid: 把你的感受告诉我。"];
+	  642 [label="You: 我很高兴我是我——一种极其敏感的容器。"];
+	  643 [label="Jump to: [the_phasmid]"];
+	  644 [label="You: 你现在连一只脚也没了！"];
+	  645 [label="Pain Threshold: 那需要上百万年的进化——或者在这个世界情况下，是完全的逆转——-你的痛苦才会终结。"];
+	  646 [label="Insulindian Phasmid: 不。还有*一个*。"];
+	  647 [label="Insulindian Phasmid: IsHighestPolitical(\"communist\")"];
+	  648 [label="IsHighestPolitical(\"communist\")", shape=diamond];
+	  649 [label="!(IsHighestPolitical(\"communist\"))", shape=diamond];
+	  650 [label="Insulindian Phasmid: 她是人间炼狱。用不着一只三米高的竹节虫来告诉你这个吧。"];
+	  651 [label="You: “那是什么——在芦苇丛里？”"];
+	  652 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_elchem_stand_and_stare\"]"];
+	  653 [label="Variable[\"seafort.phasmid_elchem_stand_and_stare\"]", shape=diamond];
+	  654 [label="!(Variable[\"seafort.phasmid_elchem_stand_and_stare\"])", shape=diamond];
+	  655 [label="You: 我一直都是这么想的吗？"];
+	  656 [label="You: 不。没有更多想法了。"];
+	  657 [label="Empathy: 坤诺不敢相信自己究竟有多糟糕，居然没有相机——在这种情况下，四眼仔在各方面都更有优势一些。"];
+	  658 [label="Cuno: “啊……”他摇摇头。“我没有相机。坤诺感觉他妈的糟透了。”"];
+	  659 [label="Cuno: “这他妈的就对了，我们刚刚发现了一只巨大的昆虫。可没人做到过……”他望向对岸。"];
+	  660 [label="Cuno: “*所有人*，哟哟哟！我们把这个告诉*全世界*。案子解决了——昆虫找到了。我们他妈的是……大侦探或者什么的。我们很*厉害*。”"];
+	  661 [label="Kim Kitsuragi: 你回头看了一眼。警督手中拿着一个滚花铝块。他非常小心地把它拉开——它是一个相机！"];
+	  662 [label="taking_photo_hub"];
+	  663 [label="You: （低语）“谁在乎他们怎么*想，金。”"];
+	  664 [label="Kim Kitsuragi: “嘘……好吧。”警督把手指放在嘴唇上，点了点头。"];
+	  665 [label="You: 慢慢抬起手。"];
+	  666 [label="Perception (Hearing): 突然的沉默。"];
+	  667 [label="You: （回头看。）“它在闻我的味道……”"];
+	  668 [label="Kim Kitsuragi: “没有。”他摇摇头。“现在它走了，警探。”\n“没有。”他摇摇头。“现在它走了，荣誉警督。”\n“没有。”他摇摇头。“现在它走了，哈里。”"];
+	  669 [label="Electrochemistry: 还有你，一名RCM的警探，站在这里，嘴巴大张——孤身一人，瞠目结舌。"];
+	  670 [label="You: “我觉得它跑进那边的芦苇丛了，就在那座小岛上……”（指向北方。）"];
+	  671 [label="Jump to: [failure_of_many_proportions]"];
+	  672 [label="You: “看在*老天爷*的份上，那到底是什么？”"];
+	  673 [label="Kim Kitsuragi: “*喜欢*你？”他怀疑地摇摇头。“我不是个昆虫学家，好吗——而且也不是什么超自然科学家。谁知道呢，也许你是对的。我唯一能肯定的就是……“"];
+	  674 [label="You: “该死。现在怎么办？”（继续。）"];
+	  675 [label="You: “我们搞定了……”（退后。）"];
+	  676 [label="Insulindian Phasmid: 一阵颤栗通过生物的节肢。它的关节重新恢复生机，就像中断的唱片继续开始播放——带着一种摇曳、祈祷的姿态。就连像黑珍珠一样的小眼睛都没有从你身上挪开……"];
+	  677 [label="You: 我想看看你里面。"];
+	  678 [label="Reaction Speed: 当你向后退时，竹节虫也向芦苇丛里退了一步。有什么东西告诉你——下次你再接触或者挣脱，它可能就会逃跑。"];
+	  679 [label="You: 我病了。"];
+	  680 [label="You: 我他妈现在到底是怎么了？"];
+	  681 [label="Insulindian Phasmid: 我也是。我生来就是探测蔗糖奖品和化学信息素的。你生来是探测什么的？"];
+	  682 [label="You: 一开始很混乱，不过我还是坚持下来了。"];
+	  683 [label="Insulindian Phasmid: 谢谢你。我也还有最后一件事要对你说：那个女人——远离废墟吧。转过身去，继续*向前*。\n谢谢你。我还有最后一件事要对你说：那个女人——离开了废墟。转身向前。为了工人阶级。\n谢谢你。在你离开之前，我还有最后一件事要对你说。那个女人——离开了废墟。转身向前。为了全人类。\n谢谢你。在你离开之前，我还有最后一件事要对你说。那个女人——离开了废墟。转身向前吧。为了瑞瓦肖。\n谢谢你。在你离开之前，我还有最后一件事要对你说。那个女人——离开了废墟。转身向前。为了自由。"];
+	  684 [label="Insulindian Phasmid: 我一直在隐藏自己，经历了四种形式的政府和两场科技革命。直到我偶然被一位瑞瓦肖公民武装的警探发现，地点是马丁内斯的瑞瓦肖区，51年3月。\n我一直在隐藏自己，经历了四种形式的政府和两场科技革命。三场——如果算上石器的话。直到我偶然被一位瑞瓦肖公民武装的警探发现，地点是马丁内斯的瑞瓦肖区，51年3月。"];
+	  685 [label="Encyclopedia: 拥有4000年历史的塞美尼西奥族文明深深地埋藏在沉积物中，你甚至都不知道它在那里——他们也没有发现我。"];
+	  686 [label="You: 这件事太敏感了。"];
+	  687 [label="You: 是不是存在一种古代的塞美尼西奥族文明？"];
+	  688 [label="Jump to: [PHASMID main]"];
+	  689 [label="Insulindian Phasmid: IsHighestPolitical(\"revacholian_nationhood\")"];
+	  690 [label="IsHighestPolitical(\"revacholian_nationhood\")", shape=diamond];
+	  691 [label="!(IsHighestPolitical(\"revacholian_nationhood\"))", shape=diamond];
+	  692 [label="Insulindian Phasmid: 她是人间炼狱。用不着一只三米高的竹节虫来告诉你这个吧。"];
+	  693 [label="Perception (Sight): 是的，现在的亮度正好够。盯着战利品看，它像是某种筑巢的材料。你应该搜寻一下。"];
+	  694 [label="Jump to: [the_phasmid]"];
+	  695 [label="Jump to: [cuno_massive_failure]"];
+	  696 [label="Physical Instrument: 看来有人在战斗中受伤了。这只触须比另一只要小很多。"];
+	  697 [label="Insulindian Phasmid: IsKimHere()"];
+	  698 [label="IsKimHere()", shape=diamond];
+	  699 [label="!(IsKimHere())", shape=diamond];
+	  700 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_saw_helmet\"]"];
+	  701 [label="Variable[\"seafort.phasmid_saw_helmet\"]", shape=diamond];
+	  702 [label="!(Variable[\"seafort.phasmid_saw_helmet\"])", shape=diamond];
+	  703 [label="Half Light: *绝对*跟那个有关！它被你驱赶了，好像是吓到了。"];
+	  704 [label="You: “有一种费洛蒙——就像公牛喷雾。我应该喷在身上的，但是我没有。”"];
+	  705 [label="Cuno: “什么狗屁*——费洛*？老兄，这跟那玩意根本没关系！我们说的可是*竹节虫*。你*看见*它的大小了吗？！”"];
+	  706 [label="Jump to: [cuno_massive_failure]"];
+	  707 [label="Savoir Faire: 长长地深吸一口气。放缓你的脉搏。先不要动，等到动的时候——动作要像羽毛一样轻。"];
+	  708 [label="Kim Kitsuragi: 你回头看了一眼。警督手中拿着一个滚花铝块。他开始把它拉开，动作非常小心……"];
+	  709 [label="You: （指向它。）“那是什么？”"];
+	  710 [label="Kim Kitsuragi: 伴随着金属滑动的声音，警督亮出了镜头。他开始填装安瓿，玻璃在他手中闪闪发光……"];
+	  711 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_esprit_stuff_in_station\"]"];
+	  712 [label="Variable[\"seafort.phasmid_esprit_stuff_in_station\"]", shape=diamond];
+	  713 [label="!(Variable[\"seafort.phasmid_esprit_stuff_in_station\"])", shape=diamond];
+	  714 [label="Jump to: [PHASMID main]"];
+	  715 [label="Insulindian Phasmid: 与此同时，这只无脊椎动物活了过来，节肢各自独立运动，仿佛每一部分都有自己的思想。它们就像瓷器茎杆的一样白，在你上方接合着。"];
+	  716 [label="Half Light: 不要，停下来，敬畏它。"];
+	  717 [label="Half Light: 也许它正准备*吃掉*自己的神明？"];
+	  718 [label="You: “拍到了吗，相片拍到了吗？”"];
+	  719 [label="You: “该死，我们应该帮那些神秘动物学家的。”"];
+	  720 [label="You: “我们本来应该再深入一些的，金。我们应该……”"];
+	  721 [label="You: “神秘动物学家！酒吧里有一个。也许她知道些什么？”"];
+	  722 [label="Encyclopedia: 你知道谁会知道——神秘动物学家！"];
+	  723 [label="The Deserter: 他凝视着余烬，沉默无语。对你的呼叫声无动于衷。"];
+	  724 [label="Conceptualization: 永生不朽。"];
+	  725 [label="touching hub"];
+	  726 [label="Insulindian Phasmid: 你面前的节肢出奇地轻巧，就像蛋壳一样。它比芦苇轻的多。你觉得只需轻轻一推，这只生物就会被掀翻在地，中空的外骨骼也会塌陷……"];
+	  727 [label="Jump to: [touching hub]"];
+	  728 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_perc_plastic\"]"];
+	  729 [label="Variable[\"seafort.phasmid_perc_plastic\"]", shape=diamond];
+	  730 [label="!(Variable[\"seafort.phasmid_perc_plastic\"])", shape=diamond];
+	  731 [label="Insulindian Phasmid: 是的。我的腿会试着独立活动，这让我走路变得很困难。"];
+	  732 [label="Insulindian Phasmid: 是的，谢天谢地，有人把它吃掉了。下次蜕皮的时候，我又会长出一只新触须！"];
+	  733 [label="You: 我身上还发生过更糟糕的事情。"];
+	  734 [label="Kim Kitsuragi: “看起来不像，没有。”"];
+	  735 [label="You: 这是地狱。我改变主意了。我想成为你。"];
+	  736 [label="Jump to: [the_phasmid]"];
+	  737 [label="Insulindian Phasmid: 还有灰域，也跟着你一起到来。在你之前没人记得它。刺胞动物没有，辐射对称没有。鸟类和植物之间几乎达成了一致的协议——你会把我们全部摧毁。"];
+	  738 [label="You: 等等，灰域是人造的吗？"];
+	  739 [label="Jump to: [the_phasmid]"];
+	  740 [label="You: “你没拍到相片吗？”"];
+	  741 [label="You: 那*是*什么？"];
+	  742 [label="You: “坤诺，你有相机或者什么的吗？”"];
+	  743 [label="You: 小心接近。"];
+	  744 [label="You: Variable[\"seafort.phasmid_rc_comp_impossible_approach\"]"];
+	  745 [label="Variable[\"seafort.phasmid_rc_comp_impossible_approach\"]", shape=diamond];
+	  746 [label="!(Variable[\"seafort.phasmid_rc_comp_impossible_approach\"])", shape=diamond];
+	  747 [label="Jump to: [chat_with_cuno]"];
+	  748 [label="Jump to: [cuno_massive_failure]"];
+	  749 [label="Insulindian Phasmid: 你没办法对我说谎的。你身后有火焰的味道。如此遥远，而你已经准备好当着她的面离去。结束这一切。"];
+	  750 [label="Rhetoric: 他不敢相信自己居然说了这么多话。"];
+	  751 [label="The Deserter: “现在怎么做……”你身后的老人突然复述到。他把手伸进灰烬里——它又脏又黑。"];
+	  752 [label="Kim Kitsuragi: “我们的嫌疑人看起来不太好。我们应该看看他。”"];
+	  753 [label="Perception (Sight): 看！在芦苇丛里，竹节虫躲藏的地方——你看见一道白光——陶瓷一般的白色。也许是某种巢穴？"];
+	  754 [label="Cuno: “是啊，就在那里——看起来不经常在外面活动。他妈的够狡猾的。现在它走了，不过……”他喘着粗气。“哇哦。”"];
+	  755 [label="Cuno: “是啊，没错，神秘动物学家！研究他们的那些蠢蛋。这真是太*假了*，老兄……”他跑的下气不接下气。"];
+	  756 [label="You: “神秘动物学家！酒吧里有一个。也许她知道些什么？”"];
+	  757 [label="Perception (Hearing): 这阵嘶嘶声跟你之前听见的弦乐器不太一样。它在诉说*别的*什么东西，以一种更加低沉的音调……"];
+	  758 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_rc_comp_impossible_approach\"]"];
+	  759 [label="Variable[\"seafort.phasmid_rc_comp_impossible_approach\"]", shape=diamond];
+	  760 [label="!(Variable[\"seafort.phasmid_rc_comp_impossible_approach\"])", shape=diamond];
+	  761 [label="You: （对昆虫说点什么，小声些，比如说……）\n（对竹节虫说点什么，小声些……比如说……）"];
+	  762 [label="Empathy: 它离你又靠近了一英寸。或者，只是*感觉*如此？"];
+	  763 [label="Empathy: 你从没见过他这么兴奋的样子。他的声音几乎在颤抖。"];
+	  764 [label="Insulindian Phasmid: Variable[\"yard.hanged_picture_taken\"]"];
+	  765 [label="Variable[\"yard.hanged_picture_taken\"]", shape=diamond];
+	  766 [label="!(Variable[\"yard.hanged_picture_taken\"])", shape=diamond];
+	  767 [label="You: 退后。"];
+	  768 [label="Jump to: [PHASMID main]"];
+	  769 [label="Kim Kitsuragi: “倒数3下，”男人低语着，声音很紧张。“如果它动了，你跳回来，我会按下快门。来了。3，2，1……”"];
+	  770 [label="Insulindian Phasmid: IsCunoInParty()"];
+	  771 [label="IsCunoInParty()", shape=diamond];
+	  772 [label="!(IsCunoInParty())", shape=diamond];
+	  773 [label="Rhetoric: 他的措辞里有一些不确定的成分。"];
+	  774 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_perc_wildlife\"]"];
+	  775 [label="Variable[\"seafort.phasmid_perc_wildlife\"]", shape=diamond];
+	  776 [label="!(Variable[\"seafort.phasmid_perc_wildlife\"])", shape=diamond];
+	  777 [label="Kim Kitsuragi: “我有吗？”他摇摇头。“我不知道。我不是个昆虫学家！而且也不是什么超自然科学家。我唯一能肯定的就是……“"];
+	  778 [label="You: “神秘动物学家……酒吧里就有一个。我想她应该知道些什么……”"];
+	  779 [label="Electrochemistry: 这种感觉让你为之振奋，响彻你的全身。"];
+	  780 [label="You: 把手拿开。"];
+	  781 [label="Jump to: [PHASMID main]"];
+	  782 [label="Inland Empire: 别说出来！你确定吗？这可能是你唯一碰触它的机会……"];
+	  783 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_disengaged_once\"]"];
+	  784 [label="Variable[\"seafort.phasmid_disengaged_once\"]", shape=diamond];
+	  785 [label="!(Variable[\"seafort.phasmid_disengaged_once\"])", shape=diamond];
+	  786 [label="Jump to: [PHASMID main]"];
+	  787 [label="Insulindian Phasmid: 那我会告诉你，对于我来说是怎么样的。"];
+	  788 [label="Insulindian Phasmid: 你确定吗？"];
+	  789 [label="You: 一条小腿。真是太可怕了。"];
+	  790 [label="Insulindian Phasmid: 只有极少数人能想象到你的恐惧——所有创造物都会反映在你的前脑。肯定就像身处地狱地底层，一个火焰和翻腾玻璃的万花筒。永恒的诅咒。"];
+	  791 [label="You: 你在毁掉他？"];
+	  792 [label="Insulindian Phasmid: 是的——有石器还有丝绸。他们也没发现我，尽管当时我还没发展出单性生殖必要的突变，而且还搜寻了新石器时代的腹地，作为独立的个体，而不是克隆体。"];
+	  793 [label="You: “不。我告诉过你是什么了。我们的命运。”"];
+	  794 [label="You: “它可以在水面上走？”"];
+	  795 [label="You: 我会特别特别小心，不让自己眨眼的，竹节虫。别担心。"];
+	  796 [label="Insulindian Phasmid: 一连串唧唧声环绕着你，就像悬崖边上的燕子一样，竹节虫移动前臂——鼓室在白色茎杆内侧清晰可见……"];
+	  797 [label="Jump to: [cuno_massive_failure]"];
+	  798 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_talking_hub_reached\"] == true"];
+	  799 [label="Variable[\"seafort.phasmid_talking_hub_reached\"] == true", shape=diamond];
+	  800 [label="!(Variable[\"seafort.phasmid_talking_hub_reached\"] == true)", shape=diamond];
+	  801 [label="Savoir Faire: 放松。既然你*知道*它在这里——它还能藏多久呢？"];
+	  802 [label="You: “它去哪了？”（望向北边。）“*你*能看见吗？”"];
+	  803 [label="You: “它是怎么*做到*的？滑翔吗？”"];
+	  804 [label="Jump to: [endhub]"];
+	  805 [label="Perception (Hearing): 滴滴-滴滴-滴滴……嘶嘶嘶嘶……滴滴-滴滴-滴滴……嘶嘶嘶嘶……"];
+	  806 [label="Kim Kitsuragi: “是的，”警督在你背后低语。你听见夹克拉链拉开时那熟悉的声音——慢慢地，轻轻地。特别费力……"];
+	  807 [label="You: （低语。）“你确定它不会被吓跑吗？”"];
+	  808 [label="Savoir Faire: 不！闪光的声音会把生物吓跑的。马上警告他！"];
+	  809 [label="Composure: 它的肢体语言有了变化，只有一点点……"];
+	  810 [label="Electrochemistry: 你屏住呼吸，慢慢地朝着竹节虫的方向靠近两步。生物发出一系列超声波滴答声，像燕子一样聚集在你的脑袋旁边……"];
+	  811 [label="Insulindian Phasmid: 昆虫止住了尖锐的声音，似乎在观察你。在它的芦苇王冠之下，小小的针形眼睛正在探测，闪闪发光。你周围的整个世界都静止了。"];
+	  812 [label="Insulindian Phasmid: IsKimHere()"];
+	  813 [label="IsKimHere()", shape=diamond];
+	  814 [label="!(IsKimHere())", shape=diamond];
+	  815 [label="Insulindian Phasmid: IsTHCPresent(\"juicy_fruit\")"];
+	  816 [label="IsTHCPresent(\"juicy_fruit\")", shape=diamond];
+	  817 [label="!(IsTHCPresent(\"juicy_fruit\"))", shape=diamond];
+	  818 [label="Inland Empire: 杏花。白色的花朵怒而绽放。一种感觉，就像放在你脸上的那只冷冰冰的手。"];
+	  819 [label="Jump to: [Insulindian Phasmid: \"The invertebrate stops, raising its...\"]"];
+	  820 [label="Kim Kitsuragi: “也许它*是*真的，费洛蒙……”警督惊讶地张大了嘴。"];
+	  821 [label="Insulindian Phasmid: 昆虫头部顶着芦苇样的鳞片，是谷穗的形状。它们随着空气的流动沙沙作响。腹部的心室还在持续扩张，就像小肺叶……"];
+	  822 [label="Kim Kitsuragi: “好吧，不过……”他怀疑地摇摇头。“我不是个昆虫学家，好吗？而且也不是什么超自然科学家。谁知道呢？我唯一能肯定的就是……“"];
+	  823 [label="Kim Kitsuragi: 他摇摇头，一言不发——他脸上的表情，是你之前从未见过的。"];
+	  824 [label="You: “跟我说说那张相片……”"];
+	  825 [label="alone hub"];
+	  826 [label="The Deserter: “你在说什么，*费洛蒙*？”老人的奇怪状态暂时中断了。话语中的某些东西让他恢复了生气……"];
+	  827 [label="The Deserter: 你的声音孤独地回荡在水面上。甚至连老人的咳嗽声都没有。"];
+	  828 [label="Jump to: [alone hub]"];
+	  829 [label="You: *慢慢*地伸出手，去碰触生物的触须。"];
+	  830 [label="Kim Kitsuragi: “小心，警探……它在动。”"];
+	  831 [label="Interfacing: 尝起来像是……糖一样。一丝微弱的甜味。节肢动物矗立在你面前，节肢和类似脑袋的部位伸出芦苇簇状的东西。"];
+	  832 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_viscal_stimulus\"]"];
+	  833 [label="Variable[\"seafort.phasmid_viscal_stimulus\"]", shape=diamond];
+	  834 [label="!(Variable[\"seafort.phasmid_viscal_stimulus\"])", shape=diamond];
+	  835 [label="Insulindian Phasmid: 节肢动物耸立在你上方——就像相片里的一样——没有注意到喋喋不休的你。它腹部的心室慢慢扩张开来，退化的翅膀宛如难以看清的薄纱，悬挂在纤细的关节内侧。"];
+	  836 [label="Inland Empire: 什么也没有。它单纯的眼睛没有发出光芒，没人在家。如果它的节肢像昆虫一样，那这种抽搐是不可知的，甚至也需要是没有实质的。"];
+	  837 [label="Jump to: [PHASMID main]"];
+	  838 [label="You: “金……那里好像有什么东西。”"];
+	  839 [label="Insulindian Phasmid: 我的内部没有火焰。甚至连血液都没有，只有淋巴液——就像酒椰树的汁液一样。"];
+	  840 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_physinst_hurt_antenna\"]"];
+	  841 [label="Variable[\"seafort.phasmid_physinst_hurt_antenna\"]", shape=diamond];
+	  842 [label="!(Variable[\"seafort.phasmid_physinst_hurt_antenna\"])", shape=diamond];
+	  843 [label="You: “看起来什么样？”"];
+	  844 [label="You: 我们需要知道。也许是神明派来的？"];
+	  845 [label="Jump to: [the_phasmid]"];
+	  846 [label="You: “算是吧。”"];
+	  847 [label="Kim Kitsuragi: 他眯起眼睛。“看起来像是某种巢穴？我们应该去看一眼。”"];
+	  848 [label="Insulindian Phasmid: 有的。我曾经克隆过自己，吃掉了小的那些。那是一个冬季，我在错误的时间醒了过来。这是个意外。"];
+	  849 [label="Insulindian Phasmid: 类人猿屠夫……很快，其中一个你会闭上双眼——再次睁开之后，会发现这一切全没有存在过。"];
+	  850 [label="Empathy: 坤诺不敢相信自己究竟有多差劲——现在居然没有相机。应该偷一台的，一个真正的警察就该有相机……"];
+	  851 [label="Insulindian Phasmid: IsCunoInParty()"];
+	  852 [label="IsCunoInParty()", shape=diamond];
+	  853 [label="!(IsCunoInParty())", shape=diamond];
+	  854 [label="Cuno: “一个巢？”他压低的声音有些紧张。“我们暂时还不能过去，别把它吓跑了。也许之后再说吧……”"];
+	  855 [label="Perception (Sight): 在芦苇丛里，竹节虫躲藏的地方，你看见一道白光——陶瓷一般的白色。"];
+	  856 [label="Cuno: “喂，我们的嫌疑人看起来不太好。我们应该检查一下他——还有，”他指向芦苇丛。"];
+	  857 [label="you_met_cryptos"];
+	  858 [label="Cuno: “我们的嫌疑人看起来不太好。我们应该检查一下他——还有，”他指向芦苇丛。"];
+	  859 [label="You: 仔细听……"];
+	  860 [label="You: “金……”（低语。）“闪光灯太响了。它不会喜欢的。”\n（低语。）“它的声音像武器一样，金。它不会喜欢的。”"];
+	  861 [label="Insulindian Phasmid: 细长的机理转回到你的方向，触须正在检测周围的空气，慢慢悠悠……"];
+	  862 [label="You: （低语。）“那是什么？”"];
+	  863 [label="Insulindian Phasmid: 你看见昆虫转向他，伸出了下颌的触须。它的动作突然变快了。\n你看见竹节虫转向他，伸出了下颌的触须。它的动作突然变快了。"];
+	  864 [label="Kim Kitsuragi: “我完全不知道……”警督低声回答到。你听见夹克拉链拉开时那熟悉的声音——慢慢地，轻轻地。特别费力……"];
+	  865 [label="Kim Kitsuragi: “我不觉得……”他试着解释，轻轻拍了拍你：“我不觉得这跟公牛喷雾有*任何*关系。它只是害怕了。”"];
+	  866 [label="You: “我不明白……我*喷了*费洛蒙……”"];
+	  867 [label="You: 什么也不说，咽下去。"];
+	  868 [label="Volition: 他抑制住了这种情绪。拍掉身上的灰尘，继续前进。你也一样。还会有机会的。"];
+	  869 [label="Reaction Speed: 神秘动物学？天啦，真有一个……"];
+	  870 [label="Insulindian Phasmid: Variable[\"coast.morell_greeting_done\"]"];
+	  871 [label="Variable[\"coast.morell_greeting_done\"]", shape=diamond];
+	  872 [label="!(Variable[\"coast.morell_greeting_done\"])", shape=diamond];
+	  873 [label="Esprit de Corps: 我们错过了，他想到。我们漏掉了一个点。我们本来应该……紧接着，警督又重新振作起来。"];
+	  874 [label="Jump to: [failure_of_many_proportions]"];
+	  875 [label="You: “我不明白……我*喷了*费洛蒙……”"];
+	  876 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_esprit_posse_incoming\"]"];
+	  877 [label="Variable[\"seafort.phasmid_esprit_posse_incoming\"]", shape=diamond];
+	  878 [label="!(Variable[\"seafort.phasmid_esprit_posse_incoming\"])", shape=diamond];
+	  879 [label="Jump to: [touching hub]"];
+	  880 [label="Jump to: [touching hub]"];
+	  881 [label="Insulindian Phasmid: 我身处在一个狭窄漏斗的底端。毫无重量。轻到我只能感觉到自己是*某种东西*。事实上——也许我什么都不是？我肯定是没有灵魂的。如果有，它也永远不会感觉到痛。\n我身处在一个狭窄漏斗的底端。毫无重量。轻到我只能感觉到自己是*某种东西*。事实上——也许我什么都不是？我肯定是没有灵魂的。如果有，它也永远不会燃烧。"];
+	  882 [label="what_is_it_like"];
+	  883 [label="You: 好吧。那件事我不想再听下去了。"];
+	  884 [label="You: 你是一个奇迹吗？"];
+	  885 [label="Insulindian Phasmid: 是的。已经很久，很久没有人发现我了。有1000年了。我在看不见的地方，颤抖着。为自己披上绿色的伪装。"];
+	  886 [label="You: 你到底*是*什么？"];
+	  887 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_chat_exit_done\"]"];
+	  888 [label="Variable[\"seafort.phasmid_chat_exit_done\"]", shape=diamond];
+	  889 [label="!(Variable[\"seafort.phasmid_chat_exit_done\"])", shape=diamond];
+	  890 [label="You: “现在怎么办？”[离开。]"];
+	  891 [label="Kim Kitsuragi: “显然是的——就像水黾，只是……”他惊愕地摇摇头。“我这辈子从来没见过*这种东西*。”"];
+	  892 [label="Jump to: [PHASMID main]"];
+	  893 [label="Kim Kitsuragi: “现在，我们只是两个怪人——没能拍下那只巨大神秘生物的相片……也许我们还有机会？现在我们*知道*它在这里了……”"];
+	  894 [label="Insulindian Phasmid: Variable[\"yard.hanged_picture_taken\"]"];
+	  895 [label="Variable[\"yard.hanged_picture_taken\"]", shape=diamond];
+	  896 [label="!(Variable[\"yard.hanged_picture_taken\"])", shape=diamond];
+	  897 [label="Cuno: “牛逼。坤诺也是——坤诺也看到了一只*大昆虫*的幻觉。而且它是*真的*。赶快退后，免得它把你吃了……”"];
+	  898 [label="You: “该死！该死！我没弄好……”[愤怒地离开。]"];
+	  899 [label="Jump to: [cuno_massive_failure]"];
+	  900 [label="Jump to: [cuno_massive_failure]"];
+	  901 [label="Kim Kitsuragi: “不过，肯定有人知道它。也许靠近它有什么秘密？我不知道……我从没听说过这样的物种。”"];
+	  902 [label="You: 在我见过的所有生物当中，你是最美丽的那一个。"];
+	  903 [label="You: 什么女人？"];
+	  904 [label="Kim Kitsuragi: “看起来那只昆虫好像在那边有个巢穴，看……也许它留下了*某种*证据……”"];
+	  905 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_saw_helmet\"]"];
+	  906 [label="Variable[\"seafort.phasmid_saw_helmet\"]", shape=diamond];
+	  907 [label="!(Variable[\"seafort.phasmid_saw_helmet\"])", shape=diamond];
+	  908 [label="You: “该死！该死！我没弄好……”[愤怒地离开。]"];
+	  909 [label="You: “该死，我们应该帮那些神秘动物学家的。”"];
+	  910 [label="Esprit de Corps: 内陆300米的地方，特别顾问特兰特·海德斯塔姆竖起耳朵。随迁警官维克玛站在码头上朝他点点头：“我听见了。”"];
+	  911 [label="You: “现在怎么办？”（继续。）"];
+	  912 [label="Cuno: “是啊，它能在水面上走，像是一只水蜘蛛，或者……那种水上漂……”他激动地话都说不出来了。“当警察真尼玛太*疯狂*了。”"];
+	  913 [label="Insulindian Phasmid: Variable[\"yard.hanged_picture_taken\"]"];
+	  914 [label="Variable[\"yard.hanged_picture_taken\"]", shape=diamond];
+	  915 [label="!(Variable[\"yard.hanged_picture_taken\"])", shape=diamond];
+	  916 [label="You: （低语）“我洒了费洛蒙，我可以接近它。”"];
+	  918 [label="Endurance: 汗水从你的眉头滴落，打湿你的胸膛……你身上散发出化学药品的臭味。"];
+	  919 [label="You: 踮起脚尖,再靠近一点查看……"];
+	  920 [label="Kim Kitsuragi: “小心。可能有毒。”警督担心地看着你。"];
+	  921 [label="Insulindian Phasmid: 头部两侧如水滴一般的复眼注视着你的一举一动。"];
+	  922 [label="You: “我们本来可以了解一些竹节虫的习性。跟他们一起寻找。”"];
+	  923 [label="Insulindian Phasmid: Variable[\"seafort.phasmid_ency_cryptozoologist\"]"];
+	  924 [label="Variable[\"seafort.phasmid_ency_cryptozoologist\"]", shape=diamond];
+	  925 [label="!(Variable[\"seafort.phasmid_ency_cryptozoologist\"])", shape=diamond];
+	  926 [label="Rhetoric: 也许是神秘-*法西斯主义者*吧。"];
+	  927 [label="Kim Kitsuragi: “拍到了……”你听见警督的低语声，那只生物的身形出现在他手中的相片里：一个白色条纹的多彩幽灵，跟芦苇和天空形成了鲜明的对比。还有你，它面前的阴影。"];
+	  928 [label="You: 看着你的手指。"];
+	  929 [label="You: 把你的手放在纤细的节肢上，向上滑动，再高一些……"];
+	  930 [label="Insulindian Phasmid: 没什么可以说的。如果有，也超过了你的想象——简单到跟你的难以兼容。节状的口器吐着泡泡，它歪起自己的小脑袋。"];
+	  931 [label="Insulindian Phasmid: Variable[\"seafort.sense_hearing_pain_flash\"]"];
+	  932 [label="Variable[\"seafort.sense_hearing_pain_flash\"]", shape=diamond];
+	  933 [label="!(Variable[\"seafort.sense_hearing_pain_flash\"])", shape=diamond];
+	  934 [label="You: 这一切是从哪里来的？所有这一切？在我们周围？这个世界？"];
+	  935 [label="You: 如果我告诉你，会怎么样呢？"];
+	  936 [label="You: 在地平线上。灰域的火焰。我们感觉到的东西马上就要结束了。"];
+	  937 [label="You: 真是太酷了。"];
+	  938 [label="Conceptualization: 如果下一个画面没有来临呢？这种生物不是相片，而是一台照相机。"];
+	  939 [label="Insulindian Phasmid: 是的，我很幸运。相比你的恐惧，这根本算不上什么——所有创造物都会反映在你的前脑。惊骇真实的一面神经镜子。恒定的，永无止境的诅咒。"];
+	  940 [label="Insulindian Phasmid: 甚至是在你睡觉的时候也是……而且当你醒来的时候，你可以把它挂在脖子周围，双眼睁开，在镜子背后忍不住又咽下了更多。我对你表示深深地、无能为力的同情。"];
+	  941 [label="Insulindian Phasmid: 是的，相比那不可估量、炽热的玻璃穹顶和*你*脑袋里的恐惧来说，它似乎并不重要。我只是觉得你应该知道。"];
+	  942 [label="Insulindian Phasmid: 那肯定特别艰难。节肢动物对你产生了一种静默无声而且毫无意义的敬畏。要知道，我们在看着你——当你厌倦的时候，当视觉失去控制的时候。昆虫会一直注视着你。支持你。"];
+	  943 [label="Volition: 为了纪念你这坨狗屎，荣誉警督。面对绝对无情的恐惧，你还能*坚持*自我。日复一日。分分秒秒。"];
+	  944 [label="Inland Empire: 警探"];
+	  945 [label="Reaction Speed: 是的，当然。三米高的竹节虫会生气的。\n是的，当然。三米高的竹节虫会*生气*的。"];
+	  946 [label="Conceptualization: 你呼出的不是空气，而是思想。没有树木是以思想为食的。"];
+	  947 [label="Insulindian Phasmid: 不——你只是*现在*这么想。这是一个启示。"];
+	  948 [label="Cuno: “是啊——非常普通。那里有一只巨大的竹节虫。退后，免得它把你给吃了……”"];
+	  949 [label="You: 在我见过的所有生物当中，你是最善良的。"];
+	  950 [label="You: “没什么。只是看看竹节虫。一切都很正常。”"];
+	  0 -> 1
+	  1 -> 518
+	  2 -> 610
+	  2 -> 198
+	  2 -> 655
+	  2 -> 472
+	  2 -> 795
+	  3 -> 611
+	  5 -> 704
+	  5 -> 476
+	  6 -> 266
+	  7 -> 858
+	  8 -> 528
+	  9 -> 108
+	  10 -> 112
+	  11 -> 68
+	  12 -> 863
+	  13 -> 270
+	  14 -> 16
+	  14 -> 15
+	  15 -> 473
+	  16 -> 114
+	  17 -> 711
+	  18 -> 166
+	  19 -> 217
+	  20 -> 21
+	  21 -> 22
+	  21 -> 23
+	  22 -> 185
+	  23 -> 185
+	  24 -> 812
+	  25 -> 168
+	  26 -> 717
+	  27 -> 717
+	  28 -> 107
+	  29 -> 873
+	  30 -> 874
+	  31 -> 594
+	  32 -> 926
+	  33 -> 831
+	  34 -> 35
+	  34 -> 36
+	  35 -> 365
+	  36 -> 676
+	  37 -> 399
+	  38 -> 880
+	  39 -> 40
+	  39 -> 41
+	  40 -> 42
+	  41 -> 550
+	  42 -> 931
+	  43 -> 599
+	  44 -> 458
+	  45 -> 140
+	  46 -> 285
+	  47 -> 403
+	  48 -> 144
+	  49 -> 688
+	  50 -> 289
+	  51 -> 291
+	  52 -> 401
+	  53 -> 683
+	  54 -> 248
+	  55 -> 56
+	  56 -> 610
+	  56 -> 198
+	  56 -> 428
+	  56 -> 655
+	  56 -> 472
+	  56 -> 795
+	  57 -> 200
+	  58 -> 747
+	  59 -> 571
+	  60 -> 703
+	  61 -> 60
+	  62 -> 432
+	  62 -> 345
+	  62 -> 434
+	  63 -> 64
+	  63 -> 65
+	  64 -> 613
+	  65 -> 59
+	  66 -> 706
+	  67 -> 662
+	  68 -> 113
+	  68 -> 307
+	  69 -> 861
+	  70 -> 620
+	  71 -> 478
+	  72 -> 73
+	  72 -> 74
+	  73 -> 621
+	  74 -> 14
+	  75 -> 622
+	  76 -> 819
+	  77 -> 78
+	  78 -> 25
+	  79 -> 584
+	  80 -> 672
+	  80 -> 353
+	  80 -> 866
+	  80 -> 489
+	  80 -> 718
+	  80 -> 719
+	  80 -> 273
+	  80 -> 626
+	  80 -> 627
+	  80 -> 824
+	  80 -> 539
+	  80 -> 221
+	  80 -> 670
+	  81 -> 173
+	  82 -> 80
+	  83 -> 278
+	  84 -> 828
+	  85 -> 725
+	  86 -> 366
+	  87 -> 929
+	  87 -> 780
+	  88 -> 282
+	  89 -> 90
+	  89 -> 91
+	  90 -> 638
+	  91 -> 639
+	  92 -> 93
+	  93 -> 232
+	  94 -> 936
+	  94 -> 371
+	  94 -> 502
+	  95 -> 552
+	  95 -> 506
+	  95 -> 733
+	  96 -> 505
+	  97 -> 287
+	  98 -> 238
+	  99 -> 469
+	  100 -> 511
+	  101 -> 401
+	  102 -> 240
+	  102 -> 293
+	  103 -> 652
+	  104 -> 401
+	  105 -> 199
+	  106 -> 259
+	  106 -> 298
+	  106 -> 155
+	  107 -> 821
+	  108 -> 109
+	  108 -> 110
+	  109 -> 707
+	  110 -> 276
+	  111 -> 112
+	  112 -> 478
+	  113 -> 710
+	  115 -> 166
+	  116 -> 767
+	  116 -> 919
+	  117 -> 118
+	  117 -> 119
+	  118 -> 820
+	  119 -> 337
+	  120 -> 176
+	  121 -> 720
+	  121 -> 537
+	  121 -> 922
+	  122 -> 123
+	  122 -> 124
+	  123 -> 9
+	  124 -> 634
+	  125 -> 126
+	  125 -> 127
+	  126 -> 80
+	  127 -> 587
+	  128 -> 129
+	  128 -> 130
+	  129 -> 310
+	  130 -> 490
+	  131 -> 721
+	  132 -> 826
+	  133 -> 134
+	  133 -> 135
+	  134 -> 636
+	  135 -> 592
+	  136 -> 449
+	  137 -> 168
+	  138 -> 34
+	  139 -> 190
+	  140 -> 232
+	  141 -> 883
+	  141 -> 644
+	  142 -> 234
+	  143 -> 883
+	  143 -> 644
+	  144 -> 387
+	  145 -> 102
+	  146 -> 607
+	  147 -> 560
+	  148 -> 294
+	  149 -> 416
+	  150 -> 694
+	  151 -> 570
+	  152 -> 153
+	  152 -> 203
+	  153 -> 154
+	  154 -> 258
+	  154 -> 950
+	  155 -> 338
+	  157 -> 904
+	  158 -> 60
+	  159 -> 900
+	  160 -> 899
+	  161 -> 10
+	  162 -> 11
+	  163 -> 164
+	  163 -> 165
+	  164 -> 271
+	  165 -> 305
+	  166 -> 439
+	  167 -> 628
+	  168 -> 169
+	  168 -> 623
+	  168 -> 624
+	  168 -> 20
+	  168 -> 665
+	  168 -> 667
+	  168 -> 220
+	  169 -> 452
+	  170 -> 921
+	  171 -> 309
+	  172 -> 822
+	  173 -> 774
+	  174 -> 82
+	  175 -> 274
+	  176 -> 855
+	  177 -> 826
+	  178 -> 179
+	  178 -> 180
+	  179 -> 31
+	  180 -> 594
+	  181 -> 450
+	  182 -> 184
+	  182 -> 183
+	  183 -> 497
+	  183 -> 138
+	  184 -> 34
+	  185 -> 186
+	  185 -> 187
+	  186 -> 228
+	  187 -> 836
+	  188 -> 844
+	  188 -> 556
+	  189 -> 230
+	  190 -> 232
+	  191 -> 512
+	  192 -> 193
+	  192 -> 194
+	  193 -> 943
+	  194 -> 321
+	  195 -> 465
+	  196 -> 411
+	  197 -> 688
+	  198 -> 523
+	  199 -> 422
+	  199 -> 742
+	  200 -> 201
+	  200 -> 202
+	  201 -> 571
+	  202 -> 297
+	  203 -> 257
+	  204 -> 106
+	  205 -> 279
+	  206 -> 8
+	  207 -> 208
+	  207 -> 209
+	  208 -> 161
+	  209 -> 805
+	  210 -> 211
+	  210 -> 212
+	  211 -> 810
+	  212 -> 167
+	  213 -> 662
+	  214 -> 662
+	  215 -> 478
+	  216 -> 439
+	  217 -> 218
+	  217 -> 219
+	  218 -> 272
+	  218 -> 170
+	  218 -> 352
+	  219 -> 44
+	  220 -> 821
+	  221 -> 175
+	  222 -> 585
+	  223 -> 827
+	  224 -> 723
+	  225 -> 880
+	  226 -> 227
+	  227 -> 39
+	  228 -> 401
+	  229 -> 513
+	  230 -> 736
+	  231 -> 881
+	  232 -> 643
+	  233 -> 401
+	  234 -> 409
+	  234 -> 937
+	  234 -> 789
+	  235 -> 236
+	  235 -> 237
+	  236 -> 195
+	  237 -> 508
+	  238 -> 333
+	  238 -> 686
+	  239 -> 292
+	  240 -> 374
+	  241 -> 242
+	  241 -> 243
+	  242 -> 692
+	  243 -> 412
+	  244 -> 245
+	  244 -> 246
+	  245 -> 457
+	  246 -> 783
+	  247 -> 147
+	  248 -> 517
+	  249 -> 517
+	  250 -> 421
+	  251 -> 694
+	  252 -> 253
+	  252 -> 254
+	  253 -> 864
+	  254 -> 851
+	  255 -> 350
+	  256 -> 152
+	  257 -> 950
+	  258 -> 897
+	  259 -> 526
+	  260 -> 753
+	  261 -> 910
+	  262 -> 573
+	  263 -> 264
+	  263 -> 265
+	  264 -> 346
+	  265 -> 857
+	  266 -> 748
+	  267 -> 60
+	  268 -> 808
+	  269 -> 12
+	  270 -> 762
+	  271 -> 71
+	  272 -> 26
+	  273 -> 535
+	  274 -> 120
+	  275 -> 355
+	  276 -> 615
+	  277 -> 125
+	  278 -> 525
+	  279 -> 825
+	  280 -> 825
+	  281 -> 879
+	  282 -> 283
+	  282 -> 284
+	  283 -> 930
+	  284 -> 455
+	  285 -> 938
+	  286 -> 233
+	  287 -> 553
+	  287 -> 142
+	  288 -> 50
+	  289 -> 685
+	  290 -> 737
+	  291 -> 401
+	  292 -> 401
+	  293 -> 377
+	  294 -> 794
+	  294 -> 651
+	  294 -> 740
+	  294 -> 890
+	  295 -> 609
+	  296 -> 892
+	  297 -> 571
+	  298 -> 58
+	  299 -> 156
+	  300 -> 905
+	  301 -> 478
+	  302 -> 304
+	  302 -> 303
+	  303 -> 475
+	  304 -> 797
+	  305 -> 71
+	  306 -> 11
+	  307 -> 269
+	  308 -> 424
+	  309 -> 769
+	  310 -> 540
+	  311 -> 397
+	  312 -> 32
+	  313 -> 544
+	  314 -> 178
+	  315 -> 495
+	  316 -> 39
+	  317 -> 501
+	  318 -> 231
+	  319 -> 239
+	  320 -> 557
+	  321 -> 944
+	  322 -> 469
+	  323 -> 509
+	  324 -> 325
+	  324 -> 326
+	  325 -> 98
+	  325 -> 686
+	  326 -> 101
+	  327 -> 739
+	  328 -> 647
+	  329 -> 330
+	  329 -> 331
+	  330 -> 513
+	  331 -> 229
+	  332 -> 386
+	  333 -> 848
+	  334 -> 336
+	  334 -> 335
+	  335 -> 657
+	  336 -> 850
+	  337 -> 107
+	  338 -> 747
+	  339 -> 156
+	  340 -> 341
+	  340 -> 342
+	  341 -> 136
+	  341 -> 364
+	  342 -> 879
+	  344 -> 60
+	  345 -> 433
+	  346 -> 857
+	  347 -> 122
+	  348 -> 529
+	  349 -> 913
+	  350 -> 441
+	  351 -> 815
+	  352 -> 27
+	  353 -> 865
+	  354 -> 81
+	  355 -> 631
+	  356 -> 172
+	  356 -> 543
+	  356 -> 588
+	  357 -> 83
+	  358 -> 591
+	  359 -> 360
+	  359 -> 361
+	  360 -> 722
+	  361 -> 590
+	  362 -> 726
+	  363 -> 340
+	  364 -> 496
+	  365 -> 451
+	  366 -> 835
+	  367 -> 368
+	  367 -> 369
+	  368 -> 928
+	  368 -> 400
+	  369 -> 545
+	  370 -> 786
+	  371 -> 503
+	  372 -> 645
+	  373 -> 734
+	  374 -> 793
+	  374 -> 468
+	  374 -> 846
+	  375 -> 463
+	  376 -> 290
+	  377 -> 378
+	  377 -> 379
+	  378 -> 471
+	  379 -> 327
+	  380 -> 294
+	  383 -> 384
+	  383 -> 385
+	  384 -> 567
+	  385 -> 347
+	  386 -> 893
+	  387 -> 946
+	  388 -> 854
+	  389 -> 160
+	  390 -> 918
+	  391 -> 24
+	  391 -> 76
+	  391 -> 583
+	  392 -> 441
+	  393 -> 714
+	  394 -> 395
+	  395 -> 927
+	  396 -> 356
+	  397 -> 359
+	  398 -> 87
+	  399 -> 725
+	  400 -> 38
+	  401 -> 640
+	  401 -> 256
+	  401 -> 934
+	  401 -> 510
+	  401 -> 687
+	  401 -> 884
+	  401 -> 373
+	  401 -> 886
+	  401 -> 149
+	  401 -> 376
+	  401 -> 507
+	  401 -> 604
+	  401 -> 189
+	  401 -> 318
+	  402 -> 401
+	  403 -> 552
+	  403 -> 506
+	  403 -> 733
+	  404 -> 405
+	  404 -> 406
+	  405 -> 407
+	  406 -> 603
+	  407 -> 233
+	  408 -> 885
+	  409 -> 143
+	  410 -> 508
+	  411 -> 791
+	  412 -> 413
+	  412 -> 414
+	  413 -> 650
+	  414 -> 415
+	  415 -> 688
+	  416 -> 54
+	  416 -> 295
+	  417 -> 249
+	  418 -> 429
+	  419 -> 845
+	  420 -> 521
+	  421 -> 104
+	  422 -> 658
+	  423 -> 17
+	  424 -> 425
+	  424 -> 426
+	  425 -> 427
+	  426 -> 17
+	  427 -> 711
+	  428 -> 2
+	  429 -> 517
+	  430 -> 700
+	  431 -> 754
+	  432 -> 433
+	  433 -> 389
+	  434 -> 659
+	  435 -> 436
+	  436 -> 437
+	  436 -> 438
+	  437 -> 210
+	  438 -> 210
+	  439 -> 478
+	  440 -> 391
+	  441 -> 442
+	  441 -> 443
+	  442 -> 351
+	  443 -> 444
+	  444 -> 168
+	  445 -> 80
+	  446 -> 205
+	  447 -> 280
+	  448 -> 876
+	  449 -> 281
+	  450 -> 727
+	  451 -> 137
+	  452 -> 453
+	  452 -> 454
+	  453 -> 86
+	  454 -> 171
+	  455 -> 39
+	  456 -> 837
+	  457 -> 247
+	  458 -> 459
+	  458 -> 460
+	  459 -> 499
+	  460 -> 768
+	  461 -> 788
+	  462 -> 600
+	  463 -> 401
+	  464 -> 97
+	  465 -> 466
+	  465 -> 467
+	  466 -> 410
+	  467 -> 508
+	  468 -> 377
+	  469 -> 324
+	  470 -> 48
+	  471 -> 739
+	  472 -> 251
+	  473 -> 763
+	  474 -> 63
+	  475 -> 797
+	  476 -> 6
+	  477 -> 13
+	  477 -> 485
+	  477 -> 70
+	  478 -> 614
+	  478 -> 743
+	  478 -> 619
+	  478 -> 435
+	  478 -> 761
+	  478 -> 859
+	  478 -> 862
+	  479 -> 480
+	  480 -> 481
+	  480 -> 482
+	  481 -> 213
+	  482 -> 662
+	  483 -> 916
+	  483 -> 484
+	  483 -> 663
+	  484 -> 664
+	  485 -> 348
+	  486 -> 488
+	  486 -> 487
+	  487 -> 277
+	  488 -> 770
+	  489 -> 865
+	  490 -> 80
+	  491 -> 445
+	  492 -> 873
+	  493 -> 635
+	  494 -> 696
+	  495 -> 832
+	  496 -> 879
+	  497 -> 37
+	  498 -> 94
+	  499 -> 728
+	  500 -> 388
+	  500 -> 317
+	  500 -> 838
+	  501 -> 786
+	  502 -> 839
+	  503 -> 597
+	  504 -> 95
+	  505 -> 737
+	  506 -> 941
+	  507 -> 887
+	  508 -> 401
+	  509 -> 292
+	  510 -> 606
+	  511 -> 291
+	  512 -> 96
+	  514 -> 515
+	  514 -> 516
+	  515 -> 204
+	  516 -> 564
+	  517 -> 401
+	  518 -> 520
+	  518 -> 519
+	  519 -> 296
+	  520 -> 383
+	  521 -> 470
+	  522 -> 55
+	  523 -> 694
+	  524 -> 401
+	  525 -> 861
+	  526 -> 300
+	  527 -> 695
+	  528 -> 156
+	  529 -> 71
+	  530 -> 168
+	  531 -> 671
+	  532 -> 533
+	  532 -> 534
+	  533 -> 396
+	  534 -> 356
+	  535 -> 314
+	  536 -> 671
+	  537 -> 630
+	  538 -> 80
+	  540 -> 541
+	  540 -> 542
+	  541 -> 869
+	  542 -> 131
+	  543 -> 777
+	  544 -> 778
+	  544 -> 358
+	  545 -> 725
+	  546 -> 547
+	  546 -> 548
+	  547 -> 34
+	  548 -> 782
+	  549 -> 89
+	  550 -> 549
+	  551 -> 642
+	  551 -> 461
+	  552 -> 939
+	  553 -> 234
+	  554 -> 374
+	  555 -> 554
+	  555 -> 293
+	  556 -> 322
+	  557 -> 558
+	  557 -> 559
+	  558 -> 192
+	  559 -> 508
+	  560 -> 561
+	  560 -> 562
+	  561 -> 380
+	  562 -> 514
+	  563 -> 294
+	  564 -> 565
+	  564 -> 566
+	  565 -> 608
+	  565 -> 741
+	  566 -> 103
+	  567 -> 478
+	  568 -> 647
+	  569 -> 894
+	  570 -> 105
+	  570 -> 422
+	  570 -> 742
+	  571 -> 802
+	  571 -> 803
+	  571 -> 612
+	  571 -> 262
+	  571 -> 574
+	  571 -> 267
+	  571 -> 908
+	  571 -> 909
+	  571 -> 431
+	  571 -> 911
+	  571 -> 344
+	  571 -> 61
+	  571 -> 158
+	  572 -> 260
+	  573 -> 474
+	  574 -> 660
+	  575 -> 7
+	  576 -> 577
+	  576 -> 578
+	  577 -> 806
+	  578 -> 579
+	  579 -> 580
+	  579 -> 581
+	  580 -> 569
+	  581 -> 308
+	  582 -> 440
+	  583 -> 392
+	  584 -> 168
+	  585 -> 80
+	  586 -> 901
+	  587 -> 80
+	  588 -> 673
+	  589 -> 354
+	  589 -> 867
+	  590 -> 825
+	  591 -> 828
+	  592 -> 825
+	  593 -> 825
+	  594 -> 80
+	  595 -> 779
+	  596 -> 545
+	  597 -> 402
+	  598 -> 139
+	  598 -> 92
+	  598 -> 45
+	  599 -> 597
+	  600 -> 601
+	  600 -> 602
+	  601 -> 504
+	  601 -> 47
+	  602 -> 552
+	  602 -> 506
+	  602 -> 733
+	  603 -> 286
+	  604 -> 681
+	  605 -> 647
+	  606 -> 419
+	  607 -> 168
+	  608 -> 693
+	  609 -> 417
+	  609 -> 418
+	  610 -> 849
+	  612 -> 261
+	  613 -> 263
+	  614 -> 576
+	  615 -> 616
+	  615 -> 617
+	  616 -> 757
+	  617 -> 478
+	  618 -> 861
+	  619 -> 72
+	  620 -> 163
+	  621 -> 763
+	  622 -> 168
+	  623 -> 116
+	  624 -> 697
+	  625 -> 715
+	  626 -> 668
+	  627 -> 531
+	  628 -> 486
+	  629 -> 491
+	  630 -> 355
+	  631 -> 632
+	  631 -> 633
+	  632 -> 868
+	  633 -> 801
+	  634 -> 108
+	  635 -> 593
+	  636 -> 592
+	  637 -> 363
+	  638 -> 639
+	  639 -> 168
+	  640 -> 641
+	  641 -> 935
+	  641 -> 498
+	  641 -> 43
+	  641 -> 679
+	  642 -> 790
+	  643 -> 401
+	  644 -> 732
+	  645 -> 463
+	  646 -> 656
+	  646 -> 53
+	  646 -> 949
+	  646 -> 902
+	  647 -> 648
+	  647 -> 649
+	  648 -> 49
+	  649 -> 689
+	  650 -> 688
+	  651 -> 847
+	  652 -> 653
+	  652 -> 654
+	  654 -> 381
+	  655 -> 947
+	  656 -> 796
+	  657 -> 423
+	  658 -> 334
+	  659 -> 389
+	  660 -> 66
+	  661 -> 67
+	  662 -> 860
+	  662 -> 709
+	  662 -> 807
+	  663 -> 69
+	  664 -> 861
+	  665 -> 811
+	  666 -> 716
+	  667 -> 117
+	  668 -> 671
+	  669 -> 825
+	  670 -> 536
+	  671 -> 80
+	  672 -> 586
+	  673 -> 174
+	  674 -> 572
+	  675 -> 546
+	  676 -> 451
+	  677 -> 316
+	  678 -> 329
+	  679 -> 598
+	  680 -> 551
+	  681 -> 408
+	  681 -> 196
+	  681 -> 100
+	  682 -> 942
+	  683 -> 568
+	  683 -> 328
+	  683 -> 605
+	  683 -> 903
+	  684 -> 52
+	  685 -> 684
+	  686 -> 945
+	  687 -> 792
+	  688 -> 168
+	  689 -> 690
+	  689 -> 691
+	  690 -> 197
+	  691 -> 241
+	  692 -> 688
+	  694 -> 401
+	  695 -> 571
+	  696 -> 830
+	  697 -> 698
+	  697 -> 699
+	  698 -> 244
+	  699 -> 798
+	  700 -> 701
+	  700 -> 702
+	  701 -> 752
+	  702 -> 157
+	  703 -> 5
+	  704 -> 705
+	  705 -> 6
+	  706 -> 571
+	  707 -> 276
+	  708 -> 479
+	  709 -> 268
+	  710 -> 357
+	  711 -> 712
+	  711 -> 713
+	  712 -> 764
+	  713 -> 216
+	  714 -> 168
+	  715 -> 19
+	  716 -> 625
+	  716 -> 77
+	  717 -> 530
+	  718 -> 823
+	  719 -> 121
+	  720 -> 275
+	  721 -> 870
+	  722 -> 923
+	  723 -> 133
+	  724 -> 85
+	  725 -> 33
+	  725 -> 362
+	  725 -> 675
+	  725 -> 829
+	  726 -> 398
+	  727 -> 725
+	  728 -> 729
+	  728 -> 730
+	  729 -> 500
+	  730 -> 768
+	  731 -> 883
+	  731 -> 644
+	  732 -> 840
+	  733 -> 372
+	  734 -> 145
+	  734 -> 843
+	  735 -> 464
+	  736 -> 401
+	  737 -> 738
+	  737 -> 420
+	  737 -> 470
+	  738 -> 521
+	  739 -> 401
+	  740 -> 332
+	  741 -> 382
+	  742 -> 658
+	  743 -> 744
+	  744 -> 745
+	  744 -> 746
+	  745 -> 758
+	  746 -> 758
+	  747 -> 106
+	  748 -> 571
+	  749 -> 568
+	  749 -> 328
+	  749 -> 605
+	  750 -> 563
+	  751 -> 430
+	  753 -> 339
+	  754 -> 900
+	  755 -> 527
+	  756 -> 755
+	  757 -> 478
+	  758 -> 760
+	  758 -> 759
+	  759 -> 167
+	  760 -> 167
+	  761 -> 477
+	  762 -> 809
+	  763 -> 301
+	  764 -> 765
+	  764 -> 766
+	  765 -> 18
+	  766 -> 115
+	  767 -> 393
+	  768 -> 168
+	  769 -> 394
+	  770 -> 771
+	  770 -> 772
+	  771 -> 57
+	  772 -> 669
+	  773 -> 532
+	  774 -> 776
+	  774 -> 775
+	  775 -> 491
+	  776 -> 629
+	  777 -> 174
+	  778 -> 84
+	  779 -> 494
+	  780 -> 181
+	  781 -> 168
+	  782 -> 182
+	  783 -> 784
+	  783 -> 785
+	  784 -> 457
+	  785 -> 678
+	  786 -> 168
+	  787 -> 498
+	  787 -> 43
+	  787 -> 679
+	  788 -> 287
+	  789 -> 731
+	  790 -> 940
+	  791 -> 51
+	  792 -> 845
+	  793 -> 377
+	  794 -> 891
+	  795 -> 150
+	  796 -> 607
+	  797 -> 571
+	  798 -> 800
+	  798 -> 799
+	  799 -> 457
+	  800 -> 783
+	  801 -> 538
+	  802 -> 159
+	  803 -> 912
+	  804 -> 156
+	  805 -> 111
+	  806 -> 913
+	  807 -> 162
+	  808 -> 214
+	  809 -> 71
+	  810 -> 390
+	  811 -> 666
+	  812 -> 813
+	  812 -> 814
+	  813 -> 920
+	  814 -> 255
+	  815 -> 816
+	  815 -> 817
+	  816 -> 818
+	  817 -> 444
+	  818 -> 444
+	  819 -> 393
+	  820 -> 28
+	  821 -> 79
+	  822 -> 174
+	  823 -> 589
+	  824 -> 823
+	  825 -> 224
+	  825 -> 674
+	  825 -> 898
+	  825 -> 132
+	  825 -> 875
+	  825 -> 177
+	  825 -> 311
+	  825 -> 312
+	  825 -> 223
+	  826 -> 493
+	  827 -> 448
+	  828 -> 825
+	  829 -> 595
+	  830 -> 367
+	  831 -> 596
+	  832 -> 833
+	  832 -> 834
+	  833 -> 637
+	  834 -> 363
+	  835 -> 781
+	  836 -> 88
+	  836 -> 226
+	  836 -> 677
+	  837 -> 168
+	  838 -> 370
+	  839 -> 597
+	  840 -> 841
+	  840 -> 842
+	  841 -> 462
+	  842 -> 233
+	  843 -> 555
+	  844 -> 99
+	  845 -> 401
+	  846 -> 377
+	  847 -> 148
+	  848 -> 101
+	  849 -> 694
+	  850 -> 423
+	  851 -> 852
+	  851 -> 853
+	  852 -> 569
+	  853 -> 308
+	  854 -> 786
+	  856 -> 3
+	  857 -> 756
+	  858 -> 206
+	  859 -> 207
+	  860 -> 306
+	  861 -> 215
+	  862 -> 252
+	  863 -> 483
+	  864 -> 349
+	  865 -> 773
+	  866 -> 865
+	  867 -> 222
+	  868 -> 801
+	  869 -> 131
+	  870 -> 872
+	  870 -> 871
+	  871 -> 492
+	  872 -> 29
+	  873 -> 30
+	  874 -> 80
+	  875 -> 826
+	  876 -> 877
+	  876 -> 878
+	  877 -> 447
+	  878 -> 280
+	  879 -> 725
+	  880 -> 725
+	  881 -> 882
+	  882 -> 680
+	  882 -> 642
+	  882 -> 461
+	  883 -> 404
+	  884 -> 191
+	  885 -> 323
+	  885 -> 319
+	  886 -> 288
+	  887 -> 888
+	  887 -> 889
+	  888 -> 146
+	  889 -> 646
+	  890 -> 751
+	  891 -> 148
+	  892 -> 168
+	  893 -> 750
+	  894 -> 896
+	  894 -> 895
+	  895 -> 151
+	  896 -> 570
+	  897 -> 524
+	  898 -> 339
+	  899 -> 571
+	  900 -> 571
+	  901 -> 128
+	  902 -> 683
+	  903 -> 749
+	  904 -> 343
+	  905 -> 906
+	  905 -> 907
+	  906 -> 4
+	  907 -> 856
+	  908 -> 804
+	  909 -> 62
+	  910 -> 302
+	  911 -> 575
+	  912 -> 900
+	  913 -> 914
+	  913 -> 915
+	  914 -> 661
+	  915 -> 708
+	  916 -> 618
+	  918 -> 75
+	  919 -> 582
+	  920 -> 350
+	  921 -> 768
+	  922 -> 275
+	  923 -> 924
+	  923 -> 925
+	  924 -> 313
+	  925 -> 544
+	  926 -> 446
+	  927 -> 724
+	  928 -> 225
+	  929 -> 315
+	  930 -> 39
+	  931 -> 932
+	  931 -> 933
+	  932 -> 456
+	  933 -> 837
+	  934 -> 188
+	  935 -> 787
+	  936 -> 46
+	  937 -> 141
+	  938 -> 402
+	  939 -> 645
+	  940 -> 682
+	  940 -> 735
+	  941 -> 375
+	  942 -> 320
+	  943 -> 944
+	  944 -> 235
+	  945 -> 101
+	  946 -> 522
+	  946 -> 250
+	  947 -> 472
+	  947 -> 610
+	  947 -> 795
+	  947 -> 198
+	  948 -> 524
+	  949 -> 683
+	  950 -> 948
+}
+

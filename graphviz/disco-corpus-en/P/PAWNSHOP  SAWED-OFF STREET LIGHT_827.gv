@@ -1,0 +1,455 @@
+# PAWNSHOP / SAWED-OFF STREET LIGHT
+# You look at and ask Roy about a street light.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Jump to: [lighthub]"];
+	  3 [label="Bird's Nest Roy: \"Hm?\" He surfaces from a daydream. \"Oh, right. That's... good,\" he replies, unsure of what you said."];
+	  4 [label="Empathy: Something lifted in him when he saw those shares. He *needs* as many as possible -- even if he won't admit it."];
+	  5 [label="Kim Kitsuragi: The lieutenant catches your movements and meets your eyes with a look of confusion."];
+	  6 [label="Inland Empire: Silence..."];
+	  7 [label="Bird's Nest Roy: \"I assure you it's not.\" He runs a finger along its edge. \"See? Not a scratch. Now, please, take it and stick it on the street light. That way people will know it's *yours*.\""];
+	  8 [label="Composure: His manner is casual, but his speech is careful, measured. He wants you to know that he has nothing to hide."];
+	  9 [label="Bird's Nest Roy: \"Excellent choice. I'm almost sad to part with it.\""];
+	  10 [label="Jump to: [Sawed-off Street Light: \"Your eyes slide back to the 700 reá...\"]"];
+	  11 [label="You: Leave your street light be for now. [Leave.]"];
+	  12 [label="Bird's Nest Roy: \"More than happy. I value the street light at 700 reál. You decide how many of your shares that gets me.\""];
+	  13 [label="You: \"Actually, no.\""];
+	  14 [label="Sawed-off Street Light: The pole has been carefully cut, the wiring redone and attached to a standard indoor plug. The light buzzes faintly but persistently."];
+	  15 [label="You: \"I've got big plans for this light. Your shop's gonna be a landmark one day.\""];
+	  16 [label="You: (Pretend to browse the shop from where you're stood.)"];
+	  17 [label="Bird's Nest Roy: \"Yeah, good. But I won't be holding onto these shares for long.\" He gives you a false grin."];
+	  18 [label="Half Light: He's trying to cut you with its sharp edge!"];
+	  19 [label="Volition: He's *really* not. Just take it off him."];
+	  20 [label="Bird's Nest Roy: \"Oh, right. Perfect. Thank you.\""];
+	  21 [label="Kim Kitsuragi: IsKimHere()"];
+	  22 [label="IsKimHere()", shape=diamond];
+	  23 [label="!(IsKimHere())", shape=diamond];
+	  24 [label="You: \"Even taking into account the risk of obtaining the light, that seems a bit steep....\""];
+	  25 [label="Conceptualization: This would make quite a statement in your living room."];
+	  26 [label="You: \"But... I don't have a truck.\""];
+	  27 [label="Kim Kitsuragi: IsKimHere()"];
+	  28 [label="IsKimHere()", shape=diamond];
+	  29 [label="!(IsKimHere())", shape=diamond];
+	  30 [label="Bird's Nest Roy: \"Yes please,\" he says eagerly."];
+	  31 [label="lighthub"];
+	  32 [label="Kim Kitsuragi: \"You have to admit, it's rather clever, what he's done with it.\" He pauses, studying the light."];
+	  33 [label="Perception (Sight): Or has another light shining on the ceiling caught his eye? It's hard to tell."];
+	  34 [label="Half Light: What if he's grabbing a GUN?!"];
+	  35 [label="Jump to: [postlightshares]"];
+	  36 [label="You: (Search for something you can defend yourself with.)"];
+	  37 [label="You: \"Careful where you point that thing. It's sharp!\""];
+	  38 [label="Kim Kitsuragi: Variable[\"canal.light_concept_transform\"]"];
+	  39 [label="Variable[\"canal.light_concept_transform\"]", shape=diamond];
+	  40 [label="!(Variable[\"canal.light_concept_transform\"])", shape=diamond];
+	  41 [label="You: \"Where did you get this?\""];
+	  42 [label="Jump to: [lighthub]"];
+	  43 [label="You: (Ready your hands on your pistol.)"];
+	  44 [label="Bird's Nest Roy: \"That's alright, I can keep it here for you until you find one.\""];
+	  45 [label="Bird's Nest Roy: He doesn't quite catch your meaning. \"Oh... sure.\" He tries to mimic your rotational action but just ends up shrugging."];
+	  46 [label="Bird's Nest Roy: He watches you attach the sign to the street light using the sticky tack he put on the back of it. \"There you go. Beautiful job.\""];
+	  47 [label="You: Let your gaze run over the street light."];
+	  48 [label="You: \"Are you out of your mind? There's one just like that on every corner!\""];
+	  49 [label="You: \"Seven hundred sounds about right. I imagine it wasn't easy sawing off that street lamp.\""];
+	  50 [label="You: \"Thanks, I appreciate it.\""];
+	  51 [label="Sawed-off Street Light: It's the 700 reál modified street light you bought for some unknown reason."];
+	  52 [label="You: \"I'll give you a third of my shares for it.\""];
+	  53 [label="Bird's Nest Roy: \"Alright, you have a deal. The street light is all yours.\" His shoulders relax as if a load has been lifted off them. \"Pleasure doing business with you.\""];
+	  54 [label="Kim Kitsuragi: Variable[\"canal.light_paid_shares\"]"];
+	  55 [label="Variable[\"canal.light_paid_shares\"]", shape=diamond];
+	  56 [label="!(Variable[\"canal.light_paid_shares\"])", shape=diamond];
+	  57 [label="You: Who is?"];
+	  58 [label="You: \"How can I trust that you won't sell it to someone else?\""];
+	  59 [label="You: \"I want my shares back then.\""];
+	  60 [label="Bird's Nest Roy: \"It is quite heavy. You're going to need a truck.\""];
+	  61 [label="You: \"Got some big purchases planned, have you?\""];
+	  62 [label="You: \"Let's talk about trading those shares again.\""];
+	  63 [label="Jump to: [shares hub]"];
+	  64 [label="Half Light: A bargain?! No, it's not! He's trying to sweet-talk you into buying trash!"];
+	  65 [label="Bird's Nest Roy: \"Well, there are the costs of removal and rewiring.\" He throws you a look of weary patience."];
+	  66 [label="Sawed-off Street Light: Your eyes slide back to the 700 reál modified street light you traded for shares. The golden light seems to flicker ever so slightly, like a butterfly... It casts shadows on the sign."];
+	  67 [label="Jump to: [thestreetlighthub]"];
+	  68 [label="You: \"Take it or leave it. Makes no odds to me.\""];
+	  69 [label="You: Read the sign."];
+	  70 [label="Kim Kitsuragi: Variable[\"canal.roy_debt_known\"]"];
+	  71 [label="Variable[\"canal.roy_debt_known\"]", shape=diamond];
+	  72 [label="!(Variable[\"canal.roy_debt_known\"])", shape=diamond];
+	  73 [label="Bird's Nest Roy: The pawnshop owner uprights himself back into view with the stiffness of an old ironing board. \"Here we go,\" he says, holding a piece of cardboard out at you."];
+	  74 [label="Bird's Nest Roy: \"Let's just say there's some long overdue business I've got to deal with.\""];
+	  75 [label="Sawed-off Street Light: The light pole has been carefully cut, and the wiring has been redone and attached to a standard indoor plug. The light buzzes faintly but persistently."];
+	  76 [label="Kim Kitsuragi: \"We're not here to investigate the theft of city property.\" He leans in so the pawnbroker doesn't hear him."];
+	  77 [label="Jump to: [lighthub]"];
+	  78 [label="You: \"What do you mean, *transformations*?\""];
+	  79 [label="Bird's Nest Roy: \"The most important transformation is the light's placement among ordinary *indoor* fixtures, which has adjusted its morphological field. The light became suitable for use inside the home just a few days ago.\" He throws you a look of weary patience."];
+	  80 [label="Bird's Nest Roy: He gulps. \"That's... not enough.\""];
+	  81 [label="Jump to: [shares hub]"];
+	  82 [label="Bird's Nest Roy: \"But... why? It's a perfectly wonderful light. Besides,\" he points to the sign on his booth, \"there are no returns or exchanges for items purchased in this shop.\""];
+	  83 [label="Volition: Don't panic. I'm sure he's just doing his shoelaces up. Something like that."];
+	  84 [label="You: \"I like your thinking.\""];
+	  85 [label="You: \"I'll get my Personal Brand Strategist to sort the legal work out with you.\" (Mumble.) \"Once I have one...\"\n\"I'll get my Personal Brand Strategist to sort the legal work out with you soon.\" (Mumble.) \"Once I find another one...\"\n\"I'll get my Personal Brand Strategist to sort the legal work out with you soon.\""];
+	  86 [label="Jump to: [Sawed-off Street Light: \"Your eyes slide back to the 700 reá...\"]"];
+	  87 [label="You: \"Let's talk about this trade then, if you're happy with shares?\" (Start hustling.)"];
+	  88 [label="Logic: A twentieth of your shares is a sensible offer. Very divisible as far as numbers go."];
+	  89 [label="You: \"How does a twentieth sound to you?\""];
+	  90 [label="Savoir Faire: As *little* as possible. We only sell shares if we're getting something of *more value* for them. Shares are *premium* goods. THINK BIG BUSINESS!"];
+	  91 [label="Bird's Nest Roy: \"Take your time.\""];
+	  92 [label="Sawed-off Street Light: It's the 700 reál modified street light you traded for shares."];
+	  93 [label="You: \"Hey! Where'd you go?\""];
+	  94 [label="Logic: The light has been removed and rewired -- that's two *transformations*. But what about the third?"];
+	  95 [label="Jump to: [lighthub]"];
+	  96 [label="Conceptualization: Makes you feel *rebellious*."];
+	  97 [label="Savoir Faire: Whoa, whoa, whoa! What are you doing? That street light isn't worth anywhere near that much. Reel it in, moneybags. Or do you like being bankrupt?"];
+	  98 [label="Bird's Nest Roy: \"Forget it, then. I'll get more for the light in cash. Unless you want to reconsider?\""];
+	  99 [label="Sawed-off Street Light: It reads: 'SOLD TO THE DISCO COP FOR SHARES IN M-K MERCURY GROUP.' The words are written with an even kerning in bold, precise letters."];
+	  100 [label="Bird's Nest Roy: \"Yes, officer. As you can see, it's in perfect working order.\""];
+	  101 [label="You: There's nothing else you need to know about the light. [Leave.]"];
+	  102 [label="Bird's Nest Roy: \"It is quite heavy. You're going to need a truck.\""];
+	  103 [label="You: \"But... I don't have a truck.\""];
+	  104 [label="Jump to: [thestreetlighthub]"];
+	  105 [label="Kim Kitsuragi: IsKimHere()"];
+	  106 [label="IsKimHere()", shape=diamond];
+	  107 [label="!(IsKimHere())", shape=diamond];
+	  108 [label="Bird's Nest Roy: \"Hm, that's a reasonable offer.\" He raises a curled finger to his chin, looking as thoughtful as he can."];
+	  109 [label="You: \"I can't go higher than a few shares.\""];
+	  110 [label="Savoir Faire: Looks surprisingly official for a small-time trader. Some of your big-biz flair must be rubbing off on him."];
+	  111 [label="Kim Kitsuragi: Variable[\"canal.light_inland_she\"]"];
+	  112 [label="Variable[\"canal.light_inland_she\"]", shape=diamond];
+	  113 [label="!(Variable[\"canal.light_inland_she\"])", shape=diamond];
+	  114 [label="Savoir Faire: But let's come back to that idea later. There's easier money to be made elsewhere. Just get that sign stuck on there for now."];
+	  115 [label="Bird's Nest Roy: \"It's a sign that declares you the owner of the street light. Stick it on and people will know that it's *yours*.\""];
+	  116 [label="Bird's Nest Roy: He hands you the sign then watches you attach it to the street light using the sticky tack he put on the back. \"There you go. Beautiful job.\""];
+	  117 [label="Sawed-off Street Light: A typical Martinaise street light sits among assorted floor and table lamps."];
+	  118 [label="Bird's Nest Roy: \"Besides,\" he points to the sign on his booth, \"there are no returns or exchanges for items purchased in this shop.\""];
+	  119 [label="Kim Kitsuragi: Variable[\"canal.light_money\"]"];
+	  120 [label="Variable[\"canal.light_money\"]", shape=diamond];
+	  121 [label="!(Variable[\"canal.light_money\"])", shape=diamond];
+	  122 [label="You: \"Is there still no way you'd give me my money back? I can't do anything with this light.\""];
+	  123 [label="You: \"Look, I was told that these shares will *double* in value in five years' time.\""];
+	  124 [label="Jump to: [postlightshares]"];
+	  125 [label="You: \"What's that?\""];
+	  126 [label="Jump to: [shares hub]"];
+	  127 [label="Jump to: [lighthub]"];
+	  128 [label="You: \"But how am I going to take it with me?\""];
+	  129 [label="You: \"I need time to mull this over.\" (Go back.)"];
+	  130 [label="You: \"Yes, I'm sure.\""];
+	  131 [label="You: \"So how do I get this light out of here?\" (Proceed.)"];
+	  132 [label="Empathy: Some extra shares would go a long way to helping him out of debt. He deserves a break."];
+	  133 [label="Bird's Nest Roy: He hands you the cardboard and you notice there's something written on it. \"Stick this to the light and people will know that it's *yours*.\""];
+	  134 [label="Bird's Nest Roy: \"Oh, nothing like that.\" He is completely unfazed by your statement. \"Just this sign that declares you the owner of the street light. Stick it on and people will know that it's *yours*.\""];
+	  135 [label="You: \"Is that a street light?\"\n\"This is the street light you want to trade?\""];
+	  136 [label="Kim Kitsuragi: \"A wise investment. I agree. The best part is that you *can't* carry it around -- I would really dislike it if you could.\""];
+	  137 [label="Bird's Nest Roy: \"Of course, officer.\" There's a tiny hint of distress in his voice. \"It's your decision.\""];
+	  138 [label="You: Look at the light in your life."];
+	  139 [label="You: (Don't ask.)"];
+	  140 [label="You: (Take it.)"];
+	  141 [label="Kim Kitsuragi: Variable[\"canal.light_roy_handed_sign\"]"];
+	  142 [label="Variable[\"canal.light_roy_handed_sign\"]", shape=diamond];
+	  143 [label="!(Variable[\"canal.light_roy_handed_sign\"])", shape=diamond];
+	  144 [label="Sawed-off Street Light: Still the same. The pole has been carefully cut, the wiring redone and attached to a standard indoor plug. The light buzzes faintly but persistently."];
+	  145 [label="Jump to: [sharelighthub]"];
+	  146 [label="Endurance: He has an idea of what he wants but he's not giving it away. Sign of a veteran dealer -- able to withstand negotiations over minuscule amounts for *days* or even *weeks*."];
+	  147 [label="Inland Empire: Silence..."];
+	  148 [label="Bird's Nest Roy: \"Tell you what...\" He bends down and disappears behind the counter."];
+	  149 [label="Jump to: [sharelighthub]"];
+	  150 [label="You: \"It'll have to do for now.\""];
+	  151 [label="Bird's Nest Roy: You tense up as the pawnshop owner uprights himself back into view. There isn't a gun in his hands -- or anywhere else on him. Instead, he holds out a piece of cardboard. \"Here we go.\""];
+	  152 [label="You: \"Phew.\" (Relax.) \"I thought you were grabbing a gun.\""];
+	  153 [label="Bird's Nest Roy: \"Uh,\" comes a voice from behind the glass. \"One quick question. How do I get hold of my shares?\""];
+	  154 [label="Bird's Nest Roy: \"The light has undergone three transformations, and every transformation, large or small, has a price tag.\" He rests his elbows on the counter and brings his face closer to the glass."];
+	  155 [label="Bird's Nest Roy: \"Hey, I don't know where it came from, but it's not every day you get to buy and sell something so extraordinary...\""];
+	  156 [label="You: \"I want my money back.\"\n\"I want my shares back.\""];
+	  157 [label="thestreetlighthub"];
+	  158 [label="Bird's Nest Roy: \"More than happy. Like I said, I value the street light at 700 reál. You decide how many of your shares that gets me.\""];
+	  159 [label="Jump to: [sharelighthub]"];
+	  160 [label="postlightshares"];
+	  161 [label="Jump to: [postlightshares]"];
+	  162 [label="Savoir Faire: Great idea! One of your physical assets *on display* for the public. Maybe this was a good idea after all. We could sell tickets for people to come see it, turn this into a little money churner..."];
+	  163 [label="Bird's Nest Roy: \"It was brought to me to be altered.\""];
+	  164 [label="You: \"How much for the street light?\"\n\"How much have you been asking for this -- in cash?\""];
+	  165 [label="Bird's Nest Roy: \"There's also the matter of rewiring. But the most important transformation is the light's placement among ordinary *indoor* fixtures, which has adjusted its morphological field. The light became suitable for use inside the home just a few days ago.\""];
+	  166 [label="You: Great. I guess I'm stuck with it. [Leave.]"];
+	  167 [label="You: Look at the light in your life."];
+	  168 [label="Bird's Nest Roy: \"Alright, alright. That'll have to do.\" His shoulders relax slightly. \"The street light is all yours.\""];
+	  169 [label="You: \"How does it feel to be a *shareholder*?\""];
+	  170 [label="Kim Kitsuragi: Variable[\"canal.light_roy_asked_how_get_shares\"]"];
+	  171 [label="Variable[\"canal.light_roy_asked_how_get_shares\"]", shape=diamond];
+	  172 [label="!(Variable[\"canal.light_roy_asked_how_get_shares\"])", shape=diamond];
+	  173 [label="Bird's Nest Roy: \"But the most important transformation is the light's placement among ordinary *indoor* fixtures, which has adjusted its morphological field. The light became suitable for use inside the home just a few days ago.\""];
+	  174 [label="Bird's Nest Roy: \"It's no problem. Come back any time to look at it. It's *your* sawed off street light now.\""];
+	  175 [label="Bird's Nest Roy: \"I'm sorry, there are no returns or exchanges for items purchased in this shop. Just enjoy it.\""];
+	  176 [label="Inland Empire: She's going to *love* it."];
+	  177 [label="You: See you later, sunshine. [Leave.]"];
+	  178 [label="You: \"Nothing like a good business deal to loosen the joints, is there?\" (Rotate your shoulders.)"];
+	  179 [label="You: \"I get how sawing it off and redoing the wiring could add to the cost, but what else?\""];
+	  180 [label="Bird's Nest Roy: \"That's alright, I can keep it here for you until you find one.\""];
+	  181 [label="Encyclopedia: Street lights like this one were part of a renovation effort a few decades back. Sadly, the effort was abandoned before it was completed -- and so these lights still illuminate crumbling streets."];
+	  182 [label="Conceptualization: Okay. That checks out."];
+	  183 [label="shares hub"];
+	  184 [label="Reaction Speed: This is all for show. He's already made his mind up."];
+	  185 [label="Drama: The pose! The power! Yessssss, drag this part out and reel in your audience, darling. See if they will crack under the suspense."];
+	  186 [label="Kim Kitsuragi: Variable[\"canal.roy_debt_known\"]"];
+	  187 [label="Variable[\"canal.roy_debt_known\"]", shape=diamond];
+	  188 [label="!(Variable[\"canal.roy_debt_known\"])", shape=diamond];
+	  189 [label="Sawed-off Street Light: The light's buzzing resembles the purring of a cat. It seems very much at home here."];
+	  191 [label="Bird's Nest Roy: \"But... why? It's a perfectly wonderful light.\""];
+	  192 [label="Kim Kitsuragi: Variable[\"canal.light_price\"]"];
+	  193 [label="Variable[\"canal.light_price\"]", shape=diamond];
+	  194 [label="!(Variable[\"canal.light_price\"])", shape=diamond];
+	  195 [label="Bird's Nest Roy: \"A *third*? Are you sure?\""];
+	  196 [label="Bird's Nest Roy: \"But I want to sell them *now*.\" He tilts his head slightly to consider this new information."];
+	  197 [label="sharelighthub"];
+	  198 [label="Bird's Nest Roy: \"Alright, you have a deal. The street light is all yours.\" His shoulders relax as if a load has been lifted off them. \"Pleasure doing business with you.\""];
+	  199 [label="Rhetoric: Did he just do a runner? He can't get away that easily. Try calling out to him."];
+	  200 [label="Bird's Nest Roy: \"Yeah, good. But I won't be holding onto these shares for long.\" He gives you a false grin. \"I've got to pay those debts off.\""];
+	  201 [label="Kim Kitsuragi: Variable[\"canal.roy_empathy_hiding_debt\"]"];
+	  202 [label="Variable[\"canal.roy_empathy_hiding_debt\"]", shape=diamond];
+	  203 [label="!(Variable[\"canal.roy_empathy_hiding_debt\"])", shape=diamond];
+	  204 [label="Bird's Nest Roy: \"Seven hundred reál. A bargain, I dare say.\""];
+	  205 [label="You: \"I want that street light. Here's 700.\""];
+	  0 -> 1
+	  1 -> 54
+	  2 -> 31
+	  3 -> 10
+	  4 -> 183
+	  5 -> 151
+	  6 -> 86
+	  7 -> 162
+	  8 -> 127
+	  9 -> 128
+	  10 -> 66
+	  12 -> 90
+	  13 -> 91
+	  14 -> 176
+	  15 -> 3
+	  16 -> 73
+	  17 -> 61
+	  18 -> 19
+	  19 -> 152
+	  19 -> 125
+	  19 -> 140
+	  19 -> 37
+	  21 -> 22
+	  21 -> 23
+	  22 -> 76
+	  23 -> 189
+	  24 -> 165
+	  25 -> 127
+	  26 -> 44
+	  27 -> 28
+	  27 -> 29
+	  28 -> 5
+	  29 -> 151
+	  30 -> 63
+	  31 -> 164
+	  31 -> 101
+	  31 -> 135
+	  31 -> 41
+	  31 -> 205
+	  31 -> 47
+	  31 -> 87
+	  31 -> 62
+	  32 -> 77
+	  33 -> 168
+	  34 -> 83
+	  35 -> 160
+	  36 -> 27
+	  37 -> 7
+	  38 -> 40
+	  38 -> 39
+	  39 -> 179
+	  40 -> 78
+	  41 -> 163
+	  42 -> 31
+	  43 -> 27
+	  44 -> 58
+	  44 -> 59
+	  45 -> 35
+	  46 -> 149
+	  47 -> 75
+	  48 -> 154
+	  49 -> 155
+	  50 -> 174
+	  51 -> 157
+	  52 -> 195
+	  53 -> 160
+	  54 -> 56
+	  54 -> 55
+	  55 -> 92
+	  56 -> 119
+	  57 -> 147
+	  58 -> 148
+	  59 -> 82
+	  60 -> 26
+	  61 -> 74
+	  62 -> 30
+	  63 -> 183
+	  64 -> 48
+	  64 -> 24
+	  64 -> 49
+	  65 -> 173
+	  66 -> 197
+	  67 -> 157
+	  68 -> 98
+	  69 -> 99
+	  70 -> 72
+	  70 -> 71
+	  71 -> 132
+	  72 -> 4
+	  73 -> 140
+	  73 -> 125
+	  74 -> 161
+	  75 -> 25
+	  76 -> 32
+	  77 -> 31
+	  78 -> 65
+	  79 -> 182
+	  80 -> 123
+	  80 -> 68
+	  81 -> 183
+	  82 -> 148
+	  83 -> 16
+	  83 -> 43
+	  83 -> 36
+	  83 -> 93
+	  84 -> 141
+	  85 -> 20
+	  86 -> 66
+	  87 -> 192
+	  88 -> 70
+	  89 -> 108
+	  90 -> 146
+	  91 -> 81
+	  92 -> 197
+	  93 -> 73
+	  94 -> 38
+	  95 -> 31
+	  96 -> 67
+	  97 -> 130
+	  97 -> 13
+	  98 -> 126
+	  99 -> 110
+	  100 -> 201
+	  102 -> 103
+	  103 -> 180
+	  104 -> 157
+	  105 -> 106
+	  105 -> 107
+	  106 -> 136
+	  107 -> 11
+	  108 -> 184
+	  109 -> 80
+	  110 -> 145
+	  111 -> 112
+	  111 -> 113
+	  112 -> 57
+	  112 -> 139
+	  113 -> 159
+	  114 -> 84
+	  114 -> 150
+	  115 -> 162
+	  116 -> 149
+	  117 -> 181
+	  119 -> 120
+	  119 -> 121
+	  120 -> 51
+	  121 -> 117
+	  122 -> 175
+	  123 -> 196
+	  124 -> 160
+	  125 -> 115
+	  126 -> 183
+	  127 -> 31
+	  128 -> 102
+	  129 -> 137
+	  130 -> 53
+	  131 -> 60
+	  132 -> 183
+	  133 -> 162
+	  134 -> 162
+	  135 -> 100
+	  136 -> 11
+	  137 -> 2
+	  138 -> 14
+	  139 -> 6
+	  140 -> 133
+	  141 -> 142
+	  141 -> 143
+	  142 -> 46
+	  143 -> 116
+	  144 -> 96
+	  145 -> 197
+	  146 -> 88
+	  147 -> 86
+	  148 -> 199
+	  149 -> 197
+	  150 -> 141
+	  151 -> 18
+	  152 -> 134
+	  153 -> 85
+	  154 -> 94
+	  155 -> 42
+	  156 -> 191
+	  157 -> 122
+	  157 -> 166
+	  157 -> 167
+	  158 -> 90
+	  159 -> 197
+	  160 -> 169
+	  160 -> 178
+	  160 -> 131
+	  161 -> 160
+	  162 -> 114
+	  163 -> 21
+	  164 -> 204
+	  165 -> 95
+	  167 -> 144
+	  168 -> 160
+	  169 -> 186
+	  170 -> 171
+	  170 -> 172
+	  172 -> 153
+	  173 -> 182
+	  174 -> 105
+	  175 -> 104
+	  176 -> 111
+	  177 -> 170
+	  178 -> 45
+	  179 -> 79
+	  180 -> 50
+	  180 -> 156
+	  181 -> 31
+	  182 -> 95
+	  183 -> 89
+	  183 -> 129
+	  183 -> 52
+	  183 -> 109
+	  184 -> 185
+	  185 -> 198
+	  186 -> 187
+	  186 -> 188
+	  187 -> 200
+	  188 -> 17
+	  189 -> 77
+	  191 -> 118
+	  192 -> 193
+	  192 -> 194
+	  193 -> 158
+	  194 -> 12
+	  195 -> 97
+	  196 -> 33
+	  197 -> 177
+	  197 -> 138
+	  197 -> 69
+	  197 -> 15
+	  198 -> 160
+	  199 -> 34
+	  200 -> 124
+	  201 -> 202
+	  201 -> 203
+	  202 -> 127
+	  203 -> 8
+	  204 -> 64
+	  205 -> 9
+}
+

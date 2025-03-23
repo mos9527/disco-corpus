@@ -1,0 +1,98 @@
+# YARD / PILE OF ETERNITE
+# Someone has left some crumbly looking eternite panels leaning against this wall. Most suspicious.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Pile of Eternite: Variable[\"yard.shack_strange_feeling\"]"];
+	  3 [label="Variable[\"yard.shack_strange_feeling\"]", shape=diamond];
+	  4 [label="!(Variable[\"yard.shack_strange_feeling\"])", shape=diamond];
+	  5 [label="You: 什么感觉？"];
+	  6 [label="Pile of Eternite: Variable[\"yard.shack_ency_eternite_dump\"]"];
+	  7 [label="Variable[\"yard.shack_ency_eternite_dump\"]", shape=diamond];
+	  8 [label="!(Variable[\"yard.shack_ency_eternite_dump\"])", shape=diamond];
+	  9 [label="You: [离开。]"];
+	  10 [label="Pile of Eternite: 一堆不起眼的屋面材料，亘石。\n自从坤诺跟你提过了他的……设备之后这堆亘石看起来愈发奇怪了。"];
+	  11 [label="Perception (Sight): 因为亘石板后藏着一扇暗门。这就是它们码放得*过于*整齐的原因。"];
+	  12 [label="Perception (Sight): “原来这就是坤诺提到的棚屋……我们进去看看吧。”"];
+	  13 [label="You: 我为什么要盯着这堆屋顶建材?"];
+	  14 [label="You: Variable[\"yard.cuno_shack_white_perc_sight\"]"];
+	  15 [label="Variable[\"yard.cuno_shack_white_perc_sight\"]", shape=diamond];
+	  16 [label="!(Variable[\"yard.cuno_shack_white_perc_sight\"])", shape=diamond];
+	  17 [label="Jump to: [Pile of Eternite: \"An inconspicuous pile of the roofin...\"]"];
+	  18 [label="Inland Empire: 很难说，那种感觉已经消失了。你也知道，感觉总是转瞬即逝的。尤其是这种微妙的感觉。"];
+	  19 [label="Pile of Eternite: 这不重要，只是有人在这间旧棚屋旁堆了一些屋顶建材。"];
+	  20 [label="Encyclopedia: 这个问题真令我感到欣慰。三十多年前，瓦塔那理工学院的次级研究员奥拉瑞· 塔尔发明了亘石，他本以为这种东西能够永存——所以才起了亘石这个名字。可惜结果证明这玩意唯一持久的性质只有致癌效果。"];
+	  21 [label="Conceptualization: 工整的布局——这令你感到安稳，哺乳动物喜欢这样的。"];
+	  22 [label="feeling_strange"];
+	  23 [label="Pile of Eternite: Variable[\"yard.cuno_shack_white_perc_sight\"]"];
+	  24 [label="Variable[\"yard.cuno_shack_white_perc_sight\"]", shape=diamond];
+	  25 [label="!(Variable[\"yard.cuno_shack_white_perc_sight\"])", shape=diamond];
+	  26 [label="Perception (Sight): 因为如果坤诺没说谎的话，你应该可以把这些板子挪开。\n因为除非坤诺说了谎，你应该可以把嵌板拉开。"];
+	  27 [label="Pile of Eternite: IsKimHere()"];
+	  28 [label="IsKimHere()", shape=diamond];
+	  29 [label="!(IsKimHere())", shape=diamond];
+	  30 [label="Jump to: [real eternite]"];
+	  31 [label="You: 这是什么?"];
+	  32 [label="Kim Kitsuragi: “这是什么？工具棚吗？他瞧了瞧里面。“我们去调查一下吧。”\n“所以这就是坤诺提到的棚屋……我们进去看看吧。”"];
+	  33 [label="Inland Empire: 不，没那么简单。你有一种奇怪的*感觉*。"];
+	  34 [label="Pile of Eternite: Variable[\"yard.shack_strange_feeling\"]"];
+	  35 [label="Variable[\"yard.shack_strange_feeling\"]", shape=diamond];
+	  36 [label="!(Variable[\"yard.shack_strange_feeling\"])", shape=diamond];
+	  37 [label="Jump to: [real eternite]"];
+	  38 [label="Jump to: [real eternite]"];
+	  40 [label="real eternite"];
+	  41 [label="You: 把这种感觉抛在脑后。"];
+	  42 [label="Perception (Sight): 因为这堆建材整齐有序。铺设平整。赏心悦目。"];
+	  43 [label="You: 把这些板子挪开。"];
+	  0 -> 1
+	  1 -> 10
+	  2 -> 3
+	  2 -> 4
+	  3 -> 12
+	  4 -> 21
+	  5 -> 18
+	  6 -> 8
+	  6 -> 7
+	  7 -> 30
+	  8 -> 20
+	  10 -> 40
+	  11 -> 27
+	  12 -> 38
+	  13 -> 14
+	  14 -> 16
+	  14 -> 15
+	  15 -> 23
+	  16 -> 23
+	  17 -> 10
+	  18 -> 37
+	  19 -> 6
+	  20 -> 30
+	  21 -> 33
+	  22 -> 41
+	  22 -> 5
+	  23 -> 24
+	  23 -> 25
+	  24 -> 26
+	  25 -> 42
+	  26 -> 43
+	  27 -> 28
+	  27 -> 29
+	  28 -> 32
+	  30 -> 40
+	  31 -> 19
+	  33 -> 34
+	  34 -> 35
+	  34 -> 36
+	  35 -> 22
+	  36 -> 38
+	  37 -> 40
+	  38 -> 40
+	  40 -> 9
+	  40 -> 13
+	  40 -> 31
+	  41 -> 17
+	  42 -> 2
+	  43 -> 11
+}
+

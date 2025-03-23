@@ -1,0 +1,97 @@
+# BOOKSTORE / BIOGRAPHIES
+# Shelf full of biographies of famous people.
+# ==================================================
+digraph G {
+	  0 [label="START"];
+	  1 [label="input"];
+	  2 [label="Plaisance: \"A very influential historical figure, but surely I don't have to tell you that.\" She waves her hand, as if casting aside the thought. \"You're a law officer and law officers have at least *some* education.\""];
+	  3 [label="Shelf of Biographies: \"High Speed Love\" chronicles the romance between two of the finest TipTop Tournée racers in history. One of them is the madcap driver Jacob Irw. His blond mane graces the cover."];
+	  4 [label="Shelf of Biographies: Next to Irw's life story, you see a slim biography of an Occidental rock star called \"The Antistar\". He's famous for shooting morphine into one of his eyeballs, and cocaine into the other!"];
+	  5 [label="Shelf of Biographies: The plaque on the shelf reads: \"Biographies of Famous People.\" You see a large variety of names, none of which ring a bell."];
+	  6 [label="Shelf of Biographies: Browsing through all the books with all their names makes your head spin. None of these seem important or relevant. It's all just vapid egoism!"];
+	  7 [label="Shelf of Biographies: Next to that, Revacholian radio-personality Guillaume Bevy stands in front of a run down drug den. He's a permanent fixture on Channel 8, reporting on real life crime and ruining cops' days..."];
+	  8 [label="biohub"];
+	  9 [label="Jump to: [biohub]"];
+	  10 [label="Plaisance: \"I really *must* insist you buy one of the books.\" You're interrupted by the shopkeep. \"Reading them is not for free. Do still browse though. But not too *long*.\""];
+	  11 [label="You: \"Who or what is an innocence?\""];
+	  12 [label="Plaisance: \"I would say...\" The woman hums to herself. \"'The Greatest Innocence.' Yes, most certainly. It's an important educational tool, delving into the depths of history, religion, and their relation to *innocentic power*.\""];
+	  13 [label="Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"]"];
+	  14 [label="Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"]", shape=diamond];
+	  15 [label="!(Variable[\"tc.turn_off_tutorial_node\"]  or  Variable[\"character.interactable_tutorial_seen\"])", shape=diamond];
+	  16 [label="Tutorial Agent: You've acquired an interactable item. Investigate this item further by going to the INTERACT tab in your INVENTORY."];
+	  17 [label="Plaisance: \"Perhaps for a layman!\" She scoffs. \"Deep analysis is necessary to peel back the multi-layered meanings.\""];
+	  18 [label="You: What's it about?"];
+	  19 [label="Plaisance: \"The book is also very daring. The author aims to re-examine the universal understandings of the innocentic system, creating a fresh vantage point and a shift in the tired order of things.\""];
+	  20 [label="You: [Leave.]"];
+	  21 [label="You: \"I'm interested in that 'Greatest Innocence' book.\""];
+	  22 [label="You: \"Storekeep, anything of note in this shelf?\""];
+	  23 [label="Plaisance: \"A true cultural touchstone.\" She nods. \"Enjoy the read.\""];
+	  24 [label="Jump to: [biohub]"];
+	  25 [label="Suggestion: She understands she has erred against the customer and immediately corrects course."];
+	  26 [label="Composure: You will attain a place on this shelf one day... or *die trying*!"];
+	  27 [label="Shelf of Biographies: Shelves full of biographies of *famous people*, whoever they are."];
+	  28 [label="You: Look through the display of books."];
+	  29 [label="You: \"Great. I don't need to know any more.\""];
+	  30 [label="You: \"I thought it was about which of these... innocences... is the coolest and greatest?\""];
+	  31 [label="Conceptualization: Do her words seem vague and abstract to you?"];
+	  32 [label="Jump to: [Shelf of Biographies: \"Shelves full of biographies of *fam...\"]"];
+	  33 [label="Jump to: [biohub]"];
+	  34 [label="Plaisance: \"I'm sorry, I did not mean to rush you. You *are* browsing. Go ahead. Take your time. Time is commerce.\""];
+	  35 [label="Plaisance: \"Certainly. It's prudent for a person to have at least an elementary understanding of history and society. Imagine the chaos we'd be in otherwise.\""];
+	  36 [label="Variable[\"doomed.bookstore_famous_hub_reached\"]"];
+	  37 [label="Variable[\"doomed.bookstore_famous_hub_reached\"]", shape=diamond];
+	  38 [label="!(Variable[\"doomed.bookstore_famous_hub_reached\"])", shape=diamond];
+	  39 [label="Inland Empire: You feel like you should get this one. Definitely. It's *important* somehow. There is something personal inside..."];
+	  40 [label="You: \"So you recommend it?\""];
+	  41 [label="Shelf of Biographies: Suddenly, a particularly odd title catches your eye. It reads: \"High Speed Love: the Tragic True Love Story of Jacob Irw and Alfie Deletraz\" by one Cecilia Averbrook."];
+	  0 -> 1
+	  1 -> 36
+	  2 -> 19
+	  3 -> 4
+	  4 -> 7
+	  5 -> 26
+	  6 -> 41
+	  7 -> 10
+	  8 -> 20
+	  8 -> 28
+	  8 -> 21
+	  8 -> 22
+	  9 -> 8
+	  10 -> 25
+	  11 -> 2
+	  12 -> 11
+	  12 -> 29
+	  13 -> 14
+	  13 -> 15
+	  14 -> 9
+	  15 -> 16
+	  16 -> 9
+	  17 -> 31
+	  18 -> 3
+	  19 -> 40
+	  19 -> 29
+	  19 -> 30
+	  21 -> 23
+	  22 -> 12
+	  23 -> 13
+	  24 -> 8
+	  25 -> 34
+	  26 -> 8
+	  27 -> 8
+	  28 -> 6
+	  29 -> 32
+	  30 -> 17
+	  31 -> 40
+	  32 -> 27
+	  33 -> 8
+	  34 -> 33
+	  35 -> 39
+	  36 -> 37
+	  36 -> 38
+	  37 -> 27
+	  38 -> 5
+	  39 -> 24
+	  40 -> 35
+	  41 -> 18
+}
+
