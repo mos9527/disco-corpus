@@ -6,10 +6,28 @@
     "configurations": [
 
         {
-            "name": "Python Debugger: Current File",
+            "name": "Python Debugger: Dump",
             "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/disco.py",
+            "console": "integratedTerminal"
+        },
+
+        {
+            "name": "Python Debugger: Walk",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/walk.py",
+            "console": "integratedTerminal",
+            "args": [
+                "graphviz/disco-corpus-en/W/WHIRLING _ KIM MAIN_0x01000004000082E4.gv"
+            ]
+        },
+        {
+            "name": "Python: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
             "console": "integratedTerminal"
         }
     ]
