@@ -1,8 +1,13 @@
 # -*- mode: python ; coding: utf-8 -*-
 from PyInstaller.utils.hooks import copy_metadata
-
-datas = []
+import os
+expand_cwd = lambda p: os.path.abspath(os.path.expanduser(os.path.expandvars(p)))
+datas = [
+    (expand_cwd("./graphviz/disco-corpus-cn"),"graphviz/disco-corpus-cn"),
+    (expand_cwd("./graphviz/disco-corpus-en"),"graphviz/disco-corpus-en")
+]
 datas += copy_metadata('readchar')
+print("extra data", datas)
 
 
 a = Analysis(
@@ -26,7 +31,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='walk',
+    name='disco',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -39,4 +44,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon=''
 )
