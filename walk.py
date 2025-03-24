@@ -117,11 +117,11 @@ def __main__():
         convo_id = choose_convo()
     else:
         convo_id = args.start
-
+    diag_id = 1
     while True:
         graph = gvGraph.from_lines(open(id_map[convo_id], encoding="utf-8").readlines())
         print(graph.comment)
-        diag_id = 1
+
         vis = set()
         while True:
             node = graph.nodes.get(diag_id, None)
@@ -138,13 +138,17 @@ def __main__():
                         ):
                             print("<%s>" % speaker, text.strip())
             else:
-                print(node.label)
+                lines = node.label.split("\n")
+                print("//".join(lines))
+
             choices = [
-                f"{v}: {graph.nodes[v].label}" for v in graph.edges.get(diag_id, [])
+                f"{v}: {graph.nodes[v].label.split('\n')[0]}"
+                for v in graph.edges.get(diag_id, [])
             ]
             if not choices:
                 if args.start == -1:
                     convo_id = choose_convo()
+                    diag_id = 1
                     break
                 else:
                     raise SystemExit
@@ -162,6 +166,7 @@ def __main__():
                 else:
                     if args.start == -1:
                         convo_id = choose_convo()
+                        diag_id = 1
                         break
                     else:
                         raise SystemExit
@@ -169,6 +174,7 @@ def __main__():
                 cur_convo_id = diag_id // MAX_DIALOGUE
                 if cur_convo_id:
                     convo_id = cur_convo_id - 1
+                    diag_id = diag_id % MAX_DIALOGUE
                     break
             else:
                 raise SystemExit
