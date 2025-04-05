@@ -74,6 +74,8 @@ class DiscoHandler(SimpleHTTPRequestHandler):
             return self.svg(path)
         if path.lower().endswith(".wav"):
             return self.vo(path)
+        else:
+            return HTTPStatus.NOT_FOUND, "text/plain", b"404 Not Found"
 
     def send_head(self):
         path = self.translate_path(self.path)
@@ -146,10 +148,10 @@ if __name__ == "__main__":
         try:
             host, port = httpd.socket.getsockname()[:2]
             url_host = f"[{host}]" if ":" in host else host
-            logger.info(
+            print(
                 f"Serving HTTP on {host} port {port} "
-                f"> http://127.0.0.1:{port}/"
-                f"> http://{url_host}:{port}/"
+                f", http://127.0.0.1:{port}/"
+                f", http://{url_host}:{port}/"
                 f""
                 f"Press Ctrl-C to stop."
             )

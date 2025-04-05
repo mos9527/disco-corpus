@@ -14,6 +14,16 @@ https://dreampuf.github.io/GraphvizOnline/?url=https://raw.githubusercontent.com
 
 There's also a SVG version of the graph available [in the `svg` folder.](https://github.com/mos9527/disco-corpus/tree/main/svg	)
 
+# Usage
+Raw text/audio files aside, [`server.py`](server.py) provides a simple HTTP server for viewing the flowchart as a graph and playing character voiceovers interactively.
+
+![image](https://github.com/user-attachments/assets/f9b19d01-f965-4a33-bf1b-5f97fa89ada3)
+
+Example:
+```bash
+python server.py --aa-dir C:\Program Files (x86)\Steam\steamapps\common\Disco Elysium\disco_Data\StreamingAssets\aa\StandaloneWindows64
+```
+
 # Example
 ```
 # WHIRLING F1 / KIM FIRST VISIT barks
@@ -27,3 +37,8 @@ digraph G {
 	  1 -> 2
 }
 ```
+
+# References
+- https://github.com/mos9527/UnityPyTypetreeCodegen
+- https://github.com/K0lb3/TypeTreeGenerator
+- https://github.com/K0lb3/UnityPy
