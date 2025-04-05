@@ -10,14 +10,31 @@
             "type": "debugpy",
             "request": "launch",
             "program": "${workspaceFolder}/disco.py",
-            "console": "integratedTerminal"
+            "console": "integratedTerminal",
+            "args": [
+                // "--lockit",
+                // "DialoguesLockitChinese",                
+                "graphviz/disco-corpus-en"
+            ]
         },
 
         {
-            "name": "Python Debugger: Walk",
+            "name": "Python Debugger: Dump VO",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/walk.py",
+            "program": "${workspaceFolder}/disco-vo.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [             
+                "vo_mapping.json"
+            ]
+        },
+
+        {
+            "name": "Python Debugger: Reader",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/reader.py",
             "console": "integratedTerminal",
             "args": [
                 "--folder",
