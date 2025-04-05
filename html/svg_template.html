@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>disco-corpus Viewer - {{title}}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0px;
+            background-color: #f4f4f4;
+        }
+        svg {
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+        .active-vo {                   
+            font-weight: bold;
+        }
+        audio {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>    
+    <h1>{{title}} - {{cid}}</h1>
+    <audio controls autoplay id="audio-player">
+        <source src="{{audio_url}}" type="audio/mpeg">
+        Your browser does not support the audio element.
+        <p>Audio file not found. Please check the URL.</p>
+    </audio>
+    {{svg_content}}
+
+    <script>
+        const ConvoID = {{cid}}
+        let activeElem = null;
+
+        function resetStyles(el){
+            el.setAttribute('fill', 'black');        
+            el.classList.remove('active-vo'); 
+        }
+
+        document.querySelectorAll('g').forEach(function(group) {
+            group.addEventListener('click', function() {
+                const title = this.querySelector('title').textContent;                                
+                if (!parseInt(title)) return; // skip if title is not a number
+                if (activeElem) resetStyles(activeElem);
+                this.classList.add('active-vo');
+                activeElem = this;
+
+                const id = parseInt(title);
+                const audioPlayer = document.getElementById('audio-player');            
+                audioPlayer.src = `/${ConvoID}/${id}.wav`;                
+                event.stopPropagation();
+            });
+        });
+    </script>
+</body>
