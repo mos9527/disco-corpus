@@ -1,4 +1,4 @@
-import argparse, logging, os, urllib, json
+import argparse, logging, os, urllib, json, contextlib, socket
 from functools import lru_cache, cache
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from http import HTTPStatus
@@ -110,7 +110,7 @@ class DiscoHandler(SimpleHTTPRequestHandler):
 
 if __name__ == "__main__":
     args = argparse.ArgumentParser(description="Serve Disco Elysium files")
-    args.add_argument("--host", help="Host to serve on", default="0.0.0.0")
+    args.add_argument("--host", help="Host to serve on", default="::")
     args.add_argument(
         "--port",
         help="Port to serve on",
@@ -144,7 +144,13 @@ if __name__ == "__main__":
     else:
         logger.error("Missing AA mapping or VO mapping. Voiceovers unavailable.")
     os.chdir(args.directory)
-    with ThreadingHTTPServer((args.host, args.port), DiscoHandler) as httpd:
+    class DualStackServer(ThreadingHTTPServer):
+        address_family = socket.AF_INET | socket.AF_INET6
+        def server_bind(self):            
+            self.socket.setsockopt(socket.IPPROTO_IPV6, socket.IPV6_V6ONLY, 0)
+            return super().server_bind()
+
+    with DualStackServer((args.host, args.port), DiscoHandler) as httpd:
         try:
             host, port = httpd.socket.getsockname()[:2]
             url_host = f"[{host}]" if ":" in host else host
