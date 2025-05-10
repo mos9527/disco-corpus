@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,56 +10,88 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0px;
-            background-color: #f4f4f4;
+            background-color: white;
         }
-        svg {
-            border: 1px solid #ccc;
-            background-color: #fff;
-        }
-        .active-vo {                   
+
+        .active-vo {
             font-weight: bold;
         }
+
+        .graphviz {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            z-index: 10;
+        }
+
         audio {
-            position: fixed;
+            display: none;
+        }
+
+        .title {
+            position: absolute;
             top: 20px;
             left: 20px;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            border-radius: 4px;
+            font-size: 24px;
+            z-index: 100;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: black;
+                color: white;
+            }
+
+            svg {
+                filter: invert(1);
+            }
         }
     </style>
 </head>
-<body>    
-    <h1>{{title}} - {{cid}}</h1>
+
+<body>
+    <script src='https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js'></script>
+    <h1 class="title">{{title}} - {{cid}}</h1>
     <audio controls autoplay id="audio-player">
-        <source src="{{audio_url}}" type="audio/mpeg">
+        <source type="audio/wav">
         Your browser does not support the audio element.
         <p>Audio file not found. Please check the URL.</p>
     </audio>
-    {{svg_content}}
+
+    <div class="graphviz">
+        {{svg_content}}
+    </div>
 
     <script>
         const ConvoID = {{cid}}
         let activeElem = null;
 
-        function resetStyles(el){
-            el.setAttribute('fill', 'black');        
-            el.classList.remove('active-vo'); 
+        const svgElement = document.querySelector('.graphviz svg');
+        const rect = svgElement.getBoundingClientRect();
+        const instance = panzoom(svgElement, {
+            autocenter: true
+        });
+        function resetStyles(el) {
+            el.setAttribute('fill', 'black');
+            el.classList.remove('active-vo');
         }
 
-        document.querySelectorAll('g').forEach(function(group) {
-            group.addEventListener('click', function() {
-                const title = this.querySelector('title').textContent;                                
+        document.querySelectorAll('g').forEach(function (group) {
+            group.addEventListener('click', function () {
+                const title = this.querySelector('title').textContent;
                 if (!parseInt(title)) return; // skip if title is not a number
                 if (activeElem) resetStyles(activeElem);
                 this.classList.add('active-vo');
                 activeElem = this;
 
                 const id = parseInt(title);
-                const audioPlayer = document.getElementById('audio-player');            
-                audioPlayer.src = `/${ConvoID}/${id}.wav`;                
+                const audioPlayer = document.getElementById('audio-player');
+                audioPlayer.src = `/${ConvoID}/${id}.wav`;
                 event.stopPropagation();
             });
-        });
+        });         
     </script>
 </body>

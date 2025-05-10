@@ -115,6 +115,7 @@ if __name__ == "__main__":
         "--port",
         help="Port to serve on",
         default=8000,
+        type=int,
     )
     args.add_argument("--directory", help="Directory to serve from", default="svg")
     args.add_argument(
@@ -144,9 +145,11 @@ if __name__ == "__main__":
     else:
         logger.error("Missing AA mapping or VO mapping. Voiceovers unavailable.")
     os.chdir(args.directory)
+
     class DualStackServer(ThreadingHTTPServer):
         address_family = socket.AF_INET | socket.AF_INET6
-        def server_bind(self):            
+
+        def server_bind(self):
             self.socket.setsockopt(socket.IPPROTO_IPV6, socket.IPV6_V6ONLY, 0)
             return super().server_bind()
 
