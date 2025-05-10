@@ -6,6 +6,17 @@ from UnityPy.classes import MonoBehaviour
 
 MAX_DIALOGUE = 10000
 
+from typing import Type, TypeVar
+
+T = TypeVar("T")
+
+
+def get_class_id(cls: Type[T]) -> T:
+    return None
+
+
+a = get_class_id(int)
+
 
 def __main__():
     parser = argparse.ArgumentParser(description="Process Disco Elysium dialogue files")
@@ -22,7 +33,7 @@ def __main__():
     parser.add_argument("output", help="Output ConvoID.DialogueID:VO Info json")
     args = parser.parse_args()
     print("Parsing Typetree info")
-    from uttcg import UTTCGen_Reread
+    from uttcg import UTTCGen_AsInstance
     from uttcg.VOTool import VoiceOverClipsLibrary
 
     print("Loading data")
@@ -34,8 +45,7 @@ def __main__():
         if obj.class_id == ClassIDType.MonoBehaviour
     ]
     vo_lib = next(filter(lambda x: x.m_Name == "VoiceOverClipsLibrary", mono))
-    vo_lib, clazzname = UTTCGen_Reread(vo_lib)
-    vo_lib = VoiceOverClipsLibrary(**vo_lib)
+    vo_lib = UTTCGen_AsInstance(VoiceOverClipsLibrary, vo_lib)
 
     mapping = json.load(open(args.articy_map, "r", encoding="utf-8"))
     vo = [
