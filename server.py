@@ -1,3 +1,6 @@
+import html
+import io
+import sys
 import argparse, logging, os, urllib, json, contextlib, socket
 from functools import lru_cache, cache
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
@@ -40,7 +43,13 @@ audio_cache = AudioCache()
 
 
 class DiscoHandler(SimpleHTTPRequestHandler):
-    @property    
+    @property
+    def dir_template(self):
+        template = os.path.join(os.path.dirname(__file__), "html", "dir_template.html")
+        with open(template, "r") as f:
+            return f.read()
+
+    @property
     def svg_template(self):
         template = os.path.join(os.path.dirname(__file__), "html", "svg_template.html")
         with open(template, "r") as f:
@@ -67,6 +76,30 @@ class DiscoHandler(SimpleHTTPRequestHandler):
         diag_id = diag_id.split(".")[0]
         return HTTPStatus.OK, "audio/wav", audio_cache.read(int(convo_id), int(diag_id))
 
+    def list_directory(self, path):
+        list = os.listdir(path)
+        list.sort(key=lambda a: a.lower())
+        r = []
+        displaypath = urllib.parse.unquote(self.path, errors="surrogatepass")
+        displaypath = html.escape(displaypath, quote=False)
+        for name in list:
+            fullname = os.path.join(path, name)
+            displayname = linkname = name
+            if os.path.isdir(fullname):
+                displayname = name + "/"
+                linkname = name + "/"
+            r.append(
+                '<li><a href="%s">%s</a></li>'
+                % (
+                    urllib.parse.quote(linkname, errors="surrogatepass"),
+                    html.escape(displayname, quote=False),
+                )
+            )
+        result = self.dir_template.replace("{{title}}", displaypath)
+        result = result.replace("{{path}}", displaypath)
+        result = result.replace("{{list}}", "\n".join(r))
+        return HTTPStatus.OK, "text/html", result.encode("utf-8")
+
     def router(self, path):
         parts = urllib.parse.urlsplit(self.path)
         path = parts.path.strip("/")
@@ -77,9 +110,16 @@ class DiscoHandler(SimpleHTTPRequestHandler):
         else:
             return HTTPStatus.NOT_FOUND, "text/plain", b"404 Not Found"
 
+    def route(self, code, mime, content):
+        self.send_response(code)
+        self.send_header("Content-Type", mime)
+        self.send_header("Content-Length", str(len(content)))
+        self.send_header("Cache-Control", "no-cache")
+        self.end_headers()
+        self.wfile.write(content)
+
     def send_head(self):
         path = self.translate_path(self.path)
-        f = None
         if os.path.isdir(path):
             parts = urllib.parse.urlsplit(self.path)
             if not parts.path.endswith("/"):
@@ -91,21 +131,12 @@ class DiscoHandler(SimpleHTTPRequestHandler):
                 self.send_header("Content-Length", "0")
                 self.end_headers()
                 return None
-            for index in self.index_pages:
-                index = os.path.join(path, index)
-                if os.path.isfile(index):
-                    path = index
-                    break
             else:
-                return self.list_directory(path)
-
-        code, mime, content = self.router(self.path)
-        self.send_response(code)
-        self.send_header("Content-Type", mime)
-        self.send_header("Content-Length", str(len(content)))
-        self.send_header("Cache-Control", "no-cache")
-        self.end_headers()
-        self.wfile.write(content)
+                code, mime, content = self.list_directory(path)
+                return self.route(code, mime, content)
+        else:
+            code, mime, content = self.router(self.path)
+            self.route(code, mime, content)
 
 
 if __name__ == "__main__":

@@ -18,7 +18,6 @@
         }
         
         .graphviz {
-            position: absolute;
             top: 0;
             left: 0;
             z-index: 10;
@@ -39,7 +38,6 @@
         }
 
         .title {
-            position: absolute;
             top: 20px;
             left: 20px;
             font-size: 24px;
@@ -81,7 +79,7 @@
         }
         function focusOn(id){            
             const elem = document.querySelector(`#node${id}`);            
-            elem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            elem.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
             if (activeElem) resetStyles(activeElem);
             elem.classList.add('active-vo');
             activeElem = elem;
@@ -115,7 +113,7 @@
             if (id) focusOn(id);                        
         });        
         const urlParams = new URLSearchParams(window.location.search);
-        const id = urlParams.get('id');
+        const id = urlParams.get('id') ?? 1;
         focusOn(parseInt(id));
     </script>
 </body>
