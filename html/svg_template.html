@@ -24,6 +24,16 @@
             z-index: 10;
         }
 
+        .edge {
+            stroke: black;
+            stroke-width: 2px;            
+            cursor: pointer;
+            transition: stroke-width 0.2s ease;
+            &:hover {
+                stroke-width: 4px;
+            }
+        }
+
         audio {
             display: none;
         }
@@ -70,31 +80,42 @@
             el.classList.remove('active-vo');
         }
         function focusOn(id){            
-            const elem = document.querySelector(`#node${id + 1}`);            
+            const elem = document.querySelector(`#node${id}`);            
             elem.scrollIntoView({ behavior: 'smooth', block: 'center' });
             if (activeElem) resetStyles(activeElem);
             elem.classList.add('active-vo');
             activeElem = elem;
+            const title = elem.querySelector('title').textContent;    
             const audioPlayer = document.getElementById('audio-player');
-            audioPlayer.src = `/${ConvoID}/${id}.wav`;
+            audioPlayer.src = `/${ConvoID}/${parseInt(title)}.wav`;
         }
         document.querySelectorAll('g').forEach(function (group) {
             group.addEventListener('click', function () {
-                const title = this.querySelector('title').textContent;    
-                const text = this.querySelector('text').textContent;            
-                const id = parseInt(title);
-                if (!id) return;
-                focusOn(id);
+                const title = this.querySelector('title').textContent;
+                if (title.includes('->')){
+                    const parts = title.split('->');                    
+                    const id = parseInt(parts[1]);
+                    const fromNode = Array.from(document.querySelectorAll('g > title')).find(el => parseInt(el.textContent) === id).parentElement;
+                    focusOn(parseInt(fromNode.id.replace('node', '')));
+                } else {
+                    const id = parseInt(this.id.replace('node', ''));
+                    const text = this.querySelector('text').textContent;                            
+                    focusOn(id);
+                    const url = new URL(window.location.href);
+                    url.searchParams.set('id', id);
+                    window.history.pushState({ id: id }, text, url);
+                    document.title = text;
+                }
                 event.stopPropagation();
-                const url = new URL(window.location.href);
-                url.searchParams.set('id', id);
-                window.history.pushState({ id: id }, text, url);
             });
         });         
         
         window.addEventListener('popstate', function (event) {
             const id = event.state ? event.state.id : null;
             if (id) focusOn(id);                        
-        });
+        });        
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get('id');
+        focusOn(parseInt(id));
     </script>
 </body>
