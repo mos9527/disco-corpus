@@ -16,14 +16,11 @@
         .active-vo {
             font-weight: bold;
         }
-
+        
         .graphviz {
             position: absolute;
             top: 0;
             left: 0;
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
             z-index: 10;
         }
 
@@ -52,8 +49,7 @@
     </style>
 </head>
 
-<body>
-    <script src='https://unpkg.com/panzoom@9.4.0/dist/panzoom.min.js'></script>
+<body>    
     <h1 class="title">{{title}} - {{cid}}</h1>
     <audio controls autoplay id="audio-player">
         <source type="audio/wav">
@@ -68,30 +64,37 @@
     <script>
         const ConvoID = {{cid}}
         let activeElem = null;
-
-        const svgElement = document.querySelector('.graphviz svg');
-        const rect = svgElement.getBoundingClientRect();
-        const instance = panzoom(svgElement, {
-            autocenter: true
-        });
+        
         function resetStyles(el) {
             el.setAttribute('fill', 'black');
             el.classList.remove('active-vo');
         }
-
+        function focusOn(id){            
+            const elem = document.querySelector(`#node${id + 1}`);            
+            elem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            if (activeElem) resetStyles(activeElem);
+            elem.classList.add('active-vo');
+            activeElem = elem;
+            const audioPlayer = document.getElementById('audio-player');
+            audioPlayer.src = `/${ConvoID}/${id}.wav`;
+        }
         document.querySelectorAll('g').forEach(function (group) {
             group.addEventListener('click', function () {
-                const title = this.querySelector('title').textContent;
-                if (!parseInt(title)) return; // skip if title is not a number
-                if (activeElem) resetStyles(activeElem);
-                this.classList.add('active-vo');
-                activeElem = this;
-
+                const title = this.querySelector('title').textContent;    
+                const text = this.querySelector('text').textContent;            
                 const id = parseInt(title);
-                const audioPlayer = document.getElementById('audio-player');
-                audioPlayer.src = `/${ConvoID}/${id}.wav`;
+                if (!id) return;
+                focusOn(id);
                 event.stopPropagation();
+                const url = new URL(window.location.href);
+                url.searchParams.set('id', id);
+                window.history.pushState({ id: id }, text, url);
             });
         });         
+        
+        window.addEventListener('popstate', function (event) {
+            const id = event.state ? event.state.id : null;
+            if (id) focusOn(id);                        
+        });
     </script>
 </body>

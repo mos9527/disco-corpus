@@ -40,8 +40,7 @@ audio_cache = AudioCache()
 
 
 class DiscoHandler(SimpleHTTPRequestHandler):
-    @property
-    @cache
+    @property    
     def svg_template(self):
         template = os.path.join(os.path.dirname(__file__), "html", "svg_template.html")
         with open(template, "r") as f:
@@ -69,7 +68,8 @@ class DiscoHandler(SimpleHTTPRequestHandler):
         return HTTPStatus.OK, "audio/wav", audio_cache.read(int(convo_id), int(diag_id))
 
     def router(self, path):
-        path = path.strip("/")
+        parts = urllib.parse.urlsplit(self.path)
+        path = parts.path.strip("/")
         if path.lower().endswith(".svg"):
             return self.svg(path)
         if path.lower().endswith(".wav"):
