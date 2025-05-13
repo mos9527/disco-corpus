@@ -86,6 +86,10 @@
             const title = elem.querySelector('title').textContent;    
             const audioPlayer = document.getElementById('audio-player');
             audioPlayer.src = `/${ConvoID}/${parseInt(title)}.wav`;
+            audioPlayer.addEventListener('canplaythrough', function() {
+                var inner = () => { audioPlayer.play().catch(()=>setTimeout(inner, 100)); };
+                inner();
+            }, { once: true });
         }
         document.querySelectorAll('g').forEach(function (group) {
             group.addEventListener('click', function () {
